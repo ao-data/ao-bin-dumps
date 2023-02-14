@@ -1,0 +1,27 @@
+{
+  "?xml": {
+    "@version": "1.0",
+    "@encoding": "utf-8"
+  },
+  "patch": {
+    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+    "@xsi:noNamespaceSchemaLocation": "patch.xsd",
+    "remove": [
+      {
+        "@sel": "/avatars/avatars/avatar[@name='AVATAR_07']"
+      },
+      {
+        "@sel": "/avatars/avatars/avatar[@name='AVATAR_10']"
+      },
+      {
+        "@sel": "/avatars/avatars/avatar[@name='AVATAR_11']"
+      }
+    ],
+    "add": {
+      "@sel": "/avatars/avatars",
+      "@before": "true",
+      "@aschild": "true",
+      "#cdata-section": "    \n\t<avatar name=\"AVATAR_07\" locked=\"false\"/>\n    <avatar name=\"AVATAR_10\" locked=\"false\"/>\n    <avatar name=\"AVATAR_11\" locked=\"false\"/>\n\t"
+    }
+  }
+}

@@ -1,0 +1,3459 @@
+{
+  "?xml": {
+    "@version": "1.0",
+    "@encoding": "utf-8"
+  },
+  "steamachievements": {
+    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+    "@xsi:noNamespaceSchemaLocation": "steamachievements.xsd",
+    "achievement": [
+      {
+        "@name": "SA_EXPLORATION_MISTS_ENTER",
+        "gotocluster": {
+          "@clustertype": "Mists"
+        }
+      },
+      {
+        "@name": "SA_EXPLORATION_MISTS_FIND_CITY",
+        "or": {
+          "gotocluster": [
+            {
+              "@clusterdirect": "5000"
+            },
+            {
+              "@clusterdirect": "5001"
+            },
+            {
+              "@clusterdirect": "5002"
+            },
+            {
+              "@clusterdirect": "5003"
+            }
+          ]
+        }
+      },
+      {
+        "@name": "SA_EXPLORATION_MISTS_CITY_FRIENDLY",
+        "havemistcitystandingrank": {
+          "@rank": "2"
+        }
+      },
+      {
+        "@name": "SA_PVE_MISTS_HUNTER",
+        "@hidden": "true",
+        "or": [
+          {
+            "killmob": [
+              {
+                "@mobid": "T5_MOB_MISTS_SPIDER",
+                "@count": "1"
+              },
+              {
+                "@mobid": "T6_MOB_MISTS_SPIDER",
+                "@count": "1"
+              },
+              {
+                "@mobid": "T7_MOB_MISTS_SPIDER",
+                "@count": "1"
+              },
+              {
+                "@mobid": "T8_MOB_MISTS_SPIDER",
+                "@count": "1"
+              }
+            ]
+          },
+          {
+            "killmob": [
+              {
+                "@mobid": "T5_MOB_MISTS_FAIRYDRAGON",
+                "@count": "1"
+              },
+              {
+                "@mobid": "T6_MOB_MISTS_FAIRYDRAGON",
+                "@count": "1"
+              },
+              {
+                "@mobid": "T7_MOB_MISTS_FAIRYDRAGON",
+                "@count": "1"
+              },
+              {
+                "@mobid": "T8_MOB_MISTS_FAIRYDRAGON",
+                "@count": "1"
+              }
+            ]
+          },
+          {
+            "killmob": [
+              {
+                "@mobid": "T5_MOB_MISTS_GRIFFIN",
+                "@count": "1"
+              },
+              {
+                "@mobid": "T6_MOB_MISTS_GRIFFIN",
+                "@count": "1"
+              },
+              {
+                "@mobid": "T7_MOB_MISTS_GRIFFIN",
+                "@count": "1"
+              },
+              {
+                "@mobid": "T8_MOB_MISTS_GRIFFIN",
+                "@count": "1"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "@name": "SA_PVP_CASTLE_CAPTURE_01",
+        "lootcastlechest": {
+          "@castletype": "MEDIUMCASTLE",
+          "@count": "1"
+        }
+      },
+      {
+        "@name": "SA_PVP_CASTLE_OUTPOST_CAPTURE",
+        "lootcastlechest": {
+          "@castletype": "SMALLCASTLE",
+          "@count": "1"
+        }
+      },
+      {
+        "@name": "SA_PVP_CRYSTAL_ARENA_RANKUP",
+        "havearenarank": {
+          "@rank": "1"
+        }
+      },
+      {
+        "@name": "SA_PVP_CRYSTAL_ARENA_SILVER1",
+        "havearenarank": {
+          "@rank": "8"
+        }
+      },
+      {
+        "@name": "SA_EXPLORATION_CABBAGE_MERCHANT",
+        "@hidden": "true",
+        "playertrade": {
+          "@itemid": "T5_CABBAGE",
+          "@tradetype": "give",
+          "@count": "1",
+          "@clusterarchetype": "BLACK"
+        }
+      },
+      {
+        "@name": "SA_EXPLORATION_TREASURE",
+        "usefunction": {
+          "@function": "OpenTreasureChest"
+        }
+      },
+      {
+        "@name": "SA_EXPLORATION_TREASURE_100",
+        "@stat": "SA_ST_EXPLORATION_TREASURE_100",
+        "usefunction": {
+          "@function": "OpenTreasureChest",
+          "@count": "100"
+        }
+      },
+      {
+        "@name": "SA_EXPLORATION_STATIC_DUNGEON_FAME",
+        "@stat": "SA_ST_EXPLORATION_STATIC_DUNGEON_FAME",
+        "killmobfame": {
+          "@value": "10000000",
+          "@specialcondition": "InStaticDungeon"
+        }
+      },
+      {
+        "@name": "SA_EXPLORATION_STATIC_DUNGEON_EVENT",
+        "killmobfame": {
+          "@value": "1",
+          "@specialcondition": "DuringStaticDungeonEvent"
+        }
+      },
+      {
+        "@name": "SA_COLLECTION_REROLL",
+        "rerollitems": {
+          "@count": "1"
+        }
+      },
+      {
+        "@name": "SA_COLLECTION_REROLL_MASTERPIECE",
+        "rerollitems": {
+          "@count": "1",
+          "@minresultquality": "5"
+        }
+      },
+      {
+        "@name": "SA_COLLECTION_REROLL_STACK",
+        "rerollitems": {
+          "@count": "1",
+          "@minoriginalstacksize": "999"
+        }
+      },
+      {
+        "@name": "SA_COLLECTION_ELITE_FIRST",
+        "unlockachievement": {
+          "@achievement": "any",
+          "@elitelevel": "1"
+        }
+      },
+      {
+        "@name": "SA_COLLECTION_ELITE_FINISH",
+        "unlockachievement": {
+          "@achievement": "any",
+          "@elitelevel": "20"
+        }
+      },
+      {
+        "@name": "SA_COLLECTION_WARGLOVES_MULTIKILL",
+        "killwithsinglespellcast": {
+          "@count": "1",
+          "@kills": "3",
+          "@spell": "PUMMELING_STRIKES_DELAYED_DAMAGE"
+        }
+      },
+      {
+        "@name": "SA_COLLECTION_HIDEOUT_HOME",
+        "usefunction": {
+          "@function": "MakeHideoutHome"
+        }
+      },
+      {
+        "@name": "SA_COLLECTION_HIDEOUT_POWER",
+        "usefunction": {
+          "@function": "CaptureHideoutPowerCrystal"
+        }
+      },
+      {
+        "@name": "SA_COLLECTION_TERRITORY_ENERGY",
+        "usefunction": {
+          "@function": "CaptureTerritoryPowerCrystal"
+        }
+      },
+      {
+        "@name": "SA_COLLECTION_HELLGATE_01",
+        "@stat": "SA_ST_COLLECTION_HELLGATE_01",
+        "or": {
+          "haveinfamy": [
+            {
+              "@amount": "100000",
+              "@infamytype": "Hell2v2"
+            },
+            {
+              "@amount": "100000",
+              "@infamytype": "Hell5v5"
+            },
+            {
+              "@amount": "100000",
+              "@infamytype": "Hell10v10"
+            }
+          ]
+        }
+      },
+      {
+        "@name": "SA_COLLECTION_HELLGATE_02",
+        "@stat": "SA_ST_COLLECTION_HELLGATE_02",
+        "or": {
+          "haveinfamy": [
+            {
+              "@amount": "250000",
+              "@infamytype": "Hell2v2"
+            },
+            {
+              "@amount": "250000",
+              "@infamytype": "Hell5v5"
+            },
+            {
+              "@amount": "250000",
+              "@infamytype": "Hell10v10"
+            }
+          ]
+        }
+      },
+      {
+        "@name": "SA_EXPLORATION_CHAIN_HELLGATE_01",
+        "@stat": "SA_ST_EXPLORATION_CHAIN_HELLGATE_01",
+        "chainhellgate": {
+          "@count": "2"
+        }
+      },
+      {
+        "@name": "SA_EXPLORATION_CHAIN_HELLGATE_02",
+        "@stat": "SA_ST_EXPLORATION_CHAIN_HELLGATE_02",
+        "chainhellgate": {
+          "@count": "5"
+        }
+      },
+      {
+        "@name": "SA_EXPLORATION_CHAIN_HELLGATE_03",
+        "@stat": "SA_ST_EXPLORATION_CHAIN_HELLGATE_03",
+        "chainhellgate": {
+          "@count": "10"
+        }
+      },
+      {
+        "@name": "SA_FACTIONWARFARE_CLUSTER_CAPTURE",
+        "gainfactionpoints": {
+          "@value": "1",
+          "@source": "CLUSTER_CAPTURED"
+        }
+      },
+      {
+        "@name": "SA_FACTIONWARFARE_BANDIT_ASSAULT",
+        "gainfactionpoints": {
+          "@value": "1",
+          "@source": "REDZONE_EVENT"
+        }
+      },
+      {
+        "@name": "SA_PVP_CORRUPTED_DUNGEON_01",
+        "killplayer": {
+          "@where": "all",
+          "@count": "1",
+          "@minvalue": "0",
+          "@specialcondition": "KillCorruptedDungeonInvader"
+        }
+      },
+      {
+        "@name": "SA_PVP_CORRUPTED_DUNGEON_02",
+        "killplayer": {
+          "@where": "all",
+          "@count": "1",
+          "@minvalue": "0",
+          "@specialcondition": "KillCorruptedDungeonHost"
+        }
+      },
+      {
+        "@name": "SA_COLLECTION_CORRUPTED_DUNGEONS_INFAMY",
+        "@stat": "SA_ST_COLLECTION_CORRUPTED_DUNGEONS_INFAMY",
+        "haveinfamy": {
+          "@amount": "100000",
+          "@infamytype": "CorruptedDungeon"
+        }
+      },
+      {
+        "@name": "SA_PVE_CORRUPTED_DUNGEONS_01",
+        "or": {
+          "killmob": [
+            {
+              "@mobid": "T5_MOB_CD_DEMON_BRUTE_BOSS",
+              "@count": "1"
+            },
+            {
+              "@mobid": "T6_MOB_CD_DEMON_BRUTE_BOSS",
+              "@count": "1"
+            },
+            {
+              "@mobid": "T5_MOB_CD_DEMON_SORCERER_BOSS",
+              "@count": "1"
+            },
+            {
+              "@mobid": "T6_MOB_CD_DEMON_SORCERER_BOSS",
+              "@count": "1"
+            }
+          ]
+        }
+      },
+      {
+        "@name": "SA_PVE_CORRUPTED_DUNGEONS_02",
+        "@stat": "SA_ST_PVE_CORRUPTED_DUNGEONS_02",
+        "killmob": {
+          "@faction": "CORRUPTED",
+          "@count": "100"
+        }
+      },
+      {
+        "@name": "SA_PVE_CORRUPTED_DUNGEONS_03",
+        "@stat": "SA_ST_PVE_CORRUPTED_DUNGEONS_03",
+        "killmob": {
+          "@faction": "CORRUPTED",
+          "@count": "1000"
+        }
+      },
+      {
+        "@name": "SA_COLLECTION_ROADS_01",
+        "gotocluster": {
+          "@archetype": "TUNNEL"
+        }
+      },
+      {
+        "@name": "SA_COLLECTION_ROADS_02",
+        "gotocluster": {
+          "@worldclustertype": "TUNNEL_DEEP"
+        }
+      },
+      {
+        "@name": "SA_PVE_ROADS_GUARDIAN",
+        "or": {
+          "killmob": [
+            {
+              "@mobid": "T6_MOB_GUARDIAN_FOREST_ENT",
+              "@count": "1",
+              "@countpartykills": "true"
+            },
+            {
+              "@mobid": "T6_MOB_GUARDIAN_FOREST_ROCKGIANT",
+              "@count": "1",
+              "@countpartykills": "true"
+            },
+            {
+              "@mobid": "T6_MOB_GUARDIAN_FOREST_OREGIANT",
+              "@count": "1",
+              "@countpartykills": "true"
+            },
+            {
+              "@mobid": "T6_MOB_GUARDIAN_FOREST_BASILISK",
+              "@count": "1",
+              "@countpartykills": "true"
+            },
+            {
+              "@mobid": "T6_MOB_GUARDIAN_FOREST_DRYAD",
+              "@count": "1",
+              "@countpartykills": "true"
+            },
+            {
+              "@mobid": "T7_MOB_GUARDIAN_FOREST_ENT",
+              "@count": "1",
+              "@countpartykills": "true"
+            },
+            {
+              "@mobid": "T7_MOB_GUARDIAN_FOREST_ROCKGIANT",
+              "@count": "1",
+              "@countpartykills": "true"
+            },
+            {
+              "@mobid": "T7_MOB_GUARDIAN_FOREST_OREGIANT",
+              "@count": "1",
+              "@countpartykills": "true"
+            },
+            {
+              "@mobid": "T7_MOB_GUARDIAN_FOREST_BASILISK",
+              "@count": "1",
+              "@countpartykills": "true"
+            },
+            {
+              "@mobid": "T7_MOB_GUARDIAN_FOREST_DRYAD",
+              "@count": "1",
+              "@countpartykills": "true"
+            },
+            {
+              "@mobid": "T8_MOB_GUARDIAN_FOREST_ENT",
+              "@count": "1",
+              "@countpartykills": "true"
+            },
+            {
+              "@mobid": "T8_MOB_GUARDIAN_FOREST_ROCKGIANT",
+              "@count": "1",
+              "@countpartykills": "true"
+            },
+            {
+              "@mobid": "T8_MOB_GUARDIAN_FOREST_OREGIANT",
+              "@count": "1",
+              "@countpartykills": "true"
+            },
+            {
+              "@mobid": "T8_MOB_GUARDIAN_FOREST_BASILISK",
+              "@count": "1",
+              "@countpartykills": "true"
+            },
+            {
+              "@mobid": "T8_MOB_GUARDIAN_FOREST_DRYAD",
+              "@count": "1",
+              "@countpartykills": "true"
+            }
+          ]
+        }
+      },
+      {
+        "@name": "SA_PVE_ROADS_AVALON",
+        "@stat": "SA_ST_PVE_ROADS_AVALON",
+        "killmob": {
+          "@faction": "ROAD",
+          "@count": "250",
+          "@countpartykills": "true"
+        }
+      },
+      {
+        "@name": "SA_PVE_RANDOMDUNGEON_LOOTCHEST_ELITE_01",
+        "@stat": "SA_ST_PVE_RANDOMDUNGEON_LOOTCHEST_ELITE_01",
+        "unlocklootchest": {
+          "@count": "10",
+          "validchest": [
+            {
+              "@name": "AVALON_ELITE_BOSS_UNCOMMON"
+            },
+            {
+              "@name": "AVALON_ELITE_BOSS_RARE"
+            },
+            {
+              "@name": "AVALON_ELITE_BOSS_LEGENDARY"
+            },
+            {
+              "@name": "AVALON_ELITE_STANDARD"
+            },
+            {
+              "@name": "AVALON_ELITE_UNCOMMON"
+            },
+            {
+              "@name": "AVALON_ELITE_RARE"
+            },
+            {
+              "@name": "AVALON_ELITE_LEGENDARY"
+            }
+          ]
+        }
+      },
+      {
+        "@name": "SA_PVE_RANDOMDUNGEON_LOOTCHEST_ELITE_02",
+        "@stat": "SA_ST_PVE_RANDOMDUNGEON_LOOTCHEST_ELITE_02",
+        "unlocklootchest": {
+          "@count": "100",
+          "validchest": [
+            {
+              "@name": "AVALON_ELITE_BOSS_UNCOMMON"
+            },
+            {
+              "@name": "AVALON_ELITE_BOSS_RARE"
+            },
+            {
+              "@name": "AVALON_ELITE_BOSS_LEGENDARY"
+            },
+            {
+              "@name": "AVALON_ELITE_STANDARD"
+            },
+            {
+              "@name": "AVALON_ELITE_UNCOMMON"
+            },
+            {
+              "@name": "AVALON_ELITE_RARE"
+            },
+            {
+              "@name": "AVALON_ELITE_LEGENDARY"
+            }
+          ]
+        }
+      },
+      {
+        "@name": "SA_COLLECTION_ELITE_DUNGEON_BUFF",
+        "useshrine": {
+          "@count": "1",
+          "validshrine": {
+            "@name": "AVALON_SHRINE_FINAL_REWARD_BUFF"
+          }
+        }
+      },
+      {
+        "@name": "SA_PVE_KILL_RD_ELITE_01",
+        "@stat": "SA_ST_PVE_KILL_RD_ELITE_01",
+        "or": [
+          {
+            "killmob": [
+              {
+                "@mobid": "T6_MOB_RD_AVALON_CAPTAIN_ELITE_BOSS",
+                "@count": "1",
+                "@countpartykills": "true"
+              },
+              {
+                "@mobid": "T7_MOB_RD_AVALON_CAPTAIN_ELITE_BOSS",
+                "@count": "1",
+                "@countpartykills": "true"
+              },
+              {
+                "@mobid": "T8_MOB_RD_AVALON_CAPTAIN_ELITE_BOSS",
+                "@count": "1",
+                "@countpartykills": "true"
+              }
+            ]
+          },
+          {
+            "killmob": [
+              {
+                "@mobid": "T6_MOB_RD_AVALON_CONSTRUCT_ELITE_BOSS",
+                "@count": "1",
+                "@countpartykills": "true"
+              },
+              {
+                "@mobid": "T7_MOB_RD_AVALON_CONSTRUCT_ELITE_BOSS",
+                "@count": "1",
+                "@countpartykills": "true"
+              },
+              {
+                "@mobid": "T8_MOB_RD_AVALON_CONSTRUCT_ELITE_BOSS",
+                "@count": "1",
+                "@countpartykills": "true"
+              }
+            ]
+          },
+          {
+            "killmob": [
+              {
+                "@mobid": "T6_MOB_RD_AVALON_BASILISK_ELITE_BOSS",
+                "@count": "1",
+                "@countpartykills": "true"
+              },
+              {
+                "@mobid": "T7_MOB_RD_AVALON_BASILISK_ELITE_BOSS",
+                "@count": "1",
+                "@countpartykills": "true"
+              },
+              {
+                "@mobid": "T8_MOB_RD_AVALON_BASILISK_ELITE_BOSS",
+                "@count": "1",
+                "@countpartykills": "true"
+              }
+            ]
+          },
+          {
+            "killmob": [
+              {
+                "@mobid": "T6_MOB_RD_AVALON_PRIEST_ELITE_BOSS",
+                "@count": "1",
+                "@countpartykills": "true"
+              },
+              {
+                "@mobid": "T7_MOB_RD_AVALON_PRIEST_ELITE_BOSS",
+                "@count": "1",
+                "@countpartykills": "true"
+              },
+              {
+                "@mobid": "T8_MOB_RD_AVALON_PRIEST_ELITE_BOSS",
+                "@count": "1",
+                "@countpartykills": "true"
+              }
+            ]
+          },
+          {
+            "killmob": [
+              {
+                "@mobid": "T6_MOB_RD_AVALON_MAGE_ELITE_BOSS",
+                "@count": "1",
+                "@countpartykills": "true"
+              },
+              {
+                "@mobid": "T7_MOB_RD_AVALON_MAGE_ELITE_BOSS",
+                "@count": "1",
+                "@countpartykills": "true"
+              },
+              {
+                "@mobid": "T8_MOB_RD_AVALON_MAGE_ELITE_BOSS",
+                "@count": "1",
+                "@countpartykills": "true"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "@name": "SA_PVE_KILL_RD_ELITE_02",
+        "or": {
+          "killmob": [
+            {
+              "@mobid": "T6_MOB_RD_AVALON_WOUNDED_KING_ELITE_BOSS",
+              "@count": "1",
+              "@countpartykills": "true"
+            },
+            {
+              "@mobid": "T7_MOB_RD_AVALON_WOUNDED_KING_ELITE_BOSS",
+              "@count": "1",
+              "@countpartykills": "true"
+            },
+            {
+              "@mobid": "T8_MOB_RD_AVALON_WOUNDED_KING_ELITE_BOSS",
+              "@count": "1",
+              "@countpartykills": "true"
+            }
+          ]
+        }
+      },
+      {
+        "@name": "SA_PVP_CRYSTAL_LEAGUE_WIN",
+        "haveplayedcrystalleague": {
+          "@won": "true",
+          "@count": "1"
+        }
+      },
+      {
+        "@name": "SA_PVP_CRYSTAL_LEAGUE_RANK_01",
+        "haveplayedcrystalleague": {
+          "@won": "true",
+          "@level": "3"
+        }
+      },
+      {
+        "@name": "SA_PVP_CRYSTAL_LEAGUE_RANK_02",
+        "haveplayedcrystalleague": {
+          "@won": "true",
+          "@level": "7"
+        }
+      },
+      {
+        "@name": "SA_PVP_TERRITORY_DEFEAT_COMMANDER",
+        "killmob": {
+          "@mobid": "T7_MOB_WATCHTOWER_ARCANEGUARD_ELITE",
+          "@count": "1",
+          "@countpartykills": "true"
+        }
+      },
+      {
+        "@name": "SA_ARENA_WIN_01",
+        "haveplayedarenamatch": {
+          "@won": "true"
+        }
+      },
+      {
+        "@name": "SA_ARENA_WIN_02",
+        "@stat": "SA_ST_ARENA_WIN_02",
+        "haveplayedarenamatch": {
+          "@won": "true",
+          "@count": "100"
+        }
+      },
+      {
+        "@name": "SA_COLLECTION_LOOTCHEST",
+        "unlocklootchest": {
+          "@count": "1",
+          "validchest": [
+            {
+              "@name": "HERETIC_SOLO_BOOKCHEST_STANDARD"
+            },
+            {
+              "@name": "HERETIC_SOLO_BOOKCHEST_UNCOMMON"
+            },
+            {
+              "@name": "HERETIC_SOLO_BOOKCHEST_RARE"
+            },
+            {
+              "@name": "HERETIC_SOLO_BOOKCHEST_LEGENDARY"
+            },
+            {
+              "@name": "KEEPER_SOLO_BOOKCHEST_STANDARD"
+            },
+            {
+              "@name": "KEEPER_SOLO_BOOKCHEST_UNCOMMON"
+            },
+            {
+              "@name": "KEEPER_SOLO_BOOKCHEST_RARE"
+            },
+            {
+              "@name": "KEEPER_SOLO_BOOKCHEST_LEGENDARY"
+            },
+            {
+              "@name": "UNDEAD_SOLO_BOOKCHEST_STANDARD"
+            },
+            {
+              "@name": "UNDEAD_SOLO_BOOKCHEST_UNCOMMON"
+            },
+            {
+              "@name": "UNDEAD_SOLO_BOOKCHEST_RARE"
+            },
+            {
+              "@name": "UNDEAD_SOLO_BOOKCHEST_LEGENDARY"
+            },
+            {
+              "@name": "MORGANA_SOLO_BOOKCHEST_STANDARD"
+            },
+            {
+              "@name": "MORGANA_SOLO_BOOKCHEST_UNCOMMON"
+            },
+            {
+              "@name": "MORGANA_SOLO_BOOKCHEST_RARE"
+            },
+            {
+              "@name": "MORGANA_SOLO_BOOKCHEST_LEGENDARY"
+            },
+            {
+              "@name": "HERETIC_SOLO_CHEST_BOSS_UNCOMMON"
+            },
+            {
+              "@name": "HERETIC_SOLO_CHEST_BOSS_RARE"
+            },
+            {
+              "@name": "HERETIC_SOLO_CHEST_BOSS_LEGENDARY"
+            },
+            {
+              "@name": "KEEPER_SOLO_CHEST_BOSS_UNCOMMON"
+            },
+            {
+              "@name": "KEEPER_SOLO_CHEST_BOSS_RARE"
+            },
+            {
+              "@name": "KEEPER_SOLO_CHEST_BOSS_LEGENDARY"
+            },
+            {
+              "@name": "UNDEAD_SOLO_CHEST_BOSS_UNCOMMON"
+            },
+            {
+              "@name": "UNDEAD_SOLO_CHEST_BOSS_RARE"
+            },
+            {
+              "@name": "UNDEAD_SOLO_CHEST_BOSS_LEGENDARY"
+            },
+            {
+              "@name": "MORGANA_SOLO_CHEST_BOSS_UNCOMMON"
+            },
+            {
+              "@name": "MORGANA_SOLO_CHEST_BOSS_RARE"
+            },
+            {
+              "@name": "MORGANA_SOLO_CHEST_BOSS_LEGENDARY"
+            },
+            {
+              "@name": "HERETIC_SOLO_CHEST_STANDARD"
+            },
+            {
+              "@name": "HERETIC_SOLO_CHEST_UNCOMMON"
+            },
+            {
+              "@name": "HERETIC_SOLO_CHEST_RARE"
+            },
+            {
+              "@name": "HERETIC_SOLO_CHEST_LEGENDARY"
+            },
+            {
+              "@name": "KEEPER_SOLO_CHEST_STANDARD"
+            },
+            {
+              "@name": "KEEPER_SOLO_CHEST_UNCOMMON"
+            },
+            {
+              "@name": "KEEPER_SOLO_CHEST_RARE"
+            },
+            {
+              "@name": "KEEPER_SOLO_CHEST_LEGENDARY"
+            },
+            {
+              "@name": "UNDEAD_SOLO_CHEST_STANDARD"
+            },
+            {
+              "@name": "UNDEAD_SOLO_CHEST_UNCOMMON"
+            },
+            {
+              "@name": "UNDEAD_SOLO_CHEST_RARE"
+            },
+            {
+              "@name": "UNDEAD_SOLO_CHEST_LEGENDARY"
+            },
+            {
+              "@name": "MORGANA_SOLO_CHEST_STANDARD"
+            },
+            {
+              "@name": "MORGANA_SOLO_CHEST_UNCOMMON"
+            },
+            {
+              "@name": "MORGANA_SOLO_CHEST_RARE"
+            },
+            {
+              "@name": "MORGANA_SOLO_CHEST_LEGENDARY"
+            },
+            {
+              "@name": "HERETIC_VETERAN_BOOKCHEST_STANDARD"
+            },
+            {
+              "@name": "HERETIC_VETERAN_BOOKCHEST_UNCOMMON"
+            },
+            {
+              "@name": "HERETIC_VETERAN_BOOKCHEST_RARE"
+            },
+            {
+              "@name": "HERETIC_VETERAN_BOOKCHEST_LEGENDARY"
+            },
+            {
+              "@name": "KEEPER_VETERAN_BOOKCHEST_STANDARD"
+            },
+            {
+              "@name": "KEEPER_VETERAN_BOOKCHEST_UNCOMMON"
+            },
+            {
+              "@name": "KEEPER_VETERAN_BOOKCHEST_RARE"
+            },
+            {
+              "@name": "KEEPER_VETERAN_BOOKCHEST_LEGENDARY"
+            },
+            {
+              "@name": "UNDEAD_VETERAN_BOOKCHEST_STANDARD"
+            },
+            {
+              "@name": "UNDEAD_VETERAN_BOOKCHEST_UNCOMMON"
+            },
+            {
+              "@name": "UNDEAD_VETERAN_BOOKCHEST_RARE"
+            },
+            {
+              "@name": "UNDEAD_VETERAN_BOOKCHEST_LEGENDARY"
+            },
+            {
+              "@name": "MORGANA_VETERAN_BOOKCHEST_STANDARD"
+            },
+            {
+              "@name": "MORGANA_VETERAN_BOOKCHEST_UNCOMMON"
+            },
+            {
+              "@name": "MORGANA_VETERAN_BOOKCHEST_RARE"
+            },
+            {
+              "@name": "MORGANA_VETERAN_BOOKCHEST_LEGENDARY"
+            },
+            {
+              "@name": "HERETIC_VETERAN_CHEST_BOSS_UNCOMMON"
+            },
+            {
+              "@name": "HERETIC_VETERAN_CHEST_BOSS_RARE"
+            },
+            {
+              "@name": "HERETIC_VETERAN_CHEST_BOSS_LEGENDARY"
+            },
+            {
+              "@name": "KEEPER_VETERAN_CHEST_BOSS_UNCOMMON"
+            },
+            {
+              "@name": "KEEPER_VETERAN_CHEST_BOSS_RARE"
+            },
+            {
+              "@name": "KEEPER_VETERAN_CHEST_BOSS_LEGENDARY"
+            },
+            {
+              "@name": "UNDEAD_VETERAN_CHEST_BOSS_UNCOMMON"
+            },
+            {
+              "@name": "UNDEAD_VETERAN_CHEST_BOSS_RARE"
+            },
+            {
+              "@name": "UNDEAD_VETERAN_CHEST_BOSS_LEGENDARY"
+            },
+            {
+              "@name": "MORGANA_VETERAN_CHEST_BOSS_UNCOMMON"
+            },
+            {
+              "@name": "MORGANA_VETERAN_CHEST_BOSS_RARE"
+            },
+            {
+              "@name": "MORGANA_VETERAN_CHEST_BOSS_LEGENDARY"
+            },
+            {
+              "@name": "HERETIC_VETERAN_CHEST_STANDARD"
+            },
+            {
+              "@name": "HERETIC_VETERAN_CHEST_UNCOMMON"
+            },
+            {
+              "@name": "HERETIC_VETERAN_CHEST_RARE"
+            },
+            {
+              "@name": "HERETIC_VETERAN_CHEST_LEGENDARY"
+            },
+            {
+              "@name": "KEEPER_VETERAN_CHEST_STANDARD"
+            },
+            {
+              "@name": "KEEPER_VETERAN_CHEST_UNCOMMON"
+            },
+            {
+              "@name": "KEEPER_VETERAN_CHEST_RARE"
+            },
+            {
+              "@name": "KEEPER_VETERAN_CHEST_LEGENDARY"
+            },
+            {
+              "@name": "UNDEAD_VETERAN_CHEST_STANDARD"
+            },
+            {
+              "@name": "UNDEAD_VETERAN_CHEST_UNCOMMON"
+            },
+            {
+              "@name": "UNDEAD_VETERAN_CHEST_RARE"
+            },
+            {
+              "@name": "UNDEAD_VETERAN_CHEST_LEGENDARY"
+            },
+            {
+              "@name": "MORGANA_VETERAN_CHEST_STANDARD"
+            },
+            {
+              "@name": "MORGANA_VETERAN_CHEST_UNCOMMON"
+            },
+            {
+              "@name": "MORGANA_VETERAN_CHEST_RARE"
+            },
+            {
+              "@name": "MORGANA_VETERAN_CHEST_LEGENDARY"
+            }
+          ]
+        }
+      },
+      {
+        "@name": "SA_COLLECTION_VANITY_UNLOCK",
+        "usefunction": {
+          "@function": "UnlockCharacterCustomization"
+        }
+      },
+      {
+        "@name": "SA_COLLECTION_VANITY_MOUNTSKIN",
+        "usefunction": {
+          "@function": "ApplyMountSkin"
+        }
+      },
+      {
+        "@name": "SA_COLLECTION_DIREWOLF",
+        "mount": {
+          "@itemid": "DIREWOLF"
+        }
+      },
+      {
+        "@name": "SA_COLLECTION_USE_INSPECT",
+        "@stat": "SA_ST_COLLECTION_USE_INSPECT",
+        "usefunction": {
+          "@function": "InspectPlayer",
+          "@count": "100"
+        }
+      },
+      {
+        "@name": "SA_COLLECTION_SALVAGE",
+        "usefunction": {
+          "@function": "SalvageItem"
+        }
+      },
+      {
+        "@name": "SA_COLLECTION_USE_POTIONS",
+        "@stat": "SA_ST_COLLECTION_USE_POTIONS",
+        "usespell": {
+          "@itemshopsubcategory": "potion",
+          "@count": "100"
+        }
+      },
+      {
+        "@name": "SA_COLLECTION_HITPOINTS",
+        "@hidden": "true",
+        "haveplayerattribute": {
+          "@attribute": "hitpointsmax",
+          "@min": "5000"
+        }
+      },
+      {
+        "@name": "SA_COLLECTION_SILVER",
+        "havesilver": {
+          "@value": "1000000"
+        }
+      },
+      {
+        "@name": "SA_COLLECTION_UNLOCK_ALL_T4",
+        "@stat": "SA_ST_COLLECTION_UNLOCK_ALL_T4",
+        "unlockachievement": [
+          {
+            "@achievement": "ADVENTURER_ADEPT",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "GATHER_ROCK_T4",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "GATHER_WOOD_T4",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "GATHER_HIDE_T4",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "GATHER_ORE_T4",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "GATHER_FIBER_T4",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "FARM_ANIMALS",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "FARM_CROPS",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "FARM_HERBS",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "FARM_COOK",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "FARM_ALCHEMIST",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "COMBAT_PLATE_SHOES",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "COMBAT_PLATE_ARMORS",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "COMBAT_PLATE_HEADS",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "COMBAT_SWORDS",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "COMBAT_AXES",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "COMBAT_MACES",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "COMBAT_HAMMERS",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "COMBAT_KNUCKLES",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "COMBAT_CROSSBOWS",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "COMBAT_SHIELDS",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "COMBAT_LEATHER_SHOES",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "COMBAT_LEATHER_ARMORS",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "COMBAT_LEATHER_HEADS",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "COMBAT_BOWS",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "COMBAT_SPEARS",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "COMBAT_NATURESTAFFS",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "COMBAT_DAGGERS",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "COMBAT_QUARTERSTAFFS",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "COMBAT_CLOTH_SHOES",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "COMBAT_CLOTH_ARMORS",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "COMBAT_CLOTH_HEADS",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "COMBAT_TORCHES",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "COMBAT_FIRESTAFFS",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "COMBAT_HOLYSTAFFS",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "COMBAT_ARCANESTAFFS",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "COMBAT_FROSTSTAFFS",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "COMBAT_CURSEDSTAFFS",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "COMBAT_BOOKS",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "CRAFT_PLATE_SHOES",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "CRAFT_PLATE_ARMORS",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "CRAFT_PLATE_HEADS",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "CRAFT_SWORDS",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "CRAFT_AXES",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "CRAFT_MACES",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "CRAFT_HAMMERS",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "CRAFT_KNUCKLES",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "CRAFT_CROSSBOWS",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "CRAFT_SHIELDS",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "CRAFT_LEATHER_SHOES",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "CRAFT_LEATHER_ARMORS",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "CRAFT_LEATHER_HEADS",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "CRAFT_BOWS",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "CRAFT_SPEARS",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "CRAFT_NATURESTAFFS",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "CRAFT_DAGGERS",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "CRAFT_QUARTERSTAFFS",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "CRAFT_TORCHES",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "CRAFT_CLOTH_SHOES",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "CRAFT_CLOTH_ARMORS",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "CRAFT_CLOTH_HEADS",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "CRAFT_FIRESTAFFS",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "CRAFT_HOLYSTAFFS",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "CRAFT_ARCANESTAFFS",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "CRAFT_FROSTSTAFFS",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "CRAFT_CURSEDSTAFFS",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "CRAFT_BOOKS",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "CRAFT_TOOL_SIEGEHAMMER",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "CRAFT_BAG",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "CRAFT_CAPE",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "CRAFT_TOOL_FISHINGROD",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "CRAFT_TOOL_AXE",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "CRAFT_TOOL_HAMMER",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "CRAFT_TOOL_PICK",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "CRAFT_TOOL_KNIFE",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "CRAFT_TOOL_SICKLE",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "CRAFT_REFINE_ROCK_T4",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "CRAFT_REFINE_WOOD_T4",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "CRAFT_REFINE_HIDE_T4",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "CRAFT_REFINE_ORE_T4",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "CRAFT_REFINE_FIBER_T4",
+            "@masterylevel": "1"
+          }
+        ]
+      },
+      {
+        "@name": "SA_COLLECTION_UNLOCK_WEAPONS",
+        "@stat": "SA_ST_COLLECTION_UNLOCK_WEAPONS",
+        "unlockachievement": [
+          {
+            "@achievement": "COMBAT_SWORDS",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "COMBAT_AXES",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "COMBAT_MACES",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "COMBAT_HAMMERS",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "COMBAT_KNUCKLES",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "COMBAT_CROSSBOWS",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "COMBAT_SHIELDS",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "COMBAT_BOWS",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "COMBAT_SPEARS",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "COMBAT_NATURESTAFFS",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "COMBAT_DAGGERS",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "COMBAT_QUARTERSTAFFS",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "COMBAT_TORCHES",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "COMBAT_FIRESTAFFS",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "COMBAT_HOLYSTAFFS",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "COMBAT_ARCANESTAFFS",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "COMBAT_FROSTSTAFFS",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "COMBAT_CURSEDSTAFFS",
+            "@masterylevel": "1"
+          },
+          {
+            "@achievement": "COMBAT_BOOKS",
+            "@masterylevel": "1"
+          }
+        ]
+      },
+      {
+        "@name": "SA_COLLECTION_EMOTES",
+        "@stat": "SA_ST_COLLECTION_EMOTES",
+        "playemote": [
+          {
+            "@which": "applaud"
+          },
+          {
+            "@which": "beg"
+          },
+          {
+            "@which": "bow"
+          },
+          {
+            "@which": "cheer"
+          },
+          {
+            "@which": "cry"
+          },
+          {
+            "@which": "dance"
+          },
+          {
+            "@which": "flex"
+          },
+          {
+            "@which": "laugh"
+          },
+          {
+            "@which": "salute"
+          },
+          {
+            "@which": "wave"
+          },
+          {
+            "@which": "sit"
+          },
+          {
+            "@which": "point"
+          }
+        ]
+      },
+      {
+        "@name": "SA_CRAFTING_FAME_01",
+        "@stat": "SA_ST_CRAFTING_FAME_01",
+        "havefame": {
+          "@action": "crafting",
+          "@value": "10000"
+        }
+      },
+      {
+        "@name": "SA_CRAFTING_FAME_02",
+        "@stat": "SA_ST_CRAFTING_FAME_02",
+        "havefame": {
+          "@action": "crafting",
+          "@value": "100000"
+        }
+      },
+      {
+        "@name": "SA_CRAFTING_FAME_03",
+        "@stat": "SA_ST_CRAFTING_FAME_03",
+        "havefame": {
+          "@action": "crafting",
+          "@value": "1000000"
+        }
+      },
+      {
+        "@name": "SA_CRAFTING_FAME_04",
+        "@stat": "SA_ST_CRAFTING_FAME_04",
+        "havefame": {
+          "@action": "crafting",
+          "@value": "10000000"
+        }
+      },
+      {
+        "@name": "SA_CRAFTING_STUDY_01",
+        "usefunction": {
+          "@function": "StudyItem"
+        }
+      },
+      {
+        "@name": "SA_CRAFTING_UNLOCK_01",
+        "or": {
+          "unlockachievement": [
+            {
+              "@achievement": "CRAFT_PLATE_SHOES",
+              "@masterylevel": "1"
+            },
+            {
+              "@achievement": "CRAFT_PLATE_ARMORS",
+              "@masterylevel": "1"
+            },
+            {
+              "@achievement": "CRAFT_PLATE_HEADS",
+              "@masterylevel": "1"
+            },
+            {
+              "@achievement": "CRAFT_SWORDS",
+              "@masterylevel": "1"
+            },
+            {
+              "@achievement": "CRAFT_AXES",
+              "@masterylevel": "1"
+            },
+            {
+              "@achievement": "CRAFT_MACES",
+              "@masterylevel": "1"
+            },
+            {
+              "@achievement": "CRAFT_HAMMERS",
+              "@masterylevel": "1"
+            },
+            {
+              "@achievement": "CRAFT_KNUCKLES",
+              "@masterylevel": "1"
+            },
+            {
+              "@achievement": "CRAFT_CROSSBOWS",
+              "@masterylevel": "1"
+            },
+            {
+              "@achievement": "CRAFT_SHIELDS",
+              "@masterylevel": "1"
+            },
+            {
+              "@achievement": "CRAFT_LEATHER_SHOES",
+              "@masterylevel": "1"
+            },
+            {
+              "@achievement": "CRAFT_LEATHER_ARMORS",
+              "@masterylevel": "1"
+            },
+            {
+              "@achievement": "CRAFT_LEATHER_HEADS",
+              "@masterylevel": "1"
+            },
+            {
+              "@achievement": "CRAFT_BOWS",
+              "@masterylevel": "1"
+            },
+            {
+              "@achievement": "CRAFT_SPEARS",
+              "@masterylevel": "1"
+            },
+            {
+              "@achievement": "CRAFT_NATURESTAFFS",
+              "@masterylevel": "1"
+            },
+            {
+              "@achievement": "CRAFT_DAGGERS",
+              "@masterylevel": "1"
+            },
+            {
+              "@achievement": "CRAFT_QUARTERSTAFFS",
+              "@masterylevel": "1"
+            },
+            {
+              "@achievement": "CRAFT_TORCHES",
+              "@masterylevel": "1"
+            },
+            {
+              "@achievement": "CRAFT_CLOTH_SHOES",
+              "@masterylevel": "1"
+            },
+            {
+              "@achievement": "CRAFT_CLOTH_ARMORS",
+              "@masterylevel": "1"
+            },
+            {
+              "@achievement": "CRAFT_CLOTH_HEADS",
+              "@masterylevel": "1"
+            },
+            {
+              "@achievement": "CRAFT_FIRESTAFFS",
+              "@masterylevel": "1"
+            },
+            {
+              "@achievement": "CRAFT_HOLYSTAFFS",
+              "@masterylevel": "1"
+            },
+            {
+              "@achievement": "CRAFT_ARCANESTAFFS",
+              "@masterylevel": "1"
+            },
+            {
+              "@achievement": "CRAFT_FROSTSTAFFS",
+              "@masterylevel": "1"
+            },
+            {
+              "@achievement": "CRAFT_CURSEDSTAFFS",
+              "@masterylevel": "1"
+            },
+            {
+              "@achievement": "CRAFT_BOOKS",
+              "@masterylevel": "1"
+            },
+            {
+              "@achievement": "CRAFT_TOOL_SIEGEHAMMER",
+              "@masterylevel": "1"
+            },
+            {
+              "@achievement": "CRAFT_BAG",
+              "@masterylevel": "1"
+            },
+            {
+              "@achievement": "CRAFT_CAPE",
+              "@masterylevel": "1"
+            },
+            {
+              "@achievement": "CRAFT_TOOL_FISHINGROD",
+              "@masterylevel": "1"
+            },
+            {
+              "@achievement": "CRAFT_TOOL_AXE",
+              "@masterylevel": "1"
+            },
+            {
+              "@achievement": "CRAFT_TOOL_HAMMER",
+              "@masterylevel": "1"
+            },
+            {
+              "@achievement": "CRAFT_TOOL_PICK",
+              "@masterylevel": "1"
+            },
+            {
+              "@achievement": "CRAFT_TOOL_KNIFE",
+              "@masterylevel": "1"
+            },
+            {
+              "@achievement": "CRAFT_TOOL_SICKLE",
+              "@masterylevel": "1"
+            }
+          ]
+        }
+      },
+      {
+        "@name": "SA_CRAFTING_UNLOCK_02",
+        "or": {
+          "unlockachievement": [
+            {
+              "@achievement": "CRAFT_PLATE_SHOES",
+              "@masterylevel": "30"
+            },
+            {
+              "@achievement": "CRAFT_PLATE_ARMORS",
+              "@masterylevel": "30"
+            },
+            {
+              "@achievement": "CRAFT_PLATE_HEADS",
+              "@masterylevel": "30"
+            },
+            {
+              "@achievement": "CRAFT_SWORDS",
+              "@masterylevel": "30"
+            },
+            {
+              "@achievement": "CRAFT_AXES",
+              "@masterylevel": "30"
+            },
+            {
+              "@achievement": "CRAFT_MACES",
+              "@masterylevel": "30"
+            },
+            {
+              "@achievement": "CRAFT_HAMMERS",
+              "@masterylevel": "30"
+            },
+            {
+              "@achievement": "CRAFT_KNUCKLES",
+              "@masterylevel": "30"
+            },
+            {
+              "@achievement": "CRAFT_CROSSBOWS",
+              "@masterylevel": "30"
+            },
+            {
+              "@achievement": "CRAFT_SHIELDS",
+              "@masterylevel": "30"
+            },
+            {
+              "@achievement": "CRAFT_LEATHER_SHOES",
+              "@masterylevel": "30"
+            },
+            {
+              "@achievement": "CRAFT_LEATHER_ARMORS",
+              "@masterylevel": "30"
+            },
+            {
+              "@achievement": "CRAFT_LEATHER_HEADS",
+              "@masterylevel": "30"
+            },
+            {
+              "@achievement": "CRAFT_BOWS",
+              "@masterylevel": "30"
+            },
+            {
+              "@achievement": "CRAFT_SPEARS",
+              "@masterylevel": "30"
+            },
+            {
+              "@achievement": "CRAFT_NATURESTAFFS",
+              "@masterylevel": "30"
+            },
+            {
+              "@achievement": "CRAFT_DAGGERS",
+              "@masterylevel": "30"
+            },
+            {
+              "@achievement": "CRAFT_QUARTERSTAFFS",
+              "@masterylevel": "30"
+            },
+            {
+              "@achievement": "CRAFT_TORCHES",
+              "@masterylevel": "30"
+            },
+            {
+              "@achievement": "CRAFT_CLOTH_SHOES",
+              "@masterylevel": "30"
+            },
+            {
+              "@achievement": "CRAFT_CLOTH_ARMORS",
+              "@masterylevel": "30"
+            },
+            {
+              "@achievement": "CRAFT_CLOTH_HEADS",
+              "@masterylevel": "30"
+            },
+            {
+              "@achievement": "CRAFT_FIRESTAFFS",
+              "@masterylevel": "30"
+            },
+            {
+              "@achievement": "CRAFT_HOLYSTAFFS",
+              "@masterylevel": "30"
+            },
+            {
+              "@achievement": "CRAFT_ARCANESTAFFS",
+              "@masterylevel": "30"
+            },
+            {
+              "@achievement": "CRAFT_FROSTSTAFFS",
+              "@masterylevel": "30"
+            },
+            {
+              "@achievement": "CRAFT_CURSEDSTAFFS",
+              "@masterylevel": "30"
+            },
+            {
+              "@achievement": "CRAFT_BOOKS",
+              "@masterylevel": "30"
+            },
+            {
+              "@achievement": "CRAFT_TOOL_SIEGEHAMMER",
+              "@masterylevel": "30"
+            },
+            {
+              "@achievement": "CRAFT_BAG",
+              "@masterylevel": "30"
+            },
+            {
+              "@achievement": "CRAFT_CAPE",
+              "@masterylevel": "30"
+            },
+            {
+              "@achievement": "CRAFT_TOOL_FISHINGROD",
+              "@masterylevel": "30"
+            },
+            {
+              "@achievement": "CRAFT_TOOL_AXE",
+              "@masterylevel": "30"
+            },
+            {
+              "@achievement": "CRAFT_TOOL_HAMMER",
+              "@masterylevel": "30"
+            },
+            {
+              "@achievement": "CRAFT_TOOL_PICK",
+              "@masterylevel": "30"
+            },
+            {
+              "@achievement": "CRAFT_TOOL_KNIFE",
+              "@masterylevel": "30"
+            },
+            {
+              "@achievement": "CRAFT_TOOL_SICKLE",
+              "@masterylevel": "30"
+            }
+          ]
+        }
+      },
+      {
+        "@name": "SA_CRAFTING_UNLOCK_03",
+        "or": {
+          "unlockachievement": [
+            {
+              "@achievement": "CRAFT_PLATE_SHOES",
+              "@masterylevel": "100"
+            },
+            {
+              "@achievement": "CRAFT_PLATE_ARMORS",
+              "@masterylevel": "100"
+            },
+            {
+              "@achievement": "CRAFT_PLATE_HEADS",
+              "@masterylevel": "100"
+            },
+            {
+              "@achievement": "CRAFT_SWORDS",
+              "@masterylevel": "100"
+            },
+            {
+              "@achievement": "CRAFT_AXES",
+              "@masterylevel": "100"
+            },
+            {
+              "@achievement": "CRAFT_MACES",
+              "@masterylevel": "100"
+            },
+            {
+              "@achievement": "CRAFT_HAMMERS",
+              "@masterylevel": "100"
+            },
+            {
+              "@achievement": "CRAFT_KNUCKLES",
+              "@masterylevel": "100"
+            },
+            {
+              "@achievement": "CRAFT_CROSSBOWS",
+              "@masterylevel": "100"
+            },
+            {
+              "@achievement": "CRAFT_SHIELDS",
+              "@masterylevel": "100"
+            },
+            {
+              "@achievement": "CRAFT_LEATHER_SHOES",
+              "@masterylevel": "100"
+            },
+            {
+              "@achievement": "CRAFT_LEATHER_ARMORS",
+              "@masterylevel": "100"
+            },
+            {
+              "@achievement": "CRAFT_LEATHER_HEADS",
+              "@masterylevel": "100"
+            },
+            {
+              "@achievement": "CRAFT_BOWS",
+              "@masterylevel": "100"
+            },
+            {
+              "@achievement": "CRAFT_SPEARS",
+              "@masterylevel": "100"
+            },
+            {
+              "@achievement": "CRAFT_NATURESTAFFS",
+              "@masterylevel": "100"
+            },
+            {
+              "@achievement": "CRAFT_DAGGERS",
+              "@masterylevel": "100"
+            },
+            {
+              "@achievement": "CRAFT_QUARTERSTAFFS",
+              "@masterylevel": "100"
+            },
+            {
+              "@achievement": "CRAFT_TORCHES",
+              "@masterylevel": "100"
+            },
+            {
+              "@achievement": "CRAFT_CLOTH_SHOES",
+              "@masterylevel": "100"
+            },
+            {
+              "@achievement": "CRAFT_CLOTH_ARMORS",
+              "@masterylevel": "100"
+            },
+            {
+              "@achievement": "CRAFT_CLOTH_HEADS",
+              "@masterylevel": "100"
+            },
+            {
+              "@achievement": "CRAFT_FIRESTAFFS",
+              "@masterylevel": "100"
+            },
+            {
+              "@achievement": "CRAFT_HOLYSTAFFS",
+              "@masterylevel": "100"
+            },
+            {
+              "@achievement": "CRAFT_ARCANESTAFFS",
+              "@masterylevel": "100"
+            },
+            {
+              "@achievement": "CRAFT_FROSTSTAFFS",
+              "@masterylevel": "100"
+            },
+            {
+              "@achievement": "CRAFT_CURSEDSTAFFS",
+              "@masterylevel": "100"
+            },
+            {
+              "@achievement": "CRAFT_BOOKS",
+              "@masterylevel": "100"
+            },
+            {
+              "@achievement": "CRAFT_TOOL_SIEGEHAMMER",
+              "@masterylevel": "100"
+            },
+            {
+              "@achievement": "CRAFT_BAG",
+              "@masterylevel": "100"
+            },
+            {
+              "@achievement": "CRAFT_CAPE",
+              "@masterylevel": "100"
+            },
+            {
+              "@achievement": "CRAFT_TOOL_FISHINGROD",
+              "@masterylevel": "100"
+            },
+            {
+              "@achievement": "CRAFT_TOOL_AXE",
+              "@masterylevel": "100"
+            },
+            {
+              "@achievement": "CRAFT_TOOL_HAMMER",
+              "@masterylevel": "100"
+            },
+            {
+              "@achievement": "CRAFT_TOOL_PICK",
+              "@masterylevel": "100"
+            },
+            {
+              "@achievement": "CRAFT_TOOL_KNIFE",
+              "@masterylevel": "100"
+            },
+            {
+              "@achievement": "CRAFT_TOOL_SICKLE",
+              "@masterylevel": "100"
+            }
+          ]
+        }
+      },
+      {
+        "@name": "SA_EXPEDITION_FINISH_01",
+        "finishexpedition": {
+          "@type": "normal"
+        }
+      },
+      {
+        "@name": "SA_EXPEDITION_FINISH_ALL",
+        "@stat": "SA_ST_EXPEDITION_FINISH_ALL",
+        "finishexpedition": [
+          {
+            "@name": "HERETIC_MINE"
+          },
+          {
+            "@name": "UNDEAD_RECRUITMENT"
+          },
+          {
+            "@name": "HERETIC_FISHYBUSINESS"
+          },
+          {
+            "@name": "KEEPER_STONEWARS"
+          },
+          {
+            "@name": "HERETIC_LUMBERCAMP"
+          },
+          {
+            "@name": "UNDEAD_SEWERSCRYPT"
+          },
+          {
+            "@name": "KEEPER_MUSHROOM"
+          },
+          {
+            "@name": "MORGANA_TRHEESISTERS"
+          },
+          {
+            "@name": "HERETIC_FISTFULOFSILVER"
+          },
+          {
+            "@name": "UNDEAD_ETERNALBATTLE"
+          },
+          {
+            "@name": "MORGANA_TORTURER"
+          }
+        ]
+      },
+      {
+        "@name": "SA_EXPEDITION_HARDCORE_01",
+        "finishexpedition": {
+          "@type": "hardcore"
+        }
+      },
+      {
+        "@name": "SA_EXPLORATION_CITIES",
+        "@stat": "SA_ST_EXPLORATION_CITIES",
+        "gotocluster": [
+          {
+            "@clusterdirect": "3003"
+          },
+          {
+            "@clusterdirect": "3004"
+          }
+        ]
+      },
+      {
+        "@name": "SA_EXPLORATION_GOTO_HELLGATE",
+        "gotocluster": {
+          "@clustertype": "Hellgate"
+        }
+      },
+      {
+        "@name": "SA_EXPLORATION_BLACKZONE",
+        "gotocluster": {
+          "@archetype": "BLACK"
+        }
+      },
+      {
+        "@name": "SA_FARMING_FAME_01",
+        "havefame": {
+          "@action": "farming",
+          "@value": "1"
+        }
+      },
+      {
+        "@name": "SA_FARMING_FAME_02",
+        "@stat": "SA_ST_FARMING_FAME_02",
+        "havefame": {
+          "@action": "farming",
+          "@value": "100000"
+        }
+      },
+      {
+        "@name": "SA_FARMING_FAME_03",
+        "@stat": "SA_ST_FARMING_FAME_03",
+        "havefame": {
+          "@action": "farming",
+          "@value": "1000000"
+        }
+      },
+      {
+        "@name": "SA_FARMING_HORSE",
+        "farmraise": {
+          "@itemid": "*HORSE*"
+        }
+      },
+      {
+        "@name": "SA_GATHERING_FAME_01",
+        "@stat": "SA_ST_GATHERING_FAME_01",
+        "havefame": {
+          "@action": "gathering",
+          "@value": "10000"
+        }
+      },
+      {
+        "@name": "SA_GATHERING_FAME_02",
+        "@stat": "SA_ST_GATHERING_FAME_02",
+        "havefame": {
+          "@action": "gathering",
+          "@value": "100000"
+        }
+      },
+      {
+        "@name": "SA_GATHERING_FAME_03",
+        "@stat": "SA_ST_GATHERING_FAME_03",
+        "havefame": {
+          "@action": "gathering",
+          "@value": "1000000"
+        }
+      },
+      {
+        "@name": "SA_GATHERING_TERRITORY_RAID",
+        "gatherfame": {
+          "@value": "1",
+          "@mintier": "8",
+          "@inenemyterritory": "true"
+        }
+      },
+      {
+        "@name": "SA_GATHERING_UNLOCK_01",
+        "or": {
+          "unlockachievement": [
+            {
+              "@achievement": "GATHER_ROCK_T4",
+              "@masterylevel": "1"
+            },
+            {
+              "@achievement": "GATHER_WOOD_T4",
+              "@masterylevel": "1"
+            },
+            {
+              "@achievement": "GATHER_HIDE_T4",
+              "@masterylevel": "1"
+            },
+            {
+              "@achievement": "GATHER_ORE_T4",
+              "@masterylevel": "1"
+            },
+            {
+              "@achievement": "GATHER_FIBER_T4",
+              "@masterylevel": "1"
+            }
+          ]
+        }
+      },
+      {
+        "@name": "SA_GATHERING_UNLOCK_02",
+        "or": {
+          "unlockachievement": [
+            {
+              "@achievement": "GATHER_ROCK_T6",
+              "@masterylevel": "1"
+            },
+            {
+              "@achievement": "GATHER_WOOD_T6",
+              "@masterylevel": "1"
+            },
+            {
+              "@achievement": "GATHER_HIDE_T6",
+              "@masterylevel": "1"
+            },
+            {
+              "@achievement": "GATHER_ORE_T6",
+              "@masterylevel": "1"
+            },
+            {
+              "@achievement": "GATHER_FIBER_T6",
+              "@masterylevel": "1"
+            }
+          ]
+        }
+      },
+      {
+        "@name": "SA_GATHERING_UNLOCK_03",
+        "or": {
+          "unlockachievement": [
+            {
+              "@achievement": "GATHER_ROCK_T8",
+              "@masterylevel": "1"
+            },
+            {
+              "@achievement": "GATHER_WOOD_T8",
+              "@masterylevel": "1"
+            },
+            {
+              "@achievement": "GATHER_HIDE_T8",
+              "@masterylevel": "1"
+            },
+            {
+              "@achievement": "GATHER_ORE_T8",
+              "@masterylevel": "1"
+            },
+            {
+              "@achievement": "GATHER_FIBER_T8",
+              "@masterylevel": "1"
+            }
+          ]
+        }
+      },
+      {
+        "@name": "SA_FISHING_FAME_01",
+        "havefame": {
+          "@action": "fishing",
+          "@value": "1"
+        }
+      },
+      {
+        "@name": "SA_FISHING_FAME_02",
+        "@stat": "SA_ST_FISHING_FAME_02",
+        "havefame": {
+          "@action": "fishing",
+          "@value": "10000"
+        }
+      },
+      {
+        "@name": "SA_FISHING_FAME_03",
+        "@stat": "SA_ST_FISHING_FAME_03",
+        "havefame": {
+          "@action": "fishing",
+          "@value": "1000000"
+        }
+      },
+      {
+        "@name": "SA_PLAYERISLAND",
+        "haveisland": null
+      },
+      {
+        "@name": "SA_PLAYERISLAND_MAX",
+        "haveisland": {
+          "@minislandlevel": "5"
+        }
+      },
+      {
+        "@name": "SA_PLAYERISLAND_BUILD_01",
+        "haveisland": {
+          "@minhousetier": "1"
+        }
+      },
+      {
+        "@name": "SA_PLAYERISLAND_BUILD_02",
+        "haveisland": {
+          "@minhousetier": "8"
+        }
+      },
+      {
+        "@name": "SA_PLAYERISLAND_LABORER_01",
+        "sendlaborer": null
+      },
+      {
+        "@name": "SA_PLAYERISLAND_LABORER_02",
+        "sendlaborer": {
+          "@tier": "8"
+        }
+      },
+      {
+        "@name": "SA_PLAYERISLAND_LABORER_03",
+        "sendlaborer": {
+          "@minyield": "1"
+        }
+      },
+      {
+        "@name": "SA_PVE_KILL_MORGANA",
+        "@stat": "SA_ST_PVE_KILL_MORGANA",
+        "killmob": {
+          "@faction": "MORGANA",
+          "@count": "1000",
+          "@countpartykills": "true"
+        }
+      },
+      {
+        "@name": "SA_PVE_KILL_DEMONPRINCE",
+        "or": {
+          "killmob": [
+            {
+              "@mobid": "T6_MOB_MORGANA_DEMON_PRINCE_ELITE_BOSS",
+              "@count": "1",
+              "@countpartykills": "true"
+            },
+            {
+              "@mobid": "T8_MOB_MORGANA_DEMON_PRINCE_ELITE_BOSS",
+              "@count": "1",
+              "@countpartykills": "true"
+            }
+          ]
+        }
+      },
+      {
+        "@name": "SA_PVE_KILL_KEEPER",
+        "@stat": "SA_ST_PVE_KILL_KEEPER",
+        "killmob": {
+          "@faction": "KEEPER",
+          "@count": "1000",
+          "@countpartykills": "true"
+        }
+      },
+      {
+        "@name": "SA_PVE_KILL_EARTHMOTHER",
+        "or": {
+          "killmob": [
+            {
+              "@mobid": "T5_MOB_KEEPER_EARTHMOTHER_ELITE_BOSS",
+              "@count": "1",
+              "@countpartykills": "true"
+            },
+            {
+              "@mobid": "T8_MOB_KEEPER_EARTHMOTHER_ELITE_BOSS",
+              "@count": "1",
+              "@countpartykills": "true"
+            }
+          ]
+        }
+      },
+      {
+        "@name": "SA_PVE_KILL_UNDEAD",
+        "@stat": "SA_ST_PVE_KILL_UNDEAD",
+        "killmob": {
+          "@faction": "UNDEAD",
+          "@count": "1000",
+          "@countpartykills": "true"
+        }
+      },
+      {
+        "@name": "SA_PVE_KILL_HARVESTER",
+        "or": {
+          "killmob": [
+            {
+              "@mobid": "T7_MOB_UNDEAD_HARVESTER_ELITE_BOSS",
+              "@count": "1",
+              "@countpartykills": "true"
+            },
+            {
+              "@mobid": "T8_MOB_UNDEAD_HARVESTER_ELITE_BOSS",
+              "@count": "1",
+              "@countpartykills": "true"
+            }
+          ]
+        }
+      },
+      {
+        "@name": "SA_PVE_KILL_HERETIC",
+        "@stat": "SA_ST_PVE_KILL_HERETIC",
+        "killmob": {
+          "@faction": "HERETIC",
+          "@count": "1000",
+          "@countpartykills": "true"
+        }
+      },
+      {
+        "@name": "SA_PVE_FAME_01",
+        "@stat": "SA_ST_PVE_FAME_01",
+        "havefame": {
+          "@action": "pve",
+          "@value": "1000"
+        }
+      },
+      {
+        "@name": "SA_PVE_FAME_02",
+        "@stat": "SA_ST_PVE_FAME_02",
+        "havefame": {
+          "@action": "pve",
+          "@value": "100000"
+        }
+      },
+      {
+        "@name": "SA_PVE_FAME_03",
+        "@stat": "SA_ST_PVE_FAME_03",
+        "havefame": {
+          "@action": "pve",
+          "@value": "10000000"
+        }
+      },
+      {
+        "@name": "SA_PVE_KILL_T1",
+        "@stat": "SA_ST_PVE_KILL_T1",
+        "killmob": {
+          "@mintier": "1",
+          "@maxtier": "1",
+          "@count": "100"
+        }
+      },
+      {
+        "@name": "SA_PVE_KILL_MINIGUARDIANS",
+        "@stat": "SA_ST_PVE_KILL_MINIGUARDIANS",
+        "killmob": {
+          "@mobid": "T6_MOB_MINIGUARDIAN_STEPPE_MAMMOTH",
+          "@count": "1",
+          "@countpartykills": "true"
+        },
+        "or": [
+          {
+            "killmob": [
+              {
+                "@mobid": "T6_MOB_MINIGUARDIAN_FIBER_SWAMP_RED",
+                "@count": "1",
+                "@countpartykills": "true"
+              },
+              {
+                "@mobid": "T6_MOB_MINIGUARDIAN_FIBER_SWAMP_DEAD",
+                "@count": "1",
+                "@countpartykills": "true"
+              }
+            ]
+          },
+          {
+            "killmob": [
+              {
+                "@mobid": "T6_MOB_MINIGUARDIAN_ORE_MOUNTAIN_RED",
+                "@count": "1",
+                "@countpartykills": "true"
+              },
+              {
+                "@mobid": "T6_MOB_MINIGUARDIAN_ORE_MOUNTAIN_DEAD",
+                "@count": "1",
+                "@countpartykills": "true"
+              }
+            ]
+          },
+          {
+            "killmob": [
+              {
+                "@mobid": "T6_MOB_MINIGUARDIAN_WOOD_FOREST_RED",
+                "@count": "1",
+                "@countpartykills": "true"
+              },
+              {
+                "@mobid": "T6_MOB_MINIGUARDIAN_WOOD_FOREST_DEAD",
+                "@count": "1",
+                "@countpartykills": "true"
+              }
+            ]
+          },
+          {
+            "killmob": [
+              {
+                "@mobid": "T6_MOB_MINIGUARDIAN_ROCK_HIGHLAND_RED",
+                "@count": "1",
+                "@countpartykills": "true"
+              },
+              {
+                "@mobid": "T6_MOB_MINIGUARDIAN_ROCK_HIGHLAND_DEAD",
+                "@count": "1",
+                "@countpartykills": "true"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "@name": "SA_REPUTATION_MAX",
+        "havereputation": {
+          "@min": "10000"
+        }
+      },
+      {
+        "@name": "SA_REPUTATION_GOOD",
+        "havereputation": {
+          "@min": "500"
+        }
+      },
+      {
+        "@name": "SA_REPUTATION_MIN",
+        "@hidden": "true",
+        "havereputation": {
+          "@min": "-50000",
+          "@max": "-20000"
+        }
+      },
+      {
+        "@name": "SA_REPUTATION_BAD",
+        "@hidden": "true",
+        "havereputation": {
+          "@min": "-50000",
+          "@max": "-1000"
+        }
+      },
+      {
+        "@name": "SA_PVP_DIE_PLAYER",
+        "@hidden": "true",
+        "die": {
+          "@where": "pvp",
+          "@minvalue": "0"
+        }
+      },
+      {
+        "@name": "SA_PVP_GVG_WIN_01",
+        "participateinopenworldattack": {
+          "@role": "Attacker",
+          "@result": "AttackerWon"
+        }
+      },
+      {
+        "@name": "SA_PVP_KILL_PLAYER_01",
+        "killplayer": {
+          "@where": "pvp",
+          "@minvalue": "0"
+        }
+      },
+      {
+        "@name": "SA_PVP_KILL_PLAYER_02",
+        "@stat": "SA_ST_PVP_KILL_PLAYER_02",
+        "killplayer": {
+          "@where": "pvp",
+          "@minvalue": "0",
+          "@count": "300"
+        }
+      },
+      {
+        "@name": "SA_PVP_KILL_PLAYER_MONSTER",
+        "@hidden": "true",
+        "killingspree": {
+          "@count": "6",
+          "@where": "pvp",
+          "@seconds": "60",
+          "@countassists": "true"
+        }
+      },
+      {
+        "@name": "SA_PVP_TERMINATOR",
+        "@hidden": "true",
+        "terminatorgrabloot": null
+      },
+      {
+        "@name": "SA_PVP_WIN_HELLGATE_01",
+        "usefunction": {
+          "@function": "WinHellgatePvp"
+        }
+      },
+      {
+        "@name": "SA_SOCIAL_GUILD",
+        "usefunction": {
+          "@function": "BeInGuild"
+        }
+      },
+      {
+        "@name": "SA_SOCIAL_FRIEND_01",
+        "usefunction": {
+          "@function": "HaveAFriend"
+        }
+      },
+      {
+        "@name": "SA_TRADE_ANY_ITEM_BM",
+        "havemarketsilverearned": {
+          "@markettype": "blackmarket",
+          "@value": "1"
+        }
+      },
+      {
+        "@name": "SA_TRADE_ANY_ITEM_MP",
+        "havemarketsilverearned": {
+          "@markettype": "normal",
+          "@value": "1"
+        }
+      },
+      {
+        "@name": "SA_TRADE_SILVER_01",
+        "@stat": "SA_ST_TRADE_SILVER_01",
+        "havemarketsilverearned": {
+          "@markettype": "all",
+          "@value": "100000"
+        }
+      },
+      {
+        "@name": "SA_TRADE_SILVER_02",
+        "@stat": "SA_ST_TRADE_SILVER_02",
+        "havemarketsilverearned": {
+          "@markettype": "all",
+          "@value": "1000000"
+        }
+      },
+      {
+        "@name": "SA_TRADE_SILVER_03",
+        "@stat": "SA_ST_TRADE_SILVER_03",
+        "havemarketsilverearned": {
+          "@markettype": "all",
+          "@value": "10000000"
+        }
+      },
+      {
+        "@name": "SA_FACTIONWARFARE_JOIN",
+        "usefunction": {
+          "@function": "EnlistWithFaction"
+        }
+      },
+      {
+        "@name": "SA_FACTIONWARFARE_CAPTURE_01",
+        "captureoutpost": null
+      },
+      {
+        "@name": "SA_FACTIONWARFARE_CAPTURE_02",
+        "@stat": "SA_ST_FACTIONWARFARE_CAPTURE_02",
+        "captureoutpost": {
+          "@count": "10"
+        }
+      },
+      {
+        "@name": "SA_FACTIONWARFARE_CAPTURE_03",
+        "@stat": "SA_ST_FACTIONWARFARE_CAPTURE_03",
+        "captureoutpost": {
+          "@count": "100"
+        }
+      },
+      {
+        "@name": "SA_FACTIONWARFARE_KILLBOSS_ALL",
+        "@stat": "SA_ST_FACTIONWARFARE_KILLBOSS_ALL",
+        "any": {
+          "@count": "5",
+          "or": [
+            {
+              "killmob": [
+                {
+                  "@mobid": "T5_MOB_CITY_FOREST_BOSS",
+                  "@count": "1",
+                  "@countpartykills": "true"
+                },
+                {
+                  "@mobid": "T6_MOB_CITY_FOREST_BOSS",
+                  "@count": "1",
+                  "@countpartykills": "true"
+                }
+              ]
+            },
+            {
+              "killmob": [
+                {
+                  "@mobid": "T5_MOB_CITY_HIGHLAND_BOSS",
+                  "@count": "1",
+                  "@countpartykills": "true"
+                },
+                {
+                  "@mobid": "T6_MOB_CITY_HIGHLAND_BOSS",
+                  "@count": "1",
+                  "@countpartykills": "true"
+                }
+              ]
+            },
+            {
+              "killmob": [
+                {
+                  "@mobid": "T5_MOB_CITY_MOUNTAIN_BOSS",
+                  "@count": "1",
+                  "@countpartykills": "true"
+                },
+                {
+                  "@mobid": "T6_MOB_CITY_MOUNTAIN_BOSS",
+                  "@count": "1",
+                  "@countpartykills": "true"
+                }
+              ]
+            },
+            {
+              "killmob": [
+                {
+                  "@mobid": "T5_MOB_CITY_STEPPE_BOSS",
+                  "@count": "1",
+                  "@countpartykills": "true"
+                },
+                {
+                  "@mobid": "T6_MOB_CITY_STEPPE_BOSS",
+                  "@count": "1",
+                  "@countpartykills": "true"
+                }
+              ]
+            },
+            {
+              "killmob": [
+                {
+                  "@mobid": "T5_MOB_CITY_SWAMP_BOSS",
+                  "@count": "1",
+                  "@countpartykills": "true"
+                },
+                {
+                  "@mobid": "T6_MOB_CITY_SWAMP_BOSS",
+                  "@count": "1",
+                  "@countpartykills": "true"
+                }
+              ]
+            },
+            {
+              "killmob": [
+                {
+                  "@mobid": "T5_MOB_CITY_CAERLEON_BOSS",
+                  "@count": "1",
+                  "@countpartykills": "true"
+                },
+                {
+                  "@mobid": "T6_MOB_CITY_CAERLEON_BOSS",
+                  "@count": "1",
+                  "@countpartykills": "true"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "@name": "SA_FACTIONWARFARE_STANDING_MAX",
+        "@stat": "SA_ST_FACTIONWARFARE_STANDING_MAX",
+        "havefactionstanding": {
+          "@faction": "any",
+          "@value": "330000"
+        }
+      },
+      {
+        "@name": "SA_FACTIONWARFARE_TRADEMISSION_01",
+        "finishquest": {
+          "@questtype": "FactionQuest"
+        }
+      },
+      {
+        "@name": "SA_COLLECTION_OVERCHARGE_01",
+        "usefunction": {
+          "@function": "OverChargeItem"
+        }
+      },
+      {
+        "@name": "SA_COLLECTION_PARTYFINDER",
+        "usefunction": {
+          "@function": "PartyFinderStartOrJoinParty"
+        }
+      },
+      {
+        "@name": "SA_COLLECTION_TUTORIAL",
+        "reachtutorialstate": {
+          "@name": "FINISH"
+        }
+      },
+      {
+        "@name": "SA_COLLECTION_TUTORIAL_02",
+        "reachtutorialstate": {
+          "@name": "SHIPFIXED"
+        }
+      },
+      {
+        "@name": "SA_PVE_RANDOMDUNGEON_ENTERED_01",
+        "usefunction": {
+          "@function": "EnterRandomDungeon"
+        }
+      },
+      {
+        "@name": "SA_PVE_RANDOMDUNGEON_ENTERED_02",
+        "@stat": "SA_ST_PVE_RANDOMDUNGEON_ENTERED_02",
+        "usefunction": {
+          "@function": "EnterRandomDungeon",
+          "@count": "1000"
+        }
+      },
+      {
+        "@name": "SA_PVE_RANDOMDUNGEON_LEGENDARY",
+        "@stat": "SA_ST_PVE_RANDOMDUNGEON_LEGENDARY",
+        "or": [
+          {
+            "killmob": [
+              {
+                "@mobid": "T4_MOB_RD_HERETIC_SHADOWMASK_VETERAN_BOSS",
+                "@count": "1",
+                "@countpartykills": "true"
+              },
+              {
+                "@mobid": "T5_MOB_RD_HERETIC_SHADOWMASK_VETERAN_BOSS",
+                "@count": "1",
+                "@countpartykills": "true"
+              },
+              {
+                "@mobid": "T6_MOB_RD_HERETIC_SHADOWMASK_VETERAN_BOSS",
+                "@count": "1",
+                "@countpartykills": "true"
+              },
+              {
+                "@mobid": "T7_MOB_RD_HERETIC_SHADOWMASK_VETERAN_BOSS",
+                "@count": "1",
+                "@countpartykills": "true"
+              },
+              {
+                "@mobid": "T8_MOB_RD_HERETIC_SHADOWMASK_VETERAN_BOSS",
+                "@count": "1",
+                "@countpartykills": "true"
+              }
+            ]
+          },
+          {
+            "killmob": [
+              {
+                "@mobid": "T4_MOB_RD_KEEPER_EARTHMOTHER_VETERAN_BOSS",
+                "@count": "1",
+                "@countpartykills": "true"
+              },
+              {
+                "@mobid": "T5_MOB_RD_KEEPER_EARTHMOTHER_VETERAN_BOSS",
+                "@count": "1",
+                "@countpartykills": "true"
+              },
+              {
+                "@mobid": "T6_MOB_RD_KEEPER_EARTHMOTHER_VETERAN_BOSS",
+                "@count": "1",
+                "@countpartykills": "true"
+              },
+              {
+                "@mobid": "T7_MOB_RD_KEEPER_EARTHMOTHER_VETERAN_BOSS",
+                "@count": "1",
+                "@countpartykills": "true"
+              },
+              {
+                "@mobid": "T8_MOB_RD_KEEPER_EARTHMOTHER_VETERAN_BOSS",
+                "@count": "1",
+                "@countpartykills": "true"
+              }
+            ]
+          },
+          {
+            "killmob": [
+              {
+                "@mobid": "T4_MOB_RD_UNDEAD_HARVESTER_VETERAN_BOSS",
+                "@count": "1",
+                "@countpartykills": "true"
+              },
+              {
+                "@mobid": "T5_MOB_RD_UNDEAD_HARVESTER_VETERAN_BOSS",
+                "@count": "1",
+                "@countpartykills": "true"
+              },
+              {
+                "@mobid": "T6_MOB_RD_UNDEAD_HARVESTER_VETERAN_BOSS",
+                "@count": "1",
+                "@countpartykills": "true"
+              },
+              {
+                "@mobid": "T7_MOB_RD_UNDEAD_HARVESTER_VETERAN_BOSS",
+                "@count": "1",
+                "@countpartykills": "true"
+              },
+              {
+                "@mobid": "T8_MOB_RD_UNDEAD_HARVESTER_VETERAN_BOSS",
+                "@count": "1",
+                "@countpartykills": "true"
+              }
+            ]
+          },
+          {
+            "killmob": [
+              {
+                "@mobid": "T4_MOB_RD_MORGANA_DEMON_PRINCE_VETERAN_BOSS",
+                "@count": "1",
+                "@countpartykills": "true"
+              },
+              {
+                "@mobid": "T5_MOB_RD_MORGANA_DEMON_PRINCE_VETERAN_BOSS",
+                "@count": "1",
+                "@countpartykills": "true"
+              },
+              {
+                "@mobid": "T6_MOB_RD_MORGANA_DEMON_PRINCE_VETERAN_BOSS",
+                "@count": "1",
+                "@countpartykills": "true"
+              },
+              {
+                "@mobid": "T7_MOB_RD_MORGANA_DEMON_PRINCE_VETERAN_BOSS",
+                "@count": "1",
+                "@countpartykills": "true"
+              },
+              {
+                "@mobid": "T8_MOB_RD_MORGANA_DEMON_PRINCE_VETERAN_BOSS",
+                "@count": "1",
+                "@countpartykills": "true"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "@name": "SA_PVE_RANDOMDUNGEON_LOOTCHEST_SOLO_01",
+        "@stat": "SA_ST_PVE_RANDOMDUNGEON_LOOTCHEST_SOLO_01",
+        "unlocklootchest": {
+          "@count": "10",
+          "validchest": [
+            {
+              "@name": "HERETIC_SOLO_BOOKCHEST_STANDARD"
+            },
+            {
+              "@name": "HERETIC_SOLO_BOOKCHEST_UNCOMMON"
+            },
+            {
+              "@name": "HERETIC_SOLO_BOOKCHEST_RARE"
+            },
+            {
+              "@name": "HERETIC_SOLO_BOOKCHEST_LEGENDARY"
+            },
+            {
+              "@name": "KEEPER_SOLO_BOOKCHEST_STANDARD"
+            },
+            {
+              "@name": "KEEPER_SOLO_BOOKCHEST_UNCOMMON"
+            },
+            {
+              "@name": "KEEPER_SOLO_BOOKCHEST_RARE"
+            },
+            {
+              "@name": "KEEPER_SOLO_BOOKCHEST_LEGENDARY"
+            },
+            {
+              "@name": "UNDEAD_SOLO_BOOKCHEST_STANDARD"
+            },
+            {
+              "@name": "UNDEAD_SOLO_BOOKCHEST_UNCOMMON"
+            },
+            {
+              "@name": "UNDEAD_SOLO_BOOKCHEST_RARE"
+            },
+            {
+              "@name": "UNDEAD_SOLO_BOOKCHEST_LEGENDARY"
+            },
+            {
+              "@name": "MORGANA_SOLO_BOOKCHEST_STANDARD"
+            },
+            {
+              "@name": "MORGANA_SOLO_BOOKCHEST_UNCOMMON"
+            },
+            {
+              "@name": "MORGANA_SOLO_BOOKCHEST_RARE"
+            },
+            {
+              "@name": "MORGANA_SOLO_BOOKCHEST_LEGENDARY"
+            },
+            {
+              "@name": "HERETIC_SOLO_CHEST_BOSS_UNCOMMON"
+            },
+            {
+              "@name": "HERETIC_SOLO_CHEST_BOSS_RARE"
+            },
+            {
+              "@name": "HERETIC_SOLO_CHEST_BOSS_LEGENDARY"
+            },
+            {
+              "@name": "KEEPER_SOLO_CHEST_BOSS_UNCOMMON"
+            },
+            {
+              "@name": "KEEPER_SOLO_CHEST_BOSS_RARE"
+            },
+            {
+              "@name": "KEEPER_SOLO_CHEST_BOSS_LEGENDARY"
+            },
+            {
+              "@name": "UNDEAD_SOLO_CHEST_BOSS_UNCOMMON"
+            },
+            {
+              "@name": "UNDEAD_SOLO_CHEST_BOSS_RARE"
+            },
+            {
+              "@name": "UNDEAD_SOLO_CHEST_BOSS_LEGENDARY"
+            },
+            {
+              "@name": "MORGANA_SOLO_CHEST_BOSS_UNCOMMON"
+            },
+            {
+              "@name": "MORGANA_SOLO_CHEST_BOSS_RARE"
+            },
+            {
+              "@name": "MORGANA_SOLO_CHEST_BOSS_LEGENDARY"
+            },
+            {
+              "@name": "HERETIC_SOLO_CHEST_STANDARD"
+            },
+            {
+              "@name": "HERETIC_SOLO_CHEST_UNCOMMON"
+            },
+            {
+              "@name": "HERETIC_SOLO_CHEST_RARE"
+            },
+            {
+              "@name": "HERETIC_SOLO_CHEST_LEGENDARY"
+            },
+            {
+              "@name": "KEEPER_SOLO_CHEST_STANDARD"
+            },
+            {
+              "@name": "KEEPER_SOLO_CHEST_UNCOMMON"
+            },
+            {
+              "@name": "KEEPER_SOLO_CHEST_RARE"
+            },
+            {
+              "@name": "KEEPER_SOLO_CHEST_LEGENDARY"
+            },
+            {
+              "@name": "UNDEAD_SOLO_CHEST_STANDARD"
+            },
+            {
+              "@name": "UNDEAD_SOLO_CHEST_UNCOMMON"
+            },
+            {
+              "@name": "UNDEAD_SOLO_CHEST_RARE"
+            },
+            {
+              "@name": "UNDEAD_SOLO_CHEST_LEGENDARY"
+            },
+            {
+              "@name": "MORGANA_SOLO_CHEST_STANDARD"
+            },
+            {
+              "@name": "MORGANA_SOLO_CHEST_UNCOMMON"
+            },
+            {
+              "@name": "MORGANA_SOLO_CHEST_RARE"
+            },
+            {
+              "@name": "MORGANA_SOLO_CHEST_LEGENDARY"
+            }
+          ]
+        }
+      },
+      {
+        "@name": "SA_PVE_RANDOMDUNGEON_LOOTCHEST_SOLO_02",
+        "@stat": "SA_ST_PVE_RANDOMDUNGEON_LOOTCHEST_SOLO_02",
+        "unlocklootchest": {
+          "@count": "100",
+          "validchest": [
+            {
+              "@name": "HERETIC_SOLO_BOOKCHEST_STANDARD"
+            },
+            {
+              "@name": "HERETIC_SOLO_BOOKCHEST_UNCOMMON"
+            },
+            {
+              "@name": "HERETIC_SOLO_BOOKCHEST_RARE"
+            },
+            {
+              "@name": "HERETIC_SOLO_BOOKCHEST_LEGENDARY"
+            },
+            {
+              "@name": "KEEPER_SOLO_BOOKCHEST_STANDARD"
+            },
+            {
+              "@name": "KEEPER_SOLO_BOOKCHEST_UNCOMMON"
+            },
+            {
+              "@name": "KEEPER_SOLO_BOOKCHEST_RARE"
+            },
+            {
+              "@name": "KEEPER_SOLO_BOOKCHEST_LEGENDARY"
+            },
+            {
+              "@name": "UNDEAD_SOLO_BOOKCHEST_STANDARD"
+            },
+            {
+              "@name": "UNDEAD_SOLO_BOOKCHEST_UNCOMMON"
+            },
+            {
+              "@name": "UNDEAD_SOLO_BOOKCHEST_RARE"
+            },
+            {
+              "@name": "UNDEAD_SOLO_BOOKCHEST_LEGENDARY"
+            },
+            {
+              "@name": "MORGANA_SOLO_BOOKCHEST_STANDARD"
+            },
+            {
+              "@name": "MORGANA_SOLO_BOOKCHEST_UNCOMMON"
+            },
+            {
+              "@name": "MORGANA_SOLO_BOOKCHEST_RARE"
+            },
+            {
+              "@name": "MORGANA_SOLO_BOOKCHEST_LEGENDARY"
+            },
+            {
+              "@name": "HERETIC_SOLO_CHEST_BOSS_UNCOMMON"
+            },
+            {
+              "@name": "HERETIC_SOLO_CHEST_BOSS_RARE"
+            },
+            {
+              "@name": "HERETIC_SOLO_CHEST_BOSS_LEGENDARY"
+            },
+            {
+              "@name": "KEEPER_SOLO_CHEST_BOSS_UNCOMMON"
+            },
+            {
+              "@name": "KEEPER_SOLO_CHEST_BOSS_RARE"
+            },
+            {
+              "@name": "KEEPER_SOLO_CHEST_BOSS_LEGENDARY"
+            },
+            {
+              "@name": "UNDEAD_SOLO_CHEST_BOSS_UNCOMMON"
+            },
+            {
+              "@name": "UNDEAD_SOLO_CHEST_BOSS_RARE"
+            },
+            {
+              "@name": "UNDEAD_SOLO_CHEST_BOSS_LEGENDARY"
+            },
+            {
+              "@name": "MORGANA_SOLO_CHEST_BOSS_UNCOMMON"
+            },
+            {
+              "@name": "MORGANA_SOLO_CHEST_BOSS_RARE"
+            },
+            {
+              "@name": "MORGANA_SOLO_CHEST_BOSS_LEGENDARY"
+            },
+            {
+              "@name": "HERETIC_SOLO_CHEST_STANDARD"
+            },
+            {
+              "@name": "HERETIC_SOLO_CHEST_UNCOMMON"
+            },
+            {
+              "@name": "HERETIC_SOLO_CHEST_RARE"
+            },
+            {
+              "@name": "HERETIC_SOLO_CHEST_LEGENDARY"
+            },
+            {
+              "@name": "KEEPER_SOLO_CHEST_STANDARD"
+            },
+            {
+              "@name": "KEEPER_SOLO_CHEST_UNCOMMON"
+            },
+            {
+              "@name": "KEEPER_SOLO_CHEST_RARE"
+            },
+            {
+              "@name": "KEEPER_SOLO_CHEST_LEGENDARY"
+            },
+            {
+              "@name": "UNDEAD_SOLO_CHEST_STANDARD"
+            },
+            {
+              "@name": "UNDEAD_SOLO_CHEST_UNCOMMON"
+            },
+            {
+              "@name": "UNDEAD_SOLO_CHEST_RARE"
+            },
+            {
+              "@name": "UNDEAD_SOLO_CHEST_LEGENDARY"
+            },
+            {
+              "@name": "MORGANA_SOLO_CHEST_STANDARD"
+            },
+            {
+              "@name": "MORGANA_SOLO_CHEST_UNCOMMON"
+            },
+            {
+              "@name": "MORGANA_SOLO_CHEST_RARE"
+            },
+            {
+              "@name": "MORGANA_SOLO_CHEST_LEGENDARY"
+            }
+          ]
+        }
+      },
+      {
+        "@name": "SA_PVE_RANDOMDUNGEON_LOOTCHEST_GROUP_01",
+        "@stat": "SA_ST_PVE_RANDOMDUNGEON_LOOTCHEST_GROUP_01",
+        "unlocklootchest": {
+          "@count": "10",
+          "validchest": [
+            {
+              "@name": "HERETIC_VETERAN_BOOKCHEST_STANDARD"
+            },
+            {
+              "@name": "HERETIC_VETERAN_BOOKCHEST_UNCOMMON"
+            },
+            {
+              "@name": "HERETIC_VETERAN_BOOKCHEST_RARE"
+            },
+            {
+              "@name": "HERETIC_VETERAN_BOOKCHEST_LEGENDARY"
+            },
+            {
+              "@name": "KEEPER_VETERAN_BOOKCHEST_STANDARD"
+            },
+            {
+              "@name": "KEEPER_VETERAN_BOOKCHEST_UNCOMMON"
+            },
+            {
+              "@name": "KEEPER_VETERAN_BOOKCHEST_RARE"
+            },
+            {
+              "@name": "KEEPER_VETERAN_BOOKCHEST_LEGENDARY"
+            },
+            {
+              "@name": "UNDEAD_VETERAN_BOOKCHEST_STANDARD"
+            },
+            {
+              "@name": "UNDEAD_VETERAN_BOOKCHEST_UNCOMMON"
+            },
+            {
+              "@name": "UNDEAD_VETERAN_BOOKCHEST_RARE"
+            },
+            {
+              "@name": "UNDEAD_VETERAN_BOOKCHEST_LEGENDARY"
+            },
+            {
+              "@name": "MORGANA_VETERAN_BOOKCHEST_STANDARD"
+            },
+            {
+              "@name": "MORGANA_VETERAN_BOOKCHEST_UNCOMMON"
+            },
+            {
+              "@name": "MORGANA_VETERAN_BOOKCHEST_RARE"
+            },
+            {
+              "@name": "MORGANA_VETERAN_BOOKCHEST_LEGENDARY"
+            },
+            {
+              "@name": "HERETIC_VETERAN_CHEST_BOSS_UNCOMMON"
+            },
+            {
+              "@name": "HERETIC_VETERAN_CHEST_BOSS_RARE"
+            },
+            {
+              "@name": "HERETIC_VETERAN_CHEST_BOSS_LEGENDARY"
+            },
+            {
+              "@name": "KEEPER_VETERAN_CHEST_BOSS_UNCOMMON"
+            },
+            {
+              "@name": "KEEPER_VETERAN_CHEST_BOSS_RARE"
+            },
+            {
+              "@name": "KEEPER_VETERAN_CHEST_BOSS_LEGENDARY"
+            },
+            {
+              "@name": "UNDEAD_VETERAN_CHEST_BOSS_UNCOMMON"
+            },
+            {
+              "@name": "UNDEAD_VETERAN_CHEST_BOSS_RARE"
+            },
+            {
+              "@name": "UNDEAD_VETERAN_CHEST_BOSS_LEGENDARY"
+            },
+            {
+              "@name": "MORGANA_VETERAN_CHEST_BOSS_UNCOMMON"
+            },
+            {
+              "@name": "MORGANA_VETERAN_CHEST_BOSS_RARE"
+            },
+            {
+              "@name": "MORGANA_VETERAN_CHEST_BOSS_LEGENDARY"
+            },
+            {
+              "@name": "HERETIC_VETERAN_CHEST_STANDARD"
+            },
+            {
+              "@name": "HERETIC_VETERAN_CHEST_UNCOMMON"
+            },
+            {
+              "@name": "HERETIC_VETERAN_CHEST_RARE"
+            },
+            {
+              "@name": "HERETIC_VETERAN_CHEST_LEGENDARY"
+            },
+            {
+              "@name": "KEEPER_VETERAN_CHEST_STANDARD"
+            },
+            {
+              "@name": "KEEPER_VETERAN_CHEST_UNCOMMON"
+            },
+            {
+              "@name": "KEEPER_VETERAN_CHEST_RARE"
+            },
+            {
+              "@name": "KEEPER_VETERAN_CHEST_LEGENDARY"
+            },
+            {
+              "@name": "UNDEAD_VETERAN_CHEST_STANDARD"
+            },
+            {
+              "@name": "UNDEAD_VETERAN_CHEST_UNCOMMON"
+            },
+            {
+              "@name": "UNDEAD_VETERAN_CHEST_RARE"
+            },
+            {
+              "@name": "UNDEAD_VETERAN_CHEST_LEGENDARY"
+            },
+            {
+              "@name": "MORGANA_VETERAN_CHEST_STANDARD"
+            },
+            {
+              "@name": "MORGANA_VETERAN_CHEST_UNCOMMON"
+            },
+            {
+              "@name": "MORGANA_VETERAN_CHEST_RARE"
+            },
+            {
+              "@name": "MORGANA_VETERAN_CHEST_LEGENDARY"
+            }
+          ]
+        }
+      },
+      {
+        "@name": "SA_PVE_RANDOMDUNGEON_LOOTCHEST_GROUP_02",
+        "@stat": "SA_ST_PVE_RANDOMDUNGEON_LOOTCHEST_GROUP_02",
+        "unlocklootchest": {
+          "@count": "100",
+          "validchest": [
+            {
+              "@name": "HERETIC_VETERAN_BOOKCHEST_STANDARD"
+            },
+            {
+              "@name": "HERETIC_VETERAN_BOOKCHEST_UNCOMMON"
+            },
+            {
+              "@name": "HERETIC_VETERAN_BOOKCHEST_RARE"
+            },
+            {
+              "@name": "HERETIC_VETERAN_BOOKCHEST_LEGENDARY"
+            },
+            {
+              "@name": "KEEPER_VETERAN_BOOKCHEST_STANDARD"
+            },
+            {
+              "@name": "KEEPER_VETERAN_BOOKCHEST_UNCOMMON"
+            },
+            {
+              "@name": "KEEPER_VETERAN_BOOKCHEST_RARE"
+            },
+            {
+              "@name": "KEEPER_VETERAN_BOOKCHEST_LEGENDARY"
+            },
+            {
+              "@name": "UNDEAD_VETERAN_BOOKCHEST_STANDARD"
+            },
+            {
+              "@name": "UNDEAD_VETERAN_BOOKCHEST_UNCOMMON"
+            },
+            {
+              "@name": "UNDEAD_VETERAN_BOOKCHEST_RARE"
+            },
+            {
+              "@name": "UNDEAD_VETERAN_BOOKCHEST_LEGENDARY"
+            },
+            {
+              "@name": "MORGANA_VETERAN_BOOKCHEST_STANDARD"
+            },
+            {
+              "@name": "MORGANA_VETERAN_BOOKCHEST_UNCOMMON"
+            },
+            {
+              "@name": "MORGANA_VETERAN_BOOKCHEST_RARE"
+            },
+            {
+              "@name": "MORGANA_VETERAN_BOOKCHEST_LEGENDARY"
+            },
+            {
+              "@name": "HERETIC_VETERAN_CHEST_BOSS_UNCOMMON"
+            },
+            {
+              "@name": "HERETIC_VETERAN_CHEST_BOSS_RARE"
+            },
+            {
+              "@name": "HERETIC_VETERAN_CHEST_BOSS_LEGENDARY"
+            },
+            {
+              "@name": "KEEPER_VETERAN_CHEST_BOSS_UNCOMMON"
+            },
+            {
+              "@name": "KEEPER_VETERAN_CHEST_BOSS_RARE"
+            },
+            {
+              "@name": "KEEPER_VETERAN_CHEST_BOSS_LEGENDARY"
+            },
+            {
+              "@name": "UNDEAD_VETERAN_CHEST_BOSS_UNCOMMON"
+            },
+            {
+              "@name": "UNDEAD_VETERAN_CHEST_BOSS_RARE"
+            },
+            {
+              "@name": "UNDEAD_VETERAN_CHEST_BOSS_LEGENDARY"
+            },
+            {
+              "@name": "MORGANA_VETERAN_CHEST_BOSS_UNCOMMON"
+            },
+            {
+              "@name": "MORGANA_VETERAN_CHEST_BOSS_RARE"
+            },
+            {
+              "@name": "MORGANA_VETERAN_CHEST_BOSS_LEGENDARY"
+            },
+            {
+              "@name": "HERETIC_VETERAN_CHEST_STANDARD"
+            },
+            {
+              "@name": "HERETIC_VETERAN_CHEST_UNCOMMON"
+            },
+            {
+              "@name": "HERETIC_VETERAN_CHEST_RARE"
+            },
+            {
+              "@name": "HERETIC_VETERAN_CHEST_LEGENDARY"
+            },
+            {
+              "@name": "KEEPER_VETERAN_CHEST_STANDARD"
+            },
+            {
+              "@name": "KEEPER_VETERAN_CHEST_UNCOMMON"
+            },
+            {
+              "@name": "KEEPER_VETERAN_CHEST_RARE"
+            },
+            {
+              "@name": "KEEPER_VETERAN_CHEST_LEGENDARY"
+            },
+            {
+              "@name": "UNDEAD_VETERAN_CHEST_STANDARD"
+            },
+            {
+              "@name": "UNDEAD_VETERAN_CHEST_UNCOMMON"
+            },
+            {
+              "@name": "UNDEAD_VETERAN_CHEST_RARE"
+            },
+            {
+              "@name": "UNDEAD_VETERAN_CHEST_LEGENDARY"
+            },
+            {
+              "@name": "MORGANA_VETERAN_CHEST_STANDARD"
+            },
+            {
+              "@name": "MORGANA_VETERAN_CHEST_UNCOMMON"
+            },
+            {
+              "@name": "MORGANA_VETERAN_CHEST_RARE"
+            },
+            {
+              "@name": "MORGANA_VETERAN_CHEST_LEGENDARY"
+            }
+          ]
+        }
+      },
+      {
+        "@name": "SA_PVP_CRYSTAL_PARTICIPATION",
+        "haveplayedcrystalleague": {
+          "@won": "false",
+          "@count": "1"
+        }
+      },
+      {
+        "@name": "SA_ANNIVERSARY_01",
+        "@stat": "SA_ST_ANNIVERSARY_01",
+        "havepaidaccountformindays": {
+          "@count": "365"
+        }
+      }
+    ]
+  }
+}

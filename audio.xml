@@ -3180,6 +3180,9 @@
   <WwiseEventInfo name="MELEE_BIG_INSTANT">
     <OnChannelingStart name="Play_melee_swoosh_big_instant" />
   </WwiseEventInfo>
+  <WwiseEventInfo name="MELEE_BIG_INSTANT_CASTFINISHED">
+	<OnCastFinished name="Play_melee_swoosh_big_instant_attack" />
+  </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_BIGCAST_BIGIMPACT">
     <OnCastStart name="Play_melee_swoosh_big" />
     <OnSpellHit name="Play_melee_impact_big" >
@@ -3276,6 +3279,9 @@
   <WwiseEventInfo name="MELEE_SPIN">
     <OnCastStart name="Play_melee_spin" />
   </WwiseEventInfo>
+  <WwiseEventInfo name="MELEE_SWORD_SPIN">
+	<OnCastFinished name="Play_sword_spin" />
+  </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_AXE_SPIN">
     <OnCastStart name="Play_axe_spin" />
   </WwiseEventInfo>
@@ -3296,6 +3302,11 @@
     <OnSpellHit name="Play_melee_impact_big" >
       <ImpactType/>
     </OnSpellHit>
+  </WwiseEventInfo>
+	<WwiseEventInfo name="MELEE_SWORD_SPINATTACK_IMPACT">
+	<OnSpellHit name="Play_melee_impact_medium" >
+	  <ImpactType/>
+	</OnSpellHit>
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_STOMP_MEDIUM" >
     <OnCastFinished name="Play_melee_stomp_medium" />
@@ -3599,6 +3610,18 @@
     <OnSpellHit name="Play_melee_impact_small_add" >
       <ImpactType/>
     </OnSpellHit>
+  </WwiseEventInfo>
+  <WwiseEventInfo name="MELEE_STAFF_CONCUSSIVE_SWING">
+	<OnCastFinished name="Play_quarterstaff_swoosh_small" />
+	<OnSpellHit name="Play_melee_impact_small_add" >
+		<ImpactType/>
+	</OnSpellHit>
+  </WwiseEventInfo>
+  <WwiseEventInfo name="MELEE_STAFF_CONCUSSIVE_JUMP">
+	<OnCastFinished name="Play_quarterstaff_swoosh_jump" />
+	<OnSpellHit name="Play_melee_impact_small" >
+		<ImpactType/>
+	</OnSpellHit>
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_STAFF_SLAM">
     <OnCastStart name="Play_melee_slam_swoosh" />
@@ -3984,6 +4007,10 @@
     <OnCastFinished name="Play_self_knockback" />
   </WwiseEventInfo>
 
+  <WwiseEventInfo name="SPELL_ARROW_CAST_SPEEDARCHER">
+	<OnCastFinished name="Play_spells_speedcaster_E_buff_cast" />
+  </WwiseEventInfo>
+
   <WwiseEventInfo name="SPELL_ARROW_MULTISHOT_CAST">
     <OnCastStart name="Play_arrow_load_short" />
     <OnCastCanceled name="Stop_arrow_load_short" />
@@ -4068,7 +4095,7 @@
     </OnCastFinished>
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_THROW_DAGGER" >
-    <OnCastFinished name="Play_throw_spear" />
+    <OnCastFinished name="Play_throw_dagger" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_THROW_SPEAR" >
     <OnCastStart name="Play_emote_foley_armor_move_fast"/>
@@ -5020,6 +5047,12 @@
   <WwiseEventInfo name="SPELL_SELF_BUFF">
     <OnCastStart name="Play_selfbuff_cast" />
   </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_SELF_BUFF_FURY">
+	<OnCastFinished name="Play_fury_damageincrease_cast" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_SELF_BUFF_IMMORTAL">
+	<OnCastStart name="Play_cast_buff_immortal" />
+  </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_SELF_BUFF_CASTFINISHED">
     <OnCastFinished name="Play_selfbuff_cast" />
   </WwiseEventInfo>
@@ -5042,7 +5075,7 @@
     <OnChannelingStart name="Play_selfbuff_cast" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_DAMAGE_REFLECT">
-    <OnCastStart name="Play_damage_reflect_loop" />
+    <OnCastFinished name="Play_armor_damagereflection_cast" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_CLEANSE_IMPAIRMENT">
     <OnCastFinished name="Play_cleanse_none" />
@@ -5112,10 +5145,14 @@
   <WwiseEventInfo name="SPELL_INVISIBILITY">
     <OnCastFinished name="Play_cast_invisibility" />
     <OnSpellRemoved name="Play_end_invisibility" />
+  </WwiseEventInfo> 
+  <WwiseEventInfo name="SPELL_MISTCLOUD_INVISIBILITY">
+	<OnCastFinished name="Play_cast_mistcloud_invisibility" />
+	<OnSpellRemoved name="Play_end_mistcloud_invisibility" />
   </WwiseEventInfo>
-  <WwiseEventInfo name="SPELL_INVISIBILITY_ALLY">
-	<OnSpellHit name="Play_cast_invisibility" />
-	<OnSpellRemoved name="Play_end_invisibility" />
+  <WwiseEventInfo name="SPELL_MISTCLOUD_INVISIBILITY_ALLY">
+	<OnSpellHit name="Play_cast_mistcloud_invisibility_ally" />
+	<OnSpellRemoved name="Play_end_mistcloud_invisibility_ally" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_UNDEAD_INVISIBILITY">
     <OnChannelingStart name="Play_undead_invisiblility" />
@@ -5933,6 +5970,15 @@
   <WwiseEventInfo name="SPELL_HERETIC_THIEF_DASH" >
     <OnCastFinished name="Play_heretic_thief_dash" />
   </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_HERETIC_THIEF_SLASH">
+	<OnCastStart name="Play_heretic_thief_slash" />
+	<OnCastCanceled name="Stop_heretic_thief_slash" />
+	<OnCastInterrupted name="Stop_heretic_thief_slash" />
+    <OnSpellHit name="Play_melee_impact_medium" >
+	  <ImpactType/>
+	</OnSpellHit>
+  </WwiseEventInfo>
   
   <WwiseEventInfo name="SPELL_HERETIC_TANK_CRUSH">
     <OnCastStart name="Play_melee_swoosh_load_medium" />
@@ -5940,7 +5986,38 @@
     <OnCastInterrupted name="Stop_melee_swoosh_load_medium" />
     <OnCastFinished name="Play_heretic_heavystrike" />
   </WwiseEventInfo>
-  
+
+  <WwiseEventInfo name="SPELL_HERETIC_TANK_CRUSH_NODELAY">
+	<OnCastStart name="Play_heretic_tank_crush" />
+	<OnCastCanceled name="Stop_heretic_tank_crush" />
+	<OnCastInterrupted name="Stop_heretic_tank_crush" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_HERETIC_TANK_DASH" >
+	<OnCastStart name="Play_heretic_tank_dash" />
+	<OnCastCanceled name="Stop_heretic_tank_dash" />
+	<OnCastInterrupted name="Stop_heretic_tank_dash" />
+	<OnCastFinished name="Play_armor_charge_dash" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_HERETIC_TANK_SHIELDBASH">
+	<OnCastStart name="Play_heretic_tank_shieldbash" />
+	<OnSpellHit name="Play_knockback" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_HERETIC_TANK_SHIELD_CAST_LOAD">
+	<OnCastStart name="Play_heretic_tank_load_shield" />
+	<OnCastCanceled name="Stop_heretic_tank_load_shield" />
+	<OnCastInterrupted name="Stop_heretic_tank_load_shield" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_HERETIC_TANK_SHIELD_CHANNEL">
+	<OnChannelingStart name="Play_heretic_tank_shield_start" />
+	<OnChannelingCancelled name="Stop_heretic_tank_shield_loop" />
+	<OnChannelingInterrupted name="Stop_heretic_tank_shield_loop" />
+	<OnChannelingEnd name="Stop_heretic_tank_shield_loop" />
+  </WwiseEventInfo>
+	
 <WwiseEventInfo name="SPELL_HERETIC_ARCHER_KNOCKBACK">
     <OnCastFinished name="Play_arrow_cast_medium"/>
     <OnSpellHit name="Play_fire_impact_medium" />
@@ -5950,7 +6027,7 @@
     <OnCastStart name="Play_archer_load_arrow" />
 	<OnCastCanceled name="Stop_archer_load_arrow" />
 	<OnCastInterrupted name="Stop_archer_load_arrow" />
-	<OnCastFinished name="Play_arrow_cast_medium"/>
+	<OnCastFinished name="Play_arrow_cast_medium_instant"/>
 	<OnSpellHit name="Play_fire_impact_medium" />
   </WwiseEventInfo>
 
@@ -5968,10 +6045,17 @@
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_HERETIC_MAGE_CAST_FIRE_MINE">
-	<OnCastStart name="Play_fire_cast_load_big" />
-	<OnCastInterrupted name="Stop_fire_cast_load_big" />
-	<OnCastCanceled name="Stop_fire_cast_load_big" />
-	<OnCastFinished name="Play_fire_cast_medium_fireball" />
+	<OnCastStart name="Play_fire_cast_load_medium_long_fireartillery" />
+	<OnCastInterrupted name="Stop_fire_cast_load_medium_long_fireartillery" />
+	<OnCastCanceled name="Stop_fire_cast_load_medium_long_fireartillery" />
+	<OnCastFinished name="Play_fire_cast_small_q_searingflame" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_HERETIC_MAGE_CAST_FIRE_AOE">
+	<OnCastStart name="Play_fire_cast_load_medium_long" />
+	<OnCastInterrupted name="Stop_fire_cast_load_medium_long" />
+	<OnCastCanceled name="Stop_fire_cast_load_medium_long" />
+	<OnCastFinished name="Play_fire_cast_medium_ignite_staff" />
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_HERETIC_HEALER_SHIELD">
@@ -5986,6 +6070,13 @@
 	<OnChannelingCancelled name="Stop_nature_heal_medium_loop" />
 	<OnChannelingInterrupted name="Stop_nature_heal_medium_loop" />
 	<OnChannelingEnd name="Stop_nature_heal_medium_loop" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_HERETIC_HEALER_KNOCKBACK">
+	<OnCastStart name="Play_heretic_healer_load_knockback" />
+	<OnCastCanceled name="Stop_heretic_healer_load_knockback" />
+	<OnCastInterrupted name="Stop_heretic_healer_load_knockback" />
+	<OnCastFinished name="Play_force_field" />
   </WwiseEventInfo>
 		
   <WwiseEventInfo name="SPELL_HERETIC_BALLISTA_ATTACK">
@@ -6648,6 +6739,10 @@
 	<OnCastInterrupted name="Stop_cursed_cast_load_darkmatter_morgana" />
 	<OnCastCanceled name="Stop_cursed_cast_load_darkmatter_morgana" />
 	<OnCastFinished name="Play_cursed_cast_medium" />
+  </WwiseEventInfo>
+	
+  <WwiseEventInfo name="SPELL_THROW_DAGGER_MOB" >
+    <OnCastFinished name="Play_throw_spear" />
   </WwiseEventInfo>
   
   <!-- Demon-->
@@ -8587,7 +8682,7 @@
 
   <!--Arena Custom Matches-->
   <WwiseClusterStateOverwrite clustername="ARENA-Resources_ARE_.*_.*_.*_.*">
-    <Environment name="World"/>
+    <Environment name="WorldEnv"/>
     <Biom name="Forest"/>
     <SubBiom name="Dead"/>
     <MobFaction name="None"/>
@@ -8596,7 +8691,7 @@
   </WwiseClusterStateOverwrite>
 
   <WwiseClusterStateOverwrite clustername="ARENA-Resources1_ARE_.*_.*_.*_.*">
-    <Environment name="World"/>
+    <Environment name="WorldEnv"/>
     <Biom name="Forest"/>
     <SubBiom name="Dead"/>
     <MobFaction name="None"/>
@@ -8605,7 +8700,7 @@
   </WwiseClusterStateOverwrite>
 
   <WwiseClusterStateOverwrite clustername="ARENA-Resources2_ARE_.*_.*_.*_.*">
-    <Environment name="World"/>
+    <Environment name="WorldEnv"/>
     <Biom name="Mountain"/>
     <SubBiom name="Dead"/>
     <MobFaction name="None"/>
@@ -8614,7 +8709,7 @@
   </WwiseClusterStateOverwrite>
 
   <WwiseClusterStateOverwrite clustername="ARENA-HomeTerritory_ARE_.*_.*_.*_.*_ROY">
-    <Environment name="World"/>
+    <Environment name="WorldEnv"/>
     <Biom name="Highland"/>
     <SubBiom name="Dead"/>
     <MobFaction name="None"/>
@@ -8623,7 +8718,7 @@
   </WwiseClusterStateOverwrite>
 
   <WwiseClusterStateOverwrite clustername="ARENA-City_ARE_.*_.*_.*_.*_ROY">
-    <Environment name="World"/>
+    <Environment name="WorldEnv"/>
     <Biom name="Highland"/>
     <SubBiom name="Dead"/>
     <MobFaction name="None"/>
@@ -8632,7 +8727,7 @@
   </WwiseClusterStateOverwrite>
 
   <WwiseClusterStateOverwrite clustername="ARENA-FarmLand_ARE_.*_.*_.*_.*_ROY">
-    <Environment name="World"/>
+    <Environment name="WorldEnv"/>
     <Biom name="Highland"/>
     <SubBiom name="Dead"/>
     <MobFaction name="None"/>
@@ -8642,7 +8737,7 @@
 
   <!--Crystal Realms-->
   <WwiseClusterStateOverwrite clustername="CrystalRealm_ARE_.*_.*_.*_.*_ROY">
-    <Environment name="Crystalrealm"/>
+    <Environment name="CrystalrealmEnv"/>
     <Biom name="Steppe"/>
     <SubBiom name="Dead"/>
     <MobFaction name="None"/>
@@ -8651,7 +8746,7 @@
   </WwiseClusterStateOverwrite>
 
   <WwiseClusterStateOverwrite clustername="CrystalRealm-Nonlethal_ARE_.*_.*_.*_.*_ROY">
-	<Environment name="Crystalrealm"/>
+	<Environment name="CrystalrealmEnv"/>
 	<Biom name="Steppe"/>
 	<SubBiom name="Dead"/>
 	<MobFaction name="None"/>
@@ -8660,7 +8755,7 @@
   </WwiseClusterStateOverwrite>
 
 <WwiseClusterStateOverwrite clustername="CrystalRealm02_ARE_.*_.*_.*_.*_ROY">
-	<Environment name="Crystalrealm"/>
+	<Environment name="CrystalrealmEnv"/>
 	<Biom name="Steppe"/>
 	<SubBiom name="Dead"/>
 	<MobFaction name="None"/>
@@ -8669,7 +8764,7 @@
 </WwiseClusterStateOverwrite>
 	
 <WwiseClusterStateOverwrite clustername="CrystalRealm20v20_ARE_.*_.*_.*_.*_ROY">
-	<Environment name="Crystalrealm"/>
+	<Environment name="CrystalrealmEnv"/>
 	<Biom name="Steppe"/>
 	<SubBiom name="Dead"/>
 	<MobFaction name="None"/>
@@ -8678,7 +8773,7 @@
 </WwiseClusterStateOverwrite>
 
   <WwiseClusterStateOverwrite clustername="CrystalRealm02-Nonlethal_ARE_.*_.*_.*_.*_ROY">
-	<Environment name="Crystalrealm"/>
+	<Environment name="CrystalrealmEnv"/>
 	<Biom name="Steppe"/>
 	<SubBiom name="Dead"/>
 	<MobFaction name="None"/>
@@ -8687,7 +8782,7 @@
   </WwiseClusterStateOverwrite>
 
   <WwiseClusterStateOverwrite clustername="CrystalRealmDebug_.*_.*_.*_.*_.*">
-	<Environment name="Crystalrealm"/>
+	<Environment name="CrystalrealmEnv"/>
 	<Biom name="Steppe"/>
 	<SubBiom name="Dead"/>
 	<MobFaction name="None"/>
@@ -8697,7 +8792,7 @@
 
   <!--Hall of Fame-->
   <WwiseClusterStateOverwrite clustername="3010_CTY_.*_.*_T1_NON">
-    <Environment name="HallOfFame"/>
+    <Environment name="HallOfFameEnv"/>
     <Biom name="Forest"/>
     <SubBiom name="Dead"/>
     <MobFaction name="None"/>
@@ -8706,7 +8801,7 @@
   </WwiseClusterStateOverwrite>
 
   <WwiseClusterStateOverwrite clustername=".*-HALL-.*_CTY_.*_.*_.*_NON">
-    <Environment name="HallOfFame"/>
+    <Environment name="HallOfFameEnv"/>
     <Biom name="Forest"/>
     <SubBiom name="Dead"/>
     <MobFaction name="None"/>
@@ -8716,7 +8811,7 @@
 
   <!--Carleon Monument Realmgate Cluster-->
   <WwiseClusterStateOverwrite clustername="3011_CTY_.*_.*_T7_NON">
-    <Environment name="Monument"/>
+    <Environment name="MonumentEnv"/>
     <Biom name="None"/>
     <SubBiom name="None"/>
     <MobFaction name="None"/>
@@ -8726,7 +8821,7 @@
     
   <!--Carleon Auction House-->
   <WwiseClusterStateOverwrite clustername="3005_CTY_.*_.*_T7_NON">
-    <Environment name="Bank"/>
+    <Environment name="BankEnv"/>
     <Biom name="Highland"/>
     <SubBiom name="Dead"/>
     <MobFaction name="None"/>
@@ -8735,7 +8830,7 @@
   </WwiseClusterStateOverwrite>
 
   <WwiseClusterStateOverwrite clustername="3013-Auction2_CTY_.*_.*_T7_NON">
-    <Environment name="Bank"/>
+    <Environment name="BankEnv"/>
     <Biom name="Highland"/>
     <SubBiom name="Dead"/>
     <MobFaction name="None"/>
@@ -8745,7 +8840,7 @@
   
   <!--Carleon Bank-->
   <WwiseClusterStateOverwrite clustername="3006_CTY_.*_.*_T7_NON">
-    <Environment name="Bank"/>
+    <Environment name="BankEnv"/>
     <Biom name="Highland"/>
     <SubBiom name="Dead"/>
     <MobFaction name="None"/>
@@ -8755,7 +8850,7 @@
 
   <!--Carleon Sewers-->
   <WwiseClusterStateOverwrite clustername="CenterCity-DNG-01_DNG_.*_.*_.*_NON_ROY">
-    <Environment name="Sewers"/>
+    <Environment name="SewersEnv"/>
     <Biom name="Forest"/>
     <SubBiom name="Dead"/>
     <MobFaction name="None"/>
@@ -8765,7 +8860,7 @@
 
   <!--Mist City-->
   <WwiseClusterStateOverwrite clustername="5000_CTY_.*_.*_T1_NON">
-	<Environment name="City"/>
+	<Environment name="CityEnv"/>
 	<Biom name="Mists"/>
 	<SubBiom name="Green"/>
 	<MobFaction name="None"/>
@@ -8774,7 +8869,7 @@
   </WwiseClusterStateOverwrite>
 	
   <WwiseClusterStateOverwrite clustername="5001_CTY_.*_.*_T1_NON">
-	<Environment name="City"/>
+	<Environment name="CityEnv"/>
 	<Biom name="Mists"/>
 	<SubBiom name="Green"/>
 	<MobFaction name="None"/>
@@ -8784,7 +8879,7 @@
 
   <!--Mist City Bank-->
   <WwiseClusterStateOverwrite clustername="5002_CTY_.*_.*_T7_NON">
-	<Environment name="City"/>
+	<Environment name="CityEnv"/>
 	<Biom name="Mists"/>
 	<SubBiom name="Green"/>
 	<MobFaction name="None"/>
@@ -8794,7 +8889,7 @@
 
   <!--Mist City Auctionhouse-->
     <WwiseClusterStateOverwrite clustername="5003_CTY_.*_.*_T7_NON">
-	<Environment name="City"/>
+	<Environment name="CityEnv"/>
 	<Biom name="Mists"/>
 	<SubBiom name="Green"/>
 	<MobFaction name="None"/>
@@ -8804,7 +8899,7 @@
 
   <!--Passages-->
   <WwiseClusterStateOverwrite clustername="PSG-.*_PGU_.*_*">
-    <Environment name="PassageUnderground"/>
+    <Environment name="PassageUndergroundEnv"/>
     <SubEnvironment name="None"/>
     <Biom name="Default"/>
     <SubBiom name="None"/>
@@ -8815,27 +8910,27 @@
   
     <!--Outland Cities-->
   <WwiseClusterStateOverwrite clustername="0008_CTY_SW_.*_T1_NON">
-    <Environment name="City"/>
+    <Environment name="CityEnv"/>
     <Biom name="Swamp"/>
-    <SubBiom name="Green"/>
+    <SubBiom name="Dead"/>
     <MobFaction name="None"/>
     <Music name="territory"/>
     <GlobalEnvironmentEffect name="swamp"/>
   </WwiseClusterStateOverwrite>
   
   <WwiseClusterStateOverwrite clustername="1012_CTY_FR_.*_T1_NON">
-    <Environment name="City"/>
+    <Environment name="CityEnv"/>
     <Biom name="Forest"/>
-    <SubBiom name="Green"/>
+    <SubBiom name="Dead"/>
     <MobFaction name="None"/>
     <Music name="territory"/>
     <GlobalEnvironmentEffect name="forest"/>
   </WwiseClusterStateOverwrite>
   
   <WwiseClusterStateOverwrite clustername="4300_CTY_MN_.*_T1_MOR_OUT_Q3">
-    <Environment name="City"/>
+    <Environment name="CityEnv"/>
     <Biom name="Mountain"/>
-    <SubBiom name="Green"/>
+    <SubBiom name="Dead"/>
     <MobFaction name="None"/>
     <Music name="territory"/>
     <GlobalEnvironmentEffect name="mountain"/>
@@ -8843,7 +8938,7 @@
 
   <!--Small Hideouts-->
   <WwiseClusterStateOverwrite clustername="HIDEOUT-0001a_*">
-    <Environment name="Hideout"/>
+    <Environment name="HideoutEnv"/>
     <SubEnvironment name="Hideout_Small"/>
     <Biom name="None"/>
     <SubBiom name="None"/>
@@ -8857,7 +8952,7 @@
     <!--Medium Hideouts-->
   
   <WwiseClusterStateOverwrite clustername="HIDEOUT-0001b_*">
-    <Environment name="Hideout"/>
+    <Environment name="HideoutEnv"/>
     <SubEnvironment name="Hideout_Medium"/>
     <Biom name="None"/>
     <SubBiom name="None"/>
@@ -8870,7 +8965,7 @@
 
   <!--Big Hideouts-->
   <WwiseClusterStateOverwrite clustername="HIDEOUT-0001c_*">
-    <Environment name="Hideout"/>
+    <Environment name="HideoutEnv"/>
     <SubEnvironment name="Hideout_Big"/>
     <Biom name="None"/>
     <SubBiom name="None"/>
@@ -8883,7 +8978,7 @@
   
   <!--Debug-->
   <WwiseClusterStateOverwrite clustername="Debug_DBG_.*_.*_T1_NON">
-    <Environment name="World"/>
+    <Environment name="WorldEnv"/>
     <SubEnvironment name="None"/>
     <Biom name="Forest"/>
     <SubBiom name="Green"/>
@@ -8894,7 +8989,7 @@
 
   <!--Avalonian Roads -->
   <WwiseClusterStateOverwrite clustername="TNL-.*_RDS_*">
-    <Environment name="World"/>
+    <Environment name="WorldEnv"/>
     <SubEnvironment name="None"/>
     <Biom name="Roads"/>
     <SubBiom name="Mists"/>
@@ -8910,7 +9005,7 @@
 	MISTS-STANDARD-07_MIS_MI_GRN_T6_HER_MIS 
 	
   <WwiseClusterStateOverwrite clustername="MISTS-STANDARD-.*_MIS_MI_GRN_*">
-	<Environment name="World"/>
+	<Environment name="WorldEnv"/>
 	<SubEnvironment name="None"/>
 	<Biom name="Mists"/>
 	<SubBiom name="Green"/>
@@ -8920,7 +9015,7 @@
   </WwiseClusterStateOverwrite>
 	
   <WwiseClusterStateOverwrite clustername="MISTS-STANDARD-.*_MIS_MI_RED_*">
-	<Environment name="World"/>
+	<Environment name="WorldEnv"/>
 	<SubEnvironment name="None"/>
 	<Biom name="Mists"/>
 	<SubBiom name="Red"/>
@@ -8930,7 +9025,7 @@
   </WwiseClusterStateOverwrite>
 	
   <WwiseClusterStateOverwrite clustername="MISTS-STANDARD-.*_MIS_MI_DED_*">
-	<Environment name="World"/>
+	<Environment name="WorldEnv"/>
 	<SubEnvironment name="None"/>
 	<Biom name="Mists"/>
 	<SubBiom name="Dead"/>
@@ -8940,7 +9035,7 @@
   </WwiseClusterStateOverwrite>
 
   <WwiseClusterStateOverwrite clustername="MISTS-STANDARD-.*_MIS_MI_NON_*">
-	<Environment name="World"/>
+	<Environment name="WorldEnv"/>
 	<SubEnvironment name="None"/>
 	<Biom name="Mists"/>
 	<SubBiom name="Green"/>
@@ -8950,7 +9045,7 @@
   </WwiseClusterStateOverwrite>
 
   <WwiseClusterStateOverwrite clustername="MISTS-STANDARD-.*_MIS_MI_AUTO_*">
-	<Environment name="World"/>
+	<Environment name="WorldEnv"/>
 	<SubEnvironment name="None"/>
 	<Biom name="Mists"/>
 	<SubBiom name="Green"/>
@@ -8960,7 +9055,7 @@
   </WwiseClusterStateOverwrite>
 	
   <WwiseClusterStateOverwrite clustername="MISTS-TEST-*">
-    <Environment name="World"/>
+    <Environment name="WorldEnv"/>
     <SubEnvironment name="None"/>
     <Biom name="Mists"/>
     <SubBiom name="Green"/>
@@ -8975,7 +9070,7 @@
 	SOLO-YELLOW-COMMON-01_MIS_MI_DED_T5_UND_MIS -->
 	
 	<WwiseClusterStateOverwrite clustername=".*-.*_MIS_MI_GRN_.*">
-		<Environment name="World"/>
+		<Environment name="WorldEnv"/>
 		<SubEnvironment name="None"/>
 		<Biom name="Mists"/>
 		<SubBiom name="Green"/>
@@ -8985,7 +9080,7 @@
 	</WwiseClusterStateOverwrite>
 
 	<WwiseClusterStateOverwrite clustername=".*-.*_MIS_MI_RED_.*">
-		<Environment name="World"/>
+		<Environment name="WorldEnv"/>
 		<SubEnvironment name="None"/>
 		<Biom name="Mists"/>
 		<SubBiom name="Red"/>
@@ -8995,7 +9090,7 @@
 	</WwiseClusterStateOverwrite>
 
 	<WwiseClusterStateOverwrite clustername=".*-.*_MIS_MI_DED_.*">
-		<Environment name="World"/>
+		<Environment name="WorldEnv"/>
 		<SubEnvironment name="None"/>
 		<Biom name="Mists"/>
 		<SubBiom name="Dead"/>
@@ -9005,7 +9100,7 @@
 	</WwiseClusterStateOverwrite>
 
 	<WwiseClusterStateOverwrite clustername=".*-.*_MIS_MI_NON_.*">
-		<Environment name="World"/>
+		<Environment name="WorldEnv"/>
 		<SubEnvironment name="None"/>
 		<Biom name="Mists"/>
 		<SubBiom name="Green"/>
@@ -9015,7 +9110,7 @@
 	</WwiseClusterStateOverwrite>
 
 	<WwiseClusterStateOverwrite clustername=".*-.*_MIS_MI_AUTO_.*">
-		<Environment name="World"/>
+		<Environment name="WorldEnv"/>
 		<SubEnvironment name="None"/>
 		<Biom name="Mists"/>
 		<SubBiom name="Green"/>
@@ -9032,8 +9127,8 @@
   <!--Lighthouse Cluster (1. Tutorial Cluster)-->
 
   <WwiseClusterStateOverwrite clustername="1008_TUT_FR_.*_T1_NON">
-    <Environment name="World"/>
-    <Biom name="Forest"/>
+    <Environment name="WorldEnv"/>
+    <Biom name="Highland"/>
     <SubBiom name="Green"/>
     <MobFaction name="None"/>
     <Music name="Tutorial"/>
@@ -9043,7 +9138,7 @@
   <!--Forest Cluster (3rd Cluster for Gathering/Fighting) -->
 
   <WwiseClusterStateOverwrite clustername="1009_TUT_FR_.*_T1_NON">
-    <Environment name="World"/>
+    <Environment name="WorldEnv"/>
     <Biom name="Forest"/>
     <SubBiom name="Green"/>
     <MobFaction name="None"/>
@@ -9053,7 +9148,7 @@
   <!--Mountain Cluster (4th Cluster for Gathering/Fighting) -->
 
   <WwiseClusterStateOverwrite clustername="1010_TUT_MN_.*_T1_NON">
-    <Environment name="World"/>
+    <Environment name="WorldEnv"/>
     <Biom name="Mountain"/>
     <SubBiom name="Green"/>
     <MobFaction name="None"/>
@@ -9063,7 +9158,7 @@
   <!--Beach Camp (2nd Cluster where Tia resides) -->
 
   <WwiseClusterStateOverwrite clustername="1011_TUT_FR_.*_T1_NON">
-    <Environment name="World"/>
+    <Environment name="WorldEnv"/>
     <Biom name="Forest"/>
     <SubBiom name="Green"/>
     <MobFaction name="None"/>
@@ -9079,7 +9174,7 @@
   <!-- e.g. "@RANDOMDUNGEON@e29005f0-a91e-4695-8491-62f41fdc0ab2_RDG_DL_T4_MOR_NON" -->
   
   <WwiseClusterStateOverwrite clustername=".*_RDG_.*_.*_.*_MOR_NON">
-    <Environment name="Dungeon"/>
+    <Environment name="DungeonEnv"/>
     <SubEnvironment name="Morgana_Monastery"/>
     <Biom name="Default"/>
     <SubBiom name="None"/>
@@ -9089,7 +9184,7 @@
   </WwiseClusterStateOverwrite>
   
   <WwiseClusterStateOverwrite clustername=".*_RDG_.*_.*_.*_KPR_NON">
-    <Environment name="Dungeon"/>
+    <Environment name="DungeonEnv"/>
     <SubEnvironment name="Keeper_Homecave"/>
     <Biom name="Default"/>
     <SubBiom name="None"/>
@@ -9099,7 +9194,7 @@
   </WwiseClusterStateOverwrite>
   
   <WwiseClusterStateOverwrite clustername=".*_RDG_.*_.*_.*_HER_NON">
-    <Environment name="Dungeon"/>
+    <Environment name="DungeonEnv"/>
     <SubEnvironment name="Heretic_Mineshaft"/>
     <Biom name="Default"/>
     <SubBiom name="None"/>
@@ -9109,7 +9204,7 @@
   </WwiseClusterStateOverwrite>
   
   <WwiseClusterStateOverwrite clustername=".*_RDG_.*_.*_.*_UND_NON">
-    <Environment name="Dungeon"/>
+    <Environment name="DungeonEnv"/>
     <SubEnvironment name="Undead_Castleruins"/>
     <Biom name="Default"/>
     <SubBiom name="None"/>
@@ -9119,7 +9214,7 @@
   </WwiseClusterStateOverwrite>
   
   <WwiseClusterStateOverwrite clustername=".*_RDG_.*_.*_.*_AVA_NON">
-    <Environment name="Dungeon"/>
+    <Environment name="DungeonEnv"/>
     <Biom name="Default"/>
     <SubBiom name="None"/>
     <MobFaction name="Avalon"/>
@@ -9134,7 +9229,7 @@
 	<!-- those that are barracks use the generic MORGANA Dungeon overwrite, custom overwrite is only listed here for later reference 
 
   <WwiseClusterStateOverwrite clustername="DNG-MOR-01-MAIN-.*_DNG_.*_.*_T6_MOR_*">
-	<Environment name="Dungeon"/>
+	<Environment name="DungeonEnv"/>
 	<SubEnvironment name="Morgana_Barracks"/>
 	<Biom name="Default"/>
 	<SubBiom name="None"/>
@@ -9144,7 +9239,7 @@
   </WwiseClusterStateOverwrite>
 
   <WwiseClusterStateOverwrite clustername="DNG-MOR-01-MAIN-.*_DNG_.*_.*_T8_MOR_*">
-	<Environment name="Dungeon"/>
+	<Environment name="DungeonEnv"/>
 	<SubEnvironment name="Morgana_Barracks"/>
 	<Biom name="Default"/>
 	<SubBiom name="None"/>
@@ -9155,7 +9250,7 @@
   -->
 
   <WwiseClusterStateOverwrite clustername="DNG-MOR-01-SUB-.*_DNG_.*_.*_T6_MOR_*">
-	<Environment name="Dungeon"/>
+	<Environment name="DungeonEnv"/>
 	<SubEnvironment name="Morgana_Prison"/>
 	<Biom name="Default"/>
 	<SubBiom name="None"/>
@@ -9165,7 +9260,7 @@
   </WwiseClusterStateOverwrite>
 
   <WwiseClusterStateOverwrite clustername="DNG-MOR-01-SUB-.*_DNG_.*_.*_T8_MOR_*">
-	<Environment name="Dungeon"/>
+	<Environment name="DungeonEnv"/>
 	<SubEnvironment name="Morgana_Prison"/>
 	<Biom name="Default"/>
 	<SubBiom name="None"/>
@@ -9175,7 +9270,7 @@
   </WwiseClusterStateOverwrite>
 	
   <WwiseClusterStateOverwrite clustername="Torturer-.*_EXP_.*_.*_T6_MOR">
-    <Environment name="Dungeon"/>
+    <Environment name="DungeonEnv"/>
     <SubEnvironment name="Morgana_Prison"/>
     <Biom name="Default"/>
     <SubBiom name="None"/>
@@ -9185,7 +9280,7 @@
   </WwiseClusterStateOverwrite>
 
   <WwiseClusterStateOverwrite clustername="ThreeSisters-.*_EXP_.*_.*_T6_MOR">
-	<Environment name="World"/>
+	<Environment name="WorldEnv"/>
 	<SubEnvironment name="Morgana_Barracks"/>
 	<Biom name="Mountain"/>
 	<SubBiom name="Red"/>
@@ -9200,7 +9295,7 @@
 	  DNG-KPR-02 has several areas and thus could also use any of the other settings
 
   <WwiseClusterStateOverwrite clustername="DNG-KPR-01-MAIN-.*_DNG_.*_.*_T5_KPR_*">
-	<Environment name="Dungeon"/>
+	<Environment name="DungeonEnv"/>
 	<SubEnvironment name="Keeper_Tentcave"/>
 	<Biom name="Default"/>
 	<SubBiom name="None"/>
@@ -9210,7 +9305,7 @@
   </WwiseClusterStateOverwrite>
 
   <WwiseClusterStateOverwrite clustername="DNG-KPR-02-MAIN-.*_DNG_.*_.*_T5_KPR_*">
-	<Environment name="Dungeon"/>
+	<Environment name="DungeonEnv"/>
 	<SubEnvironment name="Keeper_Tentcave"/>
 	<Biom name="Default"/>
 	<SubBiom name="None"/>
@@ -9221,7 +9316,7 @@
   -->
 	
   <WwiseClusterStateOverwrite clustername="MushroomCave-SOLO_EXP_.*_.*_T6_KPR">
-    <Environment name="Dungeon"/>
+    <Environment name="DungeonEnv"/>
     <SubEnvironment name="Keeper_Magiccave"/>
     <Biom name="Default"/>
     <SubBiom name="None"/>
@@ -9231,7 +9326,7 @@
   </WwiseClusterStateOverwrite>
     
   <WwiseClusterStateOverwrite clustername="MushroomCave-GROUP_EXP_.*_.*_T6_KPR">
-    <Environment name="Dungeon"/>
+    <Environment name="DungeonEnv"/>
     <SubEnvironment name="Keeper_Magiccave"/>
     <Biom name="Default"/>
     <SubBiom name="None"/>
@@ -9241,7 +9336,7 @@
   </WwiseClusterStateOverwrite>
     
   <WwiseClusterStateOverwrite clustername="MushroomCave-HRD_EXP_.*_.*_T6_KPR">
-    <Environment name="Dungeon"/>
+    <Environment name="DungeonEnv"/>
     <SubEnvironment name="Keeper_Magiccave"/>
     <Biom name="Default"/>
     <SubBiom name="None"/>
@@ -9253,7 +9348,7 @@
       <!--Heretic Dungeons-->
   
   <WwiseClusterStateOverwrite clustername="TUT-CASTLECELLAR_DNG_.*_.*_T3_HER_ROY">
-    <Environment name="Dungeon"/>
+    <Environment name="DungeonEnv"/>
     <SubEnvironment name="Heretic_Castle"/>
     <Biom name="Default"/>
     <SubBiom name="None"/>
@@ -9263,7 +9358,7 @@
   </WwiseClusterStateOverwrite> 
   
   <WwiseClusterStateOverwrite clustername="TUT-WINECELLAR_DNG_.*_.*_T2_HER_ROY">
-    <Environment name="Dungeon"/>
+    <Environment name="DungeonEnv"/>
     <SubEnvironment name="Heretic_Basement"/>
     <Biom name="Default"/>
     <SubBiom name="None"/>
@@ -9273,7 +9368,7 @@
   </WwiseClusterStateOverwrite> 
   
   <WwiseClusterStateOverwrite clustername="Mine-SOLO_EXP_.*_.*_T3_HER">
-    <Environment name="Dungeon"/>
+    <Environment name="DungeonEnv"/>
     <SubEnvironment name="Heretic_Openmines"/>
     <Biom name="Default"/>
     <SubBiom name="None"/>
@@ -9283,7 +9378,7 @@
   </WwiseClusterStateOverwrite> 
   
   <WwiseClusterStateOverwrite clustername="FishyBusiness-SOLO_EXP_.*_.*_T4_HER">
-    <Environment name="Dungeon"/>
+    <Environment name="DungeonEnv"/>
     <SubEnvironment name="Heretic_Harbor"/>
     <Biom name="Default"/>
     <SubBiom name="None"/>
@@ -9293,7 +9388,7 @@
   </WwiseClusterStateOverwrite> 
   
   <WwiseClusterStateOverwrite clustername="FishyBusiness-HRD_EXP_.*_.*_T6_HER">
-    <Environment name="Dungeon"/>
+    <Environment name="DungeonEnv"/>
     <SubEnvironment name="Heretic_Harbor"/>
     <Biom name="Default"/>
     <SubBiom name="None"/>
@@ -9303,7 +9398,7 @@
   </WwiseClusterStateOverwrite> 
   
   <WwiseClusterStateOverwrite clustername="FishyBusiness-GROUP_EXP_.*_.*_T4_HER">
-    <Environment name="Dungeon"/>
+    <Environment name="DungeonEnv"/>
     <SubEnvironment name="Heretic_Harbor"/>
     <Biom name="Default"/>
     <SubBiom name="None"/>
@@ -9317,7 +9412,7 @@
 	<!-- they are all crypts, so the generic UNDEAD Dungeon overwrite and default applies, custom overwrite is only listed here for later reference 
 
   <WwiseClusterStateOverwrite clustername="DNG-UND-01-MAIN-.*_DNG_.*_.*_T7_UND_*">
-	<Environment name="Dungeon"/>
+	<Environment name="DungeonEnv"/>
 	<SubEnvironment name="Undead_Crypt"/>
 	<Biom name="Default"/>
 	<SubBiom name="None"/>
@@ -9327,7 +9422,7 @@
   </WwiseClusterStateOverwrite>
 
   <WwiseClusterStateOverwrite clustername="DNG-UND-01-MAIN-.*_DNG_.*_.*_T4_UND_*">
-	<Environment name="Dungeon"/>
+	<Environment name="DungeonEnv"/>
 	<SubEnvironment name="Undead_Crypt"/>
 	<Biom name="Default"/>
 	<SubBiom name="None"/>
@@ -9337,7 +9432,7 @@
   </WwiseClusterStateOverwrite>
 
   <WwiseClusterStateOverwrite clustername="DNG-UND-02-MAIN-.*_DNG_.*_.*_T4_UND_*">
-	<Environment name="Dungeon"/>
+	<Environment name="DungeonEnv"/>
 	<SubEnvironment name="Undead_Crypt"/>
 	<Biom name="Default"/>
 	<SubBiom name="None"/>
@@ -9347,7 +9442,7 @@
   </WwiseClusterStateOverwrite>
 
   <WwiseClusterStateOverwrite clustername="DNG-UND-01-SUB-.*_DNG_.*_.*_T7_UND_*">
-	<Environment name="Dungeon"/>
+	<Environment name="DungeonEnv"/>
 	<SubEnvironment name="Undead_Crypt"/>
 	<Biom name="Default"/>
 	<SubBiom name="None"/>
@@ -9357,7 +9452,7 @@
   </WwiseClusterStateOverwrite>
 
   <WwiseClusterStateOverwrite clustername="DNG-UND-01-SUB-.*_DNG_.*_.*_T4_UND_*">
-	<Environment name="Dungeon"/>
+	<Environment name="DungeonEnv"/>
 	<SubEnvironment name="Undead_Crypt"/>
 	<Biom name="Default"/>
 	<SubBiom name="None"/>
@@ -9368,7 +9463,7 @@
 -->
 	
   <WwiseClusterStateOverwrite clustername="SewersMaintenance-SOLO_EXP_.*_.*_T5_UND">
-    <Environment name="Dungeon"/>
+    <Environment name="DungeonEnv"/>
     <SubEnvironment name="Undead_Sewer"/>
     <Biom name="Default"/>
     <SubBiom name="None"/>
@@ -9378,7 +9473,7 @@
   </WwiseClusterStateOverwrite> 
   
   <WwiseClusterStateOverwrite clustername="SewersMaintenance-HRD_EXP_.*_.*_T6_UND">
-    <Environment name="Dungeon"/>
+    <Environment name="DungeonEnv"/>
     <SubEnvironment name="Undead_Sewer"/>
     <Biom name="Default"/>
     <SubBiom name="None"/>
@@ -9388,7 +9483,7 @@
   </WwiseClusterStateOverwrite> 
   
   <WwiseClusterStateOverwrite clustername="SewersMaintenance-GROUP_EXP_.*_.*_T5_UND">
-    <Environment name="Dungeon"/>
+    <Environment name="DungeonEnv"/>
     <SubEnvironment name="Undead_Sewer"/>
     <Biom name="Default"/>
     <SubBiom name="None"/>
@@ -9398,7 +9493,7 @@
   </WwiseClusterStateOverwrite>
 	
  <WwiseClusterStateOverwrite clustername="EternalBattle-.*_EXP_HL_RED_T6_UND">
-    <Environment name="World"/>
+    <Environment name="WorldEnv"/>
     <Biom name="Highland"/>
     <SubBiom name="Red"/>
     <MobFaction name="Undead"/>
@@ -9409,7 +9504,7 @@
   <!--Corrupted Dungeons-->
 
   <WwiseClusterStateOverwrite clustername="CORRUPT-.*_COR_.*_.*_.*_NON_SOLO">
-    <Environment name="Dungeon"/>
+    <Environment name="DungeonEnv"/>
     <SubEnvironment name="None"/>
     <Biom name="Default"/>
     <SubBiom name="None"/>
@@ -9419,7 +9514,7 @@
   </WwiseClusterStateOverwrite>
 
   <WwiseClusterStateOverwrite clustername="CORRUPT-.*_COR_.*_.*_.*_HER_SOLO">
-    <Environment name="Dungeon"/>
+    <Environment name="DungeonEnv"/>
     <SubEnvironment name="Heretic_Openmines"/>
     <Biom name="Default"/>
     <SubBiom name="None"/>
@@ -9429,7 +9524,7 @@
   </WwiseClusterStateOverwrite>
 
   <WwiseClusterStateOverwrite clustername="CORRUPT-.*_COR_.*_.*_.*_MOR_SOLO">
-    <Environment name="Dungeon"/>
+    <Environment name="DungeonEnv"/>
     <SubEnvironment name="Morgana_Prison"/>
     <Biom name="Default"/>
     <SubBiom name="None"/>

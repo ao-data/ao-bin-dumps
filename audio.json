@@ -7937,6 +7937,12 @@
         }
       },
       {
+        "@name": "MELEE_BIG_INSTANT_CASTFINISHED",
+        "OnCastFinished": {
+          "@name": "Play_melee_swoosh_big_instant_attack"
+        }
+      },
+      {
         "@name": "MELEE_BIGCAST_BIGIMPACT",
         "OnCastStart": {
           "@name": "Play_melee_swoosh_big"
@@ -8113,6 +8119,12 @@
         }
       },
       {
+        "@name": "MELEE_SWORD_SPIN",
+        "OnCastFinished": {
+          "@name": "Play_sword_spin"
+        }
+      },
+      {
         "@name": "MELEE_AXE_SPIN",
         "OnCastStart": {
           "@name": "Play_axe_spin"
@@ -8147,6 +8159,13 @@
         "@name": "MELEE_SPINATTACK_IMPACT",
         "OnSpellHit": {
           "@name": "Play_melee_impact_big",
+          "ImpactType": null
+        }
+      },
+      {
+        "@name": "MELEE_SWORD_SPINATTACK_IMPACT",
+        "OnSpellHit": {
+          "@name": "Play_melee_impact_medium",
           "ImpactType": null
         }
       },
@@ -8735,6 +8754,26 @@
         },
         "OnSpellHit": {
           "@name": "Play_melee_impact_small_add",
+          "ImpactType": null
+        }
+      },
+      {
+        "@name": "MELEE_STAFF_CONCUSSIVE_SWING",
+        "OnCastFinished": {
+          "@name": "Play_quarterstaff_swoosh_small"
+        },
+        "OnSpellHit": {
+          "@name": "Play_melee_impact_small_add",
+          "ImpactType": null
+        }
+      },
+      {
+        "@name": "MELEE_STAFF_CONCUSSIVE_JUMP",
+        "OnCastFinished": {
+          "@name": "Play_quarterstaff_swoosh_jump"
+        },
+        "OnSpellHit": {
+          "@name": "Play_melee_impact_small",
           "ImpactType": null
         }
       },
@@ -9437,6 +9476,12 @@
         }
       },
       {
+        "@name": "SPELL_ARROW_CAST_SPEEDARCHER",
+        "OnCastFinished": {
+          "@name": "Play_spells_speedcaster_E_buff_cast"
+        }
+      },
+      {
         "@name": "SPELL_ARROW_MULTISHOT_CAST",
         "OnCastStart": {
           "@name": "Play_arrow_load_short"
@@ -9584,7 +9629,7 @@
       {
         "@name": "SPELL_THROW_DAGGER",
         "OnCastFinished": {
-          "@name": "Play_throw_spear"
+          "@name": "Play_throw_dagger"
         }
       },
       {
@@ -11703,6 +11748,18 @@
         }
       },
       {
+        "@name": "SPELL_SELF_BUFF_FURY",
+        "OnCastFinished": {
+          "@name": "Play_fury_damageincrease_cast"
+        }
+      },
+      {
+        "@name": "SPELL_SELF_BUFF_IMMORTAL",
+        "OnCastStart": {
+          "@name": "Play_cast_buff_immortal"
+        }
+      },
+      {
         "@name": "SPELL_SELF_BUFF_CASTFINISHED",
         "OnCastFinished": {
           "@name": "Play_selfbuff_cast"
@@ -11746,8 +11803,8 @@
       },
       {
         "@name": "SPELL_DAMAGE_REFLECT",
-        "OnCastStart": {
-          "@name": "Play_damage_reflect_loop"
+        "OnCastFinished": {
+          "@name": "Play_armor_damagereflection_cast"
         }
       },
       {
@@ -11892,12 +11949,21 @@
         }
       },
       {
-        "@name": "SPELL_INVISIBILITY_ALLY",
-        "OnSpellHit": {
-          "@name": "Play_cast_invisibility"
+        "@name": "SPELL_MISTCLOUD_INVISIBILITY",
+        "OnCastFinished": {
+          "@name": "Play_cast_mistcloud_invisibility"
         },
         "OnSpellRemoved": {
-          "@name": "Play_end_invisibility"
+          "@name": "Play_end_mistcloud_invisibility"
+        }
+      },
+      {
+        "@name": "SPELL_MISTCLOUD_INVISIBILITY_ALLY",
+        "OnSpellHit": {
+          "@name": "Play_cast_mistcloud_invisibility_ally"
+        },
+        "OnSpellRemoved": {
+          "@name": "Play_end_mistcloud_invisibility_ally"
         }
       },
       {
@@ -13386,6 +13452,22 @@
         }
       },
       {
+        "@name": "SPELL_HERETIC_THIEF_SLASH",
+        "OnCastStart": {
+          "@name": "Play_heretic_thief_slash"
+        },
+        "OnCastCanceled": {
+          "@name": "Stop_heretic_thief_slash"
+        },
+        "OnCastInterrupted": {
+          "@name": "Stop_heretic_thief_slash"
+        },
+        "OnSpellHit": {
+          "@name": "Play_melee_impact_medium",
+          "ImpactType": null
+        }
+      },
+      {
         "@name": "SPELL_HERETIC_TANK_CRUSH",
         "OnCastStart": {
           "@name": "Play_melee_swoosh_load_medium"
@@ -13398,6 +13480,69 @@
         },
         "OnCastFinished": {
           "@name": "Play_heretic_heavystrike"
+        }
+      },
+      {
+        "@name": "SPELL_HERETIC_TANK_CRUSH_NODELAY",
+        "OnCastStart": {
+          "@name": "Play_heretic_tank_crush"
+        },
+        "OnCastCanceled": {
+          "@name": "Stop_heretic_tank_crush"
+        },
+        "OnCastInterrupted": {
+          "@name": "Stop_heretic_tank_crush"
+        }
+      },
+      {
+        "@name": "SPELL_HERETIC_TANK_DASH",
+        "OnCastStart": {
+          "@name": "Play_heretic_tank_dash"
+        },
+        "OnCastCanceled": {
+          "@name": "Stop_heretic_tank_dash"
+        },
+        "OnCastInterrupted": {
+          "@name": "Stop_heretic_tank_dash"
+        },
+        "OnCastFinished": {
+          "@name": "Play_armor_charge_dash"
+        }
+      },
+      {
+        "@name": "SPELL_HERETIC_TANK_SHIELDBASH",
+        "OnCastStart": {
+          "@name": "Play_heretic_tank_shieldbash"
+        },
+        "OnSpellHit": {
+          "@name": "Play_knockback"
+        }
+      },
+      {
+        "@name": "SPELL_HERETIC_TANK_SHIELD_CAST_LOAD",
+        "OnCastStart": {
+          "@name": "Play_heretic_tank_load_shield"
+        },
+        "OnCastCanceled": {
+          "@name": "Stop_heretic_tank_load_shield"
+        },
+        "OnCastInterrupted": {
+          "@name": "Stop_heretic_tank_load_shield"
+        }
+      },
+      {
+        "@name": "SPELL_HERETIC_TANK_SHIELD_CHANNEL",
+        "OnChannelingStart": {
+          "@name": "Play_heretic_tank_shield_start"
+        },
+        "OnChannelingCancelled": {
+          "@name": "Stop_heretic_tank_shield_loop"
+        },
+        "OnChannelingInterrupted": {
+          "@name": "Stop_heretic_tank_shield_loop"
+        },
+        "OnChannelingEnd": {
+          "@name": "Stop_heretic_tank_shield_loop"
         }
       },
       {
@@ -13421,7 +13566,7 @@
           "@name": "Stop_archer_load_arrow"
         },
         "OnCastFinished": {
-          "@name": "Play_arrow_cast_medium"
+          "@name": "Play_arrow_cast_medium_instant"
         },
         "OnSpellHit": {
           "@name": "Play_fire_impact_medium"
@@ -13457,16 +13602,31 @@
       {
         "@name": "SPELL_HERETIC_MAGE_CAST_FIRE_MINE",
         "OnCastStart": {
-          "@name": "Play_fire_cast_load_big"
+          "@name": "Play_fire_cast_load_medium_long_fireartillery"
         },
         "OnCastInterrupted": {
-          "@name": "Stop_fire_cast_load_big"
+          "@name": "Stop_fire_cast_load_medium_long_fireartillery"
         },
         "OnCastCanceled": {
-          "@name": "Stop_fire_cast_load_big"
+          "@name": "Stop_fire_cast_load_medium_long_fireartillery"
         },
         "OnCastFinished": {
-          "@name": "Play_fire_cast_medium_fireball"
+          "@name": "Play_fire_cast_small_q_searingflame"
+        }
+      },
+      {
+        "@name": "SPELL_HERETIC_MAGE_CAST_FIRE_AOE",
+        "OnCastStart": {
+          "@name": "Play_fire_cast_load_medium_long"
+        },
+        "OnCastInterrupted": {
+          "@name": "Stop_fire_cast_load_medium_long"
+        },
+        "OnCastCanceled": {
+          "@name": "Stop_fire_cast_load_medium_long"
+        },
+        "OnCastFinished": {
+          "@name": "Play_fire_cast_medium_ignite_staff"
         }
       },
       {
@@ -13497,6 +13657,21 @@
         },
         "OnChannelingEnd": {
           "@name": "Stop_nature_heal_medium_loop"
+        }
+      },
+      {
+        "@name": "SPELL_HERETIC_HEALER_KNOCKBACK",
+        "OnCastStart": {
+          "@name": "Play_heretic_healer_load_knockback"
+        },
+        "OnCastCanceled": {
+          "@name": "Stop_heretic_healer_load_knockback"
+        },
+        "OnCastInterrupted": {
+          "@name": "Stop_heretic_healer_load_knockback"
+        },
+        "OnCastFinished": {
+          "@name": "Play_force_field"
         }
       },
       {
@@ -14709,6 +14884,12 @@
         },
         "OnCastFinished": {
           "@name": "Play_cursed_cast_medium"
+        }
+      },
+      {
+        "@name": "SPELL_THROW_DAGGER_MOB",
+        "OnCastFinished": {
+          "@name": "Play_throw_spear"
         }
       },
       {
@@ -17710,7 +17891,7 @@
       {
         "@clustername": "ARENA-Resources_ARE_.*_.*_.*_.*",
         "Environment": {
-          "@name": "World"
+          "@name": "WorldEnv"
         },
         "Biom": {
           "@name": "Forest"
@@ -17731,7 +17912,7 @@
       {
         "@clustername": "ARENA-Resources1_ARE_.*_.*_.*_.*",
         "Environment": {
-          "@name": "World"
+          "@name": "WorldEnv"
         },
         "Biom": {
           "@name": "Forest"
@@ -17752,7 +17933,7 @@
       {
         "@clustername": "ARENA-Resources2_ARE_.*_.*_.*_.*",
         "Environment": {
-          "@name": "World"
+          "@name": "WorldEnv"
         },
         "Biom": {
           "@name": "Mountain"
@@ -17773,7 +17954,7 @@
       {
         "@clustername": "ARENA-HomeTerritory_ARE_.*_.*_.*_.*_ROY",
         "Environment": {
-          "@name": "World"
+          "@name": "WorldEnv"
         },
         "Biom": {
           "@name": "Highland"
@@ -17794,7 +17975,7 @@
       {
         "@clustername": "ARENA-City_ARE_.*_.*_.*_.*_ROY",
         "Environment": {
-          "@name": "World"
+          "@name": "WorldEnv"
         },
         "Biom": {
           "@name": "Highland"
@@ -17815,7 +17996,7 @@
       {
         "@clustername": "ARENA-FarmLand_ARE_.*_.*_.*_.*_ROY",
         "Environment": {
-          "@name": "World"
+          "@name": "WorldEnv"
         },
         "Biom": {
           "@name": "Highland"
@@ -17836,7 +18017,7 @@
       {
         "@clustername": "CrystalRealm_ARE_.*_.*_.*_.*_ROY",
         "Environment": {
-          "@name": "Crystalrealm"
+          "@name": "CrystalrealmEnv"
         },
         "Biom": {
           "@name": "Steppe"
@@ -17857,7 +18038,7 @@
       {
         "@clustername": "CrystalRealm-Nonlethal_ARE_.*_.*_.*_.*_ROY",
         "Environment": {
-          "@name": "Crystalrealm"
+          "@name": "CrystalrealmEnv"
         },
         "Biom": {
           "@name": "Steppe"
@@ -17878,7 +18059,7 @@
       {
         "@clustername": "CrystalRealm02_ARE_.*_.*_.*_.*_ROY",
         "Environment": {
-          "@name": "Crystalrealm"
+          "@name": "CrystalrealmEnv"
         },
         "Biom": {
           "@name": "Steppe"
@@ -17899,7 +18080,7 @@
       {
         "@clustername": "CrystalRealm20v20_ARE_.*_.*_.*_.*_ROY",
         "Environment": {
-          "@name": "Crystalrealm"
+          "@name": "CrystalrealmEnv"
         },
         "Biom": {
           "@name": "Steppe"
@@ -17920,7 +18101,7 @@
       {
         "@clustername": "CrystalRealm02-Nonlethal_ARE_.*_.*_.*_.*_ROY",
         "Environment": {
-          "@name": "Crystalrealm"
+          "@name": "CrystalrealmEnv"
         },
         "Biom": {
           "@name": "Steppe"
@@ -17941,7 +18122,7 @@
       {
         "@clustername": "CrystalRealmDebug_.*_.*_.*_.*_.*",
         "Environment": {
-          "@name": "Crystalrealm"
+          "@name": "CrystalrealmEnv"
         },
         "Biom": {
           "@name": "Steppe"
@@ -17962,7 +18143,7 @@
       {
         "@clustername": "3010_CTY_.*_.*_T1_NON",
         "Environment": {
-          "@name": "HallOfFame"
+          "@name": "HallOfFameEnv"
         },
         "Biom": {
           "@name": "Forest"
@@ -17983,7 +18164,7 @@
       {
         "@clustername": ".*-HALL-.*_CTY_.*_.*_.*_NON",
         "Environment": {
-          "@name": "HallOfFame"
+          "@name": "HallOfFameEnv"
         },
         "Biom": {
           "@name": "Forest"
@@ -18004,7 +18185,7 @@
       {
         "@clustername": "3011_CTY_.*_.*_T7_NON",
         "Environment": {
-          "@name": "Monument"
+          "@name": "MonumentEnv"
         },
         "Biom": {
           "@name": "None"
@@ -18025,7 +18206,7 @@
       {
         "@clustername": "3005_CTY_.*_.*_T7_NON",
         "Environment": {
-          "@name": "Bank"
+          "@name": "BankEnv"
         },
         "Biom": {
           "@name": "Highland"
@@ -18046,7 +18227,7 @@
       {
         "@clustername": "3013-Auction2_CTY_.*_.*_T7_NON",
         "Environment": {
-          "@name": "Bank"
+          "@name": "BankEnv"
         },
         "Biom": {
           "@name": "Highland"
@@ -18067,7 +18248,7 @@
       {
         "@clustername": "3006_CTY_.*_.*_T7_NON",
         "Environment": {
-          "@name": "Bank"
+          "@name": "BankEnv"
         },
         "Biom": {
           "@name": "Highland"
@@ -18088,7 +18269,7 @@
       {
         "@clustername": "CenterCity-DNG-01_DNG_.*_.*_.*_NON_ROY",
         "Environment": {
-          "@name": "Sewers"
+          "@name": "SewersEnv"
         },
         "Biom": {
           "@name": "Forest"
@@ -18109,7 +18290,7 @@
       {
         "@clustername": "5000_CTY_.*_.*_T1_NON",
         "Environment": {
-          "@name": "City"
+          "@name": "CityEnv"
         },
         "Biom": {
           "@name": "Mists"
@@ -18130,7 +18311,7 @@
       {
         "@clustername": "5001_CTY_.*_.*_T1_NON",
         "Environment": {
-          "@name": "City"
+          "@name": "CityEnv"
         },
         "Biom": {
           "@name": "Mists"
@@ -18151,7 +18332,7 @@
       {
         "@clustername": "5002_CTY_.*_.*_T7_NON",
         "Environment": {
-          "@name": "City"
+          "@name": "CityEnv"
         },
         "Biom": {
           "@name": "Mists"
@@ -18172,7 +18353,7 @@
       {
         "@clustername": "5003_CTY_.*_.*_T7_NON",
         "Environment": {
-          "@name": "City"
+          "@name": "CityEnv"
         },
         "Biom": {
           "@name": "Mists"
@@ -18193,7 +18374,7 @@
       {
         "@clustername": "PSG-.*_PGU_.*_*",
         "Environment": {
-          "@name": "PassageUnderground"
+          "@name": "PassageUndergroundEnv"
         },
         "SubEnvironment": {
           "@name": "None"
@@ -18217,13 +18398,13 @@
       {
         "@clustername": "0008_CTY_SW_.*_T1_NON",
         "Environment": {
-          "@name": "City"
+          "@name": "CityEnv"
         },
         "Biom": {
           "@name": "Swamp"
         },
         "SubBiom": {
-          "@name": "Green"
+          "@name": "Dead"
         },
         "MobFaction": {
           "@name": "None"
@@ -18238,13 +18419,13 @@
       {
         "@clustername": "1012_CTY_FR_.*_T1_NON",
         "Environment": {
-          "@name": "City"
+          "@name": "CityEnv"
         },
         "Biom": {
           "@name": "Forest"
         },
         "SubBiom": {
-          "@name": "Green"
+          "@name": "Dead"
         },
         "MobFaction": {
           "@name": "None"
@@ -18259,13 +18440,13 @@
       {
         "@clustername": "4300_CTY_MN_.*_T1_MOR_OUT_Q3",
         "Environment": {
-          "@name": "City"
+          "@name": "CityEnv"
         },
         "Biom": {
           "@name": "Mountain"
         },
         "SubBiom": {
-          "@name": "Green"
+          "@name": "Dead"
         },
         "MobFaction": {
           "@name": "None"
@@ -18280,7 +18461,7 @@
       {
         "@clustername": "HIDEOUT-0001a_*",
         "Environment": {
-          "@name": "Hideout"
+          "@name": "HideoutEnv"
         },
         "SubEnvironment": {
           "@name": "Hideout_Small"
@@ -18310,7 +18491,7 @@
       {
         "@clustername": "HIDEOUT-0001b_*",
         "Environment": {
-          "@name": "Hideout"
+          "@name": "HideoutEnv"
         },
         "SubEnvironment": {
           "@name": "Hideout_Medium"
@@ -18340,7 +18521,7 @@
       {
         "@clustername": "HIDEOUT-0001c_*",
         "Environment": {
-          "@name": "Hideout"
+          "@name": "HideoutEnv"
         },
         "SubEnvironment": {
           "@name": "Hideout_Big"
@@ -18370,7 +18551,7 @@
       {
         "@clustername": "Debug_DBG_.*_.*_T1_NON",
         "Environment": {
-          "@name": "World"
+          "@name": "WorldEnv"
         },
         "SubEnvironment": {
           "@name": "None"
@@ -18394,7 +18575,7 @@
       {
         "@clustername": "TNL-.*_RDS_*",
         "Environment": {
-          "@name": "World"
+          "@name": "WorldEnv"
         },
         "SubEnvironment": {
           "@name": "None"
@@ -18418,7 +18599,7 @@
       {
         "@clustername": ".*-.*_MIS_MI_GRN_.*",
         "Environment": {
-          "@name": "World"
+          "@name": "WorldEnv"
         },
         "SubEnvironment": {
           "@name": "None"
@@ -18442,7 +18623,7 @@
       {
         "@clustername": ".*-.*_MIS_MI_RED_.*",
         "Environment": {
-          "@name": "World"
+          "@name": "WorldEnv"
         },
         "SubEnvironment": {
           "@name": "None"
@@ -18466,7 +18647,7 @@
       {
         "@clustername": ".*-.*_MIS_MI_DED_.*",
         "Environment": {
-          "@name": "World"
+          "@name": "WorldEnv"
         },
         "SubEnvironment": {
           "@name": "None"
@@ -18490,7 +18671,7 @@
       {
         "@clustername": ".*-.*_MIS_MI_NON_.*",
         "Environment": {
-          "@name": "World"
+          "@name": "WorldEnv"
         },
         "SubEnvironment": {
           "@name": "None"
@@ -18514,7 +18695,7 @@
       {
         "@clustername": ".*-.*_MIS_MI_AUTO_.*",
         "Environment": {
-          "@name": "World"
+          "@name": "WorldEnv"
         },
         "SubEnvironment": {
           "@name": "None"
@@ -18538,10 +18719,10 @@
       {
         "@clustername": "1008_TUT_FR_.*_T1_NON",
         "Environment": {
-          "@name": "World"
+          "@name": "WorldEnv"
         },
         "Biom": {
-          "@name": "Forest"
+          "@name": "Highland"
         },
         "SubBiom": {
           "@name": "Green"
@@ -18559,7 +18740,7 @@
       {
         "@clustername": "1009_TUT_FR_.*_T1_NON",
         "Environment": {
-          "@name": "World"
+          "@name": "WorldEnv"
         },
         "Biom": {
           "@name": "Forest"
@@ -18577,7 +18758,7 @@
       {
         "@clustername": "1010_TUT_MN_.*_T1_NON",
         "Environment": {
-          "@name": "World"
+          "@name": "WorldEnv"
         },
         "Biom": {
           "@name": "Mountain"
@@ -18595,7 +18776,7 @@
       {
         "@clustername": "1011_TUT_FR_.*_T1_NON",
         "Environment": {
-          "@name": "World"
+          "@name": "WorldEnv"
         },
         "Biom": {
           "@name": "Forest"
@@ -18613,7 +18794,7 @@
       {
         "@clustername": ".*_RDG_.*_.*_.*_MOR_NON",
         "Environment": {
-          "@name": "Dungeon"
+          "@name": "DungeonEnv"
         },
         "SubEnvironment": {
           "@name": "Morgana_Monastery"
@@ -18637,7 +18818,7 @@
       {
         "@clustername": ".*_RDG_.*_.*_.*_KPR_NON",
         "Environment": {
-          "@name": "Dungeon"
+          "@name": "DungeonEnv"
         },
         "SubEnvironment": {
           "@name": "Keeper_Homecave"
@@ -18661,7 +18842,7 @@
       {
         "@clustername": ".*_RDG_.*_.*_.*_HER_NON",
         "Environment": {
-          "@name": "Dungeon"
+          "@name": "DungeonEnv"
         },
         "SubEnvironment": {
           "@name": "Heretic_Mineshaft"
@@ -18685,7 +18866,7 @@
       {
         "@clustername": ".*_RDG_.*_.*_.*_UND_NON",
         "Environment": {
-          "@name": "Dungeon"
+          "@name": "DungeonEnv"
         },
         "SubEnvironment": {
           "@name": "Undead_Castleruins"
@@ -18709,7 +18890,7 @@
       {
         "@clustername": ".*_RDG_.*_.*_.*_AVA_NON",
         "Environment": {
-          "@name": "Dungeon"
+          "@name": "DungeonEnv"
         },
         "Biom": {
           "@name": "Default"
@@ -18730,7 +18911,7 @@
       {
         "@clustername": "DNG-MOR-01-SUB-.*_DNG_.*_.*_T6_MOR_*",
         "Environment": {
-          "@name": "Dungeon"
+          "@name": "DungeonEnv"
         },
         "SubEnvironment": {
           "@name": "Morgana_Prison"
@@ -18754,7 +18935,7 @@
       {
         "@clustername": "DNG-MOR-01-SUB-.*_DNG_.*_.*_T8_MOR_*",
         "Environment": {
-          "@name": "Dungeon"
+          "@name": "DungeonEnv"
         },
         "SubEnvironment": {
           "@name": "Morgana_Prison"
@@ -18778,7 +18959,7 @@
       {
         "@clustername": "Torturer-.*_EXP_.*_.*_T6_MOR",
         "Environment": {
-          "@name": "Dungeon"
+          "@name": "DungeonEnv"
         },
         "SubEnvironment": {
           "@name": "Morgana_Prison"
@@ -18802,7 +18983,7 @@
       {
         "@clustername": "ThreeSisters-.*_EXP_.*_.*_T6_MOR",
         "Environment": {
-          "@name": "World"
+          "@name": "WorldEnv"
         },
         "SubEnvironment": {
           "@name": "Morgana_Barracks"
@@ -18826,7 +19007,7 @@
       {
         "@clustername": "MushroomCave-SOLO_EXP_.*_.*_T6_KPR",
         "Environment": {
-          "@name": "Dungeon"
+          "@name": "DungeonEnv"
         },
         "SubEnvironment": {
           "@name": "Keeper_Magiccave"
@@ -18850,7 +19031,7 @@
       {
         "@clustername": "MushroomCave-GROUP_EXP_.*_.*_T6_KPR",
         "Environment": {
-          "@name": "Dungeon"
+          "@name": "DungeonEnv"
         },
         "SubEnvironment": {
           "@name": "Keeper_Magiccave"
@@ -18874,7 +19055,7 @@
       {
         "@clustername": "MushroomCave-HRD_EXP_.*_.*_T6_KPR",
         "Environment": {
-          "@name": "Dungeon"
+          "@name": "DungeonEnv"
         },
         "SubEnvironment": {
           "@name": "Keeper_Magiccave"
@@ -18898,7 +19079,7 @@
       {
         "@clustername": "TUT-CASTLECELLAR_DNG_.*_.*_T3_HER_ROY",
         "Environment": {
-          "@name": "Dungeon"
+          "@name": "DungeonEnv"
         },
         "SubEnvironment": {
           "@name": "Heretic_Castle"
@@ -18922,7 +19103,7 @@
       {
         "@clustername": "TUT-WINECELLAR_DNG_.*_.*_T2_HER_ROY",
         "Environment": {
-          "@name": "Dungeon"
+          "@name": "DungeonEnv"
         },
         "SubEnvironment": {
           "@name": "Heretic_Basement"
@@ -18946,7 +19127,7 @@
       {
         "@clustername": "Mine-SOLO_EXP_.*_.*_T3_HER",
         "Environment": {
-          "@name": "Dungeon"
+          "@name": "DungeonEnv"
         },
         "SubEnvironment": {
           "@name": "Heretic_Openmines"
@@ -18970,7 +19151,7 @@
       {
         "@clustername": "FishyBusiness-SOLO_EXP_.*_.*_T4_HER",
         "Environment": {
-          "@name": "Dungeon"
+          "@name": "DungeonEnv"
         },
         "SubEnvironment": {
           "@name": "Heretic_Harbor"
@@ -18994,7 +19175,7 @@
       {
         "@clustername": "FishyBusiness-HRD_EXP_.*_.*_T6_HER",
         "Environment": {
-          "@name": "Dungeon"
+          "@name": "DungeonEnv"
         },
         "SubEnvironment": {
           "@name": "Heretic_Harbor"
@@ -19018,7 +19199,7 @@
       {
         "@clustername": "FishyBusiness-GROUP_EXP_.*_.*_T4_HER",
         "Environment": {
-          "@name": "Dungeon"
+          "@name": "DungeonEnv"
         },
         "SubEnvironment": {
           "@name": "Heretic_Harbor"
@@ -19042,7 +19223,7 @@
       {
         "@clustername": "SewersMaintenance-SOLO_EXP_.*_.*_T5_UND",
         "Environment": {
-          "@name": "Dungeon"
+          "@name": "DungeonEnv"
         },
         "SubEnvironment": {
           "@name": "Undead_Sewer"
@@ -19066,7 +19247,7 @@
       {
         "@clustername": "SewersMaintenance-HRD_EXP_.*_.*_T6_UND",
         "Environment": {
-          "@name": "Dungeon"
+          "@name": "DungeonEnv"
         },
         "SubEnvironment": {
           "@name": "Undead_Sewer"
@@ -19090,7 +19271,7 @@
       {
         "@clustername": "SewersMaintenance-GROUP_EXP_.*_.*_T5_UND",
         "Environment": {
-          "@name": "Dungeon"
+          "@name": "DungeonEnv"
         },
         "SubEnvironment": {
           "@name": "Undead_Sewer"
@@ -19114,7 +19295,7 @@
       {
         "@clustername": "EternalBattle-.*_EXP_HL_RED_T6_UND",
         "Environment": {
-          "@name": "World"
+          "@name": "WorldEnv"
         },
         "Biom": {
           "@name": "Highland"
@@ -19135,7 +19316,7 @@
       {
         "@clustername": "CORRUPT-.*_COR_.*_.*_.*_NON_SOLO",
         "Environment": {
-          "@name": "Dungeon"
+          "@name": "DungeonEnv"
         },
         "SubEnvironment": {
           "@name": "None"
@@ -19159,7 +19340,7 @@
       {
         "@clustername": "CORRUPT-.*_COR_.*_.*_.*_HER_SOLO",
         "Environment": {
-          "@name": "Dungeon"
+          "@name": "DungeonEnv"
         },
         "SubEnvironment": {
           "@name": "Heretic_Openmines"
@@ -19183,7 +19364,7 @@
       {
         "@clustername": "CORRUPT-.*_COR_.*_.*_.*_MOR_SOLO",
         "Environment": {
-          "@name": "Dungeon"
+          "@name": "DungeonEnv"
         },
         "SubEnvironment": {
           "@name": "Morgana_Prison"

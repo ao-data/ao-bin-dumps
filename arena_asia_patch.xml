@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<patch xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="patch.xsd">
+
+  <remove sel="arena/arenaseasons/arenaseason[@name='SEASON_16']"/>
+  <remove sel="arena/arenaseasons/arenaseason[@name='SEASON_17']"/>
+
+  <remove sel="arena/arenaseasons/arenaseason[@name='SEASON_18']">
+    <attribute name="newseasonrankdownid"/>
+  </remove>
+
+  <replace sel="arena/arenaseasons/arenaseason[@name='SEASON_18']">
+    <attribute name="displayname" newvalue="@SEASONS_SEASONNAME_SEASON_BETA"/>
+    <attribute name="startdatetimeref" newvalue="ASIA_BETA_START"/>
+  </replace>
+
+  <replace sel="arena/arenaseasons/arenaseason[@name='SEASON_19']">
+    <attribute name="displayname" newvalue="@SEASONS_SEASONNAME_SEASON_01"/>
+    <attribute name="startdatetimeref" newvalue="GVG_SEASON_18_END"/>
+  </replace>
+</patch>
