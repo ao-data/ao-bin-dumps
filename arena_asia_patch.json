@@ -1,0 +1,52 @@
+{
+  "?xml": {
+    "@version": "1.0",
+    "@encoding": "utf-8"
+  },
+  "patch": {
+    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+    "@xsi:noNamespaceSchemaLocation": "patch.xsd",
+    "remove": [
+      {
+        "@sel": "arena/arenaseasons/arenaseason[@name='SEASON_16']"
+      },
+      {
+        "@sel": "arena/arenaseasons/arenaseason[@name='SEASON_17']"
+      },
+      {
+        "@sel": "arena/arenaseasons/arenaseason[@name='SEASON_18']",
+        "attribute": {
+          "@name": "newseasonrankdownid"
+        }
+      }
+    ],
+    "replace": [
+      {
+        "@sel": "arena/arenaseasons/arenaseason[@name='SEASON_18']",
+        "attribute": [
+          {
+            "@name": "displayname",
+            "@newvalue": "@SEASONS_SEASONNAME_SEASON_BETA"
+          },
+          {
+            "@name": "startdatetimeref",
+            "@newvalue": "ASIA_BETA_START"
+          }
+        ]
+      },
+      {
+        "@sel": "arena/arenaseasons/arenaseason[@name='SEASON_19']",
+        "attribute": [
+          {
+            "@name": "displayname",
+            "@newvalue": "@SEASONS_SEASONNAME_SEASON_01"
+          },
+          {
+            "@name": "startdatetimeref",
+            "@newvalue": "GVG_SEASON_18_END"
+          }
+        ]
+      }
+    ]
+  }
+}
