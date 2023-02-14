@@ -1,0 +1,298 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<eventbasedpopups xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="eventbasedpopups.xsd">
+
+    <frequencyrules>
+
+        <!-- Order is important if more frequencyrules would match, first rules first -->
+        <!-- Rules are always evaluated after a Trigger is invoked, means those can change on the fly -->
+
+        <frequencyrule uniquename="NONE_PREMIUM">
+            <timeframes>
+                <timeframe range="1-2" minutes="15" />
+                <timeframe range="2-3" minutes="30" />
+                <timeframe range="3-4" minutes="45" />
+            </timeframes>
+            <conditions>
+                <and>
+                    <not>
+                        <IfHasPremium />
+                    </not>
+                </and>
+            </conditions>
+        </frequencyrule>
+
+        <frequencyrule uniquename="SMALL_PREMIUM">
+            <timeframes>
+                <timeframe range="1-2" minutes="15" />
+            </timeframes>
+            <conditions>
+                <and>
+                    <IfHasPremium />
+                    <IfHasPremiumDays operation="less" value="7" />
+                    <not>
+                        <IfHasRecurringSubscription />
+                    </not>
+                </and>
+            </conditions>
+        </frequencyrule>
+
+        <frequencyrule uniquename="BIG_PREMIUM">
+            <timeframes>
+                <timeframe range="1-2" minutes="15" />
+            </timeframes>
+            <conditions>
+                <or>
+                    <IfHasPremiumDays operation="greaterOrEqual" value="7" />
+                    <IfHasRecurringSubscription />
+                </or>
+            </conditions>
+        </frequencyrule>
+    </frequencyrules>
+
+    <popupqueue>
+        <allowedtriggers>
+            <trigger action="GameLogin" totalpopups="4" />
+        </allowedtriggers>
+        <allowedcategories>
+            <category name="Announcements" totalpopups="1" />
+            <category name="Advertisement" totalpopups="1" />
+            <category name="GameFeature" totalpopups="1" />
+            <category name="ActivityHUB" totalpopups="1" />
+            <category name="Mobile" totalpopups="1" />
+        </allowedcategories>
+    </popupqueue>
+
+    <popups>
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        <!-- Old Popups, do not mix with other, cant control content, only conditions and trigger, still using the regular frequency rules-->
+        <!-- Guest Account Incentivization -->
+        <popup uniquename="GUEST_ACCOUNT_INCENTIVIZATION" priority="1" type="GuestAccount">
+            <categories>
+                <category name="GuestAccount" />
+                <category name="Advertisement" />
+            </categories>
+            <triggers>
+                <trigger action="OpenFastTravelUi" />
+                <trigger action="GameLogin" />
+            </triggers>
+            <conditions>
+                <or>
+                    <!-- initial -->
+                    <and>
+                        <IfIsGuestAccount />
+                        <IfTriggeredThrough action="OpenFastTravelUi" />
+                        <IfHasSeenPopup uniquename="GUEST_ACCOUNT_INCENTIVIZATION" frequency="AllTime" operation="lessOrEqual" amount="1" />
+                    </and>
+                    <and>
+                        <not>
+                            <IfTutorialCompleted />
+                        </not>
+                        <IfIsGuestAccount />
+                        <IfGuestLoginCount operation="equals" value="2" />
+                        <IfHasSeenPopup uniquename="GUEST_ACCOUNT_INCENTIVIZATION" frequency="AllTime" operation="equals" amount="0" />
+                    </and>
+                    <!---->
+                    <!-- regular remainder -->
+                    <and>
+                        <IfIsGuestAccount />
+                        <IfTutorialCompleted />
+                        <IfHasSeenPopup uniquename="GUEST_ACCOUNT_INCENTIVIZATION" frequency="AllTime" operation="greaterOrEqual" amount="1" />
+                        <IfHasSeenPopup uniquename="GUEST_ACCOUNT_INCENTIVIZATION" frequency="Hours" timefactor="12" operation="equals" amount="0" />
+                    </and>
+                    <!---->
+                </or>
+            </conditions>
+        </popup>
+
+        <!-- GvG Season Winner -->
+        <popup uniquename="SEASON_WINNER" priority="4" type="SeasonWinner">
+            <categories>
+                <category name="SeasonWinner" />
+                <category name="GameFeature" />
+            </categories>
+            <triggers>
+                <trigger action="GameLogin" />
+            </triggers>
+            <conditions>
+                <and>
+                    <IfTutorialCompleted />
+                    <not>
+                        <IfHasSeenSeasonWinnerPopup uniquename="SEASON_WINNER" />
+                    </not>
+                </and>
+            </conditions>
+        </popup>
+
+        <!-- Cross Platform -->
+        
+
+        <!-- Activity HUB -->
+        <popup uniquename="ACTIVITY_HUB" priority="1" type="ActivityHUB">
+            <categories>
+                <category name="ActivityHUB" />
+            </categories>
+            <triggers>
+                <trigger action="GameLogin" />
+            </triggers>
+            <conditions>
+                <and>
+                    <IfTutorialCompleted />
+                    <IfEnabledActivityPopupOnLogin />
+                    <IfHasSeenPopup uniquename="ACTIVITY_HUB" frequency="Days" timefactor="1" operation="less" amount="1" targetfilter="character" />
+                </and>
+            </conditions>
+        </popup>
+
+        <!-- Featured Feature -->
+        <!-- NOTE : uniquename does change based on featured feature (FEATURED_FEATURE_ContentId see cstool for ContentId)-->
+        <!-- NOTE : See CS Tool for specific setup of each individual popup -->
+        
+
+        <!-- Faction Warfare -->
+        <popup uniquename="FACTION_WARFARE_UNLOCK" priority="7" type="FactionWarfareUnlock">
+            <categories>
+                <category name="FactionWarfare" />
+                <category name="GameFeature" />
+            </categories>
+            <triggers>
+                <trigger action="GameLogin" />
+            </triggers>
+            <conditions>
+                <and>
+                    <IfHasUnlockedFactionWarfare />
+                    <IfHasSeenPopup uniquename="FACTION_WARFARE_UNLOCK" frequency="AllTime" operation="equals" amount="0" targetfilter="character" />
+                </and>
+            </conditions>
+        </popup>
+
+        <!-- Mobile Store Rating -->
+        <popup uniquename="MOBILE_STORE_RATING" priority="9" type="MobileStoreRating">
+            <categories>
+                <category name="MobileStoreRating" />
+                <category name="Mobile" />
+            </categories>
+            <triggers>
+                <trigger action="GameLogin" />
+                <trigger action="ClusterChange" />
+            </triggers>
+            <conditions>
+                <and>
+                    <IfOnPlatform platform="MobileStore" />
+                    <IfTutorialCompleted />
+                    <IfCharacterOnlineHours operation="greaterOrEqual" value="5" />
+                    <IfHasSeenPopup uniquename="MOBILE_STORE_RATING" frequency="Days" timefactor="7" operation="equals" amount="0" />
+                </and>
+            </conditions>
+        </popup>
+
+        <!-- end old popups -->
+
+        <!---->
+        <!-- For a tutorial popup use same unique name as used in tutorial xml -->
+        <!---->
+
+        <popup uniquename="PORTAL_CITY_INFO" priority="10" type="GenericTutorial">
+            <categories>
+                <category name="GenericTutorial" />
+                <category name="CityPortal" />
+            </categories>
+            <triggers>
+                <trigger action="ClusterChange" />
+            </triggers>
+            <conditions>
+                <and>
+                    <IfInCityType citytype="PortalCity" />
+                </and>
+            </conditions>
+        </popup>
+
+        <popup uniquename="GUILD_FINDER_INFO" priority="10" type="GuildFinder" title="@EVENT_BASED_POPUPS_GUILD_FINDER_TITLE" description="@EVENT_BASED_POPUPS_GUILD_FINDER_DESCRIPTION" imagepath="Gui/EventBasedPopups/EVENT_POPUP_GUILD_FINDER">
+            <categories>
+                <category name="GameFeature" />
+                <category name="Advertisement" />
+            </categories>
+            <triggers>
+                <trigger action="ClusterChange" />
+            </triggers>
+            <conditions>
+                <and>
+                    <not>
+                        <IfIsInGuild />
+                    </not>
+                    <IfTutorialCompleted />
+                    <IfAccountAgeDays value="30" operation="lessOrEqual" />
+                    <IfHasSeenPopup uniquename="GUILD_FINDER_INFO" frequency="Days" operation="equals" timefactor="7" amount="0" />
+                </and>
+            </conditions>
+        </popup>
+
+        <popup uniquename="GUILD_FINDER_VETERAN_INFO" priority="10" type="GuildFinder" title="@EVENT_BASED_POPUPS_GUILD_FINDER_VETERAN_TITLE" description="@EVENT_BASED_POPUPS_GUILD_FINDER_VETERAN_DESCRIPTION" imagepath="Gui/EventBasedPopups/EVENT_POPUP_GUILD_FINDER">
+            <categories>
+                <category name="GameFeature" />
+                <category name="Advertisement" />
+            </categories>
+            <triggers>
+                <trigger action="ClusterChange" />
+            </triggers>
+            <conditions>
+                <and>
+                    <not>
+                        <IfIsInGuild />
+                    </not>
+                    <IfTutorialCompleted />
+                    <IfAccountAgeDays value="30" operation="greater" />
+                    <IfHasSeenPopup uniquename="GUILD_FINDER_VETERAN_INFO" frequency="Days" operation="equals" timefactor="28" amount="0" />
+                    <IfHasSeenPopup uniquename="GUILD_FINDER_INFO" frequency="Days" operation="equals" timefactor="7" amount="0" />
+                </and>
+            </conditions>
+        </popup>
+
+        
+
+        <popup uniquename="BETA_WELCOME" priority="100" type="GenericTutorial">
+            <categories>
+                <category name="GenericTutorial" />
+                <category name="Announcements" />
+            </categories>
+            <triggers>
+                <trigger action="GameLogin" />
+                <trigger action="ClusterChange" />
+            </triggers>
+            <conditions>
+                <and>
+                    <IsAsiaContext />
+                    <IfValidDate start="2023-02-20T10:00:00Z" end="2023-03-13T10:00:00Z" />
+                    <IfHasSeenPopup uniquename="BETA_WELCOME" frequency="AllTime" operation="equals" amount="0" targetfilter="character" />
+                </and>
+            </conditions>
+        </popup>
+        
+    </popups>
+</eventbasedpopups>

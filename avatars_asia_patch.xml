@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<patch xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="patch.xsd">
+  <remove sel="/avatars/avatars/avatar[@name='AVATAR_07']" />
+  <remove sel="/avatars/avatars/avatar[@name='AVATAR_10']" />
+  <remove sel="/avatars/avatars/avatar[@name='AVATAR_11']" />
+  <add sel="/avatars/avatars" before="true" aschild="true">
+	  <![CDATA[    
+	<avatar name="AVATAR_07" locked="false"/>
+    <avatar name="AVATAR_10" locked="false"/>
+    <avatar name="AVATAR_11" locked="false"/>
+	]]>
+  </add>
+</patch>

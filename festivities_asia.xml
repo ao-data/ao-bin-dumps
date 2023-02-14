@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<festivities xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="festivities.xsd">
+  <!-- date/time format is yyyy-MM-dd h:mm, e.g. 2018-05-01 9:00 (= May 1st, 9:00 UTC) DO NOT FORGET THE LEADING 0s (09:00, not 9:00)-->
+  <!-- mail local needs to be @<ID>_SUBJECT and @<ID>_TEXT -->
+  <!-- From now on please add new events at the top of this file. -->
+  <fixedevents>
+    <event uniquename="XMAS2022" title="@FIXED_EVENT_XMAS_2022" description="@FIXED_EVENT_XMAS_2022_DESC" image="activities_event_xmas" showinactivityboard="true">
+      <activeflag name="christmas" />
+      <mail mailid="MAIL_XMAS_2022" sender="Albion Online">
+        <attacheditem id="T3_VANITY_CONSUMABLE_FIREWORKS_YELLOW_NONTRADABLE" amount="5" />
+        <attacheditem id="T3_VANITY_CONSUMABLE_FIREWORKS_GREEN_NONTRADABLE" amount="5" />
+        <attacheditem id="T3_VANITY_CONSUMABLE_FIREWORKS_RED_NONTRADABLE" amount="5" />
+        <attacheditem id="UNIQUE_CONSUMABLE_EVENT_WINTER_2017" amount="5" />
+      </mail>
+    </event>
+    <event uniquename="HALLOWEEN2022" title="@FIXED_EVENT_HALLOWEEN_2022" description="@FIXED_EVENT_HALLOWEEN_2022_DESC" image="activities_event_halloween" showinactivityboard="true">
+      <activeflag name="halloween" />
+    </event>
+    <event uniquename="ANNIVERSARY_2022" title="@FIXED_EVENT_ANNIVERSARY_2022" description="@FIXED_EVENT_ANNIVERSARY_2022_DESC" image="activities_event_anniversary" showinactivityboard="true">
+      <activeflag name="anniversary" />
+      <activeflag name="anniversary_prelude" />
+      <mail mailid="MAIL_ANNIVERSARY_2022" sender="Albion Online">
+        <attacheditem id="UNIQUE_AVATAR_ANNIVERSARY_2022" amount="1" />
+        <attacheditem id="UNIQUE_AVATARRING_ANNIVERSARY_2022" amount="1" />
+      </mail>
+    </event>
+    <event uniquename="EASTER2022" title="@FIXED_EVENT_EASTER_TITLE" description="@FIXED_EVENT_EASTER_DESC" image="activities_event_easter2022">
+      <activeflag name="easter" />
+      <activeflag name="res_easter" />
+    </event>
+    <event uniquename="ASIA_BETA" showinactivityboard="false">
+      <buff spell="ASIA_BETA_BUFF" />
+    </event>
+  </fixedevents>
+  <automatedevents starttime="DOWNTIME" previewhours="24">
+    <eventcategory uniquename="ACTIVITIES" weight="1">
+      <event uniquename="HELLGATE" cooldowndays="9" mindurationdays="2" maxdurationdays="3" weight="1" title="@DYNAMIC_EVENT_HELLGATE_TITLE" description="@DYNAMIC_EVENT_HELLGATE_DESCRIPTION" image="activities_event_hellgates">
+        <buff spell="DYNAMIC_EVENT_HELLGATE" />
+      </event>
+      <event uniquename="CORRUPTED" cooldowndays="9" mindurationdays="2" maxdurationdays="3" weight="1" title="@DYNAMIC_EVENT_CORRUPTED_TITLE" description="@DYNAMIC_EVENT_CORRUPTED_DESCRIPTION" image="activities_event_corrupted_dungeons">
+        <buff spell="DYNAMIC_EVENT_CORRUPTED" />
+      </event>
+      <event uniquename="FACTIONPOINTS" cooldowndays="9" mindurationdays="2" maxdurationdays="3" weight="1" title="@DYNAMIC_EVENT_FACTION_WARFARE_TITLE" description="@DYNAMIC_EVENT_FACTION_WARFARE_DESCRIPTION" image="activities_event_faction_warfare">
+        <buff spell="DYNAMIC_EVENT_FACTION_WARFARE" />
+      </event>
+      <event uniquename="GROUP_AND_RAID_DUNGEONS" cooldowndays="9" mindurationdays="2" maxdurationdays="3" weight="1" title="@DYNAMIC_EVENT_GROUP_DUNGEONS_TITLE" description="@DYNAMIC_EVENT_GROUP_DUNGEONS_DESCRIPTION" image="activities_event_group_dungeons">
+        <buff spell="DYNAMIC_EVENT_GROUP_DUNGEONS" />
+      </event>
+      <event uniquename="STATIC_DUNGEONS" cooldowndays="9" mindurationdays="2" maxdurationdays="3" weight="1" title="@DYNAMIC_EVENT_STATIC_DUNGEONS_TITLE" description="@DYNAMIC_EVENT_STATIC_DUNGEONS_DESCRIPTION" image="activities_event_static_dungeons">
+        <buff spell="DYNAMIC_EVENT_STATIC_DUNGEONS" />
+      </event>
+      <event uniquename="SOLO_DUNGEONS" cooldowndays="9" mindurationdays="2" maxdurationdays="3" weight="1" title="@DYNAMIC_EVENT_SOLO_DUNGEONS_TITLE" description="@DYNAMIC_EVENT_SOLO_DUNGEONS_DESCRIPTION" image="activities_event_solo_dungeons">
+        <buff spell="DYNAMIC_EVENT_SOLO_DUNGEONS" />
+      </event>
+      <event uniquename="ROAMING_MOBS" cooldowndays="9" mindurationdays="2" maxdurationdays="3" weight="1" title="@DYNAMIC_EVENT_ROAMING_MOBS_TITLE" description="@DYNAMIC_EVENT_ROAMING_MOBS_DESCRIPTION" image="activities_event_roaming_mobs">
+        <buff spell="DYNAMIC_EVENT_ROAMING_MOBS" />
+      </event>
+      <event uniquename="FAME" cooldowndays="9" mindurationdays="2" maxdurationdays="3" weight="0" title="@DYNAMIC_EVENT_FAME_TITLE" description="@DYNAMIC_EVENT_FAME_DESCRIPTION" image="activities_event_fame_week">
+        <buff spell="FAMEBONUS25" />
+      </event>
+      <!--<event uniquename="TREASURE_SPAWNS" cooldowndays="7" mindurationdays="1" maxdurationdays="1" weight="1" title="@DYNAMIC_EVENT_HELLGATE_TITLE" description="@DYNAMIC_EVENT_HELLGATE_DESCRIPTION" image="activities_event_hellgates">
+        <activeflag name="treasureevent"/>
+      </event>-->
+    </eventcategory>
+    <eventcategory uniquename="GATHERING" weight="1" cooldowndays="5">
+      <event uniquename="ORE" cooldowndays="19" mindurationdays="2" maxdurationdays="3" weight="1" title="@DYNAMIC_EVENT_ORE_TITLE" description="@DYNAMIC_EVENT_ORE_DESCRIPTION" image="activities_event_gathering">
+        <buff spell="DYNAMIC_EVENT_ORE" />
+        <activeflag name="dynamic_event_ore" />
+      </event>
+      <event uniquename="ROCK" cooldowndays="19" mindurationdays="2" maxdurationdays="3" weight="1" title="@DYNAMIC_EVENT_ROCK_TITLE" description="@DYNAMIC_EVENT_ROCK_DESCRIPTION" image="activities_event_gathering">
+        <buff spell="DYNAMIC_EVENT_ROCK" />
+        <activeflag name="dynamic_event_rock" />
+      </event>
+      <event uniquename="WOOD" cooldowndays="19" mindurationdays="2" maxdurationdays="3" weight="1" title="@DYNAMIC_EVENT_WOOD_TITLE" description="@DYNAMIC_EVENT_WOOD_DESCRIPTION" image="activities_event_gathering">
+        <buff spell="DYNAMIC_EVENT_WOOD" />
+        <activeflag name="dynamic_event_wood" />
+      </event>
+      <event uniquename="FIBER" cooldowndays="19" mindurationdays="2" maxdurationdays="3" weight="1" title="@DYNAMIC_EVENT_FIBER_TITLE" description="@DYNAMIC_EVENT_FIBER_DESCRIPTION" image="activities_event_gathering">
+        <buff spell="DYNAMIC_EVENT_FIBER" />
+        <activeflag name="dynamic_event_fiber" />
+      </event>
+      <event uniquename="HIDE" cooldowndays="19" mindurationdays="2" maxdurationdays="3" weight="1" title="@DYNAMIC_EVENT_HIDE_TITLE" description="@DYNAMIC_EVENT_HIDE_DESCRIPTION" image="activities_event_gathering">
+        <buff spell="DYNAMIC_EVENT_HIDE" />
+        <activeflag name="dynamic_event_hide" />
+      </event>
+      <event uniquename="FISHING" cooldowndays="19" mindurationdays="2" maxdurationdays="3" weight="1" title="@DYNAMIC_EVENT_FISHING_TITLE" description="@DYNAMIC_EVENT_FISHING_DESCRIPTION" image="activities_event_fishing">
+        <buff spell="DYNAMIC_EVENT_FISHING" />
+      </event>
+    </eventcategory>
+  </automatedevents>
+  <dailyevents starttime="DOWNTIME">
+    <eventcategory uniquename="GENERAL" quantity="2">
+      <craftbonusevent uniquename="COMMON_SWORD" category="sword" value="0.10" weight="9" />
+      <craftbonusevent uniquename="COMMON_AXE" category="axe" value="0.10" weight="9" />
+      <craftbonusevent uniquename="COMMON_CROSSBOW" category="crossbow" value="0.10" weight="9" />
+      <craftbonusevent uniquename="COMMON_HAMMER" category="hammer" value="0.10" weight="9" />
+      <craftbonusevent uniquename="COMMON_MACE" category="mace" value="0.10" weight="9" />
+      <craftbonusevent uniquename="COMMON_KNUCKLES" category="knuckles" value="0.10" weight="9" />
+      <craftbonusevent uniquename="COMMON_PLATE_HELMET" category="plate_helmet" value="0.10" weight="9" />
+      <craftbonusevent uniquename="COMMON_PLATE_ARMOR" category="plate_armor" value="0.10" weight="9" />
+      <craftbonusevent uniquename="COMMON_PLATE_SHOES" category="plate_shoes" value="0.10" weight="9" />
+      <craftbonusevent uniquename="COMMON_SPEAR" category="spear" value="0.10" weight="9" />
+      <craftbonusevent uniquename="COMMON_BOW" category="bow" value="0.10" weight="9" />
+      <craftbonusevent uniquename="COMMON_NATURESTAFF" category="naturestaff" value="0.10" weight="9" />
+      <craftbonusevent uniquename="COMMON_DAGGER" category="dagger" value="0.10" weight="9" />
+      <craftbonusevent uniquename="COMMON_QUARTERSTAFF" category="quarterstaff" value="0.10" weight="9" />
+      <craftbonusevent uniquename="COMMON_LEATHER_HELMET" category="leather_helmet" value="0.10" weight="9" />
+      <craftbonusevent uniquename="COMMON_LEATHER_ARMOR" category="leather_armor" value="0.10" weight="9" />
+      <craftbonusevent uniquename="COMMON_LEATHER_SHOES" category="leather_shoes" value="0.10" weight="9" />
+      <craftbonusevent uniquename="COMMON_ARCANESTAFF" category="arcanestaff" value="0.10" weight="9" />
+      <craftbonusevent uniquename="COMMON_CURSESTAFF" category="cursestaff" value="0.10" weight="9" />
+      <craftbonusevent uniquename="COMMON_FIRESTAFF" category="firestaff" value="0.10" weight="9" />
+      <craftbonusevent uniquename="COMMON_FROSTSTAFF" category="froststaff" value="0.10" weight="9" />
+      <craftbonusevent uniquename="COMMON_HOLYSTAFF" category="holystaff" value="0.10" weight="9" />
+      <craftbonusevent uniquename="COMMON_CLOTH_HELMET" category="cloth_helmet" value="0.10" weight="9" />
+      <craftbonusevent uniquename="COMMON_CLOTH_ARMOR" category="cloth_armor" value="0.10" weight="9" />
+      <craftbonusevent uniquename="COMMON_CLOTH_SHOES" category="cloth_shoes" value="0.10" weight="9" />
+      <craftbonusevent uniquename="COMMON_OFFHAND" category="offhand" value="0.10" weight="9" />
+      <craftbonusevent uniquename="COMMON_FIBER" category="fiber" value="0.10" weight="9" />
+      <craftbonusevent uniquename="COMMON_WOOD" category="wood" value="0.10" weight="9" />
+      <craftbonusevent uniquename="COMMON_ROCK" category="rock" value="0.10" weight="9" />
+      <craftbonusevent uniquename="COMMON_ORE" category="ore" value="0.10" weight="9" />
+      <craftbonusevent uniquename="COMMON_HIDE" category="hide" value="0.10" weight="9" />
+      <craftbonusevent uniquename="COMMON_TOOLS" category="tools" value="0.10" weight="9" />
+      <craftbonusevent uniquename="COMMON_GATHERERGEAR" category="gatherergear" value="0.10" weight="9" />
+      <craftbonusevent uniquename="COMMON_POTION" category="potion" value="0.10" weight="9" />
+      <craftbonusevent uniquename="COMMON_FOOD" category="food" value="0.10" weight="9" />
+      <craftbonusevent uniquename="COMMON_BAG" category="bag" value="0.10" weight="9" />
+      <craftbonusevent uniquename="COMMON_CAPE" category="cape" value="0.10" weight="9" />
+      <!--RARES-->
+      <craftbonusevent uniquename="RARE_SWORD" category="sword" value="0.20" weight="1" />
+      <craftbonusevent uniquename="RARE_AXE" category="axe" value="0.20" weight="1" />
+      <craftbonusevent uniquename="RARE_CROSSBOW" category="crossbow" value="0.20" weight="1" />
+      <craftbonusevent uniquename="RARE_HAMMER" category="hammer" value="0.20" weight="1" />
+      <craftbonusevent uniquename="RARE_MACE" category="mace" value="0.20" weight="1" />
+      <craftbonusevent uniquename="RARE_KNUCKLES" category="knuckles" value="0.20" weight="1" />
+      <craftbonusevent uniquename="RARE_PLATE_HELMET" category="plate_helmet" value="0.20" weight="1" />
+      <craftbonusevent uniquename="RARE_PLATE_ARMOR" category="plate_armor" value="0.20" weight="1" />
+      <craftbonusevent uniquename="RARE_PLATE_SHOES" category="plate_shoes" value="0.20" weight="1" />
+      <craftbonusevent uniquename="RARE_SPEAR" category="spear" value="0.20" weight="1" />
+      <craftbonusevent uniquename="RARE_BOW" category="bow" value="0.20" weight="1" />
+      <craftbonusevent uniquename="RARE_NATURESTAFF" category="naturestaff" value="0.20" weight="1" />
+      <craftbonusevent uniquename="RARE_DAGGER" category="dagger" value="0.20" weight="1" />
+      <craftbonusevent uniquename="RARE_QUARTERSTAFF" category="quarterstaff" value="0.20" weight="1" />
+      <craftbonusevent uniquename="RARE_LEATHER_HELMET" category="leather_helmet" value="0.20" weight="1" />
+      <craftbonusevent uniquename="RARE_LEATHER_ARMOR" category="leather_armor" value="0.20" weight="1" />
+      <craftbonusevent uniquename="RARE_LEATHER_SHOES" category="leather_shoes" value="0.20" weight="1" />
+      <craftbonusevent uniquename="RARE_ARCANESTAFF" category="arcanestaff" value="0.20" weight="1" />
+      <craftbonusevent uniquename="RARE_CURSESTAFF" category="cursestaff" value="0.20" weight="1" />
+      <craftbonusevent uniquename="RARE_FIRESTAFF" category="firestaff" value="0.20" weight="1" />
+      <craftbonusevent uniquename="RARE_FROSTSTAFF" category="froststaff" value="0.20" weight="1" />
+      <craftbonusevent uniquename="RARE_HOLYSTAFF" category="holystaff" value="0.20" weight="1" />
+      <craftbonusevent uniquename="RARE_CLOTH_HELMET" category="cloth_helmet" value="0.20" weight="1" />
+      <craftbonusevent uniquename="RARE_CLOTH_ARMOR" category="cloth_armor" value="0.20" weight="1" />
+      <craftbonusevent uniquename="RARE_CLOTH_SHOES" category="cloth_shoes" value="0.20" weight="1" />
+      <craftbonusevent uniquename="RARE_OFFHAND" category="offhand" value="0.20" weight="1" />
+      <craftbonusevent uniquename="RARE_FIBER" category="fiber" value="0.20" weight="1" />
+      <craftbonusevent uniquename="RARE_WOOD" category="wood" value="0.20" weight="1" />
+      <craftbonusevent uniquename="RARE_ROCK" category="rock" value="0.20" weight="1" />
+      <craftbonusevent uniquename="RARE_ORE" category="ore" value="0.20" weight="1" />
+      <craftbonusevent uniquename="RARE_HIDE" category="hide" value="0.20" weight="1" />
+      <craftbonusevent uniquename="RARE_TOOLS" category="tools" value="0.20" weight="1" />
+      <craftbonusevent uniquename="RARE_GATHERERGEAR" category="gatherergear" value="0.20" weight="1" />
+      <craftbonusevent uniquename="RARE_POTION" category="potion" value="0.20" weight="1" />
+      <craftbonusevent uniquename="RARE_FOOD" category="food" value="0.20" weight="1" />
+      <craftbonusevent uniquename="RARE_BAG" category="bag" value="0.20" weight="1" />
+      <craftbonusevent uniquename="RARE_CAPE" category="cape" value="0.20" weight="1" />
+    </eventcategory>
+  </dailyevents>
+</festivities>

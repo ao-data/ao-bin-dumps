@@ -1,0 +1,1377 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<steamachievements xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="steamachievements.xsd">
+
+<!-- ACHTUNG! ACHTUNG! ACHTUNG! ACHTUNG! ACHTUNG! ACHTUNG! ACHTUNG! ACHTUNG! ACHTUNG! ACHTUNG! ACHTUNG! ACHTUNG! ACHTUNG! ACHTUNG! 
+
+	All changes made to this file need to be mirrored in the Steam Partner console. Yes, even if you change just a number!
+
+    ACHTUNG! ACHTUNG! ACHTUNG! ACHTUNG! ACHTUNG! ACHTUNG! ACHTUNG! ACHTUNG! ACHTUNG! ACHTUNG! ACHTUNG! ACHTUNG! ACHTUNG! ACHTUNG! -->
+
+  <!--Vivian Update Achievements-->
+  
+  <achievement name="SA_EXPLORATION_MISTS_ENTER">
+	  <gotocluster clustertype="Mists" />
+  </achievement>
+  
+  <achievement name="SA_EXPLORATION_MISTS_FIND_CITY">
+	  <or>
+	      <gotocluster clusterdirect="5000" />
+	      <gotocluster clusterdirect="5001" />
+	      <gotocluster clusterdirect="5002" />		  
+	      <gotocluster clusterdirect="5003" />		  
+	  </or>
+  </achievement>
+
+  <achievement name="SA_EXPLORATION_MISTS_CITY_FRIENDLY">
+    <havemistcitystandingrank rank="2" />
+  </achievement>	
+  
+  <achievement name="SA_PVE_MISTS_HUNTER" hidden="true">
+	<or>
+	  <killmob mobid="T5_MOB_MISTS_SPIDER" count="1" />  
+	  <killmob mobid="T6_MOB_MISTS_SPIDER" count="1" />  
+	  <killmob mobid="T7_MOB_MISTS_SPIDER" count="1" />  
+	  <killmob mobid="T8_MOB_MISTS_SPIDER" count="1" />  
+	</or>
+	<or>
+	  <killmob mobid="T5_MOB_MISTS_FAIRYDRAGON" count="1" />
+	  <killmob mobid="T6_MOB_MISTS_FAIRYDRAGON" count="1" />
+	  <killmob mobid="T7_MOB_MISTS_FAIRYDRAGON" count="1" />
+	  <killmob mobid="T8_MOB_MISTS_FAIRYDRAGON" count="1" />  
+	</or>
+	<or>
+	  <killmob mobid="T5_MOB_MISTS_GRIFFIN" count="1" />  
+	  <killmob mobid="T6_MOB_MISTS_GRIFFIN" count="1" />  
+	  <killmob mobid="T7_MOB_MISTS_GRIFFIN" count="1" />  
+	  <killmob mobid="T8_MOB_MISTS_GRIFFIN" count="1" />  
+	</or>
+  </achievement>
+	
+  <!--Uther Update Achievements-->
+
+  <achievement name="SA_PVP_CASTLE_CAPTURE_01">
+    <lootcastlechest castletype="MEDIUMCASTLE" count="1" />
+  </achievement>
+
+  <achievement name="SA_PVP_CASTLE_OUTPOST_CAPTURE">
+    <lootcastlechest castletype="SMALLCASTLE" count="1" />
+  </achievement>
+
+  <achievement name="SA_PVP_CRYSTAL_ARENA_RANKUP">
+    <havearenarank rank="1" />
+  </achievement>
+
+  <achievement name="SA_PVP_CRYSTAL_ARENA_SILVER1">
+    <havearenarank rank="8" />
+  </achievement>
+
+  <achievement name="SA_EXPLORATION_CABBAGE_MERCHANT" hidden="true">
+    <playertrade itemid="T5_CABBAGE" tradetype="give" count="1" clusterarchetype="BLACK" />
+  </achievement>
+
+
+  <!--Torsten Update Achievements-->
+
+
+  <achievement name="SA_EXPLORATION_TREASURE">
+    <usefunction function="OpenTreasureChest" />
+  </achievement>
+
+  <achievement name="SA_EXPLORATION_TREASURE_100" stat="SA_ST_EXPLORATION_TREASURE_100">
+    <usefunction function="OpenTreasureChest" count="100" />
+  </achievement>
+
+  <achievement name="SA_EXPLORATION_STATIC_DUNGEON_FAME" stat="SA_ST_EXPLORATION_STATIC_DUNGEON_FAME">
+    <killmobfame value="10000000" specialcondition="InStaticDungeon" />
+  </achievement>
+
+  <achievement name="SA_EXPLORATION_STATIC_DUNGEON_EVENT">
+    <killmobfame value="1" specialcondition="DuringStaticDungeonEvent" />
+  </achievement>
+  
+  <achievement name="SA_COLLECTION_REROLL">
+    <rerollitems count="1" />
+  </achievement>
+
+  <achievement name="SA_COLLECTION_REROLL_MASTERPIECE">
+    <rerollitems count="1" minresultquality="5" />
+  </achievement>
+
+  <achievement name="SA_COLLECTION_REROLL_STACK">
+    <rerollitems count="1" minoriginalstacksize="999" />
+  </achievement>
+
+  <achievement name="SA_COLLECTION_ELITE_FIRST">
+    <unlockachievement achievement="any" elitelevel="1" />
+  </achievement>
+
+  <achievement name="SA_COLLECTION_ELITE_FINISH">
+    <unlockachievement achievement="any" elitelevel="20" />
+  </achievement>
+
+  <achievement name="SA_COLLECTION_WARGLOVES_MULTIKILL">
+    <killwithsinglespellcast count="1" kills="3" spell="PUMMELING_STRIKES_DELAYED_DAMAGE" />
+  </achievement>
+
+  <achievement name="SA_COLLECTION_HIDEOUT_HOME">
+    <usefunction function="MakeHideoutHome" />
+  </achievement>
+
+  <achievement name="SA_COLLECTION_HIDEOUT_POWER">
+    <usefunction function="CaptureHideoutPowerCrystal" />
+  </achievement>
+
+  <achievement name="SA_COLLECTION_TERRITORY_ENERGY">
+    <usefunction function="CaptureTerritoryPowerCrystal" />
+  </achievement>
+
+  <!--Sagramore Update Achievements-->
+  <achievement name="SA_COLLECTION_HELLGATE_01" stat="SA_ST_COLLECTION_HELLGATE_01">
+    <or>
+      <haveinfamy amount="100000" infamytype="Hell2v2" />
+      <haveinfamy amount="100000" infamytype="Hell5v5" />
+      <haveinfamy amount="100000" infamytype="Hell10v10" />
+    </or>
+  </achievement>
+  <achievement name="SA_COLLECTION_HELLGATE_02" stat="SA_ST_COLLECTION_HELLGATE_02">
+    <or>
+      <haveinfamy amount="250000" infamytype="Hell2v2" />
+      <haveinfamy amount="250000" infamytype="Hell5v5" />
+      <haveinfamy amount="250000" infamytype="Hell10v10" />
+    </or>
+  </achievement>
+  <achievement name="SA_EXPLORATION_CHAIN_HELLGATE_01" stat="SA_ST_EXPLORATION_CHAIN_HELLGATE_01">
+    <chainhellgate count="2" />
+  </achievement>
+  <achievement name="SA_EXPLORATION_CHAIN_HELLGATE_02" stat="SA_ST_EXPLORATION_CHAIN_HELLGATE_02">
+    <chainhellgate count="5" />
+  </achievement>
+  <achievement name="SA_EXPLORATION_CHAIN_HELLGATE_03" stat="SA_ST_EXPLORATION_CHAIN_HELLGATE_03">
+    <chainhellgate count="10" />
+  </achievement>
+  <achievement name="SA_FACTIONWARFARE_CLUSTER_CAPTURE">
+    <gainfactionpoints value="1" source="CLUSTER_CAPTURED" />
+  </achievement>
+  <achievement name="SA_FACTIONWARFARE_BANDIT_ASSAULT">
+    <gainfactionpoints value="1" source="REDZONE_EVENT" />
+  </achievement>
+
+  <!--Roland Update Achievements-->
+  <achievement name="SA_PVP_CORRUPTED_DUNGEON_01">
+    <killplayer where="all" count="1" minvalue="0" specialcondition="KillCorruptedDungeonInvader" />
+  </achievement>
+  <achievement name="SA_PVP_CORRUPTED_DUNGEON_02">
+    <killplayer where="all" count="1" minvalue="0" specialcondition="KillCorruptedDungeonHost" />
+  </achievement>
+  <achievement name="SA_COLLECTION_CORRUPTED_DUNGEONS_INFAMY" stat="SA_ST_COLLECTION_CORRUPTED_DUNGEONS_INFAMY">
+    <haveinfamy amount="100000" infamytype="CorruptedDungeon" />
+  </achievement>
+  <achievement name="SA_PVE_CORRUPTED_DUNGEONS_01">
+	<or>
+    <killmob mobid="T5_MOB_CD_DEMON_BRUTE_BOSS" count="1" />
+    <killmob mobid="T6_MOB_CD_DEMON_BRUTE_BOSS" count="1" />
+	  <killmob mobid="T5_MOB_CD_DEMON_SORCERER_BOSS" count="1" />
+	  <killmob mobid="T6_MOB_CD_DEMON_SORCERER_BOSS" count="1" />
+	</or>
+  </achievement>
+  <achievement name="SA_PVE_CORRUPTED_DUNGEONS_02" stat="SA_ST_PVE_CORRUPTED_DUNGEONS_02">
+    <killmob faction="CORRUPTED" count="100" />
+  </achievement>
+  <achievement name="SA_PVE_CORRUPTED_DUNGEONS_03" stat="SA_ST_PVE_CORRUPTED_DUNGEONS_03">
+    <killmob faction="CORRUPTED" count="1000" />
+  </achievement>
+  
+  <achievement name="SA_COLLECTION_ROADS_01">
+    <gotocluster archetype="TUNNEL" />
+  </achievement>
+  <achievement name="SA_COLLECTION_ROADS_02">
+    <gotocluster worldclustertype="TUNNEL_DEEP" />
+  </achievement>
+  <achievement name="SA_PVE_ROADS_GUARDIAN">
+    <or>      
+      <killmob mobid="T6_MOB_GUARDIAN_FOREST_ENT" count="1" countpartykills="true" />
+      <killmob mobid="T6_MOB_GUARDIAN_FOREST_ROCKGIANT" count="1" countpartykills="true" />
+      <killmob mobid="T6_MOB_GUARDIAN_FOREST_OREGIANT" count="1" countpartykills="true" />
+      <killmob mobid="T6_MOB_GUARDIAN_FOREST_BASILISK" count="1" countpartykills="true" />
+      <killmob mobid="T6_MOB_GUARDIAN_FOREST_DRYAD" count="1" countpartykills="true" />
+
+      <killmob mobid="T7_MOB_GUARDIAN_FOREST_ENT" count="1" countpartykills="true" />
+      <killmob mobid="T7_MOB_GUARDIAN_FOREST_ROCKGIANT" count="1" countpartykills="true" />
+      <killmob mobid="T7_MOB_GUARDIAN_FOREST_OREGIANT" count="1" countpartykills="true" />
+      <killmob mobid="T7_MOB_GUARDIAN_FOREST_BASILISK" count="1" countpartykills="true" />
+      <killmob mobid="T7_MOB_GUARDIAN_FOREST_DRYAD" count="1" countpartykills="true" />
+
+      <killmob mobid="T8_MOB_GUARDIAN_FOREST_ENT" count="1" countpartykills="true" />
+      <killmob mobid="T8_MOB_GUARDIAN_FOREST_ROCKGIANT" count="1" countpartykills="true" />
+      <killmob mobid="T8_MOB_GUARDIAN_FOREST_OREGIANT" count="1" countpartykills="true" />
+      <killmob mobid="T8_MOB_GUARDIAN_FOREST_BASILISK" count="1" countpartykills="true" />
+      <killmob mobid="T8_MOB_GUARDIAN_FOREST_DRYAD" count="1" countpartykills="true" />
+    </or>
+  </achievement>
+  <achievement name="SA_PVE_ROADS_AVALON" stat="SA_ST_PVE_ROADS_AVALON">
+    <killmob faction="ROAD" count="250" countpartykills="true" />
+  </achievement>
+  
+  <!--Queen Update Achievements-->
+  <achievement name="SA_PVE_RANDOMDUNGEON_LOOTCHEST_ELITE_01" stat="SA_ST_PVE_RANDOMDUNGEON_LOOTCHEST_ELITE_01">
+    <unlocklootchest count="10">
+      <validchest name="AVALON_ELITE_BOSS_UNCOMMON" />
+      <validchest name="AVALON_ELITE_BOSS_RARE" />
+      <validchest name="AVALON_ELITE_BOSS_LEGENDARY" />
+      
+      <validchest name="AVALON_ELITE_STANDARD" />
+      <validchest name="AVALON_ELITE_UNCOMMON" />
+      <validchest name="AVALON_ELITE_RARE" />
+      <validchest name="AVALON_ELITE_LEGENDARY" />
+    </unlocklootchest>    
+  </achievement>
+  <achievement name="SA_PVE_RANDOMDUNGEON_LOOTCHEST_ELITE_02" stat="SA_ST_PVE_RANDOMDUNGEON_LOOTCHEST_ELITE_02">
+    <unlocklootchest count="100">
+      <validchest name="AVALON_ELITE_BOSS_UNCOMMON" />
+      <validchest name="AVALON_ELITE_BOSS_RARE" />
+      <validchest name="AVALON_ELITE_BOSS_LEGENDARY" />
+
+      <validchest name="AVALON_ELITE_STANDARD" />
+      <validchest name="AVALON_ELITE_UNCOMMON" />
+      <validchest name="AVALON_ELITE_RARE" />
+      <validchest name="AVALON_ELITE_LEGENDARY" />
+    </unlocklootchest>
+  </achievement>
+  
+  <achievement name="SA_COLLECTION_ELITE_DUNGEON_BUFF">
+    <useshrine count="1">
+	    <validshrine name="AVALON_SHRINE_FINAL_REWARD_BUFF" />
+	  </useshrine>
+  </achievement>
+
+  <achievement name="SA_PVE_KILL_RD_ELITE_01" stat="SA_ST_PVE_KILL_RD_ELITE_01">
+    <or>      
+      <killmob mobid="T6_MOB_RD_AVALON_CAPTAIN_ELITE_BOSS" count="1" countpartykills="true" />
+      <killmob mobid="T7_MOB_RD_AVALON_CAPTAIN_ELITE_BOSS" count="1" countpartykills="true" />
+      <killmob mobid="T8_MOB_RD_AVALON_CAPTAIN_ELITE_BOSS" count="1" countpartykills="true" />
+    </or>
+    <or>
+      <killmob mobid="T6_MOB_RD_AVALON_CONSTRUCT_ELITE_BOSS" count="1" countpartykills="true" />
+      <killmob mobid="T7_MOB_RD_AVALON_CONSTRUCT_ELITE_BOSS" count="1" countpartykills="true" />
+      <killmob mobid="T8_MOB_RD_AVALON_CONSTRUCT_ELITE_BOSS" count="1" countpartykills="true" />
+    </or>
+    <or>
+      <killmob mobid="T6_MOB_RD_AVALON_BASILISK_ELITE_BOSS" count="1" countpartykills="true" />
+      <killmob mobid="T7_MOB_RD_AVALON_BASILISK_ELITE_BOSS" count="1" countpartykills="true" />
+      <killmob mobid="T8_MOB_RD_AVALON_BASILISK_ELITE_BOSS" count="1" countpartykills="true" />
+    </or>
+    <or>
+      <killmob mobid="T6_MOB_RD_AVALON_PRIEST_ELITE_BOSS" count="1" countpartykills="true" />
+      <killmob mobid="T7_MOB_RD_AVALON_PRIEST_ELITE_BOSS" count="1" countpartykills="true" />
+      <killmob mobid="T8_MOB_RD_AVALON_PRIEST_ELITE_BOSS" count="1" countpartykills="true" />
+    </or>
+    <or>
+      <killmob mobid="T6_MOB_RD_AVALON_MAGE_ELITE_BOSS" count="1" countpartykills="true" />
+      <killmob mobid="T7_MOB_RD_AVALON_MAGE_ELITE_BOSS" count="1" countpartykills="true" />
+      <killmob mobid="T8_MOB_RD_AVALON_MAGE_ELITE_BOSS" count="1" countpartykills="true" />
+    </or>
+  </achievement>
+  <achievement name="SA_PVE_KILL_RD_ELITE_02">
+    <or>
+      <killmob mobid="T6_MOB_RD_AVALON_WOUNDED_KING_ELITE_BOSS" count="1" countpartykills="true" />
+      <killmob mobid="T7_MOB_RD_AVALON_WOUNDED_KING_ELITE_BOSS" count="1" countpartykills="true" />
+      <killmob mobid="T8_MOB_RD_AVALON_WOUNDED_KING_ELITE_BOSS" count="1" countpartykills="true" />
+    </or>
+  </achievement>
+
+  <achievement name="SA_PVP_CRYSTAL_LEAGUE_WIN">
+    <haveplayedcrystalleague won="true" count="1" />
+  </achievement>
+
+  <achievement name="SA_PVP_CRYSTAL_LEAGUE_RANK_01">
+    <haveplayedcrystalleague won="true" level="3" />
+  </achievement>
+  
+  <achievement name="SA_PVP_CRYSTAL_LEAGUE_RANK_02">
+    <haveplayedcrystalleague won="true" level="7" />
+  </achievement>
+  
+  <achievement name="SA_PVP_TERRITORY_DEFEAT_COMMANDER">
+    <killmob mobid="T7_MOB_WATCHTOWER_ARCANEGUARD_ELITE" count="1" countpartykills="true" />
+  </achievement>
+
+  <!-- Arena -->
+
+  <achievement name="SA_ARENA_WIN_01">
+    <haveplayedarenamatch won="true" />
+  </achievement>
+
+  <achievement name="SA_ARENA_WIN_02" stat="SA_ST_ARENA_WIN_02">
+    <haveplayedarenamatch won="true" count="100" />
+  </achievement>
+
+  <!--Collection-->
+
+  <achievement name="SA_COLLECTION_LOOTCHEST">
+    <unlocklootchest count="1">
+      <validchest name="HERETIC_SOLO_BOOKCHEST_STANDARD" />
+      <validchest name="HERETIC_SOLO_BOOKCHEST_UNCOMMON" />
+      <validchest name="HERETIC_SOLO_BOOKCHEST_RARE" />
+      <validchest name="HERETIC_SOLO_BOOKCHEST_LEGENDARY" />
+
+      <validchest name="KEEPER_SOLO_BOOKCHEST_STANDARD" />
+      <validchest name="KEEPER_SOLO_BOOKCHEST_UNCOMMON" />
+      <validchest name="KEEPER_SOLO_BOOKCHEST_RARE" />
+      <validchest name="KEEPER_SOLO_BOOKCHEST_LEGENDARY" />
+
+      <validchest name="UNDEAD_SOLO_BOOKCHEST_STANDARD" />
+      <validchest name="UNDEAD_SOLO_BOOKCHEST_UNCOMMON" />
+      <validchest name="UNDEAD_SOLO_BOOKCHEST_RARE" />
+      <validchest name="UNDEAD_SOLO_BOOKCHEST_LEGENDARY" />
+
+      <validchest name="MORGANA_SOLO_BOOKCHEST_STANDARD" />
+      <validchest name="MORGANA_SOLO_BOOKCHEST_UNCOMMON" />
+      <validchest name="MORGANA_SOLO_BOOKCHEST_RARE" />
+      <validchest name="MORGANA_SOLO_BOOKCHEST_LEGENDARY" />
+      
+      <validchest name="HERETIC_SOLO_CHEST_BOSS_UNCOMMON" />
+      <validchest name="HERETIC_SOLO_CHEST_BOSS_RARE" />
+      <validchest name="HERETIC_SOLO_CHEST_BOSS_LEGENDARY" />
+
+      <validchest name="KEEPER_SOLO_CHEST_BOSS_UNCOMMON" />
+      <validchest name="KEEPER_SOLO_CHEST_BOSS_RARE" />
+      <validchest name="KEEPER_SOLO_CHEST_BOSS_LEGENDARY" />
+
+      <validchest name="UNDEAD_SOLO_CHEST_BOSS_UNCOMMON" />
+      <validchest name="UNDEAD_SOLO_CHEST_BOSS_RARE" />
+      <validchest name="UNDEAD_SOLO_CHEST_BOSS_LEGENDARY" />
+
+      <validchest name="MORGANA_SOLO_CHEST_BOSS_UNCOMMON" />
+      <validchest name="MORGANA_SOLO_CHEST_BOSS_RARE" />
+      <validchest name="MORGANA_SOLO_CHEST_BOSS_LEGENDARY" />
+      
+      <validchest name="HERETIC_SOLO_CHEST_STANDARD" />
+      <validchest name="HERETIC_SOLO_CHEST_UNCOMMON" />
+      <validchest name="HERETIC_SOLO_CHEST_RARE" />
+      <validchest name="HERETIC_SOLO_CHEST_LEGENDARY" />
+
+      <validchest name="KEEPER_SOLO_CHEST_STANDARD" />
+      <validchest name="KEEPER_SOLO_CHEST_UNCOMMON" />
+      <validchest name="KEEPER_SOLO_CHEST_RARE" />
+      <validchest name="KEEPER_SOLO_CHEST_LEGENDARY" />
+
+      <validchest name="UNDEAD_SOLO_CHEST_STANDARD" />
+      <validchest name="UNDEAD_SOLO_CHEST_UNCOMMON" />
+      <validchest name="UNDEAD_SOLO_CHEST_RARE" />
+      <validchest name="UNDEAD_SOLO_CHEST_LEGENDARY" />
+
+      <validchest name="MORGANA_SOLO_CHEST_STANDARD" />
+      <validchest name="MORGANA_SOLO_CHEST_UNCOMMON" />
+      <validchest name="MORGANA_SOLO_CHEST_RARE" />
+      <validchest name="MORGANA_SOLO_CHEST_LEGENDARY" />
+      
+      <validchest name="HERETIC_VETERAN_BOOKCHEST_STANDARD" />
+      <validchest name="HERETIC_VETERAN_BOOKCHEST_UNCOMMON" />
+      <validchest name="HERETIC_VETERAN_BOOKCHEST_RARE" />
+      <validchest name="HERETIC_VETERAN_BOOKCHEST_LEGENDARY" />
+
+      <validchest name="KEEPER_VETERAN_BOOKCHEST_STANDARD" />
+      <validchest name="KEEPER_VETERAN_BOOKCHEST_UNCOMMON" />
+      <validchest name="KEEPER_VETERAN_BOOKCHEST_RARE" />
+      <validchest name="KEEPER_VETERAN_BOOKCHEST_LEGENDARY" />
+
+      <validchest name="UNDEAD_VETERAN_BOOKCHEST_STANDARD" />
+      <validchest name="UNDEAD_VETERAN_BOOKCHEST_UNCOMMON" />
+      <validchest name="UNDEAD_VETERAN_BOOKCHEST_RARE" />
+      <validchest name="UNDEAD_VETERAN_BOOKCHEST_LEGENDARY" />
+
+      <validchest name="MORGANA_VETERAN_BOOKCHEST_STANDARD" />
+      <validchest name="MORGANA_VETERAN_BOOKCHEST_UNCOMMON" />
+      <validchest name="MORGANA_VETERAN_BOOKCHEST_RARE" />
+      <validchest name="MORGANA_VETERAN_BOOKCHEST_LEGENDARY" />
+      
+      <validchest name="HERETIC_VETERAN_CHEST_BOSS_UNCOMMON" />
+      <validchest name="HERETIC_VETERAN_CHEST_BOSS_RARE" />
+      <validchest name="HERETIC_VETERAN_CHEST_BOSS_LEGENDARY" />
+
+      <validchest name="KEEPER_VETERAN_CHEST_BOSS_UNCOMMON" />
+      <validchest name="KEEPER_VETERAN_CHEST_BOSS_RARE" />
+      <validchest name="KEEPER_VETERAN_CHEST_BOSS_LEGENDARY" />
+
+      <validchest name="UNDEAD_VETERAN_CHEST_BOSS_UNCOMMON" />
+      <validchest name="UNDEAD_VETERAN_CHEST_BOSS_RARE" />
+      <validchest name="UNDEAD_VETERAN_CHEST_BOSS_LEGENDARY" />
+
+      <validchest name="MORGANA_VETERAN_CHEST_BOSS_UNCOMMON" />
+      <validchest name="MORGANA_VETERAN_CHEST_BOSS_RARE" />
+      <validchest name="MORGANA_VETERAN_CHEST_BOSS_LEGENDARY" />
+      
+      <validchest name="HERETIC_VETERAN_CHEST_STANDARD" />
+      <validchest name="HERETIC_VETERAN_CHEST_UNCOMMON" />
+      <validchest name="HERETIC_VETERAN_CHEST_RARE" />
+      <validchest name="HERETIC_VETERAN_CHEST_LEGENDARY" />
+
+      <validchest name="KEEPER_VETERAN_CHEST_STANDARD" />
+      <validchest name="KEEPER_VETERAN_CHEST_UNCOMMON" />
+      <validchest name="KEEPER_VETERAN_CHEST_RARE" />
+      <validchest name="KEEPER_VETERAN_CHEST_LEGENDARY" />
+
+      <validchest name="UNDEAD_VETERAN_CHEST_STANDARD" />
+      <validchest name="UNDEAD_VETERAN_CHEST_UNCOMMON" />
+      <validchest name="UNDEAD_VETERAN_CHEST_RARE" />
+      <validchest name="UNDEAD_VETERAN_CHEST_LEGENDARY" />
+
+      <validchest name="MORGANA_VETERAN_CHEST_STANDARD" />
+      <validchest name="MORGANA_VETERAN_CHEST_UNCOMMON" />
+      <validchest name="MORGANA_VETERAN_CHEST_RARE" />
+      <validchest name="MORGANA_VETERAN_CHEST_LEGENDARY" />
+    </unlocklootchest>
+  </achievement>
+  
+  <achievement name="SA_COLLECTION_VANITY_UNLOCK">
+    <usefunction function="UnlockCharacterCustomization" />
+  </achievement>
+
+  <achievement name="SA_COLLECTION_VANITY_MOUNTSKIN">
+    <usefunction function="ApplyMountSkin" />
+  </achievement>
+
+  <achievement name="SA_COLLECTION_DIREWOLF">
+    <mount itemid="DIREWOLF" />
+  </achievement>
+
+  <achievement name="SA_COLLECTION_USE_INSPECT" stat="SA_ST_COLLECTION_USE_INSPECT">
+    <usefunction function="InspectPlayer" count="100" />
+  </achievement>
+  
+  <achievement name="SA_COLLECTION_SALVAGE">
+    <usefunction function="SalvageItem" />
+  </achievement>
+ 
+  <achievement name="SA_COLLECTION_USE_POTIONS" stat="SA_ST_COLLECTION_USE_POTIONS">
+    <usespell itemshopsubcategory="potion" count="100" />
+  </achievement>
+ 
+  <achievement name="SA_COLLECTION_HITPOINTS" hidden="true">
+    <haveplayerattribute attribute="hitpointsmax" min="5000" />
+  </achievement>
+
+  <achievement name="SA_COLLECTION_SILVER">
+    <havesilver value="1000000" />
+  </achievement>
+
+  <achievement name="SA_COLLECTION_UNLOCK_ALL_T4" stat="SA_ST_COLLECTION_UNLOCK_ALL_T4">
+    <unlockachievement achievement="ADVENTURER_ADEPT" masterylevel="1" />
+    <unlockachievement achievement="GATHER_ROCK_T4" masterylevel="1" />
+    <unlockachievement achievement="GATHER_WOOD_T4" masterylevel="1" />
+    <unlockachievement achievement="GATHER_HIDE_T4" masterylevel="1" />
+    <unlockachievement achievement="GATHER_ORE_T4" masterylevel="1" />
+    <unlockachievement achievement="GATHER_FIBER_T4" masterylevel="1" />
+    <unlockachievement achievement="FARM_ANIMALS" masterylevel="1" />
+    <unlockachievement achievement="FARM_CROPS" masterylevel="1" />
+    <unlockachievement achievement="FARM_HERBS" masterylevel="1" />
+    <unlockachievement achievement="FARM_COOK" masterylevel="1" />
+    <unlockachievement achievement="FARM_ALCHEMIST" masterylevel="1" />
+    <unlockachievement achievement="COMBAT_PLATE_SHOES" masterylevel="1" />
+    <unlockachievement achievement="COMBAT_PLATE_ARMORS" masterylevel="1" />
+    <unlockachievement achievement="COMBAT_PLATE_HEADS" masterylevel="1" />
+    <unlockachievement achievement="COMBAT_SWORDS" masterylevel="1" />
+    <unlockachievement achievement="COMBAT_AXES" masterylevel="1" />
+    <unlockachievement achievement="COMBAT_MACES" masterylevel="1" />
+    <unlockachievement achievement="COMBAT_HAMMERS" masterylevel="1" />
+    <unlockachievement achievement="COMBAT_KNUCKLES" masterylevel="1" />
+	  <unlockachievement achievement="COMBAT_CROSSBOWS" masterylevel="1" />
+    <unlockachievement achievement="COMBAT_SHIELDS" masterylevel="1" />
+    <unlockachievement achievement="COMBAT_LEATHER_SHOES" masterylevel="1" />
+    <unlockachievement achievement="COMBAT_LEATHER_ARMORS" masterylevel="1" />
+    <unlockachievement achievement="COMBAT_LEATHER_HEADS" masterylevel="1" />
+    <unlockachievement achievement="COMBAT_BOWS" masterylevel="1" />
+    <unlockachievement achievement="COMBAT_SPEARS" masterylevel="1" />
+    <unlockachievement achievement="COMBAT_NATURESTAFFS" masterylevel="1" />
+    <unlockachievement achievement="COMBAT_DAGGERS" masterylevel="1" />
+    <unlockachievement achievement="COMBAT_QUARTERSTAFFS" masterylevel="1" />
+    <unlockachievement achievement="COMBAT_CLOTH_SHOES" masterylevel="1" />
+    <unlockachievement achievement="COMBAT_CLOTH_ARMORS" masterylevel="1" />
+    <unlockachievement achievement="COMBAT_CLOTH_HEADS" masterylevel="1" />
+    <unlockachievement achievement="COMBAT_TORCHES" masterylevel="1" />
+    <unlockachievement achievement="COMBAT_FIRESTAFFS" masterylevel="1" />
+    <unlockachievement achievement="COMBAT_HOLYSTAFFS" masterylevel="1" />
+    <unlockachievement achievement="COMBAT_ARCANESTAFFS" masterylevel="1" />
+    <unlockachievement achievement="COMBAT_FROSTSTAFFS" masterylevel="1" />
+    <unlockachievement achievement="COMBAT_CURSEDSTAFFS" masterylevel="1" />
+    <unlockachievement achievement="COMBAT_BOOKS" masterylevel="1" />
+    <unlockachievement achievement="CRAFT_PLATE_SHOES" masterylevel="1" />
+    <unlockachievement achievement="CRAFT_PLATE_ARMORS" masterylevel="1" />
+    <unlockachievement achievement="CRAFT_PLATE_HEADS" masterylevel="1" />
+    <unlockachievement achievement="CRAFT_SWORDS" masterylevel="1" />
+    <unlockachievement achievement="CRAFT_AXES" masterylevel="1" />
+    <unlockachievement achievement="CRAFT_MACES" masterylevel="1" />
+    <unlockachievement achievement="CRAFT_HAMMERS" masterylevel="1" />
+    <unlockachievement achievement="CRAFT_KNUCKLES" masterylevel="1" />
+	  <unlockachievement achievement="CRAFT_CROSSBOWS" masterylevel="1" />
+    <unlockachievement achievement="CRAFT_SHIELDS" masterylevel="1" />
+    <unlockachievement achievement="CRAFT_LEATHER_SHOES" masterylevel="1" />
+    <unlockachievement achievement="CRAFT_LEATHER_ARMORS" masterylevel="1" />
+    <unlockachievement achievement="CRAFT_LEATHER_HEADS" masterylevel="1" />
+    <unlockachievement achievement="CRAFT_BOWS" masterylevel="1" />
+    <unlockachievement achievement="CRAFT_SPEARS" masterylevel="1" />
+    <unlockachievement achievement="CRAFT_NATURESTAFFS" masterylevel="1" />
+    <unlockachievement achievement="CRAFT_DAGGERS" masterylevel="1" />
+    <unlockachievement achievement="CRAFT_QUARTERSTAFFS" masterylevel="1" />
+    <unlockachievement achievement="CRAFT_TORCHES" masterylevel="1" />
+    <unlockachievement achievement="CRAFT_CLOTH_SHOES" masterylevel="1" />
+    <unlockachievement achievement="CRAFT_CLOTH_ARMORS" masterylevel="1" />
+    <unlockachievement achievement="CRAFT_CLOTH_HEADS" masterylevel="1" />
+    <unlockachievement achievement="CRAFT_FIRESTAFFS" masterylevel="1" />
+    <unlockachievement achievement="CRAFT_HOLYSTAFFS" masterylevel="1" />
+    <unlockachievement achievement="CRAFT_ARCANESTAFFS" masterylevel="1" />
+    <unlockachievement achievement="CRAFT_FROSTSTAFFS" masterylevel="1" />
+    <unlockachievement achievement="CRAFT_CURSEDSTAFFS" masterylevel="1" />
+    <unlockachievement achievement="CRAFT_BOOKS" masterylevel="1" />
+    <unlockachievement achievement="CRAFT_TOOL_SIEGEHAMMER" masterylevel="1" />
+    <unlockachievement achievement="CRAFT_BAG" masterylevel="1" />
+    <unlockachievement achievement="CRAFT_CAPE" masterylevel="1" />
+    <unlockachievement achievement="CRAFT_TOOL_FISHINGROD" masterylevel="1" />
+    <unlockachievement achievement="CRAFT_TOOL_AXE" masterylevel="1" />
+    <unlockachievement achievement="CRAFT_TOOL_HAMMER" masterylevel="1" />
+    <unlockachievement achievement="CRAFT_TOOL_PICK" masterylevel="1" />
+    <unlockachievement achievement="CRAFT_TOOL_KNIFE" masterylevel="1" />
+    <unlockachievement achievement="CRAFT_TOOL_SICKLE" masterylevel="1" />
+    <unlockachievement achievement="CRAFT_REFINE_ROCK_T4" masterylevel="1" />
+    <unlockachievement achievement="CRAFT_REFINE_WOOD_T4" masterylevel="1" />
+    <unlockachievement achievement="CRAFT_REFINE_HIDE_T4" masterylevel="1" />
+    <unlockachievement achievement="CRAFT_REFINE_ORE_T4" masterylevel="1" />
+    <unlockachievement achievement="CRAFT_REFINE_FIBER_T4" masterylevel="1" />
+  </achievement>
+  <achievement name="SA_COLLECTION_UNLOCK_WEAPONS" stat="SA_ST_COLLECTION_UNLOCK_WEAPONS">
+    <unlockachievement achievement="COMBAT_SWORDS" masterylevel="1" />
+    <unlockachievement achievement="COMBAT_AXES" masterylevel="1" />
+    <unlockachievement achievement="COMBAT_MACES" masterylevel="1" />
+    <unlockachievement achievement="COMBAT_HAMMERS" masterylevel="1" />
+	  <unlockachievement achievement="COMBAT_KNUCKLES" masterylevel="1" />
+    <unlockachievement achievement="COMBAT_CROSSBOWS" masterylevel="1" />
+    <unlockachievement achievement="COMBAT_SHIELDS" masterylevel="1" />
+    <unlockachievement achievement="COMBAT_BOWS" masterylevel="1" />
+    <unlockachievement achievement="COMBAT_SPEARS" masterylevel="1" />
+    <unlockachievement achievement="COMBAT_NATURESTAFFS" masterylevel="1" />
+    <unlockachievement achievement="COMBAT_DAGGERS" masterylevel="1" />
+    <unlockachievement achievement="COMBAT_QUARTERSTAFFS" masterylevel="1" />
+    <unlockachievement achievement="COMBAT_TORCHES" masterylevel="1" />
+    <unlockachievement achievement="COMBAT_FIRESTAFFS" masterylevel="1" />
+    <unlockachievement achievement="COMBAT_HOLYSTAFFS" masterylevel="1" />
+    <unlockachievement achievement="COMBAT_ARCANESTAFFS" masterylevel="1" />
+    <unlockachievement achievement="COMBAT_FROSTSTAFFS" masterylevel="1" />
+    <unlockachievement achievement="COMBAT_CURSEDSTAFFS" masterylevel="1" />
+    <unlockachievement achievement="COMBAT_BOOKS" masterylevel="1" />
+  </achievement>
+  <achievement name="SA_COLLECTION_EMOTES" stat="SA_ST_COLLECTION_EMOTES">
+    <playemote which="applaud" />
+    <playemote which="beg" />
+    <playemote which="bow" />
+    <playemote which="cheer" />
+
+    <playemote which="cry" />
+    <playemote which="dance" />
+    <playemote which="flex" />
+    <playemote which="laugh" />
+
+    <playemote which="salute" />
+    <playemote which="wave" />
+    <playemote which="sit" />
+    <playemote which="point" />
+  </achievement>
+  
+  <!--Crafting-->
+  <achievement name="SA_CRAFTING_FAME_01" stat="SA_ST_CRAFTING_FAME_01">
+    <havefame action="crafting" value="10000" />
+  </achievement>
+  <achievement name="SA_CRAFTING_FAME_02" stat="SA_ST_CRAFTING_FAME_02">
+    <havefame action="crafting" value="100000" />
+  </achievement>
+  <achievement name="SA_CRAFTING_FAME_03" stat="SA_ST_CRAFTING_FAME_03">
+    <havefame action="crafting" value="1000000" />
+  </achievement>
+  <achievement name="SA_CRAFTING_FAME_04" stat="SA_ST_CRAFTING_FAME_04">
+    <havefame action="crafting" value="10000000" />
+  </achievement>
+
+  <achievement name="SA_CRAFTING_STUDY_01">
+    <usefunction function="StudyItem" />
+  </achievement>
+
+  <achievement name="SA_CRAFTING_UNLOCK_01">
+    <or>
+      <unlockachievement achievement="CRAFT_PLATE_SHOES" masterylevel="1" />
+      <unlockachievement achievement="CRAFT_PLATE_ARMORS" masterylevel="1" />
+      <unlockachievement achievement="CRAFT_PLATE_HEADS" masterylevel="1" />
+      <unlockachievement achievement="CRAFT_SWORDS" masterylevel="1" />
+      <unlockachievement achievement="CRAFT_AXES" masterylevel="1" />
+      <unlockachievement achievement="CRAFT_MACES" masterylevel="1" />
+      <unlockachievement achievement="CRAFT_HAMMERS" masterylevel="1" />
+	  <unlockachievement achievement="CRAFT_KNUCKLES" masterylevel="1" />
+	  <unlockachievement achievement="CRAFT_CROSSBOWS" masterylevel="1" />
+      <unlockachievement achievement="CRAFT_SHIELDS" masterylevel="1" />
+      <unlockachievement achievement="CRAFT_LEATHER_SHOES" masterylevel="1" />
+      <unlockachievement achievement="CRAFT_LEATHER_ARMORS" masterylevel="1" />
+      <unlockachievement achievement="CRAFT_LEATHER_HEADS" masterylevel="1" />
+      <unlockachievement achievement="CRAFT_BOWS" masterylevel="1" />
+      <unlockachievement achievement="CRAFT_SPEARS" masterylevel="1" />
+      <unlockachievement achievement="CRAFT_NATURESTAFFS" masterylevel="1" />
+      <unlockachievement achievement="CRAFT_DAGGERS" masterylevel="1" />
+      <unlockachievement achievement="CRAFT_QUARTERSTAFFS" masterylevel="1" />
+      <unlockachievement achievement="CRAFT_TORCHES" masterylevel="1" />
+      <unlockachievement achievement="CRAFT_CLOTH_SHOES" masterylevel="1" />
+      <unlockachievement achievement="CRAFT_CLOTH_ARMORS" masterylevel="1" />
+      <unlockachievement achievement="CRAFT_CLOTH_HEADS" masterylevel="1" />
+      <unlockachievement achievement="CRAFT_FIRESTAFFS" masterylevel="1" />
+      <unlockachievement achievement="CRAFT_HOLYSTAFFS" masterylevel="1" />
+      <unlockachievement achievement="CRAFT_ARCANESTAFFS" masterylevel="1" />
+      <unlockachievement achievement="CRAFT_FROSTSTAFFS" masterylevel="1" />
+      <unlockachievement achievement="CRAFT_CURSEDSTAFFS" masterylevel="1" />
+      <unlockachievement achievement="CRAFT_BOOKS" masterylevel="1" />
+      <unlockachievement achievement="CRAFT_TOOL_SIEGEHAMMER" masterylevel="1" />
+      <unlockachievement achievement="CRAFT_BAG" masterylevel="1" />
+      <unlockachievement achievement="CRAFT_CAPE" masterylevel="1" />
+      <unlockachievement achievement="CRAFT_TOOL_FISHINGROD" masterylevel="1" />
+      <unlockachievement achievement="CRAFT_TOOL_AXE" masterylevel="1" />
+      <unlockachievement achievement="CRAFT_TOOL_HAMMER" masterylevel="1" />
+      <unlockachievement achievement="CRAFT_TOOL_PICK" masterylevel="1" />
+      <unlockachievement achievement="CRAFT_TOOL_KNIFE" masterylevel="1" />
+      <unlockachievement achievement="CRAFT_TOOL_SICKLE" masterylevel="1" />      
+    </or>
+  </achievement>
+
+  <achievement name="SA_CRAFTING_UNLOCK_02">
+    <or>
+      <unlockachievement achievement="CRAFT_PLATE_SHOES" masterylevel="30" />
+      <unlockachievement achievement="CRAFT_PLATE_ARMORS" masterylevel="30" />
+      <unlockachievement achievement="CRAFT_PLATE_HEADS" masterylevel="30" />
+      <unlockachievement achievement="CRAFT_SWORDS" masterylevel="30" />
+      <unlockachievement achievement="CRAFT_AXES" masterylevel="30" />
+      <unlockachievement achievement="CRAFT_MACES" masterylevel="30" />
+      <unlockachievement achievement="CRAFT_HAMMERS" masterylevel="30" />
+	  <unlockachievement achievement="CRAFT_KNUCKLES" masterylevel="30" />
+	  <unlockachievement achievement="CRAFT_CROSSBOWS" masterylevel="30" />
+      <unlockachievement achievement="CRAFT_SHIELDS" masterylevel="30" />
+      <unlockachievement achievement="CRAFT_LEATHER_SHOES" masterylevel="30" />
+      <unlockachievement achievement="CRAFT_LEATHER_ARMORS" masterylevel="30" />
+      <unlockachievement achievement="CRAFT_LEATHER_HEADS" masterylevel="30" />
+      <unlockachievement achievement="CRAFT_BOWS" masterylevel="30" />
+      <unlockachievement achievement="CRAFT_SPEARS" masterylevel="30" />
+      <unlockachievement achievement="CRAFT_NATURESTAFFS" masterylevel="30" />
+      <unlockachievement achievement="CRAFT_DAGGERS" masterylevel="30" />
+      <unlockachievement achievement="CRAFT_QUARTERSTAFFS" masterylevel="30" />
+      <unlockachievement achievement="CRAFT_TORCHES" masterylevel="30" />
+      <unlockachievement achievement="CRAFT_CLOTH_SHOES" masterylevel="30" />
+      <unlockachievement achievement="CRAFT_CLOTH_ARMORS" masterylevel="30" />
+      <unlockachievement achievement="CRAFT_CLOTH_HEADS" masterylevel="30" />
+      <unlockachievement achievement="CRAFT_FIRESTAFFS" masterylevel="30" />
+      <unlockachievement achievement="CRAFT_HOLYSTAFFS" masterylevel="30" />
+      <unlockachievement achievement="CRAFT_ARCANESTAFFS" masterylevel="30" />
+      <unlockachievement achievement="CRAFT_FROSTSTAFFS" masterylevel="30" />
+      <unlockachievement achievement="CRAFT_CURSEDSTAFFS" masterylevel="30" />
+      <unlockachievement achievement="CRAFT_BOOKS" masterylevel="30" />
+      <unlockachievement achievement="CRAFT_TOOL_SIEGEHAMMER" masterylevel="30" />
+      <unlockachievement achievement="CRAFT_BAG" masterylevel="30" />
+      <unlockachievement achievement="CRAFT_CAPE" masterylevel="30" />
+      <unlockachievement achievement="CRAFT_TOOL_FISHINGROD" masterylevel="30" />
+      <unlockachievement achievement="CRAFT_TOOL_AXE" masterylevel="30" />
+      <unlockachievement achievement="CRAFT_TOOL_HAMMER" masterylevel="30" />
+      <unlockachievement achievement="CRAFT_TOOL_PICK" masterylevel="30" />
+      <unlockachievement achievement="CRAFT_TOOL_KNIFE" masterylevel="30" />
+      <unlockachievement achievement="CRAFT_TOOL_SICKLE" masterylevel="30" />      
+    </or>
+  </achievement>
+
+  <achievement name="SA_CRAFTING_UNLOCK_03">
+    <or>
+      <unlockachievement achievement="CRAFT_PLATE_SHOES" masterylevel="100" />
+      <unlockachievement achievement="CRAFT_PLATE_ARMORS" masterylevel="100" />
+      <unlockachievement achievement="CRAFT_PLATE_HEADS" masterylevel="100" />
+      <unlockachievement achievement="CRAFT_SWORDS" masterylevel="100" />
+      <unlockachievement achievement="CRAFT_AXES" masterylevel="100" />
+      <unlockachievement achievement="CRAFT_MACES" masterylevel="100" />
+      <unlockachievement achievement="CRAFT_HAMMERS" masterylevel="100" />
+	  <unlockachievement achievement="CRAFT_KNUCKLES" masterylevel="100" />
+      <unlockachievement achievement="CRAFT_CROSSBOWS" masterylevel="100" />
+      <unlockachievement achievement="CRAFT_SHIELDS" masterylevel="100" />
+      <unlockachievement achievement="CRAFT_LEATHER_SHOES" masterylevel="100" />
+      <unlockachievement achievement="CRAFT_LEATHER_ARMORS" masterylevel="100" />
+      <unlockachievement achievement="CRAFT_LEATHER_HEADS" masterylevel="100" />
+      <unlockachievement achievement="CRAFT_BOWS" masterylevel="100" />
+      <unlockachievement achievement="CRAFT_SPEARS" masterylevel="100" />
+      <unlockachievement achievement="CRAFT_NATURESTAFFS" masterylevel="100" />
+      <unlockachievement achievement="CRAFT_DAGGERS" masterylevel="100" />
+      <unlockachievement achievement="CRAFT_QUARTERSTAFFS" masterylevel="100" />
+      <unlockachievement achievement="CRAFT_TORCHES" masterylevel="100" />
+      <unlockachievement achievement="CRAFT_CLOTH_SHOES" masterylevel="100" />
+      <unlockachievement achievement="CRAFT_CLOTH_ARMORS" masterylevel="100" />
+      <unlockachievement achievement="CRAFT_CLOTH_HEADS" masterylevel="100" />
+      <unlockachievement achievement="CRAFT_FIRESTAFFS" masterylevel="100" />
+      <unlockachievement achievement="CRAFT_HOLYSTAFFS" masterylevel="100" />
+      <unlockachievement achievement="CRAFT_ARCANESTAFFS" masterylevel="100" />
+      <unlockachievement achievement="CRAFT_FROSTSTAFFS" masterylevel="100" />
+      <unlockachievement achievement="CRAFT_CURSEDSTAFFS" masterylevel="100" />
+      <unlockachievement achievement="CRAFT_BOOKS" masterylevel="100" />
+      <unlockachievement achievement="CRAFT_TOOL_SIEGEHAMMER" masterylevel="100" />
+      <unlockachievement achievement="CRAFT_BAG" masterylevel="100" />
+      <unlockachievement achievement="CRAFT_CAPE" masterylevel="100" />
+      <unlockachievement achievement="CRAFT_TOOL_FISHINGROD" masterylevel="100" />
+      <unlockachievement achievement="CRAFT_TOOL_AXE" masterylevel="100" />
+      <unlockachievement achievement="CRAFT_TOOL_HAMMER" masterylevel="100" />
+      <unlockachievement achievement="CRAFT_TOOL_PICK" masterylevel="100" />
+      <unlockachievement achievement="CRAFT_TOOL_KNIFE" masterylevel="100" />
+      <unlockachievement achievement="CRAFT_TOOL_SICKLE" masterylevel="100" />      
+    </or>
+  </achievement>
+
+  <!--Expedition-->
+  <achievement name="SA_EXPEDITION_FINISH_01">
+    <finishexpedition type="normal" />
+  </achievement>
+
+  <achievement name="SA_EXPEDITION_FINISH_ALL" stat="SA_ST_EXPEDITION_FINISH_ALL">
+    <finishexpedition name="HERETIC_MINE" />
+    <finishexpedition name="UNDEAD_RECRUITMENT" />
+    <finishexpedition name="HERETIC_FISHYBUSINESS" />
+    <finishexpedition name="KEEPER_STONEWARS" />
+    <finishexpedition name="HERETIC_LUMBERCAMP" />
+    <finishexpedition name="UNDEAD_SEWERSCRYPT" />
+
+    <finishexpedition name="KEEPER_MUSHROOM" />
+    <finishexpedition name="MORGANA_TRHEESISTERS" />
+    <finishexpedition name="HERETIC_FISTFULOFSILVER" />
+    <finishexpedition name="UNDEAD_ETERNALBATTLE" />
+    <finishexpedition name="MORGANA_TORTURER" />
+  </achievement>
+
+  <achievement name="SA_EXPEDITION_HARDCORE_01">
+    <finishexpedition type="hardcore" />
+  </achievement>
+
+
+  <!--Exploration-->
+  <achievement name="SA_EXPLORATION_CITIES" stat="SA_ST_EXPLORATION_CITIES">
+    <gotocluster clusterdirect="3003" />
+    <gotocluster clusterdirect="3004" />
+    
+    
+    
+    
+  </achievement>
+
+  <achievement name="SA_EXPLORATION_GOTO_HELLGATE">
+    <gotocluster clustertype="Hellgate" />
+  </achievement>
+
+  <achievement name="SA_EXPLORATION_BLACKZONE">
+    <gotocluster archetype="BLACK" />
+  </achievement>
+
+  <!--Farming-->
+  <achievement name="SA_FARMING_FAME_01">
+    <havefame action="farming" value="1" />
+  </achievement>
+  <achievement name="SA_FARMING_FAME_02" stat="SA_ST_FARMING_FAME_02">
+    <havefame action="farming" value="100000" />
+  </achievement>
+  <achievement name="SA_FARMING_FAME_03" stat="SA_ST_FARMING_FAME_03">
+    <havefame action="farming" value="1000000" />
+  </achievement>
+
+  <achievement name="SA_FARMING_HORSE">
+    <farmraise itemid="*HORSE*" />
+  </achievement>
+
+  <!--Gathering-->
+  <achievement name="SA_GATHERING_FAME_01" stat="SA_ST_GATHERING_FAME_01">
+    <havefame action="gathering" value="10000" />
+  </achievement>
+  <achievement name="SA_GATHERING_FAME_02" stat="SA_ST_GATHERING_FAME_02">
+    <havefame action="gathering" value="100000" />
+  </achievement>
+  <achievement name="SA_GATHERING_FAME_03" stat="SA_ST_GATHERING_FAME_03">
+    <havefame action="gathering" value="1000000" />
+  </achievement>
+
+  <achievement name="SA_GATHERING_TERRITORY_RAID">
+    <gatherfame value="1" mintier="8" inenemyterritory="true" />
+  </achievement>
+
+  <achievement name="SA_GATHERING_UNLOCK_01">
+    <or>      
+      <unlockachievement achievement="GATHER_ROCK_T4" masterylevel="1" />
+      <unlockachievement achievement="GATHER_WOOD_T4" masterylevel="1" />
+      <unlockachievement achievement="GATHER_HIDE_T4" masterylevel="1" />
+      <unlockachievement achievement="GATHER_ORE_T4" masterylevel="1" />
+      <unlockachievement achievement="GATHER_FIBER_T4" masterylevel="1" />
+    </or>
+  </achievement>
+
+  <achievement name="SA_GATHERING_UNLOCK_02">
+    <or>      
+      <unlockachievement achievement="GATHER_ROCK_T6" masterylevel="1" />
+      <unlockachievement achievement="GATHER_WOOD_T6" masterylevel="1" />
+      <unlockachievement achievement="GATHER_HIDE_T6" masterylevel="1" />
+      <unlockachievement achievement="GATHER_ORE_T6" masterylevel="1" />
+      <unlockachievement achievement="GATHER_FIBER_T6" masterylevel="1" />
+    </or>
+  </achievement>
+
+  <achievement name="SA_GATHERING_UNLOCK_03">
+    <or>
+      <unlockachievement achievement="GATHER_ROCK_T8" masterylevel="1" />
+      <unlockachievement achievement="GATHER_WOOD_T8" masterylevel="1" />
+      <unlockachievement achievement="GATHER_HIDE_T8" masterylevel="1" />
+      <unlockachievement achievement="GATHER_ORE_T8" masterylevel="1" />
+      <unlockachievement achievement="GATHER_FIBER_T8" masterylevel="1" />
+    </or>
+  </achievement>
+
+  <!--Fishing-->
+  <achievement name="SA_FISHING_FAME_01">
+    <havefame action="fishing" value="1" />
+  </achievement>
+  <achievement name="SA_FISHING_FAME_02" stat="SA_ST_FISHING_FAME_02">
+    <havefame action="fishing" value="10000" />
+  </achievement>
+  <achievement name="SA_FISHING_FAME_03" stat="SA_ST_FISHING_FAME_03">
+    <havefame action="fishing" value="1000000" />
+  </achievement>
+
+  <!--Playerisland-->
+  <achievement name="SA_PLAYERISLAND">
+    <haveisland />
+  </achievement>
+
+  <achievement name="SA_PLAYERISLAND_MAX">
+    <haveisland minislandlevel="5" />
+  </achievement>
+
+  <achievement name="SA_PLAYERISLAND_BUILD_01">
+    <haveisland minhousetier="1" />
+  </achievement>
+
+  <achievement name="SA_PLAYERISLAND_BUILD_02">
+    <haveisland minhousetier="8" />
+  </achievement>
+
+  <achievement name="SA_PLAYERISLAND_LABORER_01">
+    <sendlaborer />
+  </achievement>
+
+  <achievement name="SA_PLAYERISLAND_LABORER_02">
+    <sendlaborer tier="8" />
+  </achievement>
+
+  <achievement name="SA_PLAYERISLAND_LABORER_03">
+    <sendlaborer minyield="1" />
+  </achievement>
+
+
+  <!--PVE-->
+  <achievement name="SA_PVE_KILL_MORGANA" stat="SA_ST_PVE_KILL_MORGANA">
+    <killmob faction="MORGANA" count="1000" countpartykills="true" />
+  </achievement>
+  <achievement name="SA_PVE_KILL_DEMONPRINCE">
+    <or>
+      <killmob mobid="T6_MOB_MORGANA_DEMON_PRINCE_ELITE_BOSS" count="1" countpartykills="true" />
+      <killmob mobid="T8_MOB_MORGANA_DEMON_PRINCE_ELITE_BOSS" count="1" countpartykills="true" />
+    </or>
+  </achievement>
+  <achievement name="SA_PVE_KILL_KEEPER" stat="SA_ST_PVE_KILL_KEEPER">
+    <killmob faction="KEEPER" count="1000" countpartykills="true" />
+  </achievement>
+  <achievement name="SA_PVE_KILL_EARTHMOTHER">
+    <or>
+      <killmob mobid="T5_MOB_KEEPER_EARTHMOTHER_ELITE_BOSS" count="1" countpartykills="true" />
+      <killmob mobid="T8_MOB_KEEPER_EARTHMOTHER_ELITE_BOSS" count="1" countpartykills="true" />
+    </or>
+  </achievement>
+  <achievement name="SA_PVE_KILL_UNDEAD" stat="SA_ST_PVE_KILL_UNDEAD">
+    <killmob faction="UNDEAD" count="1000" countpartykills="true" />
+  </achievement>
+  <achievement name="SA_PVE_KILL_HARVESTER">
+    <or>
+      <killmob mobid="T7_MOB_UNDEAD_HARVESTER_ELITE_BOSS" count="1" countpartykills="true" />
+      <killmob mobid="T8_MOB_UNDEAD_HARVESTER_ELITE_BOSS" count="1" countpartykills="true" />
+    </or>
+  </achievement>
+  <achievement name="SA_PVE_KILL_HERETIC" stat="SA_ST_PVE_KILL_HERETIC">
+    <killmob faction="HERETIC" count="1000" countpartykills="true" />
+  </achievement>
+
+  <achievement name="SA_PVE_FAME_01" stat="SA_ST_PVE_FAME_01">
+    <havefame action="pve" value="1000" />
+  </achievement>
+  <achievement name="SA_PVE_FAME_02" stat="SA_ST_PVE_FAME_02">
+    <havefame action="pve" value="100000" />
+  </achievement>
+  <achievement name="SA_PVE_FAME_03" stat="SA_ST_PVE_FAME_03">
+    <havefame action="pve" value="10000000" />
+  </achievement>
+
+  <achievement name="SA_PVE_KILL_T1" stat="SA_ST_PVE_KILL_T1">
+    <killmob mintier="1" maxtier="1" count="100" />
+  </achievement>
+
+  <achievement name="SA_PVE_KILL_MINIGUARDIANS" stat="SA_ST_PVE_KILL_MINIGUARDIANS">
+    <killmob mobid="T6_MOB_MINIGUARDIAN_STEPPE_MAMMOTH" count="1" countpartykills="true" />
+    <or>
+      <killmob mobid="T6_MOB_MINIGUARDIAN_FIBER_SWAMP_RED" count="1" countpartykills="true" />
+      <killmob mobid="T6_MOB_MINIGUARDIAN_FIBER_SWAMP_DEAD" count="1" countpartykills="true" />
+    </or>
+    <or>
+      <killmob mobid="T6_MOB_MINIGUARDIAN_ORE_MOUNTAIN_RED" count="1" countpartykills="true" />
+      <killmob mobid="T6_MOB_MINIGUARDIAN_ORE_MOUNTAIN_DEAD" count="1" countpartykills="true" />
+    </or>
+    <or>
+      <killmob mobid="T6_MOB_MINIGUARDIAN_WOOD_FOREST_RED" count="1" countpartykills="true" />
+      <killmob mobid="T6_MOB_MINIGUARDIAN_WOOD_FOREST_DEAD" count="1" countpartykills="true" />
+    </or>
+    <or>
+      <killmob mobid="T6_MOB_MINIGUARDIAN_ROCK_HIGHLAND_RED" count="1" countpartykills="true" />
+      <killmob mobid="T6_MOB_MINIGUARDIAN_ROCK_HIGHLAND_DEAD" count="1" countpartykills="true" />
+    </or>
+  </achievement>
+
+  <!--Reputation-->
+  <achievement name="SA_REPUTATION_MAX">
+    <havereputation min="10000" />
+  </achievement>
+  
+  <achievement name="SA_REPUTATION_GOOD">
+    <havereputation min="500" />
+  </achievement>
+  
+  <achievement name="SA_REPUTATION_MIN" hidden="true">
+    <havereputation min="-50000" max="-20000" />
+  </achievement>
+  
+  <achievement name="SA_REPUTATION_BAD" hidden="true">
+    <havereputation min="-50000" max="-1000" />
+  </achievement>
+
+  <!--PVP-->
+  <achievement name="SA_PVP_DIE_PLAYER" hidden="true">
+    <die where="pvp" minvalue="0" />
+  </achievement>
+
+  <achievement name="SA_PVP_GVG_WIN_01">
+    <participateinopenworldattack role="Attacker" result="AttackerWon" />
+  </achievement>
+
+  <achievement name="SA_PVP_KILL_PLAYER_01">
+    <killplayer where="pvp" minvalue="0" />
+  </achievement>
+
+  <achievement name="SA_PVP_KILL_PLAYER_02" stat="SA_ST_PVP_KILL_PLAYER_02">
+    <killplayer where="pvp" minvalue="0" count="300" />
+  </achievement>
+
+  <achievement name="SA_PVP_KILL_PLAYER_MONSTER" hidden="true">
+    <killingspree count="6" where="pvp" seconds="60" countassists="true" />
+  </achievement>
+
+  <achievement name="SA_PVP_TERMINATOR" hidden="true">
+    <terminatorgrabloot />
+  </achievement>
+
+  <achievement name="SA_PVP_WIN_HELLGATE_01">
+    <usefunction function="WinHellgatePvp" />
+  </achievement>
+
+  <!--Social-->
+  <achievement name="SA_SOCIAL_GUILD">
+    <usefunction function="BeInGuild" />
+  </achievement>
+
+  <achievement name="SA_SOCIAL_FRIEND_01">
+    <usefunction function="HaveAFriend" />
+  </achievement>
+  
+  
+  <!--Trade-->
+  <achievement name="SA_TRADE_ANY_ITEM_BM">
+    <havemarketsilverearned markettype="blackmarket" value="1" />
+  </achievement>
+
+  <achievement name="SA_TRADE_ANY_ITEM_MP">
+    <havemarketsilverearned markettype="normal" value="1" />
+  </achievement>
+
+  <achievement name="SA_TRADE_SILVER_01" stat="SA_ST_TRADE_SILVER_01">
+    <havemarketsilverearned markettype="all" value="100000" />
+  </achievement>
+
+  <achievement name="SA_TRADE_SILVER_02" stat="SA_ST_TRADE_SILVER_02">
+    <havemarketsilverearned markettype="all" value="1000000" />
+  </achievement>
+
+  <achievement name="SA_TRADE_SILVER_03" stat="SA_ST_TRADE_SILVER_03">
+    <havemarketsilverearned markettype="all" value="10000000" />
+  </achievement>
+
+  <!-- Faction Warfare -->
+  <achievement name="SA_FACTIONWARFARE_JOIN">
+    <usefunction function="EnlistWithFaction" />
+  </achievement>
+
+  <achievement name="SA_FACTIONWARFARE_CAPTURE_01">
+    <captureoutpost />
+  </achievement>
+
+  <achievement name="SA_FACTIONWARFARE_CAPTURE_02" stat="SA_ST_FACTIONWARFARE_CAPTURE_02">
+    <captureoutpost count="10" />
+  </achievement>
+
+  <achievement name="SA_FACTIONWARFARE_CAPTURE_03" stat="SA_ST_FACTIONWARFARE_CAPTURE_03">
+    <captureoutpost count="100" />
+  </achievement>
+
+  <achievement name="SA_FACTIONWARFARE_KILLBOSS_ALL" stat="SA_ST_FACTIONWARFARE_KILLBOSS_ALL">
+    <any count="5">
+      <or>
+        <killmob mobid="T5_MOB_CITY_FOREST_BOSS" count="1" countpartykills="true" />
+        <killmob mobid="T6_MOB_CITY_FOREST_BOSS" count="1" countpartykills="true" />
+      </or>
+      <or>
+        <killmob mobid="T5_MOB_CITY_HIGHLAND_BOSS" count="1" countpartykills="true" />
+        <killmob mobid="T6_MOB_CITY_HIGHLAND_BOSS" count="1" countpartykills="true" />
+      </or>      
+      <or>
+        <killmob mobid="T5_MOB_CITY_MOUNTAIN_BOSS" count="1" countpartykills="true" />
+        <killmob mobid="T6_MOB_CITY_MOUNTAIN_BOSS" count="1" countpartykills="true" />
+      </or>
+      <or>
+        <killmob mobid="T5_MOB_CITY_STEPPE_BOSS" count="1" countpartykills="true" />
+        <killmob mobid="T6_MOB_CITY_STEPPE_BOSS" count="1" countpartykills="true" />
+      </or>
+      <or>
+        <killmob mobid="T5_MOB_CITY_SWAMP_BOSS" count="1" countpartykills="true" />
+        <killmob mobid="T6_MOB_CITY_SWAMP_BOSS" count="1" countpartykills="true" />
+      </or>
+      <or>
+        <killmob mobid="T5_MOB_CITY_CAERLEON_BOSS" count="1" countpartykills="true" />
+        <killmob mobid="T6_MOB_CITY_CAERLEON_BOSS" count="1" countpartykills="true" />
+      </or>
+    </any>
+  </achievement>
+
+  <achievement name="SA_FACTIONWARFARE_STANDING_MAX" stat="SA_ST_FACTIONWARFARE_STANDING_MAX">
+    <havefactionstanding faction="any" value="330000" />
+  </achievement>
+
+  <achievement name="SA_FACTIONWARFARE_TRADEMISSION_01">
+    <finishquest questtype="FactionQuest" />
+  </achievement>
+  
+  <!-- Overcharge -->
+  <achievement name="SA_COLLECTION_OVERCHARGE_01">
+    <usefunction function="OverChargeItem" />
+  </achievement>
+
+  <!-- Party Finder -->
+  <achievement name="SA_COLLECTION_PARTYFINDER">
+    <usefunction function="PartyFinderStartOrJoinParty" />
+  </achievement>
+
+  <!-- Tutorial -->
+  <achievement name="SA_COLLECTION_TUTORIAL">
+    <reachtutorialstate name="FINISH" />
+  </achievement>
+
+  <achievement name="SA_COLLECTION_TUTORIAL_02">
+    <reachtutorialstate name="SHIPFIXED" />
+  </achievement>
+
+  <!-- Random Dungeons -->
+  <achievement name="SA_PVE_RANDOMDUNGEON_ENTERED_01">
+    <usefunction function="EnterRandomDungeon" />
+  </achievement>
+
+  <achievement name="SA_PVE_RANDOMDUNGEON_ENTERED_02" stat="SA_ST_PVE_RANDOMDUNGEON_ENTERED_02">
+    <usefunction function="EnterRandomDungeon" count="1000" />
+  </achievement>
+
+  <achievement name="SA_PVE_RANDOMDUNGEON_LEGENDARY" stat="SA_ST_PVE_RANDOMDUNGEON_LEGENDARY">
+    <or>
+      <killmob mobid="T4_MOB_RD_HERETIC_SHADOWMASK_VETERAN_BOSS" count="1" countpartykills="true" />
+      <killmob mobid="T5_MOB_RD_HERETIC_SHADOWMASK_VETERAN_BOSS" count="1" countpartykills="true" />
+      <killmob mobid="T6_MOB_RD_HERETIC_SHADOWMASK_VETERAN_BOSS" count="1" countpartykills="true" />
+      <killmob mobid="T7_MOB_RD_HERETIC_SHADOWMASK_VETERAN_BOSS" count="1" countpartykills="true" />
+      <killmob mobid="T8_MOB_RD_HERETIC_SHADOWMASK_VETERAN_BOSS" count="1" countpartykills="true" />
+    </or>
+    <or>
+      <killmob mobid="T4_MOB_RD_KEEPER_EARTHMOTHER_VETERAN_BOSS" count="1" countpartykills="true" />
+      <killmob mobid="T5_MOB_RD_KEEPER_EARTHMOTHER_VETERAN_BOSS" count="1" countpartykills="true" />
+      <killmob mobid="T6_MOB_RD_KEEPER_EARTHMOTHER_VETERAN_BOSS" count="1" countpartykills="true" />
+      <killmob mobid="T7_MOB_RD_KEEPER_EARTHMOTHER_VETERAN_BOSS" count="1" countpartykills="true" />
+      <killmob mobid="T8_MOB_RD_KEEPER_EARTHMOTHER_VETERAN_BOSS" count="1" countpartykills="true" />
+    </or>
+    <or>
+      <killmob mobid="T4_MOB_RD_UNDEAD_HARVESTER_VETERAN_BOSS" count="1" countpartykills="true" />
+      <killmob mobid="T5_MOB_RD_UNDEAD_HARVESTER_VETERAN_BOSS" count="1" countpartykills="true" />
+      <killmob mobid="T6_MOB_RD_UNDEAD_HARVESTER_VETERAN_BOSS" count="1" countpartykills="true" />
+      <killmob mobid="T7_MOB_RD_UNDEAD_HARVESTER_VETERAN_BOSS" count="1" countpartykills="true" />
+      <killmob mobid="T8_MOB_RD_UNDEAD_HARVESTER_VETERAN_BOSS" count="1" countpartykills="true" />
+    </or>
+    <or>
+      <killmob mobid="T4_MOB_RD_MORGANA_DEMON_PRINCE_VETERAN_BOSS" count="1" countpartykills="true" />
+      <killmob mobid="T5_MOB_RD_MORGANA_DEMON_PRINCE_VETERAN_BOSS" count="1" countpartykills="true" />
+      <killmob mobid="T6_MOB_RD_MORGANA_DEMON_PRINCE_VETERAN_BOSS" count="1" countpartykills="true" />
+      <killmob mobid="T7_MOB_RD_MORGANA_DEMON_PRINCE_VETERAN_BOSS" count="1" countpartykills="true" />
+      <killmob mobid="T8_MOB_RD_MORGANA_DEMON_PRINCE_VETERAN_BOSS" count="1" countpartykills="true" />
+    </or>
+  </achievement>
+
+  <achievement name="SA_PVE_RANDOMDUNGEON_LOOTCHEST_SOLO_01" stat="SA_ST_PVE_RANDOMDUNGEON_LOOTCHEST_SOLO_01">
+    <unlocklootchest count="10">
+      
+      <validchest name="HERETIC_SOLO_BOOKCHEST_STANDARD" />
+      <validchest name="HERETIC_SOLO_BOOKCHEST_UNCOMMON" />
+      <validchest name="HERETIC_SOLO_BOOKCHEST_RARE" />
+      <validchest name="HERETIC_SOLO_BOOKCHEST_LEGENDARY" />
+
+      <validchest name="KEEPER_SOLO_BOOKCHEST_STANDARD" />
+      <validchest name="KEEPER_SOLO_BOOKCHEST_UNCOMMON" />
+      <validchest name="KEEPER_SOLO_BOOKCHEST_RARE" />
+      <validchest name="KEEPER_SOLO_BOOKCHEST_LEGENDARY" />
+
+      <validchest name="UNDEAD_SOLO_BOOKCHEST_STANDARD" />
+      <validchest name="UNDEAD_SOLO_BOOKCHEST_UNCOMMON" />
+      <validchest name="UNDEAD_SOLO_BOOKCHEST_RARE" />
+      <validchest name="UNDEAD_SOLO_BOOKCHEST_LEGENDARY" />
+
+      <validchest name="MORGANA_SOLO_BOOKCHEST_STANDARD" />
+      <validchest name="MORGANA_SOLO_BOOKCHEST_UNCOMMON" />
+      <validchest name="MORGANA_SOLO_BOOKCHEST_RARE" />
+      <validchest name="MORGANA_SOLO_BOOKCHEST_LEGENDARY" />
+      
+      <validchest name="HERETIC_SOLO_CHEST_BOSS_UNCOMMON" />
+      <validchest name="HERETIC_SOLO_CHEST_BOSS_RARE" />
+      <validchest name="HERETIC_SOLO_CHEST_BOSS_LEGENDARY" />
+      
+      <validchest name="KEEPER_SOLO_CHEST_BOSS_UNCOMMON" />
+      <validchest name="KEEPER_SOLO_CHEST_BOSS_RARE" />
+      <validchest name="KEEPER_SOLO_CHEST_BOSS_LEGENDARY" />
+      
+      <validchest name="UNDEAD_SOLO_CHEST_BOSS_UNCOMMON" />
+      <validchest name="UNDEAD_SOLO_CHEST_BOSS_RARE" />
+      <validchest name="UNDEAD_SOLO_CHEST_BOSS_LEGENDARY" />
+      
+      <validchest name="MORGANA_SOLO_CHEST_BOSS_UNCOMMON" />
+      <validchest name="MORGANA_SOLO_CHEST_BOSS_RARE" />
+      <validchest name="MORGANA_SOLO_CHEST_BOSS_LEGENDARY" />
+      
+      <validchest name="HERETIC_SOLO_CHEST_STANDARD" />
+      <validchest name="HERETIC_SOLO_CHEST_UNCOMMON" />
+      <validchest name="HERETIC_SOLO_CHEST_RARE" />
+      <validchest name="HERETIC_SOLO_CHEST_LEGENDARY" />
+
+      <validchest name="KEEPER_SOLO_CHEST_STANDARD" />
+      <validchest name="KEEPER_SOLO_CHEST_UNCOMMON" />
+      <validchest name="KEEPER_SOLO_CHEST_RARE" />
+      <validchest name="KEEPER_SOLO_CHEST_LEGENDARY" />
+
+      <validchest name="UNDEAD_SOLO_CHEST_STANDARD" />
+      <validchest name="UNDEAD_SOLO_CHEST_UNCOMMON" />
+      <validchest name="UNDEAD_SOLO_CHEST_RARE" />
+      <validchest name="UNDEAD_SOLO_CHEST_LEGENDARY" />
+
+      <validchest name="MORGANA_SOLO_CHEST_STANDARD" />
+      <validchest name="MORGANA_SOLO_CHEST_UNCOMMON" />
+      <validchest name="MORGANA_SOLO_CHEST_RARE" />
+      <validchest name="MORGANA_SOLO_CHEST_LEGENDARY" />
+    </unlocklootchest>
+  </achievement>
+  
+  <achievement name="SA_PVE_RANDOMDUNGEON_LOOTCHEST_SOLO_02" stat="SA_ST_PVE_RANDOMDUNGEON_LOOTCHEST_SOLO_02">
+    <unlocklootchest count="100">
+      
+      <validchest name="HERETIC_SOLO_BOOKCHEST_STANDARD" />
+      <validchest name="HERETIC_SOLO_BOOKCHEST_UNCOMMON" />
+      <validchest name="HERETIC_SOLO_BOOKCHEST_RARE" />
+      <validchest name="HERETIC_SOLO_BOOKCHEST_LEGENDARY" />
+
+      <validchest name="KEEPER_SOLO_BOOKCHEST_STANDARD" />
+      <validchest name="KEEPER_SOLO_BOOKCHEST_UNCOMMON" />
+      <validchest name="KEEPER_SOLO_BOOKCHEST_RARE" />
+      <validchest name="KEEPER_SOLO_BOOKCHEST_LEGENDARY" />
+
+      <validchest name="UNDEAD_SOLO_BOOKCHEST_STANDARD" />
+      <validchest name="UNDEAD_SOLO_BOOKCHEST_UNCOMMON" />
+      <validchest name="UNDEAD_SOLO_BOOKCHEST_RARE" />
+      <validchest name="UNDEAD_SOLO_BOOKCHEST_LEGENDARY" />
+
+      <validchest name="MORGANA_SOLO_BOOKCHEST_STANDARD" />
+      <validchest name="MORGANA_SOLO_BOOKCHEST_UNCOMMON" />
+      <validchest name="MORGANA_SOLO_BOOKCHEST_RARE" />
+      <validchest name="MORGANA_SOLO_BOOKCHEST_LEGENDARY" />
+      
+      <validchest name="HERETIC_SOLO_CHEST_BOSS_UNCOMMON" />
+      <validchest name="HERETIC_SOLO_CHEST_BOSS_RARE" />
+      <validchest name="HERETIC_SOLO_CHEST_BOSS_LEGENDARY" />
+
+      <validchest name="KEEPER_SOLO_CHEST_BOSS_UNCOMMON" />
+      <validchest name="KEEPER_SOLO_CHEST_BOSS_RARE" />
+      <validchest name="KEEPER_SOLO_CHEST_BOSS_LEGENDARY" />
+
+      <validchest name="UNDEAD_SOLO_CHEST_BOSS_UNCOMMON" />
+      <validchest name="UNDEAD_SOLO_CHEST_BOSS_RARE" />
+      <validchest name="UNDEAD_SOLO_CHEST_BOSS_LEGENDARY" />
+
+      <validchest name="MORGANA_SOLO_CHEST_BOSS_UNCOMMON" />
+      <validchest name="MORGANA_SOLO_CHEST_BOSS_RARE" />
+      <validchest name="MORGANA_SOLO_CHEST_BOSS_LEGENDARY" />
+      
+      <validchest name="HERETIC_SOLO_CHEST_STANDARD" />
+      <validchest name="HERETIC_SOLO_CHEST_UNCOMMON" />
+      <validchest name="HERETIC_SOLO_CHEST_RARE" />
+      <validchest name="HERETIC_SOLO_CHEST_LEGENDARY" />
+
+      <validchest name="KEEPER_SOLO_CHEST_STANDARD" />
+      <validchest name="KEEPER_SOLO_CHEST_UNCOMMON" />
+      <validchest name="KEEPER_SOLO_CHEST_RARE" />
+      <validchest name="KEEPER_SOLO_CHEST_LEGENDARY" />
+
+      <validchest name="UNDEAD_SOLO_CHEST_STANDARD" />
+      <validchest name="UNDEAD_SOLO_CHEST_UNCOMMON" />
+      <validchest name="UNDEAD_SOLO_CHEST_RARE" />
+      <validchest name="UNDEAD_SOLO_CHEST_LEGENDARY" />
+
+      <validchest name="MORGANA_SOLO_CHEST_STANDARD" />
+      <validchest name="MORGANA_SOLO_CHEST_UNCOMMON" />
+      <validchest name="MORGANA_SOLO_CHEST_RARE" />
+      <validchest name="MORGANA_SOLO_CHEST_LEGENDARY" />
+    </unlocklootchest>
+  </achievement>
+  
+  <achievement name="SA_PVE_RANDOMDUNGEON_LOOTCHEST_GROUP_01" stat="SA_ST_PVE_RANDOMDUNGEON_LOOTCHEST_GROUP_01">
+    <unlocklootchest count="10">
+      <validchest name="HERETIC_VETERAN_BOOKCHEST_STANDARD" />
+      <validchest name="HERETIC_VETERAN_BOOKCHEST_UNCOMMON" />
+      <validchest name="HERETIC_VETERAN_BOOKCHEST_RARE" />
+      <validchest name="HERETIC_VETERAN_BOOKCHEST_LEGENDARY" />
+
+      <validchest name="KEEPER_VETERAN_BOOKCHEST_STANDARD" />
+      <validchest name="KEEPER_VETERAN_BOOKCHEST_UNCOMMON" />
+      <validchest name="KEEPER_VETERAN_BOOKCHEST_RARE" />
+      <validchest name="KEEPER_VETERAN_BOOKCHEST_LEGENDARY" />
+
+      <validchest name="UNDEAD_VETERAN_BOOKCHEST_STANDARD" />
+      <validchest name="UNDEAD_VETERAN_BOOKCHEST_UNCOMMON" />
+      <validchest name="UNDEAD_VETERAN_BOOKCHEST_RARE" />
+      <validchest name="UNDEAD_VETERAN_BOOKCHEST_LEGENDARY" />
+
+      <validchest name="MORGANA_VETERAN_BOOKCHEST_STANDARD" />
+      <validchest name="MORGANA_VETERAN_BOOKCHEST_UNCOMMON" />
+      <validchest name="MORGANA_VETERAN_BOOKCHEST_RARE" />
+      <validchest name="MORGANA_VETERAN_BOOKCHEST_LEGENDARY" />
+      
+      <validchest name="HERETIC_VETERAN_CHEST_BOSS_UNCOMMON" />
+      <validchest name="HERETIC_VETERAN_CHEST_BOSS_RARE" />
+      <validchest name="HERETIC_VETERAN_CHEST_BOSS_LEGENDARY" />
+
+      <validchest name="KEEPER_VETERAN_CHEST_BOSS_UNCOMMON" />
+      <validchest name="KEEPER_VETERAN_CHEST_BOSS_RARE" />
+      <validchest name="KEEPER_VETERAN_CHEST_BOSS_LEGENDARY" />
+
+      <validchest name="UNDEAD_VETERAN_CHEST_BOSS_UNCOMMON" />
+      <validchest name="UNDEAD_VETERAN_CHEST_BOSS_RARE" />
+      <validchest name="UNDEAD_VETERAN_CHEST_BOSS_LEGENDARY" />
+
+      <validchest name="MORGANA_VETERAN_CHEST_BOSS_UNCOMMON" />
+      <validchest name="MORGANA_VETERAN_CHEST_BOSS_RARE" />
+      <validchest name="MORGANA_VETERAN_CHEST_BOSS_LEGENDARY" />
+      
+      <validchest name="HERETIC_VETERAN_CHEST_STANDARD" />
+      <validchest name="HERETIC_VETERAN_CHEST_UNCOMMON" />
+      <validchest name="HERETIC_VETERAN_CHEST_RARE" />
+      <validchest name="HERETIC_VETERAN_CHEST_LEGENDARY" />
+
+      <validchest name="KEEPER_VETERAN_CHEST_STANDARD" />
+      <validchest name="KEEPER_VETERAN_CHEST_UNCOMMON" />
+      <validchest name="KEEPER_VETERAN_CHEST_RARE" />
+      <validchest name="KEEPER_VETERAN_CHEST_LEGENDARY" />
+
+      <validchest name="UNDEAD_VETERAN_CHEST_STANDARD" />
+      <validchest name="UNDEAD_VETERAN_CHEST_UNCOMMON" />
+      <validchest name="UNDEAD_VETERAN_CHEST_RARE" />
+      <validchest name="UNDEAD_VETERAN_CHEST_LEGENDARY" />
+
+      <validchest name="MORGANA_VETERAN_CHEST_STANDARD" />
+      <validchest name="MORGANA_VETERAN_CHEST_UNCOMMON" />
+      <validchest name="MORGANA_VETERAN_CHEST_RARE" />
+      <validchest name="MORGANA_VETERAN_CHEST_LEGENDARY" />
+    </unlocklootchest>
+  </achievement>
+  
+  <achievement name="SA_PVE_RANDOMDUNGEON_LOOTCHEST_GROUP_02" stat="SA_ST_PVE_RANDOMDUNGEON_LOOTCHEST_GROUP_02">
+    <unlocklootchest count="100">
+    
+      <validchest name="HERETIC_VETERAN_BOOKCHEST_STANDARD" />
+      <validchest name="HERETIC_VETERAN_BOOKCHEST_UNCOMMON" />
+      <validchest name="HERETIC_VETERAN_BOOKCHEST_RARE" />
+      <validchest name="HERETIC_VETERAN_BOOKCHEST_LEGENDARY" />
+
+      <validchest name="KEEPER_VETERAN_BOOKCHEST_STANDARD" />
+      <validchest name="KEEPER_VETERAN_BOOKCHEST_UNCOMMON" />
+      <validchest name="KEEPER_VETERAN_BOOKCHEST_RARE" />
+      <validchest name="KEEPER_VETERAN_BOOKCHEST_LEGENDARY" />
+
+      <validchest name="UNDEAD_VETERAN_BOOKCHEST_STANDARD" />
+      <validchest name="UNDEAD_VETERAN_BOOKCHEST_UNCOMMON" />
+      <validchest name="UNDEAD_VETERAN_BOOKCHEST_RARE" />
+      <validchest name="UNDEAD_VETERAN_BOOKCHEST_LEGENDARY" />
+
+      <validchest name="MORGANA_VETERAN_BOOKCHEST_STANDARD" />
+      <validchest name="MORGANA_VETERAN_BOOKCHEST_UNCOMMON" />
+      <validchest name="MORGANA_VETERAN_BOOKCHEST_RARE" />
+      <validchest name="MORGANA_VETERAN_BOOKCHEST_LEGENDARY" />
+      
+      <validchest name="HERETIC_VETERAN_CHEST_BOSS_UNCOMMON" />
+      <validchest name="HERETIC_VETERAN_CHEST_BOSS_RARE" />
+      <validchest name="HERETIC_VETERAN_CHEST_BOSS_LEGENDARY" />
+
+      <validchest name="KEEPER_VETERAN_CHEST_BOSS_UNCOMMON" />
+      <validchest name="KEEPER_VETERAN_CHEST_BOSS_RARE" />
+      <validchest name="KEEPER_VETERAN_CHEST_BOSS_LEGENDARY" />
+
+      <validchest name="UNDEAD_VETERAN_CHEST_BOSS_UNCOMMON" />
+      <validchest name="UNDEAD_VETERAN_CHEST_BOSS_RARE" />
+      <validchest name="UNDEAD_VETERAN_CHEST_BOSS_LEGENDARY" />
+
+      <validchest name="MORGANA_VETERAN_CHEST_BOSS_UNCOMMON" />
+      <validchest name="MORGANA_VETERAN_CHEST_BOSS_RARE" />
+      <validchest name="MORGANA_VETERAN_CHEST_BOSS_LEGENDARY" />
+      
+      <validchest name="HERETIC_VETERAN_CHEST_STANDARD" />
+      <validchest name="HERETIC_VETERAN_CHEST_UNCOMMON" />
+      <validchest name="HERETIC_VETERAN_CHEST_RARE" />
+      <validchest name="HERETIC_VETERAN_CHEST_LEGENDARY" />
+
+      <validchest name="KEEPER_VETERAN_CHEST_STANDARD" />
+      <validchest name="KEEPER_VETERAN_CHEST_UNCOMMON" />
+      <validchest name="KEEPER_VETERAN_CHEST_RARE" />
+      <validchest name="KEEPER_VETERAN_CHEST_LEGENDARY" />
+
+      <validchest name="UNDEAD_VETERAN_CHEST_STANDARD" />
+      <validchest name="UNDEAD_VETERAN_CHEST_UNCOMMON" />
+      <validchest name="UNDEAD_VETERAN_CHEST_RARE" />
+      <validchest name="UNDEAD_VETERAN_CHEST_LEGENDARY" />
+
+      <validchest name="MORGANA_VETERAN_CHEST_STANDARD" />
+      <validchest name="MORGANA_VETERAN_CHEST_UNCOMMON" />
+      <validchest name="MORGANA_VETERAN_CHEST_RARE" />
+      <validchest name="MORGANA_VETERAN_CHEST_LEGENDARY" />
+    </unlocklootchest>
+  </achievement>
+  
+  <!-- Crystal Realm GvG-->
+
+  <achievement name="SA_PVP_CRYSTAL_PARTICIPATION">
+    <haveplayedcrystalleague won="false" count="1" />
+  </achievement>
+
+  <!-- Service -->
+  <achievement name="SA_ANNIVERSARY_01" stat="SA_ST_ANNIVERSARY_01">
+    <havepaidaccountformindays count="365" />
+  </achievement>
+
+</steamachievements>

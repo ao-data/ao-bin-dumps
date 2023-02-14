@@ -1,22 +1,48 @@
 <template path="Assets/Levels/LEVEL_TEMPLATES/STEPPE/Slave/S_ST_SeasonWinnerStatue.unity" unityguid="e56860d84f73bf24f8b9fbf8f3f9285d" editorBoundsMin="-25 -25" editorBoundsMax="25 25" colBoundsMin="-25 -25" colBoundsMax="25 25">
-  <criticalscenemembers />
+  <criticalscenemembers>
+    <criticalscenemember id="placeholderspot_01" type="placeholderspot" layerId="Layer_01">
+      <tile name="STEPPE_DEAD_MONUMENT_GVG_BANNER_PLACEHOLDER" pos="0 6 11" roty="90">
+        <placeholderspot order="1" data="2" />
+      </tile>
+    </criticalscenemember>
+    <criticalscenemember id="placeholderspot_03" type="placeholderspot" layerId="Layer_01">
+      <tile name="HALL_OF_FAME_PLACEHOLDER_STATUE_ENERGY" pos="0 4 16">
+        <placeholderspot order="1" data="0" />
+      </tile>
+    </criticalscenemember>
+    <criticalscenemember id="placeholderspot_02" type="placeholderspot" layerId="Layer_02">
+      <tile name="STEPPE_DEAD_MONUMENT_GVG_BANNER_PLACEHOLDER" pos="0 6 11" roty="90">
+        <placeholderspot order="2" data="3" />
+      </tile>
+    </criticalscenemember>
+    <criticalscenemember id="placeholderspot_04" type="placeholderspot" layerId="Layer_02">
+      <tile name="HALL_OF_FAME_PLACEHOLDER_STATUE_ENERGY" pos="0 4 16">
+        <placeholderspot order="2" data="0" />
+      </tile>
+    </criticalscenemember>
+  </criticalscenemembers>
   <tiles>
     <layergroup name="">
       <layer id="Layer_01" name="SecondPlace">
-        <tile name="STEPPE_DEAD_MONUMENT_GVG_ENERGY_RUSH_B" pos="0 6 11" roty="90" />
-        <tile name="GVG_ENERGY_RUSH_SECONDPLACE_CLICKABLE" pos="0 4 16">
-          <informationprovider locatag="@GVG_SEASON_ENERGY_RUSH_SECOND_PLACE" useradius="8" type="0" data="15" data2="2" />
-        </tile>
+        <criticaltile name="STEPPE_DEAD_MONUMENT_GVG_BANNER_PLACEHOLDER" pos="0 6 11" roty="90" id="placeholderspot_01" type="placeholderspot">
+          <placeholderspot order="1" data="2" />
+        </criticaltile>
+        <criticaltile name="HALL_OF_FAME_PLACEHOLDER_STATUE_ENERGY" pos="0 4 16" id="placeholderspot_03" type="placeholderspot">
+          <placeholderspot order="1" data="0" />
+        </criticaltile>
       </layer>
     </layergroup>
     <layergroup name="">
       <layer id="Layer_02" name="ThirdPlace">
-        <tile name="STEPPE_DEAD_MONUMENT_GVG_ENERGY_RUSH_C" pos="0 6 11" roty="90" />
-        <tile name="GVG_ENERGY_RUSH_THIRDPLACE_CLICKABLE" pos="0 4 16">
-          <informationprovider locatag="@GVG_SEASON_ENERGY_RUSH_THIRD_PLACE" useradius="8" type="0" data="15" data2="3" />
-        </tile>
+        <criticaltile name="STEPPE_DEAD_MONUMENT_GVG_BANNER_PLACEHOLDER" pos="0 6 11" roty="90" id="placeholderspot_02" type="placeholderspot">
+          <placeholderspot order="2" data="3" />
+        </criticaltile>
+        <criticaltile name="HALL_OF_FAME_PLACEHOLDER_STATUE_ENERGY" pos="0 4 16" id="placeholderspot_04" type="placeholderspot">
+          <placeholderspot order="2" data="0" />
+        </criticaltile>
       </layer>
     </layergroup>
+    <tile name="HALL_OF_FAME_GROUND_COLLIDER_OBJ" pos="0 6 10" />
     <tile name="STEPPE_DEAD_CITY_PORTAL_IN_MONUMENT_RAILING_CORNER_LARGE_A" pos="0 6 14" roty="90" />
     <tile name="STEPPE_DEAD_CITY_PORTAL_IN_MONUMENT_RAILING_CORNER_LARGE_A" pos="0 4 14" roty="90" />
     <tile name="STEPPE_DEAD_CITY_PORTAL_IN_MONUMENT_RAILING_CORNER_LARGE_A" pos="0 1 14" roty="90" />
