@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<patch xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="patch.xsd">
+
+	<!--Outpost Small Treasures-->
+	<remove sel="TreasureDistribution/Events/Event[@name='CASTLE_OUTPOST_STANDARD']/Weekdays">
+	</remove>
+	<add sel="TreasureDistribution/Events/Event[@name='CASTLE_OUTPOST_STANDARD']" aschild="true">
+		<![CDATA[
+          <Weekdays clustertime="false">
+		    <Weekday day="Monday">
+              <Respawn utc="03:30:00"/>
+              <Respawn utc="06:30:00"/>
+              <Respawn utc="09:30:00"/>
+              <Respawn utc="12:30:00"/>
+              <Respawn utc="15:30:00"/>
+              <Respawn utc="18:30:00"/>
+              <Respawn utc="21:30:00"/>
+            </Weekday>
+		    <Weekday day="Tuesday">
+              <Respawn utc="03:30:00"/>
+              <Respawn utc="06:30:00"/>
+              <Respawn utc="09:30:00"/>
+              <Respawn utc="12:30:00"/>
+              <Respawn utc="15:30:00"/>
+              <Respawn utc="18:30:00"/>
+              <Respawn utc="21:30:00"/>
+            </Weekday>
+		    <Weekday day="Wednesday">
+              <Respawn utc="03:30:00"/>
+              <Respawn utc="06:30:00"/>
+              <Respawn utc="09:30:00"/>
+              <Respawn utc="12:30:00"/>
+              <Respawn utc="15:30:00"/>
+              <Respawn utc="18:30:00"/>
+              <Respawn utc="21:30:00"/>
+            </Weekday>
+		    <Weekday day="Friday">
+              <Respawn utc="03:30:00"/>
+              <Respawn utc="06:30:00"/>
+              <Respawn utc="09:30:00"/>
+              <Respawn utc="12:30:00"/>
+              <Respawn utc="15:30:00"/>
+              <Respawn utc="18:30:00"/>
+              <Respawn utc="21:30:00"/>
+            </Weekday>		  
+		    <Weekday day="Saturday">
+		      <Respawn utc="03:30:00"/>
+		  	  <End     utc="06:28:00"/>
+		  	
+		  	  <Start   utc="09:29:00"/>
+		      <Respawn utc="09:30:00"/>
+		  	  <End     utc="12:28:00"/>
+		  	
+		  	  <Start   utc="15:29:00"/>
+		      <Respawn utc="15:30:00"/>
+		  	  <End     utc="18:28:00"/>
+		  	
+		  	  <Start   utc="21:29:00"/>
+		      <Respawn utc="21:30:00"/>
+            </Weekday>
+		    <Weekday day="Sunday">
+              <Respawn utc="03:30:00"/>
+              <Respawn utc="06:30:00"/>
+              <Respawn utc="09:30:00"/>
+              <Respawn utc="12:30:00"/>
+              <Respawn utc="15:30:00"/>
+              <Respawn utc="18:30:00"/>
+              <Respawn utc="21:30:00"/>
+            </Weekday>
+		  </Weekdays>]]>
+	</add>
+	
+	<!--Outpost Big Treasures-->
+	<remove sel="TreasureDistribution/Events/Event[@name='CASTLE_OUTPOST_WEEKEND']/Weekdays/Weekday[@day='Saturday']">
+	</remove>
+	<add sel="TreasureDistribution/Events/Event[@name='CASTLE_OUTPOST_WEEKEND']/Weekdays" aschild="true">
+		<![CDATA[
+		  <Weekday day="Saturday">
+		    <Start   utc="06:29:00"/>
+		    <Respawn utc="06:30:00"/>
+		    <End     utc="09:28:00"/>
+			
+            <Start   utc="12:29:00"/>
+            <Respawn utc="12:30:00"/>
+            <End     utc="15:28:00"/>
+		  
+            <Start   utc="18:29:00"/>
+            <Respawn utc="18:30:00"/>
+            <End     utc="21:28:00"/>
+          </Weekday>]]>
+	</add>
+	<remove sel="TreasureDistribution/Events/Event[@name='CASTLE_OUTPOST_WEEKEND']/Weekdays/Weekday[@day='Sunday']">
+	</remove>
+
+	<!--Castle Small Treasures-->
+	<remove sel="TreasureDistribution/Events/Event[@name='CASTLE_STANDARD']/Weekdays">
+	</remove>
+	<add sel="TreasureDistribution/Events/Event[@name='CASTLE_STANDARD']" aschild="true">
+		<![CDATA[
+         <Weekdays clustertime="false">
+		   <Weekday day="Monday">
+             <Respawn utc="03:30:00"/>
+             <Respawn utc="06:30:00"/>
+             <Respawn utc="09:30:00"/>
+             <Respawn utc="12:30:00"/>
+             <Respawn utc="15:30:00"/>
+             <Respawn utc="18:30:00"/>
+             <Respawn utc="21:30:00"/>
+           </Weekday>
+		   <Weekday day="Tuesday">
+             <Respawn utc="03:30:00"/>
+             <Respawn utc="06:30:00"/>
+             <Respawn utc="09:30:00"/>
+             <Respawn utc="12:30:00"/>
+             <Respawn utc="15:30:00"/>
+             <Respawn utc="18:30:00"/>
+             <Respawn utc="21:30:00"/>
+           </Weekday>
+		   <Weekday day="Wednesday">
+             <Respawn utc="03:30:00"/>
+             <Respawn utc="06:30:00"/>
+             <Respawn utc="09:30:00"/>
+             <Respawn utc="12:30:00"/>
+             <Respawn utc="15:30:00"/>
+             <Respawn utc="18:30:00"/>
+             <Respawn utc="21:30:00"/>
+           </Weekday>
+		   <Weekday day="Friday">
+             <Respawn utc="03:30:00"/>
+             <Respawn utc="06:30:00"/>
+             <Respawn utc="09:30:00"/>
+             <Respawn utc="12:30:00"/>
+             <Respawn utc="15:30:00"/>
+             <Respawn utc="18:30:00"/>
+             <Respawn utc="21:30:00"/>
+           </Weekday>		  
+		   <Weekday day="Saturday">
+		     <Respawn utc="03:30:00"/>
+		 	 <End     utc="06:28:00"/>
+		 	
+		 	 <Start   utc="09:29:00"/>
+		     <Respawn utc="09:30:00"/>
+		 	 <End     utc="12:28:00"/>
+		 	
+		 	 <Start   utc="15:29:00"/>
+		     <Respawn utc="15:30:00"/>
+		 	 <End     utc="18:28:00"/>
+		 	
+		 	 <Start   utc="21:29:00"/>
+		     <Respawn utc="21:30:00"/>
+           </Weekday>
+		   <Weekday day="Sunday">
+             <Respawn utc="03:30:00"/>
+             <Respawn utc="06:30:00"/>
+             <Respawn utc="09:30:00"/>
+             <Respawn utc="12:30:00"/>
+             <Respawn utc="15:30:00"/>
+             <Respawn utc="18:30:00"/>
+             <Respawn utc="21:30:00"/>
+           </Weekday>
+		 </Weekdays>]]>
+	</add>
+	
+	<!--Castle Big Treasures-->
+	<remove sel="TreasureDistribution/Events/Event[@name='CASTLE_WEEKEND']/Weekdays/Weekday[@day='Saturday']">
+	</remove>
+	<add sel="TreasureDistribution/Events/Event[@name='CASTLE_WEEKEND']/Weekdays" aschild="true">
+		<![CDATA[
+		  <Weekday day="Saturday">
+		    <Start   utc="06:29:00"/>
+		    <Respawn utc="06:30:00"/>
+		    <End     utc="09:28:00"/>
+			
+            <Start   utc="12:29:00"/>
+            <Respawn utc="12:30:00"/>
+            <End     utc="15:28:00"/>
+		  
+            <Start   utc="18:29:00"/>
+            <Respawn utc="18:30:00"/>
+            <End     utc="21:28:00"/>
+          </Weekday>]]>
+	</add>
+	<remove sel="TreasureDistribution/Events/Event[@name='CASTLE_WEEKEND']/Weekdays/Weekday[@day='Sunday']">
+	</remove>
+</patch>

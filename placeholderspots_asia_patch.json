@@ -1,0 +1,72 @@
+{
+  "?xml": {
+    "@version": "1.0",
+    "@encoding": "utf-8"
+  },
+  "patch": {
+    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+    "@xsi:noNamespaceSchemaLocation": "patch.xsd",
+    "remove": [
+      {
+        "@sel": "PlaceholderSpots/Category/Spot/Statue[@season='GVG_SEASON_ENERGY_RUSH']"
+      },
+      {
+        "@sel": "PlaceholderSpots/Category[@name='gvg_season']/Spot/Banner"
+      },
+      {
+        "@sel": "PlaceholderSpots/Category[@name='gvg_season']/Spot/Decoration"
+      }
+    ],
+    "replace": [
+      {
+        "@sel": "PlaceholderSpots/Category/Spot/Banner[@prefab='HIGHLAND_DEAD_MONUMENT_GVG_ENERGY_RUSH_A']",
+        "attribute": {
+          "@name": "prefab",
+          "@newvalue": "HIGHLAND_DEAD_MONUMENT_GVG_ENERGY_RUSH_A_NO_LOGO"
+        }
+      },
+      {
+        "@sel": "PlaceholderSpots/Category/Spot/Banner[@prefab='STEPPE_DEAD_MONUMENT_GVG_ENERGY_RUSH_B']",
+        "attribute": {
+          "@name": "prefab",
+          "@newvalue": "STEPPE_DEAD_MONUMENT_GVG_ENERGY_RUSH_NO_LOGO"
+        }
+      },
+      {
+        "@sel": "PlaceholderSpots/Category/Spot/Banner[@prefab='STEPPE_DEAD_MONUMENT_GVG_ENERGY_RUSH_C']",
+        "attribute": {
+          "@name": "prefab",
+          "@newvalue": "STEPPE_DEAD_MONUMENT_GVG_ENERGY_RUSH_NO_LOGO"
+        }
+      },
+      {
+        "@sel": "PlaceholderSpots/Category/Spot/Statue[@prefab='HIGHLAND_DEAD_CITY_PORTAL_MONUMENT_A']",
+        "attribute": {
+          "@name": "prefab",
+          "@newvalue": "HIGHLAND_DEAD_CITY_PORTAL_MONUMENT_NO_LOGO"
+        }
+      },
+      {
+        "@sel": "PlaceholderSpots/Category[@name='gvg_season']/Spot/Statue",
+        "attribute": {
+          "@name": "prefab",
+          "@newvalue": "HALL_OF_FAME_THRONE_A_SEASON_EMPTY"
+        }
+      },
+      {
+        "@sel": "PlaceholderSpots/Category/Spot/Banner",
+        "attribute": {
+          "@name": "season",
+          "@newvalue": "GVG_SEASON_19"
+        }
+      },
+      {
+        "@sel": "PlaceholderSpots/Category/Spot/Statue",
+        "attribute": {
+          "@name": "season",
+          "@newvalue": "GVG_SEASON_19"
+        }
+      }
+    ]
+  }
+}

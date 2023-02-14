@@ -4,11 +4,29 @@
 <!-- Note: multiplying with 100 f now omitted for all values (silver, rv, fame, durability)  -->
 <AO-GameData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="gamedata.xsd">
   <ServerSettings>
+    <EarlyAccess>
+      <!-- BETA -->
+      <stage start="2023-2-20 11:00" end="2023-3-13 10:00">
+        <founder level="none" accessafterhours="672" />
+        <founder level="bronze" accessafterhours="0" />
+        <founder level="silver" accessafterhours="0" />
+        <founder level="gold" accessafterhours="0" />
+        <founder level="crystal" accessafterhours="0" />
+      </stage>
+      <!-- Asia Launch -->
+      <stage start="2023-3-15 11:00">
+        <founder level="none" accessafterhours="120" />
+        <founder level="bronze" accessafterhours="96" />
+        <founder level="silver" accessafterhours="48" />
+        <founder level="gold" accessafterhours="0" />
+        <founder level="crystal" accessafterhours="0" />
+      </stage>
+    </EarlyAccess>
     <MiniMap zergcellsize="40.0" zergmingroupsize="11" maxplayerspermsg="30" staticdungeonminimapdisplayinterestareamodifier="115"/>
     <ClientUpdate moveupdateinms="100" />
     <Items vanishtimeforunuseditems="432000" />
     <Guild 
-    cost="100000" 
+    cost="1000000" 
     guildinvitationdelayinseconds="300" 
     initialclaimterritoryguildfamerequirement="1000000" 
     claimterritoryguildfamerequirement="1000000"
@@ -53,7 +71,7 @@
 	</transactionlimits>
     
     <Territory territoryclaimtimeinsec="15" />
-    <Alliance cost="500000" upkeeptimerinmin="10080" upkeepcostperguild="0" changecooldownminutes="10080" maxplayers="30000" maxguilds="100"/>
+    <Alliance cost="5000000" upkeeptimerinmin="10080" upkeepcostperguild="0" changecooldownminutes="10080" maxplayers="30000" maxguilds="100"/>
     <GoldMarket setupsellordercost="10" setupbuyordercost="10" swaptransactiongoldpurchaseinterval="5" />
     <Respawn autorespawntimerinsecs="600" />
     <PveFameSession sessionconclusiondelaysecs="600"/>
@@ -839,12 +857,12 @@
         <TierModifier tier="8" modifier="30.0" />
   </TravelSettings>
   <RealEstateSettings realestateupkeeptimerinmin="1440" realestateupkeepwarningintervalinmin="2" realestateupkeepwarningchecktimespaninhours="24">
-    <Sale squaremeterpricenormal="0.0" squaremeterpricebuildingarea="100000.0" overallpricefactor="1">
-        <LocationQuality locationType="A" factor="2" />
-        <LocationQuality locationType="B" factor="1.5" />
-        <LocationQuality locationType="C" factor="1" />
-        <LocationQuality locationType="D" factor="0.75" />
-        <LocationQuality locationType="E" factor="0.5" />
+    <Sale squaremeterpricenormal="0.0" squaremeterpricebuildingarea="12500.0" overallpricefactor="1">
+        <LocationQuality locationType="A" factor="40" />
+        <LocationQuality locationType="B" factor="9" />
+        <LocationQuality locationType="C" factor="3" />
+        <LocationQuality locationType="D" factor="1.5" />
+        <LocationQuality locationType="E" factor="1" />
     </Sale>
     <Upkeep squaremeterpricenormal="0.0" squaremeterpricebuildingarea="0.0" overallpricefactor="1">
         <LocationQuality locationType="A" factor="0.0" />
@@ -1983,4 +2001,5 @@
   </ClusterValueVisualization>
   <FurnituresPlacementRules openworldfurnituremindistance="10" lootplacementblockadditionalborder="2"/>
   <BatchUseSkillBook maxfame="10000000"/>
+  <CharacterAndGuildNameReservation availableuntil="2023-06-13T02:00:00Z"/>
 </AO-GameData>

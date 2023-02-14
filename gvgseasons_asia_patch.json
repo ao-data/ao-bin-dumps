@@ -1,0 +1,154 @@
+{
+  "?xml": {
+    "@version": "1.0",
+    "@encoding": "utf-8"
+  },
+  "patch": {
+    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+    "@xsi:noNamespaceSchemaLocation": "patch.xsd",
+    "replace": [
+      {
+        "@sel": "gvgseasons/season[@uniquename='GVG_SEASON_19']",
+        "attribute": {
+          "@name": "displayname",
+          "@newvalue": "@SEASONS_SEASONNAME_SEASON_01"
+        }
+      },
+      {
+        "@sel": "gvgseasons/season[@uniquename='GVG_SEASON_19']/seasontimes/day[@number='1']/eventtime[@utctime='11:00:00Z']",
+        "attribute": {
+          "@name": "utctime",
+          "@newvalue": "01:00:00Z"
+        }
+      },
+      {
+        "@sel": "gvgseasons/season[@uniquename='GVG_SEASON_19']/seasontimes/day[@number='1']/eventtime[@utctime='18:00:00Z']",
+        "attribute": {
+          "@name": "utctime",
+          "@newvalue": "08:00:00Z"
+        }
+      },
+      {
+        "@sel": "gvgseasons/season[@uniquename='GVG_SEASON_19']/seasontimes/day[@number='3']/eventtime",
+        "attribute": {
+          "@name": "utctime",
+          "@newvalue": "01:00:00Z"
+        }
+      },
+      {
+        "@sel": "gvgseasons/season[@uniquename='GVG_SEASON_19']/seasontimes/day[@number='85']",
+        "attribute": {
+          "@name": "number",
+          "@newvalue": "71"
+        }
+      },
+      {
+        "@sel": "gvgseasons/season[@uniquename='GVG_SEASON_18']",
+        "attribute": {
+          "@name": "displayname",
+          "@newvalue": "@SEASONS_SEASONNAME_SEASON_BETA"
+        }
+      }
+    ],
+    "remove": [
+      {
+        "@sel": "gvgseasons/season[@uniquename='GVG_SEASON_19']/seasontimes/day[@number='2']/eventtime[@utctime='01:00:00Z']"
+      },
+      {
+        "@sel": "gvgseasons/season[@uniquename='GVG_SEASON_19']/seasontimes/day[@number='29']"
+      },
+      {
+        "@sel": "gvgseasons/season[@uniquename='GVG_SEASON_19']/seasontimes/day[@number='30']"
+      },
+      {
+        "@sel": "gvgseasons/season[@uniquename='GVG_SEASON_19']/seasontimes/day[@number='31']"
+      },
+      {
+        "@sel": "gvgseasons/season[@uniquename='GVG_SEASON_19']/seasontimes/day[@number='57']"
+      },
+      {
+        "@sel": "gvgseasons/season[@uniquename='GVG_SEASON_19']/seasontimes/day[@number='58']"
+      },
+      {
+        "@sel": "gvgseasons/season[@uniquename='GVG_SEASON_19']/seasontimes/day[@number='59']"
+      },
+      {
+        "@sel": "gvgseasons/season[@uniquename='GVG_SEASON_18']/seasontimes"
+      },
+      {
+        "@sel": "gvgseasons/season[@uniquename='GVG_SEASON_AVALONIAN_INVASION']"
+      },
+      {
+        "@sel": "gvgseasons/season[@uniquename='GVG_SEASON_ENERGY_RUSH']"
+      },
+      {
+        "@sel": "gvgseasons/season[@uniquename='GVG_SEASON_01']"
+      },
+      {
+        "@sel": "gvgseasons/season[@uniquename='GVG_SEASON_02']"
+      },
+      {
+        "@sel": "gvgseasons/season[@uniquename='GVG_SEASON_03']"
+      },
+      {
+        "@sel": "gvgseasons/season[@uniquename='GVG_SEASON_04']"
+      },
+      {
+        "@sel": "gvgseasons/season[@uniquename='GVG_SEASON_05']"
+      },
+      {
+        "@sel": "gvgseasons/season[@uniquename='GVG_SEASON_06']"
+      },
+      {
+        "@sel": "gvgseasons/season[@uniquename='GVG_SEASON_07']"
+      },
+      {
+        "@sel": "gvgseasons/season[@uniquename='GVG_SEASON_08']"
+      },
+      {
+        "@sel": "gvgseasons/season[@uniquename='GVG_SEASON_09']"
+      },
+      {
+        "@sel": "gvgseasons/season[@uniquename='GVG_SEASON_10']"
+      },
+      {
+        "@sel": "gvgseasons/season[@uniquename='GVG_SEASON_11']"
+      },
+      {
+        "@sel": "gvgseasons/season[@uniquename='GVG_SEASON_12']"
+      },
+      {
+        "@sel": "gvgseasons/season[@uniquename='GVG_SEASON_13']"
+      },
+      {
+        "@sel": "gvgseasons/season[@uniquename='GVG_SEASON_14']"
+      },
+      {
+        "@sel": "gvgseasons/season[@uniquename='GVG_SEASON_15']"
+      },
+      {
+        "@sel": "gvgseasons/season[@uniquename='GVG_SEASON_16']"
+      },
+      {
+        "@sel": "gvgseasons/season[@uniquename='GVG_SEASON_17']"
+      }
+    ],
+    "add": [
+      {
+        "@sel": "gvgseasons/season[@uniquename='GVG_SEASON_19']/seasontimes/day[@number='1']",
+        "@aschild": "true",
+        "#cdata-section": "       \n\t    <eventtime utctime=\"14:00:00Z\">\n          <clusterfilter>\n            <timeregion name=\"BR_00_00\" />\n            <timeregion name=\"US_03_00\" />\n            <timeregion name=\"US_05_00\" />\n          </clusterfilter>\n          <spawninvader/>\n          <territoriesclaimable claimlimitoverrideminutes=\"600\"/>\n        </eventtime>\n\t\t"
+      },
+      {
+        "@sel": "gvgseasons/season[@uniquename='GVG_SEASON_19']/seasontimes/day[@number='85']",
+        "@before": "true",
+        "#cdata-section": "       \n      <day number=\"22\">\n        <eventtime utctime=\"00:00:01Z\" calculateusingclustertimezone=\"true\">\n          <territorybattleend />\n          <territoryscoringend />\n          <territorystoragepayout />\n        </eventtime>\n        <eventtime utctime=\"01:00:00Z\">\n          <territoriesunclaimable />\n          <resetterritories />\n          <disable_portalbindingremoval />\n        </eventtime>\n        <eventtime utctime=\"08:00:00Z\">\n          <clusterfilter>\n            <timeregion name=\"RU_ASIA_12_00\" />\n            <timeregion name=\"RU_15_00\" />\n            <timeregion name=\"EU_RU_18_00\" />\n            <timeregion name=\"EU_21_00\" />\n          </clusterfilter>\n          <spawninvader />\n          <!-- Should run until downtime -->\n          <territoriesclaimable claimlimitoverrideminutes=\"960\" />\n        </eventtime>       \n\t    <eventtime utctime=\"14:00:00Z\">\n          <clusterfilter>\n            <timeregion name=\"BR_00_00\" />\n            <timeregion name=\"US_03_00\" />\n            <timeregion name=\"US_05_00\" />\n          </clusterfilter>\n          <spawninvader />\n          <territoriesclaimable claimlimitoverrideminutes=\"600\" />\n        </eventtime>\n      </day>\n      <day number=\"23\">\n        <eventtime utctime=\"20:00:01Z\" calculateusingclustertimezone=\"true\">\n          <territoryscoringstart />\n        </eventtime>\n      </day>\n\t  <day number=\"24\">\n        <eventtime utctime=\"01:00:00Z\">\n          <territorybattlestart />\n          <enable_portalbindingremoval />\n        </eventtime>  \n\t  </day>\n\t  <day number=\"43\">\n        <eventtime utctime=\"00:00:01Z\" calculateusingclustertimezone=\"true\">\n          <territorybattleend />\n          <territoryscoringend />\n          <territorystoragepayout />\n        </eventtime>\n        <eventtime utctime=\"01:00:00Z\">\n          <territoriesunclaimable />\n          <resetterritories />\n          <scoremultiplier newmultiplier=\"2\" />\n          <disable_portalbindingremoval />\n        </eventtime>\n        <eventtime utctime=\"08:00:00Z\">\n          <clusterfilter>\n            <timeregion name=\"RU_ASIA_12_00\" />\n            <timeregion name=\"RU_15_00\" />\n            <timeregion name=\"EU_RU_18_00\" />\n            <timeregion name=\"EU_21_00\" />\n          </clusterfilter>\n          <spawninvader />\n          <!-- Should run until downtime -->\n          <territoriesclaimable claimlimitoverrideminutes=\"960\" />\n        </eventtime>       \n\t    <eventtime utctime=\"14:00:00Z\">\n          <clusterfilter>\n            <timeregion name=\"BR_00_00\" />\n            <timeregion name=\"US_03_00\" />\n            <timeregion name=\"US_05_00\" />\n          </clusterfilter>\n          <spawninvader />\n          <territoriesclaimable claimlimitoverrideminutes=\"600\" />\n        </eventtime>\n      </day>\n      <day number=\"44\">\n        <eventtime utctime=\"20:00:01Z\" calculateusingclustertimezone=\"true\">\n          <territoryscoringstart />\n        </eventtime>\n      </day>\n\t  <day number=\"45\">\n        <eventtime utctime=\"01:00:00Z\">\n          <territorybattlestart />\n          <enable_portalbindingremoval />\n        </eventtime>  \n\t  </day>\n\t  "
+      },
+      {
+        "@sel": "gvgseasons/season[@uniquename='GVG_SEASON_18']",
+        "@aschild": "true",
+        "#cdata-section": "\n\t<seasontimes>\n\t  <day number=\"1\">\n\t    <eventtime utctime=\"01:00:00Z\">\n          <territoriesunclaimable/>\n          <resetterritories/>\n          <territorybattleend/>\n        </eventtime>\n\t  </day>\n      <!-- reset day -->\n      <day number=\"6\">\n      <eventtime utctime=\"00:00:01Z\" calculateusingclustertimezone=\"true\">\n        <territorybattleend/>\n        <territoryscoringend/>\n        <territorystoragepayout/>\n      </eventtime>\n      <eventtime utctime=\"01:00:00Z\">\n        <territoriesunclaimable/>\n        <resetterritories/>\n        <disable_portalbindingremoval/>\n      </eventtime>\n      <eventtime utctime=\"08:00:00Z\">\n        <clusterfilter>\n          <timeregion name=\"RU_ASIA_12_00\" />\n          <timeregion name=\"RU_15_00\" />\n          <timeregion name=\"EU_RU_18_00\" />\n          <timeregion name=\"EU_21_00\" />\n        </clusterfilter>\n        <spawninvader/>\n        <!-- Should run until downtime -->\n        <territoriesclaimable claimlimitoverrideminutes=\"960\"/>\n      </eventtime>\n      <eventtime utctime=\"14:00:00Z\">\n        <clusterfilter>\n          <timeregion name=\"BR_00_00\" />\n          <timeregion name=\"US_03_00\" />\n          <timeregion name=\"US_05_00\" />\n        </clusterfilter>\n        <spawninvader/>\n        <!-- Should run until downtime -->\n        <territoriesclaimable claimlimitoverrideminutes=\"600\"/>\n      </eventtime>\n      </day>\n      <day number=\"7\">\n        <eventtime utctime=\"20:00:01Z\" calculateusingclustertimezone=\"true\">\n          <territoryscoringstart/>\n        </eventtime>\n      </day>\n      <day number=\"8\">\n        <eventtime utctime=\"01:00:00Z\">\n          <territorybattlestart/>\n          <enable_portalbindingremoval/>\n        </eventtime>\n      </day>      \n      <!-- reset day -->\n      <day number=\"13\">\n      <eventtime utctime=\"00:00:01Z\" calculateusingclustertimezone=\"true\">\n        <territorybattleend/>\n        <territoryscoringend/>\n        <territorystoragepayout/>\n      </eventtime>\n      <eventtime utctime=\"01:00:00Z\">\n        <territoriesunclaimable/>\n        <resetterritories/>\n        <scoremultiplier newmultiplier=\"2\"/>\n        <disable_portalbindingremoval/>\n      </eventtime>\n      <eventtime utctime=\"08:00:00Z\">\n        <clusterfilter>\n          <timeregion name=\"RU_ASIA_12_00\" />\n          <timeregion name=\"RU_15_00\" />\n          <timeregion name=\"EU_RU_18_00\" />\n          <timeregion name=\"EU_21_00\" />\n        </clusterfilter>\n        <spawninvader/>\n        <!-- Should run until downtime -->\n        <territoriesclaimable claimlimitoverrideminutes=\"960\"/>\n      </eventtime>\n      <eventtime utctime=\"14:00:00Z\">\n        <clusterfilter>\n          <timeregion name=\"BR_00_00\" />\n          <timeregion name=\"US_03_00\" />\n          <timeregion name=\"US_05_00\" />\n        </clusterfilter>\n        <spawninvader/>\n        <!-- Should run until downtime -->\n        <territoriesclaimable claimlimitoverrideminutes=\"600\"/>\n      </eventtime>\n      </day>\n      <day number=\"14\">\n        <eventtime utctime=\"20:00:01Z\" calculateusingclustertimezone=\"true\">\n          <territoryscoringstart/>\n        </eventtime>\n      </day>\n      <day number=\"15\">\n        <eventtime utctime=\"01:00:00Z\">\n          <territorybattlestart/>\n          <enable_portalbindingremoval/>\n        </eventtime>\n      </day>\n      <day number=\"20\">\n        <eventtime utctime=\"00:00:01Z\" calculateusingclustertimezone=\"true\">\n          <territorybattleend/>\n          <territoryscoringend/>\n          <territorystoragepayout/>\n        </eventtime>\n      </day>\n    </seasontimes>"
+      }
+    ]
+  }
+}
