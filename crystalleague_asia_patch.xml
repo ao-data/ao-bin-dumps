@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <patch xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="patch.xsd">
 
+  <!--!!!!!!!! DO NOT REMOVE ANYTHING !!!!!!!!-->
+	
   <!-- Season 19 (NA) / 1 (Asia) -->
   <replace sel="crystalleague/season[@uniquename='CL_SEASON_19']">
     <attribute name="displayname" newvalue="@SEASONS_SEASONNAME_SEASON_01"/>
@@ -28,27 +30,36 @@
   <replace sel="crystalleague/season[@uniquename='CL_CITY_OFFSEASON_19_20']">
     <attribute name="ruleset" newvalue="CRYSTAL_LEAGUE_20V20_LETHAL_OFFSEASON_ASIA"/>
   </replace>
-	
-  <!-- Season 18 (NA) / Beta (Asia) -->
-    <remove sel="crystalleague/season[@uniquename='CL_SEASON_18']"/>
-	<remove sel="crystalleague/season[@uniquename='CL_SEASON_NONLETHAL_18']"/>
-	<remove sel="crystalleague/season[@uniquename='CL_CITY_SEASON_18']"/>
 
-	<replace sel="crystalleague/season[@uniquename='CL_SEASON_18_19_OFFSEASON']">
-        <attribute name="ruleset" newvalue="CRYSTAL_LEAGUE_5V5_LETHAL_OFFSEASON_ASIA"/>
-    </replace>
-    <replace sel="crystalleague/season[@uniquename='CL_SEASON_NONLETHAL_OFFSEASON_18_19']">
-        <attribute name="ruleset" newvalue="CRYSTAL_LEAGUE_5V5_NON_LETHAL_OFFSEASON_ASIA"/>
-    </replace>
-    <replace sel="crystalleague/season[@uniquename='CL_CITY_OFFSEASON_18_19']">
-        <attribute name="ruleset" newvalue="CRYSTAL_LEAGUE_20V20_LETHAL_OFFSEASON_ASIA"/>
-    </replace>
-	
-	
   <!--only on Western Season-->
-	<remove sel="crystalleague/season[@uniquename='CL_SEASON_17_18_OFFSEASON']"/>
-    <remove sel="crystalleague/season[@uniquename='CL_SEASON_NONLETHAL_OFFSEASON_17_18']"/>
-    <remove sel="crystalleague/season[@uniquename='CL_CITY_OFFSEASON_17_18']"/>	
+  <replace sel="crystalleague/season[@uniquename='CL_SEASON_18_19_OFFSEASON']">
+    <attribute name="ruleset" newvalue="CRYSTAL_LEAGUE_5V5_LETHAL_OFFSEASON_ASIA"/>
+  </replace>
+  <replace sel="crystalleague/season[@uniquename='CL_SEASON_NONLETHAL_OFFSEASON_18_19']">
+    <attribute name="ruleset" newvalue="CRYSTAL_LEAGUE_5V5_NON_LETHAL_OFFSEASON_ASIA"/>
+  </replace>
+  <replace sel="crystalleague/season[@uniquename='CL_CITY_OFFSEASON_18_19']">
+    <attribute name="ruleset" newvalue="CRYSTAL_LEAGUE_20V20_LETHAL_OFFSEASON_ASIA"/>
+  </replace>
+	
+  <replace sel="crystalleague/season[@uniquename='CL_SEASON_18']">
+    <attribute name="displayname" newvalue="@SEASONS_SEASONNAME_OLD"/>
+	<attribute name="startdatetimeref" newvalue="CRYSTAL_18_ASIA_START"/>
+	<attribute name="enddatetimeref" newvalue="CRYSTAL_18_ASIA_END"/>
+    <attribute name="tokenuioverlay2" newvalue=""/>
+  </replace>	
+  <replace sel="crystalleague/season[@uniquename='CL_SEASON_NONLETHAL_18']">
+    <attribute name="displayname" newvalue="@SEASONS_SEASONNAME_OLD"/>
+	<attribute name="startdatetimeref" newvalue="CRYSTAL_18_ASIA_START"/>
+	<attribute name="enddatetimeref" newvalue="CRYSTAL_18_ASIA_END"/>
+    <attribute name="tokenuioverlay2" newvalue=""/>
+  </replace>
+  <replace sel="crystalleague/season[@uniquename='CL_CITY_SEASON_18']">
+    <attribute name="displayname" newvalue="@SEASONS_SEASONNAME_OLD"/>
+	<attribute name="startdatetimeref" newvalue="CRYSTAL_18_ASIA_START"/>
+	<attribute name="enddatetimeref" newvalue="CRYSTAL_18_ASIA_END"/>
+    <attribute name="tokenuioverlay2" newvalue=""/>
+  </replace>
 	
   <replace sel="crystalleague/season[@uniquename='CL_SEASON_17']">
     <attribute name="displayname" newvalue="@SEASONS_SEASONNAME_OLD"/>
@@ -62,9 +73,12 @@
     <attribute name="displayname" newvalue="@SEASONS_SEASONNAME_OLD"/>
     <attribute name="tokenuioverlay2" newvalue=""/>
   </replace>
+  <replace sel="crystalleague/season[@uniquename='CL_SEASON_17_18_OFFSEASON']">
+    <attribute name="tokentradeable" newvalue="false"/>
+    <attribute name="enddatetimeref" newvalue="CRYSTAL_18_ASIA_START"/>
+  </replace>	
 
-
-	<replace sel="crystalleague/season[@uniquename='CL_SEASON_16']">
+  <replace sel="crystalleague/season[@uniquename='CL_SEASON_16']">
     <attribute name="displayname" newvalue="@SEASONS_SEASONNAME_OLD"/>
     <attribute name="tokenuioverlay2" newvalue=""/>
   </replace>
