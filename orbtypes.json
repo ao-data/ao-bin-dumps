@@ -10,10 +10,35 @@
       {
         "@uniquename": "ORB_TEST",
         "channelcapture": {
-          "@orbclaimtime": "10"
+          "@playerchanneltype": "collectivechannel",
+          "@orbclaimtime": "10",
+          "@capturerange": "10",
+          "claimtime": [
+            {
+              "@players": "1",
+              "@time": "10"
+            },
+            {
+              "@players": "2",
+              "@time": "7"
+            },
+            {
+              "@players": "3",
+              "@time": "6"
+            },
+            {
+              "@players": "4",
+              "@time": "5"
+            },
+            {
+              "@players": "5",
+              "@time": "4"
+            }
+          ]
         },
         "roundbasedscore": {
-          "@claimedondefaultbyteam": "defender"
+          "@claimedondefaultbyteam": "defender",
+          "@resetorbs": "onlyscoringorbs"
         }
       },
       {
@@ -89,11 +114,109 @@
       {
         "@uniquename": "ORB_CRYSTAL_GVG",
         "channelcapture": {
-          "@orbclaimtime": "7.5"
+          "@orbclaimtime": "7.5",
+          "@capturerange": "8",
+          "@playerchanneltype": "individualchannel"
         },
         "roundbasedscore": {
           "@claimedondefaultbyteam": "neutral",
           "@ticketreductionorbclaim": "1"
+        }
+      },
+      {
+        "@uniquename": "ORB_CRYSTAL_GVG_WINNER_RESET",
+        "channelcapture": {
+          "@orbclaimtime": "7.5",
+          "@playerchanneltype": "collectivechannel",
+          "@capturerange": "8",
+          "claimtime": [
+            {
+              "@players": "1",
+              "@time": "7.5"
+            },
+            {
+              "@players": "2",
+              "@time": "6"
+            },
+            {
+              "@players": "3",
+              "@time": "5"
+            },
+            {
+              "@players": "4",
+              "@time": "4"
+            },
+            {
+              "@players": "5",
+              "@time": "3"
+            }
+          ]
+        },
+        "roundbasedscore": {
+          "@claimedondefaultbyteam": "neutral",
+          "@ticketreductionorbclaim": "1",
+          "@resetorbs": "onlyscoringorbs"
+        }
+      },
+      {
+        "@uniquename": "ORB_CRYSTAL_GVG_ALL_RESET",
+        "channelcapture": {
+          "@orbclaimtime": "7.5",
+          "@playerchanneltype": "collectivechannel",
+          "@capturerange": "8",
+          "claimtime": [
+            {
+              "@players": "1",
+              "@time": "7.5"
+            },
+            {
+              "@players": "2",
+              "@time": "6"
+            },
+            {
+              "@players": "3",
+              "@time": "5"
+            },
+            {
+              "@players": "4",
+              "@time": "4"
+            },
+            {
+              "@players": "5",
+              "@time": "3"
+            }
+          ]
+        },
+        "roundbasedscore": {
+          "@claimedondefaultbyteam": "neutral",
+          "@ticketreductionorbclaim": "1",
+          "@resetorbs": "all"
+        }
+      },
+      {
+        "@uniquename": "ORB_CRYSTAL_GVG_WINNER_RESET_INDIVIDUAL_CHANNEL",
+        "channelcapture": {
+          "@orbclaimtime": "7.5",
+          "@playerchanneltype": "individualchannel",
+          "@capturerange": "8"
+        },
+        "roundbasedscore": {
+          "@claimedondefaultbyteam": "neutral",
+          "@ticketreductionorbclaim": "1",
+          "@resetorbs": "onlyscoringorbs"
+        }
+      },
+      {
+        "@uniquename": "ORB_CRYSTAL_GVG_ALL_RESET_INDIVIDUAL_CHANNEL",
+        "channelcapture": {
+          "@orbclaimtime": "7.5",
+          "@playerchanneltype": "individualchannel",
+          "@capturerange": "8"
+        },
+        "roundbasedscore": {
+          "@claimedondefaultbyteam": "neutral",
+          "@ticketreductionorbclaim": "1",
+          "@resetorbs": "all"
         }
       }
     ]
