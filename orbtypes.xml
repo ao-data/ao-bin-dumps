@@ -4,8 +4,14 @@
 
   <!-- DEBUG -->
   <orbtype uniquename="ORB_TEST">
-    <channelcapture orbclaimtime="10"/>
-    <roundbasedscore claimedondefaultbyteam="defender"/>
+    <channelcapture playerchanneltype="collectivechannel" orbclaimtime="10" capturerange="10">
+      <claimtime players="1" time="10"/>
+      <claimtime players="2" time="7"/>
+      <claimtime players="3" time="6"/>
+      <claimtime players="4" time="5"/>
+      <claimtime players="5" time="4"/>
+    </channelcapture>
+    <roundbasedscore claimedondefaultbyteam="defender" resetorbs="onlyscoringorbs"/>
     <!--
     <Defense engageattackrange="15.0" disengageattackrange="15.0" attackinterval="1.5" attackdamage="0.2" attackdistancedelay="24.0">
       <FriendlyFX projectile="Prefabs/Vfx/Projectiles/WarcampProjectileBlue" impact="Prefabs/SpellEffects/MeleeHit" />
@@ -42,8 +48,41 @@
   </orbtype>
   <!-- Crystal GVG -->
   <orbtype uniquename="ORB_CRYSTAL_GVG">
-    <channelcapture orbclaimtime="7.5"/>
-    <roundbasedscore claimedondefaultbyteam="neutral" ticketreductionorbclaim="1"/>
+    <channelcapture orbclaimtime="7.5" capturerange="8" playerchanneltype="individualchannel"/>
+    <roundbasedscore claimedondefaultbyteam="neutral" ticketreductionorbclaim="1"/>  
   </orbtype>
-    
+
+  <!-- Playtest Versions -->
+	<orbtype uniquename="ORB_CRYSTAL_GVG_WINNER_RESET">
+		<channelcapture orbclaimtime="7.5" playerchanneltype="collectivechannel" capturerange="8">
+      <claimtime players="1" time="7.5"/>
+      <claimtime players="2" time="6"/>
+      <claimtime players="3" time="5"/>
+      <claimtime players="4" time="4"/>
+      <claimtime players="5" time="3"/>
+		</channelcapture>
+		<roundbasedscore claimedondefaultbyteam="neutral" ticketreductionorbclaim="1" resetorbs="onlyscoringorbs"/>
+	</orbtype>
+	
+  <orbtype uniquename="ORB_CRYSTAL_GVG_ALL_RESET">
+    <channelcapture orbclaimtime="7.5" playerchanneltype="collectivechannel" capturerange="8">
+		<claimtime players="1" time="7.5"/>
+		<claimtime players="2" time="6"/>
+		<claimtime players="3" time="5"/>
+		<claimtime players="4" time="4"/>
+		<claimtime players="5" time="3"/>
+	</channelcapture>
+    <roundbasedscore claimedondefaultbyteam="neutral" ticketreductionorbclaim="1" resetorbs="all"/>
+  </orbtype>
+
+    <orbtype uniquename="ORB_CRYSTAL_GVG_WINNER_RESET_INDIVIDUAL_CHANNEL">
+		<channelcapture orbclaimtime="7.5" playerchanneltype="individualchannel" capturerange="8"/>
+		<roundbasedscore claimedondefaultbyteam="neutral" ticketreductionorbclaim="1" resetorbs="onlyscoringorbs"/>
+	</orbtype>
+
+	<orbtype uniquename="ORB_CRYSTAL_GVG_ALL_RESET_INDIVIDUAL_CHANNEL">
+		<channelcapture orbclaimtime="7.5" playerchanneltype="individualchannel" capturerange="8"/>
+		<roundbasedscore claimedondefaultbyteam="neutral" ticketreductionorbclaim="1" resetorbs="all"/>
+	</orbtype>
+
 </orbtypes>

@@ -8179,6 +8179,16 @@
         }
       },
       {
+        "@name": "MELEE_METALLIC_MEDIUMCAST_SMALLIMPACT",
+        "OnCastStart": {
+          "@name": "Play_melee_swoosh_interrupt"
+        },
+        "OnSpellHit": {
+          "@name": "Play_melee_impact_small_metallic",
+          "ImpactType": null
+        }
+      },
+      {
         "@name": "MELEE_STOMP_MEDIUM",
         "OnCastFinished": {
           "@name": "Play_melee_stomp_medium"
@@ -8205,7 +8215,7 @@
       {
         "@name": "MELEE_KNOCKOUT",
         "OnCastStart": {
-          "@name": "Play_melee_swoosh_medium"
+          "@name": "Play_spear_lunging_strike"
         },
         "OnSpellHit": {
           "@name": "Play_melee_impact_headnut",
@@ -8334,6 +8344,12 @@
         "@name": "MELEE_GROUNDSTAB",
         "OnCastStart": {
           "@name": "Play_swing_slow"
+        },
+        "OnCastCanceled": {
+          "@name": "Stop_swing_slow"
+        },
+        "OnCastInterrupted": {
+          "@name": "Stop_swing_slow"
         }
       },
       {
@@ -8753,7 +8769,7 @@
       {
         "@name": "MELEE_LETHAL_CLEAVER",
         "OnCastStart": {
-          "@name": "Play_vampiric_strike"
+          "@name": "Play_lethal_cleaver"
         }
       },
       {
@@ -8772,7 +8788,7 @@
           "@name": "Play_quarterstaff_swoosh_small"
         },
         "OnSpellHit": {
-          "@name": "Play_melee_impact_small_add",
+          "@name": "Play_melee_impact_small_sharp_add",
           "ImpactType": null
         }
       },
@@ -8782,8 +8798,62 @@
           "@name": "Play_quarterstaff_swoosh_jump"
         },
         "OnSpellHit": {
-          "@name": "Play_melee_impact_small",
+          "@name": "Play_melee_impact_small_heavy",
           "ImpactType": null
+        }
+      },
+      {
+        "@name": "MELEE_STAFF_CONCUSSIVE_HIT",
+        "OnSpellHit": {
+          "@name": "Play_melee_impact_small_sharp_add",
+          "ImpactType": null
+        }
+      },
+      {
+        "@name": "MELEE_STAFF_W_HIT",
+        "OnSpellHit": {
+          "@name": "Play_melee_impact_small_heavy",
+          "ImpactType": null
+        }
+      },
+      {
+        "@name": "MELEE_STAFF_SWING_MEDIUM_HIT",
+        "OnCastStart": {
+          "@name": "Play_quarterstaff_swoosh_medium"
+        },
+        "OnSpellHit": {
+          "@name": "Play_melee_impact_medium_sharp",
+          "ImpactType": null
+        }
+      },
+      {
+        "@name": "MELEE_STAFF_CHANNEL_TRIPLECOMBO",
+        "OnChannelingStart": {
+          "@name": "Play_quarterstaff_triple_combo"
+        },
+        "OnChannelingCancelled": {
+          "@name": "Stop_quarterstaff_triple_combo"
+        },
+        "OnChannelingEnd": {
+          "@name": "Stop_quarterstaff_triple_combo"
+        },
+        "OnChannelingInterrupted": {
+          "@name": "Stop_quarterstaff_triple_combo"
+        }
+      },
+      {
+        "@name": "MELEE_STAFF_CHANNEL_SWIRL_SINGLE",
+        "OnChannelingStart": {
+          "@name": "Play_quarterstaff_swirl"
+        },
+        "OnChannelingCancelled": {
+          "@name": "Stop_quarterstaff_swirl"
+        },
+        "OnChannelingEnd": {
+          "@name": "Stop_quarterstaff_swirl"
+        },
+        "OnChannelingInterrupted": {
+          "@name": "Stop_quarterstaff_swirl"
         }
       },
       {
@@ -8850,6 +8920,10 @@
         },
         "OnCastInterrupted": {
           "@name": "Stop_melee_seperator"
+        },
+        "OnSpellHit": {
+          "@name": "Play_melee_impact_medium_heavy",
+          "ImpactType": null
         }
       },
       {
@@ -11763,6 +11837,12 @@
         }
       },
       {
+        "@name": "SPELL_SELF_BUFF_DEMONWALK",
+        "OnCastFinished": {
+          "@name": "Play_armor_demonwalk_cast"
+        }
+      },
+      {
         "@name": "SPELL_SELF_BUFF_IMMORTAL",
         "OnCastStart": {
           "@name": "Play_cast_buff_immortal"
@@ -11931,6 +12011,12 @@
         "@name": "SPELL_DODGE",
         "OnCastStart": {
           "@name": "Play_dodge_roll"
+        }
+      },
+      {
+        "@name": "SPELL_DODGE_SWIRL",
+        "OnCastFinished": {
+          "@name": "Play_dodge_swirl"
         }
       },
       {
@@ -12217,6 +12303,12 @@
         "@name": "SPELL_CAST_ARMOR_DASH",
         "OnCastFinished": {
           "@name": "Play_melee_swoosh_dash_mob"
+        }
+      },
+      {
+        "@name": "SPELL_CAST_FIRE_BREATH",
+        "OnCastFinished": {
+          "@name": "Play_fire_cast_breath_cone"
         }
       },
       {
