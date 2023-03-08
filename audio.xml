@@ -3312,6 +3312,12 @@
 	  <ImpactType/>
 	</OnSpellHit>
   </WwiseEventInfo>
+  <WwiseEventInfo name="MELEE_METALLIC_MEDIUMCAST_SMALLIMPACT">
+	<OnCastStart name="Play_melee_swoosh_interrupt" />
+	<OnSpellHit name="Play_melee_impact_small_metallic" >
+		<ImpactType/>
+	</OnSpellHit>
+  </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_STOMP_MEDIUM" >
     <OnCastFinished name="Play_melee_stomp_medium" />
   </WwiseEventInfo>
@@ -3325,7 +3331,7 @@
     <OnSpellHit name="Play_melee_impact_shrink" />
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_KNOCKOUT">
-    <OnCastStart name="Play_melee_swoosh_medium" />
+    <OnCastStart name="Play_spear_lunging_strike" />
     <OnSpellHit name="Play_melee_impact_headnut" >  
       <ImpactType/>
     </OnSpellHit>
@@ -3384,6 +3390,8 @@
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_GROUNDSTAB">
     <OnCastStart name="Play_swing_slow" />
+	<OnCastCanceled name="Stop_swing_slow" />
+	<OnCastInterrupted name="Stop_swing_slow" />
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_JUMP">
     <OnCastStart name="Play_melee_jump_start" />
@@ -3607,7 +3615,7 @@
     <OnCastInterrupted name="Stop_melee_dualaxe_crawler" />
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_LETHAL_CLEAVER">
-    <OnCastStart name="Play_vampiric_strike" />
+    <OnCastStart name="Play_lethal_cleaver" />
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_SMALLCAST_STAFF">
     <OnCastStart name="Play_staff_swoosh" />
@@ -3617,15 +3625,43 @@
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_STAFF_CONCUSSIVE_SWING">
 	<OnCastFinished name="Play_quarterstaff_swoosh_small" />
-	<OnSpellHit name="Play_melee_impact_small_add" >
-		<ImpactType/>
+	<OnSpellHit name="Play_melee_impact_small_sharp_add" >
+	  <ImpactType/>
 	</OnSpellHit>
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_STAFF_CONCUSSIVE_JUMP">
 	<OnCastFinished name="Play_quarterstaff_swoosh_jump" />
-	<OnSpellHit name="Play_melee_impact_small" >
+	<OnSpellHit name="Play_melee_impact_small_heavy" >
 		<ImpactType/>
 	</OnSpellHit>
+  </WwiseEventInfo>
+  <WwiseEventInfo name="MELEE_STAFF_CONCUSSIVE_HIT">
+	<OnSpellHit name="Play_melee_impact_small_sharp_add" >
+		<ImpactType/>
+	</OnSpellHit>
+  </WwiseEventInfo>
+  <WwiseEventInfo name="MELEE_STAFF_W_HIT">
+	<OnSpellHit name="Play_melee_impact_small_heavy" >
+		<ImpactType/>
+	</OnSpellHit>
+  </WwiseEventInfo>
+  <WwiseEventInfo name="MELEE_STAFF_SWING_MEDIUM_HIT">
+	<OnCastStart name="Play_quarterstaff_swoosh_medium" />
+	<OnSpellHit name="Play_melee_impact_medium_sharp" >
+		<ImpactType/>
+	</OnSpellHit>
+  </WwiseEventInfo>
+  <WwiseEventInfo name="MELEE_STAFF_CHANNEL_TRIPLECOMBO" >
+	<OnChannelingStart name="Play_quarterstaff_triple_combo" />
+	<OnChannelingCancelled name="Stop_quarterstaff_triple_combo" />
+	<OnChannelingEnd name="Stop_quarterstaff_triple_combo" />
+	<OnChannelingInterrupted name="Stop_quarterstaff_triple_combo" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="MELEE_STAFF_CHANNEL_SWIRL_SINGLE" >
+	<OnChannelingStart name="Play_quarterstaff_swirl" />
+	<OnChannelingCancelled name="Stop_quarterstaff_swirl" />
+	<OnChannelingEnd name="Stop_quarterstaff_swirl" />
+	<OnChannelingInterrupted name="Stop_quarterstaff_swirl" />
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_STAFF_SLAM">
     <OnCastStart name="Play_melee_slam_swoosh" />
@@ -3656,6 +3692,9 @@
     <OnCastStart name="Play_melee_seperator" />
     <OnCastCanceled name="Stop_melee_seperator" />
     <OnCastInterrupted name="Stop_melee_seperator" />
+	<OnSpellHit name="Play_melee_impact_medium_heavy" >
+      <ImpactType/>
+    </OnSpellHit>
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_SPINNING_SMASH">
     <OnCastFinished name="Play_hammer_spin" />
@@ -5054,6 +5093,9 @@
   <WwiseEventInfo name="SPELL_SELF_BUFF_FURY">
 	<OnCastFinished name="Play_fury_damageincrease_cast" />
   </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_SELF_BUFF_DEMONWALK">
+	<OnCastFinished name="Play_armor_demonwalk_cast" />
+  </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_SELF_BUFF_IMMORTAL">
 	<OnCastStart name="Play_cast_buff_immortal" />
   </WwiseEventInfo>
@@ -5137,6 +5179,9 @@
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_DODGE" >
     <OnCastStart name="Play_dodge_roll" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_DODGE_SWIRL">
+	<OnCastFinished name="Play_dodge_swirl" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_EVASIVEJUMP" >
     <OnCastStart name="Play_evasive_jump" />
@@ -5285,6 +5330,10 @@
 
   <WwiseEventInfo name="SPELL_CAST_ARMOR_DASH">
 	<OnCastFinished name="Play_melee_swoosh_dash_mob"/>
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_CAST_FIRE_BREATH">
+	<OnCastFinished name="Play_fire_cast_breath_cone"/>
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_TRANSLUCENT">
