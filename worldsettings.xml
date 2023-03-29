@@ -618,6 +618,7 @@
                 allowfactionflagging="false"
                 vanityvisibility="Allowed"
                 ignoredestructionmultiplier="true"
+			    savelostequipment="false"
         />
         <archetype
                 name="T4_EXPEDITION"
@@ -640,6 +641,7 @@
                 allowfactionflagging="false"
                 vanityvisibility="Allowed"
                 ignoredestructionmultiplier="true"
+			    savelostequipment="false"
         />
         <archetype
                 name="T5_EXPEDITION"
@@ -662,6 +664,7 @@
                 allowfactionflagging="false"
                 vanityvisibility="Allowed"
                 ignoredestructionmultiplier="true"
+			    savelostequipment="false"
         />
         <archetype
                 name="T6_EXPEDITION"
@@ -684,6 +687,7 @@
                 allowfactionflagging="false"
                 vanityvisibility="Allowed"
                 ignoredestructionmultiplier="true"
+			    savelostequipment="false"
         />
         <archetype
                 name="HARDCORE_EXPEDITION"
@@ -706,6 +710,7 @@
                 allowfactionflagging="false"
                 vanityvisibility="Allowed"
                 ignoredestructionmultiplier="true"
+			    savelostequipment="false"
         />
 
         <archetype
@@ -729,6 +734,7 @@
                 allowfactionflagging="false"
                 vanityvisibility="Allowed"
                 ignoredestructionmultiplier="true"
+			    savelostequipment="false"
         />
         <archetype
                 name="ARENA_CUSTOM"
@@ -751,7 +757,32 @@
                 allowfactionflagging="false"
                 vanityvisibility="Allowed"
                 ignoredestructionmultiplier="true"
+			    savelostequipment="false"
         />
+		<!--players are lethal but don't drop their items-->
+		<archetype
+                name="ARENA_CRYSTAL_NONLETHAL"
+                uipvptype="Limited"
+                pvpwarningtype="safe"
+                pvprule="PvpAllowed"
+                playersarelethal="true"
+                mobsarelethal="false"
+                showpvpplayeronminimap="false"
+                showfriendlycount="false"
+                showhostilecount="false"
+                buildingcraftcapacityregenfactor="1"
+                itempowersoftcap="900"
+                itempowerscalingfactor="0.2"
+                animalgrowthfactor="0.5"
+                cropyieldfactor="2"
+                clusterdangerbonustype="yellow"
+                knockdownbuffaftergetup="SPAWN_KNOCKDOWN_INVULNERABILITY"
+                requiredreputationtoenter="-50000"
+                allowfactionflagging="false"
+                vanityvisibility="Allowed"
+                ignoredestructionmultiplier="true"
+			    savelostequipment="false"
+				/>
         <archetype
                 name="ARENA_CRYSTAL"
                 uipvptype="Limited"
@@ -773,7 +804,7 @@
                 allowfactionflagging="false"
                 vanityvisibility="Allowed"
                 ignoredestructionmultiplier="true"
-        />
+				/>
         <archetype
                 name="MISTS_SOLO_YELLOW"
                 uipvptype="Limited"
@@ -3133,6 +3164,7 @@
             <spawnbuff>
                 <buff name="BUFFSHRINE_OUTLANDCITY_INVISIBILITY_REMOVE" isclusterchange="Must" />
                 <buff name="ARENA_ENTER" isclusterchange="Must" />
+                <buff name="ARENA_OVERLOAD_PROTECTION" />
             </spawnbuff>          
             <mobspawns defaulttimefactor="1.0" />
             <resourcespawns defaulttimefactor="9999.0" />
@@ -3148,14 +3180,15 @@
                      allowmounts="true">
           <spawnbuff>
             <buff name="BUFFSHRINE_OUTLANDCITY_INVISIBILITY_REMOVE" isclusterchange="Must" />
-            <buff name="ARENA_ENTER" isclusterchange="Must" />            
+            <buff name="ARENA_ENTER" isclusterchange="Must" />
+            <buff name="ARENA_OVERLOAD_PROTECTION" />
           </spawnbuff>
           <mobspawns defaulttimefactor="1.0" />
             <resourcespawns defaulttimefactor="9999.0" />
         </clustertype>
-        <!-- ARENA -->
-        <clustertype name="ARENA_CRYSTAL"
-                     archetype="ARENA_CRYSTAL"
+        <!-- CRYSTAL ARENA & NON LETHAL CRYSTAL LEAGUE-->
+        <clustertype name="ARENA_CRYSTAL_NONLETHAL"
+                     archetype="ARENA_CRYSTAL_NONLETHAL"
                      spellcooldownsonenteringseconds="0"
                      editorcolor="255, 255, 0"
                      furnitureobjectsallowed="false"
@@ -3165,10 +3198,29 @@
           <spawnbuff>
             <buff name="BUFFSHRINE_OUTLANDCITY_INVISIBILITY_REMOVE" isclusterchange="Must" />
             <buff name="ARENA_ENTER" isclusterchange="Must" />
+            <buff name="ARENA_OVERLOAD_PROTECTION" />
           </spawnbuff>
           <mobspawns defaulttimefactor="1.0" />
             <resourcespawns defaulttimefactor="9999.0" />
         </clustertype>
+		
+		<!-- LETHAL CRYSTAL LEAGUE -->
+		<clustertype name="ARENA_CRYSTAL"
+                     archetype="ARENA_CRYSTAL"
+                     spellcooldownsonenteringseconds="0"
+                     editorcolor="255, 255, 0"
+                     furnitureobjectsallowed="false"
+                     isdungeon="false"
+                     hasshortspawnbuffonleave="false"
+                     allowmounts="true">
+			<spawnbuff>
+				<buff name="BUFFSHRINE_OUTLANDCITY_INVISIBILITY_REMOVE" isclusterchange="Must" />
+				<buff name="ARENA_ENTER" isclusterchange="Must" />
+                <buff name="ARENA_OVERLOAD_PROTECTION" />
+			</spawnbuff>
+			<mobspawns defaulttimefactor="1.0" />
+			<resourcespawns defaulttimefactor="9999.0" />
+		</clustertype>
 
         <!-- CORRUPTED DUNGEONS -->
         <clustertype name="CORRUPTED_DUNGEON_BEGINNER"

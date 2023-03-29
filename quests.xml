@@ -2071,7 +2071,7 @@
           <openhintbox uniquename="FIRSTQUEST"/>
         </preactions>
         <missions>
-          <gotolocation locationmarkerid="QUESTMARKERBOXTRIGGER" markedonminimap="false" markedinworld="false" textloca="@MISSIONS_T2_TUTORIAL_TEST_A_SIDETEXT"/>
+          <gotolocation locationmarkerid="QUESTMARKERBOXTRIGGER" markedonminimap="true" markedinworld="true" textloca="@MISSIONS_T2_TUTORIAL_TEST_A_SIDETEXT"/>
         </missions>
       </extendedmissionstep>
       <extendedmissionstep>
@@ -2089,7 +2089,7 @@
           <openhintbox uniquename ="CLEAR" displayonplatform="desktop"/>
         </preactions>
         <missions>
-          <gotoquestgiver questgivervariable="CRAFTER" textloca="@MISSIONS_T2_TUTORIAL_TEST_A2_SIDETEXT" />
+          <gotoquestgiver questgivervariable="CRAFTER" locationmarkerid="INTERACTWITHCRAFTER" markedinworld="false" textloca="@MISSIONS_T2_TUTORIAL_TEST_A2_SIDETEXT" />
         </missions>
       </extendedcompletionstep>
     </tasks>
@@ -2141,7 +2141,7 @@
           <settutorialstate state="HARDCLEARPREDB"/>
         </preactions>
         <missions>
-          <gotoquestgiver/>
+          <gotoquestgiver locationmarkerid="INTERACTWITHCRAFTER" markedinworld="false" />
         </missions>
       </extendedcompletionstep>
     </tasks>
@@ -2180,7 +2180,7 @@
           <openhintbox uniquename="SOFTCLEAR" displayonplatform="mobile"/>
         </preactions>
       <missions>
-        <gotoquestgiver />
+        <gotoquestgiver locationmarkerid="INTERACTWITHCRAFTER" markedinworld="false" />
       </missions>
       </extendedcompletionstep>
       </tasks>
@@ -2243,7 +2243,7 @@
           <openhintbox uniquename="SOFTCLEAR" displayonplatform="mobile"/>
         </preactions>
         <missions>
-          <gotoquestgiver/>
+          <gotoquestgiver locationmarkerid="INTERACTWITHCRAFTER" markedinworld="false" />
         </missions>
       </extendedcompletionstep>
     </tasks>
@@ -2487,7 +2487,7 @@
         </preactions>
         <missions>
           <gather itemid="T2_WOOD" count="6" locationmarkerid="T2_WOOD" textloca="@MISSIONS_T2_TUTORIAL_TEST_K1_SIDETEXT"  markedinworld="false" markedonminimap="false" />
-          <gather itemid="T2_HIDE" count="4" locationmarkerid="T2_WOOD" textloca="@MISSIONS_T2_TUTORIAL_TEST_K4_SIDETEXT"  markedinworld="false" markedonminimap="false" />
+          <gather itemid="T2_HIDE" count="4" locationmarkerid="T2_HIDE" textloca="@MISSIONS_T2_TUTORIAL_TEST_K4_SIDETEXT"  markedinworld="false" markedonminimap="false" />
         </missions>
       </extendedmissionstep>
       <extendedcompletionstep>
@@ -2585,7 +2585,7 @@
           <settutorialblocker id="BLOCKSHIP" statetoset="0"/>
         </preactions>
         <missions>
-          <gotoquestgiver questgivervariable="SHIPREPAIR" mustaccept="true" accepttext="@MISSIONS_T2_TUTORIAL_TEST_L_TRADETEXT" textloca="@MISSIONS_T2_TUTORIAL_TEST_L10_SIDETEXT">
+          <gotoquestgiver questgivervariable="SHIPREPAIR" locationmarkerid="SHIP_CHECK" mustaccept="true" accepttext="@MISSIONS_T2_TUTORIAL_TEST_L_TRADETEXT" textloca="@MISSIONS_T2_TUTORIAL_TEST_L10_SIDETEXT">
             <item itemid="T2_PLANKS" count="6" />
             <item itemid="T2_METALBAR" count="6" />
             <item itemid="T2_CLOTH" count="4" />

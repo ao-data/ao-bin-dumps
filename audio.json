@@ -12495,6 +12495,33 @@
         }
       },
       {
+        "@name": "SPELL_BUNNY_ENRAGE_FRENCY_CAST",
+        "OnCastStart": {
+          "@name": "Play_bunny_cast_load_snort"
+        },
+        "OnCastCanceled": {
+          "@name": "Stop_bunny_cast_load_snort"
+        },
+        "OnCastInterrupted": {
+          "@name": "Stop_bunny_cast_load_snort"
+        },
+        "OnCastFinished": {
+          "@name": "Play_bunny_spell_cast"
+        }
+      },
+      {
+        "@name": "SPELL_BUNNY_FRENZY_JUMP",
+        "OnCastFinished": {
+          "@name": "Play_mount_bunny_leap_enraged"
+        }
+      },
+      {
+        "@name": "SPELL_BUNNY_BITE",
+        "OnSpellHit": {
+          "@name": "Play_mount_bunny_bite"
+        }
+      },
+      {
         "@name": "SPELL_SUMMON_FOX",
         "OnCastFinished": {
           "@name": "Play_summon_fox"

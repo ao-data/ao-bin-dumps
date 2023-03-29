@@ -597,7 +597,8 @@
           "@allowtrade": "Disabled",
           "@allowfactionflagging": "false",
           "@vanityvisibility": "Allowed",
-          "@ignoredestructionmultiplier": "true"
+          "@ignoredestructionmultiplier": "true",
+          "@savelostequipment": "false"
         },
         {
           "@name": "T4_EXPEDITION",
@@ -619,7 +620,8 @@
           "@allowtrade": "Disabled",
           "@allowfactionflagging": "false",
           "@vanityvisibility": "Allowed",
-          "@ignoredestructionmultiplier": "true"
+          "@ignoredestructionmultiplier": "true",
+          "@savelostequipment": "false"
         },
         {
           "@name": "T5_EXPEDITION",
@@ -641,7 +643,8 @@
           "@allowtrade": "Disabled",
           "@allowfactionflagging": "false",
           "@vanityvisibility": "Allowed",
-          "@ignoredestructionmultiplier": "true"
+          "@ignoredestructionmultiplier": "true",
+          "@savelostequipment": "false"
         },
         {
           "@name": "T6_EXPEDITION",
@@ -663,7 +666,8 @@
           "@allowtrade": "Disabled",
           "@allowfactionflagging": "false",
           "@vanityvisibility": "Allowed",
-          "@ignoredestructionmultiplier": "true"
+          "@ignoredestructionmultiplier": "true",
+          "@savelostequipment": "false"
         },
         {
           "@name": "HARDCORE_EXPEDITION",
@@ -685,7 +689,8 @@
           "@allowtrade": "Disabled",
           "@allowfactionflagging": "false",
           "@vanityvisibility": "Allowed",
-          "@ignoredestructionmultiplier": "true"
+          "@ignoredestructionmultiplier": "true",
+          "@savelostequipment": "false"
         },
         {
           "@name": "ARENA",
@@ -707,7 +712,8 @@
           "@requiredreputationtoenter": "-50000",
           "@allowfactionflagging": "false",
           "@vanityvisibility": "Allowed",
-          "@ignoredestructionmultiplier": "true"
+          "@ignoredestructionmultiplier": "true",
+          "@savelostequipment": "false"
         },
         {
           "@name": "ARENA_CUSTOM",
@@ -729,7 +735,31 @@
           "@requiredreputationtoenter": "-50000",
           "@allowfactionflagging": "false",
           "@vanityvisibility": "Allowed",
-          "@ignoredestructionmultiplier": "true"
+          "@ignoredestructionmultiplier": "true",
+          "@savelostequipment": "false"
+        },
+        {
+          "@name": "ARENA_CRYSTAL_NONLETHAL",
+          "@uipvptype": "Limited",
+          "@pvpwarningtype": "safe",
+          "@pvprule": "PvpAllowed",
+          "@playersarelethal": "true",
+          "@mobsarelethal": "false",
+          "@showpvpplayeronminimap": "false",
+          "@showfriendlycount": "false",
+          "@showhostilecount": "false",
+          "@buildingcraftcapacityregenfactor": "1",
+          "@itempowersoftcap": "900",
+          "@itempowerscalingfactor": "0.2",
+          "@animalgrowthfactor": "0.5",
+          "@cropyieldfactor": "2",
+          "@clusterdangerbonustype": "yellow",
+          "@knockdownbuffaftergetup": "SPAWN_KNOCKDOWN_INVULNERABILITY",
+          "@requiredreputationtoenter": "-50000",
+          "@allowfactionflagging": "false",
+          "@vanityvisibility": "Allowed",
+          "@ignoredestructionmultiplier": "true",
+          "@savelostequipment": "false"
         },
         {
           "@name": "ARENA_CRYSTAL",
@@ -5745,6 +5775,9 @@
               {
                 "@name": "ARENA_ENTER",
                 "@isclusterchange": "Must"
+              },
+              {
+                "@name": "ARENA_OVERLOAD_PROTECTION"
               }
             ]
           },
@@ -5773,6 +5806,40 @@
               {
                 "@name": "ARENA_ENTER",
                 "@isclusterchange": "Must"
+              },
+              {
+                "@name": "ARENA_OVERLOAD_PROTECTION"
+              }
+            ]
+          },
+          "mobspawns": {
+            "@defaulttimefactor": "1.0"
+          },
+          "resourcespawns": {
+            "@defaulttimefactor": "9999.0"
+          }
+        },
+        {
+          "@name": "ARENA_CRYSTAL_NONLETHAL",
+          "@archetype": "ARENA_CRYSTAL_NONLETHAL",
+          "@spellcooldownsonenteringseconds": "0",
+          "@editorcolor": "255, 255, 0",
+          "@furnitureobjectsallowed": "false",
+          "@isdungeon": "false",
+          "@hasshortspawnbuffonleave": "false",
+          "@allowmounts": "true",
+          "spawnbuff": {
+            "buff": [
+              {
+                "@name": "BUFFSHRINE_OUTLANDCITY_INVISIBILITY_REMOVE",
+                "@isclusterchange": "Must"
+              },
+              {
+                "@name": "ARENA_ENTER",
+                "@isclusterchange": "Must"
+              },
+              {
+                "@name": "ARENA_OVERLOAD_PROTECTION"
               }
             ]
           },
@@ -5801,6 +5868,9 @@
               {
                 "@name": "ARENA_ENTER",
                 "@isclusterchange": "Must"
+              },
+              {
+                "@name": "ARENA_OVERLOAD_PROTECTION"
               }
             ]
           },
