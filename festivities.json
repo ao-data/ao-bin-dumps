@@ -9,6 +9,21 @@
     "fixedevents": {
       "event": [
         {
+          "@uniquename": "EASTER2023",
+          "@title": "@ACTIVITY_HUB_EASTER_TITLE",
+          "@description": "@FIXED_EVENT_EASTER_DESC",
+          "@image": "activities_event_easter_2023",
+          "@showinactivityboard": "true",
+          "activeflag": [
+            {
+              "@name": "easter"
+            },
+            {
+              "@name": "res_easter"
+            }
+          ]
+        },
+        {
           "@uniquename": "XMAS2022",
           "@title": "@FIXED_EVENT_XMAS_2022",
           "@description": "@FIXED_EVENT_XMAS_2022_DESC",
@@ -763,6 +778,84 @@
           }
         ]
       }
+    },
+    "activityhubeventviews": {
+      "verticalimagetemplate": [
+        {
+          "@eventref": "ANNIVERSARY_2022",
+          "@title": "@ACTIVITY_HUB_ANNIVERSARY_TITLE",
+          "@description": "@ACTIVITY_HUB_ANNIVERSARY_DESCRIPTION",
+          "@image": "activities_event_anniversary_vertical",
+          "@tabicon": "icon_tab_festivities",
+          "infos": {
+            "info": [
+              {
+                "@avatarring": "RING_MOB_STANDARD",
+                "@avatar": "ANNIVERSARYSTATUESECONDPLACE",
+                "@text": "@ACTIVITY_HUB_INFO_1"
+              },
+              {
+                "@avatarring": "RING_MOB_STANDARD",
+                "@avatar": "ANNIVERSARYSTATUESEASON05",
+                "@text": "@ACTIVITY_HUB_INFO_2"
+              },
+              {
+                "@avatarring": "RING_MOB_STANDARD",
+                "@avatar": "ANNIVERSARYSTATUESEASON08",
+                "@text": "@ACTIVITY_HUB_INFO_3"
+              }
+            ]
+          },
+          "fixedlootlist": {
+            "@title": "@ACTIVITY_HUB_ANNIVERSARY_LOOT",
+            "@lootlistref": "EVENT_ANNIVERSARY_2022_LOOT",
+            "@visibleitems": "4"
+          }
+        },
+        {
+          "@eventref": "EASTER2023",
+          "@title": "@ACTIVITY_HUB_EASTER_TITLE",
+          "@description": "@ACTIVITY_HUB_EASTER_DESCRIPTION",
+          "@image": "activities_event_easter_2023_vertical",
+          "@tabicon": "icon_tab_festivities",
+          "infos": {
+            "info": [
+              {
+                "@avatarring": "RING_MOB_STANDARD",
+                "@avatar": "EVENTEASTERCHEST1",
+                "@text": "@ACTIVITY_HUB_EASTER_INFO_1"
+              },
+              {
+                "@avatarring": "RING_MOB_STANDARD",
+                "@avatar": "NPC_VANITY_STORE",
+                "@text": "@ACTIVITY_HUB_EASTER_INFO_2"
+              },
+              {
+                "@avatarring": "RING_MOB_STANDARD",
+                "@avatar": "EASTEREGG1",
+                "@text": "@ACTIVITY_HUB_EASTER_INFO_3"
+              }
+            ]
+          },
+          "lootlist": {
+            "@title": "@ACTIVITY_HUB_ANNIVERSARY_LOOT",
+            "item": [
+              {
+                "@uniquename": "UNIQUE_CONSUMABLE_EVENT_EASTER_2020_EGG"
+              },
+              {
+                "@uniquename": "UNIQUE_CONSUMABLE_EVENT_EASTER_2020_CHOCOLATE"
+              },
+              {
+                "@uniquename": "T8_MOUNT_RABBIT_EASTER"
+              },
+              {
+                "@uniquename": "T8_MOUNT_RABBIT_EASTER_DARK@1"
+              }
+            ]
+          }
+        }
+      ]
     }
   }
 }

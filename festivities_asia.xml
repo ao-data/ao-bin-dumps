@@ -4,6 +4,10 @@
   <!-- mail local needs to be @<ID>_SUBJECT and @<ID>_TEXT -->
   <!-- From now on please add new events at the top of this file. -->
   <fixedevents>
+    <event uniquename="EASTER2023" title="@ACTIVITY_HUB_EASTER_TITLE" description="@FIXED_EVENT_EASTER_DESC" image="activities_event_easter_2023" showinactivityboard="true">
+      <activeflag name="easter" />
+      <activeflag name="res_easter" />
+    </event>
     <event uniquename="XMAS2022" title="@FIXED_EVENT_XMAS_2022" description="@FIXED_EVENT_XMAS_2022_DESC" image="activities_event_xmas" showinactivityboard="true">
       <activeflag name="christmas" />
       <mail mailid="MAIL_XMAS_2022" sender="Albion Online">
@@ -167,4 +171,31 @@
       <craftbonusevent uniquename="RARE_CAPE" category="cape" value="0.20" weight="1" />
     </eventcategory>
   </dailyevents>
+  <!-- event views are created even when the event has showinactivityboard set to false, since is showinactivityboard is for the "header" -->
+  <activityhubeventviews>
+    <verticalimagetemplate eventref="ANNIVERSARY_2022" title="@ACTIVITY_HUB_ANNIVERSARY_TITLE" description="@ACTIVITY_HUB_ANNIVERSARY_DESCRIPTION" image="activities_event_anniversary_vertical" tabicon="icon_tab_festivities">
+      <infos>
+        <info avatarring="RING_MOB_STANDARD" avatar="ANNIVERSARYSTATUESECONDPLACE" text="@ACTIVITY_HUB_INFO_1" />
+        <info avatarring="RING_MOB_STANDARD" avatar="ANNIVERSARYSTATUESEASON05" text="@ACTIVITY_HUB_INFO_2" />
+        <info avatarring="RING_MOB_STANDARD" avatar="ANNIVERSARYSTATUESEASON08" text="@ACTIVITY_HUB_INFO_3" />
+      </infos>
+      <fixedlootlist title="@ACTIVITY_HUB_ANNIVERSARY_LOOT" lootlistref="EVENT_ANNIVERSARY_2022_LOOT" visibleitems="4" />
+    </verticalimagetemplate>
+    <verticalimagetemplate eventref="EASTER2023" title="@ACTIVITY_HUB_EASTER_TITLE" description="@ACTIVITY_HUB_EASTER_DESCRIPTION" image="activities_event_easter_2023_vertical" tabicon="icon_tab_festivities">
+      <infos>
+        <info avatarring="RING_MOB_STANDARD" avatar="EVENTEASTERCHEST1" text="@ACTIVITY_HUB_EASTER_INFO_1" />
+        <info avatarring="RING_MOB_STANDARD" avatar="NPC_VANITY_STORE" text="@ACTIVITY_HUB_EASTER_INFO_2" />
+        <info avatarring="RING_MOB_STANDARD" avatar="EASTEREGG1" text="@ACTIVITY_HUB_EASTER_INFO_3" />
+      </infos>
+      <!-- EVENT_EASTER_2023_LOOT does not exists yet
+            <fixedlootlist title="@ACTIVITY_HUB_ANNIVERSARY_LOOT" lootlistref="EVENT_EASTER_2023_LOOT" visibleitems="4" /> 
+            -->
+      <lootlist title="@ACTIVITY_HUB_ANNIVERSARY_LOOT">
+        <item uniquename="UNIQUE_CONSUMABLE_EVENT_EASTER_2020_EGG" />
+        <item uniquename="UNIQUE_CONSUMABLE_EVENT_EASTER_2020_CHOCOLATE" />
+        <item uniquename="T8_MOUNT_RABBIT_EASTER" />
+        <item uniquename="T8_MOUNT_RABBIT_EASTER_DARK@1" />
+      </lootlist>
+    </verticalimagetemplate>
+  </activityhubeventviews>
 </festivities>
