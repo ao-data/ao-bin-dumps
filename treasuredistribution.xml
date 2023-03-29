@@ -36,7 +36,7 @@
   <!--####################################################################################-->
   <GameobjectDistribution>        
     <!--Chests-->
-    <Continent name="Royal" subtype="CHEST">
+    <Distribute continent="Royal" subtype="CHEST">
       <ClusterTier tier="5" >
         <Random maxslotsused="1" activationtimemin="430" activationtimemax="3010" positioncooldown="300" >
         <!--Forest-->
@@ -79,8 +79,8 @@
         <TreasureLootchest biome="Swamp" weight="80" name="SWAMP_DEAD_CHEST_SOLO" />
         </Random>
       </ClusterTier>
-    </Continent>
-    <Continent name="Outlands" subtype="CHEST">
+    </Distribute>
+    <Distribute continent="Outlands" subtype="CHEST">
       <ClusterTier tier="5" >
         <Random maxslotsused="1" activationtimemin="420" activationtimemax="2960" positioncooldown="300" >
         <!--Forest-->
@@ -177,8 +177,8 @@
         <TreasureLootchest biome="Swamp" weight="20"  name="SWAMP_DEAD_CHEST_ELITE" />
         </Random>
       </ClusterTier>
-    </Continent>
-    <Continent name="Avalon" subtype="CHEST">
+    </Distribute>
+    <Distribute continent="Avalon" subtype="CHEST">
       <ClusterTier tier="4" >
         <Random maxslotsused="1" activationtimemax="10000" activationtimemin="20000" positioncooldown="300">
           <TreasureLootchest biome="Roads" weight="4" name="ROADS_CHEST_SOLO" />
@@ -209,8 +209,8 @@
           <TreasureLootchest biome="Roads" weight="1" name="ROADS_CHEST_VETERAN" />
         </Random>        
       </ClusterTier>
-    </Continent>
-    <Continent name="Mists" subtype="CHEST">
+    </Distribute>
+    <Distribute continent="Mists" subtype="CHEST">
       <ClusterTier tier="5" >
         <Mists maxslotsused="5" activationtimemin="0" activationtimemax="0" positioncooldown="300" >
           <TreasureLootchest biome="Mists" weight="1" name="MISTS_CHEST_SOLO" />
@@ -231,36 +231,36 @@
           <TreasureLootchest biome="Mists" weight="1" name="MISTS_CHEST_SOLO" />
         </Mists>
       </ClusterTier>
-    </Continent>
+    </Distribute>
     
     <!--Resources-->
-	  <Continent name="Royal" subtype="RESOURCE_T4">
-	    <ClusterTier tier="5" >
-	      <Random maxslotsused="1" activationtimemin="5400" activationtimemax="16200" positioncooldown="8100" >
-	       <!--Forest-->
-	       <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_WOOD_T4"  biome="Forest"   weight="100" />
-	       <TreasureMob         name="OPEN_WORLD_HIDEMOB_FOREST_T4"    biome="Forest"   weight="67" />
-	       <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ROCK_T4"  biome="Forest"   weight="33" />
-	       <!--Highland-->
-	       <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ROCK_T4"  biome="Highland" weight="100" />
-	       <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ORE_T4"   biome="Highland" weight="67" />
-	       <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_WOOD_T4"  biome="Highland" weight="33" />
-	       <!--Mountain-->
-	       <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ORE_T4"   biome="Mountain" weight="100" />
-	       <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ROCK_T4"  biome="Mountain" weight="67" />
-	       <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_FIBER_T4" biome="Mountain" weight="33" />
-	       <!--Steppe-->
-	       <TreasureMob         name="OPEN_WORLD_HIDEMOB_STEPPE_T4"    biome="Steppe"   weight="100" />
-	       <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_FIBER_T4" biome="Steppe"   weight="67" />
-	       <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ORE_T4"   biome="Steppe"   weight="33" />
-	       <!--Swamp-->
-	       <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_FIBER_T4" biome="Swamp"    weight="100" />
-	       <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_WOOD_T4"  biome="Swamp"    weight="67" />
-	       <TreasureMob         name="OPEN_WORLD_HIDEMOB_SWAMP_T4"     biome="Swamp"    weight="33" />
-	      </Random>
-	    </ClusterTier>
-	  </Continent>
-	  <Continent name="Royal" subtype="RESOURCE_T5">
+    <Distribute continent="Royal" subtype="RESOURCE_T4">
+      <ClusterTier tier="5" >
+        <Random maxslotsused="1" activationtimemin="5400" activationtimemax="16200" positioncooldown="8100" >
+          <!--Forest-->
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_WOOD_T4"  biome="Forest"   weight="100" />
+          <TreasureMob         name="OPEN_WORLD_HIDEMOB_FOREST_T4"    biome="Forest"   weight="67" />
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ROCK_T4"  biome="Forest"   weight="33" />
+          <!--Highland-->
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ROCK_T4"  biome="Highland" weight="100" />
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ORE_T4"   biome="Highland" weight="67" />
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_WOOD_T4"  biome="Highland" weight="33" />
+          <!--Mountain-->
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ORE_T4"   biome="Mountain" weight="100" />
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ROCK_T4"  biome="Mountain" weight="67" />
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_FIBER_T4" biome="Mountain" weight="33" />
+          <!--Steppe-->
+          <TreasureMob         name="OPEN_WORLD_HIDEMOB_STEPPE_T4"    biome="Steppe"   weight="100" />
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_FIBER_T4" biome="Steppe"   weight="67" />
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ORE_T4"   biome="Steppe"   weight="33" />
+          <!--Swamp-->
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_FIBER_T4" biome="Swamp"    weight="100" />
+          <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_WOOD_T4"  biome="Swamp"    weight="67" />
+          <TreasureMob         name="OPEN_WORLD_HIDEMOB_SWAMP_T4"     biome="Swamp"    weight="33" />
+        </Random>
+      </ClusterTier>
+    </Distribute>
+	  <Distribute continent="Royal" subtype="RESOURCE_T5">
 	    <ClusterTier tier="5" >
 	      <Random maxslotsused="1" activationtimemin="5400" activationtimemax="16200" positioncooldown="8100" >
 	       <!--Forest-->
@@ -309,8 +309,8 @@
 	       <TreasureMob         name="OPEN_WORLD_HIDEMOB_SWAMP_T5"     biome="Swamp"    weight="33" />
 	      </Random>
 	    </ClusterTier>
-	  </Continent>	  
-	  <Continent name="Royal" subtype="RESOURCE_T6">
+	  </Distribute>	  
+	  <Distribute continent="Royal" subtype="RESOURCE_T6">
 	    <ClusterTier tier="6" >
 	      <Random maxslotsused="2" activationtimemin="5400" activationtimemax="16200" positioncooldown="8100" >
 	       <!--Forest-->
@@ -359,8 +359,8 @@
 	       <TreasureMob         name="OPEN_WORLD_HIDEMOB_SWAMP_T6"     biome="Swamp"    weight="33" />
 	      </Random>
 	    </ClusterTier>
-	  </Continent>	  
-	  <Continent name="Royal" subtype="RESOURCE_T7">
+	  </Distribute>	  
+	  <Distribute continent="Royal" subtype="RESOURCE_T7">
 	    <ClusterTier tier="7" >
 	      <Random maxslotsused="2" activationtimemin="5400" activationtimemax="16200" positioncooldown="8100" >
 	       <!--Forest-->
@@ -385,9 +385,9 @@
 	       <TreasureMob         name="OPEN_WORLD_HIDEMOB_SWAMP_T7"     biome="Swamp"    weight="33" />
 	      </Random>
 	    </ClusterTier>
-	  </Continent>    
+	  </Distribute>    
 
-	  <Continent name="Outlands" subtype="RESOURCE_T4">
+	  <Distribute continent="Outlands" subtype="RESOURCE_T4">
 	    <ClusterTier tier="5" >
 	      <Random maxslotsused="2" activationtimemin="5400" activationtimemax="16200" positioncooldown="8100" >
 	       <!--Forest-->
@@ -412,8 +412,8 @@
 	       <TreasureMob         name="OPEN_WORLD_HIDEMOB_SWAMP_T4"     biome="Swamp"    weight="33" />
 	      </Random>
 	    </ClusterTier>
-	  </Continent>
-	  <Continent name="Outlands" subtype="RESOURCE_T5">
+	  </Distribute>
+	  <Distribute continent="Outlands" subtype="RESOURCE_T5">
 	    <ClusterTier tier="5" >
 	      <Random maxslotsused="2" activationtimemin="5400" activationtimemax="16200" positioncooldown="8100" >
 	       <!--Forest-->
@@ -462,8 +462,8 @@
 	       <TreasureMob         name="OPEN_WORLD_HIDEMOB_SWAMP_T5"     biome="Swamp"    weight="33" />
 	      </Random>
 	    </ClusterTier>
-	  </Continent>	  
-	  <Continent name="Outlands" subtype="RESOURCE_T6">
+	  </Distribute>	  
+	  <Distribute continent="Outlands" subtype="RESOURCE_T6">
 	    <ClusterTier tier="6" >
 	      <Random maxslotsused="2" activationtimemin="5400" activationtimemax="16200" positioncooldown="8100" >
 	       <!--Forest-->
@@ -512,8 +512,8 @@
 	       <TreasureMob         name="OPEN_WORLD_HIDEMOB_SWAMP_T6"     biome="Swamp"    weight="33" />
 	      </Random>
 	    </ClusterTier>
-	  </Continent>	  
-	  <Continent name="Outlands" subtype="RESOURCE_T7">
+	  </Distribute>	  
+	  <Distribute continent="Outlands" subtype="RESOURCE_T7">
 	    <ClusterTier tier="7" >
 	      <Random maxslotsused="2" activationtimemin="5400" activationtimemax="16200" positioncooldown="8100" >
 	       <!--Forest-->
@@ -562,8 +562,8 @@
 	       <TreasureMob         name="OPEN_WORLD_HIDEMOB_SWAMP_T7"     biome="Swamp"    weight="33" />
 	      </Random>
 	    </ClusterTier>
-	  </Continent>	  
-	  <Continent name="Outlands" subtype="RESOURCE_T8">
+	  </Distribute>	  
+	  <Distribute continent="Outlands" subtype="RESOURCE_T8">
 	    <ClusterTier tier="8" >
 	      <Random maxslotsused="2" activationtimemin="5400" activationtimemax="16200" positioncooldown="8100" >
 	       <!--Forest-->
@@ -588,9 +588,9 @@
 	       <TreasureMob         name="OPEN_WORLD_HIDEMOB_SWAMP_T8"     biome="Swamp"    weight="33" />
 	      </Random>
 	    </ClusterTier>
-	  </Continent>
+	  </Distribute>
 
-    <Continent name="Avalon" subtype="RESOURCE_T4">
+    <Distribute continent="Avalon" subtype="RESOURCE_T4">
       <ClusterTier tier="4" >
         <Random maxslotsused="1" activationtimemin="2700" activationtimemax="8100" positioncooldown="8100" >
           <TreasureMob         name="OPEN_WORLD_HIDEMOB_FOREST_T4"     biome="Roads" weight="3" />
@@ -600,8 +600,8 @@
           <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_FIBER_T4" biome="Roads" weight="3" />
         </Random>
       </ClusterTier>
-    </Continent>
-    <Continent name="Avalon" subtype="RESOURCE_T5">
+    </Distribute>
+    <Distribute continent="Avalon" subtype="RESOURCE_T5">
       <ClusterTier tier="5" >
         <Random maxslotsused="1" activationtimemin="2700" activationtimemax="8100" positioncooldown="8100" >
           <TreasureMob         name="OPEN_WORLD_HIDEMOB_FOREST_T5"     biome="Roads" weight="2" />
@@ -611,8 +611,8 @@
           <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_FIBER_T5" biome="Roads" weight="2" />
         </Random>
       </ClusterTier>
-    </Continent>
-    <Continent name="Avalon" subtype="RESOURCE_T6">
+    </Distribute>
+    <Distribute continent="Avalon" subtype="RESOURCE_T6">
       <ClusterTier tier="6" >
         <Random maxslotsused="1" activationtimemin="2700" activationtimemax="8100" positioncooldown="8100" >
           <TreasureMob         name="OPEN_WORLD_HIDEMOB_FOREST_T6"     biome="Roads" weight="1" />
@@ -622,8 +622,8 @@
           <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_FIBER_T6" biome="Roads" weight="1" />
         </Random>
       </ClusterTier>
-    </Continent>
-    <Continent name="Avalon" subtype="RESOURCE_T7">
+    </Distribute>
+    <Distribute continent="Avalon" subtype="RESOURCE_T7">
       <ClusterTier tier="7" >
         <Random maxslotsused="1" activationtimemin="12860" activationtimemax="38580" positioncooldown="38580" >
           <TreasureMob         name="OPEN_WORLD_HIDEMOB_FOREST_T7"     biome="Roads" weight="1" />
@@ -633,8 +633,8 @@
           <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_FIBER_T7" biome="Roads" weight="1" />
         </Random>
       </ClusterTier>
-    </Continent>
-    <Continent name="Avalon" subtype="RESOURCE_T8">
+    </Distribute>
+    <Distribute continent="Avalon" subtype="RESOURCE_T8">
       <ClusterTier tier="8" >
         <Random maxslotsused="1" activationtimemin="19440" activationtimemax="58320" positioncooldown="58320" >
           <TreasureMob         name="OPEN_WORLD_HIDEMOB_FOREST_T8"     biome="Roads" weight="1" />
@@ -644,10 +644,10 @@
           <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_FIBER_T8" biome="Roads" weight="1" />
         </Random>
       </ClusterTier>
-    </Continent>
+    </Distribute>
 
     <!--Treasure Resources in Mists Yellow-->
-    <Continent name="Mists" subtype="RESOURCE_MISTS_T4">
+    <Distribute continent="Mists" subtype="RESOURCE_MISTS_T4">
       <ClusterTier tier="5" >
         <Mists maxslotsused="3" activationtimemin="0" activationtimemax="0" positioncooldown="300" >
           <TreasureMob         name="MISTS_YELLOW_HIDEMOB_MISTS_T4"    biome="Mists" weight="1" />
@@ -666,8 +666,8 @@
           <TreasureHarvestable name="MISTS_YELLOW_HARVESTABLE_FIBER_T4" biome="Mists" weight="1" />
         </Mists>
       </ClusterTier>
-    </Continent>
-    <Continent name="Mists" subtype="RESOURCE_MISTS_T5">
+    </Distribute>
+    <Distribute continent="Mists" subtype="RESOURCE_MISTS_T5">
       <ClusterTier tier="5" >
         <Mists maxslotsused="3" activationtimemin="0" activationtimemax="0" positioncooldown="300" >
           <TreasureMob         name="MISTS_YELLOW_HIDEMOB_MISTS_T5"    biome="Mists" weight="1" />
@@ -695,8 +695,8 @@
           <TreasureHarvestable name="MISTS_YELLOW_HARVESTABLE_FIBER_T5" biome="Mists" weight="1" />
         </Mists>
       </ClusterTier>      
-    </Continent>
-    <Continent name="Mists" subtype="RESOURCE_MISTS_T6">      
+    </Distribute>
+    <Distribute continent="Mists" subtype="RESOURCE_MISTS_T6">      
       <ClusterTier tier="6" >
         <Mists maxslotsused="5" activationtimemin="0" activationtimemax="0" positioncooldown="300" >
           <TreasureMob         name="MISTS_YELLOW_HIDEMOB_MISTS_T6"    biome="Mists" weight="1" />
@@ -715,8 +715,8 @@
           <TreasureHarvestable name="MISTS_YELLOW_HARVESTABLE_FIBER_T6" biome="Mists" weight="1" />
         </Mists>
       </ClusterTier>
-    </Continent>
-    <Continent name="Mists" subtype="RESOURCE_MISTS_T7">
+    </Distribute>
+    <Distribute continent="Mists" subtype="RESOURCE_MISTS_T7">
       <ClusterTier tier="7" >
         <Mists maxslotsused="3" activationtimemin="0" activationtimemax="0" positioncooldown="300" >
           <TreasureMob         name="MISTS_YELLOW_HIDEMOB_MISTS_T7"    biome="Mists" weight="1" />
@@ -726,10 +726,10 @@
           <TreasureHarvestable name="MISTS_YELLOW_HARVESTABLE_FIBER_T7" biome="Mists" weight="1" />
         </Mists>
       </ClusterTier>
-    </Continent>    
+    </Distribute>    
     
     <!--Treasure Resources in Mists Black-->
-    <Continent name="Mists" subtype="RESOURCE_T5">
+    <Distribute continent="Mists" subtype="RESOURCE_T5">
       <ClusterTier tier="6" >
         <Mists maxslotsused="3" activationtimemin="0" activationtimemax="0" positioncooldown="300" >
           <TreasureMob         name="MISTS_BLACK_HIDEMOB_MISTS_T5"    biome="Mists" weight="1" />
@@ -748,8 +748,8 @@
           <TreasureHarvestable name="MISTS_BLACK_HARVESTABLE_FIBER_T5" biome="Mists" weight="1" />
         </Mists>
       </ClusterTier>
-    </Continent>
-    <Continent name="Mists" subtype="RESOURCE_T6">
+    </Distribute>
+    <Distribute continent="Mists" subtype="RESOURCE_T6">
       <ClusterTier tier="6" >
         <Mists maxslotsused="5" activationtimemin="0" activationtimemax="0" positioncooldown="300" >
           <TreasureMob         name="MISTS_BLACK_HIDEMOB_MISTS_T6"    biome="Mists" weight="1" />
@@ -777,8 +777,8 @@
           <TreasureHarvestable name="MISTS_BLACK_HARVESTABLE_FIBER_T6" biome="Mists" weight="1" />
         </Mists>
       </ClusterTier>
-    </Continent>
-    <Continent name="Mists" subtype="RESOURCE_T7">
+    </Distribute>
+    <Distribute continent="Mists" subtype="RESOURCE_T7">
       <ClusterTier tier="7" >
         <Mists maxslotsused="3" activationtimemin="0" activationtimemax="0" positioncooldown="300" >
           <TreasureMob         name="MISTS_BLACK_HIDEMOB_MISTS_T7"    biome="Mists" weight="1" />
@@ -797,8 +797,8 @@
           <TreasureHarvestable name="MISTS_BLACK_HARVESTABLE_FIBER_T7" biome="Mists" weight="1" />
         </Mists>
       </ClusterTier>
-    </Continent>
-    <Continent name="Mists" subtype="RESOURCE_T8">
+    </Distribute>
+    <Distribute continent="Mists" subtype="RESOURCE_T8">
       <ClusterTier tier="8" >
         <Mists maxslotsused="3" activationtimemin="0" activationtimemax="0" positioncooldown="300" >
           <TreasureMob         name="MISTS_BLACK_HIDEMOB_MISTS_T8"    biome="Mists" weight="1" />
@@ -808,10 +808,10 @@
           <TreasureHarvestable name="MISTS_BLACK_HARVESTABLE_FIBER_T8" biome="Mists" weight="1" />
         </Mists>
       </ClusterTier>
-    </Continent>
+    </Distribute>
 
     <!-- Level 4 Resources-->
-    <Continent name="Outlands" subtype="RESOURCE_T4_LEVEL4">
+    <Distribute continent="Outlands" subtype="RESOURCE_T4_LEVEL4">
 	    <ClusterTier tier="5" >
 	      <Random maxslotsused="2" activationtimemin="44550" activationtimemax="133650" positioncooldown="8100" >
 	        <!--Forest-->
@@ -836,8 +836,8 @@
 	        <TreasureMob         name="OPEN_WORLD_HARVESTABLE_HIDE_T4_LEVEL4_SWAMP"         biome="Swamp"    weight="33" />
 	      </Random>
 	    </ClusterTier>
-      </Continent>	  
-	  <Continent name="Outlands" subtype="RESOURCE_T5_LEVEL4">
+      </Distribute>	  
+	  <Distribute continent="Outlands" subtype="RESOURCE_T5_LEVEL4">
 	    <ClusterTier tier="5" >
 	      <Random maxslotsused="2" activationtimemin="152730" activationtimemax="458190" positioncooldown="8100" >
 	        <!--Forest-->
@@ -886,8 +886,8 @@
 	        <TreasureMob         name="OPEN_WORLD_HARVESTABLE_HIDE_T5_LEVEL4_SWAMP"         biome="Swamp"    weight="33" />
 	      </Random>
 	    </ClusterTier>
-	  </Continent>	  
-	  <Continent name="Outlands" subtype="RESOURCE_T6_LEVEL4">
+	  </Distribute>	  
+	  <Distribute continent="Outlands" subtype="RESOURCE_T6_LEVEL4">
 	    <ClusterTier tier="6" >
 	      <Random maxslotsused="2" activationtimemin="268380" activationtimemax="805140" positioncooldown="8100" >
 	        <!--Forest-->
@@ -936,8 +936,8 @@
 	        <TreasureMob         name="OPEN_WORLD_HARVESTABLE_HIDE_T6_LEVEL4_SWAMP"          biome="Swamp"    weight="33" />
 	      </Random>
 	    </ClusterTier>
-	  </Continent>	  
-	  <Continent name="Outlands" subtype="RESOURCE_T7_LEVEL4">
+	  </Distribute>	  
+	  <Distribute continent="Outlands" subtype="RESOURCE_T7_LEVEL4">
 	    <ClusterTier tier="7" >
 	      <Random maxslotsused="2" activationtimemin="412200" activationtimemax="1236600" positioncooldown="8100" >
 	        <!--Forest-->
@@ -986,8 +986,8 @@
 	        <TreasureMob         name="OPEN_WORLD_HARVESTABLE_HIDE_T7_LEVEL4_SWAMP"          biome="Swamp"    weight="33" />
 	      </Random>
 	    </ClusterTier>
-	  </Continent>	  
-	  <Continent name="Outlands" subtype="RESOURCE_T8_LEVEL4">
+	  </Distribute>	  
+	  <Distribute continent="Outlands" subtype="RESOURCE_T8_LEVEL4">
 	    <ClusterTier tier="8" >
 	      <Random maxslotsused="2" activationtimemin="259200" activationtimemax="777600" positioncooldown="8100" >
 	        <!--Forest-->
@@ -1012,10 +1012,10 @@
 	        <TreasureMob         name="OPEN_WORLD_HARVESTABLE_HIDE_T8_LEVEL4_SWAMP"          biome="Swamp"    weight="33" />
 	      </Random>
 	    </ClusterTier>
-	  </Continent>
+	  </Distribute>
     
     <!--Hideout: Power Cores-->
-    <Continent name="Outlands" subtype="POWERCORE"> 
+    <Distribute continent="Outlands" subtype="POWERCORE"> 
       <!--Tier 5-->
       <ClusterTier tier="5" clusterquality="Q1" >
         <Random maxslotsused="1" activationtimemin="1700" activationtimemax="12700" positioncooldown="10">
@@ -1212,8 +1212,8 @@
         <TreasureMob name="POWER_CRYSTAL_MOB_HIDEOUT_R3" weight="1"/>
         </Random>
       </ClusterTier>
-    </Continent>
-    <Continent name="Avalon" subtype="POWERCORE">
+    </Distribute>
+    <Distribute continent="Avalon" subtype="POWERCORE">
       <ClusterTier tier="4">
         <Random maxslotsused="1" activationtimemin="4400" activationtimemax="30820" positioncooldown="1">
           <TreasureMob name="POWER_CRYSTAL_ROADS_MOB_HIDEOUT_R0" biome="Roads" weight="59"/>
@@ -1254,9 +1254,9 @@
           <TreasureMob name="POWER_CRYSTAL_ROADS_MOB_HIDEOUT_R3" biome="Roads" weight="1"/>
         </Random>
       </ClusterTier>
-    </Continent>
+    </Distribute>
     <!--Wisps Power Crystals-->    
-    <Continent name="Mists" subtype="WISPS">
+    <Distribute continent="Mists" subtype="WISPS">
       <ClusterTier tier="5">
         <Mists maxslotsused="1" activationtimemin="0" activationtimemax="0" positioncooldown="1">
           <TreasureMob name="POWER_CRYSTAL_MOB_WISP_YELLOW_R0" biome="Mists" pvprule="PvpAllowed" weight="59"/>
@@ -1309,9 +1309,9 @@
           <TreasureMob name="POWER_CRYSTAL_MOB_WISP_BLACK_R3" biome="Mists" pvprule="PvpForced" weight="1"/>  
         </Mists>
       </ClusterTier>
-    </Continent>
+    </Distribute>
     <!--Territory: Energy Crystals-->
-    <Continent name="Outlands" subtype="ENERGYCRYSTAL">
+    <Distribute continent="Outlands" subtype="ENERGYCRYSTAL">
       <!--Tier 5-->
       <ClusterTier tier="5" clusterquality="Q1" >
         <Random maxslotsused="1" activationtimemin="17671" activationtimemax="123699" positioncooldown="10">
@@ -2012,9 +2012,9 @@
         <TreasureMob name="POWER_CRYSTAL_MOB_TERRITORY_R3" biome="Swamp" weight="68971"/>
         </Random>
       </ClusterTier>
-    </Continent>
+    </Distribute>
     <!--Events-->
-    <Continent name="Royal" subtype="EASTER">
+    <Distribute continent="Royal" subtype="EASTER">
       <ClusterTier tier="5" >
         <Random maxslotsused="1" activationtimemin="705" activationtimemax="4935" positioncooldown="300" >
         <TreasureLootchest biome="Forest" weight="1" name="FOREST_RED_CHEST_EASTER_VETERAN" />
@@ -2042,8 +2042,8 @@
         <TreasureLootchest biome="Swamp" weight="1" name="SWAMP_DEAD_CHEST_EASTER_VETERAN" />
         </Random>
       </ClusterTier>
-    </Continent>
-    <Continent name="Outlands" subtype="EASTER">
+    </Distribute>
+    <Distribute continent="Outlands" subtype="EASTER">
       <ClusterTier tier="5" >
         <Random maxslotsused="1" activationtimemin="705" activationtimemax="4935" positioncooldown="300" >
         <TreasureLootchest biome="Forest" weight="1" name="FOREST_RED_CHEST_EASTER_VETERAN" />
@@ -2080,8 +2080,104 @@
         <TreasureLootchest biome="Swamp" weight="1" name="SWAMP_DEAD_CHEST_EASTER_VETERAN" />
         </Random>
       </ClusterTier>
-    </Continent>
-    <Continent name="Royal" subtype="ANNIVERSARY">
+    </Distribute>
+
+    <Distribute continent="Royal" subtype="EASTERRESOURCE">
+      <ClusterTier tier="2" >
+        <Random maxslotsused="10" activationtimemin="60" activationtimemax="440" positioncooldown="300" >
+          <TreasureMob name="EVENT_EASTER_RESOURCE_T2" biome="Forest" weight="1"/>
+          <TreasureMob name="EVENT_EASTER_RESOURCE_T2" biome="Highland" weight="1"/>
+          <TreasureMob name="EVENT_EASTER_RESOURCE_T2" biome="Mountain" weight="1"/>
+          <TreasureMob name="EVENT_EASTER_RESOURCE_T2" biome="Steppe" weight="1"/>
+          <TreasureMob name="EVENT_EASTER_RESOURCE_T2" biome="Swamp" weight="1"/>
+        </Random>
+      </ClusterTier>
+      <ClusterTier tier="3" >
+        <Random maxslotsused="10" activationtimemin="60" activationtimemax="440" positioncooldown="300" >
+          <TreasureMob name="EVENT_EASTER_RESOURCE_T3" biome="Forest" weight="1"/>
+          <TreasureMob name="EVENT_EASTER_RESOURCE_T3" biome="Highland" weight="1"/>
+          <TreasureMob name="EVENT_EASTER_RESOURCE_T3" biome="Mountain" weight="1"/>
+          <TreasureMob name="EVENT_EASTER_RESOURCE_T3" biome="Steppe" weight="1"/>
+          <TreasureMob name="EVENT_EASTER_RESOURCE_T3" biome="Swamp" weight="1"/>
+        </Random>
+      </ClusterTier>
+      <ClusterTier tier="4" >
+        <Random maxslotsused="10" activationtimemin="50" activationtimemax="330" positioncooldown="300" >
+          <TreasureMob name="EVENT_EASTER_RESOURCE_T4" biome="Forest" weight="1"/>
+          <TreasureMob name="EVENT_EASTER_RESOURCE_T4" biome="Highland" weight="1"/>
+          <TreasureMob name="EVENT_EASTER_RESOURCE_T4" biome="Mountain" weight="1"/>
+          <TreasureMob name="EVENT_EASTER_RESOURCE_T4" biome="Steppe" weight="1"/>
+          <TreasureMob name="EVENT_EASTER_RESOURCE_T4" biome="Swamp" weight="1"/>
+        </Random>
+      </ClusterTier>
+      <ClusterTier tier="5" >
+        <Random maxslotsused="10" activationtimemin="40" activationtimemax="280" positioncooldown="300" >
+          <TreasureMob name="EVENT_EASTER_RESOURCE_T5" biome="Forest" weight="1"/>
+          <TreasureMob name="EVENT_EASTER_RESOURCE_T5" biome="Highland" weight="1"/>
+          <TreasureMob name="EVENT_EASTER_RESOURCE_T5" biome="Mountain" weight="1"/>
+          <TreasureMob name="EVENT_EASTER_RESOURCE_T5" biome="Steppe" weight="1"/>
+          <TreasureMob name="EVENT_EASTER_RESOURCE_T5" biome="Swamp" weight="1"/>
+        </Random>
+      </ClusterTier>
+      <ClusterTier tier="6" >
+        <Random maxslotsused="10" activationtimemin="60" activationtimemax="430" positioncooldown="300" >
+          <TreasureMob name="EVENT_EASTER_RESOURCE_T6" biome="Forest" weight="1"/>
+          <TreasureMob name="EVENT_EASTER_RESOURCE_T6" biome="Highland" weight="1"/>
+          <TreasureMob name="EVENT_EASTER_RESOURCE_T6" biome="Mountain" weight="1"/>
+          <TreasureMob name="EVENT_EASTER_RESOURCE_T6" biome="Steppe" weight="1"/>
+          <TreasureMob name="EVENT_EASTER_RESOURCE_T6" biome="Swamp" weight="1"/>
+        </Random>
+      </ClusterTier>
+      <ClusterTier tier="7" >
+        <Random maxslotsused="10" activationtimemin="60" activationtimemax="420" positioncooldown="300" >
+          <TreasureMob name="EVENT_EASTER_RESOURCE_T6" biome="Forest" weight="1"/>
+          <TreasureMob name="EVENT_EASTER_RESOURCE_T6" biome="Highland" weight="1"/>
+          <TreasureMob name="EVENT_EASTER_RESOURCE_T6" biome="Mountain" weight="1"/>
+          <TreasureMob name="EVENT_EASTER_RESOURCE_T6" biome="Steppe" weight="1"/>
+          <TreasureMob name="EVENT_EASTER_RESOURCE_T6" biome="Swamp" weight="1"/>
+        </Random>
+      </ClusterTier>
+    </Distribute>
+    <Distribute continent="Outlands" subtype="EASTERRESOURCE">
+      <ClusterTier tier="5" >
+        <Random maxslotsused="10" activationtimemin="110" activationtimemax="770" positioncooldown="300" >
+          <TreasureMob name="EVENT_EASTER_RESOURCE_T5" biome="Forest" weight="1"/>
+          <TreasureMob name="EVENT_EASTER_RESOURCE_T5" biome="Highland" weight="1"/>
+          <TreasureMob name="EVENT_EASTER_RESOURCE_T5" biome="Mountain" weight="1"/>
+          <TreasureMob name="EVENT_EASTER_RESOURCE_T5" biome="Steppe" weight="1"/>
+          <TreasureMob name="EVENT_EASTER_RESOURCE_T5" biome="Swamp" weight="1"/>
+        </Random>
+      </ClusterTier>
+      <ClusterTier tier="6" >
+        <Random maxslotsused="10" activationtimemin="230" activationtimemax="1630" positioncooldown="300" >
+          <TreasureMob name="EVENT_EASTER_RESOURCE_T6" biome="Forest" weight="1"/>
+          <TreasureMob name="EVENT_EASTER_RESOURCE_T6" biome="Highland" weight="1"/>
+          <TreasureMob name="EVENT_EASTER_RESOURCE_T6" biome="Mountain" weight="1"/>
+          <TreasureMob name="EVENT_EASTER_RESOURCE_T6" biome="Steppe" weight="1"/>
+          <TreasureMob name="EVENT_EASTER_RESOURCE_T6" biome="Swamp" weight="1"/>
+        </Random>
+      </ClusterTier>
+      <ClusterTier tier="7" >
+        <Random maxslotsused="6" activationtimemin="600" activationtimemax="4200" positioncooldown="300" >
+          <TreasureMob name="EVENT_EASTER_RESOURCE_T6" biome="Forest" weight="1"/>
+          <TreasureMob name="EVENT_EASTER_RESOURCE_T6" biome="Highland" weight="1"/>
+          <TreasureMob name="EVENT_EASTER_RESOURCE_T6" biome="Mountain" weight="1"/>
+          <TreasureMob name="EVENT_EASTER_RESOURCE_T6" biome="Steppe" weight="1"/>
+          <TreasureMob name="EVENT_EASTER_RESOURCE_T6" biome="Swamp" weight="1"/>
+        </Random>
+      </ClusterTier>
+      <ClusterTier tier="8" >
+        <Random maxslotsused="5" activationtimemin="690" activationtimemax="4860" positioncooldown="300" >
+          <TreasureMob name="EVENT_EASTER_RESOURCE_T6" biome="Forest" weight="1"/>
+          <TreasureMob name="EVENT_EASTER_RESOURCE_T6" biome="Highland" weight="1"/>
+          <TreasureMob name="EVENT_EASTER_RESOURCE_T6" biome="Mountain" weight="1"/>
+          <TreasureMob name="EVENT_EASTER_RESOURCE_T6" biome="Steppe" weight="1"/>
+          <TreasureMob name="EVENT_EASTER_RESOURCE_T6" biome="Swamp" weight="1"/>
+        </Random>
+      </ClusterTier>
+    </Distribute>
+    
+    <Distribute continent="Royal" subtype="ANNIVERSARY">
       <ClusterTier tier="5" >
         <Random maxslotsused="1" activationtimemin="705" activationtimemax="4935" positioncooldown="300" >
           <TreasureMob weight="1" biome="Forest" name="EVENT_ANNIVERSARY_STATUE_SEASON_01"/>
@@ -2346,8 +2442,8 @@
           <TreasureMob weight="3" biome="Swamp" name="EVENT_ANNIVERSARY_STATUE_SEASON_14_REGULAR"/>
         </Random>
       </ClusterTier>
-    </Continent>
-    <Continent name="Outlands" subtype="ANNIVERSARY">
+    </Distribute>
+    <Distribute continent="Outlands" subtype="ANNIVERSARY">
       <ClusterTier tier="5" >
         <Random maxslotsused="1" activationtimemin="705" activationtimemax="4935" positioncooldown="300" >
           <TreasureMob weight="1" biome="Forest" name="EVENT_ANNIVERSARY_STATUE_SEASON_01"/>
@@ -2700,9 +2796,9 @@
           <TreasureMob weight="3" biome="Swamp" name="EVENT_ANNIVERSARY_STATUE_SEASON_14_REGULAR"/>
         </Random>
       </ClusterTier>
-    </Continent>
+    </Distribute>
     <!--Castles-->
-    <Continent name="Outlands" subtype="CASTLE_OUTPOST">      
+    <Distribute continent="Outlands" subtype="CASTLE_OUTPOST">      
       <ClusterTier tier="5" >
         <Event name="CASTLE_OUTPOST_STANDARD" maxslotsused="1" positioncooldown="1">
           <TreasureLootchest name="CHEST_CASTLE_OUTPOST_STANDARD" weight="40" biome="Forest"/>
@@ -2827,8 +2923,8 @@
           <TreasureLootchest name="CHEST_CASTLE_OUTPOST_LEGENDARY" weight="1" biome="Swamp"/>
         </Event>
       </ClusterTier>
-    </Continent>
-    <Continent name="Outlands" subtype="CASTLE">
+    </Distribute>
+    <Distribute continent="Outlands" subtype="CASTLE">
       <ClusterTier tier="5" >
         <Event name="CASTLE_STANDARD" maxslotsused="1" positioncooldown="1">
           <TreasureLootchest name="CHEST_CASTLE_STANDARD" weight="24" biome="Forest"/>
@@ -2953,10 +3049,10 @@
           <TreasureLootchest name="CHEST_CASTLE_LEGENDARY" weight="1" biome="Swamp"/>
         </Event>
       </ClusterTier>
-    </Continent>
+    </Distribute>
     <!--Dynamic Events-->
     <!--Dynamic Events: Resource Fiber-->
-    <Continent name="Royal" subtype="DYNAMIC_EVENT_FIBER">
+    <Distribute continent="Royal" subtype="DYNAMIC_EVENT_FIBER">
       <ClusterTier tier="5" >
         <Random maxslotsused="3" activationtimemin="5400" activationtimemax="16200" positioncooldown="16200" >
           <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_FIBER_T4" biome="Mountain" weight="1" />
@@ -2987,8 +3083,8 @@
           <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_FIBER_T6" biome="Swamp"    weight="1" />
         </Random>
       </ClusterTier>
-    </Continent>
-    <Continent name="Outlands" subtype="DYNAMIC_EVENT_FIBER">
+    </Distribute>
+    <Distribute continent="Outlands" subtype="DYNAMIC_EVENT_FIBER">
       <ClusterTier tier="5" >
         <Random maxslotsused="3" activationtimemin="5400" activationtimemax="16200" positioncooldown="16200" >
           <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_FIBER_T4" biome="Mountain" weight="1" />
@@ -3029,9 +3125,9 @@
           <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_FIBER_T8" biome="Swamp"    weight="1" />
         </Random>
       </ClusterTier>
-    </Continent>
+    </Distribute>
     <!--Dynamic Events: Resource Hide-->
-    <Continent name="Royal" subtype="DYNAMIC_EVENT_HIDE">
+    <Distribute continent="Royal" subtype="DYNAMIC_EVENT_HIDE">
       <ClusterTier tier="5" >
         <Random maxslotsused="3" activationtimemin="5400" activationtimemax="16200" positioncooldown="16200" >
           <TreasureMob name="OPEN_WORLD_HIDEMOB_FOREST_T4" biome="Forest" weight="1" />
@@ -3062,8 +3158,8 @@
           <TreasureMob name="OPEN_WORLD_HIDEMOB_SWAMP_T6"  biome="Swamp"  weight="1" />
         </Random>
       </ClusterTier>
-    </Continent>
-    <Continent name="Outlands" subtype="DYNAMIC_EVENT_HIDE">
+    </Distribute>
+    <Distribute continent="Outlands" subtype="DYNAMIC_EVENT_HIDE">
       <ClusterTier tier="5" >
         <Random maxslotsused="3" activationtimemin="5400" activationtimemax="16200" positioncooldown="16200" >
           <TreasureMob name="OPEN_WORLD_HIDEMOB_FOREST_T4" biome="Forest" weight="1" />
@@ -3104,9 +3200,9 @@
           <TreasureMob name="OPEN_WORLD_HIDEMOB_SWAMP_T8"  biome="Swamp"  weight="1" />
         </Random>
       </ClusterTier>
-    </Continent>
+    </Distribute>
     <!--Dynamic Events: Resource Ore-->
-    <Continent name="Royal" subtype="DYNAMIC_EVENT_ORE">
+    <Distribute continent="Royal" subtype="DYNAMIC_EVENT_ORE">
       <ClusterTier tier="5" >
         <Random maxslotsused="3" activationtimemin="5400" activationtimemax="16200" positioncooldown="16200" >
           <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ORE_T4" biome="Mountain" weight="1" />
@@ -3137,8 +3233,8 @@
           <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ORE_T6" biome="Highland" weight="1" />
         </Random>
       </ClusterTier>
-    </Continent>
-    <Continent name="Outlands" subtype="DYNAMIC_EVENT_ORE">
+    </Distribute>
+    <Distribute continent="Outlands" subtype="DYNAMIC_EVENT_ORE">
       <ClusterTier tier="5" >
         <Random maxslotsused="3" activationtimemin="5400" activationtimemax="16200" positioncooldown="16200" >
           <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ORE_T4" biome="Mountain" weight="1" />
@@ -3179,9 +3275,9 @@
           <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ORE_T8" biome="Highland" weight="1" />
         </Random>
       </ClusterTier>
-    </Continent>
+    </Distribute>
     <!--Dynamic Events: Resource Rock-->
-    <Continent name="Royal" subtype="DYNAMIC_EVENT_ROCK">
+    <Distribute continent="Royal" subtype="DYNAMIC_EVENT_ROCK">
       <ClusterTier tier="5" >
         <Random maxslotsused="3" activationtimemin="5400" activationtimemax="16200" positioncooldown="16200" >
           <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ROCK_T4" biome="Mountain" weight="1" />
@@ -3212,8 +3308,8 @@
           <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ROCK_T6" biome="Forest"   weight="1" />
         </Random>
       </ClusterTier>
-    </Continent>
-    <Continent name="Outlands" subtype="DYNAMIC_EVENT_ROCK">
+    </Distribute>
+    <Distribute continent="Outlands" subtype="DYNAMIC_EVENT_ROCK">
       <ClusterTier tier="5" >
         <Random maxslotsused="3" activationtimemin="5400" activationtimemax="16200" positioncooldown="16200" >
           <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ROCK_T4" biome="Mountain" weight="1" />
@@ -3254,9 +3350,9 @@
           <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_ROCK_T8" biome="Forest"   weight="1" />
         </Random>
       </ClusterTier>
-    </Continent>
+    </Distribute>
     <!--Dynamic Events: Resource Wood-->
-    <Continent name="Royal" subtype="DYNAMIC_EVENT_WOOD">
+    <Distribute continent="Royal" subtype="DYNAMIC_EVENT_WOOD">
       <ClusterTier tier="5" >
         <Random maxslotsused="3" activationtimemin="5400" activationtimemax="16200" positioncooldown="16200" >
           <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_WOOD_T4" biome="Forest"   weight="1" />
@@ -3287,8 +3383,8 @@
           <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_WOOD_T6" biome="Swamp"    weight="1" />
         </Random>
       </ClusterTier>
-    </Continent>
-    <Continent name="Outlands" subtype="DYNAMIC_EVENT_WOOD">
+    </Distribute>
+    <Distribute continent="Outlands" subtype="DYNAMIC_EVENT_WOOD">
       <ClusterTier tier="5" >
         <Random maxslotsused="3" activationtimemin="5400" activationtimemax="16200" positioncooldown="16200" >
           <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_WOOD_T4" biome="Forest"   weight="1" />
@@ -3329,10 +3425,10 @@
           <TreasureHarvestable name="OPEN_WORLD_HARVESTABLE_WOOD_T8" biome="Swamp"    weight="1" />
         </Random>
       </ClusterTier>
-    </Continent>
+    </Distribute>
   
     <!--Special Mobs-->
-    <Continent name="Mists" subtype="SPECIALMOBS">
+    <Distribute continent="Mists" subtype="SPECIALMOBS">
       <ClusterTier tier="5">
         <Mists maxslotsused="5" activationtimemin="0" activationtimemax="0" positioncooldown="300">
           <TreasureMob name="MISTS_MOB_TREASUREDRONE_T5" biome="Mists" weight="1"/>
@@ -3356,8 +3452,8 @@
           <TreasureMob name="MISTS_MOB_CRYSTALSPIDER_SMALL_T8" biome="Mists" weight="24" pvprule="PvpForced"/>        
         </Mists>
       </ClusterTier>
-    </Continent>
-    <Continent name="Mists" subtype="MYTHICALMOBS">
+    </Distribute>
+    <Distribute continent="Mists" subtype="MYTHICALMOBS">
       <ClusterTier tier="5">
         <Mists maxslotsused="5" activationtimemin="0" activationtimemax="0" positioncooldown="300">
           <TreasureMob name="MISTS_MOB_MYTHICAL_GRIFFIN_T4"     biome="Mists" weight="1" pvprule="PvpAllowed"/>
@@ -3414,7 +3510,7 @@
           <TreasureMob name="MISTS_MOB_MYTHICAL_FAIRYDRAGON_T8" biome="Mists"   weight="455" pvprule="PvpForced"/>
         </Mists>
       </ClusterTier>
-    </Continent>
+    </Distribute>
   </GameobjectDistribution>
   
   <!--####################################################################################-->
@@ -4715,6 +4811,63 @@
 	  maxmoblifetime="86400"    
     hideforclient="true"
     ><Rarities><Rarity rarity="0" weight="0" /></Rarities>
+    </TreasureMob>
+    
+    <!--Easter Event - Resource Mobs (Eggs)-->
+    <TreasureMob
+      uniquename="EVENT_EASTER_RESOURCE_T2"
+      killeventloggingradius="20"
+      mob="T2_MOB_EVENT_EASTER_RESOURCE"
+      minmoblifetime="86400"
+      maxmoblifetime="86400"
+      >
+      <Rarities>
+        <Rarity rarity="0" weight="0" />
+      </Rarities>
+    </TreasureMob>
+    <TreasureMob
+      uniquename="EVENT_EASTER_RESOURCE_T3"
+      killeventloggingradius="20"
+      mob="T3_MOB_EVENT_EASTER_RESOURCE"
+      minmoblifetime="86400"
+      maxmoblifetime="86400"
+      >
+      <Rarities>
+        <Rarity rarity="0" weight="0" />
+      </Rarities>
+    </TreasureMob>
+    <TreasureMob
+      uniquename="EVENT_EASTER_RESOURCE_T4"
+      killeventloggingradius="20"
+      mob="T4_MOB_EVENT_EASTER_RESOURCE"
+      minmoblifetime="86400"
+      maxmoblifetime="86400"
+      >
+      <Rarities>
+        <Rarity rarity="0" weight="0" />
+      </Rarities>
+    </TreasureMob>
+    <TreasureMob
+      uniquename="EVENT_EASTER_RESOURCE_T5"
+      killeventloggingradius="20"
+      mob="T5_MOB_EVENT_EASTER_RESOURCE"
+      minmoblifetime="86400"
+      maxmoblifetime="86400"
+      >
+      <Rarities>
+        <Rarity rarity="0" weight="0" />
+      </Rarities>
+    </TreasureMob>
+    <TreasureMob
+      uniquename="EVENT_EASTER_RESOURCE_T6"
+      killeventloggingradius="20"
+      mob="T6_MOB_EVENT_EASTER_RESOURCE"
+      minmoblifetime="86400"
+      maxmoblifetime="86400"
+      >
+      <Rarities>
+        <Rarity rarity="0" weight="0" />
+      </Rarities>
     </TreasureMob>
     
     <!--Anniversary Event - Big Statues-->
