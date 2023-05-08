@@ -2,11 +2,292 @@
 <LootChests xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="lootchests.xsd">
 
   <RareStateMappings>
-    <RareState name="standard"  fxindex="0" />
-    <RareState name="uncommon"  fxindex="1" />
-    <RareState name="rare"      fxindex="2" />
-    <RareState name="legendary" fxindex="3" />
+    <RareState name="none"      fxindex="0" />
+    <RareState name="standard"  fxindex="1" />
+    <RareState name="uncommon"  fxindex="2" />
+    <RareState name="rare"      fxindex="3" />
+    <RareState name="legendary" fxindex="4" />
   </RareStateMappings>
+
+  <!--************************************-->
+  <!-- MIST DUNGEON CHESTS-->
+  <!--************************************-->
+
+  <LootChest uniquename="MD_UNDEAD_SOLO_BOSS" avatar="RD_CHEST_BOSS" faction="UNDEAD" alertradius="15" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_standard" spawnsoundevent="Play_spawn_loot_standard" namelocatag="@LOOTCHEST_NAME_STANDARD" locklocatag="@CORRUPTED_DUNGEON_CHEST_LOCK_MESSAGE" dangerstate="normal" prefab="LOOTCHEST_REGULAR_01">
+    <RareStates hiderarityuntil="OnUnlock">
+      <RareState state="standard" weight="59">
+        <Loot>
+          <LootByTier tier="5">
+            <LootListReference name="T5_MISTS_DUNGEON_STANDARD"/>
+          </LootByTier>
+          <LootByTier tier="6">
+            <LootListReference name="T6_MISTS_DUNGEON_STANDARD"/>
+          </LootByTier>
+          <LootByTier tier="7">
+            <LootListReference name="T7_MISTS_DUNGEON_STANDARD" chance="1.125"/>
+          </LootByTier>
+          <LootByTier tier="8">
+            <LootListReference name="T8_MISTS_DUNGEON_STANDARD" chance="1.25"/>
+          </LootByTier>
+        </Loot>
+      </RareState>
+      <RareState state="uncommon" weight="30" spawnsoundevent="Play_spawn_loot_uncommon" opensoundevent="Play_open_chest_uncommon" namelocatag="@LOOTCHEST_NAME_UNCOMMON">
+        <Loot>
+          <LootByTier tier="5">
+            <LootListReference name="T5_MISTS_DUNGEON_UNCOMMON"/>
+          </LootByTier>
+          <LootByTier tier="6">
+            <LootListReference name="T6_MISTS_DUNGEON_UNCOMMON"/>
+          </LootByTier>
+          <LootByTier tier="7">
+            <LootListReference name="T7_MISTS_DUNGEON_UNCOMMON" chance="1.125"/>
+          </LootByTier>
+          <LootByTier tier="8">
+            <LootListReference name="T8_MISTS_DUNGEON_UNCOMMON" chance="1.25"/>
+          </LootByTier>
+        </Loot>
+      </RareState>
+      <RareState state="rare" weight="10" spawnsoundevent="Play_spawn_loot_rare" opensoundevent="Play_open_chest_rare" namelocatag="@LOOTCHEST_NAME_RARE">
+        <Loot>
+          <LootByTier tier="5">
+            <LootListReference name="T5_MISTS_DUNGEON_RARE"/>
+          </LootByTier>
+          <LootByTier tier="6">
+            <LootListReference name="T6_MISTS_DUNGEON_RARE"/>
+          </LootByTier>
+          <LootByTier tier="7">
+            <LootListReference name="T7_MISTS_DUNGEON_RARE" chance="1.125"/>
+          </LootByTier>
+          <LootByTier tier="8">
+            <LootListReference name="T8_MISTS_DUNGEON_RARE" chance="1.25"/>
+          </LootByTier>
+        </Loot>
+      </RareState>
+      <RareState state="legendary" weight="1" spawnsoundevent="Play_spawn_loot_legendary" opensoundevent="Play_open_chest_legendary" namelocatag="@LOOTCHEST_NAME_LEGENDARY">
+        <Loot>
+          <LootByTier tier="5">
+            <LootListReference name="T5_MISTS_DUNGEON_LEGENDARY"/>
+          </LootByTier>
+          <LootByTier tier="6">
+            <LootListReference name="T6_MISTS_DUNGEON_LEGENDARY"/>
+          </LootByTier>
+          <LootByTier tier="7">
+            <LootListReference name="T7_MISTS_DUNGEON_LEGENDARY" chance="1.125"/>
+          </LootByTier>
+          <LootByTier tier="8">
+            <LootListReference name="T8_MISTS_DUNGEON_LEGENDARY" chance="1.25"/>
+          </LootByTier>
+        </Loot>
+      </RareState>
+    </RareStates>
+  </LootChest>
+	
+	<LootChest uniquename="MD_UNDEAD_SOLO_REWARD" avatar="RD_CHEST_BOSS" faction="none" ismistdungeonchest="true" alertradius="15" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_standard" spawnsoundevent="Play_mist_dungeon_clear_room_transition" namelocatag="@LOOTCHEST_NAME_STANDARD" locklocatag="@CORRUPTED_DUNGEON_CHEST_LOCK_MESSAGE" dangerstate="normal" prefab="MISTS_GREEN_DNG_CASTLE_STATUE_LOOTCHEST_A">
+    <RareStates hiderarityuntil="OnUnlock">
+      <RareState state="standard" weight="59">
+        <Loot>
+          <LootByTier tier="5">
+            <LootListReference name="T5_MISTS_DUNGEON_STANDARD"/>
+          </LootByTier>
+          <LootByTier tier="6">
+            <LootListReference name="T6_MISTS_DUNGEON_STANDARD"/>
+          </LootByTier>
+          <LootByTier tier="7">
+            <LootListReference name="T7_MISTS_DUNGEON_STANDARD" chance="1.125"/>
+          </LootByTier>
+          <LootByTier tier="8">
+            <LootListReference name="T8_MISTS_DUNGEON_STANDARD" chance="1.25"/>
+          </LootByTier>
+        </Loot>
+      </RareState>
+      <RareState state="uncommon" weight="30" spawnsoundevent="Play_spawn_loot_uncommon" opensoundevent="Play_open_chest_uncommon" namelocatag="@LOOTCHEST_NAME_UNCOMMON">
+        <Loot>
+          <LootByTier tier="5">
+            <LootListReference name="T5_MISTS_DUNGEON_UNCOMMON"/>
+          </LootByTier>
+          <LootByTier tier="6">
+            <LootListReference name="T6_MISTS_DUNGEON_UNCOMMON"/>
+          </LootByTier>
+          <LootByTier tier="7">
+            <LootListReference name="T7_MISTS_DUNGEON_UNCOMMON" chance="1.125"/>
+          </LootByTier>
+          <LootByTier tier="8">
+            <LootListReference name="T8_MISTS_DUNGEON_UNCOMMON" chance="1.25"/>
+          </LootByTier>
+        </Loot>
+      </RareState>
+      <RareState state="rare" weight="10" spawnsoundevent="Play_spawn_loot_rare" opensoundevent="Play_open_chest_rare" namelocatag="@LOOTCHEST_NAME_RARE">
+        <Loot>
+          <LootByTier tier="5">
+            <LootListReference name="T5_MISTS_DUNGEON_RARE"/>
+          </LootByTier>
+          <LootByTier tier="6">
+            <LootListReference name="T6_MISTS_DUNGEON_RARE"/>
+          </LootByTier>
+          <LootByTier tier="7">
+            <LootListReference name="T7_MISTS_DUNGEON_RARE" chance="1.125"/>
+          </LootByTier>
+          <LootByTier tier="8">
+            <LootListReference name="T8_MISTS_DUNGEON_RARE" chance="1.25"/>
+          </LootByTier>
+        </Loot>
+      </RareState>
+      <RareState state="legendary" weight="1" spawnsoundevent="Play_spawn_loot_legendary" opensoundevent="Play_open_chest_legendary" namelocatag="@LOOTCHEST_NAME_LEGENDARY">
+        <Loot>
+          <LootByTier tier="5">
+            <LootListReference name="T5_MISTS_DUNGEON_LEGENDARY"/>
+          </LootByTier>
+          <LootByTier tier="6">
+            <LootListReference name="T6_MISTS_DUNGEON_LEGENDARY"/>
+          </LootByTier>
+          <LootByTier tier="7">
+            <LootListReference name="T7_MISTS_DUNGEON_LEGENDARY" chance="1.125"/>
+          </LootByTier>
+          <LootByTier tier="8">
+            <LootListReference name="T8_MISTS_DUNGEON_LEGENDARY" chance="1.25"/>
+          </LootByTier>
+        </Loot>
+      </RareState>
+    </RareStates>
+  </LootChest>
+
+  <LootChest uniquename="MD_UNDEAD_DUO_BOSS" avatar="RD_CHEST_BOSS" faction="UNDEAD" alertradius="15" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_standard" spawnsoundevent="Play_spawn_loot_standard" namelocatag="@LOOTCHEST_NAME_STANDARD" locklocatag="@CORRUPTED_DUNGEON_CHEST_LOCK_MESSAGE" dangerstate="normal" prefab="LOOTCHEST_REGULAR_01">
+    <RareStates hiderarityuntil="OnUnlock">
+      <RareState state="standard" weight="59">
+        <Loot>
+          <LootByTier tier="5">
+            <LootListReference name="T5_MISTS_DUNGEON_STANDARD" chance="1.5"/>
+          </LootByTier>
+          <LootByTier tier="6">
+            <LootListReference name="T6_MISTS_DUNGEON_STANDARD" chance="1.5"/>
+          </LootByTier>
+          <LootByTier tier="7">
+            <LootListReference name="T7_MISTS_DUNGEON_STANDARD" chance="1.5"/>
+          </LootByTier>
+          <LootByTier tier="8">
+            <LootListReference name="T8_MISTS_DUNGEON_STANDARD" chance="1.5"/>
+          </LootByTier>
+        </Loot>
+      </RareState>
+      <RareState state="uncommon" weight="30" spawnsoundevent="Play_spawn_loot_uncommon" opensoundevent="Play_open_chest_uncommon" namelocatag="@LOOTCHEST_NAME_UNCOMMON">
+        <Loot>
+          <LootByTier tier="5">
+            <LootListReference name="T5_MISTS_DUNGEON_UNCOMMON" chance="1.5"/>
+          </LootByTier>
+          <LootByTier tier="6">
+            <LootListReference name="T6_MISTS_DUNGEON_UNCOMMON" chance="1.5"/>
+          </LootByTier>
+          <LootByTier tier="7">
+            <LootListReference name="T7_MISTS_DUNGEON_UNCOMMON" chance="1.5"/>
+          </LootByTier>
+          <LootByTier tier="8">
+            <LootListReference name="T8_MISTS_DUNGEON_UNCOMMON" chance="1.5"/>
+          </LootByTier>
+        </Loot>
+      </RareState>
+      <RareState state="rare" weight="10" spawnsoundevent="Play_spawn_loot_rare" opensoundevent="Play_open_chest_rare" namelocatag="@LOOTCHEST_NAME_RARE">
+        <Loot>
+          <LootByTier tier="5">
+            <LootListReference name="T5_MISTS_DUNGEON_RARE" chance="1.5"/>
+          </LootByTier>
+          <LootByTier tier="6">
+            <LootListReference name="T6_MISTS_DUNGEON_RARE" chance="1.5"/>
+          </LootByTier>
+          <LootByTier tier="7">
+            <LootListReference name="T7_MISTS_DUNGEON_RARE" chance="1.5"/>
+          </LootByTier>
+          <LootByTier tier="8">
+            <LootListReference name="T8_MISTS_DUNGEON_RARE" chance="1.5"/>
+          </LootByTier>
+        </Loot>
+      </RareState>
+      <RareState state="legendary" weight="1" spawnsoundevent="Play_spawn_loot_legendary" opensoundevent="Play_open_chest_legendary" namelocatag="@LOOTCHEST_NAME_LEGENDARY">
+        <Loot>
+          <LootByTier tier="5">
+            <LootListReference name="T5_MISTS_DUNGEON_LEGENDARY" chance="1.5"/>
+          </LootByTier>
+          <LootByTier tier="6">
+            <LootListReference name="T6_MISTS_DUNGEON_LEGENDARY" chance="1.5"/>
+          </LootByTier>
+          <LootByTier tier="7">
+            <LootListReference name="T7_MISTS_DUNGEON_LEGENDARY" chance="1.5"/>
+          </LootByTier>
+          <LootByTier tier="8">
+            <LootListReference name="T8_MISTS_DUNGEON_LEGENDARY" chance="1.5"/>
+          </LootByTier>
+        </Loot>
+      </RareState>
+    </RareStates>
+  </LootChest>
+
+  <LootChest uniquename="MD_UNDEAD_DUO_REWARD" avatar="RD_CHEST_BOSS" faction="none" ismistdungeonchest="true" alertradius="15" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_standard" spawnsoundevent="Play_mist_dungeon_clear_room_transition" namelocatag="@LOOTCHEST_NAME_STANDARD" locklocatag="@CORRUPTED_DUNGEON_CHEST_LOCK_MESSAGE" dangerstate="normal" prefab="MISTS_GREEN_DNG_CASTLE_STATUE_LOOTCHEST_A">
+    <RareStates hiderarityuntil="OnUnlock">
+      <RareState state="standard" weight="59">
+        <Loot>
+          <LootByTier tier="5">
+            <LootListReference name="T5_MISTS_DUNGEON_STANDARD" chance="1.5"/>
+          </LootByTier>
+          <LootByTier tier="6">
+            <LootListReference name="T6_MISTS_DUNGEON_STANDARD" chance="1.5"/>
+          </LootByTier>
+          <LootByTier tier="7">
+            <LootListReference name="T7_MISTS_DUNGEON_STANDARD" chance="1.5"/>
+          </LootByTier>
+          <LootByTier tier="8">
+            <LootListReference name="T8_MISTS_DUNGEON_STANDARD" chance="1.5"/>
+          </LootByTier>
+        </Loot>
+      </RareState>
+      <RareState state="uncommon" weight="30" spawnsoundevent="Play_spawn_loot_uncommon" opensoundevent="Play_open_chest_uncommon" namelocatag="@LOOTCHEST_NAME_UNCOMMON">
+        <Loot>
+          <LootByTier tier="5">
+            <LootListReference name="T5_MISTS_DUNGEON_UNCOMMON" chance="1.5"/>
+          </LootByTier>
+          <LootByTier tier="6">
+            <LootListReference name="T6_MISTS_DUNGEON_UNCOMMON" chance="1.5"/>
+          </LootByTier>
+          <LootByTier tier="7">
+            <LootListReference name="T7_MISTS_DUNGEON_UNCOMMON" chance="1.5"/>
+          </LootByTier>
+          <LootByTier tier="8">
+            <LootListReference name="T8_MISTS_DUNGEON_UNCOMMON" chance="1.5"/>
+          </LootByTier>
+        </Loot>
+      </RareState>
+      <RareState state="rare" weight="10" spawnsoundevent="Play_spawn_loot_rare" opensoundevent="Play_open_chest_rare" namelocatag="@LOOTCHEST_NAME_RARE">
+        <Loot>
+          <LootByTier tier="5">
+            <LootListReference name="T5_MISTS_DUNGEON_RARE" chance="1.5"/>
+          </LootByTier>
+          <LootByTier tier="6">
+            <LootListReference name="T6_MISTS_DUNGEON_RARE" chance="1.5"/>
+          </LootByTier>
+          <LootByTier tier="7">
+            <LootListReference name="T7_MISTS_DUNGEON_RARE" chance="1.5"/>
+          </LootByTier>
+          <LootByTier tier="8">
+            <LootListReference name="T8_MISTS_DUNGEON_RARE" chance="1.5"/>
+          </LootByTier>
+        </Loot>
+      </RareState>
+      <RareState state="legendary" weight="1" spawnsoundevent="Play_spawn_loot_legendary" opensoundevent="Play_open_chest_legendary" namelocatag="@LOOTCHEST_NAME_LEGENDARY">
+        <Loot>
+          <LootByTier tier="5">
+            <LootListReference name="T5_MISTS_DUNGEON_LEGENDARY" chance="1.5"/>
+          </LootByTier>
+          <LootByTier tier="6">
+            <LootListReference name="T6_MISTS_DUNGEON_LEGENDARY" chance="1.5"/>
+          </LootByTier>
+          <LootByTier tier="7">
+            <LootListReference name="T7_MISTS_DUNGEON_LEGENDARY" chance="1.5"/>
+          </LootByTier>
+          <LootByTier tier="8">
+            <LootListReference name="T8_MISTS_DUNGEON_LEGENDARY" chance="1.5"/>
+          </LootByTier>
+        </Loot>
+      </RareState>
+    </RareStates>
+  </LootChest>
   
   <!--************************************-->
   <!-- STATIC DUNGEON CHESTS-->
@@ -3467,7 +3748,7 @@
 
   <!--Morgana-->
   <!--boss-->
-  <LootChest uniquename="MORGANA_VETERAN_CHEST_BOSS_UNCOMMON" avatar="RD_CHEST_BOSS" faction="MORGANA" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_uncommon" spawnsoundevent="Play_spawn_loot_uncommon" namelocatag="@LOOTCHEST_NAME_UNCOMMON" prefab="FOREST_GREEN_LOOTCHEST_MORGANA_BOSS_UNCOMMON">
+  <LootChest uniquename="MORGANA_VETERAN_CHEST_BOSS_UNCOMMON" avatar="RD_CHEST_BOSS" faction="MORGANA" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_uncommon" spawnsoundevent="Play_spawn_loot_uncommon" namelocatag="@LOOTCHEST_NAME_UNCOMMON" prefab="LOOTCHEST_REGULAR_02">
     <RareStates hiderarityuntil="OnUnlock">
       <RareState state="uncommon">
         <Loot>
@@ -3500,7 +3781,7 @@
       </RareState>
     </RareStates>
   </LootChest>
-  <LootChest uniquename="MORGANA_VETERAN_CHEST_BOSS_RARE" avatar="RD_CHEST_BOSS" faction="MORGANA" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_rare" spawnsoundevent="Play_spawn_loot_rare" namelocatag="@LOOTCHEST_NAME_RARE" prefab="FOREST_GREEN_LOOTCHEST_MORGANA_BOSS_RARE">
+  <LootChest uniquename="MORGANA_VETERAN_CHEST_BOSS_RARE" avatar="RD_CHEST_BOSS" faction="MORGANA" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_rare" spawnsoundevent="Play_spawn_loot_rare" namelocatag="@LOOTCHEST_NAME_RARE" prefab="LOOTCHEST_REGULAR_03">
     <RareStates hiderarityuntil="OnUnlock">
       <RareState state="rare">
         <Loot>
@@ -3533,7 +3814,7 @@
       </RareState>
     </RareStates>
   </LootChest>
-  <LootChest uniquename="MORGANA_VETERAN_CHEST_BOSS_LEGENDARY" avatar="RD_CHEST_BOSS" faction="MORGANA" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_legendary" spawnsoundevent="Play_spawn_loot_legendary" namelocatag="@LOOTCHEST_NAME_LEGENDARY" prefab="FOREST_GREEN_LOOTCHEST_MORGANA_BOSS_LEGENDARY">
+  <LootChest uniquename="MORGANA_VETERAN_CHEST_BOSS_LEGENDARY" avatar="RD_CHEST_BOSS" faction="MORGANA" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_legendary" spawnsoundevent="Play_spawn_loot_legendary" namelocatag="@LOOTCHEST_NAME_LEGENDARY" prefab="LOOTCHEST_REGULAR_04">
     <RareStates hiderarityuntil="OnUnlock">
       <RareState state="legendary">
         <Loot>
@@ -3567,7 +3848,7 @@
     </RareStates>
   </LootChest>
   <!--normal-->
-  <LootChest uniquename="MORGANA_VETERAN_CHEST_STANDARD" avatar="RD_CHEST_BOSS" faction="MORGANA" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_standard" spawnsoundevent="Play_spawn_loot_standard" namelocatag="@LOOTCHEST_NAME_STANDARD" prefab="FOREST_GREEN_LOOTCHEST_MORGANA_STANDARD">
+  <LootChest uniquename="MORGANA_VETERAN_CHEST_STANDARD" avatar="RD_CHEST_BOSS" faction="MORGANA" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_standard" spawnsoundevent="Play_spawn_loot_standard" namelocatag="@LOOTCHEST_NAME_STANDARD" prefab="LOOTCHEST_REGULAR_01">
     <RareStates hiderarityuntil="OnUnlock">
       <RareState state="standard">
         <Loot>
@@ -3595,7 +3876,7 @@
       </RareState>
     </RareStates>
   </LootChest>
-  <LootChest uniquename="MORGANA_VETERAN_CHEST_UNCOMMON" avatar="RD_CHEST_BOSS" faction="MORGANA" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_uncommon" spawnsoundevent="Play_spawn_loot_uncommon" namelocatag="@LOOTCHEST_NAME_UNCOMMON" prefab="FOREST_GREEN_LOOTCHEST_MORGANA_UNCOMMON">
+  <LootChest uniquename="MORGANA_VETERAN_CHEST_UNCOMMON" avatar="RD_CHEST_BOSS" faction="MORGANA" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_uncommon" spawnsoundevent="Play_spawn_loot_uncommon" namelocatag="@LOOTCHEST_NAME_UNCOMMON" prefab="LOOTCHEST_REGULAR_02">
     <RareStates hiderarityuntil="OnUnlock">
       <RareState state="uncommon">
         <Loot>
@@ -3623,7 +3904,7 @@
       </RareState>
     </RareStates>
   </LootChest>
-  <LootChest uniquename="MORGANA_VETERAN_CHEST_RARE" avatar="RD_CHEST_BOSS" faction="MORGANA" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_rare" spawnsoundevent="Play_spawn_loot_rare" namelocatag="@LOOTCHEST_NAME_RARE" prefab="FOREST_GREEN_LOOTCHEST_MORGANA_RARE">
+  <LootChest uniquename="MORGANA_VETERAN_CHEST_RARE" avatar="RD_CHEST_BOSS" faction="MORGANA" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_rare" spawnsoundevent="Play_spawn_loot_rare" namelocatag="@LOOTCHEST_NAME_RARE" prefab="LOOTCHEST_REGULAR_03">
     <RareStates hiderarityuntil="OnUnlock">
       <RareState state="rare">
         <Loot>
@@ -3651,7 +3932,7 @@
       </RareState>
     </RareStates>
   </LootChest>
-  <LootChest uniquename="MORGANA_VETERAN_CHEST_LEGENDARY" avatar="RD_CHEST_BOSS" faction="MORGANA" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_legendary" spawnsoundevent="Play_spawn_loot_legendary" namelocatag="@LOOTCHEST_NAME_LEGENDARY" prefab="FOREST_GREEN_LOOTCHEST_MORGANA_LEGENDARY">
+  <LootChest uniquename="MORGANA_VETERAN_CHEST_LEGENDARY" avatar="RD_CHEST_BOSS" faction="MORGANA" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_legendary" spawnsoundevent="Play_spawn_loot_legendary" namelocatag="@LOOTCHEST_NAME_LEGENDARY" prefab="LOOTCHEST_REGULAR_04">
     <RareStates hiderarityuntil="OnUnlock">
       <RareState state="legendary">
         <Loot>
@@ -3682,7 +3963,7 @@
 
   <!--Keeper-->
   <!--Keeper Legacy Boss Chests for Anniversary Dungeon-->
-  <LootChest uniquename="KEEPER_VETERAN_CHEST_BOSS_UNCOMMON_ANNIVERSARY" avatar="RD_CHEST_BOSS" faction="KEEPER" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_uncommon" spawnsoundevent="Play_spawn_loot_uncommon" namelocatag="@LOOTCHEST_NAME_UNCOMMON" prefab="FOREST_GREEN_LOOTCHEST_KEEPER_VETERAN_CHEST_BOSS_UNCOMMON_ANNIVERSARY">
+  <LootChest uniquename="KEEPER_VETERAN_CHEST_BOSS_UNCOMMON_ANNIVERSARY" avatar="RD_CHEST_BOSS" faction="KEEPER" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_uncommon" spawnsoundevent="Play_spawn_loot_uncommon" namelocatag="@LOOTCHEST_NAME_UNCOMMON" prefab="LOOTCHEST_REGULAR_02">
     <RareStates hiderarityuntil="OnUnlock">
       <RareState state="uncommon">
         <Loot>
@@ -3725,7 +4006,7 @@
       </RareState>
     </RareStates>
   </LootChest>
-  <LootChest uniquename="KEEPER_VETERAN_CHEST_BOSS_RARE_ANNIVERSARY" avatar="RD_CHEST_BOSS" faction="KEEPER" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_rare" spawnsoundevent="Play_spawn_loot_rare" namelocatag="@LOOTCHEST_NAME_RARE" prefab="FOREST_GREEN_LOOTCHEST_KEEPER_VETERAN_CHEST_BOSS_RARE_ANNIVERSARY">
+  <LootChest uniquename="KEEPER_VETERAN_CHEST_BOSS_RARE_ANNIVERSARY" avatar="RD_CHEST_BOSS" faction="KEEPER" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_rare" spawnsoundevent="Play_spawn_loot_rare" namelocatag="@LOOTCHEST_NAME_RARE" prefab="LOOTCHEST_REGULAR_03">
     <RareStates hiderarityuntil="OnUnlock">
       <RareState state="rare">
         <Loot>
@@ -3768,7 +4049,7 @@
       </RareState>
     </RareStates>
   </LootChest>
-  <LootChest uniquename="KEEPER_VETERAN_CHEST_BOSS_LEGENDARY_ANNIVERSARY" avatar="RD_CHEST_BOSS" faction="KEEPER" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_legendary" spawnsoundevent="Play_spawn_loot_legendary" namelocatag="@LOOTCHEST_NAME_LEGENDARY" prefab="FOREST_GREEN_LOOTCHEST_KEEPER_VETERAN_CHEST_BOSS_LEGENDARY_ANNIVERSARY">
+  <LootChest uniquename="KEEPER_VETERAN_CHEST_BOSS_LEGENDARY_ANNIVERSARY" avatar="RD_CHEST_BOSS" faction="KEEPER" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_legendary" spawnsoundevent="Play_spawn_loot_legendary" namelocatag="@LOOTCHEST_NAME_LEGENDARY" prefab="LOOTCHEST_REGULAR_04">
     <RareStates hiderarityuntil="OnUnlock">
       <RareState state="legendary">
         <Loot>
@@ -3812,7 +4093,7 @@
     </RareStates>
   </LootChest>
   <!--boss-->
-  <LootChest uniquename="KEEPER_VETERAN_CHEST_BOSS_UNCOMMON" avatar="RD_CHEST_BOSS" faction="KEEPER" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_uncommon" spawnsoundevent="Play_spawn_loot_uncommon" namelocatag="@LOOTCHEST_NAME_UNCOMMON" prefab="FOREST_GREEN_LOOTCHEST_KEEPER_BOSS_UNCOMMON">
+  <LootChest uniquename="KEEPER_VETERAN_CHEST_BOSS_UNCOMMON" avatar="RD_CHEST_BOSS" faction="KEEPER" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_uncommon" spawnsoundevent="Play_spawn_loot_uncommon" namelocatag="@LOOTCHEST_NAME_UNCOMMON" prefab="LOOTCHEST_REGULAR_02">
     <RareStates hiderarityuntil="OnUnlock">
       <RareState state="uncommon">
         <Loot>
@@ -3845,7 +4126,7 @@
       </RareState>
     </RareStates>
   </LootChest>
-  <LootChest uniquename="KEEPER_VETERAN_CHEST_BOSS_RARE" avatar="RD_CHEST_BOSS" faction="KEEPER" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_rare" spawnsoundevent="Play_spawn_loot_rare" namelocatag="@LOOTCHEST_NAME_RARE" prefab="FOREST_GREEN_LOOTCHEST_KEEPER_BOSS_RARE">
+  <LootChest uniquename="KEEPER_VETERAN_CHEST_BOSS_RARE" avatar="RD_CHEST_BOSS" faction="KEEPER" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_rare" spawnsoundevent="Play_spawn_loot_rare" namelocatag="@LOOTCHEST_NAME_RARE" prefab="LOOTCHEST_REGULAR_03">
     <RareStates hiderarityuntil="OnUnlock">
       <RareState state="rare">
         <Loot>
@@ -3878,7 +4159,7 @@
       </RareState>
     </RareStates>
   </LootChest>
-  <LootChest uniquename="KEEPER_VETERAN_CHEST_BOSS_LEGENDARY" avatar="RD_CHEST_BOSS" faction="KEEPER" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_legendary" spawnsoundevent="Play_spawn_loot_legendary" namelocatag="@LOOTCHEST_NAME_LEGENDARY" prefab="FOREST_GREEN_LOOTCHEST_KEEPER_BOSS_LEGENDARY">
+  <LootChest uniquename="KEEPER_VETERAN_CHEST_BOSS_LEGENDARY" avatar="RD_CHEST_BOSS" faction="KEEPER" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_legendary" spawnsoundevent="Play_spawn_loot_legendary" namelocatag="@LOOTCHEST_NAME_LEGENDARY" prefab="LOOTCHEST_REGULAR_04">
     <RareStates hiderarityuntil="OnUnlock">
       <RareState state="legendary">
         <Loot>
@@ -3912,7 +4193,7 @@
     </RareStates>
   </LootChest>
   <!--normal-->
-  <LootChest uniquename="KEEPER_VETERAN_CHEST_STANDARD" avatar="RD_CHEST_BOSS" faction="KEEPER" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_standard" spawnsoundevent="Play_spawn_loot_standard" namelocatag="@LOOTCHEST_NAME_STANDARD" prefab="FOREST_GREEN_LOOTCHEST_KEEPER_STANDARD">
+  <LootChest uniquename="KEEPER_VETERAN_CHEST_STANDARD" avatar="RD_CHEST_BOSS" faction="KEEPER" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_standard" spawnsoundevent="Play_spawn_loot_standard" namelocatag="@LOOTCHEST_NAME_STANDARD" prefab="LOOTCHEST_REGULAR_01">
     <RareStates hiderarityuntil="OnUnlock">
       <RareState state="standard">
         <Loot>
@@ -3940,7 +4221,7 @@
       </RareState>
     </RareStates>
   </LootChest>
-  <LootChest uniquename="KEEPER_VETERAN_CHEST_UNCOMMON" avatar="RD_CHEST_BOSS" faction="KEEPER" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_uncommon" spawnsoundevent="Play_spawn_loot_uncommon" namelocatag="@LOOTCHEST_NAME_UNCOMMON" prefab="FOREST_GREEN_LOOTCHEST_KEEPER_UNCOMMON">
+  <LootChest uniquename="KEEPER_VETERAN_CHEST_UNCOMMON" avatar="RD_CHEST_BOSS" faction="KEEPER" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_uncommon" spawnsoundevent="Play_spawn_loot_uncommon" namelocatag="@LOOTCHEST_NAME_UNCOMMON" prefab="LOOTCHEST_REGULAR_02">
     <RareStates hiderarityuntil="OnUnlock">
       <RareState state="uncommon">
         <Loot>
@@ -3968,7 +4249,7 @@
       </RareState>
     </RareStates>
   </LootChest>
-  <LootChest uniquename="KEEPER_VETERAN_CHEST_RARE" avatar="RD_CHEST_BOSS" faction="KEEPER" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_rare" spawnsoundevent="Play_spawn_loot_rare" namelocatag="@LOOTCHEST_NAME_RARE" prefab="FOREST_GREEN_LOOTCHEST_KEEPER_RARE">
+  <LootChest uniquename="KEEPER_VETERAN_CHEST_RARE" avatar="RD_CHEST_BOSS" faction="KEEPER" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_rare" spawnsoundevent="Play_spawn_loot_rare" namelocatag="@LOOTCHEST_NAME_RARE" prefab="LOOTCHEST_REGULAR_03">
     <RareStates hiderarityuntil="OnUnlock">
       <RareState state="rare">
         <Loot>
@@ -3996,7 +4277,7 @@
       </RareState>
     </RareStates>
   </LootChest>
-  <LootChest uniquename="KEEPER_VETERAN_CHEST_LEGENDARY" avatar="RD_CHEST_BOSS" faction="KEEPER" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_legendary" spawnsoundevent="Play_spawn_loot_legendary" namelocatag="@LOOTCHEST_NAME_LEGENDARY" prefab="FOREST_GREEN_LOOTCHEST_KEEPER_LEGENDARY">
+  <LootChest uniquename="KEEPER_VETERAN_CHEST_LEGENDARY" avatar="RD_CHEST_BOSS" faction="KEEPER" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_legendary" spawnsoundevent="Play_spawn_loot_legendary" namelocatag="@LOOTCHEST_NAME_LEGENDARY" prefab="LOOTCHEST_REGULAR_04">
     <RareStates hiderarityuntil="OnUnlock">
       <RareState state="legendary">
         <Loot>
@@ -4027,7 +4308,7 @@
 
   <!--Undead-->
   <!--boss-->
-  <LootChest uniquename="UNDEAD_VETERAN_CHEST_BOSS_UNCOMMON" avatar="RD_CHEST_BOSS" faction="UNDEAD" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_uncommon" spawnsoundevent="Play_spawn_loot_uncommon" namelocatag="@LOOTCHEST_NAME_UNCOMMON" prefab="FOREST_GREEN_LOOTCHEST_UNDEAD_BOSS_UNCOMMON">
+  <LootChest uniquename="UNDEAD_VETERAN_CHEST_BOSS_UNCOMMON" avatar="RD_CHEST_BOSS" faction="UNDEAD" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_uncommon" spawnsoundevent="Play_spawn_loot_uncommon" namelocatag="@LOOTCHEST_NAME_UNCOMMON" prefab="LOOTCHEST_REGULAR_02">
     <RareStates hiderarityuntil="OnUnlock">
       <RareState state="uncommon">
         <Loot>
@@ -4055,7 +4336,7 @@
       </RareState>
     </RareStates>
   </LootChest>
-  <LootChest uniquename="UNDEAD_VETERAN_CHEST_BOSS_RARE" avatar="RD_CHEST_BOSS" faction="UNDEAD" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_rare" spawnsoundevent="Play_spawn_loot_rare" namelocatag="@LOOTCHEST_NAME_RARE" prefab="FOREST_GREEN_LOOTCHEST_UNDEAD_BOSS_RARE">
+  <LootChest uniquename="UNDEAD_VETERAN_CHEST_BOSS_RARE" avatar="RD_CHEST_BOSS" faction="UNDEAD" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_rare" spawnsoundevent="Play_spawn_loot_rare" namelocatag="@LOOTCHEST_NAME_RARE" prefab="LOOTCHEST_REGULAR_03">
     <RareStates hiderarityuntil="OnUnlock">
       <RareState state="rare">
         <Loot>
@@ -4083,7 +4364,7 @@
       </RareState>
     </RareStates>
   </LootChest>
-  <LootChest uniquename="UNDEAD_VETERAN_CHEST_BOSS_LEGENDARY" avatar="RD_CHEST_BOSS" faction="UNDEAD" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_legendary" spawnsoundevent="Play_spawn_loot_legendary" namelocatag="@LOOTCHEST_NAME_LEGENDARY" prefab="FOREST_GREEN_LOOTCHEST_UNDEAD_BOSS_LEGENDARY">
+  <LootChest uniquename="UNDEAD_VETERAN_CHEST_BOSS_LEGENDARY" avatar="RD_CHEST_BOSS" faction="UNDEAD" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_legendary" spawnsoundevent="Play_spawn_loot_legendary" namelocatag="@LOOTCHEST_NAME_LEGENDARY" prefab="LOOTCHEST_REGULAR_04">
     <RareStates hiderarityuntil="OnUnlock">
       <RareState state="legendary">
         <Loot>
@@ -4112,7 +4393,7 @@
     </RareStates>
   </LootChest>
   <!--Halloween Veteran-->
-  <LootChest uniquename="UNDEAD_CHEST_BOSS_HALLOWEEN_UNCOMMON" avatar="RD_CHEST_BOSS" faction="UNDEAD" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_uncommon" spawnsoundevent="Play_spawn_loot_uncommon" namelocatag="@LOOTCHEST_NAME_UNCOMMON" prefab="FOREST_GREEN_LOOTCHEST_UNDEAD_BOSS_HALLOWEEN_UNCOMMON">
+  <LootChest uniquename="UNDEAD_CHEST_BOSS_HALLOWEEN_UNCOMMON" avatar="RD_CHEST_BOSS" faction="UNDEAD" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_uncommon" spawnsoundevent="Play_spawn_loot_uncommon" namelocatag="@LOOTCHEST_NAME_UNCOMMON" prefab="LOOTCHEST_REGULAR_02">
     <RareStates hiderarityuntil="OnUnlock">
       <RareState state="uncommon">
         <Loot>
@@ -4160,7 +4441,7 @@
       </RareState>
     </RareStates>
   </LootChest>
-  <LootChest uniquename="UNDEAD_CHEST_BOSS_HALLOWEEN_RARE" avatar="RD_CHEST_BOSS" faction="UNDEAD" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_rare" spawnsoundevent="Play_spawn_loot_rare" namelocatag="@LOOTCHEST_NAME_RARE" prefab="FOREST_GREEN_LOOTCHEST_UNDEAD_BOSS_HALLOWEEN_RARE">
+  <LootChest uniquename="UNDEAD_CHEST_BOSS_HALLOWEEN_RARE" avatar="RD_CHEST_BOSS" faction="UNDEAD" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_rare" spawnsoundevent="Play_spawn_loot_rare" namelocatag="@LOOTCHEST_NAME_RARE" prefab="LOOTCHEST_REGULAR_03">
     <RareStates hiderarityuntil="OnUnlock">
       <RareState state="rare">
         <Loot>
@@ -4208,7 +4489,7 @@
       </RareState>
     </RareStates>
   </LootChest>
-  <LootChest uniquename="UNDEAD_CHEST_BOSS_HALLOWEEN_LEGENDARY" avatar="RD_CHEST_BOSS" faction="UNDEAD" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_legendary" spawnsoundevent="Play_spawn_loot_legendary" namelocatag="@LOOTCHEST_NAME_LEGENDARY" prefab="FOREST_GREEN_LOOTCHEST_UNDEAD_BOSS_HALLOWEEN_LEGENDARY">
+  <LootChest uniquename="UNDEAD_CHEST_BOSS_HALLOWEEN_LEGENDARY" avatar="RD_CHEST_BOSS" faction="UNDEAD" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_legendary" spawnsoundevent="Play_spawn_loot_legendary" namelocatag="@LOOTCHEST_NAME_LEGENDARY" prefab="LOOTCHEST_REGULAR_04">
     <RareStates hiderarityuntil="OnUnlock">
       <RareState state="legendary">
         <Loot>
@@ -4257,7 +4538,7 @@
     </RareStates>
   </LootChest>
   <!--normal-->
-  <LootChest uniquename="UNDEAD_VETERAN_CHEST_STANDARD" avatar="RD_CHEST_BOSS" faction="UNDEAD" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_standard" spawnsoundevent="Play_spawn_loot_standard" namelocatag="@LOOTCHEST_NAME_STANDARD" prefab="FOREST_GREEN_LOOTCHEST_UNDEAD_STANDARD">
+  <LootChest uniquename="UNDEAD_VETERAN_CHEST_STANDARD" avatar="RD_CHEST_BOSS" faction="UNDEAD" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_standard" spawnsoundevent="Play_spawn_loot_standard" namelocatag="@LOOTCHEST_NAME_STANDARD" prefab="LOOTCHEST_REGULAR_01">
     <RareStates hiderarityuntil="OnUnlock">
       <RareState state="standard">
         <Loot>
@@ -4280,7 +4561,7 @@
       </RareState>
     </RareStates>
   </LootChest>
-  <LootChest uniquename="UNDEAD_VETERAN_CHEST_UNCOMMON" avatar="RD_CHEST_BOSS" faction="UNDEAD" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_uncommon" spawnsoundevent="Play_spawn_loot_uncommon" namelocatag="@LOOTCHEST_NAME_UNCOMMON" prefab="FOREST_GREEN_LOOTCHEST_UNDEAD_UNCOMMON">
+  <LootChest uniquename="UNDEAD_VETERAN_CHEST_UNCOMMON" avatar="RD_CHEST_BOSS" faction="UNDEAD" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_uncommon" spawnsoundevent="Play_spawn_loot_uncommon" namelocatag="@LOOTCHEST_NAME_UNCOMMON" prefab="LOOTCHEST_REGULAR_02">
     <RareStates hiderarityuntil="OnUnlock">
       <RareState state="uncommon">
         <Loot>
@@ -4303,7 +4584,7 @@
       </RareState>
     </RareStates>
   </LootChest>
-  <LootChest uniquename="UNDEAD_VETERAN_CHEST_RARE" avatar="RD_CHEST_BOSS" faction="UNDEAD" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_rare" spawnsoundevent="Play_spawn_loot_rare" namelocatag="@LOOTCHEST_NAME_RARE" prefab="FOREST_GREEN_LOOTCHEST_UNDEAD_RARE">
+  <LootChest uniquename="UNDEAD_VETERAN_CHEST_RARE" avatar="RD_CHEST_BOSS" faction="UNDEAD" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_rare" spawnsoundevent="Play_spawn_loot_rare" namelocatag="@LOOTCHEST_NAME_RARE" prefab="LOOTCHEST_REGULAR_03">
     <RareStates hiderarityuntil="OnUnlock">
       <RareState state="rare">
         <Loot>
@@ -4326,7 +4607,7 @@
       </RareState>
     </RareStates>
   </LootChest>
-  <LootChest uniquename="UNDEAD_VETERAN_CHEST_LEGENDARY" avatar="RD_CHEST_BOSS" faction="UNDEAD" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_legendary" spawnsoundevent="Play_spawn_loot_legendary" namelocatag="@LOOTCHEST_NAME_LEGENDARY" prefab="FOREST_GREEN_LOOTCHEST_UNDEAD_LEGENDARY">
+  <LootChest uniquename="UNDEAD_VETERAN_CHEST_LEGENDARY" avatar="RD_CHEST_BOSS" faction="UNDEAD" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_legendary" spawnsoundevent="Play_spawn_loot_legendary" namelocatag="@LOOTCHEST_NAME_LEGENDARY" prefab="LOOTCHEST_REGULAR_04">
     <RareStates hiderarityuntil="OnUnlock">
       <RareState state="legendary">
         <Loot>
@@ -4352,7 +4633,7 @@
 
   <!--Heretics-->
   <!--boss-->
-  <LootChest uniquename="HERETIC_VETERAN_CHEST_BOSS_UNCOMMON" avatar="RD_CHEST_BOSS" faction="HERETIC" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_uncommon" spawnsoundevent="Play_spawn_loot_uncommon" namelocatag="@LOOTCHEST_NAME_UNCOMMON" prefab="FOREST_GREEN_LOOTCHEST_HERETIC_BOSS_UNCOMMON">
+  <LootChest uniquename="HERETIC_VETERAN_CHEST_BOSS_UNCOMMON" avatar="RD_CHEST_BOSS" faction="HERETIC" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_uncommon" spawnsoundevent="Play_spawn_loot_uncommon" namelocatag="@LOOTCHEST_NAME_UNCOMMON" prefab="LOOTCHEST_REGULAR_02">
     <RareStates hiderarityuntil="OnUnlock">
       <RareState state="uncommon">
         <Loot>
@@ -4385,7 +4666,7 @@
       </RareState>
     </RareStates>
   </LootChest>
-  <LootChest uniquename="HERETIC_VETERAN_CHEST_BOSS_RARE" avatar="RD_CHEST_BOSS" faction="HERETIC" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_rare" spawnsoundevent="Play_spawn_loot_rare" namelocatag="@LOOTCHEST_NAME_RARE" prefab="FOREST_GREEN_LOOTCHEST_HERETIC_BOSS_RARE">
+  <LootChest uniquename="HERETIC_VETERAN_CHEST_BOSS_RARE" avatar="RD_CHEST_BOSS" faction="HERETIC" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_rare" spawnsoundevent="Play_spawn_loot_rare" namelocatag="@LOOTCHEST_NAME_RARE" prefab="LOOTCHEST_REGULAR_03">
     <RareStates hiderarityuntil="OnUnlock">
       <RareState state="rare">
         <Loot>
@@ -4418,7 +4699,7 @@
       </RareState>
     </RareStates>
   </LootChest>
-  <LootChest uniquename="HERETIC_VETERAN_CHEST_BOSS_LEGENDARY" avatar="RD_CHEST_BOSS" faction="HERETIC" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_legendary" spawnsoundevent="Play_spawn_loot_legendary" namelocatag="@LOOTCHEST_NAME_LEGENDARY" prefab="FOREST_GREEN_LOOTCHEST_HERETIC_BOSS_LEGENDARY">
+  <LootChest uniquename="HERETIC_VETERAN_CHEST_BOSS_LEGENDARY" avatar="RD_CHEST_BOSS" faction="HERETIC" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_legendary" spawnsoundevent="Play_spawn_loot_legendary" namelocatag="@LOOTCHEST_NAME_LEGENDARY" prefab="LOOTCHEST_REGULAR_04">
     <RareStates hiderarityuntil="OnUnlock">
       <RareState state="legendary">
         <Loot>
@@ -4452,7 +4733,7 @@
     </RareStates>
   </LootChest>
   <!--normal-->
-  <LootChest uniquename="HERETIC_VETERAN_CHEST_STANDARD" avatar="RD_CHEST_BOSS" faction="HERETIC" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_standard" spawnsoundevent="Play_spawn_loot_standard" namelocatag="@LOOTCHEST_NAME_STANDARD" prefab="FOREST_GREEN_LOOTCHEST_HERETIC_STANDARD">
+  <LootChest uniquename="HERETIC_VETERAN_CHEST_STANDARD" avatar="RD_CHEST_BOSS" faction="HERETIC" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_standard" spawnsoundevent="Play_spawn_loot_standard" namelocatag="@LOOTCHEST_NAME_STANDARD" prefab="LOOTCHEST_REGULAR_01">
     <RareStates hiderarityuntil="OnUnlock">
       <RareState state="standard">
         <Loot>
@@ -4480,7 +4761,7 @@
       </RareState>
     </RareStates>
   </LootChest>
-  <LootChest uniquename="HERETIC_VETERAN_CHEST_UNCOMMON" avatar="RD_CHEST_BOSS" faction="HERETIC" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_uncommon" spawnsoundevent="Play_spawn_loot_uncommon" namelocatag="@LOOTCHEST_NAME_UNCOMMON" prefab="FOREST_GREEN_LOOTCHEST_HERETIC_UNCOMMON">
+  <LootChest uniquename="HERETIC_VETERAN_CHEST_UNCOMMON" avatar="RD_CHEST_BOSS" faction="HERETIC" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_uncommon" spawnsoundevent="Play_spawn_loot_uncommon" namelocatag="@LOOTCHEST_NAME_UNCOMMON" prefab="LOOTCHEST_REGULAR_02">
     <RareStates hiderarityuntil="OnUnlock">
       <RareState state="uncommon">
         <Loot>
@@ -4508,7 +4789,7 @@
       </RareState>
     </RareStates>
   </LootChest>
-  <LootChest uniquename="HERETIC_VETERAN_CHEST_RARE" avatar="RD_CHEST_BOSS" faction="HERETIC" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_rare" spawnsoundevent="Play_spawn_loot_rare" namelocatag="@LOOTCHEST_NAME_RARE" prefab="FOREST_GREEN_LOOTCHEST_HERETIC_RARE">
+  <LootChest uniquename="HERETIC_VETERAN_CHEST_RARE" avatar="RD_CHEST_BOSS" faction="HERETIC" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_rare" spawnsoundevent="Play_spawn_loot_rare" namelocatag="@LOOTCHEST_NAME_RARE" prefab="LOOTCHEST_REGULAR_03">
     <RareStates hiderarityuntil="OnUnlock">
       <RareState state="rare">
         <Loot>
@@ -4536,7 +4817,7 @@
       </RareState>
     </RareStates>
   </LootChest>
-  <LootChest uniquename="HERETIC_VETERAN_CHEST_LEGENDARY" avatar="RD_CHEST_BOSS" faction="HERETIC" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_legendary" spawnsoundevent="Play_spawn_loot_legendary" namelocatag="@LOOTCHEST_NAME_LEGENDARY" prefab="FOREST_GREEN_LOOTCHEST_HERETIC_LEGENDARY">
+  <LootChest uniquename="HERETIC_VETERAN_CHEST_LEGENDARY" avatar="RD_CHEST_BOSS" faction="HERETIC" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_legendary" spawnsoundevent="Play_spawn_loot_legendary" namelocatag="@LOOTCHEST_NAME_LEGENDARY" prefab="LOOTCHEST_REGULAR_04">
     <RareStates hiderarityuntil="OnUnlock">
       <RareState state="legendary">
         <Loot>
@@ -6280,7 +6561,7 @@
 
   <!--Morgana-->
   <!--boss-->
-  <LootChest uniquename="MORGANA_SOLO_CHEST_BOSS_UNCOMMON" avatar="RD_CHEST_BOSS" faction="MORGANA" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST_SOLO" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_uncommon" spawnsoundevent="Play_spawn_loot_uncommon" namelocatag="@LOOTCHEST_NAME_UNCOMMON" prefab="FOREST_GREEN_LOOTCHEST_MORGANA_SOLO_BOSS_UNCOMMON">
+  <LootChest uniquename="MORGANA_SOLO_CHEST_BOSS_UNCOMMON" avatar="RD_CHEST_BOSS" faction="MORGANA" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST_SOLO" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_uncommon" spawnsoundevent="Play_spawn_loot_uncommon" namelocatag="@LOOTCHEST_NAME_UNCOMMON" prefab="LOOTCHEST_REGULAR_02">
     <RareStates hiderarityuntil="OnUnlock">
       <RareState state="uncommon">
         <Loot>
@@ -6338,7 +6619,7 @@
       </RareState>
     </RareStates>
   </LootChest>
-  <LootChest uniquename="MORGANA_SOLO_CHEST_BOSS_RARE" avatar="RD_CHEST_BOSS" faction="MORGANA" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST_SOLO" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_rare" spawnsoundevent="Play_spawn_loot_rare" namelocatag="@LOOTCHEST_NAME_RARE" prefab="FOREST_GREEN_LOOTCHEST_MORGANA_SOLO_BOSS_RARE">
+  <LootChest uniquename="MORGANA_SOLO_CHEST_BOSS_RARE" avatar="RD_CHEST_BOSS" faction="MORGANA" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST_SOLO" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_rare" spawnsoundevent="Play_spawn_loot_rare" namelocatag="@LOOTCHEST_NAME_RARE" prefab="LOOTCHEST_REGULAR_03">
     <RareStates hiderarityuntil="OnUnlock">
       <RareState state="rare">
         <Loot>
@@ -6396,7 +6677,7 @@
       </RareState>
     </RareStates>
   </LootChest>
-  <LootChest uniquename="MORGANA_SOLO_CHEST_BOSS_LEGENDARY" avatar="RD_CHEST_BOSS" faction="MORGANA" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST_SOLO" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_legendary" spawnsoundevent="Play_spawn_loot_legendary" namelocatag="@LOOTCHEST_NAME_LEGENDARY" prefab="FOREST_GREEN_LOOTCHEST_MORGANA_SOLO_BOSS_LEGENDARY">
+  <LootChest uniquename="MORGANA_SOLO_CHEST_BOSS_LEGENDARY" avatar="RD_CHEST_BOSS" faction="MORGANA" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST_SOLO" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_legendary" spawnsoundevent="Play_spawn_loot_legendary" namelocatag="@LOOTCHEST_NAME_LEGENDARY" prefab="LOOTCHEST_REGULAR_04">
     <RareStates hiderarityuntil="OnUnlock">
       <RareState state="legendary">
         <Loot>
@@ -6455,7 +6736,7 @@
     </RareStates>
   </LootChest>
   <!--normal-->
-  <LootChest uniquename="MORGANA_SOLO_CHEST_STANDARD" avatar="RD_CHEST_BOSS" faction="MORGANA" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST_SOLO" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_standard" spawnsoundevent="Play_spawn_loot_standard" namelocatag="@LOOTCHEST_NAME_STANDARD" prefab="FOREST_GREEN_LOOTCHEST_MORGANA_SOLO_STANDARD">
+  <LootChest uniquename="MORGANA_SOLO_CHEST_STANDARD" avatar="RD_CHEST_BOSS" faction="MORGANA" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST_SOLO" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_standard" spawnsoundevent="Play_spawn_loot_standard" namelocatag="@LOOTCHEST_NAME_STANDARD" prefab="LOOTCHEST_REGULAR_01">
     <RareStates hiderarityuntil="OnUnlock">
       <RareState state="standard">
         <Loot>
@@ -6497,7 +6778,7 @@
       </RareState>
     </RareStates>
   </LootChest>
-  <LootChest uniquename="MORGANA_SOLO_CHEST_UNCOMMON" avatar="RD_CHEST_BOSS" faction="MORGANA" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST_SOLO" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_uncommon" spawnsoundevent="Play_spawn_loot_uncommon" namelocatag="@LOOTCHEST_NAME_UNCOMMON" prefab="FOREST_GREEN_LOOTCHEST_MORGANA_SOLO_UNCOMMON">
+  <LootChest uniquename="MORGANA_SOLO_CHEST_UNCOMMON" avatar="RD_CHEST_BOSS" faction="MORGANA" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST_SOLO" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_uncommon" spawnsoundevent="Play_spawn_loot_uncommon" namelocatag="@LOOTCHEST_NAME_UNCOMMON" prefab="LOOTCHEST_REGULAR_02">
     <RareStates hiderarityuntil="OnUnlock">
       <RareState state="uncommon">
         <Loot>
@@ -6535,7 +6816,7 @@
       </RareState>
     </RareStates>
   </LootChest>
-  <LootChest uniquename="MORGANA_SOLO_CHEST_RARE" avatar="RD_CHEST_BOSS" faction="MORGANA" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST_SOLO" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_rare" spawnsoundevent="Play_spawn_loot_rare" namelocatag="@LOOTCHEST_NAME_RARE" prefab="FOREST_GREEN_LOOTCHEST_MORGANA_SOLO_RARE">
+  <LootChest uniquename="MORGANA_SOLO_CHEST_RARE" avatar="RD_CHEST_BOSS" faction="MORGANA" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST_SOLO" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_rare" spawnsoundevent="Play_spawn_loot_rare" namelocatag="@LOOTCHEST_NAME_RARE" prefab="LOOTCHEST_REGULAR_03">
     <RareStates hiderarityuntil="OnUnlock">
       <RareState state="rare">
         <Loot>
@@ -6573,7 +6854,7 @@
       </RareState>
     </RareStates>
   </LootChest>
-  <LootChest uniquename="MORGANA_SOLO_CHEST_LEGENDARY" avatar="RD_CHEST_BOSS" faction="MORGANA" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST_SOLO" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_legendary" spawnsoundevent="Play_spawn_loot_legendary" namelocatag="@LOOTCHEST_NAME_LEGENDARY" prefab="FOREST_GREEN_LOOTCHEST_MORGANA_SOLO_LEGENDARY">
+  <LootChest uniquename="MORGANA_SOLO_CHEST_LEGENDARY" avatar="RD_CHEST_BOSS" faction="MORGANA" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST_SOLO" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_legendary" spawnsoundevent="Play_spawn_loot_legendary" namelocatag="@LOOTCHEST_NAME_LEGENDARY" prefab="LOOTCHEST_REGULAR_04">
     <RareStates hiderarityuntil="OnUnlock">
       <RareState state="legendary">
         <Loot>
@@ -6613,7 +6894,7 @@
   </LootChest>
 
   <!--Keeper-->
-  <LootChest uniquename="KEEPER_SOLO_CHEST_BOSS_UNCOMMON_ANNIVERSARY" avatar="RD_CHEST_BOSS" faction="KEEPER" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST_SOLO" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_uncommon" spawnsoundevent="Play_spawn_loot_uncommon" namelocatag="@LOOTCHEST_NAME_UNCOMMON" prefab="FOREST_GREEN_LOOTCHEST_KEEPER_SOLO_CHEST_BOSS_UNCOMMON_ANNIVERSARY">
+  <LootChest uniquename="KEEPER_SOLO_CHEST_BOSS_UNCOMMON_ANNIVERSARY" avatar="RD_CHEST_BOSS" faction="KEEPER" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST_SOLO" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_uncommon" spawnsoundevent="Play_spawn_loot_uncommon" namelocatag="@LOOTCHEST_NAME_UNCOMMON" prefab="LOOTCHEST_REGULAR_02">
     <RareStates hiderarityuntil="OnUnlock">
       <RareState state="uncommon">
         <Loot>
@@ -6661,7 +6942,7 @@
       </RareState>
     </RareStates>
   </LootChest>
-  <LootChest uniquename="KEEPER_SOLO_CHEST_BOSS_RARE_ANNIVERSARY" avatar="RD_CHEST_BOSS" faction="KEEPER" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST_SOLO" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_rare" spawnsoundevent="Play_spawn_loot_rare" namelocatag="@LOOTCHEST_NAME_RARE" prefab="FOREST_GREEN_LOOTCHEST_KEEPER_SOLO_CHEST_BOSS_RARE_ANNIVERSARY">
+  <LootChest uniquename="KEEPER_SOLO_CHEST_BOSS_RARE_ANNIVERSARY" avatar="RD_CHEST_BOSS" faction="KEEPER" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST_SOLO" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_rare" spawnsoundevent="Play_spawn_loot_rare" namelocatag="@LOOTCHEST_NAME_RARE" prefab="LOOTCHEST_REGULAR_03">
     <RareStates hiderarityuntil="OnUnlock">
       <RareState state="rare">
         <Loot>
@@ -6709,7 +6990,7 @@
       </RareState>
     </RareStates>
   </LootChest>
-  <LootChest uniquename="KEEPER_SOLO_CHEST_BOSS_LEGENDARY_ANNIVERSARY" avatar="RD_CHEST_BOSS" faction="KEEPER" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST_SOLO" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_legendary" spawnsoundevent="Play_spawn_loot_legendary" namelocatag="@LOOTCHEST_NAME_LEGENDARY" prefab="FOREST_GREEN_LOOTCHEST_KEEPER_SOLO_CHEST_BOSS_LEGENDARY_ANNIVERSARY">
+  <LootChest uniquename="KEEPER_SOLO_CHEST_BOSS_LEGENDARY_ANNIVERSARY" avatar="RD_CHEST_BOSS" faction="KEEPER" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST_SOLO" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_legendary" spawnsoundevent="Play_spawn_loot_legendary" namelocatag="@LOOTCHEST_NAME_LEGENDARY" prefab="LOOTCHEST_REGULAR_04">
     <RareStates hiderarityuntil="OnUnlock">
       <RareState state="legendary">
         <Loot>
@@ -6758,7 +7039,7 @@
     </RareStates>
   </LootChest>
   <!--boss-->
-  <LootChest uniquename="KEEPER_SOLO_CHEST_BOSS_UNCOMMON" avatar="RD_CHEST_BOSS" faction="KEEPER" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST_SOLO" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_uncommon" spawnsoundevent="Play_spawn_loot_uncommon" namelocatag="@LOOTCHEST_NAME_UNCOMMON" prefab="FOREST_GREEN_LOOTCHEST_KEEPER_SOLO_BOSS_UNCOMMON">
+  <LootChest uniquename="KEEPER_SOLO_CHEST_BOSS_UNCOMMON" avatar="RD_CHEST_BOSS" faction="KEEPER" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST_SOLO" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_uncommon" spawnsoundevent="Play_spawn_loot_uncommon" namelocatag="@LOOTCHEST_NAME_UNCOMMON" prefab="LOOTCHEST_REGULAR_02">
     <RareStates hiderarityuntil="OnUnlock">
       <RareState state="uncommon">
         <Loot>
@@ -6816,7 +7097,7 @@
       </RareState>
     </RareStates>
   </LootChest>
-  <LootChest uniquename="KEEPER_SOLO_CHEST_BOSS_RARE" avatar="RD_CHEST_BOSS" faction="KEEPER" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST_SOLO" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_rare" spawnsoundevent="Play_spawn_loot_rare" namelocatag="@LOOTCHEST_NAME_RARE" prefab="FOREST_GREEN_LOOTCHEST_KEEPER_SOLO_BOSS_RARE">
+  <LootChest uniquename="KEEPER_SOLO_CHEST_BOSS_RARE" avatar="RD_CHEST_BOSS" faction="KEEPER" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST_SOLO" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_rare" spawnsoundevent="Play_spawn_loot_rare" namelocatag="@LOOTCHEST_NAME_RARE" prefab="LOOTCHEST_REGULAR_03">
     <RareStates hiderarityuntil="OnUnlock">
       <RareState state="rare">
         <Loot>
@@ -6874,7 +7155,7 @@
       </RareState>
     </RareStates>
   </LootChest>
-  <LootChest uniquename="KEEPER_SOLO_CHEST_BOSS_LEGENDARY" avatar="RD_CHEST_BOSS" faction="KEEPER" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST_SOLO" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_legendary" spawnsoundevent="Play_spawn_loot_legendary" namelocatag="@LOOTCHEST_NAME_LEGENDARY" prefab="FOREST_GREEN_LOOTCHEST_KEEPER_SOLO_BOSS_LEGENDARY">
+  <LootChest uniquename="KEEPER_SOLO_CHEST_BOSS_LEGENDARY" avatar="RD_CHEST_BOSS" faction="KEEPER" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST_SOLO" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_legendary" spawnsoundevent="Play_spawn_loot_legendary" namelocatag="@LOOTCHEST_NAME_LEGENDARY" prefab="LOOTCHEST_REGULAR_04">
     <RareStates hiderarityuntil="OnUnlock">
       <RareState state="legendary">
         <Loot>
@@ -6932,7 +7213,7 @@
     </RareStates>
   </LootChest>
   <!--normal-->
-  <LootChest uniquename="KEEPER_SOLO_CHEST_STANDARD" avatar="RD_CHEST_BOSS" faction="KEEPER" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST_SOLO" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_standard" spawnsoundevent="Play_spawn_loot_standard" namelocatag="@LOOTCHEST_NAME_STANDARD" prefab="FOREST_GREEN_LOOTCHEST_KEEPER_SOLO_STANDARD">
+  <LootChest uniquename="KEEPER_SOLO_CHEST_STANDARD" avatar="RD_CHEST_BOSS" faction="KEEPER" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST_SOLO" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_standard" spawnsoundevent="Play_spawn_loot_standard" namelocatag="@LOOTCHEST_NAME_STANDARD" prefab="LOOTCHEST_REGULAR_01">
     <RareStates hiderarityuntil="OnUnlock">
       <RareState state="standard">
         <Loot>
@@ -6974,7 +7255,7 @@
       </RareState>
     </RareStates>
   </LootChest>
-  <LootChest uniquename="KEEPER_SOLO_CHEST_UNCOMMON" avatar="RD_CHEST_BOSS" faction="KEEPER" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST_SOLO" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_uncommon" spawnsoundevent="Play_spawn_loot_uncommon" namelocatag="@LOOTCHEST_NAME_UNCOMMON" prefab="FOREST_GREEN_LOOTCHEST_KEEPER_SOLO_UNCOMMON">
+  <LootChest uniquename="KEEPER_SOLO_CHEST_UNCOMMON" avatar="RD_CHEST_BOSS" faction="KEEPER" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST_SOLO" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_uncommon" spawnsoundevent="Play_spawn_loot_uncommon" namelocatag="@LOOTCHEST_NAME_UNCOMMON" prefab="LOOTCHEST_REGULAR_02">
     <RareStates hiderarityuntil="OnUnlock">
       <RareState state="uncommon">
         <Loot>
@@ -7012,7 +7293,7 @@
       </RareState>
     </RareStates>
   </LootChest>
-  <LootChest uniquename="KEEPER_SOLO_CHEST_RARE" avatar="RD_CHEST_BOSS" faction="KEEPER" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST_SOLO" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_rare" spawnsoundevent="Play_spawn_loot_rare" namelocatag="@LOOTCHEST_NAME_RARE" prefab="FOREST_GREEN_LOOTCHEST_KEEPER_SOLO_RARE">
+  <LootChest uniquename="KEEPER_SOLO_CHEST_RARE" avatar="RD_CHEST_BOSS" faction="KEEPER" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST_SOLO" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_rare" spawnsoundevent="Play_spawn_loot_rare" namelocatag="@LOOTCHEST_NAME_RARE" prefab="LOOTCHEST_REGULAR_03">
     <RareStates hiderarityuntil="OnUnlock">
       <RareState state="rare">
         <Loot>
@@ -7050,7 +7331,7 @@
       </RareState>
     </RareStates>
   </LootChest>
-  <LootChest uniquename="KEEPER_SOLO_CHEST_LEGENDARY" avatar="RD_CHEST_BOSS" faction="KEEPER" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST_SOLO" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_legendary" spawnsoundevent="Play_spawn_loot_legendary" namelocatag="@LOOTCHEST_NAME_LEGENDARY" prefab="FOREST_GREEN_LOOTCHEST_KEEPER_SOLO_LEGENDARY">
+  <LootChest uniquename="KEEPER_SOLO_CHEST_LEGENDARY" avatar="RD_CHEST_BOSS" faction="KEEPER" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST_SOLO" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_legendary" spawnsoundevent="Play_spawn_loot_legendary" namelocatag="@LOOTCHEST_NAME_LEGENDARY" prefab="LOOTCHEST_REGULAR_04">
     <RareStates hiderarityuntil="OnUnlock">
       <RareState state="legendary">
         <Loot>
@@ -7091,7 +7372,7 @@
 
   <!--Undead-->
   <!--boss-->
-  <LootChest uniquename="UNDEAD_SOLO_CHEST_BOSS_UNCOMMON" avatar="RD_CHEST_BOSS" faction="UNDEAD" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST_SOLO" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_uncommon" spawnsoundevent="Play_spawn_loot_uncommon" namelocatag="@LOOTCHEST_NAME_UNCOMMON" prefab="FOREST_GREEN_LOOTCHEST_UNDEAD_SOLO_BOSS_UNCOMMON">
+  <LootChest uniquename="UNDEAD_SOLO_CHEST_BOSS_UNCOMMON" avatar="RD_CHEST_BOSS" faction="UNDEAD" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST_SOLO" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_uncommon" spawnsoundevent="Play_spawn_loot_uncommon" namelocatag="@LOOTCHEST_NAME_UNCOMMON" prefab="LOOTCHEST_REGULAR_02">
     <RareStates hiderarityuntil="OnUnlock">
       <RareState state="uncommon">
         <Loot>
@@ -7144,7 +7425,7 @@
       </RareState>
     </RareStates>
   </LootChest>
-  <LootChest uniquename="UNDEAD_SOLO_CHEST_BOSS_RARE" avatar="RD_CHEST_BOSS" faction="UNDEAD" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST_SOLO" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_rare" spawnsoundevent="Play_spawn_loot_rare" namelocatag="@LOOTCHEST_NAME_RARE" prefab="FOREST_GREEN_LOOTCHEST_UNDEAD_SOLO_BOSS_RARE">
+  <LootChest uniquename="UNDEAD_SOLO_CHEST_BOSS_RARE" avatar="RD_CHEST_BOSS" faction="UNDEAD" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST_SOLO" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_rare" spawnsoundevent="Play_spawn_loot_rare" namelocatag="@LOOTCHEST_NAME_RARE" prefab="LOOTCHEST_REGULAR_03">
     <RareStates hiderarityuntil="OnUnlock">
       <RareState state="rare">
         <Loot>
@@ -7197,7 +7478,7 @@
       </RareState>
     </RareStates>
   </LootChest>
-  <LootChest uniquename="UNDEAD_SOLO_CHEST_BOSS_LEGENDARY" avatar="RD_CHEST_BOSS" faction="UNDEAD" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST_SOLO" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_legendary" spawnsoundevent="Play_spawn_loot_legendary" namelocatag="@LOOTCHEST_NAME_LEGENDARY" prefab="FOREST_GREEN_LOOTCHEST_UNDEAD_SOLO_BOSS_LEGENDARY">
+  <LootChest uniquename="UNDEAD_SOLO_CHEST_BOSS_LEGENDARY" avatar="RD_CHEST_BOSS" faction="UNDEAD" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST_SOLO" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_legendary" spawnsoundevent="Play_spawn_loot_legendary" namelocatag="@LOOTCHEST_NAME_LEGENDARY" prefab="LOOTCHEST_REGULAR_04">
     <RareStates hiderarityuntil="OnUnlock">
       <RareState state="legendary">
         <Loot>
@@ -7251,7 +7532,7 @@
     </RareStates>
   </LootChest>
   <!-- halloween solo-->
-  <LootChest uniquename="UNDEAD_SOLO_CHEST_BOSS_HALLOWEEN_UNCOMMON" avatar="RD_CHEST_BOSS" faction="UNDEAD" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST_SOLO" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_uncommon" spawnsoundevent="Play_spawn_loot_uncommon" namelocatag="@LOOTCHEST_NAME_UNCOMMON" prefab="FOREST_GREEN_LOOTCHEST_UNDEAD_SOLO_BOSS_HALLOWEEN_UNCOMMON">
+  <LootChest uniquename="UNDEAD_SOLO_CHEST_BOSS_HALLOWEEN_UNCOMMON" avatar="RD_CHEST_BOSS" faction="UNDEAD" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST_SOLO" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_uncommon" spawnsoundevent="Play_spawn_loot_uncommon" namelocatag="@LOOTCHEST_NAME_UNCOMMON" prefab="LOOTCHEST_REGULAR_02">
     <RareStates hiderarityuntil="OnUnlock">
       <RareState state="uncommon">
         <Loot>
@@ -7322,7 +7603,7 @@
       </RareState>
     </RareStates>
   </LootChest>
-  <LootChest uniquename="UNDEAD_SOLO_CHEST_BOSS_HALLOWEEN_RARE" avatar="RD_CHEST_BOSS" faction="UNDEAD" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST_SOLO" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_rare" spawnsoundevent="Play_spawn_loot_rare" namelocatag="@LOOTCHEST_NAME_RARE" prefab="FOREST_GREEN_LOOTCHEST_UNDEAD_SOLO_BOSS_HALLOWEEN_RARE">
+  <LootChest uniquename="UNDEAD_SOLO_CHEST_BOSS_HALLOWEEN_RARE" avatar="RD_CHEST_BOSS" faction="UNDEAD" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST_SOLO" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_rare" spawnsoundevent="Play_spawn_loot_rare" namelocatag="@LOOTCHEST_NAME_RARE" prefab="LOOTCHEST_REGULAR_03">
     <RareStates hiderarityuntil="OnUnlock">
       <RareState state="rare">
         <Loot>
@@ -7394,7 +7675,7 @@
       </RareState>
     </RareStates>
   </LootChest>
-  <LootChest uniquename="UNDEAD_SOLO_CHEST_BOSS_HALLOWEEN_LEGENDARY" avatar="RD_CHEST_BOSS" faction="UNDEAD" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST_SOLO" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_legendary" spawnsoundevent="Play_spawn_loot_legendary" namelocatag="@LOOTCHEST_NAME_LEGENDARY" prefab="FOREST_GREEN_LOOTCHEST_UNDEAD_SOLO_BOSS_HALLOWEEN_LEGENDARY">
+  <LootChest uniquename="UNDEAD_SOLO_CHEST_BOSS_HALLOWEEN_LEGENDARY" avatar="RD_CHEST_BOSS" faction="UNDEAD" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST_SOLO" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_legendary" spawnsoundevent="Play_spawn_loot_legendary" namelocatag="@LOOTCHEST_NAME_LEGENDARY" prefab="LOOTCHEST_REGULAR_04">
     <RareStates hiderarityuntil="OnUnlock">
       <RareState state="legendary">
         <Loot>
@@ -7467,7 +7748,7 @@
     </RareStates>
   </LootChest>
   <!--normal-->
-  <LootChest uniquename="UNDEAD_SOLO_CHEST_STANDARD" avatar="RD_CHEST_BOSS" faction="UNDEAD" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST_SOLO" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_standard" spawnsoundevent="Play_spawn_loot_standard" namelocatag="@LOOTCHEST_NAME_STANDARD" prefab="FOREST_GREEN_LOOTCHEST_UNDEAD_SOLO_STANDARD">
+  <LootChest uniquename="UNDEAD_SOLO_CHEST_STANDARD" avatar="RD_CHEST_BOSS" faction="UNDEAD" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST_SOLO" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_standard" spawnsoundevent="Play_spawn_loot_standard" namelocatag="@LOOTCHEST_NAME_STANDARD" prefab="LOOTCHEST_REGULAR_01">
     <RareStates hiderarityuntil="OnUnlock">
       <RareState state="standard">
         <Loot>
@@ -7504,7 +7785,7 @@
       </RareState>
     </RareStates>
   </LootChest>
-  <LootChest uniquename="UNDEAD_SOLO_CHEST_UNCOMMON" avatar="RD_CHEST_BOSS" faction="UNDEAD" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST_SOLO" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_uncommon" spawnsoundevent="Play_spawn_loot_uncommon" namelocatag="@LOOTCHEST_NAME_UNCOMMON" prefab="FOREST_GREEN_LOOTCHEST_UNDEAD_SOLO_UNCOMMON">
+  <LootChest uniquename="UNDEAD_SOLO_CHEST_UNCOMMON" avatar="RD_CHEST_BOSS" faction="UNDEAD" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST_SOLO" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_uncommon" spawnsoundevent="Play_spawn_loot_uncommon" namelocatag="@LOOTCHEST_NAME_UNCOMMON" prefab="LOOTCHEST_REGULAR_02">
     <RareStates hiderarityuntil="OnUnlock">
       <RareState state="uncommon">
         <Loot>
@@ -7537,7 +7818,7 @@
       </RareState>
     </RareStates>
   </LootChest>
-  <LootChest uniquename="UNDEAD_SOLO_CHEST_RARE" avatar="RD_CHEST_BOSS" faction="UNDEAD" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST_SOLO" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_rare" spawnsoundevent="Play_spawn_loot_rare" namelocatag="@LOOTCHEST_NAME_RARE" prefab="FOREST_GREEN_LOOTCHEST_UNDEAD_SOLO_RARE">
+  <LootChest uniquename="UNDEAD_SOLO_CHEST_RARE" avatar="RD_CHEST_BOSS" faction="UNDEAD" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST_SOLO" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_rare" spawnsoundevent="Play_spawn_loot_rare" namelocatag="@LOOTCHEST_NAME_RARE" prefab="LOOTCHEST_REGULAR_03">
     <RareStates hiderarityuntil="OnUnlock">
       <RareState state="rare">
         <Loot>
@@ -7570,7 +7851,7 @@
       </RareState>
     </RareStates>
   </LootChest>
-  <LootChest uniquename="UNDEAD_SOLO_CHEST_LEGENDARY" avatar="RD_CHEST_BOSS" faction="UNDEAD" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST_SOLO" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_legendary" spawnsoundevent="Play_spawn_loot_legendary" namelocatag="@LOOTCHEST_NAME_LEGENDARY" prefab="FOREST_GREEN_LOOTCHEST_UNDEAD_SOLO_LEGENDARY">
+  <LootChest uniquename="UNDEAD_SOLO_CHEST_LEGENDARY" avatar="RD_CHEST_BOSS" faction="UNDEAD" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST_SOLO" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_legendary" spawnsoundevent="Play_spawn_loot_legendary" namelocatag="@LOOTCHEST_NAME_LEGENDARY" prefab="LOOTCHEST_REGULAR_04">
     <RareStates hiderarityuntil="OnUnlock">
       <RareState state="legendary">
         <Loot>
@@ -7605,7 +7886,7 @@
   </LootChest>
   <!--Heretics-->
   <!--boss-->
-  <LootChest uniquename="HERETIC_SOLO_CHEST_BOSS_UNCOMMON" avatar="RD_CHEST_BOSS" faction="HERETIC" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST_SOLO" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_uncommon" spawnsoundevent="Play_spawn_loot_uncommon" namelocatag="@LOOTCHEST_NAME_UNCOMMON" prefab="FOREST_GREEN_LOOTCHEST_HERETIC_SOLO_BOSS_UNCOMMON">
+  <LootChest uniquename="HERETIC_SOLO_CHEST_BOSS_UNCOMMON" avatar="RD_CHEST_BOSS" faction="HERETIC" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST_SOLO" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_uncommon" spawnsoundevent="Play_spawn_loot_uncommon" namelocatag="@LOOTCHEST_NAME_UNCOMMON" prefab="LOOTCHEST_REGULAR_02">
     <RareStates hiderarityuntil="OnUnlock">
       <RareState state="uncommon">
         <Loot>
@@ -7656,7 +7937,7 @@
       </RareState>
     </RareStates>
   </LootChest>
-  <LootChest uniquename="HERETIC_SOLO_CHEST_BOSS_RARE" avatar="RD_CHEST_BOSS" faction="HERETIC" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST_SOLO" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_rare" spawnsoundevent="Play_spawn_loot_rare" namelocatag="@LOOTCHEST_NAME_RARE" prefab="FOREST_GREEN_LOOTCHEST_HERETIC_SOLO_BOSS_RARE">
+  <LootChest uniquename="HERETIC_SOLO_CHEST_BOSS_RARE" avatar="RD_CHEST_BOSS" faction="HERETIC" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST_SOLO" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_rare" spawnsoundevent="Play_spawn_loot_rare" namelocatag="@LOOTCHEST_NAME_RARE" prefab="LOOTCHEST_REGULAR_03">
     <RareStates hiderarityuntil="OnUnlock">
       <RareState state="rare">
         <Loot>
@@ -7705,7 +7986,7 @@
       </RareState>
     </RareStates>
   </LootChest>
-  <LootChest uniquename="HERETIC_SOLO_CHEST_BOSS_LEGENDARY" avatar="RD_CHEST_BOSS" faction="HERETIC" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST_SOLO" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_legendary" spawnsoundevent="Play_spawn_loot_legendary" namelocatag="@LOOTCHEST_NAME_LEGENDARY" prefab="FOREST_GREEN_LOOTCHEST_HERETIC_SOLO_BOSS_LEGENDARY">
+  <LootChest uniquename="HERETIC_SOLO_CHEST_BOSS_LEGENDARY" avatar="RD_CHEST_BOSS" faction="HERETIC" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST_SOLO" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_legendary" spawnsoundevent="Play_spawn_loot_legendary" namelocatag="@LOOTCHEST_NAME_LEGENDARY" prefab="LOOTCHEST_REGULAR_04">
     <RareStates hiderarityuntil="OnUnlock">
       <RareState state="legendary">
         <Loot>
@@ -7755,7 +8036,7 @@
     </RareStates>
   </LootChest>
   <!--normal-->
-  <LootChest uniquename="HERETIC_SOLO_CHEST_STANDARD" avatar="RD_CHEST_BOSS" faction="HERETIC" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST_SOLO" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_standard" spawnsoundevent="Play_spawn_loot_standard" namelocatag="@LOOTCHEST_NAME_STANDARD" prefab="FOREST_GREEN_LOOTCHEST_HERETIC_SOLO_STANDARD">
+  <LootChest uniquename="HERETIC_SOLO_CHEST_STANDARD" avatar="RD_CHEST_BOSS" faction="HERETIC" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST_SOLO" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_standard" spawnsoundevent="Play_spawn_loot_standard" namelocatag="@LOOTCHEST_NAME_STANDARD" prefab="LOOTCHEST_REGULAR_01">
     <RareStates hiderarityuntil="OnUnlock">
       <RareState state="standard">
         <Loot>
@@ -7809,7 +8090,7 @@
       </RareState>
     </RareStates>
   </LootChest>
-  <LootChest uniquename="HERETIC_SOLO_CHEST_UNCOMMON" avatar="RD_CHEST_BOSS" faction="HERETIC" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST_SOLO" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_uncommon" spawnsoundevent="Play_spawn_loot_uncommon" namelocatag="@LOOTCHEST_NAME_UNCOMMON" prefab="FOREST_GREEN_LOOTCHEST_HERETIC_SOLO_UNCOMMON">
+  <LootChest uniquename="HERETIC_SOLO_CHEST_UNCOMMON" avatar="RD_CHEST_BOSS" faction="HERETIC" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST_SOLO" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_uncommon" spawnsoundevent="Play_spawn_loot_uncommon" namelocatag="@LOOTCHEST_NAME_UNCOMMON" prefab="LOOTCHEST_REGULAR_02">
     <RareStates hiderarityuntil="OnUnlock">
       <RareState state="uncommon">
         <Loot>
@@ -7859,7 +8140,7 @@
       </RareState>
     </RareStates>
   </LootChest>
-  <LootChest uniquename="HERETIC_SOLO_CHEST_RARE" avatar="RD_CHEST_BOSS" faction="HERETIC" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST_SOLO" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_rare" spawnsoundevent="Play_spawn_loot_rare" namelocatag="@LOOTCHEST_NAME_RARE" prefab="FOREST_GREEN_LOOTCHEST_HERETIC_SOLO_RARE">
+  <LootChest uniquename="HERETIC_SOLO_CHEST_RARE" avatar="RD_CHEST_BOSS" faction="HERETIC" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST_SOLO" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_rare" spawnsoundevent="Play_spawn_loot_rare" namelocatag="@LOOTCHEST_NAME_RARE" prefab="LOOTCHEST_REGULAR_03">
     <RareStates hiderarityuntil="OnUnlock">
       <RareState state="rare">
         <Loot>
@@ -7907,7 +8188,7 @@
       </RareState>
     </RareStates>
   </LootChest>
-  <LootChest uniquename="HERETIC_SOLO_CHEST_LEGENDARY" avatar="RD_CHEST_BOSS" faction="HERETIC" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST_SOLO" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_legendary" spawnsoundevent="Play_spawn_loot_legendary" namelocatag="@LOOTCHEST_NAME_LEGENDARY" prefab="FOREST_GREEN_LOOTCHEST_HERETIC_SOLO_LEGENDARY">
+  <LootChest uniquename="HERETIC_SOLO_CHEST_LEGENDARY" avatar="RD_CHEST_BOSS" faction="HERETIC" maximumwatchersallowed="5" alertradius="20" spell="OPEN_LOOTCHEST_SOLO" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_legendary" spawnsoundevent="Play_spawn_loot_legendary" namelocatag="@LOOTCHEST_NAME_LEGENDARY" prefab="LOOTCHEST_REGULAR_04">
     <RareStates hiderarityuntil="OnUnlock">
       <RareState state="legendary">
         <Loot>
@@ -7964,7 +8245,7 @@
 
 
   <!--boss-->
-  <LootChest uniquename="AVALON_ELITE_BOSS_UNCOMMON" avatar="RD_CHEST_BOSS" faction="AVALON" maximumwatchersallowed="5" alertradius="50" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_uncommon" spawnsoundevent="Play_spawn_loot_uncommon" namelocatag="@LOOTCHEST_NAME_UNCOMMON">
+  <LootChest uniquename="AVALON_ELITE_BOSS_UNCOMMON" avatar="RD_CHEST_BOSS" faction="AVALON" maximumwatchersallowed="5" alertradius="50" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_uncommon" spawnsoundevent="Play_spawn_loot_uncommon" namelocatag="@LOOTCHEST_NAME_UNCOMMON" prefab="LOOTCHEST_REGULAR_03">
     <RareStates hiderarityuntil="OnUnlock">
       <RareState state="uncommon">
         <Loot>
@@ -7981,7 +8262,7 @@
       </RareState>
     </RareStates>
   </LootChest>
-  <LootChest uniquename="AVALON_ELITE_BOSS_RARE" avatar="RD_CHEST_BOSS" faction="AVALON" maximumwatchersallowed="5" alertradius="50" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_rare" spawnsoundevent="Play_spawn_loot_rare" namelocatag="@LOOTCHEST_NAME_RARE">
+  <LootChest uniquename="AVALON_ELITE_BOSS_RARE" avatar="RD_CHEST_BOSS" faction="AVALON" maximumwatchersallowed="5" alertradius="50" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_rare" spawnsoundevent="Play_spawn_loot_rare" namelocatag="@LOOTCHEST_NAME_RARE" prefab="LOOTCHEST_REGULAR_04">
     <RareStates hiderarityuntil="OnUnlock">
       <RareState state="rare">
         <Loot>
@@ -7998,7 +8279,7 @@
       </RareState>
     </RareStates>
   </LootChest>
-  <LootChest uniquename="AVALON_ELITE_BOSS_LEGENDARY" avatar="RD_CHEST_BOSS" faction="AVALON" maximumwatchersallowed="5" alertradius="50" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_legendary" spawnsoundevent="Play_spawn_loot_legendary" namelocatag="@LOOTCHEST_NAME_LEGENDARY">
+  <LootChest uniquename="AVALON_ELITE_BOSS_LEGENDARY" avatar="RD_CHEST_BOSS" faction="AVALON" maximumwatchersallowed="5" alertradius="50" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_legendary" spawnsoundevent="Play_spawn_loot_legendary" namelocatag="@LOOTCHEST_NAME_LEGENDARY" prefab="LOOTCHEST_REGULAR_04">
     <RareStates hiderarityuntil="OnUnlock">
       <RareState state="legendary">
         <Loot>
@@ -8016,7 +8297,7 @@
     </RareStates>
   </LootChest>
   <!--normal-->
-  <LootChest uniquename="AVALON_ELITE_STANDARD" avatar="RD_CHEST_BOSS" faction="AVALON" maximumwatchersallowed="5" alertradius="50" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_standard" spawnsoundevent="Play_spawn_loot_standard" namelocatag="@LOOTCHEST_NAME_STANDARD" prefab="HIGHLAND_GREEN_LOOTCHEST_AVALON_ELITE_STANDARD">
+  <LootChest uniquename="AVALON_ELITE_STANDARD" avatar="RD_CHEST_BOSS" faction="AVALON" maximumwatchersallowed="5" alertradius="50" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_standard" spawnsoundevent="Play_spawn_loot_standard" namelocatag="@LOOTCHEST_NAME_STANDARD" prefab="LOOTCHEST_REGULAR_03">
     <RareStates hiderarityuntil="OnUnlock">
       <RareState state="standard">
         <Loot>
@@ -8033,7 +8314,7 @@
       </RareState>
     </RareStates>
   </LootChest>
-  <LootChest uniquename="AVALON_ELITE_UNCOMMON" avatar="RD_CHEST_BOSS" faction="AVALON" maximumwatchersallowed="5" alertradius="50" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_uncommon" spawnsoundevent="Play_spawn_loot_uncommon" namelocatag="@LOOTCHEST_NAME_UNCOMMON" prefab="HIGHLAND_GREEN_LOOTCHEST_AVALON_ELITE_UNCOMMON">
+  <LootChest uniquename="AVALON_ELITE_UNCOMMON" avatar="RD_CHEST_BOSS" faction="AVALON" maximumwatchersallowed="5" alertradius="50" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_uncommon" spawnsoundevent="Play_spawn_loot_uncommon" namelocatag="@LOOTCHEST_NAME_UNCOMMON" prefab="LOOTCHEST_REGULAR_03">
     <RareStates hiderarityuntil="OnUnlock">
       <RareState state="uncommon">
         <Loot>
@@ -8050,7 +8331,7 @@
       </RareState>
     </RareStates>
   </LootChest>
-  <LootChest uniquename="AVALON_ELITE_RARE" avatar="RD_CHEST_BOSS" faction="AVALON" maximumwatchersallowed="5" alertradius="50" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_rare" spawnsoundevent="Play_spawn_loot_rare" namelocatag="@LOOTCHEST_NAME_RARE" prefab="HIGHLAND_GREEN_LOOTCHEST_AVALON_ELITE_RARE">
+  <LootChest uniquename="AVALON_ELITE_RARE" avatar="RD_CHEST_BOSS" faction="AVALON" maximumwatchersallowed="5" alertradius="50" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_rare" spawnsoundevent="Play_spawn_loot_rare" namelocatag="@LOOTCHEST_NAME_RARE" prefab="LOOTCHEST_REGULAR_04">
     <RareStates hiderarityuntil="OnUnlock">
       <RareState state="rare">
         <Loot>
@@ -8067,7 +8348,7 @@
       </RareState>
     </RareStates>
   </LootChest>
-  <LootChest uniquename="AVALON_ELITE_LEGENDARY" avatar="RD_CHEST_BOSS" faction="AVALON" maximumwatchersallowed="5" alertradius="50" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_legendary" spawnsoundevent="Play_spawn_loot_legendary" namelocatag="@LOOTCHEST_NAME_LEGENDARY" prefab="HIGHLAND_GREEN_LOOTCHEST_AVALON_ELITE_LEGENDARY">
+  <LootChest uniquename="AVALON_ELITE_LEGENDARY" avatar="RD_CHEST_BOSS" faction="AVALON" maximumwatchersallowed="5" alertradius="50" spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_legendary" spawnsoundevent="Play_spawn_loot_legendary" namelocatag="@LOOTCHEST_NAME_LEGENDARY" prefab="LOOTCHEST_REGULAR_04">
     <RareStates hiderarityuntil="OnUnlock">
       <RareState state="legendary">
         <Loot>
@@ -9053,13 +9334,418 @@
   <!--########################################################################################-->
 
   <!--Treasure - Mists - Solo-->
-  <LootChest uniquename="TREASURE_MISTS_SOLO_STANDARD" avatar="TREASURECHEST_COMMON_AVATAR" faction="NONE" alertradius="20" spell="OPEN_TREASURECHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_standard" spawnsoundevent="Play_spawn_loot_standard" namelocatag="@LOOTCHEST_TREASURE_SOLO_STANDARD" protectiontimeseconds="120" pvpzoneradius="30" mightreward="PVPCHALLENGE_TREASURES_SMALL_0" alwaysrequireschanneling="true" prefab="FOREST_GREEN_LOOTCHEST_TREASURE_SOLO_STANDARD">
+  <LootChest uniquename="TREASURE_COFFER_MISTS_SOLO" avatar="TREASURECHEST_COMMON_AVATAR" faction="NONE" alertradius="20" spell="OPEN_TREASURECHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_standard" spawnsoundevent="Play_spawn_loot_standard" namelocatag="@LOOTCHEST_TREASURE_MINI_LOCKED" protectiontimeseconds="90" pvpzoneradius="30" mightreward="PVPCHALLENGE_TREASURES_MINI_0" alwaysrequireschanneling="true" prefab="FOREST_GREEN_LOOTCHEST_TREASURE_SOLO_STANDARD">
     <Tiles>
-      <Biome name="Roads" none="ROADS_LOOTCHEST_TREASURE_SOLO_STANDARD"/>
-      <Biome name="Mists" green="MISTS_GREEN_LOOTCHEST_TREASURE_SOLO_STANDARD" red="MISTS_RED_LOOTCHEST_TREASURE_SOLO_STANDARD" dead="MISTS_DEAD_LOOTCHEST_TREASURE_SOLO_STANDARD"/>
+      <Biome name="Mists" green="MISTS_GREEN_LOOTCHEST_TREASURE_COFFER_01" red="MISTS_RED_LOOTCHEST_TREASURE_COFFER_01" dead="MISTS_DEAD_LOOTCHEST_TREASURE_COFFER_01"/>
     </Tiles>
     <RareStates hiderarityuntil="OnUnlock">
-      <RareState state="standard">
+      <RareState state="standard" weight="590" opensoundevent="Play_open_chest_standard" spawnsoundevent="Play_spawn_loot_standard" namelocatag="@LOOTCHEST_TREASURE_MINI_STANDARD" mightreward="PVPCHALLENGE_TREASURES_MINI_0">
+        <Loot>
+          <LootByTier tier="4">
+            <Item type="T4_SILVERBAG_NONTRADABLE" chance="0.493858" />
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="0.290505" />
+            <Item type="T4_SKILLBOOK_STANDARD" chance="0.096835" />
+            <LootListReference name="OUTLAND_TREASURES_BLACKMARKET_LOOT" chance="2.905047" />
+            <LootListReference name="OUTLAND_TREASURES_TREASURE_LOOT" chance="0.087151" />
+            <LootListReference name="LOOT_ARTEFACTS" chance="0.012415" />
+            <LootListReference name="HELL_FRAGMENT_LOOT" chance="4.401586" />
+          </LootByTier>
+          <LootByTier tier="5">
+            <Item type="T4_SILVERBAG_NONTRADABLE" chance="0.493858" />
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="0.290505" />
+            <Item type="T4_SKILLBOOK_STANDARD" chance="0.096835" />
+            <LootListReference name="OUTLAND_TREASURES_BLACKMARKET_LOOT" chance="2.905047" />
+            <LootListReference name="OUTLAND_TREASURES_TREASURE_LOOT" chance="0.087151" />
+            <LootListReference name="LOOT_ARTEFACTS" chance="0.012415" />
+            <LootListReference name="HELL_FRAGMENT_LOOT" chance="4.401586" />
+          </LootByTier>
+          <LootByTier tier="6">
+            <Item type="T4_SILVERBAG_NONTRADABLE" chance="0.493858" />
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="0.290505" />
+            <Item type="T4_SKILLBOOK_STANDARD" chance="0.096835" />
+            <LootListReference name="OUTLAND_TREASURES_BLACKMARKET_LOOT" chance="2.905047" />
+            <LootListReference name="OUTLAND_TREASURES_TREASURE_LOOT" chance="0.087151" />
+            <LootListReference name="LOOT_ARTEFACTS" chance="0.012415" />
+            <LootListReference name="HELL_FRAGMENT_LOOT" chance="4.401586" />
+          </LootByTier>
+          <LootByTier tier="7">
+            <Item type="T4_SILVERBAG_NONTRADABLE" chance="0.493858" />
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="0.290505" />
+            <Item type="T4_SKILLBOOK_STANDARD" chance="0.096835" />
+            <LootListReference name="OUTLAND_TREASURES_BLACKMARKET_LOOT" chance="2.905047" />
+            <LootListReference name="OUTLAND_TREASURES_TREASURE_LOOT" chance="0.087151" />
+            <LootListReference name="LOOT_ARTEFACTS" chance="0.012415" />
+            <LootListReference name="HELL_FRAGMENT_LOOT" chance="4.401586" />
+          </LootByTier>
+          <LootByTier tier="8">
+            <Item type="T4_SILVERBAG_NONTRADABLE" chance="0.493858" />
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="0.290505" />
+            <Item type="T4_SKILLBOOK_STANDARD" chance="0.096835" />
+            <LootListReference name="OUTLAND_TREASURES_BLACKMARKET_LOOT" chance="2.905047" />
+            <LootListReference name="OUTLAND_TREASURES_TREASURE_LOOT" chance="0.087151" />
+            <LootListReference name="LOOT_ARTEFACTS" chance="0.012415" />
+            <LootListReference name="HELL_FRAGMENT_LOOT" chance="4.401586" />
+          </LootByTier>
+        </Loot>
+      </RareState>
+      <RareState state="uncommon" weight="300" opensoundevent="Play_open_chest_uncommon" spawnsoundevent="Play_spawn_loot_uncommon" namelocatag="@LOOTCHEST_TREASURE_MINI_UNCOMMON" mightreward="PVPCHALLENGE_TREASURES_MINI_1">
+        <Loot>
+          <LootByTier tier="4">
+            <Item type="T4_SILVERBAG_NONTRADABLE" chance="0.864251" />
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="0.508383" />
+            <Item type="T4_SKILLBOOK_STANDARD" chance="0.169461" />
+            <LootListReference name="OUTLAND_TREASURES_BLACKMARKET_LOOT" chance="5.083832" />
+            <LootListReference name="OUTLAND_TREASURES_TREASURE_LOOT" chance="0.152515" />
+            <LootListReference name="LOOT_ARTEFACTS" chance="0.021726" />
+            <LootListReference name="HELL_FRAGMENT_LOOT" chance="7.702776" />
+          </LootByTier>
+          <LootByTier tier="5">
+            <Item type="T4_SILVERBAG_NONTRADABLE" chance="0.864251" />
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="0.508383" />
+            <Item type="T4_SKILLBOOK_STANDARD" chance="0.169461" />
+            <LootListReference name="OUTLAND_TREASURES_BLACKMARKET_LOOT" chance="5.083832" />
+            <LootListReference name="OUTLAND_TREASURES_TREASURE_LOOT" chance="0.152515" />
+            <LootListReference name="LOOT_ARTEFACTS" chance="0.021726" />
+            <LootListReference name="HELL_FRAGMENT_LOOT" chance="7.702776" />
+          </LootByTier>
+          <LootByTier tier="6">
+            <Item type="T4_SILVERBAG_NONTRADABLE" chance="0.864251" />
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="0.508383" />
+            <Item type="T4_SKILLBOOK_STANDARD" chance="0.169461" />
+            <LootListReference name="OUTLAND_TREASURES_BLACKMARKET_LOOT" chance="5.083832" />
+            <LootListReference name="OUTLAND_TREASURES_TREASURE_LOOT" chance="0.152515" />
+            <LootListReference name="LOOT_ARTEFACTS" chance="0.021726" />
+            <LootListReference name="HELL_FRAGMENT_LOOT" chance="7.702776" />
+          </LootByTier>
+          <LootByTier tier="7">
+            <Item type="T4_SILVERBAG_NONTRADABLE" chance="0.864251" />
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="0.508383" />
+            <Item type="T4_SKILLBOOK_STANDARD" chance="0.169461" />
+            <LootListReference name="OUTLAND_TREASURES_BLACKMARKET_LOOT" chance="5.083832" />
+            <LootListReference name="OUTLAND_TREASURES_TREASURE_LOOT" chance="0.152515" />
+            <LootListReference name="LOOT_ARTEFACTS" chance="0.021726" />
+            <LootListReference name="HELL_FRAGMENT_LOOT" chance="7.702776" />
+          </LootByTier>
+          <LootByTier tier="8">
+            <Item type="T4_SILVERBAG_NONTRADABLE" chance="0.864251" />
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="0.508383" />
+            <Item type="T4_SKILLBOOK_STANDARD" chance="0.169461" />
+            <LootListReference name="OUTLAND_TREASURES_BLACKMARKET_LOOT" chance="5.083832" />
+            <LootListReference name="OUTLAND_TREASURES_TREASURE_LOOT" chance="0.152515" />
+            <LootListReference name="LOOT_ARTEFACTS" chance="0.021726" />
+            <LootListReference name="HELL_FRAGMENT_LOOT" chance="7.702776" />
+          </LootByTier>
+        </Loot>
+      </RareState>
+      <RareState state="rare" weight="100" opensoundevent="Play_open_chest_rare" spawnsoundevent="Play_spawn_loot_rare" namelocatag="@LOOTCHEST_TREASURE_MINI_RARE" mightreward="PVPCHALLENGE_TREASURES_MINI_2">
+        <Loot>
+          <LootByTier tier="4">
+            <Item type="T4_SILVERBAG_NONTRADABLE" chance="1.512440" />
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="0.889671" />
+            <Item type="T4_SKILLBOOK_STANDARD" chance="0.296557" />
+            <LootListReference name="OUTLAND_TREASURES_BLACKMARKET_LOOT" chance="8.896706" />
+            <LootListReference name="OUTLAND_TREASURES_TREASURE_LOOT" chance="0.266901" />
+            <LootListReference name="LOOT_ARTEFACTS" chance="0.038020" />
+            <LootListReference name="HELL_FRAGMENT_LOOT" chance="13.479857" />
+          </LootByTier>
+          <LootByTier tier="5">
+            <Item type="T4_SILVERBAG_NONTRADABLE" chance="1.512440" />
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="0.889671" />
+            <Item type="T4_SKILLBOOK_STANDARD" chance="0.296557" />
+            <LootListReference name="OUTLAND_TREASURES_BLACKMARKET_LOOT" chance="8.896706" />
+            <LootListReference name="OUTLAND_TREASURES_TREASURE_LOOT" chance="0.266901" />
+            <LootListReference name="LOOT_ARTEFACTS" chance="0.038020" />
+            <LootListReference name="HELL_FRAGMENT_LOOT" chance="13.479857" />
+          </LootByTier>
+          <LootByTier tier="6">
+            <Item type="T4_SILVERBAG_NONTRADABLE" chance="1.512440" />
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="0.889671" />
+            <Item type="T4_SKILLBOOK_STANDARD" chance="0.296557" />
+            <LootListReference name="OUTLAND_TREASURES_BLACKMARKET_LOOT" chance="8.896706" />
+            <LootListReference name="OUTLAND_TREASURES_TREASURE_LOOT" chance="0.266901" />
+            <LootListReference name="LOOT_ARTEFACTS" chance="0.038020" />
+            <LootListReference name="HELL_FRAGMENT_LOOT" chance="13.479857" />
+          </LootByTier>
+          <LootByTier tier="7">
+            <Item type="T4_SILVERBAG_NONTRADABLE" chance="1.512440" />
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="0.889671" />
+            <Item type="T4_SKILLBOOK_STANDARD" chance="0.296557" />
+            <LootListReference name="OUTLAND_TREASURES_BLACKMARKET_LOOT" chance="8.896706" />
+            <LootListReference name="OUTLAND_TREASURES_TREASURE_LOOT" chance="0.266901" />
+            <LootListReference name="LOOT_ARTEFACTS" chance="0.038020" />
+            <LootListReference name="HELL_FRAGMENT_LOOT" chance="13.479857" />
+          </LootByTier>
+          <LootByTier tier="8">
+            <Item type="T4_SILVERBAG_NONTRADABLE" chance="1.512440" />
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="0.889671" />
+            <Item type="T4_SKILLBOOK_STANDARD" chance="0.296557" />
+            <LootListReference name="OUTLAND_TREASURES_BLACKMARKET_LOOT" chance="8.896706" />
+            <LootListReference name="OUTLAND_TREASURES_TREASURE_LOOT" chance="0.266901" />
+            <LootListReference name="LOOT_ARTEFACTS" chance="0.038020" />
+            <LootListReference name="HELL_FRAGMENT_LOOT" chance="13.479857" />
+          </LootByTier>
+        </Loot>
+      </RareState>
+      <RareState state="legendary" weight="10" opensoundevent="Play_open_chest_legendary" spawnsoundevent="Play_spawn_loot_legendary" namelocatag="@LOOTCHEST_TREASURE_MINI_LEGENDARY" mightreward="PVPCHALLENGE_TREASURES_MINI_3">
+        <Loot>
+          <LootByTier tier="4">
+            <Item type="T4_SILVERBAG_NONTRADABLE" chance="2.646770" />
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="1.556924" />
+            <Item type="T4_SKILLBOOK_STANDARD" chance="0.518975" />
+            <LootListReference name="OUTLAND_TREASURES_BLACKMARKET_LOOT" chance="15.569235" />
+            <LootListReference name="OUTLAND_TREASURES_TREASURE_LOOT" chance="0.467077" />
+            <LootListReference name="LOOT_ARTEFACTS" chance="0.066535" />
+            <LootListReference name="HELL_FRAGMENT_LOOT" chance="23.589750" />
+          </LootByTier>
+          <LootByTier tier="5">
+            <Item type="T4_SILVERBAG_NONTRADABLE" chance="2.646770" />
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="1.556924" />
+            <Item type="T4_SKILLBOOK_STANDARD" chance="0.518975" />
+            <LootListReference name="OUTLAND_TREASURES_BLACKMARKET_LOOT" chance="15.569235" />
+            <LootListReference name="OUTLAND_TREASURES_TREASURE_LOOT" chance="0.467077" />
+            <LootListReference name="LOOT_ARTEFACTS" chance="0.066535" />
+            <LootListReference name="HELL_FRAGMENT_LOOT" chance="23.589750" />
+          </LootByTier>
+          <LootByTier tier="6">
+            <Item type="T4_SILVERBAG_NONTRADABLE" chance="2.646770" />
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="1.556924" />
+            <Item type="T4_SKILLBOOK_STANDARD" chance="0.518975" />
+            <LootListReference name="OUTLAND_TREASURES_BLACKMARKET_LOOT" chance="15.569235" />
+            <LootListReference name="OUTLAND_TREASURES_TREASURE_LOOT" chance="0.467077" />
+            <LootListReference name="LOOT_ARTEFACTS" chance="0.066535" />
+            <LootListReference name="HELL_FRAGMENT_LOOT" chance="23.589750" />
+          </LootByTier>
+          <LootByTier tier="7">
+            <Item type="T4_SILVERBAG_NONTRADABLE" chance="2.646770" />
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="1.556924" />
+            <Item type="T4_SKILLBOOK_STANDARD" chance="0.518975" />
+            <LootListReference name="OUTLAND_TREASURES_BLACKMARKET_LOOT" chance="15.569235" />
+            <LootListReference name="OUTLAND_TREASURES_TREASURE_LOOT" chance="0.467077" />
+            <LootListReference name="LOOT_ARTEFACTS" chance="0.066535" />
+            <LootListReference name="HELL_FRAGMENT_LOOT" chance="23.589750" />
+          </LootByTier>
+          <LootByTier tier="8">
+            <Item type="T4_SILVERBAG_NONTRADABLE" chance="2.646770" />
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="1.556924" />
+            <Item type="T4_SKILLBOOK_STANDARD" chance="0.518975" />
+            <LootListReference name="OUTLAND_TREASURES_BLACKMARKET_LOOT" chance="15.569235" />
+            <LootListReference name="OUTLAND_TREASURES_TREASURE_LOOT" chance="0.467077" />
+            <LootListReference name="LOOT_ARTEFACTS" chance="0.066535" />
+            <LootListReference name="HELL_FRAGMENT_LOOT" chance="23.589750" />
+          </LootByTier>
+        </Loot>
+      </RareState>
+    </RareStates>
+  </LootChest>
+  <LootChest uniquename="TREASURE_COFFER_MISTS_DUNGEON_SOLO" avatar="TREASURECHEST_COMMON_AVATAR" faction="NONE" alertradius="20" spell="OPEN_TREASURECHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_standard" spawnsoundevent="Play_spawn_loot_standard" namelocatag="@LOOTCHEST_TREASURE_MINI_LOCKED" protectiontimeseconds="180" pvpzoneradius="30" mightreward="PVPCHALLENGE_TREASURES_MINI_0" alwaysrequireschanneling="true" prefab="FOREST_GREEN_LOOTCHEST_TREASURE_SOLO_STANDARD">
+    <Tiles>
+      <Biome name="Mists" green="MISTS_GREEN_LOOTCHEST_TREASURE_COFFER_01" red="MISTS_RED_LOOTCHEST_TREASURE_COFFER_01" dead="MISTS_DEAD_LOOTCHEST_TREASURE_COFFER_01"/>
+    </Tiles>
+    <RareStates hiderarityuntil="OnUnlock">
+      <RareState state="standard" weight="590" opensoundevent="Play_open_chest_standard" spawnsoundevent="Play_spawn_loot_standard" namelocatag="@LOOTCHEST_TREASURE_MINI_STANDARD" mightreward="PVPCHALLENGE_TREASURES_MINI_0">
+        <Loot>
+          <LootByTier tier="4">
+            <Item type="T4_SILVERBAG_NONTRADABLE" chance="0.493858" />
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="0.290505" />
+            <Item type="T4_SKILLBOOK_STANDARD" chance="0.096835" />
+            <LootListReference name="OUTLAND_TREASURES_BLACKMARKET_LOOT" chance="2.905047" />
+            <LootListReference name="OUTLAND_TREASURES_TREASURE_LOOT" chance="0.087151" />
+            <LootListReference name="LOOT_ARTEFACTS" chance="0.012415" />
+            <LootListReference name="HELL_FRAGMENT_LOOT" chance="4.401586" />
+          </LootByTier>
+          <LootByTier tier="5">
+            <Item type="T4_SILVERBAG_NONTRADABLE" chance="0.493858" />
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="0.290505" />
+            <Item type="T4_SKILLBOOK_STANDARD" chance="0.096835" />
+            <LootListReference name="OUTLAND_TREASURES_BLACKMARKET_LOOT" chance="2.905047" />
+            <LootListReference name="OUTLAND_TREASURES_TREASURE_LOOT" chance="0.087151" />
+            <LootListReference name="LOOT_ARTEFACTS" chance="0.012415" />
+            <LootListReference name="HELL_FRAGMENT_LOOT" chance="4.401586" />
+          </LootByTier>
+          <LootByTier tier="6">
+            <Item type="T4_SILVERBAG_NONTRADABLE" chance="0.493858" />
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="0.290505" />
+            <Item type="T4_SKILLBOOK_STANDARD" chance="0.096835" />
+            <LootListReference name="OUTLAND_TREASURES_BLACKMARKET_LOOT" chance="2.905047" />
+            <LootListReference name="OUTLAND_TREASURES_TREASURE_LOOT" chance="0.087151" />
+            <LootListReference name="LOOT_ARTEFACTS" chance="0.012415" />
+            <LootListReference name="HELL_FRAGMENT_LOOT" chance="4.401586" />
+          </LootByTier>
+          <LootByTier tier="7">
+            <Item type="T4_SILVERBAG_NONTRADABLE" chance="0.493858" />
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="0.290505" />
+            <Item type="T4_SKILLBOOK_STANDARD" chance="0.096835" />
+            <LootListReference name="OUTLAND_TREASURES_BLACKMARKET_LOOT" chance="2.905047" />
+            <LootListReference name="OUTLAND_TREASURES_TREASURE_LOOT" chance="0.087151" />
+            <LootListReference name="LOOT_ARTEFACTS" chance="0.012415" />
+            <LootListReference name="HELL_FRAGMENT_LOOT" chance="4.401586" />
+          </LootByTier>
+          <LootByTier tier="8">
+            <Item type="T4_SILVERBAG_NONTRADABLE" chance="0.493858" />
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="0.290505" />
+            <Item type="T4_SKILLBOOK_STANDARD" chance="0.096835" />
+            <LootListReference name="OUTLAND_TREASURES_BLACKMARKET_LOOT" chance="2.905047" />
+            <LootListReference name="OUTLAND_TREASURES_TREASURE_LOOT" chance="0.087151" />
+            <LootListReference name="LOOT_ARTEFACTS" chance="0.012415" />
+            <LootListReference name="HELL_FRAGMENT_LOOT" chance="4.401586" />
+          </LootByTier>
+        </Loot>
+      </RareState>
+      <RareState state="uncommon" weight="300" opensoundevent="Play_open_chest_uncommon" spawnsoundevent="Play_spawn_loot_uncommon" namelocatag="@LOOTCHEST_TREASURE_MINI_UNCOMMON" mightreward="PVPCHALLENGE_TREASURES_MINI_1">
+        <Loot>
+          <LootByTier tier="4">
+            <Item type="T4_SILVERBAG_NONTRADABLE" chance="0.864251" />
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="0.508383" />
+            <Item type="T4_SKILLBOOK_STANDARD" chance="0.169461" />
+            <LootListReference name="OUTLAND_TREASURES_BLACKMARKET_LOOT" chance="5.083832" />
+            <LootListReference name="OUTLAND_TREASURES_TREASURE_LOOT" chance="0.152515" />
+            <LootListReference name="LOOT_ARTEFACTS" chance="0.021726" />
+            <LootListReference name="HELL_FRAGMENT_LOOT" chance="7.702776" />
+          </LootByTier>
+          <LootByTier tier="5">
+            <Item type="T4_SILVERBAG_NONTRADABLE" chance="0.864251" />
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="0.508383" />
+            <Item type="T4_SKILLBOOK_STANDARD" chance="0.169461" />
+            <LootListReference name="OUTLAND_TREASURES_BLACKMARKET_LOOT" chance="5.083832" />
+            <LootListReference name="OUTLAND_TREASURES_TREASURE_LOOT" chance="0.152515" />
+            <LootListReference name="LOOT_ARTEFACTS" chance="0.021726" />
+            <LootListReference name="HELL_FRAGMENT_LOOT" chance="7.702776" />
+          </LootByTier>
+          <LootByTier tier="6">
+            <Item type="T4_SILVERBAG_NONTRADABLE" chance="0.864251" />
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="0.508383" />
+            <Item type="T4_SKILLBOOK_STANDARD" chance="0.169461" />
+            <LootListReference name="OUTLAND_TREASURES_BLACKMARKET_LOOT" chance="5.083832" />
+            <LootListReference name="OUTLAND_TREASURES_TREASURE_LOOT" chance="0.152515" />
+            <LootListReference name="LOOT_ARTEFACTS" chance="0.021726" />
+            <LootListReference name="HELL_FRAGMENT_LOOT" chance="7.702776" />
+          </LootByTier>
+          <LootByTier tier="7">
+            <Item type="T4_SILVERBAG_NONTRADABLE" chance="0.864251" />
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="0.508383" />
+            <Item type="T4_SKILLBOOK_STANDARD" chance="0.169461" />
+            <LootListReference name="OUTLAND_TREASURES_BLACKMARKET_LOOT" chance="5.083832" />
+            <LootListReference name="OUTLAND_TREASURES_TREASURE_LOOT" chance="0.152515" />
+            <LootListReference name="LOOT_ARTEFACTS" chance="0.021726" />
+            <LootListReference name="HELL_FRAGMENT_LOOT" chance="7.702776" />
+          </LootByTier>
+          <LootByTier tier="8">
+            <Item type="T4_SILVERBAG_NONTRADABLE" chance="0.864251" />
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="0.508383" />
+            <Item type="T4_SKILLBOOK_STANDARD" chance="0.169461" />
+            <LootListReference name="OUTLAND_TREASURES_BLACKMARKET_LOOT" chance="5.083832" />
+            <LootListReference name="OUTLAND_TREASURES_TREASURE_LOOT" chance="0.152515" />
+            <LootListReference name="LOOT_ARTEFACTS" chance="0.021726" />
+            <LootListReference name="HELL_FRAGMENT_LOOT" chance="7.702776" />
+          </LootByTier>
+        </Loot>
+      </RareState>
+      <RareState state="rare" weight="100" opensoundevent="Play_open_chest_rare" spawnsoundevent="Play_spawn_loot_rare" namelocatag="@LOOTCHEST_TREASURE_MINI_RARE" mightreward="PVPCHALLENGE_TREASURES_MINI_2">
+        <Loot>
+          <LootByTier tier="4">
+            <Item type="T4_SILVERBAG_NONTRADABLE" chance="1.512440" />
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="0.889671" />
+            <Item type="T4_SKILLBOOK_STANDARD" chance="0.296557" />
+            <LootListReference name="OUTLAND_TREASURES_BLACKMARKET_LOOT" chance="8.896706" />
+            <LootListReference name="OUTLAND_TREASURES_TREASURE_LOOT" chance="0.266901" />
+            <LootListReference name="LOOT_ARTEFACTS" chance="0.038020" />
+            <LootListReference name="HELL_FRAGMENT_LOOT" chance="13.479857" />
+          </LootByTier>
+          <LootByTier tier="5">
+            <Item type="T4_SILVERBAG_NONTRADABLE" chance="1.512440" />
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="0.889671" />
+            <Item type="T4_SKILLBOOK_STANDARD" chance="0.296557" />
+            <LootListReference name="OUTLAND_TREASURES_BLACKMARKET_LOOT" chance="8.896706" />
+            <LootListReference name="OUTLAND_TREASURES_TREASURE_LOOT" chance="0.266901" />
+            <LootListReference name="LOOT_ARTEFACTS" chance="0.038020" />
+            <LootListReference name="HELL_FRAGMENT_LOOT" chance="13.479857" />
+          </LootByTier>
+          <LootByTier tier="6">
+            <Item type="T4_SILVERBAG_NONTRADABLE" chance="1.512440" />
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="0.889671" />
+            <Item type="T4_SKILLBOOK_STANDARD" chance="0.296557" />
+            <LootListReference name="OUTLAND_TREASURES_BLACKMARKET_LOOT" chance="8.896706" />
+            <LootListReference name="OUTLAND_TREASURES_TREASURE_LOOT" chance="0.266901" />
+            <LootListReference name="LOOT_ARTEFACTS" chance="0.038020" />
+            <LootListReference name="HELL_FRAGMENT_LOOT" chance="13.479857" />
+          </LootByTier>
+          <LootByTier tier="7">
+            <Item type="T4_SILVERBAG_NONTRADABLE" chance="1.512440" />
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="0.889671" />
+            <Item type="T4_SKILLBOOK_STANDARD" chance="0.296557" />
+            <LootListReference name="OUTLAND_TREASURES_BLACKMARKET_LOOT" chance="8.896706" />
+            <LootListReference name="OUTLAND_TREASURES_TREASURE_LOOT" chance="0.266901" />
+            <LootListReference name="LOOT_ARTEFACTS" chance="0.038020" />
+            <LootListReference name="HELL_FRAGMENT_LOOT" chance="13.479857" />
+          </LootByTier>
+          <LootByTier tier="8">
+            <Item type="T4_SILVERBAG_NONTRADABLE" chance="1.512440" />
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="0.889671" />
+            <Item type="T4_SKILLBOOK_STANDARD" chance="0.296557" />
+            <LootListReference name="OUTLAND_TREASURES_BLACKMARKET_LOOT" chance="8.896706" />
+            <LootListReference name="OUTLAND_TREASURES_TREASURE_LOOT" chance="0.266901" />
+            <LootListReference name="LOOT_ARTEFACTS" chance="0.038020" />
+            <LootListReference name="HELL_FRAGMENT_LOOT" chance="13.479857" />
+          </LootByTier>
+        </Loot>
+      </RareState>
+      <RareState state="legendary" weight="10" opensoundevent="Play_open_chest_legendary" spawnsoundevent="Play_spawn_loot_legendary" namelocatag="@LOOTCHEST_TREASURE_MINI_LEGENDARY" mightreward="PVPCHALLENGE_TREASURES_MINI_3">
+        <Loot>
+          <LootByTier tier="4">
+            <Item type="T4_SILVERBAG_NONTRADABLE" chance="2.646770" />
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="1.556924" />
+            <Item type="T4_SKILLBOOK_STANDARD" chance="0.518975" />
+            <LootListReference name="OUTLAND_TREASURES_BLACKMARKET_LOOT" chance="15.569235" />
+            <LootListReference name="OUTLAND_TREASURES_TREASURE_LOOT" chance="0.467077" />
+            <LootListReference name="LOOT_ARTEFACTS" chance="0.066535" />
+            <LootListReference name="HELL_FRAGMENT_LOOT" chance="23.589750" />
+          </LootByTier>
+          <LootByTier tier="5">
+            <Item type="T4_SILVERBAG_NONTRADABLE" chance="2.646770" />
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="1.556924" />
+            <Item type="T4_SKILLBOOK_STANDARD" chance="0.518975" />
+            <LootListReference name="OUTLAND_TREASURES_BLACKMARKET_LOOT" chance="15.569235" />
+            <LootListReference name="OUTLAND_TREASURES_TREASURE_LOOT" chance="0.467077" />
+            <LootListReference name="LOOT_ARTEFACTS" chance="0.066535" />
+            <LootListReference name="HELL_FRAGMENT_LOOT" chance="23.589750" />
+          </LootByTier>
+          <LootByTier tier="6">
+            <Item type="T4_SILVERBAG_NONTRADABLE" chance="2.646770" />
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="1.556924" />
+            <Item type="T4_SKILLBOOK_STANDARD" chance="0.518975" />
+            <LootListReference name="OUTLAND_TREASURES_BLACKMARKET_LOOT" chance="15.569235" />
+            <LootListReference name="OUTLAND_TREASURES_TREASURE_LOOT" chance="0.467077" />
+            <LootListReference name="LOOT_ARTEFACTS" chance="0.066535" />
+            <LootListReference name="HELL_FRAGMENT_LOOT" chance="23.589750" />
+          </LootByTier>
+          <LootByTier tier="7">
+            <Item type="T4_SILVERBAG_NONTRADABLE" chance="2.646770" />
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="1.556924" />
+            <Item type="T4_SKILLBOOK_STANDARD" chance="0.518975" />
+            <LootListReference name="OUTLAND_TREASURES_BLACKMARKET_LOOT" chance="15.569235" />
+            <LootListReference name="OUTLAND_TREASURES_TREASURE_LOOT" chance="0.467077" />
+            <LootListReference name="LOOT_ARTEFACTS" chance="0.066535" />
+            <LootListReference name="HELL_FRAGMENT_LOOT" chance="23.589750" />
+          </LootByTier>
+          <LootByTier tier="8">
+            <Item type="T4_SILVERBAG_NONTRADABLE" chance="2.646770" />
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="1.556924" />
+            <Item type="T4_SKILLBOOK_STANDARD" chance="0.518975" />
+            <LootListReference name="OUTLAND_TREASURES_BLACKMARKET_LOOT" chance="15.569235" />
+            <LootListReference name="OUTLAND_TREASURES_TREASURE_LOOT" chance="0.467077" />
+            <LootListReference name="LOOT_ARTEFACTS" chance="0.066535" />
+            <LootListReference name="HELL_FRAGMENT_LOOT" chance="23.589750" />
+          </LootByTier>
+        </Loot>
+      </RareState>
+    </RareStates>
+  </LootChest>
+  <LootChest uniquename="TREASURE_MISTS_SOLO" avatar="TREASURECHEST_COMMON_AVATAR" faction="NONE" alertradius="20" spell="OPEN_TREASURECHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_standard" spawnsoundevent="Play_spawn_loot_standard" namelocatag="@LOOTCHEST_TREASURE_SOLO_STANDARD" protectiontimeseconds="120" pvpzoneradius="30" mightreward="PVPCHALLENGE_TREASURES_SMALL_0" alwaysrequireschanneling="true" prefab="FOREST_GREEN_LOOTCHEST_TREASURE_SOLO_STANDARD">
+    <Tiles>
+      <Biome name="Mists" green="MISTS_GREEN_LOOTCHEST_TREASURE_01" red="MISTS_RED_LOOTCHEST_TREASURE_SOLO_STANDARD" dead="MISTS_DEAD_LOOTCHEST_TREASURE_SOLO_STANDARD"/>
+    </Tiles>    
+    <RareStates hiderarityuntil="OnUnlock">
+      <RareState state="standard" weight="590" opensoundevent="Play_open_chest_standard" spawnsoundevent="Play_spawn_loot_standard" namelocatag="@LOOTCHEST_TREASURE_SOLO_STANDARD" mightreward="PVPCHALLENGE_TREASURES_SMALL_0">        
         <Loot>
           <LootByTier tier="4">
             <Item type="T4_SILVERBAG_NONTRADABLE" chance="1.481574" />
@@ -9108,15 +9794,7 @@
           </LootByTier>
         </Loot>
       </RareState>
-    </RareStates>
-  </LootChest>
-  <LootChest uniquename="TREASURE_MISTS_SOLO_UNCOMMON" avatar="TREASURECHEST_COMMON_AVATAR" faction="NONE" alertradius="20" spell="OPEN_TREASURECHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_uncommon" spawnsoundevent="Play_spawn_loot_uncommon" namelocatag="@LOOTCHEST_TREASURE_SOLO_UNCOMMON" protectiontimeseconds="120" pvpzoneradius="30" mightreward="PVPCHALLENGE_TREASURES_SMALL_1" alwaysrequireschanneling="true" prefab="FOREST_GREEN_LOOTCHEST_TREASURE_SOLO_UNCOMMON">
-    <Tiles>
-      <Biome name="Roads" none="ROADS_LOOTCHEST_TREASURE_SOLO_UNCOMMON"/>
-      <Biome name="Mists" green="MISTS_GREEN_LOOTCHEST_TREASURE_SOLO_UNCOMMON" red="MISTS_RED_LOOTCHEST_TREASURE_SOLO_UNCOMMON" dead="MISTS_DEAD_LOOTCHEST_TREASURE_SOLO_UNCOMMON"/>
-    </Tiles>
-    <RareStates hiderarityuntil="OnUnlock">
-      <RareState state="uncommon">
+      <RareState state="uncommon" weight="300" opensoundevent="Play_open_chest_uncommon" spawnsoundevent="Play_spawn_loot_uncommon" namelocatag="@LOOTCHEST_TREASURE_SOLO_UNCOMMON" mightreward="PVPCHALLENGE_TREASURES_SMALL_1">
         <Loot>
           <LootByTier tier="4">
             <Item type="T4_SILVERBAG_NONTRADABLE" chance="2.592754" />
@@ -9165,15 +9843,7 @@
           </LootByTier>
         </Loot>
       </RareState>
-    </RareStates>
-  </LootChest>
-  <LootChest uniquename="TREASURE_MISTS_SOLO_RARE" avatar="TREASURECHEST_COMMON_AVATAR" faction="NONE" alertradius="20" spell="OPEN_TREASURECHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_rare" spawnsoundevent="Play_spawn_loot_rare" namelocatag="@LOOTCHEST_TREASURE_SOLO_RARE" protectiontimeseconds="120" pvpzoneradius="30" mightreward="PVPCHALLENGE_TREASURES_SMALL_2" alwaysrequireschanneling="true" prefab="FOREST_GREEN_LOOTCHEST_TREASURE_SOLO_RARE">
-    <Tiles>
-      <Biome name="Roads" none="ROADS_LOOTCHEST_TREASURE_SOLO_RARE"/>
-      <Biome name="Mists" green="MISTS_GREEN_LOOTCHEST_TREASURE_SOLO_RARE" red="MISTS_RED_LOOTCHEST_TREASURE_SOLO_RARE" dead="MISTS_DEAD_LOOTCHEST_TREASURE_SOLO_RARE"/>
-    </Tiles>
-    <RareStates hiderarityuntil="OnUnlock">
-      <RareState state="rare">
+      <RareState state="rare" weight="100" opensoundevent="Play_open_chest_rare" spawnsoundevent="Play_spawn_loot_rare" namelocatag="@LOOTCHEST_TREASURE_SOLO_RARE" mightreward="PVPCHALLENGE_TREASURES_SMALL_2">
         <Loot>
           <LootByTier tier="4">
             <Item type="T4_SILVERBAG_NONTRADABLE" chance="4.53732" />
@@ -9222,16 +9892,7 @@
           </LootByTier>
         </Loot>
       </RareState>
-    </RareStates>
-  </LootChest>
-  <LootChest uniquename="TREASURE_MISTS_SOLO_LEGENDARY" avatar="TREASURECHEST_COMMON_AVATAR" faction="NONE" alertradius="20" spell="OPEN_TREASURECHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_legendary" spawnsoundevent="Play_spawn_loot_legendary" namelocatag="@LOOTCHEST_TREASURE_SOLO_LEGENDARY" protectiontimeseconds="120" pvpzoneradius="30" mightreward="PVPCHALLENGE_TREASURES_SMALL_3" alwaysrequireschanneling="true" prefab="FOREST_GREEN_LOOTCHEST_TREASURE_SOLO_LEGENDARY">
-    <Tiles>
-      <Biome name="Roads" none="ROADS_LOOTCHEST_TREASURE_SOLO_LEGENDARY"/>
-      <Biome name="Mists" green="MISTS_GREEN_LOOTCHEST_TREASURE_SOLO_LEGENDARY" red="MISTS_RED_LOOTCHEST_TREASURE_SOLO_LEGENDARY" dead="MISTS_DEAD_LOOTCHEST_TREASURE_SOLO_LEGENDARY"/>
-      <Biome name="Forest" green="FOREST_GREEN_LOOTCHEST_TREASURE_SOLO_LEGENDARY" red="FOREST_RED_LOOTCHEST_TREASURE_SOLO_LEGENDARY" dead="FOREST_DEAD_LOOTCHEST_TREASURE_SOLO_LEGENDARY"/>
-    </Tiles>
-    <RareStates hiderarityuntil="OnUnlock">
-      <RareState state="legendary">
+      <RareState state="legendary" weight="10" opensoundevent="Play_open_chest_legendary" spawnsoundevent="Play_spawn_loot_legendary" namelocatag="@LOOTCHEST_TREASURE_SOLO_LEGENDARY" mightreward="PVPCHALLENGE_TREASURES_SMALL_3">
         <Loot>
           <LootByTier tier="4">
             <Item type="T4_SILVERBAG_NONTRADABLE" chance="7.94031" />
@@ -9282,7 +9943,210 @@
       </RareState>
     </RareStates>
   </LootChest>
-
+  <LootChest uniquename="TREASURE_MISTS_DUNGEON_SOLO" avatar="TREASURECHEST_COMMON_AVATAR" faction="NONE" alertradius="20" spell="OPEN_TREASURECHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_standard" spawnsoundevent="Play_spawn_loot_standard" namelocatag="@LOOTCHEST_TREASURE_SOLO_STANDARD" protectiontimeseconds="300" pvpzoneradius="30" mightreward="PVPCHALLENGE_TREASURES_SMALL_0" alwaysrequireschanneling="true" prefab="FOREST_GREEN_LOOTCHEST_TREASURE_SOLO_STANDARD">
+    <Tiles>
+      <Biome name="Mists" green="MISTS_GREEN_LOOTCHEST_TREASURE_01" red="MISTS_RED_LOOTCHEST_TREASURE_SOLO_STANDARD" dead="MISTS_DEAD_LOOTCHEST_TREASURE_SOLO_STANDARD"/>
+    </Tiles>    
+    <RareStates hiderarityuntil="OnUnlock">
+      <RareState state="standard" weight="590" opensoundevent="Play_open_chest_standard" spawnsoundevent="Play_spawn_loot_standard" namelocatag="@LOOTCHEST_TREASURE_SOLO_STANDARD" mightreward="PVPCHALLENGE_TREASURES_SMALL_0">        
+        <Loot>
+          <LootByTier tier="4">
+            <Item type="T4_SILVERBAG_NONTRADABLE" chance="1.481574" />
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="0.871514" />
+            <Item type="T4_SKILLBOOK_STANDARD" chance="0.290505" />
+            <LootListReference name="OUTLAND_TREASURES_BLACKMARKET_LOOT" chance="8.71514" />
+            <LootListReference name="OUTLAND_TREASURES_TREASURE_LOOT" chance="0.261454" />
+            <LootListReference name="LOOT_ARTEFACTS" chance="0.037244" />
+            <LootListReference name="HELL_FRAGMENT_LOOT" chance="13.204758" />
+          </LootByTier>
+          <LootByTier tier="5">
+            <Item type="T4_SILVERBAG_NONTRADABLE" chance="1.481574" />
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="0.871514" />
+            <Item type="T4_SKILLBOOK_STANDARD" chance="0.290505" />
+            <LootListReference name="OUTLAND_TREASURES_BLACKMARKET_LOOT" chance="8.71514" />
+            <LootListReference name="OUTLAND_TREASURES_TREASURE_LOOT" chance="0.261454" />
+            <LootListReference name="LOOT_ARTEFACTS" chance="0.037244" />
+            <LootListReference name="HELL_FRAGMENT_LOOT" chance="13.204758" />
+          </LootByTier>
+          <LootByTier tier="6">
+            <Item type="T4_SILVERBAG_NONTRADABLE" chance="1.481574" />
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="0.871514" />
+            <Item type="T4_SKILLBOOK_STANDARD" chance="0.290505" />
+            <LootListReference name="OUTLAND_TREASURES_BLACKMARKET_LOOT" chance="8.71514" />
+            <LootListReference name="OUTLAND_TREASURES_TREASURE_LOOT" chance="0.261454" />
+            <LootListReference name="LOOT_ARTEFACTS" chance="0.037244" />
+            <LootListReference name="HELL_FRAGMENT_LOOT" chance="13.204758" />
+          </LootByTier>
+          <LootByTier tier="7">
+            <Item type="T4_SILVERBAG_NONTRADABLE" chance="1.481574" />
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="0.871514" />
+            <Item type="T4_SKILLBOOK_STANDARD" chance="0.290505" />
+            <LootListReference name="OUTLAND_TREASURES_BLACKMARKET_LOOT" chance="8.71514" />
+            <LootListReference name="OUTLAND_TREASURES_TREASURE_LOOT" chance="0.261454" />
+            <LootListReference name="LOOT_ARTEFACTS" chance="0.037244" />
+            <LootListReference name="HELL_FRAGMENT_LOOT" chance="13.204758" />
+          </LootByTier>
+          <LootByTier tier="8">
+            <Item type="T4_SILVERBAG_NONTRADABLE" chance="1.481574" />
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="0.871514" />
+            <Item type="T4_SKILLBOOK_STANDARD" chance="0.290505" />
+            <LootListReference name="OUTLAND_TREASURES_BLACKMARKET_LOOT" chance="8.71514" />
+            <LootListReference name="OUTLAND_TREASURES_TREASURE_LOOT" chance="0.261454" />
+            <LootListReference name="LOOT_ARTEFACTS" chance="0.037244" />
+            <LootListReference name="HELL_FRAGMENT_LOOT" chance="13.204758" />
+          </LootByTier>
+        </Loot>
+      </RareState>
+      <RareState state="uncommon" weight="300" opensoundevent="Play_open_chest_uncommon" spawnsoundevent="Play_spawn_loot_uncommon" namelocatag="@LOOTCHEST_TREASURE_SOLO_UNCOMMON" mightreward="PVPCHALLENGE_TREASURES_SMALL_1">
+        <Loot>
+          <LootByTier tier="4">
+            <Item type="T4_SILVERBAG_NONTRADABLE" chance="2.592754" />
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="1.52515" />
+            <Item type="T4_SKILLBOOK_STANDARD" chance="0.508383" />
+            <LootListReference name="OUTLAND_TREASURES_BLACKMARKET_LOOT" chance="15.251496" />
+            <LootListReference name="OUTLAND_TREASURES_TREASURE_LOOT" chance="0.457545" />
+            <LootListReference name="LOOT_ARTEFACTS" chance="0.065177" />
+            <LootListReference name="HELL_FRAGMENT_LOOT" chance="23.108327" />
+          </LootByTier>
+          <LootByTier tier="5">
+            <Item type="T4_SILVERBAG_NONTRADABLE" chance="2.592754" />
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="1.52515" />
+            <Item type="T4_SKILLBOOK_STANDARD" chance="0.508383" />
+            <LootListReference name="OUTLAND_TREASURES_BLACKMARKET_LOOT" chance="15.251496" />
+            <LootListReference name="OUTLAND_TREASURES_TREASURE_LOOT" chance="0.457545" />
+            <LootListReference name="LOOT_ARTEFACTS" chance="0.065177" />
+            <LootListReference name="HELL_FRAGMENT_LOOT" chance="23.108327" />
+          </LootByTier>
+          <LootByTier tier="6">
+            <Item type="T4_SILVERBAG_NONTRADABLE" chance="2.592754" />
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="1.52515" />
+            <Item type="T4_SKILLBOOK_STANDARD" chance="0.508383" />
+            <LootListReference name="OUTLAND_TREASURES_BLACKMARKET_LOOT" chance="15.251496" />
+            <LootListReference name="OUTLAND_TREASURES_TREASURE_LOOT" chance="0.457545" />
+            <LootListReference name="LOOT_ARTEFACTS" chance="0.065177" />
+            <LootListReference name="HELL_FRAGMENT_LOOT" chance="23.108327" />
+          </LootByTier>
+          <LootByTier tier="7">
+            <Item type="T4_SILVERBAG_NONTRADABLE" chance="2.592754" />
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="1.52515" />
+            <Item type="T4_SKILLBOOK_STANDARD" chance="0.508383" />
+            <LootListReference name="OUTLAND_TREASURES_BLACKMARKET_LOOT" chance="15.251496" />
+            <LootListReference name="OUTLAND_TREASURES_TREASURE_LOOT" chance="0.457545" />
+            <LootListReference name="LOOT_ARTEFACTS" chance="0.065177" />
+            <LootListReference name="HELL_FRAGMENT_LOOT" chance="23.108327" />
+          </LootByTier>
+          <LootByTier tier="8">
+            <Item type="T4_SILVERBAG_NONTRADABLE" chance="2.592754" />
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="1.52515" />
+            <Item type="T4_SKILLBOOK_STANDARD" chance="0.508383" />
+            <LootListReference name="OUTLAND_TREASURES_BLACKMARKET_LOOT" chance="15.251496" />
+            <LootListReference name="OUTLAND_TREASURES_TREASURE_LOOT" chance="0.457545" />
+            <LootListReference name="LOOT_ARTEFACTS" chance="0.065177" />
+            <LootListReference name="HELL_FRAGMENT_LOOT" chance="23.108327" />
+          </LootByTier>
+        </Loot>
+      </RareState>
+      <RareState state="rare" weight="100" opensoundevent="Play_open_chest_rare" spawnsoundevent="Play_spawn_loot_rare" namelocatag="@LOOTCHEST_TREASURE_SOLO_RARE" mightreward="PVPCHALLENGE_TREASURES_SMALL_2">
+        <Loot>
+          <LootByTier tier="4">
+            <Item type="T4_SILVERBAG_NONTRADABLE" chance="4.53732" />
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="2.669012" />
+            <Item type="T4_SKILLBOOK_STANDARD" chance="0.889671" />
+            <LootListReference name="OUTLAND_TREASURES_BLACKMARKET_LOOT" chance="26.690118" />
+            <LootListReference name="OUTLAND_TREASURES_TREASURE_LOOT" chance="0.800704" />
+            <LootListReference name="LOOT_ARTEFACTS" chance="0.11406" />
+            <LootListReference name="HELL_FRAGMENT_LOOT" chance="40.439572" />
+          </LootByTier>
+          <LootByTier tier="5">
+            <Item type="T4_SILVERBAG_NONTRADABLE" chance="4.53732" />
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="2.669012" />
+            <Item type="T4_SKILLBOOK_STANDARD" chance="0.889671" />
+            <LootListReference name="OUTLAND_TREASURES_BLACKMARKET_LOOT" chance="26.690118" />
+            <LootListReference name="OUTLAND_TREASURES_TREASURE_LOOT" chance="0.800704" />
+            <LootListReference name="LOOT_ARTEFACTS" chance="0.11406" />
+            <LootListReference name="HELL_FRAGMENT_LOOT" chance="40.439572" />
+          </LootByTier>
+          <LootByTier tier="6">
+            <Item type="T4_SILVERBAG_NONTRADABLE" chance="4.53732" />
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="2.669012" />
+            <Item type="T4_SKILLBOOK_STANDARD" chance="0.889671" />
+            <LootListReference name="OUTLAND_TREASURES_BLACKMARKET_LOOT" chance="26.690118" />
+            <LootListReference name="OUTLAND_TREASURES_TREASURE_LOOT" chance="0.800704" />
+            <LootListReference name="LOOT_ARTEFACTS" chance="0.11406" />
+            <LootListReference name="HELL_FRAGMENT_LOOT" chance="40.439572" />
+          </LootByTier>
+          <LootByTier tier="7">
+            <Item type="T4_SILVERBAG_NONTRADABLE" chance="4.53732" />
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="2.669012" />
+            <Item type="T4_SKILLBOOK_STANDARD" chance="0.889671" />
+            <LootListReference name="OUTLAND_TREASURES_BLACKMARKET_LOOT" chance="26.690118" />
+            <LootListReference name="OUTLAND_TREASURES_TREASURE_LOOT" chance="0.800704" />
+            <LootListReference name="LOOT_ARTEFACTS" chance="0.11406" />
+            <LootListReference name="HELL_FRAGMENT_LOOT" chance="40.439572" />
+          </LootByTier>
+          <LootByTier tier="8">
+            <Item type="T4_SILVERBAG_NONTRADABLE" chance="4.53732" />
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="2.669012" />
+            <Item type="T4_SKILLBOOK_STANDARD" chance="0.889671" />
+            <LootListReference name="OUTLAND_TREASURES_BLACKMARKET_LOOT" chance="26.690118" />
+            <LootListReference name="OUTLAND_TREASURES_TREASURE_LOOT" chance="0.800704" />
+            <LootListReference name="LOOT_ARTEFACTS" chance="0.11406" />
+            <LootListReference name="HELL_FRAGMENT_LOOT" chance="40.439572" />
+          </LootByTier>
+        </Loot>
+      </RareState>
+      <RareState state="legendary" weight="10" opensoundevent="Play_open_chest_legendary" spawnsoundevent="Play_spawn_loot_legendary" namelocatag="@LOOTCHEST_TREASURE_SOLO_LEGENDARY" mightreward="PVPCHALLENGE_TREASURES_SMALL_3">
+        <Loot>
+          <LootByTier tier="4">
+            <Item type="T4_SILVERBAG_NONTRADABLE" chance="7.94031" />
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="4.670771" />
+            <Item type="T4_SKILLBOOK_STANDARD" chance="1.556924" />
+            <LootListReference name="OUTLAND_TREASURES_BLACKMARKET_LOOT" chance="46.707706" />
+            <LootListReference name="OUTLAND_TREASURES_TREASURE_LOOT" chance="1.401231" />
+            <LootListReference name="LOOT_ARTEFACTS" chance="0.199606" />
+            <LootListReference name="HELL_FRAGMENT_LOOT" chance="70.769251" />
+          </LootByTier>
+          <LootByTier tier="5">
+            <Item type="T4_SILVERBAG_NONTRADABLE" chance="7.94031" />
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="4.670771" />
+            <Item type="T4_SKILLBOOK_STANDARD" chance="1.556924" />
+            <LootListReference name="OUTLAND_TREASURES_BLACKMARKET_LOOT" chance="46.707706" />
+            <LootListReference name="OUTLAND_TREASURES_TREASURE_LOOT" chance="1.401231" />
+            <LootListReference name="LOOT_ARTEFACTS" chance="0.199606" />
+            <LootListReference name="HELL_FRAGMENT_LOOT" chance="70.769251" />
+          </LootByTier>
+          <LootByTier tier="6">
+            <Item type="T4_SILVERBAG_NONTRADABLE" chance="7.94031" />
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="4.670771" />
+            <Item type="T4_SKILLBOOK_STANDARD" chance="1.556924" />
+            <LootListReference name="OUTLAND_TREASURES_BLACKMARKET_LOOT" chance="46.707706" />
+            <LootListReference name="OUTLAND_TREASURES_TREASURE_LOOT" chance="1.401231" />
+            <LootListReference name="LOOT_ARTEFACTS" chance="0.199606" />
+            <LootListReference name="HELL_FRAGMENT_LOOT" chance="70.769251" />
+          </LootByTier>
+          <LootByTier tier="7">
+            <Item type="T4_SILVERBAG_NONTRADABLE" chance="7.94031" />
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="4.670771" />
+            <Item type="T4_SKILLBOOK_STANDARD" chance="1.556924" />
+            <LootListReference name="OUTLAND_TREASURES_BLACKMARKET_LOOT" chance="46.707706" />
+            <LootListReference name="OUTLAND_TREASURES_TREASURE_LOOT" chance="1.401231" />
+            <LootListReference name="LOOT_ARTEFACTS" chance="0.199606" />
+            <LootListReference name="HELL_FRAGMENT_LOOT" chance="70.769251" />
+          </LootByTier>
+          <LootByTier tier="8">
+            <Item type="T4_SILVERBAG_NONTRADABLE" chance="7.94031" />
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="4.670771" />
+            <Item type="T4_SKILLBOOK_STANDARD" chance="1.556924" />
+            <LootListReference name="OUTLAND_TREASURES_BLACKMARKET_LOOT" chance="46.707706" />
+            <LootListReference name="OUTLAND_TREASURES_TREASURE_LOOT" chance="1.401231" />
+            <LootListReference name="LOOT_ARTEFACTS" chance="0.199606" />
+            <LootListReference name="HELL_FRAGMENT_LOOT" chance="70.769251" />
+          </LootByTier>
+        </Loot>
+      </RareState>
+    </RareStates>
+  </LootChest>
+  
   <!--Treasure - Solo-->
   <LootChest uniquename="TREASURE_SOLO_STANDARD" avatar="TREASURECHEST_COMMON_AVATAR" faction="NONE" alertradius="20" spell="OPEN_TREASURECHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000" opensoundevent="Play_open_chest_standard" spawnsoundevent="Play_spawn_loot_standard" namelocatag="@LOOTCHEST_TREASURE_SOLO_STANDARD" protectiontimeseconds="180" pvpzoneradius="30" mightreward="PVPCHALLENGE_TREASURES_SMALL_0" alwaysrequireschanneling="true" prefab="FOREST_GREEN_LOOTCHEST_TREASURE_SOLO_STANDARD">
     <Tiles>
@@ -10474,71 +11338,91 @@
   <!--########################################################################################-->
   
   <!--Standard Small-->
-  <LootChestSpawnpointChestUpgrade name="AVALON_SMALL_STANDARD_T4" despawntimeseconds="1200" initialspawntimeseconds="0" respawntimesecondsmin="0" respawntimesecondsmax="2400" rerolltimesecondsmin="1800" rerolltimesecondsmax="5400" mobupgradefaction="ROAD" mobupgraderadius="60" onlyupgradeoutsideplayerinterestarea="true">
-    <LootChest name="AVALON_SOLO_SMALL_STANDARD_T4"  lootchestupgradelevelindex="4" weight="59"/>
-    <LootChest name="AVALON_SOLO_SMALL_UNCOMMON_T4"  lootchestupgradelevelindex="6" weight="30"/>
-    <LootChest name="AVALON_SOLO_SMALL_RARE_T4"      lootchestupgradelevelindex="8" weight="10"/>
-    <LootChest name="AVALON_SOLO_SMALL_LEGENDARY_T4" lootchestupgradelevelindex="10" weight="1"/>
+  <LootChestSpawnpointChestUpgrade name="AVALON_SMALL_STANDARD_T4" despawntimeseconds="86400" initialspawntimeseconds="0" respawn="OnOpen" respawntimesecondsmin="1200" respawntimesecondsmax="3600" rerolltimesecondsmin="1800" rerolltimesecondsmax="5400" mobupgradefaction="ROAD" mobupgraderadius="60" onlyupgradeoutsideplayerinterestarea="true" namelocatag="@LOOTCHEST_ROADS_AVALON_TITLE">
+    <MinimapDisplay minimapmarker="roads_of_avalon_solo_pve" interestareaonly="false"/>
+    <TooltipDisplay showcheststate="true"/>
+    <LootChest name="AVALON_SOLO_SMALL_STANDARD_T4"  lootchestupgradelevelindex="4" weight="876"/>
+    <LootChest name="AVALON_SOLO_SMALL_UNCOMMON_T4"  lootchestupgradelevelindex="6" weight="100"/>
+    <LootChest name="AVALON_SOLO_SMALL_RARE_T4"      lootchestupgradelevelindex="8" weight="20"/>
+    <LootChest name="AVALON_SOLO_SMALL_LEGENDARY_T4" lootchestupgradelevelindex="10" weight="4"/>
   </LootChestSpawnpointChestUpgrade>
-  <LootChestSpawnpointChestUpgrade name="AVALON_SMALL_STANDARD_T6" despawntimeseconds="1200" initialspawntimeseconds="0" respawntimesecondsmin="0" respawntimesecondsmax="2400" rerolltimesecondsmin="1800" rerolltimesecondsmax="5400" mobupgradefaction="ROAD" mobupgraderadius="60" onlyupgradeoutsideplayerinterestarea="true">
-    <LootChest name="AVALON_SOLO_SMALL_STANDARD_T6"  lootchestupgradelevelindex="4" weight="59"/>
-    <LootChest name="AVALON_SOLO_SMALL_UNCOMMON_T6"  lootchestupgradelevelindex="6" weight="30"/>
-    <LootChest name="AVALON_SOLO_SMALL_RARE_T6"      lootchestupgradelevelindex="8" weight="10"/>
-    <LootChest name="AVALON_SOLO_SMALL_LEGENDARY_T6" lootchestupgradelevelindex="10" weight="1"/>
+  <LootChestSpawnpointChestUpgrade name="AVALON_SMALL_STANDARD_T6" despawntimeseconds="86400" initialspawntimeseconds="0" respawn="OnOpen" respawntimesecondsmin="1200" respawntimesecondsmax="3600" rerolltimesecondsmin="1800" rerolltimesecondsmax="5400" mobupgradefaction="ROAD" mobupgraderadius="60" onlyupgradeoutsideplayerinterestarea="true" namelocatag="@LOOTCHEST_ROADS_AVALON_TITLE">
+    <MinimapDisplay minimapmarker="roads_of_avalon_solo_pve" interestareaonly="false"/>
+    <TooltipDisplay showcheststate="true"/>
+    <LootChest name="AVALON_SOLO_SMALL_STANDARD_T6"  lootchestupgradelevelindex="4" weight="876"/>
+    <LootChest name="AVALON_SOLO_SMALL_UNCOMMON_T6"  lootchestupgradelevelindex="6" weight="100"/>
+    <LootChest name="AVALON_SOLO_SMALL_RARE_T6"      lootchestupgradelevelindex="8" weight="20"/>
+    <LootChest name="AVALON_SOLO_SMALL_LEGENDARY_T6" lootchestupgradelevelindex="10" weight="4"/>
   </LootChestSpawnpointChestUpgrade>
-  <LootChestSpawnpointChestUpgrade name="AVALON_SMALL_STANDARD_T8" despawntimeseconds="1200" initialspawntimeseconds="0" respawntimesecondsmin="0" respawntimesecondsmax="2400" rerolltimesecondsmin="1800" rerolltimesecondsmax="5400" mobupgradefaction="ROAD" mobupgraderadius="60" onlyupgradeoutsideplayerinterestarea="true">
-    <LootChest name="AVALON_SOLO_SMALL_STANDARD_T8"  lootchestupgradelevelindex="4" weight="59"/>
-    <LootChest name="AVALON_SOLO_SMALL_UNCOMMON_T8"  lootchestupgradelevelindex="6" weight="30"/>
-    <LootChest name="AVALON_SOLO_SMALL_RARE_T8"      lootchestupgradelevelindex="8" weight="10"/>
-    <LootChest name="AVALON_SOLO_SMALL_LEGENDARY_T8" lootchestupgradelevelindex="10" weight="1"/>
+  <LootChestSpawnpointChestUpgrade name="AVALON_SMALL_STANDARD_T8" despawntimeseconds="86400" initialspawntimeseconds="0" respawn="OnOpen" respawntimesecondsmin="1200" respawntimesecondsmax="3600" rerolltimesecondsmin="1800" rerolltimesecondsmax="5400" mobupgradefaction="ROAD" mobupgraderadius="60" onlyupgradeoutsideplayerinterestarea="true" namelocatag="@LOOTCHEST_ROADS_AVALON_TITLE">
+    <MinimapDisplay minimapmarker="roads_of_avalon_solo_pve" interestareaonly="false"/>
+    <TooltipDisplay showcheststate="true"/>
+    <LootChest name="AVALON_SOLO_SMALL_STANDARD_T8"  lootchestupgradelevelindex="4" weight="876"/>
+    <LootChest name="AVALON_SOLO_SMALL_UNCOMMON_T8"  lootchestupgradelevelindex="6" weight="100"/>
+    <LootChest name="AVALON_SOLO_SMALL_RARE_T8"      lootchestupgradelevelindex="8" weight="20"/>
+    <LootChest name="AVALON_SOLO_SMALL_LEGENDARY_T8" lootchestupgradelevelindex="10" weight="4"/>
   </LootChestSpawnpointChestUpgrade>
   
   <!--Veteran Medium-->
-  <LootChestSpawnpointChestUpgrade name="AVALON_MEDIUM_VETERAN_T4" despawntimeseconds="2250" initialspawntimeseconds="0" respawntimesecondsmin="0" respawntimesecondsmax="4500" rerolltimesecondsmin="3600" rerolltimesecondsmax="7200" mobupgradefaction="ROAD" mobupgraderadius="100" onlyupgradeoutsideplayerinterestarea="true">
-    <LootChest name="AVALON_VETERAN_MEDIUM_STANDARD_T4"  lootchestupgradelevelindex="4" weight="59"/>
-    <LootChest name="AVALON_VETERAN_MEDIUM_UNCOMMON_T4"  lootchestupgradelevelindex="6" weight="30"/>
-    <LootChest name="AVALON_VETERAN_MEDIUM_RARE_T4"      lootchestupgradelevelindex="8" weight="10"/>
-    <LootChest name="AVALON_VETERAN_MEDIUM_LEGENDARY_T4" lootchestupgradelevelindex="10" weight="1"/>
+  <LootChestSpawnpointChestUpgrade name="AVALON_MEDIUM_VETERAN_T4" despawntimeseconds="86400" initialspawntimeseconds="0" respawn="OnOpen" respawntimesecondsmin="2250" respawntimesecondsmax="6750" rerolltimesecondsmin="3600" rerolltimesecondsmax="7200" mobupgradefaction="ROAD" mobupgraderadius="100" onlyupgradeoutsideplayerinterestarea="true" namelocatag="@LOOTCHEST_ROADS_AVALON_TITLE">
+    <MinimapDisplay minimapmarker="roads_of_avalon_group_pve" interestareaonly="false"/>
+    <TooltipDisplay showcheststate="true"/>
+    <LootChest name="AVALON_VETERAN_MEDIUM_STANDARD_T4"  lootchestupgradelevelindex="4" weight="876"/>
+    <LootChest name="AVALON_VETERAN_MEDIUM_UNCOMMON_T4"  lootchestupgradelevelindex="6" weight="100"/>
+    <LootChest name="AVALON_VETERAN_MEDIUM_RARE_T4"      lootchestupgradelevelindex="8" weight="20"/>
+    <LootChest name="AVALON_VETERAN_MEDIUM_LEGENDARY_T4" lootchestupgradelevelindex="10" weight="4"/>
   </LootChestSpawnpointChestUpgrade>
-  <LootChestSpawnpointChestUpgrade name="AVALON_MEDIUM_VETERAN_T6" despawntimeseconds="2250" initialspawntimeseconds="0" respawntimesecondsmin="0" respawntimesecondsmax="4500" rerolltimesecondsmin="3600" rerolltimesecondsmax="7200" mobupgradefaction="ROAD" mobupgraderadius="100" onlyupgradeoutsideplayerinterestarea="true">
-    <LootChest name="AVALON_VETERAN_MEDIUM_STANDARD_T6"  lootchestupgradelevelindex="4" weight="59"/>
-    <LootChest name="AVALON_VETERAN_MEDIUM_UNCOMMON_T6"  lootchestupgradelevelindex="6" weight="30"/>
-    <LootChest name="AVALON_VETERAN_MEDIUM_RARE_T6"      lootchestupgradelevelindex="8" weight="10"/>
-    <LootChest name="AVALON_VETERAN_MEDIUM_LEGENDARY_T6" lootchestupgradelevelindex="10" weight="1"/>
+  <LootChestSpawnpointChestUpgrade name="AVALON_MEDIUM_VETERAN_T6" despawntimeseconds="86400" initialspawntimeseconds="0" respawn="OnOpen" respawntimesecondsmin="2250" respawntimesecondsmax="6750" rerolltimesecondsmin="3600" rerolltimesecondsmax="7200" mobupgradefaction="ROAD" mobupgraderadius="100" onlyupgradeoutsideplayerinterestarea="true" namelocatag="@LOOTCHEST_ROADS_AVALON_TITLE">
+    <MinimapDisplay minimapmarker="roads_of_avalon_group_pve" interestareaonly="false"/>
+    <TooltipDisplay showcheststate="true"/>
+    <LootChest name="AVALON_VETERAN_MEDIUM_STANDARD_T6"  lootchestupgradelevelindex="4" weight="876"/>
+    <LootChest name="AVALON_VETERAN_MEDIUM_UNCOMMON_T6"  lootchestupgradelevelindex="6" weight="100"/>
+    <LootChest name="AVALON_VETERAN_MEDIUM_RARE_T6"      lootchestupgradelevelindex="8" weight="20"/>
+    <LootChest name="AVALON_VETERAN_MEDIUM_LEGENDARY_T6" lootchestupgradelevelindex="10" weight="4"/>
   </LootChestSpawnpointChestUpgrade>
-  <LootChestSpawnpointChestUpgrade name="AVALON_MEDIUM_VETERAN_T8" despawntimeseconds="2250" initialspawntimeseconds="0" respawntimesecondsmin="0" respawntimesecondsmax="4500" rerolltimesecondsmin="3600" rerolltimesecondsmax="7200" mobupgradefaction="ROAD" mobupgraderadius="100" onlyupgradeoutsideplayerinterestarea="true">
-    <LootChest name="AVALON_VETERAN_MEDIUM_STANDARD_T8"  lootchestupgradelevelindex="4" weight="59"/>
-    <LootChest name="AVALON_VETERAN_MEDIUM_UNCOMMON_T8"  lootchestupgradelevelindex="6" weight="30"/>
-    <LootChest name="AVALON_VETERAN_MEDIUM_RARE_T8"      lootchestupgradelevelindex="8" weight="10"/>
-    <LootChest name="AVALON_VETERAN_MEDIUM_LEGENDARY_T8" lootchestupgradelevelindex="10" weight="1"/>
+  <LootChestSpawnpointChestUpgrade name="AVALON_MEDIUM_VETERAN_T8" despawntimeseconds="86400" initialspawntimeseconds="0" respawn="OnOpen" respawntimesecondsmin="2250" respawntimesecondsmax="6750" rerolltimesecondsmin="3600" rerolltimesecondsmax="7200" mobupgradefaction="ROAD" mobupgraderadius="100" onlyupgradeoutsideplayerinterestarea="true" namelocatag="@LOOTCHEST_ROADS_AVALON_TITLE">
+    <MinimapDisplay minimapmarker="roads_of_avalon_group_pve" interestareaonly="false"/>
+    <TooltipDisplay showcheststate="true"/>
+    <LootChest name="AVALON_VETERAN_MEDIUM_STANDARD_T8"  lootchestupgradelevelindex="4" weight="876"/>
+    <LootChest name="AVALON_VETERAN_MEDIUM_UNCOMMON_T8"  lootchestupgradelevelindex="6" weight="100"/>
+    <LootChest name="AVALON_VETERAN_MEDIUM_RARE_T8"      lootchestupgradelevelindex="8" weight="20"/>
+    <LootChest name="AVALON_VETERAN_MEDIUM_LEGENDARY_T8" lootchestupgradelevelindex="10" weight="4"/>
   </LootChestSpawnpointChestUpgrade>
 
   <!--Elite Small-->
-  <LootChestSpawnpointChestUpgrade name="AVALON_SMALL_ELITE_T6" despawntimeseconds="5850" initialspawntimeseconds="0" respawntimesecondsmin="0" respawntimesecondsmax="11700" rerolltimesecondsmin="11700" rerolltimesecondsmax="23400" mobupgradefaction="ROAD" mobupgraderadius="100" onlyupgradeoutsideplayerinterestarea="true">
-    <LootChest name="AVALON_ELITE_SMALL_STANDARD_T6"  lootchestupgradelevelindex="4" weight="59"/>
-    <LootChest name="AVALON_ELITE_SMALL_UNCOMMON_T6"  lootchestupgradelevelindex="6" weight="30"/>
-    <LootChest name="AVALON_ELITE_SMALL_RARE_T6"      lootchestupgradelevelindex="8" weight="10"/>
-    <LootChest name="AVALON_ELITE_SMALL_LEGENDARY_T6" lootchestupgradelevelindex="10" weight="1"/>
+  <LootChestSpawnpointChestUpgrade name="AVALON_SMALL_ELITE_T6" despawntimeseconds="86400" initialspawntimeseconds="0" respawn="OnOpen" respawntimesecondsmin="900" respawntimesecondsmax="2700" rerolltimesecondsmin="1800" rerolltimesecondsmax="5400" mobupgradefaction="ROAD" mobupgraderadius="100" onlyupgradeoutsideplayerinterestarea="true" namelocatag="@LOOTCHEST_ROADS_AVALON_TITLE">
+    <MinimapDisplay minimapmarker="roads_of_avalon_raid_pve" interestareaonly="false"/>
+    <TooltipDisplay showcheststate="true"/>
+    <LootChest name="AVALON_ELITE_SMALL_STANDARD_T6"  lootchestupgradelevelindex="4" weight="895"/>
+    <LootChest name="AVALON_ELITE_SMALL_UNCOMMON_T6"  lootchestupgradelevelindex="6" weight="80"/>
+    <LootChest name="AVALON_ELITE_SMALL_RARE_T6"      lootchestupgradelevelindex="8" weight="20"/>
+    <LootChest name="AVALON_ELITE_SMALL_LEGENDARY_T6" lootchestupgradelevelindex="10" weight="5"/>
   </LootChestSpawnpointChestUpgrade>
-  <LootChestSpawnpointChestUpgrade name="AVALON_SMALL_ELITE_T8" despawntimeseconds="5850" initialspawntimeseconds="0" respawntimesecondsmin="0" respawntimesecondsmax="11700" rerolltimesecondsmin="11700" rerolltimesecondsmax="23400" mobupgradefaction="ROAD" mobupgraderadius="100" onlyupgradeoutsideplayerinterestarea="true">
-    <LootChest name="AVALON_ELITE_SMALL_STANDARD_T8"  lootchestupgradelevelindex="4" weight="59"/>
-    <LootChest name="AVALON_ELITE_SMALL_UNCOMMON_T8"  lootchestupgradelevelindex="6" weight="30"/>
-    <LootChest name="AVALON_ELITE_SMALL_RARE_T8"      lootchestupgradelevelindex="8" weight="10"/>
-    <LootChest name="AVALON_ELITE_SMALL_LEGENDARY_T8" lootchestupgradelevelindex="10" weight="1"/>
+  <LootChestSpawnpointChestUpgrade name="AVALON_SMALL_ELITE_T8" despawntimeseconds="86400" initialspawntimeseconds="0" respawn="OnOpen" respawntimesecondsmin="900" respawntimesecondsmax="2700" rerolltimesecondsmin="1800" rerolltimesecondsmax="5400" mobupgradefaction="ROAD" mobupgraderadius="100" onlyupgradeoutsideplayerinterestarea="true" namelocatag="@LOOTCHEST_ROADS_AVALON_TITLE">
+    <MinimapDisplay minimapmarker="roads_of_avalon_raid_pve" interestareaonly="false"/>
+    <TooltipDisplay showcheststate="true"/>
+    <LootChest name="AVALON_ELITE_SMALL_STANDARD_T8"  lootchestupgradelevelindex="4" weight="895"/>
+    <LootChest name="AVALON_ELITE_SMALL_UNCOMMON_T8"  lootchestupgradelevelindex="6" weight="80"/>
+    <LootChest name="AVALON_ELITE_SMALL_RARE_T8"      lootchestupgradelevelindex="8" weight="20"/>
+    <LootChest name="AVALON_ELITE_SMALL_LEGENDARY_T8" lootchestupgradelevelindex="10" weight="5"/>
   </LootChestSpawnpointChestUpgrade>
   
   <!--Elite Medium-->
-  <LootChestSpawnpointChestUpgrade name="AVALON_MEDIUM_ELITE_T6" despawntimeseconds="5850" initialspawntimeseconds="0" respawntimesecondsmin="0" respawntimesecondsmax="11700" rerolltimesecondsmin="11700" rerolltimesecondsmax="23400" mobupgradefaction="ROAD" mobupgraderadius="100" onlyupgradeoutsideplayerinterestarea="true">
-    <LootChest name="AVALON_ELITE_MEDIUM_STANDARD_T6"  lootchestupgradelevelindex="4" weight="59"/>
-    <LootChest name="AVALON_ELITE_MEDIUM_UNCOMMON_T6"  lootchestupgradelevelindex="6" weight="30"/>
-    <LootChest name="AVALON_ELITE_MEDIUM_RARE_T6"      lootchestupgradelevelindex="8" weight="10"/>
-    <LootChest name="AVALON_ELITE_MEDIUM_LEGENDARY_T6" lootchestupgradelevelindex="10" weight="1"/>
+  <LootChestSpawnpointChestUpgrade name="AVALON_MEDIUM_ELITE_T6" despawntimeseconds="86400" initialspawntimeseconds="0" respawn="OnOpen" respawntimesecondsmin="900" respawntimesecondsmax="2700" rerolltimesecondsmin="1800" rerolltimesecondsmax="5400" mobupgradefaction="ROAD" mobupgraderadius="100" onlyupgradeoutsideplayerinterestarea="true" namelocatag="@LOOTCHEST_ROADS_AVALON_TITLE">
+    <MinimapDisplay minimapmarker="roads_of_avalon_raid_pve" interestareaonly="false"/>
+    <TooltipDisplay showcheststate="true"/>
+    <LootChest name="AVALON_ELITE_MEDIUM_STANDARD_T6"  lootchestupgradelevelindex="4" weight="895"/>
+    <LootChest name="AVALON_ELITE_MEDIUM_UNCOMMON_T6"  lootchestupgradelevelindex="6" weight="80"/>
+    <LootChest name="AVALON_ELITE_MEDIUM_RARE_T6"      lootchestupgradelevelindex="8" weight="20"/>
+    <LootChest name="AVALON_ELITE_MEDIUM_LEGENDARY_T6" lootchestupgradelevelindex="10" weight="5"/>
   </LootChestSpawnpointChestUpgrade>
-  <LootChestSpawnpointChestUpgrade name="AVALON_MEDIUM_ELITE_T8" despawntimeseconds="5850" initialspawntimeseconds="0" respawntimesecondsmin="0" respawntimesecondsmax="11700" rerolltimesecondsmin="11700" rerolltimesecondsmax="23400" mobupgradefaction="ROAD" mobupgraderadius="100" onlyupgradeoutsideplayerinterestarea="true">
-    <LootChest name="AVALON_ELITE_MEDIUM_STANDARD_T8"  lootchestupgradelevelindex="4" weight="59"/>
-    <LootChest name="AVALON_ELITE_MEDIUM_UNCOMMON_T8"  lootchestupgradelevelindex="6" weight="30"/>
-    <LootChest name="AVALON_ELITE_MEDIUM_RARE_T8"      lootchestupgradelevelindex="8" weight="10"/>
-    <LootChest name="AVALON_ELITE_MEDIUM_LEGENDARY_T8" lootchestupgradelevelindex="10" weight="1"/>
+  <LootChestSpawnpointChestUpgrade name="AVALON_MEDIUM_ELITE_T8" despawntimeseconds="86400" initialspawntimeseconds="0" respawn="OnOpen" respawntimesecondsmin="900" respawntimesecondsmax="2700" rerolltimesecondsmin="1800" rerolltimesecondsmax="5400" mobupgradefaction="ROAD" mobupgraderadius="100" onlyupgradeoutsideplayerinterestarea="true" namelocatag="@LOOTCHEST_ROADS_AVALON_TITLE">
+    <MinimapDisplay minimapmarker="roads_of_avalon_raid_pve" interestareaonly="false"/>
+    <TooltipDisplay showcheststate="true"/>
+    <LootChest name="AVALON_ELITE_MEDIUM_STANDARD_T8"  lootchestupgradelevelindex="4" weight="895"/>
+    <LootChest name="AVALON_ELITE_MEDIUM_UNCOMMON_T8"  lootchestupgradelevelindex="6" weight="80"/>
+    <LootChest name="AVALON_ELITE_MEDIUM_RARE_T8"      lootchestupgradelevelindex="8" weight="20"/>
+    <LootChest name="AVALON_ELITE_MEDIUM_LEGENDARY_T8" lootchestupgradelevelindex="10" weight="5"/>
   </LootChestSpawnpointChestUpgrade>
   
   <!--########################################################################################-->
@@ -10728,11 +11612,21 @@
     <LootChest name="TREASURE_SOLO_LEGENDARY" weight="1"/>
   </LootChestSpawnpoint>
   <!--Solo - MISTS-->
+  <LootChestSpawnpoint name="MISTS_DUNGEON_TREASURE_COFFER_SOLO" despawntimeseconds="300" initialspawntimeseconds="0" respawntimesecondsmin="86400" respawntimesecondsmax="86400">
+    <MinimapDisplay minimapmarker="treasure_coffer" interestareaonly="true"/>
+    <TooltipDisplay/>
+    <LootChest name="TREASURE_COFFER_MISTS_DUNGEON_SOLO" weight="1"/>
+  </LootChestSpawnpoint>
+  <LootChestSpawnpoint name="MISTS_TREASURE_COFFER_SOLO" despawntimeseconds="300" initialspawntimeseconds="0" respawntimesecondsmin="86400" respawntimesecondsmax="86400">
+    <MinimapDisplay minimapmarker="treasure_coffer" interestareaonly="true"/>
+    <TooltipDisplay/>
+    <LootChest name="TREASURE_COFFER_MISTS_SOLO" weight="1"/>
+  </LootChestSpawnpoint>  
+  <LootChestSpawnpoint name="MISTS_DUNGEON_TREASURE_SOLO" despawntimeseconds="300" initialspawntimeseconds="0" respawntimesecondsmin="86400" respawntimesecondsmax="86400">
+    <LootChest name="TREASURE_MISTS_DUNGEON_SOLO" weight="1"/>
+  </LootChestSpawnpoint>
   <LootChestSpawnpoint name="MISTS_TREASURE_SOLO" despawntimeseconds="300" initialspawntimeseconds="0" respawntimesecondsmin="86400" respawntimesecondsmax="86400">
-    <LootChest name="TREASURE_MISTS_SOLO_STANDARD" weight="590"/>
-    <LootChest name="TREASURE_MISTS_SOLO_UNCOMMON" weight="300"/>
-    <LootChest name="TREASURE_MISTS_SOLO_RARE" weight="100"/>
-    <LootChest name="TREASURE_MISTS_SOLO_LEGENDARY" weight="10"/>
+    <LootChest name="TREASURE_MISTS_SOLO" weight="1"/>
   </LootChestSpawnpoint>
   <!--Solo - FOREST-->
   <LootChestSpawnpoint name="FOREST_GREEN_TREASURE_SOLO" despawntimeseconds="300" initialspawntimeseconds="0" respawntimesecondsmin="86400" respawntimesecondsmax="86400">
@@ -11220,27 +12114,227 @@
   <!--POI (Point of Interest) Loot Chest Spawnpoints-->
   <LootChestSpawnpoint name="STATIC_HERETIC_VETERAN_POI" affectedbystaticdungeonevent="true" rerolltimesecondsmin="1800" rerolltimesecondsmax="5400" despawntimeseconds="300" initialspawntimeseconds="0" respawntimesecondsmin="1800" respawntimesecondsmax="5400">
     <MinimapDisplay minimapmarker="minimap_icon_boss_chest" interestareaonly="true"/>
+    <TooltipDisplay/>
     <LootChest name="STATIC_HERETIC_POI" weight="889" lootchestupgradelevelindex="1"/>
     <LootChest name="STATIC_HERETIC_CHAMPION" weight="100" lootchestupgradelevelindex="2" onlyAsUpgrade="true"/>
     <LootChest name="STATIC_HERETIC_MINIBOSS" weight="10" lootchestupgradelevelindex="3" onlyAsUpgrade="true"/>
   </LootChestSpawnpoint>
   <LootChestSpawnpoint name="STATIC_MORGANA_VETERAN_POI" affectedbystaticdungeonevent="true" rerolltimesecondsmin="1800" rerolltimesecondsmax="5400" despawntimeseconds="300" initialspawntimeseconds="0" respawntimesecondsmin="1800" respawntimesecondsmax="5400">
     <MinimapDisplay minimapmarker="minimap_icon_boss_chest" interestareaonly="true"/>
+    <TooltipDisplay/>
     <LootChest name="STATIC_MORGANA_POI" weight="889" lootchestupgradelevelindex="1"/>
     <LootChest name="STATIC_MORGANA_CHAMPION" weight="100" lootchestupgradelevelindex="2" onlyAsUpgrade="true"/>
     <LootChest name="STATIC_MORGANA_MINIBOSS" weight="10" lootchestupgradelevelindex="3" onlyAsUpgrade="true"/>
   </LootChestSpawnpoint>
   <LootChestSpawnpoint name="STATIC_KEEPER_VETERAN_POI" affectedbystaticdungeonevent="true" rerolltimesecondsmin="1800" rerolltimesecondsmax="5400" despawntimeseconds="300" initialspawntimeseconds="0" respawntimesecondsmin="1800" respawntimesecondsmax="5400">
     <MinimapDisplay minimapmarker="minimap_icon_boss_chest" interestareaonly="true"/>
+    <TooltipDisplay/>
     <LootChest name="STATIC_KEEPER_POI" weight="889" lootchestupgradelevelindex="1"/>
     <LootChest name="STATIC_KEEPER_CHAMPION" weight="100" lootchestupgradelevelindex="2" onlyAsUpgrade="true"/>
     <LootChest name="STATIC_KEEPER_MINIBOSS" weight="10" lootchestupgradelevelindex="3" onlyAsUpgrade="true"/>
   </LootChestSpawnpoint>
   <LootChestSpawnpoint name="STATIC_UNDEAD_VETERAN_POI" affectedbystaticdungeonevent="true" rerolltimesecondsmin="1800" rerolltimesecondsmax="5400" despawntimeseconds="300" initialspawntimeseconds="0" respawntimesecondsmin="1800" respawntimesecondsmax="5400">
     <MinimapDisplay minimapmarker="minimap_icon_boss_chest" interestareaonly="true"/>
+    <TooltipDisplay/>
     <LootChest name="STATIC_UNDEAD_POI" weight="889" lootchestupgradelevelindex="1"/>
     <LootChest name="STATIC_UNDEAD_CHAMPION" weight="100" lootchestupgradelevelindex="2" onlyAsUpgrade="true"/>
     <LootChest name="STATIC_UNDEAD_MINIBOSS" weight="10" lootchestupgradelevelindex="3" onlyAsUpgrade="true"/>
   </LootChestSpawnpoint>
 
+  <!--########################################################################################-->
+  <!--###############################  MIST CAMP LOOTCHESTS  #################################-->
+  <!--########################################################################################-->
+  
+  <LootChestSpawnpointPersonal name="MISTS_PERSONAL_MEDIUM" respawntimesecondsmin="11" respawntimesecondsmax="11" initialspawntimeseconds="0">
+    <TooltipDisplay icon="treasure_personal"/>
+    <LootChest name="MISTS_PERSONAL_MEDIUM_LC" weight="889" />
+  </LootChestSpawnpointPersonal>
+
+  <LootChestSpawnpointPersonal name="MISTS_PERSONAL_SMALL" respawntimesecondsmin="11" respawntimesecondsmax="11" initialspawntimeseconds="0">
+    <TooltipDisplay icon="treasure_personal"/>
+    <LootChest name="MISTS_PERSONAL_SMALL_LC" weight="889" />
+  </LootChestSpawnpointPersonal>
+
+  <LootChest uniquename="MISTS_PERSONAL_MEDIUM_LC" avatar="RD_CHEST_BOSS" faction="NONE" alertradius="0"
+             spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000"
+             opensoundevent="Play_open_chest_standard" spawnsoundevent="Play_spawn_loot_standard"
+             namelocatag="@PERSONALCHEST_MEDIUM_NAME_LOCKED" locklocatag="@CORRUPTED_DUNGEON_CHEST_LOCK_MESSAGE"
+             emptylocatag="@LOOT_PERSONALCHEST_OVERHEAD_EMPTY" dangerstate="normal" prefab="MISTS_GREEN_LOOTCHEST_TREASURE_MOBCAMP_01">
+    <RareStates hiderarityuntil="OnUnlock">
+      <RareState state="standard" weight="59" namelocatag="@PERSONALCHEST_MEDIUM_NAME_STANDARD">
+        <Loot>
+          <LootByTier tier="5">
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="1.159004" />
+          </LootByTier>
+          <LootByTier tier="6">
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="1.588264" />
+          </LootByTier>
+          <LootByTier tier="7">
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="2.146303" />
+          </LootByTier>
+          <LootByTier tier="8">
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="2.918972" />
+          </LootByTier>        
+        </Loot>
+      </RareState>
+      <RareState state="uncommon" weight="30" spawnsoundevent="Play_spawn_loot_uncommon" opensoundevent="Play_open_chest_uncommon" namelocatag="@PERSONALCHEST_MEDIUM_NAME_UNCOMMON">
+        <Loot>
+          <LootByTier tier="5">
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="1.159004" />
+            <LootListReference name="T5_MISTS_MEDIUM_CAMP_UNCOMMON"/>
+          </LootByTier>
+          <LootByTier tier="6">
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="1.588264" />
+            <LootListReference name="T6_MISTS_MEDIUM_CAMP_UNCOMMON"/>
+          </LootByTier>
+          <LootByTier tier="7">
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="2.146303" />
+            <LootListReference name="T7_MISTS_MEDIUM_CAMP_UNCOMMON"/>
+          </LootByTier>
+          <LootByTier tier="8">
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="2.918972" />
+            <LootListReference name="T8_MISTS_MEDIUM_CAMP_UNCOMMON"/>
+          </LootByTier>
+        </Loot>
+      </RareState>
+      <RareState state="rare" weight="10" spawnsoundevent="Play_spawn_loot_rare" opensoundevent="Play_open_chest_rare" namelocatag="@PERSONALCHEST_MEDIUM_NAME_RARE">
+        <Loot>
+          <LootByTier tier="5">
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="1.159004" />
+            <LootListReference name="T5_MISTS_MEDIUM_CAMP_RARE"/>
+          </LootByTier>
+          <LootByTier tier="6">
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="1.588264" />
+            <LootListReference name="T6_MISTS_MEDIUM_CAMP_RARE"/>
+          </LootByTier>
+          <LootByTier tier="7">
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="2.146303" />
+            <LootListReference name="T7_MISTS_MEDIUM_CAMP_RARE"/>
+          </LootByTier>
+          <LootByTier tier="8">
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="2.918972" />
+            <LootListReference name="T8_MISTS_MEDIUM_CAMP_RARE"/>
+          </LootByTier>
+        </Loot>
+      </RareState>
+      <RareState state="legendary" weight="1" spawnsoundevent="Play_spawn_loot_legendary" opensoundevent="Play_open_chest_legendary" namelocatag="@PERSONALCHEST_MEDIUM_NAME_LEGENDARY">
+        <Loot>
+          <LootByTier tier="5">
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="1.159004" />
+            <LootListReference name="T5_MISTS_MEDIUM_CAMP_LEGENDARY"/>
+          </LootByTier>
+          <LootByTier tier="6">
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="1.588264" />
+            <LootListReference name="T6_MISTS_MEDIUM_CAMP_LEGENDARY"/>
+          </LootByTier>
+          <LootByTier tier="7">
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="2.146303" />
+            <LootListReference name="T7_MISTS_MEDIUM_CAMP_LEGENDARY"/>
+          </LootByTier>
+          <LootByTier tier="8">
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="2.918972" />
+            <LootListReference name="T8_MISTS_MEDIUM_CAMP_LEGENDARY"/>
+          </LootByTier>
+        </Loot>
+      </RareState>
+    </RareStates>
+  </LootChest>
+
+  <LootChest uniquename="MISTS_PERSONAL_SMALL_LC" avatar="RD_CHEST_BOSS" faction="NONE" alertradius="0"
+           spell="OPEN_LOOTCHEST" respawntimesecondsmin="84000" respawntimesecondsmax="84000"
+           opensoundevent="Play_open_chest_standard" spawnsoundevent="Play_spawn_loot_standard"
+           namelocatag="@PERSONALCHEST_SMALL_NAME_LOCKED" locklocatag="@CORRUPTED_DUNGEON_CHEST_LOCK_MESSAGE"
+           emptylocatag="@LOOT_PERSONALCHEST_OVERHEAD_EMPTY" dangerstate="normal" prefab="MISTS_GREEN_LOOTCHEST_TREASURE_MOBCAMP_02">
+    <RareStates hiderarityuntil="OnUnlock">
+      <RareState state="standard" weight="59" namelocatag="@PERSONALCHEST_SMALL_NAME_STANDARD">
+        <Loot>
+          <LootByTier tier="5">
+            <Item type="T3_SKILLBOOK_NONTRADABLE" chance="0.847567" />
+          </LootByTier>
+          <LootByTier tier="6">
+            <Item type="T3_SKILLBOOK_NONTRADABLE" chance="1.161480" />
+          </LootByTier>
+          <LootByTier tier="7">
+            <Item type="T3_SKILLBOOK_NONTRADABLE" chance="1.569568" />
+          </LootByTier>
+          <LootByTier tier="8">
+            <Item type="T3_SKILLBOOK_NONTRADABLE" chance="2.134613" />
+          </LootByTier>
+        </Loot>
+      </RareState>
+      <RareState state="uncommon" weight="30" spawnsoundevent="Play_spawn_loot_uncommon" opensoundevent="Play_open_chest_uncommon" namelocatag="@PERSONALCHEST_SMALL_NAME_UNCOMMON">
+        <Loot>
+          <LootByTier tier="5">
+            <Item type="T3_SKILLBOOK_NONTRADABLE" chance="0.847567" />
+            <LootListReference name="T5_MISTS_SMALL_CAMP_UNCOMMON"/>
+          </LootByTier>
+          <LootByTier tier="6">
+            <Item type="T3_SKILLBOOK_NONTRADABLE" chance="1.161480" />
+            <LootListReference name="T6_MISTS_SMALL_CAMP_UNCOMMON"/>
+          </LootByTier>
+          <LootByTier tier="7">
+            <Item type="T3_SKILLBOOK_NONTRADABLE" chance="1.569568" />
+            <LootListReference name="T7_MISTS_SMALL_CAMP_UNCOMMON"/>
+          </LootByTier>
+          <LootByTier tier="8">
+            <Item type="T3_SKILLBOOK_NONTRADABLE" chance="2.134613" />
+            <LootListReference name="T8_MISTS_SMALL_CAMP_UNCOMMON"/>
+          </LootByTier>
+        </Loot>
+      </RareState>
+      <RareState state="rare" weight="10" spawnsoundevent="Play_spawn_loot_rare" opensoundevent="Play_open_chest_rare" namelocatag="@PERSONALCHEST_SMALL_NAME_RARE">
+        <Loot>
+          <LootByTier tier="5">
+            <Item type="T3_SKILLBOOK_NONTRADABLE" chance="0.847567" />
+            <LootListReference name="T5_MISTS_SMALL_CAMP_RARE"/>
+          </LootByTier>
+          <LootByTier tier="6">
+            <Item type="T3_SKILLBOOK_NONTRADABLE" chance="1.161480" />
+            <LootListReference name="T6_MISTS_SMALL_CAMP_RARE"/>
+          </LootByTier>
+          <LootByTier tier="7">
+            <Item type="T3_SKILLBOOK_NONTRADABLE" chance="1.569568" />
+            <LootListReference name="T7_MISTS_SMALL_CAMP_RARE"/>
+          </LootByTier>
+          <LootByTier tier="8">
+            <Item type="T3_SKILLBOOK_NONTRADABLE" chance="2.134613" />
+            <LootListReference name="T8_MISTS_SMALL_CAMP_RARE"/>
+          </LootByTier>
+        </Loot>
+      </RareState>
+      <RareState state="legendary" weight="1" spawnsoundevent="Play_spawn_loot_legendary" opensoundevent="Play_open_chest_legendary" namelocatag="@PERSONALCHEST_SMALL_NAME_LEGENDARY">
+        <Loot>
+          <LootByTier tier="5">
+            <Item type="T3_SKILLBOOK_NONTRADABLE" chance="0.847567" />
+            <LootListReference name="T5_MISTS_SMALL_CAMP_LEGENDARY"/>
+          </LootByTier>
+          <LootByTier tier="6">
+            <Item type="T3_SKILLBOOK_NONTRADABLE" chance="1.161480" />
+            <LootListReference name="T6_MISTS_SMALL_CAMP_LEGENDARY"/>
+          </LootByTier>
+          <LootByTier tier="7">
+            <Item type="T3_SKILLBOOK_NONTRADABLE" chance="1.569568" />
+            <LootListReference name="T7_MISTS_SMALL_CAMP_LEGENDARY"/>
+          </LootByTier>
+          <LootByTier tier="8">
+            <Item type="T3_SKILLBOOK_NONTRADABLE" chance="2.134613" />
+            <LootListReference name="T8_MISTS_SMALL_CAMP_LEGENDARY"/>
+          </LootByTier>
+        </Loot>
+      </RareState>
+    </RareStates>
+  </LootChest>
+
+  <!--########################################################################################-->
+  <!--MIST DUNGEONS-->
+  <!--########################################################################################-->
+  <LootChestSpawnpoint name="MD_UNDEAD_SOLO_BOSS" affectedbystaticdungeonevent="false" initialspawntimeseconds="3600" despawntimeseconds="1800" respawntimesecondsmin="87000" respawntimesecondsmax="87000">
+    <LootChest name="MD_UNDEAD_SOLO_BOSS" weight="889" lootchestupgradelevelindex="1"/>
+  </LootChestSpawnpoint>
+	<LootChestSpawnpoint name="MD_UNDEAD_SOLO_REWARD" affectedbystaticdungeonevent="false" initialspawntimeseconds="3600" despawntimeseconds="1800" respawntimesecondsmin="87000" respawntimesecondsmax="87000">
+		<LootChest name="MD_UNDEAD_SOLO_REWARD" weight="889" lootchestupgradelevelindex="1"/>
+	</LootChestSpawnpoint>
+  <LootChestSpawnpoint name="MD_UNDEAD_DUO_REWARD" affectedbystaticdungeonevent="false" initialspawntimeseconds="3600" despawntimeseconds="1800" respawntimesecondsmin="87000" respawntimesecondsmax="87000">
+    <LootChest name="MD_UNDEAD_DUO_REWARD" weight="889" lootchestupgradelevelindex="1"/>
+  </LootChestSpawnpoint>
 </LootChests>

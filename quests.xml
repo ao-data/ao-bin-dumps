@@ -2377,21 +2377,27 @@
           <acquireitem itemid ="T2_MOUNT_MULE" count="1" textloca="@MISSIONS_T2_TUTORIAL_TEST_H4_SIDETEXT" hideindetailsui="true"  locationmarkerid="MARKETPLACE"/>
         </missions>
       </extendedmissionstep>
-      <extendedmissionstep locationmarkerid="CRAFTER" markedinworld="true" markedonminimap="true">
+      <extendedmissionstep>
         <preactions>
-          <settutorialstate state="HARDCLEARAFTERDB"/>
-          <openhintbox uniquename="MOUNT"/>
+          <openhintbox uniquename="CLEAR"/>
+          <settutorialstate state="EQUIPMULE"/>
         </preactions>
         <missions>
-          <or textloca="@MISSIONS_T2_TUTORIAL_TEST_H3_SIDETEXT" hideindetailsui="true">
-            <gotolocation locationmarkerid="MOUNTREMINDER" markedinworld="false" markedonminimap="false" />
-            <mount itemid="T2_MOUNT_MULE" />
-          </or>
+          <equipitem itemid ="T2_MOUNT_MULE" textloca="@MISSIONS_T2_TUTORIAL_TEST_H5_SIDETEXT"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep>
+        <preactions>
+          <openhintbox uniquename="CLEAR"/>
+          <settutorialstate state="MOUNTMULE"/>
+        </preactions>
+        <missions>
+          <mount itemid ="T2_MOUNT_MULE" textloca="@MISSIONS_T2_TUTORIAL_TEST_H6_SIDETEXT"/>
         </missions>
       </extendedmissionstep>
       <extendedcompletionstep>
         <preactions>
-          <openhintbox uniquename="SOFTCLEAR"/>
+          <settutorialstate state="FINDWOUNDEDCRAFTER"/>
         </preactions>
         <missions>
           <gotoquestgiver questgivervariable="CRAFTER" locationmarkerid="CRAFTER" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_TEST_H3_SIDETEXT"/>
@@ -2414,6 +2420,15 @@
         <preactions>
           <settutorialblocker id="BLOCKSTOOLS" statetoset="0"/>
           <settutorialstate state="CRAFTTOOLSINFO"/>
+        </preactions>
+        <missions>
+          <interactwithbuilding buildingid="T2_TOOLMAKER_TUTORIAL" locationmarkerid="TOOLMAKERSMALL" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_T2_TUTORIAL_TEST_I1_SIDETEXT"/>
+        </missions>
+      </extendedmissionstep>
+      <extendedmissionstep>
+        <preactions>
+          <settutorialblocker id="BLOCKSTOOLS" statetoset="0"/>
+          <settutorialstate state="CRAFTTOOLS"/>
         </preactions>
         <missions>
            <acquireitem itemid="T1_2H_TOOL_PICK" count="1" locationmarkerid="TOOLMAKERSMALL"/>
@@ -5199,62 +5214,74 @@ Light-->
   <!-- Below here are local quests, those only are only cluster/area local and use a different system than the quest system -->  
   <localquest uniquename="LOCAL_QUEST_MISTS_MEDIUM_HERETIC" name="@LOCAL_QUEST_CAMP_MEDIUM_HERETIC" type="mobcampquestbig" visibleonminimapbeforevisit="false">
     <missions>
-      <killmobfame value="4550" scalewithclusterquestfactor="true" faction="HERETIC" countpartykillsinsamelocalquestarea="true" />
+      <killmobfame value="3033" scalewithclusterquestfactor="true" faction="HERETIC" countpartykillsinsamelocalquestarea="true" />
     </missions>
     <rewards>
-      <pvekillfame tier="4" points="5536" scalewithclusterquestfactor="true"/>
-      <mistsfactionstanding points="466" scalewithclusterquestfactor="true"/>
-      <pvpchallengeobjective objectivename="PVPCHALLENGE_MISTS_CAMP_MEDIUM"/>
+      <pvpchallengeobjective>
+        <reward clusterdangerbonustype="mistsyellow" objectivename="PVPCHALLENGE_MISTS_CAMP_MEDIUM_YELLOW" />
+        <reward clusterdangerbonustype="mistsblack" objectivename="PVPCHALLENGE_MISTS_CAMP_MEDIUM_BLACK" />
+      </pvpchallengeobjective>
+	  <unlockpersonallootchest/>
     </rewards>
   </localquest>
   <localquest uniquename="LOCAL_QUEST_MISTS_MEDIUM_UNDEAD" name="@LOCAL_QUEST_CAMP_MEDIUM_UNDEAD" type="mobcampquestbig" visibleonminimapbeforevisit="false">
     <missions>
-      <killmobfame value="4550" scalewithclusterquestfactor="true" faction="UNDEAD" countpartykillsinsamelocalquestarea="true" />
+      <killmobfame value="3033" scalewithclusterquestfactor="true" faction="UNDEAD" countpartykillsinsamelocalquestarea="true" />
     </missions>
     <rewards>
-      <pvekillfame tier="4" points="5536" scalewithclusterquestfactor="true"/>
-      <mistsfactionstanding points="466" scalewithclusterquestfactor="true"/>
-      <pvpchallengeobjective objectivename="PVPCHALLENGE_MISTS_CAMP_MEDIUM"/>
-    </rewards>
+      <pvpchallengeobjective>
+        <reward clusterdangerbonustype="mistsyellow" objectivename="PVPCHALLENGE_MISTS_CAMP_MEDIUM_YELLOW" />
+        <reward clusterdangerbonustype="mistsblack" objectivename="PVPCHALLENGE_MISTS_CAMP_MEDIUM_BLACK" />
+      </pvpchallengeobjective>
+      <unlockpersonallootchest/>
+	</rewards>
   </localquest>
   <localquest uniquename="LOCAL_QUEST_MISTS_MEDIUM_MORGANA" name="@LOCAL_QUEST_CAMP_MEDIUM_MORGANA" type="mobcampquestbig" visibleonminimapbeforevisit="false">
     <missions>
-      <killmobfame value="4550" scalewithclusterquestfactor="true" faction="MORGANA" countpartykillsinsamelocalquestarea="true" />
+      <killmobfame value="3033" scalewithclusterquestfactor="true" faction="MORGANA" countpartykillsinsamelocalquestarea="true" />
     </missions>
     <rewards>
-      <pvekillfame tier="4" points="5536" scalewithclusterquestfactor="true"/>
-      <mistsfactionstanding points="466" scalewithclusterquestfactor="true"/>
-      <pvpchallengeobjective objectivename="PVPCHALLENGE_MISTS_CAMP_MEDIUM"/>
-    </rewards>
+      <pvpchallengeobjective>
+        <reward clusterdangerbonustype="mistsyellow" objectivename="PVPCHALLENGE_MISTS_CAMP_MEDIUM_YELLOW" />
+        <reward clusterdangerbonustype="mistsblack" objectivename="PVPCHALLENGE_MISTS_CAMP_MEDIUM_BLACK" />
+      </pvpchallengeobjective>
+	  <unlockpersonallootchest/>
+	</rewards>
   </localquest>
   <localquest uniquename="LOCAL_QUEST_MISTS_SMALL_HERETIC" name="@LOCAL_QUEST_CAMP_SMALL_HERETIC" type="mobcampquestsmall" visibleonminimapbeforevisit="false">
     <missions>
-      <killmobfame value="1664" scalewithclusterquestfactor="true" faction="HERETIC" countpartykillsinsamelocalquestarea="true" />
+      <killmobfame value="1109" scalewithclusterquestfactor="true" faction="HERETIC" countpartykillsinsamelocalquestarea="true" />
     </missions>
     <rewards>
-      <pvekillfame tier="4" points="2024" scalewithclusterquestfactor="true"/>
-      <mistsfactionstanding points="170" scalewithclusterquestfactor="true"/>
-      <pvpchallengeobjective objectivename="PVPCHALLENGE_MISTS_CAMP_SMALL"/>
-    </rewards>
+      <pvpchallengeobjective>
+        <reward clusterdangerbonustype="mistsyellow" objectivename="PVPCHALLENGE_MISTS_CAMP_SMALL_YELLOW" />
+        <reward clusterdangerbonustype="mistsblack" objectivename="PVPCHALLENGE_MISTS_CAMP_SMALL_BLACK" />
+      </pvpchallengeobjective>
+	  <unlockpersonallootchest/>
+	</rewards>
   </localquest>
   <localquest uniquename="LOCAL_QUEST_MISTS_SMALL_UNDEAD" name="@LOCAL_QUEST_CAMP_SMALL_UNDEAD" type="mobcampquestsmall" visibleonminimapbeforevisit="false">
     <missions>
-      <killmobfame value="1664" scalewithclusterquestfactor="true" faction="UNDEAD" countpartykillsinsamelocalquestarea="true" />
+      <killmobfame value="1109" scalewithclusterquestfactor="true" faction="UNDEAD" countpartykillsinsamelocalquestarea="true" />
     </missions>
     <rewards>
-      <pvekillfame tier="4" points="2024" scalewithclusterquestfactor="true"/>
-      <mistsfactionstanding points="170" scalewithclusterquestfactor="true"/>
-      <pvpchallengeobjective objectivename="PVPCHALLENGE_MISTS_CAMP_SMALL"/>
-    </rewards>
+      <pvpchallengeobjective>
+        <reward clusterdangerbonustype="mistsyellow" objectivename="PVPCHALLENGE_MISTS_CAMP_SMALL_YELLOW" />
+        <reward clusterdangerbonustype="mistsblack" objectivename="PVPCHALLENGE_MISTS_CAMP_SMALL_BLACK" />
+      </pvpchallengeobjective>
+      <unlockpersonallootchest/>
+	</rewards>
   </localquest>
   <localquest uniquename="LOCAL_QUEST_MISTS_SMALL_MORGANA" name="@LOCAL_QUEST_CAMP_SMALL_MORGANA" type="mobcampquestsmall" visibleonminimapbeforevisit="false">
     <missions>
-      <killmobfame value="1664" scalewithclusterquestfactor="true" faction="MORGANA" countpartykillsinsamelocalquestarea="true" />
+      <killmobfame value="1109" scalewithclusterquestfactor="true" faction="MORGANA" countpartykillsinsamelocalquestarea="true" />
     </missions>
     <rewards>
-      <pvekillfame tier="4" points="2024" scalewithclusterquestfactor="true"/>
-      <mistsfactionstanding points="170" scalewithclusterquestfactor="true"/>
-      <pvpchallengeobjective objectivename="PVPCHALLENGE_MISTS_CAMP_SMALL"/>
-    </rewards>
+      <pvpchallengeobjective>
+        <reward clusterdangerbonustype="mistsyellow" objectivename="PVPCHALLENGE_MISTS_CAMP_SMALL_YELLOW" />
+        <reward clusterdangerbonustype="mistsblack" objectivename="PVPCHALLENGE_MISTS_CAMP_SMALL_BLACK" />
+      </pvpchallengeobjective>
+      <unlockpersonallootchest/>
+	</rewards>
   </localquest>
 </quests>

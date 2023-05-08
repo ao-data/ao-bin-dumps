@@ -3,31 +3,23 @@
 
   <!-- Setting for the Chat UI -->
   <ChatUi maxtabs="10" selectedtab="0" maxtabnamelength="10">
-    <DefaultTab name="@CHAT_SETTINGS_TAB_NAME_GENERAL" showtimestamps="false" showchannelnames="true" maininputchannel="languageproxy">
+    <DefaultTab name="@CHAT_SETTINGS_TAB_NAME_GENERAL" showtimestamps="true" showchannelnames="true" maininputchannel="languageproxy">
       <Channel id="languageproxy" />
       <Channel id="local" />
       <Channel id="say" />
-      <Channel id="emote" />
-      <Channel id="guild" />
-      <Channel id="alliance" />
-      <Channel id="lookingforgroup" />
-      <Channel id="party" />
-      <Channel id="duell" />
-      <Channel id="faction" />
       <Channel id="personal" />
       <Channel id="killplayer" />
       <Channel id="system" />
-      <Channel id="staff" />
     </DefaultTab>
-    <DefaultTab name="@CHAT_SETTINGS_TAB_NAME_HELP" showtimestamps="false" showchannelnames="true" maininputchannel="help">
+    <DefaultTab name="@CHAT_SETTINGS_TAB_NAME_HELP" showtimestamps="true" showchannelnames="true" maininputchannel="help">
       <Channel id="help" />
       <Channel id="personal" />
+      <Channel id="system" />
     </DefaultTab>
-    <DefaultTab name="@CHAT_SETTINGS_TAB_NAME_RECRUIT" showtimestamps="false" showchannelnames="true" maininputchannel="recruit">
-      <Channel id="recruit" />
-    </DefaultTab>
-    <DefaultTab name="@CHAT_SETTINGS_TAB_NAME_TRADE" showtimestamps="false" showchannelnames="true" maininputchannel="trade">
-      <Channel id="trade" />
+    <DefaultTab name="@CHAT_SETTINGS_TAB_NAME_LOOKING_FOR_GROUP" showtimestamps="true" showchannelnames="true" maininputchannel="lookingforgroup">
+      <Channel id="lookingforgroup" />
+      <Channel id="personal" />
+      <Channel id="system" />
     </DefaultTab>
     <DefaultTab name="@CHAT_SETTINGS_TAB_NAME_COMBAT" showtimestamps="true" showchannelnames="false">
       <Channel id="takedamage" />
@@ -40,24 +32,26 @@
       <Channel id="reputation" />
       <Channel id="fame" />
     </DefaultTab>
-
-    <!-- Special Tabs that will be auto created -->
-    <GuildTab showtimestamps="true" showchannelnames="false" maininputchannel="guild">
-      <Channel id="guild" />
+    <DefaultTab name="@CHAT_SETTINGS_TAB_NAME_RECRUIT" showtimestamps="true" showchannelnames="true" maininputchannel="recruit">
+      <Channel id="recruit" />
       <Channel id="personal" />
-    </GuildTab>
-    <AllianceTab showtimestamps="true" showchannelnames="false" maininputchannel="alliance">
+      <Channel id="system" />
+    </DefaultTab>
+    <DefaultTab name="@CHAT_SETTINGS_TAB_NAME_SOCIAL" showtimestamps="true" showchannelnames="true" maininputchannel="party">
+      <Channel id="party" />
+      <Channel id="guild" />
       <Channel id="alliance" />
       <Channel id="personal" />
-    </AllianceTab>
-    <PartyTab showtimestamps="true" showchannelnames="false" maininputchannel="party">
-      <Channel id="party" />
-      <Channel id="personal" />
-    </PartyTab>
+      <Channel id="system" />
+      <Channel id="killplayer" />
+    </DefaultTab>
+
+    <!-- Special Tabs that will be auto created -->
     <FactionTab showtimestamps="true" showchannelnames="true" maininputchannel="faction">
       <Channel id="faction" />
       <Channel id="factionlocal" />
       <Channel id="personal" />
+      <Channel id="system" />
     </FactionTab>
   </ChatUi>
 
