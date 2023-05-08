@@ -224,22 +224,43 @@
         "@showdestinyboardflyout": "true"
       },
       {
-        "@uniquename": "CRAFTTOOLSINFO",
+        "@uniquename": "EQUIPMULE",
         "@previousstate": "COLLECTITEM",
+        "@triggerhint": "EQUIPMULE",
+        "@hidedestinyboard": "false",
+        "@showdestinyboardflyout": "true"
+      },
+      {
+        "@uniquename": "MOUNTMULE",
+        "@previousstate": "EQUIPMULE",
+        "@triggerhint": "MOUNTMULE",
+        "@hidedestinyboard": "false",
+        "@showdestinyboardflyout": "true"
+      },
+      {
+        "@uniquename": "FINDWOUNDEDCRAFTER",
+        "@previousstate": "MOUNTMULE",
+        "@triggerhint": "SOFTCLEAR",
+        "@hidedestinyboard": "false",
+        "@showdestinyboardflyout": "true"
+      },
+      {
+        "@uniquename": "CRAFTTOOLSINFO",
+        "@previousstate": "FINDWOUNDEDCRAFTER",
         "@triggerhint": "CRAFTTOOLSINFO",
         "@hidedestinyboard": "false",
         "@showdestinyboardflyout": "true"
       },
       {
-        "@uniquename": "CRAFTTOOLSCLEAR",
+        "@uniquename": "CRAFTTOOLS",
         "@previousstate": "CRAFTTOOLSINFO",
-        "@triggerhint": "CRAFTTOOLSCLEAR",
+        "@triggerhint": "CRAFTTOOLS",
         "@hidedestinyboard": "false",
         "@showdestinyboardflyout": "true"
       },
       {
         "@uniquename": "HIGHLIGHTMAPBUTTON",
-        "@previousstate": "CRAFTTOOLSCLEAR",
+        "@previousstate": "CRAFTTOOLS",
         "@triggerhint": "MAPINTRO",
         "@hidedestinyboard": "false",
         "@showdestinyboardflyout": "true"
@@ -1003,25 +1024,28 @@
         "@mobileposition": "BottomRight"
       },
       {
-        "@uniquename": "MOUNT",
-        "@title": "@HINT_TITLE_MOUNT",
-        "@infotext": "@HINT_INFO_MOUNT",
-        "@completebutton": "true",
+        "@uniquename": "EQUIPMULE",
+        "@title": "@HINT_TITLE_EQUIPMULE",
+        "@infotext": "@HINT_INFO_EQUIPMULE",
         "@triggerui": "inventorybutton",
-        "@delay": "1",
-        "@nexthint": "INVENTORYBUTTONHIGHLIGHT"
+        "@delay": "1"
+      },
+      {
+        "@uniquename": "MOUNTMULE",
+        "@title": "@HINT_TITLE_MOUNTMULE",
+        "@infotext": "@HINT_INFO_MOUNTMULE",
+        "@triggerui": "mountbutton",
+        "@delay": "1"
       },
       {
         "@uniquename": "CRAFTTOOLSINFO",
         "@title": "@HINT_TITLE_CRAFTTOOLS",
         "@infotext": "@HINT_INFO_CRAFTTOOLS",
-        "@completebutton": "true",
-        "@setnextstateonend": "true",
         "@triggerui": "toolmakeraxepickaxe"
       },
       {
-        "@uniquename": "CRAFTTOOLSCLEAR",
-        "@delay": "2",
+        "@uniquename": "CRAFTTOOLS",
+        "@delay": "5",
         "@triggerui": "toolmakeraxepickaxe"
       },
       {
@@ -2284,11 +2308,11 @@
         "@explanation": "VerticalTemplate",
         "@title": "@TUTORIAL_BIGHINT_INTERACTION_TITLE",
         "@completebutton": "true",
-        "@nexthint": "INTERACTIONBUTTONHIGHLIGHT",
+        "@blockworldinteraction": "true",
         "entry": [
           {
             "@imagepath": "Gui/TutorialExplanations/TUTORIAL_INTERACTION_1",
-            "@scale": "1.2",
+            "@scale": "1.4",
             "content": {
               "@title": "@TUTORIAL_BIGHINT_INTERACTION_TEXT1_TITLE",
               "@text": "@TUTORIAL_BIGHINT_INTERACTION_TEXT1_INFO"
@@ -2296,7 +2320,7 @@
           },
           {
             "@imagepath": "Gui/TutorialExplanations/TUTORIAL_INTERACTION_2",
-            "@scale": "1.2",
+            "@scale": "1.4",
             "content": {
               "@title": "@TUTORIAL_BIGHINT_INTERACTION_TEXT2_TITLE",
               "@text": "@TUTORIAL_BIGHINT_INTERACTION_TEXT2_INFO"
@@ -2662,6 +2686,7 @@
         "@uniquename": "JOYSTICK_CONTROLS_DRAG_TARGETING",
         "@explanation": "VerticalTemplate",
         "@title": "@TUTORIAL_BIGHINT_JOYSTICK_CONTROLS_TITLE_DRAG_TARGETING",
+        "@nexthint": "INTERACTION",
         "entry": [
           {
             "@imagepath": "Gui/Mobile/Tutorial/Tutorial_Mobile_Spell_Drag",
@@ -3520,6 +3545,52 @@
             "content": {
               "@title": "@TUTORIAL_APPEARANCE_SKINS_UNLOCKS_TITLE",
               "@text": "@TUTORIAL_APPEARANCE_SKINS_UNLOCKS_TEXT"
+            }
+          }
+        ]
+      },
+      {
+        "@uniquename": "CONTROLS_FEATURE_CHANGES_MOBILE",
+        "@explanation": "FeatureChoiceTemplate",
+        "@title": "@TUTORIAL_CONTROLS_CHANGE_2023_TITLE",
+        "entry": [
+          {
+            "@imagepath": "Gui/TutorialExplanations/TutorialTargetingLock",
+            "@scale": "2.1",
+            "content": {
+              "@title": "@OPTIONS_AUTOTARGETING_LOCK_TITLE",
+              "@text": "@TUTORIAL_CONTROLS_CHANGE_2023_LOCK_MOBILE"
+            }
+          },
+          {
+            "@imagepath": "Gui/TutorialExplanations/TutorialTargetingPreview",
+            "@scale": "2.1",
+            "content": {
+              "@title": "@TUTORIAL_CONTROLS_CHANGE_OTHER_TITLE",
+              "@text": "@TUTORIAL_CONTROLS_CHANGE_2023_OTHER"
+            }
+          }
+        ]
+      },
+      {
+        "@uniquename": "CONTROLS_FEATURE_CHANGES_CONTROLLER",
+        "@explanation": "FeatureChoiceTemplate",
+        "@title": "@TUTORIAL_CONTROLS_CHANGE_2023_TITLE",
+        "entry": [
+          {
+            "@imagepath": "Gui/TutorialExplanations/TutorialTargetingLock",
+            "@scale": "2.1",
+            "content": {
+              "@title": "@OPTIONS_AUTOTARGETING_LOCK_TITLE",
+              "@text": "@TUTORIAL_CONTROLS_CHANGE_2023_LOCK_CONTROLLER"
+            }
+          },
+          {
+            "@imagepath": "Gui/TutorialExplanations/TutorialTargetingPreview",
+            "@scale": "2.1",
+            "content": {
+              "@title": "@TUTORIAL_CONTROLS_CHANGE_OTHER_TITLE",
+              "@text": "@TUTORIAL_CONTROLS_CHANGE_2023_OTHER"
             }
           }
         ]

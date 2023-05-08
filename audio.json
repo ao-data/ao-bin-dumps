@@ -7206,6 +7206,24 @@
         }
       },
       {
+        "@name": "FARMABLE_OWL",
+        "CharType": {
+          "@name": "farmanimal"
+        },
+        "FarmAnimalType": {
+          "@name": "owl"
+        }
+      },
+      {
+        "@name": "FARMABLE_OWL_BABY",
+        "CharType": {
+          "@name": "farmanimal"
+        },
+        "FarmAnimalType": {
+          "@name": "owl_baby"
+        }
+      },
+      {
         "@name": "HIDEOUT_PLACEABLE_ITEM",
         "ArmorType": {
           "@name": "castlegate_small"
@@ -7482,6 +7500,12 @@
         }
       },
       {
+        "@name": "NPC_CITY_COMMANDER_MISTS",
+        "NpcType": {
+          "@name": "commander_mists"
+        }
+      },
+      {
         "@name": "NPC_TUTORIAL_TIA",
         "NpcType": {
           "@name": "tia"
@@ -7707,7 +7731,7 @@
           "@name": "Play_mace_swoosh_small"
         },
         "OnSpellHit": {
-          "@name": "Play_melee_impact_small_add",
+          "@name": "Play_melee_impact_small_heavy",
           "ImpactType": null
         }
       },
@@ -8119,6 +8143,13 @@
         },
         "OnCastFinished": {
           "@name": "Play_lance_charge"
+        }
+      },
+      {
+        "@name": "SPELL_LANCE_IMPACT_BIG",
+        "OnSpellHit": {
+          "@name": "Play_grail_impact_medium",
+          "ImpactType": null
         }
       },
       {
@@ -10742,6 +10773,12 @@
         }
       },
       {
+        "@name": "SPELL_FIRE_KNOCKBACK_IMPACT_LIMITED",
+        "OnSpellHit": {
+          "@name": "Play_fire_knockback_multiple"
+        }
+      },
+      {
         "@name": "SPELL_FIRE_CHANNELING_LOAD_PYROBLAST",
         "OnChannelingStart": {
           "@name": "Play_fire_cast_load_huge"
@@ -11114,6 +11151,12 @@
         },
         "OnCastInterrupted": {
           "@name": "Stop_frost_cast_load_medium_lance"
+        }
+      },
+      {
+        "@name": "SPELL_FROST_CAST_LANCE_INSTANT",
+        "OnCastFinished": {
+          "@name": "Play_frost_cast_medium_lance"
         }
       },
       {
@@ -12339,6 +12382,12 @@
         }
       },
       {
+        "@name": "SPELL_ARMOR_AVALON_LIGHTNING_PULSE",
+        "OnCastFinished": {
+          "@name": "Play_armor_avalon_lightning_pulse"
+        }
+      },
+      {
         "@name": "SPELL_UI_LOOTCHEST_OPEN",
         "OnCastStart": {
           "@name": "Play_ui_reward_open"
@@ -12384,6 +12433,45 @@
         "@name": "SPELL_HELLGATE_MATCH_START",
         "OnCastFinished": {
           "@name": "Play_hellgate_cooldown_reset"
+        }
+      },
+      {
+        "@name": "SPELL_COLLECT_ROSE_SHRINE_BUFF",
+        "OnSpellHit": {
+          "@name": "Play_mist_dungeon_collect_buff_rose"
+        }
+      },
+      {
+        "@name": "SPELL_COLLECT_SWORD_SHRINE_BUFF",
+        "OnSpellHit": {
+          "@name": "Play_mist_dungeon_collect_buff_sword"
+        }
+      },
+      {
+        "@name": "SPELL_COLLECT_SCALES_SHRINE_BUFF",
+        "OnSpellHit": {
+          "@name": "Play_mist_dungeon_collect_buff_scales"
+        }
+      },
+      {
+        "@name": "SPELL_ACTIVATE_SCALES_SHRINE_BUFF",
+        "OnSpellHit": {
+          "@name": "Play_mist_dungeon_activate_buff_scales"
+        }
+      },
+      {
+        "@name": "SPELL_ACTIVATE_ROSE_SHRINE_BUFF",
+        "OnSpellHit": {
+          "@name": "Play_mist_dungeon_activate_buff_rose"
+        }
+      },
+      {
+        "@name": "SPELL_ACTIVATE_SWORD_SHRINE_BUFF",
+        "OnSpellHit": {
+          "@name": "Play_mist_dungeon_activate_buff_sword"
+        },
+        "OnSpellRemoved": {
+          "@name": "Play_shrink"
         }
       },
       {
@@ -12897,6 +12985,18 @@
         "@name": "SPELL_MOUNT_OWL_SHIELD",
         "OnCastFinished": {
           "@name": "Play_owl_load"
+        }
+      },
+      {
+        "@name": "SPELL_MOUNT_OWL_RISE",
+        "OnCastFinished": {
+          "@name": "Play_mount_owl_rise"
+        }
+      },
+      {
+        "@name": "SPELL_MOUNT_OWL_FALL",
+        "OnCastFinished": {
+          "@name": "Play_mount_owl_dive"
         }
       },
       {
@@ -16011,6 +16111,21 @@
         }
       },
       {
+        "@name": "SPELL_AVALON_MAGE_ATTACK",
+        "OnCastStart": {
+          "@name": "Play_grail_cast_load_medium_02"
+        },
+        "OnCastCanceled": {
+          "@name": "Stop_grail_cast_load_medium_02"
+        },
+        "OnCastInterrupted": {
+          "@name": "Stop_grail_cast_load_medium_02"
+        },
+        "OnCastFinished": {
+          "@name": "Play_grail_cast_small_additional"
+        }
+      },
+      {
         "@name": "SPELL_AVALON_MAGE_LASER_CHANNEL",
         "OnChannelingStart": {
           "@name": "Play_mob_avalon_mage_laser_beam"
@@ -16026,6 +16141,21 @@
         }
       },
       {
+        "@name": "SPELL_AVALON_MAGE_LASER_STARTSPELL",
+        "OnCastStart": {
+          "@name": "Play_grail_cast_load_short"
+        },
+        "OnCastInterrupted": {
+          "@name": "Stop_grail_cast_load_short"
+        },
+        "OnCastCanceled": {
+          "@name": "Stop_grail_cast_load_short"
+        },
+        "OnCastFinished": {
+          "@name": "Play_mob_avalon_mage_laser_sequence"
+        }
+      },
+      {
         "@name": "SPELL_AVALON_PIKEMAN_BLOCK_CHANNEL",
         "OnChannelingStart": {
           "@name": "Play_mob_avalon_shadow_bond_loop"
@@ -16038,6 +16168,18 @@
         },
         "OnChannelingInterrupted": {
           "@name": "Stop_mob_avalon_shadow_bond_loop"
+        }
+      },
+      {
+        "@name": "SPELL_AVALON_PIKEMAN_CAST_SPIN",
+        "OnCastStart": {
+          "@name": "Play_mob_avalon_pikeman_spin"
+        },
+        "OnCastInterrupted": {
+          "@name": "Stop_mob_avalon_pikeman_spin"
+        },
+        "OnCastCanceled": {
+          "@name": "Stop_mob_avalon_pikeman_spin"
         }
       },
       {
@@ -17824,6 +17966,24 @@
         }
       },
       {
+        "@name": "FARMABLE_OWL",
+        "OnOpened": {
+          "@name": "Play_ui_open_owl"
+        },
+        "OnPlaceItemStarted": {
+          "@name": "Play_ui_open_owl"
+        }
+      },
+      {
+        "@name": "FARMABLE_OWL_BABY",
+        "OnOpened": {
+          "@name": "Play_ui_open_owl_baby"
+        },
+        "OnPlaceItemStarted": {
+          "@name": "Play_ui_open_owl_baby"
+        }
+      },
+      {
         "@name": "HIDEOUT_PLACEABLE_ITEM",
         "OnPlaceItemStarted": {
           "@name": "Play_ui_action_place_hideout_start"
@@ -19511,6 +19671,30 @@
         },
         "GlobalEnvironmentEffect": {
           "@name": "barracks"
+        }
+      },
+      {
+        "@clustername": ".*-.*_MID_MI_.*",
+        "Environment": {
+          "@name": "DungeonEnv"
+        },
+        "SubEnvironment": {
+          "@name": "None"
+        },
+        "Biom": {
+          "@name": "Default"
+        },
+        "SubBiom": {
+          "@name": "None"
+        },
+        "MobFaction": {
+          "@name": "Mists_Dungeons"
+        },
+        "Music": {
+          "@name": "Dungeon"
+        },
+        "GlobalEnvironmentEffect": {
+          "@name": "hall_of_fame"
         }
       }
     ],

@@ -3,7 +3,7 @@
   <globalsettings
     mistscityentrancetargetclusterid="5001"
     
-    portaldisappearancetimer ="30"
+    portaldisappearancetimer="30"
     
     portalrespawntime="120"
     minimumspawndistance="120"
@@ -20,19 +20,19 @@
     openworldexitportalalivetimer="30"
     
     clustershutdowncountdowntimer="300"
-    wispsspawninsecbeforeclustershutdown="300"
-    wispsstaggeredspawninterval="60"
-    wispsstaggeredspawnintervalstart="60"
     
     cityroadsentrancepartybindingtimer="300"
     cityroadsentrancepartyslots="7"
     cityroadsentrancedefaultnoslotsuseddummyclusterid="TNL-001"
-    
-    instancerandomdungeondifficultygroup="mists"
+
     immediatereturnexitprefab="Prefabs/ENV_PREFABS/SHARED/ENV_FX/MISTS/ENTRANCES/SHARED_MIST_WISP_PORTAL"
     mistsfxmanagerprefab="Prefabs/ENV_PREFABS/SHARED/ENV_FX/MISTS/MISTFX/MistsFXManager"
-  
     
+    mistdungeonfxmanagerprefab="Prefabs/ENV_PREFABS/SHARED/ENV_FX/MISTS_DUNGEONS/MistDungeonsFXManager"
+    mistdungeonroomtriggerprefab="Prefabs/ENV_PREFABS/SHARED/ENV_FX/MISTS_DUNGEONS/MistsDungeonScreenSpaceVfxCollider"
+    mistdungeonmobsoulvfxprefab="FX/ClientPrefabs/fx_mist_dungeon_mob_death_ghost"
+    mistdungeonmobsoulvfxprefab_spawn="FX/ClientPrefabs/fx_mist_dungeon_mob_death_ghost_spawn"
+
     openworldexitprefabtilename="Tunnel_Exit_Temp"
     
     staticentranceblockerdebuff="MISTS_JOINED_FROM_STATIC_ENTRANCE_DEBUFF"
@@ -40,15 +40,67 @@
     clustershutdownalerttimer = "60"
     
     initialresourcemobfillrate="0.3"
-  />
+  >
+    <modetypesetting type="mists" 
+                     instancerandomdungeondifficultygroup="mists" 
+                     wispsspawninsecbeforeclustershutdown="300"
+                     wispsstaggeredspawninterval="60"
+                     wispsstaggeredspawnintervalstart="60"
+                     minimapdisplayinterestareaextend="100"
+    />
+    <modetypesetting type="mistsdungeon" 
+                     wispsspawninsecbeforeclustershutdown="300"
+                     wispsstaggeredspawninterval="0"
+                     wispsstaggeredspawnintervalstart="0"
+                     minimapdisplayinterestareaextend="100"/> <!-- No difficulty used for the dungeons as there is only difficulty 0 -->
+  </globalsettings>
 
-  <mistcitystanding max="1000000">
+  <mistdungeonsettings>
+    
+    <RoomSetting name="default">
+      <DungeonMultiRewardObject set="rose">
+        <LootChest name="MD_UNDEAD_SOLO_REWARD" weight="15"/>
+        <Shrine buff="MD_SHRINE_ROSE_BUFF" weight="85" prefab="MISTS_GREEN_DNG_CASTLE_STATUE_BUFF_SHRINE_C"/>
+      </DungeonMultiRewardObject>
+      <DungeonMultiRewardObject set="scale">
+        <LootChest name="MD_UNDEAD_SOLO_REWARD" weight="15"/>
+        <Shrine buff="MD_SHRINE_SCALE_BUFF" weight="85" prefab="MISTS_GREEN_DNG_CASTLE_STATUE_BUFF_SHRINE_B"/>
+      </DungeonMultiRewardObject>
+      <DungeonMultiRewardObject set="sword">
+        <LootChest name="MD_UNDEAD_SOLO_REWARD" weight="15"/>
+        <Shrine buff="MD_SHRINE_SWORD_BUFF" weight="85" prefab="MISTS_GREEN_DNG_CASTLE_STATUE_BUFF_SHRINE_A"/>
+      </DungeonMultiRewardObject>      
+    </RoomSetting>
+    
+    <RoomSetting name="duo">
+      <DungeonMultiRewardObject set="rose">
+        <LootChest name="MD_UNDEAD_DUO_REWARD" weight="15"/>
+        <Shrine buff="MD_SHRINE_ROSE_BUFF" weight="85" prefab="MISTS_GREEN_DNG_CASTLE_STATUE_BUFF_SHRINE_C"/>
+      </DungeonMultiRewardObject>
+      <DungeonMultiRewardObject set="scale">
+        <LootChest name="MD_UNDEAD_DUO_REWARD" weight="15"/>
+        <Shrine buff="MD_SHRINE_SCALE_BUFF" weight="85" prefab="MISTS_GREEN_DNG_CASTLE_STATUE_BUFF_SHRINE_B"/>
+      </DungeonMultiRewardObject>
+      <DungeonMultiRewardObject set="sword">
+        <LootChest name="MD_UNDEAD_DUO_REWARD" weight="15"/>
+        <Shrine buff="MD_SHRINE_SWORD_BUFF" weight="85" prefab="MISTS_GREEN_DNG_CASTLE_STATUE_BUFF_SHRINE_A"/>
+      </DungeonMultiRewardObject>
+    </RoomSetting>    
+    
+  </mistdungeonsettings>
+
+
+  <mistcitystanding max="10000000">
     <rank minstanding="0" title="@MISTCITY_STANDING_RANK_1" pointmultiplier="1" />
     <rank minstanding="50000" title="@MISTCITY_STANDING_RANK_2" pointmultiplier="1" />
     <rank minstanding="150000" title="@MISTCITY_STANDING_RANK_3" pointmultiplier="1" />
     <rank minstanding="300000" title="@MISTCITY_STANDING_RANK_4" pointmultiplier="1"/>
     <rank minstanding="600000" title="@MISTCITY_STANDING_RANK_5" pointmultiplier="1" />
     <rank minstanding="1000000" title="@MISTCITY_STANDING_RANK_6" pointmultiplier="1" />
+    <rank minstanding="1800000" title="@MISTCITY_STANDING_RANK_7" pointmultiplier="1" />
+    <rank minstanding="3250000" title="@MISTCITY_STANDING_RANK_8" pointmultiplier="1" />
+    <rank minstanding="5700000" title="@MISTCITY_STANDING_RANK_9" pointmultiplier="1" />
+    <rank minstanding="10000000" title="@MISTCITY_STANDING_RANK_10" pointmultiplier="1" />
   </mistcitystanding>
   
   <mistsmodes>
@@ -56,121 +108,197 @@
     <!--NON-LETHAL-->
     <mistsmode
       name="MISTS_SOLO_YELLOW"
+      type="mists"
       clustertype="MISTS_SOLO_YELLOW"
       clusterdisplayname="The Mists"
       maxteamsize="1"
       mapset="MAPSET_SOLO_YELLOW"
-
-      resourcepool="YELLOW"
-      resourcedenominator="100"
       
-      maxpercentresourcepoolonstartup="0.8"
-      
-      >
-        <difficultylevel level="0" minimuminstancepool="24" flexibleinstancepool="0.3" wispmob="MOB_UNIQUE_MISTS_PORTAL_WISP" wispmobexitvisualizationref="MISTS_SOLO_YELLOW" wispinstacefillratio="0.7" rareresourcedistribution="MISTS_E0">
+      resourcepool="YELLOW">
+        <difficultylevel level="0" minimuminstancepool="24" flexibleinstancepool="0.2" wispmob="MOB_UNIQUE_MISTS_PORTAL_WISP" wispmobexitvisualizationref="MISTS_SOLO_YELLOW" wispinstacefillratio="0.7" rareresourcedistribution="MISTS_E0">
           <wispinstancedifficultyrollref randomdungeonrollref="MISTS_INSTANCE_MODE_YELLOW_SOLO" />
         </difficultylevel>
-        <difficultylevel level="1" minimuminstancepool="5" flexibleinstancepool="0.3" wispmob="MOB_UNIQUE_MISTS_PORTAL_WISP_STANDARD" wispmobexitvisualizationref="MISTS_SOLO_YELLOW" wispinstacefillratio="0.7" rareresourcedistribution="MISTS_E1">
+        <difficultylevel level="1" minimuminstancepool="5" flexibleinstancepool="0.2" wispmob="MOB_UNIQUE_MISTS_PORTAL_WISP_STANDARD" wispmobexitvisualizationref="MISTS_SOLO_YELLOW" wispinstacefillratio="0.7" rareresourcedistribution="MISTS_E1">
           <wispinstancedifficultyrollref randomdungeonrollref="MISTS_INSTANCE_MODE_YELLOW_SOLO" />
         </difficultylevel>
-        <difficultylevel level="2" minimuminstancepool="4" flexibleinstancepool="0.3" wispmob="MOB_UNIQUE_MISTS_PORTAL_WISP_UNCOMMON" wispmobexitvisualizationref="MISTS_SOLO_YELLOW" wispinstacefillratio="0.7" rareresourcedistribution="MISTS_E2">
+        <difficultylevel level="2" minimuminstancepool="4" flexibleinstancepool="0.2" wispmob="MOB_UNIQUE_MISTS_PORTAL_WISP_UNCOMMON" wispmobexitvisualizationref="MISTS_SOLO_YELLOW" wispinstacefillratio="0.7" rareresourcedistribution="MISTS_E2">
           <wispinstancedifficultyrollref randomdungeonrollref="MISTS_INSTANCE_MODE_YELLOW_SOLO" />
         </difficultylevel>
-        <difficultylevel level="3" minimuminstancepool="3" flexibleinstancepool="0.3" wispmob="MOB_UNIQUE_MISTS_PORTAL_WISP_RARE" wispmobexitvisualizationref="MISTS_SOLO_YELLOW" wispinstacefillratio="0.7" rareresourcedistribution="MISTS_E3">
+        <difficultylevel level="3" minimuminstancepool="3" flexibleinstancepool="0.2" wispmob="MOB_UNIQUE_MISTS_PORTAL_WISP_RARE" wispmobexitvisualizationref="MISTS_SOLO_YELLOW" wispinstacefillratio="0.7" rareresourcedistribution="MISTS_E3">
           <wispinstancedifficultyrollref randomdungeonrollref="MISTS_INSTANCE_MODE_YELLOW_SOLO" />
         </difficultylevel>
-        <difficultylevel level="4" minimuminstancepool="2" flexibleinstancepool="0.3" wispmob="MOB_UNIQUE_MISTS_PORTAL_WISP_LEGENDARY" wispmobexitvisualizationref="MISTS_SOLO_YELLOW" wispinstacefillratio="0.7" rareresourcedistribution="MISTS_E4">
+        <difficultylevel level="4" minimuminstancepool="2" flexibleinstancepool="0.2" wispmob="MOB_UNIQUE_MISTS_PORTAL_WISP_LEGENDARY" wispmobexitvisualizationref="MISTS_SOLO_YELLOW" wispinstacefillratio="0.7" rareresourcedistribution="MISTS_E4">
           <wispinstancedifficultyrollref randomdungeonrollref="MISTS_INSTANCE_MODE_YELLOW_SOLO" />
         </difficultylevel>
         <treasures>
-          <subtype name="CHEST" rolls="1" chance="0.454357826" initialblocktimeseconds="60" finalblocktimeseconds="360" />
+          <subtype name="CHEST" rolls="1" chance="0.3634862608" initialblocktimeseconds="60" finalblocktimeseconds="360" />
+          <subtype name="COFFER" rolls="3" chance="0.333333" initialblocktimeseconds="60" finalblocktimeseconds="420" />
           <subtype name="WISPS" rolls="1" chance="0.8" initialblocktimeseconds="60" finalblocktimeseconds="420" />
-          <subtype name="SPECIALMOBS" rolls="1" chance="0.25" initialblocktimeseconds="60" finalblocktimeseconds="420" />
           <subtype name="MYTHICALMOBS" rolls="1" chance="0.64732" initialblocktimeseconds="60" finalblocktimeseconds="420" mindifficulty="1"/>
           <subtype name="RESOURCE_MISTS_T4" rolls="1" chance="0.29952306" initialblocktimeseconds="60" finalblocktimeseconds="300" />
           <subtype name="RESOURCE_MISTS_T5" rolls="1" chance="0.16879382" initialblocktimeseconds="60" finalblocktimeseconds="300" />
           <subtype name="RESOURCE_MISTS_T6" rolls="1" chance="0.06359801" initialblocktimeseconds="60" finalblocktimeseconds="300" />
           <subtype name="RESOURCE_MISTS_T7" rolls="1" chance="0.04475415" initialblocktimeseconds="60" finalblocktimeseconds="300" />
         </treasures>
+        <specialexitsettings>
+          <exitsettings type="MistsDungeonEntrance" targetmode="MISTS_DUNGEON_SOLO_YELLOW" minwaveinterval="170" maxwaveinterval="214" exitspawnchance="1.0" initialblocktimeseconds="60" finalblocktimeseconds="300" playerdistanceblocking="45"
+          portaldisappearancetimer="120">
+            <exit tier="5" weight="80" randomdungeonexitvisualizationref="T5_MISTS_DUNGEON_SOLO_YELLOW" mindifficulty="0"/>
+            <exit tier="6" weight="14" randomdungeonexitvisualizationref="T6_MISTS_DUNGEON_SOLO_YELLOW" mindifficulty="0"/>
+            <exit tier="7" weight="6" randomdungeonexitvisualizationref="T7_MISTS_DUNGEON_SOLO_YELLOW" mindifficulty="0"/>
+          </exitsettings>
+        </specialexitsettings>
+    </mistsmode>
+    
+    <!--NON-LETHAL-->
+    <mistsmode
+      name="MISTS_DUNGEON_SOLO_YELLOW"
+      type="mistsdungeon"
+      numberofbossrooms="3"
+      bossroompreventionradius="90"
+      clustertype="MISTS_DUNGEON_SOLO_YELLOW"
+      clusterdisplayname="Knightfall Abbey"
+      maxteamsize="1"
+      mapset="MAPSET_SOLO_YELLOW_DUNGEON"
+      exitsleadtomode="MISTS_SOLO_YELLOW">
+        <difficultylevel level="0" minimuminstancepool="3" flexibleinstancepool="0.05" wispmob="MOB_UNIQUE_MISTS_PORTAL_WISP" wispmobexitvisualizationref="MISTS_SOLO_YELLOW" wispinstacefillratio="1" rareresourcedistribution="MISTS_E0">
+          <wispinstancedifficultyrollref randomdungeonrollref="MISTS_INSTANCE_MODE_DUNGEON_YELLOW_SOLO" />
+        </difficultylevel>
+        <treasures>
+          <subtype name="CHEST" rolls="1" chance="1" initialblocktimeseconds="360" finalblocktimeseconds="685"/>
+          <subtype name="COFFER" rolls="3" chance="1" initialblocktimeseconds="180" finalblocktimeseconds="570" />
+        </treasures>
     </mistsmode>
 
    <!--LETHAL-->
     <mistsmode
       name="MISTS_SOLO_BLACK"
+      type="mists"      
       clustertype="MISTS_SOLO_BLACK"
       clusterdisplayname="The Mists"
       maxteamsize="1"
       mapset="MAPSET_SOLO_BLACK"
 
-      resourcepool="BLACK"
-      resourcedenominator="100"
-      
-      maxpercentresourcepoolonstartup="0.8"
-      
-      >
-        <difficultylevel level="0" minimuminstancepool="30" flexibleinstancepool="0.3" wispmob="MOB_UNIQUE_MISTS_PORTAL_WISP" wispmobexitvisualizationref="MISTS_SOLO_BLACK" wispinstacefillratio="0.7" rareresourcedistribution="MISTS_E0">
+      resourcepool="BLACK">
+        <difficultylevel level="0" minimuminstancepool="30" flexibleinstancepool="0.2" wispmob="MOB_UNIQUE_MISTS_PORTAL_WISP" wispmobexitvisualizationref="MISTS_SOLO_BLACK" wispinstacefillratio="0.7" rareresourcedistribution="MISTS_E0">
           <wispinstancedifficultyrollref randomdungeonrollref="MISTS_INSTANCE_MODE_BLACK_SOLO" />
         </difficultylevel>
-        <difficultylevel level="1" minimuminstancepool="6" flexibleinstancepool="0.3" wispmob="MOB_UNIQUE_MISTS_PORTAL_WISP_STANDARD" wispmobexitvisualizationref="MISTS_SOLO_BLACK" wispinstacefillratio="0.7" rareresourcedistribution="MISTS_E1">
+        <difficultylevel level="1" minimuminstancepool="6" flexibleinstancepool="0.2" wispmob="MOB_UNIQUE_MISTS_PORTAL_WISP_STANDARD" wispmobexitvisualizationref="MISTS_SOLO_BLACK" wispinstacefillratio="0.7" rareresourcedistribution="MISTS_E1">
           <wispinstancedifficultyrollref randomdungeonrollref="MISTS_INSTANCE_MODE_BLACK_SOLO" />
         </difficultylevel>
-        <difficultylevel level="2" minimuminstancepool="4" flexibleinstancepool="0.3" wispmob="MOB_UNIQUE_MISTS_PORTAL_WISP_UNCOMMON" wispmobexitvisualizationref="MISTS_SOLO_BLACK" wispinstacefillratio="0.7" rareresourcedistribution="MISTS_E2">
+        <difficultylevel level="2" minimuminstancepool="4" flexibleinstancepool="0.2" wispmob="MOB_UNIQUE_MISTS_PORTAL_WISP_UNCOMMON" wispmobexitvisualizationref="MISTS_SOLO_BLACK" wispinstacefillratio="0.7" rareresourcedistribution="MISTS_E2">
           <wispinstancedifficultyrollref randomdungeonrollref="MISTS_INSTANCE_MODE_BLACK_SOLO" />
         </difficultylevel>
-        <difficultylevel level="3" minimuminstancepool="3" flexibleinstancepool="0.3" wispmob="MOB_UNIQUE_MISTS_PORTAL_WISP_RARE" wispmobexitvisualizationref="MISTS_SOLO_BLACK" wispinstacefillratio="0.7" rareresourcedistribution="MISTS_E3">
+        <difficultylevel level="3" minimuminstancepool="3" flexibleinstancepool="0.2" wispmob="MOB_UNIQUE_MISTS_PORTAL_WISP_RARE" wispmobexitvisualizationref="MISTS_SOLO_BLACK" wispinstacefillratio="0.7" rareresourcedistribution="MISTS_E3">
           <wispinstancedifficultyrollref randomdungeonrollref="MISTS_INSTANCE_MODE_BLACK_SOLO" />
         </difficultylevel>
-        <difficultylevel level="4" minimuminstancepool="2" flexibleinstancepool="0.3" wispmob="MOB_UNIQUE_MISTS_PORTAL_WISP_LEGENDARY" wispmobexitvisualizationref="MISTS_SOLO_BLACK" wispinstacefillratio="0.7" rareresourcedistribution="MISTS_E4">
+        <difficultylevel level="4" minimuminstancepool="2" flexibleinstancepool="0.2" wispmob="MOB_UNIQUE_MISTS_PORTAL_WISP_LEGENDARY" wispmobexitvisualizationref="MISTS_SOLO_BLACK" wispinstacefillratio="0.7" rareresourcedistribution="MISTS_E4">
           <wispinstancedifficultyrollref randomdungeonrollref="MISTS_INSTANCE_MODE_BLACK_SOLO" />
         </difficultylevel>
         <treasures>
-          <subtype name="CHEST" rolls="1" chance="0.461181535" initialblocktimeseconds="60" finalblocktimeseconds="360" />
+          <subtype name="CHEST" rolls="1" chance="0.368945228" initialblocktimeseconds="60" finalblocktimeseconds="360" />
+          <subtype name="COFFER" rolls="3" chance="0.333333" initialblocktimeseconds="60" finalblocktimeseconds="420" />
           <subtype name="WISPS" rolls="1" chance="0.8" initialblocktimeseconds="60" finalblocktimeseconds="420" />
-          <subtype name="SPECIALMOBS" rolls="1" chance="0.85" initialblocktimeseconds="60" finalblocktimeseconds="420" />
+          <subtype name="SPECIALMOBS" rolls="1" chance="0.6" initialblocktimeseconds="60" finalblocktimeseconds="420" />
           <subtype name="MYTHICALMOBS" rolls="1" chance="0.68546" initialblocktimeseconds="60" finalblocktimeseconds="420" mindifficulty="1"/>
           <subtype name="RESOURCE_T5" rolls="1" chance="0.12538322" initialblocktimeseconds="60" finalblocktimeseconds="300" />
           <subtype name="RESOURCE_T6" rolls="1" chance="0.20475133" initialblocktimeseconds="60" finalblocktimeseconds="300" />
           <subtype name="RESOURCE_T7" rolls="1" chance="0.20178034" initialblocktimeseconds="60" finalblocktimeseconds="300" />
           <subtype name="RESOURCE_T8" rolls="1" chance="0.13970768" initialblocktimeseconds="60" finalblocktimeseconds="480" />
         </treasures>
+        <specialexitsettings>
+          <exitsettings type="MistsDungeonEntrance" targetmode="MISTS_DUNGEON_SOLO_BLACK" minwaveinterval="170" maxwaveinterval="214" exitspawnchance="1.0" initialblocktimeseconds="60" finalblocktimeseconds="300" playerdistanceblocking="45"
+          portaldisappearancetimer="120">
+            <exit tier="6" weight="80" randomdungeonexitvisualizationref="T6_MISTS_DUNGEON_SOLO_BLACK" mindifficulty="0"/>
+            <exit tier="7" weight="14" randomdungeonexitvisualizationref="T7_MISTS_DUNGEON_SOLO_BLACK" mindifficulty="0"/>
+            <exit tier="8" weight="6" randomdungeonexitvisualizationref="T8_MISTS_DUNGEON_SOLO_BLACK" mindifficulty="0"/>
+          </exitsettings>
+        </specialexitsettings>
+      </mistsmode>
+      
+   <!--LETHAL-->
+    <mistsmode
+      name="MISTS_DUNGEON_SOLO_BLACK"
+      type="mistsdungeon"
+      numberofbossrooms="3"
+      bossroompreventionradius="90"
+      clustertype="MISTS_DUNGEON_SOLO_BLACK"
+      clusterdisplayname="Knightfall Abbey"
+      maxteamsize="1"
+      mapset="MAPSET_SOLO_BLACK_DUNGEON"
+      exitsleadtomode="MISTS_SOLO_BLACK">
+        <difficultylevel level="0" minimuminstancepool="3" flexibleinstancepool="0.05" wispmob="MOB_UNIQUE_MISTS_PORTAL_WISP" wispmobexitvisualizationref="MISTS_SOLO_BLACK" wispinstacefillratio="0.7" rareresourcedistribution="MISTS_E0">
+          <wispinstancedifficultyrollref randomdungeonrollref="MISTS_INSTANCE_MODE_DUNGEON_BLACK_SOLO" />
+        </difficultylevel>
+        <treasures>
+		    	<subtype name="CHEST" rolls="1" chance="1" initialblocktimeseconds="360" finalblocktimeseconds="685"/>
+          <subtype name="COFFER" rolls="3" chance="1" initialblocktimeseconds="180" finalblocktimeseconds="570" />
+        </treasures>
       </mistsmode>
       
          <!--LETHAL-->
     <mistsmode
       name="MISTS_DUO_BLACK"
+      type="mists"
       clustertype="MISTS_DUO_BLACK"
       clusterdisplayname="The Greater Mists"
       maxteamsize="2"
       mapset="MAPSET_DUO_BLACK"
 
-      resourcepool="BLACK"
-      resourcedenominator="100"
-      
-      maxpercentresourcepoolonstartup="0.8">
-        <difficultylevel level="0" minimuminstancepool="6" flexibleinstancepool="0.3" wispmob="MOB_UNIQUE_MISTS_PORTAL_WISP_DUO" wispmobexitvisualizationref="MISTS_DUO_BLACK" wispinstacefillratio="0.7" rareresourcedistribution="MISTS_E0">
+      resourcepool="BLACK">
+        <difficultylevel level="0" minimuminstancepool="6" flexibleinstancepool="0.2" wispmob="MOB_UNIQUE_MISTS_PORTAL_WISP_DUO" wispmobexitvisualizationref="MISTS_DUO_BLACK" wispinstacefillratio="0.7" rareresourcedistribution="MISTS_E0">
           <wispinstancedifficultyrollref randomdungeonrollref="MISTS_INSTANCE_MODE_BLACK_DUO" />                          
         </difficultylevel>                                                                                                  
-        <difficultylevel level="1" minimuminstancepool="2" flexibleinstancepool="0.3" wispmob="MOB_UNIQUE_MISTS_PORTAL_WISP_DUO_STANDARD" wispmobexitvisualizationref="MISTS_DUO_BLACK" wispinstacefillratio="0.7" rareresourcedistribution="MISTS_E1">
+        <difficultylevel level="1" minimuminstancepool="2" flexibleinstancepool="0.2" wispmob="MOB_UNIQUE_MISTS_PORTAL_WISP_DUO_STANDARD" wispmobexitvisualizationref="MISTS_DUO_BLACK" wispinstacefillratio="0.7" rareresourcedistribution="MISTS_E1">
           <wispinstancedifficultyrollref randomdungeonrollref="MISTS_INSTANCE_MODE_BLACK_DUO" />                          
         </difficultylevel>                                                                                                  
-        <difficultylevel level="2" minimuminstancepool="1" flexibleinstancepool="0.3" wispmob="MOB_UNIQUE_MISTS_PORTAL_WISP_DUO_UNCOMMON" wispmobexitvisualizationref="MISTS_DUO_BLACK" wispinstacefillratio="0.7" rareresourcedistribution="MISTS_E2">
+        <difficultylevel level="2" minimuminstancepool="1" flexibleinstancepool="0.2" wispmob="MOB_UNIQUE_MISTS_PORTAL_WISP_DUO_UNCOMMON" wispmobexitvisualizationref="MISTS_DUO_BLACK" wispinstacefillratio="0.7" rareresourcedistribution="MISTS_E2">
           <wispinstancedifficultyrollref randomdungeonrollref="MISTS_INSTANCE_MODE_BLACK_DUO" />                          
         </difficultylevel>                                                                                                  
-        <difficultylevel level="3" minimuminstancepool="1" flexibleinstancepool="0.3" wispmob="MOB_UNIQUE_MISTS_PORTAL_WISP_DUO_RARE" wispmobexitvisualizationref="MISTS_DUO_BLACK" wispinstacefillratio="0.7" rareresourcedistribution="MISTS_E3">
+        <difficultylevel level="3" minimuminstancepool="1" flexibleinstancepool="0.2" wispmob="MOB_UNIQUE_MISTS_PORTAL_WISP_DUO_RARE" wispmobexitvisualizationref="MISTS_DUO_BLACK" wispinstacefillratio="0.7" rareresourcedistribution="MISTS_E3">
           <wispinstancedifficultyrollref randomdungeonrollref="MISTS_INSTANCE_MODE_BLACK_DUO" />                          
         </difficultylevel>                                                                                                  
-        <difficultylevel level="4" minimuminstancepool="1" flexibleinstancepool="0.3" wispmob="MOB_UNIQUE_MISTS_PORTAL_WISP_DUO_LEGENDARY" wispmobexitvisualizationref="MISTS_DUO_BLACK" wispinstacefillratio="0.7" rareresourcedistribution="MISTS_E4">
+        <difficultylevel level="4" minimuminstancepool="1" flexibleinstancepool="0.2" wispmob="MOB_UNIQUE_MISTS_PORTAL_WISP_DUO_LEGENDARY" wispmobexitvisualizationref="MISTS_DUO_BLACK" wispinstacefillratio="0.7" rareresourcedistribution="MISTS_E4">
           <wispinstancedifficultyrollref randomdungeonrollref="MISTS_INSTANCE_MODE_BLACK_DUO" />
         </difficultylevel>
         <treasures>
-          <subtype name="CHEST" rolls="1" chance="0.461181535" initialblocktimeseconds="60" finalblocktimeseconds="360" />
+          <subtype name="CHEST" rolls="1" chance="0.368945228" initialblocktimeseconds="60" finalblocktimeseconds="360" />
+          <subtype name="COFFER" rolls="3" chance="0.333333" initialblocktimeseconds="60" finalblocktimeseconds="420" />
           <subtype name="WISPS" rolls="1" chance="0.8" initialblocktimeseconds="60" finalblocktimeseconds="420" />
-          <subtype name="SPECIALMOBS" rolls="1" chance="0.85" initialblocktimeseconds="60" finalblocktimeseconds="420" />
+          <subtype name="SPECIALMOBS" rolls="1" chance="0.6" initialblocktimeseconds="60" finalblocktimeseconds="420" />
           <subtype name="MYTHICALMOBS" rolls="1" chance="0.68546" initialblocktimeseconds="60" finalblocktimeseconds="420" mindifficulty="1"/>
           <subtype name="RESOURCE_T5" rolls="1" chance="0.12538322" initialblocktimeseconds="60" finalblocktimeseconds="300" />
           <subtype name="RESOURCE_T6" rolls="1" chance="0.20475133" initialblocktimeseconds="60" finalblocktimeseconds="300" />
           <subtype name="RESOURCE_T7" rolls="1" chance="0.20178034" initialblocktimeseconds="60" finalblocktimeseconds="300" />
           <subtype name="RESOURCE_T8" rolls="1" chance="0.13970768" initialblocktimeseconds="60" finalblocktimeseconds="480" />
+        </treasures>
+        <specialexitsettings>
+          <exitsettings type="MistsDungeonEntrance" targetmode="MISTS_DUNGEON_DUO_BLACK" minwaveinterval="170" maxwaveinterval="214" exitspawnchance="1.0" initialblocktimeseconds="60" finalblocktimeseconds="300" playerdistanceblocking="45"
+          portaldisappearancetimer="120">
+            <exit tier="6" weight="80" randomdungeonexitvisualizationref="T6_MISTS_DUNGEON_DUO_BLACK" mindifficulty="0"/>
+            <exit tier="7" weight="14" randomdungeonexitvisualizationref="T7_MISTS_DUNGEON_DUO_BLACK" mindifficulty="0"/>
+            <exit tier="8" weight="6" randomdungeonexitvisualizationref="T8_MISTS_DUNGEON_DUO_BLACK" mindifficulty="0"/>
+          </exitsettings>
+        </specialexitsettings>
+      </mistsmode>
+      
+      <mistsmode
+      name="MISTS_DUNGEON_DUO_BLACK"
+      type="mistsdungeon"
+      mistdungeonroomsetting="duo"
+      numberofbossrooms="3"
+      bossroompreventionradius="90"
+      clustertype="MISTS_DUNGEON_DUO_BLACK"
+      clusterdisplayname="Knightfall Abbey"
+      maxteamsize="2"
+      mapset="MAPSET_DUO_BLACK_DUNGEON"
+      exitsleadtomode="MISTS_DUO_BLACK">
+        <difficultylevel level="0" minimuminstancepool="1" flexibleinstancepool="0.05" wispmob="MOB_UNIQUE_MISTS_PORTAL_WISP_DUO" wispmobexitvisualizationref="MISTS_DUO_BLACK" wispinstacefillratio="0.7" rareresourcedistribution="MISTS_E0">
+          <wispinstancedifficultyrollref randomdungeonrollref="MISTS_INSTANCE_MODE_DUNGEON_BLACK_DUO" />
+        </difficultylevel>
+        <treasures>
+	    		<subtype name="CHEST" rolls="1" chance="1" initialblocktimeseconds="360" finalblocktimeseconds="685"/>
+          <subtype name="COFFER" rolls="3" chance="1" initialblocktimeseconds="180" finalblocktimeseconds="570" />
         </treasures>
       </mistsmode>
     
@@ -185,7 +313,6 @@
   </mistsdifficultyleveluimapping>
   
   <mistsmaps>
-    
     <mapset name="MAPSET_SOLO_YELLOW">
       <map id="SOLO_YELLOW_COMMON_01" mastertemplate="MISTS_001_M1_S4" templatepool="YELLOW_NORMAL" clustertier="5" subbiome="green" softplayerlimitmin="6" softplayerlimitmax="10" hardplayercapspace="3" weight="6" clusterclosetime="600" clustershutdowntime="1200" maxdifficulty="2"/>
       <map id="SOLO_YELLOW_COMMON_02" mastertemplate="MISTS_002_M1_S4" templatepool="YELLOW_NORMAL" clustertier="5" subbiome="green" softplayerlimitmin="6" softplayerlimitmax="10" hardplayercapspace="3" weight="6" clusterclosetime="600" clustershutdowntime="1200" maxdifficulty="2"/>
@@ -252,6 +379,11 @@
       <map id="SOLO_YELLOW_RARE_13" mastertemplate="MISTS_013_M1_S4" templatepool="YELLOW_RARE" clustertier="7" subbiome="dead" softplayerlimitmin="6" softplayerlimitmax="10" hardplayercapspace="3" weight="1" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="2" maxdifficulty="4"/>
       <map id="SOLO_YELLOW_RARE_14" mastertemplate="MISTS_014_M1_S4" templatepool="YELLOW_RARE" clustertier="7" subbiome="dead" softplayerlimitmin="6" softplayerlimitmax="10" hardplayercapspace="3" weight="1" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="2" maxdifficulty="4"/>
       <map id="SOLO_YELLOW_RARE_15" mastertemplate="MISTS_015_M1_S4" templatepool="YELLOW_RARE" clustertier="7" subbiome="dead" softplayerlimitmin="6" softplayerlimitmax="10" hardplayercapspace="3" weight="1" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="2" maxdifficulty="4"/>
+    </mapset>
+    <mapset name="MAPSET_SOLO_YELLOW_DUNGEON">
+      <map id="SOLO_YELLOW_DUNGEON_01" mastertemplate="MISTS_DNG_UND_01" templatepool="YELLOW_RARE" clustertier="5" requiredentrancetier="5" subbiome="green" softplayerlimitmin="8" softplayerlimitmax="8" hardplayercapspace="1" weight="1" clusterclosetime="130" clustershutdowntime="1050" />
+      <map id="SOLO_YELLOW_DUNGEON_02" mastertemplate="MISTS_DNG_UND_01" templatepool="YELLOW_RARE" clustertier="6" requiredentrancetier="6" subbiome="green" softplayerlimitmin="8" softplayerlimitmax="8" hardplayercapspace="1" weight="1" clusterclosetime="130" clustershutdowntime="1050" />
+      <map id="SOLO_YELLOW_DUNGEON_03" mastertemplate="MISTS_DNG_UND_01" templatepool="YELLOW_RARE" clustertier="7" requiredentrancetier="7" subbiome="green" softplayerlimitmin="9" softplayerlimitmax="9" hardplayercapspace="1" weight="1" clusterclosetime="130" clustershutdowntime="1050" />
     </mapset>
     
     <mapset name="MAPSET_SOLO_BLACK">
@@ -322,74 +454,85 @@
       <map id="SOLO_BLACK_RARE_15" mastertemplate="MISTS_015_M1_S4" templatepool="BLACK_RARE" clustertier="8" subbiome="dead" softplayerlimitmin="6" softplayerlimitmax="10" hardplayercapspace="3" weight="1" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="2" maxdifficulty="4"/>
     </mapset>
     
-    <mapset name="MAPSET_DUO_BLACK">
-      <map id="DUO_BLACK_COMMON_01" mastertemplate="MISTS_001_M1_S4" templatepool="BLACK_NORMAL" clustertier="6" subbiome="green" softplayerlimitmin="6" softplayerlimitmax="10" hardplayercapspace="3" weight="6" clusterclosetime="600" clustershutdowntime="1200" maxdifficulty="2"/>
-      <map id="DUO_BLACK_COMMON_02" mastertemplate="MISTS_002_M1_S4" templatepool="BLACK_NORMAL" clustertier="6" subbiome="green" softplayerlimitmin="6" softplayerlimitmax="10" hardplayercapspace="3" weight="6" clusterclosetime="600" clustershutdowntime="1200" maxdifficulty="2"/>
-      <map id="DUO_BLACK_COMMON_03" mastertemplate="MISTS_003_M1_S4" templatepool="BLACK_NORMAL" clustertier="6" subbiome="green" softplayerlimitmin="6" softplayerlimitmax="10" hardplayercapspace="3" weight="6" clusterclosetime="600" clustershutdowntime="1200" maxdifficulty="2"/>
-      <map id="DUO_BLACK_COMMON_04" mastertemplate="MISTS_004_M1_S4" templatepool="BLACK_NORMAL" clustertier="6" subbiome="green" softplayerlimitmin="6" softplayerlimitmax="10" hardplayercapspace="3" weight="6" clusterclosetime="600" clustershutdowntime="1200" maxdifficulty="2"/>
-      <map id="DUO_BLACK_COMMON_05" mastertemplate="MISTS_005_M1_S4" templatepool="BLACK_NORMAL" clustertier="6" subbiome="green" softplayerlimitmin="6" softplayerlimitmax="10" hardplayercapspace="3" weight="6" clusterclosetime="600" clustershutdowntime="1200" maxdifficulty="2"/>
-      <map id="DUO_BLACK_COMMON_06" mastertemplate="MISTS_006_M1_S4" templatepool="BLACK_NORMAL" clustertier="6" subbiome="green" softplayerlimitmin="6" softplayerlimitmax="10" hardplayercapspace="3" weight="6" clusterclosetime="600" clustershutdowntime="1200" maxdifficulty="2"/>
-      <map id="DUO_BLACK_COMMON_07" mastertemplate="MISTS_007_M1_S4" templatepool="BLACK_NORMAL" clustertier="6" subbiome="green" softplayerlimitmin="6" softplayerlimitmax="10" hardplayercapspace="3" weight="6" clusterclosetime="600" clustershutdowntime="1200" maxdifficulty="2"/>
-      <map id="DUO_BLACK_COMMON_08" mastertemplate="MISTS_008_M1_S4" templatepool="BLACK_NORMAL" clustertier="6" subbiome="green" softplayerlimitmin="6" softplayerlimitmax="10" hardplayercapspace="3" weight="6" clusterclosetime="600" clustershutdowntime="1200" maxdifficulty="2"/>
-      <map id="DUO_BLACK_COMMON_09" mastertemplate="MISTS_009_M1_S4" templatepool="BLACK_NORMAL" clustertier="6" subbiome="green" softplayerlimitmin="6" softplayerlimitmax="10" hardplayercapspace="3" weight="6" clusterclosetime="600" clustershutdowntime="1200" maxdifficulty="2"/>
-      <map id="DUO_BLACK_COMMON_10" mastertemplate="MISTS_010_M1_S4" templatepool="BLACK_NORMAL" clustertier="6" subbiome="green" softplayerlimitmin="6" softplayerlimitmax="10" hardplayercapspace="3" weight="6" clusterclosetime="600" clustershutdowntime="1200" maxdifficulty="2"/>
-      <map id="DUO_BLACK_COMMON_11" mastertemplate="MISTS_011_M1_S4" templatepool="BLACK_NORMAL" clustertier="6" subbiome="green" softplayerlimitmin="6" softplayerlimitmax="10" hardplayercapspace="3" weight="6" clusterclosetime="600" clustershutdowntime="1200" maxdifficulty="2"/>
-      <map id="DUO_BLACK_COMMON_12" mastertemplate="MISTS_012_M1_S4" templatepool="BLACK_NORMAL" clustertier="6" subbiome="green" softplayerlimitmin="6" softplayerlimitmax="10" hardplayercapspace="3" weight="6" clusterclosetime="600" clustershutdowntime="1200" maxdifficulty="2"/>
-      <map id="DUO_BLACK_COMMON_13" mastertemplate="MISTS_013_M1_S4" templatepool="BLACK_NORMAL" clustertier="6" subbiome="green" softplayerlimitmin="6" softplayerlimitmax="10" hardplayercapspace="3" weight="6" clusterclosetime="600" clustershutdowntime="1200" maxdifficulty="2"/>
-      <map id="DUO_BLACK_COMMON_14" mastertemplate="MISTS_014_M1_S4" templatepool="BLACK_NORMAL" clustertier="6" subbiome="green" softplayerlimitmin="6" softplayerlimitmax="10" hardplayercapspace="3" weight="6" clusterclosetime="600" clustershutdowntime="1200" maxdifficulty="2"/>
-      <map id="DUO_BLACK_COMMON_15" mastertemplate="MISTS_015_M1_S4" templatepool="BLACK_NORMAL" clustertier="6" subbiome="green" softplayerlimitmin="6" softplayerlimitmax="10" hardplayercapspace="3" weight="6" clusterclosetime="600" clustershutdowntime="1200" maxdifficulty="2"/>
-               
-      <map id="DUO_BLACK_UNCOMMON_01" mastertemplate="MISTS_001_M1_S4" templatepool="BLACK_UNCOMMON" clustertier="7" subbiome="red" softplayerlimitmin="6" softplayerlimitmax="10" hardplayercapspace="3" weight="3" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="1" maxdifficulty="3"/>
-      <map id="DUO_BLACK_UNCOMMON_02" mastertemplate="MISTS_002_M1_S4" templatepool="BLACK_UNCOMMON" clustertier="7" subbiome="red" softplayerlimitmin="6" softplayerlimitmax="10" hardplayercapspace="3" weight="3" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="1" maxdifficulty="3"/>
-      <map id="DUO_BLACK_UNCOMMON_03" mastertemplate="MISTS_003_M1_S4" templatepool="BLACK_UNCOMMON" clustertier="7" subbiome="red" softplayerlimitmin="6" softplayerlimitmax="10" hardplayercapspace="3" weight="3" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="1" maxdifficulty="3"/>
-      <map id="DUO_BLACK_UNCOMMON_04" mastertemplate="MISTS_004_M1_S4" templatepool="BLACK_UNCOMMON" clustertier="7" subbiome="red" softplayerlimitmin="6" softplayerlimitmax="10" hardplayercapspace="3" weight="3" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="1" maxdifficulty="3"/>
-      <map id="DUO_BLACK_UNCOMMON_05" mastertemplate="MISTS_005_M1_S4" templatepool="BLACK_UNCOMMON" clustertier="7" subbiome="red" softplayerlimitmin="6" softplayerlimitmax="10" hardplayercapspace="3" weight="3" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="1" maxdifficulty="3"/>
-      <map id="DUO_BLACK_UNCOMMON_06" mastertemplate="MISTS_006_M1_S4" templatepool="BLACK_UNCOMMON" clustertier="7" subbiome="red" softplayerlimitmin="6" softplayerlimitmax="10" hardplayercapspace="3" weight="3" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="1" maxdifficulty="3"/>
-      <map id="DUO_BLACK_UNCOMMON_07" mastertemplate="MISTS_007_M1_S4" templatepool="BLACK_UNCOMMON" clustertier="7" subbiome="red" softplayerlimitmin="6" softplayerlimitmax="10" hardplayercapspace="3" weight="3" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="1" maxdifficulty="3"/>
-      <map id="DUO_BLACK_UNCOMMON_08" mastertemplate="MISTS_008_M1_S4" templatepool="BLACK_UNCOMMON" clustertier="7" subbiome="red" softplayerlimitmin="6" softplayerlimitmax="10" hardplayercapspace="3" weight="3" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="1" maxdifficulty="3"/>
-      <map id="DUO_BLACK_UNCOMMON_09" mastertemplate="MISTS_009_M1_S4" templatepool="BLACK_UNCOMMON" clustertier="7" subbiome="red" softplayerlimitmin="6" softplayerlimitmax="10" hardplayercapspace="3" weight="3" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="1" maxdifficulty="3"/>
-      <map id="DUO_BLACK_UNCOMMON_10" mastertemplate="MISTS_010_M1_S4" templatepool="BLACK_UNCOMMON" clustertier="7" subbiome="red" softplayerlimitmin="6" softplayerlimitmax="10" hardplayercapspace="3" weight="3" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="1" maxdifficulty="3"/>
-      <map id="DUO_BLACK_UNCOMMON_11" mastertemplate="MISTS_011_M1_S4" templatepool="BLACK_UNCOMMON" clustertier="7" subbiome="red" softplayerlimitmin="6" softplayerlimitmax="10" hardplayercapspace="3" weight="3" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="1" maxdifficulty="3"/>
-      <map id="DUO_BLACK_UNCOMMON_12" mastertemplate="MISTS_012_M1_S4" templatepool="BLACK_UNCOMMON" clustertier="7" subbiome="red" softplayerlimitmin="6" softplayerlimitmax="10" hardplayercapspace="3" weight="3" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="1" maxdifficulty="3"/>
-      <map id="DUO_BLACK_UNCOMMON_13" mastertemplate="MISTS_013_M1_S4" templatepool="BLACK_UNCOMMON" clustertier="7" subbiome="red" softplayerlimitmin="6" softplayerlimitmax="10" hardplayercapspace="3" weight="3" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="1" maxdifficulty="3"/>
-      <map id="DUO_BLACK_UNCOMMON_14" mastertemplate="MISTS_014_M1_S4" templatepool="BLACK_UNCOMMON" clustertier="7" subbiome="red" softplayerlimitmin="6" softplayerlimitmax="10" hardplayercapspace="3" weight="3" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="1" maxdifficulty="3"/>
-      <map id="DUO_BLACK_UNCOMMON_15" mastertemplate="MISTS_015_M1_S4" templatepool="BLACK_UNCOMMON" clustertier="7" subbiome="red" softplayerlimitmin="6" softplayerlimitmax="10" hardplayercapspace="3" weight="3" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="1" maxdifficulty="3"/>
-
-      <!--Rare Spike-->
-      <map id="DUO_BLACK_UNCOMMON_16" mastertemplate="MISTS_001_M1_S4" templatepool="BLACK_UNCOMMON" clustertier="7" subbiome="red" softplayerlimitmin="6" softplayerlimitmax="10" hardplayercapspace="3" weight="5" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="2" maxdifficulty="2"/>
-      <map id="DUO_BLACK_UNCOMMON_17" mastertemplate="MISTS_002_M1_S4" templatepool="BLACK_UNCOMMON" clustertier="7" subbiome="red" softplayerlimitmin="6" softplayerlimitmax="10" hardplayercapspace="3" weight="5" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="2" maxdifficulty="2"/>
-      <map id="DUO_BLACK_UNCOMMON_18" mastertemplate="MISTS_003_M1_S4" templatepool="BLACK_UNCOMMON" clustertier="7" subbiome="red" softplayerlimitmin="6" softplayerlimitmax="10" hardplayercapspace="3" weight="5" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="2" maxdifficulty="2"/>
-      <map id="DUO_BLACK_UNCOMMON_19" mastertemplate="MISTS_004_M1_S4" templatepool="BLACK_UNCOMMON" clustertier="7" subbiome="red" softplayerlimitmin="6" softplayerlimitmax="10" hardplayercapspace="3" weight="5" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="2" maxdifficulty="2"/>
-      <map id="DUO_BLACK_UNCOMMON_20" mastertemplate="MISTS_005_M1_S4" templatepool="BLACK_UNCOMMON" clustertier="7" subbiome="red" softplayerlimitmin="6" softplayerlimitmax="10" hardplayercapspace="3" weight="5" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="2" maxdifficulty="2"/>
-      <map id="DUO_BLACK_UNCOMMON_21" mastertemplate="MISTS_006_M1_S4" templatepool="BLACK_UNCOMMON" clustertier="7" subbiome="red" softplayerlimitmin="6" softplayerlimitmax="10" hardplayercapspace="3" weight="5" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="2" maxdifficulty="2"/>
-      <map id="DUO_BLACK_UNCOMMON_22" mastertemplate="MISTS_007_M1_S4" templatepool="BLACK_UNCOMMON" clustertier="7" subbiome="red" softplayerlimitmin="6" softplayerlimitmax="10" hardplayercapspace="3" weight="5" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="2" maxdifficulty="2"/>
-      <map id="DUO_BLACK_UNCOMMON_23" mastertemplate="MISTS_008_M1_S4" templatepool="BLACK_UNCOMMON" clustertier="7" subbiome="red" softplayerlimitmin="6" softplayerlimitmax="10" hardplayercapspace="3" weight="5" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="2" maxdifficulty="2"/>
-      <map id="DUO_BLACK_UNCOMMON_24" mastertemplate="MISTS_009_M1_S4" templatepool="BLACK_UNCOMMON" clustertier="7" subbiome="red" softplayerlimitmin="6" softplayerlimitmax="10" hardplayercapspace="3" weight="5" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="2" maxdifficulty="2"/>
-      <map id="DUO_BLACK_UNCOMMON_25" mastertemplate="MISTS_010_M1_S4" templatepool="BLACK_UNCOMMON" clustertier="7" subbiome="red" softplayerlimitmin="6" softplayerlimitmax="10" hardplayercapspace="3" weight="5" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="2" maxdifficulty="2"/>
-      <map id="DUO_BLACK_UNCOMMON_26" mastertemplate="MISTS_011_M1_S4" templatepool="BLACK_UNCOMMON" clustertier="7" subbiome="red" softplayerlimitmin="6" softplayerlimitmax="10" hardplayercapspace="3" weight="5" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="2" maxdifficulty="2"/>
-      <map id="DUO_BLACK_UNCOMMON_27" mastertemplate="MISTS_012_M1_S4" templatepool="BLACK_UNCOMMON" clustertier="7" subbiome="red" softplayerlimitmin="6" softplayerlimitmax="10" hardplayercapspace="3" weight="5" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="2" maxdifficulty="2"/>
-      <map id="DUO_BLACK_UNCOMMON_28" mastertemplate="MISTS_013_M1_S4" templatepool="BLACK_UNCOMMON" clustertier="7" subbiome="red" softplayerlimitmin="6" softplayerlimitmax="10" hardplayercapspace="3" weight="5" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="2" maxdifficulty="2"/>
-      <map id="DUO_BLACK_UNCOMMON_29" mastertemplate="MISTS_014_M1_S4" templatepool="BLACK_UNCOMMON" clustertier="7" subbiome="red" softplayerlimitmin="6" softplayerlimitmax="10" hardplayercapspace="3" weight="5" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="2" maxdifficulty="2"/>
-      <map id="DUO_BLACK_UNCOMMON_30" mastertemplate="MISTS_015_M1_S4" templatepool="BLACK_UNCOMMON" clustertier="7" subbiome="red" softplayerlimitmin="6" softplayerlimitmax="10" hardplayercapspace="3" weight="5" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="2" maxdifficulty="2"/>
-      <!--End Rare Spike-->
-
-      <map id="DUO_BLACK_RARE_01" mastertemplate="MISTS_001_M1_S4" templatepool="BLACK_RARE" clustertier="8" subbiome="dead" softplayerlimitmin="6" softplayerlimitmax="10" hardplayercapspace="3" weight="1" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="2" maxdifficulty="4"/>
-      <map id="DUO_BLACK_RARE_02" mastertemplate="MISTS_002_M1_S4" templatepool="BLACK_RARE" clustertier="8" subbiome="dead" softplayerlimitmin="6" softplayerlimitmax="10" hardplayercapspace="3" weight="1" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="2" maxdifficulty="4"/>
-      <map id="DUO_BLACK_RARE_03" mastertemplate="MISTS_003_M1_S4" templatepool="BLACK_RARE" clustertier="8" subbiome="dead" softplayerlimitmin="6" softplayerlimitmax="10" hardplayercapspace="3" weight="1" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="2" maxdifficulty="4"/>
-      <map id="DUO_BLACK_RARE_04" mastertemplate="MISTS_004_M1_S4" templatepool="BLACK_RARE" clustertier="8" subbiome="dead" softplayerlimitmin="6" softplayerlimitmax="10" hardplayercapspace="3" weight="1" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="2" maxdifficulty="4"/>
-      <map id="DUO_BLACK_RARE_05" mastertemplate="MISTS_005_M1_S4" templatepool="BLACK_RARE" clustertier="8" subbiome="dead" softplayerlimitmin="6" softplayerlimitmax="10" hardplayercapspace="3" weight="1" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="2" maxdifficulty="4"/>
-      <map id="DUO_BLACK_RARE_06" mastertemplate="MISTS_006_M1_S4" templatepool="BLACK_RARE" clustertier="8" subbiome="dead" softplayerlimitmin="6" softplayerlimitmax="10" hardplayercapspace="3" weight="1" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="2" maxdifficulty="4"/>
-      <map id="DUO_BLACK_RARE_07" mastertemplate="MISTS_007_M1_S4" templatepool="BLACK_RARE" clustertier="8" subbiome="dead" softplayerlimitmin="6" softplayerlimitmax="10" hardplayercapspace="3" weight="1" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="2" maxdifficulty="4"/>
-      <map id="DUO_BLACK_RARE_08" mastertemplate="MISTS_008_M1_S4" templatepool="BLACK_RARE" clustertier="8" subbiome="dead" softplayerlimitmin="6" softplayerlimitmax="10" hardplayercapspace="3" weight="1" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="2" maxdifficulty="4"/>
-      <map id="DUO_BLACK_RARE_09" mastertemplate="MISTS_009_M1_S4" templatepool="BLACK_RARE" clustertier="8" subbiome="dead" softplayerlimitmin="6" softplayerlimitmax="10" hardplayercapspace="3" weight="1" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="2" maxdifficulty="4"/>
-      <map id="DUO_BLACK_RARE_10" mastertemplate="MISTS_010_M1_S4" templatepool="BLACK_RARE" clustertier="8" subbiome="dead" softplayerlimitmin="6" softplayerlimitmax="10" hardplayercapspace="3" weight="1" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="2" maxdifficulty="4"/>
-      <map id="DUO_BLACK_RARE_11" mastertemplate="MISTS_011_M1_S4" templatepool="BLACK_RARE" clustertier="8" subbiome="dead" softplayerlimitmin="6" softplayerlimitmax="10" hardplayercapspace="3" weight="1" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="2" maxdifficulty="4"/>
-      <map id="DUO_BLACK_RARE_12" mastertemplate="MISTS_012_M1_S4" templatepool="BLACK_RARE" clustertier="8" subbiome="dead" softplayerlimitmin="6" softplayerlimitmax="10" hardplayercapspace="3" weight="1" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="2" maxdifficulty="4"/>
-      <map id="DUO_BLACK_RARE_13" mastertemplate="MISTS_013_M1_S4" templatepool="BLACK_RARE" clustertier="8" subbiome="dead" softplayerlimitmin="6" softplayerlimitmax="10" hardplayercapspace="3" weight="1" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="2" maxdifficulty="4"/>
-      <map id="DUO_BLACK_RARE_14" mastertemplate="MISTS_014_M1_S4" templatepool="BLACK_RARE" clustertier="8" subbiome="dead" softplayerlimitmin="6" softplayerlimitmax="10" hardplayercapspace="3" weight="1" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="2" maxdifficulty="4"/>
-      <map id="DUO_BLACK_RARE_15" mastertemplate="MISTS_015_M1_S4" templatepool="BLACK_RARE" clustertier="8" subbiome="dead" softplayerlimitmin="6" softplayerlimitmax="10" hardplayercapspace="3" weight="1" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="2" maxdifficulty="4"/>
+    <mapset name="MAPSET_SOLO_BLACK_DUNGEON">
+      <map id="SOLO_BLACK_DUNGEON_01" mastertemplate="MISTS_DNG_UND_01" templatepool="BLACK_RARE" clustertier="6" requiredentrancetier="6" subbiome="green" softplayerlimitmin="8" softplayerlimitmax="8" hardplayercapspace="1" weight="1" clusterclosetime="130" clustershutdowntime="1050" />
+      <map id="SOLO_BLACK_DUNGEON_02" mastertemplate="MISTS_DNG_UND_01" templatepool="BLACK_RARE" clustertier="7" requiredentrancetier="7" subbiome="green" softplayerlimitmin="9" softplayerlimitmax="9" hardplayercapspace="1" weight="1" clusterclosetime="130" clustershutdowntime="1050" />
+      <map id="SOLO_BLACK_DUNGEON_03" mastertemplate="MISTS_DNG_UND_01" templatepool="BLACK_RARE" clustertier="8" requiredentrancetier="8" subbiome="green" softplayerlimitmin="10" softplayerlimitmax="10" hardplayercapspace="1" weight="1" clusterclosetime="130" clustershutdowntime="1050" />
     </mapset>
     
+    <mapset name="MAPSET_DUO_BLACK">
+      <map id="DUO_BLACK_COMMON_01" mastertemplate="MISTS_001_M1_S4" templatepool="BLACK_NORMAL" clustertier="6" subbiome="green" softplayerlimitmin="8" softplayerlimitmax="12" hardplayercapspace="3" weight="6" clusterclosetime="600" clustershutdowntime="1200" maxdifficulty="2"/>
+      <map id="DUO_BLACK_COMMON_02" mastertemplate="MISTS_002_M1_S4" templatepool="BLACK_NORMAL" clustertier="6" subbiome="green" softplayerlimitmin="8" softplayerlimitmax="12" hardplayercapspace="3" weight="6" clusterclosetime="600" clustershutdowntime="1200" maxdifficulty="2"/>
+      <map id="DUO_BLACK_COMMON_03" mastertemplate="MISTS_003_M1_S4" templatepool="BLACK_NORMAL" clustertier="6" subbiome="green" softplayerlimitmin="8" softplayerlimitmax="12" hardplayercapspace="3" weight="6" clusterclosetime="600" clustershutdowntime="1200" maxdifficulty="2"/>
+      <map id="DUO_BLACK_COMMON_04" mastertemplate="MISTS_004_M1_S4" templatepool="BLACK_NORMAL" clustertier="6" subbiome="green" softplayerlimitmin="8" softplayerlimitmax="12" hardplayercapspace="3" weight="6" clusterclosetime="600" clustershutdowntime="1200" maxdifficulty="2"/>
+      <map id="DUO_BLACK_COMMON_05" mastertemplate="MISTS_005_M1_S4" templatepool="BLACK_NORMAL" clustertier="6" subbiome="green" softplayerlimitmin="8" softplayerlimitmax="12" hardplayercapspace="3" weight="6" clusterclosetime="600" clustershutdowntime="1200" maxdifficulty="2"/>
+      <map id="DUO_BLACK_COMMON_06" mastertemplate="MISTS_006_M1_S4" templatepool="BLACK_NORMAL" clustertier="6" subbiome="green" softplayerlimitmin="8" softplayerlimitmax="12" hardplayercapspace="3" weight="6" clusterclosetime="600" clustershutdowntime="1200" maxdifficulty="2"/>
+      <map id="DUO_BLACK_COMMON_07" mastertemplate="MISTS_007_M1_S4" templatepool="BLACK_NORMAL" clustertier="6" subbiome="green" softplayerlimitmin="8" softplayerlimitmax="12" hardplayercapspace="3" weight="6" clusterclosetime="600" clustershutdowntime="1200" maxdifficulty="2"/>
+      <map id="DUO_BLACK_COMMON_08" mastertemplate="MISTS_008_M1_S4" templatepool="BLACK_NORMAL" clustertier="6" subbiome="green" softplayerlimitmin="8" softplayerlimitmax="12" hardplayercapspace="3" weight="6" clusterclosetime="600" clustershutdowntime="1200" maxdifficulty="2"/>
+      <map id="DUO_BLACK_COMMON_09" mastertemplate="MISTS_009_M1_S4" templatepool="BLACK_NORMAL" clustertier="6" subbiome="green" softplayerlimitmin="8" softplayerlimitmax="12" hardplayercapspace="3" weight="6" clusterclosetime="600" clustershutdowntime="1200" maxdifficulty="2"/>
+      <map id="DUO_BLACK_COMMON_10" mastertemplate="MISTS_010_M1_S4" templatepool="BLACK_NORMAL" clustertier="6" subbiome="green" softplayerlimitmin="8" softplayerlimitmax="12" hardplayercapspace="3" weight="6" clusterclosetime="600" clustershutdowntime="1200" maxdifficulty="2"/>
+      <map id="DUO_BLACK_COMMON_11" mastertemplate="MISTS_011_M1_S4" templatepool="BLACK_NORMAL" clustertier="6" subbiome="green" softplayerlimitmin="8" softplayerlimitmax="12" hardplayercapspace="3" weight="6" clusterclosetime="600" clustershutdowntime="1200" maxdifficulty="2"/>
+      <map id="DUO_BLACK_COMMON_12" mastertemplate="MISTS_012_M1_S4" templatepool="BLACK_NORMAL" clustertier="6" subbiome="green" softplayerlimitmin="8" softplayerlimitmax="12" hardplayercapspace="3" weight="6" clusterclosetime="600" clustershutdowntime="1200" maxdifficulty="2"/>
+      <map id="DUO_BLACK_COMMON_13" mastertemplate="MISTS_013_M1_S4" templatepool="BLACK_NORMAL" clustertier="6" subbiome="green" softplayerlimitmin="8" softplayerlimitmax="12" hardplayercapspace="3" weight="6" clusterclosetime="600" clustershutdowntime="1200" maxdifficulty="2"/>
+      <map id="DUO_BLACK_COMMON_14" mastertemplate="MISTS_014_M1_S4" templatepool="BLACK_NORMAL" clustertier="6" subbiome="green" softplayerlimitmin="8" softplayerlimitmax="12" hardplayercapspace="3" weight="6" clusterclosetime="600" clustershutdowntime="1200" maxdifficulty="2"/>
+      <map id="DUO_BLACK_COMMON_15" mastertemplate="MISTS_015_M1_S4" templatepool="BLACK_NORMAL" clustertier="6" subbiome="green" softplayerlimitmin="8" softplayerlimitmax="12" hardplayercapspace="3" weight="6" clusterclosetime="600" clustershutdowntime="1200" maxdifficulty="2"/>
+               
+      <map id="DUO_BLACK_UNCOMMON_01" mastertemplate="MISTS_001_M1_S4" templatepool="BLACK_UNCOMMON" clustertier="7" subbiome="red" softplayerlimitmin="8" softplayerlimitmax="12" hardplayercapspace="3" weight="3" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="1" maxdifficulty="3"/>
+      <map id="DUO_BLACK_UNCOMMON_02" mastertemplate="MISTS_002_M1_S4" templatepool="BLACK_UNCOMMON" clustertier="7" subbiome="red" softplayerlimitmin="8" softplayerlimitmax="12" hardplayercapspace="3" weight="3" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="1" maxdifficulty="3"/>
+      <map id="DUO_BLACK_UNCOMMON_03" mastertemplate="MISTS_003_M1_S4" templatepool="BLACK_UNCOMMON" clustertier="7" subbiome="red" softplayerlimitmin="8" softplayerlimitmax="12" hardplayercapspace="3" weight="3" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="1" maxdifficulty="3"/>
+      <map id="DUO_BLACK_UNCOMMON_04" mastertemplate="MISTS_004_M1_S4" templatepool="BLACK_UNCOMMON" clustertier="7" subbiome="red" softplayerlimitmin="8" softplayerlimitmax="12" hardplayercapspace="3" weight="3" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="1" maxdifficulty="3"/>
+      <map id="DUO_BLACK_UNCOMMON_05" mastertemplate="MISTS_005_M1_S4" templatepool="BLACK_UNCOMMON" clustertier="7" subbiome="red" softplayerlimitmin="8" softplayerlimitmax="12" hardplayercapspace="3" weight="3" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="1" maxdifficulty="3"/>
+      <map id="DUO_BLACK_UNCOMMON_06" mastertemplate="MISTS_006_M1_S4" templatepool="BLACK_UNCOMMON" clustertier="7" subbiome="red" softplayerlimitmin="8" softplayerlimitmax="12" hardplayercapspace="3" weight="3" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="1" maxdifficulty="3"/>
+      <map id="DUO_BLACK_UNCOMMON_07" mastertemplate="MISTS_007_M1_S4" templatepool="BLACK_UNCOMMON" clustertier="7" subbiome="red" softplayerlimitmin="8" softplayerlimitmax="12" hardplayercapspace="3" weight="3" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="1" maxdifficulty="3"/>
+      <map id="DUO_BLACK_UNCOMMON_08" mastertemplate="MISTS_008_M1_S4" templatepool="BLACK_UNCOMMON" clustertier="7" subbiome="red" softplayerlimitmin="8" softplayerlimitmax="12" hardplayercapspace="3" weight="3" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="1" maxdifficulty="3"/>
+      <map id="DUO_BLACK_UNCOMMON_09" mastertemplate="MISTS_009_M1_S4" templatepool="BLACK_UNCOMMON" clustertier="7" subbiome="red" softplayerlimitmin="8" softplayerlimitmax="12" hardplayercapspace="3" weight="3" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="1" maxdifficulty="3"/>
+      <map id="DUO_BLACK_UNCOMMON_10" mastertemplate="MISTS_010_M1_S4" templatepool="BLACK_UNCOMMON" clustertier="7" subbiome="red" softplayerlimitmin="8" softplayerlimitmax="12" hardplayercapspace="3" weight="3" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="1" maxdifficulty="3"/>
+      <map id="DUO_BLACK_UNCOMMON_11" mastertemplate="MISTS_011_M1_S4" templatepool="BLACK_UNCOMMON" clustertier="7" subbiome="red" softplayerlimitmin="8" softplayerlimitmax="12" hardplayercapspace="3" weight="3" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="1" maxdifficulty="3"/>
+      <map id="DUO_BLACK_UNCOMMON_12" mastertemplate="MISTS_012_M1_S4" templatepool="BLACK_UNCOMMON" clustertier="7" subbiome="red" softplayerlimitmin="8" softplayerlimitmax="12" hardplayercapspace="3" weight="3" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="1" maxdifficulty="3"/>
+      <map id="DUO_BLACK_UNCOMMON_13" mastertemplate="MISTS_013_M1_S4" templatepool="BLACK_UNCOMMON" clustertier="7" subbiome="red" softplayerlimitmin="8" softplayerlimitmax="12" hardplayercapspace="3" weight="3" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="1" maxdifficulty="3"/>
+      <map id="DUO_BLACK_UNCOMMON_14" mastertemplate="MISTS_014_M1_S4" templatepool="BLACK_UNCOMMON" clustertier="7" subbiome="red" softplayerlimitmin="8" softplayerlimitmax="12" hardplayercapspace="3" weight="3" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="1" maxdifficulty="3"/>
+      <map id="DUO_BLACK_UNCOMMON_15" mastertemplate="MISTS_015_M1_S4" templatepool="BLACK_UNCOMMON" clustertier="7" subbiome="red" softplayerlimitmin="8" softplayerlimitmax="12" hardplayercapspace="3" weight="3" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="1" maxdifficulty="3"/>
+
+      <!--Rare Spike-->
+      <map id="DUO_BLACK_UNCOMMON_16" mastertemplate="MISTS_001_M1_S4" templatepool="BLACK_UNCOMMON" clustertier="7" subbiome="red" softplayerlimitmin="8" softplayerlimitmax="12" hardplayercapspace="3" weight="5" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="2" maxdifficulty="2"/>
+      <map id="DUO_BLACK_UNCOMMON_17" mastertemplate="MISTS_002_M1_S4" templatepool="BLACK_UNCOMMON" clustertier="7" subbiome="red" softplayerlimitmin="8" softplayerlimitmax="12" hardplayercapspace="3" weight="5" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="2" maxdifficulty="2"/>
+      <map id="DUO_BLACK_UNCOMMON_18" mastertemplate="MISTS_003_M1_S4" templatepool="BLACK_UNCOMMON" clustertier="7" subbiome="red" softplayerlimitmin="8" softplayerlimitmax="12" hardplayercapspace="3" weight="5" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="2" maxdifficulty="2"/>
+      <map id="DUO_BLACK_UNCOMMON_19" mastertemplate="MISTS_004_M1_S4" templatepool="BLACK_UNCOMMON" clustertier="7" subbiome="red" softplayerlimitmin="8" softplayerlimitmax="12" hardplayercapspace="3" weight="5" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="2" maxdifficulty="2"/>
+      <map id="DUO_BLACK_UNCOMMON_20" mastertemplate="MISTS_005_M1_S4" templatepool="BLACK_UNCOMMON" clustertier="7" subbiome="red" softplayerlimitmin="8" softplayerlimitmax="12" hardplayercapspace="3" weight="5" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="2" maxdifficulty="2"/>
+      <map id="DUO_BLACK_UNCOMMON_21" mastertemplate="MISTS_006_M1_S4" templatepool="BLACK_UNCOMMON" clustertier="7" subbiome="red" softplayerlimitmin="8" softplayerlimitmax="12" hardplayercapspace="3" weight="5" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="2" maxdifficulty="2"/>
+      <map id="DUO_BLACK_UNCOMMON_22" mastertemplate="MISTS_007_M1_S4" templatepool="BLACK_UNCOMMON" clustertier="7" subbiome="red" softplayerlimitmin="8" softplayerlimitmax="12" hardplayercapspace="3" weight="5" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="2" maxdifficulty="2"/>
+      <map id="DUO_BLACK_UNCOMMON_23" mastertemplate="MISTS_008_M1_S4" templatepool="BLACK_UNCOMMON" clustertier="7" subbiome="red" softplayerlimitmin="8" softplayerlimitmax="12" hardplayercapspace="3" weight="5" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="2" maxdifficulty="2"/>
+      <map id="DUO_BLACK_UNCOMMON_24" mastertemplate="MISTS_009_M1_S4" templatepool="BLACK_UNCOMMON" clustertier="7" subbiome="red" softplayerlimitmin="8" softplayerlimitmax="12" hardplayercapspace="3" weight="5" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="2" maxdifficulty="2"/>
+      <map id="DUO_BLACK_UNCOMMON_25" mastertemplate="MISTS_010_M1_S4" templatepool="BLACK_UNCOMMON" clustertier="7" subbiome="red" softplayerlimitmin="8" softplayerlimitmax="12" hardplayercapspace="3" weight="5" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="2" maxdifficulty="2"/>
+      <map id="DUO_BLACK_UNCOMMON_26" mastertemplate="MISTS_011_M1_S4" templatepool="BLACK_UNCOMMON" clustertier="7" subbiome="red" softplayerlimitmin="8" softplayerlimitmax="12" hardplayercapspace="3" weight="5" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="2" maxdifficulty="2"/>
+      <map id="DUO_BLACK_UNCOMMON_27" mastertemplate="MISTS_012_M1_S4" templatepool="BLACK_UNCOMMON" clustertier="7" subbiome="red" softplayerlimitmin="8" softplayerlimitmax="12" hardplayercapspace="3" weight="5" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="2" maxdifficulty="2"/>
+      <map id="DUO_BLACK_UNCOMMON_28" mastertemplate="MISTS_013_M1_S4" templatepool="BLACK_UNCOMMON" clustertier="7" subbiome="red" softplayerlimitmin="8" softplayerlimitmax="12" hardplayercapspace="3" weight="5" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="2" maxdifficulty="2"/>
+      <map id="DUO_BLACK_UNCOMMON_29" mastertemplate="MISTS_014_M1_S4" templatepool="BLACK_UNCOMMON" clustertier="7" subbiome="red" softplayerlimitmin="8" softplayerlimitmax="12" hardplayercapspace="3" weight="5" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="2" maxdifficulty="2"/>
+      <map id="DUO_BLACK_UNCOMMON_30" mastertemplate="MISTS_015_M1_S4" templatepool="BLACK_UNCOMMON" clustertier="7" subbiome="red" softplayerlimitmin="8" softplayerlimitmax="12" hardplayercapspace="3" weight="5" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="2" maxdifficulty="2"/>
+      <!--End Rare Spike-->
+
+      <map id="DUO_BLACK_RARE_01" mastertemplate="MISTS_001_M1_S4" templatepool="BLACK_RARE" clustertier="8" subbiome="dead" softplayerlimitmin="8" softplayerlimitmax="12" hardplayercapspace="3" weight="1" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="2" maxdifficulty="4"/>
+      <map id="DUO_BLACK_RARE_02" mastertemplate="MISTS_002_M1_S4" templatepool="BLACK_RARE" clustertier="8" subbiome="dead" softplayerlimitmin="8" softplayerlimitmax="12" hardplayercapspace="3" weight="1" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="2" maxdifficulty="4"/>
+      <map id="DUO_BLACK_RARE_03" mastertemplate="MISTS_003_M1_S4" templatepool="BLACK_RARE" clustertier="8" subbiome="dead" softplayerlimitmin="8" softplayerlimitmax="12" hardplayercapspace="3" weight="1" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="2" maxdifficulty="4"/>
+      <map id="DUO_BLACK_RARE_04" mastertemplate="MISTS_004_M1_S4" templatepool="BLACK_RARE" clustertier="8" subbiome="dead" softplayerlimitmin="8" softplayerlimitmax="12" hardplayercapspace="3" weight="1" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="2" maxdifficulty="4"/>
+      <map id="DUO_BLACK_RARE_05" mastertemplate="MISTS_005_M1_S4" templatepool="BLACK_RARE" clustertier="8" subbiome="dead" softplayerlimitmin="8" softplayerlimitmax="12" hardplayercapspace="3" weight="1" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="2" maxdifficulty="4"/>
+      <map id="DUO_BLACK_RARE_06" mastertemplate="MISTS_006_M1_S4" templatepool="BLACK_RARE" clustertier="8" subbiome="dead" softplayerlimitmin="8" softplayerlimitmax="12" hardplayercapspace="3" weight="1" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="2" maxdifficulty="4"/>
+      <map id="DUO_BLACK_RARE_07" mastertemplate="MISTS_007_M1_S4" templatepool="BLACK_RARE" clustertier="8" subbiome="dead" softplayerlimitmin="8" softplayerlimitmax="12" hardplayercapspace="3" weight="1" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="2" maxdifficulty="4"/>
+      <map id="DUO_BLACK_RARE_08" mastertemplate="MISTS_008_M1_S4" templatepool="BLACK_RARE" clustertier="8" subbiome="dead" softplayerlimitmin="8" softplayerlimitmax="12" hardplayercapspace="3" weight="1" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="2" maxdifficulty="4"/>
+      <map id="DUO_BLACK_RARE_09" mastertemplate="MISTS_009_M1_S4" templatepool="BLACK_RARE" clustertier="8" subbiome="dead" softplayerlimitmin="8" softplayerlimitmax="12" hardplayercapspace="3" weight="1" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="2" maxdifficulty="4"/>
+      <map id="DUO_BLACK_RARE_10" mastertemplate="MISTS_010_M1_S4" templatepool="BLACK_RARE" clustertier="8" subbiome="dead" softplayerlimitmin="8" softplayerlimitmax="12" hardplayercapspace="3" weight="1" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="2" maxdifficulty="4"/>
+      <map id="DUO_BLACK_RARE_11" mastertemplate="MISTS_011_M1_S4" templatepool="BLACK_RARE" clustertier="8" subbiome="dead" softplayerlimitmin="8" softplayerlimitmax="12" hardplayercapspace="3" weight="1" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="2" maxdifficulty="4"/>
+      <map id="DUO_BLACK_RARE_12" mastertemplate="MISTS_012_M1_S4" templatepool="BLACK_RARE" clustertier="8" subbiome="dead" softplayerlimitmin="8" softplayerlimitmax="12" hardplayercapspace="3" weight="1" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="2" maxdifficulty="4"/>
+      <map id="DUO_BLACK_RARE_13" mastertemplate="MISTS_013_M1_S4" templatepool="BLACK_RARE" clustertier="8" subbiome="dead" softplayerlimitmin="8" softplayerlimitmax="12" hardplayercapspace="3" weight="1" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="2" maxdifficulty="4"/>
+      <map id="DUO_BLACK_RARE_14" mastertemplate="MISTS_014_M1_S4" templatepool="BLACK_RARE" clustertier="8" subbiome="dead" softplayerlimitmin="8" softplayerlimitmax="12" hardplayercapspace="3" weight="1" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="2" maxdifficulty="4"/>
+      <map id="DUO_BLACK_RARE_15" mastertemplate="MISTS_015_M1_S4" templatepool="BLACK_RARE" clustertier="8" subbiome="dead" softplayerlimitmin="8" softplayerlimitmax="12" hardplayercapspace="3" weight="1" clusterclosetime="600" clustershutdowntime="1200" mindifficulty="2" maxdifficulty="4"/>
+    </mapset>
+    
+    <mapset name="MAPSET_DUO_BLACK_DUNGEON">
+      <map id="DUO_BLACK_DUNGEON_01" mastertemplate="MISTS_DNG_UND_01" templatepool="BLACK_RARE" clustertier="6" requiredentrancetier="6" subbiome="green" softplayerlimitmin="12" softplayerlimitmax="12" hardplayercapspace="2" weight="1" clusterclosetime="130" clustershutdowntime="1050" />
+      <map id="DUO_BLACK_DUNGEON_02" mastertemplate="MISTS_DNG_UND_01" templatepool="BLACK_RARE" clustertier="7" requiredentrancetier="7" subbiome="green" softplayerlimitmin="12" softplayerlimitmax="12" hardplayercapspace="2" weight="1" clusterclosetime="130" clustershutdowntime="1050" />
+      <map id="DUO_BLACK_DUNGEON_03" mastertemplate="MISTS_DNG_UND_01" templatepool="BLACK_RARE" clustertier="8" requiredentrancetier="8" subbiome="green" softplayerlimitmin="12" softplayerlimitmax="12" hardplayercapspace="2" weight="1" clusterclosetime="130" clustershutdowntime="1050" />
+    </mapset>
   </mistsmaps>
 
   <factionweightingtable>
@@ -420,15 +563,15 @@
           <template id="MISTS_M_RES_NON_FIBER_02" weight="1" unique="true" layertags="fiber"/>
           <template id="MISTS_M_RES_NON_FIBER_03" weight="1" unique="true" layertags="fiber"/>
           
-          <template id="MISTS_M_RES_NON_ROCK-ORE_01" weight="1" unique="true" layertags="ore" />
-          <template id="MISTS_M_RES_NON_ROCK-ORE_02" weight="1" unique="true" layertags="ore" />
-          <template id="MISTS_M_RES_NON_ROCK-ORE_03" weight="1" unique="true" layertags="ore" />
+          <template id="MISTS_M_RES_NON_ROCK-ORE_01" weight="1" unique="true" layertags="ore"/>
+          <template id="MISTS_M_RES_NON_ROCK-ORE_02" weight="1" unique="true" layertags="ore"/>
+          <template id="MISTS_M_RES_NON_ROCK-ORE_03" weight="1" unique="true" layertags="ore"/>
           
           <template id="MISTS_M_RES_NON_ROCK-ORE_01" weight="1" unique="true" layertags="rock"/>          
           <template id="MISTS_M_RES_NON_ROCK-ORE_02" weight="1" unique="true" layertags="rock"/>          
           <template id="MISTS_M_RES_NON_ROCK-ORE_03" weight="1" unique="true" layertags="rock"/>
           
-          <template id="MISTS_M_RES_NON_WOOD-HIDE_01" weight="1" unique="true" layertags="wood" />
+          <template id="MISTS_M_RES_NON_WOOD-HIDE_01" weight="1" unique="true" layertags="wood"/>
           <template id="MISTS_M_RES_NON_WOOD-HIDE_02" weight="1" unique="true" layertags="wood"/>
           <template id="MISTS_M_RES_NON_WOOD-HIDE_03" weight="1" unique="true" layertags="wood"/>
           
@@ -527,15 +670,15 @@
           <template id="MISTS_M_RES_NON_FIBER_02" weight="1" unique="true" layertags="fiber"/>
           <template id="MISTS_M_RES_NON_FIBER_03" weight="1" unique="true" layertags="fiber"/>
 
-          <template id="MISTS_M_RES_NON_ROCK-ORE_01" weight="1" unique="true" layertags="ore" />
-          <template id="MISTS_M_RES_NON_ROCK-ORE_02" weight="1" unique="true" layertags="ore" />
-          <template id="MISTS_M_RES_NON_ROCK-ORE_03" weight="1" unique="true" layertags="ore" />
+          <template id="MISTS_M_RES_NON_ROCK-ORE_01" weight="1" unique="true" layertags="ore"/>
+          <template id="MISTS_M_RES_NON_ROCK-ORE_02" weight="1" unique="true" layertags="ore"/>
+          <template id="MISTS_M_RES_NON_ROCK-ORE_03" weight="1" unique="true" layertags="ore"/>
 
           <template id="MISTS_M_RES_NON_ROCK-ORE_01" weight="1" unique="true" layertags="rock"/>
           <template id="MISTS_M_RES_NON_ROCK-ORE_02" weight="1" unique="true" layertags="rock"/>
           <template id="MISTS_M_RES_NON_ROCK-ORE_03" weight="1" unique="true" layertags="rock"/>
 
-          <template id="MISTS_M_RES_NON_WOOD-HIDE_01" weight="1" unique="true" layertags="wood" />
+          <template id="MISTS_M_RES_NON_WOOD-HIDE_01" weight="1" unique="true" layertags="wood"/>
           <template id="MISTS_M_RES_NON_WOOD-HIDE_02" weight="1" unique="true" layertags="wood"/>
           <template id="MISTS_M_RES_NON_WOOD-HIDE_03" weight="1" unique="true" layertags="wood"/>
 
@@ -631,15 +774,15 @@
           <template id="MISTS_M_RES_NON_FIBER_02" weight="1" unique="true" layertags="fiber"/>
           <template id="MISTS_M_RES_NON_FIBER_03" weight="1" unique="true" layertags="fiber"/>
 
-          <template id="MISTS_M_RES_NON_ROCK-ORE_01" weight="1" unique="true" layertags="ore" />
-          <template id="MISTS_M_RES_NON_ROCK-ORE_02" weight="1" unique="true" layertags="ore" />
-          <template id="MISTS_M_RES_NON_ROCK-ORE_03" weight="1" unique="true" layertags="ore" />
+          <template id="MISTS_M_RES_NON_ROCK-ORE_01" weight="1" unique="true" layertags="ore"/>
+          <template id="MISTS_M_RES_NON_ROCK-ORE_02" weight="1" unique="true" layertags="ore"/>
+          <template id="MISTS_M_RES_NON_ROCK-ORE_03" weight="1" unique="true" layertags="ore"/>
 
           <template id="MISTS_M_RES_NON_ROCK-ORE_01" weight="1" unique="true" layertags="rock"/>
           <template id="MISTS_M_RES_NON_ROCK-ORE_02" weight="1" unique="true" layertags="rock"/>
           <template id="MISTS_M_RES_NON_ROCK-ORE_03" weight="1" unique="true" layertags="rock"/>
 
-          <template id="MISTS_M_RES_NON_WOOD-HIDE_01" weight="1" unique="true" layertags="wood" />
+          <template id="MISTS_M_RES_NON_WOOD-HIDE_01" weight="1" unique="true" layertags="wood"/>
           <template id="MISTS_M_RES_NON_WOOD-HIDE_02" weight="1" unique="true" layertags="wood"/>
           <template id="MISTS_M_RES_NON_WOOD-HIDE_03" weight="1" unique="true" layertags="wood"/>
 
@@ -736,15 +879,15 @@
           <template id="MISTS_M_RES_NON_FIBER_02" weight="1" unique="true" layertags="fiber"/>
           <template id="MISTS_M_RES_NON_FIBER_03" weight="1" unique="true" layertags="fiber"/>
 
-          <template id="MISTS_M_RES_NON_ROCK-ORE_01" weight="1" unique="true" layertags="ore" />
-          <template id="MISTS_M_RES_NON_ROCK-ORE_02" weight="1" unique="true" layertags="ore" />
-          <template id="MISTS_M_RES_NON_ROCK-ORE_03" weight="1" unique="true" layertags="ore" />
+          <template id="MISTS_M_RES_NON_ROCK-ORE_01" weight="1" unique="true" layertags="ore"/>
+          <template id="MISTS_M_RES_NON_ROCK-ORE_02" weight="1" unique="true" layertags="ore"/>
+          <template id="MISTS_M_RES_NON_ROCK-ORE_03" weight="1" unique="true" layertags="ore"/>
 
           <template id="MISTS_M_RES_NON_ROCK-ORE_01" weight="1" unique="true" layertags="rock"/>
           <template id="MISTS_M_RES_NON_ROCK-ORE_02" weight="1" unique="true" layertags="rock"/>
           <template id="MISTS_M_RES_NON_ROCK-ORE_03" weight="1" unique="true" layertags="rock"/>
 
-          <template id="MISTS_M_RES_NON_WOOD-HIDE_01" weight="1" unique="true" layertags="wood" />
+          <template id="MISTS_M_RES_NON_WOOD-HIDE_01" weight="1" unique="true" layertags="wood"/>
           <template id="MISTS_M_RES_NON_WOOD-HIDE_02" weight="1" unique="true" layertags="wood"/>
           <template id="MISTS_M_RES_NON_WOOD-HIDE_03" weight="1" unique="true" layertags="wood"/>
 
@@ -842,15 +985,15 @@
           <template id="MISTS_M_RES_NON_FIBER_02" weight="1" unique="true" layertags="fiber"/>
           <template id="MISTS_M_RES_NON_FIBER_03" weight="1" unique="true" layertags="fiber"/>
 
-          <template id="MISTS_M_RES_NON_ROCK-ORE_01" weight="1" unique="true" layertags="ore" />
-          <template id="MISTS_M_RES_NON_ROCK-ORE_02" weight="1" unique="true" layertags="ore" />
-          <template id="MISTS_M_RES_NON_ROCK-ORE_03" weight="1" unique="true" layertags="ore" />
+          <template id="MISTS_M_RES_NON_ROCK-ORE_01" weight="1" unique="true" layertags="ore"/>
+          <template id="MISTS_M_RES_NON_ROCK-ORE_02" weight="1" unique="true" layertags="ore"/>
+          <template id="MISTS_M_RES_NON_ROCK-ORE_03" weight="1" unique="true" layertags="ore"/>
 
           <template id="MISTS_M_RES_NON_ROCK-ORE_01" weight="1" unique="true" layertags="rock"/>
           <template id="MISTS_M_RES_NON_ROCK-ORE_02" weight="1" unique="true" layertags="rock"/>
           <template id="MISTS_M_RES_NON_ROCK-ORE_03" weight="1" unique="true" layertags="rock"/>
 
-          <template id="MISTS_M_RES_NON_WOOD-HIDE_01" weight="1" unique="true" layertags="wood" />
+          <template id="MISTS_M_RES_NON_WOOD-HIDE_01" weight="1" unique="true" layertags="wood"/>
           <template id="MISTS_M_RES_NON_WOOD-HIDE_02" weight="1" unique="true" layertags="wood"/>
           <template id="MISTS_M_RES_NON_WOOD-HIDE_03" weight="1" unique="true" layertags="wood"/>
 
@@ -947,15 +1090,15 @@
           <template id="MISTS_M_RES_NON_FIBER_02" weight="1" unique="true" layertags="fiber"/>
           <template id="MISTS_M_RES_NON_FIBER_03" weight="1" unique="true" layertags="fiber"/>
 
-          <template id="MISTS_M_RES_NON_ROCK-ORE_01" weight="1" unique="true" layertags="ore" />
-          <template id="MISTS_M_RES_NON_ROCK-ORE_02" weight="1" unique="true" layertags="ore" />
-          <template id="MISTS_M_RES_NON_ROCK-ORE_03" weight="1" unique="true" layertags="ore" />
+          <template id="MISTS_M_RES_NON_ROCK-ORE_01" weight="1" unique="true" layertags="ore"/>
+          <template id="MISTS_M_RES_NON_ROCK-ORE_02" weight="1" unique="true" layertags="ore"/>
+          <template id="MISTS_M_RES_NON_ROCK-ORE_03" weight="1" unique="true" layertags="ore"/>
 
           <template id="MISTS_M_RES_NON_ROCK-ORE_01" weight="1" unique="true" layertags="rock"/>
           <template id="MISTS_M_RES_NON_ROCK-ORE_02" weight="1" unique="true" layertags="rock"/>
           <template id="MISTS_M_RES_NON_ROCK-ORE_03" weight="1" unique="true" layertags="rock"/>
 
-          <template id="MISTS_M_RES_NON_WOOD-HIDE_01" weight="1" unique="true" layertags="wood" />
+          <template id="MISTS_M_RES_NON_WOOD-HIDE_01" weight="1" unique="true" layertags="wood"/>
           <template id="MISTS_M_RES_NON_WOOD-HIDE_02" weight="1" unique="true" layertags="wood"/>
           <template id="MISTS_M_RES_NON_WOOD-HIDE_03" weight="1" unique="true" layertags="wood"/>
 
@@ -1344,20 +1487,26 @@
   <cagedwisps>
     <cagedwisp uniquename="CAGED_WISP_MORGANA" cageopendurationsec="3">
       <rewards>
-        <pvekillfame tier="4" points="780" scalewithclusterquestfactor="true"/>
-        <mistsfactionstanding points="80" scalewithclusterquestfactor="true"/>
+        <pvpchallengeobjective>
+          <reward clusterdangerbonustype="mistsyellow" objectivename="PVPCHALLENGE_MISTS_CAGED_WISP" />
+          <reward clusterdangerbonustype="mistsblack" objectivename="PVPCHALLENGE_MISTS_CAGED_WISP" />
+        </pvpchallengeobjective>
       </rewards>
     </cagedwisp>
     <cagedwisp uniquename="CAGED_WISP_HERETIC" cageopendurationsec="3">
       <rewards>
-        <pvekillfame tier="4" points="780" scalewithclusterquestfactor="true"/>
-        <mistsfactionstanding points="80" scalewithclusterquestfactor="true"/>
+        <pvpchallengeobjective>
+          <reward clusterdangerbonustype="mistsyellow" objectivename="PVPCHALLENGE_MISTS_CAGED_WISP" />
+          <reward clusterdangerbonustype="mistsblack" objectivename="PVPCHALLENGE_MISTS_CAGED_WISP" />
+        </pvpchallengeobjective>
       </rewards>
     </cagedwisp>
     <cagedwisp uniquename="CAGED_WISP_UNDEAD" cageopendurationsec="3">
       <rewards>
-        <pvekillfame tier="4" points="780" scalewithclusterquestfactor="true"/>
-        <mistsfactionstanding points="80" scalewithclusterquestfactor="true"/>
+        <pvpchallengeobjective>
+          <reward clusterdangerbonustype="mistsyellow" objectivename="PVPCHALLENGE_MISTS_CAGED_WISP" />
+          <reward clusterdangerbonustype="mistsblack" objectivename="PVPCHALLENGE_MISTS_CAGED_WISP" />
+        </pvpchallengeobjective>
       </rewards>
     </cagedwisp>
   </cagedwisps>

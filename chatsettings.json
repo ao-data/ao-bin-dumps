@@ -13,7 +13,7 @@
       "DefaultTab": [
         {
           "@name": "@CHAT_SETTINGS_TAB_NAME_GENERAL",
-          "@showtimestamps": "false",
+          "@showtimestamps": "true",
           "@showchannelnames": "true",
           "@maininputchannel": "languageproxy",
           "Channel": [
@@ -27,27 +27,6 @@
               "@id": "say"
             },
             {
-              "@id": "emote"
-            },
-            {
-              "@id": "guild"
-            },
-            {
-              "@id": "alliance"
-            },
-            {
-              "@id": "lookingforgroup"
-            },
-            {
-              "@id": "party"
-            },
-            {
-              "@id": "duell"
-            },
-            {
-              "@id": "faction"
-            },
-            {
               "@id": "personal"
             },
             {
@@ -55,15 +34,12 @@
             },
             {
               "@id": "system"
-            },
-            {
-              "@id": "staff"
             }
           ]
         },
         {
           "@name": "@CHAT_SETTINGS_TAB_NAME_HELP",
-          "@showtimestamps": "false",
+          "@showtimestamps": "true",
           "@showchannelnames": "true",
           "@maininputchannel": "help",
           "Channel": [
@@ -72,26 +48,28 @@
             },
             {
               "@id": "personal"
+            },
+            {
+              "@id": "system"
             }
           ]
         },
         {
-          "@name": "@CHAT_SETTINGS_TAB_NAME_RECRUIT",
-          "@showtimestamps": "false",
+          "@name": "@CHAT_SETTINGS_TAB_NAME_LOOKING_FOR_GROUP",
+          "@showtimestamps": "true",
           "@showchannelnames": "true",
-          "@maininputchannel": "recruit",
-          "Channel": {
-            "@id": "recruit"
-          }
-        },
-        {
-          "@name": "@CHAT_SETTINGS_TAB_NAME_TRADE",
-          "@showtimestamps": "false",
-          "@showchannelnames": "true",
-          "@maininputchannel": "trade",
-          "Channel": {
-            "@id": "trade"
-          }
+          "@maininputchannel": "lookingforgroup",
+          "Channel": [
+            {
+              "@id": "lookingforgroup"
+            },
+            {
+              "@id": "personal"
+            },
+            {
+              "@id": "system"
+            }
+          ]
         },
         {
           "@name": "@CHAT_SETTINGS_TAB_NAME_COMBAT",
@@ -126,47 +104,51 @@
               "@id": "fame"
             }
           ]
+        },
+        {
+          "@name": "@CHAT_SETTINGS_TAB_NAME_RECRUIT",
+          "@showtimestamps": "true",
+          "@showchannelnames": "true",
+          "@maininputchannel": "recruit",
+          "Channel": [
+            {
+              "@id": "recruit"
+            },
+            {
+              "@id": "personal"
+            },
+            {
+              "@id": "system"
+            }
+          ]
+        },
+        {
+          "@name": "@CHAT_SETTINGS_TAB_NAME_SOCIAL",
+          "@showtimestamps": "true",
+          "@showchannelnames": "true",
+          "@maininputchannel": "party",
+          "Channel": [
+            {
+              "@id": "party"
+            },
+            {
+              "@id": "guild"
+            },
+            {
+              "@id": "alliance"
+            },
+            {
+              "@id": "personal"
+            },
+            {
+              "@id": "system"
+            },
+            {
+              "@id": "killplayer"
+            }
+          ]
         }
       ],
-      "GuildTab": {
-        "@showtimestamps": "true",
-        "@showchannelnames": "false",
-        "@maininputchannel": "guild",
-        "Channel": [
-          {
-            "@id": "guild"
-          },
-          {
-            "@id": "personal"
-          }
-        ]
-      },
-      "AllianceTab": {
-        "@showtimestamps": "true",
-        "@showchannelnames": "false",
-        "@maininputchannel": "alliance",
-        "Channel": [
-          {
-            "@id": "alliance"
-          },
-          {
-            "@id": "personal"
-          }
-        ]
-      },
-      "PartyTab": {
-        "@showtimestamps": "true",
-        "@showchannelnames": "false",
-        "@maininputchannel": "party",
-        "Channel": [
-          {
-            "@id": "party"
-          },
-          {
-            "@id": "personal"
-          }
-        ]
-      },
       "FactionTab": {
         "@showtimestamps": "true",
         "@showchannelnames": "true",
@@ -180,6 +162,9 @@
           },
           {
             "@id": "personal"
+          },
+          {
+            "@id": "system"
           }
         ]
       }
