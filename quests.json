@@ -5316,37 +5316,42 @@
               }
             },
             {
-              "@locationmarkerid": "CRAFTER",
-              "@markedinworld": "true",
-              "@markedonminimap": "true",
               "preactions": {
-                "settutorialstate": {
-                  "@state": "HARDCLEARAFTERDB"
-                },
                 "openhintbox": {
-                  "@uniquename": "MOUNT"
+                  "@uniquename": "CLEAR"
+                },
+                "settutorialstate": {
+                  "@state": "EQUIPMULE"
                 }
               },
               "missions": {
-                "or": {
-                  "@textloca": "@MISSIONS_T2_TUTORIAL_TEST_H3_SIDETEXT",
-                  "@hideindetailsui": "true",
-                  "gotolocation": {
-                    "@locationmarkerid": "MOUNTREMINDER",
-                    "@markedinworld": "false",
-                    "@markedonminimap": "false"
-                  },
-                  "mount": {
-                    "@itemid": "T2_MOUNT_MULE"
-                  }
+                "equipitem": {
+                  "@itemid": "T2_MOUNT_MULE",
+                  "@textloca": "@MISSIONS_T2_TUTORIAL_TEST_H5_SIDETEXT"
+                }
+              }
+            },
+            {
+              "preactions": {
+                "openhintbox": {
+                  "@uniquename": "CLEAR"
+                },
+                "settutorialstate": {
+                  "@state": "MOUNTMULE"
+                }
+              },
+              "missions": {
+                "mount": {
+                  "@itemid": "T2_MOUNT_MULE",
+                  "@textloca": "@MISSIONS_T2_TUTORIAL_TEST_H6_SIDETEXT"
                 }
               }
             }
           ],
           "extendedcompletionstep": {
             "preactions": {
-              "openhintbox": {
-                "@uniquename": "SOFTCLEAR"
+              "settutorialstate": {
+                "@state": "FINDWOUNDEDCRAFTER"
               }
             },
             "missions": {
@@ -5394,31 +5399,53 @@
           }
         },
         "tasks": {
-          "extendedmissionstep": {
-            "preactions": {
-              "settutorialblocker": {
-                "@id": "BLOCKSTOOLS",
-                "@statetoset": "0"
+          "extendedmissionstep": [
+            {
+              "preactions": {
+                "settutorialblocker": {
+                  "@id": "BLOCKSTOOLS",
+                  "@statetoset": "0"
+                },
+                "settutorialstate": {
+                  "@state": "CRAFTTOOLSINFO"
+                }
               },
-              "settutorialstate": {
-                "@state": "CRAFTTOOLSINFO"
+              "missions": {
+                "interactwithbuilding": {
+                  "@buildingid": "T2_TOOLMAKER_TUTORIAL",
+                  "@locationmarkerid": "TOOLMAKERSMALL",
+                  "@markedinworld": "true",
+                  "@markedonminimap": "true",
+                  "@textloca": "@MISSIONS_T2_TUTORIAL_TEST_I1_SIDETEXT"
+                }
               }
             },
-            "missions": {
-              "acquireitem": [
-                {
-                  "@itemid": "T1_2H_TOOL_PICK",
-                  "@count": "1",
-                  "@locationmarkerid": "TOOLMAKERSMALL"
+            {
+              "preactions": {
+                "settutorialblocker": {
+                  "@id": "BLOCKSTOOLS",
+                  "@statetoset": "0"
                 },
-                {
-                  "@itemid": "T1_2H_TOOL_AXE",
-                  "@count": "1",
-                  "@locationmarkerid": "TOOLMAKERSMALL"
+                "settutorialstate": {
+                  "@state": "CRAFTTOOLS"
                 }
-              ]
+              },
+              "missions": {
+                "acquireitem": [
+                  {
+                    "@itemid": "T1_2H_TOOL_PICK",
+                    "@count": "1",
+                    "@locationmarkerid": "TOOLMAKERSMALL"
+                  },
+                  {
+                    "@itemid": "T1_2H_TOOL_AXE",
+                    "@count": "1",
+                    "@locationmarkerid": "TOOLMAKERSMALL"
+                  }
+                ]
+              }
             }
-          },
+          ],
           "extendedcompletionstep": {
             "preactions": {
               "settutorialstate": {
@@ -12273,25 +12300,26 @@
         "@visibleonminimapbeforevisit": "false",
         "missions": {
           "killmobfame": {
-            "@value": "4550",
+            "@value": "3033",
             "@scalewithclusterquestfactor": "true",
             "@faction": "HERETIC",
             "@countpartykillsinsamelocalquestarea": "true"
           }
         },
         "rewards": {
-          "pvekillfame": {
-            "@tier": "4",
-            "@points": "5536",
-            "@scalewithclusterquestfactor": "true"
-          },
-          "mistsfactionstanding": {
-            "@points": "466",
-            "@scalewithclusterquestfactor": "true"
-          },
           "pvpchallengeobjective": {
-            "@objectivename": "PVPCHALLENGE_MISTS_CAMP_MEDIUM"
-          }
+            "reward": [
+              {
+                "@clusterdangerbonustype": "mistsyellow",
+                "@objectivename": "PVPCHALLENGE_MISTS_CAMP_MEDIUM_YELLOW"
+              },
+              {
+                "@clusterdangerbonustype": "mistsblack",
+                "@objectivename": "PVPCHALLENGE_MISTS_CAMP_MEDIUM_BLACK"
+              }
+            ]
+          },
+          "unlockpersonallootchest": null
         }
       },
       {
@@ -12301,25 +12329,26 @@
         "@visibleonminimapbeforevisit": "false",
         "missions": {
           "killmobfame": {
-            "@value": "4550",
+            "@value": "3033",
             "@scalewithclusterquestfactor": "true",
             "@faction": "UNDEAD",
             "@countpartykillsinsamelocalquestarea": "true"
           }
         },
         "rewards": {
-          "pvekillfame": {
-            "@tier": "4",
-            "@points": "5536",
-            "@scalewithclusterquestfactor": "true"
-          },
-          "mistsfactionstanding": {
-            "@points": "466",
-            "@scalewithclusterquestfactor": "true"
-          },
           "pvpchallengeobjective": {
-            "@objectivename": "PVPCHALLENGE_MISTS_CAMP_MEDIUM"
-          }
+            "reward": [
+              {
+                "@clusterdangerbonustype": "mistsyellow",
+                "@objectivename": "PVPCHALLENGE_MISTS_CAMP_MEDIUM_YELLOW"
+              },
+              {
+                "@clusterdangerbonustype": "mistsblack",
+                "@objectivename": "PVPCHALLENGE_MISTS_CAMP_MEDIUM_BLACK"
+              }
+            ]
+          },
+          "unlockpersonallootchest": null
         }
       },
       {
@@ -12329,25 +12358,26 @@
         "@visibleonminimapbeforevisit": "false",
         "missions": {
           "killmobfame": {
-            "@value": "4550",
+            "@value": "3033",
             "@scalewithclusterquestfactor": "true",
             "@faction": "MORGANA",
             "@countpartykillsinsamelocalquestarea": "true"
           }
         },
         "rewards": {
-          "pvekillfame": {
-            "@tier": "4",
-            "@points": "5536",
-            "@scalewithclusterquestfactor": "true"
-          },
-          "mistsfactionstanding": {
-            "@points": "466",
-            "@scalewithclusterquestfactor": "true"
-          },
           "pvpchallengeobjective": {
-            "@objectivename": "PVPCHALLENGE_MISTS_CAMP_MEDIUM"
-          }
+            "reward": [
+              {
+                "@clusterdangerbonustype": "mistsyellow",
+                "@objectivename": "PVPCHALLENGE_MISTS_CAMP_MEDIUM_YELLOW"
+              },
+              {
+                "@clusterdangerbonustype": "mistsblack",
+                "@objectivename": "PVPCHALLENGE_MISTS_CAMP_MEDIUM_BLACK"
+              }
+            ]
+          },
+          "unlockpersonallootchest": null
         }
       },
       {
@@ -12357,25 +12387,26 @@
         "@visibleonminimapbeforevisit": "false",
         "missions": {
           "killmobfame": {
-            "@value": "1664",
+            "@value": "1109",
             "@scalewithclusterquestfactor": "true",
             "@faction": "HERETIC",
             "@countpartykillsinsamelocalquestarea": "true"
           }
         },
         "rewards": {
-          "pvekillfame": {
-            "@tier": "4",
-            "@points": "2024",
-            "@scalewithclusterquestfactor": "true"
-          },
-          "mistsfactionstanding": {
-            "@points": "170",
-            "@scalewithclusterquestfactor": "true"
-          },
           "pvpchallengeobjective": {
-            "@objectivename": "PVPCHALLENGE_MISTS_CAMP_SMALL"
-          }
+            "reward": [
+              {
+                "@clusterdangerbonustype": "mistsyellow",
+                "@objectivename": "PVPCHALLENGE_MISTS_CAMP_SMALL_YELLOW"
+              },
+              {
+                "@clusterdangerbonustype": "mistsblack",
+                "@objectivename": "PVPCHALLENGE_MISTS_CAMP_SMALL_BLACK"
+              }
+            ]
+          },
+          "unlockpersonallootchest": null
         }
       },
       {
@@ -12385,25 +12416,26 @@
         "@visibleonminimapbeforevisit": "false",
         "missions": {
           "killmobfame": {
-            "@value": "1664",
+            "@value": "1109",
             "@scalewithclusterquestfactor": "true",
             "@faction": "UNDEAD",
             "@countpartykillsinsamelocalquestarea": "true"
           }
         },
         "rewards": {
-          "pvekillfame": {
-            "@tier": "4",
-            "@points": "2024",
-            "@scalewithclusterquestfactor": "true"
-          },
-          "mistsfactionstanding": {
-            "@points": "170",
-            "@scalewithclusterquestfactor": "true"
-          },
           "pvpchallengeobjective": {
-            "@objectivename": "PVPCHALLENGE_MISTS_CAMP_SMALL"
-          }
+            "reward": [
+              {
+                "@clusterdangerbonustype": "mistsyellow",
+                "@objectivename": "PVPCHALLENGE_MISTS_CAMP_SMALL_YELLOW"
+              },
+              {
+                "@clusterdangerbonustype": "mistsblack",
+                "@objectivename": "PVPCHALLENGE_MISTS_CAMP_SMALL_BLACK"
+              }
+            ]
+          },
+          "unlockpersonallootchest": null
         }
       },
       {
@@ -12413,25 +12445,26 @@
         "@visibleonminimapbeforevisit": "false",
         "missions": {
           "killmobfame": {
-            "@value": "1664",
+            "@value": "1109",
             "@scalewithclusterquestfactor": "true",
             "@faction": "MORGANA",
             "@countpartykillsinsamelocalquestarea": "true"
           }
         },
         "rewards": {
-          "pvekillfame": {
-            "@tier": "4",
-            "@points": "2024",
-            "@scalewithclusterquestfactor": "true"
-          },
-          "mistsfactionstanding": {
-            "@points": "170",
-            "@scalewithclusterquestfactor": "true"
-          },
           "pvpchallengeobjective": {
-            "@objectivename": "PVPCHALLENGE_MISTS_CAMP_SMALL"
-          }
+            "reward": [
+              {
+                "@clusterdangerbonustype": "mistsyellow",
+                "@objectivename": "PVPCHALLENGE_MISTS_CAMP_SMALL_YELLOW"
+              },
+              {
+                "@clusterdangerbonustype": "mistsblack",
+                "@objectivename": "PVPCHALLENGE_MISTS_CAMP_SMALL_BLACK"
+              }
+            ]
+          },
+          "unlockpersonallootchest": null
         }
       }
     ]

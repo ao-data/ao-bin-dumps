@@ -21,23 +21,126 @@
       "@openworldexitautodestroyafterusageinsec": "5",
       "@openworldexitportalalivetimer": "30",
       "@clustershutdowncountdowntimer": "300",
-      "@wispsspawninsecbeforeclustershutdown": "300",
-      "@wispsstaggeredspawninterval": "60",
-      "@wispsstaggeredspawnintervalstart": "60",
       "@cityroadsentrancepartybindingtimer": "300",
       "@cityroadsentrancepartyslots": "7",
       "@cityroadsentrancedefaultnoslotsuseddummyclusterid": "TNL-001",
-      "@instancerandomdungeondifficultygroup": "mists",
       "@immediatereturnexitprefab": "Prefabs/ENV_PREFABS/SHARED/ENV_FX/MISTS/ENTRANCES/SHARED_MIST_WISP_PORTAL",
       "@mistsfxmanagerprefab": "Prefabs/ENV_PREFABS/SHARED/ENV_FX/MISTS/MISTFX/MistsFXManager",
+      "@mistdungeonfxmanagerprefab": "Prefabs/ENV_PREFABS/SHARED/ENV_FX/MISTS_DUNGEONS/MistDungeonsFXManager",
+      "@mistdungeonroomtriggerprefab": "Prefabs/ENV_PREFABS/SHARED/ENV_FX/MISTS_DUNGEONS/MistsDungeonScreenSpaceVfxCollider",
+      "@mistdungeonmobsoulvfxprefab": "FX/ClientPrefabs/fx_mist_dungeon_mob_death_ghost",
+      "@mistdungeonmobsoulvfxprefab_spawn": "FX/ClientPrefabs/fx_mist_dungeon_mob_death_ghost_spawn",
       "@openworldexitprefabtilename": "Tunnel_Exit_Temp",
       "@staticentranceblockerdebuff": "MISTS_JOINED_FROM_STATIC_ENTRANCE_DEBUFF",
       "@cityroadsentranceblockerdebuff": "MISTS_CITY_ROADS_ENTRANCE_BLOCKER_DEBUFF",
       "@clustershutdownalerttimer": "60",
-      "@initialresourcemobfillrate": "0.3"
+      "@initialresourcemobfillrate": "0.3",
+      "modetypesetting": [
+        {
+          "@type": "mists",
+          "@instancerandomdungeondifficultygroup": "mists",
+          "@wispsspawninsecbeforeclustershutdown": "300",
+          "@wispsstaggeredspawninterval": "60",
+          "@wispsstaggeredspawnintervalstart": "60",
+          "@minimapdisplayinterestareaextend": "100"
+        },
+        {
+          "@type": "mistsdungeon",
+          "@wispsspawninsecbeforeclustershutdown": "300",
+          "@wispsstaggeredspawninterval": "0",
+          "@wispsstaggeredspawnintervalstart": "0",
+          "@minimapdisplayinterestareaextend": "100"
+        }
+      ]
+    },
+    "mistdungeonsettings": {
+      "RoomSetting": [
+        {
+          "@name": "default",
+          "DungeonMultiRewardObject": [
+            {
+              "@set": "rose",
+              "LootChest": {
+                "@name": "MD_UNDEAD_SOLO_REWARD",
+                "@weight": "15"
+              },
+              "Shrine": {
+                "@buff": "MD_SHRINE_ROSE_BUFF",
+                "@weight": "85",
+                "@prefab": "MISTS_GREEN_DNG_CASTLE_STATUE_BUFF_SHRINE_C"
+              }
+            },
+            {
+              "@set": "scale",
+              "LootChest": {
+                "@name": "MD_UNDEAD_SOLO_REWARD",
+                "@weight": "15"
+              },
+              "Shrine": {
+                "@buff": "MD_SHRINE_SCALE_BUFF",
+                "@weight": "85",
+                "@prefab": "MISTS_GREEN_DNG_CASTLE_STATUE_BUFF_SHRINE_B"
+              }
+            },
+            {
+              "@set": "sword",
+              "LootChest": {
+                "@name": "MD_UNDEAD_SOLO_REWARD",
+                "@weight": "15"
+              },
+              "Shrine": {
+                "@buff": "MD_SHRINE_SWORD_BUFF",
+                "@weight": "85",
+                "@prefab": "MISTS_GREEN_DNG_CASTLE_STATUE_BUFF_SHRINE_A"
+              }
+            }
+          ]
+        },
+        {
+          "@name": "duo",
+          "DungeonMultiRewardObject": [
+            {
+              "@set": "rose",
+              "LootChest": {
+                "@name": "MD_UNDEAD_DUO_REWARD",
+                "@weight": "15"
+              },
+              "Shrine": {
+                "@buff": "MD_SHRINE_ROSE_BUFF",
+                "@weight": "85",
+                "@prefab": "MISTS_GREEN_DNG_CASTLE_STATUE_BUFF_SHRINE_C"
+              }
+            },
+            {
+              "@set": "scale",
+              "LootChest": {
+                "@name": "MD_UNDEAD_DUO_REWARD",
+                "@weight": "15"
+              },
+              "Shrine": {
+                "@buff": "MD_SHRINE_SCALE_BUFF",
+                "@weight": "85",
+                "@prefab": "MISTS_GREEN_DNG_CASTLE_STATUE_BUFF_SHRINE_B"
+              }
+            },
+            {
+              "@set": "sword",
+              "LootChest": {
+                "@name": "MD_UNDEAD_DUO_REWARD",
+                "@weight": "15"
+              },
+              "Shrine": {
+                "@buff": "MD_SHRINE_SWORD_BUFF",
+                "@weight": "85",
+                "@prefab": "MISTS_GREEN_DNG_CASTLE_STATUE_BUFF_SHRINE_A"
+              }
+            }
+          ]
+        }
+      ]
     },
     "mistcitystanding": {
-      "@max": "1000000",
+      "@max": "10000000",
       "rank": [
         {
           "@minstanding": "0",
@@ -68,6 +171,26 @@
           "@minstanding": "1000000",
           "@title": "@MISTCITY_STANDING_RANK_6",
           "@pointmultiplier": "1"
+        },
+        {
+          "@minstanding": "1800000",
+          "@title": "@MISTCITY_STANDING_RANK_7",
+          "@pointmultiplier": "1"
+        },
+        {
+          "@minstanding": "3250000",
+          "@title": "@MISTCITY_STANDING_RANK_8",
+          "@pointmultiplier": "1"
+        },
+        {
+          "@minstanding": "5700000",
+          "@title": "@MISTCITY_STANDING_RANK_9",
+          "@pointmultiplier": "1"
+        },
+        {
+          "@minstanding": "10000000",
+          "@title": "@MISTCITY_STANDING_RANK_10",
+          "@pointmultiplier": "1"
         }
       ]
     },
@@ -75,18 +198,17 @@
       "mistsmode": [
         {
           "@name": "MISTS_SOLO_YELLOW",
+          "@type": "mists",
           "@clustertype": "MISTS_SOLO_YELLOW",
           "@clusterdisplayname": "The Mists",
           "@maxteamsize": "1",
           "@mapset": "MAPSET_SOLO_YELLOW",
           "@resourcepool": "YELLOW",
-          "@resourcedenominator": "100",
-          "@maxpercentresourcepoolonstartup": "0.8",
           "difficultylevel": [
             {
               "@level": "0",
               "@minimuminstancepool": "24",
-              "@flexibleinstancepool": "0.3",
+              "@flexibleinstancepool": "0.2",
               "@wispmob": "MOB_UNIQUE_MISTS_PORTAL_WISP",
               "@wispmobexitvisualizationref": "MISTS_SOLO_YELLOW",
               "@wispinstacefillratio": "0.7",
@@ -98,7 +220,7 @@
             {
               "@level": "1",
               "@minimuminstancepool": "5",
-              "@flexibleinstancepool": "0.3",
+              "@flexibleinstancepool": "0.2",
               "@wispmob": "MOB_UNIQUE_MISTS_PORTAL_WISP_STANDARD",
               "@wispmobexitvisualizationref": "MISTS_SOLO_YELLOW",
               "@wispinstacefillratio": "0.7",
@@ -110,7 +232,7 @@
             {
               "@level": "2",
               "@minimuminstancepool": "4",
-              "@flexibleinstancepool": "0.3",
+              "@flexibleinstancepool": "0.2",
               "@wispmob": "MOB_UNIQUE_MISTS_PORTAL_WISP_UNCOMMON",
               "@wispmobexitvisualizationref": "MISTS_SOLO_YELLOW",
               "@wispinstacefillratio": "0.7",
@@ -122,7 +244,7 @@
             {
               "@level": "3",
               "@minimuminstancepool": "3",
-              "@flexibleinstancepool": "0.3",
+              "@flexibleinstancepool": "0.2",
               "@wispmob": "MOB_UNIQUE_MISTS_PORTAL_WISP_RARE",
               "@wispmobexitvisualizationref": "MISTS_SOLO_YELLOW",
               "@wispinstacefillratio": "0.7",
@@ -134,7 +256,7 @@
             {
               "@level": "4",
               "@minimuminstancepool": "2",
-              "@flexibleinstancepool": "0.3",
+              "@flexibleinstancepool": "0.2",
               "@wispmob": "MOB_UNIQUE_MISTS_PORTAL_WISP_LEGENDARY",
               "@wispmobexitvisualizationref": "MISTS_SOLO_YELLOW",
               "@wispinstacefillratio": "0.7",
@@ -149,21 +271,21 @@
               {
                 "@name": "CHEST",
                 "@rolls": "1",
-                "@chance": "0.454357826",
+                "@chance": "0.3634862608",
                 "@initialblocktimeseconds": "60",
                 "@finalblocktimeseconds": "360"
+              },
+              {
+                "@name": "COFFER",
+                "@rolls": "3",
+                "@chance": "0.333333",
+                "@initialblocktimeseconds": "60",
+                "@finalblocktimeseconds": "420"
               },
               {
                 "@name": "WISPS",
                 "@rolls": "1",
                 "@chance": "0.8",
-                "@initialblocktimeseconds": "60",
-                "@finalblocktimeseconds": "420"
-              },
-              {
-                "@name": "SPECIALMOBS",
-                "@rolls": "1",
-                "@chance": "0.25",
                 "@initialblocktimeseconds": "60",
                 "@finalblocktimeseconds": "420"
               },
@@ -204,22 +326,95 @@
                 "@finalblocktimeseconds": "300"
               }
             ]
+          },
+          "specialexitsettings": {
+            "exitsettings": {
+              "@type": "MistsDungeonEntrance",
+              "@targetmode": "MISTS_DUNGEON_SOLO_YELLOW",
+              "@minwaveinterval": "170",
+              "@maxwaveinterval": "214",
+              "@exitspawnchance": "1.0",
+              "@initialblocktimeseconds": "60",
+              "@finalblocktimeseconds": "300",
+              "@playerdistanceblocking": "45",
+              "@portaldisappearancetimer": "120",
+              "exit": [
+                {
+                  "@tier": "5",
+                  "@weight": "80",
+                  "@randomdungeonexitvisualizationref": "T5_MISTS_DUNGEON_SOLO_YELLOW",
+                  "@mindifficulty": "0"
+                },
+                {
+                  "@tier": "6",
+                  "@weight": "14",
+                  "@randomdungeonexitvisualizationref": "T6_MISTS_DUNGEON_SOLO_YELLOW",
+                  "@mindifficulty": "0"
+                },
+                {
+                  "@tier": "7",
+                  "@weight": "6",
+                  "@randomdungeonexitvisualizationref": "T7_MISTS_DUNGEON_SOLO_YELLOW",
+                  "@mindifficulty": "0"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "@name": "MISTS_DUNGEON_SOLO_YELLOW",
+          "@type": "mistsdungeon",
+          "@numberofbossrooms": "3",
+          "@bossroompreventionradius": "90",
+          "@clustertype": "MISTS_DUNGEON_SOLO_YELLOW",
+          "@clusterdisplayname": "Knightfall Abbey",
+          "@maxteamsize": "1",
+          "@mapset": "MAPSET_SOLO_YELLOW_DUNGEON",
+          "@exitsleadtomode": "MISTS_SOLO_YELLOW",
+          "difficultylevel": {
+            "@level": "0",
+            "@minimuminstancepool": "3",
+            "@flexibleinstancepool": "0.05",
+            "@wispmob": "MOB_UNIQUE_MISTS_PORTAL_WISP",
+            "@wispmobexitvisualizationref": "MISTS_SOLO_YELLOW",
+            "@wispinstacefillratio": "1",
+            "@rareresourcedistribution": "MISTS_E0",
+            "wispinstancedifficultyrollref": {
+              "@randomdungeonrollref": "MISTS_INSTANCE_MODE_DUNGEON_YELLOW_SOLO"
+            }
+          },
+          "treasures": {
+            "subtype": [
+              {
+                "@name": "CHEST",
+                "@rolls": "1",
+                "@chance": "1",
+                "@initialblocktimeseconds": "360",
+                "@finalblocktimeseconds": "685"
+              },
+              {
+                "@name": "COFFER",
+                "@rolls": "3",
+                "@chance": "1",
+                "@initialblocktimeseconds": "180",
+                "@finalblocktimeseconds": "570"
+              }
+            ]
           }
         },
         {
           "@name": "MISTS_SOLO_BLACK",
+          "@type": "mists",
           "@clustertype": "MISTS_SOLO_BLACK",
           "@clusterdisplayname": "The Mists",
           "@maxteamsize": "1",
           "@mapset": "MAPSET_SOLO_BLACK",
           "@resourcepool": "BLACK",
-          "@resourcedenominator": "100",
-          "@maxpercentresourcepoolonstartup": "0.8",
           "difficultylevel": [
             {
               "@level": "0",
               "@minimuminstancepool": "30",
-              "@flexibleinstancepool": "0.3",
+              "@flexibleinstancepool": "0.2",
               "@wispmob": "MOB_UNIQUE_MISTS_PORTAL_WISP",
               "@wispmobexitvisualizationref": "MISTS_SOLO_BLACK",
               "@wispinstacefillratio": "0.7",
@@ -231,7 +426,7 @@
             {
               "@level": "1",
               "@minimuminstancepool": "6",
-              "@flexibleinstancepool": "0.3",
+              "@flexibleinstancepool": "0.2",
               "@wispmob": "MOB_UNIQUE_MISTS_PORTAL_WISP_STANDARD",
               "@wispmobexitvisualizationref": "MISTS_SOLO_BLACK",
               "@wispinstacefillratio": "0.7",
@@ -243,7 +438,7 @@
             {
               "@level": "2",
               "@minimuminstancepool": "4",
-              "@flexibleinstancepool": "0.3",
+              "@flexibleinstancepool": "0.2",
               "@wispmob": "MOB_UNIQUE_MISTS_PORTAL_WISP_UNCOMMON",
               "@wispmobexitvisualizationref": "MISTS_SOLO_BLACK",
               "@wispinstacefillratio": "0.7",
@@ -255,7 +450,7 @@
             {
               "@level": "3",
               "@minimuminstancepool": "3",
-              "@flexibleinstancepool": "0.3",
+              "@flexibleinstancepool": "0.2",
               "@wispmob": "MOB_UNIQUE_MISTS_PORTAL_WISP_RARE",
               "@wispmobexitvisualizationref": "MISTS_SOLO_BLACK",
               "@wispinstacefillratio": "0.7",
@@ -267,7 +462,7 @@
             {
               "@level": "4",
               "@minimuminstancepool": "2",
-              "@flexibleinstancepool": "0.3",
+              "@flexibleinstancepool": "0.2",
               "@wispmob": "MOB_UNIQUE_MISTS_PORTAL_WISP_LEGENDARY",
               "@wispmobexitvisualizationref": "MISTS_SOLO_BLACK",
               "@wispinstacefillratio": "0.7",
@@ -282,9 +477,16 @@
               {
                 "@name": "CHEST",
                 "@rolls": "1",
-                "@chance": "0.461181535",
+                "@chance": "0.368945228",
                 "@initialblocktimeseconds": "60",
                 "@finalblocktimeseconds": "360"
+              },
+              {
+                "@name": "COFFER",
+                "@rolls": "3",
+                "@chance": "0.333333",
+                "@initialblocktimeseconds": "60",
+                "@finalblocktimeseconds": "420"
               },
               {
                 "@name": "WISPS",
@@ -296,7 +498,7 @@
               {
                 "@name": "SPECIALMOBS",
                 "@rolls": "1",
-                "@chance": "0.85",
+                "@chance": "0.6",
                 "@initialblocktimeseconds": "60",
                 "@finalblocktimeseconds": "420"
               },
@@ -337,22 +539,95 @@
                 "@finalblocktimeseconds": "480"
               }
             ]
+          },
+          "specialexitsettings": {
+            "exitsettings": {
+              "@type": "MistsDungeonEntrance",
+              "@targetmode": "MISTS_DUNGEON_SOLO_BLACK",
+              "@minwaveinterval": "170",
+              "@maxwaveinterval": "214",
+              "@exitspawnchance": "1.0",
+              "@initialblocktimeseconds": "60",
+              "@finalblocktimeseconds": "300",
+              "@playerdistanceblocking": "45",
+              "@portaldisappearancetimer": "120",
+              "exit": [
+                {
+                  "@tier": "6",
+                  "@weight": "80",
+                  "@randomdungeonexitvisualizationref": "T6_MISTS_DUNGEON_SOLO_BLACK",
+                  "@mindifficulty": "0"
+                },
+                {
+                  "@tier": "7",
+                  "@weight": "14",
+                  "@randomdungeonexitvisualizationref": "T7_MISTS_DUNGEON_SOLO_BLACK",
+                  "@mindifficulty": "0"
+                },
+                {
+                  "@tier": "8",
+                  "@weight": "6",
+                  "@randomdungeonexitvisualizationref": "T8_MISTS_DUNGEON_SOLO_BLACK",
+                  "@mindifficulty": "0"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "@name": "MISTS_DUNGEON_SOLO_BLACK",
+          "@type": "mistsdungeon",
+          "@numberofbossrooms": "3",
+          "@bossroompreventionradius": "90",
+          "@clustertype": "MISTS_DUNGEON_SOLO_BLACK",
+          "@clusterdisplayname": "Knightfall Abbey",
+          "@maxteamsize": "1",
+          "@mapset": "MAPSET_SOLO_BLACK_DUNGEON",
+          "@exitsleadtomode": "MISTS_SOLO_BLACK",
+          "difficultylevel": {
+            "@level": "0",
+            "@minimuminstancepool": "3",
+            "@flexibleinstancepool": "0.05",
+            "@wispmob": "MOB_UNIQUE_MISTS_PORTAL_WISP",
+            "@wispmobexitvisualizationref": "MISTS_SOLO_BLACK",
+            "@wispinstacefillratio": "0.7",
+            "@rareresourcedistribution": "MISTS_E0",
+            "wispinstancedifficultyrollref": {
+              "@randomdungeonrollref": "MISTS_INSTANCE_MODE_DUNGEON_BLACK_SOLO"
+            }
+          },
+          "treasures": {
+            "subtype": [
+              {
+                "@name": "CHEST",
+                "@rolls": "1",
+                "@chance": "1",
+                "@initialblocktimeseconds": "360",
+                "@finalblocktimeseconds": "685"
+              },
+              {
+                "@name": "COFFER",
+                "@rolls": "3",
+                "@chance": "1",
+                "@initialblocktimeseconds": "180",
+                "@finalblocktimeseconds": "570"
+              }
+            ]
           }
         },
         {
           "@name": "MISTS_DUO_BLACK",
+          "@type": "mists",
           "@clustertype": "MISTS_DUO_BLACK",
           "@clusterdisplayname": "The Greater Mists",
           "@maxteamsize": "2",
           "@mapset": "MAPSET_DUO_BLACK",
           "@resourcepool": "BLACK",
-          "@resourcedenominator": "100",
-          "@maxpercentresourcepoolonstartup": "0.8",
           "difficultylevel": [
             {
               "@level": "0",
               "@minimuminstancepool": "6",
-              "@flexibleinstancepool": "0.3",
+              "@flexibleinstancepool": "0.2",
               "@wispmob": "MOB_UNIQUE_MISTS_PORTAL_WISP_DUO",
               "@wispmobexitvisualizationref": "MISTS_DUO_BLACK",
               "@wispinstacefillratio": "0.7",
@@ -364,7 +639,7 @@
             {
               "@level": "1",
               "@minimuminstancepool": "2",
-              "@flexibleinstancepool": "0.3",
+              "@flexibleinstancepool": "0.2",
               "@wispmob": "MOB_UNIQUE_MISTS_PORTAL_WISP_DUO_STANDARD",
               "@wispmobexitvisualizationref": "MISTS_DUO_BLACK",
               "@wispinstacefillratio": "0.7",
@@ -376,7 +651,7 @@
             {
               "@level": "2",
               "@minimuminstancepool": "1",
-              "@flexibleinstancepool": "0.3",
+              "@flexibleinstancepool": "0.2",
               "@wispmob": "MOB_UNIQUE_MISTS_PORTAL_WISP_DUO_UNCOMMON",
               "@wispmobexitvisualizationref": "MISTS_DUO_BLACK",
               "@wispinstacefillratio": "0.7",
@@ -388,7 +663,7 @@
             {
               "@level": "3",
               "@minimuminstancepool": "1",
-              "@flexibleinstancepool": "0.3",
+              "@flexibleinstancepool": "0.2",
               "@wispmob": "MOB_UNIQUE_MISTS_PORTAL_WISP_DUO_RARE",
               "@wispmobexitvisualizationref": "MISTS_DUO_BLACK",
               "@wispinstacefillratio": "0.7",
@@ -400,7 +675,7 @@
             {
               "@level": "4",
               "@minimuminstancepool": "1",
-              "@flexibleinstancepool": "0.3",
+              "@flexibleinstancepool": "0.2",
               "@wispmob": "MOB_UNIQUE_MISTS_PORTAL_WISP_DUO_LEGENDARY",
               "@wispmobexitvisualizationref": "MISTS_DUO_BLACK",
               "@wispinstacefillratio": "0.7",
@@ -415,9 +690,16 @@
               {
                 "@name": "CHEST",
                 "@rolls": "1",
-                "@chance": "0.461181535",
+                "@chance": "0.368945228",
                 "@initialblocktimeseconds": "60",
                 "@finalblocktimeseconds": "360"
+              },
+              {
+                "@name": "COFFER",
+                "@rolls": "3",
+                "@chance": "0.333333",
+                "@initialblocktimeseconds": "60",
+                "@finalblocktimeseconds": "420"
               },
               {
                 "@name": "WISPS",
@@ -429,7 +711,7 @@
               {
                 "@name": "SPECIALMOBS",
                 "@rolls": "1",
-                "@chance": "0.85",
+                "@chance": "0.6",
                 "@initialblocktimeseconds": "60",
                 "@finalblocktimeseconds": "420"
               },
@@ -468,6 +750,81 @@
                 "@chance": "0.13970768",
                 "@initialblocktimeseconds": "60",
                 "@finalblocktimeseconds": "480"
+              }
+            ]
+          },
+          "specialexitsettings": {
+            "exitsettings": {
+              "@type": "MistsDungeonEntrance",
+              "@targetmode": "MISTS_DUNGEON_DUO_BLACK",
+              "@minwaveinterval": "170",
+              "@maxwaveinterval": "214",
+              "@exitspawnchance": "1.0",
+              "@initialblocktimeseconds": "60",
+              "@finalblocktimeseconds": "300",
+              "@playerdistanceblocking": "45",
+              "@portaldisappearancetimer": "120",
+              "exit": [
+                {
+                  "@tier": "6",
+                  "@weight": "80",
+                  "@randomdungeonexitvisualizationref": "T6_MISTS_DUNGEON_DUO_BLACK",
+                  "@mindifficulty": "0"
+                },
+                {
+                  "@tier": "7",
+                  "@weight": "14",
+                  "@randomdungeonexitvisualizationref": "T7_MISTS_DUNGEON_DUO_BLACK",
+                  "@mindifficulty": "0"
+                },
+                {
+                  "@tier": "8",
+                  "@weight": "6",
+                  "@randomdungeonexitvisualizationref": "T8_MISTS_DUNGEON_DUO_BLACK",
+                  "@mindifficulty": "0"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "@name": "MISTS_DUNGEON_DUO_BLACK",
+          "@type": "mistsdungeon",
+          "@mistdungeonroomsetting": "duo",
+          "@numberofbossrooms": "3",
+          "@bossroompreventionradius": "90",
+          "@clustertype": "MISTS_DUNGEON_DUO_BLACK",
+          "@clusterdisplayname": "Knightfall Abbey",
+          "@maxteamsize": "2",
+          "@mapset": "MAPSET_DUO_BLACK_DUNGEON",
+          "@exitsleadtomode": "MISTS_DUO_BLACK",
+          "difficultylevel": {
+            "@level": "0",
+            "@minimuminstancepool": "1",
+            "@flexibleinstancepool": "0.05",
+            "@wispmob": "MOB_UNIQUE_MISTS_PORTAL_WISP_DUO",
+            "@wispmobexitvisualizationref": "MISTS_DUO_BLACK",
+            "@wispinstacefillratio": "0.7",
+            "@rareresourcedistribution": "MISTS_E0",
+            "wispinstancedifficultyrollref": {
+              "@randomdungeonrollref": "MISTS_INSTANCE_MODE_DUNGEON_BLACK_DUO"
+            }
+          },
+          "treasures": {
+            "subtype": [
+              {
+                "@name": "CHEST",
+                "@rolls": "1",
+                "@chance": "1",
+                "@initialblocktimeseconds": "360",
+                "@finalblocktimeseconds": "685"
+              },
+              {
+                "@name": "COFFER",
+                "@rolls": "3",
+                "@chance": "1",
+                "@initialblocktimeseconds": "180",
+                "@finalblocktimeseconds": "570"
               }
             ]
           }
@@ -1396,6 +1753,53 @@
           ]
         },
         {
+          "@name": "MAPSET_SOLO_YELLOW_DUNGEON",
+          "map": [
+            {
+              "@id": "SOLO_YELLOW_DUNGEON_01",
+              "@mastertemplate": "MISTS_DNG_UND_01",
+              "@templatepool": "YELLOW_RARE",
+              "@clustertier": "5",
+              "@requiredentrancetier": "5",
+              "@subbiome": "green",
+              "@softplayerlimitmin": "8",
+              "@softplayerlimitmax": "8",
+              "@hardplayercapspace": "1",
+              "@weight": "1",
+              "@clusterclosetime": "130",
+              "@clustershutdowntime": "1050"
+            },
+            {
+              "@id": "SOLO_YELLOW_DUNGEON_02",
+              "@mastertemplate": "MISTS_DNG_UND_01",
+              "@templatepool": "YELLOW_RARE",
+              "@clustertier": "6",
+              "@requiredentrancetier": "6",
+              "@subbiome": "green",
+              "@softplayerlimitmin": "8",
+              "@softplayerlimitmax": "8",
+              "@hardplayercapspace": "1",
+              "@weight": "1",
+              "@clusterclosetime": "130",
+              "@clustershutdowntime": "1050"
+            },
+            {
+              "@id": "SOLO_YELLOW_DUNGEON_03",
+              "@mastertemplate": "MISTS_DNG_UND_01",
+              "@templatepool": "YELLOW_RARE",
+              "@clustertier": "7",
+              "@requiredentrancetier": "7",
+              "@subbiome": "green",
+              "@softplayerlimitmin": "9",
+              "@softplayerlimitmax": "9",
+              "@hardplayercapspace": "1",
+              "@weight": "1",
+              "@clusterclosetime": "130",
+              "@clustershutdowntime": "1050"
+            }
+          ]
+        },
+        {
           "@name": "MAPSET_SOLO_BLACK",
           "map": [
             {
@@ -2286,6 +2690,53 @@
           ]
         },
         {
+          "@name": "MAPSET_SOLO_BLACK_DUNGEON",
+          "map": [
+            {
+              "@id": "SOLO_BLACK_DUNGEON_01",
+              "@mastertemplate": "MISTS_DNG_UND_01",
+              "@templatepool": "BLACK_RARE",
+              "@clustertier": "6",
+              "@requiredentrancetier": "6",
+              "@subbiome": "green",
+              "@softplayerlimitmin": "8",
+              "@softplayerlimitmax": "8",
+              "@hardplayercapspace": "1",
+              "@weight": "1",
+              "@clusterclosetime": "130",
+              "@clustershutdowntime": "1050"
+            },
+            {
+              "@id": "SOLO_BLACK_DUNGEON_02",
+              "@mastertemplate": "MISTS_DNG_UND_01",
+              "@templatepool": "BLACK_RARE",
+              "@clustertier": "7",
+              "@requiredentrancetier": "7",
+              "@subbiome": "green",
+              "@softplayerlimitmin": "9",
+              "@softplayerlimitmax": "9",
+              "@hardplayercapspace": "1",
+              "@weight": "1",
+              "@clusterclosetime": "130",
+              "@clustershutdowntime": "1050"
+            },
+            {
+              "@id": "SOLO_BLACK_DUNGEON_03",
+              "@mastertemplate": "MISTS_DNG_UND_01",
+              "@templatepool": "BLACK_RARE",
+              "@clustertier": "8",
+              "@requiredentrancetier": "8",
+              "@subbiome": "green",
+              "@softplayerlimitmin": "10",
+              "@softplayerlimitmax": "10",
+              "@hardplayercapspace": "1",
+              "@weight": "1",
+              "@clusterclosetime": "130",
+              "@clustershutdowntime": "1050"
+            }
+          ]
+        },
+        {
           "@name": "MAPSET_DUO_BLACK",
           "map": [
             {
@@ -2294,8 +2745,8 @@
               "@templatepool": "BLACK_NORMAL",
               "@clustertier": "6",
               "@subbiome": "green",
-              "@softplayerlimitmin": "6",
-              "@softplayerlimitmax": "10",
+              "@softplayerlimitmin": "8",
+              "@softplayerlimitmax": "12",
               "@hardplayercapspace": "3",
               "@weight": "6",
               "@clusterclosetime": "600",
@@ -2308,8 +2759,8 @@
               "@templatepool": "BLACK_NORMAL",
               "@clustertier": "6",
               "@subbiome": "green",
-              "@softplayerlimitmin": "6",
-              "@softplayerlimitmax": "10",
+              "@softplayerlimitmin": "8",
+              "@softplayerlimitmax": "12",
               "@hardplayercapspace": "3",
               "@weight": "6",
               "@clusterclosetime": "600",
@@ -2322,8 +2773,8 @@
               "@templatepool": "BLACK_NORMAL",
               "@clustertier": "6",
               "@subbiome": "green",
-              "@softplayerlimitmin": "6",
-              "@softplayerlimitmax": "10",
+              "@softplayerlimitmin": "8",
+              "@softplayerlimitmax": "12",
               "@hardplayercapspace": "3",
               "@weight": "6",
               "@clusterclosetime": "600",
@@ -2336,8 +2787,8 @@
               "@templatepool": "BLACK_NORMAL",
               "@clustertier": "6",
               "@subbiome": "green",
-              "@softplayerlimitmin": "6",
-              "@softplayerlimitmax": "10",
+              "@softplayerlimitmin": "8",
+              "@softplayerlimitmax": "12",
               "@hardplayercapspace": "3",
               "@weight": "6",
               "@clusterclosetime": "600",
@@ -2350,8 +2801,8 @@
               "@templatepool": "BLACK_NORMAL",
               "@clustertier": "6",
               "@subbiome": "green",
-              "@softplayerlimitmin": "6",
-              "@softplayerlimitmax": "10",
+              "@softplayerlimitmin": "8",
+              "@softplayerlimitmax": "12",
               "@hardplayercapspace": "3",
               "@weight": "6",
               "@clusterclosetime": "600",
@@ -2364,8 +2815,8 @@
               "@templatepool": "BLACK_NORMAL",
               "@clustertier": "6",
               "@subbiome": "green",
-              "@softplayerlimitmin": "6",
-              "@softplayerlimitmax": "10",
+              "@softplayerlimitmin": "8",
+              "@softplayerlimitmax": "12",
               "@hardplayercapspace": "3",
               "@weight": "6",
               "@clusterclosetime": "600",
@@ -2378,8 +2829,8 @@
               "@templatepool": "BLACK_NORMAL",
               "@clustertier": "6",
               "@subbiome": "green",
-              "@softplayerlimitmin": "6",
-              "@softplayerlimitmax": "10",
+              "@softplayerlimitmin": "8",
+              "@softplayerlimitmax": "12",
               "@hardplayercapspace": "3",
               "@weight": "6",
               "@clusterclosetime": "600",
@@ -2392,8 +2843,8 @@
               "@templatepool": "BLACK_NORMAL",
               "@clustertier": "6",
               "@subbiome": "green",
-              "@softplayerlimitmin": "6",
-              "@softplayerlimitmax": "10",
+              "@softplayerlimitmin": "8",
+              "@softplayerlimitmax": "12",
               "@hardplayercapspace": "3",
               "@weight": "6",
               "@clusterclosetime": "600",
@@ -2406,8 +2857,8 @@
               "@templatepool": "BLACK_NORMAL",
               "@clustertier": "6",
               "@subbiome": "green",
-              "@softplayerlimitmin": "6",
-              "@softplayerlimitmax": "10",
+              "@softplayerlimitmin": "8",
+              "@softplayerlimitmax": "12",
               "@hardplayercapspace": "3",
               "@weight": "6",
               "@clusterclosetime": "600",
@@ -2420,8 +2871,8 @@
               "@templatepool": "BLACK_NORMAL",
               "@clustertier": "6",
               "@subbiome": "green",
-              "@softplayerlimitmin": "6",
-              "@softplayerlimitmax": "10",
+              "@softplayerlimitmin": "8",
+              "@softplayerlimitmax": "12",
               "@hardplayercapspace": "3",
               "@weight": "6",
               "@clusterclosetime": "600",
@@ -2434,8 +2885,8 @@
               "@templatepool": "BLACK_NORMAL",
               "@clustertier": "6",
               "@subbiome": "green",
-              "@softplayerlimitmin": "6",
-              "@softplayerlimitmax": "10",
+              "@softplayerlimitmin": "8",
+              "@softplayerlimitmax": "12",
               "@hardplayercapspace": "3",
               "@weight": "6",
               "@clusterclosetime": "600",
@@ -2448,8 +2899,8 @@
               "@templatepool": "BLACK_NORMAL",
               "@clustertier": "6",
               "@subbiome": "green",
-              "@softplayerlimitmin": "6",
-              "@softplayerlimitmax": "10",
+              "@softplayerlimitmin": "8",
+              "@softplayerlimitmax": "12",
               "@hardplayercapspace": "3",
               "@weight": "6",
               "@clusterclosetime": "600",
@@ -2462,8 +2913,8 @@
               "@templatepool": "BLACK_NORMAL",
               "@clustertier": "6",
               "@subbiome": "green",
-              "@softplayerlimitmin": "6",
-              "@softplayerlimitmax": "10",
+              "@softplayerlimitmin": "8",
+              "@softplayerlimitmax": "12",
               "@hardplayercapspace": "3",
               "@weight": "6",
               "@clusterclosetime": "600",
@@ -2476,8 +2927,8 @@
               "@templatepool": "BLACK_NORMAL",
               "@clustertier": "6",
               "@subbiome": "green",
-              "@softplayerlimitmin": "6",
-              "@softplayerlimitmax": "10",
+              "@softplayerlimitmin": "8",
+              "@softplayerlimitmax": "12",
               "@hardplayercapspace": "3",
               "@weight": "6",
               "@clusterclosetime": "600",
@@ -2490,8 +2941,8 @@
               "@templatepool": "BLACK_NORMAL",
               "@clustertier": "6",
               "@subbiome": "green",
-              "@softplayerlimitmin": "6",
-              "@softplayerlimitmax": "10",
+              "@softplayerlimitmin": "8",
+              "@softplayerlimitmax": "12",
               "@hardplayercapspace": "3",
               "@weight": "6",
               "@clusterclosetime": "600",
@@ -2504,8 +2955,8 @@
               "@templatepool": "BLACK_UNCOMMON",
               "@clustertier": "7",
               "@subbiome": "red",
-              "@softplayerlimitmin": "6",
-              "@softplayerlimitmax": "10",
+              "@softplayerlimitmin": "8",
+              "@softplayerlimitmax": "12",
               "@hardplayercapspace": "3",
               "@weight": "3",
               "@clusterclosetime": "600",
@@ -2519,8 +2970,8 @@
               "@templatepool": "BLACK_UNCOMMON",
               "@clustertier": "7",
               "@subbiome": "red",
-              "@softplayerlimitmin": "6",
-              "@softplayerlimitmax": "10",
+              "@softplayerlimitmin": "8",
+              "@softplayerlimitmax": "12",
               "@hardplayercapspace": "3",
               "@weight": "3",
               "@clusterclosetime": "600",
@@ -2534,8 +2985,8 @@
               "@templatepool": "BLACK_UNCOMMON",
               "@clustertier": "7",
               "@subbiome": "red",
-              "@softplayerlimitmin": "6",
-              "@softplayerlimitmax": "10",
+              "@softplayerlimitmin": "8",
+              "@softplayerlimitmax": "12",
               "@hardplayercapspace": "3",
               "@weight": "3",
               "@clusterclosetime": "600",
@@ -2549,8 +3000,8 @@
               "@templatepool": "BLACK_UNCOMMON",
               "@clustertier": "7",
               "@subbiome": "red",
-              "@softplayerlimitmin": "6",
-              "@softplayerlimitmax": "10",
+              "@softplayerlimitmin": "8",
+              "@softplayerlimitmax": "12",
               "@hardplayercapspace": "3",
               "@weight": "3",
               "@clusterclosetime": "600",
@@ -2564,8 +3015,8 @@
               "@templatepool": "BLACK_UNCOMMON",
               "@clustertier": "7",
               "@subbiome": "red",
-              "@softplayerlimitmin": "6",
-              "@softplayerlimitmax": "10",
+              "@softplayerlimitmin": "8",
+              "@softplayerlimitmax": "12",
               "@hardplayercapspace": "3",
               "@weight": "3",
               "@clusterclosetime": "600",
@@ -2579,8 +3030,8 @@
               "@templatepool": "BLACK_UNCOMMON",
               "@clustertier": "7",
               "@subbiome": "red",
-              "@softplayerlimitmin": "6",
-              "@softplayerlimitmax": "10",
+              "@softplayerlimitmin": "8",
+              "@softplayerlimitmax": "12",
               "@hardplayercapspace": "3",
               "@weight": "3",
               "@clusterclosetime": "600",
@@ -2594,8 +3045,8 @@
               "@templatepool": "BLACK_UNCOMMON",
               "@clustertier": "7",
               "@subbiome": "red",
-              "@softplayerlimitmin": "6",
-              "@softplayerlimitmax": "10",
+              "@softplayerlimitmin": "8",
+              "@softplayerlimitmax": "12",
               "@hardplayercapspace": "3",
               "@weight": "3",
               "@clusterclosetime": "600",
@@ -2609,8 +3060,8 @@
               "@templatepool": "BLACK_UNCOMMON",
               "@clustertier": "7",
               "@subbiome": "red",
-              "@softplayerlimitmin": "6",
-              "@softplayerlimitmax": "10",
+              "@softplayerlimitmin": "8",
+              "@softplayerlimitmax": "12",
               "@hardplayercapspace": "3",
               "@weight": "3",
               "@clusterclosetime": "600",
@@ -2624,8 +3075,8 @@
               "@templatepool": "BLACK_UNCOMMON",
               "@clustertier": "7",
               "@subbiome": "red",
-              "@softplayerlimitmin": "6",
-              "@softplayerlimitmax": "10",
+              "@softplayerlimitmin": "8",
+              "@softplayerlimitmax": "12",
               "@hardplayercapspace": "3",
               "@weight": "3",
               "@clusterclosetime": "600",
@@ -2639,8 +3090,8 @@
               "@templatepool": "BLACK_UNCOMMON",
               "@clustertier": "7",
               "@subbiome": "red",
-              "@softplayerlimitmin": "6",
-              "@softplayerlimitmax": "10",
+              "@softplayerlimitmin": "8",
+              "@softplayerlimitmax": "12",
               "@hardplayercapspace": "3",
               "@weight": "3",
               "@clusterclosetime": "600",
@@ -2654,8 +3105,8 @@
               "@templatepool": "BLACK_UNCOMMON",
               "@clustertier": "7",
               "@subbiome": "red",
-              "@softplayerlimitmin": "6",
-              "@softplayerlimitmax": "10",
+              "@softplayerlimitmin": "8",
+              "@softplayerlimitmax": "12",
               "@hardplayercapspace": "3",
               "@weight": "3",
               "@clusterclosetime": "600",
@@ -2669,8 +3120,8 @@
               "@templatepool": "BLACK_UNCOMMON",
               "@clustertier": "7",
               "@subbiome": "red",
-              "@softplayerlimitmin": "6",
-              "@softplayerlimitmax": "10",
+              "@softplayerlimitmin": "8",
+              "@softplayerlimitmax": "12",
               "@hardplayercapspace": "3",
               "@weight": "3",
               "@clusterclosetime": "600",
@@ -2684,8 +3135,8 @@
               "@templatepool": "BLACK_UNCOMMON",
               "@clustertier": "7",
               "@subbiome": "red",
-              "@softplayerlimitmin": "6",
-              "@softplayerlimitmax": "10",
+              "@softplayerlimitmin": "8",
+              "@softplayerlimitmax": "12",
               "@hardplayercapspace": "3",
               "@weight": "3",
               "@clusterclosetime": "600",
@@ -2699,8 +3150,8 @@
               "@templatepool": "BLACK_UNCOMMON",
               "@clustertier": "7",
               "@subbiome": "red",
-              "@softplayerlimitmin": "6",
-              "@softplayerlimitmax": "10",
+              "@softplayerlimitmin": "8",
+              "@softplayerlimitmax": "12",
               "@hardplayercapspace": "3",
               "@weight": "3",
               "@clusterclosetime": "600",
@@ -2714,8 +3165,8 @@
               "@templatepool": "BLACK_UNCOMMON",
               "@clustertier": "7",
               "@subbiome": "red",
-              "@softplayerlimitmin": "6",
-              "@softplayerlimitmax": "10",
+              "@softplayerlimitmin": "8",
+              "@softplayerlimitmax": "12",
               "@hardplayercapspace": "3",
               "@weight": "3",
               "@clusterclosetime": "600",
@@ -2729,8 +3180,8 @@
               "@templatepool": "BLACK_UNCOMMON",
               "@clustertier": "7",
               "@subbiome": "red",
-              "@softplayerlimitmin": "6",
-              "@softplayerlimitmax": "10",
+              "@softplayerlimitmin": "8",
+              "@softplayerlimitmax": "12",
               "@hardplayercapspace": "3",
               "@weight": "5",
               "@clusterclosetime": "600",
@@ -2744,8 +3195,8 @@
               "@templatepool": "BLACK_UNCOMMON",
               "@clustertier": "7",
               "@subbiome": "red",
-              "@softplayerlimitmin": "6",
-              "@softplayerlimitmax": "10",
+              "@softplayerlimitmin": "8",
+              "@softplayerlimitmax": "12",
               "@hardplayercapspace": "3",
               "@weight": "5",
               "@clusterclosetime": "600",
@@ -2759,8 +3210,8 @@
               "@templatepool": "BLACK_UNCOMMON",
               "@clustertier": "7",
               "@subbiome": "red",
-              "@softplayerlimitmin": "6",
-              "@softplayerlimitmax": "10",
+              "@softplayerlimitmin": "8",
+              "@softplayerlimitmax": "12",
               "@hardplayercapspace": "3",
               "@weight": "5",
               "@clusterclosetime": "600",
@@ -2774,8 +3225,8 @@
               "@templatepool": "BLACK_UNCOMMON",
               "@clustertier": "7",
               "@subbiome": "red",
-              "@softplayerlimitmin": "6",
-              "@softplayerlimitmax": "10",
+              "@softplayerlimitmin": "8",
+              "@softplayerlimitmax": "12",
               "@hardplayercapspace": "3",
               "@weight": "5",
               "@clusterclosetime": "600",
@@ -2789,8 +3240,8 @@
               "@templatepool": "BLACK_UNCOMMON",
               "@clustertier": "7",
               "@subbiome": "red",
-              "@softplayerlimitmin": "6",
-              "@softplayerlimitmax": "10",
+              "@softplayerlimitmin": "8",
+              "@softplayerlimitmax": "12",
               "@hardplayercapspace": "3",
               "@weight": "5",
               "@clusterclosetime": "600",
@@ -2804,8 +3255,8 @@
               "@templatepool": "BLACK_UNCOMMON",
               "@clustertier": "7",
               "@subbiome": "red",
-              "@softplayerlimitmin": "6",
-              "@softplayerlimitmax": "10",
+              "@softplayerlimitmin": "8",
+              "@softplayerlimitmax": "12",
               "@hardplayercapspace": "3",
               "@weight": "5",
               "@clusterclosetime": "600",
@@ -2819,8 +3270,8 @@
               "@templatepool": "BLACK_UNCOMMON",
               "@clustertier": "7",
               "@subbiome": "red",
-              "@softplayerlimitmin": "6",
-              "@softplayerlimitmax": "10",
+              "@softplayerlimitmin": "8",
+              "@softplayerlimitmax": "12",
               "@hardplayercapspace": "3",
               "@weight": "5",
               "@clusterclosetime": "600",
@@ -2834,8 +3285,8 @@
               "@templatepool": "BLACK_UNCOMMON",
               "@clustertier": "7",
               "@subbiome": "red",
-              "@softplayerlimitmin": "6",
-              "@softplayerlimitmax": "10",
+              "@softplayerlimitmin": "8",
+              "@softplayerlimitmax": "12",
               "@hardplayercapspace": "3",
               "@weight": "5",
               "@clusterclosetime": "600",
@@ -2849,8 +3300,8 @@
               "@templatepool": "BLACK_UNCOMMON",
               "@clustertier": "7",
               "@subbiome": "red",
-              "@softplayerlimitmin": "6",
-              "@softplayerlimitmax": "10",
+              "@softplayerlimitmin": "8",
+              "@softplayerlimitmax": "12",
               "@hardplayercapspace": "3",
               "@weight": "5",
               "@clusterclosetime": "600",
@@ -2864,8 +3315,8 @@
               "@templatepool": "BLACK_UNCOMMON",
               "@clustertier": "7",
               "@subbiome": "red",
-              "@softplayerlimitmin": "6",
-              "@softplayerlimitmax": "10",
+              "@softplayerlimitmin": "8",
+              "@softplayerlimitmax": "12",
               "@hardplayercapspace": "3",
               "@weight": "5",
               "@clusterclosetime": "600",
@@ -2879,8 +3330,8 @@
               "@templatepool": "BLACK_UNCOMMON",
               "@clustertier": "7",
               "@subbiome": "red",
-              "@softplayerlimitmin": "6",
-              "@softplayerlimitmax": "10",
+              "@softplayerlimitmin": "8",
+              "@softplayerlimitmax": "12",
               "@hardplayercapspace": "3",
               "@weight": "5",
               "@clusterclosetime": "600",
@@ -2894,8 +3345,8 @@
               "@templatepool": "BLACK_UNCOMMON",
               "@clustertier": "7",
               "@subbiome": "red",
-              "@softplayerlimitmin": "6",
-              "@softplayerlimitmax": "10",
+              "@softplayerlimitmin": "8",
+              "@softplayerlimitmax": "12",
               "@hardplayercapspace": "3",
               "@weight": "5",
               "@clusterclosetime": "600",
@@ -2909,8 +3360,8 @@
               "@templatepool": "BLACK_UNCOMMON",
               "@clustertier": "7",
               "@subbiome": "red",
-              "@softplayerlimitmin": "6",
-              "@softplayerlimitmax": "10",
+              "@softplayerlimitmin": "8",
+              "@softplayerlimitmax": "12",
               "@hardplayercapspace": "3",
               "@weight": "5",
               "@clusterclosetime": "600",
@@ -2924,8 +3375,8 @@
               "@templatepool": "BLACK_UNCOMMON",
               "@clustertier": "7",
               "@subbiome": "red",
-              "@softplayerlimitmin": "6",
-              "@softplayerlimitmax": "10",
+              "@softplayerlimitmin": "8",
+              "@softplayerlimitmax": "12",
               "@hardplayercapspace": "3",
               "@weight": "5",
               "@clusterclosetime": "600",
@@ -2939,8 +3390,8 @@
               "@templatepool": "BLACK_UNCOMMON",
               "@clustertier": "7",
               "@subbiome": "red",
-              "@softplayerlimitmin": "6",
-              "@softplayerlimitmax": "10",
+              "@softplayerlimitmin": "8",
+              "@softplayerlimitmax": "12",
               "@hardplayercapspace": "3",
               "@weight": "5",
               "@clusterclosetime": "600",
@@ -2954,8 +3405,8 @@
               "@templatepool": "BLACK_RARE",
               "@clustertier": "8",
               "@subbiome": "dead",
-              "@softplayerlimitmin": "6",
-              "@softplayerlimitmax": "10",
+              "@softplayerlimitmin": "8",
+              "@softplayerlimitmax": "12",
               "@hardplayercapspace": "3",
               "@weight": "1",
               "@clusterclosetime": "600",
@@ -2969,8 +3420,8 @@
               "@templatepool": "BLACK_RARE",
               "@clustertier": "8",
               "@subbiome": "dead",
-              "@softplayerlimitmin": "6",
-              "@softplayerlimitmax": "10",
+              "@softplayerlimitmin": "8",
+              "@softplayerlimitmax": "12",
               "@hardplayercapspace": "3",
               "@weight": "1",
               "@clusterclosetime": "600",
@@ -2984,8 +3435,8 @@
               "@templatepool": "BLACK_RARE",
               "@clustertier": "8",
               "@subbiome": "dead",
-              "@softplayerlimitmin": "6",
-              "@softplayerlimitmax": "10",
+              "@softplayerlimitmin": "8",
+              "@softplayerlimitmax": "12",
               "@hardplayercapspace": "3",
               "@weight": "1",
               "@clusterclosetime": "600",
@@ -2999,8 +3450,8 @@
               "@templatepool": "BLACK_RARE",
               "@clustertier": "8",
               "@subbiome": "dead",
-              "@softplayerlimitmin": "6",
-              "@softplayerlimitmax": "10",
+              "@softplayerlimitmin": "8",
+              "@softplayerlimitmax": "12",
               "@hardplayercapspace": "3",
               "@weight": "1",
               "@clusterclosetime": "600",
@@ -3014,8 +3465,8 @@
               "@templatepool": "BLACK_RARE",
               "@clustertier": "8",
               "@subbiome": "dead",
-              "@softplayerlimitmin": "6",
-              "@softplayerlimitmax": "10",
+              "@softplayerlimitmin": "8",
+              "@softplayerlimitmax": "12",
               "@hardplayercapspace": "3",
               "@weight": "1",
               "@clusterclosetime": "600",
@@ -3029,8 +3480,8 @@
               "@templatepool": "BLACK_RARE",
               "@clustertier": "8",
               "@subbiome": "dead",
-              "@softplayerlimitmin": "6",
-              "@softplayerlimitmax": "10",
+              "@softplayerlimitmin": "8",
+              "@softplayerlimitmax": "12",
               "@hardplayercapspace": "3",
               "@weight": "1",
               "@clusterclosetime": "600",
@@ -3044,8 +3495,8 @@
               "@templatepool": "BLACK_RARE",
               "@clustertier": "8",
               "@subbiome": "dead",
-              "@softplayerlimitmin": "6",
-              "@softplayerlimitmax": "10",
+              "@softplayerlimitmin": "8",
+              "@softplayerlimitmax": "12",
               "@hardplayercapspace": "3",
               "@weight": "1",
               "@clusterclosetime": "600",
@@ -3059,8 +3510,8 @@
               "@templatepool": "BLACK_RARE",
               "@clustertier": "8",
               "@subbiome": "dead",
-              "@softplayerlimitmin": "6",
-              "@softplayerlimitmax": "10",
+              "@softplayerlimitmin": "8",
+              "@softplayerlimitmax": "12",
               "@hardplayercapspace": "3",
               "@weight": "1",
               "@clusterclosetime": "600",
@@ -3074,8 +3525,8 @@
               "@templatepool": "BLACK_RARE",
               "@clustertier": "8",
               "@subbiome": "dead",
-              "@softplayerlimitmin": "6",
-              "@softplayerlimitmax": "10",
+              "@softplayerlimitmin": "8",
+              "@softplayerlimitmax": "12",
               "@hardplayercapspace": "3",
               "@weight": "1",
               "@clusterclosetime": "600",
@@ -3089,8 +3540,8 @@
               "@templatepool": "BLACK_RARE",
               "@clustertier": "8",
               "@subbiome": "dead",
-              "@softplayerlimitmin": "6",
-              "@softplayerlimitmax": "10",
+              "@softplayerlimitmin": "8",
+              "@softplayerlimitmax": "12",
               "@hardplayercapspace": "3",
               "@weight": "1",
               "@clusterclosetime": "600",
@@ -3104,8 +3555,8 @@
               "@templatepool": "BLACK_RARE",
               "@clustertier": "8",
               "@subbiome": "dead",
-              "@softplayerlimitmin": "6",
-              "@softplayerlimitmax": "10",
+              "@softplayerlimitmin": "8",
+              "@softplayerlimitmax": "12",
               "@hardplayercapspace": "3",
               "@weight": "1",
               "@clusterclosetime": "600",
@@ -3119,8 +3570,8 @@
               "@templatepool": "BLACK_RARE",
               "@clustertier": "8",
               "@subbiome": "dead",
-              "@softplayerlimitmin": "6",
-              "@softplayerlimitmax": "10",
+              "@softplayerlimitmin": "8",
+              "@softplayerlimitmax": "12",
               "@hardplayercapspace": "3",
               "@weight": "1",
               "@clusterclosetime": "600",
@@ -3134,8 +3585,8 @@
               "@templatepool": "BLACK_RARE",
               "@clustertier": "8",
               "@subbiome": "dead",
-              "@softplayerlimitmin": "6",
-              "@softplayerlimitmax": "10",
+              "@softplayerlimitmin": "8",
+              "@softplayerlimitmax": "12",
               "@hardplayercapspace": "3",
               "@weight": "1",
               "@clusterclosetime": "600",
@@ -3149,8 +3600,8 @@
               "@templatepool": "BLACK_RARE",
               "@clustertier": "8",
               "@subbiome": "dead",
-              "@softplayerlimitmin": "6",
-              "@softplayerlimitmax": "10",
+              "@softplayerlimitmin": "8",
+              "@softplayerlimitmax": "12",
               "@hardplayercapspace": "3",
               "@weight": "1",
               "@clusterclosetime": "600",
@@ -3164,14 +3615,61 @@
               "@templatepool": "BLACK_RARE",
               "@clustertier": "8",
               "@subbiome": "dead",
-              "@softplayerlimitmin": "6",
-              "@softplayerlimitmax": "10",
+              "@softplayerlimitmin": "8",
+              "@softplayerlimitmax": "12",
               "@hardplayercapspace": "3",
               "@weight": "1",
               "@clusterclosetime": "600",
               "@clustershutdowntime": "1200",
               "@mindifficulty": "2",
               "@maxdifficulty": "4"
+            }
+          ]
+        },
+        {
+          "@name": "MAPSET_DUO_BLACK_DUNGEON",
+          "map": [
+            {
+              "@id": "DUO_BLACK_DUNGEON_01",
+              "@mastertemplate": "MISTS_DNG_UND_01",
+              "@templatepool": "BLACK_RARE",
+              "@clustertier": "6",
+              "@requiredentrancetier": "6",
+              "@subbiome": "green",
+              "@softplayerlimitmin": "12",
+              "@softplayerlimitmax": "12",
+              "@hardplayercapspace": "2",
+              "@weight": "1",
+              "@clusterclosetime": "130",
+              "@clustershutdowntime": "1050"
+            },
+            {
+              "@id": "DUO_BLACK_DUNGEON_02",
+              "@mastertemplate": "MISTS_DNG_UND_01",
+              "@templatepool": "BLACK_RARE",
+              "@clustertier": "7",
+              "@requiredentrancetier": "7",
+              "@subbiome": "green",
+              "@softplayerlimitmin": "12",
+              "@softplayerlimitmax": "12",
+              "@hardplayercapspace": "2",
+              "@weight": "1",
+              "@clusterclosetime": "130",
+              "@clustershutdowntime": "1050"
+            },
+            {
+              "@id": "DUO_BLACK_DUNGEON_03",
+              "@mastertemplate": "MISTS_DNG_UND_01",
+              "@templatepool": "BLACK_RARE",
+              "@clustertier": "8",
+              "@requiredentrancetier": "8",
+              "@subbiome": "green",
+              "@softplayerlimitmin": "12",
+              "@softplayerlimitmax": "12",
+              "@hardplayercapspace": "2",
+              "@weight": "1",
+              "@clusterclosetime": "130",
+              "@clustershutdowntime": "1050"
             }
           ]
         }
@@ -7003,14 +7501,17 @@
           "@uniquename": "CAGED_WISP_MORGANA",
           "@cageopendurationsec": "3",
           "rewards": {
-            "pvekillfame": {
-              "@tier": "4",
-              "@points": "780",
-              "@scalewithclusterquestfactor": "true"
-            },
-            "mistsfactionstanding": {
-              "@points": "80",
-              "@scalewithclusterquestfactor": "true"
+            "pvpchallengeobjective": {
+              "reward": [
+                {
+                  "@clusterdangerbonustype": "mistsyellow",
+                  "@objectivename": "PVPCHALLENGE_MISTS_CAGED_WISP"
+                },
+                {
+                  "@clusterdangerbonustype": "mistsblack",
+                  "@objectivename": "PVPCHALLENGE_MISTS_CAGED_WISP"
+                }
+              ]
             }
           }
         },
@@ -7018,14 +7519,17 @@
           "@uniquename": "CAGED_WISP_HERETIC",
           "@cageopendurationsec": "3",
           "rewards": {
-            "pvekillfame": {
-              "@tier": "4",
-              "@points": "780",
-              "@scalewithclusterquestfactor": "true"
-            },
-            "mistsfactionstanding": {
-              "@points": "80",
-              "@scalewithclusterquestfactor": "true"
+            "pvpchallengeobjective": {
+              "reward": [
+                {
+                  "@clusterdangerbonustype": "mistsyellow",
+                  "@objectivename": "PVPCHALLENGE_MISTS_CAGED_WISP"
+                },
+                {
+                  "@clusterdangerbonustype": "mistsblack",
+                  "@objectivename": "PVPCHALLENGE_MISTS_CAGED_WISP"
+                }
+              ]
             }
           }
         },
@@ -7033,14 +7537,17 @@
           "@uniquename": "CAGED_WISP_UNDEAD",
           "@cageopendurationsec": "3",
           "rewards": {
-            "pvekillfame": {
-              "@tier": "4",
-              "@points": "780",
-              "@scalewithclusterquestfactor": "true"
-            },
-            "mistsfactionstanding": {
-              "@points": "80",
-              "@scalewithclusterquestfactor": "true"
+            "pvpchallengeobjective": {
+              "reward": [
+                {
+                  "@clusterdangerbonustype": "mistsyellow",
+                  "@objectivename": "PVPCHALLENGE_MISTS_CAGED_WISP"
+                },
+                {
+                  "@clusterdangerbonustype": "mistsblack",
+                  "@objectivename": "PVPCHALLENGE_MISTS_CAGED_WISP"
+                }
+              ]
             }
           }
         }

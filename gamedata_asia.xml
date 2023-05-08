@@ -38,7 +38,7 @@
     <SmartClusterQueue EntranceRadius="300" MinItemPower="700" ExitCooldownOnJoinInSeconds="0" EarlyRetreatTimeWindowInSeconds="60" EarlyRetreatPenaltyInSeconds="600" SkipClusterCooldownInSeconds="60" DefaultMinActiveTimeBeforeSkippingAllowed="120" MinDeactivatedTimeBeforeActiveTimerResets="150" ReservedFactionSeats="300" MinSeatsPerFaction="50" />
 
     <transactionlimits>	    
-		<gold GoldTransactionLimitUntrustedPerDay="100" GoldTransactionLimitUntrustedJourneymanPerDay="500" GoldTransactionLimitPaidSteamOnlyUntrustedPerDay="600" GoldTransactionLimitPaidUntrustedPerDay="2000" GoldTransactionLimitLimitedPerDay="4000" />
+		<gold GoldTransactionLimitUntrustedPerDay="100" GoldTransactionLimitUntrustedJourneymanPerDay="500" GoldTransactionLimitPaidSteamOnlyUntrustedPerDay="50" GoldTransactionLimitPaidUntrustedPerDay="2000" GoldTransactionLimitLimitedPerDay="4000" />
 	</transactionlimits>
     
     <Territory territoryclaimtimeinsec="15" />
@@ -104,6 +104,7 @@
     <MiniMap showgraveseconds="300" />
     <TrainingDummy comboduration="5" />
     <CrimeWarning donotshowagainsecondes="900" />
+    <DefaultTurningSpeed mobs="14.0" />
   </ClientSettings>
   <Items>
     <AbilityPowerProgression basedamage="100" baseload="25" resistanceprogression="0.336554399" hitpointprogression="0.663445601" loadprogression="2.264101591" ccdurationfactorplayers="0.7" ccdurationfactormobs="0.5" />
@@ -447,7 +448,7 @@
   <MountSettings halfmountvfx="FX/ClientPrefabs/fx_spell_mount_radius" halfmountvfx_originalSize="15" combatmountcooldown="10" hostiledismountdetectionradius="40" longhostiledismountdetectionradius="40" />
   <VfxSettings fadeouttime="1.0" />
 
-  <TownPortalSettings maxLoad="1.0" distanceCostCap="10" distanceModifier="0.5" costModifier="0.225" baseCost="100.0" slotDisabledTimeAfterTownPortalFailedByServerInSec="2.0" />    
+  <TownPortalSettings maxLoad="1.0" distanceCostCap="10" distanceModifier="0.5" costModifier="0.225" baseCost="100.0" slotDisabledTimeAfterTownPortalFailedByServerInSec="2.0" teleportfromroadstobrecilienmodifier="0.5" />    
 
   <DuelSettings>
     <DuelAreaLeftTimerInSeconds value="10" />
@@ -1031,7 +1032,9 @@
     <ClusterDangerBonus type="expedition" icon="safe" famefactor="1" moblootfactor="0.5" mobsilverlootfactor="0.5" questscalingfactor="1" />
     <ClusterDangerBonus type="tunnel" icon="black" famefactor="6" moblootfactor="7.1" mobsilverlootfactor="8.17" questscalingfactor="6" />
     <ClusterDangerBonus type="mistsyellow" icon="yellow" famefactor="1.8" moblootfactor="1.33" mobsilverlootfactor="1.53" questscalingfactor="1.8" />
-    <ClusterDangerBonus type="mistsblack" icon="black" famefactor="3.16" moblootfactor="2.6" mobsilverlootfactor="3" questscalingfactor="3.16" />    
+    <ClusterDangerBonus type="mistsblack" icon="black" famefactor="3.16" moblootfactor="2.6" mobsilverlootfactor="3" questscalingfactor="3.16" />
+	<ClusterDangerBonus type="mistsdungeonyellow" icon="yellow" famefactor="2.4" moblootfactor="1.33" mobsilverlootfactor="1.53" questscalingfactor="1.8" />
+	<ClusterDangerBonus type="mistsdungeonblack" icon="black" famefactor="4.2" moblootfactor="2.6" mobsilverlootfactor="3" questscalingfactor="3.16" />
   </ClusterDangerBonusTypes>
   <QuestScalingByClusterTier>
     <Tier tier="1" scalingfactor="1" />

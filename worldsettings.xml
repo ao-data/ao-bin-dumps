@@ -800,7 +800,7 @@
                 cropyieldfactor="2"
                 clusterdangerbonustype="yellow"
                 knockdownbuffaftergetup="SPAWN_KNOCKDOWN_INVULNERABILITY"
-                requiredreputationtoenter="-50000"
+                requiredreputationtoenter="-50000" 
                 allowfactionflagging="false"
                 vanityvisibility="Allowed"
                 ignoredestructionmultiplier="true"
@@ -877,6 +877,89 @@
                 animalgrowthfactor="0.5"
                 cropyieldfactor="2"
                 clusterdangerbonustype="mistsblack"
+                requiredreputationtoenter="-50000"
+                allowfactionflagging="false"
+                ignoreguilds="true"
+                vanityvisibility="Allowed"
+                zergdebuffenabled="false"
+                ignoredestructionmultiplier="false"
+                mightrewards="true"
+                showpvpplayeronminimapthreshold="10"
+                outlawbuffenabled="false"
+                allowtrade="Disabled"
+               />
+		<archetype
+		        name="MISTS_DUNGEON_SOLO_YELLOW"
+		        uipvptype="Limited"
+		        pvpwarningtype="yellow"
+		        pvprule="PvpForced"
+		        playersarelethal="false"
+		        mobsarelethal="false"
+		        showpvpplayeronminimap="true"
+		        showfriendlycount="false"
+		        showhostilecount="false"
+		        buildingcraftcapacityregenfactor="1"
+		        itempowersoftcap="0"
+		        itempowerscalingfactor="0"
+		        animalgrowthfactor="0.5"
+		        cropyieldfactor="2"
+		        clusterdangerbonustype="mistsdungeonyellow"
+		        knockdownbuffaftergetup="SPAWN_KNOCKDOWN_INVULNERABILITY"
+		        requiredreputationtoenter="-20000"
+		        allowfactionflagging="false"
+		        ignoreguilds="true"
+		        vanityvisibility="Allowed"
+		        zergdebuffenabled="false"
+		        ignoredestructionmultiplier="true"
+		        mightrewards="true"
+		        blockmightorfavorrewardobjectives="true"
+		        showpvpplayeronminimapthreshold="10"
+		        outlawbuffenabled="false"
+		        allowtrade="Disabled"
+                />
+		<archetype
+                name="MISTS_DUNGEON_SOLO_BLACK"
+                uipvptype="Black"
+                pvpwarningtype="black"
+                pvprule="PvpForced"
+                playersarelethal="true"
+                mobsarelethal="false"
+                showpvpplayeronminimap="true"
+                showfriendlycount="false"
+                showhostilecount="false"
+                buildingcraftcapacityregenfactor="1"
+                itempowersoftcap="0"
+                itempowerscalingfactor="0"
+                animalgrowthfactor="0.5"
+                cropyieldfactor="2"
+                clusterdangerbonustype="mistsdungeonblack"
+                requiredreputationtoenter="-50000"
+                allowfactionflagging="false"
+                ignoreguilds="true"
+                vanityvisibility="Allowed"
+                zergdebuffenabled="false"
+                ignoredestructionmultiplier="false"
+                mightrewards="true"
+                showpvpplayeronminimapthreshold="10"
+                outlawbuffenabled="false"
+                allowtrade="Disabled"
+                />
+		<archetype
+                name="MISTS_DUNGEON_DUO_BLACK"
+                uipvptype="Black"
+                pvpwarningtype="black"
+                pvprule="PvpForced"
+                playersarelethal="true"
+                mobsarelethal="false"
+                showpvpplayeronminimap="true"
+                showfriendlycount="false"
+                showhostilecount="false"
+                buildingcraftcapacityregenfactor="1"
+                itempowersoftcap="0"
+                itempowerscalingfactor="0"
+                animalgrowthfactor="0.5"
+                cropyieldfactor="2"
+                clusterdangerbonustype="mistsdungeonblack"
                 requiredreputationtoenter="-50000"
                 allowfactionflagging="false"
                 ignoreguilds="true"
@@ -3177,7 +3260,7 @@
                      furnitureobjectsallowed="false"
                      isdungeon="false"
                      hasshortspawnbuffonleave="false"
-                     allowmounts="true">
+                     allowmounts="false">
           <spawnbuff>
             <buff name="BUFFSHRINE_OUTLANDCITY_INVISIBILITY_REMOVE" isclusterchange="Must" />
             <buff name="ARENA_ENTER" isclusterchange="Must" />
@@ -3194,7 +3277,7 @@
                      furnitureobjectsallowed="false"
                      isdungeon="false"
                      hasshortspawnbuffonleave="false"
-                     allowmounts="true">
+                     allowmounts="false">
           <spawnbuff>
             <buff name="BUFFSHRINE_OUTLANDCITY_INVISIBILITY_REMOVE" isclusterchange="Must" />
             <buff name="ARENA_ENTER" isclusterchange="Must" />
@@ -3212,6 +3295,23 @@
                      furnitureobjectsallowed="false"
                      isdungeon="false"
                      hasshortspawnbuffonleave="false"
+                     allowmounts="false">
+			<spawnbuff>
+				<buff name="BUFFSHRINE_OUTLANDCITY_INVISIBILITY_REMOVE" isclusterchange="Must" />
+				<buff name="ARENA_ENTER" isclusterchange="Must" />
+                <buff name="ARENA_OVERLOAD_PROTECTION" />
+			</spawnbuff>
+			<mobspawns defaulttimefactor="1.0" />
+			<resourcespawns defaulttimefactor="9999.0" />
+		</clustertype>
+		
+		<clustertype name="ARENA_CRYSTAL_20VS20"
+                     archetype="ARENA_CRYSTAL"
+                     spellcooldownsonenteringseconds="0"
+                     editorcolor="255, 255, 0"
+                     furnitureobjectsallowed="false"
+                     isdungeon="false"
+                     hasshortspawnbuffonleave="false"
                      allowmounts="true">
 			<spawnbuff>
 				<buff name="BUFFSHRINE_OUTLANDCITY_INVISIBILITY_REMOVE" isclusterchange="Must" />
@@ -3221,7 +3321,7 @@
 			<mobspawns defaulttimefactor="1.0" />
 			<resourcespawns defaulttimefactor="9999.0" />
 		</clustertype>
-
+				
         <!-- CORRUPTED DUNGEONS -->
         <clustertype name="CORRUPTED_DUNGEON_BEGINNER"
                      archetype="CORRUPTED_DUNGEON_BEGINNER"
@@ -3311,7 +3411,7 @@
                 <!-- order is important: immunity LAST (obvious, right?) -->
             </spawnbuff>
           <mobspawns defaulttimefactor="1">
-            <mobspawnlimit op="equal" upgradelevelindex="8" limit="5"/>
+            <mobspawnlimit op="equal" upgradelevelindex="7" limit="5"/>
             <mobspawnlimit op="equal" upgradelevelindex="9" limit="3"/>
             <mobspawnlimit op="equal" upgradelevelindex="11" limit="1"/>
           </mobspawns>
@@ -3352,7 +3452,7 @@
                 <!-- order is important: immunity LAST (obvious, right?) -->
             </spawnbuff>
           <mobspawns defaulttimefactor="1">
-            <mobspawnlimit op="equal" upgradelevelindex="8" limit="5"/>
+            <mobspawnlimit op="equal" upgradelevelindex="7" limit="5"/>
             <mobspawnlimit op="equal" upgradelevelindex="9" limit="3"/>
             <mobspawnlimit op="equal" upgradelevelindex="11" limit="1"/>
           </mobspawns>
@@ -3393,7 +3493,7 @@
                 <!-- order is important: immunity LAST (obvious, right?) -->
             </spawnbuff>
           <mobspawns defaulttimefactor="1">
-            <mobspawnlimit op="equal" upgradelevelindex="8" limit="5"/>
+            <mobspawnlimit op="equal" upgradelevelindex="7" limit="5"/>
             <mobspawnlimit op="equal" upgradelevelindex="9" limit="3"/>
             <mobspawnlimit op="equal" upgradelevelindex="11" limit="1"/>
           </mobspawns>
@@ -3434,7 +3534,7 @@
                 <!-- order is important: immunity LAST (obvious, right?) -->
             </spawnbuff>
           <mobspawns defaulttimefactor="1">
-            <mobspawnlimit op="equal" upgradelevelindex="8" limit="5"/>
+            <mobspawnlimit op="equal" upgradelevelindex="7" limit="5"/>
             <mobspawnlimit op="equal" upgradelevelindex="9" limit="3"/>
             <mobspawnlimit op="equal" upgradelevelindex="11" limit="1"/>
           </mobspawns>
@@ -3478,7 +3578,7 @@
                 <!-- order is important: immunity LAST (obvious, right?) -->
             </spawnbuff>
           <mobspawns defaulttimefactor="1">
-            <mobspawnlimit op="equal" upgradelevelindex="8" limit="5"/>
+            <mobspawnlimit op="equal" upgradelevelindex="7" limit="5"/>
             <mobspawnlimit op="equal" upgradelevelindex="9" limit="3"/>
             <mobspawnlimit op="equal" upgradelevelindex="11" limit="1"/>
           </mobspawns>
@@ -3519,7 +3619,7 @@
                 <!-- order is important: immunity LAST (obvious, right?) -->
             </spawnbuff>
           <mobspawns defaulttimefactor="1">
-            <mobspawnlimit op="equal" upgradelevelindex="8" limit="5"/>
+            <mobspawnlimit op="equal" upgradelevelindex="7" limit="5"/>
             <mobspawnlimit op="equal" upgradelevelindex="9" limit="3"/>
             <mobspawnlimit op="equal" upgradelevelindex="11" limit="1"/>
           </mobspawns>
@@ -3560,7 +3660,7 @@
                 <!-- order is important: immunity LAST (obvious, right?) -->
             </spawnbuff>
           <mobspawns defaulttimefactor="1">
-            <mobspawnlimit op="equal" upgradelevelindex="8" limit="5"/>
+            <mobspawnlimit op="equal" upgradelevelindex="7" limit="5"/>
             <mobspawnlimit op="equal" upgradelevelindex="9" limit="3"/>
             <mobspawnlimit op="equal" upgradelevelindex="11" limit="1"/>
           </mobspawns>
@@ -3604,7 +3704,7 @@
                 <!-- order is important: immunity LAST (obvious, right?) -->
             </spawnbuff>
           <mobspawns defaulttimefactor="1">
-            <mobspawnlimit op="equal" upgradelevelindex="8" limit="5"/>
+            <mobspawnlimit op="equal" upgradelevelindex="7" limit="5"/>
             <mobspawnlimit op="equal" upgradelevelindex="9" limit="3"/>
             <mobspawnlimit op="equal" upgradelevelindex="11" limit="1"/>
           </mobspawns>
@@ -3645,7 +3745,7 @@
                 <!-- order is important: immunity LAST (obvious, right?) -->
             </spawnbuff>
           <mobspawns defaulttimefactor="1">
-            <mobspawnlimit op="equal" upgradelevelindex="8" limit="5"/>
+            <mobspawnlimit op="equal" upgradelevelindex="7" limit="5"/>
             <mobspawnlimit op="equal" upgradelevelindex="9" limit="3"/>
             <mobspawnlimit op="equal" upgradelevelindex="11" limit="1"/>
           </mobspawns>
@@ -3670,6 +3770,7 @@
                      townportalspell="TOWN_PORTAL_LONG"
                      townportalzonemodifier="7.15"
                      allowpowercrystals="HIDEOUT_TUNNEL TREASURE_WISP_BLACK"
+                     hqconstructionrequiresbooster="false"
 
                      tunnelpreset="TUNNEL_HIDEOUT"
                      forceshowtimezone="true">
@@ -3690,6 +3791,8 @@
                 <!-- order is important: immunity LAST (obvious, right?) -->
             </spawnbuff>
           <mobspawns defaulttimefactor="1">
+            <mobspawnlimit op="equal" upgradelevelindex="7" limit="5"/>
+            <mobspawnlimit op="equal" upgradelevelindex="9" limit="3"/>
             <mobspawnlimit op="equal" upgradelevelindex="11" limit="1"/>
           </mobspawns>
         </clustertype>
@@ -3711,6 +3814,7 @@
                      townportalspell="TOWN_PORTAL_LONG"
                      townportalzonemodifier="7.15"
                      allowpowercrystals="HIDEOUT_TUNNEL TREASURE_WISP_BLACK"
+                     hqconstructionrequiresbooster="false"
 
                      tunnelpreset="TUNNEL_HIDEOUT_DEEP"
                      forceshowtimezone="true">
@@ -3731,7 +3835,7 @@
                 <!-- order is important: immunity LAST (obvious, right?) -->
             </spawnbuff>
           <mobspawns defaulttimefactor="1">
-            <mobspawnlimit op="equal" upgradelevelindex="8" limit="5"/>
+            <mobspawnlimit op="equal" upgradelevelindex="7" limit="5"/>
             <mobspawnlimit op="equal" upgradelevelindex="9" limit="3"/>
             <mobspawnlimit op="equal" upgradelevelindex="11" limit="1"/>
           </mobspawns>
@@ -3750,6 +3854,8 @@
                    longhostiledismount="true"                   
                    mounthitpointsmaxcap="900"
                    mounthitspointsregenerationmaxcap="9"
+                   mountbuff_physicalarmorcap="120"
+                   mountbuff_magicresistancecap="120"                   
                    allowfactionrewards="false"
                    allowpowercrystals="TREASURE_WISP_YELLOW"
                    townportalspell="TOWN_PORTAL_SHORT"
@@ -3886,7 +3992,9 @@
                    allowmounts="true"
                    longhostiledismount="true"                   
                    mounthitpointsmaxcap="900"
-                   mounthitspointsregenerationmaxcap="9"                   
+                   mounthitspointsregenerationmaxcap="9"
+                   mountbuff_physicalarmorcap="120"
+                   mountbuff_magicresistancecap="120"                    
                    allowfactionrewards="false"
                    allowpowercrystals="TREASURE_WISP_BLACK"
                    townportalspell="TOWN_PORTAL_LONG"
@@ -4026,9 +4134,11 @@
                    furnitureobjectsallowed="false"
                    isdungeon="false"
                    hasshortspawnbuffonleave="false"
-                   allowmounts="true"
+                   allowmounts="true"                   
                    mounthitpointsmaxcap="1200"
-                   mounthitspointsregenerationmaxcap="12"                   
+                   mounthitspointsregenerationmaxcap="12"
+                   mountbuff_physicalarmorcap="120"
+                   mountbuff_magicresistancecap="120"
                    allowfactionrewards="false"
                    allowpowercrystals="TREASURE_WISP_BLACK"
                    townportalspell="TOWN_PORTAL_LONG"
@@ -4160,6 +4270,133 @@
           <mobspawn name="T8_MOB_CRITTER_WOOD_MISTS_DEAD" timefactor="9999"/>
         </mobspawns>
       </clustertype>
+
+		<!--Mists-->
+		<clustertype name="MISTS_DUNGEON_SOLO_YELLOW"
+					 archetype="MISTS_DUNGEON_SOLO_YELLOW"
+					 logoutseconds="10"
+					 spellcooldownsonenteringseconds="15"
+					 editorcolor="255, 255, 0"
+					 furnitureobjectsallowed="false"
+					 isdungeon="false"
+					 hasshortspawnbuffonleave="false"
+					 allowmounts="false"
+					 longhostiledismount="true"
+					 mounthitpointsmaxcap="900"
+					 mounthitspointsregenerationmaxcap="9"
+					 mountbuff_physicalarmorcap="120"
+					 mountbuff_magicresistancecap="120"
+					 allowfactionrewards="false"
+					 allowpowercrystals="TREASURE_WISP_YELLOW"
+					 townportalspell="TOWN_PORTAL_SHORT"
+					 townportalzonemodifier="0.55"
+					 disablespellsbytag="gvgmountcombatspell"
+					 displaypvpdeathsonmapandchat="false"
+					 playeranonymity="true">
+
+			<spawnbuff>
+				<!-- The first buff makes you immune to invul shields for respawning in the open world -->
+				<buff name="SPAWN_BUFFIMMUNITY_ONDEATH" isrevive="Must" />
+				<buff name="SPAWN_INVULNERABILITY" ispvppossible="Must" isclusterchange="Must" fromshortspawnbuffcluster="MustNot" />
+				<buff name="SPAWN_INVULNERABILITY" ispvppossible="Must"
+					  isingvg="Must" />
+				<!-- This for getting ported out after a resource gvg (gets ported in the same cluster) -->
+				<buff name="SPAWN_INVULNERABILITY_SHORT" ispvppossible="Must" isclusterchange="Must" fromshortspawnbuffcluster="Must" />
+				<buff name="MISTS_ENTER" isclusterchange="Must" />
+				<buff name="SPAWN_SPEED" ispvppossible="Must" isclusterchange="Must" />
+				<buff name="HIDEOUT_BONUS_REMOVAL" ispvppossible="DoesNotMatter" isclusterchange="Must" />
+				<buff name="SPAWN_BUFFIMMUNITY" ispvppossible="Must" isclusterchange="Must" />
+				<!-- order is important: immunity LAST (obvious, right?) -->
+			</spawnbuff>
+			<gvgseasonpoints mobrewardfactor="0" />
+		</clustertype>
+
+		<clustertype name="MISTS_DUNGEON_SOLO_BLACK"
+					 archetype="MISTS_DUNGEON_SOLO_BLACK"
+					 spellcooldownsonenteringseconds="15"
+					 editorcolor="158, 158, 158"
+					 furnitureobjectsallowed="false"
+					 isdungeon="false"
+					 hasshortspawnbuffonleave="false"
+					 allowmounts="false"
+					 longhostiledismount="true"
+					 mounthitpointsmaxcap="900"
+					 mounthitspointsregenerationmaxcap="9"
+					 mountbuff_physicalarmorcap="120"
+					 mountbuff_magicresistancecap="120"
+					 allowfactionrewards="false"
+					 allowpowercrystals="TREASURE_WISP_BLACK"
+					 townportalspell="TOWN_PORTAL_LONG"
+					 townportalzonemodifier="7.15"
+					 disablespellsbytag="gvgmountcombatspell"
+					 displaypvpdeathsonmapandchat="false"
+					 playeranonymity="true">
+
+			<spawnbuff>
+				<!-- The first buff makes you immune to invul shields for respawning in the open world -->
+				<buff name="SPAWN_BUFFIMMUNITY_ONDEATH" isrevive="Must" />
+				<buff name="HIDEOUT_EXIT_ON_RESPAWN" isrevive="Must" />
+				<buff name="SPAWN_INVULNERABILITY" ispvppossible="Must" isclusterchange="Must" fromhideout="MustNot"
+					  fromshortspawnbuffcluster="MustNot" />
+				<buff name="SPAWN_INVULNERABILITY" ispvppossible="Must"
+					  isingvg="Must" />
+				<!-- This for getting ported out after a resource gvg (gets ported in the same cluster) -->
+				<buff name="SPAWN_INVULNERABILITY_SHORT" ispvppossible="Must" isclusterchange="Must" fromhideout="MustNot"
+					  fromshortspawnbuffcluster="Must" />
+				<buff name="SPAWN_INVULNERABILITY_HIDEOUT" fromhideout="Must" />
+				<buff name="MISTS_ENTER" isclusterchange="Must" />
+				<buff name="CANNOT_ENTER_HIDEOUT" ispvppossible="Must" fromstaticdungeon="Must" fromhideout="MustNot" />
+				<buff name="SPAWN_SPEED" ispvppossible="Must" isclusterchange="Must" fromhideout="MustNot" />
+				<buff name="SPAWN_BUFFIMMUNITY" ispvppossible="Must" isclusterchange="Must" fromhideout="DoesNotMatter" />
+				<buff name="SPAWN_BUFFIMMUNITY" fromhideout="Must" />
+
+				<!-- order is important: immunity LAST (obvious, right?) -->
+			</spawnbuff>
+			<gvgseasonpoints mobrewardfactor="1" />
+		</clustertype>
+
+		<clustertype name="MISTS_DUNGEON_DUO_BLACK"
+					 archetype="MISTS_DUNGEON_DUO_BLACK"
+					 spellcooldownsonenteringseconds="15"
+					 editorcolor="158, 158, 158"
+					 furnitureobjectsallowed="false"
+					 isdungeon="false"
+					 hasshortspawnbuffonleave="false"
+					 allowmounts="false"
+					 mounthitpointsmaxcap="1200"
+					 mounthitspointsregenerationmaxcap="12"
+					 mountbuff_physicalarmorcap="120"
+					 mountbuff_magicresistancecap="120"
+					 allowfactionrewards="false"
+					 allowpowercrystals="TREASURE_WISP_BLACK"
+					 townportalspell="TOWN_PORTAL_LONG"
+					 townportalzonemodifier="7.15"
+					 disablespellsbytag="gvgmountcombatspell"
+					 displaypvpdeathsonmapandchat="false"
+					 playeranonymity="true">
+
+			<spawnbuff>
+				<!-- The first buff makes you immune to invul shields for respawning in the open world -->
+				<buff name="SPAWN_BUFFIMMUNITY_ONDEATH" isrevive="Must" />
+				<buff name="HIDEOUT_EXIT_ON_RESPAWN" isrevive="Must" />
+				<buff name="SPAWN_INVULNERABILITY" ispvppossible="Must" isclusterchange="Must" fromhideout="MustNot"
+					  fromshortspawnbuffcluster="MustNot" />
+				<buff name="SPAWN_INVULNERABILITY" ispvppossible="Must"
+					  isingvg="Must" />
+				<!-- This for getting ported out after a resource gvg (gets ported in the same cluster) -->
+				<buff name="SPAWN_INVULNERABILITY_SHORT" ispvppossible="Must" isclusterchange="Must" fromhideout="MustNot"
+					  fromshortspawnbuffcluster="Must" />
+				<buff name="SPAWN_INVULNERABILITY_HIDEOUT" fromhideout="Must" />
+				<buff name="MISTS_ENTER_DUO" isclusterchange="Must" />
+				<buff name="CANNOT_ENTER_HIDEOUT" ispvppossible="Must" fromstaticdungeon="Must" fromhideout="MustNot" />
+				<buff name="SPAWN_SPEED" ispvppossible="Must" isclusterchange="Must" fromhideout="MustNot" />
+				<buff name="SPAWN_BUFFIMMUNITY" ispvppossible="Must" isclusterchange="Must" fromhideout="DoesNotMatter" />
+				<buff name="SPAWN_BUFFIMMUNITY" fromhideout="Must" />
+
+				<!-- order is important: immunity LAST (obvious, right?) -->
+			</spawnbuff>
+			<gvgseasonpoints mobrewardfactor="1" />
+		</clustertype>
 
     </clustertypes>
 

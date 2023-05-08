@@ -3051,7 +3051,7 @@
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_SMALLCAST_MACE">
     <OnCastStart name="Play_mace_swoosh_small" />
-    <OnSpellHit name="Play_melee_impact_small_add" >
+    <OnSpellHit name="Play_melee_impact_small_heavy" >
       <ImpactType/>
     </OnSpellHit>
   </WwiseEventInfo>
@@ -3279,6 +3279,11 @@
   <WwiseEventInfo name="SPELL_LANCE_CHARGE" >
     <OnCastStart name="Play_lance_load_short" />
     <OnCastFinished name="Play_lance_charge" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_LANCE_IMPACT_BIG">
+	<OnSpellHit name="Play_grail_impact_medium"  >
+      <ImpactType/>
+    </OnSpellHit>
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_SPIN">
     <OnCastStart name="Play_melee_spin" />
@@ -4594,6 +4599,9 @@
   <WwiseEventInfo name="SPELL_FIRE_KNOCKBACK_IMPACT">
 	<OnSpellHit name="Play_fire_knockback" />
   </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_FIRE_KNOCKBACK_IMPACT_LIMITED">
+	<OnSpellHit name="Play_fire_knockback_multiple" />
+  </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_FIRE_CHANNELING_LOAD_PYROBLAST">
 	<OnChannelingStart name="Play_fire_cast_load_huge" />
 	<OnChannelingCancelled name="Stop_fire_cast_load_huge" />
@@ -4760,6 +4768,9 @@
 	<OnCastStart name="Play_frost_cast_load_medium_lance" />
 	<OnCastCanceled name="Stop_frost_cast_load_medium_lance" />
 	<OnCastInterrupted name="Stop_frost_cast_load_medium_lance" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_FROST_CAST_LANCE_INSTANT">
+	<OnCastFinished name="Play_frost_cast_medium_lance" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_FROST_FROZENCRYSTAL_CAST">
     <OnCastFinished name="Play_frost_cast_big_frozencrystal" />
@@ -5350,7 +5361,11 @@
   <WwiseEventInfo name="SPELL_CAST_WILD_MAGIC_FIRE">
 	<OnCastFinished name="Play_fire_cast_small_q_searingflame"/>
   </WwiseEventInfo>
-
+	
+  <WwiseEventInfo name="SPELL_ARMOR_AVALON_LIGHTNING_PULSE">
+	<OnCastFinished name="Play_armor_avalon_lightning_pulse"/>
+  </WwiseEventInfo>
+	
   <WwiseEventInfo name="SPELL_UI_LOOTCHEST_OPEN">
     <OnCastStart name="Play_ui_reward_open" />
   </WwiseEventInfo>
@@ -5378,6 +5393,30 @@
     <OnCastFinished name="Play_hellgate_cooldown_reset"/>
   </WwiseEventInfo>
 
+  <WwiseEventInfo name="SPELL_COLLECT_ROSE_SHRINE_BUFF">
+	<OnSpellHit name="Play_mist_dungeon_collect_buff_rose" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_COLLECT_SWORD_SHRINE_BUFF">
+	<OnSpellHit name="Play_mist_dungeon_collect_buff_sword" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_COLLECT_SCALES_SHRINE_BUFF">
+	<OnSpellHit name="Play_mist_dungeon_collect_buff_scales" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_ACTIVATE_SCALES_SHRINE_BUFF">
+	<OnSpellHit name="Play_mist_dungeon_activate_buff_scales" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_ACTIVATE_ROSE_SHRINE_BUFF">
+	<OnSpellHit name="Play_mist_dungeon_activate_buff_rose" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_ACTIVATE_SWORD_SHRINE_BUFF">
+	<OnSpellHit name="Play_mist_dungeon_activate_buff_sword" />
+	<OnSpellRemoved name="Play_shrink" />
+  </WwiseEventInfo>
 
   <!-- Kill Emotes -->
   <WwiseEventInfo name="SPELL_KILL_EMOTE_TOMBSTONE" >
@@ -5661,6 +5700,14 @@
 
   <WwiseEventInfo name="SPELL_MOUNT_OWL_SHIELD">
     <OnCastFinished name="Play_owl_load" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_MOUNT_OWL_RISE" >
+	<OnCastFinished name="Play_mount_owl_rise" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_MOUNT_OWL_FALL" >
+	<OnCastFinished name="Play_mount_owl_dive" />
   </WwiseEventInfo>
   
   <WwiseEventInfo name="SPELL_MOUNT_MULE_SHOOT">
@@ -7322,12 +7369,26 @@
     <OnCastCanceled name="Stop_grail_cast_load_short" />
     <OnCastFinished name="Play_grail_cast_soft" />
   </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_AVALON_MAGE_ATTACK">
+	<OnCastStart name="Play_grail_cast_load_medium_02" />
+	<OnCastCanceled name="Stop_grail_cast_load_medium_02" />
+	<OnCastInterrupted name="Stop_grail_cast_load_medium_02" />
+	<OnCastFinished name="Play_grail_cast_small_additional" />
+  </WwiseEventInfo>
       
   <WwiseEventInfo name="SPELL_AVALON_MAGE_LASER_CHANNEL">
     <OnChannelingStart name="Play_mob_avalon_mage_laser_beam" />
     <OnChannelingEnd name="Stop_mob_avalon_mage_laser_beam" />
     <OnChannelingCancelled name="Stop_mob_avalon_mage_laser_beam" />
     <OnChannelingInterrupted name="Stop_mob_avalon_mage_laser_beam" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_AVALON_MAGE_LASER_STARTSPELL">
+	<OnCastStart name="Play_grail_cast_load_short" />
+	<OnCastInterrupted name="Stop_grail_cast_load_short" />
+	<OnCastCanceled name="Stop_grail_cast_load_short" />
+	<OnCastFinished name="Play_mob_avalon_mage_laser_sequence" />
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_AVALON_PIKEMAN_BLOCK_CHANNEL">
@@ -7337,6 +7398,12 @@
 	<OnChannelingInterrupted name="Stop_mob_avalon_shadow_bond_loop" />
   </WwiseEventInfo>
 
+  <WwiseEventInfo name="SPELL_AVALON_PIKEMAN_CAST_SPIN">
+	<OnCastStart name="Play_mob_avalon_pikeman_spin" />
+	<OnCastInterrupted name="Stop_mob_avalon_pikeman_spin" />
+	<OnCastCanceled name="Stop_mob_avalon_pikeman_spin" />
+  </WwiseEventInfo>
+	
   <WwiseEventInfo name="SPELL_AVALON_CLERIC_CAST_SMOKE">
     <OnCastStart name="Play_mob_avalon_cleric_debuff_castandvo" />
     <OnCastInterrupted name="Stop_mob_avalon_cleric_debuff_castandvo" />
@@ -8489,6 +8556,26 @@
 	<FarmAnimalType name="bunny_baby"/>
   </WwiseSwitchInfo>
 
+  <WwiseEventInfo name="FARMABLE_OWL">
+	<OnOpened name="Play_ui_open_owl"/>
+	<OnPlaceItemStarted name="Play_ui_open_owl"/>
+  </WwiseEventInfo>
+
+  <WwiseSwitchInfo name="FARMABLE_OWL">
+	<CharType name="farmanimal"/>
+	<FarmAnimalType name="owl"/>
+  </WwiseSwitchInfo>
+
+  <WwiseEventInfo name="FARMABLE_OWL_BABY">
+	<OnOpened name="Play_ui_open_owl_baby"/>
+	<OnPlaceItemStarted name="Play_ui_open_owl_baby"/>
+  </WwiseEventInfo>
+
+  <WwiseSwitchInfo name="FARMABLE_OWL_BABY">
+	<CharType name="farmanimal"/>
+	<FarmAnimalType name="owl_baby"/>
+  </WwiseSwitchInfo>
+
   <!-- FURNITURE -->
    <WwiseEventInfo name="HIDEOUT_PLACEABLE_ITEM">
     <OnPlaceItemStarted name="Play_ui_action_place_hideout_start" />
@@ -8682,6 +8769,10 @@
 
   <WwiseSwitchInfo name="NPC_CITY_COMMANDER_CAERLEON">
     <NpcType name="commander_caerleon"/>
+  </WwiseSwitchInfo>
+
+  <WwiseSwitchInfo name="NPC_CITY_COMMANDER_MISTS">
+	<NpcType name="commander_mists"/>
   </WwiseSwitchInfo>
   
     <!--Tutorial NPCs-->
@@ -9187,7 +9278,7 @@
 		<GlobalEnvironmentEffect name="forest"/>
 	</WwiseClusterStateOverwrite>
 
-
+	
 	<!--***********************************************************-->
   <!--**    Cluster State Overwrites for Tutorial Clusters     ***-->
   <!--***********************************************************-->
@@ -9600,6 +9691,22 @@
     <Music name="Dungeon"/>
     <GlobalEnvironmentEffect name="barracks"/>
   </WwiseClusterStateOverwrite>
+	
+
+	
+  <!--Mist Dungeons e.g. 
+  SOLO-BLACK-DUNGEON-RARE-1_MID_MI_GRN_T6_NON_MIS -->
+	
+  <WwiseClusterStateOverwrite clustername=".*-.*_MID_MI_.*">
+	<Environment name="DungeonEnv"/>
+	<SubEnvironment name="None"/>
+	<Biom name="Default"/>
+	<SubBiom name="None"/>
+	<MobFaction name="Mists_Dungeons"/>
+	<Music name="Dungeon"/>
+	<GlobalEnvironmentEffect name="hall_of_fame"/>
+  </WwiseClusterStateOverwrite>
+
 
   <!--***********************************************************-->
   <!--*************    Audio for Vanity Items     ***************-->

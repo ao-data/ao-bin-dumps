@@ -76,13 +76,19 @@
            resetquestonrevisit="true" hidedestinyboard="false" showdestinyboardflyout="true"/>
     <state uniquename="COLLECTITEM" previousstate="BUYMOUNT" triggerhint="BUYMOUNT_04" hidedestinyboard="false"
            showdestinyboardflyout="true"/>
-    <!--TOOLS HUB-->
-    <state uniquename="CRAFTTOOLSINFO" previousstate="COLLECTITEM" triggerhint="CRAFTTOOLSINFO" hidedestinyboard="false"
+    <state uniquename="EQUIPMULE" previousstate="COLLECTITEM" triggerhint="EQUIPMULE" hidedestinyboard="false"
            showdestinyboardflyout="true"/>
-    <state uniquename="CRAFTTOOLSCLEAR" previousstate="CRAFTTOOLSINFO" triggerhint="CRAFTTOOLSCLEAR"
-           hidedestinyboard="false" showdestinyboardflyout="true"/>
+    <state uniquename="MOUNTMULE" previousstate="EQUIPMULE" triggerhint="MOUNTMULE" hidedestinyboard="false"
+           showdestinyboardflyout="true"/>
+    <state uniquename="FINDWOUNDEDCRAFTER" previousstate="MOUNTMULE" triggerhint="SOFTCLEAR" hidedestinyboard="false"
+           showdestinyboardflyout="true"/>
+    <!--TOOLS HUB-->
+    <state uniquename="CRAFTTOOLSINFO" previousstate="FINDWOUNDEDCRAFTER" triggerhint="CRAFTTOOLSINFO" hidedestinyboard="false"
+           showdestinyboardflyout="true"/>
+    <state uniquename="CRAFTTOOLS" previousstate="CRAFTTOOLSINFO" triggerhint="CRAFTTOOLS" hidedestinyboard="false"
+           showdestinyboardflyout="true"/>
     <!--MAP INTRO HUB-->
-    <state uniquename="HIGHLIGHTMAPBUTTON" previousstate="CRAFTTOOLSCLEAR" triggerhint="MAPINTRO"
+    <state uniquename="HIGHLIGHTMAPBUTTON" previousstate="CRAFTTOOLS" triggerhint="MAPINTRO"
            hidedestinyboard="false" showdestinyboardflyout="true"/>
     <state uniquename="MAPINTRO" previousstate="HIGHLIGHTMAPBUTTON" triggerhint="MAPINTRO_01" resetquestonrevisit="true"
            hidedestinyboard="false" showdestinyboardflyout="true"/>
@@ -134,7 +140,6 @@
     <!--DEAD STATES-->
 
     <!--
-   <state uniquename="CRAFTTOOLS" previousstate="CRAFTTOOLSINFO" triggerhint="CRAFTTOOLS" hidedestinyboard="false" showdestinyboardflyout="true"/>
    <state uniquename="ITEM" previousstate="FIRSTSPELLCLEAR" triggerhint="ITEM"/>
    <state uniquename="ITEMCLEAR"  previousstate="ITEM" triggerhint="CLEAR"/>
    <state uniquename="HIGHLIGHTDESTINYBOARDBUTTON" previousstate="MAPINTRO" triggerhint="TRACKERINTRO"/>
@@ -377,15 +382,16 @@
           triggerui="marketplacecollect" blockworldinteraction="true" nexthint="BUYMOUNT_05"
           mobileposition="BottomRight"/>
     <hint uniquename="BUYMOUNT_05" triggerui="marketplacecollecttabhighlight" mobileposition="BottomRight"/>
+    <!--MOUNT-->
+    <hint uniquename="EQUIPMULE" title="@HINT_TITLE_EQUIPMULE" infotext="@HINT_INFO_EQUIPMULE"
+          triggerui="inventorybutton" delay="1"/>
+    <hint uniquename="MOUNTMULE" title="@HINT_TITLE_MOUNTMULE" infotext="@HINT_INFO_MOUNTMULE"
+          triggerui="mountbutton" delay="1"/>
 
-
-    <hint uniquename="MOUNT" title="@HINT_TITLE_MOUNT" infotext="@HINT_INFO_MOUNT" completebutton="true"
-          triggerui="inventorybutton" delay="1" nexthint="INVENTORYBUTTONHIGHLIGHT"/>
     <!--TOOLS-->
     <hint uniquename="CRAFTTOOLSINFO" title="@HINT_TITLE_CRAFTTOOLS" infotext="@HINT_INFO_CRAFTTOOLS"
-          completebutton="true" setnextstateonend="true" triggerui="toolmakeraxepickaxe"/>
-    <!--<hint uniquename="CRAFTTOOLS" triggerui="toolmakeraxepickaxe"/>-->
-    <hint uniquename="CRAFTTOOLSCLEAR" delay="2" triggerui="toolmakeraxepickaxe"/>
+          triggerui="toolmakeraxepickaxe"/>
+    <hint uniquename="CRAFTTOOLS" delay="5" triggerui="toolmakeraxepickaxe"/>
     <!--MAP-->
     <hint uniquename="MAPINTRO" triggerui="clustermapbutton"/>
 
@@ -855,11 +861,11 @@
         </entry>
     </hint>
     <hint uniquename="INTERACTION" explanation="VerticalTemplate" title="@TUTORIAL_BIGHINT_INTERACTION_TITLE"
-          completebutton="true" nexthint="INTERACTIONBUTTONHIGHLIGHT">
-        <entry imagepath="Gui/TutorialExplanations/TUTORIAL_INTERACTION_1" scale="1.2">
+          completebutton="true" blockworldinteraction="true">
+        <entry imagepath="Gui/TutorialExplanations/TUTORIAL_INTERACTION_1" scale="1.4">
             <content title="@TUTORIAL_BIGHINT_INTERACTION_TEXT1_TITLE" text="@TUTORIAL_BIGHINT_INTERACTION_TEXT1_INFO"/>
         </entry>
-        <entry imagepath="Gui/TutorialExplanations/TUTORIAL_INTERACTION_2" scale="1.2">
+        <entry imagepath="Gui/TutorialExplanations/TUTORIAL_INTERACTION_2" scale="1.4">
             <content title="@TUTORIAL_BIGHINT_INTERACTION_TEXT2_TITLE" text="@TUTORIAL_BIGHINT_INTERACTION_TEXT2_INFO"/>
         </entry>
     </hint>
@@ -1055,7 +1061,7 @@
 
     <!-- Joystick Combat -->
     <hint uniquename="JOYSTICK_CONTROLS_DRAG_TARGETING" explanation="VerticalTemplate"
-          title="@TUTORIAL_BIGHINT_JOYSTICK_CONTROLS_TITLE_DRAG_TARGETING">
+          title="@TUTORIAL_BIGHINT_JOYSTICK_CONTROLS_TITLE_DRAG_TARGETING" nexthint="INTERACTION">
         <entry imagepath="Gui/Mobile/Tutorial/Tutorial_Mobile_Spell_Drag" scale="1.2">
             <content text="@TUTORIAL_BIGHINT_JOYSTICK_CONTROLS_TEXT_DRAG_TARGETING_A"/>
         </entry>
@@ -1425,14 +1431,33 @@
             <content title="@TUTORIAL_MARKETPLACE_ORDERS_SELL_TITLE" text="@TUTORIAL_MARKETPLACE_ORDERS_SELL_TEXT"/>
         </entry>
     </hint>
-
-
+    
     <hint uniquename="APPEARANCE_SKINS" explanation="VerticalTemplate" title="@TUTORIAL_APPEARANCE_SKINS_TITLE">
         <entry imagepath="Gui/TutorialExplanations/TutorialAppearance1" scale="1.2">
             <content title="@TUTORIAL_APPEARANCE_SKINS_WHAT_TITLE" text="@TUTORIAL_APPEARANCE_SKINS_WHAT_TEXT"/>
         </entry>
         <entry imagepath="Gui/TutorialExplanations/TutorialAppearance2" scale="1.2">
             <content title="@TUTORIAL_APPEARANCE_SKINS_UNLOCKS_TITLE" text="@TUTORIAL_APPEARANCE_SKINS_UNLOCKS_TEXT"/>
+        </entry>
+    </hint>
+    
+    <!-- CONTROLS UPDATE -->
+    <hint uniquename="CONTROLS_FEATURE_CHANGES_MOBILE" explanation="FeatureChoiceTemplate" title="@TUTORIAL_CONTROLS_CHANGE_2023_TITLE">
+        <entry imagepath="Gui/TutorialExplanations/TutorialTargetingLock" scale="2.1">
+            <content title="@OPTIONS_AUTOTARGETING_LOCK_TITLE" text="@TUTORIAL_CONTROLS_CHANGE_2023_LOCK_MOBILE"/>
+        </entry>
+        <entry imagepath="Gui/TutorialExplanations/TutorialTargetingPreview" scale="2.1">
+            <content title="@TUTORIAL_CONTROLS_CHANGE_OTHER_TITLE" text="@TUTORIAL_CONTROLS_CHANGE_2023_OTHER"/>
+        </entry>
+    </hint>
+
+    <!-- CONTROLS UPDATE -->
+    <hint uniquename="CONTROLS_FEATURE_CHANGES_CONTROLLER" explanation="FeatureChoiceTemplate" title="@TUTORIAL_CONTROLS_CHANGE_2023_TITLE">
+        <entry imagepath="Gui/TutorialExplanations/TutorialTargetingLock" scale="2.1">
+            <content title="@OPTIONS_AUTOTARGETING_LOCK_TITLE" text="@TUTORIAL_CONTROLS_CHANGE_2023_LOCK_CONTROLLER"/>
+        </entry>
+        <entry imagepath="Gui/TutorialExplanations/TutorialTargetingPreview" scale="2.1">
+            <content title="@TUTORIAL_CONTROLS_CHANGE_OTHER_TITLE" text="@TUTORIAL_CONTROLS_CHANGE_2023_OTHER"/>
         </entry>
     </hint>
 

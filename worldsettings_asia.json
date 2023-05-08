@@ -865,6 +865,89 @@
           "@showpvpplayeronminimapthreshold": "10",
           "@outlawbuffenabled": "false",
           "@allowtrade": "Disabled"
+        },
+        {
+          "@name": "MISTS_DUNGEON_SOLO_YELLOW",
+          "@uipvptype": "Limited",
+          "@pvpwarningtype": "yellow",
+          "@pvprule": "PvpForced",
+          "@playersarelethal": "false",
+          "@mobsarelethal": "false",
+          "@showpvpplayeronminimap": "true",
+          "@showfriendlycount": "false",
+          "@showhostilecount": "false",
+          "@buildingcraftcapacityregenfactor": "1",
+          "@itempowersoftcap": "0",
+          "@itempowerscalingfactor": "0",
+          "@animalgrowthfactor": "0.5",
+          "@cropyieldfactor": "2",
+          "@clusterdangerbonustype": "mistsdungeonyellow",
+          "@knockdownbuffaftergetup": "SPAWN_KNOCKDOWN_INVULNERABILITY",
+          "@requiredreputationtoenter": "-20000",
+          "@allowfactionflagging": "false",
+          "@ignoreguilds": "true",
+          "@vanityvisibility": "Allowed",
+          "@zergdebuffenabled": "false",
+          "@ignoredestructionmultiplier": "true",
+          "@mightrewards": "true",
+          "@blockmightorfavorrewardobjectives": "true",
+          "@showpvpplayeronminimapthreshold": "10",
+          "@outlawbuffenabled": "false",
+          "@allowtrade": "Disabled"
+        },
+        {
+          "@name": "MISTS_DUNGEON_SOLO_BLACK",
+          "@uipvptype": "Black",
+          "@pvpwarningtype": "black",
+          "@pvprule": "PvpForced",
+          "@playersarelethal": "true",
+          "@mobsarelethal": "false",
+          "@showpvpplayeronminimap": "true",
+          "@showfriendlycount": "false",
+          "@showhostilecount": "false",
+          "@buildingcraftcapacityregenfactor": "1",
+          "@itempowersoftcap": "0",
+          "@itempowerscalingfactor": "0",
+          "@animalgrowthfactor": "0.5",
+          "@cropyieldfactor": "2",
+          "@clusterdangerbonustype": "mistsdungeonblack",
+          "@requiredreputationtoenter": "-50000",
+          "@allowfactionflagging": "false",
+          "@ignoreguilds": "true",
+          "@vanityvisibility": "Allowed",
+          "@zergdebuffenabled": "false",
+          "@ignoredestructionmultiplier": "false",
+          "@mightrewards": "true",
+          "@showpvpplayeronminimapthreshold": "10",
+          "@outlawbuffenabled": "false",
+          "@allowtrade": "Disabled"
+        },
+        {
+          "@name": "MISTS_DUNGEON_DUO_BLACK",
+          "@uipvptype": "Black",
+          "@pvpwarningtype": "black",
+          "@pvprule": "PvpForced",
+          "@playersarelethal": "true",
+          "@mobsarelethal": "false",
+          "@showpvpplayeronminimap": "true",
+          "@showfriendlycount": "false",
+          "@showhostilecount": "false",
+          "@buildingcraftcapacityregenfactor": "1",
+          "@itempowersoftcap": "0",
+          "@itempowerscalingfactor": "0",
+          "@animalgrowthfactor": "0.5",
+          "@cropyieldfactor": "2",
+          "@clusterdangerbonustype": "mistsdungeonblack",
+          "@requiredreputationtoenter": "-50000",
+          "@allowfactionflagging": "false",
+          "@ignoreguilds": "true",
+          "@vanityvisibility": "Allowed",
+          "@zergdebuffenabled": "false",
+          "@ignoredestructionmultiplier": "false",
+          "@mightrewards": "true",
+          "@showpvpplayeronminimapthreshold": "10",
+          "@outlawbuffenabled": "false",
+          "@allowtrade": "Disabled"
         }
       ]
     },
@@ -5796,7 +5879,7 @@
           "@furnitureobjectsallowed": "false",
           "@isdungeon": "false",
           "@hasshortspawnbuffonleave": "false",
-          "@allowmounts": "true",
+          "@allowmounts": "false",
           "spawnbuff": {
             "buff": [
               {
@@ -5827,7 +5910,7 @@
           "@furnitureobjectsallowed": "false",
           "@isdungeon": "false",
           "@hasshortspawnbuffonleave": "false",
-          "@allowmounts": "true",
+          "@allowmounts": "false",
           "spawnbuff": {
             "buff": [
               {
@@ -5852,6 +5935,37 @@
         },
         {
           "@name": "ARENA_CRYSTAL",
+          "@archetype": "ARENA_CRYSTAL",
+          "@spellcooldownsonenteringseconds": "0",
+          "@editorcolor": "255, 255, 0",
+          "@furnitureobjectsallowed": "false",
+          "@isdungeon": "false",
+          "@hasshortspawnbuffonleave": "false",
+          "@allowmounts": "false",
+          "spawnbuff": {
+            "buff": [
+              {
+                "@name": "BUFFSHRINE_OUTLANDCITY_INVISIBILITY_REMOVE",
+                "@isclusterchange": "Must"
+              },
+              {
+                "@name": "ARENA_ENTER",
+                "@isclusterchange": "Must"
+              },
+              {
+                "@name": "ARENA_OVERLOAD_PROTECTION"
+              }
+            ]
+          },
+          "mobspawns": {
+            "@defaulttimefactor": "1.0"
+          },
+          "resourcespawns": {
+            "@defaulttimefactor": "9999.0"
+          }
+        },
+        {
+          "@name": "ARENA_CRYSTAL_20VS20",
           "@archetype": "ARENA_CRYSTAL",
           "@spellcooldownsonenteringseconds": "0",
           "@editorcolor": "255, 255, 0",
@@ -6024,7 +6138,7 @@
             "mobspawnlimit": [
               {
                 "@op": "equal",
-                "@upgradelevelindex": "8",
+                "@upgradelevelindex": "7",
                 "@limit": "5"
               },
               {
@@ -6117,7 +6231,7 @@
             "mobspawnlimit": [
               {
                 "@op": "equal",
-                "@upgradelevelindex": "8",
+                "@upgradelevelindex": "7",
                 "@limit": "5"
               },
               {
@@ -6210,7 +6324,7 @@
             "mobspawnlimit": [
               {
                 "@op": "equal",
-                "@upgradelevelindex": "8",
+                "@upgradelevelindex": "7",
                 "@limit": "5"
               },
               {
@@ -6303,7 +6417,7 @@
             "mobspawnlimit": [
               {
                 "@op": "equal",
-                "@upgradelevelindex": "8",
+                "@upgradelevelindex": "7",
                 "@limit": "5"
               },
               {
@@ -6396,7 +6510,7 @@
             "mobspawnlimit": [
               {
                 "@op": "equal",
-                "@upgradelevelindex": "8",
+                "@upgradelevelindex": "7",
                 "@limit": "5"
               },
               {
@@ -6489,7 +6603,7 @@
             "mobspawnlimit": [
               {
                 "@op": "equal",
-                "@upgradelevelindex": "8",
+                "@upgradelevelindex": "7",
                 "@limit": "5"
               },
               {
@@ -6582,7 +6696,7 @@
             "mobspawnlimit": [
               {
                 "@op": "equal",
-                "@upgradelevelindex": "8",
+                "@upgradelevelindex": "7",
                 "@limit": "5"
               },
               {
@@ -6675,7 +6789,7 @@
             "mobspawnlimit": [
               {
                 "@op": "equal",
-                "@upgradelevelindex": "8",
+                "@upgradelevelindex": "7",
                 "@limit": "5"
               },
               {
@@ -6768,7 +6882,7 @@
             "mobspawnlimit": [
               {
                 "@op": "equal",
-                "@upgradelevelindex": "8",
+                "@upgradelevelindex": "7",
                 "@limit": "5"
               },
               {
@@ -6802,6 +6916,7 @@
           "@townportalspell": "TOWN_PORTAL_LONG",
           "@townportalzonemodifier": "7.15",
           "@allowpowercrystals": "HIDEOUT_TUNNEL TREASURE_WISP_BLACK",
+          "@hqconstructionrequiresbooster": "false",
           "@tunnelpreset": "TUNNEL_HIDEOUT",
           "@forceshowtimezone": "true",
           "spawnbuff": {
@@ -6859,11 +6974,23 @@
           },
           "mobspawns": {
             "@defaulttimefactor": "1",
-            "mobspawnlimit": {
-              "@op": "equal",
-              "@upgradelevelindex": "11",
-              "@limit": "1"
-            }
+            "mobspawnlimit": [
+              {
+                "@op": "equal",
+                "@upgradelevelindex": "7",
+                "@limit": "5"
+              },
+              {
+                "@op": "equal",
+                "@upgradelevelindex": "9",
+                "@limit": "3"
+              },
+              {
+                "@op": "equal",
+                "@upgradelevelindex": "11",
+                "@limit": "1"
+              }
+            ]
           }
         },
         {
@@ -6884,6 +7011,7 @@
           "@townportalspell": "TOWN_PORTAL_LONG",
           "@townportalzonemodifier": "7.15",
           "@allowpowercrystals": "HIDEOUT_TUNNEL TREASURE_WISP_BLACK",
+          "@hqconstructionrequiresbooster": "false",
           "@tunnelpreset": "TUNNEL_HIDEOUT_DEEP",
           "@forceshowtimezone": "true",
           "spawnbuff": {
@@ -6944,7 +7072,7 @@
             "mobspawnlimit": [
               {
                 "@op": "equal",
-                "@upgradelevelindex": "8",
+                "@upgradelevelindex": "7",
                 "@limit": "5"
               },
               {
@@ -6973,6 +7101,8 @@
           "@longhostiledismount": "true",
           "@mounthitpointsmaxcap": "900",
           "@mounthitspointsregenerationmaxcap": "9",
+          "@mountbuff_physicalarmorcap": "120",
+          "@mountbuff_magicresistancecap": "120",
           "@allowfactionrewards": "false",
           "@allowpowercrystals": "TREASURE_WISP_YELLOW",
           "@townportalspell": "TOWN_PORTAL_SHORT",
@@ -7374,6 +7504,8 @@
           "@longhostiledismount": "true",
           "@mounthitpointsmaxcap": "900",
           "@mounthitspointsregenerationmaxcap": "9",
+          "@mountbuff_physicalarmorcap": "120",
+          "@mountbuff_magicresistancecap": "120",
           "@allowfactionrewards": "false",
           "@allowpowercrystals": "TREASURE_WISP_BLACK",
           "@townportalspell": "TOWN_PORTAL_LONG",
@@ -7791,6 +7923,8 @@
           "@allowmounts": "true",
           "@mounthitpointsmaxcap": "1200",
           "@mounthitspointsregenerationmaxcap": "12",
+          "@mountbuff_physicalarmorcap": "120",
+          "@mountbuff_magicresistancecap": "120",
           "@allowfactionrewards": "false",
           "@allowpowercrystals": "TREASURE_WISP_BLACK",
           "@townportalspell": "TOWN_PORTAL_LONG",
@@ -8195,6 +8329,247 @@
                 "@timefactor": "9999"
               }
             ]
+          }
+        },
+        {
+          "@name": "MISTS_DUNGEON_SOLO_YELLOW",
+          "@archetype": "MISTS_DUNGEON_SOLO_YELLOW",
+          "@logoutseconds": "10",
+          "@spellcooldownsonenteringseconds": "15",
+          "@editorcolor": "255, 255, 0",
+          "@furnitureobjectsallowed": "false",
+          "@isdungeon": "false",
+          "@hasshortspawnbuffonleave": "false",
+          "@allowmounts": "false",
+          "@longhostiledismount": "true",
+          "@mounthitpointsmaxcap": "900",
+          "@mounthitspointsregenerationmaxcap": "9",
+          "@mountbuff_physicalarmorcap": "120",
+          "@mountbuff_magicresistancecap": "120",
+          "@allowfactionrewards": "false",
+          "@allowpowercrystals": "TREASURE_WISP_YELLOW",
+          "@townportalspell": "TOWN_PORTAL_SHORT",
+          "@townportalzonemodifier": "0.55",
+          "@disablespellsbytag": "gvgmountcombatspell",
+          "@displaypvpdeathsonmapandchat": "false",
+          "@playeranonymity": "true",
+          "spawnbuff": {
+            "buff": [
+              {
+                "@name": "SPAWN_BUFFIMMUNITY_ONDEATH",
+                "@isrevive": "Must"
+              },
+              {
+                "@name": "SPAWN_INVULNERABILITY",
+                "@ispvppossible": "Must",
+                "@isclusterchange": "Must",
+                "@fromshortspawnbuffcluster": "MustNot"
+              },
+              {
+                "@name": "SPAWN_INVULNERABILITY",
+                "@ispvppossible": "Must",
+                "@isingvg": "Must"
+              },
+              {
+                "@name": "SPAWN_INVULNERABILITY_SHORT",
+                "@ispvppossible": "Must",
+                "@isclusterchange": "Must",
+                "@fromshortspawnbuffcluster": "Must"
+              },
+              {
+                "@name": "MISTS_ENTER",
+                "@isclusterchange": "Must"
+              },
+              {
+                "@name": "SPAWN_SPEED",
+                "@ispvppossible": "Must",
+                "@isclusterchange": "Must"
+              },
+              {
+                "@name": "HIDEOUT_BONUS_REMOVAL",
+                "@ispvppossible": "DoesNotMatter",
+                "@isclusterchange": "Must"
+              },
+              {
+                "@name": "SPAWN_BUFFIMMUNITY",
+                "@ispvppossible": "Must",
+                "@isclusterchange": "Must"
+              }
+            ]
+          },
+          "gvgseasonpoints": {
+            "@mobrewardfactor": "0"
+          }
+        },
+        {
+          "@name": "MISTS_DUNGEON_SOLO_BLACK",
+          "@archetype": "MISTS_DUNGEON_SOLO_BLACK",
+          "@spellcooldownsonenteringseconds": "15",
+          "@editorcolor": "158, 158, 158",
+          "@furnitureobjectsallowed": "false",
+          "@isdungeon": "false",
+          "@hasshortspawnbuffonleave": "false",
+          "@allowmounts": "false",
+          "@longhostiledismount": "true",
+          "@mounthitpointsmaxcap": "900",
+          "@mounthitspointsregenerationmaxcap": "9",
+          "@mountbuff_physicalarmorcap": "120",
+          "@mountbuff_magicresistancecap": "120",
+          "@allowfactionrewards": "false",
+          "@allowpowercrystals": "TREASURE_WISP_BLACK",
+          "@townportalspell": "TOWN_PORTAL_LONG",
+          "@townportalzonemodifier": "7.15",
+          "@disablespellsbytag": "gvgmountcombatspell",
+          "@displaypvpdeathsonmapandchat": "false",
+          "@playeranonymity": "true",
+          "spawnbuff": {
+            "buff": [
+              {
+                "@name": "SPAWN_BUFFIMMUNITY_ONDEATH",
+                "@isrevive": "Must"
+              },
+              {
+                "@name": "HIDEOUT_EXIT_ON_RESPAWN",
+                "@isrevive": "Must"
+              },
+              {
+                "@name": "SPAWN_INVULNERABILITY",
+                "@ispvppossible": "Must",
+                "@isclusterchange": "Must",
+                "@fromhideout": "MustNot",
+                "@fromshortspawnbuffcluster": "MustNot"
+              },
+              {
+                "@name": "SPAWN_INVULNERABILITY",
+                "@ispvppossible": "Must",
+                "@isingvg": "Must"
+              },
+              {
+                "@name": "SPAWN_INVULNERABILITY_SHORT",
+                "@ispvppossible": "Must",
+                "@isclusterchange": "Must",
+                "@fromhideout": "MustNot",
+                "@fromshortspawnbuffcluster": "Must"
+              },
+              {
+                "@name": "SPAWN_INVULNERABILITY_HIDEOUT",
+                "@fromhideout": "Must"
+              },
+              {
+                "@name": "MISTS_ENTER",
+                "@isclusterchange": "Must"
+              },
+              {
+                "@name": "CANNOT_ENTER_HIDEOUT",
+                "@ispvppossible": "Must",
+                "@fromstaticdungeon": "Must",
+                "@fromhideout": "MustNot"
+              },
+              {
+                "@name": "SPAWN_SPEED",
+                "@ispvppossible": "Must",
+                "@isclusterchange": "Must",
+                "@fromhideout": "MustNot"
+              },
+              {
+                "@name": "SPAWN_BUFFIMMUNITY",
+                "@ispvppossible": "Must",
+                "@isclusterchange": "Must",
+                "@fromhideout": "DoesNotMatter"
+              },
+              {
+                "@name": "SPAWN_BUFFIMMUNITY",
+                "@fromhideout": "Must"
+              }
+            ]
+          },
+          "gvgseasonpoints": {
+            "@mobrewardfactor": "1"
+          }
+        },
+        {
+          "@name": "MISTS_DUNGEON_DUO_BLACK",
+          "@archetype": "MISTS_DUNGEON_DUO_BLACK",
+          "@spellcooldownsonenteringseconds": "15",
+          "@editorcolor": "158, 158, 158",
+          "@furnitureobjectsallowed": "false",
+          "@isdungeon": "false",
+          "@hasshortspawnbuffonleave": "false",
+          "@allowmounts": "false",
+          "@mounthitpointsmaxcap": "1200",
+          "@mounthitspointsregenerationmaxcap": "12",
+          "@mountbuff_physicalarmorcap": "120",
+          "@mountbuff_magicresistancecap": "120",
+          "@allowfactionrewards": "false",
+          "@allowpowercrystals": "TREASURE_WISP_BLACK",
+          "@townportalspell": "TOWN_PORTAL_LONG",
+          "@townportalzonemodifier": "7.15",
+          "@disablespellsbytag": "gvgmountcombatspell",
+          "@displaypvpdeathsonmapandchat": "false",
+          "@playeranonymity": "true",
+          "spawnbuff": {
+            "buff": [
+              {
+                "@name": "SPAWN_BUFFIMMUNITY_ONDEATH",
+                "@isrevive": "Must"
+              },
+              {
+                "@name": "HIDEOUT_EXIT_ON_RESPAWN",
+                "@isrevive": "Must"
+              },
+              {
+                "@name": "SPAWN_INVULNERABILITY",
+                "@ispvppossible": "Must",
+                "@isclusterchange": "Must",
+                "@fromhideout": "MustNot",
+                "@fromshortspawnbuffcluster": "MustNot"
+              },
+              {
+                "@name": "SPAWN_INVULNERABILITY",
+                "@ispvppossible": "Must",
+                "@isingvg": "Must"
+              },
+              {
+                "@name": "SPAWN_INVULNERABILITY_SHORT",
+                "@ispvppossible": "Must",
+                "@isclusterchange": "Must",
+                "@fromhideout": "MustNot",
+                "@fromshortspawnbuffcluster": "Must"
+              },
+              {
+                "@name": "SPAWN_INVULNERABILITY_HIDEOUT",
+                "@fromhideout": "Must"
+              },
+              {
+                "@name": "MISTS_ENTER_DUO",
+                "@isclusterchange": "Must"
+              },
+              {
+                "@name": "CANNOT_ENTER_HIDEOUT",
+                "@ispvppossible": "Must",
+                "@fromstaticdungeon": "Must",
+                "@fromhideout": "MustNot"
+              },
+              {
+                "@name": "SPAWN_SPEED",
+                "@ispvppossible": "Must",
+                "@isclusterchange": "Must",
+                "@fromhideout": "MustNot"
+              },
+              {
+                "@name": "SPAWN_BUFFIMMUNITY",
+                "@ispvppossible": "Must",
+                "@isclusterchange": "Must",
+                "@fromhideout": "DoesNotMatter"
+              },
+              {
+                "@name": "SPAWN_BUFFIMMUNITY",
+                "@fromhideout": "Must"
+              }
+            ]
+          },
+          "gvgseasonpoints": {
+            "@mobrewardfactor": "1"
           }
         }
       ]
