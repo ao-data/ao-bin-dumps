@@ -358,6 +358,10 @@
 	<CharType name="mount"/>
 	<MountType name="bunny"/>
   </WwiseSwitchInfo>
+  <WwiseSwitchInfo name="MOUNT_COW">
+	<CharType name="mount"/>
+	<MountType name="cow"/>
+  </WwiseSwitchInfo>
 
   <!--*************************************************************************************************************************************************************-->
   <!--MOBS-->
@@ -3212,6 +3216,11 @@
       <ImpactType/>
     </OnSpellHit>
   </WwiseEventInfo>
+  <WwiseEventInfo name="MELEE_BIGIMPACT_METALLIC">
+	<OnSpellHit name="Play_melee_impact_big_metallic" >
+		<ImpactType/>
+	</OnSpellHit>
+  </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_BIGIMPACT_SINGLE">
     <OnSpellHit name="Play_melee_impact_big" />
   </WwiseEventInfo>
@@ -3406,6 +3415,8 @@
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_VACUUMCAST">
     <OnCastStart name="Play_melee_mace_swing" />
+	<OnCastCanceled name="Stop_melee_mace_swing" />
+	<OnCastInterrupted name="Stop_melee_mace_swing" />
     <OnCastFinished name="Play_melee_vacuumslash_cast" />
   </WwiseEventInfo>
 
@@ -3508,7 +3519,6 @@
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_CAST_BACKSLASH">
     <OnCastFinished name="Play_melee_backslash" />
-	  <OnSpellHit name="Play_melee_merciless_finish_swoosh" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_POISON_COATING">
     <OnCastStart name="Play_poison_coating_cast" />
@@ -3621,6 +3631,9 @@
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_LETHAL_CLEAVER">
     <OnCastStart name="Play_lethal_cleaver" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="MELEE_SWOOSH_BIG_SHARP_INSTANT">
+	<OnCastFinished name="Play_melee_swoosh_big_sharp_instant" />
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_SMALLCAST_STAFF">
     <OnCastStart name="Play_staff_swoosh" />
