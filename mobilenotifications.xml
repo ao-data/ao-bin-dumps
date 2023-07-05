@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<mobilenotifications xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                     xsi:noNamespaceSchemaLocation="mobilenotifications.xsd">
+    <schedulednotification Id="2001" TitleLoca="@NOTIFICATION_SEVENDAYREMINDER_TITLE" BodyLoca="@NOTIFICATION_SEVENDAYREMINDER_BODY" Channel="REMINDERS" ScheduleType="AfterTime"
+                           ScheduleTime="7" RepeatInterval="7">
+    </schedulednotification>
+  <schedulednotification Id="2002" TitleLoca="@NOTIFICATION_ADC_TITLE" BodyLoca="@NOTIFICATION_ADC_BODY" Channel="REMINDERS" ScheduleType="UTCZero" RepeatInterval="1">
+    <conditions>
+      <condition type="TutorialCompleted"/>
+      <condition type="HasCharacters"/>
+    </conditions>
+  </schedulednotification>
+  <schedulednotification Id="2003" TitleLoca="@NOTIFICATION_TUTORIAL_TITLE" BodyLoca="@NOTIFICATION_TUTORIAL_BODY" Channel="REMINDERS" 
+                         ScheduleType="AfterTime" ScheduleTime="1" RepeatInterval="3">
+    <conditions>
+      <condition type="TutorialCompleted" invert="true"/>
+    </conditions>
+  </schedulednotification>
+<!--  <schedulednotification Id="2004" TitleLoca="@NOTIFICATION_TEST" BodyLoca="@NOTIFICATION_TEST" Channel="REMINDERS" -->
+<!--                         ScheduleType="AtTime" ScheduleTime="3/1/2048 6:00:00 PM">-->
+<!--    <conditions>-->
+<!--      <condition type="TutorialCompleted" invert="true"/>-->
+<!--    </conditions>-->
+<!--  </schedulednotification>-->
+</mobilenotifications>
