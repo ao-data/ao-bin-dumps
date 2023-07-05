@@ -6207,6 +6207,78 @@
         }
       },
       {
+        "@name": "MOB_ANNIVERSARY_STATUE_SEASON_16_BOSS_BIG",
+        "CharType": {
+          "@name": "mob"
+        },
+        "MobFaction": {
+          "@name": "territory"
+        },
+        "MobType": {
+          "@name": "anniversary_statue_huge"
+        },
+        "Size": {
+          "@name": "rock_huge"
+        },
+        "ArmorType": {
+          "@name": "rock"
+        },
+        "WeaponType": {
+          "@name": "rapier_big"
+        },
+        "MountType": {
+          "@name": "empty"
+        }
+      },
+      {
+        "@name": "MOB_ANNIVERSARY_STATUE_SEASON_17_BOSS_BIG",
+        "CharType": {
+          "@name": "mob"
+        },
+        "MobFaction": {
+          "@name": "territory"
+        },
+        "MobType": {
+          "@name": "anniversary_statue_huge"
+        },
+        "Size": {
+          "@name": "rock_huge"
+        },
+        "ArmorType": {
+          "@name": "rock"
+        },
+        "WeaponType": {
+          "@name": "ram"
+        },
+        "MountType": {
+          "@name": "empty"
+        }
+      },
+      {
+        "@name": "MOB_ANNIVERSARY_STATUE_SEASON_18_BOSS_BIG",
+        "CharType": {
+          "@name": "mob"
+        },
+        "MobFaction": {
+          "@name": "territory"
+        },
+        "MobType": {
+          "@name": "anniversary_statue_huge"
+        },
+        "Size": {
+          "@name": "rock_huge"
+        },
+        "ArmorType": {
+          "@name": "rock"
+        },
+        "WeaponType": {
+          "@name": "dualsword"
+        },
+        "MountType": {
+          "@name": "empty"
+        }
+      },
+      {
         "@name": "MOB_ANNIVERSARY_STATUE_SEASON_01_BOSS",
         "CharType": {
           "@name": "mob"
@@ -6345,6 +6417,78 @@
         },
         "WeaponType": {
           "@name": "ram"
+        },
+        "MountType": {
+          "@name": "empty"
+        }
+      },
+      {
+        "@name": "MOB_ANNIVERSARY_STATUE_SEASON_16_BOSS",
+        "CharType": {
+          "@name": "mob"
+        },
+        "MobFaction": {
+          "@name": "territory"
+        },
+        "MobType": {
+          "@name": "anniversary_statue_big"
+        },
+        "Size": {
+          "@name": "rock_big"
+        },
+        "ArmorType": {
+          "@name": "rock"
+        },
+        "WeaponType": {
+          "@name": "rapier_big"
+        },
+        "MountType": {
+          "@name": "empty"
+        }
+      },
+      {
+        "@name": "MOB_ANNIVERSARY_STATUE_SEASON_17_BOSS",
+        "CharType": {
+          "@name": "mob"
+        },
+        "MobFaction": {
+          "@name": "territory"
+        },
+        "MobType": {
+          "@name": "anniversary_statue_big"
+        },
+        "Size": {
+          "@name": "rock_big"
+        },
+        "ArmorType": {
+          "@name": "rock"
+        },
+        "WeaponType": {
+          "@name": "ram"
+        },
+        "MountType": {
+          "@name": "empty"
+        }
+      },
+      {
+        "@name": "MOB_ANNIVERSARY_STATUE_SEASON_18_BOSS",
+        "CharType": {
+          "@name": "mob"
+        },
+        "MobFaction": {
+          "@name": "territory"
+        },
+        "MobType": {
+          "@name": "anniversary_statue_big"
+        },
+        "Size": {
+          "@name": "rock_big"
+        },
+        "ArmorType": {
+          "@name": "rock"
+        },
+        "WeaponType": {
+          "@name": "dualsword"
         },
         "MountType": {
           "@name": "empty"
@@ -9663,6 +9807,13 @@
         }
       },
       {
+        "@name": "SPELL_MAGIC_ARROW_HIT_BIG",
+        "OnSpellHit": {
+          "@name": "Play_frost_explosion_medium_lance",
+          "ImpactType": null
+        }
+      },
+      {
         "@name": "SPELL_ARROW_UNDEADARROW",
         "OnCastStart": {
           "@name": "Play_arrow_undeadarrow"
@@ -12413,6 +12564,15 @@
         }
       },
       {
+        "@name": "SPELL_SPRINTHOT_BUFF_IMPACT",
+        "OnCastFinished": {
+          "@name": "Play_speed_increase"
+        },
+        "OnSpellHit": {
+          "@name": "Play_nature_impact_heal_buff_small"
+        }
+      },
+      {
         "@name": "SPELL_UI_LOOTCHEST_OPEN",
         "OnCastStart": {
           "@name": "Play_ui_reward_open"
@@ -12698,7 +12858,7 @@
         }
       },
       {
-        "@name": "SPELL_PANTHER_SPRINT",
+        "@name": "SPELL_PANTHER_a",
         "OnCastFinished": {
           "@name": "Play_panther_cast_buff_speed"
         }
@@ -17519,6 +17679,21 @@
         }
       },
       {
+        "@name": "ANNIVERSARY_STATUE_THROW_BLADES",
+        "OnCastStart": {
+          "@name": "Play_melee_load_medium_windy_short"
+        },
+        "OnCastCanceled": {
+          "@name": "Stop_melee_load_medium_windy_short"
+        },
+        "OnCastInterrupted": {
+          "@name": "Stop_melee_load_medium_windy_short"
+        },
+        "OnCastFinished": {
+          "@name": "Play_throw_blades"
+        }
+      },
+      {
         "@name": "ANNIVERSARY_STATUE_NATURE_BRAMBLESEED",
         "OnCastStart": {
           "@name": "Play_anniversary_statue_cast_load_brambleseed"
@@ -17555,6 +17730,110 @@
         },
         "OnCastInterrupted": {
           "@name": "Stop_anniversary_statue_nature_cast_damage_thornarea"
+        }
+      },
+      {
+        "@name": "ANNIVERSARY_STATUE_LIFESTEAL_AURA_CAST",
+        "OnCastStart": {
+          "@name": "Play_anniversary_statue_cast_load_selfbuff"
+        },
+        "OnCastInterrupted": {
+          "@name": "Stop_anniversary_statue_cast_load_selfbuff"
+        },
+        "OnCastCanceled": {
+          "@name": "Stop_anniversary_statue_cast_load_selfbuff"
+        },
+        "OnCastFinished": {
+          "@name": "Play_selfbuff_cast"
+        }
+      },
+      {
+        "@name": "ANNIVERSARY_STATUE_SELFBUFF_VOICE_CAST",
+        "OnCastStart": {
+          "@name": "Play_anniversary_statue_cast_load_selfbuff"
+        },
+        "OnCastInterrupted": {
+          "@name": "Stop_anniversary_statue_cast_load_selfbuff"
+        },
+        "OnCastCanceled": {
+          "@name": "Stop_anniversary_statue_cast_load_selfbuff"
+        },
+        "OnCastFinished": {
+          "@name": "Play_melee_swoosh_small"
+        }
+      },
+      {
+        "@name": "ANNIVERSARY_STATUE_RAPIERSTAB_CAST",
+        "OnCastFinished": {
+          "@name": "Play_anniversary_statue_rapierstab_cast"
+        }
+      },
+      {
+        "@name": "ANNIVERSARY_STATUE_GROUND_SHAKER_MACE",
+        "OnCastStart": {
+          "@name": "Play_anniversary_statue_groundshaker_load"
+        },
+        "OnCastCanceled": {
+          "@name": "Stop_anniversary_statue_groundshaker_load"
+        },
+        "OnCastInterrupted": {
+          "@name": "Stop_anniversary_statue_groundshaker_load"
+        },
+        "OnSpellHit": {
+          "@name": "Play_melee_impact_medium"
+        }
+      },
+      {
+        "@name": "ANNIVERSARY_STATUE_CHARGE_ROOT",
+        "OnCastStart": {
+          "@name": "Play_anniversary_statue_melee_charge_root_cast"
+        },
+        "OnCastCanceled": {
+          "@name": "Stop_anniversary_statue_melee_charge_root_cast"
+        },
+        "OnCastInterrupted": {
+          "@name": "Stop_anniversary_statue_melee_charge_root_cast"
+        }
+      },
+      {
+        "@name": "ANNIVERSARY_STATUE_SHRIEKMACE_STOMP",
+        "OnCastStart": {
+          "@name": "Play_anniversary_statue_shriekmace_stomp"
+        },
+        "OnCastCanceled": {
+          "@name": "Stop_anniversary_statue_shriekmace_stomp"
+        },
+        "OnCastInterrupted": {
+          "@name": "Stop_anniversary_statue_shriekmace_stomp"
+        }
+      },
+      {
+        "@name": "ANNIVERSARY_STATUE_RAPIER_SUNDERARMOR",
+        "OnCastStart": {
+          "@name": "Play_anniversary_statue_melee_load_sunderarmor"
+        },
+        "OnCastCanceled": {
+          "@name": "Stop_anniversary_statue_melee_load_sunderarmor"
+        },
+        "OnCastInterrupted": {
+          "@name": "Stop_anniversary_statue_melee_load_sunderarmor"
+        },
+        "OnSpellHit": {
+          "@name": "Play_melee_impact_small_add",
+          "ImpactType": null
+        }
+      },
+      {
+        "@name": "ANNIVERSARY_STATUE_RAPIER_SUNDERARMOR_IMPACT",
+        "OnSpellHit": {
+          "@name": "Play_melee_impact_small_add",
+          "ImpactType": null
+        }
+      },
+      {
+        "@name": "ANNIVERSARY_STATUE_SHOUT",
+        "OnCastFinished": {
+          "@name": "Play_anniversary_statue_shout"
         }
       },
       {
