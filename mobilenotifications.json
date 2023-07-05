@@ -1,0 +1,55 @@
+{
+  "?xml": {
+    "@version": "1.0",
+    "@encoding": "utf-8",
+    "@standalone": "yes"
+  },
+  "mobilenotifications": {
+    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+    "@xsi:noNamespaceSchemaLocation": "mobilenotifications.xsd",
+    "schedulednotification": [
+      {
+        "@Id": "2001",
+        "@TitleLoca": "@NOTIFICATION_SEVENDAYREMINDER_TITLE",
+        "@BodyLoca": "@NOTIFICATION_SEVENDAYREMINDER_BODY",
+        "@Channel": "REMINDERS",
+        "@ScheduleType": "AfterTime",
+        "@ScheduleTime": "7",
+        "@RepeatInterval": "7"
+      },
+      {
+        "@Id": "2002",
+        "@TitleLoca": "@NOTIFICATION_ADC_TITLE",
+        "@BodyLoca": "@NOTIFICATION_ADC_BODY",
+        "@Channel": "REMINDERS",
+        "@ScheduleType": "UTCZero",
+        "@RepeatInterval": "1",
+        "conditions": {
+          "condition": [
+            {
+              "@type": "TutorialCompleted"
+            },
+            {
+              "@type": "HasCharacters"
+            }
+          ]
+        }
+      },
+      {
+        "@Id": "2003",
+        "@TitleLoca": "@NOTIFICATION_TUTORIAL_TITLE",
+        "@BodyLoca": "@NOTIFICATION_TUTORIAL_BODY",
+        "@Channel": "REMINDERS",
+        "@ScheduleType": "AfterTime",
+        "@ScheduleTime": "1",
+        "@RepeatInterval": "3",
+        "conditions": {
+          "condition": {
+            "@type": "TutorialCompleted",
+            "@invert": "true"
+          }
+        }
+      }
+    ]
+  }
+}
