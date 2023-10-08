@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<itemroles xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="itemroles.xsd">
+
+    <baserole name="Tank" defaultuiorderpriority="1" uisprite="icon_role_defender" />
+    <baserole name="DPS" defaultuiorderpriority="2" uisprite="icon_role_attacker" />
+    <baserole name="Support" defaultuiorderpriority="3" uisprite="icon_role_support" />
+    <baserole name="Heal" defaultuiorderpriority="4" uisprite="icon_role_healer" />
+    <baserole name="BattleMount" defaultuiorderpriority="5" uisprite="icon_role_battlemount" />
+
+    <role uniquename="TANK" displayname="@EXPEDITION_ROLE_DEFENSIVE" uisprite="icon_role_defender" baserole="Tank">
+        <category value="sword" rating="4" />
+        <category value="knuckles" rating="4" />
+        <category value="hammer" rating="5" />
+        <category value="mace" rating="5" />
+        <category value="quarterstaff" rating="4" />
+
+        <category value="plate_armor" rating="7" />
+        <category value="leather_armor" rating="3" />
+    </role>
+    <role uniquename="DPS" displayname="@EXPEDITION_ROLE_OFFENSIVE" uisprite="icon_role_attacker" baserole="DPS">
+        <category value="hammer" rating="4" />
+        <category value="mace" rating="4" />
+
+        <category value="sword" rating="5" />
+        <category value="axe" rating="5" />
+        <category value="dagger" rating="5" />
+        <category value="spear" rating="5" />
+        <category value="staff" rating="5" />
+        <category value="quarterstaff" rating="5" />
+        <category value="knuckles" rating="5" />
+
+        <category value="bow" rating="5" />
+        <category value="crossbow" rating="5" />
+
+        <category value="arcanestaff" rating="5" />
+        <category value="cursestaff" rating="5" />
+        <category value="firestaff" rating="5" />
+        <category value="froststaff" rating="5" />
+
+        <category value="cloth_armor" rating="5" />
+        <category value="leather_armor" rating="3" />
+    </role>
+    <role uniquename="HEAL" displayname="@EXPEDITION_ROLE_SUPPORTIVE" uisprite="icon_role_healer" baserole="Heal">
+        <category value="holystaff" rating="10" />
+        <category value="naturestaff" rating="10" />
+        <category value="cloth_armor" rating="5" />
+        <category value="leather_armor" rating="3" />
+    </role>
+
+    <role uniquename="ARENA_DPS" displayname="@ARENA_ROLE_OFFENSIVE" uisprite="icon_role_attacker" baserole="DPS">
+        <category value="hammer" rating="4" />
+        <category value="mace" rating="4" />
+
+        <category value="sword" rating="5" />
+        <category value="axe" rating="5" />
+        <category value="dagger" rating="5" />
+        <category value="spear" rating="5" />
+        <category value="staff" rating="5" />
+        <category value="knuckles" rating="5" />
+
+        <category value="bow" rating="5" />
+        <category value="crossbow" rating="5" />
+
+        <category value="arcanestaff" rating="5" />
+        <category value="cursestaff" rating="5" />
+        <category value="firestaff" rating="5" />
+        <category value="froststaff" rating="5" />
+
+        <category value="cloth_armor" rating="5" />
+        <category value="leather_armor" rating="5" />
+        <category value="plate_armor" rating="5" />
+    </role>
+    <role uniquename="ARENA_HEAL" displayname="@ARENA_ROLE_SUPPORTIVE" uisprite="icon_role_healer" baserole="Heal">
+        <category value="holystaff" rating="10" />
+        <category value="naturestaff" rating="10" />
+        <category value="cloth_armor" rating="5" />
+        <category value="leather_armor" rating="3" />
+    </role>
+
+    <!--PartyRoles-->
+    <role uniquename="PARTY_TANK" displayname="@EXPEDITION_ROLE_DEFENSIVE" uisprite="icon_role_defender" context="party" baserole="Tank" mapmarkercolor="1590f8FF">
+        <category value="sword" rating="4" />
+        <category value="knuckles" rating="4" />
+        <category value="hammer" rating="5" />
+        <category value="mace" rating="5" />
+        <category value="quarterstaff" rating="4" />
+
+        <category value="plate_armor" rating="7" />
+        <category value="leather_armor" rating="3" />
+    </role>
+    <role uniquename="PARTY_DPS" displayname="@ARENA_ROLE_OFFENSIVE" uisprite="icon_role_attacker" context="party" baserole="DPS" mapmarkercolor="b11600FF">
+        <category value="hammer" rating="4" />
+        <category value="mace" rating="4" />
+
+        <category value="sword" rating="5" />
+        <category value="axe" rating="5" />
+        <category value="dagger" rating="5" />
+        <category value="spear" rating="5" />
+        <category value="staff" rating="5" />
+        <category value="quarterstaff" rating="5" />
+        <category value="knuckles" rating="5" />
+
+        <category value="bow" rating="5" />
+        <category value="crossbow" rating="5" />
+
+        <category value="cursestaff" rating="5" />
+        <category value="firestaff" rating="5" />
+        <category value="froststaff" rating="5" />
+
+        <category value="cloth_armor" rating="5" />
+        <category value="leather_armor" rating="3" />
+    </role>
+    <role uniquename="PARTY_HEAL" displayname="@ARENA_ROLE_SUPPORTIVE" uisprite="icon_role_healer" context="party" baserole="Heal" mapmarkercolor="4eb21aFF">
+        <category value="holystaff" rating="10" />
+        <category value="naturestaff" rating="10" />
+        <category value="cloth_armor" rating="5" />
+        <category value="leather_armor" rating="3" />
+    </role>
+    <role uniquename="PARTY_SUPPORT" displayname="@PARTY_ROLE_SUPPORT" uisprite="icon_role_support" context="party" baserole="Support" mapmarkercolor="ffda45FF">
+        <category value="arcanestaff" rating="10" />
+    </role>
+    <role uniquename="PARTY_BATTLEMOUNT" displayname="@PARTY_ROLE_BATTLEMOUNT" uisprite="icon_role_battlemount" context="party" baserole="BattleMount" mapmarkercolor="bfd6e6FF">
+        <category value="arcanestaff" rating="1" />
+    </role>
+
+</itemroles>

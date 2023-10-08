@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<orbtypes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="orbtypes.xsd">
+  <!-- ORBS -->
+
+  <!-- DEBUG -->
+  <orbtype uniquename="ORB_TEST">
+    <channelcapture orbclaimtime="10"/>
+    <roundbasedscore claimedondefaultbyteam="defender"/>
+    <!--
+    <Defense engageattackrange="15.0" disengageattackrange="15.0" attackinterval="1.5" attackdamage="0.2" attackdistancedelay="24.0">
+      <FriendlyFX projectile="Prefabs/Vfx/Projectiles/WarcampProjectileBlue" impact="Prefabs/SpellEffects/MeleeHit" />
+      <HostileFX projectile="Prefabs/Vfx/Projectiles/WarcampProjectileRed" impact="Prefabs/SpellEffects/MeleeHit" />
+    </Defense>
+    -->
+  </orbtype>
+
+  <orbtype uniquename="ORB_TEST2">
+    <zonecapture orbzoneradius="5" orbclaimtime="10" orbunclaimtime="4" orbnoteamunclaimtime="20"/>
+    <constantscore claimedondefaultbyteam="neutral" ticketreductionorbclaim="0" orbtickinterval="50" ticketreductionontick="30" claimedunclaimedstep="false"/>
+  </orbtype>
+
+   <orbtype uniquename="ORB_TEST3">
+    <channelcapture orbclaimtime="10"/>
+    <constantscore claimedondefaultbyteam="neutral" ticketreductionorbclaim="0" orbtickinterval="50" ticketreductionontick="30" claimedunclaimedstep="true"/>
+  </orbtype>
+  <!-- DEBUG_END -->
+ 
+  <!-- ARENA TEST zonecap and instant score -->
+  <orbtype uniquename="ORB_ARENA">
+    <zonecapture orbzoneradius="9" orbclaimtime="10" orbunclaimtime="4" orbnoteamunclaimtime="20"/>
+    <instantscore ticketreductionorbclaim="10" hasreset="false" orbresetsooninterval="30" orbcooldowntimeonstart="60"/>
+  </orbtype>
+  <!-- ARENA TEST zonecap and constant score -->
+  <orbtype uniquename="ORB_ARENA_ZONE_CONSTANT">
+	  <zonecapture orbzoneradius="9" orbclaimtime="10" orbunclaimtime="4" orbnoteamunclaimtime="20"/>
+    <constantscore claimedondefaultbyteam="neutral" ticketreductionorbclaim="0" orbtickinterval="3" ticketreductionontick="1" claimedunclaimedstep="false"/>
+  </orbtype>
+  <!-- Legacy GVG -->
+  <orbtype uniquename="ORB_GVG">
+    <channelcapture orbclaimtime="7.5"/>
+    <roundbasedscore claimedondefaultbyteam="neutral" ticketreductionorbclaim="1"/>
+  </orbtype>
+  <!-- Crystal GVG -->
+  <orbtype uniquename="ORB_CRYSTAL_GVG">
+    <channelcapture orbclaimtime="7.5"/>
+    <roundbasedscore claimedondefaultbyteam="neutral" ticketreductionorbclaim="1"/>
+  </orbtype>
+    
+</orbtypes>

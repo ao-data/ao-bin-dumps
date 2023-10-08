@@ -1,0 +1,587 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CharacterData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="characters.xsd">
+
+  <!-- Main use for character selection when creating a new character -->
+  <Races>
+    <Race namelocatag="@CHARACTER_RACE_NAME_HUMAN" avatar="HUMAN_RACE">
+      <Male uniquename="HUMAN_MALE"/>
+      <Female uniquename="HUMAN_FEMALE"/>
+    </Race>
+  </Races>
+
+  <!-- Used for customization of the 3d character (chars not listed have no customization) -->
+  <!-- States have an additional state 'EMPTY' that will not display it at all -->
+  <!-- not existing mesh attribute wil also just not display any mesh use for none state -->
+  <Customizations>
+    <ColorSet uniquename="SKIN" colorid="0" locatag="@CHARACTER_CUSTOMIZATION_HUMAN_MALE_SKIN_COLOR" >
+      <Color uniquename="SKIN_COLOR_1" colorposition="0" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_MALE_SKIN_COLOR_1"/>
+      <Color uniquename="SKIN_COLOR_2" colorposition="1" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_MALE_SKIN_COLOR_2"/>
+      <Color uniquename="SKIN_COLOR_3" colorposition="2" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_MALE_SKIN_COLOR_3"/>
+      <Color uniquename="SKIN_COLOR_4" colorposition="3" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_MALE_SKIN_COLOR_4"/>
+      <Color uniquename="SKIN_COLOR_5" colorposition="4" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_MALE_SKIN_COLOR_5"/>
+      <Color uniquename="SKIN_COLOR_6" colorposition="5" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_MALE_SKIN_COLOR_6"/>
+      <Color uniquename="SKIN_COLOR_7" colorposition="6" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_MALE_SKIN_COLOR_7"/>
+      <Color uniquename="SKIN_COLOR_8" colorposition="7" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_MALE_SKIN_COLOR_8"/>
+      <Color uniquename="SKIN_COLOR_9" colorposition="8" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_MALE_SKIN_COLOR_9"/>
+    </ColorSet>
+    <ColorSet uniquename="HAIR" colorid="1" unlockicon="UNIQUE_HAIR_UNLOCK" locatag="@CHARACTER_CUSTOMIZATION_HUMAN_MALE_HAIR_COLOR">
+      <Color uniquename="HAIR_COLOR_1" colorposition="0" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_MALE_HAIR_COLOR_1"/>
+      <Color uniquename="HAIR_COLOR_2" colorposition="1" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_MALE_HAIR_COLOR_2"/>
+      <Color uniquename="HAIR_COLOR_3" colorposition="2" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_MALE_HAIR_COLOR_3"/>
+      <Color uniquename="HAIR_COLOR_4" colorposition="3" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_MALE_HAIR_COLOR_4"/>
+      <Color uniquename="HAIR_COLOR_5" colorposition="4" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_MALE_HAIR_COLOR_5"/>
+      <Color uniquename="HAIR_COLOR_6" colorposition="5" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_MALE_HAIR_COLOR_6"/>
+      <Color uniquename="HAIR_COLOR_7" colorposition="6" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_MALE_HAIR_COLOR_7"/>
+      <Color uniquename="HAIR_COLOR_8" colorposition="7" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_MALE_HAIR_COLOR_8"/>
+      <Color uniquename="HAIR_COLOR_9" colorposition="8" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_MALE_HAIR_COLOR_9"/>
+      <Color uniquename="HAIR_COLOR_10" colorposition="9" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_MALE_HAIR_COLOR_10"/>
+      <Color uniquename="HAIR_COLOR_11" colorposition="10" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_MALE_HAIR_COLOR_11"/>
+      <Color uniquename="HAIR_COLOR_12" colorposition="11" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_MALE_HAIR_COLOR_12"/>
+      <Color uniquename="HAIR_COLOR_13" colorposition="12" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_MALE_HAIR_COLOR_13"/>
+      <Color uniquename="HAIR_COLOR_14" colorposition="13" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_MALE_HAIR_COLOR_14"/>
+      <Color uniquename="HAIR_COLOR_15" colorposition="14" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_MALE_HAIR_COLOR_15"/>
+      <Color uniquename="HAIR_COLOR_16" colorposition="15" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_MALE_HAIR_COLOR_16"/>
+    </ColorSet>
+    <ColorSet uniquename="UNDERWEAR" colorid="2" unlockicon="UNIQUE_UNDERWEAR_UNLOCK" locatag="@CHARACTER_CUSTOMIZATION_HUMAN_MALE_UNDERWEAR_COLOR">
+      <Color uniquename="UNDERWEAR_COLOR_1" colorposition="0" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_MALE_UNDERWEAR_COLOR_1"/>
+      <Color uniquename="UNDERWEAR_COLOR_2" colorposition="1" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_MALE_UNDERWEAR_COLOR_2"/>
+      <Color uniquename="UNDERWEAR_COLOR_3" colorposition="2" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_MALE_UNDERWEAR_COLOR_3"/>
+      <Color uniquename="UNDERWEAR_COLOR_4" colorposition="3" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_MALE_UNDERWEAR_COLOR_4"/>
+      <Color uniquename="UNDERWEAR_COLOR_5" colorposition="4" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_MALE_UNDERWEAR_COLOR_5"/>
+      <Color uniquename="UNDERWEAR_COLOR_6" colorposition="5" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_MALE_UNDERWEAR_COLOR_6"/>
+      <Color uniquename="UNDERWEAR_COLOR_7" colorposition="6" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_MALE_UNDERWEAR_COLOR_7"/>
+    </ColorSet>
+    <Customization uniquename="HUMAN_MALE">
+      <Item uniquename="FACE" characterview="CharacterViewFace">
+        <Mesh uniquename="HM_FACE_MESH_1" mesh="T0_FACE_01_HM" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_MALE_FACE_MESH_1">
+          <FaceState state="FACE" mesh="T0_FACE_01_HM_HOOD"/>
+          <FaceState state="HOOD" mesh="T0_FACE_01_HM_HOOD"/>
+          <FaceState state="HALF" mesh="T0_FACE_01_HM_HALF"/>
+        </Mesh>
+        <Mesh uniquename="HM_FACE_MESH_2" mesh="T0_FACE_02_HM" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_MALE_FACE_MESH_2">
+          <FaceState state="FACE" mesh="T0_FACE_02_HM_HOOD"/>
+          <FaceState state="HOOD" mesh="T0_FACE_02_HM_HOOD"/>
+          <FaceState state="HALF" mesh="T0_FACE_02_HM_HALF"/>
+        </Mesh>
+        <Mesh uniquename="HM_FACE_MESH_3" mesh="T0_FACE_03_HM" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_MALE_FACE_MESH_3">
+          <FaceState state="FACE" mesh="T0_FACE_03_HM_HOOD"/>
+          <FaceState state="HOOD" mesh="T0_FACE_03_HM_HOOD"/>
+          <FaceState state="HALF" mesh="T0_FACE_03_HM_HALF"/>
+        </Mesh>
+        <Mesh uniquename="HM_FACE_MESH_4" mesh="T0_FACE_04_HM" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_MALE_FACE_MESH_4">
+          <FaceState state="FACE" mesh="T0_FACE_04_HM_HOOD"/>
+          <FaceState state="HOOD" mesh="T0_FACE_04_HM_HOOD"/>
+          <FaceState state="HALF" mesh="T0_FACE_04_HM_HALF"/>
+        </Mesh>
+        <Mesh uniquename="HM_FACE_MESH_5" mesh="T0_FACE_05_HM" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_MALE_FACE_MESH_5">
+          <FaceState state="FACE" mesh="T0_FACE_05_HM_HOOD"/>
+          <FaceState state="HOOD" mesh="T0_FACE_05_HM_HOOD"/>
+          <FaceState state="HALF" mesh="T0_FACE_05_HM_HALF"/>
+        </Mesh>
+      </Item>
+      <Item uniquename="SKIN" colorset="SKIN" characterview="CharacterViewFull">
+      </Item>
+      <Item uniquename="HAIR" colorset="HAIR" unlockicon="UNIQUE_HAIR_UNLOCK" characterview="CharacterViewFace">
+        <Mesh uniquename="HM_HAIR_MESH_0" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_MALE_HAIR_MESH_0">
+        </Mesh>
+        <Mesh uniquename="HM_HAIR_MESH_1" mesh="T0_HAIR_01_HM" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_MALE_HAIR_MESH_1">
+          <FaceState state="FACE"/>
+          <FaceState state="HOOD" mesh="T0_HAIR_01_HM_HOOD"/>
+          <FaceState state="HALF" mesh="T0_HAIR_01_HM_HALF"/>
+        </Mesh>
+        <Mesh uniquename="HM_HAIR_MESH_2" mesh="T0_HAIR_02_HM" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_MALE_HAIR_MESH_2">
+          <FaceState state="FACE"/>
+          <FaceState state="HOOD" mesh="T0_HAIR_02_HM_HOOD"/>
+          <FaceState state="HALF" mesh="T0_HAIR_02_HM_HALF"/>
+        </Mesh>
+        <Mesh uniquename="HM_HAIR_MESH_3" mesh="T0_HAIR_03_HM" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_MALE_HAIR_MESH_3">
+          <FaceState state="FACE"/>
+          <FaceState state="HOOD" mesh="T0_HAIR_03_HM_HOOD"/>
+          <FaceState state="HALF" mesh="T0_HAIR_03_HM_HALF"/>
+        </Mesh>
+        <Mesh uniquename="HM_HAIR_MESH_4" mesh="T0_HAIR_04_HM" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_MALE_HAIR_MESH_4">
+          <FaceState state="FACE"/>
+          <FaceState state="HOOD"/>
+          <FaceState state="HALF" mesh="T0_HAIR_04_HM_HALF"/>
+        </Mesh>
+        <Mesh uniquename="HM_HAIR_MESH_5" mesh="T0_HAIR_05_HM" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_MALE_HAIR_MESH_5">
+          <FaceState state="FACE"/>
+          <FaceState state="HOOD"/>
+          <FaceState state="HALF"/>
+        </Mesh>
+        <Mesh uniquename="HM_HAIR_MESH_6" mesh="T0_HAIR_06_HM" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_MALE_HAIR_MESH_6">
+          <FaceState state="FACE"/>
+          <FaceState state="HOOD" mesh="T0_HAIR_06_HM_HOOD"/>
+          <FaceState state="HALF" mesh="T0_HAIR_06_HM_HALF"/>
+        </Mesh>
+        <Mesh uniquename="HM_HAIR_MESH_7" mesh="T0_HAIR_07_HM" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_MALE_HAIR_MESH_7">
+          <FaceState state="FACE"/>
+          <FaceState state="HOOD"/>
+          <FaceState state="HALF"/>
+        </Mesh>
+        <Mesh uniquename="HM_HAIR_MESH_8" mesh="T0_HAIR_08_HM" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_MALE_HAIR_MESH_8" state="Buyable" goldprice="250">
+          <FaceState state="FACE"/>
+          <FaceState state="HOOD"/>
+          <FaceState state="HALF"/>
+        </Mesh>
+        <Mesh uniquename="HM_HAIR_MESH_9" mesh="T0_HAIR_09_HM" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_MALE_HAIR_MESH_9" state="Buyable" goldprice="250">
+          <FaceState state="FACE"/>
+          <FaceState state="HOOD"/>
+          <FaceState state="HALF"/>
+        </Mesh>
+        <Mesh uniquename="HM_HAIR_MESH_10" mesh="T0_HAIR_10_HM" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_MALE_HAIR_MESH_10" state="Buyable" goldprice="250">
+          <FaceState state="FACE"/>
+          <FaceState state="HOOD"/>
+          <FaceState state="HALF" mesh="T0_HAIR_10_HM_HALF"/>
+        </Mesh>
+        <Mesh uniquename="HM_HAIR_MESH_11" mesh="T0_HAIR_11_HM" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_MALE_HAIR_MESH_11" state="Buyable" goldprice="250">
+          <FaceState state="FACE"/>
+          <FaceState state="HOOD"/>
+          <FaceState state="HALF" mesh="T0_HAIR_11_HM_HALF"/>
+        </Mesh>
+        <Mesh uniquename="HM_HAIR_MESH_12" mesh="T0_HAIR_12_HM" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_MALE_HAIR_MESH_12" state="Buyable" goldprice="250">
+          <FaceState state="FACE"/>
+          <FaceState state="HOOD"/>
+          <FaceState state="HALF" mesh="T0_HAIR_12_HM_HALF"/>
+        </Mesh>
+        <Mesh uniquename="HM_HAIR_MESH_13" mesh="T0_HAIR_13_HM" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_MALE_HAIR_MESH_13" state="Buyable" goldprice="250">
+          <FaceState state="FACE"/>
+          <FaceState state="HOOD"/>
+          <FaceState state="HALF" mesh="T0_HAIR_13_HM_HALF"/>
+        </Mesh>
+      </Item>
+      <Item uniquename="BEARD" unlockicon="UNIQUE_BEARD_UNLOCK" characterview="CharacterViewFace">
+        <Mesh uniquename="HM_BEARD_MESH_0" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_MALE_BEARD_MESH_0">
+        </Mesh>
+        <Mesh uniquename="HM_BEARD_MESH_1" mesh="T0_BEARD_01_HM" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_MALE_BEARD_MESH_1">
+          <BeardState state="HALF" mesh="T0_BEARD_01_HM_HALF"/>
+          <BeardState state="FLAT" mesh="T0_BEARD_01_HM_FLAT"/>
+        </Mesh>
+        <Mesh uniquename="HM_BEARD_MESH_2" mesh="T0_BEARD_02_HM" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_MALE_BEARD_MESH_2">
+          <BeardState state="HALF" mesh="T0_BEARD_02_HM_HALF"/>
+          <BeardState state="FLAT" mesh="T0_BEARD_02_HM_FLAT"/>
+        </Mesh>
+        <Mesh uniquename="HM_BEARD_MESH_3" mesh="T0_BEARD_03_HM" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_MALE_BEARD_MESH_3">
+          <BeardState state="HALF" mesh="T0_BEARD_03_HM_HALF"/>
+          <BeardState state="FLAT" mesh="T0_BEARD_03_HM_FLAT"/>
+        </Mesh>
+        <Mesh uniquename="HM_BEARD_MESH_4" mesh="T0_BEARD_04_HM" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_MALE_BEARD_MESH_4">
+          <BeardState state="HALF" mesh="T0_BEARD_04_HM_HALF"/>
+          <BeardState state="FLAT" mesh="T0_BEARD_04_HM_FLAT"/>
+        </Mesh>
+        <Mesh uniquename="HM_BEARD_MESH_5" mesh="T0_BEARD_05_HM" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_MALE_BEARD_MESH_5">
+          <BeardState state="HALF" mesh="T0_BEARD_05_HM_HALF"/>
+          <BeardState state="FLAT" mesh="T0_BEARD_05_HM_FLAT"/>
+        </Mesh>
+        <Mesh uniquename="HM_BEARD_MESH_6" mesh="T0_BEARD_06_HM" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_MALE_BEARD_MESH_6">
+          <BeardState state="HALF" mesh="T0_BEARD_06_HM_HALF"/>
+          <BeardState state="FLAT" mesh="T0_BEARD_06_HM_FLAT"/>
+        </Mesh>
+        <Mesh uniquename="HM_BEARD_MESH_7" mesh="T0_BEARD_07_HM" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_MALE_BEARD_MESH_7" state="Buyable" goldprice="200">
+          <BeardState state="HALF" mesh="T0_BEARD_07_HM_HALF"/>
+          <BeardState state="FLAT" mesh="T0_BEARD_07_HM_FLAT"/>
+        </Mesh>
+        <Mesh uniquename="HM_BEARD_MESH_8" mesh="T0_BEARD_08_HM" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_MALE_BEARD_MESH_8" state="Buyable" goldprice="200">
+          <BeardState state="HALF" mesh="T0_BEARD_08_HM_HALF"/>
+          <BeardState state="FLAT" mesh="T0_BEARD_08_HM_FLAT"/>
+        </Mesh>
+        <Mesh uniquename="HM_BEARD_MESH_9" mesh="T0_BEARD_09_HM" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_MALE_BEARD_MESH_9" state="Buyable" goldprice="200">
+          <BeardState state="HALF" mesh="T0_BEARD_09_HM_HALF"/>
+          <BeardState state="FLAT" mesh="T0_BEARD_09_HM_FLAT"/>
+        </Mesh>
+        <Mesh uniquename="HM_BEARD_MESH_10" mesh="T0_BEARD_10_HM" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_MALE_BEARD_MESH_10" state="Buyable" goldprice="200">
+          <BeardState state="HALF" mesh="T0_BEARD_10_HM_HALF"/>
+          <BeardState state="FLAT" mesh="T0_BEARD_10_HM_FLAT"/>
+        </Mesh>
+        <Mesh uniquename="HM_BEARD_MESH_11" mesh="T0_BEARD_11_HM" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_MALE_BEARD_MESH_11_MAGE" state="Buyable" goldprice="250">
+          <BeardState state="HALF" mesh="T0_BEARD_11_HM_HALF"/>
+          <BeardState state="FLAT" mesh="T0_BEARD_11_HM_FLAT"/>
+        </Mesh>
+      </Item>
+      <Item uniquename="UNDERWEAR" replaceslot="armor" colorset="UNDERWEAR" unlockicon="UNIQUE_UNDERWEAR_UNLOCK" characterview="CharacterViewFull">
+        <Mesh uniquename="HM_UNDERWEAR_MESH_1" mesh="T0_UNDERWEAR_01_HM" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_MALE_UNDERWEAR_MESH_1"/>
+        <Mesh uniquename="HM_UNDERWEAR_MESH_2" mesh="T0_UNDERWEAR_02_HM" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_MALE_UNDERWEAR_MESH_2"/>
+        <Mesh uniquename="HM_UNDERWEAR_MESH_3" mesh="T0_UNDERWEAR_03_HM" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_MALE_UNDERWEAR_MESH_3"/>
+        <Mesh uniquename="HM_UNDERWEAR_MESH_4" mesh="T0_UNDERWEAR_04_HM" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_MALE_UNDERWEAR_MESH_4"/>
+        <Mesh uniquename="HM_UNDERWEAR_MESH_5" mesh="T0_UNDERWEAR_05_HM" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_MALE_UNDERWEAR_MESH_5"/>
+        <Mesh uniquename="HM_UNDERWEAR_MESH_6" mesh="T0_UNDERWEAR_06_HM" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_MALE_UNDERWEAR_MESH_6"/>
+        <Mesh uniquename="HM_UNDERWEAR_MESH_7" mesh="T0_UNDERWEAR_07_HM" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_MALE_UNDERWEAR_MESH_7"/>
+      </Item>
+    </Customization>
+    
+    <Customization uniquename="HUMAN_FEMALE">
+      <Item uniquename="FACE" characterview="CharacterViewFace">
+        <Mesh uniquename="HF_FACE_MESH_1" mesh="T0_FACE_01_HF" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_FEMALE_FACE_MESH_1">
+          <FaceState state="FACE" mesh="T0_FACE_01_HF_HOOD"/>
+          <FaceState state="HOOD" mesh="T0_FACE_01_HF_HOOD"/>
+          <FaceState state="HALF" mesh="T0_FACE_01_HF_HALF"/>
+        </Mesh>
+        <Mesh uniquename="HF_FACE_MESH_2" mesh="T0_FACE_02_HF" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_FEMALE_FACE_MESH_2">
+          <FaceState state="FACE" mesh="T0_FACE_02_HF_HOOD"/>
+          <FaceState state="HOOD" mesh="T0_FACE_02_HF_HOOD"/>
+          <FaceState state="HALF" mesh="T0_FACE_02_HF_HALF"/>
+        </Mesh>
+        <Mesh uniquename="HF_FACE_MESH_3" mesh="T0_FACE_03_HF" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_FEMALE_FACE_MESH_3">
+          <FaceState state="FACE" mesh="T0_FACE_03_HF_HOOD"/>
+          <FaceState state="HOOD" mesh="T0_FACE_03_HF_HOOD"/>
+          <FaceState state="HALF" mesh="T0_FACE_03_HF_HALF"/>
+        </Mesh>
+        <Mesh uniquename="HF_FACE_MESH_4" mesh="T0_FACE_04_HF" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_FEMALE_FACE_MESH_4">
+          <FaceState state="FACE" mesh="T0_FACE_04_HF_HOOD"/>
+          <FaceState state="HOOD" mesh="T0_FACE_04_HF_HOOD"/>
+          <FaceState state="HALF" mesh="T0_FACE_04_HF_HALF"/>
+        </Mesh>
+        <Mesh uniquename="HF_FACE_MESH_5" mesh="T0_FACE_05_HF" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_FEMALE_FACE_MESH_5">
+          <FaceState state="FACE" mesh="T0_FACE_05_HF_HOOD"/>
+          <FaceState state="HOOD" mesh="T0_FACE_05_HF_HOOD"/>
+          <FaceState state="HALF" mesh="T0_FACE_05_HF_HALF"/>
+        </Mesh>
+      </Item>
+      <Item uniquename="SKIN" colorset="SKIN" characterview="CharacterViewFull">
+      </Item>
+      <Item uniquename="HAIR" colorset="HAIR" unlockicon="UNIQUE_HAIR_UNLOCK" characterview="CharacterViewFace">
+        <Mesh uniquename="HF_HAIR_MESH_0" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_FEMALE_HAIR_MESH_0">
+        </Mesh>
+        <Mesh uniquename="HF_HAIR_MESH_1" mesh="T0_HAIR_01_HF" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_FEMALE_HAIR_MESH_1">
+          <FaceState state="FACE"/>
+          <FaceState state="HOOD" mesh="T0_HAIR_01_HF_HOOD"/>
+          <FaceState state="HALF" mesh="T0_HAIR_01_HF_HALF"/>
+        </Mesh>
+        <Mesh uniquename="HF_HAIR_MESH_2" mesh="T0_HAIR_02_HF" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_FEMALE_HAIR_MESH_2">
+          <FaceState state="FACE"/>
+          <FaceState state="HOOD" mesh="T0_HAIR_02_HF_HOOD"/>
+          <FaceState state="HALF" mesh="T0_HAIR_02_HF_HALF"/>
+        </Mesh>
+        <Mesh uniquename="HF_HAIR_MESH_3" mesh="T0_HAIR_03_HF" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_FEMALE_HAIR_MESH_3">
+          <FaceState state="FACE"/>
+          <FaceState state="HOOD" mesh="T0_HAIR_03_HF_HOOD"/>
+          <FaceState state="HALF" mesh="T0_HAIR_03_HF_HALF"/>
+        </Mesh>
+        <Mesh uniquename="HF_HAIR_MESH_4" mesh="T0_HAIR_04_HF" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_FEMALE_HAIR_MESH_4">
+          <FaceState state="FACE"/>
+          <FaceState state="HOOD" mesh="T0_HAIR_04_HF_HOOD"/>
+          <FaceState state="HALF" mesh="T0_HAIR_04_HF_HALF"/>
+        </Mesh>
+        <Mesh uniquename="HF_HAIR_MESH_5" mesh="T0_HAIR_05_HF" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_FEMALE_HAIR_MESH_5">
+          <FaceState state="FACE"/>
+          <FaceState state="HOOD" mesh="T0_HAIR_05_HF_HOOD"/>
+          <FaceState state="HALF" mesh="T0_HAIR_05_HF_HALF"/>
+        </Mesh>
+        <Mesh uniquename="HF_HAIR_MESH_6" mesh="T0_HAIR_06_HF" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_FEMALE_HAIR_MESH_6">
+          <FaceState state="FACE"/>
+          <FaceState state="HOOD" mesh="T0_HAIR_06_HF_HOOD"/>
+          <FaceState state="HALF" mesh="T0_HAIR_06_HF_HALF"/>
+        </Mesh>
+        <Mesh uniquename="HF_HAIR_MESH_7" mesh="T0_HAIR_07_HF" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_FEMALE_HAIR_MESH_7">
+          <FaceState state="FACE"/>
+          <FaceState state="HOOD"/>
+          <FaceState state="HALF" mesh="T0_HAIR_07_HF_HALF"/>
+        </Mesh>
+        <Mesh uniquename="HF_HAIR_MESH_8" mesh="T0_HAIR_08_HF" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_FEMALE_HAIR_MESH_8">
+          <FaceState state="FACE"/>
+          <FaceState state="HOOD" mesh="T0_HAIR_08_HF_HOOD"/>
+          <FaceState state="HALF" mesh="T0_HAIR_08_HF_HALF"/>
+        </Mesh>
+        <Mesh uniquename="HF_HAIR_MESH_09" mesh="T0_HAIR_09_HF" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_FEMALE_HAIR_MESH_9">
+          <FaceState state="FACE"/>
+          <FaceState state="HOOD"/>
+          <FaceState state="HALF" mesh="T0_HAIR_09_HF_HALF"/>
+        </Mesh>
+        <Mesh uniquename="HF_HAIR_MESH_10" mesh="T0_HAIR_10_HF" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_FEMALE_HAIR_MESH_10">
+          <FaceState state="FACE"/>
+          <FaceState state="HOOD" mesh="T0_HAIR_10_HF_HOOD"/>
+          <FaceState state="HALF" mesh="T0_HAIR_10_HF_HALF"/>
+        </Mesh>
+        <Mesh uniquename="HF_HAIR_MESH_11" mesh="T0_HAIR_11_HF" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_FEMALE_HAIR_MESH_11">
+          <FaceState state="FACE"/>
+          <FaceState state="HOOD" mesh="T0_HAIR_11_HF_HOOD"/>
+          <FaceState state="HALF" mesh="T0_HAIR_11_HF_HALF"/>
+        </Mesh>
+        <Mesh uniquename="HF_HAIR_MESH_12" mesh="T0_HAIR_12_HF" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_FEMALE_HAIR_MESH_12" state="Buyable" goldprice="250">
+          <FaceState state="FACE"/>
+          <FaceState state="HOOD"/>
+          <FaceState state="HALF"/>
+        </Mesh>
+        <Mesh uniquename="HF_HAIR_MESH_13" mesh="T0_HAIR_13_HF" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_FEMALE_HAIR_MESH_13" state="Buyable" goldprice="250">
+          <FaceState state="FACE"/>
+          <FaceState state="HOOD"/>
+          <FaceState state="HALF" mesh="T0_HAIR_13_HF_HALF"/>
+        </Mesh>
+        <Mesh uniquename="HF_HAIR_MESH_14" mesh="T0_HAIR_14_HF" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_FEMALE_HAIR_MESH_14" state="Buyable" goldprice="250">
+          <FaceState state="FACE"/>
+          <FaceState state="HOOD" mesh="T0_HAIR_14_HF_HOOD"/>
+          <FaceState state="HALF" mesh="T0_HAIR_14_HF_HALF"/>
+        </Mesh>
+        <Mesh uniquename="HF_HAIR_MESH_15" mesh="T0_HAIR_15_HF" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_FEMALE_HAIR_MESH_15" state="Buyable" goldprice="250">
+          <FaceState state="FACE"/>
+          <FaceState state="HOOD"/>
+          <FaceState state="HALF" mesh="T0_HAIR_15_HF_HALF"/>
+        </Mesh>
+        <Mesh uniquename="HF_HAIR_MESH_16" mesh="T0_HAIR_16_HF" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_FEMALE_HAIR_MESH_16" state="Buyable" goldprice="250">
+          <FaceState state="FACE"/>
+          <FaceState state="HOOD"/>
+          <FaceState state="HALF" mesh="T0_HAIR_16_HF_HALF"/>
+        </Mesh>
+        <Mesh uniquename="HF_HAIR_MESH_17" mesh="T0_HAIR_17_HF" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_FEMALE_HAIR_MESH_17" state="Buyable" goldprice="250">
+          <FaceState state="FACE"/>
+          <FaceState state="HOOD"/>
+          <FaceState state="HALF" mesh="T0_HAIR_17_HF_HALF"/>
+        </Mesh>
+        <Mesh uniquename="HF_HAIR_MESH_18" mesh="T0_HAIR_18_HF" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_FEMALE_HAIR_MESH_18_MAGE" state="Buyable" goldprice="250">
+          <FaceState state="FACE"/>
+          <FaceState state="HOOD"/>
+          <FaceState state="HALF" mesh="T0_HAIR_18_HF_HALF"/>
+        </Mesh>
+      </Item>
+      <Item uniquename="UNDERWEAR" replaceslot="armor" colorset="UNDERWEAR" unlockicon="UNIQUE_UNDERWEAR_UNLOCK" characterview="CharacterViewFull">
+        <Mesh uniquename="HF_UNDERWEAR_MESH_1" mesh="T0_UNDERWEAR_01_HF" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_FEMALE_UNDERWEAR_MESH_1"/>
+        <Mesh uniquename="HF_UNDERWEAR_MESH_2" mesh="T0_UNDERWEAR_02_HF" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_FEMALE_UNDERWEAR_MESH_2"/>
+        <Mesh uniquename="HF_UNDERWEAR_MESH_3" mesh="T0_UNDERWEAR_03_HF" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_FEMALE_UNDERWEAR_MESH_3"/>
+        <Mesh uniquename="HF_UNDERWEAR_MESH_4" mesh="T0_UNDERWEAR_04_HF" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_FEMALE_UNDERWEAR_MESH_4"/>
+        <Mesh uniquename="HF_UNDERWEAR_MESH_5" mesh="T0_UNDERWEAR_05_HF" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_FEMALE_UNDERWEAR_MESH_5"/>
+        <Mesh uniquename="HF_UNDERWEAR_MESH_6" mesh="T0_UNDERWEAR_06_HF" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_FEMALE_UNDERWEAR_MESH_6"/>
+        <Mesh uniquename="HF_UNDERWEAR_MESH_7" mesh="T0_UNDERWEAR_07_HF" namelocatag="@CHARACTER_CUSTOMIZATION_HUMAN_FEMALE_UNDERWEAR_MESH_7"/>
+      </Item>
+    </Customization>
+  </Customizations>
+
+  <!-- presets for character creation for choosing an avatar -->
+  <AvatarToCustomizationPresets>
+    <!--Male-->
+    <Preset avatar="AVATAR_01" charactertype="HUMAN_MALE">
+      <CustomizationItem item="FACE" mesh="T0_FACE_01_HM" />
+	  <CustomizationItem item="SKIN" color="3" />
+      <CustomizationItem item="BEARD" />
+      <CustomizationItem item="HAIR" color="2" mesh="T0_HAIR_01_HM" />
+      <CustomizationItem item="UNDERWEAR" color="3" mesh="T0_UNDERWEAR_07_HM" />
+    </Preset>
+    <Preset avatar="AVATAR_02" charactertype="HUMAN_MALE">
+      <CustomizationItem item="FACE" mesh="T0_FACE_03_HM" />
+	  <CustomizationItem item="SKIN" color="2" />
+      <CustomizationItem item="BEARD" mesh="T0_BEARD_05_HM" />
+      <CustomizationItem item="HAIR" color="9" />
+      <CustomizationItem item="UNDERWEAR" color="3" mesh="T0_UNDERWEAR_06_HM" />
+    </Preset>
+    <Preset avatar="AVATAR_03" charactertype="HUMAN_MALE">
+      <CustomizationItem item="FACE" mesh="T0_FACE_01_HM" />
+	  <CustomizationItem item="SKIN" color="3" />
+      <CustomizationItem item="BEARD" />
+      <CustomizationItem item="HAIR" color="8" mesh="T0_HAIR_01_HM"/>
+      <CustomizationItem item="UNDERWEAR" color="4" mesh="T0_UNDERWEAR_04_HM" />
+    </Preset>
+    <Preset avatar="AVATAR_04" charactertype="HUMAN_MALE">
+      <CustomizationItem item="FACE" mesh="T0_FACE_03_HM" />
+	  <CustomizationItem item="SKIN" color="1" />
+      <CustomizationItem item="BEARD" mesh="T0_BEARD_03_HM" />
+      <CustomizationItem item="HAIR" color="5" mesh="T0_HAIR_02_HM"/>
+      <CustomizationItem item="UNDERWEAR" color="3" mesh="T0_UNDERWEAR_02_HM" />
+    </Preset>
+    <Preset avatar="AVATAR_05" charactertype="HUMAN_MALE">
+      <CustomizationItem item="FACE" mesh="T0_FACE_03_HM" />
+	  <CustomizationItem item="SKIN" color="3" />
+      <CustomizationItem item="BEARD" mesh="T0_BEARD_02_HM" />
+      <CustomizationItem item="HAIR" color="0" mesh="T0_HAIR_01_HM"/>
+      <CustomizationItem item="UNDERWEAR" color="0" mesh="T0_UNDERWEAR_01_HM" />
+    </Preset>
+    <Preset avatar="AVATAR_06" charactertype="HUMAN_MALE">
+      <CustomizationItem item="FACE" mesh="T0_FACE_03_HM" />
+	  <CustomizationItem item="SKIN" color="0" />
+      <CustomizationItem item="BEARD" mesh="T0_BEARD_06_HM" />
+      <CustomizationItem item="HAIR" color="3" mesh="T0_HAIR_06_HM"/>
+      <CustomizationItem item="UNDERWEAR" color="4" mesh="T0_UNDERWEAR_03_HM" />
+    </Preset>
+    <Preset avatar="AVATAR_07" charactertype="HUMAN_MALE">
+      <CustomizationItem item="FACE" mesh="T0_FACE_04_HM" />
+	  <CustomizationItem item="SKIN" color="3" />
+      <CustomizationItem item="BEARD" />
+      <CustomizationItem item="HAIR" color="9" mesh="T0_HAIR_06_HM" />
+      <CustomizationItem item="UNDERWEAR" color="5" mesh="T0_UNDERWEAR_04_HM" />
+    </Preset>
+    <Preset avatar="AVATAR_08" charactertype="HUMAN_MALE">
+      <CustomizationItem item="FACE" mesh="T0_FACE_05_HM" />
+	  <CustomizationItem item="SKIN" color="7" />
+      <CustomizationItem item="BEARD" mesh="T0_BEARD_06_HM" />
+      <CustomizationItem item="HAIR" color="9" mesh="T0_HAIR_07_HM" />
+      <CustomizationItem item="UNDERWEAR" color="2" mesh="T0_UNDERWEAR_06_HM" />
+    </Preset>
+    <Preset avatar="AVATAR_09" charactertype="HUMAN_MALE">
+      <CustomizationItem item="FACE" mesh="T0_FACE_05_HM" />
+	  <CustomizationItem item="SKIN" color="8" />
+      <CustomizationItem item="BEARD" />
+      <CustomizationItem item="HAIR" color="11" />
+      <CustomizationItem item="UNDERWEAR" color="2" mesh="T0_UNDERWEAR_07_HM" />
+    </Preset>
+    <!--Female-->
+    <Preset avatar="AVATAR_01" charactertype="HUMAN_FEMALE">
+      <CustomizationItem item="FACE" mesh="T0_FACE_01_HF" />
+	  <CustomizationItem item="SKIN" color="1" />
+      <CustomizationItem item="BEARD" />
+      <CustomizationItem item="HAIR" color="1" mesh="T0_HAIR_01_HF" />
+      <CustomizationItem item="UNDERWEAR" color="3" mesh="T0_UNDERWEAR_03_HF" />
+    </Preset>
+    <Preset avatar="AVATAR_02" charactertype="HUMAN_FEMALE">
+      <CustomizationItem item="FACE" mesh="T0_FACE_03_HF" />
+	  <CustomizationItem item="SKIN" color="0" />
+      <CustomizationItem item="BEARD" />
+      <CustomizationItem item="HAIR" color="4" mesh="T0_HAIR_05_HF"/>
+      <CustomizationItem item="UNDERWEAR" color="4" mesh="T0_UNDERWEAR_01_HF" />
+    </Preset>
+    <Preset avatar="AVATAR_03" charactertype="HUMAN_FEMALE">
+      <CustomizationItem item="FACE" mesh="T0_FACE_03_HF" />
+	  <CustomizationItem item="SKIN" color="3" />
+      <CustomizationItem item="BEARD" />
+      <CustomizationItem item="HAIR" color="6" mesh="T0_HAIR_08_HF"/>
+      <CustomizationItem item="UNDERWEAR" color="4" mesh="T0_UNDERWEAR_02_HF" />
+    </Preset>
+    <Preset avatar="AVATAR_04" charactertype="HUMAN_FEMALE">
+      <CustomizationItem item="FACE" mesh="T0_FACE_02_HF" />
+	  <CustomizationItem item="SKIN" color="4" />
+      <CustomizationItem item="BEARD"/>
+      <CustomizationItem item="HAIR" color="8" mesh="T0_HAIR_04_HF"/>
+      <CustomizationItem item="UNDERWEAR" color="3" mesh="T0_UNDERWEAR_06_HF" />
+    </Preset>
+    <Preset avatar="AVATAR_05" charactertype="HUMAN_FEMALE">
+      <CustomizationItem item="FACE" mesh="T0_FACE_01_HF" />
+	  <CustomizationItem item="SKIN" color="0" />
+      <CustomizationItem item="BEARD" />
+      <CustomizationItem item="HAIR" color="10" mesh="T0_HAIR_03_HF"/>
+      <CustomizationItem item="UNDERWEAR" color="5" mesh="T0_UNDERWEAR_02_HF" />
+    </Preset>
+    <Preset avatar="AVATAR_06" charactertype="HUMAN_FEMALE">
+      <CustomizationItem item="FACE" mesh="T0_FACE_01_HF" />
+	  <CustomizationItem item="SKIN" color="2" />
+      <CustomizationItem item="BEARD" />
+      <CustomizationItem item="HAIR" color="1" mesh="T0_HAIR_02_HF"/>
+      <CustomizationItem item="UNDERWEAR" color="5" mesh="T0_UNDERWEAR_01_HF" />
+    </Preset>
+    <Preset avatar="AVATAR_07" charactertype="HUMAN_FEMALE">
+      <CustomizationItem item="FACE" mesh="T0_FACE_04_HF" />
+	  <CustomizationItem item="SKIN" color="1" />
+      <CustomizationItem item="BEARD" />
+      <CustomizationItem item="HAIR" color="9" mesh="T0_HAIR_03_HF" />
+      <CustomizationItem item="UNDERWEAR" color="3" mesh="T0_UNDERWEAR_06_HF" />
+    </Preset>
+    <Preset avatar="AVATAR_08" charactertype="HUMAN_FEMALE">
+      <CustomizationItem item="FACE" mesh="T0_FACE_05_HF" />
+	  <CustomizationItem item="SKIN" color="6" />
+      <CustomizationItem item="BEARD" />
+      <CustomizationItem item="HAIR" color="10" mesh="T0_HAIR_05_HF"/>
+      <CustomizationItem item="UNDERWEAR" color="1" mesh="T0_UNDERWEAR_04_HF" />
+    </Preset>
+    <Preset avatar="AVATAR_09" charactertype="HUMAN_FEMALE">
+      <CustomizationItem item="FACE" mesh="T0_FACE_05_HF" />
+	  <CustomizationItem item="SKIN" color="8" />
+      <CustomizationItem item="BEARD" />
+      <CustomizationItem item="HAIR" color="10" mesh="T0_HAIR_07_HF"/>
+      <CustomizationItem item="UNDERWEAR" color="10" mesh="T0_UNDERWEAR_07_HF" />
+    </Preset>
+  </AvatarToCustomizationPresets>
+ 
+  
+  <!-- Gameplay definitions for characters (chars not listed can't be selected on character creation) -->
+  <Characters globalcastdelay="0.5">
+    <DefaultValues
+	    inventorysize="48"
+      collisionradius="0.75"
+      attackcollisionradius="0.75"
+      harvestrange="2.0"
+      useobjectrange="2.0"
+      useobjectrangeclose="1.0"
+      usecraftbuildingrange="30.0"
+      barehandrange="2"
+      barehandphysicaldamage="20"
+      barehandattackspeed="1"
+      hitpointsmax="1200.0"
+      hitpointsregeneration="12.0"
+      energymax="120.0"
+      energyregeneration="1.5"
+      craftingfocusmax="30000"
+      premiumcraftingfocusmax = "30000"
+      craftingfocusatstart="0"
+      craftingfocusregenerationperday="0"
+      premiumcraftingfocusregenerationperday="10000"
+      learningpointsmax="999999"
+      learningpointsatstart="0"
+      learningpointsecondsperpoint="0"
+      learningpointsmaxpremium="999999"
+      learningpointsecondsperpointpremium="2880"
+      premiumdestinyboardprogressionfactor="1.5"
+      premiumsilverlootfactor="1.5"
+      premiummoblootfactor="1.5"
+      premiumgatheringyieldbonuschance="0.5"
+      premiumcropyieldfactor="2.0"
+      premiumanimalgrowthfactor="0.5"
+      premiummarkettransactionfeefactor="0.5"
+      movespeed="5.5"
+      maxload="50"
+      meleeattackdamagetime="0.25"
+      rangedattackdamagetime="0.4"
+      magicattackdamagetime="0.36"
+      warcamprange="8.0"
+      monolithrange="6.0"
+      orbclaimrange="3.0"
+      claimpowercrystalhideoutrange="8.0"
+      claimpowercrystalterritoryrange="4.0"
+	    treasurechestrange="2.0"
+      maxfoodslotstacksize="10"
+      maxpotionslotstacksize="10"
+	  >
+      <ToolsForActionAnimation>
+        <crafting defaultmesh="">
+          <target id="craftcarpworkshop" mesh="T0_MAIN_SAW"/>
+          <target id="craftstonemasonry" mesh="T0_MAIN_STONEMASON_HAMMER"/>
+          <target id="craftweavingmill" mesh=""/>
+          <target id="craftannery" mesh="T0_MAIN_TANNERY_KNIFE"/>
+          <target id="craftmagicstore" mesh=""/>
+          <target id="craftforge" mesh="T0_MAIN_FORGE_HAMMER"/>
+          <target id="crafthunterlodge" mesh="T0_MAIN_HUNTER_CARVING_KNIFE"/>
+          <target id="craftsmelter" mesh="T0_2H_SMELTER_STAFF"/>
+          <target id="craftbutcher" mesh="T0_MAIN_BUTCHER_KNIFE"/>
+          <target id="crafttool" mesh="T0_MAIN_TOOLMAKER_HAMMER"/>
+          <target id="crafttalk" mesh=""/>
+        </crafting>
+        <installing defaultmesh=""/>
+        <placing defaultmesh="">
+          <target id="sow" mesh=""/>
+          <target id="planting" mesh="T0_2H_FARM_MATTOCK"/>
+          <target id="breed" mesh=""/>
+          <target id="hideout" mesh="T0_2H_BUILDINGHAMMER"/>
+        </placing>
+        <careing defaultmesh="">
+          <target id="sow" mesh="T0_MAIN_TOOL_WATERINGCAN"/>
+          <target id="planting" mesh="T0_MAIN_TOOL_WATERINGCAN"/>
+        </careing>
+      </ToolsForActionAnimation>
+   
+  </DefaultValues>
+  
+    <Character
+      uniquename="HUMAN_MALE"
+      namelocatag="@CHARACTER_NAME_HUMAN_MALE" 
+      prefab="HUMAN_MALE" 
+      prefabscale="1.25"
+      equipmentsuffix="HM"
+      vfxAddonKeyword="human">            
+      <SocketPreset name="HUMAN_MALE"/>
+      <AudioInfo name="HUMAN_MALE"/>
+      <FootStepVfxPreset name="HUMAN_MALE"/>
+      <VfxPreset name=""/>
+    </Character>
+
+    <Character 
+      uniquename="HUMAN_FEMALE"
+      namelocatag="@CHARACTER_NAME_HUMAN_FEMALE" 
+      prefab="HUMAN_FEMALE"
+      prefabscale="1.25"
+      equipmentsuffix="HF"
+      vfxAddonKeyword="human">
+      <SocketPreset name="HUMAN_FEMALE"/>
+      <AudioInfo name="HUMAN_FEMALE"/>
+      <FootStepVfxPreset name="HUMAN_FEMALE"/>
+      <VfxPreset name=""/>
+    </Character>
+
+  </Characters>
+
+</CharacterData>
+  

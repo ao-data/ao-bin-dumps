@@ -1,0 +1,873 @@
+{
+  "?xml": {
+    "@version": "1.0",
+    "@encoding": "utf-8"
+  },
+  "xs:schema": {
+    "@xmlns:xs": "http://www.w3.org/2001/XMLSchema",
+    "@elementFormDefault": "qualified",
+    "xs:attribute": [
+      {
+        "@name": "castanimation",
+        "@type": "castID"
+      },
+      {
+        "@name": "channelinganimation",
+        "@type": "channelID"
+      },
+      {
+        "@name": "spelleffectanimation",
+        "@type": "casteffectID"
+      }
+    ],
+    "xs:simpleType": [
+      {
+        "@name": "animswitchID",
+        "xs:restriction": {
+          "@base": "xs:string",
+          "xs:enumeration": [
+            {
+              "@value": "guard"
+            },
+            {
+              "@value": "work"
+            }
+          ]
+        }
+      },
+      {
+        "@name": "castID",
+        "xs:restriction": {
+          "@base": "xs:string",
+          "xs:enumeration": [
+            {
+              "@value": "none"
+            },
+            {
+              "@value": "2h_shot"
+            },
+            {
+              "@value": "ability_eat"
+            },
+            {
+              "@value": "cast_2hmagestaff"
+            },
+            {
+              "@value": "cast_aimed_shot"
+            },
+            {
+              "@value": "cast_areadamage"
+            },
+            {
+              "@value": "cast_artillery"
+            },
+            {
+              "@value": "cast_beam"
+            },
+            {
+              "@value": "cast_supportive_beam_end"
+            },
+            {
+              "@value": "cast_offensive_beam_end"
+            },
+            {
+              "@value": "cast_charge"
+            },
+            {
+              "@value": "cast_command"
+            },
+            {
+              "@value": "cast_conjure"
+            },
+            {
+              "@value": "cast_dash"
+            },
+            {
+              "@value": "cast_directattack"
+            },
+            {
+              "@value": "cast_drop"
+            },
+            {
+              "@value": "cast_enfeeble"
+            },
+            {
+              "@value": "cast_flamepillar"
+            },
+            {
+              "@value": "cast_forwardchannel"
+            },
+            {
+              "@value": "cast_ground"
+            },
+            {
+              "@value": "cast_heal"
+            },
+            {
+              "@value": "cast_heal2"
+            },
+            {
+              "@value": "cast_heal3"
+            },
+            {
+              "@value": "cast_horn"
+            },
+            {
+              "@value": "cast_icesculpture"
+            },
+            {
+              "@value": "cast_icestorm"
+            },
+            {
+              "@value": "cast_jump"
+            },
+            {
+              "@value": "jump_attack"
+            },
+            {
+              "@value": "cast_jump_back"
+            },
+            {
+              "@value": "cast_link1"
+            },
+            {
+              "@value": "cast_link2"
+            },
+            {
+              "@value": "cast_melee"
+            },
+            {
+              "@value": "cast_melee2"
+            },
+            {
+              "@value": "cast_melee_slow"
+            },
+            {
+              "@value": "cast_mimic"
+            },
+            {
+              "@value": "cast_prayer"
+            },
+            {
+              "@value": "cast_prayer_ultimate"
+            },
+            {
+              "@value": "cast_black_hole"
+            },
+            {
+              "@value": "cast_portal"
+            },
+            {
+              "@value": "cast_recoil"
+            },
+            {
+              "@value": "cast_revitalize"
+            },
+            {
+              "@value": "cast_rise"
+            },
+            {
+              "@value": "cast_silence"
+            },
+            {
+              "@value": "cast_staffsmashground"
+            },
+            {
+              "@value": "cast_staffsmashground_upright"
+            },
+            {
+              "@value": "cast_spawnmob"
+            },
+            {
+              "@value": "cast_staffonground"
+            },
+            {
+              "@value": "cast_staffarc"
+            },
+            {
+              "@value": "cast_swipe"
+            },
+            {
+              "@value": "cast_standardattack"
+            },
+            {
+              "@value": "cast_stomp"
+            },
+            {
+              "@value": "cast_stomp_big"
+            },
+            {
+              "@value": "cast_summon"
+            },
+            {
+              "@value": "cast_swirl"
+            },
+            {
+              "@value": "cast_swirl2"
+            },
+            {
+              "@value": "cast_tornado"
+            },
+            {
+              "@value": "cast_meteor"
+            },
+            {
+              "@value": "cast_undirected"
+            },
+            {
+              "@value": "cast_undirected_long"
+            },
+            {
+              "@value": "cast_skillshot_directed"
+            },
+            {
+              "@value": "cast_swirl_directed"
+            },
+            {
+              "@value": "channel_start"
+            },
+            {
+              "@value": "charge_2hsword"
+            },
+            {
+              "@value": "charge_armor"
+            },
+            {
+              "@value": "drink"
+            },
+            {
+              "@value": "dropitem"
+            },
+            {
+              "@value": "execute"
+            },
+            {
+              "@value": "laugh_halloween"
+            },
+            {
+              "@value": "MainStaff1H_AoeSpell"
+            },
+            {
+              "@value": "MainStaff1H_Attack"
+            },
+            {
+              "@value": "MagicStaff2H_Attack"
+            },
+            {
+              "@value": "MagicStaff2H_AoeSpell"
+            },
+            {
+              "@value": "melee_areaattack"
+            },
+            {
+              "@value": "melee_areadamage"
+            },
+            {
+              "@value": "melee_bigswing"
+            },
+            {
+              "@value": "melee_crescentslash"
+            },
+            {
+              "@value": "melee_enlarge_weapon"
+            },
+            {
+              "@value": "melee_ground_aoe_big"
+            },
+            {
+              "@value": "melee_groundslam"
+            },
+            {
+              "@value": "melee_headslam"
+            },
+            {
+              "@value": "melee_Heavy"
+            },
+            {
+              "@value": "melee_Heavy2"
+            },
+            {
+              "@value": "melee_heavycombo"
+            },
+            {
+              "@value": "melee_highstrike"
+            },
+            {
+              "@value": "melee_interrupt"
+            },
+            {
+              "@value": "melee_launcher"
+            },
+            {
+              "@value": "Melee_Lowstrike"
+            },
+            {
+              "@value": "melee_piercestrike"
+            },
+            {
+              "@value": "melee_shieldslam"
+            },
+            {
+              "@value": "melee_skillshot"
+            },
+            {
+              "@value": "melee_spin"
+            },
+            {
+              "@value": "melee_slam"
+            },
+            {
+              "@value": "melee_standardstrike"
+            },
+            {
+              "@value": "melee_sweepingblow"
+            },
+            {
+              "@value": "melee_sweepingblow2"
+            },
+            {
+              "@value": "mount_ability_01"
+            },
+            {
+              "@value": "mount_ability_02"
+            },
+            {
+              "@value": "mount_ability_channel"
+            },
+            {
+              "@value": "mount_ability_ultimate"
+            },
+            {
+              "@value": "mount_ability_utility"
+            },
+            {
+              "@value": "mount_bastion_charge"
+            },
+            {
+              "@value": "mount_raven_scream"
+            },
+            {
+              "@value": "mount_rhino_charge"
+            },
+            {
+              "@value": "mount_rhino_stomp"
+            },
+            {
+              "@value": "mount_chariot_towershield_climax"
+            },
+            {
+              "@value": "mount_chariot_spell_cast"
+            },
+            {
+              "@value": "mount_chariot_barreldeploy"
+            },
+            {
+              "@value": "mount_eagle_smallcast"
+            },
+            {
+              "@value": "mount_eagle_bigcast"
+            },
+            {
+              "@value": "mount_eagle_flapping_climax"
+            },
+            {
+              "@value": "mount_beetle_slam"
+            },
+            {
+              "@value": "mount_beetle_buzz"
+            },
+            {
+              "@value": "mount_beetle_charge_climax"
+            },
+            {
+              "@value": "mount_beetle_fly_liftup"
+            },
+            {
+              "@value": "pole_vault"
+            },
+            {
+              "@value": "quarterstaff_slam"
+            },
+            {
+              "@value": "ranged_aimcrossbow"
+            },
+            {
+              "@value": "ranged_heavycrossbow"
+            },
+            {
+              "@value": "ranged_crossbow_aim"
+            },
+            {
+              "@value": "ranged_heavyshot"
+            },
+            {
+              "@value": "ranged_horizontalshot"
+            },
+            {
+              "@value": "ranged_standardshot"
+            },
+            {
+              "@value": "ranged_throwingknife"
+            },
+            {
+              "@value": "ranged_undirected"
+            },
+            {
+              "@value": "rendingrage_left"
+            },
+            {
+              "@value": "rendingrage_right"
+            },
+            {
+              "@value": "self_buff"
+            },
+            {
+              "@value": "singlesmash"
+            },
+            {
+              "@value": "slam_down_spear_hit"
+            },
+            {
+              "@value": "shoot_ground"
+            },
+            {
+              "@value": "taunt_01"
+            },
+            {
+              "@value": "throw_snowball"
+            },
+            {
+              "@value": "throw_weapon"
+            },
+            {
+              "@value": "vanity_beer_drink"
+            },
+            {
+              "@value": "vanity_hunting_horn"
+            },
+            {
+              "@value": "vanity_trumpet_play"
+            },
+            {
+              "@value": "vanity_poison_pot"
+            },
+            {
+              "@value": "vanity_poison_pot_trick"
+            },
+            {
+              "@value": "vanity_warbanner_present"
+            },
+            {
+              "@value": "vanity_warbanner_charge"
+            },
+            {
+              "@value": "vanity_spellbook_fireworks"
+            },
+            {
+              "@value": "vanity_spellbook_bird"
+            },
+            {
+              "@value": "open_chest"
+            },
+            {
+              "@value": "open_shrine"
+            },
+            {
+              "@value": "use_portal"
+            }
+          ]
+        }
+      },
+      {
+        "@name": "casteffectID",
+        "xs:restriction": {
+          "@base": "xs:string",
+          "xs:enumeration": [
+            {
+              "@value": "none"
+            },
+            {
+              "@value": "sleep"
+            },
+            {
+              "@value": "tutorial_stun"
+            },
+            {
+              "@value": "whirlwind"
+            },
+            {
+              "@value": "dance"
+            }
+          ]
+        }
+      },
+      {
+        "@name": "channelID",
+        "xs:restriction": {
+          "@base": "xs:string",
+          "xs:enumeration": [
+            {
+              "@value": "channel_townportal"
+            },
+            {
+              "@value": "channel_block"
+            },
+            {
+              "@value": "channel_deflecting_spin"
+            },
+            {
+              "@value": "channel_eat_01"
+            },
+            {
+              "@value": "channel_enfeeble"
+            },
+            {
+              "@value": "channel_forwardattack"
+            },
+            {
+              "@value": "channel_invis_walk"
+            },
+            {
+              "@value": "channel_levitate"
+            },
+            {
+              "@value": "channel_levitate_weapon"
+            },
+            {
+              "@value": "channel_melee_aoe_01"
+            },
+            {
+              "@value": "channel_melee_attack_01"
+            },
+            {
+              "@value": "channel_melee_attack_02"
+            },
+            {
+              "@value": "channel_melee_combo"
+            },
+            {
+              "@value": "channel_melee_heavy"
+            },
+            {
+              "@value": "channel_melee_whirlwind_01"
+            },
+            {
+              "@value": "channel_mount_ability"
+            },
+            {
+              "@value": "channel_mount_undirected_01"
+            },
+            {
+              "@value": "channel_parry"
+            },
+            {
+              "@value": "channel_ranged_aoe_01"
+            },
+            {
+              "@value": "channel_aoe_heal_float_01"
+            },
+            {
+              "@value": "channel_ranged_attack_01"
+            },
+            {
+              "@value": "channel_ranged_attack_02"
+            },
+            {
+              "@value": "channel_staffonground"
+            },
+            {
+              "@value": "channel_undirected_01"
+            },
+            {
+              "@value": "channel_undirected_02"
+            },
+            {
+              "@value": "channel_undirected_03"
+            },
+            {
+              "@value": "channel_aoe"
+            },
+            {
+              "@value": "channel_vanity_trumpet"
+            },
+            {
+              "@value": "channel_hover_01"
+            },
+            {
+              "@value": "mount_chariot_towershield_channel"
+            },
+            {
+              "@value": "mount_eagle_flapping_channel"
+            },
+            {
+              "@value": "mount_beetle_buzz_channel"
+            },
+            {
+              "@value": "mount_beetle_fly_channel"
+            }
+          ]
+        }
+      },
+      {
+        "@name": "placeableID",
+        "xs:restriction": {
+          "@base": "xs:string",
+          "xs:enumeration": [
+            {
+              "@value": "sow"
+            },
+            {
+              "@value": "planting"
+            },
+            {
+              "@value": "breed"
+            },
+            {
+              "@value": "hideout"
+            }
+          ]
+        }
+      },
+      {
+        "@name": "actionstateID",
+        "xs:restriction": {
+          "@base": "xs:string",
+          "xs:enumeration": [
+            {
+              "@value": "inithideoutattack"
+            },
+            {
+              "@value": "openworldattackschedule"
+            },
+            {
+              "@value": "openworldattackconquer"
+            },
+            {
+              "@value": "territoryclaiming"
+            },
+            {
+              "@value": "orbclaiming"
+            },
+            {
+              "@value": "traveltohideout"
+            },
+            {
+              "@value": "hideoutmove"
+            }
+          ]
+        }
+      },
+      {
+        "@name": "forcedmovementSubID",
+        "xs:restriction": {
+          "@base": "xs:string",
+          "xs:enumeration": [
+            {
+              "@value": "mount_bastion_charge"
+            },
+            {
+              "@value": "cast_charge"
+            },
+            {
+              "@value": "etherialwalk"
+            },
+            {
+              "@value": "horse_dash"
+            },
+            {
+              "@value": "march"
+            },
+            {
+              "@value": "mount_rhino_charge"
+            },
+            {
+              "@value": "mount_moabird_zigzag"
+            },
+            {
+              "@value": "mount_swampdragon_shedskin"
+            },
+            {
+              "@value": "axe_jump"
+            },
+            {
+              "@value": "banner_jump"
+            },
+            {
+              "@value": "bigjump_halberd"
+            },
+            {
+              "@value": "cartwheel"
+            },
+            {
+              "@value": "cast_jump"
+            },
+            {
+              "@value": "charge_2hsword"
+            },
+            {
+              "@value": "dagger_dash"
+            },
+            {
+              "@value": "divekick"
+            },
+            {
+              "@value": "dbstaff_leap"
+            },
+            {
+              "@value": "elbowtackle"
+            },
+            {
+              "@value": "forwardkick"
+            },
+            {
+              "@value": "jump"
+            },
+            {
+              "@value": "jump_attack"
+            },
+            {
+              "@value": "jump_toad"
+            },
+            {
+              "@value": "leap_spear"
+            },
+            {
+              "@value": "mount_beetle_charge"
+            },
+            {
+              "@value": "mount_juggernaut_charge"
+            },
+            {
+              "@value": "melee_sweepingblow2"
+            },
+            {
+              "@value": "mighty_blow_jump"
+            },
+            {
+              "@value": "mount_giantstag_leap"
+            },
+            {
+              "@value": "pole_vault_jump"
+            },
+            {
+              "@value": "rapierstab"
+            },
+            {
+              "@value": "rendingrage_jump"
+            },
+            {
+              "@value": "slam_down"
+            },
+            {
+              "@value": "slam_down_spear"
+            },
+            {
+              "@value": "spinattack"
+            },
+            {
+              "@value": "strike_2hsword"
+            },
+            {
+              "@value": "tackle"
+            },
+            {
+              "@value": "tackle_ram"
+            },
+            {
+              "@value": "triplekick"
+            },
+            {
+              "@value": "charge_in"
+            },
+            {
+              "@value": "cast_jump_back"
+            },
+            {
+              "@value": "jumpshot"
+            },
+            {
+              "@value": "dash"
+            },
+            {
+              "@value": "charge_dualdagger"
+            }
+          ]
+        }
+      },
+      {
+        "@name": "emoteAnimationID",
+        "xs:restriction": {
+          "@base": "xs:string",
+          "xs:enumeration": [
+            {
+              "@value": "emote_applaud"
+            },
+            {
+              "@value": "emote_beg"
+            },
+            {
+              "@value": "emote_bow"
+            },
+            {
+              "@value": "emote_cheer"
+            },
+            {
+              "@value": "emote_cry"
+            },
+            {
+              "@value": "emote_flex"
+            },
+            {
+              "@value": "emote_laugh"
+            },
+            {
+              "@value": "emote_salute"
+            },
+            {
+              "@value": "emote_wave"
+            },
+            {
+              "@value": "emote_dance"
+            },
+            {
+              "@value": "emote_sit"
+            },
+            {
+              "@value": "emote_point"
+            },
+            {
+              "@value": "emote_yes"
+            },
+            {
+              "@value": "emote_no"
+            },
+            {
+              "@value": "emote_pushups"
+            },
+            {
+              "@value": "emote_backflip"
+            },
+            {
+              "@value": "emote_sleep"
+            },
+            {
+              "@value": "emote_shoulder"
+            },
+            {
+              "@value": "emote_charge"
+            },
+            {
+              "@value": "emote_taunt"
+            },
+            {
+              "@value": "emote_moonwalk"
+            },
+            {
+              "@value": "emote_hover"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

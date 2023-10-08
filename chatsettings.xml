@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ChatSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="chatsettings.xsd">
+
+  <!-- Setting for the Chat UI -->
+  <ChatUi maxtabs="10" selectedtab="0" maxtabnamelength="10">
+    <DefaultTab name="@CHAT_SETTINGS_TAB_NAME_GENERAL" showtimestamps="false" showchannelnames="true" maininputchannel="languageproxy">
+      <Channel id="languageproxy" />
+      <Channel id="local" />
+      <Channel id="say" />
+      <Channel id="emote" />
+      <Channel id="guild" />
+      <Channel id="alliance" />
+      <Channel id="lookingforgroup" />
+      <Channel id="party" />
+      <Channel id="duell" />
+      <Channel id="faction" />
+      <Channel id="personal" />
+      <Channel id="killplayer" />
+      <Channel id="system" />
+      <Channel id="staff" />
+    </DefaultTab>
+    <DefaultTab name="@CHAT_SETTINGS_TAB_NAME_HELP" showtimestamps="false" showchannelnames="true" maininputchannel="help">
+      <Channel id="help" />
+      <Channel id="personal" />
+    </DefaultTab>
+    <DefaultTab name="@CHAT_SETTINGS_TAB_NAME_RECRUIT" showtimestamps="false" showchannelnames="true" maininputchannel="recruit">
+      <Channel id="recruit" />
+    </DefaultTab>
+    <DefaultTab name="@CHAT_SETTINGS_TAB_NAME_TRADE" showtimestamps="false" showchannelnames="true" maininputchannel="trade">
+      <Channel id="trade" />
+    </DefaultTab>
+    <DefaultTab name="@CHAT_SETTINGS_TAB_NAME_COMBAT" showtimestamps="true" showchannelnames="false">
+      <Channel id="takedamage" />
+      <Channel id="givedamage" />
+      <Channel id="killplayer" />
+      <Channel id="healplayer" />
+      <Channel id="spelleffect" />
+      <Channel id="loot" />
+      <Channel id="silver" />
+      <Channel id="reputation" />
+      <Channel id="fame" />
+    </DefaultTab>
+
+    <!-- Special Tabs that will be auto created -->
+    <GuildTab showtimestamps="true" showchannelnames="false" maininputchannel="guild">
+      <Channel id="guild" />
+      <Channel id="personal" />
+    </GuildTab>
+    <AllianceTab showtimestamps="true" showchannelnames="false" maininputchannel="alliance">
+      <Channel id="alliance" />
+      <Channel id="personal" />
+    </AllianceTab>
+    <PartyTab showtimestamps="true" showchannelnames="false" maininputchannel="party">
+      <Channel id="party" />
+      <Channel id="personal" />
+    </PartyTab>
+    <FactionTab showtimestamps="true" showchannelnames="true" maininputchannel="faction">
+      <Channel id="faction" />
+      <Channel id="factionlocal" />
+      <Channel id="personal" />
+    </FactionTab>
+  </ChatUi>
+
+  <Cooldowns default_message_cooldown_ms ="500" 
+             say_cooldown_ms="500" 
+             whisper_cooldown_ms="500" 
+             say_radius="30" 
+             PlayerWhisperListCoolDownInSec="3600" 
+             MaxPlayerOnWhisperCoolDownListTutorial="3" 
+             MaxPlayerOnWhisperCoolDownList="10" 
+             MaxPlayerOnWhisperCoolDownListTrusted="100" >
+    <Channel id="local"           cooldown_ms="500"/>
+    <Channel id="global"          cooldown_ms="1000"/>
+    <Channel id="english"         cooldown_ms="1000"/>
+    <Channel id="german"          cooldown_ms="1000"/>
+    <Channel id="french"          cooldown_ms="1000"/>
+    <Channel id="polish"          cooldown_ms="1000"/>
+    <Channel id="russian"         cooldown_ms="1000" />
+    <Channel id="portuguese"      cooldown_ms="1000"/>
+    <Channel id="spanish"         cooldown_ms="1000"/>
+    <Channel id="chinese"         cooldown_ms="1000"/>
+    <Channel id="korean"          cooldown_ms="1000"/>
+    <Channel id="japanese"        cooldown_ms="1000"/>
+    <Channel id="italien"         cooldown_ms="1000"/>
+    <Channel id="trade"           cooldown_ms="30000"/>
+    <Channel id="recruit"         cooldown_ms="30000"/>
+    <Channel id="lookingforgroup" cooldown_ms="30000"/>
+    <Channel id="help"            cooldown_ms="1000"/>
+    <Channel id="staff"           cooldown_ms="100"/>
+    <Channel id="guild"           cooldown_ms="500"/>
+    <Channel id="alliance"        cooldown_ms="500"/>
+    <Channel id="party"           cooldown_ms="500"/>
+    <Channel id="duell"           cooldown_ms="500"/>
+    <Channel id="faction"         cooldown_ms="1000"/>
+    <Channel id="factionlocal"    cooldown_ms="500"/>
+  </Cooldowns>
+
+</ChatSettings>
+  

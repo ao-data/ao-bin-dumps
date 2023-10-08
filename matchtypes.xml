@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<matchtypes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="matchtypes.xsd">
+  <!-- MATCHES -->
+ 
+  <!-- ============================== ARENA ============================== -->
+  <matchtype uniquename="MATCH_ARENA" 
+             matchdurationminutes="25" 
+             roundduration="60" 
+             ticketdefault="150" 
+             timeleftorbearlyreset="0" 
+             respawndelay="10" 
+             matchtimerespawnmultiplier="1" 
+             minplayerperteam="5"
+             maxplayerperteam="5" 
+             ticketreductionbydeath="2" 
+             almostlostticketthreshold="10" 
+             advantageticketsdifference="50"
+             doublehealerpenalty="DOUBLEHEALER_PENALTY">
+    
+    <ticketreductionlookup orbdifference="0" ticketreduction="0" />
+    <ticketreductionlookup orbdifference="1" ticketreduction="10" />
+    <ticketreductionlookup orbdifference="2" ticketreduction="10" />
+    <ticketreductionlookup orbdifference="3" ticketreduction="20" />
+    <ticketreductionlookup orbdifference="4" ticketreduction="20" />
+    <warcamp>
+      <defense engageattackrange="18.0" 
+               disengageattackrange="18.0" 
+               attackinterval="0.4" 
+               attackdamage="0.1" 
+               attackdistancedelay="24.0" 
+               islethal="true" 
+               buffradius="8.7" 
+               buffspell="ARENA_WARCAMP_INVULNERABILITY">
+        <FriendlyFX beam="FX/ClientPrefabs/fx_beam_arena_blue" impact="Prefabs/SpellEffects/MeleeHit"/>
+        <HostileFX beam="FX/ClientPrefabs/fx_beam_arena_red" impact="Prefabs/SpellEffects/MeleeHit"/>
+      </defense>
+    </warcamp>
+  </matchtype>  
+  
+ <!-- ============================== SCRIM Matches ============================== -->
+  <!-- 5v5 Training Match -->
+  <matchtype uniquename="MATCH_CUSTOM" 
+             matchdurationminutes="25" 
+             roundduration="60" 
+             ticketdefault="150" 
+             timeleftorbearlyreset="0" 
+             respawndelay="18" 
+             matchtimerespawnmultiplier="1" 
+             minplayerperteam="5"
+             maxplayerperteam="5" 
+             ticketreductionbydeath="6" 
+             almostlostticketthreshold="0" 
+             advantageticketsdifference="0"
+             doublehealerpenalty="DOUBLEHEALER_PENALTY">
+    
+    <ticketreductionlookup orbdifference="0" ticketreduction="0" />
+    <ticketreductionlookup orbdifference="1" ticketreduction="10" />
+    <ticketreductionlookup orbdifference="2" ticketreduction="10" />
+    <ticketreductionlookup orbdifference="3" ticketreduction="20" />
+    <ticketreductionlookup orbdifference="4" ticketreduction="20" />
+    <warcamp>
+      <defense engageattackrange="18.0" 
+               disengageattackrange="18.0" 
+               attackinterval="0.4" 
+               attackdamage="0.1" 
+               attackdistancedelay="24.0" 
+               buffradius="8.7" 
+               buffspell="WARCAMP_INVULNERABILITY">
+        <FriendlyFX beam="FX/ClientPrefabs/fx_beam_gvg_blue" impact="Prefabs/SpellEffects/MeleeHit"/>
+        <HostileFX beam="FX/ClientPrefabs/fx_beam_gvg_orange" impact="Prefabs/SpellEffects/MeleeHit"/>
+      </defense>
+    </warcamp>
+  </matchtype>
+
+  <!-- 20v20 Training Match -->
+  <matchtype uniquename="MATCH_CUSTOM_CITY"
+             matchdurationminutes="25"
+             roundduration="120"
+             ticketdefault="200"
+             timeleftorbearlyreset="0"
+             respawndelay="15"
+             matchtimerespawnmultiplier="1"
+             minplayerperteam="15"
+             maxplayerperteam="20"
+             ticketreductionbydeath="3"
+             almostlostticketthreshold="0"
+             advantageticketsdifference="0">
+    
+    <ticketreductionlookup orbdifference="0" ticketreduction="0" />
+    <ticketreductionlookup orbdifference="1" ticketreduction="20" />
+    <ticketreductionlookup orbdifference="2" ticketreduction="20" />
+    <ticketreductionlookup orbdifference="3" ticketreduction="40" />
+    <ticketreductionlookup orbdifference="4" ticketreduction="40" />
+    <ticketreductionlookup orbdifference="5" ticketreduction="60" />
+    <warcamp>
+      <defense engageattackrange="20.0" disengageattackrange="20.0" attackinterval="0.4" attackdamage="0.1" attackdistancedelay="24.0" buffradius="8.7" buffspell="WARCAMP_INVULNERABILITY">
+        <FriendlyFX beam="FX/ClientPrefabs/fx_beam_gvg_blue" impact="Prefabs/SpellEffects/MeleeHit" />
+        <HostileFX beam="FX/ClientPrefabs/fx_beam_gvg_orange" impact="Prefabs/SpellEffects/MeleeHit"/>
+      </defense>
+    </warcamp>
+  </matchtype>  
+
+  <!-- ============================== GVG ============================== -->
+  <matchtype uniquename="MATCH_GVG"
+             matchdurationminutes="25"
+             roundduration="60"
+             ticketdefault="150"
+             timeleftorbearlyreset="0"
+             respawndelay="10"
+             matchtimerespawnmultiplier="1"
+             minplayerperteam="5"
+             maxplayerperteam="5"
+             ticketreductionbydeath="4"
+             almostlostticketthreshold="0"
+             advantageticketsdifference="0"
+             doublehealerpenalty="DOUBLEHEALER_PENALTY">
+    
+    <ticketreductionlookup orbdifference="0" ticketreduction="0" />
+    <ticketreductionlookup orbdifference="1" ticketreduction="10" />
+    <ticketreductionlookup orbdifference="2" ticketreduction="10" />
+    <ticketreductionlookup orbdifference="3" ticketreduction="20" />
+    <ticketreductionlookup orbdifference="4" ticketreduction="20" />
+    <warcamp>
+      <defense engageattackrange="18.0" disengageattackrange="18.0" attackinterval="0.4" attackdamage="0.1" attackdistancedelay="24.0" buffradius="8.7" buffspell="WARCAMP_INVULNERABILITY">
+        <FriendlyFX beam="FX/ClientPrefabs/fx_beam_gvg_blue" impact="Prefabs/SpellEffects/MeleeHit"/>
+        <HostileFX beam="FX/ClientPrefabs/fx_beam_gvg_orange" impact="Prefabs/SpellEffects/MeleeHit"/>
+      </defense>
+    </warcamp>
+  </matchtype>
+
+  <!-- ============================== Crystal League 5v5 (lethal) ============================== -->
+  <matchtype uniquename="MATCH_CRYSTAL_GVG"
+             matchdurationminutes="25"
+             roundduration="60"
+             ticketdefault="150"
+             timeleftorbearlyreset="0"
+             respawndelay="15"
+             matchtimerespawnmultiplier="1"
+             minplayerperteam="5"
+             maxplayerperteam="5"
+             ticketreductionbydeath="6"
+             almostlostticketthreshold="0"
+             advantageticketsdifference="0"
+             doublehealerpenalty="DOUBLEHEALER_PENALTY">
+    
+    <ticketreductionlookup orbdifference="0" ticketreduction="0" />
+    <ticketreductionlookup orbdifference="1" ticketreduction="10" />
+    <ticketreductionlookup orbdifference="2" ticketreduction="10" />
+    <ticketreductionlookup orbdifference="3" ticketreduction="20" />
+    <ticketreductionlookup orbdifference="4" ticketreduction="20" />
+    <warcamp>
+      <defense engageattackrange="18.0" disengageattackrange="18.0" attackinterval="0.4" attackdamage="0.1" attackdistancedelay="24.0" buffradius="8.7" buffspell="WARCAMP_INVULNERABILITY">
+        <FriendlyFX beam="FX/ClientPrefabs/fx_beam_gvg_blue" impact="Prefabs/SpellEffects/MeleeHit"/>
+        <HostileFX beam="FX/ClientPrefabs/fx_beam_gvg_orange" impact="Prefabs/SpellEffects/MeleeHit"/>
+      </defense>
+    </warcamp>
+  </matchtype>
+
+  <!-- ============================== Crystal League 5v5 (non-lethal) ============================== -->
+  <matchtype uniquename="MATCH_CRYSTAL_GVG_NONLETHAL"
+             matchdurationminutes="25"
+             roundduration="60"
+             ticketdefault="150"
+             timeleftorbearlyreset="0"
+             respawndelay="18"
+             matchtimerespawnmultiplier="1"
+             minplayerperteam="5"
+             maxplayerperteam="5"
+             ticketreductionbydeath="6"
+             almostlostticketthreshold="0"
+             advantageticketsdifference="0"
+             doublehealerpenalty="DOUBLEHEALER_PENALTY">
+
+    <ticketreductionlookup orbdifference="0" ticketreduction="0" />
+    <ticketreductionlookup orbdifference="1" ticketreduction="10" />
+    <ticketreductionlookup orbdifference="2" ticketreduction="10" />
+    <ticketreductionlookup orbdifference="3" ticketreduction="20" />
+    <ticketreductionlookup orbdifference="4" ticketreduction="20" />
+    <warcamp>
+      <defense engageattackrange="18.0" disengageattackrange="18.0" attackinterval="0.4" attackdamage="0.1" attackdistancedelay="24.0" buffradius="8.7" buffspell="WARCAMP_INVULNERABILITY">
+        <FriendlyFX beam="FX/ClientPrefabs/fx_beam_gvg_blue" impact="Prefabs/SpellEffects/MeleeHit"/>
+        <HostileFX beam="FX/ClientPrefabs/fx_beam_gvg_orange" impact="Prefabs/SpellEffects/MeleeHit"/>
+      </defense>
+    </warcamp>
+  </matchtype>
+
+  <!-- ============================== Crystal GVG DEBUG ============================== -->
+  <matchtype uniquename="MATCH_CRYSTAL_GVG_DEBUG"
+             matchdurationminutes="25"
+             roundduration="60"
+             ticketdefault="150"
+             timeleftorbearlyreset="0"
+             respawndelay="18"
+             matchtimerespawnmultiplier="1"
+             minplayerperteam="1"
+             maxplayerperteam="2"
+             ticketreductionbydeath="6"
+             almostlostticketthreshold="0"
+             advantageticketsdifference="0"
+             doublehealerpenalty="DOUBLEHEALER_PENALTY">
+    
+    <ticketreductionlookup orbdifference="0" ticketreduction="0" />
+    <ticketreductionlookup orbdifference="1" ticketreduction="10" />
+    <ticketreductionlookup orbdifference="2" ticketreduction="10" />
+    <ticketreductionlookup orbdifference="3" ticketreduction="20" />
+    <ticketreductionlookup orbdifference="4" ticketreduction="20" />
+    <warcamp>
+      <defense engageattackrange="18.0" disengageattackrange="18.0" attackinterval="0.4" attackdamage="0.1" attackdistancedelay="24.0" buffradius="8.7" buffspell="WARCAMP_INVULNERABILITY">
+        <FriendlyFX beam="FX/ClientPrefabs/fx_beam_gvg_blue" impact="Prefabs/SpellEffects/MeleeHit"/>
+        <HostileFX beam="FX/ClientPrefabs/fx_beam_gvg_orange" impact="Prefabs/SpellEffects/MeleeHit"/>
+      </defense>
+    </warcamp>
+  </matchtype>
+
+  <!-- ============================== 20v20 Crystal League ============================== -->
+  <matchtype uniquename="MATCH_GVG_CITY" 
+             matchdurationminutes="25"
+             roundduration="120" 
+             ticketdefault="200" 
+             timeleftorbearlyreset="0" 
+             respawndelay="15" 
+             matchtimerespawnmultiplier="1" 
+             minplayerperteam="15"
+             maxplayerperteam="20" 
+             ticketreductionbydeath="3" 
+             almostlostticketthreshold="0" 
+             advantageticketsdifference="0">
+    
+    <ticketreductionlookup orbdifference="0" ticketreduction="0" />
+    <ticketreductionlookup orbdifference="1" ticketreduction="20" />
+    <ticketreductionlookup orbdifference="2" ticketreduction="20" />
+    <ticketreductionlookup orbdifference="3" ticketreduction="40" />
+    <ticketreductionlookup orbdifference="4" ticketreduction="40" />
+    <ticketreductionlookup orbdifference="5" ticketreduction="60" />
+    <warcamp>
+      <defense engageattackrange="20.0"
+               disengageattackrange="20.0"
+               attackinterval="0.4"
+               attackdamage="0.1"
+               attackdistancedelay="24.0"
+               buffradius="8.7"
+               buffspell="WARCAMP_INVULNERABILITY">
+        
+        <FriendlyFX beam="FX/ClientPrefabs/fx_beam_gvg_blue" impact="Prefabs/SpellEffects/MeleeHit" />
+        <HostileFX beam="FX/ClientPrefabs/fx_beam_gvg_orange" impact="Prefabs/SpellEffects/MeleeHit"/>
+      </defense>
+    </warcamp>
+  </matchtype>
+
+</matchtypes>

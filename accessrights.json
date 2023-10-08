@@ -1,0 +1,1150 @@
+{
+  "?xml": {
+    "@version": "1.0",
+    "@encoding": "utf-8"
+  },
+  "accessrights": {
+    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+    "@xsi:noNamespaceSchemaLocation": "accessrights.xsd",
+    "accessclass": [
+      {
+        "@name": "AccessRightsIslandManagement",
+        "role": [
+          {
+            "@name": "owner",
+            "@managesroles": "coowner, builder, visitor, blacklist",
+            "@displayname": "@ACCESSRIGHTS_ISLAND_NAME_OWNER",
+            "@description": "@ACCESSRIGHTS_ISLAND_DESC_OWNER"
+          },
+          {
+            "@name": "coowner",
+            "@managesroles": "builder, visitor, blacklist",
+            "@displayname": "@ACCESSRIGHTS_ISLAND_NAME_COOWNER",
+            "@description": "@ACCESSRIGHTS_ISLAND_DESC_COOWNER"
+          },
+          {
+            "@name": "builder",
+            "@displayname": "@ACCESSRIGHTS_ISLAND_NAME_BUILDER",
+            "@description": "@ACCESSRIGHTS_ISLAND_DESC_BUILDER"
+          },
+          {
+            "@name": "visitor",
+            "@displayname": "@ACCESSRIGHTS_ISLAND_NAME_VISITOR",
+            "@description": "@ACCESSRIGHTS_ISLAND_DESC_VISITOR"
+          }
+        ],
+        "right": [
+          {
+            "@name": "VISIT",
+            "@roles": "owner, coowner, builder, visitor"
+          },
+          {
+            "@name": "PLACE_BUILDINGS",
+            "@roles": "owner, coowner, builder"
+          },
+          {
+            "@name": "CLAIM_UNOWNED_BUILDINGS",
+            "@roles": "owner, coowner, builder"
+          },
+          {
+            "@name": "FORCE_CLAIM_BUILDINGS",
+            "@roles": "owner, coowner"
+          },
+          {
+            "@name": "PLACE_FURNITURE_OUTDOOR",
+            "@roles": "owner, coowner, builder"
+          },
+          {
+            "@name": "CLAIM_UNOWNED_FURNITURE_OUTDOOR",
+            "@roles": "owner, coowner, builder"
+          },
+          {
+            "@name": "FORCE_CLAIM_FURNITURE_OUTDOOR",
+            "@roles": "owner, coowner"
+          }
+        ],
+        "preset": [
+          {
+            "@name": "closed",
+            "@description": "@ACCESSRIGHTS_ISLAND_DESC_PRESET_CLOSED"
+          },
+          {
+            "@name": "private",
+            "@description": "@ACCESSRIGHTS_ISLAND_DESC_PRESET_PRIVATE",
+            "userpreset": {
+              "@who": "guild",
+              "@role": "visitor"
+            }
+          },
+          {
+            "@name": "public",
+            "@description": "@ACCESSRIGHTS_ISLAND_DESC_PRESET_PUBLIC",
+            "userpreset": {
+              "@who": "guild",
+              "@role": "builder"
+            }
+          }
+        ]
+      },
+      {
+        "@name": "AccessRightsRealEstate",
+        "role": [
+          {
+            "@name": "owner",
+            "@managesroles": "coowner, user, blacklist",
+            "@displayname": "@ACCESSRIGHTS_REALESTATE_NAME_OWNER",
+            "@description": "@ACCESSRIGHTS_REALESTATE_DESC_OWNER"
+          },
+          {
+            "@name": "coowner",
+            "@managesroles": "user, blacklist",
+            "@displayname": "@ACCESSRIGHTS_REALESTATE_NAME_COOWNER",
+            "@description": "@ACCESSRIGHTS_REALESTATE_DESC_COOWNER"
+          },
+          {
+            "@name": "user",
+            "@displayname": "@ACCESSRIGHTS_REALESTATE_NAME_USER",
+            "@description": "@ACCESSRIGHTS_REALESTATE_DESC_USER"
+          }
+        ],
+        "right": [
+          {
+            "@name": "PLACE_FURNITURE_OUTDOOR",
+            "@roles": "owner, coowner, user"
+          },
+          {
+            "@name": "CLAIM_UNOWNED_FURNITURE_OUTDOOR",
+            "@roles": "owner, coowner, user"
+          },
+          {
+            "@name": "FORCE_CLAIM_FURNITURE_OUTDOOR",
+            "@roles": "owner, coowner"
+          },
+          {
+            "@name": "PLACE_BUILDINGS",
+            "@roles": "owner, coowner, user"
+          },
+          {
+            "@name": "CLAIM_UNOWNED_BUILDINGS",
+            "@roles": "owner, coowner, user"
+          },
+          {
+            "@name": "FORCE_CLAIM_BUILDINGS",
+            "@roles": "owner, coowner"
+          },
+          {
+            "@name": "CUSTOMIZE",
+            "@roles": "owner"
+          },
+          {
+            "@name": "GIVEUP",
+            "@roles": "owner"
+          }
+        ],
+        "preset": [
+          {
+            "@name": "closed",
+            "@description": "@ACCESSRIGHTS_REALESTATE_DESC_PRESET_CLOSED"
+          },
+          {
+            "@name": "private",
+            "@description": "@ACCESSRIGHTS_REALESTATE_DESC_PRESET_PRIVATE",
+            "userpreset": {
+              "@who": "guild",
+              "@role": "user"
+            }
+          },
+          {
+            "@name": "public",
+            "@description": "@ACCESSRIGHTS_REALESTATE_DESC_PRESET_PUBLIC",
+            "userpreset": [
+              {
+                "@who": "guild",
+                "@role": "user"
+              },
+              {
+                "@who": "everyone",
+                "@role": "user"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "@name": "AccessRightsPlayerBuilding",
+        "role": [
+          {
+            "@name": "owner",
+            "@managesroles": "coowner, user, blacklist",
+            "@displayname": "@ACCESSRIGHTS_PLAYERBUILDING_NAME_OWNER",
+            "@description": "@ACCESSRIGHTS_PLAYERBUILDING_DESC_OWNER"
+          },
+          {
+            "@name": "coowner",
+            "@managesroles": "user, blacklist",
+            "@displayname": "@ACCESSRIGHTS_PLAYERBUILDING_NAME_COOWNER",
+            "@description": "@ACCESSRIGHTS_PLAYERBUILDING_DESC_COOWNER"
+          },
+          {
+            "@name": "user",
+            "@displayname": "@ACCESSRIGHTS_PLAYERBUILDING_NAME_USER",
+            "@description": "@ACCESSRIGHTS_PLAYERBUILDING_DESC_USER"
+          }
+        ],
+        "right": [
+          {
+            "@name": "INSTALLRESOURCES",
+            "@roles": "owner, coowner, user, noaccess"
+          },
+          {
+            "@name": "MAKEHOME",
+            "@roles": "owner, coowner, user"
+          },
+          {
+            "@name": "PLACE_FURNITURE",
+            "@roles": "owner, coowner, user"
+          },
+          {
+            "@name": "CLAIM_UNOWNED_FURNITURE",
+            "@roles": "owner, coowner, user"
+          },
+          {
+            "@name": "FORCE_CLAIM_FURNITURE",
+            "@roles": "owner, coowner"
+          },
+          {
+            "@name": "REPAIR",
+            "@roles": "owner, coowner"
+          },
+          {
+            "@name": "UPGRADE",
+            "@roles": "owner, coowner"
+          },
+          {
+            "@name": "DOWNGRADE",
+            "@roles": "owner, coowner"
+          },
+          {
+            "@name": "DESTROY",
+            "@roles": "owner, coowner"
+          },
+          {
+            "@name": "GETPROTECTEDLOOT",
+            "@roles": "owner, coowner"
+          },
+          {
+            "@name": "CANCELRENOVATION",
+            "@roles": "owner, coowner"
+          },
+          {
+            "@name": "GETMAILONDESTRUCTIVERENOVATION",
+            "@roles": "owner"
+          },
+          {
+            "@name": "CUSTOMIZE",
+            "@roles": "owner"
+          },
+          {
+            "@name": "GIVEUP",
+            "@roles": "owner"
+          }
+        ],
+        "preset": [
+          {
+            "@name": "closed",
+            "@description": "@ACCESSRIGHTS_PLAYERBUILDING_DESC_PRESET_CLOSED"
+          },
+          {
+            "@name": "private",
+            "@description": "@ACCESSRIGHTS_PLAYERBUILDING_DESC_PRESET_PRIVATE",
+            "userpreset": {
+              "@who": "guild",
+              "@role": "user"
+            }
+          },
+          {
+            "@name": "public",
+            "@description": "@ACCESSRIGHTS_PLAYERBUILDING_DESC_PRESET_PUBLIC",
+            "userpreset": [
+              {
+                "@who": "guild",
+                "@role": "user"
+              },
+              {
+                "@who": "everyone",
+                "@role": "user"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "@name": "AccessRightsCraftBuilding",
+        "role": [
+          {
+            "@name": "owner",
+            "@managesroles": "coowner, user, friend, blacklist",
+            "@displayname": "@ACCESSRIGHTS_CRAFTBUILDING_NAME_OWNER",
+            "@description": "@ACCESSRIGHTS_CRAFTBUILDING_DESC_OWNER"
+          },
+          {
+            "@name": "coowner",
+            "@managesroles": "user, friend, blacklist",
+            "@displayname": "@ACCESSRIGHTS_CRAFTBUILDING_NAME_COOWNER",
+            "@description": "@ACCESSRIGHTS_CRAFTBUILDING_DESC_COOWNER"
+          },
+          {
+            "@name": "friend",
+            "@displayname": "@ACCESSRIGHTS_CRAFTBUILDING_NAME_FRIEND",
+            "@description": "@ACCESSRIGHTS_CRAFTBUILDING_DESC_FRIEND"
+          },
+          {
+            "@name": "user",
+            "@displayname": "@ACCESSRIGHTS_CRAFTBUILDING_NAME_USER",
+            "@description": "@ACCESSRIGHTS_CRAFTBUILDING_DESC_USER"
+          }
+        ],
+        "right": [
+          {
+            "@name": "INSTALLRESOURCES",
+            "@roles": "owner, coowner, friend, user, noaccess"
+          },
+          {
+            "@name": "CRAFT",
+            "@roles": "owner, coowner, friend, user"
+          },
+          {
+            "@name": "STUDY",
+            "@roles": "owner, coowner, friend, user"
+          },
+          {
+            "@name": "CHANGEUSAGEFEES",
+            "@roles": "owner, coowner"
+          },
+          {
+            "@name": "PICKUPMONEY",
+            "@roles": "owner, coowner"
+          },
+          {
+            "@name": "REPAIR",
+            "@roles": "owner, coowner"
+          },
+          {
+            "@name": "UPGRADE",
+            "@roles": "owner, coowner"
+          },
+          {
+            "@name": "DOWNGRADE",
+            "@roles": "owner, coowner"
+          },
+          {
+            "@name": "DESTROY",
+            "@roles": "owner, coowner"
+          },
+          {
+            "@name": "GETPROTECTEDLOOT",
+            "@roles": "owner, coowner"
+          },
+          {
+            "@name": "CANCELRENOVATION",
+            "@roles": "owner, coowner"
+          },
+          {
+            "@name": "GETMAILONDESTRUCTIVERENOVATION",
+            "@roles": "owner"
+          },
+          {
+            "@name": "CUSTOMIZE",
+            "@roles": "owner"
+          },
+          {
+            "@name": "GIVEUP",
+            "@roles": "owner"
+          }
+        ],
+        "preset": [
+          {
+            "@name": "closed",
+            "@description": "@ACCESSRIGHTS_CRAFTBUILDING_DESC_PRESET_CLOSED"
+          },
+          {
+            "@name": "private",
+            "@description": "@ACCESSRIGHTS_CRAFTBUILDING_DESC_PRESET_PRIVATE",
+            "userpreset": {
+              "@who": "guild",
+              "@role": "friend"
+            }
+          },
+          {
+            "@name": "public",
+            "@description": "@ACCESSRIGHTS_CRAFTBUILDING_DESC_PRESET_PUBLIC",
+            "userpreset": [
+              {
+                "@who": "guild",
+                "@role": "friend"
+              },
+              {
+                "@who": "everyone",
+                "@role": "user"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "@name": "AccessRightsMeldBuilding",
+        "role": [
+          {
+            "@name": "owner",
+            "@managesroles": "coowner, user, friend, blacklist",
+            "@displayname": "@ACCESSRIGHTS_MELDBUILDING_NAME_OWNER",
+            "@description": "@ACCESSRIGHTS_MELDBUILDING_DESC_OWNER"
+          },
+          {
+            "@name": "coowner",
+            "@managesroles": "user, friend, blacklist",
+            "@displayname": "@ACCESSRIGHTS_MELDBUILDING_NAME_COOWNER",
+            "@description": "@ACCESSRIGHTS_MELDBUILDING_DESC_COOWNER"
+          },
+          {
+            "@name": "friend",
+            "@displayname": "@ACCESSRIGHTS_MELDBUILDING_NAME_FRIEND",
+            "@description": "@ACCESSRIGHTS_MELDBUILDING_DESC_FRIEND"
+          },
+          {
+            "@name": "user",
+            "@displayname": "@ACCESSRIGHTS_MELDBUILDING_NAME_USER",
+            "@description": "@ACCESSRIGHTS_MELDBUILDING_DESC_USER"
+          }
+        ],
+        "right": [
+          {
+            "@name": "INSTALLRESOURCES",
+            "@roles": "owner, coowner, friend, user, noaccess"
+          },
+          {
+            "@name": "MELDITEM",
+            "@roles": "owner, coowner, friend, user"
+          },
+          {
+            "@name": "SALVAGEITEM",
+            "@roles": "owner, coowner, friend, user"
+          },
+          {
+            "@name": "CRAFTITEM",
+            "@roles": "owner, coowner, friend, user"
+          },
+          {
+            "@name": "UPGRADEITEMENCHANTMENT",
+            "@roles": "owner, coowner, friend, user"
+          },
+          {
+            "@name": "CHANGEUSAGEFEES",
+            "@roles": "owner, coowner"
+          },
+          {
+            "@name": "PICKUPMONEY",
+            "@roles": "owner, coowner"
+          },
+          {
+            "@name": "REPAIR",
+            "@roles": "owner, coowner"
+          },
+          {
+            "@name": "UPGRADE",
+            "@roles": "owner, coowner"
+          },
+          {
+            "@name": "DOWNGRADE",
+            "@roles": "owner, coowner"
+          },
+          {
+            "@name": "DESTROY",
+            "@roles": "owner, coowner"
+          },
+          {
+            "@name": "GETPROTECTEDLOOT",
+            "@roles": "owner, coowner"
+          },
+          {
+            "@name": "CANCELRENOVATION",
+            "@roles": "owner, coowner"
+          },
+          {
+            "@name": "GETMAILONDESTRUCTIVERENOVATION",
+            "@roles": "owner"
+          },
+          {
+            "@name": "CUSTOMIZE",
+            "@roles": "owner"
+          },
+          {
+            "@name": "GIVEUP",
+            "@roles": "owner"
+          }
+        ],
+        "preset": [
+          {
+            "@name": "closed",
+            "@description": "@ACCESSRIGHTS_MELDBUILDING_DESC_PRESET_CLOSED"
+          },
+          {
+            "@name": "private",
+            "@description": "@ACCESSRIGHTS_MELDBUILDING_DESC_PRESET_PRIVATE",
+            "userpreset": {
+              "@who": "guild",
+              "@role": "friend"
+            }
+          },
+          {
+            "@name": "public",
+            "@description": "@ACCESSRIGHTS_MELDBUILDING_DESC_PRESET_PUBLIC",
+            "userpreset": [
+              {
+                "@who": "guild",
+                "@role": "friend"
+              },
+              {
+                "@who": "everyone",
+                "@role": "user"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "@name": "AccessRightsRepairBuilding",
+        "role": [
+          {
+            "@name": "owner",
+            "@managesroles": "coowner, user, friend, blacklist",
+            "@displayname": "@ACCESSRIGHTS_REPAIRBUILDING_NAME_OWNER",
+            "@description": "@ACCESSRIGHTS_REPAIRBUILDING_DESC_OWNER"
+          },
+          {
+            "@name": "coowner",
+            "@managesroles": "user, friend, blacklist",
+            "@displayname": "@ACCESSRIGHTS_REPAIRBUILDING_NAME_COOWNER",
+            "@description": "@ACCESSRIGHTS_REPAIRBUILDING_DESC_COOWNER"
+          },
+          {
+            "@name": "friend",
+            "@displayname": "@ACCESSRIGHTS_REPAIRBUILDING_NAME_FRIEND",
+            "@description": "@ACCESSRIGHTS_REPAIRBUILDING_DESC_FRIEND"
+          },
+          {
+            "@name": "user",
+            "@displayname": "@ACCESSRIGHTS_REPAIRBUILDING_NAME_USER",
+            "@description": "@ACCESSRIGHTS_REPAIRBUILDING_DESC_USER"
+          }
+        ],
+        "right": [
+          {
+            "@name": "INSTALLRESOURCES",
+            "@roles": "owner, coowner, friend, user, noaccess"
+          },
+          {
+            "@name": "REPAIRITEM",
+            "@roles": "owner, coowner, friend, user"
+          },
+          {
+            "@name": "SALVAGEITEM",
+            "@roles": "owner, coowner, friend, user"
+          },
+          {
+            "@name": "REROLLQUALITYITEM",
+            "@roles": "owner, coowner, friend, user"
+          },
+          {
+            "@name": "CHANGEUSAGEFEES",
+            "@roles": "owner, coowner"
+          },
+          {
+            "@name": "PICKUPMONEY",
+            "@roles": "owner, coowner"
+          },
+          {
+            "@name": "REPAIR",
+            "@roles": "owner, coowner"
+          },
+          {
+            "@name": "UPGRADE",
+            "@roles": "owner, coowner"
+          },
+          {
+            "@name": "DOWNGRADE",
+            "@roles": "owner, coowner"
+          },
+          {
+            "@name": "DESTROY",
+            "@roles": "owner, coowner"
+          },
+          {
+            "@name": "GETPROTECTEDLOOT",
+            "@roles": "owner, coowner"
+          },
+          {
+            "@name": "CANCELRENOVATION",
+            "@roles": "owner, coowner"
+          },
+          {
+            "@name": "GETMAILONDESTRUCTIVERENOVATION",
+            "@roles": "owner"
+          },
+          {
+            "@name": "CUSTOMIZE",
+            "@roles": "owner"
+          },
+          {
+            "@name": "GIVEUP",
+            "@roles": "owner"
+          }
+        ],
+        "preset": [
+          {
+            "@name": "closed",
+            "@description": "@ACCESSRIGHTS_REPAIRBUILDING_DESC_PRESET_CLOSED"
+          },
+          {
+            "@name": "private",
+            "@description": "@ACCESSRIGHTS_REPAIRBUILDING_DESC_PRESET_PRIVATE",
+            "userpreset": {
+              "@who": "guild",
+              "@role": "friend"
+            }
+          },
+          {
+            "@name": "public",
+            "@description": "@ACCESSRIGHTS_REPAIRBUILDING_DESC_PRESET_PUBLIC",
+            "userpreset": [
+              {
+                "@who": "guild",
+                "@role": "friend"
+              },
+              {
+                "@who": "everyone",
+                "@role": "user"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "@name": "AccessRightsConstructionSite",
+        "role": {
+          "@name": "owner",
+          "@managesroles": "blacklist",
+          "@displayname": "@ACCESSRIGHTS_CONSTRUCTIONSITE_NAME_OWNER"
+        },
+        "right": [
+          {
+            "@name": "INSTALLRESOURCES",
+            "@roles": "owner, noaccess"
+          },
+          {
+            "@name": "GIVEUP",
+            "@roles": "owner"
+          }
+        ]
+      },
+      {
+        "@name": "AccessRightsFurnitureDecoration",
+        "role": {
+          "@name": "owner",
+          "@managesroles": "blacklist",
+          "@displayname": "@ACCESSRIGHTS_FURNITURE_DECORATION_NAME_OWNER"
+        },
+        "right": [
+          {
+            "@name": "PICKUP",
+            "@roles": "owner"
+          },
+          {
+            "@name": "GIVEUP",
+            "@roles": "owner"
+          }
+        ]
+      },
+      {
+        "@name": "AccessRightsFurnitureBattleVault",
+        "role": {
+          "@name": "owner",
+          "@managesroles": "blacklist",
+          "@displayname": "@ACCESSRIGHTS_FURNITURE_BATTLEVAULT_NAME_OWNER"
+        },
+        "right": [
+          {
+            "@name": "PICKUP",
+            "@roles": "owner"
+          },
+          {
+            "@name": "GIVEUP",
+            "@roles": "owner"
+          }
+        ]
+      },
+      {
+        "@name": "AccessRightsFurnitureBuffProvider",
+        "role": [
+          {
+            "@name": "owner",
+            "@managesroles": "coowner, user, blacklist",
+            "@displayname": "@ACCESSRIGHTS_FURNITURE_BUFF_NAME_OWNER",
+            "@description": "@ACCESSRIGHTS_FURNITURE_BUFF_DESC_OWNER"
+          },
+          {
+            "@name": "coowner",
+            "@managesroles": "user",
+            "@displayname": "@ACCESSRIGHTS_FURNITURE_BUFF_NAME_COOWNER",
+            "@description": "@ACCESSRIGHTS_FURNITURE_BUFF_DESC_COOWNER"
+          },
+          {
+            "@name": "user",
+            "@displayname": "@ACCESSRIGHTS_FURNITURE_BUFF_NAME_USER",
+            "@description": "@ACCESSRIGHTS_FURNITURE_BUFF_DESC_USER"
+          }
+        ],
+        "right": [
+          {
+            "@name": "USE",
+            "@roles": "owner, coowner, user"
+          },
+          {
+            "@name": "PICKUP",
+            "@roles": "owner"
+          },
+          {
+            "@name": "GIVEUP",
+            "@roles": "owner"
+          }
+        ],
+        "preset": [
+          {
+            "@name": "closed",
+            "@description": "@ACCESSRIGHTS_FURNITURE_BUFF_DESC_PRESET_CLOSED"
+          },
+          {
+            "@name": "private",
+            "@description": "@ACCESSRIGHTS_FURNITURE_BUFF_DESC_PRESET_PRIVATE",
+            "userpreset": {
+              "@who": "guild",
+              "@role": "user"
+            }
+          },
+          {
+            "@name": "public",
+            "@description": "@ACCESSRIGHTS_FURNITURE_BUFF_DESC_PRESET_PUBLIC",
+            "userpreset": [
+              {
+                "@who": "guild",
+                "@role": "user"
+              },
+              {
+                "@who": "everyone",
+                "@role": "user"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "@name": "AccessRightsContainers",
+        "role": [
+          {
+            "@name": "owner",
+            "@managesroles": "coowner, user, supplier, blacklist",
+            "@displayname": "@ACCESSRIGHTS_CONTAINER_NAME_OWNER",
+            "@description": "@ACCESSRIGHTS_CONTAINER_DESC_OWNER"
+          },
+          {
+            "@name": "coowner",
+            "@managesroles": "user, supplier, blacklist",
+            "@displayname": "@ACCESSRIGHTS_CONTAINER_NAME_COOWNER",
+            "@description": "@ACCESSRIGHTS_CONTAINER_DESC_COOWNER"
+          },
+          {
+            "@name": "user",
+            "@displayname": "@ACCESSRIGHTS_CONTAINER_NAME_USER",
+            "@description": "@ACCESSRIGHTS_CONTAINER_DESC_USER"
+          },
+          {
+            "@name": "supplier",
+            "@displayname": "@ACCESSRIGHTS_CONTAINER_NAME_SUPPLIER",
+            "@description": "@ACCESSRIGHTS_CONTAINER_DESC_SUPPLIER"
+          }
+        ],
+        "right": [
+          {
+            "@name": "INSPECT",
+            "@roles": "owner, coowner, user, supplier"
+          },
+          {
+            "@name": "PUTITEM",
+            "@roles": "owner, coowner, user, supplier"
+          },
+          {
+            "@name": "REMOVEITEM",
+            "@roles": "owner, coowner, user"
+          },
+          {
+            "@name": "PICKUP",
+            "@roles": "owner"
+          },
+          {
+            "@name": "GIVEUP",
+            "@roles": "owner"
+          },
+          {
+            "@name": "CHANGESETTINGS",
+            "@roles": "owner, coowner"
+          }
+        ],
+        "preset": [
+          {
+            "@name": "closed",
+            "@description": "@ACCESSRIGHTS_CONTAINER_DESC_PRESET_CLOSED"
+          },
+          {
+            "@name": "private",
+            "@description": "@ACCESSRIGHTS_CONTAINER_DESC_PRESET_PRIVATE",
+            "userpreset": {
+              "@who": "guild",
+              "@role": "user"
+            }
+          },
+          {
+            "@name": "public",
+            "@description": "@ACCESSRIGHTS_CONTAINER_DESC_PRESET_PUBLIC",
+            "userpreset": [
+              {
+                "@who": "guild",
+                "@role": "user"
+              },
+              {
+                "@who": "everyone",
+                "@role": "user"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "@name": "AccessRightsFurnitureRepairKit",
+        "role": [
+          {
+            "@name": "owner",
+            "@managesroles": "coowner, user, blacklist",
+            "@displayname": "@ACCESSRIGHTS_FURNITURE_BUFF_NAME_OWNER",
+            "@description": "@ACCESSRIGHTS_FURNITURE_BUFF_DESC_OWNER"
+          },
+          {
+            "@name": "coowner",
+            "@managesroles": "user, blacklist",
+            "@displayname": "@ACCESSRIGHTS_FURNITURE_BUFF_NAME_COOWNER",
+            "@description": "@ACCESSRIGHTS_FURNITURE_BUFF_DESC_COOWNER"
+          },
+          {
+            "@name": "user",
+            "@displayname": "@ACCESSRIGHTS_FURNITURE_BUFF_NAME_USER",
+            "@description": "@ACCESSRIGHTS_FURNITURE_BUFF_DESC_USER"
+          }
+        ],
+        "right": [
+          {
+            "@name": "USE",
+            "@roles": "owner, coowner, user"
+          },
+          {
+            "@name": "PICKUP",
+            "@roles": "owner"
+          },
+          {
+            "@name": "GIVEUP",
+            "@roles": "owner"
+          }
+        ],
+        "preset": [
+          {
+            "@name": "closed",
+            "@description": "@ACCESSRIGHTS_FURNITURE_BUFF_DESC_PRESET_CLOSED"
+          },
+          {
+            "@name": "private",
+            "@description": "@ACCESSRIGHTS_FURNITURE_BUFF_DESC_PRESET_PRIVATE",
+            "userpreset": {
+              "@who": "guild",
+              "@role": "user"
+            }
+          },
+          {
+            "@name": "public",
+            "@description": "@ACCESSRIGHTS_FURNITURE_BUFF_DESC_PRESET_PUBLIC",
+            "userpreset": [
+              {
+                "@who": "guild",
+                "@role": "user"
+              },
+              {
+                "@who": "everyone",
+                "@role": "user"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "@name": "AccessRightsFarmBuilding",
+        "role": [
+          {
+            "@name": "owner",
+            "@managesroles": "coowner, user, blacklist",
+            "@displayname": "@ACCESSRIGHTS_FARMBUILDING_NAME_OWNER",
+            "@description": "@ACCESSRIGHTS_FARMBUILDING_DESC_OWNER"
+          },
+          {
+            "@name": "coowner",
+            "@managesroles": "user, blacklist",
+            "@displayname": "@ACCESSRIGHTS_FARMBUILDING_NAME_COOWNER",
+            "@description": "@ACCESSRIGHTS_FARMBUILDING_DESC_COOWNER"
+          },
+          {
+            "@name": "user",
+            "@displayname": "@ACCESSRIGHTS_FARMBUILDING_NAME_USER",
+            "@description": "@ACCESSRIGHTS_FARMBUILDING_DESC_USER"
+          }
+        ],
+        "right": [
+          {
+            "@name": "INSTALLRESOURCES",
+            "@roles": "owner, coowner, user, noaccess"
+          },
+          {
+            "@name": "USEFARMABLE",
+            "@roles": "owner, coowner, user"
+          },
+          {
+            "@name": "REPAIR",
+            "@roles": "owner, coowner"
+          },
+          {
+            "@name": "UPGRADE",
+            "@roles": "owner, coowner"
+          },
+          {
+            "@name": "DOWNGRADE",
+            "@roles": "owner, coowner"
+          },
+          {
+            "@name": "DESTROY",
+            "@roles": "owner, coowner"
+          },
+          {
+            "@name": "GETPROTECTEDLOOT",
+            "@roles": "owner, coowner"
+          },
+          {
+            "@name": "CANCELRENOVATION",
+            "@roles": "owner, coowner"
+          },
+          {
+            "@name": "GETMAILONDESTRUCTIVERENOVATION",
+            "@roles": "owner"
+          },
+          {
+            "@name": "CUSTOMIZE",
+            "@roles": "owner"
+          },
+          {
+            "@name": "GIVEUP",
+            "@roles": "owner"
+          }
+        ],
+        "preset": [
+          {
+            "@name": "closed",
+            "@description": "@ACCESSRIGHTS_FARMBUILDING_DESC_PRESET_CLOSED"
+          },
+          {
+            "@name": "private",
+            "@description": "@ACCESSRIGHTS_FARMBUILDING_DESC_PRESET_PRIVATE",
+            "userpreset": {
+              "@who": "guild",
+              "@role": "user"
+            }
+          },
+          {
+            "@name": "public",
+            "@description": "@ACCESSRIGHTS_FARMBUILDING_DESC_PRESET_PUBLIC",
+            "userpreset": [
+              {
+                "@who": "guild",
+                "@role": "user"
+              },
+              {
+                "@who": "everyone",
+                "@role": "user"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "@name": "AccessRightsLaborerObject",
+        "role": [
+          {
+            "@name": "owner",
+            "@managesroles": "coowner, user, blacklist",
+            "@displayname": "@ACCESSRIGHTS_LABORER_NAME_OWNER",
+            "@description": "@ACCESSRIGHTS_LABORER_DESC_OWNER"
+          },
+          {
+            "@name": "coowner",
+            "@managesroles": "user, blacklist",
+            "@displayname": "@ACCESSRIGHTS_LABORER_NAME_COOWNER",
+            "@description": "@ACCESSRIGHTS_LABORER_DESC_COOWNER"
+          },
+          {
+            "@name": "user",
+            "@displayname": "@ACCESSRIGHTS_LABORER_NAME_USER",
+            "@description": "@ACCESSRIGHTS_LABORER_DESC_USER"
+          }
+        ],
+        "right": [
+          {
+            "@name": "USE",
+            "@roles": "owner, coowner, user"
+          },
+          {
+            "@name": "FIRE",
+            "@roles": "owner"
+          }
+        ],
+        "preset": [
+          {
+            "@name": "closed",
+            "@description": "@ACCESSRIGHTS_LABORER_DESC_PRESET_CLOSED"
+          },
+          {
+            "@name": "private",
+            "@description": "@ACCESSRIGHTS_LABORER_DESC_PRESET_PRIVATE",
+            "userpreset": {
+              "@who": "guild",
+              "@role": "user"
+            }
+          },
+          {
+            "@name": "public",
+            "@description": "@ACCESSRIGHTS_LABORER_DESC_PRESET_PUBLIC",
+            "userpreset": [
+              {
+                "@who": "guild",
+                "@role": "user"
+              },
+              {
+                "@who": "everyone",
+                "@role": "user"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "@name": "AccessRightsHideoutObject",
+        "role": [
+          {
+            "@name": "owner",
+            "@managesroles": "coowner, builder, visitor, blacklist",
+            "@displayname": "@ACCESSRIGHTS_ISLAND_NAME_OWNER",
+            "@description": "@ACCESSRIGHTS_ISLAND_DESC_OWNER"
+          },
+          {
+            "@name": "coowner",
+            "@managesroles": "builder, visitor, blacklist",
+            "@displayname": "@ACCESSRIGHTS_ISLAND_NAME_COOWNER",
+            "@description": "@ACCESSRIGHTS_ISLAND_DESC_COOWNER"
+          },
+          {
+            "@name": "builder",
+            "@displayname": "@ACCESSRIGHTS_ISLAND_NAME_BUILDER",
+            "@description": "@ACCESSRIGHTS_ISLAND_DESC_BUILDER"
+          },
+          {
+            "@name": "visitor",
+            "@displayname": "@ACCESSRIGHTS_ISLAND_NAME_VISITOR",
+            "@description": "@ACCESSRIGHTS_ISLAND_DESC_VISITOR"
+          }
+        ],
+        "right": [
+          {
+            "@name": "INSTALLRESOURCES",
+            "@roles": "owner, coowner, builder, visitor, noaccess"
+          },
+          {
+            "@name": "VISIT",
+            "@roles": "owner, coowner, builder, visitor"
+          },
+          {
+            "@name": "MAKEHOME",
+            "@roles": "owner, coowner, builder, visitor"
+          },
+          {
+            "@name": "PLACE_BUILDINGS",
+            "@roles": "owner, coowner, builder"
+          },
+          {
+            "@name": "CLAIM_UNOWNED_BUILDINGS",
+            "@roles": "owner, coowner, builder"
+          },
+          {
+            "@name": "PLACE_FURNITURE_OUTDOOR",
+            "@roles": "owner, coowner, builder"
+          },
+          {
+            "@name": "CLAIM_UNOWNED_FURNITURE_OUTDOOR",
+            "@roles": "owner, coowner, builder"
+          },
+          {
+            "@name": "FORCE_CLAIM_BUILDINGS",
+            "@roles": "owner, coowner"
+          },
+          {
+            "@name": "FORCE_CLAIM_FURNITURE_OUTDOOR",
+            "@roles": "owner, coowner"
+          },
+          {
+            "@name": "CHANGE_TRIBUTE",
+            "@roles": "owner, coowner"
+          }
+        ],
+        "preset": [
+          {
+            "@name": "closed",
+            "@description": "@ACCESSRIGHTS_HIDEOUT_DESC_PRESET_CLOSED"
+          },
+          {
+            "@name": "private",
+            "@description": "@ACCESSRIGHTS_HIDEOUT_DESC_PRESET_PRIVATE",
+            "userpreset": {
+              "@who": "guild",
+              "@role": "visitor"
+            }
+          },
+          {
+            "@name": "public",
+            "@description": "@ACCESSRIGHTS_HIDEOUT_DESC_PRESET_PUBLIC",
+            "userpreset": [
+              {
+                "@who": "everyone",
+                "@role": "visitor"
+              },
+              {
+                "@who": "guild",
+                "@role": "visitor"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

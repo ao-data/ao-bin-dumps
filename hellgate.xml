@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hellgates xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="hellgate.xsd">
+  <globalsettings
+    opengatedistance="10"
+    secondstoenter ="3"
+    groupchanneltime="0.1"
+    individualchanneltime="3.0"
+    mobdespawndelay="2.4"
+    mobdespawnspell="HELLGATE_MOBDESPAWN_SPELL"
+    pvpmatchstartspell="HELLGATE_MATCH_START_SPELL"
+    enteringstarteffectprefab="FX/ClientPrefabs/fx_hellgate_cast_loop"
+    enteringsuccesseffectprefab="FX/ClientPrefabs/fx_hellgate_teleport"
+    exitprefab="Prefabs/ENV_PREFABS/SHARED/BUILDINGS/PORTALS/SHARED_HELLGATE_DUNGEON_EXIT_10x10_PORTAL_02"
+    minimapiconchaining="hellgate_chaning_gate"
+    shrinedespawnseconds="10"
+    fxsecondsmin="90"
+    fxsecondsmax="120"
+    majorfxchance="0.23"
+/>
+  
+  <hellgatemodes>
+    <hellgatemode
+      name="hellgate_1v1"
+      teamsize="1"
+      teamamount="2"
+      mapset="test"
+      arearestrictiondelay="90"
+      arearestrictionvelocity="0.30"
+      arearestrictionspellwarningarea="HELLGATE_WARNING"
+      arearestrictionspelldamagearea="HELLGATE_DAMAGE"
+      arearestrictionspellentered="HELLGATE_ENTERED"
+      finalarearestrictionvelocity="0.2"
+      finalarearestrictionbreak="120"
+      
+      itempowerrequirement="500"
+      
+      pvplootchestspawnpoint="HELL_HRD_PVP_NORMAL"
+      pvelootchestspawnpoint="HELL_HRD_PVE_NORMAL"
+
+      rewardconstant="82.70936908"
+      rewardceiling="0.5"
+      rewardscaling="0.4"
+      ratingscaling="0.2"
+
+      infamymin="-0.1" 
+      infamymax="0.9"
+      
+      pvpmmrloss="0.1"
+      pvpmmrgain="0.08"
+      mmrkillbonus="0"
+      pointsrequirement="100"
+      minmatchmmr="500"
+      lowerscalingbase="1.00006932"
+      upperscalingbase="0.99993069"
+      timefactor="0.53279922"
+      timepower="1.94910649"
+      boundconstant="10000"
+      chainingoptionprefab="SHARED_HELLGATE_EXIT_LETHAL"
+    />
+
+   <!--LETHAL-->
+    <hellgatemode
+      name="hellgate_2v2"
+      teamsize="2"
+      teamamount="2"
+     
+      pvplootchestspawnpoint="HELL_HRD_PVP_NORMAL"
+      pvelootchestspawnpoint="HELL_HRD_PVE_NORMAL"
+      
+      pointsrequirement="500"
+      itempowerrequirement="900"
+      mapset="2v2"
+      
+      arearestrictiondelay="90"
+      arearestrictionvelocity="0.30"
+      arearestrictionspellwarningarea="HELLGATE_WARNING"
+      arearestrictionspelldamagearea="HELLGATE_DAMAGE"
+      arearestrictionspellentered="HELLGATE_ENTERED"
+      finalarearestrictionvelocity="0.2"
+      finalarearestrictionbreak="120"
+
+      rewardconstant="82.70936908"
+      rewardceiling="0.5"
+      rewardscaling="0.4"
+      ratingscaling="0.2"
+      
+      infamymin="-0.2" 
+      infamymax="0.8"
+
+      pvpmmrloss="0.1"
+      pvpmmrgain="0.08"
+      mmrkillbonus="0"
+      minmatchmmr="500"
+      lowerscalingbase="1.00006932"
+      upperscalingbase="0.99993069"
+      timefactor="0.53279922"
+      timepower="1.94910649"
+      boundconstant="10000"
+      chainingoptionprefab="SHARED_HELLGATE_EXIT_LETHAL"
+      mightreward="PVPCHALLENGE_HELLGATE_2V2"
+      />
+  
+    <hellgatemode
+      name="hellgate_5v5"
+      teamsize="5"
+      teamamount="2"
+     
+      pvplootchestspawnpoint="HELL_HRD_PVP_VETERAN"
+      pvelootchestspawnpoint="HELL_HRD_PVE_VETERAN"
+      
+      pointsrequirement="500"
+      itempowerrequirement="1000"
+      mapset="5v5"
+      
+      arearestrictiondelay="90"
+      arearestrictionvelocity="0.30"
+      arearestrictionspellwarningarea="HELLGATE_WARNING"
+      arearestrictionspelldamagearea="HELLGATE_DAMAGE"
+      arearestrictionspellentered="HELLGATE_ENTERED"
+      finalarearestrictionvelocity="0.2"
+      finalarearestrictionbreak="120"
+
+      rewardconstant="82.70936908"
+      rewardceiling="0.5"
+      rewardscaling="0.4"
+      ratingscaling="0.2"
+      
+      infamymin="-0.4" 
+      infamymax="0.8"
+
+      pvpmmrloss="0.1"
+      pvpmmrgain="0.08"
+      mmrkillbonus="0"
+      minmatchmmr="500"
+      lowerscalingbase="1.00006932"
+      upperscalingbase="0.99993069"
+      timefactor="0.53279922"
+      timepower="1.94910649"
+      boundconstant="10000"
+      chainingoptionprefab="SHARED_HELLGATE_EXIT_LETHAL"
+      mightreward="PVPCHALLENGE_HELLGATE_5V5"
+    />
+  
+    <hellgatemode
+      name="hellgate_10v10"
+      teamsize="10"
+      teamamount="2"
+      
+      pvplootchestspawnpoint="HELL_HRD_PVP_ELITE"
+      pvelootchestspawnpoint="HELL_HRD_PVE_ELITE"
+      
+      pointsrequirement="500"
+      itempowerrequirement="1000"
+      mapset="10v10"
+      
+      arearestrictiondelay="90"
+      arearestrictionvelocity="0.30"
+      arearestrictionspellwarningarea="HELLGATE_WARNING"
+      arearestrictionspelldamagearea="HELLGATE_DAMAGE"
+      arearestrictionspellentered="HELLGATE_ENTERED"
+      finalarearestrictionvelocity="0.2"
+      finalarearestrictionbreak="120"
+
+      rewardconstant="82.70936908"
+      rewardceiling="0.5"
+      rewardscaling="0.4"
+      ratingscaling="0.2"
+      
+      infamymin="-0.6" 
+      infamymax="0.8"
+
+      pvpmmrloss="0.1"
+      pvpmmrgain="0.08"
+      mmrkillbonus="0"
+      minmatchmmr="500"
+      lowerscalingbase="1.00006932"
+      upperscalingbase="0.99993069"
+      timefactor="0.53279922"
+      timepower="1.94910649"
+      boundconstant="10000"
+      chainingoptionprefab="SHARED_HELLGATE_EXIT_LETHAL"
+      mightreward="PVPCHALLENGE_HELLGATE_10V10"
+    />
+    
+    <!--NON-LETHAL-->
+    <hellgatemode
+      name="hellgate_2v2_non_lethal"
+      teamsize="2"
+      teamamount="2"
+     
+      pvplootchestspawnpoint="HELL_STD_PVP_NORMAL"
+      pvelootchestspawnpoint="HELL_STD_PVE_NORMAL"
+      
+      pointsrequirement="100"
+      itempowerrequirement="800"
+      mapset="2v2_non_lethal"
+      
+      arearestrictiondelay="90"
+      arearestrictionvelocity="0.30"
+      arearestrictionspellwarningarea="HELLGATE_WARNING"
+      arearestrictionspelldamagearea="HELLGATE_DAMAGE"
+      arearestrictionspellentered="HELLGATE_ENTERED"
+      finalarearestrictionvelocity="0.2"
+      finalarearestrictionbreak="120"
+
+      rewardconstant="43.44769151"
+      rewardceiling="0.5"
+      rewardscaling="0.4"
+      ratingscaling="0.2"
+      
+        
+      infamymin="-0.2" 
+      infamymax="0.8"
+
+      pvpmmrloss="0.1"
+      pvpmmrgain="0.08"
+      mmrkillbonus="0"
+      minmatchmmr="100"
+      lowerscalingbase="1.00006932"
+      upperscalingbase="0.99993069"
+      timefactor="0.53279922"
+      timepower="1.94910649"
+      boundconstant="10000"
+      chainingoptionprefab="SHARED_HELLGATE_EXIT_LETHAL"
+      />
+
+    <hellgatemode
+      name="hellgate_5v5_non_lethal"
+      teamsize="5"
+      teamamount="2"
+     
+      pvplootchestspawnpoint="HELL_STD_PVP_VETERAN"
+      pvelootchestspawnpoint="HELL_STD_PVE_VETERAN"
+      
+      pointsrequirement="100"
+      itempowerrequirement="800"
+      mapset="5v5_non_lethal"
+      
+      arearestrictiondelay="90"
+      arearestrictionvelocity="0.30"
+      arearestrictionspellwarningarea="HELLGATE_WARNING"
+      arearestrictionspelldamagearea="HELLGATE_DAMAGE"
+      arearestrictionspellentered="HELLGATE_ENTERED"
+      finalarearestrictionvelocity="0.2"
+      finalarearestrictionbreak="120"
+
+      rewardconstant="43.44769151"
+      rewardceiling="0.5"
+      rewardscaling="0.4"
+      ratingscaling="0.2"
+      
+      infamymin="-0.4" 
+      infamymax="0.8"
+
+      pvpmmrloss="0.1"
+      pvpmmrgain="0.08"
+      mmrkillbonus="0"
+      minmatchmmr="100"
+      lowerscalingbase="1.00006932"
+      upperscalingbase="0.99993069"
+      timefactor="0.53279922"
+      timepower="1.94910649"
+      boundconstant="10000"
+      chainingoptionprefab="SHARED_HELLGATE_EXIT_LETHAL"
+    />
+
+    <hellgatemode
+      name="hellgate_10v10_non_lethal"
+      teamsize="10"
+      teamamount="2"
+      
+      pvplootchestspawnpoint="HELL_STD_PVP_ELITE"
+      pvelootchestspawnpoint="HELL_STD_PVE_ELITE"
+      
+      pointsrequirement="100"
+      itempowerrequirement="800"
+      mapset="10v10_non_lethal"
+      
+      arearestrictiondelay="90"
+      arearestrictionvelocity="0.30"
+      arearestrictionspellwarningarea="HELLGATE_WARNING"
+      arearestrictionspelldamagearea="HELLGATE_DAMAGE"
+      arearestrictionspellentered="HELLGATE_ENTERED"
+      finalarearestrictionvelocity="0.2"
+      finalarearestrictionbreak="120"
+
+      rewardconstant="43.44769151"
+      rewardceiling="0.5"
+      rewardscaling="0.4"
+      ratingscaling="0.2"
+      
+      infamymin="-0.6" 
+      infamymax="0.8"
+
+      pvpmmrloss="0.1"
+      pvpmmrgain="0.08"
+      mmrkillbonus="0"
+      minmatchmmr="100"
+      lowerscalingbase="1.00006932"
+      upperscalingbase="0.99993069"
+      timefactor="0.53279922"
+      timepower="1.94910649"
+      boundconstant="10000"
+      chainingoptionprefab="SHARED_HELLGATE_EXIT_LETHAL"
+    />
+  </hellgatemodes>
+
+  <hellgatemaps>
+    <!--array of maps to choose from, 15% chance of map with miniboss, 5% chance of map with boss -->
+    <!--32 - maps with neither miniboss nor boss-->
+    <!--10 - maps with miniboss-->
+    <!--5 - maps with boss-->
+    <mapset name="test">
+      <map id="HELLGATE-01-2v2-01" layer="2" weight="32"/>
+      <map id="HELLGATE-02-2v2-01" layer="2" weight="32"/>
+      <map id="HELLGATE-03-2v2-01" layer="2" weight="10"/>
+      <map id="HELLGATE-04-2v2-01" layer="2" weight="10"/>
+      <map id="HELLGATE-05-2v2-01" layer="2" weight="32"/>
+      <map id="HELLGATE-06-2v2-01" layer="2" weight="5"/>
+      <map id="HELLGATE-07-2v2-01" layer="2" weight="10"/>
+      <map id="HELLGATE-08-2v2-01" layer="2" weight="32"/>
+      <map id="HELLGATE-09-2v2-01" layer="2" weight="32"/>
+      <map id="HELLGATE-10-2v2-01" layer="2" weight="5"/>
+    </mapset>
+    <mapset name="2v2">
+      <map id="HELLGATE-01-2v2-01-HRD" layer="2" weight="32"/>
+      <map id="HELLGATE-02-2v2-01-HRD" layer="2" weight="32"/>
+      <map id="HELLGATE-03-2v2-01-HRD" layer="2" weight="10"/>
+      <map id="HELLGATE-04-2v2-01-HRD" layer="2" weight="10"/>
+      <map id="HELLGATE-05-2v2-01-HRD" layer="2" weight="32"/>
+      <map id="HELLGATE-06-2v2-01-HRD" layer="2" weight="5"/>
+      <map id="HELLGATE-07-2v2-01-HRD" layer="2" weight="10"/>
+      <map id="HELLGATE-08-2v2-01-HRD" layer="2" weight="32"/>
+      <map id="HELLGATE-09-2v2-01-HRD" layer="2" weight="32"/>
+      <map id="HELLGATE-10-2v2-01-HRD" layer="2" weight="5"/>
+    </mapset>
+    <mapset name="5v5">
+      <map id="HELLGATE-01-5v5-01-HRD" layer="2" weight="32"/>
+      <map id="HELLGATE-02-5v5-01-HRD" layer="2" weight="32"/>
+      <map id="HELLGATE-03-5v5-01-HRD" layer="2" weight="10"/>
+      <map id="HELLGATE-04-5v5-01-HRD" layer="2" weight="10"/>
+      <map id="HELLGATE-05-5v5-01-HRD" layer="2" weight="32"/>
+      <map id="HELLGATE-06-5v5-01-HRD" layer="2" weight="5"/>
+      <map id="HELLGATE-07-5v5-01-HRD" layer="2" weight="10"/>
+      <map id="HELLGATE-08-5v5-01-HRD" layer="2" weight="32"/>
+      <map id="HELLGATE-09-5v5-01-HRD" layer="2" weight="32"/>
+      <map id="HELLGATE-10-5v5-01-HRD" layer="2" weight="5"/>
+    </mapset>
+    <mapset name="10v10">
+      <map id="HELLGATE-01-10v10-01-HRD" layer="2" weight="32"/>
+      <map id="HELLGATE-02-10v10-01-HRD" layer="2" weight="32"/>
+      <map id="HELLGATE-03-10v10-01-HRD" layer="2" weight="10"/>
+      <map id="HELLGATE-04-10v10-01-HRD" layer="2" weight="10"/>
+      <map id="HELLGATE-05-10v10-01-HRD" layer="2" weight="32"/>
+      <map id="HELLGATE-06-10v10-01-HRD" layer="2" weight="5"/>
+      <map id="HELLGATE-07-10v10-01-HRD" layer="2" weight="10"/>
+      <map id="HELLGATE-08-10v10-01-HRD" layer="2" weight="32"/>
+      <map id="HELLGATE-09-10v10-01-HRD" layer="2" weight="32"/>
+      <map id="HELLGATE-10-10v10-01-HRD" layer="2" weight="5"/>
+    </mapset>    
+    <mapset name="2v2_non_lethal">
+      <map id="HELLGATE-01-2v2-01" layer="2" weight="32"/>
+      <map id="HELLGATE-02-2v2-01" layer="2" weight="32"/>
+      <map id="HELLGATE-03-2v2-01" layer="2" weight="10"/>
+      <map id="HELLGATE-04-2v2-01" layer="2" weight="10"/>
+      <map id="HELLGATE-05-2v2-01" layer="2" weight="32"/>
+      <map id="HELLGATE-06-2v2-01" layer="2" weight="5"/>
+      <map id="HELLGATE-07-2v2-01" layer="2" weight="10"/>
+      <map id="HELLGATE-08-2v2-01" layer="2" weight="32"/>
+      <map id="HELLGATE-09-2v2-01" layer="2" weight="32"/>
+      <map id="HELLGATE-10-2v2-01" layer="2" weight="5"/>
+    </mapset>
+    <mapset name="5v5_non_lethal">
+      <map id="HELLGATE-01-5v5-01" layer="2" weight="32"/>
+      <map id="HELLGATE-02-5v5-01" layer="2" weight="32"/>
+      <map id="HELLGATE-03-5v5-01" layer="2" weight="10"/>
+      <map id="HELLGATE-04-5v5-01" layer="2" weight="10"/>
+      <map id="HELLGATE-05-5v5-01" layer="2" weight="32"/>
+      <map id="HELLGATE-06-5v5-01" layer="2" weight="5"/>
+      <map id="HELLGATE-07-5v5-01" layer="2" weight="10"/>
+      <map id="HELLGATE-08-5v5-01" layer="2" weight="32"/>
+      <map id="HELLGATE-09-5v5-01" layer="2" weight="32"/>
+      <map id="HELLGATE-10-5v5-01" layer="2" weight="5"/>
+    </mapset>
+    <mapset name="10v10_non_lethal">
+      <map id="HELLGATE-01-10v10-01" layer="2" weight="32"/>
+      <map id="HELLGATE-02-10v10-01" layer="2" weight="32"/>
+      <map id="HELLGATE-03-10v10-01" layer="2" weight="10"/>
+      <map id="HELLGATE-04-10v10-01" layer="2" weight="10"/>
+      <map id="HELLGATE-05-10v10-01" layer="2" weight="32"/>
+      <map id="HELLGATE-06-10v10-01" layer="2" weight="5"/>
+      <map id="HELLGATE-07-10v10-01" layer="2" weight="10"/>
+      <map id="HELLGATE-08-10v10-01" layer="2" weight="32"/>
+      <map id="HELLGATE-09-10v10-01" layer="2" weight="32"/>
+      <map id="HELLGATE-10-10v10-01" layer="2" weight="5"/>
+    </mapset>    
+  </hellgatemaps>
+
+  <infamymilestonetypes>
+  <!-- NOTE! mode can only be H1, H2 ,H5 ,H10 -->
+  <infamymilestones mode="H1" title="@HELLGATE_1V1_MMR_REACHED_HEADLINE" description="@HELLGATE_1V1_MMR_REACHED_TEXT">
+    <milestone value="50"/>
+    <milestone value="100"/>
+    <milestone value="250"/>
+    <milestone value="500"/>
+    <milestone value="1000"/>
+    <milestone value="2500"/>
+    <milestone value="5000"/>
+    <milestone value="7500"/>
+    <milestone value="10000"/>
+    <milestone value="25000"/>
+    <milestone value="50000"/>
+    <milestone value="75000"/>
+    <milestone value="100000"/>
+    <milestone value="250000"/>
+    <milestone value="500000"/>
+    <milestone value="750000"/>
+    <milestone value="1000000"/>
+    <milestone value="2000000"/>
+    <milestone value="3000000"/>
+    <milestone value="4000000"/>
+    <milestone value="5000000"/>
+    <milestone value="6000000"/>
+    <milestone value="7000000"/>
+    <milestone value="8000000"/>
+    <milestone value="9000000"/>
+    <milestone value="10000000"/>
+  </infamymilestones>
+  
+  <!-- NOTE! mode can only be H1, H2 ,H5 ,H10 -->
+  <infamymilestones mode="H2" title="@HELLGATE_2V2_MMR_REACHED_HEADLINE" description="@HELLGATE_2V2_MMR_REACHED_TEXT">
+    <milestone value="50"/>
+    <milestone value="100"/>
+    <milestone value="250"/>
+    <milestone value="500"/>
+    <milestone value="1000"/>
+    <milestone value="2500"/>
+    <milestone value="5000"/>
+    <milestone value="7500"/>
+    <milestone value="10000"/>
+    <milestone value="25000"/>
+    <milestone value="50000"/>
+    <milestone value="75000"/>
+    <milestone value="100000"/>
+    <milestone value="250000"/>
+    <milestone value="500000"/>
+    <milestone value="750000"/>
+    <milestone value="1000000"/>
+    <milestone value="2000000"/>
+    <milestone value="3000000"/>
+    <milestone value="4000000"/>
+    <milestone value="5000000"/>
+    <milestone value="6000000"/>
+    <milestone value="7000000"/>
+    <milestone value="8000000"/>
+    <milestone value="9000000"/>
+    <milestone value="10000000"/>
+  </infamymilestones>
+  
+  <!-- NOTE! mode can only be H1, H2 ,H5 ,H10 -->
+  <infamymilestones mode="H5" title="@HELLGATE_5V5_MMR_REACHED_HEADLINE" description="@HELLGATE_5V5_MMR_REACHED_TEXT">
+    <milestone value="50"/>
+    <milestone value="100"/>
+    <milestone value="250"/>
+    <milestone value="500"/>
+    <milestone value="1000"/>
+    <milestone value="2500"/>
+    <milestone value="5000"/>
+    <milestone value="7500"/>
+    <milestone value="10000"/>
+    <milestone value="25000"/>
+    <milestone value="50000"/>
+    <milestone value="75000"/>
+    <milestone value="100000"/>
+    <milestone value="250000"/>
+    <milestone value="500000"/>
+    <milestone value="750000"/>
+    <milestone value="1000000"/>
+    <milestone value="2000000"/>
+    <milestone value="3000000"/>
+    <milestone value="4000000"/>
+    <milestone value="5000000"/>
+    <milestone value="6000000"/>
+    <milestone value="7000000"/>
+    <milestone value="8000000"/>
+    <milestone value="9000000"/>
+    <milestone value="10000000"/>
+  </infamymilestones>
+  
+  <!-- NOTE! mode can only be H1, H2 ,H5 ,H10 -->
+  <infamymilestones mode="H10" title="@HELLGATE_10V10_MMR_REACHED_HEADLINE" description="@HELLGATE_10V10_MMR_REACHED_TEXT">
+    <milestone value="50"/>
+    <milestone value="100"/>
+    <milestone value="250"/>
+    <milestone value="500"/>
+    <milestone value="1000"/>
+    <milestone value="2500"/>
+    <milestone value="5000"/>
+    <milestone value="7500"/>
+    <milestone value="10000"/>
+    <milestone value="25000"/>
+    <milestone value="50000"/>
+    <milestone value="75000"/>
+    <milestone value="100000"/>
+    <milestone value="250000"/>
+    <milestone value="500000"/>
+    <milestone value="750000"/>
+    <milestone value="1000000"/>
+    <milestone value="2000000"/>
+    <milestone value="3000000"/>
+    <milestone value="4000000"/>
+    <milestone value="5000000"/>
+    <milestone value="6000000"/>
+    <milestone value="7000000"/>
+    <milestone value="8000000"/>
+    <milestone value="9000000"/>
+    <milestone value="10000000"/>
+  </infamymilestones>
+</infamymilestonetypes>
+
+</hellgates>

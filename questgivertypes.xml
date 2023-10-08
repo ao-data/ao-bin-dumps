@@ -1,0 +1,507 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<questgivertypes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="questgivertypes.xsd">
+
+  <!-- xxxxxxxxxxxxxxxxxxxxxxxxxx-->
+          <!--BASE TUTORIAL NPCS-->
+  <!-- xxxxxxxxxxxxxxxxxxxxxxxxxx-->
+  
+    <!--INVISIBLE QUESTGIVER-->
+  <questgivertype uniquename="GOTO_A" mobfaction="ROYALARMY" level="2" tags="GOTO_A">
+    <questslot tags="gotoa" />
+  </questgivertype>
+
+  <!--SILAS-->
+  <questgivertype uniquename="WOUNDEDCRAFTER" mobfaction="ROYALARMY" level="2" tags="WOUNDEDCRAFTER">
+    <questslot tags="woundedcrafter" />
+  </questgivertype>
+
+  <questgivertype uniquename="WOUNDEDCRAFTER_SECONDENCOUNTER" mobfaction="ROYALARMY" level="2" tags="WOUNDEDCRAFTER">
+    <questslot tags="woundedcrafter" />
+  </questgivertype>
+
+<!--TIA-->
+  <questgivertype uniquename="CAPTAIN_TIA" mobfaction="ROYALARMY" level="2" tags="CAPTAIN_TIA" maxsilverpool="1000" secondspersilver="100">
+    <questslot tags="captaintia" />
+  </questgivertype>
+
+  <questgivertype uniquename="CAPTAIN_TIA_STANDING" mobfaction="ROYALARMY" level="2" tags="CAPTAIN_TIA_STANDING" maxsilverpool="1000" secondspersilver="100">
+    <questslot tags="captaintia2" />
+  </questgivertype>
+
+  <!--SHIP REPAIR NPC-->
+   <questgivertype uniquename="SHIP_REPAIRMAN" mobfaction="ROYALARMY" level="2" tags="SHIP_REPAIRMAN" maxsilverpool="1000" secondspersilver="100"/>
+    
+  
+  
+  <!-- xxxxxxxxxxxxxxxxxxxxxxxxxx-->
+          <!--STARTER TOWN NPCS-->
+  <!-- xxxxxxxxxxxxxxxxxxxxxxxxxx-->
+  
+  <!--TEST-->
+  <questgivertype uniquename="COMBATAGENT_ROYAL" mobfaction="ROYALARMY" level="2" tags="COMBATAGENT_ROYAL">
+    <questslot tags="debug" />
+  </questgivertype>
+ 
+  
+  <!--HABOUR MASTER-->
+  <questgivertype uniquename="ROYALHARBOURMASTER" mobfaction="ROYALARMY" level="2" tags="ROYALHARBOURMASTER">
+    <questslot tags="royalharbour" />
+  </questgivertype>
+
+  <!--ROYAL COMMANDER-->
+  <questgivertype uniquename="ROYALCOMMANDER" mobfaction="ROYALARMY" level="2" tags="ROYALCOMMANDER">
+    <questgroup locatag="@MISSION_GROUP_INTRO">
+      <quest uniquename="MISSIONS_T2_TUTORIAL_OPTIONS" />
+      <quest uniquename="MISSIONS_T2_TUTORIAL_CITYTOUR_SWAMP" />
+      <quest uniquename="MISSIONS_T2_TUTORIAL_CITYTOUR_FOREST" />
+      <quest uniquename="MISSIONS_T2_TUTORIAL_CITYTOUR_STEPPE" />
+      <quest uniquename="MISSIONS_T2_TUTORIAL_CITYTOUR_HIGHLAND" />
+      <quest uniquename="MISSIONS_T2_TUTORIAL_CITYTOUR_MOUNTAIN" />
+    </questgroup>
+    <questgroup locatag="@MISSION_GROUP_COMBAT">
+      <quest uniquename="MISSIONS_T2_TUTORIAL_TEACH_COMBAT" />
+      <quest uniquename="MISSIONS_T2_TUTORIAL_TEACH_COMBAT2" />
+      <quest uniquename="MISSIONS_T2_TUTORIAL_TEACH_COMBAT3" />
+    </questgroup>
+    <questgroup locatag="@MISSION_GROUP_GATHERANDCRAFT">
+      <quest uniquename="MISSIONS_T2_TUTORIAL_GO_TO_CRAFTER" />
+    </questgroup>
+    <questgroup locatag="@MISSION_GROUP_SMUGGLER">
+      <quest uniquename="MISSIONS_T2_TUTORIAL_GO_TO_GOLD_SMUGGLER" />
+    </questgroup>   
+   <questgroup locatag="@MISSION_GROUP_YOU_ARE_READY">
+      <quest uniquename="MISSIONS_T2_TUTORIAL_GO_TO_CITY"></quest>
+    </questgroup>
+ </questgivertype>
+  
+  <!--ROYAL CRAFTER-->
+ <questgivertype uniquename="ROYALCRAFTER" mobfaction="ROYALARMY" level="2" tags="ROYALCRAFTER" secondspersilver="1" maxsilverpool="10000">
+   <questgroup locatag="@MISSION_GROUP_CRAFTING">
+     <quest uniquename="MISSIONS_T2_TUTORIAL_CRAFTING_ADVANCED" />
+   </questgroup>
+   <questgroup locatag="@MISSION_GROUP_GATHERING_ADVANCED">
+     <quest uniquename="MISSIONS_T2_TUTORIAL_GATHERING_FIBER_REFINING" />
+     <quest uniquename="MISSIONS_T2_TUTORIAL_GATHERING_WOOD_REFINING" />
+     <quest uniquename="MISSIONS_T2_TUTORIAL_GATHERING_ROCK_REFINING" />
+     <quest uniquename="MISSIONS_T2_TUTORIAL_GATHERING_ORE_REFINING" />
+     <quest uniquename="MISSIONS_T2_TUTORIAL_GATHERING_HIDE_REFINING" />
+   </questgroup>
+   <questgroup locatag="@MISSION_GROUP_GATHERING">
+     <quest uniquename="MISSIONS_T2_TUTORIAL_GATHERING_ADVANCED" />
+     <quest uniquename="MISSIONS_T2_TUTORIAL_GATHERING_FIBER" />
+     <quest uniquename="MISSIONS_T2_TUTORIAL_GATHERING_WOOD" />
+     <quest uniquename="MISSIONS_T2_TUTORIAL_GATHERING_ROCK" />
+     <quest uniquename="MISSIONS_T2_TUTORIAL_GATHERING_ORE" />
+     <quest uniquename="MISSIONS_T2_TUTORIAL_GATHERING_HIDE" />
+   </questgroup>
+   <questgroup locatag="@MISSION_GROUP_CRAFTER_YOU_ARE_READY">
+     <quest uniquename="MISSIONS_T2_TUTORIAL_RETURN_TO_COMMANDER"></quest>
+   </questgroup>
+ </questgivertype>
+
+   <!--GOLD SMUGGLER NPC-->
+ <questgivertype uniquename="GOLD_SMUGGLER" mobfaction="ROYALARMY" level="2" tags="GOLD_SMUGGLER" maxsilverpool="1000" secondspersilver="100">
+    <questslot tags="goldsmuggler" />
+  </questgivertype>
+
+
+  <!-- xxxxxxxxxxxxxxxxxxxxxxxxxx-->
+          <!--BIOME CITY NPCS-->
+  <!-- xxxxxxxxxxxxxxxxxxxxxxxxxx-->
+  <questgivertype uniquename="ROYALEXPLORER" mobfaction="ROYALARMY" level="2" tags="ROYALEXPLORER">
+    <questslot tags="adventurer" />
+  </questgivertype>
+
+ <!--FACTION WARFARE - Caravan Missions -->
+ <!--OPEN WORLD NPCS - Smuggler -->
+ <factionquestgivertype uniquename="TRADING_OUTPOST_SMUGGLER_SWAMP" playerfaction="Swamp" tags="faction_outside" />
+ <factionquestgivertype uniquename="TRADING_OUTPOST_SMUGGLER_FOREST" playerfaction="Forest" tags="faction_outside" />
+ <factionquestgivertype uniquename="TRADING_OUTPOST_SMUGGLER_STEPPE" playerfaction="Steppe" tags="faction_outside" />
+ <factionquestgivertype uniquename="TRADING_OUTPOST_SMUGGLER_HIGHLAND" playerfaction="Highland" tags="faction_outside" />
+ <factionquestgivertype uniquename="TRADING_OUTPOST_SMUGGLER_MOUNTAIN" playerfaction="Mountain" tags="faction_outside" />
+  <factionquestgivertype uniquename="TRADING_OUTPOST_SMUGGLER_CAERLEON" playerfaction="Caerleon" tags="faction_outside" />
+
+  
+  <!--FactionStore --> 
+  <factionquestgivertype uniquename="FACTIONSTORE_SWAMP_DEBUG" playerfaction="Swamp" tags="faction_store">
+  <questgroup locatag="@MISSION_GROUP_LIGHTPACKS">
+   <quest uniquename="MISSIONS_LIGHT_TRADE_PACK_TO_OUTPOST_DEBUG">
+    <factionvariable name="FACTION_B" value="Highland" />
+   </quest>
+  </questgroup>
+  <questgroup locatag="@MISSION_GROUP_MEDIUMPACKS">
+   <quest uniquename="MISSIONS_MEDIUM_TRADE_PACK_TO_OUTPOST_DEBUG">
+    <factionvariable name="FACTION_B" value="Highland" />
+   </quest>
+  </questgroup>
+  <questgroup locatag="@MISSION_GROUP_HEAVYPACKS">
+   <quest uniquename="MISSIONS_HEAVY_TRADE_PACK_TO_OUTPOST_DEBUG">
+    <factionvariable name="FACTION_B" value="Highland" />
+   </quest>
+  </questgroup>
+ </factionquestgivertype>
+ <factionquestgivertype uniquename="FACTIONSTORE_MOUNTAIN_DEBUG" playerfaction="Mountain" tags="faction_store">
+  <questgroup locatag="@MISSION_GROUP_LIGHTPACKS">
+   <quest uniquename="MISSIONS_LIGHT_TRADE_PACK_TO_OUTPOST_DEBUG">
+    <factionvariable name="FACTION_B" value="Swamp" />
+   </quest>
+  </questgroup>
+  <questgroup locatag="@MISSION_GROUP_MEDIUMPACKS">
+   <quest uniquename="MISSIONS_MEDIUM_TRADE_PACK_TO_OUTPOST_DEBUG">
+    <factionvariable name="FACTION_B" value="Swamp" />
+   </quest>
+  </questgroup>
+  <questgroup locatag="@MISSION_GROUP_HEAVYPACKS">
+   <quest uniquename="MISSIONS_HEAVY_TRADE_PACK_TO_OUTPOST_DEBUG">
+    <factionvariable name="FACTION_B" value="Swamp" />
+   </quest>
+  </questgroup>
+ </factionquestgivertype>
+ <factionquestgivertype uniquename="FACTIONSTORE_SWAMP" playerfaction="Swamp" tags="faction_store">
+   <questgroup locatag="@MISSION_GROUP_CAERLEON">
+     <quest uniquename="MISSIONS_LIGHT_TRADE_PACK_TO_CAERLEON">
+       <factionvariable name="FACTION_B" value="Caerleon" />
+     </quest>
+     <quest uniquename="MISSIONS_MEDIUM_TRADE_PACK_TO_CAERLEON">
+       <factionvariable name="FACTION_B" value="Caerleon" />
+     </quest>
+     <quest uniquename="MISSIONS_HEAVY_TRADE_PACK_TO_CAERLEON">
+       <factionvariable name="FACTION_B" value="Caerleon" />
+     </quest>
+   </questgroup>
+   <questgroup locatag="@MISSION_GROUP_HIGHLAND">
+   <quest uniquename="MISSIONS_LIGHT_TRADE_PACK_TO_OUTPOST_DISTANCE_A">
+    <factionvariable name="FACTION_B" value="Highland" />
+   </quest>
+   <quest uniquename="MISSIONS_MEDIUM_TRADE_PACK_TO_OUTPOST_DISTANCE_A">
+    <factionvariable name="FACTION_B" value="Highland" />
+   </quest>
+   <quest uniquename="MISSIONS_HEAVY_TRADE_PACK_TO_OUTPOST_DISTANCE_A">
+    <factionvariable name="FACTION_B" value="Highland" />
+   </quest>
+  </questgroup>
+  <questgroup locatag="@MISSION_GROUP_MOUNTAIN">
+   <quest uniquename="MISSIONS_LIGHT_TRADE_PACK_TO_OUTPOST_DISTANCE_A">
+    <factionvariable name="FACTION_B" value="Mountain" />
+   </quest>
+   <quest uniquename="MISSIONS_MEDIUM_TRADE_PACK_TO_OUTPOST_DISTANCE_A">
+    <factionvariable name="FACTION_B" value="Mountain" />
+   </quest>
+   <quest uniquename="MISSIONS_HEAVY_TRADE_PACK_TO_OUTPOST_DISTANCE_A">
+    <factionvariable name="FACTION_B" value="Mountain" />
+   </quest>
+  </questgroup>
+  <questgroup locatag="@MISSION_GROUP_FOREST">
+   <quest uniquename="MISSIONS_LIGHT_TRADE_PACK_TO_OUTPOST_DISTANCE_C">
+    <factionvariable name="FACTION_B" value="Forest" />
+   </quest>
+   <quest uniquename="MISSIONS_MEDIUM_TRADE_PACK_TO_OUTPOST_DISTANCE_C">
+    <factionvariable name="FACTION_B" value="Forest" />
+   </quest>
+   <quest uniquename="MISSIONS_HEAVY_TRADE_PACK_TO_OUTPOST_DISTANCE_C">
+    <factionvariable name="FACTION_B" value="Forest" />
+   </quest>
+  </questgroup>
+  <questgroup locatag="@MISSION_GROUP_STEPPE">
+   <quest uniquename="MISSIONS_LIGHT_TRADE_PACK_TO_OUTPOST_DISTANCE_D">
+    <factionvariable name="FACTION_B" value="Steppe" />
+   </quest>
+   <quest uniquename="MISSIONS_MEDIUM_TRADE_PACK_TO_OUTPOST_DISTANCE_D">
+    <factionvariable name="FACTION_B" value="Steppe" />
+   </quest>
+   <quest uniquename="MISSIONS_HEAVY_TRADE_PACK_TO_OUTPOST_DISTANCE_D">
+    <factionvariable name="FACTION_B" value="Steppe" />
+   </quest>
+  </questgroup>
+ </factionquestgivertype>
+
+ <factionquestgivertype uniquename="FACTIONSTORE_FOREST" playerfaction="Forest" tags="faction_store">
+   <questgroup locatag="@MISSION_GROUP_CAERLEON">
+     <quest uniquename="MISSIONS_LIGHT_TRADE_PACK_TO_CAERLEON">
+       <factionvariable name="FACTION_B" value="Caerleon" />
+     </quest>
+     <quest uniquename="MISSIONS_MEDIUM_TRADE_PACK_TO_CAERLEON">
+       <factionvariable name="FACTION_B" value="Caerleon" />
+     </quest>
+     <quest uniquename="MISSIONS_HEAVY_TRADE_PACK_TO_CAERLEON">
+       <factionvariable name="FACTION_B" value="Caerleon" />
+     </quest>
+   </questgroup> 
+   <questgroup locatag="@MISSION_GROUP_STEPPE">
+   <quest uniquename="MISSIONS_LIGHT_TRADE_PACK_TO_OUTPOST_DISTANCE_A">
+    <factionvariable name="FACTION_B" value="Steppe" />
+   </quest>
+   <quest uniquename="MISSIONS_MEDIUM_TRADE_PACK_TO_OUTPOST_DISTANCE_A">
+    <factionvariable name="FACTION_B" value="Steppe" />
+   </quest>
+   <quest uniquename="MISSIONS_HEAVY_TRADE_PACK_TO_OUTPOST_DISTANCE_A">
+    <factionvariable name="FACTION_B" value="Steppe" />
+   </quest>
+  </questgroup>
+  <questgroup locatag="@MISSION_GROUP_MOUNTAIN">
+   <quest uniquename="MISSIONS_LIGHT_TRADE_PACK_TO_OUTPOST_DISTANCE_A">
+    <factionvariable name="FACTION_B" value="Mountain" />
+   </quest>
+   <quest uniquename="MISSIONS_MEDIUM_TRADE_PACK_TO_OUTPOST_DISTANCE_A">
+    <factionvariable name="FACTION_B" value="Mountain" />
+   </quest>
+   <quest uniquename="MISSIONS_HEAVY_TRADE_PACK_TO_OUTPOST_DISTANCE_A">
+    <factionvariable name="FACTION_B" value="Mountain" />
+   </quest>
+  </questgroup>
+  <questgroup locatag="@MISSION_GROUP_SWAMP">
+   <quest uniquename="MISSIONS_LIGHT_TRADE_PACK_TO_OUTPOST_DISTANCE_C">
+    <factionvariable name="FACTION_B" value="Swamp" />
+   </quest>
+   <quest uniquename="MISSIONS_MEDIUM_TRADE_PACK_TO_OUTPOST_DISTANCE_C">
+    <factionvariable name="FACTION_B" value="Swamp" />
+   </quest>
+   <quest uniquename="MISSIONS_HEAVY_TRADE_PACK_TO_OUTPOST_DISTANCE_C">
+    <factionvariable name="FACTION_B" value="Swamp" />
+   </quest>
+  </questgroup>
+  <questgroup locatag="@MISSION_GROUP_HIGHLAND">
+   <quest uniquename="MISSIONS_LIGHT_TRADE_PACK_TO_OUTPOST_DISTANCE_D">
+    <factionvariable name="FACTION_B" value="Highland" />
+   </quest>
+   <quest uniquename="MISSIONS_MEDIUM_TRADE_PACK_TO_OUTPOST_DISTANCE_D">
+    <factionvariable name="FACTION_B" value="Highland" />
+   </quest>
+   <quest uniquename="MISSIONS_HEAVY_TRADE_PACK_TO_OUTPOST_DISTANCE_D">
+    <factionvariable name="FACTION_B" value="Highland" />
+   </quest>
+  </questgroup>
+ </factionquestgivertype>
+
+ <factionquestgivertype uniquename="FACTIONSTORE_STEPPE" playerfaction="Steppe" tags="faction_store">
+   <questgroup locatag="@MISSION_GROUP_CAERLEON">
+     <quest uniquename="MISSIONS_LIGHT_TRADE_PACK_TO_CAERLEON">
+       <factionvariable name="FACTION_B" value="Caerleon" />
+     </quest>
+     <quest uniquename="MISSIONS_MEDIUM_TRADE_PACK_TO_CAERLEON">
+       <factionvariable name="FACTION_B" value="Caerleon" />
+     </quest>
+     <quest uniquename="MISSIONS_HEAVY_TRADE_PACK_TO_CAERLEON">
+       <factionvariable name="FACTION_B" value="Caerleon" />
+     </quest>
+   </questgroup>
+   <questgroup locatag="@MISSION_GROUP_FOREST">
+   <quest uniquename="MISSIONS_LIGHT_TRADE_PACK_TO_OUTPOST_DISTANCE_B">
+    <factionvariable name="FACTION_B" value="Forest" />
+   </quest>
+   <quest uniquename="MISSIONS_MEDIUM_TRADE_PACK_TO_OUTPOST_DISTANCE_B">
+    <factionvariable name="FACTION_B" value="Forest" />
+   </quest>
+   <quest uniquename="MISSIONS_HEAVY_TRADE_PACK_TO_OUTPOST_DISTANCE_B">
+    <factionvariable name="FACTION_B" value="Forest" />
+   </quest>
+  </questgroup>
+  <questgroup locatag="@MISSION_GROUP_HIGHLAND">
+   <quest uniquename="MISSIONS_LIGHT_TRADE_PACK_TO_OUTPOST_DISTANCE_B">
+    <factionvariable name="FACTION_B" value="Highland" />
+   </quest>
+   <quest uniquename="MISSIONS_MEDIUM_TRADE_PACK_TO_OUTPOST_DISTANCE_B">
+    <factionvariable name="FACTION_B" value="Highland" />
+   </quest>
+   <quest uniquename="MISSIONS_HEAVY_TRADE_PACK_TO_OUTPOST_DISTANCE_B">
+    <factionvariable name="FACTION_B" value="Highland" />
+   </quest>
+  </questgroup>
+  <questgroup locatag="@MISSION_GROUP_MOUNTAIN">
+   <quest uniquename="MISSIONS_LIGHT_TRADE_PACK_TO_OUTPOST_DISTANCE_D">
+    <factionvariable name="FACTION_B" value="Mountain" />
+   </quest>
+   <quest uniquename="MISSIONS_MEDIUM_TRADE_PACK_TO_OUTPOST_DISTANCE_D">
+    <factionvariable name="FACTION_B" value="Mountain" />
+   </quest>
+   <quest uniquename="MISSIONS_HEAVY_TRADE_PACK_TO_OUTPOST_DISTANCE_D">
+    <factionvariable name="FACTION_B" value="Mountain" />
+   </quest>
+  </questgroup>
+  <questgroup locatag="@MISSION_GROUP_SWAMP">
+   <quest uniquename="MISSIONS_LIGHT_TRADE_PACK_TO_OUTPOST_DISTANCE_D">
+    <factionvariable name="FACTION_B" value="Swamp" />
+   </quest>
+   <quest uniquename="MISSIONS_MEDIUM_TRADE_PACK_TO_OUTPOST_DISTANCE_D">
+    <factionvariable name="FACTION_B" value="Swamp" />
+   </quest>
+   <quest uniquename="MISSIONS_HEAVY_TRADE_PACK_TO_OUTPOST_DISTANCE_D">
+    <factionvariable name="FACTION_B" value="Swamp" />
+   </quest>
+  </questgroup>
+ </factionquestgivertype>
+
+ <factionquestgivertype uniquename="FACTIONSTORE_HIGHLAND" playerfaction="Highland" tags="faction_store">
+   <questgroup locatag="@MISSION_GROUP_CAERLEON">
+     <quest uniquename="MISSIONS_LIGHT_TRADE_PACK_TO_CAERLEON">
+       <factionvariable name="FACTION_B" value="Caerleon" />
+     </quest>
+     <quest uniquename="MISSIONS_MEDIUM_TRADE_PACK_TO_CAERLEON">
+       <factionvariable name="FACTION_B" value="Caerleon" />
+     </quest>
+     <quest uniquename="MISSIONS_HEAVY_TRADE_PACK_TO_CAERLEON">
+       <factionvariable name="FACTION_B" value="Caerleon" />
+     </quest>
+   </questgroup>
+   <questgroup locatag="@MISSION_GROUP_STEPPE">
+   <quest uniquename="MISSIONS_LIGHT_TRADE_PACK_TO_OUTPOST_DISTANCE_A">
+    <factionvariable name="FACTION_B" value="Steppe" />
+   </quest>
+   <quest uniquename="MISSIONS_MEDIUM_TRADE_PACK_TO_OUTPOST_DISTANCE_A">
+    <factionvariable name="FACTION_B" value="Steppe" />
+   </quest>
+   <quest uniquename="MISSIONS_HEAVY_TRADE_PACK_TO_OUTPOST_DISTANCE_A">
+    <factionvariable name="FACTION_B" value="Steppe" />
+   </quest>
+  </questgroup>
+  <questgroup locatag="@MISSION_GROUP_SWAMP">
+   <quest uniquename="MISSIONS_LIGHT_TRADE_PACK_TO_OUTPOST_DISTANCE_A">
+    <factionvariable name="FACTION_B" value="Swamp" />
+   </quest>
+   <quest uniquename="MISSIONS_MEDIUM_TRADE_PACK_TO_OUTPOST_DISTANCE_A">
+    <factionvariable name="FACTION_B" value="Swamp" />
+   </quest>
+   <quest uniquename="MISSIONS_HEAVY_TRADE_PACK_TO_OUTPOST_DISTANCE_A">
+    <factionvariable name="FACTION_B" value="Swamp" />
+   </quest>
+  </questgroup>
+  <questgroup locatag="@MISSION_GROUP_MOUNTAIN">
+   <quest uniquename="MISSIONS_LIGHT_TRADE_PACK_TO_OUTPOST_DISTANCE_C">
+    <factionvariable name="FACTION_B" value="Mountain" />
+   </quest>
+   <quest uniquename="MISSIONS_MEDIUM_TRADE_PACK_TO_OUTPOST_DISTANCE_C">
+    <factionvariable name="FACTION_B" value="Mountain" />
+   </quest>
+   <quest uniquename="MISSIONS_HEAVY_TRADE_PACK_TO_OUTPOST_DISTANCE_C">
+    <factionvariable name="FACTION_B" value="Mountain" />
+   </quest>
+  </questgroup>
+  <questgroup locatag="@MISSION_GROUP_FOREST">
+   <quest uniquename="MISSIONS_LIGHT_TRADE_PACK_TO_OUTPOST_DISTANCE_D">
+    <factionvariable name="FACTION_B" value="Forest" />
+   </quest>
+   <quest uniquename="MISSIONS_MEDIUM_TRADE_PACK_TO_OUTPOST_DISTANCE_D">
+    <factionvariable name="FACTION_B" value="Forest" />
+   </quest>
+   <quest uniquename="MISSIONS_HEAVY_TRADE_PACK_TO_OUTPOST_DISTANCE_D">
+    <factionvariable name="FACTION_B" value="Forest" />
+   </quest>
+  </questgroup>
+ </factionquestgivertype>
+
+ <factionquestgivertype uniquename="FACTIONSTORE_MOUNTAIN" playerfaction="Mountain" tags="faction_store">
+   <questgroup locatag="@MISSION_GROUP_CAERLEON">
+     <quest uniquename="MISSIONS_LIGHT_TRADE_PACK_TO_CAERLEON">
+       <factionvariable name="FACTION_B" value="Caerleon" />
+     </quest>
+     <quest uniquename="MISSIONS_MEDIUM_TRADE_PACK_TO_CAERLEON">
+       <factionvariable name="FACTION_B" value="Caerleon" />
+     </quest>
+     <quest uniquename="MISSIONS_HEAVY_TRADE_PACK_TO_CAERLEON">
+       <factionvariable name="FACTION_B" value="Caerleon" />
+     </quest>
+   </questgroup>
+   <questgroup locatag="@MISSION_GROUP_SWAMP">
+   <quest uniquename="MISSIONS_LIGHT_TRADE_PACK_TO_OUTPOST_DISTANCE_A">
+    <factionvariable name="FACTION_B" value="Swamp" />
+   </quest>
+   <quest uniquename="MISSIONS_MEDIUM_TRADE_PACK_TO_OUTPOST_DISTANCE_A">
+    <factionvariable name="FACTION_B" value="Swamp" />
+   </quest>
+   <quest uniquename="MISSIONS_HEAVY_TRADE_PACK_TO_OUTPOST_DISTANCE_A">
+    <factionvariable name="FACTION_B" value="Swamp" />
+   </quest>
+  </questgroup>
+  <questgroup locatag="@MISSION_GROUP_FOREST">
+   <quest uniquename="MISSIONS_LIGHT_TRADE_PACK_TO_OUTPOST_DISTANCE_A">
+    <factionvariable name="FACTION_B" value="Forest" />
+   </quest>
+   <quest uniquename="MISSIONS_MEDIUM_TRADE_PACK_TO_OUTPOST_DISTANCE_A">
+    <factionvariable name="FACTION_B" value="Forest" />
+   </quest>
+   <quest uniquename="MISSIONS_HEAVY_TRADE_PACK_TO_OUTPOST_DISTANCE_A">
+    <factionvariable name="FACTION_B" value="Forest" />
+   </quest>
+  </questgroup>
+  <questgroup locatag="@MISSION_GROUP_STEPPE">
+   <quest uniquename="MISSIONS_LIGHT_TRADE_PACK_TO_OUTPOST_DISTANCE_D">
+    <factionvariable name="FACTION_B" value="Steppe" />
+   </quest>
+   <quest uniquename="MISSIONS_MEDIUM_TRADE_PACK_TO_OUTPOST_DISTANCE_D">
+    <factionvariable name="FACTION_B" value="Steppe" />
+   </quest>
+   <quest uniquename="MISSIONS_HEAVY_TRADE_PACK_TO_OUTPOST_DISTANCE_D">
+    <factionvariable name="FACTION_B" value="Steppe" />
+   </quest>
+  </questgroup>
+  <questgroup locatag="@MISSION_GROUP_HIGHLAND">
+   <quest uniquename="MISSIONS_LIGHT_TRADE_PACK_TO_OUTPOST_DISTANCE_C">
+    <factionvariable name="FACTION_B" value="Highland" />
+   </quest>
+   <quest uniquename="MISSIONS_MEDIUM_TRADE_PACK_TO_OUTPOST_DISTANCE_C">
+    <factionvariable name="FACTION_B" value="Highland" />
+   </quest>
+   <quest uniquename="MISSIONS_HEAVY_TRADE_PACK_TO_OUTPOST_DISTANCE_C">
+    <factionvariable name="FACTION_B" value="Highland" />
+   </quest>
+  </questgroup>
+ </factionquestgivertype>
+
+  <factionquestgivertype uniquename="FACTIONSTORE_CAERLEON" playerfaction="Caerleon" tags="faction_store">
+    <questgroup locatag="@MISSION_GROUP_SWAMP">
+      <quest uniquename="MISSIONS_LIGHT_TRADE_PACK_CAERLEON_TO_FACTION">
+        <factionvariable name="FACTION_B" value="Swamp" />
+      </quest>
+      <quest uniquename="MISSIONS_MEDIUM_TRADE_PACK_CAERLEON_TO_FACTION">
+        <factionvariable name="FACTION_B" value="Swamp" />
+      </quest>
+      <quest uniquename="MISSIONS_HEAVY_TRADE_PACK_CAERLEON_TO_FACTION">
+        <factionvariable name="FACTION_B" value="Swamp" />
+      </quest>
+    </questgroup>
+    <questgroup locatag="@MISSION_GROUP_FOREST">
+      <quest uniquename="MISSIONS_LIGHT_TRADE_PACK_CAERLEON_TO_FACTION">
+        <factionvariable name="FACTION_B" value="Forest" />
+      </quest>
+      <quest uniquename="MISSIONS_MEDIUM_TRADE_PACK_CAERLEON_TO_FACTION">
+        <factionvariable name="FACTION_B" value="Forest" />
+      </quest>
+      <quest uniquename="MISSIONS_HEAVY_TRADE_PACK_CAERLEON_TO_FACTION">
+        <factionvariable name="FACTION_B" value="Forest" />
+      </quest>
+    </questgroup>
+    <questgroup locatag="@MISSION_GROUP_MOUNTAIN">
+      <quest uniquename="MISSIONS_LIGHT_TRADE_PACK_CAERLEON_TO_FACTION">
+        <factionvariable name="FACTION_B" value="Mountain" />
+      </quest>
+      <quest uniquename="MISSIONS_MEDIUM_TRADE_PACK_CAERLEON_TO_FACTION">
+        <factionvariable name="FACTION_B" value="Mountain" />
+      </quest>
+      <quest uniquename="MISSIONS_HEAVY_TRADE_PACK_CAERLEON_TO_FACTION">
+        <factionvariable name="FACTION_B" value="Mountain" />
+      </quest>
+    </questgroup>
+    <questgroup locatag="@MISSION_GROUP_HIGHLAND">
+      <quest uniquename="MISSIONS_LIGHT_TRADE_PACK_CAERLEON_TO_FACTION">
+        <factionvariable name="FACTION_B" value="Highland" />
+      </quest>
+      <quest uniquename="MISSIONS_MEDIUM_TRADE_PACK_CAERLEON_TO_FACTION">
+        <factionvariable name="FACTION_B" value="Highland" />
+      </quest>
+      <quest uniquename="MISSIONS_HEAVY_TRADE_PACK_CAERLEON_TO_FACTION">
+        <factionvariable name="FACTION_B" value="Highland" />
+      </quest>
+    </questgroup>
+    <questgroup locatag="@MISSION_GROUP_STEPPE">
+      <quest uniquename="MISSIONS_LIGHT_TRADE_PACK_CAERLEON_TO_FACTION">
+        <factionvariable name="FACTION_B" value="Steppe" />
+      </quest>
+      <quest uniquename="MISSIONS_MEDIUM_TRADE_PACK_CAERLEON_TO_FACTION">
+        <factionvariable name="FACTION_B" value="Steppe" />
+      </quest>
+      <quest uniquename="MISSIONS_HEAVY_TRADE_PACK_CAERLEON_TO_FACTION">
+        <factionvariable name="FACTION_B" value="Steppe" />
+      </quest>
+    </questgroup>
+  </factionquestgivertype>
+</questgivertypes>

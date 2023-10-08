@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:attribute name="castanimation" type="castID"> </xs:attribute>
+  <xs:attribute name="channelinganimation" type="channelID"> </xs:attribute>
+  <xs:attribute name="spelleffectanimation" type="casteffectID"> </xs:attribute>
+  <!--xs:attribute name="emoteanimation" type="emoteAnimationID"> </xs:attribute-->
+  <xs:simpleType name="animswitchID">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="guard"/>
+      <xs:enumeration value="work"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="castID">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="none"/>
+
+      <xs:enumeration value="2h_shot"/>
+      <xs:enumeration value="ability_eat"/>
+      
+      <xs:enumeration value="cast_2hmagestaff"/>
+      <xs:enumeration value="cast_aimed_shot"/>
+      <xs:enumeration value="cast_areadamage"/>
+      <xs:enumeration value="cast_artillery"/>
+      <xs:enumeration value="cast_beam"/>
+      <xs:enumeration value="cast_supportive_beam_end"/>
+      <xs:enumeration value="cast_offensive_beam_end"/>
+      <xs:enumeration value="cast_charge"/>
+      <xs:enumeration value="cast_command"/>
+      <xs:enumeration value="cast_conjure"/>
+      <xs:enumeration value="cast_dash"/>
+      <xs:enumeration value="cast_directattack"/>
+      <xs:enumeration value="cast_drop"/>
+      <xs:enumeration value="cast_enfeeble"/>
+      <xs:enumeration value="cast_flamepillar"/>
+      <xs:enumeration value="cast_forwardchannel"/>
+      <xs:enumeration value="cast_ground"/>      
+      <xs:enumeration value="cast_heal"/>
+      <xs:enumeration value="cast_heal2"/>
+      <xs:enumeration value="cast_heal3"/>
+      <xs:enumeration value="cast_horn"/>
+      <xs:enumeration value="cast_icesculpture"/>
+      <xs:enumeration value="cast_icestorm"/>
+      <xs:enumeration value="cast_jump"/>
+      <xs:enumeration value="jump_attack"/>
+      <xs:enumeration value="cast_jump_back"/>
+      <xs:enumeration value="cast_link1"/>
+      <xs:enumeration value="cast_link2"/>
+      <xs:enumeration value="cast_melee"/>
+      <xs:enumeration value="cast_melee2"/>
+      <xs:enumeration value="cast_melee_slow"/>
+      <xs:enumeration value="cast_mimic"/>
+      <xs:enumeration value="cast_prayer"/>
+      <xs:enumeration value="cast_prayer_ultimate"/>
+      <xs:enumeration value="cast_black_hole"/>
+      <xs:enumeration value="cast_portal"/>
+      <xs:enumeration value="cast_recoil"/>
+      <xs:enumeration value="cast_revitalize"/>
+      <xs:enumeration value="cast_rise"/>
+      <xs:enumeration value="cast_silence"/>
+      <xs:enumeration value="cast_staffsmashground"/>
+      <xs:enumeration value="cast_staffsmashground_upright"/>
+      <xs:enumeration value="cast_spawnmob"/>
+      <xs:enumeration value="cast_staffonground"/>
+      <xs:enumeration value="cast_staffarc"/>
+      <xs:enumeration value="cast_swipe"/>
+      <xs:enumeration value="cast_standardattack"/>
+      <xs:enumeration value="cast_stomp"/>
+      <xs:enumeration value="cast_stomp_big"/>
+      <xs:enumeration value="cast_summon"/>
+      <xs:enumeration value="cast_swirl"/>
+      <xs:enumeration value="cast_swirl2"/>
+      <xs:enumeration value="cast_tornado"/>
+      <xs:enumeration value="cast_meteor"/>
+      <xs:enumeration value="cast_undirected" />      
+      <xs:enumeration value="cast_undirected_long" />
+      <xs:enumeration value="cast_skillshot_directed" />
+      <xs:enumeration value="cast_swirl_directed" />
+
+      <xs:enumeration value="channel_start"/>
+      <xs:enumeration value="charge_2hsword"/>
+      <xs:enumeration value="charge_armor"/>
+      <xs:enumeration value="drink"/>
+      <xs:enumeration value="dropitem"/>
+      <xs:enumeration value="execute"/>
+      <xs:enumeration value="laugh_halloween"/>      
+
+      <xs:enumeration value="MainStaff1H_AoeSpell"/>
+      <xs:enumeration value="MainStaff1H_Attack"/>
+      <xs:enumeration value="MagicStaff2H_Attack"/>
+      <xs:enumeration value="MagicStaff2H_AoeSpell"/>
+
+      <xs:enumeration value="melee_areaattack"/>
+      <xs:enumeration value="melee_areadamage"/>   
+      <xs:enumeration value="melee_bigswing"/>      
+      <xs:enumeration value="melee_crescentslash"/>
+      <xs:enumeration value="melee_enlarge_weapon"/>
+      <xs:enumeration value="melee_ground_aoe_big"/>
+      <xs:enumeration value="melee_groundslam"/>
+      <xs:enumeration value="melee_headslam"/>
+      <xs:enumeration value="melee_Heavy"/>
+      <xs:enumeration value="melee_Heavy2"/>
+      <xs:enumeration value="melee_heavycombo"/>      
+      <xs:enumeration value="melee_highstrike"/>
+      <xs:enumeration value="melee_interrupt"/>
+      <xs:enumeration value="melee_launcher"/>      
+      <xs:enumeration value="Melee_Lowstrike"/>
+      <xs:enumeration value="melee_piercestrike"/>
+      <xs:enumeration value="melee_shieldslam"/>
+      <xs:enumeration value="melee_skillshot"/>
+      <xs:enumeration value="melee_spin"/>      
+      <xs:enumeration value="melee_slam"/>
+      <xs:enumeration value="melee_standardstrike"/>
+      <xs:enumeration value="melee_sweepingblow"/>
+      <xs:enumeration value="melee_sweepingblow2"/>
+      <xs:enumeration value="mount_ability_01"/>
+      <xs:enumeration value="mount_ability_02"/>
+      <xs:enumeration value="mount_ability_channel"/>
+      <xs:enumeration value="mount_ability_ultimate"/>
+      <xs:enumeration value="mount_ability_utility"/>
+      <xs:enumeration value="mount_bastion_charge"/>
+      <xs:enumeration value="mount_raven_scream"/>
+      <xs:enumeration value="mount_rhino_charge"/>
+      <xs:enumeration value="mount_rhino_stomp"/> 
+      <xs:enumeration value="mount_chariot_towershield_climax"/> 
+      <xs:enumeration value="mount_chariot_spell_cast"/> 
+      <xs:enumeration value="mount_chariot_barreldeploy"/>
+      <xs:enumeration value="mount_eagle_smallcast"/>
+      <xs:enumeration value="mount_eagle_bigcast"/>
+      <xs:enumeration value="mount_eagle_flapping_climax"/>
+      <xs:enumeration value="mount_beetle_slam"/>
+      <xs:enumeration value="mount_beetle_buzz"/>
+      <xs:enumeration value="mount_beetle_charge_climax"/>
+      <xs:enumeration value="mount_beetle_fly_liftup"/>
+      <xs:enumeration value="pole_vault"/>
+      <xs:enumeration value="quarterstaff_slam"/>
+      <xs:enumeration value="ranged_aimcrossbow"/>
+      <xs:enumeration value="ranged_heavycrossbow"/>
+      <xs:enumeration value="ranged_crossbow_aim"/>
+      <xs:enumeration value="ranged_heavyshot" />      
+      <xs:enumeration value="ranged_horizontalshot"/>
+      <xs:enumeration value="ranged_standardshot"/>
+      <xs:enumeration value="ranged_throwingknife"/>
+      <xs:enumeration value="ranged_undirected"/>
+      <xs:enumeration value="rendingrage_left"/>
+      <xs:enumeration value="rendingrage_right"/>      
+
+      <xs:enumeration value="self_buff"/>      
+      <xs:enumeration value="singlesmash"/>
+      <xs:enumeration value="slam_down_spear_hit"/>
+      <xs:enumeration value="shoot_ground"/>
+      <xs:enumeration value="taunt_01"/>
+      <xs:enumeration value="throw_snowball"/>
+      <xs:enumeration value="throw_weapon"/>
+      <xs:enumeration value="vanity_beer_drink"/>
+      <xs:enumeration value="vanity_hunting_horn"/>
+      <xs:enumeration value="vanity_trumpet_play"/>
+	    <xs:enumeration value="vanity_poison_pot"/>
+	    <xs:enumeration value="vanity_poison_pot_trick"/>
+      <xs:enumeration value="vanity_warbanner_present"/>
+      <xs:enumeration value="vanity_warbanner_charge"/>
+  	  <xs:enumeration value="vanity_spellbook_fireworks"/>
+      <xs:enumeration value="vanity_spellbook_bird"/>
+      <xs:enumeration value="open_chest"/>
+      <xs:enumeration value="open_shrine"/>
+      <xs:enumeration value="use_portal"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="casteffectID">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="none"/>
+      <xs:enumeration value="sleep"/>
+      <xs:enumeration value="tutorial_stun"/>
+      <xs:enumeration value="whirlwind"/>
+      <xs:enumeration value="dance"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="channelID">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="channel_townportal"/>
+      <xs:enumeration value="channel_block"/>
+      <xs:enumeration value="channel_deflecting_spin"/>
+      <xs:enumeration value="channel_eat_01"/>
+      <xs:enumeration value="channel_enfeeble"/>
+      <xs:enumeration value="channel_forwardattack"/>
+      <xs:enumeration value="channel_invis_walk"/>
+      <xs:enumeration value="channel_levitate"/>
+      <xs:enumeration value="channel_levitate_weapon"/>
+      <xs:enumeration value="channel_melee_aoe_01"/>
+      <xs:enumeration value="channel_melee_attack_01"/>
+      <xs:enumeration value="channel_melee_attack_02"/>
+      <xs:enumeration value="channel_melee_combo"/>
+      <xs:enumeration value="channel_melee_heavy"/>
+      <xs:enumeration value="channel_melee_whirlwind_01"/>
+      <xs:enumeration value="channel_mount_ability"/>
+      <xs:enumeration value="channel_mount_undirected_01"/>
+      <xs:enumeration value="channel_parry"/>      
+      <xs:enumeration value="channel_ranged_aoe_01"/>
+      <xs:enumeration value="channel_aoe_heal_float_01"/>
+      <xs:enumeration value="channel_ranged_attack_01"/>
+      <xs:enumeration value="channel_ranged_attack_02"/>
+      <xs:enumeration value="channel_staffonground"/>
+      <xs:enumeration value="channel_undirected_01"/>
+      <xs:enumeration value="channel_undirected_02"/>
+      <xs:enumeration value="channel_undirected_03"/>
+      <xs:enumeration value="channel_aoe"/>
+      <xs:enumeration value="channel_vanity_trumpet"/>
+      <xs:enumeration value="channel_hover_01"/>
+      <xs:enumeration value="mount_chariot_towershield_channel"/>
+      <xs:enumeration value="mount_eagle_flapping_channel"/>
+      <xs:enumeration value="mount_beetle_buzz_channel"/>
+      <xs:enumeration value="mount_beetle_fly_channel"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="placeableID">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="sow"/>
+      <xs:enumeration value="planting"/>
+      <xs:enumeration value="breed"/>
+      <xs:enumeration value="hideout"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="actionstateID">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="inithideoutattack"/>
+      <xs:enumeration value="openworldattackschedule"/>
+      <xs:enumeration value="openworldattackconquer"/>
+      <xs:enumeration value="territoryclaiming"/>
+      <xs:enumeration value="orbclaiming"/>
+      <xs:enumeration value="traveltohideout"/>
+      <xs:enumeration value="hideoutmove"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="forcedmovementSubID">
+    <xs:restriction base="xs:string">
+      <!-- dash -->
+      <xs:enumeration value="mount_bastion_charge"/>
+      <xs:enumeration value="cast_charge"/>
+      <xs:enumeration value="etherialwalk"/>
+      <xs:enumeration value="horse_dash"/>
+      <xs:enumeration value="march"/>
+      <xs:enumeration value="mount_rhino_charge"/>
+      <xs:enumeration value="mount_moabird_zigzag"/>
+      <xs:enumeration value="mount_swampdragon_shedskin"/>
+      <!--scaled dash-->
+      <xs:enumeration value="axe_jump"/>
+      <xs:enumeration value="banner_jump"/>
+      <xs:enumeration value="bigjump_halberd"/>
+      <xs:enumeration value="cartwheel"/>
+      <xs:enumeration value="cast_jump"/>
+      <xs:enumeration value="charge_2hsword"/>
+      <xs:enumeration value="dagger_dash"/>      
+      <xs:enumeration value="divekick"/>
+      <xs:enumeration value="dbstaff_leap"/>
+      <xs:enumeration value="elbowtackle"/>
+      <xs:enumeration value="forwardkick"/>      
+      <xs:enumeration value="jump"/>
+      <xs:enumeration value="jump_attack"/>
+      <xs:enumeration value="jump_toad"/>
+      <xs:enumeration value="leap_spear"/>
+      <xs:enumeration value="mount_beetle_charge"/>
+      <xs:enumeration value="mount_juggernaut_charge"/>
+      <xs:enumeration value="melee_sweepingblow2"/>      
+      <xs:enumeration value="mighty_blow_jump"/>      
+      <xs:enumeration value="mount_giantstag_leap"/>
+      <xs:enumeration value="pole_vault_jump"/>
+      <xs:enumeration value="rapierstab"/>
+      <xs:enumeration value="rendingrage_jump"/>      
+      <xs:enumeration value="slam_down"/>
+      <xs:enumeration value="slam_down_spear"/>
+      <xs:enumeration value="spinattack"/>
+      <xs:enumeration value="strike_2hsword"/>
+      <xs:enumeration value="tackle"/>
+      <xs:enumeration value="tackle_ram"/>
+      <xs:enumeration value="triplekick"/>
+      <xs:enumeration value="charge_in"/>
+      <!--knockback-->
+      <xs:enumeration value="cast_jump_back"/>
+      <xs:enumeration value="jumpshot"/>      
+      <!--pull-->
+      <xs:enumeration value="dash"/>
+
+      <xs:enumeration value="charge_dualdagger"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="emoteAnimationID">
+    <xs:restriction base="xs:string">
+	  <xs:enumeration value="emote_applaud"/>
+	  <xs:enumeration value="emote_beg"/>
+      <xs:enumeration value="emote_bow"/>
+	  <xs:enumeration value="emote_cheer"/>
+	  <xs:enumeration value="emote_cry"/>
+	  <xs:enumeration value="emote_flex"/>
+	  <xs:enumeration value="emote_laugh"/>
+	  <xs:enumeration value="emote_salute"/>
+      <xs:enumeration value="emote_wave"/>
+      <xs:enumeration value="emote_dance"/>
+      <xs:enumeration value="emote_sit"/>
+      <xs:enumeration value="emote_point"/>
+      <xs:enumeration value="emote_yes"/>
+      <xs:enumeration value="emote_no"/>
+      <xs:enumeration value="emote_pushups"/>
+      <xs:enumeration value="emote_backflip"/>
+      <xs:enumeration value="emote_sleep"/>
+      <xs:enumeration value="emote_shoulder"/>
+      <xs:enumeration value="emote_charge"/>
+      <xs:enumeration value="emote_taunt"/>
+      <xs:enumeration value="emote_moonwalk"/>
+      <xs:enumeration value="emote_hover"/>
+	  </xs:restriction>
+  </xs:simpleType>
+</xs:schema>
