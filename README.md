@@ -1,3 +1,1 @@
-
-# THIS REPO IS ARCHIVED! THE ACTIVE REPO CAN BE FOUND [HERE](https://github.com/ao-data/ao-bin-dumps)! (ao-data/ao-bin-dumps)
-<br/><br/><br/><br/><br/><br/><br/><br/>
+Not much for the README. This contains the data dumped from the game bin files of Albion Online.
