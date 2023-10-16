@@ -2,8 +2,6 @@
   <criticalscenemembers />
   <tiles>
     <layergroup name="Backdrop">
-      <layer id="Layer_01" name="Swamp" />
-      <layer id="Layer_02" name="Steppe" />
       <layer id="Layer_04" name="FOREST">
         <compoundtile name="_FOREST_GREEN_BUSHES_10x20_COMP_01" pos="64 -28 28" roty="90" />
         <compoundtile name="_FOREST_GREEN_BUSHES_10x20_COMP_01" pos="51 -28 -29" roty="270" />
@@ -95,7 +93,6 @@
         <tile name="FOREST_GREEN_GROUND_20x20_OBJ_NOCLICK" pos="30 -28 -10" />
         <tile name="FOREST_GREEN_GROUND_20x20_OBJ_NOCLICK" pos="30 -28 -30" />
       </layer>
-      <layer id="Layer_08" name="Mountain" />
       <layer id="Layer_09" name="Cave_1">
         <tile name="AtmosphereBubble_DNG_MOR_DL_NONE_library_outdoor_cold" pos="46.1 0 -23.3">
           <atmospherebubble layer="1" radius="25" blend="0.5919999" />
@@ -200,7 +197,6 @@
           <atmospherebubble layer="1" radius="48" blend="0.6625" />
         </tile>
       </layer>
-      <layer id="Layer_10" name="Highlands" />
       <layer id="Layer_11" name="Cave_Ocean">
         <tile name="FOREST_GREEN_PLATEAU_ROCK_8M_DIAGONAL_A_NOCOL_OCEAN" pos="54 -24 -16" roty="270" />
         <tile name="FOREST_GREEN_DNG_FILL_COLUMN_LARGE_A_NOCOL" pos="2.5 -32 -39.5" />
@@ -389,14 +385,14 @@
         <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_RAVEN" pos="42.24 0 17.98" roty="98">
           <mobspawnpoint spawnbehavior="MORGANA_RAVEN_VETERAN" />
         </tile>
-        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_MELEE" pos="42.18 0 73.41" roty="6">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_VETERAN_MELEE" />
+        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_RAVEN" pos="42.77 0 12.87" roty="88">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_RAVEN_VETERAN" />
         </tile>
         <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_MELEE" pos="38.49 0 -43.17" roty="186">
           <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_VETERAN_MELEE" />
         </tile>
-        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_RAVEN" pos="42.77 0 12.87" roty="88.08">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_RAVEN_VETERAN" />
+        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_MELEE" pos="42.18 0 73.41" roty="6">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_VETERAN_MELEE" />
         </tile>
         <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_MELEE" pos="44.54 0 15.21" roty="96">
           <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_VETERAN_MELEE" />
@@ -740,10 +736,54 @@
     <tile name="FOREST_GREEN_MOR_MONASTERY_RAILING_STRAIGHT_20M_A" pos="-5 -3 10" roty="180" />
     <tile name="FOREST_GREEN_MOR_CASTLE_4M_STAIRS_ANGULAR_CORNER_A" pos="15 -4 25" roty="180" />
     <tile name="FOREST_GREEN_MOR_CASTLE_4M_STAIRS_ANGULAR_CORNER_A" pos="15 -4 5" roty="90" />
-    <tile name="EXP_MOR_POINT_LIGHT_MONASTERY_BIG" pos="39.5 5 71.5" roty="270" />
-    <tile name="EXP_MOR_POINT_LIGHT_MONASTERY_BIG" pos="40.5 5 -39.5" roty="270" />
-    <tile name="FOREST_GREEN_MOR_POINT_LIGHT_STD" pos="0.5 1 14.5" roty="270" />
-    <tile name="EXP_MOR_POINT_LIGHT_MONASTERY" pos="42.5 4 15.5" roty="270" />
+    <tile name="FOREST_GREEN_MOR_POINT_LIGHT_DNG_STANDARD_A" pos="39.5 5 71.5" roty="270">
+      <pointlight range="10" intensity="4" color="1 0.6039216 0.1294118" />
+    </tile>
+    <tile name="FOREST_GREEN_MOR_POINT_LIGHT_DNG_STANDARD_A" pos="-5.29 -0.22 16.48" roty="270">
+      <pointlight range="10" intensity="8" color="1 0.6039216 0.1294118" />
+    </tile>
+    <tile name="FOREST_GREEN_MOR_POINT_LIGHT_DNG_STANDARD_A" pos="34.77 4.32 -23.67" roty="270">
+      <pointlight range="10" intensity="4" color="1 0.6039216 0.1294118" />
+    </tile>
+    <tile name="FOREST_GREEN_MOR_POINT_LIGHT_DNG_STANDARD_A" pos="45.08 5.66 11.4" roty="270">
+      <pointlight range="10" intensity="8" color="1 0.6039216 0.1294118" />
+    </tile>
+    <tile name="FOREST_GREEN_MOR_POINT_LIGHT_DNG_STANDARD_A" pos="45.08 5.66 20.14" roty="270">
+      <pointlight range="10" intensity="8" color="1 0.6039216 0.1294118" />
+    </tile>
+    <tile name="FOREST_GREEN_MOR_POINT_LIGHT_DNG_STANDARD_A" pos="45.68 4.32 -20.28" roty="270">
+      <pointlight range="10" intensity="4" color="1 0.6039216 0.1294118" />
+    </tile>
+    <tile name="FOREST_GREEN_MOR_POINT_LIGHT_DNG_STANDARD_A" pos="55.28 4.32 -10.27" roty="270">
+      <pointlight range="10" intensity="4" color="1 0.6039216 0.1294118" />
+    </tile>
+    <tile name="FOREST_GREEN_MOR_POINT_LIGHT_DNG_STANDARD_A" pos="55.23 4.32 14.99" roty="270">
+      <pointlight range="10" intensity="4" color="1 0.6039216 0.1294118" />
+    </tile>
+    <tile name="FOREST_GREEN_MOR_POINT_LIGHT_DNG_STANDARD_A" pos="55.4 4.32 35.68" roty="270">
+      <pointlight range="10" intensity="4" color="1 0.6039216 0.1294118" />
+    </tile>
+    <tile name="FOREST_GREEN_MOR_POINT_LIGHT_DNG_STANDARD_A" pos="48.67 4.32 47.02" roty="270">
+      <pointlight range="10" intensity="4" color="1 0.6039216 0.1294118" />
+    </tile>
+    <tile name="FOREST_GREEN_MOR_POINT_LIGHT_DNG_STANDARD_A" pos="34.5 4.32 56.1" roty="270">
+      <pointlight range="10" intensity="4" color="1 0.6039216 0.1294118" />
+    </tile>
+    <tile name="FOREST_GREEN_MOR_POINT_LIGHT_DNG_STANDARD_A" pos="3.98 -0.22 22.99" roty="270">
+      <pointlight range="10" intensity="8" color="1 0.6039216 0.1294118" />
+    </tile>
+    <tile name="FOREST_GREEN_MOR_POINT_LIGHT_DNG_STANDARD_A" pos="4.09 -0.22 4.09" roty="270">
+      <pointlight range="10" intensity="8" color="1 0.6039216 0.1294118" />
+    </tile>
+    <tile name="FOREST_GREEN_MOR_POINT_LIGHT_DNG_STANDARD_A" pos="-23.34 -8.22 14.42" roty="270">
+      <pointlight range="10" intensity="4" color="1 0.6039216 0.1294118" />
+    </tile>
+    <tile name="FOREST_GREEN_MOR_POINT_LIGHT_DNG_STANDARD_A" pos="21.49 3.78 13.58" roty="270">
+      <pointlight range="10" intensity="4" color="1 0.6039216 0.1294118" />
+    </tile>
+    <tile name="FOREST_GREEN_MOR_POINT_LIGHT_DNG_STANDARD_A" pos="34.46 3.78 13.58" roty="270">
+      <pointlight range="10" intensity="4" color="1 0.6039216 0.1294118" />
+    </tile>
     <tile name="FOREST_GREEN_MOR_FX_GODRAY_ROOF_30X30_A" pos="5 -1 15" />
     <tile name="FOREST_GREEN_FILL_BLOOD_SPLATTER_B" pos="41.06 -2 8" roty="270" />
     <tile name="FOREST_GREEN_FILL_BLOOD_SPLATTER_B" pos="-9.7 -1 17" roty="258" scale="1 2.64481 1" />

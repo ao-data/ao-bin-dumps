@@ -374,6 +374,7 @@
         </popup>
 
         <!-- Control Feature Changes -->
+        <!--
         <popup uniquename="CONTROLS_FEATURE_CHANGES_CONTROLLER" priority="10" type="GenericTutorial">
             <categories>
                 <category name="GenericTutorial" />
@@ -387,14 +388,13 @@
                 <and>
                     <IfTutorialCompleted />
                     <IfAccountAgeDays value="1" operation="greater" />
-                    <IfInputType type="Gamepad" />
-                    <IfHasSeenPopup uniquename="CONTROLS_FEATURE_CHANGES_CONTROLLER" frequency="AllTime" operation="equals" amount="0" targetfilter="account" />
-                    <IfHasSeenPopup uniquename="CONTROLS_FEATURE_CHANGES_MOBILE" frequency="AllTime" operation="equals" amount="0" targetfilter="account" />
+                    <IfInputType type="Gamepad"/>
+                    <IfHasSeenPopup uniquename="CONTROLS_FEATURE_CHANGES_CONTROLLER" frequency="AllTime" operation="equals" amount="0" targetfilter="account"/>
+                    <IfHasSeenPopup uniquename="CONTROLS_FEATURE_CHANGES_MOBILE" frequency="AllTime" operation="equals" amount="0" targetfilter="account"/>
                 </and>
             </conditions>
         </popup>
 
-        <!-- Control Feature Changes -->
         <popup uniquename="CONTROLS_FEATURE_CHANGES_MOBILE" priority="10" type="GenericTutorial">
             <categories>
                 <category name="GenericTutorial" />
@@ -408,12 +408,13 @@
                 <and>
                     <IfTutorialCompleted />
                     <IfAccountAgeDays value="1" operation="greater" />
-                    <IfOnPlatform platform="Mobile" />
-                    <IfHasSeenPopup uniquename="CONTROLS_FEATURE_CHANGES_MOBILE" frequency="AllTime" operation="equals" amount="0" targetfilter="account" />
-                    <IfHasSeenPopup uniquename="CONTROLS_FEATURE_CHANGES_CONTROLLER" frequency="AllTime" operation="equals" amount="0" targetfilter="account" />
+                    <IfOnPlatform platform="Mobile"/>
+                    <IfHasSeenPopup uniquename="CONTROLS_FEATURE_CHANGES_MOBILE" frequency="AllTime" operation="equals" amount="0" targetfilter="account"/>
+                    <IfHasSeenPopup uniquename="CONTROLS_FEATURE_CHANGES_CONTROLLER" frequency="AllTime" operation="equals" amount="0" targetfilter="account"/>
                 </and>
             </conditions>
         </popup>
+        -->
 
         <!-- Old Popups, do not mix with other, cant control content, only conditions and trigger, still using the regular frequency rules-->
         <!-- Guest Account Incentivization -->
