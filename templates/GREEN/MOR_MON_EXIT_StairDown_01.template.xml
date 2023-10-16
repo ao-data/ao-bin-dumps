@@ -48,7 +48,6 @@
         <tile name="FOREST_GREEN_VEG_FERN_C" pos="31 -28 -5" roty="180" />
         <tile name="FOREST_GREEN_VEG_FERN_C" pos="-17 -28 -33" roty="180" />
       </layer>
-      <layer id="Layer_06" name="Mountain" />
       <layer id="Layer_07" name="Cave_1">
         <tile name="FOREST_GREEN_FILL_ROCK_8M_NOCOL" pos="-28 -36 -32" roty="90" />
         <tile name="FOREST_GREEN_FILL_ROCK_12M_NOCOL" pos="-31 -37 -37" roty="90" />
@@ -87,7 +86,6 @@
         <tile name="FOREST_GREEN_DNG_GROUND_OBJ_NOCLICK_20x20_A" pos="-10 -36 -30" scale="2 1 2" />
         <tile name="FOREST_GREEN_DNG_GROUND_OBJ_NOCLICK_20x20_A" pos="-30 -36 -30" scale="2 1 2" />
       </layer>
-      <layer id="Layer_08" name="Highlands" />
       <layer id="Layer_09" name="Cave_Ocean">
         <tile name="FOREST_GREEN_PLATEAU_ROCK_8M_DIAGONAL_A_NOCOL_OCEAN" pos="-9 -24 -30" />
         <tile name="FOREST_GREEN_PLATEAU_ROCK_8M_DIAGONAL_A_NOCOL_OCEAN" pos="-14 -24 -21" />
@@ -112,8 +110,6 @@
         <tile name="FOREST_GREEN_WATER_sealevel_20x20" pos="10 -24 -30" />
         <tile name="FOREST_GREEN_WATER_sealevel_20x20" pos="30 -24 -30" />
       </layer>
-      <layer id="Layer_10" name="Swamp" />
-      <layer id="Layer_11" name="Steppe" />
     </layergroup>
     <layergroup name="ENCOUNTER_SOLO">
       <layer id="Layer_01" name="mob_solo_hard_01 ">
@@ -305,8 +301,21 @@
     <tile name="FOREST_GREEN_MOR_CASTLE_WALL_INNER_DIAGONAL_A" pos="-15 0 -25" roty="180" />
     <tile name="FOREST_GREEN_MOR_MONASTERY_RAILING_STRAIGHT_A" pos="15 0 -25" roty="270" />
     <tile name="FOREST_GREEN_MOR_CASTLE_WALL_INNER_DIAGONAL_A" pos="15 0 -25" roty="90" />
-    <tile name="FOREST_GREEN_MOR_POINT_LIGHT_STD" pos="-0.5 5 -27.5" />
-    <tile name="FX_EXIT_MORGANA_A" pos="-1 -6 -5" rot="5.62 83.03 70.95" />
+    <tile name="FOREST_GREEN_MOR_POINT_LIGHT_DNG_STANDARD_A" pos="-6.5 4.4 -22.58">
+      <pointlight range="10" intensity="5" color="1 0.6039216 0.1294118" />
+    </tile>
+    <tile name="FOREST_GREEN_MOR_POINT_LIGHT_DNG_STANDARD_A" pos="5.64 4.4 -22.58">
+      <pointlight range="10" intensity="5" color="1 0.6039216 0.1294118" />
+    </tile>
+    <tile name="FOREST_GREEN_MOR_POINT_LIGHT_DNG_STANDARD_A" pos="1.24 -4.2 7.95">
+      <pointlight range="12" intensity="4" color="1 0.6039216 0.1294118" />
+    </tile>
+    <tile name="FOREST_GREEN_MOR_POINT_LIGHT_DNG_STANDARD_A" pos="-13.87 5.34 -6.69">
+      <pointlight range="10" intensity="3" color="1 0.6039216 0.1294118" />
+    </tile>
+    <tile name="FOREST_GREEN_MOR_POINT_LIGHT_DNG_STANDARD_A" pos="14.01 5.34 -6.69">
+      <pointlight range="10" intensity="3" color="1 0.6039216 0.1294118" />
+    </tile>
     <criticaltile name="ExitTrigger_10x10_EXIT" pos="0 -4 -5" roty="90" id="exit_01" type="exit">
       <exit size="20 20" spawnpos="14.57768 0" faction="None" kind="Cluster" roadtype="Primary" staticdungeonentrance="NoStaticDungeonExit" proximitytooltiptype="None">
         <guards>
@@ -317,5 +326,6 @@
     </criticaltile>
     <tile name="INVISIBLE_COLLISON_STRAIGHT" pos="-6 4 -5.5" />
     <tile name="INVISIBLE_COLLISON_STRAIGHT" pos="5 4 -5.5" />
+    <tile name="FX_EXIT_MORGANA_A" pos="-1 -6 -5" rot="6 83 71" />
   </tiles>
 </template>

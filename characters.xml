@@ -551,7 +551,7 @@
   <!-- Gameplay definitions for characters (chars not listed can't be selected on character creation) -->
   <Characters globalcastdelay="0.5">
     <DefaultValues
-	    inventorysize="48"
+      inventorysize="48"
       collisionradius="0.75"
       attackcollisionradius="0.75"
       harvestrange="2.0"
@@ -592,10 +592,11 @@
       orbclaimrange="3.0"
       claimpowercrystalhideoutrange="8.0"
       claimpowercrystalterritoryrange="4.0"
-	    treasurechestrange="2.0"
+      treasurechestrange="2.0"
       maxfoodslotstacksize="10"
       maxpotionslotstacksize="10"
-	  >
+      prefab="PLACEHOLDER"
+    >
       <ToolsForActionAnimation>
         <crafting defaultmesh="">
           <target id="craftcarpworkshop" mesh="T0_MAIN_SAW"/>
@@ -627,9 +628,11 @@
   
     <Character
       uniquename="HUMAN_MALE"
+			turnspeed="20"
       namelocatag="@CHARACTER_NAME_HUMAN_MALE" 
       prefab="HUMAN_MALE" 
       prefabscale="1.25"
+      supportsequip="true"
       equipmentsuffix="HM"
       vfxAddonKeyword="human">            
       <SocketPreset name="HUMAN_MALE"/>
@@ -641,9 +644,11 @@
 
     <Character 
       uniquename="HUMAN_FEMALE"
+			turnspeed="20"
       namelocatag="@CHARACTER_NAME_HUMAN_FEMALE" 
       prefab="HUMAN_FEMALE"
       prefabscale="1.25"
+      supportsequip="true"
       equipmentsuffix="HF"
       vfxAddonKeyword="human">
       <SocketPreset name="HUMAN_FEMALE"/>

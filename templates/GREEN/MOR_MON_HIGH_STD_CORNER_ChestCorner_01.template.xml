@@ -55,7 +55,6 @@
           <atmospherebubble layer="1" radius="31" blend="0.5870968" />
         </tile>
       </layer>
-      <layer id="Layer_03" name="Highlands" />
       <layer id="Layer_08" name="FOREST">
         <tile name="FOREST_GREEN_GROUND_20x20_OBJ_NOCLICK" pos="30 -28 30" roty="270" />
         <tile name="FOREST_GREEN_GROUND_20x20_OBJ_NOCLICK" pos="30 -28 10" roty="270" />
@@ -119,9 +118,6 @@
           <atmospherebubble layer="1" radius="31" blend="0.5870968" />
         </tile>
       </layer>
-      <layer id="Layer_11" name="Mountain" />
-      <layer id="Layer_12" name="Swamp" />
-      <layer id="Layer_13" name="Steppe" />
     </layergroup>
     <layergroup name="ENCOUNTER_SOLO">
       <layer id="Layer_06" name="mob_solo_hard_01">
@@ -243,8 +239,8 @@
         <tile name="SpawnPoint_RANDOM_MORGANA_SOLO_RECRUIT" pos="-13.72 0 0.71" roty="127">
           <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_RECRUIT" />
         </tile>
-        <tile name="SpawnPoint_RANDOM_MORGANA_SOLO_CROSSBOWMAN" pos="0.55 0 23.74" roty="223">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_CROSSBOWMAN" />
+        <tile name="SpawnPoint_RANDOM_MORGANA_SOLO_MAGIC" pos="2.18 0 -0.13" roty="20">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_MAGIC" />
         </tile>
         <tile name="SpawnPoint_RANDOM_MORGANA_SOLO_MAGIC" pos="-1.34 0 2.59" roty="55.1">
           <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_MAGIC" />
@@ -252,8 +248,8 @@
         <tile name="SpawnPoint_RANDOM_MORGANA_SOLO_RECRUIT" pos="-10.64 0 4.1" roty="127">
           <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_RECRUIT" />
         </tile>
-        <tile name="SpawnPoint_RANDOM_MORGANA_SOLO_MAGIC" pos="2.18 0 -0.13" rot="0 20.24 0">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_MAGIC" />
+        <tile name="SpawnPoint_RANDOM_MORGANA_SOLO_CROSSBOWMAN" pos="0.55 0 23.74" roty="223">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_CROSSBOWMAN" />
         </tile>
         <tile name="SpawnPoint_RANDOM_MORGANA_SOLO_RECRUIT" pos="0.69 0 -14.44" roty="307">
           <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_RECRUIT" />
@@ -495,9 +491,25 @@
     <tile name="FOREST_GREEN_MOR_CASTLE_GROUND_STRAIGHT_20x20_A" pos="10 -38 -20" />
     <tile name="FOREST_GREEN_MOR_CASTLE_GROUND_BORDER_DARK_20x20_A" pos="-10 0 -10" roty="180" />
     <tile name="FOREST_GREEN_MOR_CASTLE_GROUND_STRAIGHT_20x20_A" pos="-20 -38 10" />
-    <tile name="FOREST_GREEN_MOR_POINT_LIGHT_RED" pos="-16.5 8 -17.5" roty="270" />
-    <tile name="FOREST_GREEN_MOR_POINT_LIGHT_STD" pos="2.5 4 2.5" roty="270" />
-    <tile name="FOREST_GREEN_MOR_CASTLE_DECO_PEDESTAL_LARGE_A" pos="17 -1 17" roty="270" />
+    <tile name="FOREST_GREEN_MOR_POINT_LIGHT_DNG_STANDARD_A" pos="-16.32 8 -8.17" roty="270">
+      <pointlight range="10" intensity="8" color="1 0.6039216 0.1294118" />
+    </tile>
+    <tile name="FOREST_GREEN_MOR_POINT_LIGHT_DNG_STANDARD_A" pos="11.78 4.92 -1.19" roty="270">
+      <pointlight range="10" intensity="8" color="1 0.6039216 0.1294118" />
+    </tile>
+    <tile name="FOREST_GREEN_MOR_POINT_LIGHT_DNG_STANDARD_A" pos="0.43 4.92 9.07" roty="270">
+      <pointlight range="10" intensity="8" color="1 0.6039216 0.1294118" />
+    </tile>
+    <tile name="FOREST_GREEN_MOR_POINT_LIGHT_DNG_STANDARD_A" pos="-8.92 8 -17.67" roty="270">
+      <pointlight range="10" intensity="8" color="1 0.6039216 0.1294118" />
+    </tile>
+    <tile name="FOREST_GREEN_MOR_POINT_LIGHT_DNG_STANDARD_A" pos="-20.52 10.29 -21.81" roty="270">
+      <pointlight range="12" intensity="8" color="1 0.6039216 0.1294118" />
+    </tile>
+    <tile name="FOREST_GREEN_MOR_POINT_LIGHT_DNG_STANDARD_A" pos="13.76 6.03 13.5" roty="270">
+      <pointlight range="8" intensity="3" color="1 0.6039216 0.1294118" />
+    </tile>
+    <tile name="FOREST_GREEN_MOR_CASTLE_DECO_PEDESTAL_LARGE_A" pos="17 -2 17" roty="270" />
     <tile name="FOREST_GREEN_MOR_FX_GODRAY_ROOF_20X20_A" pos="-20 -4 -20" roty="270" />
     <tile name="FOREST_GREEN_MOR_MONASTERY_CARPET_A" pos="0 0 25" roty="270" />
     <tile name="FOREST_GREEN_MOR_MONASTERY_WALL_GATE_STRAIGHT_A_20M" pos="0 0 25" roty="270" />
@@ -545,7 +557,7 @@
     <tile name="FOREST_GREEN_MOR_MONASTERY_CURTAIN_DIAGONAL_B" pos="-23 2 -24" roty="270" />
     <tile name="FOREST_GREEN_MOR_FILL_MAGE_BOOK_STATUE_MEDIUM_A" pos="-6 2 11" roty="351" />
     <tile name="FOREST_GREEN_MOR_FILL_MAGE_BOOK_STATUE_MEDIUM_A" pos="11 2 -6" roty="261" />
-    <tile name="FOREST_GREEN_MOR_FILL_MAGE_BOOK_STATUE_MEDIUM_A" pos="17 3 17" roty="136" />
+    <tile name="FOREST_GREEN_MOR_FILL_MAGE_BOOK_STATUE_MEDIUM_A" pos="17 2 17" roty="136" />
     <tile name="FOREST_GREEN_MOR_MONASTERY_CURTAIN_SIDE_DIAGONAL_A" pos="4 2 -2" roty="90" />
     <tile name="FOREST_GREEN_MOR_FILL_MAGE_BOOK_STATUE_MEDIUM_A" pos="-8 3 -25" roty="225" />
     <tile name="FOREST_GREEN_MOR_MONASTERY_CARPET_A" pos="0 0 35" roty="270" />
