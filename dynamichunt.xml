@@ -2631,7 +2631,7 @@
         <dynamictreasurespot name="LOCATION" filterbylocationhistoryvariable="LOCATION_HISTORY">
           <distancetocluster mindistance="0" maxdistance="0" />
         </dynamictreasurespot>        
-        <mob name="MOB" mobtypevariable="HUNT_TARGET" locationvariable="LOCATION" escapeonthreatcount="3" escapeonplayersinproximity="7" overrideaggrodelay="0.1" escapeaftertimeincombat="60"/>        
+        <mob name="MOB" mobtypevariable="HUNT_TARGET" locationvariable="LOCATION" escapeonthreatcount="4" escapeonplayersinproximity="8" overrideaggrodelay="0.1" escapeaftertimeincombat="60"/>        
         <locationmarker name="LOCATION_MARKER_MINIMAP" locationvariable="LOCATION" radius="80" offsetmin="20" offsetmax="60"/>
         <locationmarker name="LOCATION_MARKER_TRIGGER" locationvariable="LOCATION" radius="30"/>
         <locationmarker name="LOCATION_MARKER_COMBAT"  locationvariable="LOCATION" radius="40"/>
@@ -2658,6 +2658,13 @@
           <missions>
             <gotolocation amount="1" gotolocationmarkervariable="LOCATION_MARKER_TRIGGER" locationmarkervariable="LOCATION_MARKER_MINIMAP" markedinworld="false" markedonminimap="true"/>
           </missions>
+          <eventlisteners>
+            <mobevent targetmobvariable="MOB" type="onescape">              
+              <setfloat tovariable="HP_TARGET" fromvariable="MOB" type="hitpoints"/>
+              <setlocation tovariable="TARGET_LOCATION" fromvariable="MOB"/>
+              <abortquest reason="TARGET_ESCAPED"/>
+            </mobevent>
+          </eventlisteners>
         </missionstep>
         
         <completionstep>
@@ -2687,7 +2694,7 @@
         <dynamictreasurespot name="LOCATION" filterbylocationhistoryvariable="LOCATION_HISTORY">
           <distancetocluster mindistance="0" maxdistance="0" />
         </dynamictreasurespot>
-        <mob name="MOB" mobtypevariable="HUNT_TARGET" locationvariable="LOCATION" escapeonthreatcount="8" escapeonplayersinproximity="20" overrideaggrodelay="0.1" escapeaftertimeincombat="180"/>        
+        <mob name="MOB" mobtypevariable="HUNT_TARGET" locationvariable="LOCATION" escapeonthreatcount="9" escapeonplayersinproximity="20" overrideaggrodelay="0.1" escapeaftertimeincombat="180"/>        
         <locationmarker name="LOCATION_MARKER_MINIMAP" locationvariable="LOCATION" radius="160" offsetmin="20" offsetmax="140"/>
         <locationmarker name="LOCATION_MARKER_TRIGGER" locationvariable="LOCATION" radius="30"/>
         <locationmarker name="LOCATION_MARKER_COMBAT"  locationvariable="LOCATION" radius="40"/>
@@ -2713,6 +2720,13 @@
           <missions>
             <gotolocation amount="1" gotolocationmarkervariable="LOCATION_MARKER_TRIGGER" locationmarkervariable="LOCATION_MARKER_MINIMAP" markedinworld="false" markedonminimap="true"/>
           </missions>
+          <eventlisteners>
+            <mobevent targetmobvariable="MOB" type="onescape">              
+              <setfloat tovariable="HP_TARGET" fromvariable="MOB" type="hitpoints"/>
+              <setlocation tovariable="TARGET_LOCATION" fromvariable="MOB"/>
+              <abortquest reason="TARGET_ESCAPED"/>
+            </mobevent>
+          </eventlisteners>
         </missionstep>
         
         <completionstep>
@@ -3473,7 +3487,7 @@
         </dynamictreasurespot>
         <locationmarker name="LOCATION_MARKER_MINIMAP" locationvariable="LOCATION" radius="80" offsetmin="20" offsetmax="60"/>
         <locationmarker name="LOCATION_MARKER_PROXIMITY" locationvariable="LOCATION" radius="20"/>
-        <mob name="MOB" mobtypevariable="HUNT_TARGET" locationvariable="LOCATION" escapeonthreatcount="4" escapeonplayersinproximity="10" escapeaftertimeincombat="20" escapeathealthpercentage="0.3"/>
+        <mob name="MOB" mobtypevariable="HUNT_TARGET" locationvariable="LOCATION" escapeonthreatcount="4" escapeonplayersinproximity="8" escapeaftertimeincombat="40" escapeathealthpercentage="0.3"/>
       </variables>
 
       <tasks>
@@ -3525,7 +3539,7 @@
         </dynamictreasurespot>
         <locationmarker name="LOCATION_MARKER_MINIMAP" locationvariable="LOCATION" radius="80" offsetmin="20" offsetmax="60"/>
         <locationmarker name="LOCATION_MARKER_PROXIMITY" locationvariable="LOCATION" radius="20"/>
-        <mob name="MOB" mobtypevariable="HUNT_TARGET" locationvariable="LOCATION" escapeonthreatcount="4" escapeonplayersinproximity="10" escapeaftertimeincombat="20" escapeathealthpercentage="0.3"/>
+        <mob name="MOB" mobtypevariable="HUNT_TARGET" locationvariable="LOCATION" escapeonthreatcount="4" escapeonplayersinproximity="8" escapeaftertimeincombat="40" escapeathealthpercentage="0.3"/>
       </variables>
 
       <tasks>
@@ -4252,7 +4266,7 @@
         </dynamictreasurespot>
         <locationmarker name="LOCATION_MARKER_MINIMAP" locationvariable="LOCATION" radius="160" offsetmin="20" offsetmax="140"/>
         <locationmarker name="LOCATION_MARKER_PROXIMITY" locationvariable="LOCATION" radius="20"/>
-        <mob name="MOB" mobtypevariable="HUNT_TARGET" locationvariable="LOCATION" escapeonthreatcount="9" escapeonplayersinproximity="20" escapeathealthpercentage="0.4" escapeaftertimeincombat="20"/>
+        <mob name="MOB" mobtypevariable="HUNT_TARGET" locationvariable="LOCATION" escapeonthreatcount="9" escapeonplayersinproximity="20" escapeathealthpercentage="0.4" escapeaftertimeincombat="60"/>
       </variables>
 
       <tasks>
@@ -4304,7 +4318,7 @@
         </dynamictreasurespot>
         <locationmarker name="LOCATION_MARKER_MINIMAP" locationvariable="LOCATION" radius="160" offsetmin="20" offsetmax="140"/>
         <locationmarker name="LOCATION_MARKER_PROXIMITY" locationvariable="LOCATION" radius="20"/>
-        <mob name="MOB" mobtypevariable="HUNT_TARGET" locationvariable="LOCATION" escapeonthreatcount="9" escapeonplayersinproximity="20" escapeathealthpercentage="0.4" escapeaftertimeincombat="20"/>
+        <mob name="MOB" mobtypevariable="HUNT_TARGET" locationvariable="LOCATION" escapeonthreatcount="9" escapeonplayersinproximity="20" escapeathealthpercentage="0.4" escapeaftertimeincombat="60"/>
       </variables>
 
       <tasks>

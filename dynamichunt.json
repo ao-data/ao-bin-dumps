@@ -4208,8 +4208,8 @@
               "@name": "MOB",
               "@mobtypevariable": "HUNT_TARGET",
               "@locationvariable": "LOCATION",
-              "@escapeonthreatcount": "3",
-              "@escapeonplayersinproximity": "7",
+              "@escapeonthreatcount": "4",
+              "@escapeonplayersinproximity": "8",
               "@overrideaggrodelay": "0.1",
               "@escapeaftertimeincombat": "60"
             },
@@ -4281,6 +4281,24 @@
                     "@markedinworld": "false",
                     "@markedonminimap": "true"
                   }
+                },
+                "eventlisteners": {
+                  "mobevent": {
+                    "@targetmobvariable": "MOB",
+                    "@type": "onescape",
+                    "setfloat": {
+                      "@tovariable": "HP_TARGET",
+                      "@fromvariable": "MOB",
+                      "@type": "hitpoints"
+                    },
+                    "setlocation": {
+                      "@tovariable": "TARGET_LOCATION",
+                      "@fromvariable": "MOB"
+                    },
+                    "abortquest": {
+                      "@reason": "TARGET_ESCAPED"
+                    }
+                  }
                 }
               }
             ],
@@ -4339,7 +4357,7 @@
               "@name": "MOB",
               "@mobtypevariable": "HUNT_TARGET",
               "@locationvariable": "LOCATION",
-              "@escapeonthreatcount": "8",
+              "@escapeonthreatcount": "9",
               "@escapeonplayersinproximity": "20",
               "@overrideaggrodelay": "0.1",
               "@escapeaftertimeincombat": "180"
@@ -4411,6 +4429,24 @@
                     "@locationmarkervariable": "LOCATION_MARKER_MINIMAP",
                     "@markedinworld": "false",
                     "@markedonminimap": "true"
+                  }
+                },
+                "eventlisteners": {
+                  "mobevent": {
+                    "@targetmobvariable": "MOB",
+                    "@type": "onescape",
+                    "setfloat": {
+                      "@tovariable": "HP_TARGET",
+                      "@fromvariable": "MOB",
+                      "@type": "hitpoints"
+                    },
+                    "setlocation": {
+                      "@tovariable": "TARGET_LOCATION",
+                      "@fromvariable": "MOB"
+                    },
+                    "abortquest": {
+                      "@reason": "TARGET_ESCAPED"
+                    }
                   }
                 }
               }
@@ -6374,8 +6410,8 @@
               "@mobtypevariable": "HUNT_TARGET",
               "@locationvariable": "LOCATION",
               "@escapeonthreatcount": "4",
-              "@escapeonplayersinproximity": "10",
-              "@escapeaftertimeincombat": "20",
+              "@escapeonplayersinproximity": "8",
+              "@escapeaftertimeincombat": "40",
               "@escapeathealthpercentage": "0.3"
             }
           },
@@ -6515,8 +6551,8 @@
               "@mobtypevariable": "HUNT_TARGET",
               "@locationvariable": "LOCATION",
               "@escapeonthreatcount": "4",
-              "@escapeonplayersinproximity": "10",
-              "@escapeaftertimeincombat": "20",
+              "@escapeonplayersinproximity": "8",
+              "@escapeaftertimeincombat": "40",
               "@escapeathealthpercentage": "0.3"
             }
           },
@@ -8500,7 +8536,7 @@
               "@escapeonthreatcount": "9",
               "@escapeonplayersinproximity": "20",
               "@escapeathealthpercentage": "0.4",
-              "@escapeaftertimeincombat": "20"
+              "@escapeaftertimeincombat": "60"
             }
           },
           "tasks": {
@@ -8641,7 +8677,7 @@
               "@escapeonthreatcount": "9",
               "@escapeonplayersinproximity": "20",
               "@escapeathealthpercentage": "0.4",
-              "@escapeaftertimeincombat": "20"
+              "@escapeaftertimeincombat": "60"
             }
           },
           "tasks": {
