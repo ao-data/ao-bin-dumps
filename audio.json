@@ -9554,14 +9554,8 @@
       },
       {
         "@name": "MELEE_SEPERATOR",
-        "OnCastStart": {
+        "OnCastFinished": {
           "@name": "Play_melee_seperator"
-        },
-        "OnCastCanceled": {
-          "@name": "Stop_melee_seperator"
-        },
-        "OnCastInterrupted": {
-          "@name": "Stop_melee_seperator"
         },
         "OnSpellHit": {
           "@name": "Play_melee_impact_medium_heavy",
@@ -10417,6 +10411,12 @@
         },
         "OnCastFinished": {
           "@name": "Play_throw_spear_intense"
+        }
+      },
+      {
+        "@name": "SPELL_THROW_SPEAR_E",
+        "OnCastFinished": {
+          "@name": "Play_spell_spear_cast_throw_big"
         }
       },
       {
@@ -15163,9 +15163,6 @@
         "@name": "SPELL_GUARDIAN_DRYAD_CAST",
         "OnCastStart": {
           "@name": "Play_guardian_dryad_cast"
-        },
-        "OnCastFinished": {
-          "@name": "Play_guardian_forestspirit_pierce"
         }
       },
       {
