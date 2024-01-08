@@ -1239,6 +1239,14 @@
     <WeaponType name="grail"/>
     <MountType name="empty"/>
   </WwiseSwitchInfo>
+  <WwiseSwitchInfo name="MOB_AVALON_STATUE">
+	<CharType name="mob"/>
+	<MobFaction name="avalon"/>
+	<MobType name="avalon_statue"/>
+	<Size name="rock_big"/>
+	<ArmorType name="rock"/>
+	<MountType name="empty"/>
+	</WwiseSwitchInfo>
   <WwiseSwitchInfo name="MOB_AVALON_MINION">
     <CharType name="mob"/>
     <MobFaction name="avalon"/>
@@ -1375,6 +1383,9 @@
     <ArmorType name="wood_hard"/>
     <MountType name="empty"/>
   </WwiseSwitchInfo>
+  <WwiseEventInfo name ="MOB_HERETIC_TOTEM">
+	<OnMobDied name="Die"/>
+  </WwiseEventInfo>
   <WwiseSwitchInfo name="MOB_HERETIC_THIEF">
     <CharType name="mob"/>
     <MobFaction name="heretic"/>
@@ -1916,7 +1927,7 @@
     <MobType name="undead_harvester"/>
     <Size name="bone_plate_big"/>
     <ArmorType name="bone_plate"/>
-    <WeaponType name="swoosh_huge"/>
+    <WeaponType name="rapier_big"/>
     <MountType name="empty"/>
   </WwiseSwitchInfo>  
   <WwiseSwitchInfo name="MOB_UNDEAD_GOVERNOR">
@@ -2401,7 +2412,7 @@
     <MobType name="keeper_earthdaughter"/>
     <Size name="huge"/>
     <ArmorType name="leather"/>
-    <WeaponType name="swoosh_huge"/>
+    <WeaponType name="swoosh_medium"/>
     <MountType name="empty"/>
   </WwiseSwitchInfo>
   <WwiseSwitchInfo name="MOB_KEEPER_WITCH">
@@ -3323,6 +3334,15 @@
       <ImpactType/>
     </OnSpellHit>
   </WwiseEventInfo>
+  <WwiseEventInfo name="MELEE_SMALLCAST_HEROICSTRIKE2">
+	<OnCastStart name="Play_melee_heroicstrike" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="MELEE_SMALLCAST_HEROICCLEAVE">
+	<OnCastFinished name="Play_melee_swoosh_heroiccleave" />
+	<OnSpellHit name="Play_melee_impact_small_sharp_add" >
+		<ImpactType/>
+	</OnSpellHit>
+  </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_SPLITTINGSLASH_SWORD">
     <OnCastFinished name="Play_melee_splittingstrike_swoosh" />
   </WwiseEventInfo>
@@ -3345,8 +3365,32 @@
   <WwiseEventInfo name="MELEE_SWORD_HAMSTRING_DASH">
     <OnCastFinished name="Play_melee_hamstring_jump" />
   </WwiseEventInfo>
+	
+  <WwiseEventInfo name="MELEE_CRYSTAL_SWORD_CHANNEL_LIMITBREAKER" >
+	<OnChannelingStart name="Play_crystal_sword_channel_big_limitbreaker" />
+	<OnChannelingCancelled name="Stop_crystal_sword_channel_big_limitbreaker" />
+	<OnChannelingInterrupted name="Stop_crystal_sword_channel_big_limitbreaker" />
+	<OnChannelingEnd name="Stop_crystal_sword_channel_big_limitbreaker" />
+  </WwiseEventInfo>
 
-  <WwiseEventInfo name="MELEE_MEDIUMCAST">
+  <WwiseEventInfo name="MELEE_CRYSTAL_SWORD_LIMITBREAKER_DOUBLESWING">
+	<OnCastFinished name="Play_crystal_sword_cast_big_limitbreaker" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="MELEE_CRYSTAL_SWORD_LIMITBREAKER_GLOW" >
+	<OnSpellAdded name="Play_crystal_sword_loaded_state_loop" />
+	<OnSpellRemoved name="Stop_crystal_sword_loaded_state_loop" />
+  </WwiseEventInfo>
+	
+  <WwiseEventInfo name="MELEE_CRYSTAL_WEAPON_IMPACT_MEDIUM" >
+	<OnSpellHit name="Play_crystal_melee_impact_medium" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="MELEE_CRYSTAL_WEAPON_IMPACT_BIG" >
+	<OnSpellHit name="Play_crystal_melee_impact_big" />
+  </WwiseEventInfo>
+	
+	<WwiseEventInfo name="MELEE_MEDIUMCAST">
     <OnCastStart name="Play_melee_swoosh_medium" />
   </WwiseEventInfo>
 
@@ -3428,7 +3472,11 @@
     <OnCastCanceled name="Stop_melee_tar_ring_cast" />
     <OnCastInterrupted name="Stop_melee_tar_ring_cast" />
   </WwiseEventInfo>
-  
+
+  <WwiseEventInfo name="MELEE_SWOOSH_SMALL_SHARP">
+	<OnCastFinished name="Play_melee_swoosh_small_sharp" />
+  </WwiseEventInfo>
+	
   <WwiseEventInfo name="MELEE_BIGCAST">
     <OnCastStart name="Play_melee_swoosh_big" />
   </WwiseEventInfo>
@@ -3545,6 +3593,12 @@
 	<OnSpellHit name="Play_grail_impact_medium"  >
       <ImpactType/>
     </OnSpellHit>
+  </WwiseEventInfo>
+  <WwiseEventInfo name="MELEE_CRYSTAL_SPEAR_CAST_RUPTURE">
+	<OnCastStart name="Play_crystal_spear_cast_load_big" />
+	<OnCastCanceled name="Stop_crystal_spear_cast_load_big" />
+	<OnCastInterrupted name="Stop_crystal_spear_cast_load_big" />
+	<OnCastFinished name="Play_crystal_spear_cast_big" />
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_SPIN">
     <OnCastStart name="Play_melee_spin" />
@@ -3725,9 +3779,7 @@
     <OnSpellHit name="Play_melee_impact_rock_big" />
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_SHRINKINSMASH_CAST">
-    <OnCastStart name="Play_shrinking_smash" />
-    <OnCastCanceled name="Stop_shrinking_smash" />
-    <OnCastInterrupted name="Stop_shrinking_smash" />
+    <OnCastFinished name="Play_shrinking_smash" />
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_MACE_QUADRUNE_CAST">
     <OnCastStart name="Play_cast_guard_rune" />
@@ -4605,6 +4657,13 @@
     <OnCastFinished name="Play_arcane_meteor_cast" />
 	<OnSpellHit name="Play_arcane_impact_damage_medium" />
   </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_ARCANE_STARFALL_CHANNEL">
+	<OnChannelingStart name="Play_arcane_channel_starfall_sequence" />
+	<OnChannelingEnd name="Stop_arcane_channel_starfall_sequence" />
+	<OnChannelingInterrupted name="Stop_arcane_channel_starfall_sequence" />
+	<OnChannelingCancelled name="Stop_arcane_channel_starfall_sequence" />
+  </WwiseEventInfo>
   
   <WwiseEventInfo name="SPELL_CURSED_CAST_SMALL_CURSEDDOT">
     <OnCastFinished name="Play_cursed_cast_small_curseddot" />
@@ -4667,6 +4726,11 @@
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_CURSED_CAST_INSTANT">
     <OnCastStart name="Play_cursed_cast_instant" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_CURSED_CAST_LOAD_MEDIUM">
+	<OnCastStart name="Play_cursed_cast_load_medium_1" />
+	<OnCastCanceled name="Stop_cursed_cast_load_medium_1" />
+	<OnCastInterrupted name="Stop_cursed_cast_load_medium_1" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_CURSED_HIT_SMALL">
     <OnSpellHit name="Play_cursed_impact_small" />
@@ -5887,6 +5951,27 @@
   <WwiseEventInfo name="SPELL_TRACKING_EAGLE_ESCAPE_DASH">
 	<OnCastStart name="Play_tracking_eagle_escape" />
   </WwiseEventInfo>
+ 
+  <WwiseEventInfo name="SPELL_UNDEAD_HARVESTER_ESCAPE_CLEAVE">
+	<OnCastStart name="Play_mob_undead_harvester_escape_cleave_load" />
+	<OnCastCanceled name="Stop_mob_undead_harvester_escape_cleave_load" />
+	<OnCastInterrupted name="Stop_mob_undead_harvester_escape_cleave_load" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_TRACKING_HARVESTER_ESCAPE_DASH">
+	<OnCastStart name="Play_tracking_harvester_escape_dash" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_TRACKING_EARTHDAUGHTER_ESCAPE_CAST">
+	<OnCastStart name="Play_tracking_earthdaughter_escape_roar_load" />
+	<OnCastCanceled name="Stop_tracking_earthdaughter_escape_roar_load" />
+	<OnCastInterrupted name="Stop_tracking_earthdaughter_escape_roar_load" />
+	<OnCastFinished name="Play_tracking_earthdaughter_escape_groundhit" />
+  </WwiseEventInfo>
+	
+  <WwiseEventInfo name="SPELL_TRACKING_EARTHDAUGHTER_ESCAPE_DASH">
+	<OnCastStart name="Play_tracking_earthdaughter_escape" />
+  </WwiseEventInfo>
 	
 	<!-- Misc -->
   <WwiseEventInfo name="OPEN_SILVERBAG" >
@@ -6441,7 +6526,7 @@
     <OnCastFinished name="Stop_siege_channel" />
   </WwiseEventInfo>
   
-  <WwiseEventInfo name="SPELL_PANTHER_a" >
+  <WwiseEventInfo name="SPELL_PANTHER_SPRINT" >
     <OnCastFinished name="Play_panther_cast_buff_speed" />
   </WwiseEventInfo>
 
@@ -6808,6 +6893,12 @@
   <WwiseEventInfo name="SPELL_GUARDIAN_SUMMON_ROCK_AVALANCHE" >
 	<OnCastFinished name="Play_rock_elemental_avalanche" />
   </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_GUARDIAN_SUMMON_ROCK_AVALANCHE_CAST" >
+	<OnCastStart name="Play_keeper_pebble_load_avalanche" />
+	<OnCastCanceled name="Stop_keeper_pebble_load_avalanche" />
+	<OnCastInterrupted name="Stop_keeper_pebble_load_avalanche" />
+    <OnCastFinished name="Play_keeper_pebble_avalanche" />
+  </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_GUARDIAN_ROCK_GIANT_TREMOR_CAST" >
     <OnCastStart name="Play_melee_swoosh_load_big" />
     <OnCastCanceled name="Stop_melee_swoosh_load_big" />
@@ -7074,6 +7165,31 @@
 	<OnCastInterrupted name="Stop_fire_cast_load_medium_long" />
 	<OnCastCanceled name="Stop_fire_cast_load_medium_long" />
 	<OnCastFinished name="Play_fire_cast_medium_ignite_staff" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_HERETIC_MAGE_CAST_FIRE_CONE">
+	<OnCastStart name="Play_fire_cast_load_medium" />
+	<OnCastInterrupted name="Stop_fire_cast_load_medium" />
+	<OnCastCanceled name="Stop_fire_cast_load_medium" />
+	<OnCastFinished name="Play_fire_cast_small_q_searingflame" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_HERETIC_TOTEM_HEALING_CHANNEL">
+	<OnChannelingStart name="Play_nature_heal_small_loop" />
+	<OnChannelingCancelled name="Stop_nature_heal_small_loop" />
+	<OnChannelingInterrupted name="Stop_nature_heal_small_loop" />
+	<OnChannelingEnd name="Stop_nature_heal_small_loop" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_HERETIC_TOTEM_LOAD_HEAL">
+	<OnCastStart name="Play_nature_cast_load_heal_small" />
+	<OnCastCanceled name="Stop_nature_cast_load_heal_small" />
+	<OnCastInterrupted name="Stop_nature_cast_load_heal_small" />
+	<OnCastFinished name="Stop_nature_cast_load_heal_small" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_HERETIC_TOTEM_SPAWN">
+	<OnCastFinished name="Play_mob_heretic_mage_totem_appear" />
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_HERETIC_HEALER_SHIELD">
@@ -7442,6 +7558,27 @@
   <WwiseEventInfo name="SPELL_KEEPER_EARTHDAUGHTER_THROW">
     <OnCastStart name="Play_mob_keeper_earthdaughter_throwrock_vo" />
     <OnSpellHit name="Play_melee_impact_rock_big" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_KEEPER_EARTHDAUGHTER_TRACKING_THROW">
+	<OnCastStart name="Play_melee_load_medium_windy_short" />
+	<OnCastCanceled name="Stop_melee_load_medium_windy_short" />
+	<OnCastInterrupted name="Stop_melee_load_medium_windy_short" />
+	<OnCastFinished name="Play_mob_keeper_earthdaughter_throwrock_vo_short" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_KEEPER_EARTHDAUGHTER_TRACKING_THUNDERSLAM">
+	<OnCastStart name="Play_tracking_keeper_earthdaughter_thunderslam_load" />
+	<OnCastCanceled name="Stop_tracking_keeper_earthdaughter_thunderslam_load" />
+	<OnCastInterrupted name="Stop_tracking_keeper_earthdaughter_thunderslam_load" />
+	<OnCastFinished name="Play_mob_keeper_earthmother_thunderslam_impact" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_KEEPER_EARTHDAUGHTER_TRACKING_THUNDERSLAM_FAST">
+	<OnCastStart name="Play_tracking_keeper_earthdaughter_thunderslam_load_fast" />
+	<OnCastCanceled name="Stop_tracking_keeper_earthdaughter_thunderslam_load_fast" />
+	<OnCastInterrupted name="Stop_tracking_keeper_earthdaughter_thunderslam_load_fast" />
+	<OnCastFinished name="Play_mob_keeper_earthmother_thunderslam_impact" />
   </WwiseEventInfo>
   
   <WwiseEventInfo name="SPELL_KEEPER_EARTHDAUGHTER_CLOBBERING">
@@ -7993,7 +8130,52 @@
   <WwiseEventInfo name="SPELL_UNDEAD_HARVESTER_SCYTHE">
     <OnCastFinished name="Play_melee_scythe" />
   </WwiseEventInfo>
+	
+  <WwiseEventInfo name="SPELL_UNDEAD_HARVESTER_CLEAVE_FAST">
+	<OnCastFinished name="Play_mob_undead_harvester_cleave_fast" />
+  </WwiseEventInfo>
+	
+  <WwiseEventInfo name="SPELL_UNDEAD_HARVESTER_CLEAVE">
+	<OnCastFinished name="Play_mob_undead_harvester_cleave" />
+  </WwiseEventInfo>
 
+  <WwiseEventInfo name="SPELL_UNDEAD_HARVESTER_CLEAVE_LOAD">
+	<OnCastStart name="Play_mob_undead_harvester_cleave_load" />
+	<OnCastCanceled name="Stop_mob_undead_harvester_cleave_load" />
+	<OnCastInterrupted name="Stop_mob_undead_harvester_cleave_load" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_UNDEAD_HARVESTER_AREAOFDECAY">
+	<OnCastStart name="Play_cursed_cast_load_big_cataclysm" />
+	<OnCastInterrupted name="Stop_cursed_cast_load_big_cataclysm" />
+	<OnCastCanceled name="Stop_cursed_cast_load_big_cataclysm" />
+	<OnCastFinished name="Play_cursed_cast_big" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_UNDEAD_HARVESTER_AREAOFDECAY_DAMAGE_ADDED">
+	<OnSpellAdded name="Play_cursed_impact_small_repeated" />
+  </WwiseEventInfo>
+	
+  <WwiseEventInfo name="SPELL_UNDEAD_HARVESTER_SPLITTINGSTRIKE">
+	<OnCastStart name="Play_undead_harvester_splitting_strike" />
+	<OnCastInterrupted name="Stop_undead_harvester_splitting_strike" />
+	<OnCastCanceled name="Stop_undead_harvester_splitting_strike" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_UNDEAD_HARVESTER_SPLITTINGSTRIKE_INSTANT">
+	<OnCastFinished name="Play_undead_harvester_splitting_strike_instant" />
+	<OnSpellHit name="Play_melee_impact_medium_metallic" >
+	  <ImpactType/>
+	</OnSpellHit>
+  </WwiseEventInfo>
+	
+  <WwiseEventInfo name="SPELL_UNDEAD_HARVESTER_SWEEP_LOAD" >
+	<OnCastStart name="Play_melee_load_medium_windy_short" />
+	<OnCastCanceled name="Stop_melee_load_medium_windy_short" />
+	<OnCastInterrupted name="Stop_melee_load_medium_windy_short" />
+	<OnCastFinished name="Play_melee_swoosh_small_sharp" />
+  </WwiseEventInfo>
+	
   <WwiseEventInfo name="SPELL_UNDEAD_SARCOPHAGUS_HEAL">
     <OnSpellHit name="Play_undead_sarcophagus_heal"/>
   </WwiseEventInfo>

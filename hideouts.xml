@@ -21,7 +21,7 @@
     </constructionphases>
     <upgradelevels>
       <level cluster="HIDEOUT-0001a" maxshields="2" shieldregenerationrate="1" maxdurability="50000" durabilityrecovery="25" dailyupkeepnutrition="15000" maximumnutritionstorage="150000">
-        <attackcosts silver="1000000" time="5" swaptransaction="true">
+        <attackcosts agefactor="0.2" maxsilvercost="25000000" startsilverpercentage="0.2" time="5" swaptransaction="true">
           <item uniquename="UNIQUE_GVGTOKEN_GENERIC" count="50" />
         </attackcosts>
         <makehome guild="true" alliance="false" public="false" />
@@ -33,7 +33,7 @@
           <upgraderesource uniquename="T1_ROCK" count="125" />
           <upgraderesource uniquename="T6_STONEBLOCK" count="500" />
         </upgraderequirement>
-        <attackcosts silver="3000000" time="5" swaptransaction="true">
+        <attackcosts agefactor="0.2" maxsilvercost="50000000" startsilverpercentage="0.2" time="5" swaptransaction="true">
           <item uniquename="UNIQUE_GVGTOKEN_GENERIC" count="150" />
         </attackcosts>
         <makehome guild="true" alliance="false" public="false" />
@@ -45,22 +45,22 @@
           <upgraderesource uniquename="T1_ROCK" count="500" />
           <upgraderesource uniquename="T6_STONEBLOCK" count="2000" />
         </upgraderequirement>
-        <attackcosts silver="11000000" time="5" swaptransaction="true">
+        <attackcosts agefactor="0.2" maxsilvercost="100000000" startsilverpercentage="0.2" time="5" swaptransaction="true">
           <item uniquename="UNIQUE_GVGTOKEN_GENERIC" count="550" />
         </attackcosts>
         <makehome guild="true" alliance="true" public="false" />
       </level>
     </upgradelevels>
     <powerlevels>
-      <powerlevel level="1" powerpointspool="800" decaydays="7" territorydecaydays="8" />
-      <powerlevel level="2" powerpointspool="1650" decaydays="7" territorydecaydays="8" generalistcraftingbonus="0.01" specialistcraftingbonus="0.02"  hideoutbuff="HIDEOUT_BONUS_LVL1"/>
-      <powerlevel level="3" powerpointspool="3250" decaydays="7" territorydecaydays="8" generalistcraftingbonus="0.02" specialistcraftingbonus="0.04"  hideoutbuff="HIDEOUT_BONUS_LVL2"/>
-      <powerlevel level="4" powerpointspool="6500" decaydays="6" territorydecaydays="7" generalistcraftingbonus="0.03" specialistcraftingbonus="0.06"  hideoutbuff="HIDEOUT_BONUS_LVL3"/>
-      <powerlevel level="5" powerpointspool="11250" decaydays="5" territorydecaydays="6" generalistcraftingbonus="0.04" specialistcraftingbonus="0.08"  hideoutbuff="HIDEOUT_BONUS_LVL4"/>
-      <powerlevel level="6" powerpointspool="18750" decaydays="4" territorydecaydays="5" generalistcraftingbonus="0.05" specialistcraftingbonus="0.10"  hideoutbuff="HIDEOUT_BONUS_LVL5"/>
-      <powerlevel level="7" powerpointspool="30000" decaydays="3" territorydecaydays="4" generalistcraftingbonus="0.06" specialistcraftingbonus="0.12"  hideoutbuff="HIDEOUT_BONUS_LVL6"/>
-      <powerlevel level="8" powerpointspool="45000" decaydays="2" territorydecaydays="3" generalistcraftingbonus="0.07" specialistcraftingbonus="0.14"  hideoutbuff="HIDEOUT_BONUS_LVL7"/>
-      <powerlevel level="9" powerpointspool="60000" decaydays="1" territorydecaydays="2" generalistcraftingbonus="0.08" specialistcraftingbonus="0.16" hideoutbuff="HIDEOUT_BONUS_LVL8"/>
+      <powerlevel level="1" powerpointspool="800"   decaydays="3.5" territorydecaydays="8" roadsdecaydays="7" />
+      <powerlevel level="2" powerpointspool="1650"  decaydays="3.5" territorydecaydays="8" roadsdecaydays="7" generalistcraftingbonus="0.06" specialistcraftingbonus="0.0375" hideoutbuff="HIDEOUT_BONUS_LVL1"/>
+      <powerlevel level="3" powerpointspool="3250"  decaydays="3.5" territorydecaydays="8" roadsdecaydays="7" generalistcraftingbonus="0.11" specialistcraftingbonus="0.0750" hideoutbuff="HIDEOUT_BONUS_LVL2"/>
+      <powerlevel level="4" powerpointspool="6500"  decaydays="3"   territorydecaydays="7" roadsdecaydays="6" generalistcraftingbonus="0.15" specialistcraftingbonus="0.1125" hideoutbuff="HIDEOUT_BONUS_LVL3"/>
+      <powerlevel level="5" powerpointspool="11250" decaydays="2.5" territorydecaydays="6" roadsdecaydays="5" generalistcraftingbonus="0.18" specialistcraftingbonus="0.1500" hideoutbuff="HIDEOUT_BONUS_LVL4"/>
+      <powerlevel level="6" powerpointspool="18750" decaydays="2"   territorydecaydays="5" roadsdecaydays="4" generalistcraftingbonus="0.20" specialistcraftingbonus="0.1875" hideoutbuff="HIDEOUT_BONUS_LVL5"/>
+      <powerlevel level="7" powerpointspool="30000" decaydays="1.5" territorydecaydays="4" roadsdecaydays="3" generalistcraftingbonus="0.22" specialistcraftingbonus="0.2250" hideoutbuff="HIDEOUT_BONUS_LVL6"/>
+      <powerlevel level="8" powerpointspool="45000" decaydays="1"   territorydecaydays="3" roadsdecaydays="2" generalistcraftingbonus="0.24" specialistcraftingbonus="0.2625" hideoutbuff="HIDEOUT_BONUS_LVL7"/>
+      <powerlevel level="9" powerpointspool="60000" decaydays="0.5" territorydecaydays="2" roadsdecaydays="1" generalistcraftingbonus="0.26" specialistcraftingbonus="0.3000" hideoutbuff="HIDEOUT_BONUS_LVL8"/>
     </powerlevels> 
     <hq favorbonus="1" mightbonus="1" powerbonus="2" hqlossenergypenalty="0.51">
       <tier value="5">

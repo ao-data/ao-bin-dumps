@@ -14,9 +14,10 @@
     },
     "crystal": [
       {
-        "@uniquename": "TERRITORY",
+        "@uniquename": "TERRITORY_POWER_CRYSTAL",
         "@target": "territory",
         "@reward": "guild",
+        "@subtype": "powercrystal",
         "@displayname": "@POWER_CRYSTAL_NAME_TERRITORY",
         "@raritydesc": "@TREASURE_TOOLTIP_RARITY",
         "rarity": [
@@ -33,7 +34,11 @@
             "@playerlistlimit": "40",
             "@playerlefttimeout": "1800",
             "@displayname": "@POWERCRYSTAL_RARITY_STANDARD",
-            "@displaycolor": "99FF00FF"
+            "@displaycolor": "99FF00FF",
+            "@pickupsound": "Play_energy_crystal_pick_up",
+            "@initialdropsound": "Play_energy_crystal_claimable_start",
+            "@dropsound": "Play_energy_crystal_drop",
+            "@claimsuccesssoundontarget": "Play_energy_crystal_transfer_into_hideout"
           },
           {
             "@raritylevel": "1",
@@ -48,7 +53,11 @@
             "@playerlistlimit": "60",
             "@playerlefttimeout": "1800",
             "@displayname": "@POWERCRYSTAL_RARITY_UNCOMMON",
-            "@displaycolor": "1F8CF2FF"
+            "@displaycolor": "1F8CF2FF",
+            "@pickupsound": "Play_energy_crystal_pick_up",
+            "@initialdropsound": "Play_energy_crystal_claimable_start",
+            "@dropsound": "Play_energy_crystal_drop",
+            "@claimsuccesssoundontarget": "Play_energy_crystal_transfer_into_hideout"
           },
           {
             "@raritylevel": "2",
@@ -63,7 +72,11 @@
             "@playerlistlimit": "120",
             "@playerlefttimeout": "1800",
             "@displayname": "@POWERCRYSTAL_RARITY_RARE",
-            "@displaycolor": "CC12C9FF"
+            "@displaycolor": "CC12C9FF",
+            "@pickupsound": "Play_energy_crystal_pick_up",
+            "@initialdropsound": "Play_energy_crystal_claimable_start",
+            "@dropsound": "Play_energy_crystal_drop",
+            "@claimsuccesssoundontarget": "Play_energy_crystal_transfer_into_hideout"
           },
           {
             "@raritylevel": "3",
@@ -78,7 +91,82 @@
             "@playerlistlimit": "160",
             "@playerlefttimeout": "1800",
             "@displayname": "@POWERCRYSTAL_RARITY_LEGENDARY",
-            "@displaycolor": "F2BA4FFF"
+            "@displaycolor": "F2BA4FFF",
+            "@pickupsound": "Play_energy_crystal_pick_up",
+            "@initialdropsound": "Play_energy_crystal_claimable_start",
+            "@dropsound": "Play_energy_crystal_drop",
+            "@claimsuccesssoundontarget": "Play_energy_crystal_transfer_into_hideout"
+          }
+        ]
+      },
+      {
+        "@uniquename": "TERRITORY_RAW_ENERGY_CORE",
+        "@target": "territory",
+        "@reward": "guild",
+        "@subtype": "rawenergycore",
+        "@disableplayertracking": "true",
+        "@displayname": "@RAW_ENERGY_CORE_NAME_TERRITORY",
+        "@raritydesc": "@TREASURE_TOOLTIP_RARITY",
+        "rarity": [
+          {
+            "@raritylevel": "0",
+            "@powerpoints": "0",
+            "@tileid": "UNIQUE_RAWENERGYCORE_TERRITORY_R0_PICKABLE",
+            "@carrybuff": "RAW_ENERGY_CORE_CARRY_TERRITORY_1",
+            "@claimvfxspell": "RAW_ENERGY_CLAIMVFX_TERRITORY",
+            "@minimapmarker": "minimap_raw_energy_core_small",
+            "@dropicon": "ENERGY_CORE_TERRITORY_DROP_0",
+            "@eligibilityradius": "0",
+            "@playerlistlimit": "0",
+            "@playerlefttimeout": "1",
+            "@displayname": "@RAW_ENERGY_CORE_SMALL",
+            "@displaycolor": "99FF00FF",
+            "@pickupsound": "Play_energy_raw_pick_up",
+            "@initialdropsound": "Play_energy_raw_claimable_start",
+            "@dropsound": "Play_energy_raw_drop",
+            "@claimsuccesssoundontarget": "Play_energy_raw_transfer_into_territory",
+            "@expirysound": "Play_raw_energy_teleport",
+            "@initialspawnpickupdelaysec": "1.5"
+          },
+          {
+            "@raritylevel": "1",
+            "@powerpoints": "0",
+            "@tileid": "UNIQUE_RAWENERGYCORE_TERRITORY_R1_PICKABLE",
+            "@carrybuff": "RAW_ENERGY_CORE_CARRY_TERRITORY_2",
+            "@claimvfxspell": "RAW_ENERGY_CLAIMVFX_TERRITORY",
+            "@minimapmarker": "minimap_raw_energy_core_medium",
+            "@dropicon": "ENERGY_CORE_TERRITORY_DROP_0",
+            "@eligibilityradius": "0",
+            "@playerlistlimit": "0",
+            "@playerlefttimeout": "1",
+            "@displayname": "@RAW_ENERGY_CORE_MEDIUM",
+            "@displaycolor": "99FF00FF",
+            "@pickupsound": "Play_energy_raw_pick_up",
+            "@initialdropsound": "Play_energy_raw_claimable_start",
+            "@dropsound": "Play_energy_raw_drop",
+            "@claimsuccesssoundontarget": "Play_energy_raw_transfer_into_territory",
+            "@expirysound": "Play_raw_energy_teleport",
+            "@initialspawnpickupdelaysec": "1.5"
+          },
+          {
+            "@raritylevel": "2",
+            "@powerpoints": "0",
+            "@tileid": "UNIQUE_RAWENERGYCORE_TERRITORY_R2_PICKABLE",
+            "@carrybuff": "RAW_ENERGY_CORE_CARRY_TERRITORY_3",
+            "@claimvfxspell": "RAW_ENERGY_CLAIMVFX_TERRITORY",
+            "@minimapmarker": "minimap_raw_energy_core_large",
+            "@dropicon": "ENERGY_CORE_TERRITORY_DROP_0",
+            "@eligibilityradius": "0",
+            "@playerlistlimit": "0",
+            "@playerlefttimeout": "1",
+            "@displayname": "@RAW_ENERGY_CORE_LARGE",
+            "@displaycolor": "99FF00FF",
+            "@pickupsound": "Play_energy_raw_pick_up",
+            "@initialdropsound": "Play_energy_raw_claimable_start",
+            "@dropsound": "Play_energy_raw_drop",
+            "@claimsuccesssoundontarget": "Play_energy_raw_transfer_into_territory",
+            "@expirysound": "Play_raw_energy_teleport",
+            "@initialspawnpickupdelaysec": "1.5"
           }
         ]
       },
@@ -86,6 +174,7 @@
         "@uniquename": "HIDEOUT_OPENWORLD",
         "@target": "hideout",
         "@reward": "guild",
+        "@subtype": "powercrystal",
         "@displayname": "@POWER_CRYSTAL_NAME_CRYSTAL",
         "@raritydesc": "@TREASURE_TOOLTIP_RARITY",
         "rarity": [
@@ -102,7 +191,11 @@
             "@playerlistlimit": "40",
             "@playerlefttimeout": "1800",
             "@displayname": "@POWERCRYSTAL_RARITY_STANDARD",
-            "@displaycolor": "99FF00FF"
+            "@displaycolor": "99FF00FF",
+            "@pickupsound": "Play_power_core_pick_up",
+            "@initialdropsound": "Play_power_core_claimable_start",
+            "@dropsound": "Play_power_core_drop",
+            "@claimsuccesssoundontarget": "Play_power_core_transfer_into_hideout"
           },
           {
             "@raritylevel": "1",
@@ -117,7 +210,11 @@
             "@playerlistlimit": "60",
             "@playerlefttimeout": "1800",
             "@displayname": "@POWERCRYSTAL_RARITY_UNCOMMON",
-            "@displaycolor": "1F8CF2FF"
+            "@displaycolor": "1F8CF2FF",
+            "@pickupsound": "Play_power_core_pick_up",
+            "@initialdropsound": "Play_power_core_claimable_start",
+            "@dropsound": "Play_power_core_drop",
+            "@claimsuccesssoundontarget": "Play_power_core_transfer_into_hideout"
           },
           {
             "@raritylevel": "2",
@@ -132,7 +229,11 @@
             "@playerlistlimit": "120",
             "@playerlefttimeout": "1800",
             "@displayname": "@POWERCRYSTAL_RARITY_RARE",
-            "@displaycolor": "CC12C9FF"
+            "@displaycolor": "CC12C9FF",
+            "@pickupsound": "Play_power_core_pick_up",
+            "@initialdropsound": "Play_power_core_claimable_start",
+            "@dropsound": "Play_power_core_drop",
+            "@claimsuccesssoundontarget": "Play_power_core_transfer_into_hideout"
           },
           {
             "@raritylevel": "3",
@@ -147,7 +248,11 @@
             "@playerlistlimit": "160",
             "@playerlefttimeout": "1800",
             "@displayname": "@POWERCRYSTAL_RARITY_LEGENDARY",
-            "@displaycolor": "F2BA4FFF"
+            "@displaycolor": "F2BA4FFF",
+            "@pickupsound": "Play_power_core_pick_up",
+            "@initialdropsound": "Play_power_core_claimable_start",
+            "@dropsound": "Play_power_core_drop",
+            "@claimsuccesssoundontarget": "Play_power_core_transfer_into_hideout"
           }
         ]
       },
@@ -155,6 +260,7 @@
         "@uniquename": "HIDEOUT_TUNNEL",
         "@target": "hideout",
         "@reward": "guild",
+        "@subtype": "powercrystal",
         "@displayname": "@POWER_CRYSTAL_NAME_CRYSTAL",
         "@raritydesc": "@TREASURE_TOOLTIP_RARITY",
         "rarity": [
@@ -171,7 +277,11 @@
             "@playerlistlimit": "40",
             "@playerlefttimeout": "1800",
             "@displayname": "@POWERCRYSTAL_RARITY_STANDARD",
-            "@displaycolor": "99FF00FF"
+            "@displaycolor": "99FF00FF",
+            "@pickupsound": "Play_power_core_pick_up",
+            "@initialdropsound": "Play_power_core_claimable_start",
+            "@dropsound": "Play_power_core_drop",
+            "@claimsuccesssoundontarget": "Play_power_core_transfer_into_hideout"
           },
           {
             "@raritylevel": "1",
@@ -186,7 +296,11 @@
             "@playerlistlimit": "60",
             "@playerlefttimeout": "1800",
             "@displayname": "@POWERCRYSTAL_RARITY_UNCOMMON",
-            "@displaycolor": "1F8CF2FF"
+            "@displaycolor": "1F8CF2FF",
+            "@pickupsound": "Play_power_core_pick_up",
+            "@initialdropsound": "Play_power_core_claimable_start",
+            "@dropsound": "Play_power_core_drop",
+            "@claimsuccesssoundontarget": "Play_power_core_transfer_into_hideout"
           },
           {
             "@raritylevel": "2",
@@ -201,7 +315,11 @@
             "@playerlistlimit": "120",
             "@playerlefttimeout": "1800",
             "@displayname": "@POWERCRYSTAL_RARITY_RARE",
-            "@displaycolor": "CC12C9FF"
+            "@displaycolor": "CC12C9FF",
+            "@pickupsound": "Play_power_core_pick_up",
+            "@initialdropsound": "Play_power_core_claimable_start",
+            "@dropsound": "Play_power_core_drop",
+            "@claimsuccesssoundontarget": "Play_power_core_transfer_into_hideout"
           },
           {
             "@raritylevel": "3",
@@ -216,7 +334,11 @@
             "@playerlistlimit": "160",
             "@playerlefttimeout": "1800",
             "@displayname": "@POWERCRYSTAL_RARITY_LEGENDARY",
-            "@displaycolor": "F2BA4FFF"
+            "@displaycolor": "F2BA4FFF",
+            "@pickupsound": "Play_power_core_pick_up",
+            "@initialdropsound": "Play_power_core_claimable_start",
+            "@dropsound": "Play_power_core_drop",
+            "@claimsuccesssoundontarget": "Play_power_core_transfer_into_hideout"
           }
         ]
       },
@@ -240,7 +362,9 @@
             "@playerlistlimit": "40",
             "@playerlefttimeout": "1800",
             "@displayname": "@MIST_DIFFICULTY_LEVEL_STANDARD",
-            "@displaycolor": "99FF00FF"
+            "@displaycolor": "99FF00FF",
+            "@pickupsound": "Play_wisp_hurt_pickup",
+            "@dropsound": "Play_wisp_dropped"
           },
           {
             "@raritylevel": "1",
@@ -254,7 +378,9 @@
             "@playerlistlimit": "40",
             "@playerlefttimeout": "1800",
             "@displayname": "@MIST_DIFFICULTY_LEVEL_UNCOMMON",
-            "@displaycolor": "1F8CF2FF"
+            "@displaycolor": "1F8CF2FF",
+            "@pickupsound": "Play_wisp_hurt_pickup",
+            "@dropsound": "Play_wisp_dropped"
           },
           {
             "@raritylevel": "2",
@@ -268,7 +394,9 @@
             "@playerlistlimit": "40",
             "@playerlefttimeout": "1800",
             "@displayname": "@MIST_DIFFICULTY_LEVEL_RARE",
-            "@displaycolor": "CC12C9FF"
+            "@displaycolor": "CC12C9FF",
+            "@pickupsound": "Play_wisp_hurt_pickup",
+            "@dropsound": "Play_wisp_dropped"
           },
           {
             "@raritylevel": "3",
@@ -282,7 +410,9 @@
             "@playerlistlimit": "40",
             "@playerlefttimeout": "1800",
             "@displayname": "@MIST_DIFFICULTY_LEVEL_LEGENDARY",
-            "@displaycolor": "F2BA4FFF"
+            "@displaycolor": "F2BA4FFF",
+            "@pickupsound": "Play_wisp_hurt_pickup",
+            "@dropsound": "Play_wisp_dropped"
           }
         ]
       },
@@ -306,7 +436,9 @@
             "@playerlistlimit": "40",
             "@playerlefttimeout": "1800",
             "@displayname": "@MIST_DIFFICULTY_LEVEL_STANDARD",
-            "@displaycolor": "99FF00FF"
+            "@displaycolor": "99FF00FF",
+            "@pickupsound": "Play_wisp_hurt_pickup",
+            "@dropsound": "Play_wisp_dropped"
           },
           {
             "@raritylevel": "1",
@@ -320,7 +452,9 @@
             "@playerlistlimit": "40",
             "@playerlefttimeout": "1800",
             "@displayname": "@MIST_DIFFICULTY_LEVEL_UNCOMMON",
-            "@displaycolor": "1F8CF2FF"
+            "@displaycolor": "1F8CF2FF",
+            "@pickupsound": "Play_wisp_hurt_pickup",
+            "@dropsound": "Play_wisp_dropped"
           },
           {
             "@raritylevel": "2",
@@ -334,7 +468,9 @@
             "@playerlistlimit": "40",
             "@playerlefttimeout": "1800",
             "@displayname": "@MIST_DIFFICULTY_LEVEL_RARE",
-            "@displaycolor": "CC12C9FF"
+            "@displaycolor": "CC12C9FF",
+            "@pickupsound": "Play_wisp_hurt_pickup",
+            "@dropsound": "Play_wisp_dropped"
           },
           {
             "@raritylevel": "3",
@@ -348,7 +484,9 @@
             "@playerlistlimit": "40",
             "@playerlefttimeout": "1800",
             "@displayname": "@MIST_DIFFICULTY_LEVEL_LEGENDARY",
-            "@displaycolor": "F2BA4FFF"
+            "@displaycolor": "F2BA4FFF",
+            "@pickupsound": "Play_wisp_hurt_pickup",
+            "@dropsound": "Play_wisp_dropped"
           }
         ]
       }
