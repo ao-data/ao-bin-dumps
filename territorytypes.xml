@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <territorytypes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="territorytypes.xsd" upkeepwarningchecktimespaninhours="24" upkeepwarningintervalinmin="60" upkeeptimerinmin="1440">
+
+  <AlliancePenaltySettings>
+    <Cluster quality="None" controlcost="0"/>
+    <Cluster quality="1"    controlcost="4"/>
+    <Cluster quality="2"    controlcost="3"/>
+    <Cluster quality="3"    controlcost="3"/>
+    <Cluster quality="4"    controlcost="2"/>
+    <Cluster quality="5"    controlcost="2"/>
+    <Cluster quality="6"    controlcost="1"/>
+  </AlliancePenaltySettings>
+  
   <territorytype
     name="WATCHTOWER"
     claimcost="2000000" 	  	  
@@ -29,6 +40,7 @@
                   decaydays="2"
                   yieldbonus="0.01"
                   pointboostermultiplier="1"
+                  dailyconversionbonus="0"
                   enchantedresourcemultiplier="1"/>
       <towerlevel level="2"
                   powerpointspool="14996"
@@ -36,6 +48,7 @@
                   guardbuff="MOB_TERRITORY_GUARD_BUFF_01"
                   yieldbonus="0.02"
                   pointboostermultiplier="1.35"
+                  dailyconversionbonus="0.0025"				  
                   enchantedresourcemultiplier="1.1"/>
       <towerlevel level="3"
                   powerpointspool="22744"
@@ -43,6 +56,7 @@
                   guardbuff="MOB_TERRITORY_GUARD_BUFF_02"
                   yieldbonus="0.05"
                   pointboostermultiplier="1.80"
+                  dailyconversionbonus="0.005"				  
                   enchantedresourcemultiplier="1.2"/>
       <towerlevel level="4"
                   powerpointspool="33791"
@@ -50,6 +64,7 @@
                   guardbuff="MOB_TERRITORY_GUARD_BUFF_03"
                   yieldbonus="0.07"
                   pointboostermultiplier="2.50"
+                  dailyconversionbonus="0.0075"				  
                   enchantedresourcemultiplier="1.3"/>
       <towerlevel level="5"
                   powerpointspool="49419"
@@ -57,6 +72,7 @@
                   guardbuff="MOB_TERRITORY_GUARD_BUFF_04"
                   yieldbonus="0.10"
                   pointboostermultiplier="3.30"
+                  dailyconversionbonus="0.01"				  
                   enchantedresourcemultiplier="1.4"/>
       <towerlevel level="6"
                   powerpointspool="71384"
@@ -64,6 +80,7 @@
                   guardbuff="MOB_TERRITORY_GUARD_BUFF_05"
                   yieldbonus="0.12"
                   pointboostermultiplier="4.50"
+                  dailyconversionbonus="0.0125"				  
                   enchantedresourcemultiplier="1.6"/>
       <towerlevel level="7"
                   powerpointspool="102079"
@@ -71,6 +88,7 @@
                   guardbuff="MOB_TERRITORY_GUARD_BUFF_06"
                   yieldbonus="0.15"
                   pointboostermultiplier="6.00"
+                  dailyconversionbonus="0.015"				  
                   enchantedresourcemultiplier="1.8"/>
       <towerlevel level="8"
                   powerpointspool="144766"
@@ -78,35 +96,36 @@
                   guardbuff="MOB_TERRITORY_GUARD_BUFF_07"
                   yieldbonus="0.20"
                   pointboostermultiplier="7.50"
+                  dailyconversionbonus="0.0175"				  
                   enchantedresourcemultiplier="2.0"/>
     </crystalleague>
 
     <PointBoosterSettings
       baseratemultiplier="0"
       totalpointboosterratebonus="1"
-      pointboostertokendroprate="0.9"
+      pointboostertokendroprate="0.5"
       pointboosterpointsdroprate="0"
       pointboosterpointsdropratetokenless="0"
       earlyspawntoken="GVGTOKEN_GENERIC"
-      earlyspawntokenrate="1">
+      earlyspawntokenrate="1"
+      boosternonprimetimeprotectionspell="MOB_WATCHTOWER_COLLECTER_PROTECTION">
       <!-- 
       pointboosterpointsdropratetokenless = Season Points the ´guild gets on 
       pointboosterpointsdropratetokenless="0.225" means that 90% of the dropped Season Points are transferred directly to the guild. 22.5% times 4 (for each mage slot) -->
       <!--if "boosterpresent" boosters present then spawn next one in "spawndelayseconds" -->
-      <SpawnSettings boosterpresent="3" spawndelayseconds="43200"/>
-      <SpawnSettings boosterpresent="2" spawndelayseconds="21600"/>
-      <SpawnSettings boosterpresent="1" spawndelayseconds="14400"/>
-      <SpawnSettings boosterpresent="0" spawndelayseconds="10800"/>
+      <SpawnSettings boosterpresent="3" spawndelayseconds="86400"/>
+      <SpawnSettings boosterpresent="2" spawndelayseconds="43200"/>
+      <SpawnSettings boosterpresent="1" spawndelayseconds="28800"/>
+      <SpawnSettings boosterpresent="0" spawndelayseconds="21600"/>
     </PointBoosterSettings>
     <Tower engageattackrange="20.0" disengageattackrange="25.0" attackinterval="0.5" attackdamage="0.05" attackdistancedelay="24.0">
       <FriendlyFX beam="FX/ClientPrefabs/fx_beam_lightning_tower_blue_01" impact="" />
       <HostileFX beam="FX/ClientPrefabs/fx_beam_lightning_tower_red_01" impact=""/>
     </Tower>
-    <GuardSettings respawntimeseconds="1200" />
+    <GuardSettings respawntimeseconds="3600" />
 
     <OpenWorldAttackSettings
-        GuardCommanderRespawninsec="1200"
-        AttackSilverCost="2000000"
+        GuardCommanderRespawninsec="3600"
         AttackDeclarationChannelTimeinsec="10"
         ConquerChannelTimeinsec="30"
         DamageCancelsDeclarationChannel="false"
@@ -116,6 +135,93 @@
         BattleTimeinsec="1800"
     />
 
+    <AttackCosts>
+      <ClusterType name="OPENPVP_BLACK_1">
+        <Tower level="1" silver="1000000" />
+        <Tower level="2" silver="1140000" />
+        <Tower level="3" silver="1320000" />
+        <Tower level="4" silver="1600000" />
+        <Tower level="5" silver="1920000" />
+        <Tower level="6" silver="2400000" />
+        <Tower level="7" silver="3000000" />
+        <Tower level="8" silver="3600000" />
+      </ClusterType>
+
+      <ClusterType name="OPENPVP_BLACK_2">
+        <Tower level="1" silver="1200000" />
+        <Tower level="2" silver="1420000" />
+        <Tower level="3" silver="1680000" />
+        <Tower level="4" silver="2100000" />
+        <Tower level="5" silver="2580000" />
+        <Tower level="6" silver="3300000" />
+        <Tower level="7" silver="4200000" />
+        <Tower level="8" silver="5100000" />
+      </ClusterType>
+
+      <ClusterType name="OPENPVP_BLACK_3">
+        <Tower level="1" silver="1400000" />
+        <Tower level="2" silver="1680000" />
+        <Tower level="3" silver="2040000" />
+        <Tower level="4" silver="2600000" />
+        <Tower level="5" silver="3240000" />
+        <Tower level="6" silver="4200000" />
+        <Tower level="7" silver="5400000" />
+        <Tower level="8" silver="6600000" />
+      </ClusterType>
+
+      <ClusterType name="OPENPVP_BLACK_4">
+        <Tower level="1" silver="1800000" />
+        <Tower level="2" silver="2220000" />
+        <Tower level="3" silver="2760000" />
+        <Tower level="4" silver="3600000" />
+        <Tower level="5" silver="4560000" />
+        <Tower level="6" silver="6000000" />
+        <Tower level="7" silver="7800000" />
+        <Tower level="8" silver="9600000" />
+      </ClusterType>
+
+      <ClusterType name="OPENPVP_BLACK_5">
+        <Tower level="1" silver="2400000" />
+        <Tower level="2" silver="3040000" />
+        <Tower level="3" silver="3840000" />
+        <Tower level="4" silver="5100000" />
+        <Tower level="5" silver="6540000" />
+        <Tower level="6" silver="8700000" />
+        <Tower level="7" silver="11400000" />
+        <Tower level="8" silver="14100000" />
+      </ClusterType>
+
+      <ClusterType name="OPENPVP_BLACK_6">
+        <Tower level="1" silver="3000000" />
+        <Tower level="2" silver="3840000" />
+        <Tower level="3" silver="4920000" />
+        <Tower level="4" silver="6600000" />
+        <Tower level="5" silver="8520000" />
+        <Tower level="6" silver="11400000" />
+        <Tower level="7" silver="15000000" />
+        <Tower level="8" silver="18600000" />
+      </ClusterType>
+
+      <ClusterType name="OPENPVP_BLACK_DEBUG">
+        <Tower level="1" silver="3000000" />
+        <Tower level="2" silver="3840000" />
+        <Tower level="3" silver="4920000" />
+        <Tower level="4" silver="6600000" />
+        <Tower level="5" silver="8520000" />
+        <Tower level="6" silver="11400000" />
+        <Tower level="7" silver="15000000" />
+        <Tower level="8" silver="18600000" />
+      </ClusterType>
+    </AttackCosts>
+    
+    <TerritoryRaidSettings raidchanneltimeinsec="15" raidchannelvfxspell="RAW_ENERGY_CHANNELVFX_TERRITORY">
+      <EnergyCores>
+        <EnergyCore powercrystaltype="TERRITORY_RAW_ENERGY_CORE" rarity="0" minenergyforrarity="0" />
+        <EnergyCore powercrystaltype="TERRITORY_RAW_ENERGY_CORE" rarity="1" minenergyforrarity="100" />
+        <EnergyCore powercrystaltype="TERRITORY_RAW_ENERGY_CORE" rarity="2" minenergyforrarity="250" />
+      </EnergyCores>
+    </TerritoryRaidSettings>
+    
     <!-- Red:B1:B2:B3 == 1:4:6:8; lowest has to be 86400/pointboosterspawndelayseconds/min(pointboostertokendroprate,pointboostertokendroprate) so you get at least 1 point/token when raiding -->
     <PointsSettings>
       <!--base points for territory ownership-->
@@ -128,38 +234,22 @@
         <ClusterTier tier="8" points="40" />
       </PointsValues>
       <PointsValues clustertype="OPENPVP_BLACK_2">
-        <ClusterTier tier="3" points="56" />
-        <ClusterTier tier="4" points="56" />
-        <ClusterTier tier="5" points="56" />
-        <ClusterTier tier="6" points="56" />
-        <ClusterTier tier="7" points="56" />
-        <ClusterTier tier="8" points="56" />
+        <ClusterTier tier="3" points="60" />
+        <ClusterTier tier="4" points="60" />
+        <ClusterTier tier="5" points="60" />
+        <ClusterTier tier="6" points="60" />
+        <ClusterTier tier="7" points="60" />
+        <ClusterTier tier="8" points="60" />
       </PointsValues>
       <PointsValues clustertype="OPENPVP_BLACK_3">
-        <ClusterTier tier="3" points="72" />
-        <ClusterTier tier="4" points="72" />
-        <ClusterTier tier="5" points="72" />
-        <ClusterTier tier="6" points="72" />
-        <ClusterTier tier="7" points="72" />
-        <ClusterTier tier="8" points="72" />
+        <ClusterTier tier="3" points="80" />
+        <ClusterTier tier="4" points="80" />
+        <ClusterTier tier="5" points="80" />
+        <ClusterTier tier="6" points="80" />
+        <ClusterTier tier="7" points="80" />
+        <ClusterTier tier="8" points="80" />
       </PointsValues>
       <PointsValues clustertype="OPENPVP_BLACK_4">
-        <ClusterTier tier="3" points="88" />
-        <ClusterTier tier="4" points="88" />
-        <ClusterTier tier="5" points="88" />
-        <ClusterTier tier="6" points="88" />
-        <ClusterTier tier="7" points="88" />
-        <ClusterTier tier="8" points="88" />
-      </PointsValues>
-      <PointsValues clustertype="OPENPVP_BLACK_5">
-        <ClusterTier tier="3" points="104" />
-        <ClusterTier tier="4" points="104" />
-        <ClusterTier tier="5" points="104" />
-        <ClusterTier tier="6" points="104" />
-        <ClusterTier tier="7" points="104" />
-        <ClusterTier tier="8" points="104" />
-      </PointsValues>
-      <PointsValues clustertype="OPENPVP_BLACK_6">
         <ClusterTier tier="3" points="120" />
         <ClusterTier tier="4" points="120" />
         <ClusterTier tier="5" points="120" />
@@ -167,15 +257,39 @@
         <ClusterTier tier="7" points="120" />
         <ClusterTier tier="8" points="120" />
       </PointsValues>
+      <PointsValues clustertype="OPENPVP_BLACK_5">
+        <ClusterTier tier="3" points="180" />
+        <ClusterTier tier="4" points="180" />
+        <ClusterTier tier="5" points="180" />
+        <ClusterTier tier="6" points="180" />
+        <ClusterTier tier="7" points="180" />
+        <ClusterTier tier="8" points="180" />
+      </PointsValues>
+      <PointsValues clustertype="OPENPVP_BLACK_6">
+        <ClusterTier tier="3" points="240" />
+        <ClusterTier tier="4" points="240" />
+        <ClusterTier tier="5" points="240" />
+        <ClusterTier tier="6" points="240" />
+        <ClusterTier tier="7" points="240" />
+        <ClusterTier tier="8" points="240" />
+      </PointsValues>
     </PointsSettings>
-    <TerritoryStorage raidonconquer="0.2" destructiononconquer="0.2" destructionongiveup="0.2">
-      <Storage clustertype="OPENPVP_BLACK_1" upkeep="0"/>
-      <Storage clustertype="OPENPVP_BLACK_2" upkeep="0"/>
-      <Storage clustertype="OPENPVP_BLACK_3" upkeep="0.1"/>
-      <Storage clustertype="OPENPVP_BLACK_4" upkeep="0.2"/>
-      <Storage clustertype="OPENPVP_BLACK_5" upkeep="0.3"/>
-      <Storage clustertype="OPENPVP_BLACK_6" upkeep="0.35"/>
+
+    <TerritoryStorage raidonconquer="0" destructiononconquer="0" destructionongiveup="0">
+      <WorldmapStorageEffectMappings>
+        <Mapping energystorageupwardsof="0" worldmapresourceindex="-1"/> <!-- -1 means no extra prefab will be shown -->
+        <Mapping energystorageupwardsof="2000" worldmapresourceindex="0"/>
+        <Mapping energystorageupwardsof="5000" worldmapresourceindex="1"/>
+      </WorldmapStorageEffectMappings>
+      <Storage clustertype="OPENPVP_BLACK_1" upkeep="0.5" raidsteal="0.5" raiddestruction="0.01" raidedcorelifetimemins="30" dailyconversion="0.07" dailyconversionmax="500" storagefilleventenergyamount="300"/>
+      <Storage clustertype="OPENPVP_BLACK_2" upkeep="0.5" raidsteal="0.5" raiddestruction="0.01" raidedcorelifetimemins="30" dailyconversion="0.08" dailyconversionmax="700" storagefilleventenergyamount="350"/>
+      <Storage clustertype="OPENPVP_BLACK_3" upkeep="0.5" raidsteal="0.5" raiddestruction="0.01" raidedcorelifetimemins="30" dailyconversion="0.09" dailyconversionmax="900" storagefilleventenergyamount="450"/>
+      <Storage clustertype="OPENPVP_BLACK_4" upkeep="0.5" raidsteal="0.5" raiddestruction="0.01" raidedcorelifetimemins="30" dailyconversion="0.1" dailyconversionmax="1400" storagefilleventenergyamount="600"/>
+      <Storage clustertype="OPENPVP_BLACK_5" upkeep="0.5" raidsteal="0.5" raiddestruction="0.01" raidedcorelifetimemins="30" dailyconversion="0.11" dailyconversionmax="2000" storagefilleventenergyamount="800"/>
+      <Storage clustertype="OPENPVP_BLACK_6" upkeep="0.5" raidsteal="0.5" raiddestruction="0.01" raidedcorelifetimemins="30" dailyconversion="0.12" dailyconversionmax="3000" storagefilleventenergyamount="1000"/>
+      <Storage clustertype="DEBUG_BLACK"     upkeep="0.5" raidsteal="0.5" raiddestruction="0.01" raidedcorelifetimemins="30" dailyconversion="0.12" dailyconversionmax="3000" storagefilleventenergyamount="1000"/>
     </TerritoryStorage>
+
   </territorytype>
 </territorytypes>
 
