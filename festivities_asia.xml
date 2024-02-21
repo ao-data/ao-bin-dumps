@@ -4,6 +4,11 @@
   <!-- mail local needs to be @<ID>_SUBJECT and @<ID>_TEXT -->
   <!-- From now on please add new events at the top of this file. -->
   <fixedevents>
+    <event uniquename="EASTER2024" title="@ACTIVITY_HUB_EASTER_TITLE" description="@FIXED_EVENT_EASTER_DESC" image="activities_event_easter_2023" showinactivityboard="true">
+      <activeflag name="easter" />
+      <activeflag name="res_easter" />
+      <buff spell="FAMEBONUS35" />
+    </event>
     <event uniquename="XMAS2023" title="@FIXED_EVENT_XMAS_2022" description="@FIXED_EVENT_XMAS_2022_DESC" image="activities_event_xmas" showinactivityboard="true">
       <activeflag name="christmas" />
       <mail mailid="MAIL_XMAS_2023" sender="Albion Online">
@@ -208,15 +213,12 @@
       </infos>
       <fixedlootlist title="@ACTIVITY_HUB_ANNIVERSARY_LOOT" lootlistref="EVENT_ANNIVERSARY_2022_LOOT" visibleitems="4" />
     </verticalimagetemplate>
-    <verticalimagetemplate eventref="EASTER2023" title="@ACTIVITY_HUB_EASTER_TITLE" description="@ACTIVITY_HUB_EASTER_DESCRIPTION" image="activities_event_easter_2023_vertical" tabicon="icon_tab_festivities">
+    <verticalimagetemplate eventref="EASTER2024" title="@ACTIVITY_HUB_EASTER_TITLE" description="@ACTIVITY_HUB_EASTER_DESCRIPTION" image="activities_event_easter_2023_vertical" tabicon="icon_tab_festivities">
       <infos>
         <info avatarring="RING_MOB_STANDARD" avatar="EVENTEASTERCHEST1" text="@ACTIVITY_HUB_EASTER_INFO_1" />
         <info avatarring="RING_MOB_STANDARD" avatar="NPC_VANITY_STORE" text="@ACTIVITY_HUB_EASTER_INFO_2" />
         <info avatarring="RING_MOB_STANDARD" avatar="EASTEREGG1" text="@ACTIVITY_HUB_EASTER_INFO_3" />
       </infos>
-      <!-- EVENT_EASTER_2023_LOOT does not exists yet
-            <fixedlootlist title="@ACTIVITY_HUB_ANNIVERSARY_LOOT" lootlistref="EVENT_EASTER_2023_LOOT" visibleitems="4" /> 
-            -->
       <lootlist title="@ACTIVITY_HUB_ANNIVERSARY_LOOT">
         <item uniquename="UNIQUE_CONSUMABLE_EVENT_EASTER_2020_EGG" />
         <item uniquename="UNIQUE_CONSUMABLE_EVENT_EASTER_2020_CHOCOLATE" />
