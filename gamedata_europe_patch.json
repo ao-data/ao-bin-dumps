@@ -1,0 +1,59 @@
+{
+  "?xml": {
+    "@version": "1.0",
+    "@encoding": "utf-8"
+  },
+  "patch": {
+    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+    "@xsi:noNamespaceSchemaLocation": "patch.xsd",
+    "replace": [
+      {
+        "@sel": "AO-GameData/ServerSettings/RealEstateAuctionSettings",
+        "attribute": {
+          "@name": "auctioncyclereferencetimestamp",
+          "@newvalue": "2024-01-29T12:00"
+        }
+      },
+      {
+        "@sel": "AO-GameData/Expedition/ExpeditionBonusRewardTimer/ResetTimer",
+        "attribute": {
+          "@name": "utctime",
+          "@newvalue": "10:00"
+        }
+      },
+      {
+        "@sel": "AO-GameData/TerritoryBlockClaiming/clustergroup[@enddate='2020-02-01T18:00:00Z']",
+        "attribute": [
+          {
+            "@name": "startdate",
+            "@newvalue": "2024-04-03T10:00:00Z"
+          },
+          {
+            "@name": "enddate",
+            "@newvalue": "2024-04-06T18:00:00Z"
+          }
+        ]
+      }
+    ],
+    "remove": [
+      {
+        "@sel": "AO-GameData/MarketPriceEstimation/contributingmarket[@id=1002]"
+      },
+      {
+        "@sel": "AO-GameData/MarketPriceEstimation/contributingmarket[@id=4002]"
+      },
+      {
+        "@sel": "AO-GameData/MarketPriceEstimation/contributingmarket[@id=0007]"
+      },
+      {
+        "@sel": "AO-GameData/MarketPriceEstimation/contributingmarket[@id=0004]"
+      },
+      {
+        "@sel": "AO-GameData/MarketPriceEstimation/contributingmarket[@id=1006]"
+      },
+      {
+        "@sel": "AO-GameData/MarketPriceEstimation/contributingmarket[@id=4006]"
+      }
+    ]
+  }
+}

@@ -1175,7 +1175,7 @@
     <seasontimes>
       <day number="1">
         <eventtime utctime="00:00:00Z">
-		  <territorystoragefill />
+		      <territorystoragefill />
           <territoriesunclaimable />
           <resetterritories />
           <territorybattleend />
@@ -1308,46 +1308,44 @@
         </eventtime>
       </day>
       <day number="85">
-		<eventtime utctime="00:00:01Z" calculateusingclustertimezone="true">
-		  <territorybattleend />
-	      <territoryraidend />
-		  <territoryscoringend />
-		</eventtime>
-		<eventtime utctime="11:00:00Z">
-		  <territoriesunclaimable />
-		  <resetterritories />
+		    <eventtime utctime="00:00:01Z" calculateusingclustertimezone="true">
+		      <territorybattleend />
+	        <territoryraidend />
+		      <territoryscoringend />
+		    </eventtime>
+		    <eventtime utctime="00:00:00Z">
+		      <territoriesunclaimable />
+		      <resetterritories />
           <territorystoragepayoutonclaimstart />
-		  <disable_portalbindingremoval />
-		</eventtime>
-		<eventtime utctime="18:00:00Z">
-		  <clusterfilter>
-			<timeregion name="RU_ASIA_12_00" />
-			<timeregion name="RU_15_00" />
-			<timeregion name="EU_RU_18_00" />
-			<timeregion name="EU_21_00" />
-		  </clusterfilter>
-		  <spawninvader />
-		  <!-- Should run until downtime -->
-		  <territoriesclaimable claimlimitoverrideminutes="960" />
-		</eventtime>
-	  </day>
-	  <day number="86">
-		<eventtime utctime="01:00:00Z">
-		  <clusterfilter>
-		    <timeregion name="BR_00_00" />
-			<timeregion name="US_03_00" />
-			<timeregion name="US_05_00" />
-		  </clusterfilter>
-		  <spawninvader />
-		  <!-- Should run until downtime -->
-		  <territoriesclaimable claimlimitoverrideminutes="540" />
-		</eventtime>
-	  </day>
-	  <day number="86">
-		<eventtime utctime="23:59:00Z">
-          <territorystoragepayoutonclaimend />
-		</eventtime>
-	  </day>	
+		      <disable_portalbindingremoval />
+		    </eventtime>
+		           
+	    <eventtime utctime="08:00:00Z">
+          <clusterfilter>
+            <timeregion name="US_05_00" />
+            <timeregion name="RU_ASIA_12_00" />
+            <timeregion name="RU_15_00" />
+            <timeregion name="EU_RU_18_00" />
+          </clusterfilter>
+          <spawninvader />
+          <territoriesclaimable claimlimitoverrideminutes="900" />
+        </eventtime>       
+	    <eventtime utctime="14:00:00Z">
+          <clusterfilter>
+            <timeregion name="EU_21_00" />
+            <timeregion name="BR_00_00" />
+            <timeregion name="US_03_00" />
+          </clusterfilter>
+          <spawninvader />
+          <territoriesclaimable claimlimitoverrideminutes="540" />
+        </eventtime>
+	    </day>
+	    <day number="86">
+		    
+		    <eventtime utctime="23:59:00Z">
+            <territorystoragepayoutonclaimend />
+		    </eventtime>
+	    </day>	
     </seasontimes>	  
   </season>
 
