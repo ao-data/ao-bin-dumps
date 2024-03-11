@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<patch xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="patch.xsd">
+
+	<remove sel="AO-WorldSettings/timeregions" />
+
+	<add sel="AO-WorldSettings/worldmap" before="true">
+		<![CDATA[
+    <timeregions primetimeduration="1:00">
+        <!-- Europe Time Regions-->
+		<!-- UI Lists in Reverse Order -->
+		<timeregion name="US_00_00" starttime="22:00" timezone="-2" worldmapvisible="true" worldmapcolor="6b2c51b2" />
+		<timeregion name="US_22_00" starttime="20:00" timezone="0" worldmapvisible="true" worldmapcolor="324e67b2" />
+		<timeregion name="US_20_00" starttime="18:00" timezone="+2" worldmapvisible="true" worldmapcolor="43622db2" />
+		<timeregion name="US_18_00" starttime="16:00" timezone="+4" worldmapvisible="true" worldmapcolor="f0b53db2" />
+		<timeregion name="US_04_00" starttime="14:00" timezone="+6" worldmapvisible="true" worldmapcolor="bb5a18b2" />
+		<timeregion name="US_02_00" starttime="12:00" timezone="+8" worldmapvisible="true" worldmapcolor="941e1bb2" />
+
+		<timeregion name="NOT_USED" starttime="20:00" timezone="0" />
+		
+		<!-- LEGACY DATA -->
+		
+	    <!-- Other Prime Time Slots - currently not used anymore-->
+		<timeregion name="US_01_00" starttime="01:00" timezone="-5" />
+		<timeregion name="RU_ASIA_13_00" starttime="13:00" timezone="+7" />
+		<timeregion name="RU_14_00" starttime="14:00" timezone="+6" />
+		<timeregion name="RU_16_00" starttime="16:00" timezone="+4" />
+		<timeregion name="RU_17_00" starttime="17:00" timezone="+3" />
+		<timeregion name="EU_19_00" starttime="19:00" timezone="+1" />
+		<timeregion name="EU_20_00" starttime="20:00" timezone="0" />
+		<timeregion name="BR_22_00" starttime="22:00" timezone="-2" />
+		<timeregion name="BR_23_00" starttime="23:00" timezone="-3" />
+
+		<!--Can be removed probably-->
+		<timeregion name="AMERICA_EAST" starttime="12:00" timezone="+8" />
+		<timeregion name="AMERICA_WEST" starttime="14:00" timezone="+5" />
+		<timeregion name="EU" starttime="16:00" timezone="0" />
+		<timeregion name="RUSSIA" starttime="18:00" timezone="+3" />
+    </timeregions>
+    ]]>
+	</add>
+
+  <replace sel="AO-WorldSettings/clustertypes/clustertype[@name='SAFEAREA']/resourcespawns/resourcetier[@tier='2']">
+    <attribute name="timefactor" newvalue="0.35"/>
+  </replace>
+  <replace sel="AO-WorldSettings/clustertypes/clustertype[@name='SAFEAREA']/resourcespawns/resourcetier[@tier='3']">
+    <attribute name="timefactor" newvalue="0.17"/>
+  </replace>
+  <replace sel="AO-WorldSettings/clustertypes/clustertype[@name='SAFEAREA']/resourcespawns/resourcetier[@tier='4']">
+    <attribute name="timefactor" newvalue="0.13"/>
+  </replace>
+  <replace sel="AO-WorldSettings/clustertypes/clustertype[@name='SAFEAREA']/mobspawns/mobspawn[@name='MOB_FOX']">
+    <attribute name="timefactor" newvalue="0.35"/>
+  </replace>
+  <replace sel="AO-WorldSettings/clustertypes/clustertype[@name='SAFEAREA']/mobspawns/mobspawn[@name='T2_MOB_HIDE_SWAMP_SNAKE']">
+    <attribute name="timefactor" newvalue="0.35"/>
+  </replace>
+  <replace sel="AO-WorldSettings/clustertypes/clustertype[@name='SAFEAREA']/mobspawns/mobspawn[@name='T2_MOB_HIDE_STEPPE_IMPALA']">
+    <attribute name="timefactor" newvalue="0.35"/>
+  </replace>
+  <replace sel="AO-WorldSettings/clustertypes/clustertype[@name='SAFEAREA']/mobspawns/mobspawn[@name='MOB_WOLF']">
+    <attribute name="timefactor" newvalue="0.17"/>
+  </replace>
+  <replace sel="AO-WorldSettings/clustertypes/clustertype[@name='SAFEAREA']/mobspawns/mobspawn[@name='T3_MOB_HIDE_SWAMP_GIANTTOAD']">
+    <attribute name="timefactor" newvalue="0.17"/>
+  </replace>
+  <replace sel="AO-WorldSettings/clustertypes/clustertype[@name='SAFEAREA']/mobspawns/mobspawn[@name='T3_MOB_HIDE_STEPPE_MOABIRD']">
+    <attribute name="timefactor" newvalue="0.17"/>
+  </replace>
+  <replace sel="AO-WorldSettings/clustertypes/clustertype[@name='SAFEAREA']/mobspawns/mobspawn[@name='T3_MOB_CRITTER_FIBER']">
+    <attribute name="timefactor" newvalue="0.17"/>
+  </replace>
+  <replace sel="AO-WorldSettings/clustertypes/clustertype[@name='SAFEAREA']/mobspawns/mobspawn[@name='T3_MOB_CRITTER_HIDE_COUGAR']">
+    <attribute name="timefactor" newvalue="0.17"/>
+  </replace>
+  <replace sel="AO-WorldSettings/clustertypes/clustertype[@name='SAFEAREA']/mobspawns/mobspawn[@name='T3_MOB_CRITTER_ORE_MOUNTAIN_GREEN']">
+    <attribute name="timefactor" newvalue="0.17"/>
+  </replace>
+  <replace sel="AO-WorldSettings/clustertypes/clustertype[@name='SAFEAREA']/mobspawns/mobspawn[@name='T3_MOB_CRITTER_ORE_MOUNTAIN_RED']">
+    <attribute name="timefactor" newvalue="0.17"/>
+  </replace>
+  <replace sel="AO-WorldSettings/clustertypes/clustertype[@name='SAFEAREA']/mobspawns/mobspawn[@name='T3_MOB_CRITTER_WOOD_FOREST_GREEN']">
+    <attribute name="timefactor" newvalue="0.17"/>
+  </replace>
+  <replace sel="AO-WorldSettings/clustertypes/clustertype[@name='SAFEAREA']/mobspawns/mobspawn[@name='T3_MOB_CRITTER_WOOD_FOREST_RED']">
+    <attribute name="timefactor" newvalue="0.17"/>
+  </replace>
+  <replace sel="AO-WorldSettings/clustertypes/clustertype[@name='SAFEAREA']/mobspawns/mobspawn[@name='T3_MOB_CRITTER_ROCK_HIGHLAND_GREEN']">
+    <attribute name="timefactor" newvalue="0.17"/>
+  </replace>
+  <replace sel="AO-WorldSettings/clustertypes/clustertype[@name='SAFEAREA']/mobspawns/mobspawn[@name='T3_MOB_CRITTER_ROCK_HIGHLAND_RED']">
+    <attribute name="timefactor" newvalue="0.17"/>
+  </replace>
+  <replace sel="AO-WorldSettings/clustertypes/clustertype[@name='SAFEAREA']/mobspawns/mobspawn[@name='MOB_BOAR']">
+    <attribute name="timefactor" newvalue="0.15"/>
+  </replace>
+  <replace sel="AO-WorldSettings/clustertypes/clustertype[@name='SAFEAREA']/mobspawns/mobspawn[@name='T4_MOB_HIDE_SWAMP_MONITORLIZARD']">
+    <attribute name="timefactor" newvalue="0.15"/>
+  </replace>
+  <replace sel="AO-WorldSettings/clustertypes/clustertype[@name='SAFEAREA']/mobspawns/mobspawn[@name='T4_MOB_HIDE_STEPPE_GIANTSTAG']">
+    <attribute name="timefactor" newvalue="0.15"/>
+  </replace>
+
+  <replace sel="AO-WorldSettings/clustertypes/clustertype[@name='OPENPVP_YELLOW']/resourcespawns/resourcetier[@tier='2']">
+    <attribute name="timefactor" newvalue="0.35"/>
+  </replace>
+  <replace sel="AO-WorldSettings/clustertypes/clustertype[@name='OPENPVP_YELLOW']/resourcespawns/resourcetier[@tier='3']">
+    <attribute name="timefactor" newvalue="0.17"/>
+  </replace>
+  <replace sel="AO-WorldSettings/clustertypes/clustertype[@name='OPENPVP_YELLOW']/resourcespawns/resourcetier[@tier='4']">
+    <attribute name="timefactor" newvalue="0.13"/>
+  </replace>
+  <replace sel="AO-WorldSettings/clustertypes/clustertype[@name='OPENPVP_YELLOW']/resourcespawns/resourcetier[@tier='5']">
+    <attribute name="timefactor" newvalue="0.17"/>
+  </replace>
+  <replace sel="AO-WorldSettings/clustertypes/clustertype[@name='OPENPVP_YELLOW']/mobspawns/mobspawn[@name='MOB_FOX']">
+    <attribute name="timefactor" newvalue="0.35"/>
+  </replace>
+  <replace sel="AO-WorldSettings/clustertypes/clustertype[@name='OPENPVP_YELLOW']/mobspawns/mobspawn[@name='T2_MOB_HIDE_SWAMP_SNAKE']">
+    <attribute name="timefactor" newvalue="0.35"/>
+  </replace>
+  <replace sel="AO-WorldSettings/clustertypes/clustertype[@name='OPENPVP_YELLOW']/mobspawns/mobspawn[@name='T2_MOB_HIDE_STEPPE_IMPALA']">
+    <attribute name="timefactor" newvalue="0.35"/>
+  </replace>
+  <replace sel="AO-WorldSettings/clustertypes/clustertype[@name='OPENPVP_YELLOW']/mobspawns/mobspawn[@name='MOB_WOLF']">
+    <attribute name="timefactor" newvalue="0.17"/>
+  </replace>
+  <replace sel="AO-WorldSettings/clustertypes/clustertype[@name='OPENPVP_YELLOW']/mobspawns/mobspawn[@name='T3_MOB_HIDE_SWAMP_GIANTTOAD']">
+    <attribute name="timefactor" newvalue="0.17"/>
+  </replace>
+  <replace sel="AO-WorldSettings/clustertypes/clustertype[@name='OPENPVP_YELLOW']/mobspawns/mobspawn[@name='T3_MOB_HIDE_STEPPE_MOABIRD']">
+    <attribute name="timefactor" newvalue="0.17"/>
+  </replace>
+  <replace sel="AO-WorldSettings/clustertypes/clustertype[@name='OPENPVP_YELLOW']/mobspawns/mobspawn[@name='T3_MOB_CRITTER_FIBER']">
+    <attribute name="timefactor" newvalue="0.17"/>
+  </replace>
+  <replace sel="AO-WorldSettings/clustertypes/clustertype[@name='OPENPVP_YELLOW']/mobspawns/mobspawn[@name='T3_MOB_CRITTER_HIDE_COUGAR']">
+    <attribute name="timefactor" newvalue="0.17"/>
+  </replace>
+  <replace sel="AO-WorldSettings/clustertypes/clustertype[@name='OPENPVP_YELLOW']/mobspawns/mobspawn[@name='T3_MOB_CRITTER_ORE_MOUNTAIN_GREEN']">
+    <attribute name="timefactor" newvalue="0.17"/>
+  </replace>
+  <replace sel="AO-WorldSettings/clustertypes/clustertype[@name='OPENPVP_YELLOW']/mobspawns/mobspawn[@name='T3_MOB_CRITTER_ORE_MOUNTAIN_RED']">
+    <attribute name="timefactor" newvalue="0.17"/>
+  </replace>
+  <replace sel="AO-WorldSettings/clustertypes/clustertype[@name='OPENPVP_YELLOW']/mobspawns/mobspawn[@name='T3_MOB_CRITTER_WOOD_FOREST_GREEN']">
+    <attribute name="timefactor" newvalue="0.17"/>
+  </replace>
+  <replace sel="AO-WorldSettings/clustertypes/clustertype[@name='OPENPVP_YELLOW']/mobspawns/mobspawn[@name='T3_MOB_CRITTER_WOOD_FOREST_RED']">
+    <attribute name="timefactor" newvalue="0.17"/>
+  </replace>
+  <replace sel="AO-WorldSettings/clustertypes/clustertype[@name='OPENPVP_YELLOW']/mobspawns/mobspawn[@name='T3_MOB_CRITTER_ROCK_HIGHLAND_GREEN']">
+    <attribute name="timefactor" newvalue="0.17"/>
+  </replace>
+  <replace sel="AO-WorldSettings/clustertypes/clustertype[@name='OPENPVP_YELLOW']/mobspawns/mobspawn[@name='T3_MOB_CRITTER_ROCK_HIGHLAND_RED']">
+    <attribute name="timefactor" newvalue="0.17"/>
+  </replace>
+  <replace sel="AO-WorldSettings/clustertypes/clustertype[@name='OPENPVP_YELLOW']/mobspawns/mobspawn[@name='MOB_BOAR']">
+    <attribute name="timefactor" newvalue="0.13"/>
+  </replace>
+  <replace sel="AO-WorldSettings/clustertypes/clustertype[@name='OPENPVP_YELLOW']/mobspawns/mobspawn[@name='T4_MOB_HIDE_SWAMP_MONITORLIZARD']">
+    <attribute name="timefactor" newvalue="0.13"/>
+  </replace>
+  <replace sel="AO-WorldSettings/clustertypes/clustertype[@name='OPENPVP_YELLOW']/mobspawns/mobspawn[@name='T4_MOB_HIDE_STEPPE_GIANTSTAG']">
+    <attribute name="timefactor" newvalue="0.13"/>
+  </replace>
+  <replace sel="AO-WorldSettings/clustertypes/clustertype[@name='OPENPVP_YELLOW']/mobspawns/mobspawn[@name='MOB_BEAR']">
+    <attribute name="timefactor" newvalue="0.17"/>
+  </replace>
+  <replace sel="AO-WorldSettings/clustertypes/clustertype[@name='OPENPVP_YELLOW']/mobspawns/mobspawn[@name='T5_MOB_HIDE_SWAMP_GIANTSNAKE']">
+    <attribute name="timefactor" newvalue="0.17"/>
+  </replace>
+  <replace sel="AO-WorldSettings/clustertypes/clustertype[@name='OPENPVP_YELLOW']/mobspawns/mobspawn[@name='T5_MOB_HIDE_STEPPE_TERRORBIRD']">
+    <attribute name="timefactor" newvalue="0.17"/>
+  </replace>
+  <replace sel="AO-WorldSettings/clustertypes/clustertype[@name='OPENPVP_YELLOW']/mobspawns/mobspawn[@name='T5_MOB_CRITTER_FIBER']">
+    <attribute name="timefactor" newvalue="0.17"/>
+  </replace>
+  <replace sel="AO-WorldSettings/clustertypes/clustertype[@name='OPENPVP_YELLOW']/mobspawns/mobspawn[@name='T5_MOB_CRITTER_HIDE_COUGAR']">
+    <attribute name="timefactor" newvalue="0.17"/>
+  </replace>
+  <replace sel="AO-WorldSettings/clustertypes/clustertype[@name='OPENPVP_YELLOW']/mobspawns/mobspawn[@name='T5_MOB_CRITTER_ORE_MOUNTAIN_RED']">
+    <attribute name="timefactor" newvalue="0.17"/>
+  </replace>
+  <replace sel="AO-WorldSettings/clustertypes/clustertype[@name='OPENPVP_YELLOW']/mobspawns/mobspawn[@name='T5_MOB_CRITTER_ORE_MOUNTAIN_DEAD']">
+    <attribute name="timefactor" newvalue="0.17"/>
+  </replace>
+  <replace sel="AO-WorldSettings/clustertypes/clustertype[@name='OPENPVP_YELLOW']/mobspawns/mobspawn[@name='T5_MOB_CRITTER_WOOD_FOREST_RED']">
+    <attribute name="timefactor" newvalue="0.17"/>
+  </replace>
+  <replace sel="AO-WorldSettings/clustertypes/clustertype[@name='OPENPVP_YELLOW']/mobspawns/mobspawn[@name='T5_MOB_CRITTER_WOOD_FOREST_DEAD']">
+    <attribute name="timefactor" newvalue="0.17"/>
+  </replace>
+  <replace sel="AO-WorldSettings/clustertypes/clustertype[@name='OPENPVP_YELLOW']/mobspawns/mobspawn[@name='T5_MOB_CRITTER_ROCK_HIGHLAND_RED']">
+    <attribute name="timefactor" newvalue="0.17"/>
+  </replace>
+  <replace sel="AO-WorldSettings/clustertypes/clustertype[@name='OPENPVP_YELLOW']/mobspawns/mobspawn[@name='T5_MOB_CRITTER_ROCK_HIGHLAND_DEAD']">
+    <attribute name="timefactor" newvalue="0.17"/>
+  </replace>
+
+</patch>

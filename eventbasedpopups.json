@@ -1166,47 +1166,6 @@
               ]
             }
           }
-        },
-        {
-          "@uniquename": "BETA_WELCOME",
-          "@priority": "100",
-          "@type": "GenericTutorial",
-          "categories": {
-            "category": [
-              {
-                "@name": "GenericTutorial"
-              },
-              {
-                "@name": "Announcements"
-              }
-            ]
-          },
-          "triggers": {
-            "trigger": [
-              {
-                "@action": "GameLogin"
-              },
-              {
-                "@action": "ClusterChange"
-              }
-            ]
-          },
-          "conditions": {
-            "and": {
-              "IsAsiaContext": null,
-              "IfValidDate": {
-                "@start": "2023-02-20T10:00:00Z",
-                "@end": "2023-03-13T10:00:00Z"
-              },
-              "IfHasSeenPopup": {
-                "@uniquename": "BETA_WELCOME",
-                "@frequency": "AllTime",
-                "@operation": "equals",
-                "@amount": "0",
-                "@targetfilter": "character"
-              }
-            }
-          }
         }
       ],
       "lootchestpopup": {
