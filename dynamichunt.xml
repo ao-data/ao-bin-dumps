@@ -30,6 +30,18 @@
       <target uniquename="HARVESTER_GROUP_T6" mobid="T6_MOB_TR_SILVER_UNDEAD_HARVESTER_VETERAN_BOSS" tracktileref="TRACK_SILVER_GROUP" minimapicon="tracking_target_silver_group" />
       <target uniquename="HARVESTER_GROUP_T7" mobid="T7_MOB_TR_SILVER_UNDEAD_HARVESTER_VETERAN_BOSS" tracktileref="TRACK_SILVER_GROUP" minimapicon="tracking_target_silver_group" />
       <target uniquename="HARVESTER_GROUP_T8" mobid="T8_MOB_TR_SILVER_UNDEAD_HARVESTER_VETERAN_BOSS" tracktileref="TRACK_SILVER_GROUP" minimapicon="tracking_target_silver_group" />
+
+      <!--Shadowmask-->
+      <target uniquename="SHADOWMASK_SOLO_T4"  mobid="T4_MOB_TR_SILVER_HERETIC_SHADOWMASK_BOSS"         tracktileref="TRACK_SILVER_SOLO"  minimapicon="tracking_target_silver_solo"/>
+      <target uniquename="SHADOWMASK_SOLO_T5"  mobid="T5_MOB_TR_SILVER_HERETIC_SHADOWMASK_BOSS"         tracktileref="TRACK_SILVER_SOLO"  minimapicon="tracking_target_silver_solo"/>
+      <target uniquename="SHADOWMASK_SOLO_T6"  mobid="T6_MOB_TR_SILVER_HERETIC_SHADOWMASK_BOSS"         tracktileref="TRACK_SILVER_SOLO"  minimapicon="tracking_target_silver_solo"/>
+      <target uniquename="SHADOWMASK_SOLO_T7"  mobid="T7_MOB_TR_SILVER_HERETIC_SHADOWMASK_BOSS"         tracktileref="TRACK_SILVER_SOLO"  minimapicon="tracking_target_silver_solo"/>
+      <target uniquename="SHADOWMASK_SOLO_T8"  mobid="T8_MOB_TR_SILVER_HERETIC_SHADOWMASK_BOSS"         tracktileref="TRACK_SILVER_SOLO"  minimapicon="tracking_target_silver_solo"/>
+      <target uniquename="SHADOWMASK_GROUP_T4" mobid="T4_MOB_TR_SILVER_HERETIC_SHADOWMASK_VETERAN_BOSS" tracktileref="TRACK_SILVER_GROUP" minimapicon="tracking_target_silver_group" />
+      <target uniquename="SHADOWMASK_GROUP_T5" mobid="T5_MOB_TR_SILVER_HERETIC_SHADOWMASK_VETERAN_BOSS" tracktileref="TRACK_SILVER_GROUP" minimapicon="tracking_target_silver_group" />
+      <target uniquename="SHADOWMASK_GROUP_T6" mobid="T6_MOB_TR_SILVER_HERETIC_SHADOWMASK_VETERAN_BOSS" tracktileref="TRACK_SILVER_GROUP" minimapicon="tracking_target_silver_group" />
+      <target uniquename="SHADOWMASK_GROUP_T7" mobid="T7_MOB_TR_SILVER_HERETIC_SHADOWMASK_VETERAN_BOSS" tracktileref="TRACK_SILVER_GROUP" minimapicon="tracking_target_silver_group" />
+      <target uniquename="SHADOWMASK_GROUP_T8" mobid="T8_MOB_TR_SILVER_HERETIC_SHADOWMASK_VETERAN_BOSS" tracktileref="TRACK_SILVER_GROUP" minimapicon="tracking_target_silver_group" />
     </category>
     
     <!--Artefact and Ingredient Targets-->
@@ -3824,7 +3836,7 @@
         <dynamictreasurespot name="LOCATION" filterbylocationhistoryvariable="LOCATION_HISTORY">
           <distancetocluster mindistance="0" maxdistance="0" />
         </dynamictreasurespot>        
-        <mob name="MOB" mobtypevariable="HUNT_TARGET" locationvariable="LOCATION" escapeonthreatcount="4" escapeonplayersinproximity="8" overrideaggrodelay="0.1" escapeaftertimeincombat="60"/>        
+        <mob name="MOB" mobtypevariable="HUNT_TARGET" locationvariable="LOCATION" escapeonthreatcount="4" escapeonplayersinproximity="8" overrideaggrodelay="0.1" escapeaftertimeincombat="60" escapeafterfirstengagein="120"/>        
         <locationmarker name="LOCATION_MARKER_MINIMAP" locationvariable="LOCATION" radius="80" offsetmin="20" offsetmax="60"/>
         <locationmarker name="LOCATION_MARKER_TRIGGER" locationvariable="LOCATION" radius="30"/>
         <locationmarker name="LOCATION_MARKER_COMBAT"  locationvariable="LOCATION" radius="40"/>
@@ -3887,7 +3899,7 @@
         <dynamictreasurespot name="LOCATION" filterbylocationhistoryvariable="LOCATION_HISTORY">
           <distancetocluster mindistance="0" maxdistance="0" />
         </dynamictreasurespot>
-        <mob name="MOB" mobtypevariable="HUNT_TARGET" locationvariable="LOCATION" escapeonthreatcount="9" escapeonplayersinproximity="20" overrideaggrodelay="0.1" escapeaftertimeincombat="180"/>        
+        <mob name="MOB" mobtypevariable="HUNT_TARGET" locationvariable="LOCATION" escapeonthreatcount="9" escapeonplayersinproximity="20" overrideaggrodelay="0.1" escapeaftertimeincombat="180" escapeafterfirstengagein="240"/>        
         <locationmarker name="LOCATION_MARKER_MINIMAP" locationvariable="LOCATION" radius="160" offsetmin="20" offsetmax="140"/>
         <locationmarker name="LOCATION_MARKER_TRIGGER" locationvariable="LOCATION" radius="30"/>
         <locationmarker name="LOCATION_MARKER_COMBAT"  locationvariable="LOCATION" radius="40"/>
@@ -4680,7 +4692,7 @@
         </dynamictreasurespot>
         <locationmarker name="LOCATION_MARKER_MINIMAP" locationvariable="LOCATION" radius="80" offsetmin="20" offsetmax="60"/>
         <locationmarker name="LOCATION_MARKER_PROXIMITY" locationvariable="LOCATION" radius="20"/>
-        <mob name="MOB" mobtypevariable="HUNT_TARGET" locationvariable="LOCATION" escapeonthreatcount="4" escapeonplayersinproximity="8" escapeaftertimeincombat="40" escapeathealthpercentage="0.3"/>
+        <mob name="MOB" mobtypevariable="HUNT_TARGET" locationvariable="LOCATION" escapeonthreatcount="4" escapeonplayersinproximity="8" escapeaftertimeincombat="40" escapeathealthpercentage="0.3" escapeafterfirstengagein="100"/>
       </variables>
 
       <tasks>
@@ -4717,6 +4729,9 @@
               <setfloat tovariable="HP_TARGET" fromvariable="MOB" type="hitpoints"/>
               <setlocation tovariable="TARGET_LOCATION" fromvariable="MOB"/>
             </mobevent>
+            <mobevent targetmobvariable="MOB" type="onescapebyfirstengagetimer">
+              <abortquest reason="TARGET_ESCAPED"/>
+            </mobevent>
           </eventlisteners>
         </completionstep>
       </tasks>
@@ -4732,7 +4747,7 @@
         </dynamictreasurespot>
         <locationmarker name="LOCATION_MARKER_MINIMAP" locationvariable="LOCATION" radius="80" offsetmin="20" offsetmax="60"/>
         <locationmarker name="LOCATION_MARKER_PROXIMITY" locationvariable="LOCATION" radius="20"/>
-        <mob name="MOB" mobtypevariable="HUNT_TARGET" locationvariable="LOCATION" escapeonthreatcount="4" escapeonplayersinproximity="8" escapeaftertimeincombat="40" escapeathealthpercentage="0.3"/>
+        <mob name="MOB" mobtypevariable="HUNT_TARGET" locationvariable="LOCATION" escapeonthreatcount="4" escapeonplayersinproximity="8" escapeaftertimeincombat="40" escapeathealthpercentage="0.3" escapeafterfirstengagein="100"/>
       </variables>
 
       <tasks>
@@ -4768,6 +4783,9 @@
             <mobevent targetmobvariable="MOB" type="onescape">
               <setfloat tovariable="HP_TARGET" fromvariable="MOB" type="hitpoints"/>
               <setlocation tovariable="TARGET_LOCATION" fromvariable="MOB"/>
+            </mobevent>
+            <mobevent targetmobvariable="MOB" type="onescapebyfirstengagetimer">
+              <abortquest reason="TARGET_ESCAPED"/>
             </mobevent>
           </eventlisteners>
         </completionstep>
@@ -5459,7 +5477,7 @@
         </dynamictreasurespot>
         <locationmarker name="LOCATION_MARKER_MINIMAP" locationvariable="LOCATION" radius="160" offsetmin="20" offsetmax="140"/>
         <locationmarker name="LOCATION_MARKER_PROXIMITY" locationvariable="LOCATION" radius="20"/>
-        <mob name="MOB" mobtypevariable="HUNT_TARGET" locationvariable="LOCATION" escapeonthreatcount="9" escapeonplayersinproximity="20" escapeathealthpercentage="0.4" escapeaftertimeincombat="60"/>
+        <mob name="MOB" mobtypevariable="HUNT_TARGET" locationvariable="LOCATION" escapeonthreatcount="9" escapeonplayersinproximity="20" escapeathealthpercentage="0.4" escapeaftertimeincombat="60" escapeafterfirstengagein="120"/>
       </variables>
 
       <tasks>
@@ -5496,6 +5514,9 @@
               <setfloat tovariable="HP_TARGET" fromvariable="MOB" type="hitpoints"/>
               <setlocation tovariable="TARGET_LOCATION" fromvariable="MOB"/>
             </mobevent>
+            <mobevent targetmobvariable="MOB" type="onescapebyfirstengagetimer">
+              <abortquest reason="TARGET_ESCAPED"/>
+            </mobevent>
           </eventlisteners>
         </completionstep>
       </tasks>
@@ -5511,7 +5532,7 @@
         </dynamictreasurespot>
         <locationmarker name="LOCATION_MARKER_MINIMAP" locationvariable="LOCATION" radius="160" offsetmin="20" offsetmax="140"/>
         <locationmarker name="LOCATION_MARKER_PROXIMITY" locationvariable="LOCATION" radius="20"/>
-        <mob name="MOB" mobtypevariable="HUNT_TARGET" locationvariable="LOCATION" escapeonthreatcount="9" escapeonplayersinproximity="20" escapeathealthpercentage="0.4" escapeaftertimeincombat="60"/>
+        <mob name="MOB" mobtypevariable="HUNT_TARGET" locationvariable="LOCATION" escapeonthreatcount="9" escapeonplayersinproximity="20" escapeathealthpercentage="0.4" escapeaftertimeincombat="60" escapeafterfirstengagein="120"/>
       </variables>
 
       <tasks>
@@ -5547,6 +5568,9 @@
             <mobevent targetmobvariable="MOB" type="onescape">
               <setfloat tovariable="HP_TARGET" fromvariable="MOB" type="hitpoints"/>
               <setlocation tovariable="TARGET_LOCATION" fromvariable="MOB"/>
+            </mobevent>
+            <mobevent targetmobvariable="MOB" type="onescapebyfirstengagetimer">
+              <abortquest reason="TARGET_ESCAPED"/>
             </mobevent>
           </eventlisteners>
         </completionstep>

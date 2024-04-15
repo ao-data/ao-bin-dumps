@@ -329,13 +329,13 @@
         "@typefactorslow": "0.3",
         "@typefactorforcedmovement": "0.3",
         "@typefactortransformationcc": "0.3",
-        "@decreasetimestun": "10",
-        "@decreasetimeroot": "10",
+        "@decreasetimestun": "5",
+        "@decreasetimeroot": "5",
         "@decreasetimeknockback": "10",
-        "@decreasetimesilence": "10",
+        "@decreasetimesilence": "5",
         "@decreasetimeslow": "10",
         "@decreasetimeforcedmovement": "10",
-        "@decreasetimetransformationcc": "10"
+        "@decreasetimetransformationcc": "5"
       },
       "ReflectedDamage": {
         "@maxReflectCapacityFactorOfMaxHp": "2"
@@ -2514,6 +2514,10 @@
     },
     "FreeCrafting": {
       "@maxTier": "2"
+    },
+    "BuildingManagement": {
+      "@maxuseagefee": "1000",
+      "@maxnutritionreward": "100000"
     },
     "BuildingConsumptionBalanceFactor": {
       "@factor": "1"
@@ -6133,6 +6137,18 @@
           "@color": "082323ff"
         }
       ]
-    }
+    },
+    "RecoveryVault": [
+      {
+        "@type": "Migration",
+        "@feefactor": "0",
+        "@notclaimabletime": "0"
+      },
+      {
+        "@type": "MigrationWithFee",
+        "@feefactor": "450",
+        "@notclaimabletime": "604800"
+      }
+    ]
   }
 }

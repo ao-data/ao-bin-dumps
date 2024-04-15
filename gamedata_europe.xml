@@ -82,7 +82,7 @@
       <OnHostileDismount mainhand1="5" mainhand2="5" offhandormainhand3="5" armor="5" head="5" shoes="5" potion="5" food="5" />
       <OnLongHostileDismount mainhand1="15" mainhand2="15" offhandormainhand3="15" armor="15" head="15" shoes="15" potion="15" food="15" />
     </SpellCooldowns> 
-    <CrowdControlDiminishingReturns breaksondamagefactor="0.7" diminishingreturnmax="0.8" typefactorstun="0.3" typefactorroot="0.3" typefactorknockback="0.08" typefactorsilence="0.3" typefactorslow="0.3" typefactorforcedmovement="0.3" typefactortransformationcc="0.3" decreasetimestun="10" decreasetimeroot="10" decreasetimeknockback="10" decreasetimesilence="10" decreasetimeslow="10" decreasetimeforcedmovement="10" decreasetimetransformationcc="10" />
+    <CrowdControlDiminishingReturns breaksondamagefactor="0.7" diminishingreturnmax="0.8" typefactorstun="0.3" typefactorroot="0.3" typefactorknockback="0.08" typefactorsilence="0.3" typefactorslow="0.3" typefactorforcedmovement="0.3" typefactortransformationcc="0.3" decreasetimestun="5" decreasetimeroot="5" decreasetimeknockback="10" decreasetimesilence="5" decreasetimeslow="10" decreasetimeforcedmovement="10" decreasetimetransformationcc="5" />
     <ReflectedDamage maxReflectCapacityFactorOfMaxHp="2" />
     <Casting globaldisruptionfactor="1" globalcastrangetolerance="7" minchanneldurationbeforecancelpossible="0.75" mintoggledurationbeforecancelpossible="0.75" />
     <AoeEscalation defaulttargetcountthresholdmin="1" defaulttargetcountthresholdmax="7" />
@@ -570,6 +570,7 @@
   <CraftNutrition minimumpercent="0" />
   <ItemValueToBuildingCapacityFactor factor="0.5" />	<!--do not adjust uninformed - use BuildingConsumptionBalanceFactor instead-->
   <FreeCrafting maxTier="2" />
+  <BuildingManagement maxuseagefee="1000" maxnutritionreward="100000" />
   <BuildingConsumptionBalanceFactor factor="1" />
   <ActionFocus costreductionconstant="1.00695555005672">
     <CraftingEfficiency bonus="0.59" />
@@ -1231,7 +1232,7 @@
   </AlliancePenalty>
   <AchievementProgressConversion silverConversionRatio="1" fameDecayOnConversion="0.2" fameDecayOnMaxLevel="0.8" />
   <TerritoryBlockClaiming>
-    <clustergroup startdate="2024-04-03T10:00:00Z" enddate="2024-04-06T18:00:00Z"> <!-- EU -->
+    <clustergroup startdate="2024-04-24T10:00:00Z" enddate="2024-05-04T18:00:00Z"> <!-- EU -->
       <cluster id="0302" />
       <cluster id="0303" />
       <cluster id="0304" />
@@ -1575,4 +1576,6 @@
     <StorageRange min="501" max="1500" color="104040ff" />
     <StorageRange min="0" max="500" color="082323ff" />
   </EnergyStorageOverlay>
+  <RecoveryVault type="Migration" feefactor="0" notclaimabletime="0" />
+  <RecoveryVault type="MigrationWithFee" feefactor="450" notclaimabletime="604800" />
 </AO-GameData>

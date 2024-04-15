@@ -131,6 +131,66 @@
               "@mobid": "T8_MOB_TR_SILVER_UNDEAD_HARVESTER_VETERAN_BOSS",
               "@tracktileref": "TRACK_SILVER_GROUP",
               "@minimapicon": "tracking_target_silver_group"
+            },
+            {
+              "@uniquename": "SHADOWMASK_SOLO_T4",
+              "@mobid": "T4_MOB_TR_SILVER_HERETIC_SHADOWMASK_BOSS",
+              "@tracktileref": "TRACK_SILVER_SOLO",
+              "@minimapicon": "tracking_target_silver_solo"
+            },
+            {
+              "@uniquename": "SHADOWMASK_SOLO_T5",
+              "@mobid": "T5_MOB_TR_SILVER_HERETIC_SHADOWMASK_BOSS",
+              "@tracktileref": "TRACK_SILVER_SOLO",
+              "@minimapicon": "tracking_target_silver_solo"
+            },
+            {
+              "@uniquename": "SHADOWMASK_SOLO_T6",
+              "@mobid": "T6_MOB_TR_SILVER_HERETIC_SHADOWMASK_BOSS",
+              "@tracktileref": "TRACK_SILVER_SOLO",
+              "@minimapicon": "tracking_target_silver_solo"
+            },
+            {
+              "@uniquename": "SHADOWMASK_SOLO_T7",
+              "@mobid": "T7_MOB_TR_SILVER_HERETIC_SHADOWMASK_BOSS",
+              "@tracktileref": "TRACK_SILVER_SOLO",
+              "@minimapicon": "tracking_target_silver_solo"
+            },
+            {
+              "@uniquename": "SHADOWMASK_SOLO_T8",
+              "@mobid": "T8_MOB_TR_SILVER_HERETIC_SHADOWMASK_BOSS",
+              "@tracktileref": "TRACK_SILVER_SOLO",
+              "@minimapicon": "tracking_target_silver_solo"
+            },
+            {
+              "@uniquename": "SHADOWMASK_GROUP_T4",
+              "@mobid": "T4_MOB_TR_SILVER_HERETIC_SHADOWMASK_VETERAN_BOSS",
+              "@tracktileref": "TRACK_SILVER_GROUP",
+              "@minimapicon": "tracking_target_silver_group"
+            },
+            {
+              "@uniquename": "SHADOWMASK_GROUP_T5",
+              "@mobid": "T5_MOB_TR_SILVER_HERETIC_SHADOWMASK_VETERAN_BOSS",
+              "@tracktileref": "TRACK_SILVER_GROUP",
+              "@minimapicon": "tracking_target_silver_group"
+            },
+            {
+              "@uniquename": "SHADOWMASK_GROUP_T6",
+              "@mobid": "T6_MOB_TR_SILVER_HERETIC_SHADOWMASK_VETERAN_BOSS",
+              "@tracktileref": "TRACK_SILVER_GROUP",
+              "@minimapicon": "tracking_target_silver_group"
+            },
+            {
+              "@uniquename": "SHADOWMASK_GROUP_T7",
+              "@mobid": "T7_MOB_TR_SILVER_HERETIC_SHADOWMASK_VETERAN_BOSS",
+              "@tracktileref": "TRACK_SILVER_GROUP",
+              "@minimapicon": "tracking_target_silver_group"
+            },
+            {
+              "@uniquename": "SHADOWMASK_GROUP_T8",
+              "@mobid": "T8_MOB_TR_SILVER_HERETIC_SHADOWMASK_VETERAN_BOSS",
+              "@tracktileref": "TRACK_SILVER_GROUP",
+              "@minimapicon": "tracking_target_silver_group"
             }
           ]
         },
@@ -6968,7 +7028,8 @@
               "@escapeonthreatcount": "4",
               "@escapeonplayersinproximity": "8",
               "@overrideaggrodelay": "0.1",
-              "@escapeaftertimeincombat": "60"
+              "@escapeaftertimeincombat": "60",
+              "@escapeafterfirstengagein": "120"
             },
             "locationmarker": [
               {
@@ -7117,7 +7178,8 @@
               "@escapeonthreatcount": "9",
               "@escapeonplayersinproximity": "20",
               "@overrideaggrodelay": "0.1",
-              "@escapeaftertimeincombat": "180"
+              "@escapeaftertimeincombat": "180",
+              "@escapeafterfirstengagein": "240"
             },
             "locationmarker": [
               {
@@ -9169,7 +9231,8 @@
               "@escapeonthreatcount": "4",
               "@escapeonplayersinproximity": "8",
               "@escapeaftertimeincombat": "40",
-              "@escapeathealthpercentage": "0.3"
+              "@escapeathealthpercentage": "0.3",
+              "@escapeafterfirstengagein": "100"
             }
           },
           "tasks": {
@@ -9254,19 +9317,28 @@
                 }
               },
               "eventlisteners": {
-                "mobevent": {
-                  "@targetmobvariable": "MOB",
-                  "@type": "onescape",
-                  "setfloat": {
-                    "@tovariable": "HP_TARGET",
-                    "@fromvariable": "MOB",
-                    "@type": "hitpoints"
+                "mobevent": [
+                  {
+                    "@targetmobvariable": "MOB",
+                    "@type": "onescape",
+                    "setfloat": {
+                      "@tovariable": "HP_TARGET",
+                      "@fromvariable": "MOB",
+                      "@type": "hitpoints"
+                    },
+                    "setlocation": {
+                      "@tovariable": "TARGET_LOCATION",
+                      "@fromvariable": "MOB"
+                    }
                   },
-                  "setlocation": {
-                    "@tovariable": "TARGET_LOCATION",
-                    "@fromvariable": "MOB"
+                  {
+                    "@targetmobvariable": "MOB",
+                    "@type": "onescapebyfirstengagetimer",
+                    "abortquest": {
+                      "@reason": "TARGET_ESCAPED"
+                    }
                   }
-                }
+                ]
               }
             }
           },
@@ -9310,7 +9382,8 @@
               "@escapeonthreatcount": "4",
               "@escapeonplayersinproximity": "8",
               "@escapeaftertimeincombat": "40",
-              "@escapeathealthpercentage": "0.3"
+              "@escapeathealthpercentage": "0.3",
+              "@escapeafterfirstengagein": "100"
             }
           },
           "tasks": {
@@ -9395,19 +9468,28 @@
                 }
               },
               "eventlisteners": {
-                "mobevent": {
-                  "@targetmobvariable": "MOB",
-                  "@type": "onescape",
-                  "setfloat": {
-                    "@tovariable": "HP_TARGET",
-                    "@fromvariable": "MOB",
-                    "@type": "hitpoints"
+                "mobevent": [
+                  {
+                    "@targetmobvariable": "MOB",
+                    "@type": "onescape",
+                    "setfloat": {
+                      "@tovariable": "HP_TARGET",
+                      "@fromvariable": "MOB",
+                      "@type": "hitpoints"
+                    },
+                    "setlocation": {
+                      "@tovariable": "TARGET_LOCATION",
+                      "@fromvariable": "MOB"
+                    }
                   },
-                  "setlocation": {
-                    "@tovariable": "TARGET_LOCATION",
-                    "@fromvariable": "MOB"
+                  {
+                    "@targetmobvariable": "MOB",
+                    "@type": "onescapebyfirstengagetimer",
+                    "abortquest": {
+                      "@reason": "TARGET_ESCAPED"
+                    }
                   }
-                }
+                ]
               }
             }
           },
@@ -11293,7 +11375,8 @@
               "@escapeonthreatcount": "9",
               "@escapeonplayersinproximity": "20",
               "@escapeathealthpercentage": "0.4",
-              "@escapeaftertimeincombat": "60"
+              "@escapeaftertimeincombat": "60",
+              "@escapeafterfirstengagein": "120"
             }
           },
           "tasks": {
@@ -11378,19 +11461,28 @@
                 }
               },
               "eventlisteners": {
-                "mobevent": {
-                  "@targetmobvariable": "MOB",
-                  "@type": "onescape",
-                  "setfloat": {
-                    "@tovariable": "HP_TARGET",
-                    "@fromvariable": "MOB",
-                    "@type": "hitpoints"
+                "mobevent": [
+                  {
+                    "@targetmobvariable": "MOB",
+                    "@type": "onescape",
+                    "setfloat": {
+                      "@tovariable": "HP_TARGET",
+                      "@fromvariable": "MOB",
+                      "@type": "hitpoints"
+                    },
+                    "setlocation": {
+                      "@tovariable": "TARGET_LOCATION",
+                      "@fromvariable": "MOB"
+                    }
                   },
-                  "setlocation": {
-                    "@tovariable": "TARGET_LOCATION",
-                    "@fromvariable": "MOB"
+                  {
+                    "@targetmobvariable": "MOB",
+                    "@type": "onescapebyfirstengagetimer",
+                    "abortquest": {
+                      "@reason": "TARGET_ESCAPED"
+                    }
                   }
-                }
+                ]
               }
             }
           },
@@ -11434,7 +11526,8 @@
               "@escapeonthreatcount": "9",
               "@escapeonplayersinproximity": "20",
               "@escapeathealthpercentage": "0.4",
-              "@escapeaftertimeincombat": "60"
+              "@escapeaftertimeincombat": "60",
+              "@escapeafterfirstengagein": "120"
             }
           },
           "tasks": {
@@ -11519,19 +11612,28 @@
                 }
               },
               "eventlisteners": {
-                "mobevent": {
-                  "@targetmobvariable": "MOB",
-                  "@type": "onescape",
-                  "setfloat": {
-                    "@tovariable": "HP_TARGET",
-                    "@fromvariable": "MOB",
-                    "@type": "hitpoints"
+                "mobevent": [
+                  {
+                    "@targetmobvariable": "MOB",
+                    "@type": "onescape",
+                    "setfloat": {
+                      "@tovariable": "HP_TARGET",
+                      "@fromvariable": "MOB",
+                      "@type": "hitpoints"
+                    },
+                    "setlocation": {
+                      "@tovariable": "TARGET_LOCATION",
+                      "@fromvariable": "MOB"
+                    }
                   },
-                  "setlocation": {
-                    "@tovariable": "TARGET_LOCATION",
-                    "@fromvariable": "MOB"
+                  {
+                    "@targetmobvariable": "MOB",
+                    "@type": "onescapebyfirstengagetimer",
+                    "abortquest": {
+                      "@reason": "TARGET_ESCAPED"
+                    }
                   }
-                }
+                ]
               }
             }
           },

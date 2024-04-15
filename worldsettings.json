@@ -82,6 +82,28 @@
           "@buildingcraftcapacityregenfactor": "1",
           "@itempowersoftcap": "0",
           "@itempowerscalingfactor": "0",
+          "@animalgrowthfactor": "0.25",
+          "@clusterdangerbonustype": "black",
+          "@requiredreputationtoenter": "-50000",
+          "@allowfactionflagging": "false",
+          "@vanityvisibility": "Allowed",
+          "@zergdebuffenabled": "true",
+          "@ignoredestructionmultiplier": "false",
+          "@mightrewards": "true"
+        },
+        {
+          "@name": "BLACK_PLAYTEST",
+          "@uipvptype": "Black",
+          "@pvpwarningtype": "black",
+          "@pvprule": "PvpForced",
+          "@playersarelethal": "true",
+          "@mobsarelethal": "false",
+          "@showpvpplayeronminimap": "true",
+          "@showfriendlycount": "false",
+          "@showhostilecount": "false",
+          "@buildingcraftcapacityregenfactor": "1",
+          "@itempowersoftcap": "1500",
+          "@itempowerscalingfactor": "0",
           "@animalgrowthfactor": "0.5",
           "@clusterdangerbonustype": "black",
           "@requiredreputationtoenter": "-50000",
@@ -781,7 +803,8 @@
           "@allowfactionflagging": "false",
           "@vanityvisibility": "Allowed",
           "@ignoredestructionmultiplier": "true",
-          "@allowlegendaryitempassives": "false"
+          "@allowlegendaryitempassives": "false",
+          "@savelostequipment": "false"
         },
         {
           "@name": "MISTS_SOLO_YELLOW",
@@ -2489,6 +2512,339 @@
         {
           "@name": "OPENPVP_BLACK_2",
           "@archetype": "BLACK",
+          "@spellcooldownsonenteringseconds": "15",
+          "@editorcolor": "128, 128, 128",
+          "@furnitureobjectsallowed": "true",
+          "@isdungeon": "false",
+          "@hasshortspawnbuffonleave": "false",
+          "@hideoutplacementallowed": "true",
+          "@allowmounts": "true",
+          "@huntsactiveandreceivehuntupdates": "true",
+          "@smartclusterqueue": "true",
+          "@SmartClusterQueueMinActiveTimeBeforeSkippingAllowed": "120",
+          "@allowfactionrewards": "false",
+          "@allowpowercrystals": "TERRITORY_POWER_CRYSTAL TERRITORY_RAW_ENERGY_CORE HIDEOUT_OPENWORLD",
+          "@clustervaluelookup": "Outlands",
+          "@townportalspell": "TOWN_PORTAL_LONG",
+          "@townportalzonemodifier": "7.15",
+          "@tunnelpreset": "OPENPVP_BLACK_LOW",
+          "spawnbuff": {
+            "buff": [
+              {
+                "@name": "SPAWN_BUFFIMMUNITY_ONDEATH",
+                "@isrevive": "Must"
+              },
+              {
+                "@name": "HIDEOUT_EXIT_ON_RESPAWN",
+                "@isrevive": "Must"
+              },
+              {
+                "@name": "SPAWN_INVULNERABILITY",
+                "@ispvppossible": "Must",
+                "@isclusterchange": "Must",
+                "@fromhideout": "MustNot",
+                "@fromshortspawnbuffcluster": "MustNot"
+              },
+              {
+                "@name": "SPAWN_INVULNERABILITY",
+                "@ispvppossible": "Must",
+                "@isingvg": "Must"
+              },
+              {
+                "@name": "SPAWN_INVULNERABILITY_SHORT",
+                "@ispvppossible": "Must",
+                "@isclusterchange": "Must",
+                "@fromhideout": "MustNot",
+                "@fromshortspawnbuffcluster": "Must"
+              },
+              {
+                "@name": "SPAWN_INVULNERABILITY_HIDEOUT",
+                "@fromhideout": "Must"
+              },
+              {
+                "@name": "CANNOT_ENTER_HIDEOUT",
+                "@ispvppossible": "Must",
+                "@fromstaticdungeon": "Must",
+                "@fromhideout": "MustNot"
+              },
+              {
+                "@name": "SPAWN_SPEED",
+                "@ispvppossible": "Must",
+                "@isclusterchange": "Must",
+                "@fromhideout": "MustNot"
+              },
+              {
+                "@name": "SPAWN_BUFFIMMUNITY",
+                "@ispvppossible": "Must",
+                "@isclusterchange": "Must",
+                "@fromhideout": "DoesNotMatter"
+              },
+              {
+                "@name": "SPAWN_BUFFIMMUNITY",
+                "@fromhideout": "Must"
+              }
+            ]
+          },
+          "mobspawns": {
+            "@defaulttimefactor": "1.0",
+            "mobspawn": [
+              {
+                "@name": "MOB_FOX",
+                "@timefactor": "10.0"
+              },
+              {
+                "@name": "T2_MOB_HIDE_SWAMP_SNAKE",
+                "@timefactor": "10.0"
+              },
+              {
+                "@name": "T2_MOB_HIDE_STEPPE_IMPALA",
+                "@timefactor": "10.0"
+              },
+              {
+                "@name": "MOB_WOLF",
+                "@timefactor": "3.75"
+              },
+              {
+                "@name": "T3_MOB_HIDE_SWAMP_GIANTTOAD",
+                "@timefactor": "3.75"
+              },
+              {
+                "@name": "T3_MOB_HIDE_STEPPE_MOABIRD",
+                "@timefactor": "3.75"
+              },
+              {
+                "@name": "T3_MOB_CRITTER_FIBER",
+                "@timefactor": "3.75"
+              },
+              {
+                "@name": "T3_MOB_CRITTER_HIDE_COUGAR",
+                "@timefactor": "3.75"
+              },
+              {
+                "@name": "T3_MOB_CRITTER_ORE_MOUNTAIN_GREEN",
+                "@timefactor": "3.75"
+              },
+              {
+                "@name": "T3_MOB_CRITTER_ORE_MOUNTAIN_RED",
+                "@timefactor": "3.75"
+              },
+              {
+                "@name": "T3_MOB_CRITTER_WOOD_FOREST_GREEN",
+                "@timefactor": "3.75"
+              },
+              {
+                "@name": "T3_MOB_CRITTER_WOOD_FOREST_RED",
+                "@timefactor": "3.75"
+              },
+              {
+                "@name": "T3_MOB_CRITTER_ROCK_HIGHLAND_GREEN",
+                "@timefactor": "3.75"
+              },
+              {
+                "@name": "T3_MOB_CRITTER_ROCK_HIGHLAND_RED",
+                "@timefactor": "3.75"
+              },
+              {
+                "@name": "MOB_BOAR",
+                "@timefactor": "1.875"
+              },
+              {
+                "@name": "T4_MOB_HIDE_SWAMP_MONITORLIZARD",
+                "@timefactor": "1.875"
+              },
+              {
+                "@name": "T4_MOB_HIDE_STEPPE_GIANTSTAG",
+                "@timefactor": "1.875"
+              },
+              {
+                "@name": "MOB_BEAR",
+                "@timefactor": "0.8333"
+              },
+              {
+                "@name": "T5_MOB_HIDE_SWAMP_GIANTSNAKE",
+                "@timefactor": "0.8333"
+              },
+              {
+                "@name": "T5_MOB_HIDE_STEPPE_TERRORBIRD",
+                "@timefactor": "0.8333"
+              },
+              {
+                "@name": "T5_MOB_CRITTER_FIBER",
+                "@timefactor": "0.8333"
+              },
+              {
+                "@name": "T5_MOB_CRITTER_HIDE_COUGAR",
+                "@timefactor": "0.8333"
+              },
+              {
+                "@name": "T5_MOB_CRITTER_ORE_MOUNTAIN_RED",
+                "@timefactor": "0.8333"
+              },
+              {
+                "@name": "T5_MOB_CRITTER_ORE_MOUNTAIN_DEAD",
+                "@timefactor": "0.8333"
+              },
+              {
+                "@name": "T5_MOB_CRITTER_WOOD_FOREST_RED",
+                "@timefactor": "0.8333"
+              },
+              {
+                "@name": "T5_MOB_CRITTER_WOOD_FOREST_DEAD",
+                "@timefactor": "0.8333"
+              },
+              {
+                "@name": "T5_MOB_CRITTER_ROCK_HIGHLAND_RED",
+                "@timefactor": "0.8333"
+              },
+              {
+                "@name": "T5_MOB_CRITTER_ROCK_HIGHLAND_DEAD",
+                "@timefactor": "0.8333"
+              },
+              {
+                "@name": "MOB_DIREWOLF",
+                "@timefactor": "0.6771"
+              },
+              {
+                "@name": "T6_MOB_HIDE_FOREST_GIANTSTAG",
+                "@timefactor": "0.6771"
+              },
+              {
+                "@name": "T6_MOB_HIDE_SWAMP_DRAGON",
+                "@timefactor": "0.6771"
+              },
+              {
+                "@name": "T6_MOB_HIDE_STEPPE_DESERTWOLF",
+                "@timefactor": "0.6771"
+              },
+              {
+                "@name": "T7_MOB_HIDE_FOREST_DIREBOAR_SMALL",
+                "@timefactor": "0.8333"
+              },
+              {
+                "@name": "T7_MOB_HIDE_STEPPE_RHINO_SMALL",
+                "@timefactor": "0.8333"
+              },
+              {
+                "@name": "T7_MOB_CRITTER_FIBER",
+                "@timefactor": "0.8333"
+              },
+              {
+                "@name": "T7_MOB_CRITTER_HIDE_COUGAR",
+                "@timefactor": "0.8333"
+              },
+              {
+                "@name": "T7_MOB_CRITTER_ORE_MOUNTAIN_DEAD",
+                "@timefactor": "0.8333"
+              },
+              {
+                "@name": "T7_MOB_CRITTER_WOOD_FOREST_DEAD",
+                "@timefactor": "0.8333"
+              },
+              {
+                "@name": "T7_MOB_CRITTER_ROCK_HIGHLAND_DEAD",
+                "@timefactor": "0.8333"
+              },
+              {
+                "@name": "T8_MOB_HIDE_FOREST_DIREBEAR_SMALL",
+                "@timefactor": "0.8333"
+              },
+              {
+                "@name": "T8_MOB_HIDE_STEPPE_MAMMOTH",
+                "@timefactor": "0.8333"
+              },
+              {
+                "@name": "T2_MOB_EVENT_EASTER_RESOURCE",
+                "@timefactor": "10.0"
+              },
+              {
+                "@name": "T3_MOB_EVENT_EASTER_RESOURCE",
+                "@timefactor": "3.75"
+              },
+              {
+                "@name": "T4_MOB_EVENT_EASTER_RESOURCE",
+                "@timefactor": "1.875"
+              }
+            ],
+            "mobspawnlimit": [
+              {
+                "@upgradelevelindex": "6",
+                "@op": "equal",
+                "@limit": "75"
+              },
+              {
+                "@upgradelevelindex": "8",
+                "@op": "equal",
+                "@limit": "20"
+              },
+              {
+                "@upgradelevelindex": "9",
+                "@op": "equal",
+                "@limit": "1"
+              },
+              {
+                "@upgradelevelindex": "10",
+                "@op": "equal",
+                "@limit": "1"
+              },
+              {
+                "@upgradelevelindex": "11",
+                "@op": "equal",
+                "@limit": "3"
+              },
+              {
+                "@upgradelevelindex": "20",
+                "@op": "equal",
+                "@limit": "30"
+              }
+            ]
+          },
+          "resourcespawns": {
+            "@defaulttimefactor": "1.0",
+            "resourcetier": [
+              {
+                "@tier": "2",
+                "@timefactor": "10.0"
+              },
+              {
+                "@tier": "3",
+                "@timefactor": "3.75"
+              },
+              {
+                "@tier": "4",
+                "@timefactor": "1.875"
+              },
+              {
+                "@tier": "5",
+                "@timefactor": "0.8333"
+              },
+              {
+                "@tier": "6",
+                "@timefactor": "0.6771"
+              },
+              {
+                "@tier": "7",
+                "@timefactor": "0.8333"
+              },
+              {
+                "@tier": "8",
+                "@timefactor": "0.8333"
+              }
+            ]
+          },
+          "lootchestspawns": {
+            "poilootchestspawnlimit": {
+              "@upgradelevelindex": "1",
+              "@op": "greaterOrEqual",
+              "@limit": "1"
+            }
+          },
+          "gvgseasonpoints": {
+            "@mobrewardfactor": "1.4"
+          }
+        },
+        {
+          "@name": "OPENPVP_BLACK_2_PLAYTEST",
+          "@archetype": "BLACK_PLAYTEST",
           "@spellcooldownsonenteringseconds": "15",
           "@editorcolor": "128, 128, 128",
           "@furnitureobjectsallowed": "true",
@@ -9811,128 +10167,46 @@
       "@primetimeduration": "1:00",
       "timeregion": [
         {
-          "@name": "BR_00_00",
-          "@starttime": "00:00",
-          "@timezone": "-4",
-          "@worldmapvisible": "true",
-          "@worldmapcolor": "cdbf9eb2"
-        },
-        {
-          "@name": "US_03_00",
-          "@starttime": "03:00",
-          "@timezone": "-7",
-          "@worldmapvisible": "true",
-          "@worldmapcolor": "f0b53db2"
-        },
-        {
-          "@name": "US_05_00",
-          "@starttime": "05:00",
-          "@timezone": "-9",
-          "@worldmapvisible": "true",
-          "@worldmapcolor": "bb5a18b2"
-        },
-        {
-          "@name": "RU_ASIA_12_00",
-          "@starttime": "12:00",
-          "@timezone": "+8",
-          "@worldmapvisible": "true",
-          "@worldmapcolor": "941e1bb2"
-        },
-        {
-          "@name": "RU_15_00",
-          "@starttime": "15:00",
-          "@timezone": "+5",
+          "@name": "US_04_00",
+          "@starttime": "04:00",
+          "@timezone": "-8",
           "@worldmapvisible": "true",
           "@worldmapcolor": "6b2c51b2"
         },
         {
-          "@name": "EU_RU_18_00",
-          "@starttime": "18:00",
-          "@timezone": "+2",
+          "@name": "US_02_00",
+          "@starttime": "02:00",
+          "@timezone": "-6",
           "@worldmapvisible": "true",
           "@worldmapcolor": "324e67b2"
         },
         {
-          "@name": "EU_21_00",
-          "@starttime": "21:00",
-          "@timezone": "-1",
+          "@name": "US_00_00",
+          "@starttime": "00:00",
+          "@timezone": "-4",
           "@worldmapvisible": "true",
           "@worldmapcolor": "43622db2"
         },
         {
-          "@name": "US_01_00",
-          "@starttime": "01:00",
-          "@timezone": "-5"
-        },
-        {
-          "@name": "US_02_00",
-          "@starttime": "02:00",
-          "@timezone": "-6"
-        },
-        {
-          "@name": "US_04_00",
-          "@starttime": "04:00",
-          "@timezone": "-8"
-        },
-        {
-          "@name": "RU_ASIA_13_00",
-          "@starttime": "13:00",
-          "@timezone": "+7"
-        },
-        {
-          "@name": "RU_14_00",
-          "@starttime": "14:00",
-          "@timezone": "+6"
-        },
-        {
-          "@name": "RU_16_00",
-          "@starttime": "16:00",
-          "@timezone": "+4"
-        },
-        {
-          "@name": "RU_17_00",
-          "@starttime": "17:00",
-          "@timezone": "+3"
-        },
-        {
-          "@name": "EU_19_00",
-          "@starttime": "19:00",
-          "@timezone": "+1"
-        },
-        {
-          "@name": "EU_20_00",
-          "@starttime": "20:00",
-          "@timezone": "0"
-        },
-        {
-          "@name": "BR_22_00",
+          "@name": "US_22_00",
           "@starttime": "22:00",
-          "@timezone": "-2"
+          "@timezone": "-2",
+          "@worldmapvisible": "true",
+          "@worldmapcolor": "f0b53db2"
         },
         {
-          "@name": "BR_23_00",
-          "@starttime": "23:00",
-          "@timezone": "-3"
+          "@name": "US_20_00",
+          "@starttime": "20:00",
+          "@timezone": "0",
+          "@worldmapvisible": "true",
+          "@worldmapcolor": "bb5a18b2"
         },
         {
-          "@name": "AMERICA_EAST",
-          "@starttime": "12:00",
-          "@timezone": "+8"
-        },
-        {
-          "@name": "AMERICA_WEST",
-          "@starttime": "14:00",
-          "@timezone": "+5"
-        },
-        {
-          "@name": "EU",
-          "@starttime": "16:00",
-          "@timezone": "0"
-        },
-        {
-          "@name": "RUSSIA",
+          "@name": "US_18_00",
           "@starttime": "18:00",
-          "@timezone": "+3"
+          "@timezone": "+2",
+          "@worldmapvisible": "true",
+          "@worldmapcolor": "941e1bb2"
         },
         {
           "@name": "NOT_USED",

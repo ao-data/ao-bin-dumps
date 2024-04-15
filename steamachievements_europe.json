@@ -6,6 +6,88 @@
   "steamachievements": {
     "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
     "@xsi:noNamespaceSchemaLocation": "steamachievements.xsd",
+    "categories": {
+      "category": [
+        {
+          "@uniquename": "PVE",
+          "@displayname": "@JOURNAL_CATEGORY_PVE",
+          "@finishedmissionforreveal": "0",
+          "subcategory": [
+            {
+              "@uniquename": "PVE_EXPEDITION",
+              "@displayname": "@JOURNAL_SUBCATEGORY_PVE_EXPEDITION"
+            },
+            {
+              "@uniquename": "PVE_RANDOMDUNGEONS",
+              "@displayname": "@JOURNAL_SUBCATEGORY_PVE_RANDOMDUNGEONS"
+            },
+            {
+              "@uniquename": "PVE_REAVER",
+              "@displayname": "@JOURNAL_SUBCATEGORY_PVE_REAVER"
+            },
+            {
+              "@uniquename": "PVE_ROAMINGMOBS",
+              "@displayname": "@JOURNAL_SUBCATEGORY_PVE_ROAMINGMOBS"
+            },
+            {
+              "@uniquename": "PVE_STATICDUNGEONS",
+              "@displayname": "@JOURNAL_SUBCATEGORY_PVE_STATICDUNGEONS"
+            },
+            {
+              "@uniquename": "PVE_TRACKING",
+              "@displayname": "@JOURNAL_SUBCATEGORY_PVE_TRACKING"
+            },
+            {
+              "@uniquename": "PVE_WORLDBOSS",
+              "@displayname": "@JOURNAL_SUBCATEGORY_PVE_WORLDBOSS"
+            },
+            {
+              "@uniquename": "PVE_AVALONIANDUNGEONS",
+              "@displayname": "@JOURNAL_SUBCATEGORY_PVE_AVALONIANDUNGEONS"
+            }
+          ]
+        },
+        {
+          "@uniquename": "ECONOMY",
+          "@displayname": "@JOURNAL_CATEGORY_ECONOMY",
+          "@finishedmissionforreveal": "1",
+          "subcategory": {
+            "@uniquename": "ECONOMY_EQUIPMENTBUY",
+            "@displayname": "@JOURNAL_SUBCATEGORY_ECONOMY_EQUIPMENTBUY"
+          }
+        },
+        {
+          "@uniquename": "PROGRESSION",
+          "@displayname": "@JOURNAL_CATEGORY_PROGRESSION",
+          "@finishedmissionforreveal": "3"
+        },
+        {
+          "@uniquename": "GATHERING",
+          "@displayname": "@JOURNAL_CATEGORY_GATHERING",
+          "@finishedmissionforreveal": "5"
+        },
+        {
+          "@uniquename": "EXPLORATION",
+          "@displayname": "@JOURNAL_CATEGORY_EXPLORATION",
+          "@finishedmissionforreveal": "7"
+        },
+        {
+          "@uniquename": "PVP",
+          "@displayname": "@JOURNAL_CATEGORY_PVP",
+          "@finishedmissionforreveal": "9"
+        },
+        {
+          "@uniquename": "GUILD",
+          "@displayname": "@JOURNAL_CATEGORY_GUILD",
+          "@finishedmissionforreveal": "15"
+        },
+        {
+          "@uniquename": "CREATURES",
+          "@displayname": "@JOURNAL_CATEGORY_CREATURES",
+          "@finishedmissionforreveal": "8"
+        }
+      ]
+    },
     "achievement": [
       {
         "@name": "SA_EXPLORATION_MISTS_KILL_STRANGER",
@@ -17,6 +99,23 @@
           "@count": "1",
           "@minvalue": "0",
           "@specialcondition": "KillMysteriousStrangerWhoIsAFriendOrGuildMate"
+        }
+      },
+      {
+        "@name": "SA_PVP_GVG_MAX_UPGRADES",
+        "@steamachievementname": "SA_PVP_GVG_MAX_UPGRADES",
+        "@googleplayid": "CgkI-YfN27AEEAIQoAE",
+        "visitfortification": {
+          "@mustbeownedbymyguild": "true",
+          "@mintierofallparts": "8"
+        }
+      },
+      {
+        "@name": "SA_PVP_GVG_OPEN_ENEMY_GATE",
+        "@steamachievementname": "SA_PVP_GVG_OPEN_ENEMY_GATE",
+        "@googleplayid": "CgkI-YfN27AEEAIQoQE",
+        "usefunction": {
+          "@function": "PartyOpensEnemyFortificationGate"
         }
       },
       {

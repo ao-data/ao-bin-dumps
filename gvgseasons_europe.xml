@@ -1,4 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  ###############################################
+  !!! DON'T FORGET TO SETUP ASIA & EU SEASONS !!!
+  ###############################################
+-->
+
+
 <gvgseasons xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="gvgseasons.xsd">
 
   <seasonwinnerpopup displayminfame="202045" displaytimeindays="3" /> <!--displayminfame = fame needed for expert adventurer on DB from start-->
@@ -473,6 +481,8 @@
           <territorystoragefill />
           <territoriesunclaimable />
           <resetterritories />
+          <fortificationpointsreset />
+          <fortificationpointsgenerationstart />
           <territorybattleend />
           <territoryraidend />
           <disable_portalbindingremoval />
@@ -489,7 +499,6 @@
             <timeregion name="US_22_00" />
           </clusterfilter>
           <spawninvader />
-          <!-- Should run until downtime -->
           <territoriesclaimable claimlimitoverrideminutes="960" />
         </eventtime>
         <eventtime utctime="20:00:01Z" calculateusingclustertimezone="true">
@@ -508,7 +517,6 @@
           <territorybattleend />
           <territoryraidend />
           <territoryscoringend />
-          <territorystoragepayout />
         </eventtime>
         <eventtime utctime="11:00:00Z">
           <territoriesunclaimable />
@@ -546,7 +554,6 @@
           <territorybattleend />
           <territoryraidend />
           <territoryscoringend />
-          <territorystoragepayout />
         </eventtime>
         <eventtime utctime="11:00:00Z">
           <territoriesunclaimable />
@@ -582,13 +589,16 @@
       </day>
       <day number="71">
         <eventtime utctime="00:00:01Z" calculateusingclustertimezone="true">
-          <territorybattleend />
+		  <fortificationpointsreset />
+		  <territorybattleend />
           <territoryraidend />
           <territoryscoringend />
+          <fortificationpointsgenerationend />		
         </eventtime>
         <eventtime utctime="11:00:00Z">
           <territoriesunclaimable />
           <resetterritories />
+          <territorystoragepayoutonclaimstart />
           <disable_portalbindingremoval />
         </eventtime>
       </day>
@@ -605,11 +615,9 @@
           <spawninvader />
           <!-- Should run until downtime -->
           <territoriesclaimable claimlimitoverrideminutes="960" />
-        </eventtime>
-      </day>
-      <day number="72">
+        </eventtime>  
         <eventtime utctime="23:59:00Z">
-          <territorystoragepayout />
+          <territorystoragepayoutonclaimend />
         </eventtime>
       </day>
     </seasontimes>
@@ -795,6 +803,8 @@
           <territorystoragefill />
           <territoriesunclaimable />
           <resetterritories />
+          <fortificationpointsreset />
+          <fortificationpointsgenerationstart />
           <territorybattleend />
           <territoryraidend />
           <disable_portalbindingremoval />
@@ -829,7 +839,6 @@
           <territorybattleend />
           <territoryraidend />
           <territoryscoringend />
-          <territorystoragepayout />
         </eventtime>
         <eventtime utctime="11:00:00Z">
           <territoriesunclaimable />
@@ -867,7 +876,6 @@
           <territorybattleend />
           <territoryraidend />
           <territoryscoringend />
-          <territorystoragepayout />
         </eventtime>
         <eventtime utctime="11:00:00Z">
           <territoriesunclaimable />
@@ -903,13 +911,16 @@
       </day>
       <day number="85">
         <eventtime utctime="00:00:01Z" calculateusingclustertimezone="true">
+		  <fortificationpointsreset />			
           <territorybattleend />
           <territoryraidend />
           <territoryscoringend />
+          <fortificationpointsgenerationend />
         </eventtime>
         <eventtime utctime="11:00:00Z">
           <territoriesunclaimable />
           <resetterritories />
+          <territorystoragepayoutonclaimstart />
           <disable_portalbindingremoval />
         </eventtime>
       </day>
@@ -927,10 +938,8 @@
           <!-- Should run until downtime -->
           <territoriesclaimable claimlimitoverrideminutes="960" />
         </eventtime>
-      </day>
-      <day number="85">
         <eventtime utctime="23:59:00Z">
-          <territorystoragepayout />
+          <territorystoragepayoutonclaimend />
         </eventtime>
       </day>
     </seasontimes>
@@ -1116,6 +1125,8 @@
           <territorystoragefill />
           <territoriesunclaimable />
           <resetterritories />
+          <fortificationpointsreset />
+          <fortificationpointsgenerationstart />
           <territorybattleend />
           <territoryraidend />
           <disable_portalbindingremoval />
@@ -1150,7 +1161,6 @@
           <territorybattleend />
           <territoryraidend />
           <territoryscoringend />
-          <territorystoragepayout />
         </eventtime>
         <eventtime utctime="11:00:00Z">
           <territoriesunclaimable />
@@ -1188,7 +1198,6 @@
           <territorybattleend />
           <territoryraidend />
           <territoryscoringend />
-          <territorystoragepayout />
         </eventtime>
         <eventtime utctime="11:00:00Z">
           <territoriesunclaimable />
@@ -1224,13 +1233,16 @@
       </day>
       <day number="85">
         <eventtime utctime="00:00:01Z" calculateusingclustertimezone="true">
+		  <fortificationpointsreset />			
           <territorybattleend />
           <territoryraidend />
           <territoryscoringend />
+          <fortificationpointsgenerationend />
         </eventtime>
         <eventtime utctime="11:00:00Z">
           <territoriesunclaimable />
           <resetterritories />
+          <territorystoragepayoutonclaimstart />
           <disable_portalbindingremoval />
         </eventtime>
       </day>
@@ -1248,10 +1260,8 @@
           <!-- Should run until downtime -->
           <territoriesclaimable claimlimitoverrideminutes="540" />
         </eventtime>
-      </day>
-      <day number="86">
         <eventtime utctime="23:59:00Z">
-          <territorystoragepayout />
+          <territorystoragepayoutonclaimend />
         </eventtime>
       </day>
     </seasontimes>
