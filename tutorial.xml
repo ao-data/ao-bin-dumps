@@ -985,20 +985,32 @@
     <hint uniquename="PREMIUM_SUBSCRIPTION_INFO" explanation="MobilePremiumSubscriptions" blockworldinteraction="true"/>
 
     <!-- Territory Infos -->
-    <hint uniquename="ENERGY_STORAGE_INFO" explanation="VerticalTemplate" title="@TERRITORIES_TUTORIAL_SCREEN_1_TITLE" nexthint="ENERGY_STORAGE_INFO_2">
+    <!-- Old uniquename -->
+    <hint uniquename="ENERGY_STORAGE_INFO" explanation="VerticalTemplate" title="@TERRITORIES_TUTORIAL_SCREEN_1_TITLE" nexthint="TERRITORIES_ENERGY_INFO">
         <entry imagepath="Gui/TutorialExplanations/TutorialTerritoryInfo1" scale="2">
             <content text="@TERRITORIES_TUTORIAL_SCREEN_1_DESC"/>
         </entry>
     </hint>
-	<hint uniquename="ENERGY_STORAGE_INFO_2" explanation="VerticalTemplate" title="@TERRITORIES_TUTORIAL_SCREEN_2_TITLE" nexthint="ENERGY_STORAGE_INFO_3">
+    <!-- New uniquename -->
+    <hint uniquename="TERRITORIES_INFO" explanation="VerticalTemplate" title="@TERRITORIES_TUTORIAL_SCREEN_1_TITLE" nexthint="TERRITORIES_ENERGY_INFO">
+        <entry imagepath="Gui/TutorialExplanations/TutorialTerritoryInfo1" scale="2">
+            <content text="@TERRITORIES_TUTORIAL_SCREEN_1_DESC"/>
+        </entry>
+    </hint>
+    <hint uniquename="TERRITORIES_ENERGY_INFO" explanation="VerticalTemplate" title="@TERRITORIES_TUTORIAL_SCREEN_2_TITLE" nexthint="TERRITORIES_ACTIVITY_CHEST_INFO">
         <entry imagepath="Gui/TutorialExplanations/TutorialTerritoryInfo2" scale="1.2">
             <content title="@TERRITORIES_TUTORIAL_SCREEN_2_SUBTITLE_1" text="@TERRITORIES_TUTORIAL_SCREEN_2_DESC_1"/>
         </entry>
-		<entry imagepath="Gui/TutorialExplanations/TutorialTerritoryInfo3" scale="1.2">
+        <entry imagepath="Gui/TutorialExplanations/TutorialTerritoryInfo3" scale="1.2">
             <content title="@TERRITORIES_TUTORIAL_SCREEN_2_SUBTITLE_2" text="@TERRITORIES_TUTORIAL_SCREEN_2_DESC_2"/>
         </entry>
     </hint>
-	<hint uniquename="ENERGY_STORAGE_INFO_3" explanation="VerticalTemplate" title="@TERRITORIES_TUTORIAL_SCREEN_3_TITLE" nexthint="ENERGY_STORAGE_INFO_4">
+    <hint uniquename="TERRITORIES_ACTIVITY_CHEST_INFO" explanation="VerticalTemplate" title="@TERRITORIES_TUTORIAL_ACTIVITY_CHEST_SCREEN_TITLE" nexthint="TERRITORIES_POWER_LEVEL_INFO">
+        <entry imagepath="Gui/TutorialExplanations/Territories/ActivityChest" scale="2">
+            <content text="@TERRITORIES_TUTORIAL_ACTIVITY_CHEST_SCREEN_DESC"/>
+        </entry>
+    </hint>
+	<hint uniquename="TERRITORIES_POWER_LEVEL_INFO" explanation="VerticalTemplate" title="@TERRITORIES_TUTORIAL_SCREEN_3_TITLE" nexthint="TERRITORIES_RAIDING_INFO">
         <entry imagepath="Gui/TutorialExplanations/TutorialTerritoryInfo5" scale="1.2">
             <content title="@TERRITORIES_TUTORIAL_SCREEN_3_SUBTITLE_1" text="@TERRITORIES_TUTORIAL_SCREEN_3_DESC_1"/>
         </entry>
@@ -1006,12 +1018,19 @@
             <content title="@TERRITORIES_TUTORIAL_SCREEN_3_SUBTITLE_2" text="@TERRITORIES_TUTORIAL_SCREEN_3_DESC_2"/>
         </entry>
     </hint>
-	<hint uniquename="ENERGY_STORAGE_INFO_4" explanation="VerticalTemplate" title="@TERRITORIES_TUTORIAL_SCREEN_4_TITLE" nexthint="ENERGY_STORAGE_INFO_5">
-        <entry imagepath="Gui/TutorialExplanations/TutorialTerritoryInfo6" scale="1.2">
-            <content title="@TERRITORIES_TUTORIAL_SCREEN_4_SUBTITLE_1" text="@TERRITORIES_TUTORIAL_SCREEN_4_DESC_1"/>
+    <hint uniquename="TERRITORIES_RAIDING_INFO" explanation="VerticalTemplate" title="@TERRITORIES_TUTORIAL_RAIDING_SCREEN_TITLE" nexthint="TERRITORIES_ATTACKING_INFO">
+        <entry imagepath="Gui/TutorialExplanations/TutorialTerritoryInfo6" scale="2">
+            <content text="@TERRITORIES_TUTORIAL_SCREEN_4_DESC_1"/>
         </entry>
-		<entry imagepath="Gui/TutorialExplanations/TutorialTerritoryInfo7" scale="1.2">
-            <content title="@TERRITORIES_TUTORIAL_SCREEN_4_SUBTITLE_2" text="@TERRITORIES_TUTORIAL_SCREEN_4_DESC_2"/>
+    </hint>
+    <hint uniquename="TERRITORIES_ATTACKING_INFO" explanation="VerticalTemplate" title="@TERRITORIES_TUTORIAL_ATTACKING_SCREEN_TITLE" nexthint="TERRITORIES_BANNERS_INFO">
+        <entry imagepath="Gui/TutorialExplanations/TutorialTerritoryInfo7" scale="2">
+            <content text="@TERRITORIES_TUTORIAL_SCREEN_4_DESC_2"/>
+        </entry>
+    </hint>
+    <hint uniquename="TERRITORIES_BANNERS_INFO" explanation="VerticalTemplate" title="@TERRITORIES_TUTORIAL_BANNERS_TITLE" nexthint="ENERGY_STORAGE_INFO_5">
+        <entry imagepath="Gui/TutorialExplanations/Territories/Banners" scale="2">
+            <content text="@TERRITORIES_TUTORIAL_BANNERS_SCREEN_DESC"/>
         </entry>
     </hint>
 	<hint uniquename="ENERGY_STORAGE_INFO_5" explanation="VerticalTemplate" title="@TERRITORIES_TUTORIAL_SCREEN_5_TITLE" nexthint="ENERGY_STORAGE_INFO_6">
@@ -1024,7 +1043,46 @@
             <content text="@TERRITORIES_TUTORIAL_SCREEN_6_DESC"/>
         </entry>
     </hint>
-
+    
+    <!-- Fortification Infos -->
+    <!-- Old uniquename -->
+    <hint uniquename="FORTIFICATION_POINTS" explanation="VerticalTemplate" title="@FORTIFICATIONS_TUTORIAL_INTRO_SCREEN_TITLE" nexthint="FORTIFICATIONS_POINTS_UPGRADING_INFO">
+        <entry imagepath="Gui/TutorialExplanations/Fortifications/Fortifications" scale="2">
+            <content text="@FORTIFICATIONS_TUTORIAL_INTRO_SCREEN_DESC"/> 
+        </entry>
+    </hint>
+    <!-- New uniquename -->
+    <hint uniquename="FORTIFICATIONS_INFO" explanation="VerticalTemplate" title="@FORTIFICATIONS_TUTORIAL_INTRO_SCREEN_TITLE" nexthint="FORTIFICATIONS_POINTS_UPGRADING_INFO">
+        <entry imagepath="Gui/TutorialExplanations/Fortifications/Fortifications" scale="2">
+            <content text="@FORTIFICATIONS_TUTORIAL_INTRO_SCREEN_DESC"/>
+        </entry>
+    </hint>
+    <hint uniquename="FORTIFICATIONS_POINTS_UPGRADING_INFO" explanation="VerticalTemplate" title="@FORTIFICATIONS_TUTORIAL_POINTS_UPGRADING_SCREEN_TITLE" nexthint="FORTIFICATIONS_BUILDINGS_GUARDS_INFO">
+        <entry imagepath="Gui/TutorialExplanations/Fortifications/FortificationPoints" scale="1.2">
+            <content title="@FORTIFICATIONS_TUTORIAL_POINTS_UPGRADING_SCREEN_SUBTITLE_1" text="@FORTIFICATIONS_TUTORIAL_POINTS_UPGRADING_SCREEN_DESC_1"/>
+        </entry>
+        <entry imagepath="Gui/TutorialExplanations/Fortifications/Upgrading" scale="1.2">
+            <content title="@FORTIFICATIONS_TUTORIAL_POINTS_UPGRADING_SCREEN_SUBTITLE_2" text="@FORTIFICATIONS_TUTORIAL_POINTS_UPGRADING_SCREEN_DESC_2"/>
+        </entry>
+    </hint>
+    <hint uniquename="FORTIFICATIONS_BUILDINGS_GUARDS_INFO" explanation="VerticalTemplate" title="@FORTIFICATIONS_TUTORIAL_BUILDINGS_GUARDS_SCREEN_TITLE" nexthint="FORTIFICATIONS_PHASES_INFO">
+        <entry imagepath="Gui/TutorialExplanations/Fortifications/Buildings" scale="1.2">
+            <content title="@FORTIFICATIONS_TUTORIAL_BUILDINGS_GUARDS_SCREEN_SUBTITLE_1" text="@FORTIFICATIONS_TUTORIAL_BUILDINGS_GUARDS_SCREEN_DESC_1"/>
+        </entry>
+        <entry imagepath="Gui/TutorialExplanations/Fortifications/Guards" scale="1.2">
+            <content title="@FORTIFICATIONS_TUTORIAL_BUILDINGS_GUARDS_SCREEN_SUBTITLE_2" text="@FORTIFICATIONS_TUTORIAL_BUILDINGS_GUARDS_SCREEN_DESC_2"/>
+        </entry>
+    </hint>
+    <hint uniquename="FORTIFICATIONS_PHASES_INFO" explanation="VerticalTemplate" title="@FORTIFICATIONS_TUTORIAL_PHASES_SCREEN_TITLE" nexthint="FORTIFICATIONS_CYSTAL_GATES_INFO">
+        <entry imagepath="Gui/TutorialExplanations/Fortifications/PreBattlePhaseAndPrimeTime" scale="2">
+            <content text="@FORTIFICATIONS_TUTORIAL_PHASES_SCREEN_DESC"/>
+        </entry>
+    </hint>
+    <hint uniquename="FORTIFICATIONS_CYSTAL_GATES_INFO" explanation="VerticalTemplate" title="@FORTIFICATIONS_TUTORIAL_CRYSTAL_GATES_SCREEN_TITLE">
+        <entry imagepath="Gui/TutorialExplanations/Fortifications/CrystalGates" scale="2">
+            <content text="@FORTIFICATIONS_TUTORIAL_CRYSTAL_GATES_SCREEN_DESC"/>
+        </entry>
+    </hint>
 
     <!-- Local Production Bonuses Infos -->
     <hint uniquename="LOCAL_PRODUCTION_INFO" explanation="VerticalTemplate" title="@CLUSTERMAP_PRODUCTIONBONUS_TITLE">
@@ -1548,6 +1606,12 @@
         </entry>
     </hint>
 
+    <!-- CLUSTER_CHEST_ACTIVITY -->
+    <hint uniquename="CLUSTER_CHEST_ACTIVITY" explanation="VerticalTemplate" title="@TERRITORIES_TUTORIAL_ACTIVITY_CHEST_SCREEN_TITLE">
+        <entry imagepath="Gui/TutorialExplanations/Territories/ActivityChest" scale="2">
+            <content text="@TERRITORIES_TUTORIAL_ACTIVITY_CHEST_SCREEN_DESC"/>
+        </entry>
+    </hint>
 
 	<!-- Beta Welcome Europe-->
     <texthint uniquename="BETA_WELCOME_EUROPE" explanation="TextOnlyTemplate" title="@ASIA_BETA_WELCOME_POPUP_TITLE">

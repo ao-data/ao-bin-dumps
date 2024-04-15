@@ -1,0 +1,52 @@
+{
+  "?xml": {
+    "@version": "1.0",
+    "@encoding": "utf-8"
+  },
+  "patch": {
+    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+    "@xsi:noNamespaceSchemaLocation": "patch.xsd",
+    "remove": [
+      {
+        "@sel": "TreasureDistribution/Events/Event[@name='CASTLE_OUTPOST_STANDARD']/Weekdays"
+      },
+      {
+        "@sel": "TreasureDistribution/Events/Event[@name='CASTLE_OUTPOST_WEEKEND']/Weekdays/Weekday[@day='Saturday']"
+      },
+      {
+        "@sel": "TreasureDistribution/Events/Event[@name='CASTLE_OUTPOST_WEEKEND']/Weekdays/Weekday[@day='Sunday']"
+      },
+      {
+        "@sel": "TreasureDistribution/Events/Event[@name='CASTLE_STANDARD']/Weekdays"
+      },
+      {
+        "@sel": "TreasureDistribution/Events/Event[@name='CASTLE_WEEKEND']/Weekdays/Weekday[@day='Saturday']"
+      },
+      {
+        "@sel": "TreasureDistribution/Events/Event[@name='CASTLE_WEEKEND']/Weekdays/Weekday[@day='Sunday']"
+      }
+    ],
+    "add": [
+      {
+        "@sel": "TreasureDistribution/Events/Event[@name='CASTLE_OUTPOST_STANDARD']",
+        "@aschild": "true",
+        "#cdata-section": "\n      <Weekdays clustertime=\"false\">\n        <Weekday day=\"Monday\">\n          <Respawn utc=\"10:00:00\"/>\n          <Respawn utc=\"12:00:00\"/>\n          <Respawn utc=\"14:00:00\"/>\n          <Respawn utc=\"16:00:00\"/>\n          <Respawn utc=\"18:00:00\"/>\n          <Respawn utc=\"20:00:00\"/>\n          <Respawn utc=\"22:00:00\"/>\n        </Weekday>\n        <Weekday day=\"Tuesday\">\n          <Respawn utc=\"10:00:00\"/>\n          <Respawn utc=\"12:00:00\"/>\n          <Respawn utc=\"14:00:00\"/>\n          <Respawn utc=\"16:00:00\"/>\n          <Respawn utc=\"18:00:00\"/>\n          <Respawn utc=\"20:00:00\"/>\n          <Respawn utc=\"22:00:00\"/>\n        </Weekday>\n        <Weekday day=\"Wednesday\">\n          <Respawn utc=\"10:00:00\"/>\n          <Respawn utc=\"12:00:00\"/>\n          <Respawn utc=\"14:00:00\"/>\n          <Respawn utc=\"16:00:00\"/>\n          <Respawn utc=\"18:00:00\"/>\n          <Respawn utc=\"20:00:00\"/>\n          <Respawn utc=\"22:00:00\"/>\n        </Weekday>\n        <Weekday day=\"Thursday\">\n          <Respawn utc=\"10:00:00\"/>\n          <Respawn utc=\"12:00:00\"/>\n          <Respawn utc=\"14:00:00\"/>\n          <Respawn utc=\"16:00:00\"/>\n          <Respawn utc=\"18:00:00\"/>\n          <Respawn utc=\"20:00:00\"/>\n          <Respawn utc=\"22:00:00\"/>\n        </Weekday>\n        <Weekday day=\"Friday\">\n          <Respawn utc=\"10:00:00\"/>\n          <Respawn utc=\"12:00:00\"/>\n          <Respawn utc=\"14:00:00\"/>\n          <Respawn utc=\"16:00:00\"/>\n          <Respawn utc=\"18:00:00\"/>\n          <Respawn utc=\"20:00:00\"/>\n          <Respawn utc=\"22:00:00\"/>\n        </Weekday>\n        <Weekday day=\"Saturday\">\n          <Respawn utc=\"10:00:00\"/>\n          <Respawn utc=\"12:00:00\"/>\n          <Respawn utc=\"14:00:00\"/>\n          <Respawn utc=\"16:00:00\"/>\n\t\t  \n\t\t  <End     utc=\"17:58:00\"/>\n\t\t  <Start   utc=\"19:59:00\"/>\t\t  \n\t\t  \n          <Respawn utc=\"20:00:00\"/>\n          <Respawn utc=\"22:00:00\"/>\n        </Weekday>\n        <Weekday day=\"Sunday\">\n          <Respawn utc=\"10:00:00\"/>\n          <Respawn utc=\"12:00:00\"/>\n          <Respawn utc=\"14:00:00\"/>\n          <Respawn utc=\"16:00:00\"/>\n\t\t  \n\t\t  <End     utc=\"17:58:00\"/>\n\t\t  <Start   utc=\"19:59:00\"/>\t\t  \n\t\t  \n          <Respawn utc=\"20:00:00\"/>\n          <Respawn utc=\"22:00:00\"/>\n        </Weekday>\n      </Weekdays>"
+      },
+      {
+        "@sel": "TreasureDistribution/Events/Event[@name='CASTLE_OUTPOST_WEEKEND']/Weekdays",
+        "@aschild": "true",
+        "#cdata-section": "\n\t    <Weekday day=\"Saturday\">\n          <Start   utc=\"17:59:00\"/>\n          <Respawn utc=\"18:00:00\"/>\n          <End     utc=\"19:58:00\"/>\n        </Weekday>\n        <Weekday day=\"Sunday\">\n          <Start   utc=\"17:59:00\"/>\n          <Respawn utc=\"18:00:00\"/>\n          <End     utc=\"19:58:00\"/>\n        </Weekday>"
+      },
+      {
+        "@sel": "TreasureDistribution/Events/Event[@name='CASTLE_STANDARD']",
+        "@aschild": "true",
+        "#cdata-section": "\n      <Weekdays clustertime=\"false\">\n        <Weekday day=\"Monday\">\n          <Respawn utc=\"10:00:00\"/>\n          <Respawn utc=\"12:00:00\"/>\n          <Respawn utc=\"14:00:00\"/>\n          <Respawn utc=\"16:00:00\"/>\n          <Respawn utc=\"18:00:00\"/>\n          <Respawn utc=\"20:00:00\"/>\n          <Respawn utc=\"22:00:00\"/>\n        </Weekday>\n        <Weekday day=\"Tuesday\">\n          <Respawn utc=\"10:00:00\"/>\n          <Respawn utc=\"12:00:00\"/>\n          <Respawn utc=\"14:00:00\"/>\n          <Respawn utc=\"16:00:00\"/>\n          <Respawn utc=\"18:00:00\"/>\n          <Respawn utc=\"20:00:00\"/>\n          <Respawn utc=\"22:00:00\"/>\n        </Weekday>\n        <Weekday day=\"Wednesday\">\n          <Respawn utc=\"10:00:00\"/>\n          <Respawn utc=\"12:00:00\"/>\n          <Respawn utc=\"14:00:00\"/>\n          <Respawn utc=\"16:00:00\"/>\n          <Respawn utc=\"18:00:00\"/>\n          <Respawn utc=\"20:00:00\"/>\n          <Respawn utc=\"22:00:00\"/>\n        </Weekday>\n        <Weekday day=\"Thursday\">\n          <Respawn utc=\"10:00:00\"/>\n          <Respawn utc=\"12:00:00\"/>\n          <Respawn utc=\"14:00:00\"/>\n          <Respawn utc=\"16:00:00\"/>\n          <Respawn utc=\"18:00:00\"/>\n          <Respawn utc=\"20:00:00\"/>\n          <Respawn utc=\"22:00:00\"/>\n        </Weekday>\n        <Weekday day=\"Friday\">\n          <Respawn utc=\"10:00:00\"/>\n          <Respawn utc=\"12:00:00\"/>\n          <Respawn utc=\"14:00:00\"/>\n          <Respawn utc=\"16:00:00\"/>\n          <Respawn utc=\"18:00:00\"/>\n          <Respawn utc=\"20:00:00\"/>\n          <Respawn utc=\"22:00:00\"/>\n        </Weekday>\n        <Weekday day=\"Saturday\">\n          <Respawn utc=\"10:00:00\"/>\n          <Respawn utc=\"12:00:00\"/>\n          <Respawn utc=\"14:00:00\"/>\n          <Respawn utc=\"16:00:00\"/>\n\t\t  \n\t\t  <End     utc=\"17:58:00\"/>\n\t\t  <Start   utc=\"19:59:00\"/>\t\t  \n\t\t  \n          <Respawn utc=\"20:00:00\"/>\n          <Respawn utc=\"22:00:00\"/>\n        </Weekday>\n        <Weekday day=\"Sunday\">\n          <Respawn utc=\"10:00:00\"/>\n          <Respawn utc=\"12:00:00\"/>\n          <Respawn utc=\"14:00:00\"/>\n          <Respawn utc=\"16:00:00\"/>\n\t\t  \n\t\t  <End     utc=\"17:58:00\"/>\n\t\t  <Start   utc=\"19:59:00\"/>\t\t  \n\t\t  \n          <Respawn utc=\"20:00:00\"/>\n          <Respawn utc=\"22:00:00\"/>\n        </Weekday>\n      </Weekdays>"
+      },
+      {
+        "@sel": "TreasureDistribution/Events/Event[@name='CASTLE_WEEKEND']/Weekdays",
+        "@aschild": "true",
+        "#cdata-section": "\n\t    <Weekday day=\"Saturday\">\n          <Start   utc=\"17:59:00\"/>\n          <Respawn utc=\"18:00:00\"/>\n          <End     utc=\"19:58:00\"/>\n        </Weekday>\n        <Weekday day=\"Sunday\">\n          <Start   utc=\"17:59:00\"/>\n          <Respawn utc=\"18:00:00\"/>\n          <End     utc=\"19:58:00\"/>\n        </Weekday>"
+      }
+    ]
+  }
+}

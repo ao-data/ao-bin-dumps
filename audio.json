@@ -3692,7 +3692,7 @@
           "@name": "cloth"
         },
         "WeaponType": {
-          "@name": "swoosh_medium"
+          "@name": "sword_long"
         },
         "MountType": {
           "@name": "empty"
@@ -4661,7 +4661,7 @@
           "@name": "incorporeal"
         },
         "WeaponType": {
-          "@name": "bite_medium"
+          "@name": "undead_magic"
         },
         "MountType": {
           "@name": "empty"
@@ -6378,6 +6378,102 @@
         }
       },
       {
+        "@name": "MOB_TERRITORY_SUMMON_ARCANE_ELEMENTAL",
+        "CharType": {
+          "@name": "mob"
+        },
+        "MobFaction": {
+          "@name": "arcane"
+        },
+        "MobType": {
+          "@name": "arcane_elemental"
+        },
+        "Size": {
+          "@name": "medium"
+        },
+        "ArmorType": {
+          "@name": "arcane"
+        },
+        "WeaponType": {
+          "@name": "frost"
+        },
+        "MountType": {
+          "@name": "empty"
+        }
+      },
+      {
+        "@name": "MOB_TERRITORY_GUARD_MAGE",
+        "CharType": {
+          "@name": "mob"
+        },
+        "MobFaction": {
+          "@name": "territory"
+        },
+        "MobType": {
+          "@name": "territory_guard_mage"
+        },
+        "Size": {
+          "@name": "medium"
+        },
+        "ArmorType": {
+          "@name": "cloth"
+        },
+        "WeaponType": {
+          "@name": "frost"
+        },
+        "MountType": {
+          "@name": "empty"
+        }
+      },
+      {
+        "@name": "MOB_TERRITORY_GUARD_RANGED",
+        "CharType": {
+          "@name": "mob"
+        },
+        "MobFaction": {
+          "@name": "territory"
+        },
+        "MobType": {
+          "@name": "territory_guard_ranged_female"
+        },
+        "Size": {
+          "@name": "medium"
+        },
+        "ArmorType": {
+          "@name": "leather"
+        },
+        "WeaponType": {
+          "@name": "bolt_medium"
+        },
+        "MountType": {
+          "@name": "empty"
+        }
+      },
+      {
+        "@name": "MOB_TERRITORY_GUARD_SWORD",
+        "CharType": {
+          "@name": "mob"
+        },
+        "MobFaction": {
+          "@name": "castleguard"
+        },
+        "MobType": {
+          "@name": "castleguard_soldier"
+        },
+        "Size": {
+          "@name": "medium"
+        },
+        "ArmorType": {
+          "@name": "plate"
+        },
+        "WeaponType": {
+          "@name": "sword_long"
+        },
+        "MountType": {
+          "@name": "empty"
+        }
+      },
+      {
         "@name": "MOB_TERRITORY_ENERGY_CRYSTAL",
         "CharType": {
           "@name": "mob"
@@ -7812,6 +7908,30 @@
         }
       },
       {
+        "@name": "FORTIFICATION_WALL_WOOD",
+        "ArmorType": {
+          "@name": "wall_wood"
+        }
+      },
+      {
+        "@name": "FORTIFICATION_WALL_STONE",
+        "ArmorType": {
+          "@name": "wall_stone"
+        }
+      },
+      {
+        "@name": "FORTIFICATION_GATE_CRYSTAL_ACTIVE",
+        "ArmorType": {
+          "@name": "gate_crystal"
+        }
+      },
+      {
+        "@name": "FORTIFICATION_GATE_CRYSTAL_BROKEN",
+        "ArmorType": {
+          "@name": "gate_wood"
+        }
+      },
+      {
         "@name": "FURNITURE_WOOD",
         "ArmorType": {
           "@name": "furniture_wood"
@@ -8448,6 +8568,12 @@
         }
       },
       {
+        "@name": "MELEE_CRYSTAL_WEAPON_IMPACT_SMALL",
+        "OnSpellHit": {
+          "@name": "Play_crystal_melee_impact_small"
+        }
+      },
+      {
         "@name": "MELEE_CRYSTAL_WEAPON_IMPACT_MEDIUM",
         "OnSpellHit": {
           "@name": "Play_crystal_melee_impact_medium"
@@ -8596,6 +8722,43 @@
         "@name": "MELEE_IMPACT_BIG_HEAVY",
         "OnSpellHit": {
           "@name": "Play_melee_impact_big_heavy"
+        }
+      },
+      {
+        "@name": "MELEE_HAMMER_CAST_SHOVE",
+        "OnCastFinished": {
+          "@name": "Play_hammer_cast_shove"
+        }
+      },
+      {
+        "@name": "MELEE_IMPACT_SMALL_HEAVY_WEAPONHIT",
+        "OnSpellHit": {
+          "@name": "Play_melee_impact_small_heavy",
+          "ImpactType": null
+        }
+      },
+      {
+        "@name": "MELEE_HAMMER_CHANNEL_TREMOR",
+        "OnChannelingStart": {
+          "@name": "Play_hammer_triple_groundslam_channel"
+        },
+        "OnChannelingCancelled": {
+          "@name": "Stop_hammer_triple_groundslam_channel"
+        },
+        "OnChannelingInterrupted": {
+          "@name": "Stop_hammer_triple_groundslam_channel"
+        }
+      },
+      {
+        "@name": "MELEE_HAMMER_TREMOR_HIT_SMALL",
+        "OnSpellHit": {
+          "@name": "Play_melee_impact_small_heavy"
+        }
+      },
+      {
+        "@name": "MELEE_HAMMER_TREMOR_HIT_MEDIUM",
+        "OnSpellHit": {
+          "@name": "Play_melee_impact_medium_heavy"
         }
       },
       {
@@ -9455,6 +9618,12 @@
         }
       },
       {
+        "@name": "MELEE_AXE_RAGING_BLADES_CAST",
+        "OnCastFinished": {
+          "@name": "Play_melee_axe_raging_blades_cast"
+        }
+      },
+      {
         "@name": "MELEE_AXE_TEARAPART",
         "OnCastStart": {
           "@name": "Play_axe_tearapart"
@@ -9494,6 +9663,12 @@
         },
         "OnCastInterrupted": {
           "@name": "Stop_melee_dualaxe_crawler"
+        }
+      },
+      {
+        "@name": "MELEE_CRYSTAL_SCYTHE_CAST_BIG_DASHSWING",
+        "OnCastFinished": {
+          "@name": "Play_crystal_scythe_cast_big_dashswing"
         }
       },
       {
@@ -9638,6 +9813,18 @@
         "@name": "MELEE_BLADEDSTAFF_SOARINGSWIPE",
         "OnCastFinished": {
           "@name": "Play_bladedstaff_swipe"
+        }
+      },
+      {
+        "@name": "MELEE_CRYSTAL_BLADEDSTAFF_CAST_SWING",
+        "OnCastFinished": {
+          "@name": "Play_crystal_bladedstaff_cast_swing"
+        }
+      },
+      {
+        "@name": "MELEE_CRYSTAL_BLADEDSTAFF_CAST_BIG_SWING",
+        "OnCastFinished": {
+          "@name": "Play_crystal_bladedstaff_cast_big_swing"
         }
       },
       {
@@ -10158,6 +10345,9 @@
         },
         "OnCastFinished": {
           "@name": "Play_arrow_cast_swoosh_medium"
+        },
+        "OnSpellHit": {
+          "@name": "Play_arrow_impact_medium_sundershot"
         }
       },
       {
@@ -10196,7 +10386,7 @@
           "@name": "Play_bolt_cast_medium_shot"
         },
         "OnSpellHit": {
-          "@name": "Play_arrow_impact_big"
+          "@name": "Play_arrow_impact_big_armorpiercer"
         },
         "OnProjectileHit": {
           "ImpactType": null
@@ -10291,9 +10481,6 @@
       },
       {
         "@name": "SPELL_ARROW_UNDEAD_MINE",
-        "OnCastStart": {
-          "@name": "Play_arrow_cast_swoosh_big"
-        },
         "OnCastFinished": {
           "@name": "Play_arrow_undead_mine"
         }
@@ -11876,6 +12063,12 @@
         }
       },
       {
+        "@name": "SPELL_FROST_HIT_SMALL_AUTOATTACK",
+        "OnSpellHit": {
+          "@name": "Play_frost_impact_small_autoattack"
+        }
+      },
+      {
         "@name": "SPELL_FROST_HIT_SMALL_ICECRYSTAL",
         "OnSpellHit": {
           "@name": "Play_frost_impact_small_icecrystal"
@@ -11996,6 +12189,24 @@
         "@name": "SPELL_FROST_BUFF_DAMAGE_INCREASE",
         "OnSpellHit": {
           "@name": "Play_frost_buff_damage_increase"
+        }
+      },
+      {
+        "@name": "SPELL_FROST_TARGETED_CHANNEL_CAST",
+        "OnCastFinished": {
+          "@name": "Play_frost_targeted_channel_cast"
+        }
+      },
+      {
+        "@name": "SPELL_FROST_TARGETED_CHANNEL_SHOT",
+        "OnCastFinished": {
+          "@name": "Play_frost_targeted_channel_shot_E"
+        }
+      },
+      {
+        "@name": "SPELL_FROST_IMPACT_SMALL_ICE_SHARDS",
+        "OnSpellHit": {
+          "@name": "Play_frost_impact_small_ice_shards"
         }
       },
       {
@@ -12239,9 +12450,21 @@
         }
       },
       {
+        "@name": "SPELL_LIGHTNING_SPELLHIT",
+        "OnSpellHit": {
+          "@name": "Play_lightning_impact_add"
+        }
+      },
+      {
         "@name": "SPELL_LIGHTNING_CHAIN",
         "OnCastFinished": {
           "@name": "Play_lightningbolt_chain"
+        }
+      },
+      {
+        "@name": "SPELL_LIGHTNING_HIT_SMALL_VOICELIMITED",
+        "OnSpellHit": {
+          "@name": "Play_lightning_impact_small_voicelimited"
         }
       },
       {
@@ -13620,6 +13843,81 @@
         }
       },
       {
+        "@name": "SPELL_TRACKING_SHADOWMASK_MELEE_SWING",
+        "OnCastStart": {
+          "@name": "Play_melee_load_medium_windy"
+        },
+        "OnCastInterrupted": {
+          "@name": "Stop_melee_load_medium_windy"
+        },
+        "OnCastCanceled": {
+          "@name": "Stop_melee_load_medium_windy"
+        },
+        "OnCastFinished": {
+          "@name": "Play_melee_swoosh_windy_short_attack"
+        }
+      },
+      {
+        "@name": "SPELL_TRACKING_SHADOWMASK_FIRE",
+        "OnCastStart": {
+          "@name": "Play_fire_cast_load_medium_short"
+        },
+        "OnCastInterrupted": {
+          "@name": "Stop_fire_cast_load_medium_short"
+        },
+        "OnCastCanceled": {
+          "@name": "Stop_fire_cast_load_medium_short"
+        },
+        "OnCastFinished": {
+          "@name": "Play_arrow_cast_medium"
+        }
+      },
+      {
+        "@name": "SPELL_TRACKING_SHADOWMAST_SUMMON_CHANNEL",
+        "OnChannelingStart": {
+          "@name": "Play_spell_fire_W_fireball_projectile_loop"
+        },
+        "OnChannelingCancelled": {
+          "@name": "Stop_spell_fire_W_fireball_projectile_loop"
+        },
+        "OnChannelingInterrupted": {
+          "@name": "Stop_spell_fire_W_fireball_projectile_loop"
+        },
+        "OnChannelingEnd": {
+          "@name": "Stop_spell_fire_W_fireball_projectile_loop"
+        }
+      },
+      {
+        "@name": "SPELL_TRACKING_SHADOWMAST_SUMMON_EXPLOSION",
+        "OnCastFinished": {
+          "@name": "Play_fire_explosion_small"
+        },
+        "OnSpellHit": {
+          "@name": "Play_fire_impact_small"
+        }
+      },
+      {
+        "@name": "SPELL_TRACKING_SHADOWMASK_ESCAPE_EXPLOSION",
+        "OnCastStart": {
+          "@name": "Play_fire_cast_load_medium_long"
+        },
+        "OnCastInterrupted": {
+          "@name": "Stop_fire_cast_load_medium_long"
+        },
+        "OnCastCanceled": {
+          "@name": "Stop_fire_cast_load_medium_long"
+        },
+        "OnCastFinished": {
+          "@name": "Play_fire_cast_medium_ignite_staff"
+        }
+      },
+      {
+        "@name": "SPELL_TRACKING_SHADOWMASK_ESCAPE_DASH",
+        "OnCastStart": {
+          "@name": "Play_mob_jump_dash"
+        }
+      },
+      {
         "@name": "OPEN_SILVERBAG",
         "OnSpellHit": {
           "@name": "Play_open_silver_bag"
@@ -13776,6 +14074,12 @@
         "@name": "SPELL_DAMAGE_REFLECT",
         "OnCastFinished": {
           "@name": "Play_armor_damagereflection_cast"
+        }
+      },
+      {
+        "@name": "SPELL_CAST_SACRIFICE_HEAL",
+        "OnCastFinished": {
+          "@name": "Play_cast_sacrifice_heal"
         }
       },
       {
@@ -14224,6 +14528,12 @@
         },
         "OnChannelingCancelled": {
           "@name": "Play_undead_invisibility_end"
+        }
+      },
+      {
+        "@name": "SPELL_REFLECT_SHIELD_ECHO",
+        "OnCastFinished": {
+          "@name": "Play_mob_knight_shield_echo"
         }
       },
       {
@@ -17042,6 +17352,12 @@
         "OnCastStart": {
           "@name": "Play_mob_morgana_champion_cast"
         },
+        "OnCastInterrupted": {
+          "@name": "Stop_mob_morgana_champion_cast"
+        },
+        "OnCastCanceled": {
+          "@name": "Stop_mob_morgana_champion_cast"
+        },
         "OnCastFinished": {
           "@name": "Play_mob_morgana_champion_spikes"
         },
@@ -19276,6 +19592,84 @@
         }
       },
       {
+        "@name": "SPELL_GUARD_MAGE_SUPPORT_BEAM_CHANNEL",
+        "OnChannelingStart": {
+          "@name": "Play_territory_guard_mage_support_beam_loop"
+        },
+        "OnChannelingEnd": {
+          "@name": "Stop_territory_guard_mage_support_beam_loop"
+        },
+        "OnChannelingInterrupted": {
+          "@name": "Stop_territory_guard_mage_support_beam_loop"
+        },
+        "OnChannelingCancelled": {
+          "@name": "Stop_territory_guard_mage_support_beam_loop"
+        }
+      },
+      {
+        "@name": "SPELL_GUARD_MELEE_WARCRY_CAST",
+        "OnCastFinished": {
+          "@name": "Play_mob_guard_warcry_buff_cast"
+        }
+      },
+      {
+        "@name": "SPELL_GUARD_SIEGE_BUFF_HIT",
+        "OnSpellHit": {
+          "@name": "Play_mob_guard_siege_buff"
+        }
+      },
+      {
+        "@name": "TERRITORY_SIPHONING_MAGE_ICEBLOCK",
+        "OnCastFinished": {
+          "@name": "Play_frost_cast_iceblock"
+        }
+      },
+      {
+        "@name": "TERRITORY_SIPHONING_MAGE_CAST_FROSTPROJECTILE",
+        "OnCastFinished": {
+          "@name": "Play_frost_cast_small_frostbite"
+        }
+      },
+      {
+        "@name": "SPELL_SENTRY_MAGE_CHAINLIGHTNING",
+        "OnCastStart": {
+          "@name": "Play_lightning_cast_load"
+        },
+        "OnCastCanceled": {
+          "@name": "Stop_lightning_cast_load"
+        },
+        "OnCastInterrupted": {
+          "@name": "Stop_lightning_cast_load"
+        },
+        "OnCastFinished": {
+          "@name": "Play_lightningbolt_chain"
+        }
+      },
+      {
+        "@name": "SPELL_SENTRY_MAGE_LIGHTNINGSTRIKE",
+        "OnCastStart": {
+          "@name": "Play_lightning_cast_load"
+        },
+        "OnCastCanceled": {
+          "@name": "Stop_lightning_cast_load"
+        },
+        "OnCastInterrupted": {
+          "@name": "Stop_lightning_cast_load"
+        }
+      },
+      {
+        "@name": "SPELL_SENTRY_MAGE_LIGHTNING_BEAMCIRCLE",
+        "OnCastStart": {
+          "@name": "Play_sentry_mage_summon_lightning_ring_load"
+        },
+        "OnCastCanceled": {
+          "@name": "Stop_sentry_mage_summon_lightning_ring_load"
+        },
+        "OnCastInterrupted": {
+          "@name": "Stop_sentry_mage_summon_lightning_ring_load"
+        }
+      },
+      {
         "@name": "DEMON_HAZARD_GLUE_EXPLODE",
         "OnSpellHit": {
           "@name": "Play_mob_hazard_glue_explosion"
@@ -20267,6 +20661,96 @@
         },
         "OnPlaceItemFinished": {
           "@name": "Play_ui_action_place_hideout_finish"
+        }
+      },
+      {
+        "@name": "FORTIFICATION_WALL_WOOD",
+        "OnDamaged": {
+          "@name": "Play_territory_wall_wood_damage"
+        },
+        "OnDestroyed": {
+          "@name": "Play_territory_wall_wood_destroyed"
+        },
+        "OnRepaired": {
+          "@name": "Play_territory_wall_wood_repair"
+        },
+        "OnRestored": {
+          "@name": "Play_territory_wall_wood_restored"
+        },
+        "OnDowngrade": {
+          "@name": "Play_territory_wall_wood_removed"
+        },
+        "OnUpgrade": {
+          "@name": "Play_territory_fortification_upgrade_finished"
+        }
+      },
+      {
+        "@name": "FORTIFICATION_WALL_STONE",
+        "OnDamaged": {
+          "@name": "Play_territory_wall_stone_damage"
+        },
+        "OnDestroyed": {
+          "@name": "Play_territory_wall_stone_destroyed"
+        },
+        "OnRepaired": {
+          "@name": "Play_territory_wall_stone_repair"
+        },
+        "OnRestored": {
+          "@name": "Play_territory_wall_stone_restored"
+        },
+        "OnDowngrade": {
+          "@name": "Play_territory_wall_stone_removed"
+        },
+        "OnUpgrade": {
+          "@name": "Play_territory_fortification_upgrade_finished"
+        }
+      },
+      {
+        "@name": "FORTIFICATION_GATE_CRYSTAL_ACTIVE",
+        "OnDamaged": {
+          "@name": "Play_territory_gate_crystal_damage"
+        },
+        "OnDestroyed": {
+          "@name": "Play_territory_gate_crystal_destroyed"
+        },
+        "OnRepaired": {
+          "@name": "Play_territory_gate_repair"
+        },
+        "OnRestored": {
+          "@name": "Play_territory_gate_crystal_restored"
+        },
+        "OnDowngrade": {
+          "@name": "Play_territory_gate_removed"
+        },
+        "OnUpgrade": {
+          "@name": "Play_territory_fortification_upgrade_finished"
+        }
+      },
+      {
+        "@name": "FORTIFICATION_GATE_CRYSTAL_BROKEN",
+        "OnDamaged": {
+          "@name": "Play_territory_gate_wood_damage"
+        },
+        "OnDestroyed": {
+          "@name": "Play_territory_gate_destroyed"
+        },
+        "OnRepaired": {
+          "@name": "Play_territory_gate_repair"
+        },
+        "OnRestored": {
+          "@name": "Play_territory_gate_wood_restored"
+        },
+        "OnDowngrade": {
+          "@name": "Play_territory_gate_removed"
+        },
+        "OnUpgrade": {
+          "@name": "Play_territory_fortification_upgrade_finished"
+        }
+      },
+      {
+        "@name": "FORTIFICATION_GUARD_UPGRADE",
+        "OnCastFinished": {
+          "@name": "Play_territory_guard_upgrade"
         }
       },
       {

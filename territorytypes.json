@@ -45,12 +45,11 @@
       "@name": "WATCHTOWER",
       "@claimcost": "2000000",
       "@dailyinstancedbattles": "1",
-      "@battlevaultsize": "64",
       "@nutritionstorage": "38880",
       "@secondspernutrition": "22.222222",
       "@claimnutrition": "4000",
       "@conquernutrition": "4000",
-      "crystalleague": {
+      "towerlevels": {
         "towerlevel": [
           {
             "@level": "1",
@@ -59,77 +58,94 @@
             "@yieldbonus": "0.01",
             "@pointboostermultiplier": "1",
             "@dailyconversionbonus": "0",
-            "@enchantedresourcemultiplier": "1"
+            "@enchantedresourcemultiplier": "1",
+            "@dailyfortificationpoints": "100",
+            "@clusteractivitybonusgathering": "0.01",
+            "@clusteractivitybonusloot": "0.015"
           },
           {
             "@level": "2",
             "@powerpointspool": "14996",
             "@decaydays": "2.40",
-            "@guardbuff": "MOB_TERRITORY_GUARD_BUFF_01",
             "@yieldbonus": "0.02",
             "@pointboostermultiplier": "1.35",
             "@dailyconversionbonus": "0.0025",
-            "@enchantedresourcemultiplier": "1.1"
+            "@enchantedresourcemultiplier": "1.1",
+            "@dailyfortificationpoints": "200",
+            "@clusteractivitybonusgathering": "0.02",
+            "@clusteractivitybonusloot": "0.03"
           },
           {
             "@level": "3",
             "@powerpointspool": "22744",
             "@decaydays": "2.8",
-            "@guardbuff": "MOB_TERRITORY_GUARD_BUFF_02",
             "@yieldbonus": "0.05",
             "@pointboostermultiplier": "1.80",
             "@dailyconversionbonus": "0.005",
-            "@enchantedresourcemultiplier": "1.2"
+            "@enchantedresourcemultiplier": "1.2",
+            "@dailyfortificationpoints": "300",
+            "@clusteractivitybonusgathering": "0.03",
+            "@clusteractivitybonusloot": "0.045"
           },
           {
             "@level": "4",
             "@powerpointspool": "33791",
             "@decaydays": "3.2",
-            "@guardbuff": "MOB_TERRITORY_GUARD_BUFF_03",
             "@yieldbonus": "0.07",
             "@pointboostermultiplier": "2.50",
             "@dailyconversionbonus": "0.0075",
-            "@enchantedresourcemultiplier": "1.3"
+            "@enchantedresourcemultiplier": "1.3",
+            "@dailyfortificationpoints": "400",
+            "@clusteractivitybonusgathering": "0.04",
+            "@clusteractivitybonusloot": "0.06"
           },
           {
             "@level": "5",
             "@powerpointspool": "49419",
             "@decaydays": "3.6",
-            "@guardbuff": "MOB_TERRITORY_GUARD_BUFF_04",
             "@yieldbonus": "0.10",
             "@pointboostermultiplier": "3.30",
             "@dailyconversionbonus": "0.01",
-            "@enchantedresourcemultiplier": "1.4"
+            "@enchantedresourcemultiplier": "1.4",
+            "@dailyfortificationpoints": "500",
+            "@clusteractivitybonusgathering": "0.05",
+            "@clusteractivitybonusloot": "0.075"
           },
           {
             "@level": "6",
             "@powerpointspool": "71384",
             "@decaydays": "4",
-            "@guardbuff": "MOB_TERRITORY_GUARD_BUFF_05",
             "@yieldbonus": "0.12",
             "@pointboostermultiplier": "4.50",
             "@dailyconversionbonus": "0.0125",
-            "@enchantedresourcemultiplier": "1.6"
+            "@enchantedresourcemultiplier": "1.6",
+            "@dailyfortificationpoints": "600",
+            "@clusteractivitybonusgathering": "0.06",
+            "@clusteractivitybonusloot": "0.09"
           },
           {
             "@level": "7",
             "@powerpointspool": "102079",
             "@decaydays": "4.4",
-            "@guardbuff": "MOB_TERRITORY_GUARD_BUFF_06",
             "@yieldbonus": "0.15",
             "@pointboostermultiplier": "6.00",
             "@dailyconversionbonus": "0.015",
-            "@enchantedresourcemultiplier": "1.8"
+            "@enchantedresourcemultiplier": "1.8",
+            "@dailyfortificationpoints": "700",
+            "@clusteractivitybonusgathering": "0.07",
+            "@clusteractivitybonusloot": "0.105"
           },
           {
             "@level": "8",
             "@powerpointspool": "144766",
             "@decaydays": "4.8",
-            "@guardbuff": "MOB_TERRITORY_GUARD_BUFF_07",
             "@yieldbonus": "0.20",
             "@pointboostermultiplier": "7.50",
             "@dailyconversionbonus": "0.0175",
-            "@enchantedresourcemultiplier": "2.0"
+            "@enchantedresourcemultiplier": "2.0",
+            "@dailyfortificationpoints": "800",
+            "@clusteractivitybonusgathering": "0.08",
+            "@clusteractivitybonusloot": "0.12"
           }
         ]
       },
@@ -162,7 +178,7 @@
         ]
       },
       "Tower": {
-        "@engageattackrange": "20.0",
+        "@engageattackrange": "0.0",
         "@disengageattackrange": "25.0",
         "@attackinterval": "0.5",
         "@attackdamage": "0.05",
@@ -176,8 +192,26 @@
           "@impact": ""
         }
       },
+      "ClusterActivityChest": {
+        "@bonusgatheringmintier": "2",
+        "@neighbourfactor": "0.25",
+        "@raiditemtrashfactor": "0.3"
+      },
       "GuardSettings": {
         "@respawntimeseconds": "3600"
+      },
+      "BannerSettings": {
+        "@conquestcreationtimeframe": "900",
+        "@proximityradius": "200",
+        "@raidbanner": "TERRITORY_RAID_BANNER",
+        "@conquerbanner": "TERRITORY_CONQUEST_BANNER",
+        "@creationcostitem": "UNIQUE_GVGTOKEN_GENERIC"
+      },
+      "BattleTimeSettings": {
+        "@battlepreparationtimeinsec": "1800",
+        "@battleejectionannouncementoffsetinsec": "120",
+        "@battleejectionfinalannouncementoffsetinsec": "10",
+        "@battlenobannerfortificationresettimerinsec": "300"
       },
       "OpenWorldAttackSettings": {
         "@GuardCommanderRespawninsec": "3600",
@@ -185,9 +219,307 @@
         "@ConquerChannelTimeinsec": "30",
         "@DamageCancelsDeclarationChannel": "false",
         "@DamageCancelsConquerChannel": "false",
-        "@BattlePreparationTimeinSec": "900",
-        "@MinTimeUntilNextOpenWorldAttackInMinutes": "1200",
-        "@BattleTimeinsec": "1800"
+        "@MinTimeUntilNextOpenWorldAttackInMinutes": "1200"
+      },
+      "BannerCreationCosts": {
+        "ClusterType": [
+          {
+            "@name": "OPENPVP_BLACK_1",
+            "Tower": [
+              {
+                "@level": "1",
+                "@energy": "50"
+              },
+              {
+                "@level": "2",
+                "@energy": "50"
+              },
+              {
+                "@level": "3",
+                "@energy": "50"
+              },
+              {
+                "@level": "4",
+                "@energy": "50"
+              },
+              {
+                "@level": "5",
+                "@energy": "50"
+              },
+              {
+                "@level": "6",
+                "@energy": "50"
+              },
+              {
+                "@level": "7",
+                "@energy": "50"
+              },
+              {
+                "@level": "8",
+                "@energy": "50"
+              }
+            ]
+          },
+          {
+            "@name": "OPENPVP_BLACK_2",
+            "Tower": [
+              {
+                "@level": "1",
+                "@energy": "50"
+              },
+              {
+                "@level": "2",
+                "@energy": "50"
+              },
+              {
+                "@level": "3",
+                "@energy": "50"
+              },
+              {
+                "@level": "4",
+                "@energy": "50"
+              },
+              {
+                "@level": "5",
+                "@energy": "50"
+              },
+              {
+                "@level": "6",
+                "@energy": "50"
+              },
+              {
+                "@level": "7",
+                "@energy": "50"
+              },
+              {
+                "@level": "8",
+                "@energy": "50"
+              }
+            ]
+          },
+          {
+            "@name": "OPENPVP_BLACK_2_PLAYTEST",
+            "Tower": [
+              {
+                "@level": "1",
+                "@energy": "50"
+              },
+              {
+                "@level": "2",
+                "@energy": "50"
+              },
+              {
+                "@level": "3",
+                "@energy": "50"
+              },
+              {
+                "@level": "4",
+                "@energy": "50"
+              },
+              {
+                "@level": "5",
+                "@energy": "50"
+              },
+              {
+                "@level": "6",
+                "@energy": "50"
+              },
+              {
+                "@level": "7",
+                "@energy": "50"
+              },
+              {
+                "@level": "8",
+                "@energy": "50"
+              }
+            ]
+          },
+          {
+            "@name": "OPENPVP_BLACK_3",
+            "Tower": [
+              {
+                "@level": "1",
+                "@energy": "50"
+              },
+              {
+                "@level": "2",
+                "@energy": "50"
+              },
+              {
+                "@level": "3",
+                "@energy": "50"
+              },
+              {
+                "@level": "4",
+                "@energy": "50"
+              },
+              {
+                "@level": "5",
+                "@energy": "50"
+              },
+              {
+                "@level": "6",
+                "@energy": "50"
+              },
+              {
+                "@level": "7",
+                "@energy": "50"
+              },
+              {
+                "@level": "8",
+                "@energy": "50"
+              }
+            ]
+          },
+          {
+            "@name": "OPENPVP_BLACK_4",
+            "Tower": [
+              {
+                "@level": "1",
+                "@energy": "50"
+              },
+              {
+                "@level": "2",
+                "@energy": "50"
+              },
+              {
+                "@level": "3",
+                "@energy": "50"
+              },
+              {
+                "@level": "4",
+                "@energy": "50"
+              },
+              {
+                "@level": "5",
+                "@energy": "50"
+              },
+              {
+                "@level": "6",
+                "@energy": "50"
+              },
+              {
+                "@level": "7",
+                "@energy": "50"
+              },
+              {
+                "@level": "8",
+                "@energy": "50"
+              }
+            ]
+          },
+          {
+            "@name": "OPENPVP_BLACK_5",
+            "Tower": [
+              {
+                "@level": "1",
+                "@energy": "50"
+              },
+              {
+                "@level": "2",
+                "@energy": "50"
+              },
+              {
+                "@level": "3",
+                "@energy": "50"
+              },
+              {
+                "@level": "4",
+                "@energy": "50"
+              },
+              {
+                "@level": "5",
+                "@energy": "50"
+              },
+              {
+                "@level": "6",
+                "@energy": "50"
+              },
+              {
+                "@level": "7",
+                "@energy": "50"
+              },
+              {
+                "@level": "8",
+                "@energy": "50"
+              }
+            ]
+          },
+          {
+            "@name": "OPENPVP_BLACK_6",
+            "Tower": [
+              {
+                "@level": "1",
+                "@energy": "50"
+              },
+              {
+                "@level": "2",
+                "@energy": "50"
+              },
+              {
+                "@level": "3",
+                "@energy": "50"
+              },
+              {
+                "@level": "4",
+                "@energy": "50"
+              },
+              {
+                "@level": "5",
+                "@energy": "50"
+              },
+              {
+                "@level": "6",
+                "@energy": "50"
+              },
+              {
+                "@level": "7",
+                "@energy": "50"
+              },
+              {
+                "@level": "8",
+                "@energy": "50"
+              }
+            ]
+          },
+          {
+            "@name": "OPENPVP_BLACK_DEBUG",
+            "Tower": [
+              {
+                "@level": "1",
+                "@energy": "50"
+              },
+              {
+                "@level": "2",
+                "@energy": "50"
+              },
+              {
+                "@level": "3",
+                "@energy": "50"
+              },
+              {
+                "@level": "4",
+                "@energy": "50"
+              },
+              {
+                "@level": "5",
+                "@energy": "50"
+              },
+              {
+                "@level": "6",
+                "@energy": "50"
+              },
+              {
+                "@level": "7",
+                "@energy": "50"
+              },
+              {
+                "@level": "8",
+                "@energy": "50"
+              }
+            ]
+          }
+        ]
       },
       "AttackCosts": {
         "ClusterType": [
@@ -230,6 +562,43 @@
           },
           {
             "@name": "OPENPVP_BLACK_2",
+            "Tower": [
+              {
+                "@level": "1",
+                "@silver": "1200000"
+              },
+              {
+                "@level": "2",
+                "@silver": "1420000"
+              },
+              {
+                "@level": "3",
+                "@silver": "1680000"
+              },
+              {
+                "@level": "4",
+                "@silver": "2100000"
+              },
+              {
+                "@level": "5",
+                "@silver": "2580000"
+              },
+              {
+                "@level": "6",
+                "@silver": "3300000"
+              },
+              {
+                "@level": "7",
+                "@silver": "4200000"
+              },
+              {
+                "@level": "8",
+                "@silver": "5100000"
+              }
+            ]
+          },
+          {
+            "@name": "OPENPVP_BLACK_2_PLAYTEST",
             "Tower": [
               {
                 "@level": "1",
@@ -458,17 +827,17 @@
         "EnergyCores": {
           "EnergyCore": [
             {
-              "@powercrystaltype": "TERRITORY_RAW_ENERGY_CORE",
+              "@carriableobjecttype": "TERRITORY_RAW_ENERGY_CORE",
               "@rarity": "0",
               "@minenergyforrarity": "0"
             },
             {
-              "@powercrystaltype": "TERRITORY_RAW_ENERGY_CORE",
+              "@carriableobjecttype": "TERRITORY_RAW_ENERGY_CORE",
               "@rarity": "1",
               "@minenergyforrarity": "100"
             },
             {
-              "@powercrystaltype": "TERRITORY_RAW_ENERGY_CORE",
+              "@carriableobjecttype": "TERRITORY_RAW_ENERGY_CORE",
               "@rarity": "2",
               "@minenergyforrarity": "250"
             }
@@ -508,6 +877,35 @@
           },
           {
             "@clustertype": "OPENPVP_BLACK_2",
+            "ClusterTier": [
+              {
+                "@tier": "3",
+                "@points": "60"
+              },
+              {
+                "@tier": "4",
+                "@points": "60"
+              },
+              {
+                "@tier": "5",
+                "@points": "60"
+              },
+              {
+                "@tier": "6",
+                "@points": "60"
+              },
+              {
+                "@tier": "7",
+                "@points": "60"
+              },
+              {
+                "@tier": "8",
+                "@points": "60"
+              }
+            ]
+          },
+          {
+            "@clustertype": "OPENPVP_BLACK_2_PLAYTEST",
             "ClusterTier": [
               {
                 "@tier": "3",
@@ -695,6 +1093,16 @@
             "@storagefilleventenergyamount": "350"
           },
           {
+            "@clustertype": "OPENPVP_BLACK_2_PLAYTEST",
+            "@upkeep": "0.5",
+            "@raidsteal": "0.5",
+            "@raiddestruction": "0.01",
+            "@raidedcorelifetimemins": "30",
+            "@dailyconversion": "0.08",
+            "@dailyconversionmax": "700",
+            "@storagefilleventenergyamount": "350"
+          },
+          {
             "@clustertype": "OPENPVP_BLACK_3",
             "@upkeep": "0.5",
             "@raidsteal": "0.5",
@@ -743,6 +1151,111 @@
             "@dailyconversion": "0.12",
             "@dailyconversionmax": "3000",
             "@storagefilleventenergyamount": "1000"
+          }
+        ]
+      },
+      "FortificationProtectionReduction": {
+        "HighestBanner": [
+          {
+            "@tier": "0",
+            "@reductionpersecond": "0"
+          },
+          {
+            "@tier": "1",
+            "@reductionpersecond": "-0.1"
+          },
+          {
+            "@tier": "2",
+            "@reductionpersecond": "-0.01"
+          },
+          {
+            "@tier": "3",
+            "@reductionpersecond": "-0.001"
+          },
+          {
+            "@tier": "4",
+            "@reductionpersecond": "0.00119"
+          },
+          {
+            "@tier": "5",
+            "@reductionpersecond": "0.001282"
+          },
+          {
+            "@tier": "6",
+            "@reductionpersecond": "0.001389"
+          },
+          {
+            "@tier": "7",
+            "@reductionpersecond": "0.001515"
+          },
+          {
+            "@tier": "8",
+            "@reductionpersecond": "0.001667"
+          }
+        ]
+      },
+      "FortificationResourceCostFactor": {
+        "@fallbackresourcecostfactor": "1",
+        "Cost": [
+          {
+            "@clustertype": "OPENPVP_BLACK_1",
+            "@resourcefactor": "1"
+          },
+          {
+            "@clustertype": "OPENPVP_BLACK_2",
+            "@resourcefactor": "1.5"
+          },
+          {
+            "@clustertype": "OPENPVP_BLACK_2_PLAYTEST",
+            "@resourcefactor": "1.5"
+          },
+          {
+            "@clustertype": "OPENPVP_BLACK_3",
+            "@resourcefactor": "2"
+          },
+          {
+            "@clustertype": "OPENPVP_BLACK_4",
+            "@resourcefactor": "3"
+          },
+          {
+            "@clustertype": "OPENPVP_BLACK_5",
+            "@resourcefactor": "4.5"
+          },
+          {
+            "@clustertype": "OPENPVP_BLACK_6",
+            "@resourcefactor": "6"
+          },
+          {
+            "@clustertype": "DEBUG_BLACK",
+            "@resourcefactor": "2"
+          }
+        ]
+      },
+      "FortificationUpgradeTimes": {
+        "Tier": [
+          {
+            "@tier": "3",
+            "@afterprimetimes": "1"
+          },
+          {
+            "@tier": "4",
+            "@afterprimetimes": "1"
+          },
+          {
+            "@tier": "5",
+            "@afterprimetimes": "1"
+          },
+          {
+            "@tier": "6",
+            "@afterprimetimes": "1"
+          },
+          {
+            "@tier": "7",
+            "@afterprimetimes": "1"
+          },
+          {
+            "@tier": "8",
+            "@afterprimetimes": "1"
           }
         ]
       }
