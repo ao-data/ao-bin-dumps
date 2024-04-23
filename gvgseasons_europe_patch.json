@@ -307,22 +307,9 @@
           "@name": "number",
           "@newvalue": "72"
         }
-      },
-      {
-        "@sel": "gvgseasons/season[@uniquename='GVG_SEASON_22']",
-        "attribute": {
-          "@name": "displayname",
-          "@newvalue": "@SEASONS_SEASONNAME_SEASON_BETA"
-        }
       }
     ],
     "remove": [
-      {
-        "@sel": "gvgseasons/season[@uniquename='GVG_SEASON_22']/guildmemberrewards"
-      },
-      {
-        "@sel": "gvgseasons/season[@uniquename='GVG_SEASON_22']/seasontimes"
-      },
       {
         "@sel": "gvgseasons/season[@uniquename='GVG_SEASON_AVALONIAN_INVASION']"
       },
@@ -391,12 +378,10 @@
       },
       {
         "@sel": "gvgseasons/season[@uniquename='GVG_SEASON_21']"
+      },
+      {
+        "@sel": "gvgseasons/season[@uniquename='GVG_SEASON_22']"
       }
-    ],
-    "add": {
-      "@sel": "gvgseasons/season[@uniquename='GVG_SEASON_22']",
-      "@aschild": "true",
-      "#cdata-section": "\n      <seasontimes>\n        <day number=\"4\">\n          <eventtime utctime=\"11:00:00Z\">\n            <territorystoragefill />\n            <territoriesunclaimable />\n            <resetterritories />\n            <territorybattleend />\n            <territoryraidend />\n            <disable_portalbindingremoval />\n          </eventtime>\n        </day>\n        <day number=\"4\">\n          <eventtime utctime=\"18:00:00Z\">\n            <clusterfilter>\n              <timeregion name=\"US_00_00\" />\n              <timeregion name=\"US_02_00\" />\n              <timeregion name=\"US_04_00\" />\n              <timeregion name=\"US_18_00\" />\n              <timeregion name=\"US_20_00\" />\n              <timeregion name=\"US_22_00\" />\n            </clusterfilter>\n            <spawninvader />\n            <!-- Should run until downtime -->\n            <territoriesclaimable claimlimitoverrideminutes=\"960\" />\n          </eventtime>\n          <eventtime utctime=\"20:00:01Z\" calculateusingclustertimezone=\"true\">\n            <territoryscoringstart />\n          </eventtime>\n        </day>\n        <day number=\"5\">\n          <eventtime utctime=\"11:00:00Z\">\n            <territorybattlestart />\n            <territoryraidstart />\n            <enable_portalbindingremoval />\n          </eventtime>\n        </day>\n        <day number=\"11\">\n          <eventtime utctime=\"00:00:01Z\" calculateusingclustertimezone=\"true\">\n            <territorybattleend />\n            <territoryraidend />\n            <territoryscoringend />\n            <territorystoragepayout />\n          </eventtime>\n          <eventtime utctime=\"11:00:00Z\">\n            <territoriesunclaimable />\n            <resetterritories />\n            <scoremultiplier newmultiplier=\"3\" />\n            <disable_portalbindingremoval />\n          </eventtime>\n        </day>\n        <day number=\"11\">\n          <eventtime utctime=\"18:00:00Z\">\n            <clusterfilter>\n              <timeregion name=\"US_00_00\" />\n              <timeregion name=\"US_02_00\" />\n              <timeregion name=\"US_04_00\" />\n              <timeregion name=\"US_18_00\" />\n              <timeregion name=\"US_20_00\" />\n              <timeregion name=\"US_22_00\" />\n            </clusterfilter>\n            <spawninvader />\n            <!-- Should run until downtime -->\n            <territoriesclaimable claimlimitoverrideminutes=\"960\" />\n          </eventtime>\n          <eventtime utctime=\"20:00:01Z\" calculateusingclustertimezone=\"true\">\n            <territoryscoringstart />\n          </eventtime>\n        </day>\n        <day number=\"12\">\n          <eventtime utctime=\"11:00:00Z\">\n            <territorybattlestart />\n            <territoryraidstart />\n            <enable_portalbindingremoval />\n          </eventtime>\n        </day>\n        <day number=\"18\">\n          <eventtime utctime=\"00:00:01Z\" calculateusingclustertimezone=\"true\">\n            <territorybattleend />\n            <territoryraidend />\n            <territoryscoringend />\n          </eventtime>\n          <eventtime utctime=\"11:00:00Z\">\n            <territoriesunclaimable />\n            <resetterritories />\n\t\t\t<territorystoragepayoutonclaimstart/>\n            <disable_portalbindingremoval />\n          </eventtime>\n        </day>\n        <day number=\"18\">\n          <eventtime utctime=\"18:00:00Z\">\n            <clusterfilter>\n              <timeregion name=\"US_00_00\" />\n              <timeregion name=\"US_02_00\" />\n              <timeregion name=\"US_04_00\" />\n              <timeregion name=\"US_18_00\" />\n              <timeregion name=\"US_20_00\" />\n              <timeregion name=\"US_22_00\" />\n            </clusterfilter>\n            <spawninvader />\n            <!-- Should run until downtime -->\n            <territoriesclaimable claimlimitoverrideminutes=\"960\" />\n          </eventtime>\n        </day>\n        <day number=\"19\">\n          <eventtime utctime=\"23:59:00Z\">\n            <territorystoragepayoutonclaimend/>\n          </eventtime>\n        </day>\n      </seasontimes>\n\t\t"
-    }
+    ]
   }
 }
