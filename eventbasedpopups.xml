@@ -666,6 +666,7 @@
             </triggers>
             <conditions>
               <and>
+                <IfValidDate start="2024-06-03T10:15:00" />
                 <IfTutorialCompleted />
                 <not>
                   <IfIsGuestAccount/>
@@ -679,5 +680,112 @@
                 <item itemid="UNIQUE_UNLOCK_SKIN_COUGAR_AMETHYST" />
             </possibledrops>
         </lootchestpopup>
+
+        <popup uniquename="FOUNDER_PACK_LAST_CHANCE_BUY"
+               priority="10"
+               type="EuropeFounderPacks"
+               title="@EVENT_BASED_POPUPS_FOUNDER_PACK_LAST_CHANCE_BUY_TITLE"
+               description="@EVENT_BASED_POPUPS_FOUNDER_PACK_LAST_CHANCE_BUY_DESCRIPTION"
+               imagepath="Gui/Advertisements/ad_founder_eu_founderpacks">
+            <categories>
+                <category name="Advertisement" />
+            </categories>
+            <triggers>
+                <trigger action="GameLogin" />
+            </triggers>
+            <conditions>
+                <and>
+                    <IfValidDate end="2024-06-03T09:00:00" />
+                    <IfHasEuropeFounderState founderState="none"/>
+                    <IsEuropeContext />
+                    <IfOnPlatform platform="Desktop"/>
+                    <IfTutorialCompleted />
+                    <IfHasSeenPopup uniquename="FOUNDER_PACK_LAST_CHANCE_BUY" frequency="Days" operation="equals" timefactor="7" amount="0" />
+                    <IfHasSeenPopup uniquename="FOUNDER_PACK_LAST_CHANCE_OFF_MARKET" frequency="Days" operation="equals" timefactor="7" amount="0" />
+                    <IfHasSeenPopup uniquename="FOUNDER_PACK_LAST_CHANCE_CROSS_PURCHASE" frequency="Days" operation="equals" timefactor="7" amount="0" />
+                    <IfHasSeenPopup uniquename="FOUNDER_PACK_LAST_CHANCE_UPGRADE" frequency="Days" operation="equals" timefactor="7" amount="0" />
+                </and>
+            </conditions>
+        </popup>
+        <popup uniquename="FOUNDER_PACK_LAST_CHANCE_OFF_MARKET"
+               priority="10"
+               type="EuropeFounderPacks"
+               title="@EVENT_BASED_POPUPS_FOUNDER_PACK_LAST_CHANCE_BUY_OFF_MARKET_TITLE"
+               description="@EVENT_BASED_POPUPS_FOUNDER_PACK_LAST_CHANCE_BUY_OFF_MARKET_DESCRIPTION"               imagepath="Gui/Advertisements/ad_founder_eu_founderpacks">
+            <categories>
+                <category name="Advertisement" />
+            </categories>
+            <triggers>
+                <trigger action="GameLogin" />
+            </triggers>
+            <conditions>
+                <and>
+                    <IfValidDate end="2024-06-03T09:00:00" />
+                    <IfHasEuropeFounderState founderState="none"/>
+                    <not>
+                        <IsEuropeContext />
+                    </not>
+                    <IfOnPlatform platform="Desktop"/>
+                    <IfTutorialCompleted />
+                    <IfHasSeenPopup uniquename="FOUNDER_PACK_LAST_CHANCE_BUY" frequency="Days" operation="equals" timefactor="7" amount="0" />
+                    <IfHasSeenPopup uniquename="FOUNDER_PACK_LAST_CHANCE_OFF_MARKET" frequency="Days" operation="equals" timefactor="7" amount="0" />
+                    <IfHasSeenPopup uniquename="FOUNDER_PACK_LAST_CHANCE_CROSS_PURCHASE" frequency="Days" operation="equals" timefactor="7" amount="0" />
+                    <IfHasSeenPopup uniquename="FOUNDER_PACK_LAST_CHANCE_UPGRADE" frequency="Days" operation="equals" timefactor="7" amount="0" />
+                </and>
+            </conditions>
+        </popup>
+        <popup uniquename="FOUNDER_PACK_LAST_CHANCE_CROSS_PURCHASE"
+               priority="10"
+               type="EuropeFounderPacks"
+               title="@EVENT_BASED_POPUPS_FOUNDER_PACK_LAST_CHANCE_CROSS_PURCHASE_TITLE"
+               description="@EVENT_BASED_POPUPS_FOUNDER_PACK_LAST_CHANCE_CROSS_PURCHASE_DESCRIPTION"               imagepath="Gui/Advertisements/ad_founder_eu_founderpacks">
+            <categories>
+                <category name="Advertisement" />
+            </categories>
+            <triggers>
+                <trigger action="GameLogin" />
+            </triggers>
+            <conditions>
+                <and>
+                    <IfValidDate end="2024-06-03T09:00:00" />
+                    <IfHasEuropeFounderState founderState="crystal"/>
+                    <IfOnPlatform platform="Desktop"/>
+                    <IfTutorialCompleted />
+                    <IfHasSeenPopup uniquename="FOUNDER_PACK_LAST_CHANCE_BUY" frequency="Days" operation="equals" timefactor="7" amount="0" />
+                    <IfHasSeenPopup uniquename="FOUNDER_PACK_LAST_CHANCE_OFF_MARKET" frequency="Days" operation="equals" timefactor="7" amount="0" />
+                    <IfHasSeenPopup uniquename="FOUNDER_PACK_LAST_CHANCE_CROSS_PURCHASE" frequency="Days" operation="equals" timefactor="7" amount="0" />
+                    <IfHasSeenPopup uniquename="FOUNDER_PACK_LAST_CHANCE_UPGRADE" frequency="Days" operation="equals" timefactor="7" amount="0" />
+                </and>
+            </conditions>
+        </popup>
+        <popup uniquename="FOUNDER_PACK_LAST_CHANCE_UPGRADE"
+               priority="10"
+               type="EuropeFounderPacks"
+               title="@EVENT_BASED_POPUPS_FOUNDER_PACK_LAST_CHANCE_UPGRADE_TITLE"
+               description="@EVENT_BASED_POPUPS_FOUNDER_PACK_LAST_CHANCE_UPGRADE_DESCRIPTION"               imagepath="Gui/Advertisements/ad_founder_eu_founderpacks">
+            <categories>
+                <category name="Advertisement" />
+            </categories>
+            <triggers>
+                <trigger action="GameLogin" />
+            </triggers>
+            <conditions>
+                <and>
+                    <IfValidDate end="2024-06-03T09:00:00" />
+                    <not> 
+                        <IfHasEuropeFounderState founderState="none"/>
+                    </not>
+                    <not>
+                        <IfHasEuropeFounderState founderState="crystal"/>
+                    </not>
+                    <IfOnPlatform platform="Desktop"/>
+                    <IfTutorialCompleted />
+                    <IfHasSeenPopup uniquename="FOUNDER_PACK_LAST_CHANCE_BUY" frequency="Days" operation="equals" timefactor="7" amount="0" />
+                    <IfHasSeenPopup uniquename="FOUNDER_PACK_LAST_CHANCE_OFF_MARKET" frequency="Days" operation="equals" timefactor="7" amount="0" />
+                    <IfHasSeenPopup uniquename="FOUNDER_PACK_LAST_CHANCE_CROSS_PURCHASE" frequency="Days" operation="equals" timefactor="7" amount="0" />
+                    <IfHasSeenPopup uniquename="FOUNDER_PACK_LAST_CHANCE_UPGRADE" frequency="Days" operation="equals" timefactor="7" amount="0" />
+                </and>
+            </conditions>
+        </popup> 
     </popups>
 </eventbasedpopups>
