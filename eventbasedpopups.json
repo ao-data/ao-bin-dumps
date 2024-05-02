@@ -1166,6 +1166,267 @@
               ]
             }
           }
+        },
+        {
+          "@uniquename": "FOUNDER_PACK_LAST_CHANCE_BUY",
+          "@priority": "10",
+          "@type": "EuropeFounderPacks",
+          "@title": "@EVENT_BASED_POPUPS_FOUNDER_PACK_LAST_CHANCE_BUY_TITLE",
+          "@description": "@EVENT_BASED_POPUPS_FOUNDER_PACK_LAST_CHANCE_BUY_DESCRIPTION",
+          "@imagepath": "Gui/Advertisements/ad_founder_eu_founderpacks",
+          "categories": {
+            "category": {
+              "@name": "Advertisement"
+            }
+          },
+          "triggers": {
+            "trigger": {
+              "@action": "GameLogin"
+            }
+          },
+          "conditions": {
+            "and": {
+              "IfValidDate": {
+                "@end": "2024-06-03T09:00:00"
+              },
+              "IfHasEuropeFounderState": {
+                "@founderState": "none"
+              },
+              "IsEuropeContext": null,
+              "IfOnPlatform": {
+                "@platform": "Desktop"
+              },
+              "IfTutorialCompleted": null,
+              "IfHasSeenPopup": [
+                {
+                  "@uniquename": "FOUNDER_PACK_LAST_CHANCE_BUY",
+                  "@frequency": "Days",
+                  "@operation": "equals",
+                  "@timefactor": "7",
+                  "@amount": "0"
+                },
+                {
+                  "@uniquename": "FOUNDER_PACK_LAST_CHANCE_OFF_MARKET",
+                  "@frequency": "Days",
+                  "@operation": "equals",
+                  "@timefactor": "7",
+                  "@amount": "0"
+                },
+                {
+                  "@uniquename": "FOUNDER_PACK_LAST_CHANCE_CROSS_PURCHASE",
+                  "@frequency": "Days",
+                  "@operation": "equals",
+                  "@timefactor": "7",
+                  "@amount": "0"
+                },
+                {
+                  "@uniquename": "FOUNDER_PACK_LAST_CHANCE_UPGRADE",
+                  "@frequency": "Days",
+                  "@operation": "equals",
+                  "@timefactor": "7",
+                  "@amount": "0"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "@uniquename": "FOUNDER_PACK_LAST_CHANCE_OFF_MARKET",
+          "@priority": "10",
+          "@type": "EuropeFounderPacks",
+          "@title": "@EVENT_BASED_POPUPS_FOUNDER_PACK_LAST_CHANCE_BUY_OFF_MARKET_TITLE",
+          "@description": "@EVENT_BASED_POPUPS_FOUNDER_PACK_LAST_CHANCE_BUY_OFF_MARKET_DESCRIPTION",
+          "@imagepath": "Gui/Advertisements/ad_founder_eu_founderpacks",
+          "categories": {
+            "category": {
+              "@name": "Advertisement"
+            }
+          },
+          "triggers": {
+            "trigger": {
+              "@action": "GameLogin"
+            }
+          },
+          "conditions": {
+            "and": {
+              "IfValidDate": {
+                "@end": "2024-06-03T09:00:00"
+              },
+              "IfHasEuropeFounderState": {
+                "@founderState": "none"
+              },
+              "not": {
+                "IsEuropeContext": null
+              },
+              "IfOnPlatform": {
+                "@platform": "Desktop"
+              },
+              "IfTutorialCompleted": null,
+              "IfHasSeenPopup": [
+                {
+                  "@uniquename": "FOUNDER_PACK_LAST_CHANCE_BUY",
+                  "@frequency": "Days",
+                  "@operation": "equals",
+                  "@timefactor": "7",
+                  "@amount": "0"
+                },
+                {
+                  "@uniquename": "FOUNDER_PACK_LAST_CHANCE_OFF_MARKET",
+                  "@frequency": "Days",
+                  "@operation": "equals",
+                  "@timefactor": "7",
+                  "@amount": "0"
+                },
+                {
+                  "@uniquename": "FOUNDER_PACK_LAST_CHANCE_CROSS_PURCHASE",
+                  "@frequency": "Days",
+                  "@operation": "equals",
+                  "@timefactor": "7",
+                  "@amount": "0"
+                },
+                {
+                  "@uniquename": "FOUNDER_PACK_LAST_CHANCE_UPGRADE",
+                  "@frequency": "Days",
+                  "@operation": "equals",
+                  "@timefactor": "7",
+                  "@amount": "0"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "@uniquename": "FOUNDER_PACK_LAST_CHANCE_CROSS_PURCHASE",
+          "@priority": "10",
+          "@type": "EuropeFounderPacks",
+          "@title": "@EVENT_BASED_POPUPS_FOUNDER_PACK_LAST_CHANCE_CROSS_PURCHASE_TITLE",
+          "@description": "@EVENT_BASED_POPUPS_FOUNDER_PACK_LAST_CHANCE_CROSS_PURCHASE_DESCRIPTION",
+          "@imagepath": "Gui/Advertisements/ad_founder_eu_founderpacks",
+          "categories": {
+            "category": {
+              "@name": "Advertisement"
+            }
+          },
+          "triggers": {
+            "trigger": {
+              "@action": "GameLogin"
+            }
+          },
+          "conditions": {
+            "and": {
+              "IfValidDate": {
+                "@end": "2024-06-03T09:00:00"
+              },
+              "IfHasEuropeFounderState": {
+                "@founderState": "crystal"
+              },
+              "IfOnPlatform": {
+                "@platform": "Desktop"
+              },
+              "IfTutorialCompleted": null,
+              "IfHasSeenPopup": [
+                {
+                  "@uniquename": "FOUNDER_PACK_LAST_CHANCE_BUY",
+                  "@frequency": "Days",
+                  "@operation": "equals",
+                  "@timefactor": "7",
+                  "@amount": "0"
+                },
+                {
+                  "@uniquename": "FOUNDER_PACK_LAST_CHANCE_OFF_MARKET",
+                  "@frequency": "Days",
+                  "@operation": "equals",
+                  "@timefactor": "7",
+                  "@amount": "0"
+                },
+                {
+                  "@uniquename": "FOUNDER_PACK_LAST_CHANCE_CROSS_PURCHASE",
+                  "@frequency": "Days",
+                  "@operation": "equals",
+                  "@timefactor": "7",
+                  "@amount": "0"
+                },
+                {
+                  "@uniquename": "FOUNDER_PACK_LAST_CHANCE_UPGRADE",
+                  "@frequency": "Days",
+                  "@operation": "equals",
+                  "@timefactor": "7",
+                  "@amount": "0"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "@uniquename": "FOUNDER_PACK_LAST_CHANCE_UPGRADE",
+          "@priority": "10",
+          "@type": "EuropeFounderPacks",
+          "@title": "@EVENT_BASED_POPUPS_FOUNDER_PACK_LAST_CHANCE_UPGRADE_TITLE",
+          "@description": "@EVENT_BASED_POPUPS_FOUNDER_PACK_LAST_CHANCE_UPGRADE_DESCRIPTION",
+          "@imagepath": "Gui/Advertisements/ad_founder_eu_founderpacks",
+          "categories": {
+            "category": {
+              "@name": "Advertisement"
+            }
+          },
+          "triggers": {
+            "trigger": {
+              "@action": "GameLogin"
+            }
+          },
+          "conditions": {
+            "and": {
+              "IfValidDate": {
+                "@end": "2024-06-03T09:00:00"
+              },
+              "not": [
+                {
+                  "IfHasEuropeFounderState": {
+                    "@founderState": "none"
+                  }
+                },
+                {
+                  "IfHasEuropeFounderState": {
+                    "@founderState": "crystal"
+                  }
+                }
+              ],
+              "IfOnPlatform": {
+                "@platform": "Desktop"
+              },
+              "IfTutorialCompleted": null,
+              "IfHasSeenPopup": [
+                {
+                  "@uniquename": "FOUNDER_PACK_LAST_CHANCE_BUY",
+                  "@frequency": "Days",
+                  "@operation": "equals",
+                  "@timefactor": "7",
+                  "@amount": "0"
+                },
+                {
+                  "@uniquename": "FOUNDER_PACK_LAST_CHANCE_OFF_MARKET",
+                  "@frequency": "Days",
+                  "@operation": "equals",
+                  "@timefactor": "7",
+                  "@amount": "0"
+                },
+                {
+                  "@uniquename": "FOUNDER_PACK_LAST_CHANCE_CROSS_PURCHASE",
+                  "@frequency": "Days",
+                  "@operation": "equals",
+                  "@timefactor": "7",
+                  "@amount": "0"
+                },
+                {
+                  "@uniquename": "FOUNDER_PACK_LAST_CHANCE_UPGRADE",
+                  "@frequency": "Days",
+                  "@operation": "equals",
+                  "@timefactor": "7",
+                  "@amount": "0"
+                }
+              ]
+            }
+          }
         }
       ],
       "lootchestpopup": {
@@ -1192,6 +1453,9 @@
         },
         "conditions": {
           "and": {
+            "IfValidDate": {
+              "@start": "2024-06-03T10:15:00"
+            },
             "IfTutorialCompleted": null,
             "not": {
               "IfIsGuestAccount": null
