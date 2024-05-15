@@ -305,35 +305,16 @@
             "and": {
               "IfTutorialCompleted": null,
               "IfHasPremium": null,
-              "or": {
-                "and": [
-                  {
-                    "IfHasPremiumDays": {
-                      "@operation": "less",
-                      "@value": "7"
-                    },
-                    "IfHasSeenPopup": {
-                      "@uniquename": "DONT_MISS_OUT",
-                      "@frequency": "Hours",
-                      "@timefactor": "68",
-                      "@operation": "less",
-                      "@amount": "1"
-                    }
-                  },
-                  {
-                    "IfHasPremiumDays": {
-                      "@operation": "less",
-                      "@value": "3"
-                    },
-                    "IfHasSeenPopup": {
-                      "@uniquename": "DONT_MISS_OUT",
-                      "@frequency": "Hours",
-                      "@timefactor": "44",
-                      "@operation": "less",
-                      "@amount": "1"
-                    }
-                  }
-                ]
+              "IfHasPremiumDays": {
+                "@operation": "less",
+                "@value": "4"
+              },
+              "IfHasSeenPopup": {
+                "@uniquename": "DONT_MISS_OUT",
+                "@frequency": "Hours",
+                "@timefactor": "50",
+                "@operation": "less",
+                "@amount": "1"
               },
               "not": {
                 "IfHasRecurringSubscription": null

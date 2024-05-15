@@ -163,21 +163,11 @@
                 <and>
                     <IfTutorialCompleted />
                     <IfHasPremium />
-                    <or>
-                        <and>
-                            <IfHasPremiumDays operation="less" value="7" />
-                            <IfHasSeenPopup uniquename="DONT_MISS_OUT" frequency="Hours" timefactor="68" operation="less" amount="1" />
-                        </and>
-                        <and>
-                            <IfHasPremiumDays operation="less" value="3" />
-                            <IfHasSeenPopup uniquename="DONT_MISS_OUT" frequency="Hours" timefactor="44" operation="less" amount="1" />
-                        </and>
-                    </or>
-
+                    <IfHasPremiumDays operation="less" value="4" />
+                    <IfHasSeenPopup uniquename="DONT_MISS_OUT" frequency="Hours" timefactor="50" operation="less" amount="1" />   
                     <not>
                         <IfHasRecurringSubscription />
                     </not>
-
                 </and>
             </conditions>
         </popup>
