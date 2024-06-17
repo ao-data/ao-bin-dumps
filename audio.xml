@@ -2813,6 +2813,36 @@
 	<MountType name="empty"/>
   </WwiseSwitchInfo>
 
+  <WwiseSwitchInfo name="MOB_ANNIVERSARY_STATUE_SEASON_A1_BOSS_BIG">
+	<CharType name="mob"/>
+	<MobFaction name="territory"/>
+	<MobType name="anniversary_statue_huge"/>
+	<Size name="rock_huge"/>
+	<ArmorType name="rock"/>
+	<WeaponType name="staff_bladed_high"/>
+	<MountType name="empty"/>
+  </WwiseSwitchInfo>
+
+  <WwiseSwitchInfo name="MOB_ANNIVERSARY_STATUE_SEASON_A2_BOSS_BIG">
+	<CharType name="mob"/>
+	<MobFaction name="territory"/>
+	<MobType name="anniversary_statue_huge"/>
+	<Size name="rock_huge"/>
+	<ArmorType name="rock"/>
+	<WeaponType name="gauntlets"/>
+	<MountType name="empty"/>
+  </WwiseSwitchInfo>
+
+  <WwiseSwitchInfo name="MOB_ANNIVERSARY_STATUE_SEASON_19_BOSS_BIG">
+	<CharType name="mob"/>
+	<MobFaction name="territory"/>
+	<MobType name="anniversary_statue_huge"/>
+	<Size name="rock_huge"/>
+	<ArmorType name="rock"/>
+	<WeaponType name="staff_metal_high"/>
+	<MountType name="empty"/>
+  </WwiseSwitchInfo>
+
 <!-- ANNIVERSARY STATUE BIG "MINI" BOSSES -->
 	
   <WwiseSwitchInfo name="MOB_ANNIVERSARY_STATUE_SEASON_01_BOSS">
@@ -2905,6 +2935,36 @@
 	<MountType name="empty"/>
   </WwiseSwitchInfo>
 
+  <WwiseSwitchInfo name="MOB_ANNIVERSARY_STATUE_SEASON_A1_BOSS">
+	<CharType name="mob"/>
+	<MobFaction name="territory"/>
+	<MobType name="anniversary_statue_big"/>
+	<Size name="rock_big"/>
+	<ArmorType name="rock"/>
+	<WeaponType name="staff_bladed_high"/>
+	<MountType name="empty"/>
+  </WwiseSwitchInfo>
+
+  <WwiseSwitchInfo name="MOB_ANNIVERSARY_STATUE_SEASON_A2_BOSS">
+	<CharType name="mob"/>
+	<MobFaction name="territory"/>
+	<MobType name="anniversary_statue_big"/>
+	<Size name="rock_big"/>
+	<ArmorType name="rock"/>
+	<WeaponType name="gauntlets"/>
+	<MountType name="empty"/>
+  </WwiseSwitchInfo>
+
+  <WwiseSwitchInfo name="MOB_ANNIVERSARY_STATUE_SEASON_19_BOSS">
+	<CharType name="mob"/>
+	<MobFaction name="territory"/>
+	<MobType name="anniversary_statue_big"/>
+	<Size name="rock_big"/>
+	<ArmorType name="rock"/>
+	<WeaponType name="staff_metal_high"/>
+	<MountType name="empty"/>
+  </WwiseSwitchInfo>
+	
 <!-- ANNIVERSARY STATUE ROAMING MOBS -->
 
   <WwiseSwitchInfo name="MOB_ANNIVERSARY_STATUE_SECONDPLACE_STANDARD">
@@ -3395,7 +3455,9 @@
   <WwiseEventInfo name="MELEE_SMALLIMPACT_SINGLE">
     <OnSpellHit name="Play_melee_impact_small" />
   </WwiseEventInfo>
-
+  <WwiseEventInfo name="MELEE_IMPACT_SMALL_SHARP">
+	<OnSpellHit name="Play_melee_impact_small_sharp" />
+  </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_SWORD_MIGHTY_BLOW">
     <OnCastFinished name="Play_melee_swoosh_big_double" />
   </WwiseEventInfo>
@@ -3862,6 +3924,11 @@
   <WwiseEventInfo name="MELEE_HAMMER_GIANT_SMASH">
 	<OnCastFinished name="Play_hammer_giant_smash" />
   </WwiseEventInfo>
+
+  <WwiseEventInfo name="MELEE_HAMMER_UNDEADHAND_CAST">
+	<OnCastFinished name="Play_melee_jump_small_stomp" />
+	<OnSpellHit name="Play_melee_impact_rock_medium" />
+  </WwiseEventInfo>
 	
   <WwiseEventInfo name="MELEE_CAST_EARTHSHATTER">
     <OnCastFinished name="Play_melee_cast_earthshatterer" />
@@ -4059,9 +4126,7 @@
 	<OnChannelingInterrupted name="Stop_quarterstaff_swirl" />
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_STAFF_SLAM">
-    <OnCastStart name="Play_melee_slam_swoosh" />
-    <OnCastCanceled name="Stop_melee_slam_swoosh" />
-    <OnCastInterrupted name="Stop_melee_slam_swoosh" />
+    <OnCastFinished name="Play_melee_slam_swoosh" />
     <OnSpellHit>
       <ImpactType/>
     </OnSpellHit>
@@ -6383,6 +6448,10 @@
 
   <WwiseEventInfo name="SPELL_ARMOR_PREMONITION">
 	<OnSpellHit name="Play_premonition_buff_start" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_ARMOR_DELAYED_TELEPORT_CAST">
+	<OnCastFinished name="Play_cast_delayed_teleport" />
   </WwiseEventInfo>
 	
   <WwiseEventInfo name="SPELL_CAST_ROOT_SPIDERWEB">
@@ -9435,7 +9504,9 @@
   </WwiseEventInfo>
 
   <WwiseEventInfo name="ANNIVERSARY_STATUE_RAPIERSTAB_CAST">
-	<OnCastFinished name="Play_anniversary_statue_rapierstab_cast" />
+	<OnCastStart name="Play_anniversary_statue_rapierstab_cast" />
+	<OnCastCanceled name="Stop_anniversary_statue_rapierstab_cast" />
+	<OnCastInterrupted name="Stop_anniversary_statue_rapierstab_cast" />
   </WwiseEventInfo>
 
   <WwiseEventInfo name="ANNIVERSARY_STATUE_GROUND_SHAKER_MACE">
@@ -9471,6 +9542,48 @@
 	</OnSpellHit>
   </WwiseEventInfo>
 
+  <WwiseEventInfo name="ANNIVERSARY_STATUE_KNUCKLES_TRIPLEKICK" >
+	<OnCastStart name="Play_melee_load_medium_energetic" />
+	<OnCastCanceled name="Stop_melee_load_medium_energetic" />
+	<OnCastInterrupted name="Stop_melee_load_medium_energetic" />
+	<OnCastFinished name="Play_melee_triplekick" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="ANNIVERSARY_STATUE_CARTWHEEL">
+	<OnCastStart name="Play_anniversary_statue_melee_load_cartwheel" />
+	<OnCastCanceled name="Stop_anniversary_statue_melee_load_rendingspin" />
+	<OnCastInterrupted name="Stop_anniversary_statue_melee_load_rendingspin" />
+	<OnCastFinished name="Play_cartwheel" />
+  </WwiseEventInfo>
+	
+  <WwiseEventInfo name="ANNIVERSARY_STATUE_SEPERATINGSLAM">
+	<OnCastFinished name="Play_anniversary_statue_melee_seperator" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="ANNIVERSARY_STATUE_BLADEDSTAFF_TORNADO">
+    <OnCastStart name="Play_anniversary_statue_tornado_cast_load" />
+    <OnCastCanceled name="Stop_anniversary_statue_tornado_cast_load" />
+    <OnCastInterrupted name="Stop_anniversary_statue_tornado_cast_load" />
+	<OnCastFinished name="Play_melee_tornado" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="ANNIVERSARY_STATUE_STAFF_WHIRLINGSTAFF">
+	<OnCastFinished name="Play_anniversary_statue_melee_whirlingstaff" />
+	<OnSpellHit name="Play_melee_impact_small_sharp_add" >
+		<ImpactType/>
+	</OnSpellHit>
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="ANNIVERSARY_STATUE_STAFF_SOULSHAKER">
+ 	<OnCastStart name="Play_anniversary_statue_melee_load_soulshaker" />
+	<OnCastCanceled name="Stop_anniversary_statue_melee_load_soulshaker" />
+	<OnCastInterrupted name="Stop_anniversary_statue_melee_load_soulshaker" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="ANNIVERSARY_STATUE_STAFF_SOULSHAKER_NOCASTTIME">
+	<OnCastFinished name="Play_anniversary_statue_melee_load_soulshaker" />
+  </WwiseEventInfo>
+	
   <WwiseEventInfo name="ANNIVERSARY_STATUE_SHOUT">
 	<OnCastFinished name="Play_anniversary_statue_shout" />
   </WwiseEventInfo>
