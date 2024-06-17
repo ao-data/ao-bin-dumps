@@ -6786,6 +6786,78 @@
         }
       },
       {
+        "@name": "MOB_ANNIVERSARY_STATUE_SEASON_A1_BOSS_BIG",
+        "CharType": {
+          "@name": "mob"
+        },
+        "MobFaction": {
+          "@name": "territory"
+        },
+        "MobType": {
+          "@name": "anniversary_statue_huge"
+        },
+        "Size": {
+          "@name": "rock_huge"
+        },
+        "ArmorType": {
+          "@name": "rock"
+        },
+        "WeaponType": {
+          "@name": "staff_bladed_high"
+        },
+        "MountType": {
+          "@name": "empty"
+        }
+      },
+      {
+        "@name": "MOB_ANNIVERSARY_STATUE_SEASON_A2_BOSS_BIG",
+        "CharType": {
+          "@name": "mob"
+        },
+        "MobFaction": {
+          "@name": "territory"
+        },
+        "MobType": {
+          "@name": "anniversary_statue_huge"
+        },
+        "Size": {
+          "@name": "rock_huge"
+        },
+        "ArmorType": {
+          "@name": "rock"
+        },
+        "WeaponType": {
+          "@name": "gauntlets"
+        },
+        "MountType": {
+          "@name": "empty"
+        }
+      },
+      {
+        "@name": "MOB_ANNIVERSARY_STATUE_SEASON_19_BOSS_BIG",
+        "CharType": {
+          "@name": "mob"
+        },
+        "MobFaction": {
+          "@name": "territory"
+        },
+        "MobType": {
+          "@name": "anniversary_statue_huge"
+        },
+        "Size": {
+          "@name": "rock_huge"
+        },
+        "ArmorType": {
+          "@name": "rock"
+        },
+        "WeaponType": {
+          "@name": "staff_metal_high"
+        },
+        "MountType": {
+          "@name": "empty"
+        }
+      },
+      {
         "@name": "MOB_ANNIVERSARY_STATUE_SEASON_01_BOSS",
         "CharType": {
           "@name": "mob"
@@ -6996,6 +7068,78 @@
         },
         "WeaponType": {
           "@name": "dualsword"
+        },
+        "MountType": {
+          "@name": "empty"
+        }
+      },
+      {
+        "@name": "MOB_ANNIVERSARY_STATUE_SEASON_A1_BOSS",
+        "CharType": {
+          "@name": "mob"
+        },
+        "MobFaction": {
+          "@name": "territory"
+        },
+        "MobType": {
+          "@name": "anniversary_statue_big"
+        },
+        "Size": {
+          "@name": "rock_big"
+        },
+        "ArmorType": {
+          "@name": "rock"
+        },
+        "WeaponType": {
+          "@name": "staff_bladed_high"
+        },
+        "MountType": {
+          "@name": "empty"
+        }
+      },
+      {
+        "@name": "MOB_ANNIVERSARY_STATUE_SEASON_A2_BOSS",
+        "CharType": {
+          "@name": "mob"
+        },
+        "MobFaction": {
+          "@name": "territory"
+        },
+        "MobType": {
+          "@name": "anniversary_statue_big"
+        },
+        "Size": {
+          "@name": "rock_big"
+        },
+        "ArmorType": {
+          "@name": "rock"
+        },
+        "WeaponType": {
+          "@name": "gauntlets"
+        },
+        "MountType": {
+          "@name": "empty"
+        }
+      },
+      {
+        "@name": "MOB_ANNIVERSARY_STATUE_SEASON_19_BOSS",
+        "CharType": {
+          "@name": "mob"
+        },
+        "MobFaction": {
+          "@name": "territory"
+        },
+        "MobType": {
+          "@name": "anniversary_statue_big"
+        },
+        "Size": {
+          "@name": "rock_big"
+        },
+        "ArmorType": {
+          "@name": "rock"
+        },
+        "WeaponType": {
+          "@name": "staff_metal_high"
         },
         "MountType": {
           "@name": "empty"
@@ -8526,6 +8670,12 @@
         }
       },
       {
+        "@name": "MELEE_IMPACT_SMALL_SHARP",
+        "OnSpellHit": {
+          "@name": "Play_melee_impact_small_sharp"
+        }
+      },
+      {
         "@name": "MELEE_SWORD_MIGHTY_BLOW",
         "OnCastFinished": {
           "@name": "Play_melee_swoosh_big_double"
@@ -9414,6 +9564,15 @@
         }
       },
       {
+        "@name": "MELEE_HAMMER_UNDEADHAND_CAST",
+        "OnCastFinished": {
+          "@name": "Play_melee_jump_small_stomp"
+        },
+        "OnSpellHit": {
+          "@name": "Play_melee_impact_rock_medium"
+        }
+      },
+      {
         "@name": "MELEE_CAST_EARTHSHATTER",
         "OnCastFinished": {
           "@name": "Play_melee_cast_earthshatterer"
@@ -9775,14 +9934,8 @@
       },
       {
         "@name": "MELEE_STAFF_SLAM",
-        "OnCastStart": {
+        "OnCastFinished": {
           "@name": "Play_melee_slam_swoosh"
-        },
-        "OnCastCanceled": {
-          "@name": "Stop_melee_slam_swoosh"
-        },
-        "OnCastInterrupted": {
-          "@name": "Stop_melee_slam_swoosh"
         },
         "OnSpellHit": {
           "ImpactType": null
@@ -14465,6 +14618,12 @@
         "@name": "SPELL_ARMOR_PREMONITION",
         "OnSpellHit": {
           "@name": "Play_premonition_buff_start"
+        }
+      },
+      {
+        "@name": "SPELL_ARMOR_DELAYED_TELEPORT_CAST",
+        "OnCastFinished": {
+          "@name": "Play_cast_delayed_teleport"
         }
       },
       {
@@ -20146,8 +20305,14 @@
       },
       {
         "@name": "ANNIVERSARY_STATUE_RAPIERSTAB_CAST",
-        "OnCastFinished": {
+        "OnCastStart": {
           "@name": "Play_anniversary_statue_rapierstab_cast"
+        },
+        "OnCastCanceled": {
+          "@name": "Stop_anniversary_statue_rapierstab_cast"
+        },
+        "OnCastInterrupted": {
+          "@name": "Stop_anniversary_statue_rapierstab_cast"
         }
       },
       {
@@ -20210,6 +20375,85 @@
         "OnSpellHit": {
           "@name": "Play_melee_impact_small_add",
           "ImpactType": null
+        }
+      },
+      {
+        "@name": "ANNIVERSARY_STATUE_KNUCKLES_TRIPLEKICK",
+        "OnCastStart": {
+          "@name": "Play_melee_load_medium_energetic"
+        },
+        "OnCastCanceled": {
+          "@name": "Stop_melee_load_medium_energetic"
+        },
+        "OnCastInterrupted": {
+          "@name": "Stop_melee_load_medium_energetic"
+        },
+        "OnCastFinished": {
+          "@name": "Play_melee_triplekick"
+        }
+      },
+      {
+        "@name": "ANNIVERSARY_STATUE_CARTWHEEL",
+        "OnCastStart": {
+          "@name": "Play_anniversary_statue_melee_load_cartwheel"
+        },
+        "OnCastCanceled": {
+          "@name": "Stop_anniversary_statue_melee_load_rendingspin"
+        },
+        "OnCastInterrupted": {
+          "@name": "Stop_anniversary_statue_melee_load_rendingspin"
+        },
+        "OnCastFinished": {
+          "@name": "Play_cartwheel"
+        }
+      },
+      {
+        "@name": "ANNIVERSARY_STATUE_SEPERATINGSLAM",
+        "OnCastFinished": {
+          "@name": "Play_anniversary_statue_melee_seperator"
+        }
+      },
+      {
+        "@name": "ANNIVERSARY_STATUE_BLADEDSTAFF_TORNADO",
+        "OnCastStart": {
+          "@name": "Play_anniversary_statue_tornado_cast_load"
+        },
+        "OnCastCanceled": {
+          "@name": "Stop_anniversary_statue_tornado_cast_load"
+        },
+        "OnCastInterrupted": {
+          "@name": "Stop_anniversary_statue_tornado_cast_load"
+        },
+        "OnCastFinished": {
+          "@name": "Play_melee_tornado"
+        }
+      },
+      {
+        "@name": "ANNIVERSARY_STATUE_STAFF_WHIRLINGSTAFF",
+        "OnCastFinished": {
+          "@name": "Play_anniversary_statue_melee_whirlingstaff"
+        },
+        "OnSpellHit": {
+          "@name": "Play_melee_impact_small_sharp_add",
+          "ImpactType": null
+        }
+      },
+      {
+        "@name": "ANNIVERSARY_STATUE_STAFF_SOULSHAKER",
+        "OnCastStart": {
+          "@name": "Play_anniversary_statue_melee_load_soulshaker"
+        },
+        "OnCastCanceled": {
+          "@name": "Stop_anniversary_statue_melee_load_soulshaker"
+        },
+        "OnCastInterrupted": {
+          "@name": "Stop_anniversary_statue_melee_load_soulshaker"
+        }
+      },
+      {
+        "@name": "ANNIVERSARY_STATUE_STAFF_SOULSHAKER_NOCASTTIME",
+        "OnCastFinished": {
+          "@name": "Play_anniversary_statue_melee_load_soulshaker"
         }
       },
       {
