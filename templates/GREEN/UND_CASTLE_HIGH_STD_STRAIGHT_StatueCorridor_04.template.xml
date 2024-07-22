@@ -1,4 +1,4 @@
-<template path="Assets/Levels/LEVEL_TEMPLATES/FOREST/Slave/DungeonBlocks/UNDEAD/UND_CASTLE_HIGH_STD_STRAIGHT_StatueCorridor_04.unity" unityguid="915b05e751237e6459ab3e5a55db1f90" editorBoundsMin="-40 -40" editorBoundsMax="40 40" colBoundsMin="-42 -42" colBoundsMax="40 43">
+<template path="Assets/Levels/LEVEL_TEMPLATES/FOREST/Slave/DungeonBlocks/UNDEAD/UND_CASTLE_HIGH_STD_STRAIGHT_StatueCorridor_04.unity" unityguid="915b05e751237e6459ab3e5a55db1f90" editorBoundsMin="-40 -40" editorBoundsMax="40 40" colBoundsMin="-42 -43" colBoundsMax="40 43">
   <criticalscenemembers />
   <tiles>
     <layergroup name="BACKDROP">
@@ -120,6 +120,42 @@
           <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_STATUE" />
         </tile>
       </layer>
+      <layer id="Layer_03" name="mob_solo_hard_02">
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_MINIBOSS" pos="-15.69 7.35 -0.81" roty="94">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_MINIBOSS" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_BAT" pos="2.03 0 -33.62" roty="184">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_BAT" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_BAT" pos="-1.62 0 -33.62" roty="184">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_BAT" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_PULLER" pos="-0.49 2 -24.19">
+          <mobspawnpoint behavior="PATROL" spawnbehavior="UNDEAD_PULLER">
+            <path>
+              <waypoint pos="-0.6000023 -24.57" idle="1" pace="WALK" />
+              <waypoint pos="-0.4400024 -2.09" idle="0" pace="WALK" />
+              <waypoint pos="-2.510002 -1.950001" idle="3" pace="WALK" />
+              <waypoint pos="-0.4400024 -2.09" idle="0" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_GHOST" pos="-4.52 2.17 -8.24" roty="94">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_GHOST" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_GHOST" pos="-4.83 2.17 6.43" roty="94">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_GHOST" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_BAT" pos="1.38 0 34.23" roty="4">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_BAT" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_BAT" pos="-2.04 0 34.23" roty="4">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_BAT" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_SOLO_GHOST" pos="7.7 2.17 -0.26" roty="274">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_GHOST" />
+        </tile>
+      </layer>
     </layergroup>
     <layergroup name="ENCOUNTER_VETERAN">
       <layer id="Layer_01" name="mob_veteran_hard_01">
@@ -165,6 +201,42 @@
         </tile>
         <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_SKELETON_CURSED" pos="-28.06 6.16 4.13" roty="121.37">
           <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_VETERAN_SKELETON_CURSED" />
+        </tile>
+      </layer>
+      <layer id="Layer_04" name="mob_veteran_hard_02">
+        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_BAT" pos="2.03 0 -33.62" roty="184">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_VETERAN_BAT" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_GHOST" pos="7.7 2.17 -0.26" roty="274">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_VETERAN_GHOST" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_PULLER" pos="-0.49 2 -24.19">
+          <mobspawnpoint behavior="PATROL" spawnbehavior="UNDEAD_VETERAN_PULLER">
+            <path>
+              <waypoint pos="-0.6000023 -24.57" idle="1" pace="WALK" />
+              <waypoint pos="-0.4400024 -2.09" idle="0" pace="WALK" />
+              <waypoint pos="-2.510002 -1.950001" idle="3" pace="WALK" />
+              <waypoint pos="-0.4400024 -2.09" idle="0" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_GHOST" pos="-4.52 2.17 -8.24" roty="94">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_VETERAN_GHOST" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_BAT" pos="-1.62 0 -33.62" roty="184">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_VETERAN_BAT" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_BAT" pos="-2.04 0 34.23" roty="4">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_VETERAN_BAT" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_GHOST" pos="-4.83 2.17 6.43" roty="94">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_VETERAN_GHOST" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_BAT" pos="1.38 0 34.23" roty="4">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_VETERAN_BAT" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_UNDEAD_VETERAN_MINIBOSS" pos="-15.69 7.35 -0.81" roty="94">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="UNDEAD_VETERAN_MINIBOSS" />
         </tile>
       </layer>
     </layergroup>

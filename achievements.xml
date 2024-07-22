@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<achievements Version="af587564-450f-4b37-a9d6-9104a8fd7af4" xsi:noNamespaceSchemaLocation="achievements.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<achievements Version="dbda1a5c-6714-490e-9349-c3fc02ac60a2" xsi:noNamespaceSchemaLocation="achievements.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <template name="REFINE_T4">
     <baselevels structure="Fame;LP;LPThreshold;MissionTargetMinTier;MissionTargetMaxTier;MissionItemMinTier;MissionItemMaxTier;UnlockTier">
     3713;15;0.2;2;8;2;8;4
@@ -2703,7 +2703,7 @@
       <achievement id="ADVENTURER_GRANDMASTER" />
     </parentachievements>
   </achievement>
-  <achievement id="ADVENTURER_EXPERT" category="main" ring="4" isfameachievement="false" textureReward="HUMAN_MALE_AVATAR_FAMERANK_03">
+  <achievement id="ADVENTURER_EXPERT" category="main" ring="5" isfameachievement="false" textureReward="HUMAN_MALE_AVATAR_FAMERANK_03">
     <title tag="@DESTINYBOARD_TITLE_ADVENTURER_EXPERT" />
     <masterylevels>
       <masterylevel>
@@ -2789,7 +2789,7 @@
       <achievement id="ADVENTURER_MASTER" />
     </parentachievements>
   </achievement>
-  <achievement id="ADVENTURER_GRANDMASTER" category="main" ring="7" isfameachievement="false" textureReward="HUMAN_MALE_AVATAR_FAMERANK_04">
+  <achievement id="ADVENTURER_GRANDMASTER" category="main" ring="8" isfameachievement="false" textureReward="HUMAN_MALE_AVATAR_FAMERANK_04">
     <title tag="@DESTINYBOARD_TITLE_ADVENTURER_GRANDMASTER" />
     <masterylevels>
       <masterylevel>
@@ -2931,7 +2931,7 @@
       <achievement id="ADVENTURER_ADEPT" />
     </parentachievements>
   </achievement>
-  <achievement id="ADVENTURER_MASTER" category="main" ring="5" isfameachievement="false" textureReward="HUMAN_MALE_AVATAR_FAMERANK_04">
+  <achievement id="ADVENTURER_MASTER" category="main" ring="6" isfameachievement="false" textureReward="HUMAN_MALE_AVATAR_FAMERANK_04">
     <title tag="@DESTINYBOARD_TITLE_ADVENTURER_MASTER" />
     <masterylevels>
       <masterylevel>
@@ -5953,6 +5953,7 @@
       <itempattern pattern="T?_MAIN_DAGGER_HELL" />
       <itempattern pattern="T?_2H_DUALSICKLE_UNDEAD" />
       <itempattern pattern="T?_2H_DAGGER_KATAR_AVALON" />
+      <itempattern pattern="T?_2H_DAGGERPAIR_CRYSTAL" />
     </itemlist>
     <baserewards>
       <unlock type="itemuse">
@@ -5963,6 +5964,7 @@
         <itempattern pattern="T?_MAIN_DAGGER_HELL" />
         <itempattern pattern="T?_2H_DUALSICKLE_UNDEAD" />
         <itempattern pattern="T?_2H_DAGGER_KATAR_AVALON" />
+        <itempattern pattern="T?_2H_DAGGERPAIR_CRYSTAL" />
       </unlock>
       <unlock type="spelluse">
         <itempattern pattern="T?_MAIN_DAGGER" />
@@ -5972,6 +5974,7 @@
         <itempattern pattern="T?_MAIN_DAGGER_HELL" />
         <itempattern pattern="T?_2H_DUALSICKLE_UNDEAD" />
         <itempattern pattern="T?_2H_DAGGER_KATAR_AVALON" />
+        <itempattern pattern="T?_2H_DAGGERPAIR_CRYSTAL" />
       </unlock>
       <bonus type="itemwearbonus" attribute="itempower" bonus="0.2" mintier="4" maxtier="8">
         <description tag="@DESTINYBOARD_COMBAT_DAGGERS_CATEGORYBONUS" />
@@ -5982,6 +5985,7 @@
         <itempattern pattern="T?_MAIN_DAGGER_HELL" />
         <itempattern pattern="T?_2H_DUALSICKLE_UNDEAD" />
         <itempattern pattern="T?_2H_DAGGER_KATAR_AVALON" />
+        <itempattern pattern="T?_2H_DAGGERPAIR_CRYSTAL" />
       </bonus>
     </baserewards>
     <parentachievements allrequired="false">
@@ -5993,6 +5997,7 @@
       <achievement id="COMBAT_DAGGERS_HELL" />
       <achievement id="COMBAT_DAGGERS_UNDEAD" />
       <achievement id="COMBAT_DAGGERS_AVALON" />
+      <achievement id="COMBAT_DAGGERS_CRYSTAL" />
     </parentachievements>
   </templateachievement>
   <templateachievement usetemplate="COMBAT_SPEC" missiontype="killmobfame" lpmultiplier="0.5" famemultiplier="1" id="COMBAT_DAGGERS_AVALON" re-spectype="combat" category="fighting" ring="9" spriteReward="2H_DAGGER_KATAR_AVALON" itemforsprite="T8_2H_DAGGER_KATAR_AVALON" isfameachievement="false">
@@ -6063,6 +6068,89 @@
       <bonus type="itemwearbonus" attribute="itempower" bonus="2" mintier="4" maxtier="8">
         <description tag="@DESTINYBOARD_COMBAT_DAGGERS_CLAWS_GROUPBONUS" />
         <itempattern pattern="T?_2H_CLAWPAIR" />
+      </bonus>
+    </eliterewards>
+    <parentachievements allrequired="false">
+      <achievement id="COMBAT_DAGGERS" />
+    </parentachievements>
+  </templateachievement>
+  <templateachievement id="COMBAT_DAGGERS_CRYSTAL" itemforsprite="T8_2H_DAGGERPAIR_CRYSTAL" category="fighting" ring="9" isfameachievement="false" spriteReward="2H_DAGGERPAIR_CRYSTAL" re-spectype="combat" usetemplate="COMBAT_SPEC" missiontype="killmobfame" famemultiplier="1" lpmultiplier="0.5">
+    <title tag="@DESTINYBOARD_TITLE_COMBAT_DAGGERS_CRYSTAL" />
+    <itemlist>
+      <itempattern pattern="T?_2H_DAGGERPAIR_CRYSTAL" />
+    </itemlist>
+    <baserewards>
+      <bonus type="itemwearbonus" attribute="itempower" bonus="0.025" mintier="4" maxtier="8">
+        <description tag="@DESTINYBOARD_COMBAT_CRYSTAL_HUNTER_TREEBONUS" />
+        <itempattern pattern="T?_2H_BOW*" />
+        <itempattern pattern="T?_2H_WARBOW*" />
+        <itempattern pattern="T?_2H_LONGBOW*" />
+        <itempattern pattern="T?_MAIN_DAGGER*" />
+        <itempattern pattern="T?_2H_DAGGER*" />
+        <itempattern pattern="T?_2H_CLAWPAIR*" />
+        <itempattern pattern="T?_MAIN_RAPIER*" />
+        <itempattern pattern="T?_2H_DUALSICKLE*" />
+        <itempattern pattern="T?_MAIN_SPEAR*" />
+        <itempattern pattern="T?_2H_SPEAR*" />
+        <itempattern pattern="T?_2H_GLAIVE*" />
+        <itempattern pattern="T?_2H_HARPOON*" />
+        <itempattern pattern="T?_2H_TRIDENT*" />
+        <itempattern pattern="T?_2H_QUARTERSTAFF*" />
+        <itempattern pattern="T?_2H_IRONCLADEDSTAFF*" />
+        <itempattern pattern="T?_2H_DOUBLEBLADEDSTAFF*" />
+        <itempattern pattern="T?_2H_COMBATSTAFF*" />
+        <itempattern pattern="T?_2H_TWINSCYTHE*" />
+        <itempattern pattern="T?_2H_ROCKSTAFF*" />
+        <itempattern pattern="T?_2H_SHAPESHIFTER*" />
+        <itempattern pattern="T?_MAIN_NATURESTAFF*" />
+        <itempattern pattern="T?_2H_NATURESTAFF*" />
+        <itempattern pattern="T?_2H_WILDSTAFF*" />
+        <itempattern pattern="T?_OFF_TORCH*" />
+        <itempattern pattern="T?_OFF_HORN*" />
+        <itempattern pattern="T?_OFF_JESTERCANE*" />
+        <itempattern pattern="T?_OFF_LAMP*" />
+        <itempattern pattern="T?_OFF_TALISMAN*" />
+      </bonus>
+      <bonus type="itemwearbonus" attribute="itempower" bonus="2" mintier="4" maxtier="8">
+        <description tag="@DESTINYBOARD_COMBAT_DAGGERS_CRYSTAL_GROUPBONUS" />
+        <itempattern pattern="T?_2H_DAGGERPAIR_CRYSTAL" />
+      </bonus>
+    </baserewards>
+    <eliterewards>
+      <bonus type="itemwearbonus" attribute="itempower" bonus="0.025" mintier="4" maxtier="8">
+        <description tag="@DESTINYBOARD_COMBAT_CRYSTAL_HUNTER_TREEBONUS" />
+        <itempattern pattern="T?_2H_BOW*" />
+        <itempattern pattern="T?_2H_WARBOW*" />
+        <itempattern pattern="T?_2H_LONGBOW*" />
+        <itempattern pattern="T?_MAIN_DAGGER*" />
+        <itempattern pattern="T?_2H_DAGGER*" />
+        <itempattern pattern="T?_2H_CLAWPAIR*" />
+        <itempattern pattern="T?_MAIN_RAPIER*" />
+        <itempattern pattern="T?_2H_DUALSICKLE*" />
+        <itempattern pattern="T?_MAIN_SPEAR*" />
+        <itempattern pattern="T?_2H_SPEAR*" />
+        <itempattern pattern="T?_2H_GLAIVE*" />
+        <itempattern pattern="T?_2H_HARPOON*" />
+        <itempattern pattern="T?_2H_TRIDENT*" />
+        <itempattern pattern="T?_2H_QUARTERSTAFF*" />
+        <itempattern pattern="T?_2H_IRONCLADEDSTAFF*" />
+        <itempattern pattern="T?_2H_DOUBLEBLADEDSTAFF*" />
+        <itempattern pattern="T?_2H_COMBATSTAFF*" />
+        <itempattern pattern="T?_2H_TWINSCYTHE*" />
+        <itempattern pattern="T?_2H_ROCKSTAFF*" />
+        <itempattern pattern="T?_2H_SHAPESHIFTER*" />
+        <itempattern pattern="T?_MAIN_NATURESTAFF*" />
+        <itempattern pattern="T?_2H_NATURESTAFF*" />
+        <itempattern pattern="T?_2H_WILDSTAFF*" />
+        <itempattern pattern="T?_OFF_TORCH*" />
+        <itempattern pattern="T?_OFF_HORN*" />
+        <itempattern pattern="T?_OFF_JESTERCANE*" />
+        <itempattern pattern="T?_OFF_LAMP*" />
+        <itempattern pattern="T?_OFF_TALISMAN*" />
+      </bonus>
+      <bonus type="itemwearbonus" attribute="itempower" bonus="2" mintier="4" maxtier="8">
+        <description tag="@DESTINYBOARD_COMBAT_DAGGERS_CRYSTAL_GROUPBONUS" />
+        <itempattern pattern="T?_2H_DAGGERPAIR_CRYSTAL" />
       </bonus>
     </eliterewards>
     <parentachievements allrequired="false">
@@ -7267,6 +7355,7 @@
       <itempattern pattern="T?_2H_HOLYSTAFF_HELL" />
       <itempattern pattern="T?_2H_HOLYSTAFF_UNDEAD" />
       <itempattern pattern="T?_MAIN_HOLYSTAFF_AVALON" />
+      <itempattern pattern="T?_2H_HOLYSTAFF_CRYSTAL" />
     </itemlist>
     <baserewards>
       <unlock type="itemuse">
@@ -7277,6 +7366,7 @@
         <itempattern pattern="T?_2H_HOLYSTAFF_HELL" />
         <itempattern pattern="T?_2H_HOLYSTAFF_UNDEAD" />
         <itempattern pattern="T?_MAIN_HOLYSTAFF_AVALON" />
+        <itempattern pattern="T?_2H_HOLYSTAFF_CRYSTAL" />
       </unlock>
       <unlock type="spelluse">
         <itempattern pattern="T?_MAIN_HOLYSTAFF" />
@@ -7286,6 +7376,7 @@
         <itempattern pattern="T?_2H_HOLYSTAFF_HELL" />
         <itempattern pattern="T?_2H_HOLYSTAFF_UNDEAD" />
         <itempattern pattern="T?_MAIN_HOLYSTAFF_AVALON" />
+        <itempattern pattern="T?_2H_HOLYSTAFF_CRYSTAL" />
       </unlock>
       <bonus type="itemwearbonus" attribute="itempower" bonus="0.2" mintier="4" maxtier="8">
         <description tag="@DESTINYBOARD_COMBAT_HOLYSTAFFS_CATEGORYBONUS" />
@@ -7296,6 +7387,7 @@
         <itempattern pattern="T?_2H_HOLYSTAFF_HELL" />
         <itempattern pattern="T?_2H_HOLYSTAFF_UNDEAD" />
         <itempattern pattern="T?_MAIN_HOLYSTAFF_AVALON" />
+        <itempattern pattern="T?_2H_HOLYSTAFF_CRYSTAL" />
       </bonus>
     </baserewards>
     <parentachievements allrequired="false">
@@ -7307,6 +7399,7 @@
       <achievement id="COMBAT_HOLYSTAFFS_HELL" />
       <achievement id="COMBAT_HOLYSTAFFS_UNDEAD" />
       <achievement id="COMBAT_HOLYSTAFFS_AVALON" />
+      <achievement id="COMBAT_HOLYSTAFFS_CRYSTAL" />
     </parentachievements>
   </templateachievement>
   <templateachievement usetemplate="COMBAT_SPEC" missiontype="killmobfame" lpmultiplier="0.5" famemultiplier="1" id="COMBAT_HOLYSTAFFS_AVALON" re-spectype="combat" category="fighting" ring="9" spriteReward="MAIN_HOLYSTAFF_AVALON" itemforsprite="T8_MAIN_HOLYSTAFF_AVALON" isfameachievement="false">
@@ -7336,6 +7429,85 @@
       <bonus type="itemwearbonus" attribute="itempower" bonus="2" mintier="4" maxtier="8">
         <description tag="@DESTINYBOARD_COMBAT_HOLYSTAFFS_AVALON_GROUPBONUS" />
         <itempattern pattern="T?_MAIN_HOLYSTAFF_AVALON" />
+      </bonus>
+    </eliterewards>
+    <parentachievements allrequired="false">
+      <achievement id="COMBAT_HOLYSTAFFS" />
+    </parentachievements>
+  </templateachievement>
+  <templateachievement id="COMBAT_HOLYSTAFFS_CRYSTAL" itemforsprite="T8_2H_HOLYSTAFF_CRYSTAL" category="fighting" ring="9" isfameachievement="false" spriteReward="2H_HOLYSTAFF_CRYSTAL" re-spectype="combat" usetemplate="COMBAT_SPEC" missiontype="killmobfame" famemultiplier="1" lpmultiplier="0.5">
+    <title tag="@DESTINYBOARD_TITLE_COMBAT_HOLYSTAFFS_CRYSTAL" />
+    <itemlist>
+      <itempattern pattern="T?_2H_HOLYSTAFF_CRYSTAL" />
+    </itemlist>
+    <baserewards>
+      <bonus type="itemwearbonus" attribute="itempower" bonus="0.025" mintier="4" maxtier="8">
+        <description tag="@DESTINYBOARD_COMBAT_CRYSTAL_MAGE_TREEBONUS" />
+        <itempattern pattern="T?_MAIN_FIRESTAFF*" />
+        <itempattern pattern="T?_2H_FIRESTAFF*" />
+        <itempattern pattern="T?_2H_INFERNOSTAFF*" />
+        <itempattern pattern="T?_2H_FIRE_RINGPAIR*" />
+        <itempattern pattern="T?_MAIN_HOLYSTAFF*" />
+        <itempattern pattern="T?_2H_HOLYSTAFF*" />
+        <itempattern pattern="T?_2H_DIVINESTAFF*" />
+        <itempattern pattern="T?_MAIN_ARCANESTAFF*" />
+        <itempattern pattern="T?_2H_ARCANESTAFF*" />
+        <itempattern pattern="T?_2H_ENIGMATICSTAFF*" />
+        <itempattern pattern="T?_2H_ENIGMATICORB*" />
+        <itempattern pattern="T?_2H_ARCANE_RINGPAIR*" />
+        <itempattern pattern="T?_MAIN_FROSTSTAFF*" />
+        <itempattern pattern="T?_2H_FROSTSTAFF*" />
+        <itempattern pattern="T?_2H_GLACIALSTAFF*" />
+        <itempattern pattern="T?_2H_ICEGAUNTLETS*" />
+        <itempattern pattern="T?_2H_ICECRYSTAL*" />
+        <itempattern pattern="T?_MAIN_CURSEDSTAFF*" />
+        <itempattern pattern="T?_2H_CURSEDSTAFF*" />
+        <itempattern pattern="T?_2H_DEMONICSTAFF*" />
+        <itempattern pattern="T?_2H_SKULLORB*" />
+        <itempattern pattern="T?_OFF_BOOK*" />
+        <itempattern pattern="T?_OFF_ORB*" />
+        <itempattern pattern="T?_OFF_DEMONSKULL*" />
+        <itempattern pattern="T?_OFF_TOTEM*" />
+        <itempattern pattern="T?_OFF_CENSER*" />
+      </bonus>
+      <bonus type="itemwearbonus" attribute="itempower" bonus="2" mintier="4" maxtier="8">
+        <description tag="@DESTINYBOARD_COMBAT_HOLYSTAFFS_CRYSTAL_GROUPBONUS" />
+        <itempattern pattern="T?_2H_HOLYSTAFF_CRYSTAL" />
+      </bonus>
+    </baserewards>
+    <eliterewards>
+      <bonus type="itemwearbonus" attribute="itempower" bonus="0.025" mintier="4" maxtier="8">
+        <description tag="@DESTINYBOARD_COMBAT_CRYSTAL_MAGE_TREEBONUS" />
+        <itempattern pattern="T?_MAIN_FIRESTAFF*" />
+        <itempattern pattern="T?_2H_FIRESTAFF*" />
+        <itempattern pattern="T?_2H_INFERNOSTAFF*" />
+        <itempattern pattern="T?_2H_FIRE_RINGPAIR*" />
+        <itempattern pattern="T?_MAIN_HOLYSTAFF*" />
+        <itempattern pattern="T?_2H_HOLYSTAFF*" />
+        <itempattern pattern="T?_2H_DIVINESTAFF*" />
+        <itempattern pattern="T?_MAIN_ARCANESTAFF*" />
+        <itempattern pattern="T?_2H_ARCANESTAFF*" />
+        <itempattern pattern="T?_2H_ENIGMATICSTAFF*" />
+        <itempattern pattern="T?_2H_ENIGMATICORB*" />
+        <itempattern pattern="T?_2H_ARCANE_RINGPAIR*" />
+        <itempattern pattern="T?_MAIN_FROSTSTAFF*" />
+        <itempattern pattern="T?_2H_FROSTSTAFF*" />
+        <itempattern pattern="T?_2H_GLACIALSTAFF*" />
+        <itempattern pattern="T?_2H_ICEGAUNTLETS*" />
+        <itempattern pattern="T?_2H_ICECRYSTAL*" />
+        <itempattern pattern="T?_MAIN_CURSEDSTAFF*" />
+        <itempattern pattern="T?_2H_CURSEDSTAFF*" />
+        <itempattern pattern="T?_2H_DEMONICSTAFF*" />
+        <itempattern pattern="T?_2H_SKULLORB*" />
+        <itempattern pattern="T?_OFF_BOOK*" />
+        <itempattern pattern="T?_OFF_ORB*" />
+        <itempattern pattern="T?_OFF_DEMONSKULL*" />
+        <itempattern pattern="T?_OFF_TOTEM*" />
+        <itempattern pattern="T?_OFF_CENSER*" />
+      </bonus>
+      <bonus type="itemwearbonus" attribute="itempower" bonus="2" mintier="4" maxtier="8">
+        <description tag="@DESTINYBOARD_COMBAT_HOLYSTAFFS_CRYSTAL_GROUPBONUS" />
+        <itempattern pattern="T?_2H_HOLYSTAFF_CRYSTAL" />
       </bonus>
     </eliterewards>
     <parentachievements allrequired="false">
@@ -8840,6 +9012,7 @@
       <itempattern pattern="T?_MAIN_MACE_HELL" />
       <itempattern pattern="T?_2H_MACE_MORGANA" />
       <itempattern pattern="T?_2H_DUALMACE_AVALON" />
+      <itempattern pattern="T?_MAIN_MACE_CRYSTAL" />
     </itemlist>
     <baserewards>
       <unlock type="itemuse">
@@ -8850,6 +9023,7 @@
         <itempattern pattern="T?_MAIN_MACE_HELL" />
         <itempattern pattern="T?_2H_MACE_MORGANA" />
         <itempattern pattern="T?_2H_DUALMACE_AVALON" />
+        <itempattern pattern="T?_MAIN_MACE_CRYSTAL" />
       </unlock>
       <unlock type="spelluse">
         <itempattern pattern="T?_MAIN_MACE" />
@@ -8859,6 +9033,7 @@
         <itempattern pattern="T?_MAIN_MACE_HELL" />
         <itempattern pattern="T?_2H_MACE_MORGANA" />
         <itempattern pattern="T?_2H_DUALMACE_AVALON" />
+        <itempattern pattern="T?_MAIN_MACE_CRYSTAL" />
       </unlock>
       <bonus type="itemwearbonus" attribute="itempower" bonus="0.2" mintier="4" maxtier="8">
         <description tag="@DESTINYBOARD_COMBAT_MACES_CATEGORYBONUS" />
@@ -8869,6 +9044,7 @@
         <itempattern pattern="T?_MAIN_MACE_HELL" />
         <itempattern pattern="T?_2H_MACE_MORGANA" />
         <itempattern pattern="T?_2H_DUALMACE_AVALON" />
+        <itempattern pattern="T?_MAIN_MACE_CRYSTAL" />
       </bonus>
     </baserewards>
     <parentachievements allrequired="false">
@@ -8880,6 +9056,7 @@
       <achievement id="COMBAT_MACES_HELL" />
       <achievement id="COMBAT_MACES_MORGANA" />
       <achievement id="COMBAT_MACES_AVALON" />
+      <achievement id="COMBAT_MACES_CRYSTAL" />
     </parentachievements>
   </templateachievement>
   <templateachievement usetemplate="COMBAT_SPEC" missiontype="killmobfame" lpmultiplier="0.5" famemultiplier="1" id="COMBAT_MACES_AVALON" re-spectype="combat" category="fighting" ring="9" spriteReward="2H_DUALMACE_AVALON" itemforsprite="T8_2H_DUALMACE_AVALON" isfameachievement="false">
@@ -8913,6 +9090,93 @@
       <bonus type="itemwearbonus" attribute="itempower" bonus="2" mintier="4" maxtier="8">
         <description tag="@DESTINYBOARD_COMBAT_MACES_AVALON_GROUPBONUS" />
         <itempattern pattern="T?_2H_DUALMACE_AVALON" />
+      </bonus>
+    </eliterewards>
+    <parentachievements allrequired="false">
+      <achievement id="COMBAT_MACES" />
+    </parentachievements>
+  </templateachievement>
+  <templateachievement id="COMBAT_MACES_CRYSTAL" itemforsprite="T8_MAIN_MACE_CRYSTAL" category="fighting" ring="9" isfameachievement="false" spriteReward="MAIN_MACE_CRYSTAL" re-spectype="combat" usetemplate="COMBAT_SPEC" missiontype="killmobfame" famemultiplier="1" lpmultiplier="0.5">
+    <title tag="@DESTINYBOARD_TITLE_COMBAT_MACES_CRYSTAL" />
+    <itemlist>
+      <itempattern pattern="T?_MAIN_MACE_CRYSTAL" />
+    </itemlist>
+    <baserewards>
+      <bonus type="itemwearbonus" attribute="itempower" bonus="0.025" mintier="4" maxtier="8">
+        <description tag="@DESTINYBOARD_COMBAT_CRYSTAL_WARRIOR_TREEBONUS" />
+        <itempattern pattern="T?_MAIN_SWORD*" />
+        <itempattern pattern="T?_2H_CLAYMORE*" />
+        <itempattern pattern="T?_2H_DUALSWORD*" />
+        <itempattern pattern="T?_MAIN_SCIMITAR*" />
+        <itempattern pattern="T?_2H_CLEAVER*" />
+        <itempattern pattern="T?_2H_DUALSCIMITAR*" />
+        <itempattern pattern="T?_MAIN_AXE*" />
+        <itempattern pattern="T?_2H_AXE*" />
+        <itempattern pattern="T?_2H_HALBERD*" />
+        <itempattern pattern="T?_2H_SCYTHE*" />
+        <itempattern pattern="T?_2H_DUALAXE*" />
+        <itempattern pattern="T?_MAIN_MACE*" />
+        <itempattern pattern="T?_2H_MACE*" />
+        <itempattern pattern="T?_2H_FLAIL*" />
+        <itempattern pattern="T?_MAIN_ROCKMACE*" />
+        <itempattern pattern="T?_2H_DUALMACE*" />
+        <itempattern pattern="T?_MAIN_HAMMER*" />
+        <itempattern pattern="T?_2H_HAMMER*" />
+        <itempattern pattern="T?_2H_POLEHAMMER*" />
+        <itempattern pattern="T?_2H_DUALHAMMER*" />
+        <itempattern pattern="T?_2H_RAM*" />
+        <itempattern pattern="T?_2H_KNUCKLES*" />
+        <itempattern pattern="T?_2H_CROSSBOW*" />
+        <itempattern pattern="T?_2H_CROSSBOWLARGE*" />
+        <itempattern pattern="T?_MAIN_1HCROSSBOW*" />
+        <itempattern pattern="T?_2H_REPEATINGCROSSBOW*" />
+        <itempattern pattern="T?_2H_DUALCROSSBOW*" />
+        <itempattern pattern="T?_OFF_SHIELD*" />
+        <itempattern pattern="T?_OFF_TOWERSHIELD*" />
+        <itempattern pattern="T?_OFF_SPIKEDSHIELD*" />
+      </bonus>
+      <bonus type="itemwearbonus" attribute="itempower" bonus="2" mintier="4" maxtier="8">
+        <description tag="@DESTINYBOARD_COMBAT_MACES_CRYSTAL_GROUPBONUS" />
+        <itempattern pattern="T?_MAIN_MACE_CRYSTAL" />
+      </bonus>
+    </baserewards>
+    <eliterewards>
+      <bonus type="itemwearbonus" attribute="itempower" bonus="0.025" mintier="4" maxtier="8">
+        <description tag="@DESTINYBOARD_COMBAT_CRYSTAL_WARRIOR_TREEBONUS" />
+        <itempattern pattern="T?_MAIN_SWORD*" />
+        <itempattern pattern="T?_2H_CLAYMORE*" />
+        <itempattern pattern="T?_2H_DUALSWORD*" />
+        <itempattern pattern="T?_MAIN_SCIMITAR*" />
+        <itempattern pattern="T?_2H_CLEAVER*" />
+        <itempattern pattern="T?_2H_DUALSCIMITAR*" />
+        <itempattern pattern="T?_MAIN_AXE*" />
+        <itempattern pattern="T?_2H_AXE*" />
+        <itempattern pattern="T?_2H_HALBERD*" />
+        <itempattern pattern="T?_2H_SCYTHE*" />
+        <itempattern pattern="T?_2H_DUALAXE*" />
+        <itempattern pattern="T?_MAIN_MACE*" />
+        <itempattern pattern="T?_2H_MACE*" />
+        <itempattern pattern="T?_2H_FLAIL*" />
+        <itempattern pattern="T?_MAIN_ROCKMACE*" />
+        <itempattern pattern="T?_2H_DUALMACE*" />
+        <itempattern pattern="T?_MAIN_HAMMER*" />
+        <itempattern pattern="T?_2H_HAMMER*" />
+        <itempattern pattern="T?_2H_POLEHAMMER*" />
+        <itempattern pattern="T?_2H_DUALHAMMER*" />
+        <itempattern pattern="T?_2H_RAM*" />
+        <itempattern pattern="T?_2H_KNUCKLES*" />
+        <itempattern pattern="T?_2H_CROSSBOW*" />
+        <itempattern pattern="T?_2H_CROSSBOWLARGE*" />
+        <itempattern pattern="T?_MAIN_1HCROSSBOW*" />
+        <itempattern pattern="T?_2H_REPEATINGCROSSBOW*" />
+        <itempattern pattern="T?_2H_DUALCROSSBOW*" />
+        <itempattern pattern="T?_OFF_SHIELD*" />
+        <itempattern pattern="T?_OFF_TOWERSHIELD*" />
+        <itempattern pattern="T?_OFF_SPIKEDSHIELD*" />
+      </bonus>
+      <bonus type="itemwearbonus" attribute="itempower" bonus="2" mintier="4" maxtier="8">
+        <description tag="@DESTINYBOARD_COMBAT_MACES_CRYSTAL_GROUPBONUS" />
+        <itempattern pattern="T?_MAIN_MACE_CRYSTAL" />
       </bonus>
     </eliterewards>
     <parentachievements allrequired="false">
@@ -15494,6 +15758,7 @@
       <itempattern pattern="T?_MAIN_DAGGER_HELL" />
       <itempattern pattern="T?_2H_DUALSICKLE_UNDEAD" />
       <itempattern pattern="T?_2H_DAGGER_KATAR_AVALON" />
+      <itempattern pattern="T?_2H_DAGGERPAIR_CRYSTAL" />
     </itemlist>
     <baserewards>
       <unlock type="itemcraft">
@@ -15504,6 +15769,7 @@
         <itempattern pattern="T?_MAIN_DAGGER_HELL" />
         <itempattern pattern="T?_2H_DUALSICKLE_UNDEAD" />
         <itempattern pattern="T?_2H_DAGGER_KATAR_AVALON" />
+        <itempattern pattern="T?_2H_DAGGERPAIR_CRYSTAL" />
       </unlock>
       <bonus type="craftingfocuscostreduction" bonus="0.3" mintier="4" maxtier="8">
         <description tag="@DESTINYBOARD_CRAFT_DAGGERS_CATEGORYBONUS_FOCUS" />
@@ -15514,6 +15780,7 @@
         <itempattern pattern="T?_MAIN_DAGGER_HELL" />
         <itempattern pattern="T?_2H_DUALSICKLE_UNDEAD" />
         <itempattern pattern="T?_2H_DAGGER_KATAR_AVALON" />
+        <itempattern pattern="T?_2H_DAGGERPAIR_CRYSTAL" />
       </bonus>
       <bonus type="itemcraftquality" bonus="0.75" mintier="4" maxtier="8">
         <description tag="@DESTINYBOARD_CRAFT_DAGGERS_CATEGORYBONUS_QUALITY" />
@@ -15524,6 +15791,7 @@
         <itempattern pattern="T?_MAIN_DAGGER_HELL" />
         <itempattern pattern="T?_2H_DUALSICKLE_UNDEAD" />
         <itempattern pattern="T?_2H_DAGGER_KATAR_AVALON" />
+        <itempattern pattern="T?_2H_DAGGERPAIR_CRYSTAL" />
       </bonus>
     </baserewards>
     <parentachievements allrequired="false">
@@ -15535,6 +15803,7 @@
       <achievement id="CRAFT_DAGGERS_HELL" />
       <achievement id="CRAFT_DAGGERS_UNDEAD" />
       <achievement id="CRAFT_DAGGERS_AVALON" />
+      <achievement id="CRAFT_DAGGERS_CRYSTAL" />
     </parentachievements>
   </templateachievement>
   <templateachievement usetemplate="CRAFT_SPEC" missiontype="craftitemfame" lpmultiplier="0.6667" famemultiplier="2" id="CRAFT_DAGGERS_AVALON" category="crafting" ring="9" spriteReward="2H_DAGGER_KATAR_AVALON" itemforsprite="T8_2H_DAGGER_KATAR_AVALON" isfameachievement="false">
@@ -15601,6 +15870,41 @@
       <bonus type="itemcraftquality" bonus="6" mintier="4" maxtier="8">
         <description tag="@DESTINYBOARD_CRAFT_DAGGERS_CLAWS_GROUPBONUS_QUALITY" />
         <itempattern pattern="T?_2H_CLAWPAIR" />
+      </bonus>
+    </baserewards>
+    <parentachievements allrequired="false">
+      <achievement id="CRAFT_DAGGERS" />
+    </parentachievements>
+  </templateachievement>
+  <templateachievement id="CRAFT_DAGGERS_CRYSTAL" itemforsprite="T8_2H_DAGGERPAIR_CRYSTAL" category="crafting" ring="9" isfameachievement="false" spriteReward="2H_DAGGERPAIR_CRYSTAL" usetemplate="CRAFT_SPEC" missiontype="craftitemfame" famemultiplier="2" lpmultiplier="0.6667">
+    <title tag="@DESTINYBOARD_TITLE_CRAFT_DAGGERS_CRYSTAL" />
+    <itemlist>
+      <itempattern pattern="T?_2H_DAGGERPAIR_CRYSTAL" />
+    </itemlist>
+    <baserewards>
+      <bonus type="craftingfocuscostreduction" bonus="0.0215" mintier="4" maxtier="8">
+        <description tag="@DESTINYBOARD_CRAFT_CRYSTAL_HUNTER_TREEBONUS_FOCUS" />
+        <itempattern pattern="T?_MAIN_DAGGER*" />
+        <itempattern pattern="T?_2H_DAGGER*" />
+        <itempattern pattern="T?_2H_CLAWPAIR*" />
+        <itempattern pattern="T?_MAIN_RAPIER*" />
+        <itempattern pattern="T?_2H_DUALSICKLE*" />
+      </bonus>
+      <bonus type="itemcraftquality" bonus="0.05" mintier="4" maxtier="8">
+        <description tag="@DESTINYBOARD_CRAFT_CRYSTAL_HUNTER_TREEBONUS_QUALITY" />
+        <itempattern pattern="T?_MAIN_DAGGER*" />
+        <itempattern pattern="T?_2H_DAGGER*" />
+        <itempattern pattern="T?_2H_CLAWPAIR*" />
+        <itempattern pattern="T?_MAIN_RAPIER*" />
+        <itempattern pattern="T?_2H_DUALSICKLE*" />
+      </bonus>
+      <bonus type="craftingfocuscostreduction" bonus="2.5" mintier="4" maxtier="8">
+        <description tag="@DESTINYBOARD_CRAFT_DAGGERS_CRYSTAL_GROUPBONUS_FOCUS" />
+        <itempattern pattern="T?_2H_DAGGERPAIR_CRYSTAL" />
+      </bonus>
+      <bonus type="itemcraftquality" bonus="6" mintier="4" maxtier="8">
+        <description tag="@DESTINYBOARD_CRAFT_DAGGERS_CRYSTAL_GROUPBONUS_QUALITY" />
+        <itempattern pattern="T?_2H_DAGGERPAIR_CRYSTAL" />
       </bonus>
     </baserewards>
     <parentachievements allrequired="false">
@@ -16754,6 +17058,7 @@
       <itempattern pattern="T?_2H_HOLYSTAFF_HELL" />
       <itempattern pattern="T?_2H_HOLYSTAFF_UNDEAD" />
       <itempattern pattern="T?_MAIN_HOLYSTAFF_AVALON" />
+      <itempattern pattern="T?_2H_HOLYSTAFF_CRYSTAL" />
     </itemlist>
     <baserewards>
       <unlock type="itemcraft">
@@ -16764,6 +17069,7 @@
         <itempattern pattern="T?_2H_HOLYSTAFF_HELL" />
         <itempattern pattern="T?_2H_HOLYSTAFF_UNDEAD" />
         <itempattern pattern="T?_MAIN_HOLYSTAFF_AVALON" />
+        <itempattern pattern="T?_2H_HOLYSTAFF_CRYSTAL" />
       </unlock>
       <bonus type="craftingfocuscostreduction" bonus="0.3" mintier="4" maxtier="8">
         <description tag="@DESTINYBOARD_CRAFT_HOLYSTAFFS_CATEGORYBONUS_FOCUS" />
@@ -16774,6 +17080,7 @@
         <itempattern pattern="T?_2H_HOLYSTAFF_HELL" />
         <itempattern pattern="T?_2H_HOLYSTAFF_UNDEAD" />
         <itempattern pattern="T?_MAIN_HOLYSTAFF_AVALON" />
+        <itempattern pattern="T?_2H_HOLYSTAFF_CRYSTAL" />
       </bonus>
       <bonus type="itemcraftquality" bonus="0.75" mintier="4" maxtier="8">
         <description tag="@DESTINYBOARD_CRAFT_HOLYSTAFFS_CATEGORYBONUS_QUALITY" />
@@ -16784,6 +17091,7 @@
         <itempattern pattern="T?_2H_HOLYSTAFF_HELL" />
         <itempattern pattern="T?_2H_HOLYSTAFF_UNDEAD" />
         <itempattern pattern="T?_MAIN_HOLYSTAFF_AVALON" />
+        <itempattern pattern="T?_2H_HOLYSTAFF_CRYSTAL" />
       </bonus>
     </baserewards>
     <parentachievements allrequired="false">
@@ -16795,6 +17103,7 @@
       <achievement id="CRAFT_HOLYSTAFFS_HELL" />
       <achievement id="CRAFT_HOLYSTAFFS_UNDEAD" />
       <achievement id="CRAFT_HOLYSTAFFS_AVALON" />
+      <achievement id="CRAFT_HOLYSTAFFS_CRYSTAL" />
     </parentachievements>
   </templateachievement>
   <templateachievement usetemplate="CRAFT_SPEC" missiontype="craftitemfame" lpmultiplier="0.6667" famemultiplier="2" id="CRAFT_HOLYSTAFFS_AVALON" category="crafting" ring="9" spriteReward="MAIN_HOLYSTAFF_AVALON" itemforsprite="T8_MAIN_HOLYSTAFF_AVALON" isfameachievement="false">
@@ -16822,6 +17131,37 @@
       <bonus type="itemcraftquality" bonus="6" mintier="4" maxtier="8">
         <description tag="@DESTINYBOARD_CRAFT_HOLYSTAFFS_AVALON_GROUPBONUS_QUALITY" />
         <itempattern pattern="T?_MAIN_HOLYSTAFF_AVALON" />
+      </bonus>
+    </baserewards>
+    <parentachievements allrequired="false">
+      <achievement id="CRAFT_HOLYSTAFFS" />
+    </parentachievements>
+  </templateachievement>
+  <templateachievement id="CRAFT_HOLYSTAFFS_CRYSTAL" itemforsprite="T8_2H_HOLYSTAFF_CRYSTAL" category="crafting" ring="9" isfameachievement="false" spriteReward="2H_HOLYSTAFF_CRYSTAL" usetemplate="CRAFT_SPEC" missiontype="craftitemfame" famemultiplier="2" lpmultiplier="0.6667">
+    <title tag="@DESTINYBOARD_TITLE_CRAFT_HOLYSTAFFS_CRYSTAL" />
+    <itemlist>
+      <itempattern pattern="T?_2H_HOLYSTAFF_CRYSTAL" />
+    </itemlist>
+    <baserewards>
+      <bonus type="craftingfocuscostreduction" bonus="0.0215" mintier="4" maxtier="8">
+        <description tag="@DESTINYBOARD_CRAFT_CRYSTAL_MAGE_TREEBONUS_FOCUS" />
+        <itempattern pattern="T?_MAIN_HOLYSTAFF*" />
+        <itempattern pattern="T?_2H_HOLYSTAFF*" />
+        <itempattern pattern="T?_2H_DIVINESTAFF*" />
+      </bonus>
+      <bonus type="itemcraftquality" bonus="0.05" mintier="4" maxtier="8">
+        <description tag="@DESTINYBOARD_CRAFT_CRYSTAL_MAGE_TREEBONUS_QUALITY" />
+        <itempattern pattern="T?_MAIN_HOLYSTAFF*" />
+        <itempattern pattern="T?_2H_HOLYSTAFF*" />
+        <itempattern pattern="T?_2H_DIVINESTAFF*" />
+      </bonus>
+      <bonus type="craftingfocuscostreduction" bonus="2.5" mintier="4" maxtier="8">
+        <description tag="@DESTINYBOARD_CRAFT_HOLYSTAFFS_CRYSTAL_GROUPBONUS_FOCUS" />
+        <itempattern pattern="T?_2H_HOLYSTAFF_CRYSTAL" />
+      </bonus>
+      <bonus type="itemcraftquality" bonus="6" mintier="4" maxtier="8">
+        <description tag="@DESTINYBOARD_CRAFT_HOLYSTAFFS_CRYSTAL_GROUPBONUS_QUALITY" />
+        <itempattern pattern="T?_2H_HOLYSTAFF_CRYSTAL" />
       </bonus>
     </baserewards>
     <parentachievements allrequired="false">
@@ -18372,6 +18712,7 @@
       <itempattern pattern="T?_MAIN_MACE_HELL" />
       <itempattern pattern="T?_2H_MACE_MORGANA" />
       <itempattern pattern="T?_2H_DUALMACE_AVALON" />
+      <itempattern pattern="T?_MAIN_MACE_CRYSTAL" />
     </itemlist>
     <baserewards>
       <unlock type="itemcraft">
@@ -18382,6 +18723,7 @@
         <itempattern pattern="T?_MAIN_MACE_HELL" />
         <itempattern pattern="T?_2H_MACE_MORGANA" />
         <itempattern pattern="T?_2H_DUALMACE_AVALON" />
+        <itempattern pattern="T?_MAIN_MACE_CRYSTAL" />
       </unlock>
       <bonus type="craftingfocuscostreduction" bonus="0.3" mintier="4" maxtier="8">
         <description tag="@DESTINYBOARD_CRAFT_MACES_CATEGORYBONUS_FOCUS" />
@@ -18392,6 +18734,7 @@
         <itempattern pattern="T?_MAIN_MACE_HELL" />
         <itempattern pattern="T?_2H_MACE_MORGANA" />
         <itempattern pattern="T?_2H_DUALMACE_AVALON" />
+        <itempattern pattern="T?_MAIN_MACE_CRYSTAL" />
       </bonus>
       <bonus type="itemcraftquality" bonus="0.75" mintier="4" maxtier="8">
         <description tag="@DESTINYBOARD_CRAFT_MACES_CATEGORYBONUS_QUALITY" />
@@ -18402,6 +18745,7 @@
         <itempattern pattern="T?_MAIN_MACE_HELL" />
         <itempattern pattern="T?_2H_MACE_MORGANA" />
         <itempattern pattern="T?_2H_DUALMACE_AVALON" />
+        <itempattern pattern="T?_MAIN_MACE_CRYSTAL" />
       </bonus>
     </baserewards>
     <parentachievements allrequired="false">
@@ -18413,6 +18757,7 @@
       <achievement id="CRAFT_MACES_HELL" />
       <achievement id="CRAFT_MACES_MORGANA" />
       <achievement id="CRAFT_MACES_AVALON" />
+      <achievement id="CRAFT_MACES_CRYSTAL" />
     </parentachievements>
   </templateachievement>
   <templateachievement usetemplate="CRAFT_SPEC" missiontype="craftitemfame" lpmultiplier="0.6667" famemultiplier="2" id="CRAFT_MACES_AVALON" category="crafting" ring="9" spriteReward="2H_DUALMACE_AVALON" itemforsprite="T8_2H_DUALMACE_AVALON" isfameachievement="false">
@@ -18444,6 +18789,41 @@
       <bonus type="itemcraftquality" bonus="6" mintier="4" maxtier="8">
         <description tag="@DESTINYBOARD_CRAFT_MACES_AVALON_GROUPBONUS_QUALITY" />
         <itempattern pattern="T?_2H_DUALMACE_AVALON" />
+      </bonus>
+    </baserewards>
+    <parentachievements allrequired="false">
+      <achievement id="CRAFT_MACES" />
+    </parentachievements>
+  </templateachievement>
+  <templateachievement id="CRAFT_MACES_CRYSTAL" itemforsprite="T8_MAIN_MACE_CRYSTAL" category="crafting" ring="9" isfameachievement="false" spriteReward="MAIN_MACE_CRYSTAL" usetemplate="CRAFT_SPEC" missiontype="craftitemfame" famemultiplier="2" lpmultiplier="0.6667">
+    <title tag="@DESTINYBOARD_TITLE_CRAFT_MACES_CRYSTAL" />
+    <itemlist>
+      <itempattern pattern="T?_MAIN_MACE_CRYSTAL" />
+    </itemlist>
+    <baserewards>
+      <bonus type="craftingfocuscostreduction" bonus="0.0215" mintier="4" maxtier="8">
+        <description tag="@DESTINYBOARD_CRAFT_CRYSTAL_WARRIOR_TREEBONUS_FOCUS" />
+        <itempattern pattern="T?_MAIN_MACE*" />
+        <itempattern pattern="T?_2H_MACE*" />
+        <itempattern pattern="T?_2H_FLAIL*" />
+        <itempattern pattern="T?_MAIN_ROCKMACE*" />
+        <itempattern pattern="T?_2H_DUALMACE*" />
+      </bonus>
+      <bonus type="itemcraftquality" bonus="0.05" mintier="4" maxtier="8">
+        <description tag="@DESTINYBOARD_CRAFT_CRYSTAL_WARRIOR_TREEBONUS_QUALITY" />
+        <itempattern pattern="T?_MAIN_MACE*" />
+        <itempattern pattern="T?_2H_MACE*" />
+        <itempattern pattern="T?_2H_FLAIL*" />
+        <itempattern pattern="T?_MAIN_ROCKMACE*" />
+        <itempattern pattern="T?_2H_DUALMACE*" />
+      </bonus>
+      <bonus type="craftingfocuscostreduction" bonus="2.5" mintier="4" maxtier="8">
+        <description tag="@DESTINYBOARD_CRAFT_MACES_CRYSTAL_GROUPBONUS_FOCUS" />
+        <itempattern pattern="T?_MAIN_MACE_CRYSTAL" />
+      </bonus>
+      <bonus type="itemcraftquality" bonus="6" mintier="4" maxtier="8">
+        <description tag="@DESTINYBOARD_CRAFT_MACES_CRYSTAL_GROUPBONUS_QUALITY" />
+        <itempattern pattern="T?_MAIN_MACE_CRYSTAL" />
       </bonus>
     </baserewards>
     <parentachievements allrequired="false">
@@ -27380,25 +27760,25 @@
         </missions>
         <rewardgroups>
           <rewardgroup>
+            <reward type="expeditioncategory">
+              <entry id="T3_STANDARD" />
+            </reward>
+          </rewardgroup>
+          <rewardgroup>
             <reward type="bonusdamagevsmobs" tier="3" bonus="0.15" />
+            <reward type="bonusdamagevsmobs" tier="4" bonus="0.15" />
             <reward type="bonusdamagevsmobs" tier="5" bonus="0.15" />
             <reward type="bonusdamagevsmobs" tier="6" bonus="0.15" />
             <reward type="bonusdamagevsmobs" tier="7" bonus="0.15" />
             <reward type="bonusdamagevsmobs" tier="8" bonus="0.15" />
-            <reward type="bonusdamagevsmobs" tier="4" bonus="0.15" />
           </rewardgroup>
           <rewardgroup>
             <reward type="bonusdefensevsmobs" tier="3" bonus="0.15" />
+            <reward type="bonusdefensevsmobs" tier="4" bonus="0.15" />
             <reward type="bonusdefensevsmobs" tier="5" bonus="0.15" />
             <reward type="bonusdefensevsmobs" tier="6" bonus="0.15" />
             <reward type="bonusdefensevsmobs" tier="7" bonus="0.15" />
             <reward type="bonusdefensevsmobs" tier="8" bonus="0.15" />
-            <reward type="bonusdefensevsmobs" tier="4" bonus="0.15" />
-          </rewardgroup>
-          <rewardgroup>
-            <reward type="expeditioncategory">
-              <entry id="T3_STANDARD" />
-            </reward>
           </rewardgroup>
           <rewardgroup>
             <reward type="reavertierunlock" tier="3" />

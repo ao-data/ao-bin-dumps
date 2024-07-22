@@ -100,6 +100,8 @@
       <level requiredpoints="-20000" title="@REPUTATION_LEVEL_NEGATIVE03" nametagicon="REPUTATION_NEGATIVE03" rewardicon="REPUTATION_NEGATIVE03" recoveryperday="500" pvegainfactor="0.042" gathergainfactor="0.3" candisablepvp="true" canenterexpedition="false" attackpenalty="0" knockdownpenalty="0" killpenalty="0" cityaccessdisplay="safe" crimeprotectionbuff="" />
       <level requiredpoints="-50000" title="@REPUTATION_LEVEL_NEGATIVE04" nametagicon="REPUTATION_NEGATIVE04" rewardicon="REPUTATION_NEGATIVE04" recoveryperday="2000" pvegainfactor="0.063" gathergainfactor="0.45" candisablepvp="true" canenterexpedition="false" attackpenalty="0" knockdownpenalty="0" killpenalty="0" cityaccessdisplay="safe" crimeprotectionbuff="" />
     </Reputation>
+      <!-- Note base ccu for the activity quotient is not defined here but in the server environments so it can be setup per environment, defaults to 50k ccu -->
+    <GlobalActivityQuotient minimum="0.1" modifier="0.9" />
   </ServerSettings>
   <ClientSettings>
     <MiniMap showgraveseconds="300" />
@@ -276,29 +278,29 @@
     <dangerstate dangerstate="elite" attackerthreshold="20" />
   </MobFocusFire>
   <PlayerFocusFire lookbackseconds="10" effectdurationinsec="5">
-    <attackers numbergreaterorequal="2" meleemodifier="0.143" rangedmodifier="0.100" mountedmodifier="0.143" />
-    <attackers numbergreaterorequal="3" meleemodifier="0.259" rangedmodifier="0.187" mountedmodifier="0.259" />
-    <attackers numbergreaterorequal="4" meleemodifier="0.353" rangedmodifier="0.262" mountedmodifier="0.353" />
-    <attackers numbergreaterorequal="5" meleemodifier="0.430" rangedmodifier="0.328" mountedmodifier="0.430" />
-    <attackers numbergreaterorequal="6" meleemodifier="0.494" rangedmodifier="0.385" mountedmodifier="0.494" />
-    <attackers numbergreaterorequal="7" meleemodifier="0.547" rangedmodifier="0.436" mountedmodifier="0.547" />
-    <attackers numbergreaterorequal="8" meleemodifier="0.592" rangedmodifier="0.480" mountedmodifier="0.592" />
-    <attackers numbergreaterorequal="9" meleemodifier="0.630" rangedmodifier="0.519" mountedmodifier="0.630" />
-    <attackers numbergreaterorequal="10" meleemodifier="0.662" rangedmodifier="0.554" mountedmodifier="0.662" />
-    <attackers numbergreaterorequal="11" meleemodifier="0.690" rangedmodifier="0.584" mountedmodifier="0.690" />
-    <attackers numbergreaterorequal="12" meleemodifier="0.713" rangedmodifier="0.612" mountedmodifier="0.713" />
-    <attackers numbergreaterorequal="13" meleemodifier="0.734" rangedmodifier="0.637" mountedmodifier="0.734" />
-    <attackers numbergreaterorequal="14" meleemodifier="0.752" rangedmodifier="0.659" mountedmodifier="0.752" />
-    <attackers numbergreaterorequal="15" meleemodifier="0.768" rangedmodifier="0.678" mountedmodifier="0.768" />
-    <attackers numbergreaterorequal="16" meleemodifier="0.782" rangedmodifier="0.696" mountedmodifier="0.782" />
-    <attackers numbergreaterorequal="17" meleemodifier="0.795" rangedmodifier="0.713" mountedmodifier="0.795" />
-    <attackers numbergreaterorequal="18" meleemodifier="0.800" rangedmodifier="0.727" mountedmodifier="0.800" />
-    <attackers numbergreaterorequal="19" meleemodifier="0.800" rangedmodifier="0.741" mountedmodifier="0.800" />
-    <attackers numbergreaterorequal="20" meleemodifier="0.800" rangedmodifier="0.753" mountedmodifier="0.800" />
-    <attackers numbergreaterorequal="21" meleemodifier="0.800" rangedmodifier="0.764" mountedmodifier="0.800" />
-    <attackers numbergreaterorequal="22" meleemodifier="0.800" rangedmodifier="0.774" mountedmodifier="0.800" />
-    <attackers numbergreaterorequal="23" meleemodifier="0.800" rangedmodifier="0.784" mountedmodifier="0.800" />
-    <attackers numbergreaterorequal="24" meleemodifier="0.800" rangedmodifier="0.793" mountedmodifier="0.800" />
+    <attackers numbergreaterorequal="2" meleemodifier="0.143" rangedmodifier="0.143" mountedmodifier="0.143" />
+    <attackers numbergreaterorequal="3" meleemodifier="0.259" rangedmodifier="0.259" mountedmodifier="0.259" />
+    <attackers numbergreaterorequal="4" meleemodifier="0.353" rangedmodifier="0.353" mountedmodifier="0.353" />
+    <attackers numbergreaterorequal="5" meleemodifier="0.430" rangedmodifier="0.430" mountedmodifier="0.430" />
+    <attackers numbergreaterorequal="6" meleemodifier="0.486" rangedmodifier="0.486" mountedmodifier="0.494" />
+    <attackers numbergreaterorequal="7" meleemodifier="0.530" rangedmodifier="0.530" mountedmodifier="0.547" />
+    <attackers numbergreaterorequal="8" meleemodifier="0.566" rangedmodifier="0.566" mountedmodifier="0.592" />
+    <attackers numbergreaterorequal="9" meleemodifier="0.596" rangedmodifier="0.596" mountedmodifier="0.630" />
+    <attackers numbergreaterorequal="10" meleemodifier="0.622" rangedmodifier="0.622" mountedmodifier="0.662" />
+    <attackers numbergreaterorequal="11" meleemodifier="0.645" rangedmodifier="0.645" mountedmodifier="0.690" />
+    <attackers numbergreaterorequal="12" meleemodifier="0.665" rangedmodifier="0.665" mountedmodifier="0.713" />
+    <attackers numbergreaterorequal="13" meleemodifier="0.683" rangedmodifier="0.683" mountedmodifier="0.734" />
+    <attackers numbergreaterorequal="14" meleemodifier="0.699" rangedmodifier="0.699" mountedmodifier="0.752" />
+    <attackers numbergreaterorequal="15" meleemodifier="0.713" rangedmodifier="0.713" mountedmodifier="0.768" />
+    <attackers numbergreaterorequal="16" meleemodifier="0.726" rangedmodifier="0.726" mountedmodifier="0.782" />
+    <attackers numbergreaterorequal="17" meleemodifier="0.738" rangedmodifier="0.738" mountedmodifier="0.795" />
+    <attackers numbergreaterorequal="18" meleemodifier="0.749" rangedmodifier="0.749" mountedmodifier="0.800" />
+    <attackers numbergreaterorequal="19" meleemodifier="0.759" rangedmodifier="0.759" mountedmodifier="0.800" />
+    <attackers numbergreaterorequal="20" meleemodifier="0.768" rangedmodifier="0.768" mountedmodifier="0.800" />
+    <attackers numbergreaterorequal="21" meleemodifier="0.776" rangedmodifier="0.776" mountedmodifier="0.800" />
+    <attackers numbergreaterorequal="22" meleemodifier="0.784" rangedmodifier="0.784" mountedmodifier="0.800" />
+    <attackers numbergreaterorequal="23" meleemodifier="0.791" rangedmodifier="0.791" mountedmodifier="0.800" />
+    <attackers numbergreaterorequal="24" meleemodifier="0.797" rangedmodifier="0.797" mountedmodifier="0.800" />
     <attackers numbergreaterorequal="25" meleemodifier="0.800" rangedmodifier="0.800" mountedmodifier="0.800" />
     <attackers numbergreaterorequal="26" meleemodifier="0.800" rangedmodifier="0.800" mountedmodifier="0.800" />
     <attackers numbergreaterorequal="27" meleemodifier="0.800" rangedmodifier="0.800" mountedmodifier="0.800" />
@@ -482,6 +484,14 @@
     <PartyInvitationSnoozeDurationInSeconds value="180" />
     <PartySnoozeDurationUpperLimitInMinutes value="180" />
     <PartySnoozeDurationLowerLimitInMinutes value="1" />
+    <PartyReadyCheckDuration value="60" /> <!-- Seconds -->
+    <PartyReadyCheckTimeout value="60" /> <!-- Seconds -->
+    <PartyReadyCheckResultDuration value="30" /> <!-- Seconds -->
+	<PartyLeaveDelays>
+		<LeaveDelayInSeconds pvprule="FactionPvpOnly" duration="0" />
+		<LeaveDelayInSeconds pvprule="PvpAllowed" duration="5" />
+		<LeaveDelayInSeconds pvprule="PvpForced" duration="5" />
+	</PartyLeaveDelays>
   </PartySettings>
 
   <WeightLimits normalmessage="@OVERLOAD_MESSAGE_OUT_OF_OVERLOAD" repeatdelay="10">
@@ -571,7 +581,7 @@
   <CraftNutrition minimumpercent="0" />
   <ItemValueToBuildingCapacityFactor factor="0.5" />	<!--do not adjust uninformed - use BuildingConsumptionBalanceFactor instead-->
   <FreeCrafting maxTier="2" />
-  <BuildingManagement maxuseagefee="1000" maxnutritionreward="100000" />
+  <BuildingManagement maxuseagefee="1000" maxnutritionreward="100000" lownutritionratio="0.1" lowdurabilityratio="0.1" />
   <BuildingConsumptionBalanceFactor factor="1" />
   <ActionFocus costreductionconstant="1.00695555005672">
     <CraftingEfficiency bonus="0.59" />
@@ -1028,25 +1038,25 @@
     </Reward>
   </PremiumLifeTimeRewards>
   <ClusterDangerBonusTypes globalmoblootfactor="0.9" globalmobsilverlootfactor="0.9">
-    <ClusterDangerBonus type="safe" icon="safe" famefactor="2.15" moblootfactor="1.25" mobsilverlootfactor="1.45" questscalingfactor="2.15" />
-    <ClusterDangerBonus type="yellow" icon="yellow" famefactor="2.4" moblootfactor="1.33" mobsilverlootfactor="1.53" questscalingfactor="2.4" />
-    <ClusterDangerBonus type="red" icon="red" famefactor="3.3" moblootfactor="2.25" mobsilverlootfactor="2.6" questscalingfactor="3.3" />
-    <ClusterDangerBonus type="black" icon="black" famefactor="4.2" moblootfactor="2.6" mobsilverlootfactor="3" questscalingfactor="4.2" />
-    <ClusterDangerBonus type="hell_nonlethal_2v2" icon="hellnonlethal2v2" famefactor="2.4" moblootfactor="1.33" mobsilverlootfactor="1.53" questscalingfactor="2.4" />
-    <ClusterDangerBonus type="hell_nonlethal_5v5" icon="hellnonlethal5v5" famefactor="2.4" moblootfactor="1.33" mobsilverlootfactor="1.53" questscalingfactor="2.4" />
-    <ClusterDangerBonus type="hell_nonlethal_10v10" icon="hellnonlethal10v10" famefactor="2.4" moblootfactor="1.33" mobsilverlootfactor="1.53" questscalingfactor="2.4" />
-    <ClusterDangerBonus type="hell_lethal_2v2" icon="helllethal2v2" famefactor="4.2" moblootfactor="2.6" mobsilverlootfactor="3" questscalingfactor="4.2" />
-    <ClusterDangerBonus type="hell_lethal_5v5" icon="helllethal5v5" famefactor="4.2" moblootfactor="2.6" mobsilverlootfactor="3" questscalingfactor="4.2" />
-    <ClusterDangerBonus type="hell_lethal_10v10" icon="helllethal10v10" famefactor="4.2" moblootfactor="2.6" mobsilverlootfactor="3" questscalingfactor="4.2" />
-    <ClusterDangerBonus type="corrupted_beginner" icon="corruptedbeginner" famefactor="3.2" moblootfactor="1.33" mobsilverlootfactor="1.53" questscalingfactor="3.2" />
-    <ClusterDangerBonus type="corrupted_intermediate" icon="corruptedintermediate" famefactor="5.1" moblootfactor="2.6" mobsilverlootfactor="3" questscalingfactor="5.1" />
-    <ClusterDangerBonus type="corrupted_pro" icon="corruptedpro" famefactor="3.5" moblootfactor="2.6" mobsilverlootfactor="3" questscalingfactor="3.5" />
-    <ClusterDangerBonus type="expedition" icon="safe" famefactor="1" moblootfactor="0.5" mobsilverlootfactor="0.5" questscalingfactor="1" />
-    <ClusterDangerBonus type="tunnel" icon="black" famefactor="6" moblootfactor="7.1" mobsilverlootfactor="8.17" questscalingfactor="6" />
-    <ClusterDangerBonus type="mistsyellow" icon="yellow" famefactor="1.8" moblootfactor="1.33" mobsilverlootfactor="1.53" questscalingfactor="1.8" />
-    <ClusterDangerBonus type="mistsblack" icon="black" famefactor="3.16" moblootfactor="2.6" mobsilverlootfactor="3" questscalingfactor="3.16" />
-	<ClusterDangerBonus type="mistsdungeonyellow" icon="yellow" famefactor="2.4" moblootfactor="1.33" mobsilverlootfactor="1.53" questscalingfactor="1.8" />
-	<ClusterDangerBonus type="mistsdungeonblack" icon="black" famefactor="4.2" moblootfactor="2.6" mobsilverlootfactor="3" questscalingfactor="3.16" />
+    <ClusterDangerBonus type="safe" icon="safe" famefactor="2.15" moblootfactor="1.25" mobsilverlootfactor="1.45" questscalingfactor="2.15" gatheringfamefactor="1" fishingfamefactor="1" />
+    <ClusterDangerBonus type="yellow" icon="yellow" famefactor="2.4" moblootfactor="1.33" mobsilverlootfactor="1.53" questscalingfactor="2.4" gatheringfamefactor="1" fishingfamefactor="1" />
+    <ClusterDangerBonus type="red" icon="red" famefactor="3.3" moblootfactor="2.25" mobsilverlootfactor="2.6" questscalingfactor="3.3" gatheringfamefactor="1" fishingfamefactor="1" />
+    <ClusterDangerBonus type="black" icon="black" famefactor="4.2" moblootfactor="2.6" mobsilverlootfactor="3" questscalingfactor="4.2" gatheringfamefactor="1" fishingfamefactor="1" />
+    <ClusterDangerBonus type="hell_nonlethal_2v2" icon="hellnonlethal2v2" famefactor="2.4" moblootfactor="1.33" mobsilverlootfactor="1.53" questscalingfactor="2.4" gatheringfamefactor="1" fishingfamefactor="1" />
+    <ClusterDangerBonus type="hell_nonlethal_5v5" icon="hellnonlethal5v5" famefactor="2.4" moblootfactor="1.33" mobsilverlootfactor="1.53" questscalingfactor="2.4" gatheringfamefactor="1" fishingfamefactor="1" />
+    <ClusterDangerBonus type="hell_nonlethal_10v10" icon="hellnonlethal10v10" famefactor="2.4" moblootfactor="1.33" mobsilverlootfactor="1.53" questscalingfactor="2.4" gatheringfamefactor="1" fishingfamefactor="1" />
+    <ClusterDangerBonus type="hell_lethal_2v2" icon="helllethal2v2" famefactor="4.2" moblootfactor="2.6" mobsilverlootfactor="3" questscalingfactor="4.2" gatheringfamefactor="1" fishingfamefactor="1" />
+    <ClusterDangerBonus type="hell_lethal_5v5" icon="helllethal5v5" famefactor="4.2" moblootfactor="2.6" mobsilverlootfactor="3" questscalingfactor="4.2" gatheringfamefactor="1" fishingfamefactor="1" />
+    <ClusterDangerBonus type="hell_lethal_10v10" icon="helllethal10v10" famefactor="4.2" moblootfactor="2.6" mobsilverlootfactor="3" questscalingfactor="4.2" gatheringfamefactor="1" fishingfamefactor="1" />
+    <ClusterDangerBonus type="corrupted_beginner" icon="corruptedbeginner" famefactor="3.2" moblootfactor="1.33" mobsilverlootfactor="1.53" questscalingfactor="3.2" gatheringfamefactor="1" fishingfamefactor="1" />
+    <ClusterDangerBonus type="corrupted_intermediate" icon="corruptedintermediate" famefactor="5.1" moblootfactor="2.6" mobsilverlootfactor="3" questscalingfactor="5.1" gatheringfamefactor="1" fishingfamefactor="1" />
+    <ClusterDangerBonus type="corrupted_pro" icon="corruptedpro" famefactor="3.5" moblootfactor="2.6" mobsilverlootfactor="3" questscalingfactor="3.5" gatheringfamefactor="1" fishingfamefactor="1" />
+    <ClusterDangerBonus type="expedition" icon="safe" famefactor="1" moblootfactor="0.5" mobsilverlootfactor="0.5" questscalingfactor="1" gatheringfamefactor="1" fishingfamefactor="1" />
+    <ClusterDangerBonus type="tunnel" icon="black" famefactor="4.2" moblootfactor="3" mobsilverlootfactor="3.45" questscalingfactor="4.2" gatheringfamefactor="1" fishingfamefactor="1" />
+    <ClusterDangerBonus type="mistsyellow" icon="yellow" famefactor="1.8" moblootfactor="1.33" mobsilverlootfactor="1.53" questscalingfactor="1.8" gatheringfamefactor="1" fishingfamefactor="1" />
+    <ClusterDangerBonus type="mistsblack" icon="black" famefactor="3.16" moblootfactor="2.6" mobsilverlootfactor="3" questscalingfactor="3.16" gatheringfamefactor="1" fishingfamefactor="1" />
+    <ClusterDangerBonus type="mistsdungeonyellow" icon="yellow" famefactor="2.4" moblootfactor="1.33" mobsilverlootfactor="1.53" questscalingfactor="1.8" gatheringfamefactor="1" fishingfamefactor="1" />
+    <ClusterDangerBonus type="mistsdungeonblack" icon="black" famefactor="4.2" moblootfactor="2.6" mobsilverlootfactor="3" questscalingfactor="3.16" gatheringfamefactor="1" fishingfamefactor="1" />
   </ClusterDangerBonusTypes>
   <QuestScalingByClusterTier>
     <Tier tier="1" scalingfactor="1" />
@@ -1059,7 +1069,7 @@
     <Tier tier="8" scalingfactor="3.4" />
   </QuestScalingByClusterTier>
   <AchievementHud tutorial_idletime_till_highlight="30" />
-  <SilverDropSettings prefab="COINS" premiumprefab="COINS_PREMIUM" decaytimemob="300.0" decaytimeplayer="300.0" dropvisibilitydelay="0.5" manualpickuprange="4.0" autopickupdelay="0.2" autopickupradius="4.0" />
+  <SilverDropSettings prefab="COINS" premiumprefab="COINS_PREMIUM" decaytimemob="300.0" decaytimeplayer="300.0" decaytimespell="300" dropvisibilitydelay="0.5" manualpickuprange="4.0" autopickupdelay="0.2" autopickupradius="4.0" />
   <buildingrenovationsettings downgradedelay="86400" destroydelay="86400" ownerdowngradedestroydelay="60" lootprotection="86400" lootlifetime="172800" />
   <constructionSiteTearDownSettings lootlifetime="172800" lootprotection="86400" />
   <!--ExitSettings are used for random dungeon exits-->
@@ -1124,11 +1134,13 @@
   <BlackmarketBank size="128" weightlimit="100000.0">
     <TabCost cost="250000" />
   </BlackmarketBank>
-  <OverCharge bonus="100" duration="1800" warningtime="60" trashchance="0.15" durabilityloss="0.30" overchargeitem="UNIQUE_GVGTOKEN_GENERIC" overchargeitemcount="10" buttonholdtime="1.00">
+  <OverCharge warningtime="60" overchargeitem="UNIQUE_GVGTOKEN_GENERIC" buttonholdtime="1.00">
     <startvfx prefab="FX/ClientPrefabs/OverChargeVfx/overcharge_start" socket="damage" constraintpreset="pointconstraint" />
     <endvfx prefab="FX/ClientPrefabs/OverChargeVfx/overcharge_end" socket="floor" constraintpreset="pointconstraint" />
     <itemtrashedvfx prefab="FX/ClientPrefabs/OverChargeVfx/overcharge_itemtrashed" socket="damage" constraintpreset="inworld" />
     <endwarningvfx prefab="FX/ClientPrefabs/OverChargeVfx/overcharge_endwarning" socket="damage" constraintpreset="inworld" />
+    <stack bonus="100" duration="1800" overchargeitemcount="10" trashchance="0.15" durabilityloss="0.3" fakeslotspell="OVERCHARGE" spelleffect="OVER_CHARGED" />
+    <stack bonus="100" duration="3600" overchargeitemcount="0" trashchance="0.30" durabilityloss="0.6" fakeslotspell="OVERCHARGE2" spelleffect="OVER_CHARGED2" />
   </OverCharge>
   <AlliancePenalty>
     <Penalty territorythreshold="15" energydrainfactor="0.03" silverpenalty="0" famepenalty="0" />
@@ -1365,6 +1377,27 @@
     <contributingmarket id="3002" />
     
   </MarketPriceEstimation>
+  <CityMarkets>
+    <!-- carleon and other royal cities-->
+    <cluster id="3005" />
+    <cluster id="1002" />
+    <cluster id="3008" />
+    <cluster id="4002" />
+    <cluster id="0007" />
+    <cluster id="2004" />
+    <!-- starter towns -->
+    <cluster id="0004" />
+    <cluster id="1006" />
+    <cluster id="2002" />
+    <cluster id="3002" />
+    <cluster id="4006" />
+    <!-- blackzone cities todo -->
+    <cluster id="4300" />
+    <cluster id="0008" />
+    <cluster id="1012" />
+	<!-- brecilien -->
+	<cluster id="5003" />
+  </CityMarkets>
   <CrossPlatformRewards>
     <Mail mailid="CROSSPLATFORM_REWARD_MAIL" sender="Albion Online">
       <AttachedItem id="UNIQUE_LOOTCHEST_SKILLBOOKS_TELLAFRIEND" amount="1" />
@@ -1398,6 +1431,12 @@
     <StorageRange min="501" max="1500" color="104040ff" />
     <StorageRange min="0" max="500" color="082323ff" />
   </EnergyStorageOverlay>
+  <ClusterActivityChestOverlay defaultcolor="3b4f61ff">
+    <Level color="5c6870ff" threshold="2000000" />
+    <Level color="837e73ff" threshold="5000000" />
+    <Level color="c8a164ff" threshold="10000000" />
+    <Level color="ffd15fff" threshold="15000000" />
+  </ClusterActivityChestOverlay>
   <RecoveryVault type="Migration" feefactor="0" notclaimabletime="0" />
   <RecoveryVault type="MigrationWithFee" feefactor="450" notclaimabletime="604800" />
 </AO-GameData>

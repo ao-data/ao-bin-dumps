@@ -1,5 +1,11 @@
 <template path="Assets/Levels/LEVEL_TEMPLATES/MOUNTAIN/Slave/M_MN_TerritoryFortification_02.unity" unityguid="b850f34a1e8236d4e9c3a2e20dff5e6f" editorBoundsMin="-75 -75" editorBoundsMax="76 75" colBoundsMin="-75 -76" colBoundsMax="75 75">
   <criticalscenemembers>
+    <criticalscenemember id="actionbuilding_11" type="actionbuilding" layerId="">
+      <tile name="MOUNTAIN_RED_FORT_BLOCKER_SHED" pos="-60 5 30">
+        <actionbuilding />
+        <fortificationtileswitch group="UpdateGroup_OuterGates_06" />
+      </tile>
+    </criticalscenemember>
     <criticalscenemember id="actionbuilding_92" type="actionbuilding" layerId="">
       <tile name="MOUNTAIN_RED_FORTIFICATION_GATE" pos="-60 0 50" roty="180">
         <actionbuilding />
@@ -29,18 +35,18 @@
         <fortificationguardspawnpoint behavior="GUARD" group="UpdateGroup_InnerGuards_03" />
       </tile>
     </criticalscenemember>
-    <criticalscenemember id="fortificationguardspawnpoint_21" type="fortificationguardspawnpoint" layerId="">
-      <tile name="SpawnPoint_FORTIFICATIONGUARD_CROSSBOW" pos="38.69 10 -11.87" roty="193">
-        <fortificationguardspawnpoint behavior="GUARD" group="UpdateGroup_InnerGuards_03" />
-      </tile>
-    </criticalscenemember>
-    <criticalscenemember id="fortificationguardspawnpoint_16" type="fortificationguardspawnpoint" layerId="">
-      <tile name="SpawnPoint_FORTIFICATIONGUARD_CROSSBOW" pos="-10.5 10 -21.5" rot="0 230.11 0">
-        <fortificationguardspawnpoint behavior="GUARD" group="UpdateGroup_InnerGuards_04" />
+    <criticalscenemember id="fortificationguardspawnpoint_12" type="fortificationguardspawnpoint" layerId="">
+      <tile name="SpawnPoint_FORTIFICATIONGUARD_CROSSBOW" pos="-42.27 10 -11.9" roty="225">
+        <fortificationguardspawnpoint behavior="GUARD" group="UpdateGroup_InnerGuards_05" />
       </tile>
     </criticalscenemember>
     <criticalscenemember id="fortificationguardspawnpoint_19" type="fortificationguardspawnpoint" layerId="">
       <tile name="SpawnPoint_FORTIFICATIONGUARD_STAFF" pos="-10.5 10 -16.5" roty="207">
+        <fortificationguardspawnpoint behavior="GUARD" group="UpdateGroup_InnerGuards_04" />
+      </tile>
+    </criticalscenemember>
+    <criticalscenemember id="fortificationguardspawnpoint_20" type="fortificationguardspawnpoint" layerId="">
+      <tile name="SpawnPoint_FORTIFICATIONGUARD_STAFF" pos="12.55 10 -18.72" roty="189.49">
         <fortificationguardspawnpoint behavior="GUARD" group="UpdateGroup_InnerGuards_04" />
       </tile>
     </criticalscenemember>
@@ -54,14 +60,9 @@
         <fortificationguardspawnpoint behavior="GUARD" group="UpdateGroup_InnerGuards_04" />
       </tile>
     </criticalscenemember>
-    <criticalscenemember id="fortificationguardspawnpoint_12" type="fortificationguardspawnpoint" layerId="">
-      <tile name="SpawnPoint_FORTIFICATIONGUARD_CROSSBOW" pos="-42.27 10 -11.9" roty="225">
-        <fortificationguardspawnpoint behavior="GUARD" group="UpdateGroup_InnerGuards_05" />
-      </tile>
-    </criticalscenemember>
-    <criticalscenemember id="fortificationguardspawnpoint_15" type="fortificationguardspawnpoint" layerId="">
-      <tile name="SpawnPoint_FORTIFICATIONGUARD_STAFF" pos="-36.88 10 -6.79" roty="219">
-        <fortificationguardspawnpoint behavior="GUARD" group="UpdateGroup_InnerGuards_05" />
+    <criticalscenemember id="fortificationguardspawnpoint_16" type="fortificationguardspawnpoint" layerId="">
+      <tile name="SpawnPoint_FORTIFICATIONGUARD_CROSSBOW" pos="-10.5 10 -21.5" rot="0 230.11 0">
+        <fortificationguardspawnpoint behavior="GUARD" group="UpdateGroup_InnerGuards_04" />
       </tile>
     </criticalscenemember>
     <criticalscenemember id="fortificationguardspawnpoint_13" type="fortificationguardspawnpoint" layerId="">
@@ -69,15 +70,14 @@
         <fortificationguardspawnpoint behavior="GUARD" group="UpdateGroup_InnerGuards_05" />
       </tile>
     </criticalscenemember>
-    <criticalscenemember id="fortificationguardspawnpoint_20" type="fortificationguardspawnpoint" layerId="">
-      <tile name="SpawnPoint_FORTIFICATIONGUARD_STAFF" pos="12.55 10 -18.72" roty="189.49">
-        <fortificationguardspawnpoint behavior="GUARD" group="UpdateGroup_InnerGuards_04" />
+    <criticalscenemember id="fortificationguardspawnpoint_21" type="fortificationguardspawnpoint" layerId="">
+      <tile name="SpawnPoint_FORTIFICATIONGUARD_CROSSBOW" pos="38.69 10 -11.87" roty="193">
+        <fortificationguardspawnpoint behavior="GUARD" group="UpdateGroup_InnerGuards_03" />
       </tile>
     </criticalscenemember>
-    <criticalscenemember id="actionbuilding_11" type="actionbuilding" layerId="">
-      <tile name="MOUNTAIN_RED_FORT_BLOCKER_SHED" pos="-60 5 30">
-        <actionbuilding />
-        <fortificationtileswitch group="UpdateGroup_OuterGates_06" />
+    <criticalscenemember id="fortificationguardspawnpoint_15" type="fortificationguardspawnpoint" layerId="">
+      <tile name="SpawnPoint_FORTIFICATIONGUARD_STAFF" pos="-36.88 10 -6.79" roty="219">
+        <fortificationguardspawnpoint behavior="GUARD" group="UpdateGroup_InnerGuards_05" />
       </tile>
     </criticalscenemember>
     <criticalscenemember id="actionbuilding_51" type="actionbuilding" layerId="">
@@ -427,8 +427,8 @@
         <fortificationguardspawnpoint behavior="GUARD" group="UpdateGroup_OuterGuards_05" />
       </tile>
     </criticalscenemember>
-    <criticalscenemember id="fortificationguardspawnpoint_70" type="fortificationguardspawnpoint" layerId="">
-      <tile name="SpawnPoint_FORTIFICATIONGUARD_CROSSBOW" pos="19.5 5 -51.5" roty="180">
+    <criticalscenemember id="fortificationguardspawnpoint_71" type="fortificationguardspawnpoint" layerId="">
+      <tile name="SpawnPoint_FORTIFICATIONGUARD_STAFF" pos="27.5 5 -52.5" roty="224">
         <fortificationguardspawnpoint behavior="GUARD" group="UpdateGroup_OuterGuards_05" />
       </tile>
     </criticalscenemember>
@@ -913,8 +913,8 @@
         <fortificationguardspawnpoint behavior="GUARD" group="UpdateGroup_OuterGuards_09" />
       </tile>
     </criticalscenemember>
-    <criticalscenemember id="fortificationguardspawnpoint_71" type="fortificationguardspawnpoint" layerId="">
-      <tile name="SpawnPoint_FORTIFICATIONGUARD_STAFF" pos="27.5 5 -52.5" roty="224">
+    <criticalscenemember id="fortificationguardspawnpoint_70" type="fortificationguardspawnpoint" layerId="">
+      <tile name="SpawnPoint_FORTIFICATIONGUARD_CROSSBOW" pos="19.5 5 -51.5" roty="180">
         <fortificationguardspawnpoint behavior="GUARD" group="UpdateGroup_OuterGuards_05" />
       </tile>
     </criticalscenemember>
@@ -923,6 +923,7 @@
     <tile name="TerritoryPlayerEjectionArea" pos="-5 -10 5">
       <namedrectmarkerpoint areasize="122 0 122" />
     </tile>
+    <tile name="MOUNTAIN_RED_FORT_WALL_STR_A_NOBREAK" pos="50 5 0" />
     <tile name="MOUNTAIN_RED_FORT_WALL_COR_A_LEFT_NOBREAK_R" pos="60 0 30" roty="90" />
     <tile name="MOUNTAIN_RED_FORT_WALL_COR_A_RIGHT_NOBREAK_L" pos="60 0 -20" roty="270" />
     <tile name="MOUNTAIN_RED_FORT_WALL_DOUBCOR_A_RIGHT_NOBREAK_L" pos="-10 5 50" />
@@ -943,11 +944,11 @@
     <tile name="MOUNTAIN_RED_FORT_WALL_COR_A_LEFT_NOBREAK" pos="50 5 20" />
     <tile name="MOUNTAIN_RED_FORT_WALL_COR_A_RIGHT_NOBREAK" pos="-10 5 50" roty="270" />
     <tile name="MOUNTAIN_RED_FORT_WALL_COR_A_RIGHT_NOBREAK" pos="50 5 -10" />
-    <tile name="MOUNTAIN_RED_FORT_WALL_COR_A_LEFT_NOBREAK_THIN" pos="-10 5 -20" roty="180" />
-    <tile name="MOUNTAIN_RED_FORT_WALL_STR_A_NOBREAK" pos="50 5 0" />
-    <tile name="MOUNTAIN_RED_FORT_WALL_COR_A_RIGHT_NOBREAK_R" pos="50 5 20" roty="270" />
     <tile name="MOUNTAIN_RED_FORT_WALL_COR_A_LEFT_NOBREAK_L" pos="50 0 60" />
-    <tile name="MOUNTAIN_RED_FORT_WALL_COR_A_LEFT_NOBREAK_LR" pos="-10 0 -60" roty="90" />
+    <tile name="MOUNTAIN_RED_FORT_WALL_COR_A_LEFT_NOBREAK_THIN" pos="-10 5 -20" roty="180" />
+    <tile name="MOUNTAIN_RED_FORT_WALL_STR_A_NOBREAK" pos="-50 5 20" roty="180" />
+    <tile name="MOUNTAIN_RED_FORT_WALL_COR_A_LEFT_NOBREAK_L" pos="-60 0 60" roty="270" />
+    <tile name="MOUNTAIN_RED_FORT_WALL_STR_A_NOBREAK" pos="-50 0 -60" roty="90" />
     <tile name="MOUNTAIN_RED_FORT_WALL_COR_A_RIGHT_NOBREAK_R" pos="-60 0 0" roty="180" />
     <tile name="MOUNTAIN_RED_FORT_WALL_STR_A_NOBREAK" pos="50 0 -60" roty="90" />
     <tile name="MOUNTAIN_RED_FORT_WALL_STR_A_NOBREAK_L" pos="0 0 60" roty="270" />
@@ -968,11 +969,12 @@
     <tile name="MOUNTAIN_RED_FORT_WALL_STR_A_NOBREAK" pos="-20 0 60" roty="270" />
     <tile name="MOUNTAIN_RED_FORT_WALL_DOUBCOR_A_LEFT_NOBREAK" pos="-60 0 30" roty="90" />
     <tile name="MOUNTAIN_RED_FORT_WALL_COR_A_LEFT_NOBREAK_L" pos="-50 5 30" roty="270" />
-    <tile name="MOUNTAIN_RED_FORT_WALL_COR_A_LEFT_NOBREAK_L" pos="-60 0 60" roty="270" />
-    <tile name="MOUNTAIN_RED_FORT_WALL_STR_A_NOBREAK" pos="-50 5 20" roty="180" />
-    <tile name="MOUNTAIN_RED_PLATEAU_PLUG_ROCK_4M_B" pos="63 0 20" />
+    <tile name="MOUNTAIN_RED_FORT_WALL_COR_A_LEFT_NOBREAK_LR" pos="-10 0 -60" roty="90" />
+    <tile name="MOUNTAIN_RED_FORT_GROUND_SUB_COR_A" pos="30 0 -70" />
+    <tile name="MOUNTAIN_RED_FORT_WALL_COR_A_RIGHT_NOBREAK_R" pos="50 5 20" roty="270" />
     <tile name="MOUNTAIN_RED_FORT_ROCK_HIGH_DIAG_A" pos="58 5 8" roty="270" />
-    <tile name="MOUNTAIN_RED_FORT_ROCK_DEBRIS_SMALL_C_NOCOL" pos="-46.71 5 37.46" roty="278.19" scale="0.58457 0.58457 0.58457" />
+    <tile name="MOUNTAIN_RED_FORT_ROCK_DEBRIS_SMALL_C_NOCOL" pos="47.98 5 27.5" roty="306" scale="0.58457 0.58457 0.58457" />
+    <tile name="MOUNTAIN_RED_FORT_ROCK_HIGH_A" pos="56 3 -15" />
     <tile name="MOUNTAIN_RED_FORT_ROCK_CORNER_A" pos="60 0 -60" />
     <tile name="MOUNTAIN_RED_FORT_ROCK_HIGH_A" pos="45 0 -65" />
     <tile name="MOUNTAIN_RED_FORT_ROCK_HIGH_A" pos="56 0 -57" roty="90" />
@@ -992,12 +994,11 @@
     <tile name="MOUNTAIN_RED_FORT_ROCK_HIGH_DIAG_A" pos="-60 6 21" roty="180" />
     <tile name="MOUNTAIN_RED_FORT_ROCK_LARGE_A" pos="-58 0 7" roty="270" />
     <tile name="MOUNTAIN_RED_FORT_ROCK_HIGH_A" pos="65 -1 -57" roty="270" />
-    <tile name="MOUNTAIN_RED_FORT_ROCK_SMALL_A" pos="-48 0 -67" />
-    <tile name="MOUNTAIN_RED_FORT_ROCK_HIGH_DIAG_A" pos="54 9 17" />
-    <tile name="MOUNTAIN_RED_FORT_ROCK_HIGH_A" pos="56 3 -15" />
-    <tile name="MOUNTAIN_RED_FORT_ROCK_DEBRIS_SMALL_C_NOCOL" pos="47.98 5 27.5" roty="306" scale="0.58457 0.58457 0.58457" />
     <tile name="MOUNTAIN_RED_FORT_ROCK_HIGH_A" pos="-54 4 -5" />
+    <tile name="MOUNTAIN_RED_PLATEAU_PLUG_ROCK_4M_B" pos="63 0 20" />
     <tile name="MOUNTAIN_RED_FORT_ROCK_CORNER_A" pos="-60 0 -60" roty="90" />
+    <tile name="MOUNTAIN_RED_PLATEAU_PLUG_ROCK_4M_B" pos="-12 0 66" roty="270" />
+    <tile name="MOUNTAIN_RED_FORT_ROCK_DEBRIS_SMALL_C_NOCOL" pos="-46.71 5 37.46" roty="278.19" scale="0.58457 0.58457 0.58457" />
     <tile name="MOUNTAIN_RED_FORT_ROCK_SMALL_A" pos="67 0 -49" roty="270" />
     <tile name="MOUNTAIN_RED_FORT_ROCK_HIGH_A" pos="63 -2 -12" roty="270" />
     <tile name="MOUNTAIN_RED_FORT_ROCK_MEDIUM_C" pos="44 0 -65" />
@@ -1008,8 +1009,8 @@
     <tile name="MOUNTAIN_RED_FORT_ROCK_DEBRIS_SMALL_C_NOCOL" pos="-7.1 5 -27.41" roty="225.68" scale="0.58457 0.58457 0.58457" />
     <tile name="MOUNTAIN_RED_PLATEAU_PLUG_ROCK_4M_B" pos="67 0 12" />
     <tile name="MOUNTAIN_RED_FORT_ROCK_DEBRIS_SMALL_C_NOCOL" pos="24.37 5 57.57" roty="216.21" scale="0.58457 0.58457 0.58457" />
-    <tile name="MOUNTAIN_RED_FORT_WALL_STR_A_NOBREAK" pos="-50 0 -60" roty="90" />
     <tile name="MOUNTAIN_RED_PLATEAU_PLUG_ROCK_4M_B" pos="-28 0 66" roty="270" />
+    <tile name="MOUNTAIN_RED_FORT_ROCK_LARGE_A" pos="59 0 13" roty="90" />
     <tile name="MOUNTAIN_RED_FORT_ROCK_DEBRIS_SMALL_C_NOCOL" pos="-59.77 5 55.51" roty="27.63" scale="0.58457 0.58457 0.58457" />
     <tile name="MOUNTAIN_RED_FORT_ROCK_LARGE_A" pos="59 0 -6" roty="90" />
     <tile name="MOUNTAIN_RED_FORT_ROCK_HIGH_A" pos="63 0 -56" />
@@ -1018,12 +1019,11 @@
     <tile name="MOUNTAIN_RED_FORT_ROCK_LARGE_A" pos="-58 0 20" roty="270" />
     <tile name="MOUNTAIN_RED_FORT_ROCK_HIGH_DIAG_A" pos="58 8 -4" roty="90" />
     <tile name="MOUNTAIN_RED_FORT_ROCK_HIGH_DIAG_A" pos="-55 9 9" roty="180" />
-    <tile name="MOUNTAIN_RED_PLATEAU_PLUG_ROCK_4M_B" pos="-12 0 66" roty="270" />
     <tile name="MOUNTAIN_RED_FORT_ROCK_DEBRIS_SMALL_C_NOCOL" pos="-4.85 5 -45.12" roty="224.67" scale="0.58457 0.58457 0.58457" />
-    <tile name="MOUNTAIN_RED_FORT_ROCK_LARGE_A" pos="59 0 13" roty="90" />
-    <tile name="MOUNTAIN_RED_PLATEAU_PLUG_ROCK_4M_B" pos="57 0 61" />
-    <tile name="MOUNTAIN_RED_FORT_GROUND_SUB_COR_A" pos="30 0 -70" />
+    <tile name="MOUNTAIN_RED_FORT_GROUND_SUB_COR_A" pos="20 0 -70" roty="90" />
     <tile name="MOUNTAIN_RED_FORT_GROUND_SUB_INCOR_A" pos="20 0 -60" roty="90" />
+    <tile name="MOUNTAIN_RED_FORT_GROUND_SUB" pos="50 0 60" />
+    <tile name="MOUNTAIN_RED_FORT_GROUND_SUB_STR_A" pos="30 0 70" roty="180" />
     <tile name="MOUNTAIN_RED_FORT_GROUND_SUB_STR_A" pos="70 0 -30" roty="270" />
     <tile name="MOUNTAIN_RED_FORT_GROUND_SUB_STR_A" pos="-10 0 -70" />
     <tile name="MOUNTAIN_RED_GROUND" pos="70 0 -70" roty="90" />
@@ -1044,11 +1044,11 @@
     <tile name="MOUNTAIN_RED_FORT_GROUND_SUB_STR_A" pos="-70 0 50" roty="90" />
     <tile name="MOUNTAIN_RED_GROUND" pos="10 0 -70" />
     <tile name="MOUNTAIN_RED_GROUND" pos="70 0 10" roty="270" />
-    <tile name="MOUNTAIN_RED_GROUND" pos="70 0 -50" roty="90" />
-    <tile name="MOUNTAIN_RED_FORT_GROUND_SUB_STR_A" pos="30 0 70" roty="180" />
-    <tile name="MOUNTAIN_RED_FORT_GROUND_SUB_STR_A" pos="-70 0 40" roty="90" />
     <tile name="MOUNTAIN_RED_FORT_GROUND_SUB_COR_A" pos="70 0 -10" roty="270" />
-    <tile name="MOUNTAIN_RED_FORT_GROUND_SUB_STR_A" pos="10 0 70" roty="180" />
+    <tile name="MOUNTAIN_RED_GROUND" pos="70 0 -50" roty="90" />
+    <tile name="MOUNTAIN_RED_GROUND" pos="-20 0 70" />
+    <tile name="MOUNTAIN_RED_GROUND" pos="-60 0 20" roty="180" />
+    <tile name="MOUNTAIN_RED_GROUND" pos="-60 0 -70" roty="90" />
     <tile name="MOUNTAIN_RED_FORT_GROUND_SUB_COR_A" pos="-70 0 30" roty="90" />
     <tile name="MOUNTAIN_RED_GROUND" pos="50 0 -70" roty="90" />
     <tile name="MOUNTAIN_RED_FORT_GROUND_SUB_INCOR_A" pos="60 0 50" roty="270" />
@@ -1069,11 +1069,11 @@
     <tile name="MOUNTAIN_RED_FORT_GROUND_SUB_STR_A" pos="-40 0 70" roty="180" />
     <tile name="MOUNTAIN_RED_GROUND" pos="60 0 0" roty="270" />
     <tile name="MOUNTAIN_RED_GROUND" pos="-70 0 -60" roty="90" />
-    <tile name="MOUNTAIN_RED_GROUND" pos="-60 0 20" roty="180" />
-    <tile name="MOUNTAIN_RED_GROUND" pos="-20 0 70" />
+    <tile name="MOUNTAIN_RED_FORT_GROUND_SUB_STR_A" pos="10 0 70" roty="180" />
+    <tile name="MOUNTAIN_RED_FORT_GROUND_SUB_STR_A" pos="-70 0 40" roty="90" />
     <tile name="MOUNTAIN_RED_FORT_GROUND_SUB_COR_A" pos="0 0 70" roty="180" />
     <tile name="MOUNTAIN_RED_FORT_GROUND_SUB_COR_A" pos="-50 0 -70" roty="90" />
-    <tile name="MOUNTAIN_RED_FORT_GROUND_SUB_STR_A" pos="-30 0 -70" />
+    <tile name="MOUNTAIN_RED_FORT_GROUND_SUB" pos="0 0 60" />
     <tile name="MOUNTAIN_RED_FORT_GROUND_SUB" pos="50 0 40" />
     <tile name="MOUNTAIN_RED_FORT_GROUND_SUB" pos="-60 0 -20" />
     <tile name="MOUNTAIN_RED_FORT_GROUND_SUB" pos="-10 0 -60" />
@@ -1094,11 +1094,11 @@
     <tile name="MOUNTAIN_RED_FORT_GROUND_SUB" pos="20 0 -50" />
     <tile name="MOUNTAIN_RED_FORT_GROUND_SUB" pos="60 0 -20" />
     <tile name="MOUNTAIN_RED_FORT_GROUND_SUB" pos="20 0 60" />
-    <tile name="MOUNTAIN_RED_FORT_GROUND_SUB" pos="50 0 60" />
-    <tile name="MOUNTAIN_RED_FORT_GROUND_SUB" pos="0 0 60" />
     <tile name="MOUNTAIN_RED_FORT_GROUND_SUB" pos="30 0 -50" />
     <tile name="MOUNTAIN_RED_FORT_GROUND_SUB" pos="-60 0 -40" />
     <tile name="MOUNTAIN_RED_FORT_GROUND_SUB" pos="-50 0 -60" />
+    <tile name="MOUNTAIN_RED_FORT_GROUND_SUB" pos="-60 0 -10" />
+    <tile name="MOUNTAIN_RED_FORT_GROUND_SUB_STR_A" pos="-30 0 -70" />
     <tile name="MOUNTAIN_RED_GROUND" pos="70 0 0" roty="270" />
     <tile name="MOUNTAIN_RED_FORT_GROUND_SUB" pos="30 0 60" />
     <tile name="MOUNTAIN_RED_FORT_GROUND_SUB" pos="10 0 -50" />
@@ -1108,9 +1108,9 @@
     <tile name="MOUNTAIN_RED_GROUND" pos="70 0 70" />
     <tile name="MOUNTAIN_RED_FORT_GROUND_SUB_COR_A" pos="70 0 20" />
     <tile name="MOUNTAIN_RED_FORT_GROUND_SUB_STR_A" pos="70 0 -20" roty="270" />
+    <tile name="MOUNTAIN_RED_FORT_ROCK_SMALL_A" pos="-48 0 -67" />
     <tile name="MOUNTAIN_RED_FORT_GROUND_SUB_COR_A" pos="-30 0 70" roty="270" />
-    <tile name="MOUNTAIN_RED_FORT_GROUND_SUB_COR_A" pos="20 0 -70" roty="90" />
-    <tile name="MOUNTAIN_RED_GROUND" pos="-10 0 70" />
+    <tile name="MOUNTAIN_RED_FORT_GROUND_SUB_COR_A" pos="-60 0 70" roty="180" />
     <tile name="MOUNTAIN_RED_FORT_GROUND_SUB_STR_A" pos="50 0 70" roty="180" />
     <tile name="MOUNTAIN_RED_FORT_GROUND_SUB_STR_A" pos="-20 0 -70" />
     <tile name="MOUNTAIN_RED_FORT_GROUND_SUB_STR_A" pos="20 0 70" roty="180" />
@@ -1120,11 +1120,10 @@
     <tile name="MOUNTAIN_RED_FORT_GROUND_SUB" pos="-60 0 40" />
     <tile name="MOUNTAIN_RED_FORT_GROUND_SUB" pos="60 0 -30" />
     <tile name="MOUNTAIN_RED_FORT_GROUND_SUB" pos="-60 0 60" />
-    <tile name="MOUNTAIN_RED_FORT_GROUND_SUB" pos="-60 0 -10" />
-    <tile name="MOUNTAIN_RED_FORT_GROUND_SUB_COR_A" pos="-60 0 70" roty="180" />
-    <tile name="MOUNTAIN_RED_GROUND" pos="-60 0 -70" roty="90" />
+    <tile name="MOUNTAIN_RED_GROUND" pos="-10 0 70" />
+    <tile name="MOUNTAIN_RED_FORT_HILL_BLEND_BACK_A" pos="20 5 15" roty="270" />
+    <tile name="MOUNTAIN_RED_FORT_ROCK_HIGH_DIAG_A" pos="54 9 17" />
     <tile name="MOUNTAIN_RED_FORT_ROCK_HIGH_A" pos="57 2 -63" roty="180" />
-    <tile name="MOUNTAIN_RED_FORT_ROCK_DEBRIS_SMALL_A" pos="-17 0 68" roty="270" />
     <tile name="MOUNTAIN_RED_FORT_PATCH_BASE_TO_BUILD_HALF_A" pos="4.67 10 -4.35" roty="359.69" scale="0.7433657 1 0.8978566" />
     <tile name="MOUNTAIN_RED_FORT_ROCK_DEBRIS_SUB_A" pos="-49.34 5 -45.58" roty="34.86" />
     <tile name="MOUNTAIN_RED_WATER_PUDDLE_SMALL_A_DECO" pos="12.59 5 49.43" roty="96.49" scale="0.5563357 1 0.4994084" />
@@ -1133,7 +1132,6 @@
     <tile name="MOUNTAIN_RED_WATER_PUDDLE_SMALL_A_DECO" pos="-54 5 -45.63" roty="125" scale="0.4602514 1 0.3850489" />
     <tile name="MOUNTAIN_RED_FORT_ROCK_DEBRIS_B" pos="-49.2 10.05 0.7" roty="270" />
     <tile name="MOUNTAIN_RED_FORT_PATCH_COBBLESTONES_TO_SUB_ROUND_A" pos="-26.99 5 -31.55" roty="232" />
-    <tile name="Mesh" pos="-26.99 5 -31.55" roty="142" />
     <tile name="MOUNTAIN_RED_FORT_PATCH_BASE_TO_BUILD_HALF_A" pos="-28 10 44.73" roty="356.84" scale="0.9418909 1 0.8978566" />
     <tile name="MOUNTAIN_RED_FORT_PATCH_PATH_OVERLAY_B" pos="26.1 5 47.24" roty="317.66" scale="1.087729 1 0.894189" />
     <tile name="MOUNTAIN_RED_FORT_ROCK_DEBRIS_B" pos="-59.99 5 59.16" roty="287.95" />
@@ -1146,8 +1144,9 @@
     <tile name="MOUNTAIN_RED_FORT_BORDERSTONE_CORNER_A" pos="18 10 -18" roty="180" scale="1.21097 1 1.228495" />
     <tile name="MOUNTAIN_RED_FORT_PATCH_COBBLESTONES_TO_SUB_SMALL_A" pos="46.93 5 57.01" roty="90" />
     <tile name="MOUNTAIN_RED_FORT_BORDER_STR_NOBREAK" pos="15 10 -22" roty="90" />
-    <tile name="MOUNTAIN_RED_FORT_PATCH_BUILD_BROKEN_B" pos="-14 10 32" roty="50" scale="1.6576 1 1.5655" />
     <tile name="MOUNTAIN_RED_FORT_BORDER_STR_NOBREAK" pos="45 10 -12" roty="90" />
+    <tile name="MOUNTAIN_RED_FORT_PATCH_BUILD_BROKEN_B" pos="-14 10 32" roty="50" scale="1.6576 1 1.5655" />
+    <tile name="MOUNTAIN_RED_FORT_BORDER_STR_NOBREAK" pos="-45 10 32" roty="270" />
     <tile name="MOUNTAIN_RED_FORT_PATCH_BASE_TO_BUILD_HALF_A" pos="-25.44 10 -8.22" roty="91.51" scale="0.8864707 1 0.8978566" />
     <tile name="MOUNTAIN_RED_FORT_PATCH_COBBLESTONES_TO_SUB_SMALL_A" pos="4.6 5 -38.1" roty="90" />
     <tile name="MOUNTAIN_RED_FORT_PATCH_BASE_TO_BUILD_HALF_A" pos="11.96 10 28.08" roty="86.84" scale="0.9066265 1 0.8978566" />
@@ -1172,9 +1171,9 @@
     <tile name="MOUNTAIN_RED_FORT_PATCH_BUILD_BROKEN_B" pos="17 10 2" roty="139.52" scale="1.234 1 1.199517" />
     <tile name="MOUNTAIN_RED_FORT_PATCH_BASE_TO_SUB_HALF_A" pos="58.2 5 -24.57" roty="180" scale="0.891223 1 0.8082369" />
     <tile name="MOUNTAIN_RED_FORT_PATCH_BUILD_BROKEN_C" pos="-41 10 28" roty="309" scale="1.1281 1 1.2967" />
-    <tile name="MOUNTAIN_RED_FORT_BORDER_STR_NOBREAK" pos="-45 10 32" roty="270" />
+    <tile name="MOUNTAIN_RED_FORT_PATCH_BASE_TO_SUB_HALF_A" pos="34.29 5 -62.37" roty="180" scale="1.55557 1 1.543746" />
     <tile name="MOUNTAIN_RED_FORT_BORDER_STR_NOBREAK" pos="-6 5 -54" roty="270" />
-    <tile name="MOUNTAIN_RED_FORT_BORDER_DIA_NOBREAK" pos="-7 10 42" roty="270" />
+    <tile name="MOUNTAIN_RED_FORT_BORDER_STR_NOBREAK" pos="52 5 55" />
     <tile name="MOUNTAIN_RED_T1_DECO_BUSH_D" pos="55.5 7 -56.5" />
     <tile name="MOUNTAIN_RED_T1_DECO_TREE_UNIVERSAL_SLIM_A" pos="-63.5 3 6.5" roty="349" />
     <tile name="MOUNTAIN_RED_T1_DECO_BUSH_D" pos="-1.5 5 -38.5" roty="90" />
@@ -1197,10 +1196,9 @@
     <tile name="MOUNTAIN_RED_T1_DECO_TREE_UNIVERSAL_SLIM_A" pos="53.5 5 -53.5" roty="59" />
     <tile name="MOUNTAIN_RED_T1_DECO_BUSH_D" pos="-52.5 10 23.5" roty="270" />
     <tile name="MOUNTAIN_RED_T1_DECO_BUSH_D" pos="59.5 5 -16.5" />
+    <tile name="MOUNTAIN_RED_FORT_BORDER_DIA_NOBREAK" pos="-7 10 42" roty="270" />
     <tile name="MOUNTAIN_RED_T1_BUSH_A" pos="-67.5 0 6.5" roty="90" />
-    <tile name="MOUNTAIN_RED_T1_DECO_BUSH_D" pos="52.5 10 5.5" />
     <tile name="MOUNTAIN_RED_T1_DECO_BUSH_D" pos="-49.5 5 -9.5" />
-    <tile name="MOUNTAIN_RED_FORT_BORDER_STR_NOBREAK" pos="52 5 55" />
     <tile name="MOUNTAIN_RED_FORT_BORDER_DIA_NOBREAK" pos="62 5 -18" roty="270" />
     <tile name="MOUNTAIN_RED_FORT_BORDER_STR_NOBREAK" pos="-55 5 62" roty="270" />
     <tile name="MOUNTAIN_RED_FORT_BORDER_DIA_NOBREAK" pos="28 5 -62" roty="90" />
@@ -1210,8 +1208,8 @@
     <tile name="MOUNTAIN_RED_T1_DECO_BUSH_D" pos="50.5 5 28.5" roty="180" />
     <tile name="MOUNTAIN_RED_T1_DECO_BUSH_D" pos="45.5 5 61.5" roty="90" />
     <tile name="MOUNTAIN_RED_T1_BUSH_A" pos="48.5 0 -68.5" />
-    <tile name="MOUNTAIN_RED_FORT_PATCH_BASE_TO_SUB_HALF_A" pos="34.29 5 -62.37" roty="180" scale="1.55557 1 1.543746" />
     <tile name="MOUNTAIN_RED_T1_DECO_BUSH_D" pos="-62.5 5 -55.5" roty="90" />
+    <tile name="MOUNTAIN_RED_T1_DECO_BUSH_D" pos="-51.68 10 14.13" roty="270" />
     <tile name="MOUNTAIN_RED_T1_DECO_BUSH_D" pos="-50.5 10 27.5" roty="90" />
     <tile name="MOUNTAIN_RED_T1_DECO_BUSH_D" pos="62.5 5 -48.5" roty="180" />
     <tile name="MOUNTAIN_RED_T1_DECO_BUSH_D" pos="-5.84 5 -47.83" roty="90" />
@@ -1222,10 +1220,12 @@
     <tile name="MOUNTAIN_RED_T1_DECO_BUSH_D" pos="-6.5 5 62.5" roty="270" />
     <tile name="MOUNTAIN_RED_T1_DECO_BUSH_D" pos="23.04 10 -17.75" roty="0" />
     <tile name="MOUNTAIN_RED_T1_DECO_BUSH_D" pos="-21.5 5 61.5" roty="270" />
-    <tile name="MOUNTAIN_RED_T1_DECO_BUSH_D" pos="-51.68 10 14.13" roty="270" />
-    <tile name="MOUNTAIN_RED_FORT_ROCK_DEBRIS_SMALL_C_NOCOL" pos="15.53 5 -47.2" roty="108.04" scale="0.58457 0.58457 0.58457" />
+    <tile name="MOUNTAIN_RED_T1_DECO_BUSH_D" pos="52.5 10 5.5" />
     <tile name="MOUNTAIN_RED_FORT_PATCH_BASE_TO_SUB_HALF_A" pos="53.08 5 26.87" roty="180" scale="1.893112 1 1.41997" />
+    <tile name="MOUNTAIN_RED_FORT_PATCH_DIRT_TO_BUILD_B" pos="-41.36 10 15.32" roty="119" scale="1.748381 1 1.356178" />
     <tile name="MOUNTAIN_RED_FORT_BORDERSTONE_CORNER_A" pos="-48.34 10 13.97" scale="1.1667 1 1" />
+    <tile name="MOUNTAIN_RED_FORT_PATCH_DIRT_TO_BUILD_A" pos="4 10 -13" roty="201.09" scale="1.5454 1 0.53411" />
+    <tile name="MOUNTAIN_RED_FORT_PATCH_BASE_TO_SUB_HALF_A" pos="35.17 5 58.04" roty="270" scale="0.9317636 1 1.014699" />
     <tile name="MOUNTAIN_RED_FORT_PATCH_BASE_TO_BUILD_INNERCORNER_A" pos="-52.98 10 -1.43" roty="272" scale="1.270583 1 1.130033" />
     <tile name="MOUNTAIN_RED_WATER_PUDDLE_SMALL_A_DECO" pos="-8.4 5 -38.86" roty="105.67" scale="0.6111218 1 0.4994084" />
     <tile name="MOUNTAIN_RED_WATER_PUDDLE_SMALL_A_DECO" pos="38.73 5 -26.31" roty="96.9" scale="0.3727293 1 0.4994084" />
@@ -1245,12 +1245,12 @@
     <tile name="MOUNTAIN_RED_FORT_PATCH_BUILD_BROKEN_C" pos="-5 10 21" roty="132" scale="1.1281 1 1.2967" />
     <tile name="MOUNTAIN_RED_FORT_PATCH_DIRT_TO_BUILD_B" pos="-18 10 30" roty="154.45" scale="2.3254 1 2.929075" />
     <tile name="MOUNTAIN_RED_FORT_PATCH_DIRT_TO_BUILD_A" pos="-44.94 10 24.78" roty="89" scale="1.15681 1 0.53411" />
+    <tile name="MOUNTAIN_RED_FORT_PATCH_BUILD_BROKEN_C" pos="-6 10 6" roty="309" scale="1.1281 1 1.2967" />
     <tile name="MOUNTAIN_RED_FORT_PATCH_DIRT_TO_BUILD_CORNER_A" pos="-6.8 10 -16.12" roty="265" scale="0.331225 1 0.5695639" />
-    <tile name="MOUNTAIN_RED_WATER_PUDDLE_SMALL_A_DECO" pos="17.14 5 -46.12" roty="125" scale="0.2927997 1 0.2514661" />
-    <tile name="MOUNTAIN_RED_FORT_PATCH_BASE_TO_SUB_HALF_A" pos="35.17 5 58.04" roty="270" scale="0.9317636 1 1.014699" />
-    <tile name="MOUNTAIN_RED_FORT_ROCK_DEBRIS_SUB_A" pos="-27.06 5 -22.22" roty="304.86" />
-    <tile name="MOUNTAIN_RED_FORT_PATCH_DIRT_TO_BUILD_A" pos="4 10 -13" roty="201.09" scale="1.5454 1 0.53411" />
     <tile name="MOUNTAIN_RED_FORT_PATCH_BUILD_BROKEN_A" pos="-4 10 -5" roty="135" scale="0.9972372 1 1.12993" />
+    <tile name="MOUNTAIN_RED_FORT_PATCH_BASE_TO_BUILD_HALF_A" pos="-52.15 10 19.83" roty="270" scale="1.793706 1 1.606709" />
+    <tile name="MOUNTAIN_RED_FORT_ROCK_DEBRIS_SMALL_C_NOCOL" pos="15.53 5 -47.2" roty="108.04" scale="0.58457 0.58457 0.58457" />
+    <tile name="MOUNTAIN_RED_FORT_ROCK_DEBRIS_SMALL_A" pos="-17 0 68" roty="270" />
     <tile name="MOUNTAIN_RED_FORT_ROCK_DEBRIS_SMALL_A" pos="-67 0 -54" roty="270" />
     <tile name="MOUNTAIN_RED_FORT_ROCK_DEBRIS_SMALL_A" pos="46 0 68" roty="270" />
     <tile name="MOUNTAIN_RED_FORT_ROCK_DEBRIS_SMALL_A" pos="-33 0 68" roty="270" />
@@ -1270,12 +1270,10 @@
     <tile name="MOUNTAIN_RED_FORT_PATCH_DIRT_TO_BUILD_A" pos="35 10 5" roty="161.6" scale="1.3056 1 1.0592" />
     <tile name="MOUNTAIN_RED_FORT_PATCH_PATH_OVERLAY_A" pos="24 5 -39.86" roty="352" scale="0.8229721 1 0.8180304" />
     <tile name="MOUNTAIN_RED_FORT_ROCK_DEBRIS_B" pos="44.7 5 -18.51" roty="180" />
-    <tile name="MOUNTAIN_RED_FORT_PATCH_BASE_TO_BUILD_HALF_A" pos="-52.15 10 19.83" roty="270" scale="1.793706 1 1.606709" />
     <tile name="MOUNTAIN_RED_FORT_PATCH_DIRT_TO_BUILD_A" pos="31.91 10 14.84" roty="359" scale="0.9254826 1 0.53411" />
-    <tile name="MOUNTAIN_RED_FORT_PATCH_BUILD_BROKEN_C" pos="-6 10 6" roty="309" scale="1.1281 1 1.2967" />
+    <tile name="MOUNTAIN_RED_WATER_PUDDLE_SMALL_A_DECO" pos="17.14 5 -46.12" roty="125" scale="0.2927997 1 0.2514661" />
+    <tile name="MOUNTAIN_RED_FORT_ROCK_DEBRIS_SUB_A" pos="-27.06 5 -22.22" roty="304.86" />
     <tile name="MOUNTAIN_RED_FORT_PATCH_COBBLESTONES_TO_SUB_ROUND_A" pos="40 5 -39" roty="322" />
-    <tile name="Mesh" pos="40 5 -39" roty="232" />
-    <tile name="MOUNTAIN_RED_FORT_PATCH_COBBLESTONES_TO_SUB_ROUND_A" pos="44 5 41" roty="322" />
     <tile name="MOUNTAIN_RED_FORT_PATCH_BASE_TO_SUB_HALF_A" pos="-50.68 5 -62.07" roty="180" scale="1.363219 1 1.4875" />
     <tile name="MOUNTAIN_RED_FORT_PATCH_BUILD_BROKEN_B" pos="43 10 -2" roty="73" scale="1.234 1 1.199517" />
     <tile name="MOUNTAIN_RED_FORT_ROCK_DEBRIS_B" pos="49.53 10.05 -9.99" roty="47.29" />
@@ -1301,7 +1299,7 @@
     <tile name="MOUNTAIN_RED_FORT_ROCK_DEBRIS_B" pos="58.31 5 29.12" roty="197.95" />
     <tile name="MOUNTAIN_RED_FORT_PATCH_COBBLESTONES_TO_SUB_SMALL_A" pos="58.58 5 -57.93" />
     <tile name="MOUNTAIN_RED_FORT_PATCH_BASE_TO_SUB_HALF_A" pos="14.97 5 -48.01" roty="270" scale="0.8819755 1 0.9886149" />
-    <tile name="Mesh" pos="44 5 41" roty="232" />
+    <tile name="MOUNTAIN_RED_FORT_PATCH_COBBLESTONES_TO_SUB_ROUND_A" pos="44 5 41" roty="322" />
     <tile name="MOUNTAIN_RED_FORT_PATCH_DIRT_TO_BUILD_CORNER_A" pos="42.44 10 12.59" roty="257.72" scale="0.5920476 1 0.6555139" />
     <tile name="MOUNTAIN_RED_FORT_PATCH_BASE_TO_SUB_HALF_A" pos="-10.71 5 -26.36" scale="1.644059 1 1.4875" />
     <tile name="MOUNTAIN_RED_FORT_ROCK_DEBRIS_B" pos="17.77 5 31.55" roty="107.95" />
@@ -1311,7 +1309,7 @@
     <tile name="MOUNTAIN_RED_FORT_PATCH_BASE_TO_SUB_HALF_A" pos="-34.44 5 -58.16" roty="270" scale="0.9082755 1 1.022861" />
     <tile name="MOUNTAIN_RED_FORT_PATCH_DIRT_TO_BUILD_B" pos="3 10 15" roty="327" scale="2.025434 1 2.573702" />
     <tile name="MOUNTAIN_RED_FORT_PATCH_BUILD_BROKEN_A" pos="3 10 18" roty="45" scale="1.153618 1 1.219483" />
-    <tile name="MOUNTAIN_RED_FORT_PATCH_DIRT_TO_BUILD_B" pos="-41.36 10 15.32" roty="119" scale="1.748381 1 1.356178" />
+    <tile name="MOUNTAIN_RED_PLATEAU_PLUG_ROCK_4M_B" pos="57 0 61" />
     <tile name="MOUNTAIN_RED_FORT_PATCH_COBBLESTONES_TO_SUB_SINGLE_A" pos="-57 5 -51" />
     <tile name="MOUNTAIN_RED_FORT_PATCH_BASE_TO_BUILD_INNERCORNER_A" pos="23.47 10 -22.16" roty="182" scale="0.8168945 1 0.6695713" />
     <tile name="MOUNTAIN_RED_FORT_PATCH_DIRT_TO_BUILD_A" pos="-8 10 20" roty="310" scale="1.11558 1 0.53411" />
@@ -1324,9 +1322,9 @@
     <tile name="MOUNTAIN_RED_FORT_ROCK_DEBRIS_SUB_A" pos="-23.92 5 -44.45" roty="304.86" />
     <tile name="MOUNTAIN_RED_FORT_PATCH_BASE_TO_BUILD_HALF_A" pos="-14.7 10 -10" roty="269.69" scale="1.195583 1 0.8978566" />
     <tile name="MOUNTAIN_RED_FORT_ROCK_DEBRIS_SUB_A" pos="27.53 5 43.91" roty="127.54" />
-    <tile name="MOUNTAIN_RED_T1_DECO_BUSH_D" pos="37.5 5 -57.5" roty="180" />
-    <tile name="MOUNTAIN_RED_FORT_HILL_BLEND_BACK_A" pos="20 5 15" roty="270" />
+    <tile name="MOUNTAIN_RED_FORT_GROUND_BUILD" pos="20 10 -10" roty="270" />
     <tile name="MOUNTAIN_RED_FORT_HILL_BLEND_STR_A" pos="10 5 -20" roty="90" />
+    <tile name="MOUNTAIN_RED_FORT_HILL_BLEND_COR_A" pos="-40 5 -10" roty="180" />
     <tile name="MOUNTAIN_RED_FORT_GROUND_SUB" pos="40 5 40" roty="180" />
     <tile name="MOUNTAIN_RED_FORT_GROUND_SUB" pos="-40 5 50" roty="90" />
     <tile name="MOUNTAIN_RED_FORT_GROUND_SUB" pos="50 5 -50" roty="270" />
@@ -1443,7 +1441,7 @@
     <tile name="ROCK_HIGH_NODE" pos="-67 0 19">
       <resourcenode nodetype="high" resourcetype="rock" />
     </tile>
-    <tile name="MOUNTAIN_RED_FORT_GROUND_BUILD" pos="20 10 -10" roty="270" />
+    <tile name="MOUNTAIN_RED_T1_DECO_BUSH_D" pos="37.5 5 -57.5" roty="180" />
     <tile name="ROCK_HIGH_NODE" pos="67 0 4" roty="270">
       <resourcenode nodetype="high" resourcetype="rock" />
     </tile>
@@ -1492,7 +1490,6 @@
       <resourcenode nodetype="high" resourcetype="rock" />
     </tile>
     <tile name="MOUNTAIN_RED_FORT_GROUND_SUB" pos="0 5 -50" roty="270" />
-    <tile name="MOUNTAIN_RED_FORT_HILL_BLEND_BACK_A" pos="25 5 -10" />
     <tile name="MOUNTAIN_RED_FORT_HILL_BLEND_STR_A" pos="30 5 20" roty="270" />
     <tile name="MOUNTAIN_RED_FORT_HILL_BLEND_STR_A" pos="-40 5 30" roty="270" />
     <tile name="MOUNTAIN_RED_FORT_GROUND_BUILD" pos="-10 10 10" roty="270" />
@@ -1519,11 +1516,11 @@
     <tile name="MOUNTAIN_RED_FORT_GROUND_BUILD" pos="10 5 30" roty="180" />
     <tile name="MOUNTAIN_RED_FORT_GROUND_BUILD" pos="-30 5 -10" roty="180" />
     <tile name="MOUNTAIN_RED_FORT_GROUND_SUB" pos="30 5 -40" roty="270" />
+    <tile name="MOUNTAIN_RED_FORT_GROUND_SUB" pos="20 5 -40" roty="270" />
+    <tile name="MOUNTAIN_RED_FORT_HILL_BLEND_BACK_A" pos="25 5 -10" />
     <tile name="MOUNTAIN_RED_FORT_GROUND_BUILD" pos="-10 10 30" roty="270" />
     <tile name="MOUNTAIN_RED_FORT_GROUND_BUILD" pos="-20 10 40" roty="270" />
     <tile name="MOUNTAIN_RED_FORT_HILL_BLEND_INCOR_A" pos="0 5 30" roty="270" />
-    <tile name="MOUNTAIN_RED_FORT_GROUND_BUILD" pos="-40 10 20" roty="270" />
-    <tile name="MOUNTAIN_RED_FORT_HILL_BLEND_COR_A" pos="-40 5 -10" roty="180" />
     <tile name="MOUNTAIN_RED_FORT_HILL_BLEND_BACK_A" pos="-15 5 -10" roty="180" />
     <tile name="MOUNTAIN_RED_FORT_HILL_BLEND_SIDE_RIGHT_A" pos="35 5 -10" roty="90" />
     <tile name="MOUNTAIN_RED_FORT_HILL_BLEND_STR_A" pos="-10 5 50" />
@@ -1531,14 +1528,14 @@
     <tile name="MOUNTAIN_RED_FORT_GROUND_BUILD" pos="30 10 0" roty="270" />
     <tile name="MOUNTAIN_RED_FORT_GROUND_BUILD" pos="0 10 0" roty="270" />
     <tile name="MOUNTAIN_RED_FORT_GROUND_BUILD" pos="-10 10 0" roty="270" />
-    <tile name="MOUNTAIN_RED_FORT_HILL_STR_A" pos="-60 0 40" roty="180" />
     <tile name="MOUNTAIN_RED_FORT_HILL_BLEND_STR_A" pos="-30 5 -10" roty="90" />
+    <tile name="MOUNTAIN_RED_FORT_HILL_STR_A" pos="-60 0 40" roty="180" />
     <tile name="MOUNTAIN_RED_FORT_GROUND_BUILD" pos="0 10 10" roty="270" />
     <tile name="MOUNTAIN_RED_FORT_GROUND_BUILD" pos="10 10 -10" roty="270" />
     <tile name="MOUNTAIN_RED_FORT_HILL_BLEND_BACK_A" pos="30 5 -5" roty="90" />
-    <tile name="MOUNTAIN_RED_FORT_GROUND_SUB" pos="20 5 -40" roty="270" />
     <tile name="MOUNTAIN_RED_FORT_GROUND_BUILD" pos="40 10 10" roty="270" />
-    <tile name="MOUNTAIN_RED_FORT_HILL_BLEND_BACK_A" pos="-25 5 50" roty="180" />
+    <tile name="MOUNTAIN_RED_FORT_GROUND_BUILD" pos="40 5 -10" roty="270" />
+    <tile name="MOUNTAIN_RED_FORT_GROUND_BUILD" pos="10 10 0" roty="270" />
     <tile name="MOUNTAIN_RED_FORT_HILL_BLEND_STR_A" pos="-30 5 40" roty="180" />
     <tile name="MOUNTAIN_RED_FORT_GROUND_BUILD" pos="-10 10 -10" roty="270" />
     <tile name="MOUNTAIN_RED_FORT_GROUND_BUILD" pos="-40 10 10" roty="270" />
@@ -1551,11 +1548,11 @@
     <tile name="MOUNTAIN_RED_FORT_HILL_BLEND_STR_A" pos="20 5 -20" roty="90" />
     <tile name="MOUNTAIN_RED_FORT_GROUND_BUILD" pos="-20 10 30" roty="270" />
     <tile name="MOUNTAIN_RED_FORT_HILL_BLEND_STR_A" pos="-10 5 -20" roty="90" />
-    <tile name="MOUNTAIN_RED_FORT_GROUND_BUILD" pos="10 10 0" roty="270" />
-    <tile name="MOUNTAIN_RED_FORT_GROUND_BUILD" pos="40 5 -10" roty="270" />
+    <tile name="MOUNTAIN_RED_FORT_GROUND_BUILD" pos="-40 10 20" roty="270" />
+    <tile name="MOUNTAIN_RED_FORT_HILL_BLEND_BACK_A" pos="-25 5 50" roty="180" />
+    <tile name="MOUNTAIN_RED_FORT_HILL_SIDE_RIGHT_A" pos="-60 0 -35" roty="180" />
     <tile name="MOUNTAIN_RED_T1_DECO_BUSH_D" pos="-57.83 7.69 17.73" roty="90" />
-    <tile name="MOUNTAIN_RED_FORT_GROUND_SUB" pos="0 5 50" roty="180" />
-    <tile name="MOUNTAIN_RED_FORT_GROUND_SUB" pos="50 5 -40" roty="270" />
+    <tile name="MOUNTAIN_RED_FORT_HILL_STR_A" pos="-20 0 -60" roty="90" />
     <tile name="MOUNTAIN_RED_FORT_HILL_SIDE_LEFT_A" pos="35 0 60" roty="270" />
     <tile name="MOUNTAIN_RED_FORT_GROUND_BUILD" pos="-10 5 -20" roty="180" />
     <tile name="MOUNTAIN_RED_FORT_GROUND_SUB" pos="-20 5 60" roty="180" />
@@ -1568,8 +1565,8 @@
     <tile name="MOUNTAIN_RED_FORT_GROUND_SUB" pos="50 5 -60" roty="270" />
     <tile name="MOUNTAIN_RED_FORT_HILL_STR_A" pos="20 0 60" roty="270" />
     <tile name="MOUNTAIN_RED_FORT_GROUND_SUB" pos="60 5 -50" roty="270" />
-    <tile name="MOUNTAIN_RED_FORT_HILL_STR_A" pos="-50 0 -60" roty="90" />
     <tile name="MOUNTAIN_RED_FORT_GROUND_SUB" pos="30 5 40" roty="180" />
+    <tile name="MOUNTAIN_RED_FORT_GROUND_SUB" pos="20 5 50" roty="180" />
     <tile name="MOUNTAIN_RED_FORT_HILL_INCOR_A" pos="-10 0 -50" />
     <tile name="MOUNTAIN_RED_FORT_GROUND_BUILD" pos="-20 5 50" roty="180" />
     <tile name="MOUNTAIN_RED_FORT_HILL_STR_A" pos="-60 0 -20" roty="180" />
@@ -1582,40 +1579,44 @@
     <tile name="MOUNTAIN_RED_FORT_GROUND_BUILD" pos="50 10 10" roty="180" />
     <tile name="MOUNTAIN_RED_FORT_HILL_STR_A" pos="40 0 60" roty="270" />
     <tile name="MOUNTAIN_RED_FORT_HILL_STR_A" pos="-40 0 60" roty="270" />
-    <tile name="MOUNTAIN_RED_FORT_HILL_SIDE_RIGHT_A" pos="-60 0 -35" roty="180" />
+    <tile name="MOUNTAIN_RED_FORT_GROUND_SUB" pos="0 5 50" roty="180" />
+    <tile name="MOUNTAIN_RED_FORT_GROUND_SUB" pos="50 5 -40" roty="270" />
+    <tile name="MOUNTAIN_RED_FORT_HILL_STR_A" pos="-50 0 -60" roty="90" />
     <tile name="MOUNTAIN_RED_FORT_HILL_STR_A" pos="20 0 -50" roty="90" />
-    <tile name="MOUNTAIN_RED_FORT_HILL_SIDE_LEFT_A" pos="-60 0 55" roty="180" />
-    <tile name="MOUNTAIN_RED_FORT_GROUND_SUB" pos="20 5 50" roty="180" />
-    <tile name="MOUNTAIN_RED_FORT_HILL_BACK_A" pos="-55 0 50" roty="180" />
-    <tile name="MOUNTAIN_RED_FORT_HILL_STR_A" pos="-20 0 -60" roty="90" />
     <tile name="MOUNTAIN_RED_FORT_HILL_COR_A" pos="-10 0 -60" roty="90" />
-    <tile name="MOUNTAIN_RED_FORT_GROUND_BUILD" pos="0 5 30" roty="180" />
+    <tile name="MOUNTAIN_RED_FORT_GROUND_SUB" pos="20 5 30" roty="180" />
+    <tile name="MOUNTAIN_RED_FORT_HILL_SIDE_LEFT_A" pos="-60 0 55" roty="180" />
     <tile name="MOUNTAIN_RED_FORT_GROUND_SUB" pos="-60 5 -50" roty="270" />
     <tile name="MOUNTAIN_RED_FORT_HILL_COR_A" pos="-60 0 -60" roty="180" />
     <tile name="MOUNTAIN_RED_FORT_GROUND_SUB" pos="30 5 30" roty="180" />
     <tile name="MOUNTAIN_RED_FORT_GROUND_SUB" pos="10 5 -40" roty="270" />
-    <tile name="MOUNTAIN_RED_FORT_GROUND_SUB" pos="20 5 30" roty="180" />
-    <tile name="MOUNTAIN_RED_FORT_GROUND_SUB" pos="40 5 -60" roty="270" />
+    <tile name="MOUNTAIN_RED_FORT_GROUND_SUB" pos="20 5 20" roty="180" />
     <tile name="MOUNTAIN_RED_FORT_GROUND_SUB" pos="-30 5 60" roty="180" />
     <tile name="MOUNTAIN_RED_FORT_GROUND_SUB" pos="-20 5 -10" roty="270" />
     <tile name="MOUNTAIN_RED_FORT_GROUND_SUB" pos="-30 5 -20" roty="180" />
     <tile name="MOUNTAIN_RED_FORT_GROUND_SUB" pos="40 5 -20" roty="270" />
     <tile name="MOUNTAIN_RED_FORT_GROUND_SUB" pos="-50 5 -30" roty="270" />
-    <tile name="MOUNTAIN_RED_FORT_GROUND_SUB" pos="20 5 20" roty="180" />
     <tile name="MOUNTAIN_RED_FORT_HILL_SIDE_RIGHT_A" pos="60 0 -25" />
+    <tile name="MOUNTAIN_RED_FORT_GROUND_SUB" pos="40 5 -60" roty="270" />
+    <tile name="MOUNTAIN_RED_FORT_GROUND_BUILD" pos="30 5 20" roty="180" />
+    <tile name="MOUNTAIN_RED_FORT_HILL_BACK_A" pos="-55 0 50" roty="180" />
+    <tile name="MOUNTAIN_RED_FORT_GROUND_SUB" pos="0 5 -40" roty="270" />
+    <tile name="MOUNTAIN_RED_FORT_HILL_STR_A" pos="-60 0 -10" roty="180" />
     <tile name="MOUNTAIN_RED_FORT_HILL_COR_A" pos="-60 0 60" roty="270" />
     <tile name="MOUNTAIN_RED_FORT_GROUND_SUB" pos="-40 5 -20" roty="270" />
     <tile name="MOUNTAIN_RED_FORT_GROUND_SUB" pos="-40 5 -40" roty="270" />
-    <tile name="MOUNTAIN_RED_FORT_GROUND_SUB" pos="0 5 -40" roty="270" />
-    <tile name="MOUNTAIN_RED_FORT_GROUND_BUILD" pos="50 10 20" roty="180" />
-    <tile name="MOUNTAIN_RED_FORT_GROUND_SUB" pos="-30 5 50" roty="180" />
     <tile name="MOUNTAIN_RED_FORT_GROUND_SUB" pos="-60 5 30" roty="270" />
+    <tile name="MOUNTAIN_RED_FORT_GROUND_BUILD" pos="0 5 30" roty="180" />
+    <tile name="MOUNTAIN_RED_FORT_GROUND_SUB" pos="-30 5 50" roty="180" />
+    <tile name="MOUNTAIN_RED_FORT_GROUND_SUB" pos="-40 5 -50" roty="180" />
     <tile name="MOUNTAIN_RED_FORT_GROUND_SUB" pos="10 5 40" roty="180" />
     <tile name="MOUNTAIN_RED_FORT_GROUND_BUILD" pos="-50 10 10" roty="180" />
     <tile name="MOUNTAIN_RED_FORT_GROUND_SUB" pos="-30 5 -40" roty="270" />
-    <tile name="MOUNTAIN_RED_FORT_GROUND_BUILD" pos="30 5 20" roty="180" />
-    <tile name="MOUNTAIN_RED_FORT_HILL_STR_A" pos="-60 0 -10" roty="180" />
-    <tile name="MOUNTAIN_RED_FORT_GROUND_SUB" pos="-40 5 -50" roty="180" />
+    <tile name="MOUNTAIN_RED_FORT_GROUND_BUILD" pos="50 10 20" roty="180" />
+    <criticaltile name="MOUNTAIN_RED_FORT_BLOCKER_SHED" pos="-60 5 30" id="actionbuilding_11" type="actionbuilding">
+      <actionbuilding />
+      <fortificationtileswitch group="UpdateGroup_OuterGates_06" />
+    </criticaltile>
     <criticaltile name="MOUNTAIN_RED_FORTIFICATION_GATE" pos="-60 0 50" roty="180" id="actionbuilding_92" type="actionbuilding">
       <actionbuilding />
       <fortificationtileswitch group="UpdateGroup_OuterGates_06" />
@@ -1635,13 +1636,13 @@
     <criticaltile name="SpawnPoint_FORTIFICATIONGUARD_STAFF" pos="44.5 10 -8.5" roty="204.16" id="fortificationguardspawnpoint_22" type="fortificationguardspawnpoint">
       <fortificationguardspawnpoint behavior="GUARD" group="UpdateGroup_InnerGuards_03" />
     </criticaltile>
-    <criticaltile name="SpawnPoint_FORTIFICATIONGUARD_CROSSBOW" pos="38.69 10 -11.87" roty="193" id="fortificationguardspawnpoint_21" type="fortificationguardspawnpoint">
-      <fortificationguardspawnpoint behavior="GUARD" group="UpdateGroup_InnerGuards_03" />
-    </criticaltile>
-    <criticaltile name="SpawnPoint_FORTIFICATIONGUARD_CROSSBOW" pos="-10.5 10 -21.5" rot="0 230.11 0" id="fortificationguardspawnpoint_16" type="fortificationguardspawnpoint">
-      <fortificationguardspawnpoint behavior="GUARD" group="UpdateGroup_InnerGuards_04" />
+    <criticaltile name="SpawnPoint_FORTIFICATIONGUARD_CROSSBOW" pos="-42.27 10 -11.9" roty="225" id="fortificationguardspawnpoint_12" type="fortificationguardspawnpoint">
+      <fortificationguardspawnpoint behavior="GUARD" group="UpdateGroup_InnerGuards_05" />
     </criticaltile>
     <criticaltile name="SpawnPoint_FORTIFICATIONGUARD_STAFF" pos="-10.5 10 -16.5" roty="207" id="fortificationguardspawnpoint_19" type="fortificationguardspawnpoint">
+      <fortificationguardspawnpoint behavior="GUARD" group="UpdateGroup_InnerGuards_04" />
+    </criticaltile>
+    <criticaltile name="SpawnPoint_FORTIFICATIONGUARD_STAFF" pos="12.55 10 -18.72" roty="189.49" id="fortificationguardspawnpoint_20" type="fortificationguardspawnpoint">
       <fortificationguardspawnpoint behavior="GUARD" group="UpdateGroup_InnerGuards_04" />
     </criticaltile>
     <criticaltile name="SpawnPoint_FORTIFICATIONGUARD_CROSSBOW" pos="20.5 10 -21.5" roty="180" id="fortificationguardspawnpoint_18" type="fortificationguardspawnpoint">
@@ -1650,21 +1651,17 @@
     <criticaltile name="SpawnPoint_FORTIFICATIONGUARD_CROSSBOW" pos="4.5 10 -21.5" roty="180" id="fortificationguardspawnpoint_17" type="fortificationguardspawnpoint">
       <fortificationguardspawnpoint behavior="GUARD" group="UpdateGroup_InnerGuards_04" />
     </criticaltile>
-    <criticaltile name="SpawnPoint_FORTIFICATIONGUARD_CROSSBOW" pos="-42.27 10 -11.9" roty="225" id="fortificationguardspawnpoint_12" type="fortificationguardspawnpoint">
-      <fortificationguardspawnpoint behavior="GUARD" group="UpdateGroup_InnerGuards_05" />
-    </criticaltile>
-    <criticaltile name="SpawnPoint_FORTIFICATIONGUARD_STAFF" pos="-36.88 10 -6.79" roty="219" id="fortificationguardspawnpoint_15" type="fortificationguardspawnpoint">
-      <fortificationguardspawnpoint behavior="GUARD" group="UpdateGroup_InnerGuards_05" />
+    <criticaltile name="SpawnPoint_FORTIFICATIONGUARD_CROSSBOW" pos="-10.5 10 -21.5" rot="0 230.11 0" id="fortificationguardspawnpoint_16" type="fortificationguardspawnpoint">
+      <fortificationguardspawnpoint behavior="GUARD" group="UpdateGroup_InnerGuards_04" />
     </criticaltile>
     <criticaltile name="SpawnPoint_FORTIFICATIONGUARD_CROSSBOW" pos="-29.99 10 -11.77" roty="180" id="fortificationguardspawnpoint_13" type="fortificationguardspawnpoint">
       <fortificationguardspawnpoint behavior="GUARD" group="UpdateGroup_InnerGuards_05" />
     </criticaltile>
-    <criticaltile name="SpawnPoint_FORTIFICATIONGUARD_STAFF" pos="12.55 10 -18.72" roty="189.49" id="fortificationguardspawnpoint_20" type="fortificationguardspawnpoint">
-      <fortificationguardspawnpoint behavior="GUARD" group="UpdateGroup_InnerGuards_04" />
+    <criticaltile name="SpawnPoint_FORTIFICATIONGUARD_CROSSBOW" pos="38.69 10 -11.87" roty="193" id="fortificationguardspawnpoint_21" type="fortificationguardspawnpoint">
+      <fortificationguardspawnpoint behavior="GUARD" group="UpdateGroup_InnerGuards_03" />
     </criticaltile>
-    <criticaltile name="MOUNTAIN_RED_FORT_BLOCKER_SHED" pos="-60 5 30" id="actionbuilding_11" type="actionbuilding">
-      <actionbuilding />
-      <fortificationtileswitch group="UpdateGroup_OuterGates_06" />
+    <criticaltile name="SpawnPoint_FORTIFICATIONGUARD_STAFF" pos="-36.88 10 -6.79" roty="219" id="fortificationguardspawnpoint_15" type="fortificationguardspawnpoint">
+      <fortificationguardspawnpoint behavior="GUARD" group="UpdateGroup_InnerGuards_05" />
     </criticaltile>
     <criticaltile name="MOUNTAIN_RED_FORT_DECO_BANNER_A" pos="70 0 -20" roty="270" id="actionbuilding_51" type="actionbuilding">
       <actionbuilding />
@@ -1893,7 +1890,7 @@
     <criticaltile name="SpawnPoint_FORTIFICATIONGUARD_SWORD" pos="11.71 0 -57.12" roty="180" id="fortificationguardspawnpoint_33" type="fortificationguardspawnpoint">
       <fortificationguardspawnpoint behavior="GUARD" group="UpdateGroup_OuterGuards_05" />
     </criticaltile>
-    <criticaltile name="SpawnPoint_FORTIFICATIONGUARD_CROSSBOW" pos="19.5 5 -51.5" roty="180" id="fortificationguardspawnpoint_70" type="fortificationguardspawnpoint">
+    <criticaltile name="SpawnPoint_FORTIFICATIONGUARD_STAFF" pos="27.5 5 -52.5" roty="224" id="fortificationguardspawnpoint_71" type="fortificationguardspawnpoint">
       <fortificationguardspawnpoint behavior="GUARD" group="UpdateGroup_OuterGuards_05" />
     </criticaltile>
     <criticaltile name="SpawnPoint_FORTIFICATIONGUARD_CROSSBOW" pos="30.29 5 -61.56" roty="180" id="fortificationguardspawnpoint_69" type="fortificationguardspawnpoint">
@@ -2225,7 +2222,7 @@
     <criticaltile name="SpawnPoint_FORTIFICATIONGUARD_CROSSBOW" pos="-37.5 5 61.26" roty="359" id="fortificationguardspawnpoint_51" type="fortificationguardspawnpoint">
       <fortificationguardspawnpoint behavior="GUARD" group="UpdateGroup_OuterGuards_09" />
     </criticaltile>
-    <criticaltile name="SpawnPoint_FORTIFICATIONGUARD_STAFF" pos="27.5 5 -52.5" roty="224" id="fortificationguardspawnpoint_71" type="fortificationguardspawnpoint">
+    <criticaltile name="SpawnPoint_FORTIFICATIONGUARD_CROSSBOW" pos="19.5 5 -51.5" roty="180" id="fortificationguardspawnpoint_70" type="fortificationguardspawnpoint">
       <fortificationguardspawnpoint behavior="GUARD" group="UpdateGroup_OuterGuards_05" />
     </criticaltile>
   </tiles>

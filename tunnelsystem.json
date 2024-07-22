@@ -15,7 +15,7 @@
       "tunnelexittype": [
         {
           "@name": "SOLO",
-          "@maxcharges": "2",
+          "@maxcharges": "7",
           "@timeperchargeupmin": "300",
           "@timeperchargeupmax": "300",
           "@usedconnectionduration": "300"
@@ -48,15 +48,11 @@
           "outgoingConnectionWeighting": [
             {
               "@outgoingConnectionKeyword": "Royalzone_Safe",
-              "@weight": "39"
+              "@weight": "32"
             },
             {
               "@outgoingConnectionKeyword": "Royalzone_Yellow",
-              "@weight": "24"
-            },
-            {
-              "@outgoingConnectionKeyword": "Royalzone_Red",
-              "@weight": "19"
+              "@weight": "41"
             }
           ]
         },
@@ -66,17 +62,21 @@
           "outgoingConnectionWeighting": [
             {
               "@outgoingConnectionKeyword": "Royalzone_Safe",
-              "@weight": "39"
+              "@weight": "32"
             },
             {
               "@outgoingConnectionKeyword": "Royalzone_Yellow",
-              "@weight": "24"
-            },
-            {
-              "@outgoingConnectionKeyword": "Royalzone_Red",
-              "@weight": "19"
+              "@weight": "41"
             }
           ]
+        },
+        {
+          "@name": "OUT_ROYAL_RED",
+          "@outgoingConnectionChance": "1",
+          "outgoingConnectionWeighting": {
+            "@outgoingConnectionKeyword": "Royalzone_Red",
+            "@weight": "1"
+          }
         },
         {
           "@name": "OUT_BLACK_LOW",
@@ -84,7 +84,7 @@
           "outgoingConnectionWeighting": [
             {
               "@outgoingConnectionKeyword": "Blackzone_Low",
-              "@weight": "80"
+              "@weight": "78"
             },
             {
               "@outgoingConnectionKeyword": "Blackzone_Medium",
@@ -92,7 +92,7 @@
             },
             {
               "@outgoingConnectionKeyword": "Blackzone_High",
-              "@weight": "5"
+              "@weight": "7"
             }
           ]
         },
@@ -106,11 +106,11 @@
             },
             {
               "@outgoingConnectionKeyword": "Blackzone_Medium",
-              "@weight": "75"
+              "@weight": "80"
             },
             {
               "@outgoingConnectionKeyword": "Blackzone_High",
-              "@weight": "10"
+              "@weight": "5"
             }
           ]
         },
@@ -120,11 +120,11 @@
           "outgoingConnectionWeighting": [
             {
               "@outgoingConnectionKeyword": "Blackzone_Low",
-              "@weight": "6"
+              "@weight": "10"
             },
             {
               "@outgoingConnectionKeyword": "Blackzone_Medium",
-              "@weight": "9"
+              "@weight": "5"
             },
             {
               "@outgoingConnectionKeyword": "Blackzone_High",
@@ -138,41 +138,59 @@
           "outgoingConnectionWeighting": [
             {
               "@outgoingConnectionKeyword": "Royalzone_Safe",
-              "@weight": "9"
+              "@weight": "16"
             },
             {
               "@outgoingConnectionKeyword": "Royalzone_Yellow",
-              "@weight": "6"
-            },
-            {
-              "@outgoingConnectionKeyword": "Royalzone_Red",
-              "@weight": "5"
+              "@weight": "20"
             },
             {
               "@outgoingConnectionKeyword": "Royalzone_Entrance",
-              "@weight": "72"
+              "@weight": "88"
             },
             {
               "@outgoingConnectionKeyword": "Tunnel_Hideout",
-              "@weight": "8"
+              "@weight": "6"
+            }
+          ]
+        },
+        {
+          "@name": "OUT_TUNNEL_ROYAL_RED",
+          "@outgoingConnectionChance": "0.9",
+          "outgoingConnectionWeighting": [
+            {
+              "@outgoingConnectionKeyword": "Royalzone_Red",
+              "@weight": "14"
+            },
+            {
+              "@outgoingConnectionKeyword": "Royalzone_Entrance",
+              "@weight": "11"
+            },
+            {
+              "@outgoingConnectionKeyword": "Royalzone_Entrance_Red",
+              "@weight": "32"
+            },
+            {
+              "@outgoingConnectionKeyword": "Tunnel_Hideout",
+              "@weight": "2"
             }
           ]
         },
         {
           "@name": "OUT_TUNNEL_BLACK_LOW",
-          "@outgoingConnectionChance": "0.6",
+          "@outgoingConnectionChance": "0.7",
           "outgoingConnectionWeighting": [
             {
               "@outgoingConnectionKeyword": "Blackzone_Low",
-              "@weight": "24"
+              "@weight": "75"
             },
             {
               "@outgoingConnectionKeyword": "Blackzone_Entrance_Low",
-              "@weight": "61"
+              "@weight": "135"
             },
             {
               "@outgoingConnectionKeyword": "Tunnel_Hideout",
-              "@weight": "15"
+              "@weight": "6"
             }
           ]
         },
@@ -182,19 +200,19 @@
           "outgoingConnectionWeighting": [
             {
               "@outgoingConnectionKeyword": "Blackzone_Medium",
-              "@weight": "22"
+              "@weight": "37"
             },
             {
               "@outgoingConnectionKeyword": "Blackzone_Entrance_Low",
-              "@weight": "49"
+              "@weight": "45"
             },
             {
               "@outgoingConnectionKeyword": "Blackzone_Entrance_Medium",
-              "@weight": "14"
+              "@weight": "64"
             },
             {
               "@outgoingConnectionKeyword": "Tunnel_Hideout",
-              "@weight": "15"
+              "@weight": "9"
             }
           ]
         },
@@ -208,15 +226,15 @@
             },
             {
               "@outgoingConnectionKeyword": "Blackzone_Entrance_Medium",
-              "@weight": "40"
+              "@weight": "16"
             },
             {
               "@outgoingConnectionKeyword": "Blackzone_Entrance_High",
-              "@weight": "23"
+              "@weight": "36"
             },
             {
               "@outgoingConnectionKeyword": "Tunnel_Hideout",
-              "@weight": "15"
+              "@weight": "4"
             }
           ]
         },
@@ -226,11 +244,19 @@
           "outgoingConnectionWeighting": [
             {
               "@outgoingConnectionKeyword": "Blackzone_Entrance_Low",
-              "@weight": "52"
+              "@weight": "90"
             },
             {
               "@outgoingConnectionKeyword": "Royalzone_Entrance",
-              "@weight": "48"
+              "@weight": "44"
+            },
+            {
+              "@outgoingConnectionKeyword": "Royalzone_Entrance_Red",
+              "@weight": "16"
+            },
+            {
+              "@outgoingConnectionKeyword": "Tunnel_Deep_Raid",
+              "@weight": "15"
             }
           ]
         },
@@ -240,11 +266,15 @@
           "outgoingConnectionWeighting": [
             {
               "@outgoingConnectionKeyword": "Blackzone_Entrance_Low",
-              "@weight": "45"
+              "@weight": "90"
             },
             {
               "@outgoingConnectionKeyword": "Blackzone_Entrance_Medium",
-              "@weight": "55"
+              "@weight": "64"
+            },
+            {
+              "@outgoingConnectionKeyword": "Tunnel_Deep_Raid",
+              "@weight": "15"
             }
           ]
         },
@@ -254,15 +284,19 @@
           "outgoingConnectionWeighting": [
             {
               "@outgoingConnectionKeyword": "Blackzone_Entrance_Low",
-              "@weight": "20"
+              "@weight": "90"
             },
             {
               "@outgoingConnectionKeyword": "Blackzone_Entrance_Medium",
-              "@weight": "15"
+              "@weight": "32"
             },
             {
               "@outgoingConnectionKeyword": "Blackzone_Entrance_High",
-              "@weight": "65"
+              "@weight": "32"
+            },
+            {
+              "@outgoingConnectionKeyword": "Tunnel_Deep_Raid",
+              "@weight": "15"
             }
           ]
         },
@@ -272,19 +306,23 @@
           "outgoingConnectionWeighting": [
             {
               "@outgoingConnectionKeyword": "Royalzone_Entrance",
-              "@weight": "43"
+              "@weight": "44"
+            },
+            {
+              "@outgoingConnectionKeyword": "Royalzone_Entrance_Red",
+              "@weight": "16"
             },
             {
               "@outgoingConnectionKeyword": "Blackzone_Entrance_Low",
-              "@weight": "33"
+              "@weight": "90"
             },
             {
               "@outgoingConnectionKeyword": "Blackzone_Entrance_Medium",
-              "@weight": "10"
+              "@weight": "32"
             },
             {
               "@outgoingConnectionKeyword": "Blackzone_Entrance_High",
-              "@weight": "4"
+              "@weight": "18"
             },
             {
               "@outgoingConnectionKeyword": "Tunnel_Hideout_Deep",
@@ -298,27 +336,27 @@
           "outgoingConnectionWeighting": [
             {
               "@outgoingConnectionKeyword": "Royalzone_Entrance",
-              "@weight": "7"
+              "@weight": "44"
+            },
+            {
+              "@outgoingConnectionKeyword": "Royalzone_Entrance_Red",
+              "@weight": "16"
             },
             {
               "@outgoingConnectionKeyword": "Blackzone_Entrance_Low",
-              "@weight": "10"
+              "@weight": "90"
             },
             {
               "@outgoingConnectionKeyword": "Blackzone_Entrance_Medium",
-              "@weight": "3"
+              "@weight": "32"
             },
             {
               "@outgoingConnectionKeyword": "Blackzone_Entrance_High",
-              "@weight": "3"
+              "@weight": "18"
             },
             {
               "@outgoingConnectionKeyword": "Tunnel_Low",
-              "@weight": "72"
-            },
-            {
-              "@outgoingConnectionKeyword": "Tunnel_Hideout_Deep",
-              "@weight": "5"
+              "@weight": "104"
             }
           ]
         },
@@ -327,24 +365,28 @@
           "@outgoingConnectionChance": "1",
           "outgoingConnectionWeighting": [
             {
+              "@outgoingConnectionKeyword": "Royalzone_Entrance",
+              "@weight": "44"
+            },
+            {
+              "@outgoingConnectionKeyword": "Royalzone_Entrance_Red",
+              "@weight": "16"
+            },
+            {
               "@outgoingConnectionKeyword": "Blackzone_Entrance_Low",
-              "@weight": "30"
+              "@weight": "90"
             },
             {
               "@outgoingConnectionKeyword": "Blackzone_Entrance_Medium",
-              "@weight": "18"
+              "@weight": "32"
             },
             {
               "@outgoingConnectionKeyword": "Blackzone_Entrance_High",
-              "@weight": "17"
+              "@weight": "18"
             },
             {
               "@outgoingConnectionKeyword": "Tunnel_Medium",
               "@weight": "20"
-            },
-            {
-              "@outgoingConnectionKeyword": "Tunnel_Hideout_Deep",
-              "@weight": "15"
             }
           ]
         },
@@ -354,15 +396,15 @@
           "outgoingConnectionWeighting": [
             {
               "@outgoingConnectionKeyword": "Tunnel_Low",
-              "@weight": "74"
+              "@weight": "90"
             },
             {
               "@outgoingConnectionKeyword": "Tunnel_Medium",
-              "@weight": "9"
+              "@weight": "32"
             },
             {
               "@outgoingConnectionKeyword": "Tunnel_High",
-              "@weight": "17"
+              "@weight": "18"
             }
           ]
         },
@@ -372,23 +414,15 @@
           "outgoingConnectionWeighting": [
             {
               "@outgoingConnectionKeyword": "Tunnel_Low",
-              "@weight": "23"
+              "@weight": "90"
             },
             {
               "@outgoingConnectionKeyword": "Tunnel_Medium",
-              "@weight": "4"
+              "@weight": "32"
             },
             {
               "@outgoingConnectionKeyword": "Tunnel_High",
-              "@weight": "7"
-            },
-            {
-              "@outgoingConnectionKeyword": "Tunnel_Hideout",
-              "@weight": "33"
-            },
-            {
-              "@outgoingConnectionKeyword": "Tunnel_Hideout_Deep",
-              "@weight": "33"
+              "@weight": "18"
             }
           ]
         },
@@ -398,19 +432,19 @@
           "outgoingConnectionWeighting": [
             {
               "@outgoingConnectionKeyword": "Royalzone_Entrance",
-              "@weight": "30"
+              "@weight": "44"
             },
             {
-              "@outgoingConnectionKeyword": "Blackzone_Entrance_Low",
-              "@weight": "45"
-            },
-            {
-              "@outgoingConnectionKeyword": "Blackzone_Entrance_Medium",
+              "@outgoingConnectionKeyword": "Royalzone_Entrance_Red",
               "@weight": "16"
             },
             {
-              "@outgoingConnectionKeyword": "Blackzone_Entrance_High",
-              "@weight": "9"
+              "@outgoingConnectionKeyword": "Blackzone_Entrance_Low",
+              "@weight": "90"
+            },
+            {
+              "@outgoingConnectionKeyword": "Blackzone_Entrance_Medium",
+              "@weight": "32"
             }
           ]
         },
@@ -420,59 +454,51 @@
           "outgoingConnectionWeighting": [
             {
               "@outgoingConnectionKeyword": "Tunnel_Low",
-              "@weight": "75"
+              "@weight": "52"
             },
             {
               "@outgoingConnectionKeyword": "Tunnel_Medium",
-              "@weight": "15"
+              "@weight": "10"
             },
             {
               "@outgoingConnectionKeyword": "Tunnel_High",
-              "@weight": "10"
+              "@weight": "8"
             }
           ]
         },
         {
           "@name": "OUT_TUNNEL_HIDEOUT_ALL",
-          "@outgoingConnectionChance": "0.35",
+          "@outgoingConnectionChance": "0.65",
           "outgoingConnectionWeighting": [
             {
               "@outgoingConnectionKeyword": "Tunnel_Deep_Raid",
-              "@weight": "90"
+              "@weight": "35"
             },
             {
-              "@outgoingConnectionKeyword": "Blackzone_Entrance_Low",
+              "@outgoingConnectionKeyword": "Tunnel_Hideout",
               "@weight": "7"
             },
             {
-              "@outgoingConnectionKeyword": "Blackzone_Entrance_Medium",
-              "@weight": "2"
-            },
-            {
-              "@outgoingConnectionKeyword": "Blackzone_Entrance_High",
-              "@weight": "1"
+              "@outgoingConnectionKeyword": "Tunnel_Hideout_Deep",
+              "@weight": "3"
             }
           ]
         },
         {
           "@name": "OUT_TUNNEL_HIDEOUT_DEEP_ALL",
-          "@outgoingConnectionChance": "0.35",
+          "@outgoingConnectionChance": "0.65",
           "outgoingConnectionWeighting": [
             {
               "@outgoingConnectionKeyword": "Tunnel_Deep_Raid",
-              "@weight": "90"
+              "@weight": "35"
             },
             {
-              "@outgoingConnectionKeyword": "Tunnel_Low",
+              "@outgoingConnectionKeyword": "Tunnel_Hideout",
               "@weight": "7"
             },
             {
-              "@outgoingConnectionKeyword": "Tunnel_Medium",
-              "@weight": "2"
-            },
-            {
-              "@outgoingConnectionKeyword": "Tunnel_High",
-              "@weight": "1"
+              "@outgoingConnectionKeyword": "Tunnel_Hideout_Deep",
+              "@weight": "3"
             }
           ]
         }
@@ -602,7 +628,40 @@
           "@dialsymbol": "ENTRANCE",
           "incomingConnectionWeightings": {
             "type": {
-              "@name": "GROUP",
+              "@name": "SOLO",
+              "@weight": "1"
+            }
+          },
+          "exits": {
+            "exit": [
+              {
+                "@weight": "1",
+                "@tunnelexitpreset": "OUT_ROYAL_SAFE"
+              },
+              {
+                "@weight": "1",
+                "@tunnelexitpreset": "OUT_ROYAL_YELLOW"
+              },
+              {
+                "@weight": "1",
+                "@tunnelexitpreset": "OUT_TUNNEL_ROYAL"
+              },
+              {
+                "@weight": "3",
+                "@tunnelexitpreset": "INCOMING"
+              }
+            ]
+          }
+        },
+        {
+          "@name": "TUNNEL_ROYAL_RED",
+          "@incomingConnectionKeyword": "Royalzone_Entrance_Red",
+          "@minExits": "6",
+          "@maxExits": "6",
+          "@dialsymbol": "ENTRANCE",
+          "incomingConnectionWeightings": {
+            "type": {
+              "@name": "SOLO",
               "@weight": "1"
             }
           },
@@ -610,18 +669,14 @@
             "exit": [
               {
                 "@weight": "2",
-                "@tunnelexitpreset": "OUT_ROYAL_SAFE"
+                "@tunnelexitpreset": "OUT_ROYAL_RED"
               },
               {
-                "@weight": "2",
-                "@tunnelexitpreset": "OUT_ROYAL_YELLOW"
+                "@weight": "1",
+                "@tunnelexitpreset": "OUT_TUNNEL_ROYAL_RED"
               },
               {
-                "@weight": "2",
-                "@tunnelexitpreset": "OUT_TUNNEL_ROYAL"
-              },
-              {
-                "@weight": "6",
+                "@weight": "3",
                 "@tunnelexitpreset": "INCOMING"
               }
             ]
@@ -635,7 +690,7 @@
           "@dialsymbol": "ENTRANCE",
           "incomingConnectionWeightings": {
             "type": {
-              "@name": "GROUP",
+              "@name": "SOLO",
               "@weight": "1"
             }
           },
@@ -664,7 +719,7 @@
           "@dialsymbol": "ENTRANCE",
           "incomingConnectionWeightings": {
             "type": {
-              "@name": "GROUP",
+              "@name": "SOLO",
               "@weight": "1"
             }
           },
@@ -693,7 +748,7 @@
           "@dialsymbol": "ENTRANCE",
           "incomingConnectionWeightings": {
             "type": {
-              "@name": "GROUP",
+              "@name": "SOLO",
               "@weight": "1"
             }
           },
@@ -722,7 +777,7 @@
           "@dialsymbol": "TUNNEL",
           "incomingConnectionWeightings": {
             "type": {
-              "@name": "GROUP",
+              "@name": "SOLO",
               "@weight": "1"
             }
           },
@@ -751,7 +806,7 @@
           "@dialsymbol": "TUNNEL",
           "incomingConnectionWeightings": {
             "type": {
-              "@name": "GROUP",
+              "@name": "SOLO",
               "@weight": "1"
             }
           },
@@ -780,7 +835,7 @@
           "@dialsymbol": "TUNNEL",
           "incomingConnectionWeightings": {
             "type": {
-              "@name": "GROUP",
+              "@name": "SOLO",
               "@weight": "1"
             }
           },
@@ -809,7 +864,7 @@
           "@dialsymbol": "DEEP",
           "incomingConnectionWeightings": {
             "type": {
-              "@name": "GROUP",
+              "@name": "SOLO",
               "@weight": "1"
             }
           },
@@ -853,7 +908,7 @@
           "@dialsymbol": "HIDEOUT",
           "incomingConnectionWeightings": {
             "type": {
-              "@name": "GROUP",
+              "@name": "SOLO",
               "@weight": "1"
             }
           },
@@ -882,7 +937,7 @@
           "@dialsymbol": "HIDEOUT",
           "incomingConnectionWeightings": {
             "type": {
-              "@name": "GROUP",
+              "@name": "SOLO",
               "@weight": "1"
             }
           },

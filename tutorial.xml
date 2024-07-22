@@ -869,6 +869,9 @@
             <content title="@TUTORIAL_BIGHINT_INTERACTION_TEXT2_TITLE" text="@TUTORIAL_BIGHINT_INTERACTION_TEXT2_INFO"/>
         </entry>
     </hint>
+
+    <!-- STATIC DUNGEONS -->
+    <!-- Hint during the tutorial phase -->
     <hint uniquename="STATIC_DUNGEON" explanation="VerticalTemplate" title="@TUTORIAL_BIGHINT_STATIC_DUNGEON_TITLE"
           completebutton="true">
         <entry imagepath="Gui/TutorialExplanations/TUTORIAL_STATIC_DUNGEON_1" scale="1.2">
@@ -878,6 +881,15 @@
         <entry imagepath="Gui/TutorialExplanations/TUTORIAL_STATIC_DUNGEON_2" scale="1.2">
             <content title="@TUTORIAL_BIGHINT_STATIC_DUNGEON_TEXT2_TITLE"
                      text="@TUTORIAL_BIGHINT_STATIC_DUNGEON_TEXT2_INFO"/>
+        </entry>
+    </hint>
+    <!-- Hint for the Albion Journal -->
+    <hint uniquename="STATIC_DUNGEONS_INFO" explanation="VerticalTemplate" title="@STATIC_DUNGEONS_INFO_TITLE">
+        <entry imagepath="Gui/TutorialExplanations/TutorialStaticDungeonsWhere" scale="1.2">
+            <content title="@STATIC_DUNGEONS_INFO_WHERE_SUBTITLE" text="@STATIC_DUNGEONS_INFO_WHERE_TEXT"/>
+        </entry>
+        <entry imagepath="Gui/TutorialExplanations/TUTORIAL_STATIC_DUNGEON_2" scale="1.2">
+            <content title="@STATIC_DUNGEONS_INFO_GROUP_CONTENT_SUBTITLE" text="@STATIC_DUNGEONS_INFO_GROUP_CONTENT_TEXT"/>
         </entry>
     </hint>
 
@@ -945,15 +957,24 @@
             <content title="@PORTAL_CITY_INFO_SUBTITLE_02" text="@PORTAL_CITY_INFO_TEXT_02"/>
         </entry>
     </hint>
+    <!-- Portal City Infos, Journal Version -->
+    <hint uniquename="JOURNAL_PORTAL_CITY_INFO" explanation="VerticalTemplate" title="@PORTAL_CITY_INFO_TITLE">
+        <entry imagepath="Gui/TutorialExplanations/PORTAL_CITY_01" scale="1.2">
+            <content title="@PORTAL_CITY_INFO_SUBTITLE_01" text="@PORTAL_CITY_INFO_TEXT_01"/>
+        </entry>
+        <entry imagepath="Gui/TutorialExplanations/PORTAL_CITY_02" scale="1.2">
+            <content title="@PORTAL_CITY_INFO_SUBTITLE_02" text="@PORTAL_CITY_INFO_TEXT_02"/>
+        </entry>
+    </hint>
 
     <!--READY FOR WORLD-->
     <hint uniquename="NOMOREQUESTS" title="@HFINT_TITLE_NOMOREQUESTS_01" infotext="@HINT_INFO_NOMOREQUESTS_01"
           blockworldinteraction="true" completebutton="true"/>
 
     <!-- CRYSTAL LEAGUE -->
-    <hint uniquename="CRYSTAL_LEAGUE_INFO" explanation="VerticalTemplate" title="@CRYSTAL_LEAGUE_UI_TITLE">
+    <hint uniquename="CRYSTAL_LEAGUE_INFO" explanation="VerticalTemplate" title="@CRYSTAL_LEAGUE_INFO_TITLE">
         <entry imagepath="Gui/TutorialExplanations/TutorialCrystalLeague" scale="2">
-            <content text="@CRYSTAL_LEAGUE_UI_TUTORIAL"/>
+            <content text="@CRYSTAL_LEAGUE_INFO_TEXT"/>
         </entry>
     </hint>
 
@@ -1120,7 +1141,19 @@
             <content text="@ROADS_OF_AVALON_HIDEOUTS_TUTORIAL_CONTENT"/>
         </entry>
     </hint>
-
+    <hint uniquename="HIDEOUT_HQ_REQUIREMENTS" explanation="VerticalTemplate" title="@HIDEOUT_HQ_REQUIREMENTS_TITLE">
+        <entry imagepath="Gui/TutorialExplanations/TutorialHideoutHQ" scale="2">
+            <content text="@HIDEOUT_HQ_REQUIREMENTS_BRACKETS"/>
+        </entry>
+    </hint>
+    <hint uniquename="HIDEOUTS_GENERAL_INFO"
+          explanation="VerticalTemplate"
+          title="@HIDEOUTS_GENERAL_INFO_TITLE"
+          nexthint="HIDEOUT_HQ_REQUIREMENTS">
+        <entry imagepath="Gui/TutorialExplanations/TutorialHideoutsGeneral" scale="2">
+            <content text="@HIDEOUTS_GENERAL_INFO_TEXT"/>
+        </entry>
+    </hint>
 
     <!-- Cluster Access -->
     <hint uniquename="CLUSTER_ACCESS_PRIORITY_INFO" explanation="VerticalTemplate"
@@ -1271,13 +1304,6 @@
         </entry>
     </hint>
 
-    <!-- SMART CLUSTER QUEUE -->
-    <hint uniquename="HIDEOUT_HQ_REQUIREMENTS" explanation="VerticalTemplate" title="@HIDEOUT_HQ_REQUIREMENTS_TITLE">
-        <entry imagepath="Gui/TutorialExplanations/TutorialHideoutHQ" scale="2">
-            <content text="@HIDEOUT_HQ_REQUIREMENTS_BRACKETS"/>
-        </entry>
-    </hint>
-
     <!-- ARENA MATCHES -->
     <hint uniquename="ARENA_MATCH_INFO" explanation="VerticalTemplate" title="@TUTORIAL_ARENA_TITLE">
         <entry imagepath="Gui/TutorialExplanations/TutorialCustomMatch" scale="1.0">
@@ -1291,7 +1317,7 @@
     <!-- CRYSTAL ARENA MATCHES -->
     <hint uniquename="CRYSTAL_ARENA_MATCH_INFO" explanation="VerticalTemplate" title="@TUTORIAL_CRYSTAL_ARENA_TITLE"
           nexthint="CRYSTAL_ARENA_RANKS_INFO">
-        <entry imagepath="Gui/TutorialExplanations/TutorialCrystalLeague" scale="1.0">
+        <entry imagepath="Gui/TutorialExplanations/TutorialCrystalArenaSignUp" scale="1.0">
             <content title="@TUTORIAL_CRYSTAL_ARENA_SIGN_UP_TITLE" text="@TUTORIAL_CRYSTAL_ARENA_SIGN_UP_TEXT"/>
         </entry>
         <entry imagepath="Gui/TutorialExplanations/TutorialArenaCrystalRules" scale="1.0">
@@ -1455,28 +1481,6 @@
         </entry>
     </hint>
 
-    <!-- MISTS -->
-    <hint uniquename="MISTS_INFO" explanation="VerticalTemplate" title="@MISTS_INFO_TITLE" delay="5"
-          dontshow_decisiontag="EnteredPortalCity">
-        <entry imagepath="Gui/TutorialExplanations/PORTAL_CITY_01" scale="1.2">
-            <content title="@MISTS_INFO_SUBTITLE_01" text="@PORTAL_CITY_INFO_TEXT_01"/>
-        </entry>
-        <entry imagepath="Gui/TutorialExplanations/PORTAL_CITY_02" scale="1.2">
-            <content title="@PORTAL_CITY_INFO_SUBTITLE_02" text="@PORTAL_CITY_INFO_TEXT_02"/>
-        </entry>
-    </hint>
-
-    <!-- ROADS OF AVALON -->
-    <hint uniquename="ROADS_OF_AVALON_INFO" explanation="VerticalTemplate" title="@ROADS_OF_AVALON_INFO_TITLE" delay="5"
-          dontshow_decisiontag="EnteredPortalCity">
-        <entry imagepath="Gui/TutorialExplanations/PORTAL_CITY_01" scale="1.2">
-            <content title="@ROADS_OF_AVALON_INFO_SUBTITLE_01" text="@ROADS_OF_AVALON_INFO_TEXT_01"/>
-        </entry>
-        <entry imagepath="Gui/TutorialExplanations/PORTAL_CITY_02" scale="1.2">
-            <content title="@ROADS_OF_AVALON_INFO_SUBTITLE_02" text="@ROADS_OF_AVALON_INFO_TEXT_02"/>
-        </entry>
-    </hint>
-
     <hint uniquename="BLACK_MARKET" explanation="VerticalTemplate" title="@TUTORIAL_BLACK_MARKET_TITLE">
         <entry imagepath="Gui/TutorialExplanations/TutorialBlackmarket1" scale="1.2">
             <content title="@TUTORIAL_BLACK_MARKET_WHAT_TITLE" text="@TUTORIAL_BLACK_MARKET_WHAT_TEXT"/>
@@ -1609,7 +1613,434 @@
             <content text="@TERRITORIES_TUTORIAL_ACTIVITY_CHEST_SCREEN_DESC"/>
         </entry>
     </hint>
+    
+    <!-- ALBION JOURNAL -->
+    <hint uniquename="JOURNAL_INFO" explanation="VerticalTemplate" title="@JOURNAL_INFO_TITLE">
+        <entry imagepath="Gui/TutorialExplanations/TutorialJournalGeneral" scale="1.2">
+            <content title="@JOURNAL_INFO_GENERAL_SUBTITLE" text="@JOURNAL_INFO_GENERAL_TEXT"/>
+        </entry>
+        <entry imagepath="Gui/TutorialExplanations/TutorialJournalTracking" scale="1.2">
+            <content title="@JOURNAL_INFO_TRACKING_SUBTITLE" text="@JOURNAL_INFO_TRACKING_TEXT"/>
+        </entry>
+    </hint>
 
+    <!-- ENEMY RANKS -->
+    <hint uniquename="ENEMY_RANKS_INFO" explanation="VerticalTemplate" title="@ENEMY_RANKS_INFO_TITLE">
+        <entry imagepath="Gui/TutorialExplanations/TutorialEnemyRanksTypes" scale="1.2">
+            <content title="@ENEMY_RANKS_INFO_TYPES_SUBTITLE" text="@ENEMY_RANKS_INFO_TYPES_TEXT"/>
+        </entry>
+        <entry imagepath="Gui/TutorialExplanations/TutorialEnemyRanksLooks" scale="1.2">
+            <content title="@ENEMY_RANKS_INFO_LOOKS_SUBTITLE" text="@ENEMY_RANKS_INFO_LOOKS_TEXT"/>
+        </entry>
+    </hint>
+
+    <!-- SOLO RANDOMIZED DUNGEONS -->
+    <hint uniquename="SOLO_RANDOM_DUNGEONS_INTRO_INFO"
+          explanation="VerticalTemplate"
+          title="@SOLO_RANDOM_DUNGEONS_INFO_TITLE"
+          nexthint="SOLO_RANDOM_DUNGEONS_CHALLENGE_INFO">
+        <entry imagepath="Gui/TutorialExplanations/TutorialSoloRandomDungeonsIntro" scale="2">
+            <content title="@SOLO_RANDOM_DUNGEONS_INFO_INTRO_SUBTITLE" text="@SOLO_RANDOM_DUNGEONS_INFO_INTRO_TEXT"/>
+        </entry>
+    </hint>
+    <hint uniquename="SOLO_RANDOM_DUNGEONS_CHALLENGE_INFO" explanation="VerticalTemplate" title="@SOLO_RANDOM_DUNGEONS_INFO_TITLE">
+        <entry imagepath="Gui/TutorialExplanations/TutorialSoloRandomDungeonsChallenge" scale="2">
+            <content title="@RANDOM_DUNGEONS_INFO_CHALLENGE_SUBTITLE" text="@RANDOM_DUNGEONS_INFO_CHALLENGE_TEXT"/>
+        </entry>
+    </hint>
+
+    <!-- GROUP RANDOMIZED DUNGEONS -->
+    <hint uniquename="GROUP_RANDOM_DUNGEONS_INTRO_INFO" 
+          explanation="VerticalTemplate"
+          title="@GROUP_RANDOM_DUNGEONS_INFO_TITLE"
+          nexthint="GROUP_RANDOM_DUNGEONS_CHALLENGE_INFO">
+        <entry imagepath="Gui/TutorialExplanations/TutorialGroupRandomDungeons" scale="2">
+            <content title="@GROUP_RANDOM_DUNGEONS_INFO_SUBTITLE" text="@GROUP_RANDOM_DUNGEONS_INFO_TEXT"/>
+        </entry>
+    </hint>
+    <hint uniquename="GROUP_RANDOM_DUNGEONS_CHALLENGE_INFO"
+          explanation="VerticalTemplate"
+          title="@GROUP_RANDOM_DUNGEONS_INFO_TITLE"
+          nexthint="ENEMY_RANKS_INFO">
+        <entry imagepath="Gui/TutorialExplanations/TutorialSoloRandomDungeonsChallenge" scale="2">
+            <content title="@RANDOM_DUNGEONS_INFO_CHALLENGE_SUBTITLE" text="@RANDOM_DUNGEONS_INFO_CHALLENGE_TEXT"/>
+        </entry>
+    </hint>
+
+    <!-- OPEN WORLD MOBS -->
+    <hint uniquename="ROAMING_MOBS_INFO" explanation="VerticalTemplate" title="@ROAMING_MOBS_INFO_TITLE">
+        <entry imagepath="Gui/TutorialExplanations/TutorialOpenWorldMobsIntro" scale="1.2">
+            <content title="@ROAMING_MOBS_INFO_SUBTITLE" text="@ROAMING_MOBS_INFO_TEXT"/>
+        </entry>
+        <entry imagepath="Gui/TutorialExplanations/TutorialEnemyRanksLooks" scale="1.2">
+            <content title="@ENEMY_RANKS_INFO_LOOKS_SUBTITLE" text="@ENEMY_RANKS_INFO_LOOKS_TEXT"/>
+        </entry>
+    </hint>
+
+    <!-- WORLD BOSSES -->
+    <hint uniquename="WORLD_BOSSES_INFO"
+          explanation="VerticalTemplate"
+          title="@WORLD_BOSSES_INFO_TITLE"
+          nexthint="ENEMY_RANKS_INFO">
+        <entry imagepath="Gui/TutorialExplanations/TutorialWorldBosses" scale="2">
+            <content title="@WORLD_BOSSES_INFO_SUBTITLE" text="@WORLD_BOSSES_INFO_TEXT"/>
+        </entry>
+    </hint>
+
+    <!-- AVALONIAN DUNGEONS -->
+    <hint uniquename="AVALONIAN_DUNGEONS_INFO" explanation="VerticalTemplate" title="@AVALONIAN_DUNGEONS_INFO_TITLE">
+        <entry imagepath="Gui/TutorialExplanations/TutorialAvalonianDungeons" scale="2">
+            <content title="@AVALONIAN_DUNGEONS_INFO_SUBTITLE" text="@AVALONIAN_DUNGEONS_INFO_TEXT"/>
+        </entry>
+    </hint>
+
+    <!-- FISHING -->
+    <hint uniquename="FISHING_INFO" explanation="VerticalTemplate" title="@FISHING_INFO_TITLE">
+        <entry imagepath="Gui/TutorialExplanations/TutorialFishing" scale="2">
+            <content title="@FISHING_INFO_SUBTITLE" text="@FISHING_INFO_TEXT"/>
+        </entry>
+    </hint>
+
+    <!-- REFINING RESOURCES -->
+    <hint uniquename="REFINING_RESOURCES_INFO"
+          explanation="VerticalTemplate"
+          title="@REFINING_RESOURCES_INFO_TITLE"
+          nexthint="LOCAL_PRODUCTION_INFO">
+        <entry imagepath="Gui/TutorialExplanations/TutorialRefiningResources" scale="2">
+            <content title="@REFINING_RESOURCES_INFO_SUBTITLE" text="@REFINING_RESOURCES_INFO_TEXT"/>
+        </entry>
+    </hint>
+
+    <!-- CITY PLOTS -->
+    <hint uniquename="CITY_PLOT_REAL_ESTATE_INFO"
+          explanation="VerticalTemplate"
+          title="@CITY_PLOT_REAL_ESTATE_INFO_TITLE"
+          nexthint="CITY_PLOT_SELL_BID_INFO">
+        <entry imagepath="Gui/TutorialExplanations/TutorialCityPlotRealEstateClaim" scale="1.2">
+            <content title="@CITY_PLOT_REAL_ESTATE_INFO_CLAIM_SUBTITLE" text="@CITY_PLOT_REAL_ESTATE_INFO_CLAIM_TEXT"/>
+        </entry>
+        <entry imagepath="Gui/TutorialExplanations/TutorialCityPlotRealEstateManage" scale="1.2">
+            <content title="@CITY_PLOT_REAL_ESTATE_INFO_MANAGE_SUBTITLE" text="@CITY_PLOT_REAL_ESTATE_INFO_MANAGE_TEXT"/>
+        </entry>
+    </hint>
+    <hint uniquename="CITY_PLOT_SELL_BID_INFO" explanation="VerticalTemplate" title="@CITY_PLOT_SELL_BID_INFO_TITLE">
+        <entry imagepath="Gui/TutorialExplanations/TutorialCityPlotSell" scale="1.2">
+            <content title="@CITY_PLOT_SELL_BID_INFO_SELL_SUBTITLE" text="@CITY_PLOT_SELL_BID_INFO_SELL_TEXT"/>
+        </entry>
+        <entry imagepath="Gui/TutorialExplanations/TutorialCityPlotBid" scale="1.2">
+            <content title="@CITY_PLOT_SELL_BID_INFO_BID_SUBTITLE" text="@CITY_PLOT_SELL_BID_INFO_BID_TEXT"/>
+        </entry>
+    </hint>
+
+    <!-- MIGHT & FAVOR -->
+    <hint uniquename="MIGHT_FAVOR_INFO"
+          explanation="VerticalTemplate"
+          title="@MIGHT_FAVOR_INFO_TITLE"
+          nexthint="GAINING_MIGHT_INFO">
+        <entry imagepath="Gui/TutorialExplanations/TutorialMightFavor" scale="2">
+            <content text="@MIGHT_FAVOR_INFO_TEXT"/>
+        </entry>
+    </hint>
+
+    <!-- MISTS -->
+    <hint uniquename="MISTS_OUTSIDE_INFO"
+          explanation="VerticalTemplate"
+          title="@MISTS_INFO_TITLE"
+          nexthint="MISTS_INSIDE_INFO">
+        <entry imagepath="Gui/TutorialExplanations/TutorialMistsIntro" scale="1.2">
+            <content title="@MISTS_INFO_INTRO_SUBTITLE" text="@MISTS_INFO_INTRO_TEXT"/>
+        </entry>
+        <entry imagepath="Gui/TutorialExplanations/TutorialMistsVariants" scale="1.2">
+            <content title="@MISTS_INFO_VARIANTS_SUBTITLE" text="@MISTS_INFO_VARIANTS_TEXT"/>
+        </entry>
+    </hint>
+    <hint uniquename="MISTS_INSIDE_INFO" explanation="VerticalTemplate" title="@IN_THE_MISTS_INFO_TITLE">
+        <entry imagepath="Gui/TutorialExplanations/TutorialMistsExplore" scale="1.2">
+            <content title="@IN_THE_MISTS_INFO_EXPLORE_SUBTITLE" text="@IN_THE_MISTS_INFO_EXPLORE_TEXT"/>
+        </entry>
+        <entry imagepath="Gui/TutorialExplanations/TutorialMistsMechanics" scale="1.2">
+            <content title="@IN_THE_MISTS_INFO_MECHANICS_SUBTITLE" text="@IN_THE_MISTS_INFO_MECHANICS_TEXT"/>
+        </entry>
+    </hint>
+
+    <!-- ROADS OF AVALON -->
+    <hint uniquename="ROADS_OF_AVALON_INFO"
+          explanation="VerticalTemplate"
+          title="@ROADS_OF_AVALON_INFO_TITLE"
+          nexthint="ROADS_HIDEOUT_PLACEMENT_INFO">
+        <entry imagepath="Gui/TutorialExplanations/TutorialRoadsOfAvalonLocation" scale="1.2">
+            <content title="@ROADS_OF_AVALON_INFO_LOCATION_SUBTITLE" text="@ROADS_OF_AVALON_INFO_LOCATION_TEXT"/>
+        </entry>
+        <entry imagepath="Gui/TutorialExplanations/TutorialRoadsOfAvalonContent" scale="1.2">
+            <content title="@ROADS_OF_AVALON_INFO_CONTENT_SUBTITLE" text="@ROADS_OF_AVALON_INFO_CONTENT_TEXT"/>
+        </entry>
+    </hint>
+
+    <!-- OPEN WORLD PVP -->
+    <hint uniquename="OPEN_WORLD_PVP_INFO"
+          explanation="VerticalTemplate"
+          title="@OPEN_WORLD_PVP_INFO_TITLE"
+          nexthint="SURVIVAL_TIPS_INFO">
+        <entry imagepath="Gui/TutorialExplanations/TutorialOpenWorldPvp" scale="2">
+            <content title="@OPEN_WORLD_PVP_INFO_SUBTITLE" text="@OPEN_WORLD_PVP_INFO_TEXT"/>
+        </entry>
+    </hint>
+
+    <!-- GUILD SEASON -->
+    <hint uniquename="GUILD_SEASON_INFO" explanation="VerticalTemplate" title="@GUILD_SEASON_INFO_TITLE">
+        <entry imagepath="Gui/TutorialExplanations/TutorialGuildSeasonRanking" scale="1.2">
+            <content title="@GUILD_SEASON_INFO_RANKING_SUBTITLE" text="@GUILD_SEASON_INFO_RANKING_TEXT"/>
+        </entry>
+        <entry imagepath="Gui/TutorialExplanations/TutorialGuildSeasonChallenge" scale="1.2">
+            <content title="@GUILD_SEASON_INFO_CHALLENGE_SUBTITLE" text="@GUILD_SEASON_INFO_CHALLENGE_TEXT"/>
+        </entry>
+    </hint>
+
+    <!-- LARGE-SCALE BATTLES -->
+    <hint uniquename="LARGE_SCALE_BATTLES_INFO"
+          explanation="VerticalTemplate"
+          title="@LARGE_SCALE_BATTLES_INFO_TITLE"
+          nexthint="JOURNAL_CLUSTER_QUEUE_INFO">
+        <entry imagepath="Gui/TutorialExplanations/TutorialLargeScaleBattles" scale="2">
+            <content title="@LARGE_SCALE_BATTLES_INFO_SUBTITLE" text="@LARGE_SCALE_BATTLES_INFO_TEXT"/>
+        </entry>
+    </hint>
+    <hint uniquename="JOURNAL_CLUSTER_QUEUE_INFO"
+          explanation="VerticalTemplate"
+          title="@SCQ_TUTORIAL_TITLE"
+          nexthint="CLUSTER_ACCESS_PRIORITY_INFO">
+        <entry imagepath="Gui/TutorialExplanations/TutorialClusterQueue" scale="2">
+            <content text="@SMART_CLUSTER_QUEUE_TUTORIAL_LIST"/>
+        </entry>
+    </hint>
+
+    <!-- JOURNAL: RESOURCES -->
+    <hint uniquename="RESOURCE_GATHERING_INFO"
+          explanation="VerticalTemplate" 
+          title="@TUTORIAL_BIGHINT_WHAT_CAN_I_GATHER_TITLE"
+          nexthint="RESOURCE_LOCATION_FIBER_INFO">
+        <entry imagepath="Gui/TutorialExplanations/TUTORIAL_WHATTOGATHER" scale="2">
+            <content title="@TUTORIAL_BIGHINT_WHAT_CAN_I_GATHER_TEXT1_TITLE"
+                     text="@TUTORIAL_BIGHINT_WHAT_CAN_I_GATHER_TEXT1_INFO"/>
+        </entry>
+    </hint>
+    <hint uniquename="RESOURCE_LOCATION_FIBER_INFO" 
+          explanation="VerticalTemplate"
+          title="@RESOURCE_LOCATION_INFO_TITLE"
+          nexthint="RESOURCE_LOCATION_WOOD_INFO">
+        <entry imagepath="Gui/TutorialExplanations/TUTORIAL_FIBER_T2_1" scale="0.9">
+            <content title="@TUTORIAL_BIGHINT_FIBER_TEXT1_TITLE" text="@TUTORIAL_BIGHINT_FIBER_TEXT1_INFO"/>
+        </entry>
+        <entry imagepath="Gui/TutorialExplanations/TUTORIAL_FIBER_T2_2" scale="0.9">
+            <content title="@TUTORIAL_BIGHINT_FIBER_TEXT2_TITLE" text="@TUTORIAL_BIGHINT_FIBER_TEXT2_INFO"/>
+        </entry>
+        <entry imagepath="Gui/TutorialExplanations/TUTORIAL_FIBER_T3_1" scale="0.9">
+            <content title="@TUTORIAL_BIGHINT_FIBER2_TEXT1_TITLE" text="@TUTORIAL_BIGHINT_FIBER2_TEXT1_INFO"/>
+        </entry>
+    </hint>
+    <hint uniquename="RESOURCE_LOCATION_WOOD_INFO"
+          explanation="VerticalTemplate"
+          title="@RESOURCE_LOCATION_INFO_TITLE"
+          nexthint="RESOURCE_LOCATION_HIDE_INFO">
+        <entry imagepath="Gui/TutorialExplanations/TUTORIAL_WOOD_T2_1" scale="0.9">
+            <content title="@TUTORIAL_BIGHINT_WOOD_TEXT1_TITLE" text="@TUTORIAL_BIGHINT_WOOD_TEXT1_INFO"/>
+        </entry>
+        <entry imagepath="Gui/TutorialExplanations/TUTORIAL_WOOD_T2_2" scale="0.9">
+            <content title="@TUTORIAL_BIGHINT_WOOD_TEXT2_TITLE" text="@TUTORIAL_BIGHINT_WOOD_TEXT2_INFO"/>
+        </entry>
+        <entry imagepath="Gui/TutorialExplanations/TUTORIAL_WOOD_T3_1" scale="0.9">
+            <content title="@TUTORIAL_BIGHINT_WOOD2_TEXT1_TITLE" text="@TUTORIAL_BIGHINT_WOOD2_TEXT1_INFO"/>
+        </entry>
+    </hint>
+    <hint uniquename="RESOURCE_LOCATION_HIDE_INFO"
+          explanation="VerticalTemplate"
+          title="@RESOURCE_LOCATION_INFO_TITLE"
+          nexthint="RESOURCE_LOCATION_STONE_INFO">
+        <entry imagepath="Gui/TutorialExplanations/TUTORIAL_HIDE_T2_1" scale="0.9">
+            <content title="@TUTORIAL_BIGHINT_HIDE_TEXT1_TITLE" text="@TUTORIAL_BIGHINT_HIDE_TEXT1_INFO"/>
+        </entry>
+        <entry imagepath="Gui/TutorialExplanations/TUTORIAL_HIDE_T2_2" scale="0.9">
+            <content title="@TUTORIAL_BIGHINT_HIDE_TEXT2_TITLE" text="@TUTORIAL_BIGHINT_HIDE_TEXT2_INFO"/>
+        </entry>
+        <entry imagepath="Gui/TutorialExplanations/TUTORIAL_HIDE_T3_3" scale="0.9">
+            <content title="@TUTORIAL_BIGHINT_HIDE2_TEXT1_TITLE" text="@TUTORIAL_BIGHINT_HIDE2_TEXT1_INFO"/>
+        </entry>
+    </hint>
+    <hint uniquename="RESOURCE_LOCATION_STONE_INFO"
+          explanation="VerticalTemplate"
+          title="@RESOURCE_LOCATION_INFO_TITLE"
+          nexthint="RESOURCE_LOCATION_ORE_INFO">
+        <entry imagepath="Gui/TutorialExplanations/TUTORIAL_STONE_T2_1" scale="0.9">
+            <content title="@TUTORIAL_BIGHINT_STONE_TEXT1_TITLE" text="@TUTORIAL_BIGHINT_STONE_TEXT1_INFO"/>
+        </entry>
+        <entry imagepath="Gui/TutorialExplanations/TUTORIAL_STONE_T2_2" scale="0.9">
+            <content title="@TUTORIAL_BIGHINT_STONE_TEXT2_TITLE" text="@TUTORIAL_BIGHINT_STONE_TEXT2_INFO"/>
+        </entry>
+        <entry imagepath="Gui/TutorialExplanations/TUTORIAL_STONE_T3_1" scale="0.9">
+            <content title="@TUTORIAL_BIGHINT_STONE2_TEXT1_TITLE" text="@TUTORIAL_BIGHINT_STONE2_TEXT1_INFO"/>
+        </entry>
+    </hint>
+    <hint uniquename="RESOURCE_LOCATION_ORE_INFO"
+          explanation="VerticalTemplate"
+          title="@RESOURCE_LOCATION_INFO_TITLE">
+        <entry imagepath="Gui/TutorialExplanations/TUTORIAL_ORE_T2_1" scale="0.9">
+            <content title="@TUTORIAL_BIGHINT_ORE_TEXT1_TITLE" text="@TUTORIAL_BIGHINT_ORE_TEXT1_INFO"/>
+        </entry>
+        <entry imagepath="Gui/TutorialExplanations/TUTORIAL_ORE_T2_2" scale="0.9">
+            <content title="@TUTORIAL_BIGHINT_ORE_TEXT2_TITLE" text="@TUTORIAL_BIGHINT_ORE_TEXT2_INFO"/>
+        </entry>
+        <entry imagepath="Gui/TutorialExplanations/TUTORIAL_ORE_T3_1" scale="0.9">
+            <content title="@TUTORIAL_BIGHINT_ORE2_TEXT1_TITLE" text="@TUTORIAL_BIGHINT_ORE2_TEXT1_INFO"/>
+        </entry>
+    </hint>
+
+    <hint uniquename="SKINNER_INFO" explanation="VerticalTemplate" title="@TUTORIAL_BIGHINT_HIDE_TITLE" nexthint="SKINNING_INFO">
+        <entry imagepath="Gui/TutorialExplanations/TUTORIAL_HIDE_T2_1" scale="1.2">
+            <content title="@TUTORIAL_BIGHINT_HIDE_TEXT1_TITLE" text="@TUTORIAL_BIGHINT_HIDE_TEXT1_INFO"/>
+        </entry>
+        <entry imagepath="Gui/TutorialExplanations/TUTORIAL_HIDE_T2_2" scale="1.2">
+            <content title="@TUTORIAL_BIGHINT_HIDE_TEXT2_TITLE" text="@TUTORIAL_BIGHINT_HIDE_TEXT2_INFO"/>
+        </entry>
+    </hint>
+    <hint uniquename="SKINNING_INFO" explanation="VerticalTemplate" title="@TUTORIAL_BIGHINT_HIDE2_TITLE">
+        <entry imagepath="Gui/TutorialExplanations/TUTORIAL_HIDE_T3_3" scale="1.2">
+            <content title="@TUTORIAL_BIGHINT_HIDE2_TEXT1_TITLE" text="@TUTORIAL_BIGHINT_HIDE2_TEXT1_INFO"/>
+        </entry>
+        <entry imagepath="Gui/TutorialExplanations/TUTORIAL_HIDE_T3_2" scale="1.2">
+            <content title="@TUTORIAL_BIGHINT_HIDE2_TEXT2_TITLE" text="@TUTORIAL_BIGHINT_HIDE2_TEXT2_INFO"/>
+        </entry>
+    </hint>
+    
+    <!-- JOURNAL - ECONOMY - BUYING/SELLING ITEMS -->
+    <hint uniquename="JOURNAL_MARKETPLACE_INFO" explanation="VerticalTemplate" title="@TUTORIAL_MARKETPLACE_MAIN_TITLE"
+          nexthint="BUYING_SELLING_ITEMS_INFO">
+        <entry imagepath="Gui/TutorialExplanations/TutorialMarketplace1" scale="1.2">
+            <content title="@TUTORIAL_MARKETPLACE_MAIN_FIRST_TITLE" text="@TUTORIAL_MARKETPLACE_MAIN_FIRST_TEXT"/>
+        </entry>
+        <entry imagepath="Gui/TutorialExplanations/TutorialMarketplace2" scale="1.2">
+            <content title="@TUTORIAL_MARKETPLACE_MAIN_SECOND_TITLE" text="@TUTORIAL_MARKETPLACE_MAIN_SECOND_TEXT"/>
+        </entry>
+    </hint>
+    <hint uniquename="BUYING_SELLING_ITEMS_INFO" explanation="VerticalTemplate" title="@TUTORIAL_MARKETPLACE_TRADING_TITLE">
+        <entry imagepath="Gui/TutorialExplanations/TutorialMarketplace3" scale="1.2">
+            <content title="@TUTORIAL_MARKETPLACE_TRADING_BUY_TITLE" text="@TUTORIAL_MARKETPLACE_TRADING_BUY_TEXT"/>
+        </entry>
+        <entry imagepath="Gui/TutorialExplanations/TutorialMarketplace4" scale="1.2">
+            <content title="@TUTORIAL_MARKETPLACE_TRADING_SELL_TITLE" text="@TUTORIAL_MARKETPLACE_TRADING_SELL_TEXT"/>
+        </entry>
+    </hint>
+
+    <!-- JOURNAL - ECONOMY - CRAFTING -->
+    <hint uniquename="JOURNAL_CRAFTING_INFO"
+          explanation="VerticalTemplate"
+          title="@TUTORIAL_BIGHINT_CRAFTING_TITLE"
+          nexthint="LOCAL_PRODUCTION_INFO">
+        <entry imagepath="Gui/TutorialExplanations/TUTORIAL_CRAFTING" scale="2">
+            <content title="@TUTORIAL_BIGHINT_CRAFTING_TEXT1_TITLE" text="@TUTORIAL_BIGHINT_CRAFTING_TEXT1_INFO"/>
+        </entry>
+    </hint>
+
+    <!-- JOURNAL - ECONOMY - ACCUMULATE WEALTH -->
+    <hint uniquename="JOURNAL_WEALTH_MARKETPLACE_INFO"
+          explanation="VerticalTemplate"
+          title="@TUTORIAL_MARKETPLACE_MAIN_TITLE"
+          nexthint="JOURNAL_WEALTH_MARKETPLACE_TRADING_INFO">
+        <entry imagepath="Gui/TutorialExplanations/TutorialMarketplace1" scale="1.2">
+            <content title="@TUTORIAL_MARKETPLACE_MAIN_FIRST_TITLE" text="@TUTORIAL_MARKETPLACE_MAIN_FIRST_TEXT"/>
+        </entry>
+        <entry imagepath="Gui/TutorialExplanations/TutorialMarketplace2" scale="1.2">
+            <content title="@TUTORIAL_MARKETPLACE_MAIN_SECOND_TITLE" text="@TUTORIAL_MARKETPLACE_MAIN_SECOND_TEXT"/>
+        </entry>
+    </hint>
+    <hint uniquename="JOURNAL_WEALTH_MARKETPLACE_TRADING_INFO"
+          explanation="VerticalTemplate"
+          title="@TUTORIAL_MARKETPLACE_TRADING_TITLE"
+          nexthint="JOURNAL_WEALTH_MARKETPLACE_ORDERS_GENERAL_INFO">
+        <entry imagepath="Gui/TutorialExplanations/TutorialMarketplace3" scale="1.2">
+            <content title="@TUTORIAL_MARKETPLACE_TRADING_BUY_TITLE" text="@TUTORIAL_MARKETPLACE_TRADING_BUY_TEXT"/>
+        </entry>
+        <entry imagepath="Gui/TutorialExplanations/TutorialMarketplace4" scale="1.2">
+            <content title="@TUTORIAL_MARKETPLACE_TRADING_SELL_TITLE" text="@TUTORIAL_MARKETPLACE_TRADING_SELL_TEXT"/>
+        </entry>
+    </hint>
+    <hint uniquename="JOURNAL_WEALTH_MARKETPLACE_ORDERS_GENERAL_INFO"
+          explanation="VerticalTemplate"
+          title="@TUTORIAL_MARKETPLACE_ORDERS_TITLE"
+          nexthint="JOURNAL_WEALTH_MARKETPLACE_ORDERS_INFO">
+        <entry imagepath="Gui/TutorialExplanations/TutorialMarketplace5" scale="2.1">
+            <content title="@TUTORIAL_MARKETPLACE_ORDERS_GENERAL_TITLE"
+                     text="@TUTORIAL_MARKETPLACE_ORDERS_GENERAL_TEXT"/>
+        </entry>
+    </hint>
+    <hint uniquename="JOURNAL_WEALTH_MARKETPLACE_ORDERS_INFO"
+          explanation="VerticalTemplate"
+          title="@TUTORIAL_MARKETPLACE_ORDERS_TITLE"
+          nexthint="JOURNAL_BLACK_MARKET_INFO">
+        <entry imagepath="Gui/TutorialExplanations/TutorialMarketplace6" scale="1.2">
+            <content title="@TUTORIAL_MARKETPLACE_ORDERS_BUY_TITLE" text="@TUTORIAL_MARKETPLACE_ORDERS_BUY_TEXT"/>
+        </entry>
+        <entry imagepath="Gui/TutorialExplanations/TutorialMarketplace7" scale="1.2">
+            <content title="@TUTORIAL_MARKETPLACE_ORDERS_SELL_TITLE" text="@TUTORIAL_MARKETPLACE_ORDERS_SELL_TEXT"/>
+        </entry>
+    </hint>
+    <hint uniquename="JOURNAL_BLACK_MARKET_INFO"
+          explanation="VerticalTemplate"
+          title="@TUTORIAL_BLACK_MARKET_TITLE">
+        <entry imagepath="Gui/TutorialExplanations/TutorialBlackmarket1" scale="1.2">
+            <content title="@TUTORIAL_BLACK_MARKET_WHAT_TITLE" text="@TUTORIAL_BLACK_MARKET_WHAT_TEXT"/>
+        </entry>
+        <entry imagepath="Gui/TutorialExplanations/TutorialBlackmarket2" scale="1.2">
+            <content title="@TUTORIAL_BLACK_MARKET_HOW_TITLE" text="@TUTORIAL_BLACK_MARKET_HOW_TEXT"/>
+        </entry>
+    </hint>
+
+    <!-- JOURNAL: Corrupted Dungeons  -->
+    <hint uniquename="JOURNAL_CORRUPTED_DUNGEON_INFO" explanation="VerticalTemplate" title="@CORRUPTED_DUNGEON_TUTORIAL_TITLE">
+        <entry imagepath="Gui/TutorialExplanations/TutorialCorruptedDungeonsPVE" scale="1.2">
+            <content title="@CORRUPTED_DUNGEON_TUTORIAL_SUB_TITLE_PVE" text="@CORRUPTED_DUNGEON_TUTORIAL_CONTENT_PVE"/>
+        </entry>
+        <entry imagepath="Gui/TutorialExplanations/TutorialCorruptedDungeonsPVP" scale="1.2">
+            <content title="@CORRUPTED_DUNGEON_TUTORIAL_SUB_TITLE_PVP" text="@CORRUPTED_DUNGEON_TUTORIAL_CONTENT_PVP"/>
+        </entry>
+    </hint>
+
+    <!-- JOURNAL: PvP Zones -->
+    <hint uniquename="JOURNAL_YELLOW_ZONE_INFO" 
+          explanation="VerticalTemplate" 
+          title="@TUTORIAL_PVP_YELLOW_TITLE"
+          nexthint="JOURNAL_RED_ZONE_INFO">
+        <entry imagepath="Gui/TutorialExplanations/TutorialKnockdown" scale="1">
+            <content title="@TUTORIAL_PVP_YELLOW_NONLETHAL_TITLE" text="@TUTORIAL_PVP_YELLOW_NONLETHAL_TEXT"/>
+        </entry>
+        <entry imagepath="Gui/TutorialExplanations/TutorialYellowHelp" scale="1">
+            <content title="@TUTORIAL_PVP_YELLOW_HELP_TITLE" text="@TUTORIAL_PVP_YELLOW_HELP_TEXT"/>
+            <button text="@TUTORIAL_SURVIVAL_TIPS_BUTTON" openshint="SURVIVAL_TIPS_INFO" alignment="right"/>
+        </entry>
+    </hint>
+    <hint uniquename="JOURNAL_RED_ZONE_INFO" 
+          explanation="VerticalTemplate"
+          title="@TUTORIAL_PVP_RED_TITLE"
+          nexthint="JOURNAL_BLACK_ZONE_INFO">
+        <entry imagepath="Gui/TutorialExplanations/TutorialYouDied" scale="1">
+            <content title="@TUTORIAL_PVP_RED_LETHAL_TITLE" text="@TUTORIAL_PVP_RED_LETHAL_TEXT"/>
+        </entry>
+        <entry imagepath="Gui/TutorialExplanations/TutorialRedHelp" scale="1">
+            <content title="@TUTORIAL_PVP_RED_HELP_TITLE" text="@TUTORIAL_PVP_RED_HELP_TEXT"/>
+            <button text="@TUTORIAL_SURVIVAL_TIPS_BUTTON" openshint="SURVIVAL_TIPS_INFO" alignment="right"/>
+        </entry>
+    </hint>
+    <hint uniquename="JOURNAL_BLACK_ZONE_INFO"
+          explanation="VerticalTemplate"
+          title="@TUTORIAL_PVP_BLACK_TITLE">
+        <entry imagepath="Gui/TutorialExplanations/TutorialYouDied" scale="1">
+            <content title="@TUTORIAL_PVP_BLACK_LETHAL_TITLE" text="@TUTORIAL_PVP_BLACK_LETHAL_TEXT"/>
+        </entry>
+        <entry imagepath="Gui/TutorialExplanations/TutorialBlackHelp" scale="1">
+            <content title="@TUTORIAL_PVP_BLACK_HELP_TITLE" text="@TUTORIAL_PVP_BLACK_HELP_TEXT"/>
+            <button text="@TUTORIAL_SURVIVAL_TIPS_BUTTON" openshint="SURVIVAL_TIPS_INFO" alignment="right"/>
+        </entry>
+    </hint>
+    
 	<!-- Beta Welcome Europe-->
     <texthint uniquename="BETA_WELCOME_EUROPE" explanation="TextOnlyTemplate" title="@ASIA_BETA_WELCOME_POPUP_TITLE">
         <label text="@ASIA_BETA_WELCOME_POPUP_TEXT_1"/>

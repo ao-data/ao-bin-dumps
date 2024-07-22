@@ -3749,7 +3749,2337 @@
         </questblock>
       </mainquests>
     </hunt>
+    <!--****************************************************-->
+    <!--Hunts for Roads-->
+    <!--****************************************************-->
+    <!--roads generic solo hunt-->
+    <hunt uniquename="ROADS_GENERAL_SOLO"
+          type="solo"
+          namelocatag="@HUNT_GENERAL_SOLO"
+          namelocatagwithtarget="@HUNT_GENERAL_SOLO_WITH_TARGET"
+          groupsizemin="1"
+          groupsizemax="3"
+          initialfinalquestchance="0.3"
+          defaultchancechangeonsuccess="0.018"
+          defaultchancechangeonfailure="0"
+          minquestsuntilfinalquest="0"
+          maxquestsuntilfinalquest="100"
+          maxclusterdistance="3"
+          trackingtime="18"
+          >
+      <variables>
+        <float name="HP_TARGET" value="1.0"/>
+        <location name="TARGET_LOCATION"/>
+        <locationhistory name="LOCATION_HISTORY" historymaxsize="10" hidefromclient="true" initwithhuntstartposition="true"/>
+      </variables>
+
+      <finalquests>
+        <quest weight="1" name="FINAL_SOLO_SIMPLE" chancechangeonfailure="1" />
+      </finalquests>
+
+      <mainquests>
+        <!--base chance increase-->
+        <questblock>
+          <conditions>
+            <ifquestcount op="less" type="all" value="5"/>
+          </conditions>
+          <!--..........................................-->
+          <quest weight="6" name="MAIN_GOTO_SHORT_MEDIUM_RING">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+
+          <!--..........................................-->
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_2">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_3">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+
+          <!--..........................................-->
+          <quest weight="15" name="MAIN_SOLO_SHORT_ESCAPE_TIME">
+            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.5"/>
+          </quest>
+        </questblock>
+        <!--2x base chance increase, no more long range quests-->
+        <questblock>
+          <conditions>
+            <ifquestcount op="greaterorequal" type="all" value="5"/>
+            <ifquestcount op="less" type="all" value="10"/>
+          </conditions>
+          <!--..........................................-->
+          <quest weight="6" name="MAIN_GOTO_SHORT_MEDIUM_RING" chancechangeonsuccess="0.036">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_1" chancechangeonsuccess="0.036">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_2" chancechangeonsuccess="0.036">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_3" chancechangeonsuccess="0.036">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="15" name="MAIN_SOLO_SHORT_ESCAPE_TIME" chancechangeonsuccess="0.036">
+            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.5"/>
+          </quest>
+        </questblock>
+        <!--100% chance increase-->
+        <questblock>
+          <conditions>
+            <ifquestcount op="greaterorequal" type="all" value="10"/>
+          </conditions>
+          <!--..........................................-->
+          <quest weight="6" name="MAIN_GOTO_SHORT_MEDIUM_RING" chancechangeonsuccess="1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_1" chancechangeonsuccess="1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_2" chancechangeonsuccess="1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_3" chancechangeonsuccess="1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="15" name="MAIN_SOLO_SHORT_ESCAPE_TIME" chancechangeonsuccess="1">
+            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.5"/>
+          </quest>
+        </questblock>
+      </mainquests>
+    </hunt>
+
+    <!--roads specific solo hunt-->    
+    <hunt uniquename="ROADS_WEREWOLF_SOLO"
+          type="solo"
+          namelocatag="@HUNT_GENERAL_SOLO"
+          namelocatagwithtarget="@HUNT_GENERAL_SOLO_WITH_TARGET"
+          groupsizemin="1"
+          groupsizemax="3"
+          initialfinalquestchance="0.2"
+          defaultchancechangeonsuccess="0.015"
+          defaultchancechangeonfailure="0"
+          minquestsuntilfinalquest="0"
+          maxquestsuntilfinalquest="100"
+          maxclusterdistance="3"
+          trackingtime="18"
+          >
+      <variables>
+        <float name="HP_TARGET" value="1.0"/>
+        <location name="TARGET_LOCATION"/>
+        <locationhistory name="LOCATION_HISTORY" historymaxsize="10" hidefromclient="true" initwithhuntstartposition="true"/>
+      </variables>
+
+      <finalquests>
+        <quest weight="1" name="FINAL_SOLO_SIMPLE" chancechangeonfailure="1" />
+      </finalquests>
+
+      <mainquests>
+        <!--base chance increase-->
+        <questblock>
+          <conditions>
+            <ifquestcount op="less" type="all" value="5"/>
+          </conditions>
+          <!--..........................................-->
+          <quest weight="6" name="MAIN_GOTO_SHORT_MEDIUM_RING">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+
+          <!--..........................................-->
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_2">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_3">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+
+          <!--..........................................-->
+          <quest weight="15" name="MAIN_SOLO_SHORT_ESCAPE_TIME">
+            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.5"/>
+          </quest>
+          <quest weight="7" name="MAIN_SOLO_LONG_ESCAPE_TIME" chancechangeonsuccess="0.02">
+            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.5"/>
+          </quest>          
+        </questblock>
+        <!--2x base chance increase, no more long range quests-->
+        <questblock>
+          <conditions>
+            <ifquestcount op="greaterorequal" type="all" value="5"/>
+            <ifquestcount op="less" type="all" value="10"/>
+          </conditions>
+          <!--..........................................-->
+          <quest weight="6" name="MAIN_GOTO_SHORT_MEDIUM_RING" chancechangeonsuccess="0.03">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_1" chancechangeonsuccess="0.03">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_2" chancechangeonsuccess="0.03">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_3" chancechangeonsuccess="0.03">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="15" name="MAIN_SOLO_SHORT_ESCAPE_TIME" chancechangeonsuccess="0.03">
+            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.5"/>
+          </quest>
+        </questblock>
+        <!--4x base chance increase-->
+        <questblock>
+          <conditions>
+            <ifquestcount op="greaterorequal" type="all" value="10"/>
+            <ifquestcount op="less" type="all" value="12"/>
+          </conditions>
+          <!--..........................................-->
+          <quest weight="6" name="MAIN_GOTO_SHORT_MEDIUM_RING" chancechangeonsuccess="0.06">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_1" chancechangeonsuccess="0.06">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_2" chancechangeonsuccess="0.06">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_3" chancechangeonsuccess="0.06">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="15" name="MAIN_SOLO_SHORT_ESCAPE_TIME" chancechangeonsuccess="0.06">
+            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.5"/>
+          </quest>
+        </questblock>
+        <!--100% chance increase-->
+        <questblock>
+          <conditions>
+            <ifquestcount op="greaterorequal" type="all" value="12"/>
+          </conditions>
+          <!--..........................................-->
+          <quest weight="6" name="MAIN_GOTO_SHORT_MEDIUM_RING" chancechangeonsuccess="1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_1" chancechangeonsuccess="1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_2" chancechangeonsuccess="1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_3" chancechangeonsuccess="1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="15" name="MAIN_SOLO_SHORT_ESCAPE_TIME" chancechangeonsuccess="1">
+            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.5"/>
+          </quest>
+          <!--
+          <quest weight="15" name="MAIN_SOLO_SHORT_ESCAPE_80" chancechangeonsuccess="1">
+            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.9"/>
+          </quest>
+          <quest weight="15" name="MAIN_SOLO_SHORT_ESCAPE_60" chancechangeonsuccess="1">
+            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.7"/>
+            <ifvarfloat variablename="HP_TARGET" op="lessorequal" value="0.9"/>
+          </quest>
+          <quest weight="15" name="MAIN_SOLO_SHORT_ESCAPE_40" chancechangeonsuccess="1">
+            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.5"/>
+            <ifvarfloat variablename="HP_TARGET" op="lessorequal" value="0.7"/>
+          </quest>
+          -->
+        </questblock>
+      </mainquests>
+    </hunt>
+    <hunt uniquename="ROADS_IMP_SOLO"
+          type="solo"
+          namelocatag="@HUNT_GENERAL_SOLO"
+          namelocatagwithtarget="@HUNT_GENERAL_SOLO_WITH_TARGET"
+          groupsizemin="1"
+          groupsizemax="3"
+          initialfinalquestchance="0.16"
+          defaultchancechangeonsuccess="0.012"
+          defaultchancechangeonfailure="0"
+          minquestsuntilfinalquest="0"
+          maxquestsuntilfinalquest="100"
+          maxclusterdistance="3"
+          trackingtime="18"
+          >
+      <variables>
+        <float name="HP_TARGET" value="1.0"/>
+        <location name="TARGET_LOCATION"/>
+        <locationhistory name="LOCATION_HISTORY" historymaxsize="10" hidefromclient="true" initwithhuntstartposition="true"/>
+      </variables>
+
+      <finalquests>
+        <quest weight="1" name="FINAL_SOLO_SIMPLE" chancechangeonfailure="1" />
+      </finalquests>
+
+      <mainquests>
+        <!--base chance increase-->
+        <questblock>
+          <conditions>
+            <ifquestcount op="less" type="all" value="5"/>
+          </conditions>
+          <!--..........................................-->
+          <quest weight="6" name="MAIN_GOTO_SHORT_MEDIUM_RING">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+
+          <!--..........................................-->
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_2">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_3">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+
+          <!--..........................................-->
+          <quest weight="15" name="MAIN_SOLO_SHORT_ESCAPE_TIME">
+            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.5"/>
+          </quest>
+          <quest weight="7" name="MAIN_SOLO_LONG_ESCAPE_TIME" chancechangeonsuccess="0.016">
+            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.5"/>
+          </quest>
+        </questblock>
+        <!--2x base chance increase, no more long range quests-->
+        <questblock>
+          <conditions>
+            <ifquestcount op="greaterorequal" type="all" value="5"/>
+            <ifquestcount op="less" type="all" value="10"/>
+          </conditions>
+          <!--..........................................-->
+          <quest weight="6" name="MAIN_GOTO_SHORT_MEDIUM_RING" chancechangeonsuccess="0.024">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_1" chancechangeonsuccess="0.024">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_2" chancechangeonsuccess="0.024">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_3" chancechangeonsuccess="0.024">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="15" name="MAIN_SOLO_SHORT_ESCAPE_TIME" chancechangeonsuccess="0.024">
+            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.5"/>
+          </quest>
+        </questblock>
+        <!--4x base chance increase-->
+        <questblock>
+          <conditions>
+            <ifquestcount op="greaterorequal" type="all" value="10"/>
+            <ifquestcount op="less" type="all" value="12"/>
+          </conditions>
+          <!--..........................................-->
+          <quest weight="6" name="MAIN_GOTO_SHORT_MEDIUM_RING" chancechangeonsuccess="0.048">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_1" chancechangeonsuccess="0.048">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_2" chancechangeonsuccess="0.048">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_3" chancechangeonsuccess="0.048">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="15" name="MAIN_SOLO_SHORT_ESCAPE_TIME" chancechangeonsuccess="0.048">
+            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.5"/>
+          </quest>
+        </questblock>
+        <!--100% chance increase-->
+        <questblock>
+          <conditions>
+            <ifquestcount op="greaterorequal" type="all" value="12"/>
+          </conditions>
+          <!--..........................................-->
+          <quest weight="6" name="MAIN_GOTO_SHORT_MEDIUM_RING" chancechangeonsuccess="1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_1" chancechangeonsuccess="1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_2" chancechangeonsuccess="1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_3" chancechangeonsuccess="1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="15" name="MAIN_SOLO_SHORT_ESCAPE_TIME" chancechangeonsuccess="1">
+            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.5"/>
+          </quest>
+        </questblock>
+      </mainquests>
+    </hunt>
+    <hunt uniquename="ROADS_ELEMENTAL_SOLO"
+          type="solo"
+          namelocatag="@HUNT_GENERAL_SOLO"
+          namelocatagwithtarget="@HUNT_GENERAL_SOLO_WITH_TARGET"
+          groupsizemin="1"
+          groupsizemax="3"
+          initialfinalquestchance="0.15"
+          defaultchancechangeonsuccess="0.01"
+          defaultchancechangeonfailure="0"
+          minquestsuntilfinalquest="0"
+          maxquestsuntilfinalquest="100"
+          maxclusterdistance="3"
+          trackingtime="18"
+          >
+      <variables>
+        <float name="HP_TARGET" value="1.0"/>
+        <location name="TARGET_LOCATION"/>
+        <locationhistory name="LOCATION_HISTORY" historymaxsize="10" hidefromclient="true" initwithhuntstartposition="true"/>
+      </variables>
+
+      <finalquests>
+        <quest weight="1" name="FINAL_SOLO_SIMPLE" chancechangeonfailure="1" />
+      </finalquests>
+
+      <mainquests>
+        <!--base chance increase-->
+        <questblock>
+          <conditions>
+            <ifquestcount op="less" type="all" value="5"/>
+          </conditions>
+          <!--..........................................-->
+          <quest weight="6" name="MAIN_GOTO_SHORT_MEDIUM_RING">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_2">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_3">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="15" name="MAIN_SOLO_SHORT_ESCAPE_TIME">
+            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.5"/>
+          </quest>
+          <quest weight="7" name="MAIN_SOLO_LONG_ESCAPE_TIME" chancechangeonsuccess="0.012">
+            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.5"/>
+          </quest>          
+        </questblock>
+        <!--2x base chance increase, no more long range quests-->
+        <questblock>
+          <conditions>
+            <ifquestcount op="greaterorequal" type="all" value="5"/>
+            <ifquestcount op="less" type="all" value="10"/>
+          </conditions>
+          <!--..........................................-->
+          <quest weight="6" name="MAIN_GOTO_SHORT_MEDIUM_RING" chancechangeonsuccess="0.02">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_1" chancechangeonsuccess="0.02">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_2" chancechangeonsuccess="0.02">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_3" chancechangeonsuccess="0.02">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="15" name="MAIN_SOLO_SHORT_ESCAPE_TIME" chancechangeonsuccess="0.02">
+            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.5"/>
+          </quest>          
+        </questblock>
+        <!--4x base chance increase-->
+        <questblock>
+          <conditions>
+            <ifquestcount op="greaterorequal" type="all" value="10"/>
+            <ifquestcount op="less" type="all" value="12"/>
+          </conditions>
+          <!--..........................................-->
+          <quest weight="6" name="MAIN_GOTO_SHORT_MEDIUM_RING" chancechangeonsuccess="0.04">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_1" chancechangeonsuccess="0.04">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_2" chancechangeonsuccess="0.04">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_3" chancechangeonsuccess="0.04">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="15" name="MAIN_SOLO_SHORT_ESCAPE_TIME" chancechangeonsuccess="0.04">
+            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.5"/>
+          </quest>          
+        </questblock>
+        <!--100% chance increase-->
+        <questblock>
+          <conditions>
+            <ifquestcount op="greaterorequal" type="all" value="12"/>
+          </conditions>
+          <!--..........................................-->
+          <quest weight="6" name="MAIN_GOTO_SHORT_MEDIUM_RING" chancechangeonsuccess="1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_1" chancechangeonsuccess="1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_2" chancechangeonsuccess="1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_3" chancechangeonsuccess="1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="15" name="MAIN_SOLO_SHORT_ESCAPE_TIME" chancechangeonsuccess="1">
+            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.5"/>
+          </quest>          
+        </questblock>
+      </mainquests>
+    </hunt>
+    <hunt uniquename="ROADS_EAGLE_SOLO"
+          type="solo"
+          namelocatag="@HUNT_GENERAL_SOLO"
+          namelocatagwithtarget="@HUNT_GENERAL_SOLO_WITH_TARGET"
+          groupsizemin="1"
+          groupsizemax="3"
+          initialfinalquestchance="0.15"
+          defaultchancechangeonsuccess="0.009"
+          defaultchancechangeonfailure="0"
+          minquestsuntilfinalquest="0"
+          maxquestsuntilfinalquest="100"
+          maxclusterdistance="3"
+          trackingtime="18"
+          >
+      <variables>
+        <float name="HP_TARGET" value="1.0"/>
+        <location name="TARGET_LOCATION"/>
+        <locationhistory name="LOCATION_HISTORY" historymaxsize="10" hidefromclient="true" initwithhuntstartposition="true"/>
+      </variables>
+
+      <finalquests>
+        <quest weight="1" name="FINAL_SOLO_SIMPLE" chancechangeonfailure="1" />
+      </finalquests>
+
+      <mainquests>
+        <!--base chance increase-->
+        <questblock>
+          <conditions>
+            <ifquestcount op="less" type="all" value="5"/>
+          </conditions>
+          <!--..........................................-->
+          <quest weight="6" name="MAIN_GOTO_SHORT_MEDIUM_RING">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_2">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_3">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="15" name="MAIN_SOLO_SHORT_ESCAPE_TIME">
+            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.5"/>
+          </quest>         
+        </questblock>
+        <!--2x base chance increase, no more long range quests-->
+        <questblock>
+          <conditions>
+            <ifquestcount op="greaterorequal" type="all" value="5"/>
+            <ifquestcount op="less" type="all" value="10"/>
+          </conditions>
+          <!--..........................................-->
+          <quest weight="6" name="MAIN_GOTO_SHORT_MEDIUM_RING" chancechangeonsuccess="0.018">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_1" chancechangeonsuccess="0.018">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_2" chancechangeonsuccess="0.018">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_3" chancechangeonsuccess="0.018">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="15" name="MAIN_SOLO_SHORT_ESCAPE_TIME" chancechangeonsuccess="0.018">
+            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.5"/>
+          </quest>
+        </questblock>
+        <!--4x base chance increase-->
+        <questblock>
+          <conditions>
+            <ifquestcount op="greaterorequal" type="all" value="10"/>
+            <ifquestcount op="less" type="all" value="12"/>
+          </conditions>
+          <!--..........................................-->
+          <quest weight="6" name="MAIN_GOTO_SHORT_MEDIUM_RING" chancechangeonsuccess="0.036">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_1" chancechangeonsuccess="0.036">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_2" chancechangeonsuccess="0.036">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_3" chancechangeonsuccess="0.036">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="15" name="MAIN_SOLO_SHORT_ESCAPE_TIME" chancechangeonsuccess="0.036">
+            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.5"/>
+          </quest>
+        </questblock>
+        <!--100% chance increase-->
+        <questblock>
+          <conditions>
+            <ifquestcount op="greaterorequal" type="all" value="12"/>
+          </conditions>
+          <!--..........................................-->
+          <quest weight="6" name="MAIN_GOTO_SHORT_MEDIUM_RING" chancechangeonsuccess="1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_1" chancechangeonsuccess="1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_2" chancechangeonsuccess="1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_3" chancechangeonsuccess="1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="15" name="MAIN_SOLO_SHORT_ESCAPE_TIME" chancechangeonsuccess="1">
+            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.5"/>
+          </quest>
+        </questblock>
+      </mainquests>
+    </hunt>
+
+    <!--roads silver hunts-->
+    <hunt uniquename="ROADS_SILVER_SOLO_T4"
+          type="solo"
+          namelocatag="@HUNT_GENERAL_SOLO"
+          namelocatagwithtarget="@HUNT_GENERAL_SOLO_WITH_TARGET"
+          groupsizemin="1"
+          groupsizemax="3"
+          initialfinalquestchance="0.3"
+          defaultchancechangeonsuccess="0.018"
+          defaultchancechangeonfailure="0"
+          minquestsuntilfinalquest="0"
+          maxquestsuntilfinalquest="100"
+          maxclusterdistance="3"
+          trackingtime="18"
+          >
+      <variables>
+        <float name="HP_TARGET" value="1.0"/>
+        <location name="TARGET_LOCATION"/>
+        <locationhistory name="LOCATION_HISTORY" historymaxsize="10" hidefromclient="true" initwithhuntstartposition="true"/>
+      </variables>
+
+      <finalquests>
+        <quest weight="1" name="FINAL_SOLO_SIMPLE" chancechangeonfailure="1" />
+      </finalquests>
+
+      <mainquests>
+        <!--base chance increase-->
+        <questblock>
+          <conditions>
+            <ifquestcount op="less" type="all" value="5"/>
+          </conditions>
+          <!--..........................................-->
+          <quest weight="6" name="MAIN_GOTO_SHORT_MEDIUM_RING">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_2">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_3">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="15" name="MAIN_SOLO_SHORT_ESCAPE_TIME">
+            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.5"/>
+          </quest>
+        </questblock>
+        <!--2x base chance increase, no more long range quests-->
+        <questblock>
+          <conditions>
+            <ifquestcount op="greaterorequal" type="all" value="5"/>
+            <ifquestcount op="less" type="all" value="10"/>
+          </conditions>
+          <!--..........................................-->
+          <quest weight="6" name="MAIN_GOTO_SHORT_MEDIUM_RING" chancechangeonsuccess="0.036">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_1" chancechangeonsuccess="0.036">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_2" chancechangeonsuccess="0.036">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_3" chancechangeonsuccess="0.036">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="15" name="MAIN_SOLO_SHORT_ESCAPE_TIME" chancechangeonsuccess="0.036">
+            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.5"/>
+          </quest>
+        </questblock>
+        <!--100% chance increase-->
+        <questblock>
+          <conditions>
+            <ifquestcount op="greaterorequal" type="all" value="10"/>
+          </conditions>
+          <!--..........................................-->
+          <quest weight="6" name="MAIN_GOTO_SHORT_MEDIUM_RING" chancechangeonsuccess="1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_1" chancechangeonsuccess="1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_2" chancechangeonsuccess="1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_3" chancechangeonsuccess="1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="15" name="MAIN_SOLO_SHORT_ESCAPE_TIME" chancechangeonsuccess="1">
+            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.5"/>
+          </quest>
+        </questblock>
+      </mainquests>
+    </hunt>
+    <hunt uniquename="ROADS_SILVER_SOLO_T5"
+          type="solo"
+          namelocatag="@HUNT_GENERAL_SOLO"
+          namelocatagwithtarget="@HUNT_GENERAL_SOLO_WITH_TARGET"
+          groupsizemin="1"
+          groupsizemax="3"
+          initialfinalquestchance="0.2"
+          defaultchancechangeonsuccess="0.015"
+          defaultchancechangeonfailure="0"
+          minquestsuntilfinalquest="0"
+          maxquestsuntilfinalquest="100"
+          maxclusterdistance="3"
+          trackingtime="18"
+          >
+      <variables>
+        <float name="HP_TARGET" value="1.0"/>
+        <location name="TARGET_LOCATION"/>
+        <locationhistory name="LOCATION_HISTORY" historymaxsize="10" hidefromclient="true" initwithhuntstartposition="true"/>
+      </variables>
+
+      <finalquests>
+        <quest weight="1" name="FINAL_SOLO_SIMPLE" chancechangeonfailure="1" />
+      </finalquests>
+
+      <mainquests>
+        <!--base chance increase-->
+        <questblock>
+          <conditions>
+            <ifquestcount op="less" type="all" value="5"/>
+          </conditions>
+          <!--..........................................-->
+          <quest weight="6" name="MAIN_GOTO_SHORT_MEDIUM_RING">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_2">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_3">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="15" name="MAIN_SOLO_SHORT_ESCAPE_TIME">
+            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.5"/>
+          </quest>
+        </questblock>
+        <!--2x base chance increase, no more long range quests-->
+        <questblock>
+          <conditions>
+            <ifquestcount op="greaterorequal" type="all" value="5"/>
+            <ifquestcount op="less" type="all" value="10"/>
+          </conditions>
+          <!--..........................................-->
+          <quest weight="6" name="MAIN_GOTO_SHORT_MEDIUM_RING" chancechangeonsuccess="0.03">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_1" chancechangeonsuccess="0.03">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_2" chancechangeonsuccess="0.03">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_3" chancechangeonsuccess="0.03">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="15" name="MAIN_SOLO_SHORT_ESCAPE_TIME" chancechangeonsuccess="0.03">
+            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.5"/>
+          </quest>
+        </questblock>
+        <!--100% chance increase-->
+        <questblock>
+          <conditions>
+            <ifquestcount op="greaterorequal" type="all" value="10"/>
+          </conditions>
+          <!--..........................................-->
+          <quest weight="6" name="MAIN_GOTO_SHORT_MEDIUM_RING" chancechangeonsuccess="1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_1" chancechangeonsuccess="1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_2" chancechangeonsuccess="1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_3" chancechangeonsuccess="1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="15" name="MAIN_SOLO_SHORT_ESCAPE_TIME" chancechangeonsuccess="1">
+            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.5"/>
+          </quest>
+        </questblock>
+      </mainquests>
+    </hunt>
+    <hunt uniquename="ROADS_SILVER_SOLO_T6"
+          type="solo"
+          namelocatag="@HUNT_GENERAL_SOLO"
+          namelocatagwithtarget="@HUNT_GENERAL_SOLO_WITH_TARGET"
+          groupsizemin="1"
+          groupsizemax="3"
+          initialfinalquestchance="0.16"
+          defaultchancechangeonsuccess="0.012"
+          defaultchancechangeonfailure="0"
+          minquestsuntilfinalquest="0"
+          maxquestsuntilfinalquest="100"
+          maxclusterdistance="3"
+          trackingtime="18"
+          >
+      <variables>
+        <float name="HP_TARGET" value="1.0"/>
+        <location name="TARGET_LOCATION"/>
+        <locationhistory name="LOCATION_HISTORY" historymaxsize="10" hidefromclient="true" initwithhuntstartposition="true"/>
+      </variables>
+
+      <finalquests>
+        <quest weight="1" name="FINAL_SOLO_SIMPLE" chancechangeonfailure="1" />
+      </finalquests>
+
+      <mainquests>
+        <!--base chance increase-->
+        <questblock>
+          <conditions>
+            <ifquestcount op="less" type="all" value="5"/>
+          </conditions>
+          <!--..........................................-->
+          <quest weight="6" name="MAIN_GOTO_SHORT_MEDIUM_RING">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_2">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_3">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="15" name="MAIN_SOLO_SHORT_ESCAPE_TIME">
+            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.5"/>
+          </quest>
+          <quest weight="7" name="MAIN_SOLO_LONG_ESCAPE_TIME" chancechangeonsuccess="0.022">
+            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.5"/>
+          </quest>
+        </questblock>
+        <!--2x base chance increase, no more long range quests-->
+        <questblock>
+          <conditions>
+            <ifquestcount op="greaterorequal" type="all" value="5"/>
+            <ifquestcount op="less" type="all" value="10"/>
+          </conditions>
+          <!--..........................................-->
+          <quest weight="6" name="MAIN_GOTO_SHORT_MEDIUM_RING" chancechangeonsuccess="0.024">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_1" chancechangeonsuccess="0.024">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_2" chancechangeonsuccess="0.024">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_3" chancechangeonsuccess="0.024">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="15" name="MAIN_SOLO_SHORT_ESCAPE_TIME" chancechangeonsuccess="0.024">
+            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.5"/>
+          </quest>
+        </questblock>
+        <!--100% chance increase-->
+        <questblock>
+          <conditions>
+            <ifquestcount op="greaterorequal" type="all" value="10"/>
+          </conditions>
+          <!--..........................................-->
+          <quest weight="6" name="MAIN_GOTO_SHORT_MEDIUM_RING" chancechangeonsuccess="1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_1" chancechangeonsuccess="1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_2" chancechangeonsuccess="1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_3" chancechangeonsuccess="1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="15" name="MAIN_SOLO_SHORT_ESCAPE_TIME" chancechangeonsuccess="1">
+            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.5"/>
+          </quest>
+        </questblock>
+      </mainquests>
+    </hunt>
+    <hunt uniquename="ROADS_SILVER_SOLO_T7"
+          type="solo"
+          namelocatag="@HUNT_GENERAL_SOLO"
+          namelocatagwithtarget="@HUNT_GENERAL_SOLO_WITH_TARGET"
+          groupsizemin="1"
+          groupsizemax="3"
+          initialfinalquestchance="0.15"
+          defaultchancechangeonsuccess="0.01"
+          defaultchancechangeonfailure="0"
+          minquestsuntilfinalquest="0"
+          maxquestsuntilfinalquest="100"
+          maxclusterdistance="3"
+          trackingtime="18"
+          >
+      <variables>
+        <float name="HP_TARGET" value="1.0"/>
+        <location name="TARGET_LOCATION"/>
+        <locationhistory name="LOCATION_HISTORY" historymaxsize="10" hidefromclient="true" initwithhuntstartposition="true"/>
+      </variables>
+
+      <finalquests>
+        <quest weight="1" name="FINAL_SOLO_SIMPLE" chancechangeonfailure="1" />
+      </finalquests>
+
+      <mainquests>
+        <!--base chance increase-->
+        <questblock>
+          <conditions>
+            <ifquestcount op="less" type="all" value="5"/>
+          </conditions>
+          <!--..........................................-->
+          <quest weight="6" name="MAIN_GOTO_SHORT_MEDIUM_RING">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_2">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_3">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="15" name="MAIN_SOLO_SHORT_ESCAPE_TIME">
+            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.5"/>
+          </quest>
+        </questblock>
+        <!--2x base chance increase, no more long range quests-->
+        <questblock>
+          <conditions>
+            <ifquestcount op="greaterorequal" type="all" value="5"/>
+            <ifquestcount op="less" type="all" value="10"/>
+          </conditions>
+          <!--..........................................-->
+          <quest weight="6" name="MAIN_GOTO_SHORT_MEDIUM_RING" chancechangeonsuccess="0.02">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_1" chancechangeonsuccess="0.02">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_2" chancechangeonsuccess="0.02">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_3" chancechangeonsuccess="0.02">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="15" name="MAIN_SOLO_SHORT_ESCAPE_TIME" chancechangeonsuccess="0.02">
+            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.5"/>
+          </quest>
+        </questblock>
+        <!--100% chance increase-->
+        <questblock>
+          <conditions>
+            <ifquestcount op="greaterorequal" type="all" value="10"/>
+          </conditions>
+          <!--..........................................-->
+          <quest weight="6" name="MAIN_GOTO_SHORT_MEDIUM_RING" chancechangeonsuccess="1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_1" chancechangeonsuccess="1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_2" chancechangeonsuccess="1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_3" chancechangeonsuccess="1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="15" name="MAIN_SOLO_SHORT_ESCAPE_TIME" chancechangeonsuccess="1">
+            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.5"/>
+          </quest>
+        </questblock>
+      </mainquests>
+    </hunt>
+    <hunt uniquename="ROADS_SILVER_SOLO_T8"
+          type="solo"
+          namelocatag="@HUNT_GENERAL_SOLO"
+          namelocatagwithtarget="@HUNT_GENERAL_SOLO_WITH_TARGET"
+          groupsizemin="1"
+          groupsizemax="3"
+          initialfinalquestchance="0.15"
+          defaultchancechangeonsuccess="0.009"
+          defaultchancechangeonfailure="0"
+          minquestsuntilfinalquest="0"
+          maxquestsuntilfinalquest="100"
+          maxclusterdistance="3"
+          trackingtime="18"
+          >
+      <variables>
+        <float name="HP_TARGET" value="1.0"/>
+        <location name="TARGET_LOCATION"/>
+        <locationhistory name="LOCATION_HISTORY" historymaxsize="10" hidefromclient="true" initwithhuntstartposition="true"/>
+      </variables>
+
+      <finalquests>
+        <quest weight="1" name="FINAL_SOLO_SIMPLE" chancechangeonfailure="1" />
+      </finalquests>
+
+      <mainquests>
+        <!--base chance increase-->
+        <questblock>
+          <conditions>
+            <ifquestcount op="less" type="all" value="5"/>
+          </conditions>
+          <!--..........................................-->
+          <quest weight="6" name="MAIN_GOTO_SHORT_MEDIUM_RING">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_2">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_3">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="15" name="MAIN_SOLO_SHORT_ESCAPE_TIME">
+            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.5"/>
+          </quest>
+        </questblock>
+        <!--2x base chance increase, no more long range quests-->
+        <questblock>
+          <conditions>
+            <ifquestcount op="greaterorequal" type="all" value="5"/>
+            <ifquestcount op="less" type="all" value="10"/>
+          </conditions>
+          <!--..........................................-->
+          <quest weight="6" name="MAIN_GOTO_SHORT_MEDIUM_RING" chancechangeonsuccess="0.018">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_1" chancechangeonsuccess="0.018">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_2" chancechangeonsuccess="0.018">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_3" chancechangeonsuccess="0.018">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="15" name="MAIN_SOLO_SHORT_ESCAPE_TIME" chancechangeonsuccess="0.018">
+            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.5"/>
+          </quest>
+        </questblock>
+        <!--100% chance increase-->
+        <questblock>
+          <conditions>
+            <ifquestcount op="greaterorequal" type="all" value="10"/>
+          </conditions>
+          <!--..........................................-->
+          <quest weight="6" name="MAIN_GOTO_SHORT_MEDIUM_RING" chancechangeonsuccess="1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_1" chancechangeonsuccess="1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_2" chancechangeonsuccess="1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_3" chancechangeonsuccess="1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="15" name="MAIN_SOLO_SHORT_ESCAPE_TIME" chancechangeonsuccess="1">
+            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.5"/>
+          </quest>
+        </questblock>
+      </mainquests>
+    </hunt>
+    <!--******************************************-->
+    <!--roads generic group hunt-->
+    <hunt uniquename="ROADS_GENERAL_GROUP"
+          type="group"
+          namelocatag="@HUNT_GENERAL_GROUP"
+          namelocatagwithtarget="@HUNT_GENERAL_GROUP_WITH_TARGET"
+          groupsizemin="4"
+          groupsizemax="8"
+          initialfinalquestchance="0.3"
+          defaultchancechangeonsuccess="0.018"
+          defaultchancechangeonfailure="0"
+          minquestsuntilfinalquest="0"
+          maxquestsuntilfinalquest="100"
+          maxclusterdistance="5"
+          trackingtime="18"
+          >
+      <variables>
+        <float name="HP_TARGET" value="1.0"/>
+        <location name="TARGET_LOCATION"/>
+        <locationhistory name="LOCATION_HISTORY" historymaxsize="10" hidefromclient="true" initwithhuntstartposition="true"/>
+      </variables>
+
+      <finalquests>
+        <quest name="FINAL_GROUP_SIMPLE" weight="1"/>
+      </finalquests>
+
+      <mainquests>
+        <!--base chance increase-->
+        <questblock>
+          <conditions>
+            <ifquestcount type="all" op="less" value="5"/>
+          </conditions>
+          <!--..........................................-->
+          <quest weight="18" name="MAIN_GOTO_SHORT_LARGE_RING">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="3" name="MAIN_GROUP_SHORT_FIGHT_2">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="9" name="MAIN_GROUP_SHORT_FIGHT_3">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="6" name="MAIN_GROUP_SHORT_FIGHT_4">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="72" name="MAIN_GROUP_SHORT_ESCAPE_TIME">
+            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.5"/>
+          </quest>         
+        </questblock>
+        <!--2x chance increase, no more long quests-->
+        <questblock>
+          <conditions>
+            <ifquestcount type="all" op="greaterorequal" value="5"/>
+            <ifquestcount type="all" op="less" value="12"/>
+          </conditions>
+          <!--..........................................-->
+          <quest weight="18" name="MAIN_GOTO_SHORT_LARGE_RING" chancechangeonsuccess="0.036">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="3" name="MAIN_GROUP_SHORT_FIGHT_2" chancechangeonsuccess="0.036">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="9" name="MAIN_GROUP_SHORT_FIGHT_3" chancechangeonsuccess="0.036">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="6" name="MAIN_GROUP_SHORT_FIGHT_4" chancechangeonsuccess="0.036">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="72" name="MAIN_GROUP_SHORT_ESCAPE_TIME" chancechangeonsuccess="0.036">
+            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.5"/>
+          </quest>          
+        </questblock>
+        <!--100% chance-->
+        <questblock>
+          <conditions>
+            <ifquestcount type="all" op="greaterorequal" value="12"/>
+          </conditions>
+          <!--..........................................-->
+          <quest weight="18" name="MAIN_GOTO_SHORT_LARGE_RING" chancechangeonsuccess="1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="3" name="MAIN_GROUP_SHORT_FIGHT_2" chancechangeonsuccess="1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="9" name="MAIN_GROUP_SHORT_FIGHT_3" chancechangeonsuccess="1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="6" name="MAIN_GROUP_SHORT_FIGHT_4" chancechangeonsuccess="1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="72" name="MAIN_GROUP_SHORT_ESCAPE_TIME" chancechangeonsuccess="1">
+            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.5"/>
+          </quest>
+        </questblock>
+      </mainquests>
+    </hunt>
+    <!--roads generic group hunt-->    
+    <hunt uniquename="ROADS_WEREWOLF_GROUP"
+          type="group"
+          namelocatag="@HUNT_GENERAL_GROUP"
+          namelocatagwithtarget="@HUNT_GENERAL_GROUP_WITH_TARGET"
+          groupsizemin="4"
+          groupsizemax="8"
+          initialfinalquestchance="0.2"
+          defaultchancechangeonsuccess="0.015"
+          defaultchancechangeonfailure="0"
+          minquestsuntilfinalquest="0"
+          maxquestsuntilfinalquest="100"
+          maxclusterdistance="5"
+          trackingtime="18"
+          >
+      <variables>
+        <float name="HP_TARGET" value="1.0"/>
+        <location name="TARGET_LOCATION"/>
+        <locationhistory name="LOCATION_HISTORY" historymaxsize="10" hidefromclient="true" initwithhuntstartposition="true"/>
+      </variables>
+
+      <finalquests>
+        <quest name="FINAL_GROUP_SIMPLE" weight="1"/>
+      </finalquests>
+
+      <mainquests>
+        <!--base chance increase-->
+        <questblock>
+          <conditions>
+            <ifquestcount type="all" op="less" value="5"/>
+          </conditions>
+          <!--..........................................-->
+          <quest weight="18" name="MAIN_GOTO_SHORT_LARGE_RING">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="3" name="MAIN_GROUP_SHORT_FIGHT_2">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="9" name="MAIN_GROUP_SHORT_FIGHT_3">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="6" name="MAIN_GROUP_SHORT_FIGHT_4">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="72" name="MAIN_GROUP_SHORT_ESCAPE_TIME">
+            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.5"/>
+          </quest>       
+        </questblock>
+        <!--2x chance increase, no more long quests-->
+        <questblock>
+          <conditions>
+            <ifquestcount type="all" op="greaterorequal" value="5"/>
+            <ifquestcount type="all" op="less" value="10"/>
+          </conditions>
+          <!--..........................................-->
+          <quest weight="18" name="MAIN_GOTO_SHORT_LARGE_RING" chancechangeonsuccess="0.03">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="3" name="MAIN_GROUP_SHORT_FIGHT_2" chancechangeonsuccess="0.03">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="9" name="MAIN_GROUP_SHORT_FIGHT_3" chancechangeonsuccess="0.03">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="6" name="MAIN_GROUP_SHORT_FIGHT_4" chancechangeonsuccess="0.03">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="72" name="MAIN_GROUP_SHORT_ESCAPE_TIME" chancechangeonsuccess="0.03">
+            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.5"/>
+          </quest>          
+        </questblock>
+        <!--4x chance increase-->
+        <questblock>
+          <conditions>
+            <ifquestcount type="all" op="greaterorequal" value="10"/>
+            <ifquestcount type="all" op="less" value="13"/>
+          </conditions>
+          <!--..........................................-->
+          <quest weight="18" name="MAIN_GOTO_SHORT_LARGE_RING" chancechangeonsuccess="0.06">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="3" name="MAIN_GROUP_SHORT_FIGHT_2" chancechangeonsuccess="0.06">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="9" name="MAIN_GROUP_SHORT_FIGHT_3" chancechangeonsuccess="0.06">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="6" name="MAIN_GROUP_SHORT_FIGHT_4" chancechangeonsuccess="0.06">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="72" name="MAIN_GROUP_SHORT_ESCAPE_TIME" chancechangeonsuccess="0.06">
+            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.5"/>
+          </quest>          
+        </questblock>
+        <!--100% chance-->
+        <questblock>
+          <conditions>
+            <ifquestcount type="all" op="greaterorequal" value="13"/>
+          </conditions>
+          <!--..........................................-->
+          <quest weight="18" name="MAIN_GOTO_SHORT_LARGE_RING" chancechangeonsuccess="1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="3" name="MAIN_GROUP_SHORT_FIGHT_2" chancechangeonsuccess="1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="9" name="MAIN_GROUP_SHORT_FIGHT_3" chancechangeonsuccess="1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="6" name="MAIN_GROUP_SHORT_FIGHT_4" chancechangeonsuccess="1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="72" name="MAIN_GROUP_SHORT_ESCAPE_TIME" chancechangeonsuccess="1">
+            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.5"/>
+          </quest>          
+        </questblock>
+      </mainquests>
+    </hunt>
+    <hunt uniquename="ROADS_IMP_GROUP"
+          type="group"
+          namelocatag="@HUNT_GENERAL_GROUP"
+          namelocatagwithtarget="@HUNT_GENERAL_GROUP_WITH_TARGET"
+          groupsizemin="4"
+          groupsizemax="8"
+          initialfinalquestchance="0.16"
+          defaultchancechangeonsuccess="0.012"
+          defaultchancechangeonfailure="0"
+          minquestsuntilfinalquest="0"
+          maxquestsuntilfinalquest="100"
+          maxclusterdistance="5"
+          trackingtime="18"
+          >
+      <variables>
+        <float name="HP_TARGET" value="1.0"/>
+        <location name="TARGET_LOCATION"/>
+        <locationhistory name="LOCATION_HISTORY" historymaxsize="10" hidefromclient="true" initwithhuntstartposition="true"/>
+      </variables>
+
+      <finalquests>
+        <quest name="FINAL_GROUP_SIMPLE" weight="1"/>
+      </finalquests>
+
+      <mainquests>
+        <!--base chance increase-->
+        <questblock>
+          <conditions>
+            <ifquestcount type="all" op="less" value="5"/>
+          </conditions>
+          <!--..........................................-->
+          <quest weight="18" name="MAIN_GOTO_SHORT_LARGE_RING">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="3" name="MAIN_GROUP_SHORT_FIGHT_2">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="9" name="MAIN_GROUP_SHORT_FIGHT_3">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="6" name="MAIN_GROUP_SHORT_FIGHT_4">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="72" name="MAIN_GROUP_SHORT_ESCAPE_TIME">
+            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.5"/>
+          </quest>         
+        </questblock>
+        <!--2x chance increase, no more long quests-->
+        <questblock>
+          <conditions>
+            <ifquestcount type="all" op="greaterorequal" value="5"/>
+            <ifquestcount type="all" op="less" value="10"/>
+          </conditions>
+          <!--..........................................-->
+          <quest weight="18" name="MAIN_GOTO_SHORT_LARGE_RING" chancechangeonsuccess="0.024">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+
+          <!--..........................................-->
+          <quest weight="3" name="MAIN_GROUP_SHORT_FIGHT_2" chancechangeonsuccess="0.024">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="9" name="MAIN_GROUP_SHORT_FIGHT_3" chancechangeonsuccess="0.024">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="6" name="MAIN_GROUP_SHORT_FIGHT_4" chancechangeonsuccess="0.024">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="72" name="MAIN_GROUP_SHORT_ESCAPE_TIME" chancechangeonsuccess="0.024">
+            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.5"/>
+          </quest>
+        </questblock>
+        <!--4x chance increase-->
+        <questblock>
+          <conditions>
+            <ifquestcount type="all" op="greaterorequal" value="10"/>
+            <ifquestcount type="all" op="less" value="14"/>
+          </conditions>
+          <!--..........................................-->
+          <quest weight="18" name="MAIN_GOTO_SHORT_LARGE_RING" chancechangeonsuccess="0.048">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="3" name="MAIN_GROUP_SHORT_FIGHT_2" chancechangeonsuccess="0.048">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="9" name="MAIN_GROUP_SHORT_FIGHT_3" chancechangeonsuccess="0.048">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="6" name="MAIN_GROUP_SHORT_FIGHT_4" chancechangeonsuccess="0.048">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="72" name="MAIN_GROUP_SHORT_ESCAPE_TIME" chancechangeonsuccess="0.048">
+            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.5"/>
+          </quest>
+        </questblock>
+        <!--100% chance-->
+        <questblock>
+          <conditions>
+            <ifquestcount type="all" op="greaterorequal" value="14"/>
+          </conditions>
+          <!--..........................................-->
+          <quest weight="18" name="MAIN_GOTO_SHORT_LARGE_RING" chancechangeonsuccess="1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="3" name="MAIN_GROUP_SHORT_FIGHT_2" chancechangeonsuccess="1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="9" name="MAIN_GROUP_SHORT_FIGHT_3" chancechangeonsuccess="1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="6" name="MAIN_GROUP_SHORT_FIGHT_4" chancechangeonsuccess="1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="72" name="MAIN_GROUP_SHORT_ESCAPE_TIME" chancechangeonsuccess="1">
+            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.5"/>
+          </quest>
+        </questblock>
+      </mainquests>
+    </hunt>
+    <hunt uniquename="ROADS_ELEMENTAL_GROUP"
+          type="group"
+          namelocatag="@HUNT_GENERAL_GROUP"
+          namelocatagwithtarget="@HUNT_GENERAL_GROUP_WITH_TARGET"
+          groupsizemin="4"
+          groupsizemax="8"
+          initialfinalquestchance="0.15"
+          defaultchancechangeonsuccess="0.01"
+          defaultchancechangeonfailure="0"
+          minquestsuntilfinalquest="0"
+          maxquestsuntilfinalquest="100"
+          maxclusterdistance="5"
+          trackingtime="18"
+          >
+      <variables>
+        <float name="HP_TARGET" value="1.0"/>
+        <location name="TARGET_LOCATION"/>
+        <locationhistory name="LOCATION_HISTORY" historymaxsize="10" hidefromclient="true" initwithhuntstartposition="true"/>
+      </variables>
+
+      <finalquests>
+        <quest name="FINAL_GROUP_SIMPLE" weight="1"/>
+      </finalquests>
+
+      <mainquests>
+        <!--base chance increase-->
+        <questblock>
+          <conditions>
+            <ifquestcount type="all" op="less" value="5"/>
+          </conditions>
+          <!--..........................................-->
+          <quest weight="18" name="MAIN_GOTO_SHORT_LARGE_RING">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="3" name="MAIN_GROUP_SHORT_FIGHT_2">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="9" name="MAIN_GROUP_SHORT_FIGHT_3">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="6" name="MAIN_GROUP_SHORT_FIGHT_4">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="72" name="MAIN_GROUP_SHORT_ESCAPE_TIME">
+            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.5"/>
+          </quest>
+        </questblock>
+        <!--2x chance increase, no more long quests-->
+        <questblock>
+          <conditions>
+            <ifquestcount type="all" op="greaterorequal" value="5"/>
+            <ifquestcount type="all" op="less" value="10"/>
+          </conditions>
+          <!--..........................................-->
+          <quest weight="18" name="MAIN_GOTO_SHORT_LARGE_RING" chancechangeonsuccess="0.02">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="3" name="MAIN_GROUP_SHORT_FIGHT_2" chancechangeonsuccess="0.02">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="9" name="MAIN_GROUP_SHORT_FIGHT_3" chancechangeonsuccess="0.02">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="6" name="MAIN_GROUP_SHORT_FIGHT_4" chancechangeonsuccess="0.02">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="72" name="MAIN_GROUP_SHORT_ESCAPE_TIME" chancechangeonsuccess="0.02">
+            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.5"/>
+          </quest>
+        </questblock>
+        <!--4x chance increase-->
+        <questblock>
+          <conditions>
+            <ifquestcount type="all" op="greaterorequal" value="10"/>
+            <ifquestcount type="all" op="less" value="14"/>
+          </conditions>
+          <!--..........................................-->
+          <quest weight="18" name="MAIN_GOTO_SHORT_LARGE_RING" chancechangeonsuccess="0.04">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="3" name="MAIN_GROUP_SHORT_FIGHT_2" chancechangeonsuccess="0.04">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="9" name="MAIN_GROUP_SHORT_FIGHT_3" chancechangeonsuccess="0.04">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="6" name="MAIN_GROUP_SHORT_FIGHT_4" chancechangeonsuccess="0.04">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="72" name="MAIN_GROUP_SHORT_ESCAPE_TIME" chancechangeonsuccess="0.04">
+            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.5"/>
+          </quest>
+        </questblock>
+        <!--100% chance-->
+        <questblock>
+          <conditions>
+            <ifquestcount type="all" op="greaterorequal" value="14"/>
+          </conditions>
+          <!--..........................................-->
+          <quest weight="18" name="MAIN_GOTO_SHORT_LARGE_RING" chancechangeonsuccess="1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="3" name="MAIN_GROUP_SHORT_FIGHT_2" chancechangeonsuccess="1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="9" name="MAIN_GROUP_SHORT_FIGHT_3" chancechangeonsuccess="1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="6" name="MAIN_GROUP_SHORT_FIGHT_4" chancechangeonsuccess="1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="72" name="MAIN_GROUP_SHORT_ESCAPE_TIME" chancechangeonsuccess="1">
+            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.5"/>
+          </quest>
+        </questblock>
+      </mainquests>
+    </hunt>
+    <hunt uniquename="ROADS_EAGLE_GROUP"
+          type="group"
+          namelocatag="@HUNT_GENERAL_GROUP"
+          namelocatagwithtarget="@HUNT_GENERAL_GROUP_WITH_TARGET"
+          groupsizemin="4"
+          groupsizemax="8"
+          initialfinalquestchance="0.15"
+          defaultchancechangeonsuccess="0.009"
+          defaultchancechangeonfailure="0"
+          minquestsuntilfinalquest="0"
+          maxquestsuntilfinalquest="100"
+          maxclusterdistance="5"
+          trackingtime="18"
+          >
+      <variables>
+        <float name="HP_TARGET" value="1.0"/>
+        <location name="TARGET_LOCATION"/>
+        <locationhistory name="LOCATION_HISTORY" historymaxsize="10" hidefromclient="true" initwithhuntstartposition="true"/>
+      </variables>
+
+      <finalquests>
+        <quest name="FINAL_GROUP_SIMPLE" weight="1"/>
+      </finalquests>
+
+      <mainquests>
+        <!--base chance increase-->
+        <questblock>
+          <conditions>
+            <ifquestcount type="all" op="less" value="5"/>
+          </conditions>
+          <!--..........................................-->
+          <quest weight="18" name="MAIN_GOTO_SHORT_LARGE_RING">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="3" name="MAIN_GROUP_SHORT_FIGHT_2">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="9" name="MAIN_GROUP_SHORT_FIGHT_3">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="6" name="MAIN_GROUP_SHORT_FIGHT_4">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="72" name="MAIN_GROUP_SHORT_ESCAPE_TIME">
+            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.5"/>
+          </quest>
+        </questblock>
+        <!--2x chance increase, no more long quests-->
+        <questblock>
+          <conditions>
+            <ifquestcount type="all" op="greaterorequal" value="5"/>
+            <ifquestcount type="all" op="less" value="10"/>
+          </conditions>
+          <!--..........................................-->
+          <quest weight="18" name="MAIN_GOTO_SHORT_LARGE_RING" chancechangeonsuccess="0.018">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="3" name="MAIN_GROUP_SHORT_FIGHT_2" chancechangeonsuccess="0.018">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="9" name="MAIN_GROUP_SHORT_FIGHT_3" chancechangeonsuccess="0.018">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="6" name="MAIN_GROUP_SHORT_FIGHT_4" chancechangeonsuccess="0.018">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="72" name="MAIN_GROUP_SHORT_ESCAPE_TIME" chancechangeonsuccess="0.018">
+            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.5"/>
+          </quest>
+        </questblock>
+        <!--4x chance increase-->
+        <questblock>
+          <conditions>
+            <ifquestcount type="all" op="greaterorequal" value="10"/>
+            <ifquestcount type="all" op="less" value="14"/>
+          </conditions>
+          <!--..........................................-->
+          <quest weight="18" name="MAIN_GOTO_SHORT_LARGE_RING" chancechangeonsuccess="0.036">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="3" name="MAIN_GROUP_SHORT_FIGHT_2" chancechangeonsuccess="0.036">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="9" name="MAIN_GROUP_SHORT_FIGHT_3" chancechangeonsuccess="0.036">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="6" name="MAIN_GROUP_SHORT_FIGHT_4" chancechangeonsuccess="0.036">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="72" name="MAIN_GROUP_SHORT_ESCAPE_TIME" chancechangeonsuccess="0.036">
+            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.5"/>
+          </quest>
+        </questblock>
+        <!--100% chance-->
+        <questblock>
+          <conditions>
+            <ifquestcount type="all" op="greaterorequal" value="14"/>
+          </conditions>
+          <!--..........................................-->
+          <quest weight="18" name="MAIN_GOTO_SHORT_LARGE_RING" chancechangeonsuccess="1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="3" name="MAIN_GROUP_SHORT_FIGHT_2" chancechangeonsuccess="1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="9" name="MAIN_GROUP_SHORT_FIGHT_3" chancechangeonsuccess="1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="6" name="MAIN_GROUP_SHORT_FIGHT_4" chancechangeonsuccess="1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="72" name="MAIN_GROUP_SHORT_ESCAPE_TIME" chancechangeonsuccess="1">
+            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.5"/>
+          </quest>
+        </questblock>
+      </mainquests>
+    </hunt>
+
+    <!--generic silver group hunt-->
+    <hunt uniquename="ROADS_SILVER_GROUP_T4"
+          type="group"
+          namelocatag="@HUNT_GENERAL_GROUP"
+          namelocatagwithtarget="@HUNT_GENERAL_GROUP_WITH_TARGET"
+          groupsizemin="4"
+          groupsizemax="8"
+          initialfinalquestchance="0.3"
+          defaultchancechangeonsuccess="0.018"
+          defaultchancechangeonfailure="0"
+          minquestsuntilfinalquest="0"
+          maxquestsuntilfinalquest="100"
+          maxclusterdistance="5"
+          trackingtime="18"
+          >
+      <variables>
+        <float name="HP_TARGET" value="1.0"/>
+        <location name="TARGET_LOCATION"/>
+        <locationhistory name="LOCATION_HISTORY" historymaxsize="10" hidefromclient="true" initwithhuntstartposition="true"/>
+      </variables>
+
+      <finalquests>
+        <quest name="FINAL_GROUP_SIMPLE" weight="1"/>
+      </finalquests>
+
+      <mainquests>
+        <!--base chance increase-->
+        <questblock>
+          <conditions>
+            <ifquestcount type="all" op="less" value="5"/>
+          </conditions>
+          <!--..........................................-->
+          <quest weight="18" name="MAIN_GOTO_SHORT_LARGE_RING">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="3" name="MAIN_GROUP_SHORT_FIGHT_2">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="9" name="MAIN_GROUP_SHORT_FIGHT_3">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="6" name="MAIN_GROUP_SHORT_FIGHT_4">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="72" name="MAIN_GROUP_SHORT_ESCAPE_TIME">
+            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.5"/>
+          </quest>
+        </questblock>
+        <!--2x chance increase, no more long quests-->
+        <questblock>
+          <conditions>
+            <ifquestcount type="all" op="greaterorequal" value="5"/>
+            <ifquestcount type="all" op="less" value="12"/>
+          </conditions>
+          <!--..........................................-->
+          <quest weight="18" name="MAIN_GOTO_SHORT_LARGE_RING" chancechangeonsuccess="0.036">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="3" name="MAIN_GROUP_SHORT_FIGHT_2" chancechangeonsuccess="0.036">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="9" name="MAIN_GROUP_SHORT_FIGHT_3" chancechangeonsuccess="0.036">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="6" name="MAIN_GROUP_SHORT_FIGHT_4" chancechangeonsuccess="0.036">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="72" name="MAIN_GROUP_SHORT_ESCAPE_TIME" chancechangeonsuccess="0.036">
+            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.5"/>
+          </quest>
+        </questblock>
+        <!--100% chance-->
+        <questblock>
+          <conditions>
+            <ifquestcount type="all" op="greaterorequal" value="12"/>
+          </conditions>
+          <!--..........................................-->
+          <quest weight="18" name="MAIN_GOTO_SHORT_LARGE_RING" chancechangeonsuccess="1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="3" name="MAIN_GROUP_SHORT_FIGHT_2" chancechangeonsuccess="1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="9" name="MAIN_GROUP_SHORT_FIGHT_3" chancechangeonsuccess="1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="6" name="MAIN_GROUP_SHORT_FIGHT_4" chancechangeonsuccess="1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="72" name="MAIN_GROUP_SHORT_ESCAPE_TIME" chancechangeonsuccess="1">
+            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.5"/>
+          </quest>
+        </questblock>
+      </mainquests>
+    </hunt>
+    <hunt uniquename="ROADS_SILVER_GROUP_T5"
+          type="group"
+          namelocatag="@HUNT_GENERAL_GROUP"
+          namelocatagwithtarget="@HUNT_GENERAL_GROUP_WITH_TARGET"
+          groupsizemin="4"
+          groupsizemax="8"
+          initialfinalquestchance="0.2"
+          defaultchancechangeonsuccess="0.015"
+          defaultchancechangeonfailure="0"
+          minquestsuntilfinalquest="0"
+          maxquestsuntilfinalquest="100"
+          maxclusterdistance="5"
+          trackingtime="18"
+          >
+      <variables>
+        <float name="HP_TARGET" value="1.0"/>
+        <location name="TARGET_LOCATION"/>
+        <locationhistory name="LOCATION_HISTORY" historymaxsize="10" hidefromclient="true" initwithhuntstartposition="true"/>
+      </variables>
+
+      <finalquests>
+        <quest name="FINAL_GROUP_SIMPLE" weight="1"/>
+      </finalquests>
+
+      <mainquests>
+        <!--base chance increase-->
+        <questblock>
+          <conditions>
+            <ifquestcount type="all" op="less" value="5"/>
+          </conditions>
+          <!--..........................................-->
+          <quest weight="18" name="MAIN_GOTO_SHORT_LARGE_RING">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <!--..........................................-->
+          <quest weight="3" name="MAIN_GROUP_SHORT_FIGHT_2">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="9" name="MAIN_GROUP_SHORT_FIGHT_3">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="6" name="MAIN_GROUP_SHORT_FIGHT_4">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+
+          <quest weight="1" name="MAIN_GROUP_LONG_FIGHT_2" chancechangeonsuccess="0.022">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="3" name="MAIN_GROUP_LONG_FIGHT_3" chancechangeonsuccess="0.022">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="2" name="MAIN_GROUP_LONG_FIGHT_4" chancechangeonsuccess="0.022">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+
+          <!--..........................................-->
+          <quest weight="72" name="MAIN_GROUP_SHORT_ESCAPE_TIME">
+            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.5"/>
+          </quest>
+          <quest weight="24" name="MAIN_GROUP_LONG_ESCAPE_TIME" chancechangeonsuccess="0.022">
+            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.5"/>
+          </quest>
+        </questblock>
+        <!--2x chance increase, no more long quests-->
+        <questblock>
+          <conditions>
+            <ifquestcount type="all" op="greaterorequal" value="5"/>
+            <ifquestcount type="all" op="less" value="12"/>
+          </conditions>
+          <!--..........................................-->
+          <quest weight="18" name="MAIN_GOTO_SHORT_LARGE_RING" chancechangeonsuccess="0.03">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+
+          <!--..........................................-->
+          <quest weight="3" name="MAIN_GROUP_SHORT_FIGHT_2" chancechangeonsuccess="0.03">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="9" name="MAIN_GROUP_SHORT_FIGHT_3" chancechangeonsuccess="0.03">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="6" name="MAIN_GROUP_SHORT_FIGHT_4" chancechangeonsuccess="0.03">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+
+          <!--..........................................-->
+          <quest weight="72" name="MAIN_GROUP_SHORT_ESCAPE_TIME" chancechangeonsuccess="0.03">
+            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.5"/>
+          </quest>
+        </questblock>
+        <!--100% chance-->
+        <questblock>
+          <conditions>
+            <ifquestcount type="all" op="greaterorequal" value="12"/>
+          </conditions>
+          <!--..........................................-->
+          <quest weight="18" name="MAIN_GOTO_SHORT_LARGE_RING" chancechangeonsuccess="1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+
+          <!--..........................................-->
+          <quest weight="3" name="MAIN_GROUP_SHORT_FIGHT_2" chancechangeonsuccess="1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="9" name="MAIN_GROUP_SHORT_FIGHT_3" chancechangeonsuccess="1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="6" name="MAIN_GROUP_SHORT_FIGHT_4" chancechangeonsuccess="1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+
+          <!--..........................................-->
+          <quest weight="72" name="MAIN_GROUP_SHORT_ESCAPE_TIME" chancechangeonsuccess="1">
+            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.5"/>
+          </quest>
+        </questblock>
+      </mainquests>
+    </hunt>
+    <hunt uniquename="ROADS_SILVER_GROUP_T6"
+          type="group"
+          namelocatag="@HUNT_GENERAL_GROUP"
+          namelocatagwithtarget="@HUNT_GENERAL_GROUP_WITH_TARGET"
+          groupsizemin="4"
+          groupsizemax="8"
+          initialfinalquestchance="0.16"
+          defaultchancechangeonsuccess="0.012"
+          defaultchancechangeonfailure="0"
+          minquestsuntilfinalquest="0"
+          maxquestsuntilfinalquest="100"
+          maxclusterdistance="5"
+          trackingtime="18"
+          >
+      <variables>
+        <float name="HP_TARGET" value="1.0"/>
+        <location name="TARGET_LOCATION"/>
+        <locationhistory name="LOCATION_HISTORY" historymaxsize="10" hidefromclient="true" initwithhuntstartposition="true"/>
+      </variables>
+
+      <finalquests>
+        <quest name="FINAL_GROUP_SIMPLE" weight="1"/>
+      </finalquests>
+
+      <mainquests>
+        <!--base chance increase-->
+        <questblock>
+          <conditions>
+            <ifquestcount type="all" op="less" value="5"/>
+          </conditions>
+          <!--..........................................-->
+          <quest weight="18" name="MAIN_GOTO_SHORT_LARGE_RING">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="6" name="MAIN_GOTO_LONG_LARGE_RING" chancechangeonsuccess="0.022">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+
+          <!--..........................................-->
+          <quest weight="3" name="MAIN_GROUP_SHORT_FIGHT_2">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="9" name="MAIN_GROUP_SHORT_FIGHT_3">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="6" name="MAIN_GROUP_SHORT_FIGHT_4">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+
+          <quest weight="1" name="MAIN_GROUP_LONG_FIGHT_2" chancechangeonsuccess="0.022">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="3" name="MAIN_GROUP_LONG_FIGHT_3" chancechangeonsuccess="0.022">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="2" name="MAIN_GROUP_LONG_FIGHT_4" chancechangeonsuccess="0.022">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+
+          <!--..........................................-->
+          <quest weight="72" name="MAIN_GROUP_SHORT_ESCAPE_TIME">
+            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.5"/>
+          </quest>
+          <quest weight="24" name="MAIN_GROUP_LONG_ESCAPE_TIME" chancechangeonsuccess="0.022">
+            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.5"/>
+          </quest>
+        </questblock>
+        <!--2x chance increase, no more long quests-->
+        <questblock>
+          <conditions>
+            <ifquestcount type="all" op="greaterorequal" value="5"/>
+            <ifquestcount type="all" op="less" value="12"/>
+          </conditions>
+          <!--..........................................-->
+          <quest weight="18" name="MAIN_GOTO_SHORT_LARGE_RING" chancechangeonsuccess="0.024">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+
+          <!--..........................................-->
+          <quest weight="3" name="MAIN_GROUP_SHORT_FIGHT_2" chancechangeonsuccess="0.024">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="9" name="MAIN_GROUP_SHORT_FIGHT_3" chancechangeonsuccess="0.024">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="6" name="MAIN_GROUP_SHORT_FIGHT_4" chancechangeonsuccess="0.024">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+
+          <!--..........................................-->
+          <quest weight="72" name="MAIN_GROUP_SHORT_ESCAPE_TIME" chancechangeonsuccess="0.024">
+            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.5"/>
+          </quest>
+        </questblock>
+        <!--100% chance-->
+        <questblock>
+          <conditions>
+            <ifquestcount type="all" op="greaterorequal" value="12"/>
+          </conditions>
+          <!--..........................................-->
+          <quest weight="18" name="MAIN_GOTO_SHORT_LARGE_RING" chancechangeonsuccess="1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+
+          <!--..........................................-->
+          <quest weight="3" name="MAIN_GROUP_SHORT_FIGHT_2" chancechangeonsuccess="1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="9" name="MAIN_GROUP_SHORT_FIGHT_3" chancechangeonsuccess="1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="6" name="MAIN_GROUP_SHORT_FIGHT_4" chancechangeonsuccess="1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+
+          <!--..........................................-->
+          <quest weight="72" name="MAIN_GROUP_SHORT_ESCAPE_TIME" chancechangeonsuccess="1">
+            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.5"/>
+          </quest>
+        </questblock>
+      </mainquests>
+    </hunt>
+    <hunt uniquename="ROADS_SILVER_GROUP_T7"
+          type="group"
+          namelocatag="@HUNT_GENERAL_GROUP"
+          namelocatagwithtarget="@HUNT_GENERAL_GROUP_WITH_TARGET"
+          groupsizemin="4"
+          groupsizemax="8"
+          initialfinalquestchance="0.15"
+          defaultchancechangeonsuccess="0.01"
+          defaultchancechangeonfailure="0"
+          minquestsuntilfinalquest="0"
+          maxquestsuntilfinalquest="100"
+          maxclusterdistance="5"
+          trackingtime="18"
+          >
+      <variables>
+        <float name="HP_TARGET" value="1.0"/>
+        <location name="TARGET_LOCATION"/>
+        <locationhistory name="LOCATION_HISTORY" historymaxsize="10" hidefromclient="true" initwithhuntstartposition="true"/>
+      </variables>
+
+      <finalquests>
+        <quest name="FINAL_GROUP_SIMPLE" weight="1"/>
+      </finalquests>
+
+      <mainquests>
+        <!--base chance increase-->
+        <questblock>
+          <conditions>
+            <ifquestcount type="all" op="less" value="5"/>
+          </conditions>
+          <!--..........................................-->
+          <quest weight="18" name="MAIN_GOTO_SHORT_LARGE_RING">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="6" name="MAIN_GOTO_LONG_LARGE_RING" chancechangeonsuccess="0.02">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+
+          <!--..........................................-->
+          <quest weight="3" name="MAIN_GROUP_SHORT_FIGHT_2">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="9" name="MAIN_GROUP_SHORT_FIGHT_3">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="6" name="MAIN_GROUP_SHORT_FIGHT_4">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+
+          <quest weight="1" name="MAIN_GROUP_LONG_FIGHT_2" chancechangeonsuccess="0.02">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="3" name="MAIN_GROUP_LONG_FIGHT_3" chancechangeonsuccess="0.02">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="2" name="MAIN_GROUP_LONG_FIGHT_4" chancechangeonsuccess="0.02">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+
+          <!--..........................................-->
+          <quest weight="72" name="MAIN_GROUP_SHORT_ESCAPE_TIME">
+            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.5"/>
+          </quest>
+          <quest weight="24" name="MAIN_GROUP_LONG_ESCAPE_TIME" chancechangeonsuccess="0.02">
+            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.5"/>
+          </quest>
+        </questblock>
+        <!--2x chance increase, no more long quests-->
+        <questblock>
+          <conditions>
+            <ifquestcount type="all" op="greaterorequal" value="5"/>
+            <ifquestcount type="all" op="less" value="12"/>
+          </conditions>
+          <!--..........................................-->
+          <quest weight="18" name="MAIN_GOTO_SHORT_LARGE_RING" chancechangeonsuccess="0.02">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+
+          <!--..........................................-->
+          <quest weight="3" name="MAIN_GROUP_SHORT_FIGHT_2" chancechangeonsuccess="0.02">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="9" name="MAIN_GROUP_SHORT_FIGHT_3" chancechangeonsuccess="0.02">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="6" name="MAIN_GROUP_SHORT_FIGHT_4" chancechangeonsuccess="0.02">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+
+          <!--..........................................-->
+          <quest weight="72" name="MAIN_GROUP_SHORT_ESCAPE_TIME" chancechangeonsuccess="0.02">
+            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.5"/>
+          </quest>
+        </questblock>
+        <!--100% chance-->
+        <questblock>
+          <conditions>
+            <ifquestcount type="all" op="greaterorequal" value="12"/>
+          </conditions>
+          <!--..........................................-->
+          <quest weight="18" name="MAIN_GOTO_SHORT_LARGE_RING" chancechangeonsuccess="1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+
+          <!--..........................................-->
+          <quest weight="3" name="MAIN_GROUP_SHORT_FIGHT_2" chancechangeonsuccess="1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="9" name="MAIN_GROUP_SHORT_FIGHT_3" chancechangeonsuccess="1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="6" name="MAIN_GROUP_SHORT_FIGHT_4" chancechangeonsuccess="1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+
+          <!--..........................................-->
+          <quest weight="72" name="MAIN_GROUP_SHORT_ESCAPE_TIME" chancechangeonsuccess="1">
+            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.5"/>
+          </quest>
+        </questblock>
+      </mainquests>
+    </hunt>
+    <hunt uniquename="ROADS_SILVER_GROUP_T8"
+          type="group"
+          namelocatag="@HUNT_GENERAL_GROUP"
+          namelocatagwithtarget="@HUNT_GENERAL_GROUP_WITH_TARGET"
+          groupsizemin="4"
+          groupsizemax="8"
+          initialfinalquestchance="0.15"
+          defaultchancechangeonsuccess="0.009"
+          defaultchancechangeonfailure="0"
+          minquestsuntilfinalquest="0"
+          maxquestsuntilfinalquest="100"
+          maxclusterdistance="5"
+          trackingtime="18"
+          >
+      <variables>
+        <float name="HP_TARGET" value="1.0"/>
+        <location name="TARGET_LOCATION"/>
+        <locationhistory name="LOCATION_HISTORY" historymaxsize="10" hidefromclient="true" initwithhuntstartposition="true"/>
+      </variables>
+
+      <finalquests>
+        <quest name="FINAL_GROUP_SIMPLE" weight="1"/>
+      </finalquests>
+
+      <mainquests>
+        <!--base chance increase-->
+        <questblock>
+          <conditions>
+            <ifquestcount type="all" op="less" value="5"/>
+          </conditions>
+          <!--..........................................-->
+          <quest weight="18" name="MAIN_GOTO_SHORT_LARGE_RING">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="6" name="MAIN_GOTO_LONG_LARGE_RING" chancechangeonsuccess="0.012">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+
+          <!--..........................................-->
+          <quest weight="3" name="MAIN_GROUP_SHORT_FIGHT_2">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="9" name="MAIN_GROUP_SHORT_FIGHT_3">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="6" name="MAIN_GROUP_SHORT_FIGHT_4">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+
+          <quest weight="1" name="MAIN_GROUP_LONG_FIGHT_2" chancechangeonsuccess="0.012">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="3" name="MAIN_GROUP_LONG_FIGHT_3" chancechangeonsuccess="0.012">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="2" name="MAIN_GROUP_LONG_FIGHT_4" chancechangeonsuccess="0.012">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+
+          <!--..........................................-->
+          <quest weight="72" name="MAIN_GROUP_SHORT_ESCAPE_TIME">
+            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.5"/>
+          </quest>
+          <quest weight="24" name="MAIN_GROUP_LONG_ESCAPE_TIME" chancechangeonsuccess="0.012">
+            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.5"/>
+          </quest>
+        </questblock>
+        <!--2x chance increase, no more long quests-->
+        <questblock>
+          <conditions>
+            <ifquestcount type="all" op="greaterorequal" value="5"/>
+            <ifquestcount type="all" op="less" value="12"/>
+          </conditions>
+          <!--..........................................-->
+          <quest weight="18" name="MAIN_GOTO_SHORT_LARGE_RING" chancechangeonsuccess="0.018">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+
+          <!--..........................................-->
+          <quest weight="3" name="MAIN_GROUP_SHORT_FIGHT_2" chancechangeonsuccess="0.018">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="9" name="MAIN_GROUP_SHORT_FIGHT_3" chancechangeonsuccess="0.018">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="6" name="MAIN_GROUP_SHORT_FIGHT_4" chancechangeonsuccess="0.018">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+
+          <!--..........................................-->
+          <quest weight="72" name="MAIN_GROUP_SHORT_ESCAPE_TIME" chancechangeonsuccess="0.018">
+            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.5"/>
+          </quest>
+        </questblock>
+        <!--100% chance-->
+        <questblock>
+          <conditions>
+            <ifquestcount type="all" op="greaterorequal" value="12"/>
+          </conditions>
+          <!--..........................................-->
+          <quest weight="18" name="MAIN_GOTO_SHORT_LARGE_RING" chancechangeonsuccess="1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+
+          <!--..........................................-->
+          <quest weight="3" name="MAIN_GROUP_SHORT_FIGHT_2" chancechangeonsuccess="1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="9" name="MAIN_GROUP_SHORT_FIGHT_3" chancechangeonsuccess="1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+          <quest weight="6" name="MAIN_GROUP_SHORT_FIGHT_4" chancechangeonsuccess="1">
+            <iflastoccurrence op="greater" value="1"/>
+          </quest>
+
+          <!--..........................................-->
+          <quest weight="72" name="MAIN_GROUP_SHORT_ESCAPE_TIME" chancechangeonsuccess="1">
+            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.5"/>
+          </quest>
+        </questblock>
+      </mainquests>
+    </hunt>
     
+    <!--***********************************************-->
     <!--coder test hunts-->
     <hunt uniquename="HUNT_TEST" 
           type="solo" 

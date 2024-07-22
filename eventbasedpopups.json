@@ -1029,6 +1029,38 @@
           }
         },
         {
+          "@uniquename": "JOURNAL_INTRODUCTION",
+          "@priority": "11",
+          "@type": "JournalIntroduction",
+          "categories": {
+            "category": [
+              {
+                "@name": "JournalIntroduction"
+              },
+              {
+                "@name": "GameFeature"
+              }
+            ]
+          },
+          "triggers": {
+            "trigger": {
+              "@action": "ClusterChange"
+            }
+          },
+          "conditions": {
+            "and": {
+              "IfIsInStarterCluster": null,
+              "IfTutorialCompletedThisSession": null,
+              "IfHasSeenPopup": {
+                "@uniquename": "JOURNAL_INTRODUCTION",
+                "@frequency": "AllTime",
+                "@operation": "less",
+                "@amount": "1"
+              }
+            }
+          }
+        },
+        {
           "@uniquename": "PORTAL_CITY_INFO",
           "@priority": "10",
           "@type": "GenericTutorial",
