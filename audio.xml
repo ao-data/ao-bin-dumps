@@ -191,6 +191,10 @@
 	<CharType name="mount"/>
 	<MountType name="direboar_armored_plate_arcane"/>
   </WwiseSwitchInfo>
+  <WwiseSwitchInfo name="MOUNT_DIREBOAR_MECH">
+    <CharType name="mount"/>
+	<MountType name="direboar_mech"/>
+  </WwiseSwitchInfo>
   <WwiseSwitchInfo name="MOUNT_DIREBEAR">
     <CharType name="mount"/>
     <MountType name="direbear"/>
@@ -198,6 +202,10 @@
   <WwiseSwitchInfo name="MOUNT_DIREBEAR_ARMORED_PLATE">
     <CharType name="mount"/>
     <MountType name="direbear_armored_plate"/>
+  </WwiseSwitchInfo>
+  <WwiseSwitchInfo name="MOUNT_DIREBEAR_ARMORED_LEATHER">
+	<CharType name="mount"/>
+	<MountType name="direbear_armored_leather"/>
   </WwiseSwitchInfo>
   <WwiseSwitchInfo name="MOUNT_BEAR">
     <CharType name="mount"/>
@@ -422,6 +430,14 @@
   <WwiseSwitchInfo name="MOUNT_COW">
 	<CharType name="mount"/>
 	<MountType name="cow"/>
+  </WwiseSwitchInfo>
+  <WwiseSwitchInfo name="MOUNT_CAT">
+	<CharType name="mount"/>
+	<MountType name="cat_traveling"/>
+  </WwiseSwitchInfo>
+  <WwiseSwitchInfo name="MOUNT_PALANQUIN">
+    <CharType name="mount"/>
+    <MountType name="palanquin"/>
   </WwiseSwitchInfo>
 
   <!--*************************************************************************************************************************************************************-->
@@ -1186,6 +1202,15 @@
     <WeaponType name="mace_big"/>
     <MountType name="empty"/>
   </WwiseSwitchInfo>
+  <WwiseSwitchInfo name="MOB_AVALON_MONK_SOLDIER">
+	<CharType name="mob"/>
+	<MobFaction name="avalon"/>
+	<MobType name="avalon_monk_soldier"/>
+	<Size name="medium"/>
+	<ArmorType name="cloth"/>
+	<WeaponType name="mace_big"/>
+	<MountType name="empty"/>
+  </WwiseSwitchInfo>
   <WwiseSwitchInfo name="MOB_AVALON_PRIEST">
     <CharType name="mob"/>
     <MobFaction name="avalon"/>
@@ -1541,6 +1566,15 @@
     <ArmorType name="cloth"/>
     <WeaponType name="sword_long"/>
     <MountType name="empty"/>
+  </WwiseSwitchInfo>
+  <WwiseSwitchInfo name="MOB_HERETIC_SHADOWMASK_EXPEDITION">
+	<CharType name="mob"/>
+	<MobFaction name="heretic"/>
+	<MobType name="heretic_shadowmask_expedition"/>
+	<Size name="medium"/>
+	<ArmorType name="cloth"/>
+	<WeaponType name="sword_long"/>
+	<MountType name="empty"/>
   </WwiseSwitchInfo>
 
   <!--MORGANA-->
@@ -3461,6 +3495,10 @@
   <WwiseEventInfo name="MELEE_SWORD_MIGHTY_BLOW">
     <OnCastFinished name="Play_melee_swoosh_big_double" />
   </WwiseEventInfo>
+  <WwiseEventInfo name="MELEE_SWORD_HAMSTRING_KICK">
+	<OnCastFinished name="Play_melee_hamstring_kick" />
+	<OnSpellHit name="Play_melee_kick_impact_quick_pummeling_limited" />
+  </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_SWORD_HAMSTRING_DASH">
     <OnCastFinished name="Play_melee_hamstring_jump" />
   </WwiseEventInfo>
@@ -3492,8 +3530,18 @@
 	<OnSpellHit name="Play_crystal_melee_impact_medium" />
   </WwiseEventInfo>
 
+  <WwiseEventInfo name="MELEE_CRYSTAL_WEAPON_IMPACT_MEDIUM_WEAPON_HIT">
+	<OnSpellHit name="Play_crystal_melee_impact_medium" >
+	<ImpactType/>
+	</OnSpellHit>
+  </WwiseEventInfo>
+
   <WwiseEventInfo name="MELEE_CRYSTAL_WEAPON_IMPACT_BIG" >
 	<OnSpellHit name="Play_crystal_melee_impact_big" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="MELEE_CRYSTAL_WEAPON_IMPACT_BIG_CUT" >
+	<OnSpellHit name="Play_crystal_melee_impact_cut_big" />
   </WwiseEventInfo>
 	
 	<WwiseEventInfo name="MELEE_MEDIUMCAST">
@@ -3674,7 +3722,7 @@
   <WwiseEventInfo name="MELEE_IMPACT_BLOODY">
 	<OnSpellHit name="Play_melee_impact_bloody" />
   </WwiseEventInfo>
-	<WwiseEventInfo name="MELEE_CHARGE">
+  <WwiseEventInfo name="MELEE_CHARGE">
     <OnCastStart name="Play_charge" />
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_WATER_CHARGE">
@@ -3733,6 +3781,9 @@
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_AXE_SPIN">
     <OnCastStart name="Play_axe_spin" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="MELEE_AXE_INNERBLEEDING_SPIN">
+	<OnCastStart name="Play_axe_innerbleeding_spin" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_THROW_AXE" >
     <OnCastStart name="Play_emote_foley_armor_move_fast"/>
@@ -3825,9 +3876,7 @@
     <OnChannelingCancelled name="Stop_weapontype_swirl_loop" />
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_THREATENINGSMASH">
-    <OnCastStart name="Play_melee_threateningsmash" />
-    <OnCastCanceled name="Stop_melee_threateningsmash" />
-    <OnCastInterrupted name="Stop_melee_threateningsmash" />
+    <OnCastFinished name="Play_melee_threateningsmash" />
   </WwiseEventInfo>
 
   <WwiseEventInfo name="MELEE_CARTWHEEL">
@@ -3916,6 +3965,12 @@
   <WwiseEventInfo name="MELEE_MACE_PULL_HIT" >
 	<OnSpellHit name="Play_pull_displacement_hit" />
   </WwiseEventInfo>
+  <WwiseEventInfo name="MELEE_MACE_CRYSTAL_SWING" >
+	<OnCastFinished name="Play_crystal_melee_mace_swing" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="MELEE_MACE_CRYSTAL_SMASH" >
+	<OnCastFinished name="Play_crystal_melee_mace_final_smash" />
+  </WwiseEventInfo>
 
   <WwiseEventInfo name="MELEE_HAMMER_IRONBREAKER">
     <OnCastStart name="Play_hammer_ironbreaker" />
@@ -3981,6 +4036,14 @@
     <OnCastFinished name="Play_melee_bloodblade" />
   </WwiseEventInfo>
 
+  <WwiseEventInfo name="MELEE_CRYSTAL_DAGGER_BLADE_RING_CAST">
+	<OnCastFinished name="Play_crystal_melee_blade_ring_cast" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="MELEE_CRYSTAL_DAGGER_BLADE_RING_PULLBACK">
+	<OnCastFinished name="Play_crystal_melee_blade_ring_pullback" />
+  </WwiseEventInfo>
+
   <WwiseEventInfo name="MELEE_PUNCHCOMBO_CHANNEL">
     <OnChannelingStart name="Play_melee_punchcombo_swooshes" />
     <OnChannelingInterrupted name="Stop_melee_punchcombo_swooshes" />
@@ -4020,6 +4083,9 @@
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_RENDINGCOMBO_AXE">
     <OnCastFinished name="Play_melee_rending_combo" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="MELEE_RENDINGCOMBO_AXE_CASTSTART">
+	<OnCastStart name="Play_melee_rending_combo" />
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_RENDINGCOMBO_AXE_JUMP">
     <OnCastFinished name="Play_melee_axe_rendingcombo_jump" />
@@ -4180,7 +4246,10 @@
   <WwiseEventInfo name="MELEE_CAST_SOULSHAKER">
     <OnCastFinished name="Play_melee_soulshaker" />
   </WwiseEventInfo>
-
+  <WwiseEventInfo name="MELEE_HAMMER_SLOWING_CHARGE">
+	<OnCastStart name="Play_hammer_slowing_charge" />
+  </WwiseEventInfo>
+	
   <WwiseEventInfo name="MELEE_IMPACT_MEDIUM_HEAVY">
 	<OnSpellHit name="Play_melee_impact_medium_heavy" >
 		<ImpactType/>
@@ -4966,6 +5035,9 @@
     <OnCastFinished name="Play_fire_cast_big" />
     <OnSpellHit name="Play_fire_impact_big" />
   </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_FIRE_EXPLOSION_MEDIUM">
+	<OnCastFinished name="Play_fire_explosion_medium" />
+  </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_FIRE_TORNADO">    
     <OnCastStart name="Play_fire_cast_load_big_fire_tornado" />
 	<OnCastInterrupted name="Stop_fire_cast_load_big_fire_tornado" />
@@ -5418,6 +5490,11 @@
     <OnCastFinished name="Play_holy_cast_heal_big_celestialsphere" />
     <OnSpellHit name="Play_holy_heal_small" />
   </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_HOLY_CAST_DISPEL">
+	<OnCastStart name="Play_holy_cast_load_big_dispel" />
+	<OnCastCanceled name="Stop_holy_cast_load_big_dispel" />
+	<OnCastInterrupted name="Stop_holy_cast_load_big_dispel" />
+  </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_LIGHTNING_CAST_SMALL">
     <OnCastFinished name="Play_lightning_cast_small" />
@@ -5658,6 +5735,9 @@
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_SHAPESHIFTER_DAMAGE_CAST_MEDIUM_SKILLSHOT_SHOOT" >
+	<OnCastStart name="Play_shapeshifter_cast_load_damage_small_projectile" />
+	<OnCastCanceled name="Stop_shapeshifter_cast_load_damage_small_projectile" />
+	<OnCastInterrupted name="Stop_shapeshifter_cast_load_damage_small_projectile" />
 	<OnCastFinished name="Play_shapeshifter_cast_medium_skillshot_shoot" />
   </WwiseEventInfo>
 
@@ -6148,17 +6228,15 @@
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_TRACKING_SHADOWMASK_MELEE_SWING">
-	<OnCastStart name="Play_melee_load_medium_windy" />
-	<OnCastInterrupted name="Stop_melee_load_medium_windy" />
-	<OnCastCanceled name="Stop_melee_load_medium_windy" />
-	<OnCastFinished name="Play_melee_swoosh_windy_short_attack" />
+	<OnCastStart name="Play_shadowmask_castload_vo_short" />
+	<OnCastFinished name="Play_mob_heretic_shadowmask_melee_swoosh" />
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_TRACKING_SHADOWMASK_FIRE">
     <OnCastStart name="Play_fire_cast_load_medium_short" />
 	<OnCastInterrupted name="Stop_fire_cast_load_medium_short" />
 	<OnCastCanceled name="Stop_fire_cast_load_medium_short" />
-	<OnCastFinished name="Play_arrow_cast_medium" />
+	<OnCastFinished name="Play_arrow_cast_medium_instant" />
   </WwiseEventInfo>
   
   <WwiseEventInfo name="SPELL_TRACKING_SHADOWMAST_SUMMON_CHANNEL">
@@ -6174,14 +6252,14 @@
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_TRACKING_SHADOWMASK_ESCAPE_EXPLOSION">
-	<OnCastStart name="Play_fire_cast_load_medium_long" />
-	<OnCastInterrupted name="Stop_fire_cast_load_medium_long" />
-	<OnCastCanceled name="Stop_fire_cast_load_medium_long" />
+	<OnCastStart name="Play_mob_heretic_shadowmask_escape_load" />
+	<OnCastInterrupted name="Stop_mob_heretic_shadowmask_escape_load" />
+	<OnCastCanceled name="Stop_mob_heretic_shadowmask_escape_load" />
 	<OnCastFinished name="Play_fire_cast_medium_ignite_staff" />
   </WwiseEventInfo>
 	
   <WwiseEventInfo name="SPELL_TRACKING_SHADOWMASK_ESCAPE_DASH">
-	<OnCastStart name="Play_mob_jump_dash" />
+	<OnCastStart name="Play_mob_heretic_shadowmask_dash" />
   </WwiseEventInfo>
 
 	<!-- Misc -->
@@ -7553,12 +7631,35 @@
   <WwiseEventInfo name="SPELL_HERETIC_SHADOWMASK_FIRE">
     <OnCastStart name="Play_shadowmask_fire_vo" />
     <OnCastFinished name="Play_arrow_cast_medium" />
-    <OnSpellHit name="Play_arcane_impact_medium" />
     <OnProjectileHit>
       <ImpactType/>
     </OnProjectileHit>
   </WwiseEventInfo>
-  
+
+  <WwiseEventInfo name="SPELL_HERETIC_SHADOWMASK_AIMEDSHOT">
+	<OnCastStart name="Play_shadowmask_castload_vo" />
+	<OnCastFinished name="Play_mob_heretic_shadowmask_cast_aimedshot" />
+  </WwiseEventInfo>
+	
+  <WwiseEventInfo name="SPELL_HERETIC_SHADOWMASK_AIMEDSHOT_HIT">
+	<OnSpellHit name="Play_arrow_impact_medium_sundershot" />
+	<OnProjectileHit>
+		<ImpactType/>
+	</OnProjectileHit>
+  </WwiseEventInfo>
+	
+  <WwiseEventInfo name="SPELL_HERETIC_SHADOWMASK_EXPLOSION">
+	<OnCastFinished name="Play_mob_heretic_shadowmask_snipe_cast_explosion"/>
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_HERETIC_CAST_INVISIBILITY">
+	<OnCastFinished name="Play_cast_invisibility" />
+  </WwiseEventInfo>
+	
+  <WwiseEventInfo name="SPELL_HERETIC_END_INVISIBILITY">
+    <OnCastFinished name="Play_end_invisibility" />
+  </WwiseEventInfo>
+	
   <WwiseEventInfo name="SPELL_BARRELBOMB_IGNITE">
     <OnCastFinished name="Play_barrelbomb_ignite"/>
   </WwiseEventInfo>
@@ -8298,6 +8399,13 @@
   <WwiseEventInfo name="SPELL_LAVA_PROJECTILE_IMPACT">
     <OnSpellHit name="Play_lava_projectile_impact" />
   </WwiseEventInfo>
+	
+  <WwiseEventInfo name="SPELL_DEMON_BOSS_FIREBALL">
+	<OnCastStart name="Play_mob_demon_boss_fireball_load" />
+	<OnCastInterrupted name="Stop_mob_demon_boss_fireball_load" />
+	<OnCastCanceled name="Stop_mob_demon_boss_fireball_load" />
+	<OnCastFinished name="Play_mob_demon_boss_fireball_cast" />
+  </WwiseEventInfo>
 
   <!-- Undead-->
   
@@ -8590,6 +8698,13 @@
     <OnCastFinished name="Play_mob_avalon_minion_dash" />
   </WwiseEventInfo>
 
+  <WwiseEventInfo name="SPELL_AVALON_WORKER_CHARGE">
+	<OnCastStart name="Play_mob_avalon_minion_dash_load" />
+	<OnCastCanceled name="Stop_mob_avalon_minion_dash_load" />
+	<OnCastInterrupted name="Stop_mob_avalon_minion_dash_load" />
+	<OnCastFinished name="Play_mob_avalon_worker_charge" />
+  </WwiseEventInfo>
+
   <WwiseEventInfo name="SPELL_AVALON_WORKER_WINDWALL_CAST">
     <OnCastStart name="Play_mob_avalon_worker_cast" />
     <OnCastFinished name="Play_mob_avalon_worker_windwall_cooldown" />
@@ -8727,7 +8842,15 @@
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_AVALON_MONK_PURESTRIKE_CAST">
-    <OnCastFinished name="Play_mob_avalon_monk_purestrike_cast" />
+    <OnCastStart name="Play_mob_avalon_monk_purestrike_cast" />
+	<OnCastCanceled name="Stop_mob_avalon_monk_purestrike_cast"/>
+	<OnCastInterrupted name="Stop_mob_avalon_monk_purestrike_cast"/>
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_AVALON_MONK_PURESTRIKE_CAST_STANDARD">
+	<OnCastStart name="Play_mob_avalon_monk_purestrike_cast_standard" />
+	<OnCastCanceled name="Stop_mob_avalon_monk_purestrike_cast_standard"/>
+	<OnCastInterrupted name="Stop_mob_avalon_monk_purestrike_cast_standard"/>
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_AVALON_MONK_SHIELDJUMP_CAST">
@@ -8742,6 +8865,13 @@
     <OnCastCanceled name="Stop_mob_avalon_monk_staff_swirl_long" />
     <OnCastInterrupted name="Stop_mob_avalon_monk_staff_swirl_long" />
     <OnCastFinished name="Play_mob_avalon_monk_sweep_swoosh" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_AVALON_MONK_SWEEP_STANDARD">
+	<OnCastStart name="Play_mob_avalon_monk_staff_swirl_load" />
+	<OnCastCanceled name="Stop_mob_avalon_monk_staff_swirl_load" />
+	<OnCastInterrupted name="Stop_mob_avalon_monk_staff_swirl_load" />
+	<OnCastFinished name="Play_mob_avalon_monk_sweep_swoosh" />
   </WwiseEventInfo>
   
   <WwiseEventInfo name="SPELL_AVALON_PRIEST_ENERGY_BEAM_CHANNEL">
@@ -10653,7 +10783,7 @@
   </WwiseClusterStateOverwrite>
   
   <!--Debug-->
-  <WwiseClusterStateOverwrite clustername="Debug_DBG_.*_.*_T1_NON">
+  <WwiseClusterStateOverwrite clustername="Debug_DBG_.*_.*_.*_NON"> 
     <Environment name="WorldEnv"/>
     <SubEnvironment name="None"/>
     <Biom name="Forest"/>
@@ -11302,8 +11432,100 @@
   <WwiseEventInfo name="SPELL_VANITY_FIREWORK_GUN_SHOOT">
 	<OnCastFinished name="Play_shoot_gun_vanity_fireworks"/>
   </WwiseEventInfo>
-  
-   <QuestStateEvent name="TUT_FIRST_QUEST_ACCEPTED">
+
+  <WwiseEventInfo name="SPELL_VANITY_NOBLE_ROBE_MONEY_TOSS">
+	<OnCastFinished name="Play_vanity_aj_moneyrobe_wealthy_toss"/>
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_VANITY_RICH_NOBLE_ROBE_MONEY_TOSS">
+	<OnCastFinished name="Play_vanity_aj_moneyrobe_very_wealthy_toss"/>
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_VANITY_GATHERING_MULTITOOL_CHOP">
+	<OnCastFinished name="Play_vanity_aj_multitool_chop_tree"/>
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_VANITY_GATHERING_MULTITOOL_OVERCHARGED_CHOP">
+	<OnCastFinished name="Play_vanity_aj_multitool_overcharged_chop_tree"/>
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_VANITY_SHADOWHELMET_REAPER_APPEAR">
+	<OnCastFinished name="Play_vanity_aj_shadowhelmet_reaper_gesture"/>
+  </WwiseEventInfo>
+	
+  <WwiseEventInfo name="SPELL_VANITY_SHADOWHELMET_REAPER_SWING">
+	<OnCastFinished name="Play_vanity_aj_shadowhelmet_reaper_gestureswing"/>
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_VANITY_LUTE_CHANNEL_SONG_1_OUTLANDS" >
+	<OnChannelingStart name="Play_vanity_channel_lute_song_1_outlandtowns" />
+	<OnChannelingCancelled name="Stop_vanity_channel_lute_song_1_outlandtowns" />
+	<OnChannelingInterrupted name="Stop_vanity_channel_lute_song_1_outlandtowns" />
+	<OnChannelingEnd name="Stop_vanity_channel_lute_song_1_outlandtowns" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_VANITY_LUTE_CHANNEL_SONG_2_LUNE" >
+	<OnChannelingStart name="Play_vanity_channel_lute_song_2_clairedelalune" />
+	<OnChannelingCancelled name="Stop_vanity_channel_lute_song_2_clairedelalune" />
+	<OnChannelingInterrupted name="Stop_vanity_channel_lute_song_2_clairedelalune" />
+	<OnChannelingEnd name="Stop_vanity_channel_lute_song_2_clairedelalune" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_VANITY_MAGNIFICENT_LUTE_CHANNEL_SONG_1_OUTLANDS" >
+	<OnChannelingStart name="Play_vanity_channel_magnificent_lute_song_1_outlandtowns" />
+	<OnChannelingCancelled name="Stop_vanity_channel_magnificent_lute_song_1_outlandtowns" />
+	<OnChannelingInterrupted name="Stop_vanity_channel_magnificent_lute_song_1_outlandtowns" />
+	<OnChannelingEnd name="Stop_vanity_channel_magnificent_lute_song_1_outlandtowns" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_VANITY_MAGNIFICENT_LUTE_CHANNEL_SONG_2_LUNE" >
+	<OnChannelingStart name="Play_vanity_channel_magnificent_lute_song_2_clairedelalune" />
+	<OnChannelingCancelled name="Stop_vanity_channel_magnificent_lute_song_2_clairedelalune" />
+	<OnChannelingInterrupted name="Stop_vanity_channel_magnificent_lute_song_2_clairedelalune" />
+	<OnChannelingEnd name="Stop_vanity_channel_magnificent_lute_song_2_clairedelalune" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_VANITY_MAGINFICENT_LUTE_CHANNEL_SONG_3_MAINTHEME" >
+	<OnChannelingStart name="Play_vanity_channel_magnificent_lute_song_3_maintheme" />
+	<OnChannelingCancelled name="Stop_vanity_channel_magnificent_lute_song_3_maintheme" />
+	<OnChannelingInterrupted name="Stop_vanity_channel_magnificent_lute_song_3_maintheme" />
+	<OnChannelingEnd name="Stop_vanity_channel_magnificent_lute_song_3_maintheme" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_VANITY_DIE_6SIDED_THROW">
+	<OnCastFinished name="Play_vanity_aj_dice_shake_throw_6sided"/>
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_VANITY_DIE_20SIDED_THROW">
+	<OnCastFinished name="Play_vanity_aj_dice_shake_throw_20sided"/>
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_VANITY_DIE_RESULT_TERRIBLE">
+	<OnCastFinished name="Play_vanity_aj_dice_result_terrible"/>
+  </WwiseEventInfo>
+	
+  <WwiseEventInfo name="SPELL_VANITY_DIE_RESULT_MEDIUM">
+	<OnCastFinished name="Play_vanity_aj_dice_result_medium"/>
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_VANITY_DIE_RESULT_GOOD">
+	<OnCastFinished name="Play_vanity_aj_dice_result_good"/>
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_VANITY_DIE_RESULT_EXCEPTIONAL">
+	<OnCastFinished name="Play_vanity_aj_dice_result_exceptional"/>
+  </WwiseEventInfo>
+
+<!-- <WwiseEventInfo name="SPELL_VANITY_BANNER_GUIDON_AJ">
+	<OnCastFinished name="Play_vanity_aj_banner_spawn"/>
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_VANITY_BANNER_GUIDON_GOLDEN_AJ">
+	<OnCastFinished name="Play_vanity_aj_banner_golden_spawn"/>
+  </WwiseEventInfo>
+  -->
+
+	<QuestStateEvent name="TUT_FIRST_QUEST_ACCEPTED">
      <States>
        <Music name="Tutorial"/>
        <Tutorial_State name="FirstQuest"/>

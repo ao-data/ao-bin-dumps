@@ -6,7 +6,66 @@
       <layer id="Layer_09" name="Cave_1" />
       <layer id="Layer_11" name="Cave_Ocean" />
     </layergroup>
-    <layergroup name="ENCOUNTER">
+    <layergroup name="ENCOUNTER_SOLO">
+      <layer id="Layer_03" name="mob_solo_hard_01">
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_AXE_THROWER" pos="0.73 0 26.33" roty="5">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_AXE_THROWER" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_AXE_THROWER" pos="24.97 0 -2.37" roty="95">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_AXE_THROWER" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_MINIBOSS_BERSERK" pos="-7.59 0 -3.63" roty="74">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_MINIBOSS_BERSERK" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_AXE_THROWER" pos="25.37 0 2.18" roty="95">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_AXE_THROWER" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_BEAR" pos="6.95 0 9.07" roty="202">
+          <mobspawnpoint behavior="PATROL" spawnbehavior="KEEPER_BEAR">
+            <path>
+              <waypoint pos="2.955978 11.83772" idle="3" pace="WALK" />
+              <waypoint pos="-2.753588 -2.454115" idle="3" pace="WALK" />
+              <waypoint pos="8.315469 -5.222223" idle="3" pace="WALK" />
+              <waypoint pos="8.458623 6.076915" idle="5" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_BEAR" pos="13.3 0 4.57" roty="272">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_BEAR" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_BEAR" pos="3.51 0 26.73" roty="335.08">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_BEAR" />
+        </tile>
+      </layer>
+      <layer id="Layer_06" name="mob_solo_hard_02">
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_AXE_THROWER" pos="0.73 0 26.33" roty="5">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_AXE_THROWER" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_MINIBOSS_BERSERK" pos="-7.59 0 -3.63" roty="74">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_MINIBOSS_BERSERK" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_SNIPER" pos="3.51 0 26.73" roty="335.08">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_SNIPER" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_DRUID" pos="6.95 0 9.07" roty="202">
+          <mobspawnpoint behavior="PATROL" spawnbehavior="KEEPER_DRUID">
+            <path>
+              <waypoint pos="2.955978 11.83772" idle="3" pace="WALK" />
+              <waypoint pos="-2.753588 -2.454115" idle="3" pace="WALK" />
+              <waypoint pos="8.315469 -5.222223" idle="3" pace="WALK" />
+              <waypoint pos="8.458623 6.076915" idle="5" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_DRUID" pos="13.3 0 4.57" roty="272">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_DRUID" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_GIANT" pos="26.27 0 0.24" roty="95">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_GIANT" />
+        </tile>
+      </layer>
+    </layergroup>
+    <layergroup name="ENCOUNTER_VETERAN">
       <layer id="Layer_02" name="mob_veteran_hard_01">
         <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_MINIBOSS" pos="-6.41 0 -5.96" roty="68">
           <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_VETERAN_MINIBOSS" />
@@ -36,36 +95,31 @@
           <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_VETERAN_BEAR" />
         </tile>
       </layer>
-    </layergroup>
-    <layergroup name="Encounter_Solo">
-      <layer id="Layer_03" name="mob_solo_hard_01">
-        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_AXE_THROWER" pos="0.73 0 26.33" roty="5">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_AXE_THROWER" />
+      <layer id="Layer_07" name="mob_veteran_hard_02">
+        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_SNIPER" pos="3.51 0 26.73" roty="335.08">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_VETERAN_SNIPER" />
         </tile>
-        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_AXE_THROWER" pos="24.97 0 -2.37" roty="95">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_AXE_THROWER" />
+        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_DRUID" pos="13.3 0 4.57" roty="272">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_VETERAN_DRUID" />
         </tile>
-        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_MINIBOSS_BERSERK" pos="-7.59 0 -3.63" roty="74">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_MINIBOSS_BERSERK" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_AXE_THROWER" pos="25.37 0 2.18" roty="95">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_AXE_THROWER" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_BEAR" pos="6.95 0 9.07" roty="202">
-          <mobspawnpoint behavior="PATROL" spawnbehavior="KEEPER_BEAR">
+        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_DRUID" pos="6.95 0 9.07" roty="202">
+          <mobspawnpoint behavior="PATROL" spawnbehavior="KEEPER_VETERAN_DRUID">
             <path>
-              <waypoint pos="2.955978 11.83772" idle="3" pace="WALK" />
-              <waypoint pos="-2.753588 -2.454115" idle="3" pace="WALK" />
-              <waypoint pos="8.315469 -5.222223" idle="3" pace="WALK" />
-              <waypoint pos="8.458623 6.076915" idle="5" pace="WALK" />
+              <waypoint pos="2.955976 11.83772" idle="3" pace="WALK" />
+              <waypoint pos="-2.753592 -2.454117" idle="3" pace="WALK" />
+              <waypoint pos="8.31547 -5.222229" idle="3" pace="WALK" />
+              <waypoint pos="8.458623 6.076913" idle="5" pace="WALK" />
             </path>
           </mobspawnpoint>
         </tile>
-        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_BEAR" pos="13.3 0 4.57" roty="272">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_BEAR" />
+        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_AXE_THROWER" pos="0.73 0 26.33" roty="5">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_VETERAN_AXE_THROWER" />
         </tile>
-        <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_BEAR" pos="3.51 0 26.73" roty="335.08">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_BEAR" />
+        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_GIANT" pos="26.27 0 0.24" roty="95">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_VETERAN_GIANT" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_MINIBOSS" pos="-6.41 0 -5.96" roty="68">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_VETERAN_MINIBOSS" />
         </tile>
       </layer>
     </layergroup>

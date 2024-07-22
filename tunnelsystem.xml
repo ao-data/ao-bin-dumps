@@ -1,167 +1,174 @@
 <?xml version="1.0" encoding="utf-8"?>
 <tunnelsystem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="tunnelsystem.xsd">
-  
+
   <tunnelexitsettings lifetimemin="43200" lifetimemax="86400" shutdownwarningtime="3600"/>
   <tunnelexittypes>
-    <tunnelexittype 
+    <tunnelexittype
 	  name="SOLO"
-	  maxcharges="2"
+	  maxcharges="7"
 	  timeperchargeupmin="300"
-	  timeperchargeupmax="300"	  
+	  timeperchargeupmax="300"
     usedconnectionduration="300"
     />
-    <tunnelexittype 
+    <tunnelexittype
 	  name="GROUP"
 	  maxcharges="7"
 	  timeperchargeupmin="600"
 	  timeperchargeupmax="600"
     usedconnectionduration="600"
     />
-    <tunnelexittype 
+    <tunnelexittype
 	  name="RAID"
 	  maxcharges="20"
 	  timeperchargeupmin="1200"
-	  timeperchargeupmax="1200"	  
+	  timeperchargeupmax="1200"
     usedconnectionduration="1200"
     />
   </tunnelexittypes>
 
   <tunnelexitpresets>
     <tunnelexitpreset name="INCOMING" outgoingConnectionChance="0.0"/>
-    
+
     <tunnelexitpreset name="OUT_ROYAL_SAFE" outgoingConnectionChance="1">
-      <outgoingConnectionWeighting outgoingConnectionKeyword="Royalzone_Safe" weight="39"/>
-      <outgoingConnectionWeighting outgoingConnectionKeyword="Royalzone_Yellow" weight="24"/>
-      <outgoingConnectionWeighting outgoingConnectionKeyword="Royalzone_Red" weight="19"/>
+      <outgoingConnectionWeighting outgoingConnectionKeyword="Royalzone_Safe" weight="32"/>
+      <outgoingConnectionWeighting outgoingConnectionKeyword="Royalzone_Yellow" weight="41"/>
     </tunnelexitpreset>
     <tunnelexitpreset name="OUT_ROYAL_YELLOW" outgoingConnectionChance="1">
-      <outgoingConnectionWeighting outgoingConnectionKeyword="Royalzone_Safe" weight="39"/>
-      <outgoingConnectionWeighting outgoingConnectionKeyword="Royalzone_Yellow" weight="24"/>
-      <outgoingConnectionWeighting outgoingConnectionKeyword="Royalzone_Red" weight="19"/>
+      <outgoingConnectionWeighting outgoingConnectionKeyword="Royalzone_Safe" weight="32"/>
+      <outgoingConnectionWeighting outgoingConnectionKeyword="Royalzone_Yellow" weight="41"/>
+    </tunnelexitpreset>
+    <tunnelexitpreset name="OUT_ROYAL_RED" outgoingConnectionChance="1">
+      <outgoingConnectionWeighting outgoingConnectionKeyword="Royalzone_Red" weight="1"/>
     </tunnelexitpreset>
     <tunnelexitpreset name="OUT_BLACK_LOW" outgoingConnectionChance="1">
-      <outgoingConnectionWeighting outgoingConnectionKeyword="Blackzone_Low" weight="80"/>
+      <outgoingConnectionWeighting outgoingConnectionKeyword="Blackzone_Low" weight="78"/>
       <outgoingConnectionWeighting outgoingConnectionKeyword="Blackzone_Medium" weight="15"/>
-      <outgoingConnectionWeighting outgoingConnectionKeyword="Blackzone_High" weight="5"/>
+      <outgoingConnectionWeighting outgoingConnectionKeyword="Blackzone_High" weight="7"/>
     </tunnelexitpreset>
     <tunnelexitpreset name="OUT_BLACK_MEDIUM" outgoingConnectionChance="1">
       <outgoingConnectionWeighting outgoingConnectionKeyword="Blackzone_Low" weight="15"/>
-      <outgoingConnectionWeighting outgoingConnectionKeyword="Blackzone_Medium" weight="75"/>
-      <outgoingConnectionWeighting outgoingConnectionKeyword="Blackzone_High" weight="10"/>
+      <outgoingConnectionWeighting outgoingConnectionKeyword="Blackzone_Medium" weight="80"/>
+      <outgoingConnectionWeighting outgoingConnectionKeyword="Blackzone_High" weight="5"/>
     </tunnelexitpreset>
     <tunnelexitpreset name="OUT_BLACK_HIGH" outgoingConnectionChance="1">
-      <outgoingConnectionWeighting outgoingConnectionKeyword="Blackzone_Low" weight="6"/>
-      <outgoingConnectionWeighting outgoingConnectionKeyword="Blackzone_Medium" weight="9"/>
+      <outgoingConnectionWeighting outgoingConnectionKeyword="Blackzone_Low" weight="10"/>
+      <outgoingConnectionWeighting outgoingConnectionKeyword="Blackzone_Medium" weight="5"/>
       <outgoingConnectionWeighting outgoingConnectionKeyword="Blackzone_High" weight="85"/>
     </tunnelexitpreset>
     <tunnelexitpreset name="OUT_TUNNEL_ROYAL" outgoingConnectionChance="0.5">
-      <outgoingConnectionWeighting outgoingConnectionKeyword="Royalzone_Safe" weight="9"/>
-      <outgoingConnectionWeighting outgoingConnectionKeyword="Royalzone_Yellow" weight="6"/>
-      <outgoingConnectionWeighting outgoingConnectionKeyword="Royalzone_Red" weight="5"/>
-      <outgoingConnectionWeighting outgoingConnectionKeyword="Royalzone_Entrance" weight="72"/>
-      <outgoingConnectionWeighting outgoingConnectionKeyword="Tunnel_Hideout" weight="8"/>
+      <outgoingConnectionWeighting outgoingConnectionKeyword="Royalzone_Safe" weight="16"/>
+      <outgoingConnectionWeighting outgoingConnectionKeyword="Royalzone_Yellow" weight="20"/>
+      <outgoingConnectionWeighting outgoingConnectionKeyword="Royalzone_Entrance" weight="88"/>
+      <outgoingConnectionWeighting outgoingConnectionKeyword="Tunnel_Hideout" weight="6"/>
     </tunnelexitpreset>
-    <tunnelexitpreset name="OUT_TUNNEL_BLACK_LOW" outgoingConnectionChance="0.6">
-      <outgoingConnectionWeighting outgoingConnectionKeyword="Blackzone_Low" weight="24"/>
-      <outgoingConnectionWeighting outgoingConnectionKeyword="Blackzone_Entrance_Low" weight="61"/>
-      <outgoingConnectionWeighting outgoingConnectionKeyword="Tunnel_Hideout" weight="15"/>
+    <tunnelexitpreset name="OUT_TUNNEL_ROYAL_RED" outgoingConnectionChance="0.9">
+      <outgoingConnectionWeighting outgoingConnectionKeyword="Royalzone_Red" weight="14"/>
+      <outgoingConnectionWeighting outgoingConnectionKeyword="Royalzone_Entrance" weight="11"/>
+      <outgoingConnectionWeighting outgoingConnectionKeyword="Royalzone_Entrance_Red" weight="32"/>
+      <outgoingConnectionWeighting outgoingConnectionKeyword="Tunnel_Hideout" weight="2"/>
+    </tunnelexitpreset>
+    <tunnelexitpreset name="OUT_TUNNEL_BLACK_LOW" outgoingConnectionChance="0.7">
+      <outgoingConnectionWeighting outgoingConnectionKeyword="Blackzone_Low" weight="75"/>
+      <outgoingConnectionWeighting outgoingConnectionKeyword="Blackzone_Entrance_Low" weight="135"/>
+      <outgoingConnectionWeighting outgoingConnectionKeyword="Tunnel_Hideout" weight="6"/>
     </tunnelexitpreset>
     <tunnelexitpreset name="OUT_TUNNEL_BLACK_MEDIUM" outgoingConnectionChance="0.7">
-      <outgoingConnectionWeighting outgoingConnectionKeyword="Blackzone_Medium" weight="22"/>
-      <outgoingConnectionWeighting outgoingConnectionKeyword="Blackzone_Entrance_Low" weight="49"/>
-      <outgoingConnectionWeighting outgoingConnectionKeyword="Blackzone_Entrance_Medium" weight="14"/>
-      <outgoingConnectionWeighting outgoingConnectionKeyword="Tunnel_Hideout" weight="15"/>
+      <outgoingConnectionWeighting outgoingConnectionKeyword="Blackzone_Medium" weight="37"/>
+      <outgoingConnectionWeighting outgoingConnectionKeyword="Blackzone_Entrance_Low" weight="45"/>
+      <outgoingConnectionWeighting outgoingConnectionKeyword="Blackzone_Entrance_Medium" weight="64"/>
+      <outgoingConnectionWeighting outgoingConnectionKeyword="Tunnel_Hideout" weight="9"/>
     </tunnelexitpreset>
     <tunnelexitpreset name="OUT_TUNNEL_BLACK_HIGH" outgoingConnectionChance="0.7">
       <outgoingConnectionWeighting outgoingConnectionKeyword="Blackzone_High" weight="22"/>
-      <outgoingConnectionWeighting outgoingConnectionKeyword="Blackzone_Entrance_Medium" weight="40"/>
-      <outgoingConnectionWeighting outgoingConnectionKeyword="Blackzone_Entrance_High" weight="23"/>
-      <outgoingConnectionWeighting outgoingConnectionKeyword="Tunnel_Hideout" weight="15"/>
+      <outgoingConnectionWeighting outgoingConnectionKeyword="Blackzone_Entrance_Medium" weight="16"/>
+      <outgoingConnectionWeighting outgoingConnectionKeyword="Blackzone_Entrance_High" weight="36"/>
+      <outgoingConnectionWeighting outgoingConnectionKeyword="Tunnel_Hideout" weight="4"/>
     </tunnelexitpreset>
     <tunnelexitpreset name="OUT_TUNNEL_ENTRANCE_LOW" outgoingConnectionChance="1">
-      <outgoingConnectionWeighting outgoingConnectionKeyword="Blackzone_Entrance_Low" weight="52"/>
-      <outgoingConnectionWeighting outgoingConnectionKeyword="Royalzone_Entrance" weight="48"/>
+      <outgoingConnectionWeighting outgoingConnectionKeyword="Blackzone_Entrance_Low" weight="90"/>
+      <outgoingConnectionWeighting outgoingConnectionKeyword="Royalzone_Entrance" weight="44"/>
+      <outgoingConnectionWeighting outgoingConnectionKeyword="Royalzone_Entrance_Red" weight="16"/>
+      <outgoingConnectionWeighting outgoingConnectionKeyword="Tunnel_Deep_Raid" weight="15"/>
     </tunnelexitpreset>
     <tunnelexitpreset name="OUT_TUNNEL_ENTRANCE_MEDIUM" outgoingConnectionChance="1">
-      <outgoingConnectionWeighting outgoingConnectionKeyword="Blackzone_Entrance_Low" weight="45"/>
-      <outgoingConnectionWeighting outgoingConnectionKeyword="Blackzone_Entrance_Medium" weight="55"/>
+      <outgoingConnectionWeighting outgoingConnectionKeyword="Blackzone_Entrance_Low" weight="90"/>
+      <outgoingConnectionWeighting outgoingConnectionKeyword="Blackzone_Entrance_Medium" weight="64"/>
+      <outgoingConnectionWeighting outgoingConnectionKeyword="Tunnel_Deep_Raid" weight="15"/>
     </tunnelexitpreset>
     <tunnelexitpreset name="OUT_TUNNEL_ENTRANCE_HIGH" outgoingConnectionChance="1">
-      <outgoingConnectionWeighting outgoingConnectionKeyword="Blackzone_Entrance_Low" weight="20"/>
-      <outgoingConnectionWeighting outgoingConnectionKeyword="Blackzone_Entrance_Medium" weight="15"/>
-      <outgoingConnectionWeighting outgoingConnectionKeyword="Blackzone_Entrance_High" weight="65"/>
+      <outgoingConnectionWeighting outgoingConnectionKeyword="Blackzone_Entrance_Low" weight="90"/>
+      <outgoingConnectionWeighting outgoingConnectionKeyword="Blackzone_Entrance_Medium" weight="32"/>
+      <outgoingConnectionWeighting outgoingConnectionKeyword="Blackzone_Entrance_High" weight="32"/>
+      <outgoingConnectionWeighting outgoingConnectionKeyword="Tunnel_Deep_Raid" weight="15"/>
     </tunnelexitpreset>
     <tunnelexitpreset name="OUT_TUNNEL_ENTRANCE" outgoingConnectionChance="0.5">
-      <outgoingConnectionWeighting outgoingConnectionKeyword="Royalzone_Entrance" weight="43"/>
-      <outgoingConnectionWeighting outgoingConnectionKeyword="Blackzone_Entrance_Low" weight="33"/>
-      <outgoingConnectionWeighting outgoingConnectionKeyword="Blackzone_Entrance_Medium" weight="10"/>
-      <outgoingConnectionWeighting outgoingConnectionKeyword="Blackzone_Entrance_High" weight="4"/>
+      <outgoingConnectionWeighting outgoingConnectionKeyword="Royalzone_Entrance" weight="44"/>
+      <outgoingConnectionWeighting outgoingConnectionKeyword="Royalzone_Entrance_Red" weight="16"/>
+      <outgoingConnectionWeighting outgoingConnectionKeyword="Blackzone_Entrance_Low" weight="90"/>
+      <outgoingConnectionWeighting outgoingConnectionKeyword="Blackzone_Entrance_Medium" weight="32"/>
+      <outgoingConnectionWeighting outgoingConnectionKeyword="Blackzone_Entrance_High" weight="18"/>
       <outgoingConnectionWeighting outgoingConnectionKeyword="Tunnel_Hideout_Deep" weight="10"/>
     </tunnelexitpreset>
     <tunnelexitpreset name="OUT_TUNNEL_LOW" outgoingConnectionChance="1">
-      <outgoingConnectionWeighting outgoingConnectionKeyword="Royalzone_Entrance" weight="7"/>
-      <outgoingConnectionWeighting outgoingConnectionKeyword="Blackzone_Entrance_Low" weight="10"/>
-      <outgoingConnectionWeighting outgoingConnectionKeyword="Blackzone_Entrance_Medium" weight="3"/>
-      <outgoingConnectionWeighting outgoingConnectionKeyword="Blackzone_Entrance_High" weight="3"/>
-      <outgoingConnectionWeighting outgoingConnectionKeyword="Tunnel_Low" weight="72"/>
-      <outgoingConnectionWeighting outgoingConnectionKeyword="Tunnel_Hideout_Deep" weight="5"/>
+      <outgoingConnectionWeighting outgoingConnectionKeyword="Royalzone_Entrance" weight="44"/>
+      <outgoingConnectionWeighting outgoingConnectionKeyword="Royalzone_Entrance_Red" weight="16"/>
+      <outgoingConnectionWeighting outgoingConnectionKeyword="Blackzone_Entrance_Low" weight="90"/>
+      <outgoingConnectionWeighting outgoingConnectionKeyword="Blackzone_Entrance_Medium" weight="32"/>
+      <outgoingConnectionWeighting outgoingConnectionKeyword="Blackzone_Entrance_High" weight="18"/>
+      <outgoingConnectionWeighting outgoingConnectionKeyword="Tunnel_Low" weight="104"/>
     </tunnelexitpreset>
     <tunnelexitpreset name="OUT_TUNNEL_MEDIUM" outgoingConnectionChance="1">
-      <outgoingConnectionWeighting outgoingConnectionKeyword="Blackzone_Entrance_Low" weight="30"/>
-      <outgoingConnectionWeighting outgoingConnectionKeyword="Blackzone_Entrance_Medium" weight="18"/>
-      <outgoingConnectionWeighting outgoingConnectionKeyword="Blackzone_Entrance_High" weight="17"/>
+      <outgoingConnectionWeighting outgoingConnectionKeyword="Royalzone_Entrance" weight="44"/>
+      <outgoingConnectionWeighting outgoingConnectionKeyword="Royalzone_Entrance_Red" weight="16"/>
+      <outgoingConnectionWeighting outgoingConnectionKeyword="Blackzone_Entrance_Low" weight="90"/>
+      <outgoingConnectionWeighting outgoingConnectionKeyword="Blackzone_Entrance_Medium" weight="32"/>
+      <outgoingConnectionWeighting outgoingConnectionKeyword="Blackzone_Entrance_High" weight="18"/>
       <outgoingConnectionWeighting outgoingConnectionKeyword="Tunnel_Medium" weight="20"/>
-      <outgoingConnectionWeighting outgoingConnectionKeyword="Tunnel_Hideout_Deep" weight="15"/>
     </tunnelexitpreset>
     <tunnelexitpreset name="OUT_TUNNEL_DEEP_MAIN" outgoingConnectionChance="1">
-      <outgoingConnectionWeighting outgoingConnectionKeyword="Tunnel_Low" weight="74"/>
-      <outgoingConnectionWeighting outgoingConnectionKeyword="Tunnel_Medium" weight="9"/>
-      <outgoingConnectionWeighting outgoingConnectionKeyword="Tunnel_High" weight="17"/>
+      <outgoingConnectionWeighting outgoingConnectionKeyword="Tunnel_Low" weight="90"/>
+      <outgoingConnectionWeighting outgoingConnectionKeyword="Tunnel_Medium" weight="32"/>
+      <outgoingConnectionWeighting outgoingConnectionKeyword="Tunnel_High" weight="18"/>
     </tunnelexitpreset>
     <tunnelexitpreset name="OUT_TUNNEL_DEEP_SECONDARY" outgoingConnectionChance="1">
-      <outgoingConnectionWeighting outgoingConnectionKeyword="Tunnel_Low" weight="23"/>
-      <outgoingConnectionWeighting outgoingConnectionKeyword="Tunnel_Medium" weight="4"/>
-      <outgoingConnectionWeighting outgoingConnectionKeyword="Tunnel_High" weight="7"/>
-      <outgoingConnectionWeighting outgoingConnectionKeyword="Tunnel_Hideout" weight="33"/>
-      <outgoingConnectionWeighting outgoingConnectionKeyword="Tunnel_Hideout_Deep" weight="33"/>
+      <outgoingConnectionWeighting outgoingConnectionKeyword="Tunnel_Low" weight="90"/>
+      <outgoingConnectionWeighting outgoingConnectionKeyword="Tunnel_Medium" weight="32"/>
+      <outgoingConnectionWeighting outgoingConnectionKeyword="Tunnel_High" weight="18"/>
     </tunnelexitpreset>
     <tunnelexitpreset name="OUT_TUNNEL_HIDEOUT" outgoingConnectionChance="1">
-      <outgoingConnectionWeighting outgoingConnectionKeyword="Royalzone_Entrance" weight="30"/>
-      <outgoingConnectionWeighting outgoingConnectionKeyword="Blackzone_Entrance_Low" weight="45"/>
-      <outgoingConnectionWeighting outgoingConnectionKeyword="Blackzone_Entrance_Medium" weight="16"/>
-      <outgoingConnectionWeighting outgoingConnectionKeyword="Blackzone_Entrance_High" weight="9"/>
+      <outgoingConnectionWeighting outgoingConnectionKeyword="Royalzone_Entrance" weight="44"/>
+      <outgoingConnectionWeighting outgoingConnectionKeyword="Royalzone_Entrance_Red" weight="16"/>
+      <outgoingConnectionWeighting outgoingConnectionKeyword="Blackzone_Entrance_Low" weight="90"/>
+      <outgoingConnectionWeighting outgoingConnectionKeyword="Blackzone_Entrance_Medium" weight="32"/>
     </tunnelexitpreset>
     <tunnelexitpreset name="OUT_TUNNEL_HIDEOUT_DEEP" outgoingConnectionChance="1">
-      <outgoingConnectionWeighting outgoingConnectionKeyword="Tunnel_Low" weight="75"/>
-      <outgoingConnectionWeighting outgoingConnectionKeyword="Tunnel_Medium" weight="15"/>
-      <outgoingConnectionWeighting outgoingConnectionKeyword="Tunnel_High" weight="10"/>
+      <outgoingConnectionWeighting outgoingConnectionKeyword="Tunnel_Low" weight="52"/>
+      <outgoingConnectionWeighting outgoingConnectionKeyword="Tunnel_Medium" weight="10"/>
+      <outgoingConnectionWeighting outgoingConnectionKeyword="Tunnel_High" weight="8"/>
     </tunnelexitpreset>
-    <tunnelexitpreset name="OUT_TUNNEL_HIDEOUT_ALL" outgoingConnectionChance="0.35">
-      <outgoingConnectionWeighting outgoingConnectionKeyword="Tunnel_Deep_Raid" weight="90"/>
-      <outgoingConnectionWeighting outgoingConnectionKeyword="Blackzone_Entrance_Low" weight="7"/>
-      <outgoingConnectionWeighting outgoingConnectionKeyword="Blackzone_Entrance_Medium" weight="2"/>
-      <outgoingConnectionWeighting outgoingConnectionKeyword="Blackzone_Entrance_High" weight="1"/>
+    <tunnelexitpreset name="OUT_TUNNEL_HIDEOUT_ALL" outgoingConnectionChance="0.65">
+      <outgoingConnectionWeighting outgoingConnectionKeyword="Tunnel_Deep_Raid" weight="35"/>
+      <outgoingConnectionWeighting outgoingConnectionKeyword="Tunnel_Hideout" weight="7"/>
+      <outgoingConnectionWeighting outgoingConnectionKeyword="Tunnel_Hideout_Deep" weight="3"/>
     </tunnelexitpreset>
-    <tunnelexitpreset name="OUT_TUNNEL_HIDEOUT_DEEP_ALL" outgoingConnectionChance="0.35">
-      <outgoingConnectionWeighting outgoingConnectionKeyword="Tunnel_Deep_Raid" weight="90"/>
-      <outgoingConnectionWeighting outgoingConnectionKeyword="Tunnel_Low" weight="7"/>
-      <outgoingConnectionWeighting outgoingConnectionKeyword="Tunnel_Medium" weight="2"/>
-      <outgoingConnectionWeighting outgoingConnectionKeyword="Tunnel_High" weight="1"/>
+    <tunnelexitpreset name="OUT_TUNNEL_HIDEOUT_DEEP_ALL" outgoingConnectionChance="0.65">
+      <outgoingConnectionWeighting outgoingConnectionKeyword="Tunnel_Deep_Raid" weight="35"/>
+      <outgoingConnectionWeighting outgoingConnectionKeyword="Tunnel_Hideout" weight="7"/>
+      <outgoingConnectionWeighting outgoingConnectionKeyword="Tunnel_Hideout_Deep" weight="3"/>
     </tunnelexitpreset>
-
   </tunnelexitpresets>
-  
+
   <tunnelpresets>
-	
-	  <!--0. Layer Open World-->
+
+    <!--0. Layer Open World-->
     <tunnelpreset name="SAFEZONE" incomingConnectionKeyword="Royalzone_Safe" minExits="0" maxExits="6" dialsymbol="BLUE">
       <incomingConnectionWeightings>
         <type name="GROUP" weight="1"/>
       </incomingConnectionWeightings>
-			<exits>
+      <exits>
         <exit weight="6" tunnelexitpreset="INCOMING"/>
       </exits>
-		</tunnelpreset>
+    </tunnelpreset>
     <tunnelpreset name="YELLOW" incomingConnectionKeyword="Royalzone_Yellow" minExits="0" maxExits="6" dialsymbol="YELLOW">
       <incomingConnectionWeightings>
         <type name="GROUP" weight="1"/>
@@ -170,7 +177,7 @@
         <exit weight="6" tunnelexitpreset="INCOMING"/>
       </exits>
     </tunnelpreset>
-		<tunnelpreset name="OPENPVP_RED" incomingConnectionKeyword="Royalzone_Red" minExits="0" maxExits="6" dialsymbol="RED">
+    <tunnelpreset name="OPENPVP_RED" incomingConnectionKeyword="Royalzone_Red" minExits="0" maxExits="6" dialsymbol="RED">
       <incomingConnectionWeightings>
         <type name="GROUP" weight="1"/>
       </incomingConnectionWeightings>
@@ -178,56 +185,66 @@
         <exit weight="6" tunnelexitpreset="INCOMING"/>
       </exits>
     </tunnelpreset>
-		<tunnelpreset  name="OPENPVP_BLACK_LOW" incomingConnectionKeyword="Blackzone_Low" minExits="0" maxExits="6" dialsymbol="BLACK">
+    <tunnelpreset  name="OPENPVP_BLACK_LOW" incomingConnectionKeyword="Blackzone_Low" minExits="0" maxExits="6" dialsymbol="BLACK">
       <incomingConnectionWeightings>
         <type name="GROUP" weight="1"/>
       </incomingConnectionWeightings>
-			<exits>
-				<exit weight="6" tunnelexitpreset="INCOMING"/>
-			</exits>
+      <exits>
+        <exit weight="6" tunnelexitpreset="INCOMING"/>
+      </exits>
     </tunnelpreset>
-		<tunnelpreset  name="OPENPVP_BLACK_MEDIUM" incomingConnectionKeyword="Blackzone_Medium" minExits="0" maxExits="6" dialsymbol="BLACK">
+    <tunnelpreset  name="OPENPVP_BLACK_MEDIUM" incomingConnectionKeyword="Blackzone_Medium" minExits="0" maxExits="6" dialsymbol="BLACK">
       <incomingConnectionWeightings>
         <type name="GROUP" weight="1"/>
       </incomingConnectionWeightings>
-			<exits>
-				<exit weight="6" tunnelexitpreset="INCOMING"/>
-			</exits>
+      <exits>
+        <exit weight="6" tunnelexitpreset="INCOMING"/>
+      </exits>
     </tunnelpreset>
-		<tunnelpreset  name="OPENPVP_BLACK_HIGH" incomingConnectionKeyword="Blackzone_High" minExits="0" maxExits="6" dialsymbol="BLACK">
+    <tunnelpreset  name="OPENPVP_BLACK_HIGH" incomingConnectionKeyword="Blackzone_High" minExits="0" maxExits="6" dialsymbol="BLACK">
       <incomingConnectionWeightings>
         <type name="GROUP" weight="1"/>
       </incomingConnectionWeightings>
-			<exits>
-				<exit weight="6" tunnelexitpreset="INCOMING"/>
-			</exits>
+      <exits>
+        <exit weight="6" tunnelexitpreset="INCOMING"/>
+      </exits>
     </tunnelpreset>
-		
-		<!--1. Layer Tunnels-->
-		<tunnelpreset name="TUNNEL_ROYAL" incomingConnectionKeyword="Royalzone_Entrance" minExits="6" maxExits="6" dialsymbol="ENTRANCE">
+
+    <!--1. Layer Tunnels-->
+    <tunnelpreset name="TUNNEL_ROYAL" incomingConnectionKeyword="Royalzone_Entrance" minExits="6" maxExits="6" dialsymbol="ENTRANCE">
       <incomingConnectionWeightings>
-        <type name="GROUP" weight="1"/>
+        <type name="SOLO" weight="1"/>
       </incomingConnectionWeightings>
-			<exits>
-				<exit weight="2" tunnelexitpreset="OUT_ROYAL_SAFE"/>
-        <exit weight="2" tunnelexitpreset="OUT_ROYAL_YELLOW"/>
-				<exit weight="2" tunnelexitpreset="OUT_TUNNEL_ROYAL"/>
-				<exit weight="6" tunnelexitpreset="INCOMING"/>
-			</exits>
-		</tunnelpreset>
-		<tunnelpreset name="TUNNEL_BLACK_LOW" incomingConnectionKeyword="Blackzone_Entrance_Low" minExits="6" maxExits="6" dialsymbol="ENTRANCE">
+      <exits>
+        <exit weight="1" tunnelexitpreset="OUT_ROYAL_SAFE"/>
+        <exit weight="1" tunnelexitpreset="OUT_ROYAL_YELLOW"/>
+        <exit weight="1" tunnelexitpreset="OUT_TUNNEL_ROYAL"/>
+        <exit weight="3" tunnelexitpreset="INCOMING"/>
+      </exits>
+    </tunnelpreset>
+    <tunnelpreset name="TUNNEL_ROYAL_RED" incomingConnectionKeyword="Royalzone_Entrance_Red" minExits="6" maxExits="6" dialsymbol="ENTRANCE">
       <incomingConnectionWeightings>
-        <type name="GROUP" weight="1"/>
+        <type name="SOLO" weight="1"/>
       </incomingConnectionWeightings>
-			<exits>
+      <exits>
+        <exit weight="2" tunnelexitpreset="OUT_ROYAL_RED"/>
+        <exit weight="1" tunnelexitpreset="OUT_TUNNEL_ROYAL_RED"/>
+        <exit weight="3" tunnelexitpreset="INCOMING"/>
+      </exits>
+    </tunnelpreset>
+    <tunnelpreset name="TUNNEL_BLACK_LOW" incomingConnectionKeyword="Blackzone_Entrance_Low" minExits="6" maxExits="6" dialsymbol="ENTRANCE">
+      <incomingConnectionWeightings>
+        <type name="SOLO" weight="1"/>
+      </incomingConnectionWeightings>
+      <exits>
         <exit weight="2" tunnelexitpreset="OUT_BLACK_LOW"/>
         <exit weight="1" tunnelexitpreset="OUT_TUNNEL_BLACK_LOW"/>
-				<exit weight="3" tunnelexitpreset="INCOMING"/>
-			</exits>
-		</tunnelpreset>
+        <exit weight="3" tunnelexitpreset="INCOMING"/>
+      </exits>
+    </tunnelpreset>
     <tunnelpreset name="TUNNEL_BLACK_MEDIUM" incomingConnectionKeyword="Blackzone_Entrance_Medium" minExits="5" maxExits="5" dialsymbol="ENTRANCE">
       <incomingConnectionWeightings>
-        <type name="GROUP" weight="1"/>
+        <type name="SOLO" weight="1"/>
       </incomingConnectionWeightings>
       <exits>
         <exit weight="2" tunnelexitpreset="OUT_BLACK_MEDIUM"/>
@@ -237,7 +254,7 @@
     </tunnelpreset>
     <tunnelpreset name="TUNNEL_BLACK_HIGH" incomingConnectionKeyword="Blackzone_Entrance_High" minExits="5" maxExits="5" dialsymbol="ENTRANCE">
       <incomingConnectionWeightings>
-        <type name="GROUP" weight="1"/>
+        <type name="SOLO" weight="1"/>
       </incomingConnectionWeightings>
       <exits>
         <exit weight="2" tunnelexitpreset="OUT_BLACK_HIGH"/>
@@ -249,7 +266,7 @@
     <!--2. Layer Tunnels-->
     <tunnelpreset name="TUNNEL_LOW" incomingConnectionKeyword="Tunnel_Low" minExits="4" maxExits="4" dialsymbol="TUNNEL">
       <incomingConnectionWeightings>
-        <type name="GROUP" weight="1"/>
+        <type name="SOLO" weight="1"/>
       </incomingConnectionWeightings>
       <exits>
         <exit weight="1" tunnelexitpreset="OUT_TUNNEL_ENTRANCE_LOW"/>
@@ -259,7 +276,7 @@
     </tunnelpreset>
     <tunnelpreset name="TUNNEL_MEDIUM" incomingConnectionKeyword="Tunnel_Medium" minExits="4" maxExits="4" dialsymbol="TUNNEL">
       <incomingConnectionWeightings>
-        <type name="GROUP" weight="1"/>
+        <type name="SOLO" weight="1"/>
       </incomingConnectionWeightings>
       <exits>
         <exit weight="1" tunnelexitpreset="OUT_TUNNEL_ENTRANCE_MEDIUM"/>
@@ -269,7 +286,7 @@
     </tunnelpreset>
     <tunnelpreset name="TUNNEL_HIGH" incomingConnectionKeyword="Tunnel_High" minExits="4" maxExits="4" dialsymbol="TUNNEL">
       <incomingConnectionWeightings>
-        <type name="GROUP" weight="1"/>
+        <type name="SOLO" weight="1"/>
       </incomingConnectionWeightings>
       <exits>
         <exit weight="1" tunnelexitpreset="OUT_TUNNEL_ENTRANCE_HIGH"/>
@@ -277,17 +294,17 @@
         <exit weight="2" tunnelexitpreset="INCOMING"/>
       </exits>
     </tunnelpreset>
-		
-		<!--3. Layer Tunnels-->		
-		<tunnelpreset name="TUNNEL_DEEP" incomingConnectionKeyword="Tunnel_Deep" minExits="2" maxExits="2" dialsymbol="DEEP">
-			<incomingConnectionWeightings>
-				<type name="GROUP" weight="1"/>
-			</incomingConnectionWeightings>
-			<exits>
+
+    <!--3. Layer Tunnels-->
+    <tunnelpreset name="TUNNEL_DEEP" incomingConnectionKeyword="Tunnel_Deep" minExits="2" maxExits="2" dialsymbol="DEEP">
+      <incomingConnectionWeightings>
+        <type name="SOLO" weight="1"/>
+      </incomingConnectionWeightings>
+      <exits>
         <exit weight="1" tunnelexitpreset="OUT_TUNNEL_DEEP_MAIN"/>
         <exit weight="1" tunnelexitpreset="OUT_TUNNEL_DEEP_SECONDARY"/>
-			</exits>
-		</tunnelpreset>
+      </exits>
+    </tunnelpreset>
     <tunnelpreset name="TUNNEL_DEEP_RAID" incomingConnectionKeyword="Tunnel_Deep_Raid" minExits="4" maxExits="4" dialsymbol="RAID">
       <incomingConnectionWeightings>
         <type name="RAID" weight="1"/>
@@ -300,7 +317,7 @@
     <!--Hideout Tunnels-->
     <tunnelpreset name="TUNNEL_HIDEOUT" incomingConnectionKeyword="Tunnel_Hideout" minExits="3" maxExits="3" dialsymbol="HIDEOUT">
       <incomingConnectionWeightings>
-        <type name="GROUP" weight="1"/>
+        <type name="SOLO" weight="1"/>
       </incomingConnectionWeightings>
       <exits>
         <exit weight="1" tunnelexitpreset="OUT_TUNNEL_HIDEOUT"/>
@@ -310,7 +327,7 @@
     </tunnelpreset>
     <tunnelpreset name="TUNNEL_HIDEOUT_DEEP" incomingConnectionKeyword="Tunnel_Hideout_Deep" minExits="3" maxExits="3" dialsymbol="HIDEOUT">
       <incomingConnectionWeightings>
-        <type name="GROUP" weight="1"/>
+        <type name="SOLO" weight="1"/>
       </incomingConnectionWeightings>
       <exits>
         <exit weight="1" tunnelexitpreset="OUT_TUNNEL_HIDEOUT_DEEP"/>
