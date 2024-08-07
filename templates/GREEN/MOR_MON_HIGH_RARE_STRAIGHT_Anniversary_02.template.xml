@@ -260,7 +260,7 @@
         <tile name="FOREST_GREEN_WATER_river_DNG_30x30_OBJ_BG" pos="65 -24 35" />
         <tile name="FOREST_GREEN_WATER_river_DNG_30x30_OBJ_BG" pos="65 -24 -65" />
         <tile name="FOREST_GREEN_WATER_river_DNG_30x30_OBJ_BG" pos="105 -24 -55" />
-        <tile name="AtmosphereBubble_DNG_MOR_DL_NONE_library_indoor_warm" pos="85.5 0 -59.7" roty="270">
+        <tile name="AtmosphereBubble_DNG_MOR_DL_NONE_library_indoor_warm" pos="87.3 0 -59.7" roty="270">
           <atmospherebubble layer="1" radius="24" blend="0.5749999" />
         </tile>
         <tile name="FOREST_GREEN_PLATEAU_ROCK_8M_DIAGONAL_B_NOCOL_OCEAN" pos="74 -24 26" roty="270" />
@@ -310,27 +310,38 @@
         <tile name="SpawnPoint_RANDOM_MORGANA_SOLO_MAGIC" pos="84.11 0 50.34" roty="90">
           <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_MAGIC" />
         </tile>
+        <tile name="SpawnPoint_RANDOM_MORGANA_SOLO_STANDARD" pos="78.43 0 71">
+          <mobspawnpoint behavior="PATROL" spawnbehavior="MORGANA_STANDARD">
+            <path>
+              <waypoint pos="78.14323 70.49628" idle="1" pace="WALK" />
+              <waypoint pos="78.23009 35.50004" idle="1" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+        <tile name="SpawnPoint_RANDOM_MORGANA_SOLO_RAVEN" pos="78.64 0 -17.5" roty="334.86">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_RAVEN" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_MORGANA_SOLO_STANDARD" pos="78.4 0 -71.62" roty="180">
+          <mobspawnpoint behavior="PATROL" spawnbehavior="MORGANA_STANDARD">
+            <path>
+              <waypoint pos="78.6869 -71.11621" idle="1" pace="WALK" />
+              <waypoint pos="78.60004 -36.11998" idle="1" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+        <tile name="SpawnPoint_RANDOM_MORGANA_SOLO_STANDARD" pos="81.43 0 -71.62" roty="180">
+          <mobspawnpoint behavior="PATROL" spawnbehavior="MORGANA_STANDARD">
+            <path>
+              <waypoint pos="81.71689 -71.11625" idle="1" pace="WALK" />
+              <waypoint pos="81.63004 -36.12002" idle="1" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
         <tile name="SpawnPoint_RANDOM_MORGANA_SOLO_ACOLYTE" pos="84.68 0 -58.64" roty="90">
           <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_ACOLYTE" />
         </tile>
         <tile name="SpawnPoint_RANDOM_MORGANA_SOLO_ACOLYTE" pos="84.68 0 -61.41" roty="90">
           <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_ACOLYTE" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_MORGANA_SOLO_RAVEN" pos="81.43 0 -71.62" roty="180">
-          <mobspawnpoint behavior="PATROL" spawnbehavior="MORGANA_RAVEN">
-            <path>
-              <waypoint pos="81.71689 -71.11625" idle="1" pace="WALK" />
-              <waypoint pos="81.63002 -36.12001" idle="1" pace="WALK" />
-            </path>
-          </mobspawnpoint>
-        </tile>
-        <tile name="SpawnPoint_RANDOM_MORGANA_SOLO_RAVEN" pos="78.4 0 -71.62" roty="180">
-          <mobspawnpoint behavior="PATROL" spawnbehavior="MORGANA_RAVEN">
-            <path>
-              <waypoint pos="78.6869 -71.11621" idle="1" pace="WALK" />
-              <waypoint pos="78.60004 -36.11999" idle="1" pace="WALK" />
-            </path>
-          </mobspawnpoint>
         </tile>
         <tile name="SpawnPoint_RANDOM_MORGANA_SOLO_BOOK" pos="88.21 0 -61.98" roty="90">
           <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_BOOK" />
@@ -353,22 +364,6 @@
         <tile name="SpawnPoint_RANDOM_MORGANA_SOLO_BAT" pos="85.2 0 46.79" roty="53.22">
           <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_BAT" />
         </tile>
-        <tile name="SpawnPoint_RANDOM_MORGANA_SOLO_RAVEN" pos="78.43 0 71">
-          <mobspawnpoint behavior="PATROL" spawnbehavior="MORGANA_RAVEN">
-            <path>
-              <waypoint pos="78.14323 70.49628" idle="1" pace="WALK" />
-              <waypoint pos="78.23009 35.50004" idle="1" pace="WALK" />
-            </path>
-          </mobspawnpoint>
-        </tile>
-        <tile name="SpawnPoint_RANDOM_MORGANA_SOLO_RAVEN" pos="81.46 0 71">
-          <mobspawnpoint behavior="PATROL" spawnbehavior="MORGANA_RAVEN">
-            <path>
-              <waypoint pos="81.17323 70.49628" idle="1" pace="WALK" />
-              <waypoint pos="81.26009 35.50004" idle="1" pace="WALK" />
-            </path>
-          </mobspawnpoint>
-        </tile>
         <tile name="SpawnPoint_LOOTCHEST_ANNIVERSARY_SOLO_LOOTCHEST_BOSS" pos="-2 -4 9" roty="301.86" />
         <tile name="SpawnPoint_RANDOM_MORGANA_SOLO_ACOLYTE" pos="79.74 0 3.11" roty="256">
           <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_ACOLYTE" />
@@ -384,11 +379,16 @@
         <tile name="SpawnPoint_RANDOM_MORGANA_SOLO_ACOLYTE" pos="79.75 0 -2.03" roty="270">
           <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_ACOLYTE" />
         </tile>
-        <tile name="SpawnPoint_RANDOM_MORGANA_SOLO_STANDARD" pos="79.28 0 -15.48" roty="319.72">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_STANDARD" />
+        <tile name="SpawnPoint_RANDOM_MORGANA_SOLO_STANDARD" pos="81.46 0 71">
+          <mobspawnpoint behavior="PATROL" spawnbehavior="MORGANA_STANDARD">
+            <path>
+              <waypoint pos="81.17323 70.49628" idle="1" pace="WALK" />
+              <waypoint pos="81.26009 35.50004" idle="1" pace="WALK" />
+            </path>
+          </mobspawnpoint>
         </tile>
-        <tile name="SpawnPoint_RANDOM_MORGANA_SOLO_STANDARD" pos="81.63 0 -14.06" roty="319.72">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_STANDARD" />
+        <tile name="SpawnPoint_RANDOM_MORGANA_SOLO_RAVEN" pos="81.69 0 -13.99" roty="300.99">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_RAVEN" />
         </tile>
       </layer>
       <layer id="Layer_02" name="mob_solo_hard_01">
@@ -454,11 +454,44 @@
     </layergroup>
     <layergroup name="ENCOUNTER_VETERAN">
       <layer id="Layer_03" name="mob_veteran_hard_02">
-        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_RAVEN" pos="78.4 0 -71.62" roty="180">
-          <mobspawnpoint behavior="PATROL" spawnbehavior="MORGANA_RAVEN_VETERAN">
+        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_RECRUIT" pos="78.7 0 31.29" roty="1">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_VETERAN_RECRUIT" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_STANDARD" pos="78.43 0 71">
+          <mobspawnpoint behavior="PATROL" spawnbehavior="MORGANA_VETERAN_STANDARD">
             <path>
-              <waypoint pos="78.68693 -71.11624" idle="1" pace="WALK" />
-              <waypoint pos="78.60007 -36.12002" idle="1" pace="WALK" />
+              <waypoint pos="78.14326 70.49631" idle="1" pace="WALK" />
+              <waypoint pos="78.23012 35.50008" idle="1" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_STANDARD" pos="81.43 0 -71.62" roty="180">
+          <mobspawnpoint behavior="PATROL" spawnbehavior="MORGANA_VETERAN_STANDARD">
+            <path>
+              <waypoint pos="81.71692 -71.11628" idle="1" pace="WALK" />
+              <waypoint pos="81.63007 -36.12006" idle="1" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_STANDARD" pos="81.46 0 71">
+          <mobspawnpoint behavior="PATROL" spawnbehavior="MORGANA_VETERAN_STANDARD">
+            <path>
+              <waypoint pos="81.17326 70.49631" idle="1" pace="WALK" />
+              <waypoint pos="81.26012 35.50008" idle="1" pace="WALK" />
+            </path>
+          </mobspawnpoint>
+        </tile>
+        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_MAGIC" pos="84.11 0 50.34" roty="90">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_VETERAN_MAGIC" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_RAVEN" pos="77.96 0 -20.19" roty="333.21">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_RAVEN_VETERAN" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_RD_ANNIVERSARY_VETERAN_BOSS" pos="-0.97 -4.15 3" roty="90">
+          <mobspawnpoint behavior="PATROL" spawnbehavior="RD_ANNIVERSARY_VETERAN_BOSS">
+            <path>
+              <waypoint pos="11.03 -2.861023E-06" idle="0" pace="WALK" />
+              <waypoint pos="11.86877 0.1957083" idle="120" pace="WALK" />
             </path>
           </mobspawnpoint>
         </tile>
@@ -466,14 +499,16 @@
           <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_VETERAN_GIANT" />
         </tile>
         <tile name="SpawnPoint_LOOTCHEST_ANNIVERSARY_VETERAN_LOOTCHEST_BOSS" pos="-2 -4 9" roty="301.86" />
-        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_ACOLYTE" pos="84.68 0 -61.41" roty="90">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_ACOLYTE_VETERAN" />
+        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_RAVEN" pos="81.95 0 -14.58" roty="303.11">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_RAVEN_VETERAN" />
         </tile>
-        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_BAT" pos="85.72 0 53.06" roty="118">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_VETERAN_BAT" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_ACOLYTE" pos="84.68 0 -58.64" roty="90">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_ACOLYTE_VETERAN" />
+        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_STANDARD" pos="78.4 0 -71.62" roty="180">
+          <mobspawnpoint behavior="PATROL" spawnbehavior="MORGANA_VETERAN_STANDARD">
+            <path>
+              <waypoint pos="78.68693 -71.11624" idle="1" pace="WALK" />
+              <waypoint pos="78.60007 -36.12002" idle="1" pace="WALK" />
+            </path>
+          </mobspawnpoint>
         </tile>
         <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_ACOLYTE" pos="79.74 0 3.11" roty="256">
           <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_ACOLYTE_VETERAN" />
@@ -484,58 +519,26 @@
         <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_BAT" pos="85.2 0 46.79" roty="53.22">
           <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_VETERAN_BAT" />
         </tile>
-        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_RAVEN" pos="81.46 0 71">
-          <mobspawnpoint behavior="PATROL" spawnbehavior="MORGANA_RAVEN_VETERAN">
-            <path>
-              <waypoint pos="81.17326 70.49631" idle="1" pace="WALK" />
-              <waypoint pos="81.26012 35.50008" idle="1" pace="WALK" />
-            </path>
-          </mobspawnpoint>
-        </tile>
-        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_RAVEN" pos="78.43 0 71">
-          <mobspawnpoint behavior="PATROL" spawnbehavior="MORGANA_RAVEN_VETERAN">
-            <path>
-              <waypoint pos="78.14326 70.49631" idle="1" pace="WALK" />
-              <waypoint pos="78.23012 35.50008" idle="1" pace="WALK" />
-            </path>
-          </mobspawnpoint>
-        </tile>
         <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_RECRUIT" pos="82.46 0 31.29" roty="1">
           <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_VETERAN_RECRUIT" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_ACOLYTE" pos="86.48 0 -61.41" roty="90">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_ACOLYTE_VETERAN" />
         </tile>
         <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_ACOLYTE" pos="79.75 0 -2.03" roty="270">
           <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_ACOLYTE_VETERAN" />
         </tile>
-        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_STANDARD" pos="81.63 0 -14.06" roty="319.72">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_VETERAN_STANDARD" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_RAVEN" pos="81.43 0 -71.62" roty="180">
-          <mobspawnpoint behavior="PATROL" spawnbehavior="MORGANA_RAVEN_VETERAN">
-            <path>
-              <waypoint pos="81.71692 -71.11628" idle="1" pace="WALK" />
-              <waypoint pos="81.63005 -36.12006" idle="1" pace="WALK" />
-            </path>
-          </mobspawnpoint>
+        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_ACOLYTE" pos="86.48 0 -58.64" roty="90">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_ACOLYTE_VETERAN" />
         </tile>
         <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_BOOK" pos="88.09 0 -58.27" roty="90">
           <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_VETERAN_BOOK" />
         </tile>
-        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_RECRUIT" pos="78.7 0 31.29" roty="1">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_VETERAN_RECRUIT" />
+        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_BAT" pos="85.72 0 53.06" roty="118">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_VETERAN_BAT" />
         </tile>
-        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_STANDARD" pos="79.28 0 -15.48" roty="319.72">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_VETERAN_STANDARD" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_RD_ANNIVERSARY_VETERAN_BOSS" pos="-0.97 -4.15 3" roty="90">
-          <mobspawnpoint behavior="PATROL" spawnbehavior="RD_ANNIVERSARY_VETERAN_BOSS">
-            <path>
-              <waypoint pos="11.03 -2.861023E-06" idle="0" pace="WALK" />
-              <waypoint pos="11.86877 0.1957083" idle="120" pace="WALK" />
-            </path>
-          </mobspawnpoint>
-        </tile>
-        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_MAGIC" pos="84.11 0 50.34" roty="90">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_VETERAN_MAGIC" />
+        <tile name="SpawnPoint_RANDOM_MORGANA_VETERAN_RAVEN" pos="83.97 0 -59.72" roty="90">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="MORGANA_RAVEN_VETERAN" />
         </tile>
       </layer>
       <layer id="Layer_11" name="mob_veteran_hard_01">
