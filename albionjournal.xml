@@ -1434,49 +1434,116 @@
 				</achievement>
 			</subcategory>
 			<subcategory uniquename="PVE_ROAMINGMOBS" displayname="@JOURNAL_ACTIVITY_ROAMINGMOBS" tutorial="ROAMING_MOBS_INFO">
-				<achievement name="JOURNAL_PVE_ROAMINGMOBS_KILL_T3_MOBS_01" rewarditem="T3_SILVERBAG_NONTRADABLE" difficultyrating="125" absoluteprogressmax="25">
-					<killmob countpartykills="true" mintier="3" maxtier="3" count="25" category="roaming" />
+				<achievement name="JOURNAL_PVE_ROAMINGMOBS_KILL_T3_MOBS_01" rewarditem="T3_SILVERBAG_NONTRADABLE" difficultyrating="125" absoluteprogressmax="12">
+					<killmob countpartykills="true" mintier="3" maxtier="3" count="12" category="roaming">
+						<or>
+							<IfClusterArcheType op="equals" value="GREEN"/>
+							<IfClusterArcheType op="equals" value="YELLOW"/>
+							<IfClusterArcheType op="equals" value="RED"/>
+							<IfClusterArcheType op="equals" value="BLACK"/>
+						</or>
+					</killmob>
 				</achievement>
 				<achievement name="JOURNAL_PVE_ROAMINGMOBS_KILL_T4_MOBS_01" rewarditem="T2_LEARNINGPOINTS_NONTRADABLE" difficultyrating="315" absoluteprogressmax="50">
-					<killmob countpartykills="true" mintier="4" maxtier="4" count="50" category="roaming" />
+					<killmob countpartykills="true" mintier="4" maxtier="4" count="50" category="roaming">
+						<or>
+							<IfClusterArcheType op="equals" value="GREEN"/>
+							<IfClusterArcheType op="equals" value="YELLOW"/>
+							<IfClusterArcheType op="equals" value="RED"/>
+							<IfClusterArcheType op="equals" value="BLACK"/>
+						</or>
+					</killmob>
 				</achievement>
 				<achievement name="JOURNAL_PVE_ROAMINGMOBS_KILL_HALFMOUNTED_3" rewarditem="T3_SKILLBOOK_NONTRADABLE" difficultyrating="330" absoluteprogressmax="3">
 					<killmob countpartykills="true" count="3" category="roaming">
-						<IfHalfMounted />
+						<and>							
+							<IfHalfMounted />
+							<or>
+								<IfClusterArcheType op="equals" value="GREEN"/>
+								<IfClusterArcheType op="equals" value="YELLOW"/>
+								<IfClusterArcheType op="equals" value="RED"/>
+								<IfClusterArcheType op="equals" value="BLACK"/>
+							</or>
+						</and>
 					</killmob>
 				</achievement>
 				<achievement name="JOURNAL_PVE_ROAMINGMOBS_KILL_MOBS_IN_TIME_01" rewarditem="T4_SKILLBOOK_NONTRADABLE" difficultyrating="420" absoluteprogressmax="4">
-					<killmob countpartykills="true" count="4" category="roaming" withinseconds="10" />
+					<killmob countpartykills="true" count="4" category="roaming" withinseconds="10">
+						<or>
+							<IfClusterArcheType op="equals" value="GREEN"/>
+							<IfClusterArcheType op="equals" value="YELLOW"/>
+							<IfClusterArcheType op="equals" value="RED"/>
+							<IfClusterArcheType op="equals" value="BLACK"/>
+						</or>
+					</killmob>
 				</achievement>
 				<achievement name="JOURNAL_PVE_ROAMINGMOBS_KILL_MOB_WITH_ARMOR_HELMET_SHOES" rewarditem="T4_SKILLBOOK_NONTRADABLE" difficultyrating="545" expandabledescription="@JOURNAL_PVE_ROAMINGMOBS_KILL_MOB_WITH_ARMOR_HELMET_SHOES_INFO" absoluteprogressmax="1">
 					<killmob countpartykills="true" count="1" category="roaming">
-						<or>
-							<IfTargetMobLastHitBySpell slot="armor" />
-							<IfTargetMobLastHitBySpell slot="head" />
-							<IfTargetMobLastHitBySpell slot="shoes" />
-						</or>
+						<and>
+							<or>
+							
+								<IfTargetMobLastHitBySpell slot="armor" />
+								<IfTargetMobLastHitBySpell slot="head" />
+								<IfTargetMobLastHitBySpell slot="shoes" />
+							</or>
+							<or>
+								<IfClusterArcheType op="equals" value="GREEN"/>
+								<IfClusterArcheType op="equals" value="YELLOW"/>
+								<IfClusterArcheType op="equals" value="RED"/>
+								<IfClusterArcheType op="equals" value="BLACK"/>
+							</or>						
+						</and>
 					</killmob>
 				</achievement>
 				<achievement name="JOURNAL_PVE_ROAMINGMOBS_KILL_T5_MOBS_01" rewarditem="T3_LEARNINGPOINTS_NONTRADABLE" difficultyrating="565" absoluteprogressmax="80">
-					<killmob countpartykills="true" mintier="5" maxtier="5" count="80" category="roaming" />
-				</achievement>
-				<achievement name="JOURNAL_PVE_ROAMINGMOBS_KILL_MOBS_IN_TIME_02" rewarditem="T5_SKILLBOOK_NONTRADABLE" difficultyrating="810" absoluteprogressmax="10">
-					<killmob countpartykills="true" count="10" category="roaming" withinseconds="30" />
-				</achievement>
-				<achievement name="JOURNAL_PVE_ROAMINGMOBS_KILL_MOBS_FACTION_FLAGGED_50" rewarditem="T3_LEARNINGPOINTS_NONTRADABLE" difficultyrating="935" absoluteprogressmax="50">
-					<killmob countpartykills="true" count="50" category="roaming">
+					<killmob countpartykills="true" mintier="5" maxtier="5" count="80" category="roaming">
 						<or>
-							<IfOwnFlag faction="caerleon" />
-							<IfOwnFlag faction="steppe" />
-							<IfOwnFlag faction="mountain" />
-							<IfOwnFlag faction="swamp" />
-							<IfOwnFlag faction="highland" />
-							<IfOwnFlag faction="forest" />
+							<IfClusterArcheType op="equals" value="GREEN"/>
+							<IfClusterArcheType op="equals" value="YELLOW"/>
+							<IfClusterArcheType op="equals" value="RED"/>
+							<IfClusterArcheType op="equals" value="BLACK"/>
 						</or>
 					</killmob>
 				</achievement>
+				<achievement name="JOURNAL_PVE_ROAMINGMOBS_KILL_MOBS_IN_TIME_02" rewarditem="T5_SKILLBOOK_NONTRADABLE" difficultyrating="810" absoluteprogressmax="10">
+					<killmob countpartykills="true" count="10" category="roaming" withinseconds="30">
+						<or>
+							<IfClusterArcheType op="equals" value="GREEN"/>
+							<IfClusterArcheType op="equals" value="YELLOW"/>
+							<IfClusterArcheType op="equals" value="RED"/>
+							<IfClusterArcheType op="equals" value="BLACK"/>
+						</or>
+					</killmob>
+				</achievement>
+				<achievement name="JOURNAL_PVE_ROAMINGMOBS_KILL_MOBS_FACTION_FLAGGED_50" rewarditem="T3_LEARNINGPOINTS_NONTRADABLE" difficultyrating="935" absoluteprogressmax="50">
+					<killmob countpartykills="true" count="50" category="roaming">
+						<and>							
+							<or>
+								<IfOwnFlag faction="caerleon" />
+								<IfOwnFlag faction="steppe" />
+								<IfOwnFlag faction="mountain" />
+								<IfOwnFlag faction="swamp" />
+								<IfOwnFlag faction="highland" />
+								<IfOwnFlag faction="forest" />
+							</or>
+							<or>
+								<IfClusterArcheType op="equals" value="GREEN"/>
+								<IfClusterArcheType op="equals" value="YELLOW"/>
+								<IfClusterArcheType op="equals" value="RED"/>
+								<IfClusterArcheType op="equals" value="BLACK"/>
+							</or>
+						</and>
+					</killmob>
+				</achievement>
 				<achievement name="JOURNAL_PVE_ROAMINGMOBS_KILL_MOBS_IN_TIME_03" rewarditem="T4_LEARNINGPOINTS_NONTRADABLE" difficultyrating="1040" absoluteprogressmax="8">
-					<killmob countpartykills="true" count="8" category="roaming" withinseconds="10" />
+					<killmob countpartykills="true" count="8" category="roaming" withinseconds="10">
+						<or>
+							<IfClusterArcheType op="equals" value="GREEN"/>
+							<IfClusterArcheType op="equals" value="YELLOW"/>
+							<IfClusterArcheType op="equals" value="RED"/>
+							<IfClusterArcheType op="equals" value="BLACK"/>
+						</or>
+					</killmob>
 				</achievement>
 				<achievement name="JOURNAL_PVE_ROAMINGMOBS_KILL_MOBS_IN_REDZONE_5" rewarditem="T5_SKILLBOOK_NONTRADABLE" difficultyrating="1105" absoluteprogressmax="5">
 					<killmob countpartykills="true" count="5" category="roaming">
@@ -1484,104 +1551,278 @@
 					</killmob>
 				</achievement>
 				<achievement name="JOURNAL_PVE_ROAMINGMOBS_KILL_T6_MOBS_01" rewarditem="T5_SILVERBAG_NONTRADABLE" difficultyrating="1170" absoluteprogressmax="120">
-					<killmob countpartykills="true" mintier="6" maxtier="6" count="120" category="roaming" />
+					<killmob countpartykills="true" mintier="6" maxtier="6" count="120" category="roaming">
+						<or>
+							<IfClusterArcheType op="equals" value="GREEN"/>
+							<IfClusterArcheType op="equals" value="YELLOW"/>
+							<IfClusterArcheType op="equals" value="RED"/>
+							<IfClusterArcheType op="equals" value="BLACK"/>
+						</or>
+					</killmob>
 				</achievement>
 				<achievement name="JOURNAL_PVE_ROAMINGMOBS_KILL_T7_MOBS_01" rewarditem="T6_SKILLBOOK_NONTRADABLE" difficultyrating="1670" absoluteprogressmax="200">
-					<killmob countpartykills="true" mintier="7" maxtier="7" count="200" category="roaming" />
+					<killmob countpartykills="true" mintier="7" maxtier="7" count="200" category="roaming">
+						<or>
+							<IfClusterArcheType op="equals" value="GREEN"/>
+							<IfClusterArcheType op="equals" value="YELLOW"/>
+							<IfClusterArcheType op="equals" value="RED"/>
+							<IfClusterArcheType op="equals" value="BLACK"/>
+						</or>
+					</killmob>
 				</achievement>
 				<achievement name="JOURNAL_PVE_ROAMINGMOBS_KILL_MOBS_IN_BLACKZONE_01" rewarditem="T5_LEARNINGPOINTS_NONTRADABLE" difficultyrating="1705" absoluteprogressmax="1000">
 					<killmob countpartykills="true" count="1000" category="roaming">
 						<IfClusterArcheType op="equals" value="BLACK" />
 					</killmob>
 				</achievement>
-				<achievement name="JOURNAL_PVE_ROAMINGMOBS_KILL_T8_MOBS_01" rewarditem="T7_SKILLBOOK_NONTRADABLE" difficultyrating="1905" absoluteprogressmax="200">
-					<killmob countpartykills="true" mintier="8" maxtier="8" count="200" category="roaming" />
+				<achievement name="JOURNAL_PVE_ROAMINGMOBS_KILL_T8_MOBS_01" rewarditem="T7_SKILLBOOK_NONTRADABLE" difficultyrating="1905" absoluteprogressmax="300">
+					<killmob countpartykills="true" mintier="8" maxtier="8" count="300" category="roaming">
+						<or>
+							<IfClusterArcheType op="equals" value="GREEN"/>
+							<IfClusterArcheType op="equals" value="YELLOW"/>
+							<IfClusterArcheType op="equals" value="RED"/>
+							<IfClusterArcheType op="equals" value="BLACK"/>
+						</or>
+					</killmob>
 				</achievement>
 				<achievement name="JOURNAL_PVE_ROAMINGMOBS_KILL_MOBS_CHAMPIONS_01" rewarditem="T3_LEARNINGPOINTS_NONTRADABLE" difficultyrating="1920" symbol="CLUSTER_CORRUPTED_INTERMEDIATE" absoluteprogressmax="30">
 					<killmob countpartykills="true" count="30" category="roaming">
-						<IfTargetMobName op="contains" value="_CHAMPION" />
+						<and>
+							<IfTargetMobName op="contains" value="_CHAMPION" />
+							<or>
+								<IfClusterArcheType op="equals" value="GREEN"/>
+								<IfClusterArcheType op="equals" value="YELLOW"/>
+								<IfClusterArcheType op="equals" value="RED"/>
+								<IfClusterArcheType op="equals" value="BLACK"/>
+							</or>
+						</and>
 					</killmob>
 				</achievement>
 				<achievement name="JOURNAL_PVE_ROAMINGMOBS_KILL_MOBS_CHAMPIONS_02" rewarditem="T6_SILVERBAG_NONTRADABLE" difficultyrating="2165" symbol="CLUSTER_CORRUPTED_INTERMEDIATE" absoluteprogressmax="100">
 					<killmob countpartykills="true" count="100" category="roaming">
-						<IfTargetMobName op="contains" value="_CHAMPION" />
+						<and>	
+							<IfTargetMobName op="contains" value="_CHAMPION" />
+							<or>
+								<IfClusterArcheType op="equals" value="GREEN"/>
+								<IfClusterArcheType op="equals" value="YELLOW"/>
+								<IfClusterArcheType op="equals" value="RED"/>
+								<IfClusterArcheType op="equals" value="BLACK"/>
+							</or>						
+						</and>
 					</killmob>
 				</achievement>
 				<achievement name="JOURNAL_PVE_ROAMINGMOBS_KILL_MOBS_CHAMPIONS_03" rewarditem="T8_SILVERBAG_NONTRADABLE" difficultyrating="2580" symbol="CLUSTER_CORRUPTED_INTERMEDIATE" absoluteprogressmax="300">
 					<killmob countpartykills="true" count="300" category="roaming">
-						<IfTargetMobName op="contains" value="_CHAMPION" />
+						<and>							
+							<IfTargetMobName op="contains" value="_CHAMPION" />
+							<or>
+								<IfClusterArcheType op="equals" value="GREEN"/>
+								<IfClusterArcheType op="equals" value="YELLOW"/>
+								<IfClusterArcheType op="equals" value="RED"/>
+								<IfClusterArcheType op="equals" value="BLACK"/>
+							</or>
+						</and>
 					</killmob>
 				</achievement>
 				<achievement name="JOURNAL_PVE_ROAMINGMOBS_KILL_MOBS_CHAMPIONS_04" rewarditem="T7_SKILLBOOK_NONTRADABLE" difficultyrating="2825" symbol="CLUSTER_CORRUPTED_INTERMEDIATE" absoluteprogressmax="1000">
 					<killmob countpartykills="true" count="1000" category="roaming">
-						<IfTargetMobName op="contains" value="_CHAMPION" />
+						<and>
+							<IfTargetMobName op="contains" value="_CHAMPION" />
+							<or>
+								<IfClusterArcheType op="equals" value="GREEN"/>
+								<IfClusterArcheType op="equals" value="YELLOW"/>
+								<IfClusterArcheType op="equals" value="RED"/>
+								<IfClusterArcheType op="equals" value="BLACK"/>
+							</or>
+						</and>
 					</killmob>
 				</achievement>
 				<achievement name="JOURNAL_PVE_ROAMINGMOBS_KILL_MOBS_CHAMPIONS_05" rewarditem="T4_LEARNINGPOINTS_NONTRADABLE" difficultyrating="3045" symbol="CLUSTER_CORRUPTED_INTERMEDIATE" absoluteprogressmax="3000">
 					<killmob countpartykills="true" count="3000" category="roaming">
-						<IfTargetMobName op="contains" value="_CHAMPION" />
+						<and>
+							<IfTargetMobName op="contains" value="_CHAMPION" />
+							<or>
+								<IfClusterArcheType op="equals" value="GREEN"/>
+								<IfClusterArcheType op="equals" value="YELLOW"/>
+								<IfClusterArcheType op="equals" value="RED"/>
+								<IfClusterArcheType op="equals" value="BLACK"/>
+							</or>
+						</and>
 					</killmob>
 				</achievement>
 				<achievement name="JOURNAL_PVE_ROAMINGMOBS_KILL_MOBS_MINIBOSSES_01" rewarditem="UNIQUE_FURNITUREITEM_ADC_ICESCULPTURE_C" difficultyrating="3110" symbol="CLUSTER_CORRUPTED_INTERMEDIATE" absoluteprogressmax="10">
 					<killmob countpartykills="true" count="10" category="roaming">
-						<IfTargetMobName op="contains" value="_MINIBOSS" />
+						<and>							
+							<IfTargetMobName op="contains" value="_MINIBOSS"/>
+							<or>
+								<IfClusterArcheType op="equals" value="GREEN"/>
+								<IfClusterArcheType op="equals" value="YELLOW"/>
+								<IfClusterArcheType op="equals" value="RED"/>
+								<IfClusterArcheType op="equals" value="BLACK"/>
+							</or>
+						</and>
 					</killmob>
 				</achievement>
-				<achievement name="JOURNAL_PVE_ROAMINGMOBS_KILL_MOBS_MINIBOSSES_02" rewarditem="T8_SILVERBAG_NONTRADABLE" difficultyrating="3115" symbol="CLUSTER_CORRUPTED_INTERMEDIATE" absoluteprogressmax="30">
+				<achievement name="JOURNAL_PVE_ROAMINGMOBS_KILL_MOBS_MINIBOSSES_02" rewarditem="T6_SKILLBOOK_NONTRADABLE" difficultyrating="3115" symbol="CLUSTER_CORRUPTED_INTERMEDIATE" absoluteprogressmax="30">
 					<killmob countpartykills="true" count="30" category="roaming">
-						<IfTargetMobName op="contains" value="_MINIBOSS" />
+						<and>
+							<IfTargetMobName op="contains" value="_MINIBOSS" />
+							<or>
+								<IfClusterArcheType op="equals" value="GREEN"/>
+								<IfClusterArcheType op="equals" value="YELLOW"/>
+								<IfClusterArcheType op="equals" value="RED"/>
+								<IfClusterArcheType op="equals" value="BLACK"/>
+							</or>
+						</and>
 					</killmob>
 				</achievement>
 				<achievement name="JOURNAL_PVE_ROAMINGMOBS_KILL_MOBS_MINIBOSSES_03" rewarditem="T7_SKILLBOOK_NONTRADABLE" difficultyrating="3125" symbol="CLUSTER_CORRUPTED_INTERMEDIATE" absoluteprogressmax="100">
 					<killmob countpartykills="true" count="100" category="roaming">
-						<IfTargetMobName op="contains" value="_MINIBOSS" />
+						<and>							
+							<IfTargetMobName op="contains" value="_MINIBOSS" />
+							<or>
+								<IfClusterArcheType op="equals" value="GREEN"/>
+								<IfClusterArcheType op="equals" value="YELLOW"/>
+								<IfClusterArcheType op="equals" value="RED"/>
+								<IfClusterArcheType op="equals" value="BLACK"/>
+							</or>						
+						</and>
 					</killmob>
 				</achievement>
 				<achievement name="JOURNAL_PVE_ROAMINGMOBS_KILL_MOBS_MINIBOSSES_04" rewarditem="T4_LEARNINGPOINTS_NONTRADABLE" difficultyrating="3255" symbol="CLUSTER_CORRUPTED_INTERMEDIATE" absoluteprogressmax="300">
 					<killmob countpartykills="true" count="300" category="roaming">
-						<IfTargetMobName op="contains" value="_MINIBOSS" />
+						<and>							
+							<IfTargetMobName op="contains" value="_MINIBOSS" />
+							<or>
+								<IfClusterArcheType op="equals" value="GREEN"/>
+								<IfClusterArcheType op="equals" value="YELLOW"/>
+								<IfClusterArcheType op="equals" value="RED"/>
+								<IfClusterArcheType op="equals" value="BLACK"/>
+							</or>
+						</and>
 					</killmob>
 				</achievement>
 				<achievement name="JOURNAL_PVE_ROAMINGMOBS_KILL_MOBS_BOSSES_01" rewarditem="T6_SKILLBOOK_NONTRADABLE" difficultyrating="3260" symbol="CLUSTER_CORRUPTED_INTERMEDIATE" absoluteprogressmax="3">
 					<killmob countpartykills="true" count="3" category="roaming">
-						<IfTargetMobName op="contains" value="_BOSS" />
+						<and>							
+							<IfTargetMobName op="contains" value="_BOSS" />
+							<or>
+								<IfClusterArcheType op="equals" value="GREEN"/>
+								<IfClusterArcheType op="equals" value="YELLOW"/>
+								<IfClusterArcheType op="equals" value="RED"/>
+								<IfClusterArcheType op="equals" value="BLACK"/>
+							</or>
+						</and>
 					</killmob>
 				</achievement>
 				<achievement name="JOURNAL_PVE_ROAMINGMOBS_KILL_MOBS_BOSSES_02" rewarditem="T7_SKILLBOOK_NONTRADABLE" difficultyrating="3375" symbol="CLUSTER_CORRUPTED_INTERMEDIATE" absoluteprogressmax="10">
 					<killmob countpartykills="true" count="10" category="roaming">
-						<IfTargetMobName op="contains" value="_BOSS" />
+						<and>							
+							<IfTargetMobName op="contains" value="_BOSS" />
+							<or>
+								<IfClusterArcheType op="equals" value="GREEN"/>
+								<IfClusterArcheType op="equals" value="YELLOW"/>
+								<IfClusterArcheType op="equals" value="RED"/>
+								<IfClusterArcheType op="equals" value="BLACK"/>
+							</or>
+						</and>
 					</killmob>
 				</achievement>
 				<achievement name="JOURNAL_PVE_ROAMINGMOBS_KILL_MOBS_BOSSES_03" rewarditem="T4_LEARNINGPOINTS_NONTRADABLE" difficultyrating="3385" symbol="CLUSTER_CORRUPTED_INTERMEDIATE" absoluteprogressmax="30">
 					<killmob countpartykills="true" count="30" category="roaming">
-						<IfTargetMobName op="contains" value="_BOSS" />
+						<and>							
+							<IfTargetMobName op="contains" value="_BOSS" />
+							<or>
+								<IfClusterArcheType op="equals" value="GREEN"/>
+								<IfClusterArcheType op="equals" value="YELLOW"/>
+								<IfClusterArcheType op="equals" value="RED"/>
+								<IfClusterArcheType op="equals" value="BLACK"/>
+							</or>
+						</and>
 					</killmob>
 				</achievement>
 				<achievement name="JOURNAL_PVE_ROAMINGMOBS_KILL_MOBS_BOSSES_04" rewarditem="T8_SILVERBAG_NONTRADABLE" rewardamount="10" difficultyrating="3430" symbol="CLUSTER_CORRUPTED_INTERMEDIATE" absoluteprogressmax="100">
 					<killmob countpartykills="true" count="100" category="roaming">
-						<IfTargetMobName op="contains" value="_BOSS" />
+						<and>							
+							<IfTargetMobName op="contains" value="_BOSS" />
+							<or>
+								<IfClusterArcheType op="equals" value="GREEN"/>
+								<IfClusterArcheType op="equals" value="YELLOW"/>
+								<IfClusterArcheType op="equals" value="RED"/>
+								<IfClusterArcheType op="equals" value="BLACK"/>
+							</or>
+						</and>
 					</killmob>
 				</achievement>
 				<achievement name="JOURNAL_PVE_ROAMINGMOBS_GAIN_MOBFAME_01" rewarditem="T3_LEARNINGPOINTS_NONTRADABLE" difficultyrating="3490" symbol="FAME" absoluteprogressmax="100000">
-					<killmobfame value="100000" category="roaming" />
+					<killmobfame value="100000" category="roaming">
+						<or>
+							<IfClusterArcheType op="equals" value="GREEN"/>
+							<IfClusterArcheType op="equals" value="YELLOW"/>
+							<IfClusterArcheType op="equals" value="RED"/>
+							<IfClusterArcheType op="equals" value="BLACK"/>
+						</or>
+					</killmobfame>
 				</achievement>
 				<achievement name="JOURNAL_PVE_ROAMINGMOBS_GAIN_MOBFAME_02" rewarditem="T6_SKILLBOOK_NONTRADABLE" difficultyrating="3495" symbol="FAME" absoluteprogressmax="300000">
-					<killmobfame value="300000" category="roaming" />
+					<killmobfame value="300000" category="roaming">
+						<or>
+							<IfClusterArcheType op="equals" value="GREEN"/>
+							<IfClusterArcheType op="equals" value="YELLOW"/>
+							<IfClusterArcheType op="equals" value="RED"/>
+							<IfClusterArcheType op="equals" value="BLACK"/>
+						</or>
+					</killmobfame>
 				</achievement>
 				<achievement name="JOURNAL_PVE_ROAMINGMOBS_GAIN_MOBFAME_03" rewarditem="T5_LEARNINGPOINTS_NONTRADABLE" difficultyrating="3565" symbol="FAME" absoluteprogressmax="1000000">
-					<killmobfame value="1000000" category="roaming" />
+					<killmobfame value="1000000" category="roaming">
+						<or>
+							<IfClusterArcheType op="equals" value="GREEN"/>
+							<IfClusterArcheType op="equals" value="YELLOW"/>
+							<IfClusterArcheType op="equals" value="RED"/>
+							<IfClusterArcheType op="equals" value="BLACK"/>
+						</or>
+					</killmobfame>
 				</achievement>
-				<achievement name="JOURNAL_PVE_ROAMINGMOBS_GAIN_MOBFAME_04" rewarditem="T8_SILVERBAG_NONTRADABLE" difficultyrating="3620" symbol="FAME" absoluteprogressmax="3000000">
-					<killmobfame value="3000000" category="roaming" />
+				<achievement name="JOURNAL_PVE_ROAMINGMOBS_GAIN_MOBFAME_04" rewarditem="T7_SKILLBOOK_NONTRADABLE" difficultyrating="3620" symbol="FAME" absoluteprogressmax="3000000">
+					<killmobfame value="3000000" category="roaming">
+						<or>
+							<IfClusterArcheType op="equals" value="GREEN"/>
+							<IfClusterArcheType op="equals" value="YELLOW"/>
+							<IfClusterArcheType op="equals" value="RED"/>
+							<IfClusterArcheType op="equals" value="BLACK"/>
+						</or>
+					</killmobfame>
 				</achievement>
-				<achievement name="JOURNAL_PVE_ROAMINGMOBS_GAIN_MOBFAME_05" rewarditem="T8_SILVERBAG_NONTRADABLE" rewardamount="5" difficultyrating="3740" symbol="FAME" absoluteprogressmax="10000000">
-					<killmobfame value="10000000" category="roaming" />
+				<achievement name="JOURNAL_PVE_ROAMINGMOBS_GAIN_MOBFAME_05" rewarditem="T8_SKILLBOOK_NONTRADABLE" difficultyrating="3740" symbol="FAME" absoluteprogressmax="10000000">
+					<killmobfame value="10000000" category="roaming">
+						<or>
+							<IfClusterArcheType op="equals" value="GREEN"/>
+							<IfClusterArcheType op="equals" value="YELLOW"/>
+							<IfClusterArcheType op="equals" value="RED"/>
+							<IfClusterArcheType op="equals" value="BLACK"/>
+						</or>
+					</killmobfame>
 				</achievement>
-				<achievement name="JOURNAL_PVE_ROAMINGMOBS_GAIN_MOBFAME_06" rewarditem="T8_SILVERBAG_NONTRADABLE" rewardamount="10" difficultyrating="3840" symbol="FAME" absoluteprogressmax="30000000">
-					<killmobfame value="30000000" category="roaming" />
+				<achievement name="JOURNAL_PVE_ROAMINGMOBS_GAIN_MOBFAME_06" rewarditem="UNIQUE_TOKEN_COMMUNITY" rewardamount="50" difficultyrating="3840" symbol="FAME" absoluteprogressmax="30000000">
+					<killmobfame value="30000000" category="roaming">
+						<or>
+							<IfClusterArcheType op="equals" value="GREEN"/>
+							<IfClusterArcheType op="equals" value="YELLOW"/>
+							<IfClusterArcheType op="equals" value="RED"/>
+							<IfClusterArcheType op="equals" value="BLACK"/>
+						</or>
+					</killmobfame>
 				</achievement>
-				<achievement name="JOURNAL_PVE_ROAMINGMOBS_GAIN_MOBFAME_07" rewarditem="T8_SILVERBAG_NONTRADABLE" rewardamount="25" difficultyrating="3850" symbol="FAME" absoluteprogressmax="100000000">
-					<killmobfame value="100000000" category="roaming" />
+				<achievement name="JOURNAL_PVE_ROAMINGMOBS_GAIN_MOBFAME_07" rewarditem="T8_SILVERBAG_NONTRADABLE" rewardamount="15" difficultyrating="3850" symbol="FAME" absoluteprogressmax="100000000">
+					<killmobfame value="100000000" category="roaming">
+						<or>
+							<IfClusterArcheType op="equals" value="GREEN"/>
+							<IfClusterArcheType op="equals" value="YELLOW"/>
+							<IfClusterArcheType op="equals" value="RED"/>
+							<IfClusterArcheType op="equals" value="BLACK"/>
+						</or>
+					</killmobfame>
 				</achievement>
 			</subcategory>
 			<subcategory uniquename="PVE_STATICDUNGEONS" displayname="@JOURNAL_ACTIVITY_STATICDUNGEONS" tutorial="STATIC_DUNGEONS_INFO">
@@ -1637,7 +1878,7 @@
 						<IfTargetMobName op="contains" value="_CHAMPION" />
 					</killmob>
 				</achievement>
-				<achievement name="JOURNAL_PVE_STATICDUNGEONS_KILL_MOBS_CHAMPIONS_03" rewarditem="T8_SILVERBAG_NONTRADABLE" rewardamount="5" difficultyrating="3995" absoluteprogressmax="1000">
+				<achievement name="JOURNAL_PVE_STATICDUNGEONS_KILL_MOBS_CHAMPIONS_03" rewarditem="T8_SKILLBOOK_NONTRADABLE" difficultyrating="3995" absoluteprogressmax="1000">
 					<killmob count="1000" countpartykills="true" category="static">
 						<IfTargetMobName op="contains" value="_CHAMPION" />
 					</killmob>
@@ -3716,7 +3957,7 @@
 					<gather count="75" mintier="3" maxtier="3" />
 				</achievement>
 				<achievement name="JOURNAL_GATHERING_RESOURCES_FAME_01" rewarditem="T2_LEARNINGPOINTS_NONTRADABLE" difficultyrating="140" symbol="FAME" absoluteprogressmax="500">
-					<havefame action="gathering" value="500" />
+					<gatherfame value="500"/>
 				</achievement>
 				<achievement name="JOURNAL_GATHERING_RESOURCES_ANY_TYPE_T4" rewarditem="T3_LEARNINGPOINTS_NONTRADABLE" difficultyrating="580" absoluteprogressmax="100">
 					<gather count="100" mintier="4" maxtier="4" />
@@ -3838,31 +4079,31 @@
 					<gather count="30" minenchantmentlevel="4" maxenchantmentlevel="4" />
 				</achievement>
 				<achievement name="SA_GATHERING_FAME_01" rewarditem="T4_SKILLBOOK_GATHER_ORE_NONTRADABLE" difficultyrating="2545" steamachievementname="SA_GATHERING_FAME_01" steamstatname="SA_ST_GATHERING_FAME_01" googleplayid="CgkI-YfN27AEEAIQIA" googleplaymaxsteps="10" symbol="FAME" absoluteprogressmax="10000">
-					<havefame action="gathering" value="10000" />
+					<gatherfame value="10000"/>
 				</achievement>
 				<achievement name="JOURNAL_GATHERING_RESOURCES_FAME_02" rewarditem="T5_SKILLBOOK_GATHER_FIBER_NONTRADABLE" difficultyrating="2550" symbol="FAME" absoluteprogressmax="25000">
-					<havefame action="gathering" value="25000" />
+					<gatherfame value="25000"/>
 				</achievement>
 				<achievement name="JOURNAL_GATHERING_RESOURCES_FAME_03" rewarditem="T6_SKILLBOOK_GATHER_ROCK_NONTRADABLE" difficultyrating="2555" symbol="FAME" absoluteprogressmax="50000">
-					<havefame action="gathering" value="50000" />
+					<gatherfame value="50000"/>
 				</achievement>
 				<achievement name="SA_GATHERING_FAME_02" rewarditem="T7_SKILLBOOK_GATHER_WOOD_NONTRADABLE" difficultyrating="2560" steamachievementname="SA_GATHERING_FAME_02" steamstatname="SA_ST_GATHERING_FAME_02" googleplayid="CgkI-YfN27AEEAIQIQ" googleplaymaxsteps="100" symbol="FAME" absoluteprogressmax="100000">
-					<havefame action="gathering" value="100000" />
+					<gatherfame value="100000"/>
 				</achievement>
 				<achievement name="JOURNAL_GATHERING_RESOURCES_FAME_04" rewarditem="T8_SKILLBOOK_GATHER_FIBER_NONTRADABLE" difficultyrating="2585" symbol="FAME" absoluteprogressmax="250000">
-					<havefame action="gathering" value="250000" />
+					<gatherfame value="250000"/>
 				</achievement>
 				<achievement name="JOURNAL_GATHERING_RESOURCES_FAME_05" rewarditem="T8_SILVERBAG_NONTRADABLE" difficultyrating="2605" symbol="FAME" absoluteprogressmax="500000">
-					<havefame action="gathering" value="500000" />
+					<gatherfame value="500000"/>
 				</achievement>
 				<achievement name="SA_GATHERING_FAME_03" rewarditem="T8_SILVERBAG_NONTRADABLE" rewardamount="2" difficultyrating="2800" steamachievementname="SA_GATHERING_FAME_03" steamstatname="SA_ST_GATHERING_FAME_03" googleplayid="CgkI-YfN27AEEAIQIg" googleplaymaxsteps="1000" symbol="FAME" absoluteprogressmax="1000000">
-					<havefame action="gathering" value="1000000" />
+					<gatherfame value="1000000"/>
 				</achievement>
 				<achievement name="JOURNAL_GATHERING_RESOURCES_FAME_06" rewarditem="T8_SILVERBAG_NONTRADABLE" rewardamount="3" difficultyrating="2955" symbol="FAME" absoluteprogressmax="3000000">
-					<havefame action="gathering" value="3000000" />
+					<gatherfame value="3000000"/>
 				</achievement>
 				<achievement name="JOURNAL_GATHERING_RESOURCES_FAME_07" rewarditem="T8_SILVERBAG_NONTRADABLE" rewardamount="5" difficultyrating="3500" symbol="FAME" absoluteprogressmax="10000000">
-					<havefame action="gathering" value="10000000" />
+					<gatherfame value="10000000"/>
 				</achievement>
 				<achievement name="SA_GATHERING_TERRITORY_RAID" rewarditem="T8_SILVERBAG_NONTRADABLE" difficultyrating="4444" steamachievementname="SA_GATHERING_TERRITORY_RAID" googleplayid="CgkI-YfN27AEEAIQmAE" absoluteprogressmax="1">
 					<gather count="1" mintier="8" maxtier="8" inenemyterritory="true" />
@@ -4719,49 +4960,49 @@
 				</achievement>
 				<achievement name="JOURNAL_GATHERING_SKINNING_LOOT_BABY_1" rewarditem="UNIQUE_FURNITUREITEM_ADC_RUG_DIREBEAR" difficultyrating="3220" showlist="showcompleted" absoluteprogressmax="1">
 					<any count="1">
-						<lootitem count="1" uniquename="T4_FARM_GIANTSTAG_BABY" />
-						<lootitem count="1" uniquename="T5_FARM_COUGAR_BABY" />
-						<lootitem count="1" uniquename="T6_FARM_DIREWOLF_BABY" />
-						<lootitem count="1" uniquename="T6_FARM_GIANTSTAG_MOOSE_BABY" />
-						<lootitem count="1" uniquename="T7_FARM_DIREBOAR_BABY" />
-						<lootitem count="1" uniquename="T7_FARM_SWAMPDRAGON_BABY" />
-						<lootitem count="1" uniquename="T8_FARM_DIREBEAR_BABY" />
-						<lootitem count="1" uniquename="T8_FARM_MAMMOTH_BABY" />
+						<lootitem onlymobloot="true" count="1" uniquename="T4_FARM_GIANTSTAG_BABY" />
+						<lootitem onlymobloot="true" count="1" uniquename="T5_FARM_COUGAR_BABY" />
+						<lootitem onlymobloot="true" count="1" uniquename="T6_FARM_DIREWOLF_BABY" />
+						<lootitem onlymobloot="true" count="1" uniquename="T6_FARM_GIANTSTAG_MOOSE_BABY" />
+						<lootitem onlymobloot="true" count="1" uniquename="T7_FARM_DIREBOAR_BABY" />
+						<lootitem onlymobloot="true" count="1" uniquename="T7_FARM_SWAMPDRAGON_BABY" />
+						<lootitem onlymobloot="true" count="1" uniquename="T8_FARM_DIREBEAR_BABY" />
+						<lootitem onlymobloot="true" count="1" uniquename="T8_FARM_MAMMOTH_BABY" />
 					</any>
 				</achievement>
 				<achievement name="JOURNAL_GATHERING_SKINNING_LOOT_BABY_2" rewarditem="T4_LEARNINGPOINTS_NONTRADABLE" difficultyrating="3365" showlist="showcompleted" absoluteprogressmax="3">
 					<any count="3">
-						<lootitem count="1" uniquename="T4_FARM_GIANTSTAG_BABY" />
-						<lootitem count="1" uniquename="T5_FARM_COUGAR_BABY" />
-						<lootitem count="1" uniquename="T6_FARM_DIREWOLF_BABY" />
-						<lootitem count="1" uniquename="T6_FARM_GIANTSTAG_MOOSE_BABY" />
-						<lootitem count="1" uniquename="T7_FARM_DIREBOAR_BABY" />
-						<lootitem count="1" uniquename="T7_FARM_SWAMPDRAGON_BABY" />
-						<lootitem count="1" uniquename="T8_FARM_DIREBEAR_BABY" />
-						<lootitem count="1" uniquename="T8_FARM_MAMMOTH_BABY" />
+						<lootitem onlymobloot="true" count="1" uniquename="T4_FARM_GIANTSTAG_BABY" />
+						<lootitem onlymobloot="true" count="1" uniquename="T5_FARM_COUGAR_BABY" />
+						<lootitem onlymobloot="true" count="1" uniquename="T6_FARM_DIREWOLF_BABY" />
+						<lootitem onlymobloot="true" count="1" uniquename="T6_FARM_GIANTSTAG_MOOSE_BABY" />
+						<lootitem onlymobloot="true" count="1" uniquename="T7_FARM_DIREBOAR_BABY" />
+						<lootitem onlymobloot="true" count="1" uniquename="T7_FARM_SWAMPDRAGON_BABY" />
+						<lootitem onlymobloot="true" count="1" uniquename="T8_FARM_DIREBEAR_BABY" />
+						<lootitem onlymobloot="true" count="1" uniquename="T8_FARM_MAMMOTH_BABY" />
 					</any>
 				</achievement>
-				<achievement name="JOURNAL_GATHERING_SKINNING_LOOT_BABY_3" rewarditem="T8_SILVERBAG_NONTRADABLE" rewardamount="5" difficultyrating="3615" showlist="showcompleted" absoluteprogressmax="5">
+				<achievement name="JOURNAL_GATHERING_SKINNING_LOOT_BABY_3" rewarditem="T8_SKILLBOOK_NONTRADABLE" difficultyrating="3615" showlist="showcompleted" absoluteprogressmax="5">
 					<any count="5">
-						<lootitem count="1" uniquename="T4_FARM_GIANTSTAG_BABY" />
-						<lootitem count="1" uniquename="T5_FARM_COUGAR_BABY" />
-						<lootitem count="1" uniquename="T6_FARM_DIREWOLF_BABY" />
-						<lootitem count="1" uniquename="T6_FARM_GIANTSTAG_MOOSE_BABY" />
-						<lootitem count="1" uniquename="T7_FARM_DIREBOAR_BABY" />
-						<lootitem count="1" uniquename="T7_FARM_SWAMPDRAGON_BABY" />
-						<lootitem count="1" uniquename="T8_FARM_DIREBEAR_BABY" />
-						<lootitem count="1" uniquename="T8_FARM_MAMMOTH_BABY" />
+						<lootitem onlymobloot="true" count="1" uniquename="T4_FARM_GIANTSTAG_BABY" />
+						<lootitem onlymobloot="true" count="1" uniquename="T5_FARM_COUGAR_BABY" />
+						<lootitem onlymobloot="true" count="1" uniquename="T6_FARM_DIREWOLF_BABY" />
+						<lootitem onlymobloot="true" count="1" uniquename="T6_FARM_GIANTSTAG_MOOSE_BABY" />
+						<lootitem onlymobloot="true" count="1" uniquename="T7_FARM_DIREBOAR_BABY" />
+						<lootitem onlymobloot="true" count="1" uniquename="T7_FARM_SWAMPDRAGON_BABY" />
+						<lootitem onlymobloot="true" count="1" uniquename="T8_FARM_DIREBEAR_BABY" />
+						<lootitem onlymobloot="true" count="1" uniquename="T8_FARM_MAMMOTH_BABY" />
 					</any>
 				</achievement>
 				<achievement name="JOURNAL_GATHERING_SKINNING_LOOT_BABY_ALL" rewarditem="T5_LEARNINGPOINTS_NONTRADABLE" difficultyrating="3845" showlist="showall" absoluteprogressmax="8">
-					<lootitem count="1" uniquename="T4_FARM_GIANTSTAG_BABY" />
-					<lootitem count="1" uniquename="T5_FARM_COUGAR_BABY" />
-					<lootitem count="1" uniquename="T6_FARM_DIREWOLF_BABY" />
-					<lootitem count="1" uniquename="T6_FARM_GIANTSTAG_MOOSE_BABY" />
-					<lootitem count="1" uniquename="T7_FARM_DIREBOAR_BABY" />
-					<lootitem count="1" uniquename="T7_FARM_SWAMPDRAGON_BABY" />
-					<lootitem count="1" uniquename="T8_FARM_DIREBEAR_BABY" />
-					<lootitem count="1" uniquename="T8_FARM_MAMMOTH_BABY" />
+					<lootitem onlymobloot="true" count="1" uniquename="T4_FARM_GIANTSTAG_BABY" />
+					<lootitem onlymobloot="true" count="1" uniquename="T5_FARM_COUGAR_BABY" />
+					<lootitem onlymobloot="true" count="1" uniquename="T6_FARM_DIREWOLF_BABY" />
+					<lootitem onlymobloot="true" count="1" uniquename="T6_FARM_GIANTSTAG_MOOSE_BABY" />
+					<lootitem onlymobloot="true" count="1" uniquename="T7_FARM_DIREBOAR_BABY" />
+					<lootitem onlymobloot="true" count="1" uniquename="T7_FARM_SWAMPDRAGON_BABY" />
+					<lootitem onlymobloot="true" count="1" uniquename="T8_FARM_DIREBEAR_BABY" />
+					<lootitem onlymobloot="true" count="1" uniquename="T8_FARM_MAMMOTH_BABY" />
 				</achievement>
 			</subcategory>
 			<subcategory uniquename="GATHERING_FISHING" displayname="@JOURNAL_ACTIVITY_FISHING" tutorial="FISHING_INFO">
@@ -5136,28 +5377,28 @@
 					</any>
 				</achievement>
 				<achievement name="JOURNAL_GATHERING_FISHING_FAME_01" rewarditem="T3_SKILLBOOK_NONTRADABLE" difficultyrating="2130" absoluteprogressmax="3000">
-					<havefame action="fishing" value="3000" />
+					<fishingfame value="3000"/>
 				</achievement>
 				<achievement name="SA_FISHING_FAME_02" rewarditem="UNIQUE_FURNITUREITEM_KEEPER_CAULDRON" difficultyrating="2135" steamachievementname="SA_FISHING_FAME_02" steamstatname="SA_ST_FISHING_FAME_02" googleplayid="CgkI-YfN27AEEAIQOQ" googleplaymaxsteps="1000" symbol="FAME" absoluteprogressmax="10000">
-					<havefame action="fishing" value="10000" />
+					<fishingfame value="10000"/>
 				</achievement>
 				<achievement name="JOURNAL_GATHERING_FISHING_FAME_02" rewarditem="T4_SKILLBOOK_NONTRADABLE" difficultyrating="2140" symbol="FAME" absoluteprogressmax="30000">
-					<havefame action="fishing" value="30000" />
+					<fishingfame value="30000"/>
 				</achievement>
 				<achievement name="JOURNAL_GATHERING_FISHING_FAME_03" rewarditem="T5_SKILLBOOK_NONTRADABLE" difficultyrating="2310" symbol="FAME" absoluteprogressmax="100000">
-					<havefame action="fishing" value="100000" />
+					<fishingfame value="100000"/>
 				</achievement>
 				<achievement name="JOURNAL_GATHERING_FISHING_FAME_04" rewarditem="T3_LEARNINGPOINTS_NONTRADABLE" difficultyrating="2505" symbol="FAME" absoluteprogressmax="300000">
-					<havefame action="fishing" value="300000" />
+					<fishingfame value="300000"/>
 				</achievement>
 				<achievement name="SA_FISHING_FAME_03" rewarditem="T5_SKILLBOOK_NONTRADABLE" difficultyrating="3215" steamachievementname="SA_FISHING_FAME_03" steamstatname="SA_ST_FISHING_FAME_03" googleplayid="CgkI-YfN27AEEAIQOg" googleplaymaxsteps="10000" symbol="FAME" absoluteprogressmax="1000000">
-					<havefame action="fishing" value="1000000" />
+					<fishingfame value="1000000"/>
 				</achievement>
 				<achievement name="JOURNAL_GATHERING_FISHING_FAME_06" rewarditem="T6_SKILLBOOK_NONTRADABLE" difficultyrating="3480" symbol="FAME" absoluteprogressmax="3000000">
-					<havefame action="fishing" value="3000000" />
+					<fishingfame value="3000000"/>
 				</achievement>
 				<achievement name="JOURNAL_GATHERING_FISHING_FAME_07" rewarditem="T3_VANITY_CONSUMABLE_FIREWORKS_BLUE_NONTRADABLE" rewardamount="99" difficultyrating="3895" symbol="FAME" absoluteprogressmax="10000000">
-					<havefame action="fishing" value="10000000" />
+					<fishingfame value="10000000"/>
 				</achievement>
 			</subcategory>
 			<subcategory uniquename="GATHERING_CRITTERS" displayname="@JOURNAL_ACTIVITY_GATHERING_CRITTERS">
@@ -8704,7 +8945,7 @@
 					<craftitem itemtype="equipmentitem" enchantmentlevel="3" count="50" />
 				</achievement>
 				<achievement name="JOURNAL_ECONOMY_CRAFTING_LOCAL_BONUS_HIDEOUT" rewarditem="UNIQUE_TOKEN_COMMUNITY" rewardamount="50" difficultyrating="2960" absoluteprogressmax="1">
-					<craftitem craftingmodifier="craftingbonus">
+					<craftitem itemtype="equipmentitem" craftingmodifier="craftingbonus">
 						<IfClusterArcheType op="equals" value="HIDEOUT" />
 					</craftitem>
 				</achievement>
@@ -9002,7 +9243,7 @@
 					<mount itemid="HORSE" />
 				</achievement>
 				<achievement name="JOURNAL_EXPLORATION_TRAVEL_HIDDEN_TREASURE_01" rewarditem="T3_SILVERBAG_NONTRADABLE" difficultyrating="750" absoluteprogressmax="1">
-					<killmob count="1">
+					<killmob count="1" countpartykills="true">
 						<mobid name="T4_MOB_ROAMING_FOREST_CHEST" />
 						<mobid name="T5_MOB_ROAMING_FOREST_CHEST" />
 						<mobid name="T6_MOB_ROAMING_FOREST_CHEST" />
@@ -9045,7 +9286,7 @@
 					<mount itemid="DIREWOLF" />
 				</achievement>
 				<achievement name="JOURNAL_EXPLORATION_TRAVEL_HIDDEN_TREASURE_02" rewarditem="T3_LEARNINGPOINTS_NONTRADABLE" difficultyrating="1208" absoluteprogressmax="5">
-		  <killmob count="5">
+		  <killmob count="5" countpartykills="true">
 		    <mobid name="T4_MOB_ROAMING_FOREST_CHEST"/>
 		    <mobid name="T5_MOB_ROAMING_FOREST_CHEST"/>
 		    <mobid name="T6_MOB_ROAMING_FOREST_CHEST"/>
@@ -9095,7 +9336,7 @@
 					</or>
 				</achievement>
 				<achievement name="JOURNAL_EXPLORATION_TRAVEL_HIDDEN_TREASURE_03" rewarditem="T5_SILVERBAG_NONTRADABLE" difficultyrating="1370" absoluteprogressmax="10">
-		  <killmob count="10">
+		  <killmob count="10" countpartykills="true">
 		    <mobid name="T4_MOB_ROAMING_FOREST_CHEST"/>
 		    <mobid name="T5_MOB_ROAMING_FOREST_CHEST"/>
 		    <mobid name="T6_MOB_ROAMING_FOREST_CHEST"/>
@@ -9145,7 +9386,7 @@
 					</or>
 				</achievement>
 				<achievement name="JOURNAL_EXPLORATION_TRAVEL_HIDDEN_TREASURE_04" rewarditem="T6_SILVERBAG_NONTRADABLE" difficultyrating="1931" absoluteprogressmax="20">
-		  <killmob count="20">
+		  <killmob count="20" countpartykills="true">
 		    <mobid name="T4_MOB_ROAMING_FOREST_CHEST"/>
 		    <mobid name="T5_MOB_ROAMING_FOREST_CHEST"/>
 		    <mobid name="T6_MOB_ROAMING_FOREST_CHEST"/>
@@ -9185,7 +9426,7 @@
 					</or>
 				</achievement>
 				<achievement name="JOURNAL_EXPLORATION_TRAVEL_HIDDEN_TREASURE_05" rewarditem="T7_SILVERBAG_NONTRADABLE" difficultyrating="2131" absoluteprogressmax="40">
-		  <killmob count="40">
+		  <killmob count="40" countpartykills="true">
 		    <mobid name="T4_MOB_ROAMING_FOREST_CHEST"/>
 		    <mobid name="T5_MOB_ROAMING_FOREST_CHEST"/>
 		    <mobid name="T6_MOB_ROAMING_FOREST_CHEST"/>
@@ -9229,7 +9470,7 @@
 					</or>
 				</achievement>
 				<achievement name="JOURNAL_EXPLORATION_TRAVEL_HIDDEN_TREASURE_06" rewarditem="T8_SILVERBAG_NONTRADABLE" difficultyrating="2333" absoluteprogressmax="65">
-		  <killmob count="65">
+		  <killmob count="65" countpartykills="true">
 		    <mobid name="T4_MOB_ROAMING_FOREST_CHEST"/>
 		    <mobid name="T5_MOB_ROAMING_FOREST_CHEST"/>
 		    <mobid name="T6_MOB_ROAMING_FOREST_CHEST"/>
@@ -9302,7 +9543,7 @@
 					</or>
 				</achievement>
 				<achievement name="JOURNAL_EXPLORATION_TRAVEL_HIDDEN_TREASURE_07" rewarditem="T8_SILVERBAG_NONTRADABLE" rewardamount="5" difficultyrating="2631" absoluteprogressmax="100">
-		  <killmob count="100">
+		  <killmob count="100" countpartykills="true">
 		    <mobid name="T4_MOB_ROAMING_FOREST_CHEST"/>
 		    <mobid name="T5_MOB_ROAMING_FOREST_CHEST"/>
 		    <mobid name="T6_MOB_ROAMING_FOREST_CHEST"/>
@@ -9350,7 +9591,7 @@
 					<mount itemid="T8_MOUNT_GREYWOLF_FW_CAERLEON_ELITE" nameloca="@ITEMS_T8_MOUNT_GREYWOLF_FW_CAERLEON_ELITE" />
 				</achievement>
 				<achievement name="JOURNAL_EXPLORATION_TRAVEL_HIDDEN_TREASURE_08" rewarditem="T8_SILVERBAG_NONTRADABLE" rewardamount="8" difficultyrating="2833" absoluteprogressmax="200">
-					<killmob count="200">
+					<killmob count="200" countpartykills="true">
 		    <mobid name="T4_MOB_ROAMING_FOREST_CHEST"/>
 		    <mobid name="T5_MOB_ROAMING_FOREST_CHEST"/>
 		    <mobid name="T6_MOB_ROAMING_FOREST_CHEST"/>
@@ -9387,7 +9628,7 @@
 					<mount itemid="T8_MOUNT_MAMMOTH_TRANSPORT" />
 				</achievement>
 				<achievement name="JOURNAL_EXPLORATION_TRAVEL_HIDDEN_TREASURE_09" rewarditem="T8_SILVERBAG_NONTRADABLE" rewardamount="15" difficultyrating="2973" absoluteprogressmax="500">
-					<killmob count="500">
+					<killmob count="500" countpartykills="true">
 						<mobid name="T4_MOB_ROAMING_FOREST_CHEST" />
 						<mobid name="T5_MOB_ROAMING_FOREST_CHEST" />
 						<mobid name="T6_MOB_ROAMING_FOREST_CHEST" />
@@ -9587,7 +9828,7 @@
 					</fameearned>
 				</achievement>
 				<achievement name="JOURNAL_EXPLORATION_MISTS_RESCUE_WISPS_DUO_BLACK_01" rewarditem="T6_SKILLBOOK_NONTRADABLE" difficultyrating="2180" absoluteprogressmax="50">
-					<usefunction function="FreeCagedWisp" count="50">
+					<usefunction function="FreeCagedWisp" count="50" countforallpartymembers="true">
 						<IfClusterArcheType value="MISTS_DUO_BLACK" op="equals" />
 					</usefunction>
 				</achievement>
@@ -9913,22 +10154,22 @@
 						<IfClusterArcheType value="TUNNEL" op="contains" />
 					</fameearned>
 				</achievement>
-				<achievement name="JOURNAL_EXPLORATION_ROADS_OF_AVALON_FAME_02" rewarditem="T8_SILVERBAG_NONTRADABLE" difficultyrating="3815" symbol="FAME" absoluteprogressmax="3000000">
+				<achievement name="JOURNAL_EXPLORATION_ROADS_OF_AVALON_FAME_02" rewarditem="T7_SKILLBOOK_NONTRADABLE" difficultyrating="3815" symbol="FAME" absoluteprogressmax="3000000">
 					<fameearned value="3000000">
 						<IfClusterArcheType value="TUNNEL" op="contains" />
 					</fameearned>
 				</achievement>
-				<achievement name="JOURNAL_EXPLORATION_ROADS_OF_AVALON_FAME_03" rewarditem="T8_SILVERBAG_NONTRADABLE" rewardamount="5" difficultyrating="3955" symbol="FAME" absoluteprogressmax="10000000">
+				<achievement name="JOURNAL_EXPLORATION_ROADS_OF_AVALON_FAME_03" rewarditem="T8_SKILLBOOK_NONTRADABLE" difficultyrating="3955" symbol="FAME" absoluteprogressmax="10000000">
 					<fameearned value="10000000">
 						<IfClusterArcheType value="TUNNEL" op="contains" />
 					</fameearned>
 				</achievement>
-				<achievement name="JOURNAL_EXPLORATION_ROADS_OF_AVALON_FAME_04" rewarditem="T8_SILVERBAG_NONTRADABLE" rewardamount="10" difficultyrating="4000" symbol="FAME" absoluteprogressmax="30000000">
+				<achievement name="JOURNAL_EXPLORATION_ROADS_OF_AVALON_FAME_04" rewarditem="UNIQUE_TOKEN_COMMUNITY" rewardamount="50" difficultyrating="4000" symbol="FAME" absoluteprogressmax="30000000">
 					<fameearned value="30000000">
 						<IfClusterArcheType value="TUNNEL" op="contains" />
 					</fameearned>
 				</achievement>
-				<achievement name="JOURNAL_EXPLORATION_ROADS_OF_AVALON_FAME_05" rewarditem="T8_SILVERBAG_NONTRADABLE" rewardamount="25" difficultyrating="5000" symbol="FAME" absoluteprogressmax="100000000">
+				<achievement name="JOURNAL_EXPLORATION_ROADS_OF_AVALON_FAME_05" rewarditem="T8_SILVERBAG_NONTRADABLE" rewardamount="15" difficultyrating="5000" symbol="FAME" absoluteprogressmax="100000000">
 					<fameearned value="100000000">
 						<IfClusterArcheType value="TUNNEL" op="contains" />
 					</fameearned>
@@ -10725,7 +10966,9 @@
       <finishcrystalleaguematch count="1" />
 	  </achievement>
                 <achievement name="SA_PVP_CRYSTAL_LEAGUE_WIN" rewarditem="T7_SILVERBAG_NONTRADABLE" difficultyrating="2305" steamachievementname="SA_PVP_CRYSTAL_LEAGUE_WIN" googleplayid="CgkI-YfN27AEEAIQmgE" absoluteprogressmax="1">
-		  <finishcrystalleaguematch result="win" count="1" />
+                  <finishcrystalleaguematch result="win" count="1" >
+                    <IfArenaMatchCategory op="equals" value="crystal_league_nonlethal" />
+                  </finishcrystalleaguematch>
 		</achievement>
                 <achievement name="JOURNAL_PVP_CRYSTAL_LEAGUE_5V5_WIN_2" rewarditem="T8_SILVERBAG_NONTRADABLE" difficultyrating="2965" absoluteprogressmax="1">
 		  <finishcrystalleaguematch result="win" level="2">
@@ -10738,7 +10981,7 @@
       </finishcrystalleaguematch>
 		</achievement>
                 <achievement name="JOURNAL_PVP_CRYSTAL_LEAGUE_20V20_WIN_1" rewarditem="T8_SILVERBAG_NONTRADABLE" difficultyrating="3610" absoluteprogressmax="1">
-		  <finishcrystalleaguematch result="win" level="1">
+		  <finishcrystalleaguematch result="win" count="1">
         <IfArenaMatchCategory op="equals" value="crystal_league_city"/>
       </finishcrystalleaguematch>
 		</achievement>

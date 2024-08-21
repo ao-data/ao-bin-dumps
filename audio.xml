@@ -3453,6 +3453,20 @@
     <OnCastCanceled name="Stop_melee_swoosh_load_medium" />
     <OnCastInterrupted name="Stop_melee_swoosh_load_medium" />
   </WwiseEventInfo>
+  <WwiseEventInfo name="MELEE_CAST_LOAD_SHORT_ENERGETIC_ONLY">
+    <OnCastStart name="Play_melee_load_short_energetic" />
+    <OnCastCanceled name="Stop_melee_load_short_energetic" />
+    <OnCastInterrupted name="Stop_melee_load_short_energetic" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="MELEE_CAST_LOAD_SHORT_AGGRESSIVE_ONLY">
+	<OnCastStart name="Play_melee_load_short_aggressive" />
+	<OnCastCanceled name="Stop_melee_load_short_aggressive" />
+	<OnCastInterrupted name="Stop_melee_load_short_aggressive" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="MELEE_SWOOSH_SMALL_HEAVY_CAST">
+	<OnCastFinished name="Play_melee_swoosh_small_heavy" />
+  </WwiseEventInfo>
+		
   <WwiseEventInfo name="MELEE_HAMMER_BASH">
     <OnCastStart name="Play_hammer_bash_small" />
     <OnSpellHit>
@@ -3491,6 +3505,11 @@
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_IMPACT_SMALL_SHARP">
 	<OnSpellHit name="Play_melee_impact_small_sharp" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="MELEE_IMPACT_MEDIUM_METALLIC">
+	<OnSpellHit name="Play_melee_impact_medium_metallic" >
+		<ImpactType/>
+	</OnSpellHit>
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_SWORD_MIGHTY_BLOW">
     <OnCastFinished name="Play_melee_swoosh_big_double" />
@@ -3667,6 +3686,11 @@
   </WwiseEventInfo> 
   <WwiseEventInfo name="MELEE_IMPACT_BIG_SHARP">
 	<OnSpellHit name="Play_melee_impact_big_sharp" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="MELEE_IMPACT_BIG_SHARP_WEAPONHIT">
+    <OnSpellHit name="Play_melee_impact_big_sharp" >
+	  <ImpactType/>
+	</OnSpellHit>
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_BIGCAST_BIG_ROCK_IMPACT_NO_WEAPON_IMPACT">
     <OnCastStart name="Play_melee_swoosh_small" />
@@ -4598,6 +4622,11 @@
   <WwiseEventInfo name="SPELL_ARROW_UNDEAD_MINE">
     <OnCastFinished name="Play_arrow_undead_mine" />
   </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_ARROW_HIT_SMALL">
+    <OnSpellHit name="Play_arrow_impact_small" >
+      <ImpactType/>
+    </OnSpellHit>
+  </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_ARROW_HIT_MEDIUM">
     <OnSpellHit name="Play_arrow_impact_medium" />
   </WwiseEventInfo>
@@ -4633,10 +4662,10 @@
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_ARROW_MULTISHOT_CAST_4SHOTS">
-	<OnCastStart name="Play_arrow_load_short" />
-	<OnCastCanceled name="Stop_arrow_load_short" />
-	<OnCastInterrupted name="Stop_arrow_load_short"/>
-	<OnCastFinished name="Play_arrow_multishot"/>
+	<OnCastStart name="Play_melee_load_medium_energetic" />
+	<OnCastCanceled name="Stop_melee_load_medium_energetic" />
+	<OnCastInterrupted name="Stop_melee_load_medium_energetic"/>
+	<OnCastFinished name="Play_arrow_multishot_4shots"/>
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_ARROW_RAIN">
@@ -4774,7 +4803,6 @@
 	<OnCastInterrupted name="Stop_arcane_cast_load_damage_medium" />
 	<OnCastCanceled name="Stop_arcane_cast_load_damage_medium" />
 	<OnCastFinished name="Play_arcane_cast_damage_medium" />
-    <OnSpellHit name="Play_arcane_impact_damage_small" />
   </WwiseEventInfo>
  <WwiseEventInfo name="SPELL_ARCANE_CAST_DAMAGE_MEDIUM_ENIGMABLADE">
     <OnCastFinished name="Play_arcane_cast_damage_medium_enigmablade" />
@@ -5024,6 +5052,11 @@
   </WwiseEventInfo>  
   <WwiseEventInfo name="SPELL_FIRE_HIT_MEDIUM">
     <OnSpellHit name="Play_fire_impact_medium" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_FIRE_HIT_WEAPONHIT">
+    <OnSpellHit name="Play_fire_impact_medium" >
+      <ImpactType/>
+    </OnSpellHit>
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_FIRE_IMPACT_MEDIUM_W">
 	<OnSpellHit name="Play_fire_impact_medium_w" />
@@ -6374,6 +6407,11 @@
   <WwiseEventInfo name="SPELL_HIT_KNOCKBACK">
     <OnSpellHit name="Play_self_knockback" />
   </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_HIT_KNOCKBACK_WEAPONIMPACT" >
+	<OnSpellHit name="Play_self_knockback" >
+		<ImpactType/>
+	</OnSpellHit>
+  </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_TELEPORT_CAST" >
     <OnSpellHit name="Play_teleport" />
   </WwiseEventInfo>
@@ -7144,6 +7182,23 @@
   <WwiseEventInfo name="SPELL_GUARDS_SUMMON">
     <OnCastStart name="Play_mob_castlelord_support_whistle" />
   </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_CASTLELORD_SWIPE">
+	<OnCastStart name="Play_melee_swoosh_medium" />
+	<OnCastFinished name="Play_mob_castlelord_swipe_delayed" />
+	<OnSpellHit name="Play_melee_impact_medium" >
+		<ImpactType/>
+	</OnSpellHit>
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_CASTLELORD_SWIPE_2">
+	<OnCastStart name="Play_melee_swoosh_medium" />
+	<OnCastFinished name="Play_mob_castlelord_swipe_2_delayed" />
+	<OnSpellHit name="Play_melee_impact_medium" >
+		<ImpactType/>
+	</OnSpellHit>
+  </WwiseEventInfo>
+	
   <!--Critter-->
   <WwiseEventInfo name="SPELL_GUARDIAN_FORESTSPIRIT_CAST_LOAD">
     <OnCastStart name="Play_guardian_forestspirit_cast"/>
@@ -7360,10 +7415,9 @@
   <!-- Heretics-->
   
   <WwiseEventInfo name="SPELL_HERETIC_THIEF_HEAVYSTRIKE">
-    <OnCastStart name="Play_melee_swoosh_load_medium" />
-    <OnCastCanceled name="Stop_melee_swoosh_load_medium" />
-    <OnCastInterrupted name="Stop_melee_swoosh_load_medium" />
-    <OnCastFinished name="Play_heretic_heavystrike"/>
+    <OnCastStart name="Play_heretic_heavystrike_load" />
+    <OnCastCanceled name="Stop_heretic_heavystrike_load" />
+    <OnCastInterrupted name="Stop_heretic_heavystrike_load" />
     <OnSpellHit name="Play_melee_impact_small" >
       <ImpactType/>
     </OnSpellHit>
@@ -7377,6 +7431,9 @@
   </WwiseEventInfo>
   
   <WwiseEventInfo name="SPELL_HERETIC_THIEF_DASH" >
+	<OnCastStart name="Play_melee_load_medium_windy_short" />
+	<OnCastCanceled name="Stop_melee_load_medium_windy_short" />
+	<OnCastInterrupted name="Stop_melee_load_medium_windy_short" />
     <OnCastFinished name="Play_heretic_thief_dash" />
   </WwiseEventInfo>
 
@@ -7427,16 +7484,22 @@
 	<OnChannelingEnd name="Stop_heretic_tank_shield_loop" />
   </WwiseEventInfo>
 	
-<WwiseEventInfo name="SPELL_HERETIC_ARCHER_KNOCKBACK">
+  <WwiseEventInfo name="SPELL_HERETIC_ARCHER_KNOCKBACK">
     <OnCastFinished name="Play_arrow_cast_medium"/>
-    <OnSpellHit name="Play_fire_impact_medium" />
+  </WwiseEventInfo>
+	
+  <WwiseEventInfo name="SPELL_HERETIC_ARCHER_RAINOFARROW_WITHLOAD">
+    <OnCastStart name="Play_arrow_load_rainofarrows_mobs" />
+    <OnCastCanceled name="Stop_arrow_load_rainofarrows_mobs" />
+    <OnCastInterrupted name="Stop_arrow_load_rainofarrows_mobs" />
+    <OnCastFinished name="Play_arrow_cast_medium_stops_load"/>
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_HERETIC_ARCHER_KNOCKBACK_WITHLOAD_FIRY">
     <OnCastStart name="Play_archer_load_arrow" />
 	<OnCastCanceled name="Stop_archer_load_arrow" />
 	<OnCastInterrupted name="Stop_archer_load_arrow" />
-	<OnCastFinished name="Play_arrow_cast_medium_instant"/>
+	<OnCastFinished name="Play_arrow_cast_small_delayed"/>
 	<OnSpellHit name="Play_fire_impact_medium" />
   </WwiseEventInfo>
 
@@ -7472,6 +7535,10 @@
 	<OnCastInterrupted name="Stop_fire_cast_load_medium" />
 	<OnCastCanceled name="Stop_fire_cast_load_medium" />
 	<OnCastFinished name="Play_fire_cast_small_q_searingflame" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_HERETIC_MAGE_FIRETRAP_HIT">
+	<OnSpellHit name="Play_firetrap_impact_small" />
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_HERETIC_TOTEM_HEALING_CHANNEL">
@@ -7571,7 +7638,26 @@
 	  <ImpactType/>
 	</OnSpellHit>
   </WwiseEventInfo>
-	
+
+  <WwiseEventInfo name="SPELL_HERETIC_LUMBERJACK_STRIKE_SMASH">
+	<OnCastStart name="Play_heretic_lumberjack_strike" />
+	<OnCastCanceled name="Stop_keeper_berserk_cast_load_smash" />
+	<OnCastInterrupted name="Stop_keeper_berserk_cast_load_smash" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_HERETIC_LUMBERJACK_STRIKE_SMASH_18CT">
+	<OnCastStart name="Play_heretic_lumberjack_strike_ct18" />
+	<OnCastCanceled name="Stop_keeper_berserk_cast_load_smash" />
+	<OnCastInterrupted name="Stop_keeper_berserk_cast_load_smash" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_HERETIC_LUMBERJACK_BLEED">
+	<OnCastStart name="Play_melee_load_short_energetic" />
+	<OnCastCanceled name="Stop_melee_load_short_energetic" />
+	<OnCastInterrupted name="Stop_melee_load_short_energetic" />
+	<OnCastFinished name="Play_spear_stab_ground" />
+  </WwiseEventInfo>
+
   <WwiseEventInfo name="SPELL_HERETIC_LUMBERJACK_WHIRLWIND_VO">
   	<OnCastStart name="Play_lumberjack_boss_vo_whirlwind"/>
     <OnCastFinished name="Play_melee_spin" />
@@ -7743,6 +7829,40 @@
     <OnSpellHit name="Play_berserker_enrage" />
   </WwiseEventInfo>
 
+	<!-- Berserk Smash - the Sound here is the same for all Berserk Smash spells, the timing for the hit of the floor is just different depending on the cast time. 15CT means it works for a cast time of 1.5 sec; 17CT works for a casttime of 1-7 sec etc. -->
+	
+  <WwiseEventInfo name="SPELL_KEEPER_BERSERK_CAST_SMASH_15CT">
+	<OnCastStart name="Play_keeper_berserk_cast_load_smash_15ct" />
+	<OnCastCanceled name="Stop_keeper_berserk_cast_load_smash" />
+	<OnCastInterrupted name="Stop_keeper_berserk_cast_load_smash" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_KEEPER_BERSERK_CAST_SMASH_17CT">
+	<OnCastStart name="Play_keeper_berserk_cast_load_smash_17ct" />
+	<OnCastCanceled name="Stop_keeper_berserk_cast_load_smash" />
+	<OnCastInterrupted name="Stop_keeper_berserk_cast_load_smash" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_KEEPER_BERSERK_CAST_SMASH_19CT">
+	<OnCastStart name="Play_keeper_berserk_cast_load_smash_19ct" />
+	<OnCastCanceled name="Stop_keeper_berserk_cast_load_smash" />
+	<OnCastInterrupted name="Stop_keeper_berserk_cast_load_smash" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_KEEPER_BERSERK_CAST_SMASH_GROUND">
+	<OnCastStart name="Play_keeper_berserk_cast_load_smash_ground" />
+	<OnCastCanceled name="Stop_keeper_berserk_cast_load_smash_ground" />
+	<OnCastInterrupted name="Stop_keeper_berserk_cast_load_smash_ground" />
+	<OnCastFinished name="Play_mob_keeper_warstomp" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_KEEPER_BERSERK_CAST_WHIRLWIND_CHANNEL">
+	<OnCastStart name="Play_melee_load_long_energetic" />
+	<OnCastCanceled name="Stop_melee_load_long_energetic" />
+	<OnCastInterrupted name="Stop_melee_load_long_energetic" />
+	<OnCastFinished name="Play_melee_swoosh_small_heavy" />
+  </WwiseEventInfo>
+	
   <WwiseEventInfo name="SPELL_KEEPER_GIANT_KICK_ROCKSLIDE">
     <OnCastStart name="Play_melee_swoosh_load_big" />
     <OnCastCanceled name="Stop_melee_swoosh_load_big" />
@@ -7797,11 +7917,15 @@
     <OnSpellHit name="Play_melee_impact_rock_medium" />
   </WwiseEventInfo>
 
+  <WwiseEventInfo name="SPELL_KEEPER_CHIEFTAIN_CAST_LIGHTNING_AXE">
+	<OnCastFinished name="Play_keeper_chieftain_cast_lightning_smash" />
+  </WwiseEventInfo>
+	
   <WwiseEventInfo name="SPELL_KEEPER_CHIEFTAIN_SMASH_JUMP">
     <OnCastStart name="Play_mob_keeper_chieftain_smash_jump" />
     <OnCastCanceled name="Stop_mob_keeper_chieftain_smash_jump" />
     <OnCastInterrupted name="Stop_mob_keeper_chieftain_smash_jump" />
-    <OnSpellHit name="Play_melee_impact_rock_medium" />
+	<OnCastFinished name="Play_mob_keeper_warstomp" />
   </WwiseEventInfo>
   
   <WwiseEventInfo name="SPELL_KEEPER_CHIEFTAIN_WHIRLWIND" >
@@ -8302,6 +8426,7 @@
 
   <WwiseEventInfo name="DEMON_BRUTE_PHASECHANGE" >
     <OnCastStart name="Play_mob_demon_warlord_phasechange_vo" />
+	<OnCastFinished name="Play_melee_swoosh_big_sharp_instant" />
   </WwiseEventInfo>
   <WwiseEventInfo name="DEMON_BRUTE_CHARGE" >
     <OnCastStart name="Play_mob_demon_warlord_castload_dash" />
