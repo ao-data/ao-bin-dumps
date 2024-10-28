@@ -664,7 +664,7 @@
             </conditions>
         </popup>
 
-        <lootchestpopup uniquename="TWITCH_DROPS" type="LootChests" guitemplate="LootChests" priority="0" title="@EVENT_BASED_POPUPS_TITLE_TWITCH_DROPS" description="@EVENT_BASED_POPUPS_DESCRIPTION_TWITCH_DROPS" rewardstitle="@EVENT_BASED_POPUPS_REWARDS_TITLE_TWITCH_DROPS" buttontext="@EVENT_BASED_POPUPS_BUTTON_TWITCH_DROPS" imagepath="Gui/EventBasedPopups/EVENT_POPUP_TWITCH_DROPS" flagpath="Gui/EventBasedPopups/icons_shop_flag_purple_big" flagiconpath="Gui/EventBasedPopups/icon_twitch_drops">
+        <lootchestpopup uniquename="TWITCH_DROPS" type="LootChests" guitemplate="LootChest" priority="0" title="@EVENT_BASED_POPUPS_TITLE_TWITCH_DROPS" description="@EVENT_BASED_POPUPS_DESCRIPTION_TWITCH_DROPS" rewardstitle="@EVENT_BASED_POPUPS_REWARDS_TITLE_TWITCH_DROPS" buttonloca="@EVENT_BASED_POPUPS_BUTTON_TWITCH_DROPS" imagepath="Gui/EventBasedPopups/EVENT_POPUP_TWITCH_DROPS" flagpath="Gui/EventBasedPopups/icons_shop_flag_purple_big" flagiconpath="Gui/EventBasedPopups/icon_twitch_drops">
             <categories>
                 <category name="Advertisement" />
             </categories>
@@ -793,6 +793,73 @@
                     <IfHasSeenPopup uniquename="FOUNDER_PACK_LAST_CHANCE_UPGRADE" frequency="Days" operation="equals" timefactor="7" amount="0" />
                 </and>
             </conditions>
-        </popup> 
+        </popup>
+
+        <!-- Kickstart Bundles aka Mastery Packs -->
+        <genericadvertisement
+                uniquename="MASTERY_PACKS_NATIVE_OFFER"
+                priority="10"
+                type="GenericAdvertisement"
+                guitemplate="GenericAdvertisement"
+                title="@EVENT_BASED_POPUPS_MASTERY_PACK_NATIVE_TITLE"
+                description="@EVENT_BASED_POPUPS_MASTERY_PACK_NATIVE_DESCRIPTION"
+                imagepath="Gui/Advertisements/ad_mastery_packs_2024"
+                linkmode="Store"
+                buttonloca="@GENERIC_BUY_NOW"
+                flagiconpath=""
+                flagpath="">
+            <categories>
+                <category name="Advertisement" />
+            </categories>
+            <triggers>
+                <trigger action="GameLogin" />
+            </triggers>
+            <conditions>
+                <and>
+                    <IfValidDate start="2024-10-28T12:00:00" end="2025-02-17T09:00:00" />
+                    <not> 
+                        <IsEuropeContext />
+                    </not>
+                    <IfOnPlatform platform="Desktop"/>
+                    <IfTutorialCompleted />
+                    <IfHasSeenPopup uniquename="MASTERY_PACKS_NATIVE_OFFER" frequency="Days" operation="equals" timefactor="7" amount="0" />
+                    <IfHasSeenPopup uniquename="MASTERY_PACKS_NON_NATIVE_OFFER" frequency="Days" operation="equals" timefactor="7" amount="0" />
+                </and>
+            </conditions>
+        </genericadvertisement>
+        <genericadvertisement
+                uniquename="MASTERY_PACKS_NON_NATIVE_OFFER"
+                priority="10"
+                type="GenericAdvertisement"
+                guitemplate="GenericAdvertisement"
+                title="@EVENT_BASED_POPUPS_MASTERY_PACK_NON_NATIVE_TITLE"
+                description="@EVENT_BASED_POPUPS_MASTERY_PACK_NON_NATIVE_DESCRIPTION"
+                imagepath="Gui/Advertisements/ad_mastery_packs_2024"
+                linkmode="Url"
+                customurl="https://albiononline.com/news/warden-mastery-packs-available"
+                buttonloca="@GENERIC_LEARN_MORE"
+                flagiconpath=""
+                flagpath="">
+            <categories>
+                <category name="Advertisement"/>
+            </categories>
+            <triggers>
+                <trigger action="GameLogin"/>
+            </triggers>
+            <conditions>
+                <and>
+                    <IfValidDate start="2024-10-28T12:00:00" end="2025-02-17T09:00:00"/>
+                    <not>
+                        <IsEuropeContext/>
+                    </not>
+                    <not>
+                        <IfOnPlatform platform="Desktop"/>
+                    </not>
+                    <IfTutorialCompleted/>
+                    <IfHasSeenPopup uniquename="MASTERY_PACKS_NATIVE_OFFER" frequency="Days" operation="equals" timefactor="7" amount="0"/>
+                    <IfHasSeenPopup uniquename="MASTERY_PACKS_NON_NATIVE_OFFER" frequency="Days" operation="equals" timefactor="7" amount="0"/>
+                </and>
+            </conditions>
+        </genericadvertisement>
     </popups>
 </eventbasedpopups>

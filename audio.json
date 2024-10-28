@@ -291,6 +291,15 @@
         }
       },
       {
+        "@name": "MOUNT_OX_FARMER",
+        "CharType": {
+          "@name": "mount"
+        },
+        "MountType": {
+          "@name": "ox_farmer"
+        }
+      },
+      {
         "@name": "MOUNT_MAMMOTH",
         "CharType": {
           "@name": "mount"
@@ -1658,7 +1667,7 @@
           "@name": "hide"
         },
         "MobType": {
-          "@name": "hide_lizard"
+          "@name": "hide_dragon"
         },
         "Size": {
           "@name": "heavy"
@@ -5427,6 +5436,30 @@
         }
       },
       {
+        "@name": "MOB_DEMON_SENTINEL",
+        "CharType": {
+          "@name": "mob"
+        },
+        "MobFaction": {
+          "@name": "demon"
+        },
+        "MobType": {
+          "@name": "demon_sentinel"
+        },
+        "Size": {
+          "@name": "big"
+        },
+        "ArmorType": {
+          "@name": "rock"
+        },
+        "WeaponType": {
+          "@name": "hammer_medium"
+        },
+        "MountType": {
+          "@name": "empty"
+        }
+      },
+      {
         "@name": "MOB_DEMON_HAZARD_LAVA",
         "CharType": {
           "@name": "mob"
@@ -6168,6 +6201,54 @@
         },
         "WeaponType": {
           "@name": "blade_small"
+        },
+        "MountType": {
+          "@name": "empty"
+        }
+      },
+      {
+        "@name": "MOB_ARCANE_BEETLE_BOSS",
+        "CharType": {
+          "@name": "mob"
+        },
+        "MobFaction": {
+          "@name": "arcane"
+        },
+        "MobType": {
+          "@name": "arcane_beetle_boss"
+        },
+        "Size": {
+          "@name": "small"
+        },
+        "ArmorType": {
+          "@name": "crystal"
+        },
+        "WeaponType": {
+          "@name": "blade_small"
+        },
+        "MountType": {
+          "@name": "empty"
+        }
+      },
+      {
+        "@name": "MOB_ARCANE_COBRA_BOSS",
+        "CharType": {
+          "@name": "mob"
+        },
+        "MobFaction": {
+          "@name": "arcane"
+        },
+        "MobType": {
+          "@name": "arcane_cobra_boss"
+        },
+        "Size": {
+          "@name": "small"
+        },
+        "ArmorType": {
+          "@name": "crystal"
+        },
+        "WeaponType": {
+          "@name": "bite_medium"
         },
         "MountType": {
           "@name": "empty"
@@ -8576,6 +8657,12 @@
         }
       },
       {
+        "@name": "MOB_DEMON_SENTINEL",
+        "OnMobDied": {
+          "@name": "Die"
+        }
+      },
+      {
         "@name": "MOB_DEMON_STATUE",
         "OnMobViewInit": {
           "@name": "Play_mob_loops"
@@ -8595,6 +8682,18 @@
       },
       {
         "@name": "MOB_ARCANE_SPIDER_BOSS",
+        "OnMobDied": {
+          "@name": "Die"
+        }
+      },
+      {
+        "@name": "MOB_ARCANE_BEETLE_BOSS",
+        "OnMobDied": {
+          "@name": "Die"
+        }
+      },
+      {
+        "@name": "MOB_ARCANE_COBRA_BOSS",
         "OnMobDied": {
           "@name": "Die"
         }
@@ -10582,6 +10681,12 @@
         }
       },
       {
+        "@name": "SPELL_KNUCKLES_CRYSTAL_DASH",
+        "OnCastFinished": {
+          "@name": "Play_crystal_knuckles_dash"
+        }
+      },
+      {
         "@name": "SPELL_ARROW_CAST_MEDIUM",
         "OnCastStart": {
           "@name": "Play_arrow_cast_medium"
@@ -11698,6 +11803,18 @@
         }
       },
       {
+        "@name": "SPELL_CURSED_IMPACT_BIG_WET",
+        "OnSpellHit": {
+          "@name": "Play_cursed_impact_big_wet"
+        }
+      },
+      {
+        "@name": "SPELL_CURSED_CAST_BIG_GHOST_SKELETON",
+        "OnCastFinished": {
+          "@name": "Play_cursed_cast_big_ghost_skeleton"
+        }
+      },
+      {
         "@name": "SPELL_FIRE_CAST_MEDIUM",
         "OnCastFinished": {
           "@name": "Play_fire_cast_medium"
@@ -12431,6 +12548,13 @@
         }
       },
       {
+        "@name": "SPELL_FROST_HIT_SMALL_WEAPONHIT",
+        "OnSpellHit": {
+          "@name": "Play_frost_impact_small",
+          "ImpactType": null
+        }
+      },
+      {
         "@name": "SPELL_FROST_HIT_SMALL_AUTOATTACK",
         "OnSpellHit": {
           "@name": "Play_frost_impact_small_autoattack"
@@ -12482,6 +12606,12 @@
         "@name": "SPELL_FROST_EXPLOSION_MEDIUM_LANCE",
         "OnSpellHit": {
           "@name": "Play_frost_explosion_medium_lance"
+        }
+      },
+      {
+        "@name": "SPELL_FROST_EXPLOSION_SMALL_ICESCULPTURE",
+        "OnSpellHit": {
+          "@name": "Play_frost_explosion_small_icesculpture"
         }
       },
       {
@@ -12845,6 +12975,12 @@
         "@name": "SPELL_LIGHTNING_CHAIN",
         "OnCastFinished": {
           "@name": "Play_lightningbolt_chain"
+        }
+      },
+      {
+        "@name": "SPELL_LIGHTNING_HIT_SMALL",
+        "OnSpellHit": {
+          "@name": "Play_lightning_impact_small"
         }
       },
       {
@@ -14442,6 +14578,12 @@
         }
       },
       {
+        "@name": "SPELL_SMALL_DEBUFF_LIMITED",
+        "OnSpellHit": {
+          "@name": "Play_simple_debuff_limited"
+        }
+      },
+      {
         "@name": "SPELL_FROST_ROOT",
         "OnSpellHit": {
           "@name": "Play_root_frost"
@@ -14451,6 +14593,12 @@
         "@name": "SPELL_SELF_BUFF_HIT",
         "OnSpellHit": {
           "@name": "Play_selfbuff_cast"
+        }
+      },
+      {
+        "@name": "SPELL_SELF_BUFF_SOFTER_HIT",
+        "OnSpellHit": {
+          "@name": "Play_cast_selfbuff_soft"
         }
       },
       {
@@ -14542,6 +14690,12 @@
         "OnSpellHit": {
           "@name": "Play_self_knockback",
           "ImpactType": null
+        }
+      },
+      {
+        "@name": "SPELL_ENERGY_GAIN_REPEATING",
+        "OnSpellHit": {
+          "@name": "Play_energy_gain_repeating"
         }
       },
       {
@@ -15107,6 +15261,12 @@
         }
       },
       {
+        "@name": "SPELL_MOBCAMP_MAP_COLLECTION",
+        "OnSpellHit": {
+          "@name": "Play_collect_mobcamp_map"
+        }
+      },
+      {
         "@name": "SPELL_COLLECT_ROSE_SHRINE_BUFF",
         "OnSpellHit": {
           "@name": "Play_mist_dungeon_collect_buff_rose"
@@ -15185,6 +15345,12 @@
         }
       },
       {
+        "@name": "SPELL_MOUNT_DRAGON_SPIT_FIREBOLT",
+        "OnCastFinished": {
+          "@name": "Play_dragon_spit_firebolt"
+        }
+      },
+      {
         "@name": "SPELL_MOUNT_DRAGON_EXHALE",
         "OnCastFinished": {
           "@name": "Play_dragon_poisonbreath_start"
@@ -15193,7 +15359,13 @@
       {
         "@name": "SPELL_MOUNT_DRAGON_BREATH_POISON",
         "OnCastStart": {
-          "@name": "Play_dragon_cast_poison"
+          "@name": "Play_dragon_cast_load_poisonbreath"
+        },
+        "OnCastCanceled": {
+          "@name": "Stop_dragon_cast_load_poisonbreath"
+        },
+        "OnCastInterrupted": {
+          "@name": "Stop_dragon_cast_load_poisonbreath"
         },
         "OnCastFinished": {
           "@name": "Play_dragon_poisonbreath_start"
@@ -15202,7 +15374,13 @@
       {
         "@name": "SPELL_MOUNT_DRAGON_SPIT_POISON",
         "OnCastStart": {
-          "@name": "Play_dragon_cast_poison"
+          "@name": "Play_dragon_cast_load_spit"
+        },
+        "OnCastCanceled": {
+          "@name": "Stop_dragon_cast_load_spit"
+        },
+        "OnCastInterrupted": {
+          "@name": "Stop_dragon_cast_load_spit"
         },
         "OnCastFinished": {
           "@name": "Play_dragon_spit"
@@ -15233,6 +15411,21 @@
         "@name": "SPELLHIT_POISON_IMPACT",
         "OnSpellHit": {
           "@name": "Play_poison_impact"
+        }
+      },
+      {
+        "@name": "SPELL_MOUNT_LIZARD_SPIT_POISON",
+        "OnCastStart": {
+          "@name": "Play_lizard_spell_load_poison"
+        },
+        "OnCastCanceled": {
+          "@name": "Stop_lizard_spell_load_poison"
+        },
+        "OnCastInterrupted": {
+          "@name": "Stop_lizard_spell_load_poison"
+        },
+        "OnCastFinished": {
+          "@name": "Play_lizard_spit"
         }
       },
       {
@@ -15894,12 +16087,9 @@
         }
       },
       {
-        "@name": "SPELL_ARCANE_SPIDER_DASH",
-        "OnCastStart": {
-          "@name": "Play_mob_arcane_spider_dash"
-        },
+        "@name": "SPELL_ARCANE_SPIDER_DASH_CASTFINISHED",
         "OnCastFinished": {
-          "@name": "Play_melee_swoosh_dash_mob"
+          "@name": "Play_arcane_spider_dash_swoosh"
         }
       },
       {
@@ -15914,7 +16104,7 @@
           "@name": "Stop_arcane_spider_cast_load_B"
         },
         "OnCastFinished": {
-          "@name": "Play_frost_cast_small"
+          "@name": "Play_frost_icerain"
         }
       },
       {
@@ -15930,6 +16120,72 @@
         },
         "OnCastFinished": {
           "@name": "Play_mob_arcane_spider_prison_beam"
+        }
+      },
+      {
+        "@name": "SPELL_CRYSTAL_COBRA_AWAKEN",
+        "OnCastFinished": {
+          "@name": "Play_mob_crystal_cobra_awaken"
+        }
+      },
+      {
+        "@name": "SPELL_CRYSTAL_COBRA_CAST_BITE",
+        "OnCastStart": {
+          "@name": "Play_mob_crystal_cobra_bite_castload"
+        },
+        "OnCastFinished": {
+          "@name": "Play_mob_crystal_cobra_bite"
+        }
+      },
+      {
+        "@name": "SPELL_CRSTAL_COBRA_SPIT_CAST",
+        "OnCastFinished": {
+          "@name": "Play_mob_crystal_cobra_spit"
+        },
+        "OnSpellHit": {
+          "@name": "Play_mob_crystal_cobra_poison_spit_impact"
+        }
+      },
+      {
+        "@name": "SPELL_CRYSTAL_COBRA_CAST_INTIMIDATE",
+        "OnCastStart": {
+          "@name": "Play_mob_crystal_cobra_intimidate_start"
+        }
+      },
+      {
+        "@name": "SPELL_CRYSTAL_COBRA_CHANNEL_INTIMIDATE",
+        "OnChannelingStart": {
+          "@name": "Play_mob_crystal_cobra_intimidate_loop"
+        },
+        "OnChannelingCancelled": {
+          "@name": "Play_mob_crystal_cobra_intimidate_stop"
+        },
+        "OnChannelingEnd": {
+          "@name": "Play_mob_crystal_cobra_intimidate_finale"
+        },
+        "OnChannelingInterrupted": {
+          "@name": "Play_mob_crystal_cobra_intimidate_stop"
+        }
+      },
+      {
+        "@name": "SPELL_CRYSTAL_BEETLE_DASH",
+        "OnCastStart": {
+          "@name": "Play_crystal_beetle_cast_flight_jump"
+        },
+        "OnCastCanceled": {
+          "@name": "Stop_crystal_beetle_cast_flight_jump"
+        },
+        "OnCastInterrupted": {
+          "@name": "Stop_crystal_beetle_cast_flight_jump"
+        },
+        "OnCastFinished": {
+          "@name": "Play_crystal_beetle_dash_flight"
+        }
+      },
+      {
+        "@name": "SPELL_CRSTAL_BEETLE_ENERGY_BUBBLE_POP",
+        "OnSpellHit": {
+          "@name": "Play_crystal_beetle_energy_bubble_explode"
         }
       },
       {
@@ -16115,6 +16371,15 @@
         },
         "OnCastFinished": {
           "@name": "Play_dragon_poison_cloud"
+        }
+      },
+      {
+        "@name": "SPELL_GUARDIAN_BASILISK_SPIT_POISON",
+        "OnCastStart": {
+          "@name": "Play_dragon_cast_poison"
+        },
+        "OnCastFinished": {
+          "@name": "Play_dragon_spit"
         }
       },
       {
@@ -18408,6 +18673,36 @@
         },
         "OnChannelingInterrupted": {
           "@name": "Stop_mob_demon_sentinel_shooting"
+        }
+      },
+      {
+        "@name": "MOB_DEMON_SENTINEL_FIREBALL_ATTACK",
+        "OnCastStart": {
+          "@name": "Play_mob_demon_sentinel_fireball_load"
+        },
+        "OnCastCanceled": {
+          "@name": "Stop_mob_demon_sentinel_fireball_load"
+        },
+        "OnCastInterrupted": {
+          "@name": "Stop_mob_demon_sentinel_fireball_load"
+        }
+      },
+      {
+        "@name": "SPELL_DEMON_SENTINEL_PUNCH",
+        "OnCastFinished": {
+          "@name": "Play_mob_demon_sentinel_punch_attack"
+        }
+      },
+      {
+        "@name": "SPELL_DEMON_SENTINEL_PUNCH_IMPACT",
+        "OnSpellHit": {
+          "@name": "Play_mob_demon_sentinel_punch_hit"
+        }
+      },
+      {
+        "@name": "MOB_DEMON_SENTINEL_CAST_VOICE",
+        "OnCastStart": {
+          "@name": "Play_mob_demon_sentinel_load_short_vo"
         }
       },
       {
@@ -21774,6 +22069,30 @@
         "@name": "SPELL_VANITY_DIE_RESULT_EXCEPTIONAL",
         "OnCastFinished": {
           "@name": "Play_vanity_aj_dice_result_exceptional"
+        }
+      },
+      {
+        "@name": "SPELL_VANITY_BANNER_GUIDON_AJ",
+        "OnCastFinished": {
+          "@name": "Play_vanity_aj_banner_spawn"
+        }
+      },
+      {
+        "@name": "SPELL_VANITY_BANNER_GUIDON_GOLDEN_AJ",
+        "OnCastFinished": {
+          "@name": "Play_vanity_aj_banner_golden_spawn"
+        }
+      },
+      {
+        "@name": "SPELL_VANITY_FARMER_HAT_AJ",
+        "OnCastFinished": {
+          "@name": "Play_vanity_aj_island_hat_flowersbloom"
+        }
+      },
+      {
+        "@name": "SPELL_VANITY_FARMER_HAT_LUSH_AJ",
+        "OnCastFinished": {
+          "@name": "Play_vanity_aj_island_hat_fancy_flowersbloom"
         }
       }
     ],

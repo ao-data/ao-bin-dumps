@@ -1446,12 +1446,12 @@
       "lootchestpopup": {
         "@uniquename": "TWITCH_DROPS",
         "@type": "LootChests",
-        "@guitemplate": "LootChests",
+        "@guitemplate": "LootChest",
         "@priority": "0",
         "@title": "@EVENT_BASED_POPUPS_TITLE_TWITCH_DROPS",
         "@description": "@EVENT_BASED_POPUPS_DESCRIPTION_TWITCH_DROPS",
         "@rewardstitle": "@EVENT_BASED_POPUPS_REWARDS_TITLE_TWITCH_DROPS",
-        "@buttontext": "@EVENT_BASED_POPUPS_BUTTON_TWITCH_DROPS",
+        "@buttonloca": "@EVENT_BASED_POPUPS_BUTTON_TWITCH_DROPS",
         "@imagepath": "Gui/EventBasedPopups/EVENT_POPUP_TWITCH_DROPS",
         "@flagpath": "Gui/EventBasedPopups/icons_shop_flag_purple_big",
         "@flagiconpath": "Gui/EventBasedPopups/icon_twitch_drops",
@@ -1496,7 +1496,122 @@
             }
           ]
         }
-      }
+      },
+      "genericadvertisement": [
+        {
+          "@uniquename": "MASTERY_PACKS_NATIVE_OFFER",
+          "@priority": "10",
+          "@type": "GenericAdvertisement",
+          "@guitemplate": "GenericAdvertisement",
+          "@title": "@EVENT_BASED_POPUPS_MASTERY_PACK_NATIVE_TITLE",
+          "@description": "@EVENT_BASED_POPUPS_MASTERY_PACK_NATIVE_DESCRIPTION",
+          "@imagepath": "Gui/Advertisements/ad_mastery_packs_2024",
+          "@linkmode": "Store",
+          "@buttonloca": "@GENERIC_BUY_NOW",
+          "@flagiconpath": "",
+          "@flagpath": "",
+          "categories": {
+            "category": {
+              "@name": "Advertisement"
+            }
+          },
+          "triggers": {
+            "trigger": {
+              "@action": "GameLogin"
+            }
+          },
+          "conditions": {
+            "and": {
+              "IfValidDate": {
+                "@start": "2024-10-28T12:00:00",
+                "@end": "2025-02-17T09:00:00"
+              },
+              "not": {
+                "IsEuropeContext": null
+              },
+              "IfOnPlatform": {
+                "@platform": "Desktop"
+              },
+              "IfTutorialCompleted": null,
+              "IfHasSeenPopup": [
+                {
+                  "@uniquename": "MASTERY_PACKS_NATIVE_OFFER",
+                  "@frequency": "Days",
+                  "@operation": "equals",
+                  "@timefactor": "7",
+                  "@amount": "0"
+                },
+                {
+                  "@uniquename": "MASTERY_PACKS_NON_NATIVE_OFFER",
+                  "@frequency": "Days",
+                  "@operation": "equals",
+                  "@timefactor": "7",
+                  "@amount": "0"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "@uniquename": "MASTERY_PACKS_NON_NATIVE_OFFER",
+          "@priority": "10",
+          "@type": "GenericAdvertisement",
+          "@guitemplate": "GenericAdvertisement",
+          "@title": "@EVENT_BASED_POPUPS_MASTERY_PACK_NON_NATIVE_TITLE",
+          "@description": "@EVENT_BASED_POPUPS_MASTERY_PACK_NON_NATIVE_DESCRIPTION",
+          "@imagepath": "Gui/Advertisements/ad_mastery_packs_2024",
+          "@linkmode": "Url",
+          "@customurl": "https://albiononline.com/news/warden-mastery-packs-available",
+          "@buttonloca": "@GENERIC_LEARN_MORE",
+          "@flagiconpath": "",
+          "@flagpath": "",
+          "categories": {
+            "category": {
+              "@name": "Advertisement"
+            }
+          },
+          "triggers": {
+            "trigger": {
+              "@action": "GameLogin"
+            }
+          },
+          "conditions": {
+            "and": {
+              "IfValidDate": {
+                "@start": "2024-10-28T12:00:00",
+                "@end": "2025-02-17T09:00:00"
+              },
+              "not": [
+                {
+                  "IsEuropeContext": null
+                },
+                {
+                  "IfOnPlatform": {
+                    "@platform": "Desktop"
+                  }
+                }
+              ],
+              "IfTutorialCompleted": null,
+              "IfHasSeenPopup": [
+                {
+                  "@uniquename": "MASTERY_PACKS_NATIVE_OFFER",
+                  "@frequency": "Days",
+                  "@operation": "equals",
+                  "@timefactor": "7",
+                  "@amount": "0"
+                },
+                {
+                  "@uniquename": "MASTERY_PACKS_NON_NATIVE_OFFER",
+                  "@frequency": "Days",
+                  "@operation": "equals",
+                  "@timefactor": "7",
+                  "@amount": "0"
+                }
+              ]
+            }
+          }
+        }
+      ]
     }
   }
 }
