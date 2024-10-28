@@ -182,6 +182,46 @@
   <!--*************************************************************************************************************************************************************-->
   <!-- VANITY ITEMS -->
   <!--*************************************************************************************************************************************************************-->
+  <SocketInfo name="UNIQUE_HEAD_VANITY_KICKSTARTER_2024_UPGRADE">
+    <SocketConstraintMaster name="HUMAN_FEMALE">
+      <Socket socketname="kickstarter_head" bonename="Neck_Head" scaling="0.87" />
+    </SocketConstraintMaster>
+    <SocketConstraintMaster name="HUMAN_MALE">
+      <Socket socketname="kickstarter_head" bonename="Neck_Head" />
+    </SocketConstraintMaster>
+  </SocketInfo>
+  <SocketInfo name="UNIQUE_HEAD_VANITY_DESTINY_STONES_AJ">
+    <SocketConstraintMaster name="HUMAN_FEMALE">
+      <Socket socketname="destiny_stones_head" bonename="Neck_Head" positionOffset="-0.18 0 0" rotationOffset="90 -90 0" />
+    </SocketConstraintMaster>
+    <SocketConstraintMaster name="HUMAN_MALE">
+      <Socket socketname="destiny_stones_head" bonename="Neck_Head" positionOffset="-0.2 0 0" rotationOffset="90 -90 0" />
+    </SocketConstraintMaster>
+  </SocketInfo>
+  <SocketInfo name="UNIQUE_HEAD_VANITY_DESTINY_STONES_ADVANCED_AJ">
+    <SocketConstraintMaster name="HUMAN_FEMALE">
+      <Socket socketname="destiny_stones_head" bonename="Neck_Head" positionOffset="-0.18 0 0" rotationOffset="90 -90 0" />
+    </SocketConstraintMaster>
+    <SocketConstraintMaster name="HUMAN_MALE">
+      <Socket socketname="destiny_stones_head" bonename="Neck_Head" positionOffset="-0.2 0 0" rotationOffset="90 -90 0" />
+    </SocketConstraintMaster>
+  </SocketInfo>
+  <SocketInfo name="UNIQUE_HEAD_VANITY_FARMER_COZY_AJ">
+    <SocketConstraintMaster name="HUMAN_FEMALE">
+      <Socket socketname="farmer_head" bonename="Neck_Head" rotationOffset="90 -90 0" />
+    </SocketConstraintMaster>
+    <SocketConstraintMaster name="HUMAN_MALE">
+      <Socket socketname="farmer_head" bonename="Neck_Head" rotationOffset="90 -90 0" />
+    </SocketConstraintMaster>
+  </SocketInfo>
+  <SocketInfo name="UNIQUE_HEAD_VANITY_FARMER_AJ">
+    <SocketConstraintMaster name="HUMAN_FEMALE">
+      <Socket socketname="farmer_head" bonename="Neck_Head" rotationOffset="90 -90 0" />
+    </SocketConstraintMaster>
+    <SocketConstraintMaster name="HUMAN_MALE">
+      <Socket socketname="farmer_head" bonename="Neck_Head" rotationOffset="90 -90 0" />
+    </SocketConstraintMaster>
+  </SocketInfo>
   <SocketInfo name="UNIQUE_ARMOR_VANITY_WEALTHY_NOBLE_AJ">
     <SocketConstraintMaster name="HUMAN_FEMALE">
       <Socket socketname="vanity_wealthy_noble_chest" bonename="Breast" positionOffset="0.125 0 0" rotationOffset="0 0 -90" scaling="0.95" />
@@ -501,6 +541,20 @@
     <Socket socketname="damage" bonename="Tail_0" rotationOffset="0 -90 0" />
     <Socket socketname="halo" bonename="Skeleton_Root" positionOffset="0 1.5 0" />
     <Socket socketname="enchantment" bonename="Tail_3" positionOffset="-0.2 0.1 0" rotationOffset="0 90 0" />
+  </SocketInfo>
+  <SocketInfo name="MOB_SNAKE_WITH_UPPERBODY">
+    <Socket socketname="root" bonename="Skeleton_Root" />
+    <Socket socketname="floor" bonename="Skeleton_Root" positionOffset="0 0.1 0" />
+    <Socket socketname="damage" bonename="Chest" rotationOffset="135 -90 0" />
+    <Socket socketname="halo" bonename="Skeleton_Root" positionOffset="0 1.5 0" />
+    <Socket socketname="mainhandprojectile" bonename="Head" positionOffset="-0.075 0 0" rotationOffset="0 270 0" />
+    <Socket socketname="head" bonename="Head" rotationOffset="0 270 0" />
+    <Socket socketname="tailend" bonename="Tail_13" rotationOffset="0 270 0" />
+    <Socket socketname="pelvis" bonename="Spine_1" rotationOffset="0 270 0" />
+    <Socket socketname="chest" bonename="Neck_2" rotationOffset="270 0 0" />
+    <Socket socketname="chestleft" bonename="LeftNeck2_Side" />
+    <Socket socketname="chestright" bonename="RightNeck2_Side" rotationOffset="180 0 0" />
+    <Socket socketname="chesthigh" bonename="Neck_3" />
   </SocketInfo>
   <SocketInfo name="MOB_MARMOT">
     <Socket socketname="root" bonename="Skeleton_Root" />
@@ -2236,6 +2290,15 @@
     <Socket socketname="damage" bonename="Pelvis" rotationOffset="0 -90 0" />
     <Socket socketname="mainhand" bonename="Spine_1" positionOffset="0.2 -0.8 0" rotationOffset="90 0 0" />
   </SocketInfo>
+  <SocketInfo name="MOB_ARCANE_CRYSTALBEETLE_BOSS">
+    <Socket socketname="root" bonename="Skeleton_Root" />
+    <Socket socketname="headsegment" bonename="Head" />
+    <Socket socketname="centersegment" bonename="Spine_1" />
+    <Socket socketname="abdomensegment" bonename="BodyScale" />
+    <Socket socketname="halo" bonename="Skeleton_Root" positionOffset="0 4 0" />
+    <Socket socketname="mainhandprojectile" bonename="Head" rotationOffset="0 90 0" />
+    <Socket socketname="damage" bonename="Spine_1" />
+  </SocketInfo>
   <SocketInfo name="MOB_ARCANE_ELEMENTAL_BOSS">
     <Socket socketname="root" bonename="Skeleton_Root" />
     <Socket socketname="floor" bonename="Skeleton_Root" positionOffset="0 0.1 0" />
@@ -3173,6 +3236,9 @@
     <Socket socketname="foot_03" bonename="mount|LeftLegToeBase" positionOffset="-0.22 -0.05 0" rotationOffset="-36 -90 0" />
     <Socket socketname="foot_04" bonename="mount|RightLegToeBase" positionOffset="0.22 0.05 0" rotationOffset="-215 270 0" />
     <Socket socketname="head_mount_chimera" bonename="mount|Neck_Head" />
+    <Socket socketname="banner" bonename="mount|Banner" />
+    <Socket socketname="chest_mount" bonename="mount|Spine_3" />
+    <Socket socketname="back_mount" bonename="mount|Spine_0" />
   </SocketInfo>
   <SocketInfo name="MOUNT_HORSE_MORGANA">
     <Socket socketname="root_mount" bonename="mount|Skeleton_Root" />
@@ -3447,6 +3513,8 @@
     <Socket socketname="BeamFront" bonename="backleft" positionOffset="0.5 1 0" />
     <Socket socketname="BeamBack" bonename="frontleft" positionOffset="0.5 1 0" />
     <Socket socketname="SplittingClaw" bonename="frontcenter" positionOffset="0 0 0" rotationOffset="0 0 90" />
+    <Socket socketname="sourceBeam" bonename="backcenter" positionOffset="0 1 1" />
+    <Socket socketname="targetBeam" bonename="frontcenter" positionOffset="0 1 -1" />
   </SocketInfo>
   <SocketInfo name="SEA_ARC">
     <Socket socketname="center" bonename="center" positionOffset="0 2 0" />

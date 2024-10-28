@@ -271,8 +271,7 @@
             <content title="@TUTORIAL_BIGHINT_INFO2_TEXT2_TITLE" text="@TUTORIAL_BIGHINT_INFO2_TEXT2_INFO"/>
         </entry>
     </hint>
-    <hint uniquename="BUTTONINFO3" explanation="VerticalTemplate" nexthint="BUTTONINFO1"
-          title="@TUTORIAL_BIGHINT_INFO3_TITLE">
+    <hint uniquename="BUTTONINFO3" explanation="VerticalTemplate" title="@TUTORIAL_BIGHINT_INFO3_TITLE">
         <entry imagepath="Gui/TutorialExplanations/TutorialArmorCloth">
             <content title="@TUTORIAL_BIGHINT_INFO3_TEXT1_TITLE" text="@TUTORIAL_BIGHINT_INFO3_TEXT1_INFO"/>
         </entry>
@@ -1449,6 +1448,17 @@
         </entry>
     </hint>
 
+    <hint uniquename="LOCAL_QUESTS_TUTORIAL_DYNAMIC" explanation="VerticalTemplate" title="@TUTORIAL_DYNAMIC_LOCAL_QUESTS_INFO_TITLE"
+          blockworldinteraction="true">
+        <entry imagepath="Gui/TutorialExplanations/TutorialRoamingEncampmentsTakeOnCamps" scale="1.2">
+            <content title="@TUTORIAL_DYNAMIC_LOCAL_QUESTS_INFO_WHAT_ARE_TITLE"
+                     text="@TUTORIAL_DYNAMIC_LOCAL_QUESTS_INFO_WHAT_ARE_TEXT"/>
+        </entry>
+        <entry imagepath="Gui/TutorialExplanations/TutorialRoamingEncampmentsSoloOrWithAllies" scale="1.2">
+            <content title="@TUTORIAL_DYNAMIC_LOCAL_QUESTS_INFO_MAP_TITLE" text="@TUTORIAL_DYNAMIC_LOCAL_QUESTS_INFO_MAP_TEXT"/>
+        </entry>
+    </hint>
+
 
     <!-- AUTO RESPEC -->
     <hint uniquename="AUTO_RESPEC" explanation="VerticalTemplate" title="@TUTORIAL_AUTO_RESPEC_TITLE">
@@ -1921,7 +1931,7 @@
             <content title="@TUTORIAL_MARKETPLACE_MAIN_SECOND_TITLE" text="@TUTORIAL_MARKETPLACE_MAIN_SECOND_TEXT"/>
         </entry>
     </hint>
-    <hint uniquename="BUYING_SELLING_ITEMS_INFO" explanation="VerticalTemplate" title="@TUTORIAL_MARKETPLACE_TRADING_TITLE">
+    <hint uniquename="BUYING_SELLING_ITEMS_INFO" explanation="VerticalTemplate" title="@TUTORIAL_MARKETPLACE_TRADING_TITLE" nexthint="LUXURY_GOODS_INFO">
         <entry imagepath="Gui/TutorialExplanations/TutorialMarketplace3" scale="1.2">
             <content title="@TUTORIAL_MARKETPLACE_TRADING_BUY_TITLE" text="@TUTORIAL_MARKETPLACE_TRADING_BUY_TEXT"/>
         </entry>
@@ -2003,6 +2013,15 @@
             <content title="@CORRUPTED_DUNGEON_TUTORIAL_SUB_TITLE_PVP" text="@CORRUPTED_DUNGEON_TUTORIAL_CONTENT_PVP"/>
         </entry>
     </hint>
+  
+    <hint uniquename="JOURNAL_CORRUPTED_DUNGEON_LOCATION" explanation="VerticalTemplate" title="@TUTORIAL_CORRUPTED_DUNGEON_LOCATION_INFO_TITLE" nexthint="JOURNAL_CORRUPTED_DUNGEON_INFO">
+      <entry imagepath="Gui/TutorialExplanations/TutorialCorruptedDungeonLocationIntro" scale="1.2">
+        <content title="@TUTORIAL_CORRUPTED_DUNGEONS_LOCATION_SUBTITLE" text="@TUTORIAL_CORRUPTED_DUNGEONS_LOCATION_TEXT"/>
+      </entry>
+      <entry imagepath="Gui/TutorialExplanations/TutorialCorruptedDungeonLocationDifficulty" scale="1.2">
+        <content title="@TUTORIAL_CORRUPTED_DUNGEONS_LOCATION_DIFFICULTY_SUBTITLE" text="@TUTORIAL_CORRUPTED_DUNGEONS_LOCATION_DIFFICULTY_TEXT"/>
+      </entry>
+    </hint>
 
     <!-- JOURNAL: PvP Zones -->
     <hint uniquename="JOURNAL_YELLOW_ZONE_INFO" 
@@ -2040,7 +2059,199 @@
             <button text="@TUTORIAL_SURVIVAL_TIPS_BUTTON" openshint="SURVIVAL_TIPS_INFO" alignment="right"/>
         </entry>
     </hint>
-    
+
+    <!-- Outlands Teleportation Portal -->
+    <hint uniquename="OUTLANDS_TELEPORTATION_PORTALS_INFO"
+          explanation="VerticalTemplate"
+          title="@TUTORIAL_OUTLANDS_TELEPORTATION_PORTALS_TITLE">
+        <entry imagepath="Gui/TutorialExplanations/TutorialSAFEPortal1" scale="1.2">
+            <content title="@TUTORIAL_OUTLANDS_TELEPORTATION_PORTALS_SUB_TITLE_ONE" text="@TUTORIAL_OUTLANDS_TELEPORTATION_PORTALS_TEXT_ONE"/>
+        </entry>
+        <entry imagepath="Gui/TutorialExplanations/TutorialSAFEPortal2" scale="1.2">
+            <content title="@TUTORIAL_OUTLANDS_TELEPORTATION_PORTALS_SUB_TITLE_TWO" text="@TUTORIAL_OUTLANDS_TELEPORTATION_PORTALS_TEXT_TWO"/> 
+        </entry>
+    </hint>
+	
+	<!-- JOURNAL: Groups -->
+	<hint uniquename="GROUPS_INFO"
+          explanation="VerticalTemplate"
+          title="@TUTORIAL_GROUPS_INFO_TITLE">
+        <entry imagepath="Gui/TutorialExplanations/TutorialGroupsTogether" scale="1.2">
+            <content title="@TUTORIAL_GROUPS_INFO_BETTER_TOGETHER_SUBTITLE" text="@TUTORIAL_GROUPS_INFO_BETTER_TOGETHER_TEXT"/>
+        </entry>
+        <entry imagepath="Gui/TutorialExplanations/TutorialGroupsSharedExperience" scale="1.2">
+            <content title="@TUTORIAL_GROUPS_INFO_SHARE_THE_EXPERIENCE_SUBTITLE" text="@TUTORIAL_GROUPS_INFO_SHARE_THE_EXPERIENCE_TEXT"/>
+        </entry>
+    </hint>
+	
+	<!-- JOURNAL: Guild Season 2 -->
+	<hint uniquename="GUILD_SEASONS_INFO"
+          explanation="VerticalTemplate"
+          title="@TUTORIAL_GUILD_SEASONS_INFO_TITLE"
+		  nexthint="GUILD_SEASON_INFO"> 
+        <entry imagepath="Gui/TutorialExplanations/TutorialGuildSeasonStrength" scale="1.2">
+            <content title="@TUTORIAL_GUILD_SEASONS_STRENGTH_SUBTITLE" text="@TUTORIAL_GUILD_SEASONS_STRENGTH_TEXT"/>
+        </entry>
+		<entry imagepath="Gui/TutorialExplanations/TutorialGuildSeasonReward" scale="1.2">
+            <content title="@TUTORIAL_GUILD_SEASONS_REWARD_SUBTITLE" text="@TUTORIAL_GUILD_SEASONS_REWARD_TEXT"/>
+        </entry>
+    </hint>
+	
+	<!-- JOURNAL: Islands -->
+	<hint uniquename="ISLANDS_INFO"
+          explanation="VerticalTemplate"
+          title="@TUTORIAL_ISLANDS_INFO_TITLE">
+        <entry imagepath="Gui/TutorialExplanations/TutorialIslandsIntro1" scale="1.2">
+            <content title="@TUTORIAL_ISLANDS_INFO_LIFE_SUBTITLE" text="@TUTORIAL_ISLANDS_INFO_LIFE_TEXT"/>
+        </entry>
+        <entry imagepath="Gui/TutorialExplanations/TutorialIslandsIntro2" scale="1.2">
+            <content title="@TUTORIAL_ISLANDS_INFO_OFF_SHORE_SUBTITLE" text="@TUTORIAL_ISLANDS_INFO_OFF_SHORE_TEXT"/>
+        </entry>
+    </hint>
+	
+	<!-- JOURNAL: Islands Plots -->
+	<hint uniquename="ISLANDS_PLOTS_INFO"
+          explanation="VerticalTemplate"
+          title="@TUTORIAL_ISLANDS_PLOTS_INFO_TITLE">
+        <entry imagepath="Gui/TutorialExplanations/TutorialIslandsPlots" scale="2">
+            <content title="@TUTORIAL_ISLANDS_PLOTS_SUBTITLE" text="@TUTORIAL_ISLANDS_PLOTS_TEXT"/>
+			</entry>
+    </hint>
+	
+<!-- JOURNAL: Islands Farming -->
+	<hint uniquename="ISLANDS_FARMING_INFO"
+          explanation="VerticalTemplate"
+          title="@TUTORIAL_ISLANDS_FARMING_INFO_TITLE">
+        <entry imagepath="Gui/TutorialExplanations/TutorialIslandsFarmingSeed" scale="1.2">
+            <content title="@TUTORIAL_ISLANDS_FARMING_SPREAD_YOUR_SEED_SUBTITLE" text="@TUTORIAL_ISLANDS_FARMING_SPREAD_YOUR_SEED_TEXT"/>
+        </entry>
+        <entry imagepath="Gui/TutorialExplanations/TutorialIslandsFarmingAnimal" scale="1.2">
+            <content title="@TUTORIAL_ISLANDS_FARMING_ANIMAL_SUBTITLE" text="@TUTORIAL_ISLANDS_FARMING_ANIMAL_TEXT"/>
+        </entry>
+    </hint>
+
+<!-- JOURNAL: Islands Housing -->
+	<hint uniquename="ISLANDS_HOUSING_INFO"
+          explanation="VerticalTemplate"
+          title="@TUTORIAL_ISLANDS_HOUSING_INFO_TITLE">
+        <entry imagepath="Gui/TutorialExplanations/TutorialIslandsHousingHome" scale="1.2">
+            <content title="@TUTORIAL_ISLANDS_HOUSING_HOME_SWEET_HOME_SUBTITLE" text="@TUTORIAL_ISLANDS_HOUSING_HOME_SWEET_HOME_TEXT"/>
+        </entry>
+        <entry imagepath="Gui/TutorialExplanations/TutorialIslandsHousingLabor" scale="1.2">
+            <content title="@TUTORIAL_ISLANDS_HOUSING_LABOR_SUBTITLE" text="@TUTORIAL_ISLANDS_HOUSING_LABOR_TEXT"/>
+        </entry>
+    </hint>
+	
+	<!-- JOURNAL: Corrupted Dungeons Location -->
+	<hint uniquename="CORRUPTED_DUNGEON_LOCATION_INFO"
+          explanation="VerticalTemplate"
+          title="@TUTORIAL_CORRUPTED_DUNGEON_LOCATION_INFO_TITLE"
+		  nexthint="JOURNAL_CORRUPTED_DUNGEON_INFO"> 
+        <entry imagepath="Gui/TutorialExplanations/TutorialCorruptedDungeonLocationIntro" scale="1.2">
+            <content title="@TUTORIAL_CORRUPTED_DUNGEONS_LOCATION_SUBTITLE" text="@TUTORIAL_CORRUPTED_DUNGEONS_LOCATION_TEXT"/>
+        </entry>
+        <entry imagepath="Gui/TutorialExplanations/TutorialCorruptedDungeonLocationDifficulty" scale="1.2">
+            <content title="@TUTORIAL_CORRUPTED_DUNGEONS_LOCATION_DIFFICULTY_SUBTITLE" text="@TUTORIAL_CORRUPTED_DUNGEONS_LOCATION_DIFFICULTY_TEXT"/>
+        </entry>
+    </hint>
+	
+	<!-- JOURNAL: Resource Mobs -->
+	<hint uniquename="RECOURCE_MOBS_INFO"
+          explanation="VerticalTemplate"
+          title="@TUTORIAL_RECOURCE_MOBS_TITLE">
+        <entry imagepath="Gui/TutorialExplanations/TutorialResourceMobs" scale="2">
+            <content text="@TUTORIAL_RECOURCE_MOBS_TEXT"/>
+        </entry>
+    </hint>
+	
+	<!-- JOURNAL: Luxury Goods -->
+	<hint uniquename="LUXURY_GOODS_INFO"
+          explanation="VerticalTemplate"
+          title="@TUTORIAL_LUXURY_GOODS_TITLE">
+        <entry imagepath="Gui/TutorialExplanations/TutorialLuxuryGoods" scale="2">
+            <content text="@TUTORIAL_LUXURY_GOODS_TEXT"/>
+        </entry>
+    </hint>
+	
+	<!-- JOURNAL: Hidden Treasures -->
+	<hint uniquename="HIDDEN_TREASURES_INFO"
+          explanation="VerticalTemplate"
+          title="@TUTORIAL_HIDDEN_TREASURES_TITLE">
+        <entry imagepath="Gui/TutorialExplanations/TutorialHiddenTreasures" scale="2">
+            <content title="@TUTORIAL_HIDDEN_TREASURES_SUBTITLE" text="@TUTORIAL_HIDDEN_TREASURES_TEXT"/>
+        </entry>
+    </hint>
+	
+	<!-- JOURNAL: Salvaging -->
+	<hint uniquename="SALVAGING_INFO"
+          explanation="VerticalTemplate"
+          title="@TUTORIAL_SALVAGING_TITLE">
+        <entry imagepath="Gui/TutorialExplanations/TutorialSalvaging" scale="2">
+            <content title="@TUTORIAL_SALVAGING_SUBTITLE" text="@TUTORIAL_SALVAGING_TEXT"/>
+        </entry>
+    </hint>
+	
+	<!-- JOURNAL: Outposts and Castles-->
+	<hint uniquename="OUTPOSTS_AND_CASTLES_INFO"
+          explanation="VerticalTemplate"
+          title="@TUTORIAL_OUTPOSTS_AND_CASTLES_TITLE">
+        <entry imagepath="Gui/TutorialExplanations/TutorialOutpostsCastles1" scale="1.2">
+            <content title="@TUTORIAL_OUTPOSTS_AND_CASTLES_OUTPOSTS_SUBTITLE" text="@TUTORIAL_OUTPOSTS_AND_CASTLES_OUTPOSTS_TEXT"/>
+        </entry>
+		<entry imagepath="Gui/TutorialExplanations/TutorialOutpostsCastles2" scale="1.2">
+            <content title="@TUTORIAL_OUTPOSTS_AND_CASTLES_CASTLES_SUBTITLE" text="@TUTORIAL_OUTPOSTS_AND_CASTLES_CASTLES_TEXT"/>
+        </entry>
+    </hint>
+
+  <!-- JOURNAL: Guilds-->
+  <hint uniquename="GUILDS_INFO"
+          explanation="VerticalTemplate"
+          title="@GUILDS_INFO_TITLE">
+    <entry imagepath="Gui/TutorialExplanations/TutorialGuildsNeverWalkAlone" scale="1.2">
+      <content title="@GUILDS_INFO_NEVER_WALK_ALONE_SUBTITLE" text="@GUILDS_INFO_NEVER_WALK_ALONE_TEXT"/>
+    </entry>
+    <entry imagepath="Gui/TutorialExplanations/TutorialGuildsWhereToStart" scale="1.2">
+      <content title="@GUILDS_INFO_WHERE_TO_START_SUBTITLE" text="@GUILDS_INFO_WHERE_TO_START_TEXT"/>
+    </entry>
+  </hint>
+
+  <!-- JOURNAL: Player Interactions-->
+  <hint uniquename="PLAYER_INTERACTIONS_INFO"
+          explanation="VerticalTemplate"
+          title="@PLAYER_INTERACTIONS_INFO_TITLE">
+    <entry imagepath="Gui/TutorialExplanations/TutorialPlayerInteractions" scale="2">
+      <content title="@PLAYER_INTERACTIONS_INFO_SUBTITLE" text="@PLAYER_INTERACTIONS_INFO_TEXT"/>
+    </entry>
+  </hint>
+
+  <!-- JOURNAL: Dynamic Camps -->
+  <hint uniquename="ROAMING_ENCAMPMENTS_INFO"
+          explanation="VerticalTemplate"
+          title="@ROAMING_ENCAMPMENTS_INFO_TITLE"
+          nexthint="INTERACTABLE_MAPS_INFO">
+    <entry imagepath="Gui/TutorialExplanations/TutorialRoamingEncampmentsTakeOnCamps" scale="1.2">
+      <content title="@ROAMING_ENCAMPMENTS_INFO_TAKE_ON_CAMPS_SUBTITLE" text="@ROAMING_ENCAMPMENTS_INFO_TAKE_ON_CAMPS_TEXT"/>
+    </entry>
+    <entry imagepath="Gui/TutorialExplanations/TutorialRoamingEncampmentsSoloOrWithAllies" scale="1.2">
+      <content title="@ROAMING_ENCAMPMENTS_INFO_SOLO_OR_WITH_ALLIES_SUBTITLE" text="@ROAMING_ENCAMPMENTS_INFO_SOLO_OR_WITH_ALLIES_TEXT"/>
+    </entry>
+  </hint>
+  <hint uniquename="INTERACTABLE_MAPS_INFO"
+          explanation="VerticalTemplate"
+          title="@INTERACTABLE_MAPS_INFO_TITLE">
+    <entry imagepath="Gui/TutorialExplanations/TutorialInteractableMapsDiscoverMapsToHiddenDungeons" scale="2">
+      <content title="@INTERACTABLE_MAPS_INFO_DISCOVER_MAPS_TO_HIDDEN_DUNGEONS_SUBTITLE" text="@INTERACTABLE_MAPS_INFO_DISCOVER_MAPS_TO_HIDDEN_DUNGEONS_TEXT"/>
+    </entry>
+  </hint>
+
+    <hint uniquename="CLUSTER_REWARD_SCALING_INFO"
+          explanation="VerticalTemplate"
+          title="@TUTORIAL_CLUSTER_REWARD_SCALING_INFO_TITLE">
+        <entry imagepath="Gui/TutorialExplanations/TutorialClusterRewardScaling" scale="2">
+            <content text="@TUTORIAL_CLUSTER_REWARD_SCALING_INFO_TEXT"/>
+        </entry>
+    </hint>
+  
 	<!-- Beta Welcome Europe-->
     <texthint uniquename="BETA_WELCOME_EUROPE" explanation="TextOnlyTemplate" title="@ASIA_BETA_WELCOME_POPUP_TITLE">
         <label text="@ASIA_BETA_WELCOME_POPUP_TEXT_1"/>
@@ -2056,7 +2267,4 @@
 	
 	
 
-
 </tutorial>
-
-

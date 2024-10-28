@@ -69,7 +69,7 @@
         <Group size="20" bonusfactor="1.4" />
       </GroupBonus>        
     </Fame>
-    <DeathSettings playerexecutionspell="PLAYER_COUPDEGRACE" mobexecutionspell="MOB_COUPDEGRACE" getuptimeseconds="3" knockdownhealthregentopercent="1" knockdowngetuptimeseconds_pve="600" knockdowngetuptimeseconds_duel="6" knockdowngetuptimeseconds_pvp="180" knockdowngetuptimeseconds_combatover="18" knockdownbuffaftergetup="SPAWN_KNOCKDOWN" playervisibilityafterdeath="3" />
+    <DeathSettings playerexecutionspell="PLAYER_COUPDEGRACE" mobexecutionspell="MOB_COUPDEGRACE" getuptimeseconds="3" knockdownhealthregentopercent="1" knockdowngetuptimeseconds_pve="600" knockdowngetuptimeseconds_duel="6" knockdowngetuptimeseconds_pvp="180" knockdowngetuptimeseconds_pvp_dynamicmobcamp="30" knockdowngetuptimeseconds_combatover="18" knockdownbuffaftergetup="SPAWN_KNOCKDOWN" playervisibilityafterdeath="3" />
     <StuckCommand cooldownseconds="1800" delayseconds="180" />
     <ClusterChange cooldownseconds="10" />
     <Logout timeseconds="60" inactivitylogoutminutes="30" />
@@ -104,7 +104,7 @@
     <GlobalActivityQuotient minimum="0.1" modifier="0.9" />
   </ServerSettings>
   <ClientSettings>
-    <MiniMap showgraveseconds="300" />
+    <MiniMap showgraveseconds="300" showdeathseconds="10" />
     <TrainingDummy comboduration="5" />
     <CrimeWarning donotshowagainsecondes="900" />
     <DefaultTurningSpeed mobs="14.0" />
@@ -329,7 +329,7 @@
     <attackers numbergreaterorequal="19" buff="HEALINGSICKNESS_19" />
     <attackers numbergreaterorequal="20" buff="HEALINGSICKNESS_20" />
   </PlayerHealingSickness>
-  <ZergDebuff checkfrequency="20">
+  <ZergDebuff checkfrequency="20">  
     <allies numbergreaterorequal="21" debuff="ZERGDEBUFF_LVL1" damagemodifier="0.99" ccdurationmodifier="0.99" />
     <allies numbergreaterorequal="22" debuff="ZERGDEBUFF_LVL2" damagemodifier="0.98" ccdurationmodifier="0.98" />
     <allies numbergreaterorequal="23" debuff="ZERGDEBUFF_LVL3" damagemodifier="0.97" ccdurationmodifier="0.97" />
@@ -1042,6 +1042,14 @@
     <ClusterDangerBonus type="yellow" icon="yellow" famefactor="2.4" moblootfactor="1.33" mobsilverlootfactor="1.53" questscalingfactor="2.4" gatheringfamefactor="1" fishingfamefactor="1" />
     <ClusterDangerBonus type="red" icon="red" famefactor="3.3" moblootfactor="2.25" mobsilverlootfactor="2.6" questscalingfactor="3.3" gatheringfamefactor="1" fishingfamefactor="1" />
     <ClusterDangerBonus type="black" icon="black" famefactor="4.2" moblootfactor="2.6" mobsilverlootfactor="3" questscalingfactor="4.2" gatheringfamefactor="1" fishingfamefactor="1" />
+    
+    <ClusterDangerBonus type="black1" icon="black" famefactor="4.2" moblootfactor="2.6" mobsilverlootfactor="3" questscalingfactor="4.2" gatheringfamefactor="1.25" fishingfamefactor="1.25" />
+    <ClusterDangerBonus type="black2" icon="black" famefactor="4.6" moblootfactor="2.8" mobsilverlootfactor="3.3" questscalingfactor="4.6" gatheringfamefactor="1.30" fishingfamefactor="1.30" mobbuff="MOB_OPENWORLD_BUFF_Q2" />
+    <ClusterDangerBonus type="black3" icon="black" famefactor="5.0" moblootfactor="3.0" mobsilverlootfactor="3.6" questscalingfactor="5.0" gatheringfamefactor="1.35" fishingfamefactor="1.35" mobbuff="MOB_OPENWORLD_BUFF_Q3" />
+    <ClusterDangerBonus type="black4" icon="black" famefactor="5.4" moblootfactor="3.3" mobsilverlootfactor="3.9" questscalingfactor="5.4" gatheringfamefactor="1.40" fishingfamefactor="1.40" mobbuff="MOB_OPENWORLD_BUFF_Q4" />
+    <ClusterDangerBonus type="black5" icon="black" famefactor="5.8" moblootfactor="3.6" mobsilverlootfactor="4.2" questscalingfactor="5.8" gatheringfamefactor="1.45" fishingfamefactor="1.45" mobbuff="MOB_OPENWORLD_BUFF_Q5" />
+    <ClusterDangerBonus type="black6" icon="black" famefactor="6.3" moblootfactor="3.9" mobsilverlootfactor="4.5" questscalingfactor="6.3" gatheringfamefactor="1.50" fishingfamefactor="1.50" mobbuff="MOB_OPENWORLD_BUFF_Q6" />
+    
     <ClusterDangerBonus type="hell_nonlethal_2v2" icon="hellnonlethal2v2" famefactor="2.4" moblootfactor="1.33" mobsilverlootfactor="1.53" questscalingfactor="2.4" gatheringfamefactor="1" fishingfamefactor="1" />
     <ClusterDangerBonus type="hell_nonlethal_5v5" icon="hellnonlethal5v5" famefactor="2.4" moblootfactor="1.33" mobsilverlootfactor="1.53" questscalingfactor="2.4" gatheringfamefactor="1" fishingfamefactor="1" />
     <ClusterDangerBonus type="hell_nonlethal_10v10" icon="hellnonlethal10v10" famefactor="2.4" moblootfactor="1.33" mobsilverlootfactor="1.53" questscalingfactor="2.4" gatheringfamefactor="1" fishingfamefactor="1" />
@@ -1055,8 +1063,8 @@
     <ClusterDangerBonus type="tunnel" icon="black" famefactor="4.2" moblootfactor="3" mobsilverlootfactor="3.45" questscalingfactor="4.2" gatheringfamefactor="1" fishingfamefactor="1" />
     <ClusterDangerBonus type="mistsyellow" icon="yellow" famefactor="1.8" moblootfactor="1.33" mobsilverlootfactor="1.53" questscalingfactor="1.8" gatheringfamefactor="1" fishingfamefactor="1" />
     <ClusterDangerBonus type="mistsblack" icon="black" famefactor="3.16" moblootfactor="2.6" mobsilverlootfactor="3" questscalingfactor="3.16" gatheringfamefactor="1" fishingfamefactor="1" />
-    <ClusterDangerBonus type="mistsdungeonyellow" icon="yellow" famefactor="2.4" moblootfactor="1.33" mobsilverlootfactor="1.53" questscalingfactor="1.8" gatheringfamefactor="1" fishingfamefactor="1" />
-    <ClusterDangerBonus type="mistsdungeonblack" icon="black" famefactor="4.2" moblootfactor="2.6" mobsilverlootfactor="3" questscalingfactor="3.16" gatheringfamefactor="1" fishingfamefactor="1" />
+    <ClusterDangerBonus type="mistsdungeonyellow" icon="yellow" famefactor="2.4" moblootfactor="1.33" mobsilverlootfactor="1.53" questscalingfactor="2.4" gatheringfamefactor="1" fishingfamefactor="1" />
+    <ClusterDangerBonus type="mistsdungeonblack" icon="black" famefactor="4.2" moblootfactor="2.6" mobsilverlootfactor="3" questscalingfactor="4.2" gatheringfamefactor="1" fishingfamefactor="1" />
   </ClusterDangerBonusTypes>
   <QuestScalingByClusterTier>
     <Tier tier="1" scalingfactor="1" />
@@ -1370,12 +1378,6 @@
     <contributingmarket id="4002" />
     <contributingmarket id="0007" />
     <contributingmarket id="2004" />
-    <!-- starter towns -->
-    <contributingmarket id="0004" />
-    <contributingmarket id="1006" />
-    <contributingmarket id="2002" />
-    <contributingmarket id="3002" />
-    <contributingmarket id="4006" />
   </MarketPriceEstimation>
   <CityMarkets>
     <!-- carleon and other royal cities-->
