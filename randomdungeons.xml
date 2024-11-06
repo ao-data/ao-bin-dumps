@@ -3,6 +3,7 @@
 
   <!--  maxlifetimeseconds:         time until the dungeon is closed even if players are inside -->
   <!--  lifetimeafteremptyseconds:  time until dungeon is closed, but it will pause when players are found in the dungeon -->
+  <!--  playersarelethal:           if not used both types are valid-->
   <DungeonLifeTimes maxlifetimeseconds="87000" lifetimeafteremptyseconds="300" >
     <exitsubtype type="SOLO" lifetimeafteremptyseconds="30" />
     <exitsubtype type="ELITE" lifetimeafteremptyseconds="7200" />
@@ -658,7 +659,23 @@
           <RandomExit name="HELLGATE_5V5_NON_LETHAL" weight="0" />
           <RandomExit name="HELLGATE_10V10_NON_LETHAL" weight="0" />
         </ClusterTier>
-        <ClusterTier tier="6" maxfillratio="0.78">
+        <ClusterTier tier="6" maxfillratio="0.84" playersarelethal="false">
+          <RandomExit name="MISTS_SOLO_YELLOW" weight="46" randomlevelrerollref="MISTS_OPEN_WORLD_MODE_YELLOW_SOLO" />
+          
+          <RandomExit name="CORRUPTED_SOLO_NONLETHAL" weight="25" />
+          <RandomExit name="T6_PORTAL_SOLO" weight="25" randomlevelrerollref="SOLO_ROYAL"/>
+
+          <RandomExit name="T6_PORTAL_CONSUMABLE_SOLO" weight="0"/>
+          <RandomExit name="T7_PORTAL_CONSUMABLE_SOLO" weight="0"/>
+
+          <RandomExit name="T6_MORGANA_BOSSROOM_SOLO" weight="0" />
+
+          <!--Spawns 6 2v2 Hellgates-->
+          <RandomExit name="HELLGATE_2V2_NON_LETHAL" weight="4" />
+          <RandomExit name="HELLGATE_5V5_NON_LETHAL" weight="0" />
+          <RandomExit name="HELLGATE_10V10_NON_LETHAL" weight="0" />
+        </ClusterTier>
+        <ClusterTier tier="6" maxfillratio="0.78" playersarelethal="true">
           <RandomExit name="MISTS_SOLO_BLACK" weight="35" randomlevelrerollref="MISTS_OPEN_WORLD_MODE_BLACK_SOLO" />
           <RandomExit name="MISTS_DUO_BLACK" weight="11" randomlevelrerollref="MISTS_OPEN_WORLD_MODE_BLACK_DUO" />
           
