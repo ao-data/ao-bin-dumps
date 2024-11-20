@@ -17,10 +17,10 @@
       <difficulty level="4" mobmodifier="MOB_RANDOM_DUNGEON_BUFF_04" silverfactor="3.1832" lootfactor="3.1832" mobfamefactor="2.7416" questscalingfactor="2.7416" gatheringfamefactor="1" fishingfamefactor="1"/>
     </difficultygroup>
     <difficultygroup name="bossroom_solo">
-      <difficulty level="0" silverfactor="1" lootfactor="3" mobfamefactor="2.64" questscalingfactor="1" gatheringfamefactor="1" fishingfamefactor="1"/>
+      <difficulty level="0" silverfactor="1" lootfactor="1" mobfamefactor="2.64" questscalingfactor="1" gatheringfamefactor="1" fishingfamefactor="1"/>
     </difficultygroup>
     <difficultygroup name="bossroom_veteran">
-      <difficulty level="0" silverfactor="1" lootfactor="3" mobfamefactor="2.64" questscalingfactor="1" gatheringfamefactor="1" fishingfamefactor="1"/>
+      <difficulty level="0" silverfactor="1" lootfactor="1" mobfamefactor="2.64" questscalingfactor="1" gatheringfamefactor="1" fishingfamefactor="1"/>
     </difficultygroup>
     <difficultygroup name="mists">
       <difficulty level="1" mobmodifier="MOB_MISTS_BUFF_01" silverfactor="1.16"   lootfactor="1.16"   mobfamefactor="1.16"   questscalingfactor="1.16"   gatheringfamefactor="1" fishingfamefactor="1"/>
@@ -1090,6 +1090,13 @@
         <prefab weight="1" name="SHARED_HELLGATE_ENTRANCE_10V10_NON_LETHAL" />        
       </fallback>      
     </Visualization>
+    
+    <!--Portal to chain hellgates-->
+    <Visualization name="HELLGATE_CHAIN_EXIT">
+      <fallback>
+        <prefab weight="1" name="SHARED_HELLGATE_EXIT_LETHAL" />
+      </fallback>
+    </Visualization>
 
     <!--Mists of Avalon-->
 
@@ -1405,7 +1412,12 @@
         </subbiome>
       </biome>
     </Visualization>
-    
+    <!--Portal to next corrupted dungeon-->
+    <Visualization name="CORRUPTED_DUNGEON_CHAIN_EXIT">
+      <fallback>
+        <prefab weight="1" name="SHARED_CORRUPTED_DUNGEON_EXIT_10x10_PORTAL" />
+      </fallback>
+    </Visualization>
     
     <!--Random Dungeons-->
     <!--Solo-->
@@ -2237,123 +2249,124 @@
     <Visualization name="PORTAL_BOSSROOM_SOLO">
       <TooltipDisplay uisprite="dungeon_solo_map" displayname="@PROXIMITY_TOOLTIP_BOSSROOM_DUNGEON_SOLO" optionentry="SoloDungeon"/>
       <fallback>
-        <prefab weight="1" name="SHARED_HELLGATE_ENTRANCE_2V2_LETHAL" />
+        <prefab weight="1" name="SHARED_HELLGATE_ENTRANCE_2V2_LETHAL" activeattachments="EXTRA_GOLD"/>
       </fallback>
       <biome name="Forest">     
         <subbiome name="Green">
-          <prefab weight="1" name="FOREST_GREEN_RANDOM_EXIT_10x10_PORTAL_SOLO_A" />
-		      <prefab weight="1" name="FOREST_GREEN_RANDOM_EXIT_10x10_PORTAL_SOLO_B" />
-		      <prefab weight="1" name="FOREST_GREEN_RANDOM_EXIT_10x10_PORTAL_SOLO_C" />
+          <prefab weight="1" name="FOREST_GREEN_RANDOM_EXIT_10x10_PORTAL_SOLO_A" activeattachments="EXTRA_GOLD"/>
+		      <prefab weight="1" name="FOREST_GREEN_RANDOM_EXIT_10x10_PORTAL_SOLO_B" activeattachments="EXTRA_GOLD"/>
+		      <prefab weight="1" name="FOREST_GREEN_RANDOM_EXIT_10x10_PORTAL_SOLO_C" activeattachments="EXTRA_GOLD"/>
         </subbiome>
         <subbiome name="Red">
-          <prefab weight="1" name="FOREST_RED_RANDOM_EXIT_10x10_PORTAL_SOLO_A" />
-		      <prefab weight="1" name="FOREST_RED_RANDOM_EXIT_10x10_PORTAL_SOLO_B" />
-		      <prefab weight="1" name="FOREST_RED_RANDOM_EXIT_10x10_PORTAL_SOLO_C" />
+          <prefab weight="1" name="FOREST_RED_RANDOM_EXIT_10x10_PORTAL_SOLO_A" activeattachments="EXTRA_GOLD"/>
+		      <prefab weight="1" name="FOREST_RED_RANDOM_EXIT_10x10_PORTAL_SOLO_B" activeattachments="EXTRA_GOLD"/>
+		      <prefab weight="1" name="FOREST_RED_RANDOM_EXIT_10x10_PORTAL_SOLO_C" activeattachments="EXTRA_GOLD"/>
         </subbiome>
         <subbiome name="Dead">
-          <prefab weight="1" name="FOREST_DEAD_RANDOM_EXIT_10x10_PORTAL_SOLO_A" />
-		      <prefab weight="1" name="FOREST_DEAD_RANDOM_EXIT_10x10_PORTAL_SOLO_B" />
-		      <prefab weight="1" name="FOREST_DEAD_RANDOM_EXIT_10x10_PORTAL_SOLO_C" />
+          <prefab weight="1" name="FOREST_DEAD_RANDOM_EXIT_10x10_PORTAL_SOLO_A" activeattachments="EXTRA_GOLD"/>
+		      <prefab weight="1" name="FOREST_DEAD_RANDOM_EXIT_10x10_PORTAL_SOLO_B" activeattachments="EXTRA_GOLD"/>
+		      <prefab weight="1" name="FOREST_DEAD_RANDOM_EXIT_10x10_PORTAL_SOLO_C" activeattachments="EXTRA_GOLD"/>
         </subbiome>
       </biome>
       <biome name="Steppe">     
         <subbiome name="Green">
-          <prefab weight="1" name="STEPPE_GREEN_RANDOM_EXIT_10x10_PORTAL_SOLO_A" />
-		      <prefab weight="1" name="STEPPE_GREEN_RANDOM_EXIT_10x10_PORTAL_SOLO_B" />
-		      <prefab weight="1" name="STEPPE_GREEN_RANDOM_EXIT_10x10_PORTAL_SOLO_C" />
+          <prefab weight="1" name="STEPPE_GREEN_RANDOM_EXIT_10x10_PORTAL_SOLO_A" activeattachments="EXTRA_GOLD"/>
+		      <prefab weight="1" name="STEPPE_GREEN_RANDOM_EXIT_10x10_PORTAL_SOLO_B" activeattachments="EXTRA_GOLD"/>
+		      <prefab weight="1" name="STEPPE_GREEN_RANDOM_EXIT_10x10_PORTAL_SOLO_C" activeattachments="EXTRA_GOLD"/>
         </subbiome>
         <subbiome name="Red">
-          <prefab weight="1" name="STEPPE_RED_RANDOM_EXIT_10x10_PORTAL_SOLO_A" />
-		      <prefab weight="1" name="STEPPE_RED_RANDOM_EXIT_10x10_PORTAL_SOLO_B" />
-		      <prefab weight="1" name="STEPPE_RED_RANDOM_EXIT_10x10_PORTAL_SOLO_C" />
+          <prefab weight="1" name="STEPPE_RED_RANDOM_EXIT_10x10_PORTAL_SOLO_A" activeattachments="EXTRA_GOLD"/>
+		      <prefab weight="1" name="STEPPE_RED_RANDOM_EXIT_10x10_PORTAL_SOLO_B" activeattachments="EXTRA_GOLD"/>
+		      <prefab weight="1" name="STEPPE_RED_RANDOM_EXIT_10x10_PORTAL_SOLO_C" activeattachments="EXTRA_GOLD"/>
         </subbiome>
         <subbiome name="Dead">
-          <prefab weight="1" name="STEPPE_DEAD_RANDOM_EXIT_10x10_PORTAL_SOLO_A" />
-		      <prefab weight="1" name="STEPPE_DEAD_RANDOM_EXIT_10x10_PORTAL_SOLO_B" />
-		      <prefab weight="1" name="STEPPE_DEAD_RANDOM_EXIT_10x10_PORTAL_SOLO_C" />
+          <prefab weight="1" name="STEPPE_DEAD_RANDOM_EXIT_10x10_PORTAL_SOLO_A" activeattachments="EXTRA_GOLD"/>
+		      <prefab weight="1" name="STEPPE_DEAD_RANDOM_EXIT_10x10_PORTAL_SOLO_B" activeattachments="EXTRA_GOLD"/>
+		      <prefab weight="1" name="STEPPE_DEAD_RANDOM_EXIT_10x10_PORTAL_SOLO_C" activeattachments="EXTRA_GOLD"/>
         </subbiome>
       </biome>
       <biome name="Swamp">     
         <subbiome name="Green">
-          <prefab weight="1" name="SWAMP_GREEN_RANDOM_EXIT_10x10_PORTAL_SOLO_A" />
-		      <prefab weight="1" name="SWAMP_GREEN_RANDOM_EXIT_10x10_PORTAL_SOLO_B" />
-		      <prefab weight="1" name="SWAMP_GREEN_RANDOM_EXIT_10x10_PORTAL_SOLO_C" />
+          <prefab weight="1" name="SWAMP_GREEN_RANDOM_EXIT_10x10_PORTAL_SOLO_A" activeattachments="EXTRA_GOLD"/>
+		      <prefab weight="1" name="SWAMP_GREEN_RANDOM_EXIT_10x10_PORTAL_SOLO_B" activeattachments="EXTRA_GOLD"/>
+		      <prefab weight="1" name="SWAMP_GREEN_RANDOM_EXIT_10x10_PORTAL_SOLO_C" activeattachments="EXTRA_GOLD"/>
         </subbiome>
         <subbiome name="Red">
-          <prefab weight="1" name="SWAMP_RED_RANDOM_EXIT_10x10_PORTAL_SOLO_A" />
-		      <prefab weight="1" name="SWAMP_RED_RANDOM_EXIT_10x10_PORTAL_SOLO_B" />
-		      <prefab weight="1" name="SWAMP_RED_RANDOM_EXIT_10x10_PORTAL_SOLO_C" />
+          <prefab weight="1" name="SWAMP_RED_RANDOM_EXIT_10x10_PORTAL_SOLO_A" activeattachments="EXTRA_GOLD"/>
+		      <prefab weight="1" name="SWAMP_RED_RANDOM_EXIT_10x10_PORTAL_SOLO_B" activeattachments="EXTRA_GOLD"/>
+		      <prefab weight="1" name="SWAMP_RED_RANDOM_EXIT_10x10_PORTAL_SOLO_C" activeattachments="EXTRA_GOLD"/>
         </subbiome>
         <subbiome name="Dead">
-          <prefab weight="1" name="SWAMP_DEAD_RANDOM_EXIT_10x10_PORTAL_SOLO_A" />
-		      <prefab weight="1" name="SWAMP_DEAD_RANDOM_EXIT_10x10_PORTAL_SOLO_B" />
-		      <prefab weight="1" name="SWAMP_DEAD_RANDOM_EXIT_10x10_PORTAL_SOLO_C" />
+          <prefab weight="1" name="SWAMP_DEAD_RANDOM_EXIT_10x10_PORTAL_SOLO_A" activeattachments="EXTRA_GOLD"/>
+		      <prefab weight="1" name="SWAMP_DEAD_RANDOM_EXIT_10x10_PORTAL_SOLO_B" activeattachments="EXTRA_GOLD"/>
+		      <prefab weight="1" name="SWAMP_DEAD_RANDOM_EXIT_10x10_PORTAL_SOLO_C" activeattachments="EXTRA_GOLD"/>
         </subbiome>
       </biome>
       <biome name="Highland">     
         <subbiome name="Green">
-          <prefab weight="1" name="HIGHLAND_GREEN_RANDOM_EXIT_10x10_PORTAL_SOLO_A" />
-		      <prefab weight="1" name="HIGHLAND_GREEN_RANDOM_EXIT_10x10_PORTAL_SOLO_B" />
-		      <prefab weight="1" name="HIGHLAND_GREEN_RANDOM_EXIT_10x10_PORTAL_SOLO_C" />
+          <prefab weight="1" name="HIGHLAND_GREEN_RANDOM_EXIT_10x10_PORTAL_SOLO_A" activeattachments="EXTRA_GOLD"/>
+		      <prefab weight="1" name="HIGHLAND_GREEN_RANDOM_EXIT_10x10_PORTAL_SOLO_B" activeattachments="EXTRA_GOLD"/>
+		      <prefab weight="1" name="HIGHLAND_GREEN_RANDOM_EXIT_10x10_PORTAL_SOLO_C" activeattachments="EXTRA_GOLD"/>
         </subbiome>
         <subbiome name="Red">
-          <prefab weight="1" name="HIGHLAND_RED_RANDOM_EXIT_10x10_PORTAL_SOLO_A" />
-		      <prefab weight="1" name="HIGHLAND_RED_RANDOM_EXIT_10x10_PORTAL_SOLO_B" />
-		      <prefab weight="1" name="HIGHLAND_RED_RANDOM_EXIT_10x10_PORTAL_SOLO_C" />
+          <prefab weight="1" name="HIGHLAND_RED_RANDOM_EXIT_10x10_PORTAL_SOLO_A" activeattachments="EXTRA_GOLD"/>
+		      <prefab weight="1" name="HIGHLAND_RED_RANDOM_EXIT_10x10_PORTAL_SOLO_B" activeattachments="EXTRA_GOLD"/>
+		      <prefab weight="1" name="HIGHLAND_RED_RANDOM_EXIT_10x10_PORTAL_SOLO_C" activeattachments="EXTRA_GOLD"/>
         </subbiome>
         <subbiome name="Dead">
-          <prefab weight="1" name="HIGHLAND_DEAD_RANDOM_EXIT_10x10_PORTAL_SOLO_A" />
-		      <prefab weight="1" name="HIGHLAND_DEAD_RANDOM_EXIT_10x10_PORTAL_SOLO_B" />
-		      <prefab weight="1" name="HIGHLAND_DEAD_RANDOM_EXIT_10x10_PORTAL_SOLO_C" />
+          <prefab weight="1" name="HIGHLAND_DEAD_RANDOM_EXIT_10x10_PORTAL_SOLO_A" activeattachments="EXTRA_GOLD"/>
+		      <prefab weight="1" name="HIGHLAND_DEAD_RANDOM_EXIT_10x10_PORTAL_SOLO_B" activeattachments="EXTRA_GOLD"/>
+		      <prefab weight="1" name="HIGHLAND_DEAD_RANDOM_EXIT_10x10_PORTAL_SOLO_C" activeattachments="EXTRA_GOLD"/>
         </subbiome>
       </biome>
       <biome name="Mountain">     
         <subbiome name="Green">
-          <prefab weight="1" name="MOUNTAIN_GREEN_RANDOM_EXIT_10x10_PORTAL_SOLO_A" />
-		      <prefab weight="1" name="MOUNTAIN_GREEN_RANDOM_EXIT_10x10_PORTAL_SOLO_B" />
-		      <prefab weight="1" name="MOUNTAIN_GREEN_RANDOM_EXIT_10x10_PORTAL_SOLO_C" />
+          <prefab weight="1" name="MOUNTAIN_GREEN_RANDOM_EXIT_10x10_PORTAL_SOLO_A" activeattachments="EXTRA_GOLD"/>
+		      <prefab weight="1" name="MOUNTAIN_GREEN_RANDOM_EXIT_10x10_PORTAL_SOLO_B" activeattachments="EXTRA_GOLD"/>
+		      <prefab weight="1" name="MOUNTAIN_GREEN_RANDOM_EXIT_10x10_PORTAL_SOLO_C" activeattachments="EXTRA_GOLD"/>
         </subbiome>
         <subbiome name="Red">
-          <prefab weight="1" name="MOUNTAIN_RED_RANDOM_EXIT_10x10_PORTAL_SOLO_A" />
-		      <prefab weight="1" name="MOUNTAIN_RED_RANDOM_EXIT_10x10_PORTAL_SOLO_B" />
-		      <prefab weight="1" name="MOUNTAIN_RED_RANDOM_EXIT_10x10_PORTAL_SOLO_C" />
+          <prefab weight="1" name="MOUNTAIN_RED_RANDOM_EXIT_10x10_PORTAL_SOLO_A" activeattachments="EXTRA_GOLD"/>
+		      <prefab weight="1" name="MOUNTAIN_RED_RANDOM_EXIT_10x10_PORTAL_SOLO_B" activeattachments="EXTRA_GOLD"/>
+		      <prefab weight="1" name="MOUNTAIN_RED_RANDOM_EXIT_10x10_PORTAL_SOLO_C" activeattachments="EXTRA_GOLD"/>
         </subbiome>
         <subbiome name="Dead">
-          <prefab weight="1" name="MOUNTAIN_DEAD_RANDOM_EXIT_10x10_PORTAL_SOLO_A" />
-		      <prefab weight="1" name="MOUNTAIN_DEAD_RANDOM_EXIT_10x10_PORTAL_SOLO_B" />
-		      <prefab weight="1" name="MOUNTAIN_DEAD_RANDOM_EXIT_10x10_PORTAL_SOLO_C" />
+          <prefab weight="1" name="MOUNTAIN_DEAD_RANDOM_EXIT_10x10_PORTAL_SOLO_A" activeattachments="EXTRA_GOLD"/>
+		      <prefab weight="1" name="MOUNTAIN_DEAD_RANDOM_EXIT_10x10_PORTAL_SOLO_B" activeattachments="EXTRA_GOLD"/>
+		      <prefab weight="1" name="MOUNTAIN_DEAD_RANDOM_EXIT_10x10_PORTAL_SOLO_C" activeattachments="EXTRA_GOLD"/>
         </subbiome>
       </biome>
       <biome name="Roads">
         <fallback>
-          <prefab weight="1" name="ROADS_RANDOM_EXIT_10x10_PORTAL_SOLO_A" />
-          <prefab weight="1" name="ROADS_RANDOM_EXIT_10x10_PORTAL_SOLO_B" />
-          <prefab weight="1" name="ROADS_RANDOM_EXIT_10x10_PORTAL_SOLO_C" />
+          <prefab weight="1" name="ROADS_RANDOM_EXIT_10x10_PORTAL_SOLO_A" activeattachments="EXTRA_GOLD"/>
+          <prefab weight="1" name="ROADS_RANDOM_EXIT_10x10_PORTAL_SOLO_B" activeattachments="EXTRA_GOLD"/>
+          <prefab weight="1" name="ROADS_RANDOM_EXIT_10x10_PORTAL_SOLO_C" activeattachments="EXTRA_GOLD"/>
         </fallback>
       </biome>
       <biome name="Mists">
         <fallback>
-          <prefab weight="1" name="ROADS_RANDOM_EXIT_10x10_PORTAL_SOLO_A" />
-          <prefab weight="1" name="ROADS_RANDOM_EXIT_10x10_PORTAL_SOLO_B" />
-          <prefab weight="1" name="ROADS_RANDOM_EXIT_10x10_PORTAL_SOLO_C" />
+          <prefab weight="1" name="ROADS_RANDOM_EXIT_10x10_PORTAL_SOLO_A" activeattachments="EXTRA_GOLD"/>
+          <prefab weight="1" name="ROADS_RANDOM_EXIT_10x10_PORTAL_SOLO_B" activeattachments="EXTRA_GOLD"/>
+          <prefab weight="1" name="ROADS_RANDOM_EXIT_10x10_PORTAL_SOLO_C" activeattachments="EXTRA_GOLD"/>
         </fallback>
         <subbiome name="Green">
-          <prefab weight="1" name="MISTS_GREEN_RANDOM_EXIT_10x10_PORTAL_SOLO_A" />
-          <prefab weight="1" name="MISTS_GREEN_RANDOM_EXIT_10x10_PORTAL_SOLO_B" />
-          <prefab weight="1" name="MISTS_GREEN_RANDOM_EXIT_10x10_PORTAL_SOLO_C" />          
+          <prefab weight="1" name="MISTS_GREEN_RANDOM_EXIT_10x10_PORTAL_SOLO_A" activeattachments="EXTRA_GOLD"/>
+          <prefab weight="1" name="MISTS_GREEN_RANDOM_EXIT_10x10_PORTAL_SOLO_B" activeattachments="EXTRA_GOLD"/>
+          <prefab weight="1" name="MISTS_GREEN_RANDOM_EXIT_10x10_PORTAL_SOLO_C" activeattachments="EXTRA_GOLD"/>          
         </subbiome>
         <subbiome name="Red">
-          <prefab weight="1" name="MISTS_RED_RANDOM_EXIT_10x10_PORTAL_SOLO_A" />
-          <prefab weight="1" name="MISTS_RED_RANDOM_EXIT_10x10_PORTAL_SOLO_B" />
-          <prefab weight="1" name="MISTS_RED_RANDOM_EXIT_10x10_PORTAL_SOLO_C" />
+          <prefab weight="1" name="MISTS_RED_RANDOM_EXIT_10x10_PORTAL_SOLO_A" activeattachments="EXTRA_GOLD"/>
+          <prefab weight="1" name="MISTS_RED_RANDOM_EXIT_10x10_PORTAL_SOLO_B" activeattachments="EXTRA_GOLD"/>
+          <prefab weight="1" name="MISTS_RED_RANDOM_EXIT_10x10_PORTAL_SOLO_C" activeattachments="EXTRA_GOLD"/>
         </subbiome>
         <subbiome name="Dead">
-          <prefab weight="1" name="MISTS_DEAD_RANDOM_EXIT_10x10_PORTAL_SOLO_A" />
-          <prefab weight="1" name="MISTS_DEAD_RANDOM_EXIT_10x10_PORTAL_SOLO_B" />
-          <prefab weight="1" name="MISTS_DEAD_RANDOM_EXIT_10x10_PORTAL_SOLO_C" />
+          <prefab weight="1" name="MISTS_DEAD_RANDOM_EXIT_10x10_PORTAL_SOLO_A" activeattachments="EXTRA_GOLD"/>
+          <prefab weight="1" name="MISTS_DEAD_RANDOM_EXIT_10x10_PORTAL_SOLO_B" activeattachments="EXTRA_GOLD"/>
+          <prefab weight="1" name="MISTS_DEAD_RANDOM_EXIT_10x10_PORTAL_SOLO_C" activeattachments="EXTRA_GOLD"/>
         </subbiome>
       </biome>
     </Visualization>
+    
     <!--Veteran-->
     <Visualization name="PORTAL_BOSSROOM_GROUP">
       <TooltipDisplay uisprite="dungeon_group" displayname="@PROXIMITY_TOOLTIP_BOSSROOM_DUNGEON_GROUP" optionentry="GroupDungeon"/>
@@ -2362,74 +2375,272 @@
       </fallback>
       <biome name="Forest">
         <subbiome name="Green">
-          <prefab name="FOREST_GREEN_RANDOM_EXIT_10x10_PORTAL" />
+          <prefab name="FOREST_GREEN_RANDOM_EXIT_10x10_PORTAL" activeattachments="EXTRA_GOLD"/>
         </subbiome>
         <subbiome name="Red">
-          <prefab name="FOREST_RED_RANDOM_EXIT_10x10_PORTAL" />
+          <prefab name="FOREST_RED_RANDOM_EXIT_10x10_PORTAL" activeattachments="EXTRA_GOLD"/>
         </subbiome>
         <subbiome name="Dead">
-          <prefab name="FOREST_DEAD_RANDOM_EXIT_10x10_PORTAL" />
+          <prefab name="FOREST_DEAD_RANDOM_EXIT_10x10_PORTAL" activeattachments="EXTRA_GOLD"/>
         </subbiome>
       </biome>
       <biome name="Steppe">
         <subbiome name="Green">
-          <prefab name="STEPPE_GREEN_RANDOM_EXIT_10x10_PORTAL" />
+          <prefab name="STEPPE_GREEN_RANDOM_EXIT_10x10_PORTAL" activeattachments="EXTRA_GOLD"/>
         </subbiome>
         <subbiome name="Red">
-          <prefab name="STEPPE_RED_RANDOM_EXIT_10x10_PORTAL" />
+          <prefab name="STEPPE_RED_RANDOM_EXIT_10x10_PORTAL" activeattachments="EXTRA_GOLD"/>
         </subbiome>
         <subbiome name="Dead">
-          <prefab name="STEPPE_DEAD_RANDOM_EXIT_10x10_PORTAL" />
+          <prefab name="STEPPE_DEAD_RANDOM_EXIT_10x10_PORTAL" activeattachments="EXTRA_GOLD"/>
         </subbiome>
       </biome>
       <biome name="Swamp">
         <subbiome name="Green">
-          <prefab name="SWAMP_GREEN_RANDOM_EXIT_10x10_PORTAL" />
+          <prefab name="SWAMP_GREEN_RANDOM_EXIT_10x10_PORTAL" activeattachments="EXTRA_GOLD"/>
         </subbiome>
         <subbiome name="Red">
-          <prefab name="SWAMP_RED_RANDOM_EXIT_10x10_PORTAL" />
+          <prefab name="SWAMP_RED_RANDOM_EXIT_10x10_PORTAL" activeattachments="EXTRA_GOLD"/>
         </subbiome>
         <subbiome name="Dead">
-          <prefab name="SWAMP_DEAD_RANDOM_EXIT_10x10_PORTAL" />
+          <prefab name="SWAMP_DEAD_RANDOM_EXIT_10x10_PORTAL" activeattachments="EXTRA_GOLD"/>
         </subbiome>
       </biome>
       <biome name="Highland">
         <subbiome name="Green">
-          <prefab name="HIGHLAND_GREEN_RANDOM_EXIT_10x10_PORTAL" />
+          <prefab name="HIGHLAND_GREEN_RANDOM_EXIT_10x10_PORTAL" activeattachments="EXTRA_GOLD"/>
         </subbiome>
         <subbiome name="Red">
-          <prefab name="HIGHLAND_RED_RANDOM_EXIT_10x10_PORTAL" />
+          <prefab name="HIGHLAND_RED_RANDOM_EXIT_10x10_PORTAL" activeattachments="EXTRA_GOLD"/>
         </subbiome>
         <subbiome name="Dead">
-          <prefab name="HIGHLAND_DEAD_RANDOM_EXIT_10x10_PORTAL" />
+          <prefab name="HIGHLAND_DEAD_RANDOM_EXIT_10x10_PORTAL" activeattachments="EXTRA_GOLD"/>
         </subbiome>
       </biome>
       <biome name="Mountain">
         <subbiome name="Green">
-          <prefab name="MOUNTAIN_GREEN_RANDOM_EXIT_10x10_PORTAL" />
+          <prefab name="MOUNTAIN_GREEN_RANDOM_EXIT_10x10_PORTAL" activeattachments="EXTRA_GOLD"/>
         </subbiome>
         <subbiome name="Red">
-          <prefab name="MOUNTAIN_RED_RANDOM_EXIT_10x10_PORTAL" />
+          <prefab name="MOUNTAIN_RED_RANDOM_EXIT_10x10_PORTAL" activeattachments="EXTRA_GOLD"/>
         </subbiome>
         <subbiome name="Dead">
-          <prefab name="MOUNTAIN_DEAD_RANDOM_EXIT_10x10_PORTAL" />
+          <prefab name="MOUNTAIN_DEAD_RANDOM_EXIT_10x10_PORTAL" activeattachments="EXTRA_GOLD"/>
         </subbiome>
       </biome>
       <biome name="Roads">
         <fallback>
-          <prefab name="ROADS_RANDOM_EXIT_10x10_PORTAL" />
+          <prefab name="ROADS_RANDOM_EXIT_10x10_PORTAL" activeattachments="EXTRA_GOLD"/>
         </fallback>
       </biome>
       <biome name="Mists">
         <subbiome name="Green">
-          <prefab name="MISTS_GREEN_RANDOM_EXIT_10x10_PORTAL" />
+          <prefab name="MISTS_GREEN_RANDOM_EXIT_10x10_PORTAL" activeattachments="EXTRA_GOLD"/>
         </subbiome>
         <subbiome name="Red">
-          <prefab name="MISTS_RED_RANDOM_EXIT_10x10_PORTAL" />
+          <prefab name="MISTS_RED_RANDOM_EXIT_10x10_PORTAL" activeattachments="EXTRA_GOLD"/>
         </subbiome>
         <subbiome name="Dead">
-          <prefab name="MISTS_DEAD_RANDOM_EXIT_10x10_PORTAL" />
+          <prefab name="MISTS_DEAD_RANDOM_EXIT_10x10_PORTAL" activeattachments="EXTRA_GOLD"/>
         </subbiome>
+      </biome>
+    </Visualization>
+    <Visualization name="KEEPER_BOSSROOM_GROUP">
+      <TooltipDisplay uisprite="dungeon_group" displayname="@PROXIMITY_TOOLTIP_BOSSROOM_DUNGEON_GROUP" optionentry="GroupDungeon"/>
+      <fallback>
+        <prefab weight="1" name="SHARED_HELLGATE_ENTRANCE_2V2_LETHAL" activeattachments="EXTRA_GOLD" />
+      </fallback>
+      <biome name="Forest">
+        <subbiome name="Green">
+          <prefab name="FOREST_GREEN_RANDOM_EXIT_10x10_KPR" activeattachments="EXTRA_GOLD" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="FOREST_RED_RANDOM_EXIT_10x10_KPR" activeattachments="EXTRA_GOLD" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="FOREST_DEAD_RANDOM_EXIT_10x10_KPR" activeattachments="EXTRA_GOLD" />
+        </subbiome>
+      </biome>
+      <biome name="Steppe">
+        <subbiome name="Green">
+          <prefab name="STEPPE_GREEN_RANDOM_EXIT_10x10_KPR" activeattachments="EXTRA_GOLD" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="STEPPE_RED_RANDOM_EXIT_10x10_KPR" activeattachments="EXTRA_GOLD" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="STEPPE_DEAD_RANDOM_EXIT_10x10_KPR" activeattachments="EXTRA_GOLD" />
+        </subbiome>
+      </biome>
+      <biome name="Swamp">
+        <subbiome name="Green">
+          <prefab name="SWAMP_GREEN_RANDOM_EXIT_10x10_KPR" activeattachments="EXTRA_GOLD" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="SWAMP_RED_RANDOM_EXIT_10x10_KPR" activeattachments="EXTRA_GOLD" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="SWAMP_DEAD_RANDOM_EXIT_10x10_KPR" activeattachments="EXTRA_GOLD" />
+        </subbiome>
+      </biome>
+      <biome name="Highland">
+        <subbiome name="Green">
+          <prefab name="HIGHLAND_GREEN_RANDOM_EXIT_10x10_KPR" activeattachments="EXTRA_GOLD" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="HIGHLAND_RED_RANDOM_EXIT_10x10_KPR" activeattachments="EXTRA_GOLD" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="HIGHLAND_DEAD_RANDOM_EXIT_10x10_KPR" activeattachments="EXTRA_GOLD" />
+        </subbiome>
+      </biome>
+      <biome name="Mountain">
+        <subbiome name="Green">
+          <prefab name="MOUNTAIN_GREEN_RANDOM_EXIT_10x10_KPR" activeattachments="EXTRA_GOLD" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="MOUNTAIN_RED_RANDOM_EXIT_10x10_KPR" activeattachments="EXTRA_GOLD" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="MOUNTAIN_DEAD_RANDOM_EXIT_10x10_KPR" activeattachments="EXTRA_GOLD" />
+        </subbiome>
+      </biome>
+      <biome name="Roads">
+        <fallback>
+          <prefab name="ROADS_RANDOM_EXIT_10x10_KPR" activeattachments="EXTRA_GOLD" />
+        </fallback>
+      </biome>
+    </Visualization>
+    <Visualization name="UNDEAD_BOSSROOM_GROUP">
+      <TooltipDisplay uisprite="dungeon_group" displayname="@PROXIMITY_TOOLTIP_BOSSROOM_DUNGEON_GROUP" optionentry="GroupDungeon"/>
+      <fallback>
+        <prefab weight="1" name="SHARED_HELLGATE_ENTRANCE_2V2_LETHAL" activeattachments="EXTRA_GOLD" />
+      </fallback>
+      <biome name="Forest">
+        <subbiome name="Green">
+          <prefab name="FOREST_GREEN_RANDOM_EXIT_10x10_UND" activeattachments="EXTRA_GOLD" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="FOREST_RED_RANDOM_EXIT_10x10_UND" activeattachments="EXTRA_GOLD" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="FOREST_DEAD_RANDOM_EXIT_10x10_UND" activeattachments="EXTRA_GOLD" />
+        </subbiome>
+      </biome>
+      <biome name="Steppe">
+        <subbiome name="Green">
+          <prefab name="STEPPE_GREEN_RANDOM_EXIT_10x10_UND" activeattachments="EXTRA_GOLD" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="STEPPE_RED_RANDOM_EXIT_10x10_UND" activeattachments="EXTRA_GOLD" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="STEPPE_DEAD_RANDOM_EXIT_10x10_UND" activeattachments="EXTRA_GOLD" />
+        </subbiome>
+      </biome>
+      <biome name="Swamp">
+        <subbiome name="Green">
+          <prefab name="SWAMP_GREEN_RANDOM_EXIT_10x10_UND" activeattachments="EXTRA_GOLD" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="SWAMP_RED_RANDOM_EXIT_10x10_UND" activeattachments="EXTRA_GOLD" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="SWAMP_DEAD_RANDOM_EXIT_10x10_UND" activeattachments="EXTRA_GOLD" />
+        </subbiome>
+      </biome>
+      <biome name="Highland">
+        <subbiome name="Green">
+          <prefab name="HIGHLAND_GREEN_RANDOM_EXIT_10x10_UND" activeattachments="EXTRA_GOLD" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="HIGHLAND_RED_RANDOM_EXIT_10x10_UND" activeattachments="EXTRA_GOLD" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="HIGHLAND_DEAD_RANDOM_EXIT_10x10_UND" activeattachments="EXTRA_GOLD" />
+        </subbiome>
+      </biome>
+      <biome name="Mountain">
+        <subbiome name="Green">
+          <prefab name="MOUNTAIN_GREEN_RANDOM_EXIT_10x10_UND" activeattachments="EXTRA_GOLD" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="MOUNTAIN_RED_RANDOM_EXIT_10x10_UND" activeattachments="EXTRA_GOLD" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="MOUNTAIN_DEAD_RANDOM_EXIT_10x10_UND" activeattachments="EXTRA_GOLD" />
+        </subbiome>
+      </biome>
+      <biome name="Roads">
+        <fallback>
+          <prefab name="ROADS_RANDOM_EXIT_10x10_UND" activeattachments="EXTRA_GOLD" />
+        </fallback>
+      </biome>
+    </Visualization> 
+    <Visualization name="MORGANA_BOSSROOM_GROUP">
+      <TooltipDisplay uisprite="dungeon_group" displayname="@PROXIMITY_TOOLTIP_BOSSROOM_DUNGEON_GROUP" optionentry="GroupDungeon"/>
+      <fallback>
+        <prefab weight="1" name="SHARED_HELLGATE_ENTRANCE_2V2_LETHAL" activeattachments="EXTRA_GOLD" />
+      </fallback>
+      <biome name="Forest">
+        <subbiome name="Green">
+          <prefab name="FOREST_GREEN_RANDOM_EXIT_10x10_MOR" activeattachments="EXTRA_GOLD" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="FOREST_RED_RANDOM_EXIT_10x10_MOR" activeattachments="EXTRA_GOLD" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="FOREST_DEAD_RANDOM_EXIT_10x10_MOR" activeattachments="EXTRA_GOLD" />
+        </subbiome>
+      </biome>
+      <biome name="Steppe">
+        <subbiome name="Green">
+          <prefab name="STEPPE_GREEN_RANDOM_EXIT_10x10_MOR" activeattachments="EXTRA_GOLD" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="STEPPE_RED_RANDOM_EXIT_10x10_MOR" activeattachments="EXTRA_GOLD" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="STEPPE_DEAD_RANDOM_EXIT_10x10_MOR" activeattachments="EXTRA_GOLD" />
+        </subbiome>
+      </biome>
+      <biome name="Swamp">
+        <subbiome name="Green">
+          <prefab name="SWAMP_GREEN_RANDOM_EXIT_10x10_MOR" activeattachments="EXTRA_GOLD" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="SWAMP_RED_RANDOM_EXIT_10x10_MOR" activeattachments="EXTRA_GOLD" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="SWAMP_DEAD_RANDOM_EXIT_10x10_MOR" activeattachments="EXTRA_GOLD" />
+        </subbiome>
+      </biome>
+      <biome name="Highland">
+        <subbiome name="Green">
+          <prefab name="HIGHLAND_GREEN_RANDOM_EXIT_10x10_MOR" activeattachments="EXTRA_GOLD" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="HIGHLAND_RED_RANDOM_EXIT_10x10_MOR" activeattachments="EXTRA_GOLD" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="HIGHLAND_DEAD_RANDOM_EXIT_10x10_MOR" activeattachments="EXTRA_GOLD" />
+        </subbiome>
+      </biome>
+      <biome name="Mountain">
+        <subbiome name="Green">
+          <prefab name="MOUNTAIN_GREEN_RANDOM_EXIT_10x10_MOR" activeattachments="EXTRA_GOLD" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="MOUNTAIN_RED_RANDOM_EXIT_10x10_MOR" activeattachments="EXTRA_GOLD" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="MOUNTAIN_DEAD_RANDOM_EXIT_10x10_MOR" activeattachments="EXTRA_GOLD" />
+        </subbiome>
+      </biome>
+      <biome name="Roads">
+        <fallback>
+          <prefab name="ROADS_RANDOM_EXIT_10x10_MOR" activeattachments="EXTRA_GOLD" />
+        </fallback>
       </biome>
     </Visualization>
 
@@ -2791,13 +3002,6 @@
     </RandomExit>
 
     <!-- Undead -->
-    <RandomExit name="T4_UNDEAD_BOSSROOM_SOLO" activationtime="60" cooldown="30" lifetimeafterlastuse="90" >
-      <RandomDungeonGenerators>
-        <GeneratedRandomDungeon generatorName="UNDEAD_RANDOM_DUNGEON_BOSSROOM_SOLO" tier="4" weight="1" />
-      </RandomDungeonGenerators>
-      <Visualization ref="PORTAL_BOSSROOM_SOLO"/>
-    </RandomExit>
-
     <RandomExit name="T7_UNDEAD_BOSSROOM_SOLO" activationtime="60" cooldown="30" lifetimeafterlastuse="90" >
       <RandomDungeonGenerators>
         <GeneratedRandomDungeon generatorName="UNDEAD_RANDOM_DUNGEON_BOSSROOM_SOLO" tier="7" weight="1" />
@@ -3061,7 +3265,7 @@
       <RandomDungeonGenerators>
         <GeneratedRandomDungeon generatorName="KEEPER_RANDOM_DUNGEON_BOSSROOM_VETERAN" tier="5" weight="1" />
       </RandomDungeonGenerators>
-      <Visualization ref="PORTAL_BOSSROOM_GROUP"/>
+      <Visualization ref="KEEPER_BOSSROOM_GROUP"/>
     </RandomExit>
 
     <!-- Morgana -->
@@ -3069,27 +3273,21 @@
       <RandomDungeonGenerators>
         <GeneratedRandomDungeon generatorName="MORGANA_RANDOM_DUNGEON_BOSSROOM_VETERAN" tier="6" weight="1" />
       </RandomDungeonGenerators>
-      <Visualization ref="PORTAL_BOSSROOM_GROUP"/>
+      <Visualization ref="MORGANA_BOSSROOM_GROUP"/>
     </RandomExit>
     <RandomExit name="T8_MORGANA_BOSSROOM_VETERAN" activationtime="60" cooldown="30" lifetimeafterlastuse="90" >
       <RandomDungeonGenerators>
         <GeneratedRandomDungeon generatorName="MORGANA_RANDOM_DUNGEON_BOSSROOM_VETERAN" tier="8" weight="1" />
       </RandomDungeonGenerators>
-      <Visualization ref="PORTAL_BOSSROOM_GROUP"/>
+      <Visualization ref="MORGANA_BOSSROOM_GROUP"/>
     </RandomExit>
 
     <!-- Undead -->
-    <RandomExit name="T4_UNDEAD_BOSSROOM_VETERAN" activationtime="60" cooldown="30" lifetimeafterlastuse="90" >
-      <RandomDungeonGenerators>
-        <GeneratedRandomDungeon generatorName="UNDEAD_RANDOM_DUNGEON_BOSSROOM_VETERAN" tier="4" weight="1" />
-      </RandomDungeonGenerators>
-      <Visualization ref="PORTAL_BOSSROOM_GROUP"/>
-    </RandomExit>
     <RandomExit name="T7_UNDEAD_BOSSROOM_VETERAN" activationtime="60" cooldown="30" lifetimeafterlastuse="90" >
       <RandomDungeonGenerators>
         <GeneratedRandomDungeon generatorName="UNDEAD_RANDOM_DUNGEON_BOSSROOM_VETERAN" tier="7" weight="1" />
       </RandomDungeonGenerators>
-      <Visualization ref="PORTAL_BOSSROOM_GROUP"/>
+      <Visualization ref="UNDEAD_BOSSROOM_GROUP"/>
     </RandomExit>
 
     <!--HALLOWEEN-->
@@ -10309,15 +10507,12 @@
         <Subset name="tribe" />
       </Faction>
       <Flags>
-        <Flag name="solo"/>
+        <Flag name="bosslair_solo"/>
       </Flags>
       <Environments>
         <Environment name="indoor" weight="50">
           <Subset name="cave_01" weight="50" />
           <Subset name="cave_ocean" weight="50" />
-        </Environment>
-        <Environment name="outdoor" weight="50">
-          <Subset name="forest" />
         </Environment>
       </Environments>
       <DungeonSizeAndDepth>
@@ -10340,15 +10535,12 @@
         <Subset name="monastery" />
       </Faction>
       <Flags>
-        <Flag name="solo"/>
+        <Flag name="bosslair_solo"/>
       </Flags>
       <Environments>
         <Environment name="indoor" weight="50">
           <Subset name="cave_01" weight="50" />
           <Subset name="cave_ocean" weight="50" />
-        </Environment>
-        <Environment name="outdoor" weight="50">
-          <Subset name="forest" />
         </Environment>
       </Environments>
       <DungeonSizeAndDepth>
@@ -10371,15 +10563,12 @@
         <Subset name="castle" />
       </Faction>
       <Flags>
-        <Flag name="solo"/>
+        <Flag name="bosslair_solo"/>
       </Flags>
       <Environments>
         <Environment name="indoor" weight="50">
           <Subset name="cave_01" weight="50" />
           <Subset name="cave_ocean" weight="50" />
-        </Environment>
-        <Environment name="outdoor" weight="50">
-          <Subset name="forest" />
         </Environment>
       </Environments>
       <DungeonSizeAndDepth>
@@ -10404,15 +10593,12 @@
         <Subset name="tribe" />
       </Faction>
       <Flags>
-        <Flag name="veteran"/>
+        <Flag name="bosslair_veteran"/>
       </Flags>
       <Environments>
         <Environment name="indoor" weight="50">
           <Subset name="cave_01" weight="50" />
           <Subset name="cave_ocean" weight="50" />
-        </Environment>
-        <Environment name="outdoor" weight="50">
-          <Subset name="forest" />
         </Environment>
       </Environments>
       <DungeonSizeAndDepth>
@@ -10435,15 +10621,12 @@
         <Subset name="monastery" />
       </Faction>
       <Flags>
-        <Flag name="veteran"/>
+        <Flag name="bosslair_veteran"/>
       </Flags>
       <Environments>
         <Environment name="indoor" weight="50">
           <Subset name="cave_01" weight="50" />
           <Subset name="cave_ocean" weight="50" />
-        </Environment>
-        <Environment name="outdoor" weight="50">
-          <Subset name="forest" />
         </Environment>
       </Environments>
       <DungeonSizeAndDepth>
@@ -10466,15 +10649,12 @@
         <Subset name="castle" />
       </Faction>
       <Flags>
-        <Flag name="veteran"/>
+        <Flag name="bosslair_veteran"/>
       </Flags>
       <Environments>
         <Environment name="indoor" weight="50">
           <Subset name="cave_01" weight="50" />
           <Subset name="cave_ocean" weight="50" />
-        </Environment>
-        <Environment name="outdoor" weight="50">
-          <Subset name="forest" />
         </Environment>
       </Environments>
       <DungeonSizeAndDepth>

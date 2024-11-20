@@ -6,12 +6,21 @@
   "patch": {
     "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
     "@xsi:noNamespaceSchemaLocation": "patch.xsd",
-    "replace": {
-      "@sel": "seasonstatues/statue[@season='GVG_SEASON_23']",
-      "attribute": {
-        "@name": "texture",
-        "@newvalue": "GvgSeasonWinnerEU23"
+    "replace": [
+      {
+        "@sel": "seasonstatues/statue[@season='GVG_SEASON_23']",
+        "attribute": {
+          "@name": "texture",
+          "@newvalue": "GvgSeasonWinnerEU23"
+        }
+      },
+      {
+        "@sel": "seasonstatues/dynamicstatue[@season='GVG_SEASON_24']",
+        "attribute": {
+          "@name": "winnername",
+          "@newvalue": "POLSKA GUROM"
+        }
       }
-    }
+    ]
   }
 }

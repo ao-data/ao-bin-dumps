@@ -12,7 +12,7 @@
                 "@pathsize": "1",
                 "@factionsubset": "tribe",
                 "@environment": "indoor",
-                "@flags": "legacy_group|legacy_solo",
+                "@flags": "bosslair_solo|bosslair_veteran|legacy_group|legacy_solo",
                 "@pathdata": "Aw==",
                 "template": {
                   "@name": "KPR_MULTIFLAG_BASIC_CORNER",
@@ -91,7 +91,7 @@
                 "@pathsize": "1",
                 "@factionsubset": "tribe",
                 "@environment": "indoor",
-                "@flags": "legacy_group|legacy_solo",
+                "@flags": "bosslair_solo|bosslair_veteran|legacy_group|legacy_solo",
                 "@pathdata": "BQ==",
                 "template": {
                   "@name": "KPR_MULTIFLAG_BASIC_STRAIGHT",
@@ -2384,6 +2384,44 @@
                 "@pathsize": "2",
                 "@factionsubset": "tribe",
                 "@environment": "indoor|outdoor",
+                "@flags": "bosslair_solo|bosslair_veteran",
+                "@endbosshighlight": "true",
+                "@pathdata": "AAUAAAQAAAAA",
+                "template": {
+                  "@name": "KPR_BOSSLAIR_BOSS_UNCOMMON_01",
+                  "layercontrol": [
+                    {
+                      "@type": "all:environment|indoor|cave_01",
+                      "@layers": "Layer_04"
+                    },
+                    {
+                      "@type": "all:environment|indoor|cave_ocean",
+                      "@layers": "Layer_06"
+                    },
+                    {
+                      "@type": "bosslair_solo",
+                      "@layers": "Layer_11"
+                    },
+                    {
+                      "@type": "bosslair_solo:encounter|hard",
+                      "@layers": "Layer_09"
+                    },
+                    {
+                      "@type": "bosslair_veteran",
+                      "@layers": "Layer_10"
+                    },
+                    {
+                      "@type": "bosslair_veteran:encounter|hard",
+                      "@layers": "Layer_01"
+                    }
+                  ]
+                }
+              },
+              {
+                "@size": "3 3",
+                "@pathsize": "2",
+                "@factionsubset": "tribe",
+                "@environment": "indoor|outdoor",
                 "@flags": "solo|veteran",
                 "@endbosshighlight": "true",
                 "@pathdata": "AAUAAAQAAAAA",
@@ -2932,6 +2970,44 @@
               },
               {
                 "@size": "3 3",
+                "@pathsize": "2",
+                "@factionsubset": "tribe",
+                "@environment": "indoor|outdoor",
+                "@flags": "bosslair_solo|bosslair_veteran",
+                "@endbosshighlight": "true",
+                "@pathdata": "AAUAAAQAAAAA",
+                "template": {
+                  "@name": "KPR_BOSSLAIR_BOSS_RARE_01",
+                  "layercontrol": [
+                    {
+                      "@type": "all:environment|indoor|cave_01",
+                      "@layers": "Layer_04"
+                    },
+                    {
+                      "@type": "all:environment|indoor|cave_ocean",
+                      "@layers": "Layer_06"
+                    },
+                    {
+                      "@type": "bosslair_solo",
+                      "@layers": "Layer_11"
+                    },
+                    {
+                      "@type": "bosslair_solo:encounter|hard",
+                      "@layers": "Layer_09"
+                    },
+                    {
+                      "@type": "bosslair_veteran",
+                      "@layers": "Layer_10"
+                    },
+                    {
+                      "@type": "bosslair_veteran:encounter|hard",
+                      "@layers": "Layer_01"
+                    }
+                  ]
+                }
+              },
+              {
+                "@size": "3 3",
                 "@pathsize": "1",
                 "@factionsubset": "tribe",
                 "@environment": "indoor|outdoor",
@@ -3187,12 +3263,73 @@
                     }
                   ]
                 }
+              },
+              {
+                "@size": "3 3",
+                "@pathsize": "2",
+                "@factionsubset": "tribe",
+                "@environment": "indoor|outdoor",
+                "@flags": "bosslair_solo|bosslair_veteran",
+                "@endbosshighlight": "true",
+                "@pathdata": "AAUAAAQAAAAA",
+                "template": {
+                  "@name": "KPR_BOSSLAIR_BOSS_LEGENDARY_01",
+                  "layercontrol": [
+                    {
+                      "@type": "all:environment|indoor|cave_01",
+                      "@layers": "Layer_04"
+                    },
+                    {
+                      "@type": "all:environment|indoor|cave_ocean",
+                      "@layers": "Layer_06"
+                    },
+                    {
+                      "@type": "bosslair_solo",
+                      "@layers": "Layer_11"
+                    },
+                    {
+                      "@type": "bosslair_solo:encounter|hard",
+                      "@layers": "Layer_09"
+                    },
+                    {
+                      "@type": "bosslair_veteran",
+                      "@layers": "Layer_10"
+                    },
+                    {
+                      "@type": "bosslair_veteran:encounter|hard",
+                      "@layers": "Layer_01"
+                    }
+                  ]
+                }
               }
             ]
           },
           {
             "@name": "Start",
             "info": [
+              {
+                "@size": "1 1",
+                "@pathsize": "1",
+                "@factionsubset": "tribe",
+                "@environment": "indoor|outdoor",
+                "@flags": "bosslair_solo|bosslair_veteran",
+                "@templateusage": "Enforce",
+                "@dungeonlevelusage": "First",
+                "@pathdata": "AQ==",
+                "template": {
+                  "@name": "KPR_BOSSLAIR_START_01",
+                  "layercontrol": [
+                    {
+                      "@type": "all:environment|indoor|cave_01",
+                      "@layers": "Layer_04"
+                    },
+                    {
+                      "@type": "all:environment|indoor|cave_ocean",
+                      "@layers": "Layer_06"
+                    }
+                  ]
+                }
+              },
               {
                 "@size": "1 1",
                 "@pathsize": "1",
@@ -3421,7 +3558,7 @@
                 "@pathsize": "1",
                 "@factionsubset": "tribe",
                 "@environment": "indoor",
-                "@flags": "legacy_group|legacy_solo",
+                "@flags": "bosslair_solo|bosslair_veteran|legacy_group|legacy_solo",
                 "@pathdata": "BA==",
                 "template": {
                   "@name": "KPR_MULTIFLAG_EXIT",
@@ -3552,7 +3689,7 @@
               "@pathsize": "0",
               "@factionsubset": "tribe",
               "@environment": "indoor|outdoor",
-              "@flags": "legacy_group|legacy_solo|solo|veteran",
+              "@flags": "bosslair_solo|bosslair_veteran|legacy_group|legacy_solo|solo|veteran",
               "template": {
                 "@name": "KPR_DEFAULT_BACKDROP_01",
                 "layercontrol": [
@@ -3636,75 +3773,80 @@
                 "@pathsize": "0",
                 "@factionsubset": "tribe",
                 "@environment": "indoor|outdoor",
+                "@flags": "bosslair_solo|bosslair_veteran|solo|veteran",
+                "template": {
+                  "@name": "KPR_TRIBE_MASTER_01",
+                  "layercontrol": [
+                    {
+                      "@type": "all:environment|indoor|cave_01",
+                      "@layers": "Layer_01"
+                    },
+                    {
+                      "@type": "all:environment|indoor|cave_ocean",
+                      "@layers": "Layer_02"
+                    },
+                    {
+                      "@type": "all:environment|outdoor|forest",
+                      "@layers": "Layer_03"
+                    },
+                    {
+                      "@type": "all:environment|outdoor|highlands",
+                      "@layers": "Layer_04"
+                    },
+                    {
+                      "@type": "all:environment|outdoor|mountain",
+                      "@layers": "Layer_05"
+                    },
+                    {
+                      "@type": "all:environment|outdoor|steppe",
+                      "@layers": "Layer_06"
+                    },
+                    {
+                      "@type": "all:environment|outdoor|swamp",
+                      "@layers": "Layer_07"
+                    }
+                  ]
+                }
+              },
+              {
+                "@size": "10 10",
+                "@pathsize": "0",
+                "@factionsubset": "tribe",
+                "@environment": "indoor|outdoor",
                 "@flags": "solo|veteran",
-                "template": [
-                  {
-                    "@name": "EASTER_MASTER_01",
-                    "layercontrol": [
-                      {
-                        "@type": "all:environment|indoor|cave_01",
-                        "@layers": "Layer_01"
-                      },
-                      {
-                        "@type": "all:environment|indoor|cave_ocean",
-                        "@layers": "Layer_02"
-                      },
-                      {
-                        "@type": "all:environment|outdoor|forest",
-                        "@layers": "Layer_03"
-                      },
-                      {
-                        "@type": "all:environment|outdoor|highlands",
-                        "@layers": "Layer_04"
-                      },
-                      {
-                        "@type": "all:environment|outdoor|mountain",
-                        "@layers": "Layer_05"
-                      },
-                      {
-                        "@type": "all:environment|outdoor|steppe",
-                        "@layers": "Layer_06"
-                      },
-                      {
-                        "@type": "all:environment|outdoor|swamp",
-                        "@layers": "Layer_07"
-                      }
-                    ]
-                  },
-                  {
-                    "@name": "KPR_TRIBE_MASTER_01",
-                    "layercontrol": [
-                      {
-                        "@type": "all:environment|indoor|cave_01",
-                        "@layers": "Layer_01"
-                      },
-                      {
-                        "@type": "all:environment|indoor|cave_ocean",
-                        "@layers": "Layer_02"
-                      },
-                      {
-                        "@type": "all:environment|outdoor|forest",
-                        "@layers": "Layer_03"
-                      },
-                      {
-                        "@type": "all:environment|outdoor|highlands",
-                        "@layers": "Layer_04"
-                      },
-                      {
-                        "@type": "all:environment|outdoor|mountain",
-                        "@layers": "Layer_05"
-                      },
-                      {
-                        "@type": "all:environment|outdoor|steppe",
-                        "@layers": "Layer_06"
-                      },
-                      {
-                        "@type": "all:environment|outdoor|swamp",
-                        "@layers": "Layer_07"
-                      }
-                    ]
-                  }
-                ]
+                "template": {
+                  "@name": "EASTER_MASTER_01",
+                  "layercontrol": [
+                    {
+                      "@type": "all:environment|indoor|cave_01",
+                      "@layers": "Layer_01"
+                    },
+                    {
+                      "@type": "all:environment|indoor|cave_ocean",
+                      "@layers": "Layer_02"
+                    },
+                    {
+                      "@type": "all:environment|outdoor|forest",
+                      "@layers": "Layer_03"
+                    },
+                    {
+                      "@type": "all:environment|outdoor|highlands",
+                      "@layers": "Layer_04"
+                    },
+                    {
+                      "@type": "all:environment|outdoor|mountain",
+                      "@layers": "Layer_05"
+                    },
+                    {
+                      "@type": "all:environment|outdoor|steppe",
+                      "@layers": "Layer_06"
+                    },
+                    {
+                      "@type": "all:environment|outdoor|swamp",
+                      "@layers": "Layer_07"
+                    }
+                  ]
+                }
               }
             ]
           }
@@ -3716,6 +3858,100 @@
           {
             "@name": "Basic",
             "info": [
+              {
+                "@size": "1 1",
+                "@pathsize": "1",
+                "@factionsubset": "monastery",
+                "@environment": "indoor",
+                "@flags": "bosslair_solo|bosslair_veteran",
+                "@pathdata": "BQ==",
+                "template": {
+                  "@name": "MOR_MULTIFLAG_BASIC_STRAIGHT",
+                  "weightedlayerblock": {
+                    "@name": "shrine",
+                    "@flag": "solo",
+                    "layer": [
+                      {
+                        "@id": "Layer_15",
+                        "@weight": "2"
+                      },
+                      {
+                        "@id": "Layer_21",
+                        "@weight": "8"
+                      }
+                    ]
+                  },
+                  "layercontrol": [
+                    {
+                      "@type": "all:environment|indoor|cave_01",
+                      "@layers": "Layer_09"
+                    },
+                    {
+                      "@type": "all:environment|indoor|cave_ocean",
+                      "@layers": "Layer_11"
+                    },
+                    {
+                      "@type": "all:environment|outdoor|forest",
+                      "@layers": "Layer_04"
+                    },
+                    {
+                      "@type": "solo:encounter|hard",
+                      "@layers": "Layer_20"
+                    },
+                    {
+                      "@type": "veteran:encounter|hard",
+                      "@layers": "Layer_23"
+                    }
+                  ]
+                }
+              },
+              {
+                "@size": "1 1",
+                "@pathsize": "1",
+                "@factionsubset": "monastery",
+                "@environment": "indoor|outdoor",
+                "@flags": "bosslair_solo|bosslair_veteran",
+                "@pathdata": "Aw==",
+                "template": {
+                  "@name": "MOR_MULTIFLAG_BASIC_CORNER",
+                  "weightedlayerblock": {
+                    "@name": "shrine_solo",
+                    "@flag": "solo",
+                    "layer": [
+                      {
+                        "@id": "Layer_11",
+                        "@weight": "2"
+                      },
+                      {
+                        "@id": "Layer_16",
+                        "@weight": "8"
+                      }
+                    ]
+                  },
+                  "layercontrol": [
+                    {
+                      "@type": "all:environment|indoor|cave_01",
+                      "@layers": "Layer_10"
+                    },
+                    {
+                      "@type": "all:environment|indoor|cave_ocean",
+                      "@layers": "Layer_12"
+                    },
+                    {
+                      "@type": "all:environment|outdoor|forest",
+                      "@layers": "Layer_09"
+                    },
+                    {
+                      "@type": "solo:encounter|hard",
+                      "@layers": "Layer_06"
+                    },
+                    {
+                      "@type": "veteran:encounter|hard",
+                      "@layers": "Layer_07"
+                    }
+                  ]
+                }
+              },
               {
                 "@size": "1 1",
                 "@pathsize": "1",
@@ -6037,6 +6273,44 @@
                 }
               },
               {
+                "@size": "3 2",
+                "@pathsize": "1",
+                "@factionsubset": "monastery",
+                "@environment": "indoor|outdoor",
+                "@flags": "bosslair_solo|bosslair_veteran",
+                "@endbosshighlight": "true",
+                "@pathdata": "AAUAAAAA",
+                "template": {
+                  "@name": "MOR_BOSSLAIR_BOSS_UNCOMMON_01",
+                  "layercontrol": [
+                    {
+                      "@type": "all:environment|indoor|cave_01",
+                      "@layers": "Layer_04"
+                    },
+                    {
+                      "@type": "all:environment|indoor|cave_ocean",
+                      "@layers": "Layer_06"
+                    },
+                    {
+                      "@type": "bosslair_solo",
+                      "@layers": "Layer_11"
+                    },
+                    {
+                      "@type": "bosslair_solo:encounter|hard",
+                      "@layers": "Layer_09"
+                    },
+                    {
+                      "@type": "bosslair_veteran",
+                      "@layers": "Layer_10"
+                    },
+                    {
+                      "@type": "bosslair_veteran:encounter|hard",
+                      "@layers": "Layer_01"
+                    }
+                  ]
+                }
+              },
+              {
                 "@size": "3 3",
                 "@pathsize": "2",
                 "@factionsubset": "monastery",
@@ -6502,6 +6776,44 @@
               },
               {
                 "@size": "3 2",
+                "@pathsize": "1",
+                "@factionsubset": "monastery",
+                "@environment": "indoor|outdoor",
+                "@flags": "bosslair_solo|bosslair_veteran",
+                "@endbosshighlight": "true",
+                "@pathdata": "AAUAAAAA",
+                "template": {
+                  "@name": "MOR_BOSSLAIR_BOSS_RARE_01",
+                  "layercontrol": [
+                    {
+                      "@type": "all:environment|indoor|cave_01",
+                      "@layers": "Layer_04"
+                    },
+                    {
+                      "@type": "all:environment|indoor|cave_ocean",
+                      "@layers": "Layer_06"
+                    },
+                    {
+                      "@type": "bosslair_solo",
+                      "@layers": "Layer_11"
+                    },
+                    {
+                      "@type": "bosslair_solo:encounter|hard",
+                      "@layers": "Layer_09"
+                    },
+                    {
+                      "@type": "bosslair_veteran",
+                      "@layers": "Layer_10"
+                    },
+                    {
+                      "@type": "bosslair_veteran:encounter|hard",
+                      "@layers": "Layer_01"
+                    }
+                  ]
+                }
+              },
+              {
+                "@size": "3 2",
                 "@pathsize": "3",
                 "@factionsubset": "monastery",
                 "@environment": "indoor|outdoor",
@@ -6820,12 +7132,73 @@
                     }
                   ]
                 }
+              },
+              {
+                "@size": "3 2",
+                "@pathsize": "1",
+                "@factionsubset": "monastery",
+                "@environment": "indoor|outdoor",
+                "@flags": "bosslair_solo|bosslair_veteran",
+                "@endbosshighlight": "true",
+                "@pathdata": "AAUAAAAA",
+                "template": {
+                  "@name": "MOR_BOSSLAIR_BOSS_LEGENDARY_01",
+                  "layercontrol": [
+                    {
+                      "@type": "all:environment|indoor|cave_01",
+                      "@layers": "Layer_04"
+                    },
+                    {
+                      "@type": "all:environment|indoor|cave_ocean",
+                      "@layers": "Layer_06"
+                    },
+                    {
+                      "@type": "bosslair_solo",
+                      "@layers": "Layer_11"
+                    },
+                    {
+                      "@type": "bosslair_solo:encounter|hard",
+                      "@layers": "Layer_09"
+                    },
+                    {
+                      "@type": "bosslair_veteran",
+                      "@layers": "Layer_10"
+                    },
+                    {
+                      "@type": "bosslair_veteran:encounter|hard",
+                      "@layers": "Layer_01"
+                    }
+                  ]
+                }
               }
             ]
           },
           {
             "@name": "Start",
             "info": [
+              {
+                "@size": "1 1",
+                "@pathsize": "1",
+                "@factionsubset": "monastery",
+                "@environment": "indoor|outdoor",
+                "@flags": "bosslair_solo|bosslair_veteran",
+                "@templateusage": "Enforce",
+                "@dungeonlevelusage": "First",
+                "@pathdata": "AQ==",
+                "template": {
+                  "@name": "MOR_BOSSLAIR_START_01",
+                  "layercontrol": [
+                    {
+                      "@type": "all:environment|indoor|cave_01",
+                      "@layers": "Layer_04"
+                    },
+                    {
+                      "@type": "all:environment|indoor|cave_ocean",
+                      "@layers": "Layer_06"
+                    }
+                  ]
+                }
+              },
               {
                 "@size": "1 1",
                 "@pathsize": "1",
@@ -6958,39 +7331,70 @@
           },
           {
             "@name": "Exit",
-            "info": {
-              "@size": "1 1",
-              "@pathsize": "1",
-              "@factionsubset": "monastery",
-              "@environment": "indoor|outdoor",
-              "@flags": "solo|veteran",
-              "@pathdata": "BA==",
-              "template": {
-                "@name": "MOR_MON_EXIT_StairDown_01",
-                "layercontrol": [
-                  {
-                    "@type": "all:environment|indoor|cave_01",
-                    "@layers": "Layer_07"
-                  },
-                  {
-                    "@type": "all:environment|indoor|cave_ocean",
-                    "@layers": "Layer_09"
-                  },
-                  {
-                    "@type": "all:environment|outdoor|forest",
-                    "@layers": "Layer_02"
-                  },
-                  {
-                    "@type": "solo:encounter|hard",
-                    "@layers": "Layer_01,Layer_03,Layer_05"
-                  },
-                  {
-                    "@type": "veteran:encounter|hard",
-                    "@layers": "Layer_04,Layer_12,Layer_13"
-                  }
-                ]
+            "info": [
+              {
+                "@size": "1 1",
+                "@pathsize": "1",
+                "@factionsubset": "monastery",
+                "@environment": "indoor|outdoor",
+                "@flags": "bosslair_solo|bosslair_veteran",
+                "@pathdata": "BA==",
+                "template": {
+                  "@name": "MOR_MULTIFLAG_EXIT",
+                  "layercontrol": [
+                    {
+                      "@type": "all:environment|indoor|cave_01",
+                      "@layers": "Layer_07"
+                    },
+                    {
+                      "@type": "all:environment|indoor|cave_ocean",
+                      "@layers": "Layer_09"
+                    },
+                    {
+                      "@type": "all:environment|outdoor|forest",
+                      "@layers": "Layer_02"
+                    },
+                    {
+                      "@type": "veteran:encounter|standard",
+                      "@layers": "Layer_04"
+                    }
+                  ]
+                }
+              },
+              {
+                "@size": "1 1",
+                "@pathsize": "1",
+                "@factionsubset": "monastery",
+                "@environment": "indoor|outdoor",
+                "@flags": "solo|veteran",
+                "@pathdata": "BA==",
+                "template": {
+                  "@name": "MOR_MON_EXIT_StairDown_01",
+                  "layercontrol": [
+                    {
+                      "@type": "all:environment|indoor|cave_01",
+                      "@layers": "Layer_07"
+                    },
+                    {
+                      "@type": "all:environment|indoor|cave_ocean",
+                      "@layers": "Layer_09"
+                    },
+                    {
+                      "@type": "all:environment|outdoor|forest",
+                      "@layers": "Layer_02"
+                    },
+                    {
+                      "@type": "solo:encounter|hard",
+                      "@layers": "Layer_01,Layer_03,Layer_05"
+                    },
+                    {
+                      "@type": "veteran:encounter|hard",
+                      "@layers": "Layer_04,Layer_12,Layer_13"
+                    }
+                  ]
+                }
               }
-            }
+            ]
           },
           {
             "@name": "Backdrop",
@@ -6999,7 +7403,7 @@
               "@pathsize": "0",
               "@factionsubset": "monastery",
               "@environment": "indoor|outdoor",
-              "@flags": "solo|veteran",
+              "@flags": "bosslair_solo|bosslair_veteran|solo|veteran",
               "template": {
                 "@name": "MOR_DEFAULT_BACKDROP_01",
                 "layercontrol": [
@@ -7026,7 +7430,7 @@
               "@pathsize": "0",
               "@factionsubset": "monastery",
               "@environment": "indoor|outdoor",
-              "@flags": "solo|veteran",
+              "@flags": "bosslair_solo|bosslair_veteran|solo|veteran",
               "template": {
                 "@name": "MOR_MONASTERY_MASTER_01",
                 "layercontrol": [
@@ -7070,6 +7474,53 @@
           {
             "@name": "Basic",
             "info": [
+              {
+                "@size": "1 1",
+                "@pathsize": "1",
+                "@factionsubset": "castle",
+                "@environment": "indoor",
+                "@flags": "bosslair_solo|bosslair_veteran|halloween|halloween_solo|legacy_group|legacy_solo",
+                "@pathdata": "BQ==",
+                "template": {
+                  "@name": "UND_MULTIFLAG_BASIC_STRAIGHT",
+                  "weightedlayerblock": {
+                    "@name": "shrine",
+                    "@flag": "solo",
+                    "layer": [
+                      {
+                        "@id": "Layer_15",
+                        "@weight": "2"
+                      },
+                      {
+                        "@id": "Layer_21",
+                        "@weight": "8"
+                      }
+                    ]
+                  },
+                  "layercontrol": [
+                    {
+                      "@type": "all:environment|indoor|cave_01",
+                      "@layers": "Layer_09"
+                    },
+                    {
+                      "@type": "all:environment|indoor|cave_ocean",
+                      "@layers": "Layer_11"
+                    },
+                    {
+                      "@type": "all:environment|outdoor|forest",
+                      "@layers": "Layer_04"
+                    },
+                    {
+                      "@type": "solo:encounter|hard",
+                      "@layers": "Layer_20"
+                    },
+                    {
+                      "@type": "veteran:encounter|hard",
+                      "@layers": "Layer_23"
+                    }
+                  ]
+                }
+              },
               {
                 "@size": "1 1",
                 "@pathsize": "1",
@@ -7137,21 +7588,21 @@
                 "@size": "1 1",
                 "@pathsize": "1",
                 "@factionsubset": "castle",
-                "@environment": "indoor",
-                "@flags": "halloween|halloween_solo|legacy_group|legacy_solo",
-                "@pathdata": "BQ==",
+                "@environment": "indoor|outdoor",
+                "@flags": "bosslair_solo|bosslair_veteran|halloween|halloween_solo|legacy_group|legacy_solo",
+                "@pathdata": "Aw==",
                 "template": {
-                  "@name": "UND_MULTIFLAG_BASIC_STRAIGHT",
+                  "@name": "UND_MULTIFLAG_BASIC_CORNER",
                   "weightedlayerblock": {
-                    "@name": "shrine",
+                    "@name": "shrine_solo",
                     "@flag": "solo",
                     "layer": [
                       {
-                        "@id": "Layer_15",
+                        "@id": "Layer_11",
                         "@weight": "2"
                       },
                       {
-                        "@id": "Layer_21",
+                        "@id": "Layer_16",
                         "@weight": "8"
                       }
                     ]
@@ -7159,23 +7610,23 @@
                   "layercontrol": [
                     {
                       "@type": "all:environment|indoor|cave_01",
-                      "@layers": "Layer_09"
+                      "@layers": "Layer_10"
                     },
                     {
                       "@type": "all:environment|indoor|cave_ocean",
-                      "@layers": "Layer_11"
+                      "@layers": "Layer_12"
                     },
                     {
                       "@type": "all:environment|outdoor|forest",
-                      "@layers": "Layer_04"
+                      "@layers": "Layer_09"
                     },
                     {
                       "@type": "solo:encounter|hard",
-                      "@layers": "Layer_20"
+                      "@layers": "Layer_06"
                     },
                     {
                       "@type": "veteran:encounter|hard",
-                      "@layers": "Layer_23"
+                      "@layers": "Layer_07"
                     }
                   ]
                 }
@@ -7231,53 +7682,6 @@
                     {
                       "@type": "all:environment|outdoor|swamp",
                       "@layers": "Layer_14"
-                    },
-                    {
-                      "@type": "solo:encounter|hard",
-                      "@layers": "Layer_06"
-                    },
-                    {
-                      "@type": "veteran:encounter|hard",
-                      "@layers": "Layer_07"
-                    }
-                  ]
-                }
-              },
-              {
-                "@size": "1 1",
-                "@pathsize": "1",
-                "@factionsubset": "castle",
-                "@environment": "indoor|outdoor",
-                "@flags": "halloween|halloween_solo|legacy_group|legacy_solo",
-                "@pathdata": "Aw==",
-                "template": {
-                  "@name": "UND_MULTIFLAG_BASIC_CORNER",
-                  "weightedlayerblock": {
-                    "@name": "shrine_solo",
-                    "@flag": "solo",
-                    "layer": [
-                      {
-                        "@id": "Layer_11",
-                        "@weight": "2"
-                      },
-                      {
-                        "@id": "Layer_16",
-                        "@weight": "8"
-                      }
-                    ]
-                  },
-                  "layercontrol": [
-                    {
-                      "@type": "all:environment|indoor|cave_01",
-                      "@layers": "Layer_10"
-                    },
-                    {
-                      "@type": "all:environment|indoor|cave_ocean",
-                      "@layers": "Layer_12"
-                    },
-                    {
-                      "@type": "all:environment|outdoor|forest",
-                      "@layers": "Layer_09"
                     },
                     {
                       "@type": "solo:encounter|hard",
@@ -9385,6 +9789,44 @@
                 "@pathsize": "1",
                 "@factionsubset": "castle",
                 "@environment": "indoor|outdoor",
+                "@flags": "bosslair_solo|bosslair_veteran",
+                "@endbosshighlight": "true",
+                "@pathdata": "AAUAAAAA",
+                "template": {
+                  "@name": "UND_BOSSLAIR_BOSS_UNCOMMON_01",
+                  "layercontrol": [
+                    {
+                      "@type": "all:environment|indoor|cave_01",
+                      "@layers": "Layer_04"
+                    },
+                    {
+                      "@type": "all:environment|indoor|cave_ocean",
+                      "@layers": "Layer_06"
+                    },
+                    {
+                      "@type": "bosslair_solo",
+                      "@layers": "Layer_11"
+                    },
+                    {
+                      "@type": "bosslair_solo:encounter|hard",
+                      "@layers": "Layer_09"
+                    },
+                    {
+                      "@type": "bosslair_veteran",
+                      "@layers": "Layer_10"
+                    },
+                    {
+                      "@type": "bosslair_veteran:encounter|hard",
+                      "@layers": "Layer_01"
+                    }
+                  ]
+                }
+              },
+              {
+                "@size": "3 2",
+                "@pathsize": "1",
+                "@factionsubset": "castle",
+                "@environment": "indoor|outdoor",
                 "@flags": "solo|veteran",
                 "@endbosshighlight": "true",
                 "@pathdata": "AAUAAAAA",
@@ -9805,6 +10247,44 @@
               },
               {
                 "@size": "3 2",
+                "@pathsize": "1",
+                "@factionsubset": "castle",
+                "@environment": "indoor|outdoor",
+                "@flags": "bosslair_solo|bosslair_veteran",
+                "@endbosshighlight": "true",
+                "@pathdata": "AAUAAAAA",
+                "template": {
+                  "@name": "UND_BOSSLAIR_BOSS_RARE_01",
+                  "layercontrol": [
+                    {
+                      "@type": "all:environment|indoor|cave_01",
+                      "@layers": "Layer_04"
+                    },
+                    {
+                      "@type": "all:environment|indoor|cave_ocean",
+                      "@layers": "Layer_06"
+                    },
+                    {
+                      "@type": "bosslair_solo",
+                      "@layers": "Layer_11"
+                    },
+                    {
+                      "@type": "bosslair_solo:encounter|hard",
+                      "@layers": "Layer_09"
+                    },
+                    {
+                      "@type": "bosslair_veteran",
+                      "@layers": "Layer_10"
+                    },
+                    {
+                      "@type": "bosslair_veteran:encounter|hard",
+                      "@layers": "Layer_01"
+                    }
+                  ]
+                }
+              },
+              {
+                "@size": "3 2",
                 "@pathsize": "2",
                 "@factionsubset": "castle",
                 "@environment": "indoor|outdoor",
@@ -10124,6 +10604,44 @@
                 }
               },
               {
+                "@size": "3 2",
+                "@pathsize": "1",
+                "@factionsubset": "castle",
+                "@environment": "indoor|outdoor",
+                "@flags": "bosslair_solo|bosslair_veteran",
+                "@endbosshighlight": "true",
+                "@pathdata": "AAUAAAAA",
+                "template": {
+                  "@name": "UND_BOSSLAIR_BOSS_LEGENDARY_01",
+                  "layercontrol": [
+                    {
+                      "@type": "all:environment|indoor|cave_01",
+                      "@layers": "Layer_04"
+                    },
+                    {
+                      "@type": "all:environment|indoor|cave_ocean",
+                      "@layers": "Layer_06"
+                    },
+                    {
+                      "@type": "bosslair_solo",
+                      "@layers": "Layer_11"
+                    },
+                    {
+                      "@type": "bosslair_solo:encounter|hard",
+                      "@layers": "Layer_09"
+                    },
+                    {
+                      "@type": "bosslair_veteran",
+                      "@layers": "Layer_10"
+                    },
+                    {
+                      "@type": "bosslair_veteran:encounter|hard",
+                      "@layers": "Layer_01"
+                    }
+                  ]
+                }
+              },
+              {
                 "@size": "3 3",
                 "@pathsize": "2",
                 "@factionsubset": "castle",
@@ -10170,6 +10688,29 @@
           {
             "@name": "Start",
             "info": [
+              {
+                "@size": "1 1",
+                "@pathsize": "1",
+                "@factionsubset": "castle",
+                "@environment": "indoor|outdoor",
+                "@flags": "bosslair_solo|bosslair_veteran",
+                "@templateusage": "Enforce",
+                "@dungeonlevelusage": "First",
+                "@pathdata": "AQ==",
+                "template": {
+                  "@name": "UND_BOSSLAIR_START_01",
+                  "layercontrol": [
+                    {
+                      "@type": "all:environment|indoor|cave_01",
+                      "@layers": "Layer_04"
+                    },
+                    {
+                      "@type": "all:environment|indoor|cave_ocean",
+                      "@layers": "Layer_06"
+                    }
+                  ]
+                }
+              },
               {
                 "@size": "1 1",
                 "@pathsize": "1",
@@ -10401,7 +10942,7 @@
                 "@pathsize": "1",
                 "@factionsubset": "castle",
                 "@environment": "indoor|outdoor",
-                "@flags": "halloween|halloween_solo|legacy_group|legacy_solo",
+                "@flags": "bosslair_solo|bosslair_veteran|halloween|halloween_solo|legacy_group|legacy_solo",
                 "@pathdata": "BA==",
                 "template": {
                   "@name": "UND_MULTIFLAG_EXIT",
@@ -10500,7 +11041,7 @@
               "@pathsize": "0",
               "@factionsubset": "castle",
               "@environment": "indoor|outdoor",
-              "@flags": "halloween|halloween_solo|legacy_group|legacy_solo|solo|veteran",
+              "@flags": "bosslair_solo|bosslair_veteran|halloween|halloween_solo|legacy_group|legacy_solo|solo|veteran",
               "template": {
                 "@name": "UND_DEFAULT_BACKDROP_01",
                 "layercontrol": [
@@ -10544,21 +11085,7 @@
                 "@pathsize": "0",
                 "@factionsubset": "castle",
                 "@environment": "indoor",
-                "@flags": "halloween|halloween_solo",
-                "template": {
-                  "@name": "UND_CASTLE_MASTER_HALLOWEEN_01",
-                  "layercontrol": {
-                    "@type": "all:environment|indoor|cave_01",
-                    "@layers": "Layer_01"
-                  }
-                }
-              },
-              {
-                "@size": "0 0",
-                "@pathsize": "0",
-                "@factionsubset": "castle",
-                "@environment": "indoor",
-                "@flags": "solo|veteran",
+                "@flags": "bosslair_solo|bosslair_veteran|solo|veteran",
                 "template": {
                   "@name": "UND_CASTLE_MASTER_01",
                   "layercontrol": [
@@ -10591,6 +11118,20 @@
                       "@layers": "Layer_07"
                     }
                   ]
+                }
+              },
+              {
+                "@size": "0 0",
+                "@pathsize": "0",
+                "@factionsubset": "castle",
+                "@environment": "indoor",
+                "@flags": "halloween|halloween_solo",
+                "template": {
+                  "@name": "UND_CASTLE_MASTER_HALLOWEEN_01",
+                  "layercontrol": {
+                    "@type": "all:environment|indoor|cave_01",
+                    "@layers": "Layer_01"
+                  }
                 }
               },
               {
