@@ -8310,6 +8310,18 @@
     <OnCastFinished name="Play_mob_morgana_crossbow_jump" />
   </WwiseEventInfo>
 
+  <WwiseEventInfo name="MORGANA_CROSSBOW_CAST_RAPIDSHOT">
+	<OnCastStart name="Play_arrow_cast_swoosh_big" />
+	<OnCastFinished name="Play_mob_morgana_crossbow_rapidfire_shoot" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="MORGANA_CROSSBOW_CAST_CALTROPS">
+	<OnCastStart name="Play_arrow_load_short" />
+	<OnCastCanceled name="Stop_arrow_load_short" />
+	<OnCastInterrupted name="Stop_arrow_load_short"/>
+	<OnCastFinished name="Play_arrow_cast_small"/>
+  </WwiseEventInfo>
+
   <WwiseEventInfo name="SPELL_MORGANA_FANG_DASH">
     <OnCastStart name="Play_mob_morgana_fang_dash_vo"/>
     <OnCastInterrupted name="Stop_mob_morgana_fang_dash_vo" />
@@ -8407,8 +8419,24 @@
   </WwiseEventInfo>
 
   <WwiseEventInfo name="MORGANA_SOLDIER_STRIKE">
-    <OnCastStart name="Play_melee_swoosh_medium" />
+    <OnCastStart name="Play_mob_morgana_soldier_strike" />
+	<OnCastInterrupted name="Stop_mob_morgana_soldier_strike" />
+	<OnCastCanceled name="Stop_mob_morgana_soldier_strike" />
     <OnCastFinished name="Play_mob_morgana_soldier_flagellate" />
+  </WwiseEventInfo>
+	
+  <WwiseEventInfo name="MORGANA_SOLDIER_WHIRLWIND_CAST_LOAD">
+	<OnCastStart name="Play_mob_morgana_soldier_load_whirlwind" />
+	<OnCastCanceled name="Stop_mob_morgana_soldier_load_whirlwind" />
+	<OnCastInterrupted name="Stop_mob_morgana_soldier_load_whirlwind"/>
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="MORGANA_SOLDIER_WHIRLWIND_CHANNEL">
+	<OnChannelingStart name="Play_mob_morgana_soldier_whirlwind_loop" />
+	<OnChannelingCancelled name="Stop_mob_morgana_soldier_whirlwind_loop" />
+	<OnChannelingEnd name="Stop_mob_morgana_soldier_whirlwind_loop"/>
+	<OnChannelingInterrupted name="Stop_mob_morgana_soldier_whirlwind_loop" />
+	<OnSpellHit name="Play_cursed_impact_small_cut" />
   </WwiseEventInfo>
 
   <WwiseEventInfo name="MORGANA_TRAP_CAST">
@@ -8421,6 +8449,12 @@
     <OnCastInterrupted name="Stop_mob_morgana_soldier_stab"/>
   </WwiseEventInfo>
 
+  <WwiseEventInfo name="MORGANA_SOLDIER_CAST_RAVEN">
+	<OnCastStart name="Play_mob_morgana_soldier_raven" />
+	<OnCastCanceled name="Stop_mob_morgana_soldier_raven" />
+	<OnCastInterrupted name="Stop_mob_morgana_soldier_raven"/>
+  </WwiseEventInfo>
+	
   <WwiseEventInfo name="MORGANA_SOLDIER_DEMONIC_FOCUS_CHANNEL">
     <OnChannelingStart name="Play_demonic_circle_loop" />
     <OnChannelingCancelled name="Stop_demonic_circle_loop" />
@@ -8475,7 +8509,14 @@
   <WwiseEventInfo name="SPELL_THROW_DAGGER_MOB" >
     <OnCastFinished name="Play_throw_spear" />
   </WwiseEventInfo>
-  
+
+  <WwiseEventInfo name="SPELL_MORGANA_THROW_SPEAR" >
+	<OnCastStart name="Play_melee_load_medium_energetic" />
+	<OnCastCanceled name="Stop_melee_load_medium_energetic" />
+	<OnCastInterrupted name="Stop_melee_load_medium_energetic" />
+	<OnCastFinished name="Play_spear_lunging_strike" />
+  </WwiseEventInfo>
+	
   <!-- Demon-->
 
   <WwiseEventInfo name="DEMON_HELLGATE_MOBDESPAWN" >
@@ -8636,7 +8677,8 @@
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_DEMON_SENTINEL_PUNCH">
-	<OnCastFinished name="Play_mob_demon_sentinel_punch_attack" />   
+	<OnCastFinished name="Play_mob_demon_sentinel_punch_attack" />
+	<OnSpellHit name="Play_self_knockback" />
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_DEMON_SENTINEL_PUNCH_IMPACT">
@@ -8682,6 +8724,13 @@
   
   <WwiseEventInfo name="SPELL_UNDEAD_FIRE_BUFF">
     <OnCastFinished name="Play_undead_stomp" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_UNDEAD_FIRE_BUFF_CASTLOAD">
+	<OnCastStart name="Play_undead_cast_load_burnarea" />
+	<OnCastInterrupted name="Stop_undead_cast_load_burnarea" />
+	<OnCastCanceled name="Stop_undead_cast_load_burnarea" />
+	<OnCastFinished name="Play_undead_stomp" />
   </WwiseEventInfo>
   
   <WwiseEventInfo name="SPELL_UNDEAD_HAND_CAST">
@@ -8891,7 +8940,10 @@
     <OnCastStart name="Play_undead_mageboss_summon" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_UNDEAD_MAGEBOSS_FREEZE">
-    <OnCastStart name="Play_undead_mageboss_freeze" />
+    <OnCastStart name="Play_undead_mageboss_freeze_load" />
+	<OnCastCanceled name="Stop_undead_mageboss_freeze_load" />
+	<OnCastInterrupted name="Stop_undead_mageboss_freeze_load" />
+	<OnCastFinished name="Play_undead_mageboss_freeze" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_UNDEAD_MAGEBOSS_AOE">
     <OnCastStart name="Play_undead_mageboss_aoe_frost" />

@@ -1,7 +1,7 @@
 <templatemetadata>
   <faction name="Keeper">
     <type name="Basic">
-      <info size="1 1" pathsize="1" factionsubset="tribe" environment="indoor" flags="legacy_group|legacy_solo" pathdata="Aw==">
+      <info size="1 1" pathsize="1" factionsubset="tribe" environment="indoor" flags="bosslair_solo|bosslair_veteran|legacy_group|legacy_solo" pathdata="Aw==">
         <template name="KPR_MULTIFLAG_BASIC_CORNER">
           <weightedlayerblock name="shrine_solo" flag="solo">
             <layer id="Layer_11" weight="2" />
@@ -22,7 +22,7 @@
           <layercontrol type="veteran:encounter|standard" layers="Layer_03,Layer_04" />
         </template>
       </info>
-      <info size="1 1" pathsize="1" factionsubset="tribe" environment="indoor" flags="legacy_group|legacy_solo" pathdata="BQ==">
+      <info size="1 1" pathsize="1" factionsubset="tribe" environment="indoor" flags="bosslair_solo|bosslair_veteran|legacy_group|legacy_solo" pathdata="BQ==">
         <template name="KPR_MULTIFLAG_BASIC_STRAIGHT">
           <weightedlayerblock name="shrine" flag="solo">
             <layer id="Layer_15" weight="2" />
@@ -636,6 +636,16 @@
           <layercontrol type="veteran:encounter|hard" layers="Layer_02,Layer_03" />
         </template>
       </info>
+      <info size="3 3" pathsize="2" factionsubset="tribe" environment="indoor|outdoor" flags="bosslair_solo|bosslair_veteran" endbosshighlight="true" pathdata="AAUAAAQAAAAA">
+        <template name="KPR_BOSSLAIR_BOSS_UNCOMMON_01">
+          <layercontrol type="all:environment|indoor|cave_01" layers="Layer_04" />
+          <layercontrol type="all:environment|indoor|cave_ocean" layers="Layer_06" />
+          <layercontrol type="bosslair_solo" layers="Layer_11" />
+          <layercontrol type="bosslair_solo:encounter|hard" layers="Layer_09" />
+          <layercontrol type="bosslair_veteran" layers="Layer_10" />
+          <layercontrol type="bosslair_veteran:encounter|hard" layers="Layer_01" />
+        </template>
+      </info>
       <info size="3 3" pathsize="2" factionsubset="tribe" environment="indoor|outdoor" flags="solo|veteran" endbosshighlight="true" pathdata="AAUAAAQAAAAA">
         <template name="KPR_TRIBE_BOSS_UNCOMMON_END_CaveVillage_01">
           <layercontrol type="all:environment|indoor|cave_01" layers="Layer_09" />
@@ -782,6 +792,16 @@
           <layercontrol type="veteran:encounter|hard" layers="Layer_03,Layer_11" />
         </template>
       </info>
+      <info size="3 3" pathsize="2" factionsubset="tribe" environment="indoor|outdoor" flags="bosslair_solo|bosslair_veteran" endbosshighlight="true" pathdata="AAUAAAQAAAAA">
+        <template name="KPR_BOSSLAIR_BOSS_RARE_01">
+          <layercontrol type="all:environment|indoor|cave_01" layers="Layer_04" />
+          <layercontrol type="all:environment|indoor|cave_ocean" layers="Layer_06" />
+          <layercontrol type="bosslair_solo" layers="Layer_11" />
+          <layercontrol type="bosslair_solo:encounter|hard" layers="Layer_09" />
+          <layercontrol type="bosslair_veteran" layers="Layer_10" />
+          <layercontrol type="bosslair_veteran:encounter|hard" layers="Layer_01" />
+        </template>
+      </info>
       <info size="3 3" pathsize="1" factionsubset="tribe" environment="indoor|outdoor" flags="solo|veteran" endbosshighlight="true" pathdata="AAUAAAAAAAAA">
         <template name="KPR_TRIBE_BOSS_RARE_END_AvaRuin_01">
           <layercontrol type="all:environment|indoor|cave_01" layers="Layer_09" />
@@ -850,8 +870,24 @@
           <layercontrol type="veteran:encounter|hard" layers="Layer_02,Layer_03" />
         </template>
       </info>
+      <info size="3 3" pathsize="2" factionsubset="tribe" environment="indoor|outdoor" flags="bosslair_solo|bosslair_veteran" endbosshighlight="true" pathdata="AAUAAAQAAAAA">
+        <template name="KPR_BOSSLAIR_BOSS_LEGENDARY_01">
+          <layercontrol type="all:environment|indoor|cave_01" layers="Layer_04" />
+          <layercontrol type="all:environment|indoor|cave_ocean" layers="Layer_06" />
+          <layercontrol type="bosslair_solo" layers="Layer_11" />
+          <layercontrol type="bosslair_solo:encounter|hard" layers="Layer_09" />
+          <layercontrol type="bosslair_veteran" layers="Layer_10" />
+          <layercontrol type="bosslair_veteran:encounter|hard" layers="Layer_01" />
+        </template>
+      </info>
     </type>
     <type name="Start">
+      <info size="1 1" pathsize="1" factionsubset="tribe" environment="indoor|outdoor" flags="bosslair_solo|bosslair_veteran" templateusage="Enforce" dungeonlevelusage="First" pathdata="AQ==">
+        <template name="KPR_BOSSLAIR_START_01">
+          <layercontrol type="all:environment|indoor|cave_01" layers="Layer_04" />
+          <layercontrol type="all:environment|indoor|cave_ocean" layers="Layer_06" />
+        </template>
+      </info>
       <info size="1 1" pathsize="1" factionsubset="tribe" environment="indoor|outdoor" flags="solo" templateusage="Enforce" dungeonlevelusage="First" pathdata="AQ==">
         <template name="KPR_TRIBE_START_firstlevel_solo_01">
           <layercontrol type="all:environment|indoor|cave_01" layers="Layer_06" />
@@ -910,7 +946,7 @@
       </info>
     </type>
     <type name="Exit">
-      <info size="1 1" pathsize="1" factionsubset="tribe" environment="indoor" flags="legacy_group|legacy_solo" pathdata="BA==">
+      <info size="1 1" pathsize="1" factionsubset="tribe" environment="indoor" flags="bosslair_solo|bosslair_veteran|legacy_group|legacy_solo" pathdata="BA==">
         <template name="KPR_MULTIFLAG_EXIT">
           <layercontrol type="all:environment|indoor|cave_01" layers="Layer_07" />
           <layercontrol type="all:environment|indoor|cave_ocean" layers="Layer_09" />
@@ -946,7 +982,7 @@
       </info>
     </type>
     <type name="Backdrop">
-      <info size="1 1" pathsize="0" factionsubset="tribe" environment="indoor|outdoor" flags="legacy_group|legacy_solo|solo|veteran">
+      <info size="1 1" pathsize="0" factionsubset="tribe" environment="indoor|outdoor" flags="bosslair_solo|bosslair_veteran|legacy_group|legacy_solo|solo|veteran">
         <template name="KPR_DEFAULT_BACKDROP_01">
           <layercontrol type="all:environment|indoor|cave_01" layers="Layer_02" />
           <layercontrol type="all:environment|indoor|cave_ocean" layers="Layer_01" />
@@ -970,8 +1006,8 @@
           <layercontrol type="all:environment|outdoor|swamp" layers="Layer_07" />
         </template>
       </info>
-      <info size="10 10" pathsize="0" factionsubset="tribe" environment="indoor|outdoor" flags="solo|veteran">
-        <template name="EASTER_MASTER_01">
+      <info size="10 10" pathsize="0" factionsubset="tribe" environment="indoor|outdoor" flags="bosslair_solo|bosslair_veteran|solo|veteran">
+        <template name="KPR_TRIBE_MASTER_01">
           <layercontrol type="all:environment|indoor|cave_01" layers="Layer_01" />
           <layercontrol type="all:environment|indoor|cave_ocean" layers="Layer_02" />
           <layercontrol type="all:environment|outdoor|forest" layers="Layer_03" />
@@ -980,7 +1016,9 @@
           <layercontrol type="all:environment|outdoor|steppe" layers="Layer_06" />
           <layercontrol type="all:environment|outdoor|swamp" layers="Layer_07" />
         </template>
-        <template name="KPR_TRIBE_MASTER_01">
+      </info>
+      <info size="10 10" pathsize="0" factionsubset="tribe" environment="indoor|outdoor" flags="solo|veteran">
+        <template name="EASTER_MASTER_01">
           <layercontrol type="all:environment|indoor|cave_01" layers="Layer_01" />
           <layercontrol type="all:environment|indoor|cave_ocean" layers="Layer_02" />
           <layercontrol type="all:environment|outdoor|forest" layers="Layer_03" />
@@ -994,6 +1032,32 @@
   </faction>
   <faction name="Morgana">
     <type name="Basic">
+      <info size="1 1" pathsize="1" factionsubset="monastery" environment="indoor" flags="bosslair_solo|bosslair_veteran" pathdata="BQ==">
+        <template name="MOR_MULTIFLAG_BASIC_STRAIGHT">
+          <weightedlayerblock name="shrine" flag="solo">
+            <layer id="Layer_15" weight="2" />
+            <layer id="Layer_21" weight="8" />
+          </weightedlayerblock>
+          <layercontrol type="all:environment|indoor|cave_01" layers="Layer_09" />
+          <layercontrol type="all:environment|indoor|cave_ocean" layers="Layer_11" />
+          <layercontrol type="all:environment|outdoor|forest" layers="Layer_04" />
+          <layercontrol type="solo:encounter|hard" layers="Layer_20" />
+          <layercontrol type="veteran:encounter|hard" layers="Layer_23" />
+        </template>
+      </info>
+      <info size="1 1" pathsize="1" factionsubset="monastery" environment="indoor|outdoor" flags="bosslair_solo|bosslair_veteran" pathdata="Aw==">
+        <template name="MOR_MULTIFLAG_BASIC_CORNER">
+          <weightedlayerblock name="shrine_solo" flag="solo">
+            <layer id="Layer_11" weight="2" />
+            <layer id="Layer_16" weight="8" />
+          </weightedlayerblock>
+          <layercontrol type="all:environment|indoor|cave_01" layers="Layer_10" />
+          <layercontrol type="all:environment|indoor|cave_ocean" layers="Layer_12" />
+          <layercontrol type="all:environment|outdoor|forest" layers="Layer_09" />
+          <layercontrol type="solo:encounter|hard" layers="Layer_06" />
+          <layercontrol type="veteran:encounter|hard" layers="Layer_07" />
+        </template>
+      </info>
       <info size="1 1" pathsize="1" factionsubset="monastery" environment="indoor|outdoor" flags="solo|veteran" pathdata="Aw==">
         <template name="MOR_MON_BASIC_CORNER_large_01">
           <weightedlayerblock name="shrine" flag="solo">
@@ -1614,6 +1678,16 @@
           <layercontrol type="veteran" layers="Layer_04" />
         </template>
       </info>
+      <info size="3 2" pathsize="1" factionsubset="monastery" environment="indoor|outdoor" flags="bosslair_solo|bosslair_veteran" endbosshighlight="true" pathdata="AAUAAAAA">
+        <template name="MOR_BOSSLAIR_BOSS_UNCOMMON_01">
+          <layercontrol type="all:environment|indoor|cave_01" layers="Layer_04" />
+          <layercontrol type="all:environment|indoor|cave_ocean" layers="Layer_06" />
+          <layercontrol type="bosslair_solo" layers="Layer_11" />
+          <layercontrol type="bosslair_solo:encounter|hard" layers="Layer_09" />
+          <layercontrol type="bosslair_veteran" layers="Layer_10" />
+          <layercontrol type="bosslair_veteran:encounter|hard" layers="Layer_01" />
+        </template>
+      </info>
       <info size="3 3" pathsize="2" factionsubset="monastery" environment="indoor|outdoor" flags="solo|veteran" category="fame" endbosshighlight="true" pathdata="AAUAAAUAAAAA">
         <template name="MOR_MON_BOSS_UNCOMMON_END_GardenCourt_01">
           <layercontrol type="all:environment|indoor|cave_01" layers="Layer_08" />
@@ -1737,6 +1811,16 @@
           <layercontrol type="veteran:encounter|hard" layers="Layer_03,Layer_13" />
         </template>
       </info>
+      <info size="3 2" pathsize="1" factionsubset="monastery" environment="indoor|outdoor" flags="bosslair_solo|bosslair_veteran" endbosshighlight="true" pathdata="AAUAAAAA">
+        <template name="MOR_BOSSLAIR_BOSS_RARE_01">
+          <layercontrol type="all:environment|indoor|cave_01" layers="Layer_04" />
+          <layercontrol type="all:environment|indoor|cave_ocean" layers="Layer_06" />
+          <layercontrol type="bosslair_solo" layers="Layer_11" />
+          <layercontrol type="bosslair_solo:encounter|hard" layers="Layer_09" />
+          <layercontrol type="bosslair_veteran" layers="Layer_10" />
+          <layercontrol type="bosslair_veteran:encounter|hard" layers="Layer_01" />
+        </template>
+      </info>
       <info size="3 2" pathsize="3" factionsubset="monastery" environment="indoor|outdoor" flags="solo|veteran" category="statue" pathdata="AAINAAAF">
         <template name="MOR_MON_HIGH_RARE_STRAIGHT_Anniversary_01">
           <layercontrol type="all:environment|indoor|cave_01" layers="Layer_08" />
@@ -1821,8 +1905,24 @@
           <layercontrol type="veteran:encounter|hard" layers="Layer_03,Layer_13" />
         </template>
       </info>
+      <info size="3 2" pathsize="1" factionsubset="monastery" environment="indoor|outdoor" flags="bosslair_solo|bosslair_veteran" endbosshighlight="true" pathdata="AAUAAAAA">
+        <template name="MOR_BOSSLAIR_BOSS_LEGENDARY_01">
+          <layercontrol type="all:environment|indoor|cave_01" layers="Layer_04" />
+          <layercontrol type="all:environment|indoor|cave_ocean" layers="Layer_06" />
+          <layercontrol type="bosslair_solo" layers="Layer_11" />
+          <layercontrol type="bosslair_solo:encounter|hard" layers="Layer_09" />
+          <layercontrol type="bosslair_veteran" layers="Layer_10" />
+          <layercontrol type="bosslair_veteran:encounter|hard" layers="Layer_01" />
+        </template>
+      </info>
     </type>
     <type name="Start">
+      <info size="1 1" pathsize="1" factionsubset="monastery" environment="indoor|outdoor" flags="bosslair_solo|bosslair_veteran" templateusage="Enforce" dungeonlevelusage="First" pathdata="AQ==">
+        <template name="MOR_BOSSLAIR_START_01">
+          <layercontrol type="all:environment|indoor|cave_01" layers="Layer_04" />
+          <layercontrol type="all:environment|indoor|cave_ocean" layers="Layer_06" />
+        </template>
+      </info>
       <info size="1 1" pathsize="1" factionsubset="monastery" environment="indoor|outdoor" flags="solo" templateusage="Enforce" dungeonlevelusage="First" pathdata="AQ==">
         <template name="MOR_MON_START_FirstLevel_Solo_01">
           <layercontrol type="all:environment|indoor|cave_01" layers="Layer_04" />
@@ -1858,6 +1958,14 @@
       </info>
     </type>
     <type name="Exit">
+      <info size="1 1" pathsize="1" factionsubset="monastery" environment="indoor|outdoor" flags="bosslair_solo|bosslair_veteran" pathdata="BA==">
+        <template name="MOR_MULTIFLAG_EXIT">
+          <layercontrol type="all:environment|indoor|cave_01" layers="Layer_07" />
+          <layercontrol type="all:environment|indoor|cave_ocean" layers="Layer_09" />
+          <layercontrol type="all:environment|outdoor|forest" layers="Layer_02" />
+          <layercontrol type="veteran:encounter|standard" layers="Layer_04" />
+        </template>
+      </info>
       <info size="1 1" pathsize="1" factionsubset="monastery" environment="indoor|outdoor" flags="solo|veteran" pathdata="BA==">
         <template name="MOR_MON_EXIT_StairDown_01">
           <layercontrol type="all:environment|indoor|cave_01" layers="Layer_07" />
@@ -1869,7 +1977,7 @@
       </info>
     </type>
     <type name="Backdrop">
-      <info size="1 1" pathsize="0" factionsubset="monastery" environment="indoor|outdoor" flags="solo|veteran">
+      <info size="1 1" pathsize="0" factionsubset="monastery" environment="indoor|outdoor" flags="bosslair_solo|bosslair_veteran|solo|veteran">
         <template name="MOR_DEFAULT_BACKDROP_01">
           <layercontrol type="all:environment|indoor|cave_01" layers="Layer_02" />
           <layercontrol type="all:environment|indoor|cave_ocean" layers="Layer_01" />
@@ -1878,7 +1986,7 @@
       </info>
     </type>
     <type name="Master">
-      <info size="0 0" pathsize="0" factionsubset="monastery" environment="indoor|outdoor" flags="solo|veteran">
+      <info size="0 0" pathsize="0" factionsubset="monastery" environment="indoor|outdoor" flags="bosslair_solo|bosslair_veteran|solo|veteran">
         <template name="MOR_MONASTERY_MASTER_01">
           <layercontrol type="all:environment|indoor|cave_01" layers="Layer_01" />
           <layercontrol type="all:environment|indoor|cave_ocean" layers="Layer_02" />
@@ -1893,6 +2001,19 @@
   </faction>
   <faction name="Undead">
     <type name="Basic">
+      <info size="1 1" pathsize="1" factionsubset="castle" environment="indoor" flags="bosslair_solo|bosslair_veteran|halloween|halloween_solo|legacy_group|legacy_solo" pathdata="BQ==">
+        <template name="UND_MULTIFLAG_BASIC_STRAIGHT">
+          <weightedlayerblock name="shrine" flag="solo">
+            <layer id="Layer_15" weight="2" />
+            <layer id="Layer_21" weight="8" />
+          </weightedlayerblock>
+          <layercontrol type="all:environment|indoor|cave_01" layers="Layer_09" />
+          <layercontrol type="all:environment|indoor|cave_ocean" layers="Layer_11" />
+          <layercontrol type="all:environment|outdoor|forest" layers="Layer_04" />
+          <layercontrol type="solo:encounter|hard" layers="Layer_20" />
+          <layercontrol type="veteran:encounter|hard" layers="Layer_23" />
+        </template>
+      </info>
       <info size="1 1" pathsize="1" factionsubset="castle" environment="indoor" flags="halloween|halloween_solo" pathdata="BQ==">
         <template name="UND_HALLOWEEN_BASIC_STRAIGHT_01">
           <weightedlayerblock name="shrine" flag="solo">
@@ -1910,17 +2031,17 @@
           <layercontrol type="veteran:encounter|hard" layers="Layer_23" />
         </template>
       </info>
-      <info size="1 1" pathsize="1" factionsubset="castle" environment="indoor" flags="halloween|halloween_solo|legacy_group|legacy_solo" pathdata="BQ==">
-        <template name="UND_MULTIFLAG_BASIC_STRAIGHT">
-          <weightedlayerblock name="shrine" flag="solo">
-            <layer id="Layer_15" weight="2" />
-            <layer id="Layer_21" weight="8" />
+      <info size="1 1" pathsize="1" factionsubset="castle" environment="indoor|outdoor" flags="bosslair_solo|bosslair_veteran|halloween|halloween_solo|legacy_group|legacy_solo" pathdata="Aw==">
+        <template name="UND_MULTIFLAG_BASIC_CORNER">
+          <weightedlayerblock name="shrine_solo" flag="solo">
+            <layer id="Layer_11" weight="2" />
+            <layer id="Layer_16" weight="8" />
           </weightedlayerblock>
-          <layercontrol type="all:environment|indoor|cave_01" layers="Layer_09" />
-          <layercontrol type="all:environment|indoor|cave_ocean" layers="Layer_11" />
-          <layercontrol type="all:environment|outdoor|forest" layers="Layer_04" />
-          <layercontrol type="solo:encounter|hard" layers="Layer_20" />
-          <layercontrol type="veteran:encounter|hard" layers="Layer_23" />
+          <layercontrol type="all:environment|indoor|cave_01" layers="Layer_10" />
+          <layercontrol type="all:environment|indoor|cave_ocean" layers="Layer_12" />
+          <layercontrol type="all:environment|outdoor|forest" layers="Layer_09" />
+          <layercontrol type="solo:encounter|hard" layers="Layer_06" />
+          <layercontrol type="veteran:encounter|hard" layers="Layer_07" />
         </template>
       </info>
       <info size="1 1" pathsize="1" factionsubset="castle" environment="indoor|outdoor" flags="halloween|halloween_solo" pathdata="Aw==">
@@ -1936,19 +2057,6 @@
           <layercontrol type="all:environment|outdoor|mountain" layers="Layer_08" />
           <layercontrol type="all:environment|outdoor|steppe" layers="Layer_13" />
           <layercontrol type="all:environment|outdoor|swamp" layers="Layer_14" />
-          <layercontrol type="solo:encounter|hard" layers="Layer_06" />
-          <layercontrol type="veteran:encounter|hard" layers="Layer_07" />
-        </template>
-      </info>
-      <info size="1 1" pathsize="1" factionsubset="castle" environment="indoor|outdoor" flags="halloween|halloween_solo|legacy_group|legacy_solo" pathdata="Aw==">
-        <template name="UND_MULTIFLAG_BASIC_CORNER">
-          <weightedlayerblock name="shrine_solo" flag="solo">
-            <layer id="Layer_11" weight="2" />
-            <layer id="Layer_16" weight="8" />
-          </weightedlayerblock>
-          <layercontrol type="all:environment|indoor|cave_01" layers="Layer_10" />
-          <layercontrol type="all:environment|indoor|cave_ocean" layers="Layer_12" />
-          <layercontrol type="all:environment|outdoor|forest" layers="Layer_09" />
           <layercontrol type="solo:encounter|hard" layers="Layer_06" />
           <layercontrol type="veteran:encounter|hard" layers="Layer_07" />
         </template>
@@ -2514,6 +2622,16 @@
           <layercontrol type="veteran:encounter|hard" layers="Layer_04,Layer_13" />
         </template>
       </info>
+      <info size="3 2" pathsize="1" factionsubset="castle" environment="indoor|outdoor" flags="bosslair_solo|bosslair_veteran" endbosshighlight="true" pathdata="AAUAAAAA">
+        <template name="UND_BOSSLAIR_BOSS_UNCOMMON_01">
+          <layercontrol type="all:environment|indoor|cave_01" layers="Layer_04" />
+          <layercontrol type="all:environment|indoor|cave_ocean" layers="Layer_06" />
+          <layercontrol type="bosslair_solo" layers="Layer_11" />
+          <layercontrol type="bosslair_solo:encounter|hard" layers="Layer_09" />
+          <layercontrol type="bosslair_veteran" layers="Layer_10" />
+          <layercontrol type="bosslair_veteran:encounter|hard" layers="Layer_01" />
+        </template>
+      </info>
       <info size="3 2" pathsize="1" factionsubset="castle" environment="indoor|outdoor" flags="solo|veteran" endbosshighlight="true" pathdata="AAUAAAAA">
         <template name="UND_CASTLE_BOSS_UNCOMMON_END_ArcaneTower">
           <layercontrol type="all:environment|indoor|cave_01" layers="Layer_04" />
@@ -2625,6 +2743,16 @@
           <layercontrol type="veteran:encounter|hard" layers="Layer_11,Layer_15" />
         </template>
       </info>
+      <info size="3 2" pathsize="1" factionsubset="castle" environment="indoor|outdoor" flags="bosslair_solo|bosslair_veteran" endbosshighlight="true" pathdata="AAUAAAAA">
+        <template name="UND_BOSSLAIR_BOSS_RARE_01">
+          <layercontrol type="all:environment|indoor|cave_01" layers="Layer_04" />
+          <layercontrol type="all:environment|indoor|cave_ocean" layers="Layer_06" />
+          <layercontrol type="bosslair_solo" layers="Layer_11" />
+          <layercontrol type="bosslair_solo:encounter|hard" layers="Layer_09" />
+          <layercontrol type="bosslair_veteran" layers="Layer_10" />
+          <layercontrol type="bosslair_veteran:encounter|hard" layers="Layer_01" />
+        </template>
+      </info>
       <info size="3 2" pathsize="2" factionsubset="castle" environment="indoor|outdoor" flags="solo|veteran" endbosshighlight="true" pathdata="AAUAAAQA">
         <template name="UND_CASTLE_BOSS_RARE_END_HallOfLords_01">
           <layercontrol type="all:environment|indoor|cave_01" layers="Layer_04" />
@@ -2709,6 +2837,16 @@
           <layercontrol type="veteran:encounter|hard" layers="Layer_03,Layer_11" />
         </template>
       </info>
+      <info size="3 2" pathsize="1" factionsubset="castle" environment="indoor|outdoor" flags="bosslair_solo|bosslair_veteran" endbosshighlight="true" pathdata="AAUAAAAA">
+        <template name="UND_BOSSLAIR_BOSS_LEGENDARY_01">
+          <layercontrol type="all:environment|indoor|cave_01" layers="Layer_04" />
+          <layercontrol type="all:environment|indoor|cave_ocean" layers="Layer_06" />
+          <layercontrol type="bosslair_solo" layers="Layer_11" />
+          <layercontrol type="bosslair_solo:encounter|hard" layers="Layer_09" />
+          <layercontrol type="bosslair_veteran" layers="Layer_10" />
+          <layercontrol type="bosslair_veteran:encounter|hard" layers="Layer_01" />
+        </template>
+      </info>
       <info size="3 3" pathsize="2" factionsubset="castle" environment="indoor|outdoor" flags="solo|veteran" endbosshighlight="true" pathdata="AAUAAAQAAAAA">
         <template name="UND_CASTLE_BOSS_LEGEND_END_ElderHalls_01">
           <layercontrol type="all:environment|indoor|cave_01" layers="Layer_04" />
@@ -2722,6 +2860,12 @@
       </info>
     </type>
     <type name="Start">
+      <info size="1 1" pathsize="1" factionsubset="castle" environment="indoor|outdoor" flags="bosslair_solo|bosslair_veteran" templateusage="Enforce" dungeonlevelusage="First" pathdata="AQ==">
+        <template name="UND_BOSSLAIR_START_01">
+          <layercontrol type="all:environment|indoor|cave_01" layers="Layer_04" />
+          <layercontrol type="all:environment|indoor|cave_ocean" layers="Layer_06" />
+        </template>
+      </info>
       <info size="1 1" pathsize="1" factionsubset="castle" environment="indoor|outdoor" flags="solo" templateusage="Enforce" dungeonlevelusage="First" pathdata="AQ==">
         <template name="UND_CASTLE_START_FirstLevel_Solo_01">
           <layercontrol type="all:environment|indoor|cave_01" layers="Layer_12" />
@@ -2781,7 +2925,7 @@
       </info>
     </type>
     <type name="Exit">
-      <info size="1 1" pathsize="1" factionsubset="castle" environment="indoor|outdoor" flags="halloween|halloween_solo|legacy_group|legacy_solo" pathdata="BA==">
+      <info size="1 1" pathsize="1" factionsubset="castle" environment="indoor|outdoor" flags="bosslair_solo|bosslair_veteran|halloween|halloween_solo|legacy_group|legacy_solo" pathdata="BA==">
         <template name="UND_MULTIFLAG_EXIT">
           <layercontrol type="all:environment|indoor|cave_01" layers="Layer_07" />
           <layercontrol type="all:environment|indoor|cave_ocean" layers="Layer_09" />
@@ -2809,7 +2953,7 @@
       </info>
     </type>
     <type name="Backdrop">
-      <info size="1 1" pathsize="0" factionsubset="castle" environment="indoor|outdoor" flags="halloween|halloween_solo|legacy_group|legacy_solo|solo|veteran">
+      <info size="1 1" pathsize="0" factionsubset="castle" environment="indoor|outdoor" flags="bosslair_solo|bosslair_veteran|halloween|halloween_solo|legacy_group|legacy_solo|solo|veteran">
         <template name="UND_DEFAULT_BACKDROP_01">
           <layercontrol type="all:environment|indoor|cave_01" layers="Layer_02" />
           <layercontrol type="all:environment|indoor|cave_ocean" layers="Layer_01" />
@@ -2822,12 +2966,7 @@
       </info>
     </type>
     <type name="Master">
-      <info size="0 0" pathsize="0" factionsubset="castle" environment="indoor" flags="halloween|halloween_solo">
-        <template name="UND_CASTLE_MASTER_HALLOWEEN_01">
-          <layercontrol type="all:environment|indoor|cave_01" layers="Layer_01" />
-        </template>
-      </info>
-      <info size="0 0" pathsize="0" factionsubset="castle" environment="indoor" flags="solo|veteran">
+      <info size="0 0" pathsize="0" factionsubset="castle" environment="indoor" flags="bosslair_solo|bosslair_veteran|solo|veteran">
         <template name="UND_CASTLE_MASTER_01">
           <layercontrol type="all:environment|indoor|cave_01" layers="Layer_01" />
           <layercontrol type="all:environment|indoor|cave_ocean" layers="Layer_02" />
@@ -2836,6 +2975,11 @@
           <layercontrol type="all:environment|outdoor|mountain" layers="Layer_05" />
           <layercontrol type="all:environment|outdoor|steppe" layers="Layer_06" />
           <layercontrol type="all:environment|outdoor|swamp" layers="Layer_07" />
+        </template>
+      </info>
+      <info size="0 0" pathsize="0" factionsubset="castle" environment="indoor" flags="halloween|halloween_solo">
+        <template name="UND_CASTLE_MASTER_HALLOWEEN_01">
+          <layercontrol type="all:environment|indoor|cave_01" layers="Layer_01" />
         </template>
       </info>
       <info size="10 10" pathsize="0" factionsubset="castle" environment="indoor" flags="legacy_group|legacy_solo">

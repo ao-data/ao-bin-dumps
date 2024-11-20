@@ -13193,7 +13193,7 @@
 					<haveislandfeatures islandtype="any" buildingnamepart="FARMHOUSE" />
 				</achievement>
 				<achievement name="SA_FARMING_FAME_01" steamachievementname="SA_FARMING_FAME_01" googleplayid="CgkI-YfN27AEEAIQSA" absoluteprogressmax="1" difficultyrating="339" symbol="NONE" rewarditem="T3_SKILLBOOK_NONTRADABLE" rewardamount="1">
-					<havefame action="farming" value="1" />
+					<havefame action="farming_crops" value="1" />
 				</achievement>
 				<achievement name="JOURNAL_ISLAND_FARMING_CROP_TYPE_01" absoluteprogressmax="70" difficultyrating="404" symbol="NONE" rewarditem="T3_FOCUSPOTION_NONTRADABLE" rewardamount="1">
 					<farmharvest itemid="T3_WHEAT" count="70" />
@@ -13202,13 +13202,13 @@
 					<watercrop count="20" />
 				</achievement>
 				<achievement name="JOURNAL_ISLAND_FARMING_FAME_02" absoluteprogressmax="5000" difficultyrating="556" symbol="FAME" rewarditem="T4_SKILLBOOK_GATHER_FIBER_NONTRADABLE" rewardamount="1">
-					<havefame action="farming" value="5000" />
+					<havefame action="farming_crops" value="5000" />
 				</achievement>
 				<achievement name="JOURNAL_ISLAND_FARMING_CROP_TYPE_02" absoluteprogressmax="140" difficultyrating="557" symbol="NONE" rewarditem="T3_FOCUSPOTION_NONTRADABLE" rewardamount="1">
 					<farmharvest itemid="T5_CABBAGE" count="140" />
 				</achievement>
 				<achievement name="JOURNAL_ISLAND_FARMING_FAME_03" absoluteprogressmax="12000" difficultyrating="1016" symbol="FAME" rewarditem="T4_FOCUSPOTION_NONTRADABLE" rewardamount="1">
-					<havefame action="farming" value="12000" />
+					<havefame action="farming_crops" value="12000" />
 				</achievement>
 				<achievement name="JOURNAL_ISLAND_FARMING_HERBGARDEN_01" absoluteprogressmax="1" difficultyrating="1018" symbol="NONE" rewarditem="T3_SKILLBOOK_NONTRADABLE" rewardamount="1">
 					<haveislandfeatures islandtype="any" buildingnamepart="HERBGARDEN" />
@@ -13319,10 +13319,10 @@
           </farmharvest>
         </achievement>
 				<achievement name="SA_FARMING_FAME_02" steamachievementname="SA_FARMING_FAME_02" steamstatname="SA_ST_FARMING_FAME_02" googleplayid="CgkI-YfN27AEEAIQaQ" googleplaymaxsteps="100" absoluteprogressmax="100000" difficultyrating="5362" symbol="FAME" rewarditem="T6_SKILLBOOK_NONTRADABLE" rewardamount="1">
-					<havefame action="farming" value="100000" />
+					<havefame action="farming_crops" value="100000" />
 				</achievement>
 				<achievement name="JOURNAL_ISLAND_FARMING_FAME_06" absoluteprogressmax="300000" difficultyrating="5363" symbol="FAME" rewarditem="T5_FOCUSPOTION_NONTRADABLE" rewardamount="1">
-					<havefame action="farming" value="300000" />
+					<havefame action="farming_crops" value="300000" />
 				</achievement>
 				<achievement name="JOURNAL_ISLAND_FARMING_CROP_TYPE_11" difficultyrating="5364" symbol="NONE" rewarditem="T6_FOCUSPOTION_NONTRADABLE" rewardamount="1" absoluteprogressmax="7500" showlist="showall">
 					<farmharvest itemid="T2_AGARIC" count="500" />
@@ -13342,10 +13342,10 @@
 					<farmharvest itemid="T8_PUMPKIN" count="500" />
 				</achievement>
 				<achievement name="SA_FARMING_FAME_03" steamachievementname="SA_FARMING_FAME_03" steamstatname="SA_ST_FARMING_FAME_03" googleplayid="CgkI-YfN27AEEAIQag" googleplaymaxsteps="1000" absoluteprogressmax="1000000" difficultyrating="5365" symbol="FAME" rewarditem="T8_SKILLBOOK_GATHER_FIBER_NONTRADABLE" rewardamount="1">
-					<havefame action="farming" value="1000000" />
+					<havefame action="farming_crops" value="1000000" />
 				</achievement>
 				<achievement name="JOURNAL_ISLAND_FARMING_FAME_08" absoluteprogressmax="3000000" difficultyrating="5366" symbol="FAME" rewarditem="T6_FOCUSPOTION_NONTRADABLE" rewardamount="1">
-					<havefame action="farming" value="3000000" />
+					<havefame action="farming_crops" value="3000000" />
 				</achievement>
         <achievement name="JOURNAL_ISLAND_FARMING_CROP_TYPE_12" absoluteprogressmax="1000" difficultyrating="5367" symbol="NONE" rewarditem="T4_LEARNINGPOINTS_NONTRADABLE" rewardamount="1">
           <farmharvest count="1000" clustertype="World">
@@ -13418,7 +13418,7 @@
 						<item id="T8_MEAT" />
 					</craftitem>
 				</achievement>
-				<achievement name="JOURNAL_ISLAND_ANIMALBREEDING_RAISE_ANIMALS_02" absoluteprogressmax="3" difficultyrating="1511" symbol="NONE" rewarditem="UNIQUE_TOKEN_COMMUNITY" rewardamount="10">
+				<achievement name="JOURNAL_ISLAND_ANIMALBREEDING_RAISE_ANIMALS_02" absoluteprogressmax="3" difficultyrating="1511" symbol="NONE" rewarditem="UNIQUE_TOKEN_COMMUNITY" rewardamount="10" showlist="showcompleted">
 					<farmraisedistinct count="3">
 						<item name="T3_FARM_CHICKEN_BABY" />
 						<item name="T3_FARM_HORSE_BABY" />
@@ -13439,8 +13439,8 @@
 						<item name="T5_FARM_RAM_FW_MARTLOCK_BABY" />
 						<item name="T5_FARM_SWAMPDRAGON_FW_THETFORD_BABY" />
 						<item name="T6_FARM_DIREWOLF_BABY" />
-						<item name="T6_FARM_GIANTSTAG_BABY" />
-						<item name="T6_FARM_GIANTSTAG_MOOSE_BABY" />
+            <!-- <item name="T6_FARM_GIANTSTAG_BABY" /> Is not obtainable ingame -->
+            <item name="T6_FARM_GIANTSTAG_MOOSE_BABY" />
 						<item name="T6_FARM_HORSE_BABY" />
 						<item name="T6_FARM_OX_BABY" />
 						<item name="T6_FARM_SHEEP_BABY" />
@@ -13461,7 +13461,8 @@
 						<item name="T8_FARM_OWL_FW_BRECILIEN_BABY" />
 						<item name="T8_FARM_OX_BABY" />
 						<item name="T8_FARM_RABBIT_EASTER_BABY" />
-						<item name="T8_FARM_RAM_FW_MARTLOCK_BABY" />
+            <item name="T8_FARM_RABBIT_EASTER_BABY_DARK" />
+            <item name="T8_FARM_RAM_FW_MARTLOCK_BABY" />
 						<item name="T8_FARM_SWAMPDRAGON_FW_THETFORD_BABY" />
 					</farmraisedistinct>
 				</achievement>
@@ -13506,7 +13507,7 @@
             <item id="T8_MOUNT_RABBIT_EASTER_DARK" />
           </craftitem>
         </achievement>
-				<achievement name="JOURNAL_ISLAND_ANIMALBREEDING_RAISE_ANIMALS_03" absoluteprogressmax="6" difficultyrating="2030" symbol="NONE" rewarditem="T4_SKILLBOOK_GATHER_HIDE_NONTRADABLE" rewardamount="1">
+				<achievement name="JOURNAL_ISLAND_ANIMALBREEDING_RAISE_ANIMALS_03" absoluteprogressmax="6" difficultyrating="2030" symbol="NONE" rewarditem="T4_SKILLBOOK_GATHER_HIDE_NONTRADABLE" rewardamount="1" showlist="showcompleted">
 					<farmraisedistinct count="6">
 						<item name="T3_FARM_CHICKEN_BABY" />
 						<item name="T3_FARM_HORSE_BABY" />
@@ -13527,8 +13528,8 @@
 						<item name="T5_FARM_RAM_FW_MARTLOCK_BABY" />
 						<item name="T5_FARM_SWAMPDRAGON_FW_THETFORD_BABY" />
 						<item name="T6_FARM_DIREWOLF_BABY" />
-						<item name="T6_FARM_GIANTSTAG_BABY" />
-						<item name="T6_FARM_GIANTSTAG_MOOSE_BABY" />
+            <!-- <item name="T6_FARM_GIANTSTAG_BABY" /> Is not obtainable ingame -->
+            <item name="T6_FARM_GIANTSTAG_MOOSE_BABY" />
 						<item name="T6_FARM_HORSE_BABY" />
 						<item name="T6_FARM_OX_BABY" />
 						<item name="T6_FARM_SHEEP_BABY" />
@@ -13549,7 +13550,8 @@
 						<item name="T8_FARM_OWL_FW_BRECILIEN_BABY" />
 						<item name="T8_FARM_OX_BABY" />
 						<item name="T8_FARM_RABBIT_EASTER_BABY" />
-						<item name="T8_FARM_RAM_FW_MARTLOCK_BABY" />
+            <item name="T8_FARM_RABBIT_EASTER_BABY_DARK" />
+            <item name="T8_FARM_RAM_FW_MARTLOCK_BABY" />
 						<item name="T8_FARM_SWAMPDRAGON_FW_THETFORD_BABY" />
 					</farmraisedistinct>
 				</achievement>
@@ -13572,7 +13574,7 @@
 						<item name="T5_FARM_GREYWOLF_FW_CAERLEON_BABY" />
 					</farmraisedistinct>
 				</achievement>
-				<achievement name="JOURNAL_ISLAND_ANIMALBREEDING_RAISE_ANIMALS_05" absoluteprogressmax="10" difficultyrating="2402" symbol="NONE" rewarditem="T5_FOCUSPOTION_NONTRADABLE" rewardamount="1">
+				<achievement name="JOURNAL_ISLAND_ANIMALBREEDING_RAISE_ANIMALS_05" absoluteprogressmax="10" difficultyrating="2402" symbol="NONE" rewarditem="T5_FOCUSPOTION_NONTRADABLE" rewardamount="1" showlist="showcompleted">
 					<farmraisedistinct count="10">
 						<item name="T3_FARM_CHICKEN_BABY" />
 						<item name="T3_FARM_HORSE_BABY" />
@@ -13593,8 +13595,8 @@
 						<item name="T5_FARM_RAM_FW_MARTLOCK_BABY" />
 						<item name="T5_FARM_SWAMPDRAGON_FW_THETFORD_BABY" />
 						<item name="T6_FARM_DIREWOLF_BABY" />
-						<item name="T6_FARM_GIANTSTAG_BABY" />
-						<item name="T6_FARM_GIANTSTAG_MOOSE_BABY" />
+            <!-- <item name="T6_FARM_GIANTSTAG_BABY" /> Is not obtainable ingame -->
+            <item name="T6_FARM_GIANTSTAG_MOOSE_BABY" />
 						<item name="T6_FARM_HORSE_BABY" />
 						<item name="T6_FARM_OX_BABY" />
 						<item name="T6_FARM_SHEEP_BABY" />
@@ -13615,14 +13617,15 @@
 						<item name="T8_FARM_OWL_FW_BRECILIEN_BABY" />
 						<item name="T8_FARM_OX_BABY" />
 						<item name="T8_FARM_RABBIT_EASTER_BABY" />
-						<item name="T8_FARM_RAM_FW_MARTLOCK_BABY" />
+            <item name="T8_FARM_RABBIT_EASTER_BABY_DARK" />
+            <item name="T8_FARM_RAM_FW_MARTLOCK_BABY" />
 						<item name="T8_FARM_SWAMPDRAGON_FW_THETFORD_BABY" />
 					</farmraisedistinct>
 				</achievement>
         <achievement name="JOURNAL_ISLAND_ANIMALBREEDING_ANIMAL_REWARDS_02" difficultyrating="2616" symbol="NONE" rewarditem="T4_SKILLBOOK_NONTRADABLE" rewardamount="1" absoluteprogressmax="100">
           <farmproduct count="100" itemid="*MILK" />
         </achievement>
-				<achievement name="JOURNAL_ISLAND_ANIMALBREEDING_RAISE_ANIMALS_06" absoluteprogressmax="15" difficultyrating="2617" symbol="NONE" rewarditem="T6_FOCUSPOTION_NONTRADABLE" rewardamount="1">
+				<achievement name="JOURNAL_ISLAND_ANIMALBREEDING_RAISE_ANIMALS_06" absoluteprogressmax="15" difficultyrating="2617" symbol="NONE" rewarditem="T6_FOCUSPOTION_NONTRADABLE" rewardamount="1" showlist="showcompleted">
 					<farmraisedistinct count="15">
 						<item name="T3_FARM_CHICKEN_BABY" />
 						<item name="T3_FARM_HORSE_BABY" />
@@ -13643,8 +13646,8 @@
 						<item name="T5_FARM_RAM_FW_MARTLOCK_BABY" />
 						<item name="T5_FARM_SWAMPDRAGON_FW_THETFORD_BABY" />
 						<item name="T6_FARM_DIREWOLF_BABY" />
-						<item name="T6_FARM_GIANTSTAG_BABY" />
-						<item name="T6_FARM_GIANTSTAG_MOOSE_BABY" />
+            <!-- <item name="T6_FARM_GIANTSTAG_BABY" /> Is not obtainable ingame -->
+            <item name="T6_FARM_GIANTSTAG_MOOSE_BABY" />
 						<item name="T6_FARM_HORSE_BABY" />
 						<item name="T6_FARM_OX_BABY" />
 						<item name="T6_FARM_SHEEP_BABY" />
@@ -13665,7 +13668,8 @@
 						<item name="T8_FARM_OWL_FW_BRECILIEN_BABY" />
 						<item name="T8_FARM_OX_BABY" />
 						<item name="T8_FARM_RABBIT_EASTER_BABY" />
-						<item name="T8_FARM_RAM_FW_MARTLOCK_BABY" />
+            <item name="T8_FARM_RABBIT_EASTER_BABY_DARK" />
+            <item name="T8_FARM_RAM_FW_MARTLOCK_BABY" />
 						<item name="T8_FARM_SWAMPDRAGON_FW_THETFORD_BABY" />
 					</farmraisedistinct>
 				</achievement>
@@ -13675,7 +13679,7 @@
 						<!-- <item name="T8_FARM_DIREWOLF_BABY" /> Is not obtainable ingame -->
 					</farmraisedistinct>
 				</achievement>
-				<achievement name="JOURNAL_ISLAND_ANIMALBREEDING_COLLECT_OFFSPRING_01" difficultyrating="2619" symbol="NONE" rewarditem="T6_SKILLBOOK_GATHER_HIDE_NONTRADABLE" rewardamount="1" absoluteprogressmax="20">
+				<achievement name="JOURNAL_ISLAND_ANIMALBREEDING_COLLECT_OFFSPRING_01" difficultyrating="2619" symbol="NONE" rewarditem="T6_SKILLBOOK_GATHER_HIDE_NONTRADABLE" rewardamount="1" absoluteprogressmax="20" showlist="showcompleted">
 					<farmoffspringdistinct count="20">
 						<item name="T3_FARM_CHICKEN_BABY" />
 						<item name="T3_FARM_HORSE_BABY" />
@@ -13696,8 +13700,8 @@
 						<item name="T5_FARM_RAM_FW_MARTLOCK_BABY" />
 						<item name="T5_FARM_SWAMPDRAGON_FW_THETFORD_BABY" />
 						<item name="T6_FARM_DIREWOLF_BABY" />
-						<item name="T6_FARM_GIANTSTAG_BABY" />
-						<item name="T6_FARM_GIANTSTAG_MOOSE_BABY" />
+            <!-- <item name="T6_FARM_GIANTSTAG_BABY" /> Is not obtainable ingame -->
+            <item name="T6_FARM_GIANTSTAG_MOOSE_BABY" />
 						<item name="T6_FARM_HORSE_BABY" />
 						<item name="T6_FARM_OX_BABY" />
 						<item name="T6_FARM_SHEEP_BABY" />
@@ -13718,11 +13722,12 @@
 						<item name="T8_FARM_OWL_FW_BRECILIEN_BABY" />
 						<item name="T8_FARM_OX_BABY" />
 						<item name="T8_FARM_RABBIT_EASTER_BABY" />
-						<item name="T8_FARM_RAM_FW_MARTLOCK_BABY" />
+            <item name="T8_FARM_RABBIT_EASTER_BABY_DARK" />
+            <item name="T8_FARM_RAM_FW_MARTLOCK_BABY" />
 						<item name="T8_FARM_SWAMPDRAGON_FW_THETFORD_BABY" />
 					</farmoffspringdistinct>
 				</achievement>
-				<achievement name="JOURNAL_ISLAND_ANIMALBREEDING_RAISE_ANIMALS_07" absoluteprogressmax="21" difficultyrating="5390" symbol="NONE" rewarditem="T6_FOCUSPOTION_NONTRADABLE" rewardamount="1">
+				<achievement name="JOURNAL_ISLAND_ANIMALBREEDING_RAISE_ANIMALS_07" absoluteprogressmax="21" difficultyrating="5390" symbol="NONE" rewarditem="T6_FOCUSPOTION_NONTRADABLE" rewardamount="1" showlist="showcompleted">
 					<farmraisedistinct count="21">
 						<item name="T3_FARM_CHICKEN_BABY" />
 						<item name="T3_FARM_HORSE_BABY" />
@@ -13743,8 +13748,8 @@
 						<item name="T5_FARM_RAM_FW_MARTLOCK_BABY" />
 						<item name="T5_FARM_SWAMPDRAGON_FW_THETFORD_BABY" />
 						<item name="T6_FARM_DIREWOLF_BABY" />
-						<item name="T6_FARM_GIANTSTAG_BABY" />
-						<item name="T6_FARM_GIANTSTAG_MOOSE_BABY" />
+            <!-- <item name="T6_FARM_GIANTSTAG_BABY" /> Is not obtainable ingame -->
+            <item name="T6_FARM_GIANTSTAG_MOOSE_BABY" />
 						<item name="T6_FARM_HORSE_BABY" />
 						<item name="T6_FARM_OX_BABY" />
 						<item name="T6_FARM_SHEEP_BABY" />
@@ -13765,14 +13770,15 @@
 						<item name="T8_FARM_OWL_FW_BRECILIEN_BABY" />
 						<item name="T8_FARM_OX_BABY" />
 						<item name="T8_FARM_RABBIT_EASTER_BABY" />
-						<item name="T8_FARM_RAM_FW_MARTLOCK_BABY" />
+            <item name="T8_FARM_RABBIT_EASTER_BABY_DARK" />
+            <item name="T8_FARM_RAM_FW_MARTLOCK_BABY" />
 						<item name="T8_FARM_SWAMPDRAGON_FW_THETFORD_BABY" />
 					</farmraisedistinct>
 				</achievement>
         <achievement name="JOURNAL_ISLAND_ANIMALBREEDING_ANIMAL_REWARDS_03" difficultyrating="5391" symbol="NONE" rewarditem="UNIQUE_UNLOCK_OFF_VANITY_PIRATE_RED_NON_TRADABLE" rewardamount="1" absoluteprogressmax="350">
           <farmproduct count="350" withinseconds="600" itemid="*EGG" />
         </achievement>
-          <achievement name="JOURNAL_ISLAND_ANIMALBREEDING_COLLECT_OFFSPRING_02" absoluteprogressmax="16" difficultyrating="5392" symbol="NONE" rewarditem="T6_FOCUSPOTION_NONTRADABLE" rewardamount="1">
+          <achievement name="JOURNAL_ISLAND_ANIMALBREEDING_COLLECT_OFFSPRING_02" absoluteprogressmax="16" difficultyrating="5392" symbol="NONE" rewarditem="T6_FOCUSPOTION_NONTRADABLE" rewardamount="1" showlist="showcompleted">
 					<farmoffspringdistinct count="16">
 						<item name="T3_FARM_CHICKEN_BABY" />
 						<item name="T3_FARM_HORSE_BABY" />
@@ -13793,8 +13799,8 @@
 						<item name="T5_FARM_RAM_FW_MARTLOCK_BABY" />
 						<item name="T5_FARM_SWAMPDRAGON_FW_THETFORD_BABY" />
 						<item name="T6_FARM_DIREWOLF_BABY" />
-						<item name="T6_FARM_GIANTSTAG_BABY" />
-						<item name="T6_FARM_GIANTSTAG_MOOSE_BABY" />
+            <!-- <item name="T6_FARM_GIANTSTAG_BABY" /> Is not obtainable ingame -->
+            <item name="T6_FARM_GIANTSTAG_MOOSE_BABY" />
 						<item name="T6_FARM_HORSE_BABY" />
 						<item name="T6_FARM_OX_BABY" />
 						<item name="T6_FARM_SHEEP_BABY" />
@@ -13815,7 +13821,8 @@
 						<item name="T8_FARM_OWL_FW_BRECILIEN_BABY" />
 						<item name="T8_FARM_OX_BABY" />
 						<item name="T8_FARM_RABBIT_EASTER_BABY" />
-						<item name="T8_FARM_RAM_FW_MARTLOCK_BABY" />
+            <item name="T8_FARM_RABBIT_EASTER_BABY_DARK" />
+            <item name="T8_FARM_RAM_FW_MARTLOCK_BABY" />
 						<item name="T8_FARM_SWAMPDRAGON_FW_THETFORD_BABY" />
 					</farmoffspringdistinct>
 				</achievement>
@@ -13851,7 +13858,7 @@
 						<item name="T7_FARM_SWAMPDRAGON_BABY" />
 					</farmraisedistinct>
 				</achievement>
-				<achievement name="JOURNAL_ISLAND_ANIMALBREEDING_RAISE_ANIMALS_09" difficultyrating="5397" symbol="NONE" rewarditem="UNIQUE_FOCUSPOTION_ADC_NONTRADABLE_01" rewardamount="1" absoluteprogressmax="28">
+				<achievement name="JOURNAL_ISLAND_ANIMALBREEDING_RAISE_ANIMALS_09" difficultyrating="5397" symbol="NONE" rewarditem="UNIQUE_FOCUSPOTION_ADC_NONTRADABLE_01" rewardamount="1" absoluteprogressmax="28" showlist="showcompleted">
 					<farmraisedistinct count="28">
 						<item name="T3_FARM_CHICKEN_BABY" />
 						<item name="T3_FARM_HORSE_BABY" />
@@ -13872,8 +13879,8 @@
 						<item name="T5_FARM_RAM_FW_MARTLOCK_BABY" />
 						<item name="T5_FARM_SWAMPDRAGON_FW_THETFORD_BABY" />
 						<item name="T6_FARM_DIREWOLF_BABY" />
-						<item name="T6_FARM_GIANTSTAG_BABY" />
-						<item name="T6_FARM_GIANTSTAG_MOOSE_BABY" />
+            <!-- <item name="T6_FARM_GIANTSTAG_BABY" /> Is not obtainable ingame -->
+            <item name="T6_FARM_GIANTSTAG_MOOSE_BABY" />
 						<item name="T6_FARM_HORSE_BABY" />
 						<item name="T6_FARM_OX_BABY" />
 						<item name="T6_FARM_SHEEP_BABY" />
@@ -13894,11 +13901,12 @@
 						<item name="T8_FARM_OWL_FW_BRECILIEN_BABY" />
 						<item name="T8_FARM_OX_BABY" />
 						<item name="T8_FARM_RABBIT_EASTER_BABY" />
-						<item name="T8_FARM_RAM_FW_MARTLOCK_BABY" />
+            <item name="T8_FARM_RABBIT_EASTER_BABY_DARK" />
+            <item name="T8_FARM_RAM_FW_MARTLOCK_BABY" />
 						<item name="T8_FARM_SWAMPDRAGON_FW_THETFORD_BABY" />
 					</farmraisedistinct>
 				</achievement>
-				<achievement name="JOURNAL_ISLAND_ANIMALBREEDING_COLLECT_OFFSPRING_04" absoluteprogressmax="21" difficultyrating="5398" symbol="NONE" rewarditem="T4_LEARNINGPOINTS_NONTRADABLE" rewardamount="1">
+				<achievement name="JOURNAL_ISLAND_ANIMALBREEDING_COLLECT_OFFSPRING_04" absoluteprogressmax="21" difficultyrating="5398" symbol="NONE" rewarditem="T4_LEARNINGPOINTS_NONTRADABLE" rewardamount="1" showlist="showcompleted">
 					<farmoffspringdistinct count="21">
 						<item name="T3_FARM_CHICKEN_BABY" />
 						<item name="T3_FARM_HORSE_BABY" />
@@ -13919,8 +13927,8 @@
 						<item name="T5_FARM_RAM_FW_MARTLOCK_BABY" />
 						<item name="T5_FARM_SWAMPDRAGON_FW_THETFORD_BABY" />
 						<item name="T6_FARM_DIREWOLF_BABY" />
-						<item name="T6_FARM_GIANTSTAG_BABY" />
-						<item name="T6_FARM_GIANTSTAG_MOOSE_BABY" />
+            <!-- <item name="T6_FARM_GIANTSTAG_BABY" /> Is not obtainable ingame -->
+            <item name="T6_FARM_GIANTSTAG_MOOSE_BABY" />
 						<item name="T6_FARM_HORSE_BABY" />
 						<item name="T6_FARM_OX_BABY" />
 						<item name="T6_FARM_SHEEP_BABY" />
@@ -13940,7 +13948,8 @@
 						<item name="T8_FARM_MOABIRD_FW_BRIDGEWATCH_BABY" />
 						<item name="T8_FARM_OWL_FW_BRECILIEN_BABY" />
 						<item name="T8_FARM_OX_BABY" />
-						<item name="T8_FARM_RABBIT_EASTER_BABY" />
+            <item name="T8_FARM_RABBIT_EASTER_BABY_DARK" />
+            <item name="T8_FARM_RABBIT_EASTER_BABY" />
 						<item name="T8_FARM_RAM_FW_MARTLOCK_BABY" />
 						<item name="T8_FARM_SWAMPDRAGON_FW_THETFORD_BABY" />
 					</farmoffspringdistinct>
@@ -13955,7 +13964,7 @@
 						<item name="T8_FARM_GREYWOLF_FW_CAERLEON_BABY" />
 					</farmraisedistinct>
 				</achievement>
-				<achievement name="JOURNAL_ISLAND_ANIMALBREEDING_RAISE_ANIMALS_11" absoluteprogressmax="35" difficultyrating="5400" symbol="NONE" rewarditem="UNIQUE_FOCUSPOTION_ADC_NONTRADABLE_01" rewardamount="1">
+				<achievement name="JOURNAL_ISLAND_ANIMALBREEDING_RAISE_ANIMALS_11" absoluteprogressmax="35" difficultyrating="5400" symbol="NONE" rewarditem="UNIQUE_FOCUSPOTION_ADC_NONTRADABLE_01" rewardamount="1" showlist="showcompleted">
 					<farmraisedistinct count="35">
 						<item name="T3_FARM_CHICKEN_BABY" />
 						<item name="T3_FARM_HORSE_BABY" />
@@ -13976,8 +13985,8 @@
 						<item name="T5_FARM_RAM_FW_MARTLOCK_BABY" />
 						<item name="T5_FARM_SWAMPDRAGON_FW_THETFORD_BABY" />
 						<item name="T6_FARM_DIREWOLF_BABY" />
-						<item name="T6_FARM_GIANTSTAG_BABY" />
-						<item name="T6_FARM_GIANTSTAG_MOOSE_BABY" />
+            <!-- <item name="T6_FARM_GIANTSTAG_BABY" /> Is not obtainable ingame -->
+            <item name="T6_FARM_GIANTSTAG_MOOSE_BABY" />
 						<item name="T6_FARM_HORSE_BABY" />
 						<item name="T6_FARM_OX_BABY" />
 						<item name="T6_FARM_SHEEP_BABY" />
@@ -13997,6 +14006,7 @@
 						<item name="T8_FARM_MOABIRD_FW_BRIDGEWATCH_BABY" />
 						<item name="T8_FARM_OWL_FW_BRECILIEN_BABY" />
 						<item name="T8_FARM_OX_BABY" />
+            <item name="T8_FARM_RABBIT_EASTER_BABY_DARK" />
 						<item name="T8_FARM_RABBIT_EASTER_BABY" />
 						<item name="T8_FARM_RAM_FW_MARTLOCK_BABY" />
 						<item name="T8_FARM_SWAMPDRAGON_FW_THETFORD_BABY" />
@@ -14026,7 +14036,7 @@
             <item name="T5_FARM_RAM_FW_MARTLOCK_BABY" />
             <item name="T5_FARM_SWAMPDRAGON_FW_THETFORD_BABY" />
             <item name="T6_FARM_DIREWOLF_BABY" />
-            <item name="T6_FARM_GIANTSTAG_BABY" />
+            <!-- <item name="T6_FARM_GIANTSTAG_BABY" /> Is not obtainable ingame -->
             <item name="T6_FARM_GIANTSTAG_MOOSE_BABY" />
             <item name="T6_FARM_HORSE_BABY" />
             <item name="T6_FARM_OX_BABY" />
@@ -14048,6 +14058,7 @@
             <item name="T8_FARM_OWL_FW_BRECILIEN_BABY" />
             <item name="T8_FARM_OX_BABY" />
             <item name="T8_FARM_RABBIT_EASTER_BABY" />
+            <item name="T8_FARM_RABBIT_EASTER_BABY_DARK" />
             <item name="T8_FARM_RAM_FW_MARTLOCK_BABY" />
             <item name="T8_FARM_SWAMPDRAGON_FW_THETFORD_BABY" />
           </farmraisedistinct>
@@ -14075,8 +14086,8 @@
 					<farmoffspring itemid="T5_FARM_RAM_FW_MARTLOCK_BABY" />
 					<farmoffspring itemid="T5_FARM_SWAMPDRAGON_FW_THETFORD_BABY" />
 					<farmoffspring itemid="T6_FARM_DIREWOLF_BABY" />
-					<farmoffspring itemid="T6_FARM_GIANTSTAG_BABY" />
-					<farmoffspring itemid="T6_FARM_GIANTSTAG_MOOSE_BABY" />
+          <!-- <farmoffspring itemid="T6_FARM_GIANTSTAG_BABY" /> Is not obtainable ingame -->
+          <farmoffspring itemid="T6_FARM_GIANTSTAG_MOOSE_BABY" />
 					<farmoffspring itemid="T6_FARM_HORSE_BABY" />
 					<farmoffspring itemid="T6_FARM_OX_BABY" />
 					<farmoffspring itemid="T6_FARM_SHEEP_BABY" />
@@ -14096,8 +14107,9 @@
 					<farmoffspring itemid="T8_FARM_MOABIRD_FW_BRIDGEWATCH_BABY" />
 					<farmoffspring itemid="T8_FARM_OWL_FW_BRECILIEN_BABY" />
 					<farmoffspring itemid="T8_FARM_OX_BABY" />
-					<farmoffspring itemid="T8_FARM_RABBIT_EASTER_BABY" />
-					<farmoffspring itemid="T8_FARM_RAM_FW_MARTLOCK_BABY" />
+          <farmoffspring itemid="T8_FARM_RABBIT_EASTER_BABY" />
+          <farmoffspring itemid="T8_FARM_RABBIT_EASTER_BABY_DARK" />
+          <farmoffspring itemid="T8_FARM_RAM_FW_MARTLOCK_BABY" />
 					<farmoffspring itemid="T8_FARM_SWAMPDRAGON_FW_THETFORD_BABY" />
 				</achievement>
 			</subcategory>
