@@ -8741,7 +8741,10 @@
 				<achievement name="JOURNAL_ECONOMY_SELLING_LUXURY_GOODS_CAERLEON" rewarditem="UNIQUE_TOKEN_COMMUNITY" rewardamount="15" difficultyrating="4150" absoluteprogressmax="9999" symbol="NONE">
 					<marketsellitem count="9999">
 						<IfItemId op="contains" value="TREASURE_RITUAL_RARITY" />
-						<IfClusterId op="equals" value="3005" />
+            <or>
+              <IfClusterId op="equals" value="3005" />
+              <IfClusterId op="equals" value="3013-Auction2" />
+            </or>
 					</marketsellitem>
 				</achievement>
 			</subcategory>
@@ -10681,8 +10684,11 @@
 				</achievement>
 				<achievement name="JOURNAL_EXPLORATION_MISTS_CAPTURE_TREASURE_WISP_SOLO_BLACK_01" rewarditem="T8_SILVERBAG_NONTRADABLE" difficultyrating="2630" absoluteprogressmax="50" symbol="NONE" rewardamount="1">
 					<usefunction function="BringWispToSanctuaryPortal" count="50" countforallpartymembers="true">
-						<IfClusterArcheType value="MISTS_SOLO_BLACK" op="equals" />
-					</usefunction>
+            <or>
+              <IfClusterArcheType value="MISTS_SOLO_BLACK" op="equals" />
+              <IfClusterArcheType value="MISTS_DUO_BLACK" op="equals" />
+            </or>
+          </usefunction>
 				</achievement>
 				<achievement name="JOURNAL_EXPLORATION_MISTS_FAME_SOLO_BLACK_02" rewarditem="T5_SILVERBAG_NONTRADABLE" difficultyrating="2815" symbol="FAME" absoluteprogressmax="500000" rewardamount="1">
 					<fameearned value="500000">
@@ -12237,8 +12243,8 @@
 				<achievement name="JOURNAL_GUILD_GUILD_CHALLENGE_LEVEL_06" rewarditem="T7_SKILLBOOK_NONTRADABLE" absoluteprogressmax="75" difficultyrating="5045" symbol="NONE" rewardamount="1">
 					<reachguildchallengelevel value="75" />
 				</achievement>
-				<achievement name="JOURNAL_GUILD_GUILD_CHALLENGE_LEVEL_07" rewarditem="T5_LEARNINGPOINTS_NONTRADABLE" absoluteprogressmax="100" difficultyrating="5046" symbol="NONE" rewardamount="1">
-					<reachguildchallengelevel value="100" />
+				<achievement name="JOURNAL_GUILD_GUILD_CHALLENGE_LEVEL_07" rewarditem="T5_LEARNINGPOINTS_NONTRADABLE" absoluteprogressmax="99" difficultyrating="5046" symbol="NONE" rewardamount="1">
+					<reachguildchallengelevel value="99" />
 				</achievement>
 			</subcategory>
 			<subcategory uniquename="GUILD_CRYSTAL_CREATURES" displayname="@JOURNAL_ACTIVITY_GUILD_CRYSTAL_CREATURES">
@@ -13854,7 +13860,6 @@
 						<item name="T7_FARM_DIREBOAR_BABY" />
 						<item name="T7_FARM_HORSE_BABY" />
 						<item name="T7_FARM_OX_BABY" />
-						<item name="T7_FARM_PIG_BABY" />
 						<item name="T7_FARM_SWAMPDRAGON_BABY" />
 					</farmraisedistinct>
 				</achievement>
@@ -14067,50 +14072,52 @@
 					<farmoffspring itemid="T8_FARM_MAMMOTH_BABY" />
 				</achievement>
 				<achievement name="JOURNAL_ISLAND_ANIMALBREEDING_COLLECT_OFFSPRING_06" absoluteprogressmax="42" difficultyrating="5404" symbol="NONE" rewarditem="UNIQUE_TOKEN_COMMUNITY" rewardamount="75" showlist="showall">
-					<farmoffspring itemid="T3_FARM_CHICKEN_BABY" />
-					<farmoffspring itemid="T3_FARM_HORSE_BABY" />
-					<farmoffspring itemid="T3_FARM_OX_BABY" />
-					<farmoffspring itemid="T4_FARM_GIANTSTAG_BABY" />
-					<farmoffspring itemid="T4_FARM_GOAT_BABY" />
-					<farmoffspring itemid="T4_FARM_HORSE_BABY" />
-					<farmoffspring itemid="T4_FARM_OX_BABY" />
-					<farmoffspring itemid="T5_FARM_COUGAR_BABY" />
-					<farmoffspring itemid="T5_FARM_DIREBEAR_FW_FORTSTERLING_BABY" />
-					<farmoffspring itemid="T5_FARM_DIREBOAR_FW_LYMHURST_BABY" />
-					<farmoffspring itemid="T5_FARM_GOOSE_BABY" />
-					<farmoffspring itemid="T5_FARM_GREYWOLF_FW_CAERLEON_BABY" />
-					<farmoffspring itemid="T5_FARM_HORSE_BABY" />
-					<farmoffspring itemid="T5_FARM_MOABIRD_FW_BRIDGEWATCH_BABY" />
-					<farmoffspring itemid="T5_FARM_OWL_FW_BRECILIEN_BABY" />
-					<farmoffspring itemid="T5_FARM_OX_BABY" />
-					<farmoffspring itemid="T5_FARM_RAM_FW_MARTLOCK_BABY" />
-					<farmoffspring itemid="T5_FARM_SWAMPDRAGON_FW_THETFORD_BABY" />
-					<farmoffspring itemid="T6_FARM_DIREWOLF_BABY" />
-          <!-- <farmoffspring itemid="T6_FARM_GIANTSTAG_BABY" /> Is not obtainable ingame -->
-          <farmoffspring itemid="T6_FARM_GIANTSTAG_MOOSE_BABY" />
-					<farmoffspring itemid="T6_FARM_HORSE_BABY" />
-					<farmoffspring itemid="T6_FARM_OX_BABY" />
-					<farmoffspring itemid="T6_FARM_SHEEP_BABY" />
-					<farmoffspring itemid="T7_FARM_DIREBOAR_BABY" />
-					<farmoffspring itemid="T7_FARM_HORSE_BABY" />
-					<farmoffspring itemid="T7_FARM_OX_BABY" />
-					<farmoffspring itemid="T7_FARM_PIG_BABY" />
-					<farmoffspring itemid="T7_FARM_SWAMPDRAGON_BABY" />
-					<farmoffspring itemid="T8_FARM_COW_BABY" />
-					<farmoffspring itemid="T8_FARM_DIREBEAR_BABY" />
-					<farmoffspring itemid="T8_FARM_DIREBEAR_FW_FORTSTERLING_BABY" />
-					<farmoffspring itemid="T8_FARM_DIREBOAR_FW_LYMHURST_BABY" />
-          <!--	<farmoffspring itemid="T8_FARM_DIREWOLF_BABY" /> -->
-					<farmoffspring itemid="T8_FARM_GREYWOLF_FW_CAERLEON_BABY" />
-					<farmoffspring itemid="T8_FARM_HORSE_BABY" />
-					<farmoffspring itemid="T8_FARM_MAMMOTH_BABY" />
-					<farmoffspring itemid="T8_FARM_MOABIRD_FW_BRIDGEWATCH_BABY" />
-					<farmoffspring itemid="T8_FARM_OWL_FW_BRECILIEN_BABY" />
-					<farmoffspring itemid="T8_FARM_OX_BABY" />
-          <farmoffspring itemid="T8_FARM_RABBIT_EASTER_BABY" />
-          <farmoffspring itemid="T8_FARM_RABBIT_EASTER_BABY_DARK" />
-          <farmoffspring itemid="T8_FARM_RAM_FW_MARTLOCK_BABY" />
-					<farmoffspring itemid="T8_FARM_SWAMPDRAGON_FW_THETFORD_BABY" />
+          <farmoffspringdistinct count="42">
+            <item name="T3_FARM_CHICKEN_BABY" />
+            <item name="T3_FARM_HORSE_BABY" />
+            <item name="T3_FARM_OX_BABY" />
+            <item name="T4_FARM_GIANTSTAG_BABY" />
+            <item name="T4_FARM_GOAT_BABY" />
+            <item name="T4_FARM_HORSE_BABY" />
+            <item name="T4_FARM_OX_BABY" />
+            <item name="T5_FARM_COUGAR_BABY" />
+            <item name="T5_FARM_DIREBEAR_FW_FORTSTERLING_BABY" />
+            <item name="T5_FARM_DIREBOAR_FW_LYMHURST_BABY" />
+            <item name="T5_FARM_GOOSE_BABY" />
+            <item name="T5_FARM_GREYWOLF_FW_CAERLEON_BABY" />
+            <item name="T5_FARM_HORSE_BABY" />
+            <item name="T5_FARM_MOABIRD_FW_BRIDGEWATCH_BABY" />
+            <item name="T5_FARM_OWL_FW_BRECILIEN_BABY" />
+            <item name="T5_FARM_OX_BABY" />
+            <item name="T5_FARM_RAM_FW_MARTLOCK_BABY" />
+            <item name="T5_FARM_SWAMPDRAGON_FW_THETFORD_BABY" />
+            <item name="T6_FARM_DIREWOLF_BABY" />
+            <!-- <item name="T6_FARM_GIANTSTAG_BABY" /> Is not obtainable ingame -->
+            <item name="T6_FARM_GIANTSTAG_MOOSE_BABY" />
+            <item name="T6_FARM_HORSE_BABY" />
+            <item name="T6_FARM_OX_BABY" />
+            <item name="T6_FARM_SHEEP_BABY" />
+            <item name="T7_FARM_DIREBOAR_BABY" />
+            <item name="T7_FARM_HORSE_BABY" />
+            <item name="T7_FARM_OX_BABY" />
+            <item name="T7_FARM_PIG_BABY" />
+            <item name="T7_FARM_SWAMPDRAGON_BABY" />
+            <item name="T8_FARM_COW_BABY" />
+            <item name="T8_FARM_DIREBEAR_BABY" />
+            <item name="T8_FARM_DIREBEAR_FW_FORTSTERLING_BABY" />
+            <item name="T8_FARM_DIREBOAR_FW_LYMHURST_BABY" />
+            <!-- <item name="T8_FARM_DIREWOLF_BABY" /> Is not obtainable ingame -->
+            <item name="T8_FARM_GREYWOLF_FW_CAERLEON_BABY" />
+            <item name="T8_FARM_HORSE_BABY" />
+            <item name="T8_FARM_MAMMOTH_BABY" />
+            <item name="T8_FARM_MOABIRD_FW_BRIDGEWATCH_BABY" />
+            <item name="T8_FARM_OWL_FW_BRECILIEN_BABY" />
+            <item name="T8_FARM_OX_BABY" />
+            <item name="T8_FARM_RABBIT_EASTER_BABY_DARK" />
+            <item name="T8_FARM_RABBIT_EASTER_BABY" />
+            <item name="T8_FARM_RAM_FW_MARTLOCK_BABY" />
+            <item name="T8_FARM_SWAMPDRAGON_FW_THETFORD_BABY" />
+          </farmoffspringdistinct>
 				</achievement>
 			</subcategory>
 			<subcategory uniquename="ISLAND_CREATE_FOOD" displayname="@JOURNAL_ACTIVITY_CREATE_FOOD" tutorial="JOURNAL_CRAFTING_INFO">

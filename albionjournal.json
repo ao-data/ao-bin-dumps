@@ -27213,9 +27213,17 @@
                       "@op": "contains",
                       "@value": "TREASURE_RITUAL_RARITY"
                     },
-                    "IfClusterId": {
-                      "@op": "equals",
-                      "@value": "3005"
+                    "or": {
+                      "IfClusterId": [
+                        {
+                          "@op": "equals",
+                          "@value": "3005"
+                        },
+                        {
+                          "@op": "equals",
+                          "@value": "3013-Auction2"
+                        }
+                      ]
                     }
                   }
                 }
@@ -33438,9 +33446,17 @@
                     "@function": "BringWispToSanctuaryPortal",
                     "@count": "50",
                     "@countforallpartymembers": "true",
-                    "IfClusterArcheType": {
-                      "@value": "MISTS_SOLO_BLACK",
-                      "@op": "equals"
+                    "or": {
+                      "IfClusterArcheType": [
+                        {
+                          "@value": "MISTS_SOLO_BLACK",
+                          "@op": "equals"
+                        },
+                        {
+                          "@value": "MISTS_DUO_BLACK",
+                          "@op": "equals"
+                        }
+                      ]
                     }
                   }
                 },
@@ -38709,12 +38725,12 @@
                 {
                   "@name": "JOURNAL_GUILD_GUILD_CHALLENGE_LEVEL_07",
                   "@rewarditem": "T5_LEARNINGPOINTS_NONTRADABLE",
-                  "@absoluteprogressmax": "100",
+                  "@absoluteprogressmax": "99",
                   "@difficultyrating": "5046",
                   "@symbol": "NONE",
                   "@rewardamount": "1",
                   "reachguildchallengelevel": {
-                    "@value": "100"
+                    "@value": "99"
                   }
                 }
               ]
@@ -44166,9 +44182,6 @@
                         "@name": "T7_FARM_OX_BABY"
                       },
                       {
-                        "@name": "T7_FARM_PIG_BABY"
-                      },
-                      {
                         "@name": "T7_FARM_SWAMPDRAGON_BABY"
                       }
                     ]
@@ -44795,134 +44808,137 @@
                   "@rewarditem": "UNIQUE_TOKEN_COMMUNITY",
                   "@rewardamount": "75",
                   "@showlist": "showall",
-                  "farmoffspring": [
-                    {
-                      "@itemid": "T3_FARM_CHICKEN_BABY"
-                    },
-                    {
-                      "@itemid": "T3_FARM_HORSE_BABY"
-                    },
-                    {
-                      "@itemid": "T3_FARM_OX_BABY"
-                    },
-                    {
-                      "@itemid": "T4_FARM_GIANTSTAG_BABY"
-                    },
-                    {
-                      "@itemid": "T4_FARM_GOAT_BABY"
-                    },
-                    {
-                      "@itemid": "T4_FARM_HORSE_BABY"
-                    },
-                    {
-                      "@itemid": "T4_FARM_OX_BABY"
-                    },
-                    {
-                      "@itemid": "T5_FARM_COUGAR_BABY"
-                    },
-                    {
-                      "@itemid": "T5_FARM_DIREBEAR_FW_FORTSTERLING_BABY"
-                    },
-                    {
-                      "@itemid": "T5_FARM_DIREBOAR_FW_LYMHURST_BABY"
-                    },
-                    {
-                      "@itemid": "T5_FARM_GOOSE_BABY"
-                    },
-                    {
-                      "@itemid": "T5_FARM_GREYWOLF_FW_CAERLEON_BABY"
-                    },
-                    {
-                      "@itemid": "T5_FARM_HORSE_BABY"
-                    },
-                    {
-                      "@itemid": "T5_FARM_MOABIRD_FW_BRIDGEWATCH_BABY"
-                    },
-                    {
-                      "@itemid": "T5_FARM_OWL_FW_BRECILIEN_BABY"
-                    },
-                    {
-                      "@itemid": "T5_FARM_OX_BABY"
-                    },
-                    {
-                      "@itemid": "T5_FARM_RAM_FW_MARTLOCK_BABY"
-                    },
-                    {
-                      "@itemid": "T5_FARM_SWAMPDRAGON_FW_THETFORD_BABY"
-                    },
-                    {
-                      "@itemid": "T6_FARM_DIREWOLF_BABY"
-                    },
-                    {
-                      "@itemid": "T6_FARM_GIANTSTAG_MOOSE_BABY"
-                    },
-                    {
-                      "@itemid": "T6_FARM_HORSE_BABY"
-                    },
-                    {
-                      "@itemid": "T6_FARM_OX_BABY"
-                    },
-                    {
-                      "@itemid": "T6_FARM_SHEEP_BABY"
-                    },
-                    {
-                      "@itemid": "T7_FARM_DIREBOAR_BABY"
-                    },
-                    {
-                      "@itemid": "T7_FARM_HORSE_BABY"
-                    },
-                    {
-                      "@itemid": "T7_FARM_OX_BABY"
-                    },
-                    {
-                      "@itemid": "T7_FARM_PIG_BABY"
-                    },
-                    {
-                      "@itemid": "T7_FARM_SWAMPDRAGON_BABY"
-                    },
-                    {
-                      "@itemid": "T8_FARM_COW_BABY"
-                    },
-                    {
-                      "@itemid": "T8_FARM_DIREBEAR_BABY"
-                    },
-                    {
-                      "@itemid": "T8_FARM_DIREBEAR_FW_FORTSTERLING_BABY"
-                    },
-                    {
-                      "@itemid": "T8_FARM_DIREBOAR_FW_LYMHURST_BABY"
-                    },
-                    {
-                      "@itemid": "T8_FARM_GREYWOLF_FW_CAERLEON_BABY"
-                    },
-                    {
-                      "@itemid": "T8_FARM_HORSE_BABY"
-                    },
-                    {
-                      "@itemid": "T8_FARM_MAMMOTH_BABY"
-                    },
-                    {
-                      "@itemid": "T8_FARM_MOABIRD_FW_BRIDGEWATCH_BABY"
-                    },
-                    {
-                      "@itemid": "T8_FARM_OWL_FW_BRECILIEN_BABY"
-                    },
-                    {
-                      "@itemid": "T8_FARM_OX_BABY"
-                    },
-                    {
-                      "@itemid": "T8_FARM_RABBIT_EASTER_BABY"
-                    },
-                    {
-                      "@itemid": "T8_FARM_RABBIT_EASTER_BABY_DARK"
-                    },
-                    {
-                      "@itemid": "T8_FARM_RAM_FW_MARTLOCK_BABY"
-                    },
-                    {
-                      "@itemid": "T8_FARM_SWAMPDRAGON_FW_THETFORD_BABY"
-                    }
-                  ]
+                  "farmoffspringdistinct": {
+                    "@count": "42",
+                    "item": [
+                      {
+                        "@name": "T3_FARM_CHICKEN_BABY"
+                      },
+                      {
+                        "@name": "T3_FARM_HORSE_BABY"
+                      },
+                      {
+                        "@name": "T3_FARM_OX_BABY"
+                      },
+                      {
+                        "@name": "T4_FARM_GIANTSTAG_BABY"
+                      },
+                      {
+                        "@name": "T4_FARM_GOAT_BABY"
+                      },
+                      {
+                        "@name": "T4_FARM_HORSE_BABY"
+                      },
+                      {
+                        "@name": "T4_FARM_OX_BABY"
+                      },
+                      {
+                        "@name": "T5_FARM_COUGAR_BABY"
+                      },
+                      {
+                        "@name": "T5_FARM_DIREBEAR_FW_FORTSTERLING_BABY"
+                      },
+                      {
+                        "@name": "T5_FARM_DIREBOAR_FW_LYMHURST_BABY"
+                      },
+                      {
+                        "@name": "T5_FARM_GOOSE_BABY"
+                      },
+                      {
+                        "@name": "T5_FARM_GREYWOLF_FW_CAERLEON_BABY"
+                      },
+                      {
+                        "@name": "T5_FARM_HORSE_BABY"
+                      },
+                      {
+                        "@name": "T5_FARM_MOABIRD_FW_BRIDGEWATCH_BABY"
+                      },
+                      {
+                        "@name": "T5_FARM_OWL_FW_BRECILIEN_BABY"
+                      },
+                      {
+                        "@name": "T5_FARM_OX_BABY"
+                      },
+                      {
+                        "@name": "T5_FARM_RAM_FW_MARTLOCK_BABY"
+                      },
+                      {
+                        "@name": "T5_FARM_SWAMPDRAGON_FW_THETFORD_BABY"
+                      },
+                      {
+                        "@name": "T6_FARM_DIREWOLF_BABY"
+                      },
+                      {
+                        "@name": "T6_FARM_GIANTSTAG_MOOSE_BABY"
+                      },
+                      {
+                        "@name": "T6_FARM_HORSE_BABY"
+                      },
+                      {
+                        "@name": "T6_FARM_OX_BABY"
+                      },
+                      {
+                        "@name": "T6_FARM_SHEEP_BABY"
+                      },
+                      {
+                        "@name": "T7_FARM_DIREBOAR_BABY"
+                      },
+                      {
+                        "@name": "T7_FARM_HORSE_BABY"
+                      },
+                      {
+                        "@name": "T7_FARM_OX_BABY"
+                      },
+                      {
+                        "@name": "T7_FARM_PIG_BABY"
+                      },
+                      {
+                        "@name": "T7_FARM_SWAMPDRAGON_BABY"
+                      },
+                      {
+                        "@name": "T8_FARM_COW_BABY"
+                      },
+                      {
+                        "@name": "T8_FARM_DIREBEAR_BABY"
+                      },
+                      {
+                        "@name": "T8_FARM_DIREBEAR_FW_FORTSTERLING_BABY"
+                      },
+                      {
+                        "@name": "T8_FARM_DIREBOAR_FW_LYMHURST_BABY"
+                      },
+                      {
+                        "@name": "T8_FARM_GREYWOLF_FW_CAERLEON_BABY"
+                      },
+                      {
+                        "@name": "T8_FARM_HORSE_BABY"
+                      },
+                      {
+                        "@name": "T8_FARM_MAMMOTH_BABY"
+                      },
+                      {
+                        "@name": "T8_FARM_MOABIRD_FW_BRIDGEWATCH_BABY"
+                      },
+                      {
+                        "@name": "T8_FARM_OWL_FW_BRECILIEN_BABY"
+                      },
+                      {
+                        "@name": "T8_FARM_OX_BABY"
+                      },
+                      {
+                        "@name": "T8_FARM_RABBIT_EASTER_BABY_DARK"
+                      },
+                      {
+                        "@name": "T8_FARM_RABBIT_EASTER_BABY"
+                      },
+                      {
+                        "@name": "T8_FARM_RAM_FW_MARTLOCK_BABY"
+                      },
+                      {
+                        "@name": "T8_FARM_SWAMPDRAGON_FW_THETFORD_BABY"
+                      }
+                    ]
+                  }
                 }
               ]
             },
