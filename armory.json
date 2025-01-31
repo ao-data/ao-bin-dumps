@@ -1,0 +1,455 @@
+{
+  "?xml": {
+    "@version": "1.0",
+    "@encoding": "utf-8"
+  },
+  "armory": {
+    "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+    "@xsi:noNamespaceSchemaLocation": "armory.xsd",
+    "sessionrequirements": {
+      "@defaultmindurationminutes": "10",
+      "activity": [
+        {
+          "@name": "openworldsolo",
+          "or": {
+            "and": [
+              {
+                "duration": {
+                  "@mindurationminutes": "5"
+                },
+                "metric": {
+                  "@name": "pvpfamegained",
+                  "@minvalue": "1"
+                }
+              },
+              {
+                "duration": {
+                  "@mindurationminutes": "5"
+                },
+                "metric": {
+                  "@name": "pvefamegained",
+                  "@minvalue": "1"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "@name": "openworldgroup",
+          "or": {
+            "and": [
+              {
+                "duration": {
+                  "@mindurationminutes": "10"
+                },
+                "metric": {
+                  "@name": "pvpfamegained",
+                  "@minvalue": "1"
+                }
+              },
+              {
+                "duration": {
+                  "@mindurationminutes": "10"
+                },
+                "metric": {
+                  "@name": "pvefamegained",
+                  "@minvalue": "1"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "@name": "openworldlargegroup",
+          "or": {
+            "and": [
+              {
+                "duration": {
+                  "@mindurationminutes": "10"
+                },
+                "metric": {
+                  "@name": "pvpfamegained",
+                  "@minvalue": "1"
+                }
+              },
+              {
+                "duration": {
+                  "@mindurationminutes": "10"
+                },
+                "metric": {
+                  "@name": "pvefamegained",
+                  "@minvalue": "1"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "@name": "zvz",
+          "and": {
+            "duration": {
+              "@mindurationminutes": "5"
+            },
+            "or": {
+              "metric": [
+                {
+                  "@name": "damagedealt",
+                  "@minvalue": "5000"
+                },
+                {
+                  "@name": "healingdone",
+                  "@minvalue": "5000"
+                },
+                {
+                  "@name": "kills",
+                  "@minvalue": "3"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "@name": "corrupteddungeons",
+          "or": {
+            "metric": [
+              {
+                "@name": "successwin",
+                "@minvalue": "1"
+              },
+              {
+                "@name": "kills",
+                "@minvalue": "1"
+              }
+            ]
+          }
+        },
+        {
+          "@name": "hellgate2v2",
+          "or": {
+            "metric": [
+              {
+                "@name": "successwin",
+                "@minvalue": "1"
+              },
+              {
+                "@name": "kills",
+                "@minvalue": "1"
+              }
+            ]
+          }
+        },
+        {
+          "@name": "hellgate5v5",
+          "or": {
+            "metric": [
+              {
+                "@name": "successwin",
+                "@minvalue": "1"
+              },
+              {
+                "@name": "kills",
+                "@minvalue": "1"
+              }
+            ]
+          }
+        },
+        {
+          "@name": "hellgate10v10",
+          "or": {
+            "metric": [
+              {
+                "@name": "successwin",
+                "@minvalue": "1"
+              },
+              {
+                "@name": "kills",
+                "@minvalue": "1"
+              }
+            ]
+          }
+        },
+        {
+          "@name": "crystalleague5v5",
+          "and": {
+            "duration": {
+              "@mindurationminutes": "5"
+            },
+            "or": {
+              "metric": [
+                {
+                  "@name": "damagedealt",
+                  "@minvalue": "5000"
+                },
+                {
+                  "@name": "healingdone",
+                  "@minvalue": "5000"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "@name": "crystalleague20v20",
+          "and": {
+            "duration": {
+              "@mindurationminutes": "5"
+            },
+            "or": {
+              "metric": [
+                {
+                  "@name": "damagedealt",
+                  "@minvalue": "5000"
+                },
+                {
+                  "@name": "healingdone",
+                  "@minvalue": "5000"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "@name": "crystalarena",
+          "and": {
+            "duration": {
+              "@mindurationminutes": "5"
+            },
+            "or": {
+              "metric": [
+                {
+                  "@name": "damagedealt",
+                  "@minvalue": "5000"
+                },
+                {
+                  "@name": "healingdone",
+                  "@minvalue": "5000"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "@name": "arena",
+          "and": {
+            "duration": {
+              "@mindurationminutes": "5"
+            },
+            "or": {
+              "metric": [
+                {
+                  "@name": "damagedealt",
+                  "@minvalue": "5000"
+                },
+                {
+                  "@name": "healingdone",
+                  "@minvalue": "5000"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "@name": "mists",
+          "or": {
+            "and": [
+              {
+                "duration": {
+                  "@mindurationminutes": "5"
+                },
+                "or": {
+                  "metric": [
+                    {
+                      "@name": "pvpfamegained",
+                      "@minvalue": "1"
+                    },
+                    {
+                      "@name": "kills",
+                      "@minvalue": "1"
+                    }
+                  ]
+                }
+              },
+              {
+                "duration": {
+                  "@mindurationminutes": "10"
+                },
+                "or": {
+                  "metric": [
+                    {
+                      "@name": "pvefamegained",
+                      "@minvalue": "1000"
+                    },
+                    {
+                      "@name": "mobskilled",
+                      "@minvalue": "5"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "@name": "castle",
+          "and": {
+            "duration": {
+              "@mindurationminutes": "5"
+            },
+            "or": {
+              "metric": [
+                {
+                  "@name": "pvpfamegained",
+                  "@minvalue": "1"
+                },
+                {
+                  "@name": "pvefamegained",
+                  "@minvalue": "1"
+                },
+                {
+                  "@name": "mobskilled",
+                  "@minvalue": "1"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "@name": "fortification",
+          "and": {
+            "duration": {
+              "@mindurationminutes": "10"
+            }
+          }
+        },
+        {
+          "@name": "avalonianroads",
+          "and": {
+            "duration": {
+              "@mindurationminutes": "10"
+            },
+            "or": {
+              "metric": [
+                {
+                  "@name": "pvpfamegained",
+                  "@minvalue": "1"
+                },
+                {
+                  "@name": "pvefamegained",
+                  "@minvalue": "1"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "@name": "gathering",
+          "and": {
+            "duration": {
+              "@mindurationminutes": "10"
+            },
+            "metric": {
+              "@name": "pvefamegained",
+              "@minvalue": "1000"
+            }
+          }
+        },
+        {
+          "@name": "fishing",
+          "and": {
+            "duration": {
+              "@mindurationminutes": "10"
+            },
+            "metric": {
+              "@name": "pvefamegained",
+              "@minvalue": "1000"
+            }
+          }
+        },
+        {
+          "@name": "solodungeons",
+          "and": {
+            "duration": {
+              "@mindurationminutes": "10"
+            },
+            "metric": {
+              "@name": "mobskilled",
+              "@minvalue": "10"
+            }
+          }
+        },
+        {
+          "@name": "groupdungeons",
+          "and": {
+            "duration": {
+              "@mindurationminutes": "10"
+            },
+            "metric": {
+              "@name": "mobskilled",
+              "@minvalue": "10"
+            }
+          }
+        },
+        {
+          "@name": "avaloniandungeons",
+          "and": {
+            "duration": {
+              "@mindurationminutes": "10"
+            },
+            "metric": {
+              "@name": "mobskilled",
+              "@minvalue": "10"
+            }
+          }
+        },
+        {
+          "@name": "hardcoreexpeditions",
+          "and": {
+            "duration": {
+              "@mindurationminutes": "10"
+            },
+            "metric": {
+              "@name": "mobskilled",
+              "@minvalue": "10"
+            }
+          }
+        },
+        {
+          "@name": "homebase",
+          "and": {
+            "duration": {
+              "@mindurationminutes": "10"
+            },
+            "metric": [
+              {
+                "@name": "pvefamegained",
+                "@minvalue": "1"
+              },
+              {
+                "@name": "mobskilled",
+                "@minvalue": "1"
+              }
+            ]
+          }
+        },
+        {
+          "@name": "tracking",
+          "or": {
+            "and": {
+              "duration": {
+                "@mindurationminutes": "5"
+              },
+              "metric": {
+                "@name": "damagedealt",
+                "@minvalue": "1000"
+              }
+            },
+            "metric": {
+              "@name": "successwin",
+              "@minvalue": "1"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

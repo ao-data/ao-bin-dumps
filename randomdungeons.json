@@ -72,7 +72,7 @@
           "difficulty": {
             "@level": "0",
             "@silverfactor": "1",
-            "@lootfactor": "1",
+            "@lootfactor": "3",
             "@mobfamefactor": "2.64",
             "@questscalingfactor": "1",
             "@gatheringfamefactor": "1",
@@ -84,7 +84,7 @@
           "difficulty": {
             "@level": "0",
             "@silverfactor": "1",
-            "@lootfactor": "1",
+            "@lootfactor": "3",
             "@mobfamefactor": "2.64",
             "@questscalingfactor": "1",
             "@gatheringfamefactor": "1",
@@ -555,6 +555,32 @@
             {
               "@level": "4",
               "@weight": "1"
+            }
+          ]
+        },
+        {
+          "@name": "MISTS_RESOURCE_INSTANCE_MODE_BLACK",
+          "@singlerollonly": "true",
+          "level": [
+            {
+              "@level": "0",
+              "@weight": "8976"
+            },
+            {
+              "@level": "1",
+              "@weight": "429"
+            },
+            {
+              "@level": "2",
+              "@weight": "298"
+            },
+            {
+              "@level": "3",
+              "@weight": "198"
+            },
+            {
+              "@level": "4",
+              "@weight": "99"
             }
           ]
         }
@@ -3667,6 +3693,15 @@
         },
         {
           "@name": "MISTS_DUO_BLACK",
+          "fallback": {
+            "prefab": {
+              "@weight": "1",
+              "@name": "SHARED_MIST_WISP_PORTAL_MOB"
+            }
+          }
+        },
+        {
+          "@name": "MISTS_RESOURCE_BLACK",
           "fallback": {
             "prefab": {
               "@weight": "1",

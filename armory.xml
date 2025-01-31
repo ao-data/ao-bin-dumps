@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<armory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="armory.xsd">
+    <sessionrequirements defaultmindurationminutes="10">
+        <activity name="openworldsolo">
+            <or>
+                <and>
+                    <duration mindurationminutes="5"/>
+                    <metric name="pvpfamegained" minvalue="1"/>
+                </and>
+                <and>
+                    <duration mindurationminutes="5"/>
+                    <metric name="pvefamegained" minvalue="1"/>
+                </and>
+            </or>
+        </activity>
+
+        <activity name="openworldgroup">
+            <or>
+                <and>
+                    <duration mindurationminutes="10"/>
+                    <metric name="pvpfamegained" minvalue="1"/>
+                </and>
+                <and>
+                    <duration mindurationminutes="10"/>
+                    <metric name="pvefamegained" minvalue="1"/>
+                </and>
+            </or>
+        </activity>
+
+        <activity name="openworldlargegroup">
+            <or>
+                <and>
+                    <duration mindurationminutes="10"/>
+                    <metric name="pvpfamegained" minvalue="1"/>
+                </and>
+                <and>
+                    <duration mindurationminutes="10"/>
+                    <metric name="pvefamegained" minvalue="1"/>
+                </and>
+            </or>
+        </activity>
+
+        <activity name="zvz">
+            <and>
+                <duration mindurationminutes="5"/>
+                <or>
+                    <metric name="damagedealt" minvalue="5000"/>
+                    <metric name="healingdone" minvalue="5000"/>
+                    <metric name="kills" minvalue="3"/>
+                </or>
+            </and>
+        </activity>
+
+        <activity name="corrupteddungeons">
+            <or>
+                <metric name="successwin" minvalue="1"/>
+                <metric name="kills" minvalue="1"/>
+            </or>
+        </activity>
+
+        <activity name="hellgate2v2">
+            <or>
+                <metric name="successwin" minvalue="1"/>
+                <metric name="kills" minvalue="1"/>
+            </or>
+        </activity>
+
+        <activity name="hellgate5v5">
+            <or>
+                <metric name="successwin" minvalue="1"/>
+                <metric name="kills" minvalue="1"/>
+            </or>
+        </activity>
+
+        <activity name="hellgate10v10">
+            <or>
+                <metric name="successwin" minvalue="1"/>
+                <metric name="kills" minvalue="1"/>
+            </or>
+        </activity>
+
+        <activity name="crystalleague5v5">
+            <and>
+                <duration mindurationminutes="5"/>
+                <or>
+                    <metric name="damagedealt" minvalue="5000"/>
+                    <metric name="healingdone" minvalue="5000"/>
+                </or>
+            </and>
+        </activity>
+
+        <activity name="crystalleague20v20">
+            <and>
+                <duration mindurationminutes="5"/>
+                <or>
+                    <metric name="damagedealt" minvalue="5000"/>
+                    <metric name="healingdone" minvalue="5000"/>
+                </or>
+            </and>
+        </activity>
+
+        <activity name="crystalarena">
+            <and>
+                <duration mindurationminutes="5"/>
+                <or>
+                    <metric name="damagedealt" minvalue="5000"/>
+                    <metric name="healingdone" minvalue="5000"/>
+                </or>
+            </and>
+        </activity>
+
+        <activity name="arena">
+            <and>
+                <duration mindurationminutes="5"/>
+                <or>
+                    <metric name="damagedealt" minvalue="5000"/>
+                    <metric name="healingdone" minvalue="5000"/>
+                </or>
+            </and>
+        </activity>
+
+        <activity name="mists">
+            <or>
+                <and> <!-- PvP Combat Scenario -->
+                    <duration mindurationminutes="5"/>
+                    <or>
+                        <metric name="pvpfamegained" minvalue="1"/>
+                        <metric name="kills" minvalue="1"/>
+                    </or>
+                </and>
+                <and> <!-- PvE Scenario -->
+                    <duration mindurationminutes="10"/>
+                    <or>
+                        <metric name="pvefamegained" minvalue="1000"/>
+                        <metric name="mobskilled" minvalue="5"/>
+                    </or>
+                </and>
+            </or>
+        </activity>
+
+        <activity name="castle">
+            <and>
+                <duration mindurationminutes="5"/>
+                <or>
+                    <metric name="pvpfamegained" minvalue="1"/>
+                    <metric name="pvefamegained" minvalue="1"/>
+                    <metric name="mobskilled" minvalue="1"/>
+                </or>
+            </and>
+        </activity>
+
+        <activity name="fortification">
+            <and>
+                <duration mindurationminutes="10"/>
+            </and>
+        </activity>
+
+        <activity name="avalonianroads">
+            <and>
+                <duration mindurationminutes="10"/>
+                <or>
+                    <metric name="pvpfamegained" minvalue="1"/>
+                    <metric name="pvefamegained" minvalue="1"/>
+                </or>
+            </and>
+        </activity>
+
+        <activity name="gathering">
+            <and>
+                <duration mindurationminutes="10"/>
+                <metric name="pvefamegained" minvalue="1000"/>
+            </and>
+        </activity>
+
+        <activity name="fishing">
+            <and>
+                <duration mindurationminutes="10"/>
+                <metric name="pvefamegained" minvalue="1000"/>
+            </and>
+        </activity>
+
+        <activity name="solodungeons">
+            <and>
+                <duration mindurationminutes="10"/>
+                <metric name="mobskilled" minvalue="10"/>
+            </and>
+        </activity>
+
+        <activity name="groupdungeons">
+            <and>
+                <duration mindurationminutes="10"/>
+                <metric name="mobskilled" minvalue="10"/>
+            </and>
+        </activity>
+
+        <activity name="avaloniandungeons">
+            <and>
+                <duration mindurationminutes="10"/>
+                <metric name="mobskilled" minvalue="10"/>
+            </and>
+        </activity>
+
+        <activity name="hardcoreexpeditions">
+            <and>
+                <duration mindurationminutes="10"/>
+                <metric name="mobskilled" minvalue="10"/>
+            </and>
+        </activity>
+
+        <activity name="homebase">
+            <and>
+                <duration mindurationminutes="10"/>
+                <metric name="pvefamegained" minvalue="1"/>
+                <metric name="mobskilled" minvalue="1"/>
+            </and>
+        </activity>
+
+        <activity name="tracking">
+            <or>
+                <and>
+                    <duration mindurationminutes="5"/>
+                    <metric name="damagedealt" minvalue="1000"/>
+                </and>
+                <metric name="successwin" minvalue="1"/>
+            </or>
+        </activity>
+
+    </sessionrequirements>
+</armory>

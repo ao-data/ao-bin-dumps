@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
   <xs:attribute name="castanimation" type="castID"> </xs:attribute>
+  <xs:attribute name="levitateanimation" type="levitateID"> </xs:attribute>
   <xs:attribute name="channelinganimation" type="channelID"> </xs:attribute>
   <xs:attribute name="spelleffectanimation" type="casteffectID"> </xs:attribute>
   <!--xs:attribute name="emoteanimation" type="emoteAnimationID"> </xs:attribute-->
@@ -8,6 +9,12 @@
     <xs:restriction base="xs:string">
       <xs:enumeration value="guard"/>
       <xs:enumeration value="work"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="levitateID">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="none"/>
+      <xs:enumeration value="crystal_bow"/>
     </xs:restriction>
   </xs:simpleType>
   <xs:simpleType name="castID">
@@ -74,6 +81,8 @@
       <xs:enumeration value="cast_summon"/>
       <xs:enumeration value="cast_swirl"/>
       <xs:enumeration value="cast_swirl2"/>
+      <xs:enumeration value="cast_flip"/>
+      <xs:enumeration value="cast_flop"/>
       <xs:enumeration value="cast_sword_spin"/>
       <xs:enumeration value="cast_test"/>
       <xs:enumeration value="cast_tornado"/>
@@ -153,9 +162,10 @@
       <xs:enumeration value="ranged_standardshot"/>
       <xs:enumeration value="ranged_throwingknife"/>
       <xs:enumeration value="ranged_undirected"/>
+      <xs:enumeration value="ranged_from_levitate"/>
       <xs:enumeration value="rendingrage_left"/>
       <xs:enumeration value="rendingrage_right"/>      
-
+      
       <xs:enumeration value="self_buff"/>      
       <xs:enumeration value="singlesmash"/>
       <xs:enumeration value="slam_down_spear_hit"/>
@@ -173,6 +183,7 @@
       <xs:enumeration value="vanity_warbanner_charge"/>
   	  <xs:enumeration value="vanity_spellbook_fireworks"/>
       <xs:enumeration value="vanity_spellbook_bird"/>
+      <xs:enumeration value="vanity_throw_skull"/>
       <xs:enumeration value="vanity_roll_dice_d6"/>
       <xs:enumeration value="vanity_roll_dice_d20"/>
       <xs:enumeration value="vanity_throw_silver"/>
@@ -194,6 +205,8 @@
       <xs:enumeration value="sleep"/>
       <xs:enumeration value="tutorial_stun"/>
       <xs:enumeration value="whirlwind"/>
+      <xs:enumeration value="cast_flip"/>
+      <xs:enumeration value="cast_flop"/>
     </xs:restriction>
   </xs:simpleType>
   <xs:simpleType name="channelID">
@@ -233,6 +246,7 @@
       <xs:enumeration value="channel_hover_01"/>
       <xs:enumeration value="channel_mend_wounds"/>
       <xs:enumeration value="channel_lute_song_01"/>
+      <xs:enumeration value="channel_floating_meditate"/>
       <xs:enumeration value="mount_chariot_towershield_channel"/>
       <xs:enumeration value="mount_eagle_flapping_channel"/>
       <xs:enumeration value="mount_beetle_buzz_channel"/>
@@ -315,6 +329,10 @@
       <xs:enumeration value="triplekick"/>
       <xs:enumeration value="melee_tackle_swingattack"/>
       <xs:enumeration value="melee_dash_area"/>
+      <xs:enumeration value="ranged_dash_spin_01"/>
+      <xs:enumeration value="ranged_dash_spin_02"/>
+      <xs:enumeration value="ranged_dash_spin_03"/>
+      <xs:enumeration value="levitate_ascent"/>
       <!--knockback-->
       <xs:enumeration value="cast_jump_back"/>
       <xs:enumeration value="crystal_bow"/>		

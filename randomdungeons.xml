@@ -17,10 +17,10 @@
       <difficulty level="4" mobmodifier="MOB_RANDOM_DUNGEON_BUFF_04" silverfactor="3.1832" lootfactor="3.1832" mobfamefactor="2.7416" questscalingfactor="2.7416" gatheringfamefactor="1" fishingfamefactor="1"/>
     </difficultygroup>
     <difficultygroup name="bossroom_solo">
-      <difficulty level="0" silverfactor="1" lootfactor="1" mobfamefactor="2.64" questscalingfactor="1" gatheringfamefactor="1" fishingfamefactor="1"/>
+      <difficulty level="0" silverfactor="1" lootfactor="3" mobfamefactor="2.64" questscalingfactor="1" gatheringfamefactor="1" fishingfamefactor="1"/>
     </difficultygroup>
     <difficultygroup name="bossroom_veteran">
-      <difficulty level="0" silverfactor="1" lootfactor="1" mobfamefactor="2.64" questscalingfactor="1" gatheringfamefactor="1" fishingfamefactor="1"/>
+      <difficulty level="0" silverfactor="1" lootfactor="3" mobfamefactor="2.64" questscalingfactor="1" gatheringfamefactor="1" fishingfamefactor="1"/>
     </difficultygroup>
     <difficultygroup name="mists">
       <difficulty level="1" mobmodifier="MOB_MISTS_BUFF_01" silverfactor="1.16"   lootfactor="1.16"   mobfamefactor="1.16"   questscalingfactor="1.16"   gatheringfamefactor="1" fishingfamefactor="1"/>
@@ -141,6 +141,13 @@
       <level level="2" weight="6"/>
       <level level="3" weight="3"/>
       <level level="4" weight="1"/>
+    </RandomLevelReroll>
+    <RandomLevelReroll name="MISTS_RESOURCE_INSTANCE_MODE_BLACK" singlerollonly="true">
+      <level level="0" weight="8976"/>
+      <level level="1" weight="429"/>
+      <level level="2" weight="298"/>
+      <level level="3" weight="198"/>
+      <level level="4" weight="99"/>
     </RandomLevelReroll>
   </RandomLevelRerolls>
 
@@ -1113,6 +1120,12 @@
     </Visualization>
     
     <Visualization name="MISTS_DUO_BLACK">
+      <fallback>
+        <prefab weight="1" name="SHARED_MIST_WISP_PORTAL_MOB" />
+      </fallback>
+    </Visualization>
+
+    <Visualization name="MISTS_RESOURCE_BLACK">
       <fallback>
         <prefab weight="1" name="SHARED_MIST_WISP_PORTAL_MOB" />
       </fallback>

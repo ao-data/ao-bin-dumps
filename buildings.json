@@ -255,6 +255,10 @@
         "@uniquename": "MIST_GREEN_T8_MELDBUILDING"
       },
       {
+        "@template": "T8_MELDBUILDING",
+        "@uniquename": "HIGHLAND_RED_T8_MELDBUILDING_BLACKBANK"
+      },
+      {
         "@template": "T1_BANK",
         "@uniquename": "SWAMP_GREEN_T1_BANK"
       },
@@ -367,6 +371,34 @@
         "@uniquename": "SWAMP_GREEN_BANK_STONE"
       },
       {
+        "@template": "T1_BANK",
+        "@uniquename": "FOREST_GREEN_T1_BANK_ISLAND"
+      },
+      {
+        "@template": "T1_BANK",
+        "@uniquename": "HIGHLAND_GREEN_T1_BANK_ISLAND"
+      },
+      {
+        "@template": "T1_BANK",
+        "@uniquename": "HIGHLAND_DEAD_T1_BANK_ISLAND"
+      },
+      {
+        "@template": "T1_BANK",
+        "@uniquename": "MISTS_GREEN_T1_BANK_ISLAND"
+      },
+      {
+        "@template": "T1_BANK",
+        "@uniquename": "MOUNTAIN_GREEN_T1_BANK_ISLAND"
+      },
+      {
+        "@template": "T1_BANK",
+        "@uniquename": "STEPPE_GREEN_T1_BANK_ISLAND"
+      },
+      {
+        "@template": "T1_BANK",
+        "@uniquename": "SWAMP_GREEN_T1_BANK_ISLAND"
+      },
+      {
         "@template": "T1_BANK_OUTLAND",
         "@uniquename": "SWAMP_GREEN_T1_BANK_OUTLAND"
       },
@@ -425,6 +457,10 @@
       {
         "@template": "T1_BANK_OUTLAND",
         "@uniquename": "STEPPE_DEAD_T1_BANK_OUTLAND"
+      },
+      {
+        "@template": "T1_BANK_SMUGGLERS_DEN",
+        "@uniquename": "HIGHLAND_RED_T1_BANK_BLACKBANK"
       },
       {
         "@template": "MARKETPLACE_SMALL",
@@ -533,6 +569,26 @@
       {
         "@template": "MARKETPLACE_MINIATURE",
         "@uniquename": "SWAMP_GREEN_MARKETPLACE_GUILD_ISLAND"
+      },
+      {
+        "@template": "SMUGGLERMARKET",
+        "@uniquename": "HIGHLAND_RED_MARKETPLACE_BLACKBANK_A"
+      },
+      {
+        "@template": "SMUGGLERMARKET",
+        "@uniquename": "HIGHLAND_RED_MARKETPLACE_BLACKBANK_B"
+      },
+      {
+        "@template": "SMUGGLERMARKET",
+        "@uniquename": "FOREST_GREEN_MARKETPLACE_BLACKBANK"
+      },
+      {
+        "@template": "SMUGGLERMARKET",
+        "@uniquename": "MOUNTAIN_GREEN_MARKETPLACE_BLACKBANK"
+      },
+      {
+        "@template": "SMUGGLERMARKET",
+        "@uniquename": "SWAMP_GREEN_MARKETPLACE_BLACKBANK"
       },
       {
         "@template": "FARMING_MERCHANT",
@@ -769,6 +825,10 @@
       {
         "@template": "T8_REPAIRSHOP",
         "@uniquename": "MIST_GREEN_REPAIRSHOP"
+      },
+      {
+        "@template": "T8_REPAIRSHOP",
+        "@uniquename": "HIGHLAND_RED_REPAIRSHOP_BLACKBANK"
       }
     ],
     "repairbuilding": [
@@ -1729,7 +1789,7 @@
         "@firstname": "@BUILDINGS_MISTS_GREEN_CITY_TRADER_TITLE",
         "@surname": "@BUILDINGS_MISTS_GREEN_CITY_TRADER",
         "@uisoundevent": "Play_ui_select_toolmaker",
-        "@showmistcitystanding": "true",
+        "@showstanding": "mistcity",
         "@hideonclustermap": "true",
         "craftingitemlist": {
           "craftitem": [
@@ -1787,6 +1847,101 @@
         },
         "AudioInfo": {
           "@name": "NPC_CITY_COMMANDER_MISTS"
+        }
+      },
+      {
+        "@uniquename": "HIGHLAND_RED_SMUGGLER_SPOT_BLACKBANK",
+        "@tier": "8",
+        "@nutritionstorage": "0",
+        "@randomidleanimoffset": "false",
+        "@placecost": "0",
+        "@displaygroup": "8",
+        "@allowsstudy": "false",
+        "@isshop": "true",
+        "@animateonguiopen": "true",
+        "@craftanimation": "none",
+        "@defaultcostfactorfriends": "0",
+        "@defaultcostfactorusers": "0",
+        "@durability": "1",
+        "@durabilityloss": "0",
+        "@category": "none",
+        "@craftcapacity": "0",
+        "@craftcapacityregeneration": "0",
+        "@usesbuildingplacementrules": "false",
+        "@iconAtlas": "RefMiniMapAtlas",
+        "@iconSprite": "building_toolmaker",
+        "@uispritename": "Gui/Avatars/Buildings/NPC_SMUGGLER_01",
+        "@firstname": "@BUILDINGS_SMUGGLERS_DEN_TRADER_TITLE",
+        "@surname": "@BUILDINGS_SMUGGLERS_DEN_TRADER",
+        "@uisoundevent": "Play_ui_select_toolmaker",
+        "@showstanding": "smugglers",
+        "@hideonclustermap": "true",
+        "craftingitemlist": {
+          "craftitem": [
+            {
+              "@uniquename": "QUESTITEM_STANDING_SMUGGLER",
+              "@category": "@BUILDING_ITEMS_CATEGORY_FAVOR",
+              "@displaygroup": "1"
+            },
+            {
+              "@uniquename": "T4_CAPEITEM_SMUGGLER_BP",
+              "@category": "@BUILDING_ITEMS_CATEGORY_FAVOR",
+              "@displaygroup": "1"
+            },
+            {
+              "@uniquename": "T5_CAPEITEM_SMUGGLER_BP",
+              "@category": "@BUILDING_ITEMS_CATEGORY_FAVOR",
+              "@displaygroup": "1"
+            },
+            {
+              "@uniquename": "T6_CAPEITEM_SMUGGLER_BP",
+              "@category": "@BUILDING_ITEMS_CATEGORY_FAVOR",
+              "@displaygroup": "1"
+            },
+            {
+              "@uniquename": "T7_CAPEITEM_SMUGGLER_BP",
+              "@category": "@BUILDING_ITEMS_CATEGORY_FAVOR",
+              "@displaygroup": "1"
+            },
+            {
+              "@uniquename": "T8_CAPEITEM_SMUGGLER_BP",
+              "@category": "@BUILDING_ITEMS_CATEGORY_FAVOR",
+              "@displaygroup": "1"
+            },
+            {
+              "@uniquename": "UNIQUE_UNLOCK_SHOES_VANITY_SMUGGLER",
+              "@category": "@BUILDING_ITEMS_CATEGORY_FAVOR",
+              "@displaygroup": "1"
+            },
+            {
+              "@uniquename": "UNIQUE_UNLOCK_CAPE_VANITY_SMUGGLER",
+              "@category": "@BUILDING_ITEMS_CATEGORY_FAVOR",
+              "@displaygroup": "1"
+            },
+            {
+              "@uniquename": "UNIQUE_UNLOCK_ARMOR_VANITY_SMUGGLER",
+              "@category": "@BUILDING_ITEMS_CATEGORY_FAVOR",
+              "@displaygroup": "1"
+            },
+            {
+              "@uniquename": "UNIQUE_UNLOCK_HEAD_VANITY_SMUGGLER",
+              "@category": "@BUILDING_ITEMS_CATEGORY_FAVOR",
+              "@displaygroup": "1"
+            },
+            {
+              "@uniquename": "UNIQUE_AVATARRING_SMUGGLER",
+              "@category": "@BUILDING_ITEMS_CATEGORY_FAVOR",
+              "@displaygroup": "1"
+            },
+            {
+              "@uniquename": "UNIQUE_AVATAR_SMUGGLER",
+              "@category": "@BUILDING_ITEMS_CATEGORY_FAVOR",
+              "@displaygroup": "1"
+            }
+          ]
+        },
+        "AudioInfo": {
+          "@name": "NPC_SMUGGLER_FACTION_TRADER"
         }
       },
       {
@@ -2123,6 +2278,11 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
+              "@uniquename": "T8_2H_KNUCKLES_CRYSTAL",
+              "@displaygroup": "8",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
               "@uniquename": "T8_2H_BOW",
               "@displaygroup": "8",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
@@ -2154,6 +2314,11 @@
             },
             {
               "@uniquename": "T8_2H_BOW_AVALON",
+              "@displaygroup": "8",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T8_2H_BOW_CRYSTAL",
               "@displaygroup": "8",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
@@ -2224,6 +2389,11 @@
             },
             {
               "@uniquename": "T8_MAIN_CURSEDSTAFF_AVALON",
+              "@displaygroup": "8",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T8_MAIN_CURSEDSTAFF_CRYSTAL",
               "@displaygroup": "8",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
@@ -3018,6 +3188,11 @@
               "@displaygroup": "8"
             },
             {
+              "@uniquename": "T8_CAPEITEM_SMUGGLER",
+              "@category": "@BUILDING_ITEMS_CATEGORY_ACCESSOIRES",
+              "@displaygroup": "8"
+            },
+            {
               "@uniquename": "T5_MEAL_SOUP",
               "@category": "@BUILDING_ITEMS_CATEGORY_FOOD",
               "@displaygroup": "5"
@@ -3560,6 +3735,11 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
+              "@uniquename": "T8_2H_KNUCKLES_CRYSTAL",
+              "@displaygroup": "8",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
               "@uniquename": "T8_2H_BOW",
               "@displaygroup": "8",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
@@ -3591,6 +3771,11 @@
             },
             {
               "@uniquename": "T8_2H_BOW_AVALON",
+              "@displaygroup": "8",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T8_2H_BOW_CRYSTAL",
               "@displaygroup": "8",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
@@ -3661,6 +3846,11 @@
             },
             {
               "@uniquename": "T8_MAIN_CURSEDSTAFF_AVALON",
+              "@displaygroup": "8",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T8_MAIN_CURSEDSTAFF_CRYSTAL",
               "@displaygroup": "8",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
@@ -4436,6 +4626,11 @@
             },
             {
               "@uniquename": "T8_CAPEITEM_AVALON",
+              "@category": "@BUILDING_ITEMS_CATEGORY_ACCESSOIRES",
+              "@displaygroup": "8"
+            },
+            {
+              "@uniquename": "T8_CAPEITEM_SMUGGLER",
               "@category": "@BUILDING_ITEMS_CATEGORY_ACCESSOIRES",
               "@displaygroup": "8"
             },
@@ -4997,6 +5192,11 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
+              "@uniquename": "T7_2H_KNUCKLES_CRYSTAL",
+              "@displaygroup": "8",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
               "@uniquename": "T7_2H_BOW",
               "@displaygroup": "8",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
@@ -5028,6 +5228,11 @@
             },
             {
               "@uniquename": "T7_2H_BOW_AVALON",
+              "@displaygroup": "8",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T7_2H_BOW_CRYSTAL",
               "@displaygroup": "8",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
@@ -5098,6 +5303,11 @@
             },
             {
               "@uniquename": "T7_MAIN_CURSEDSTAFF_AVALON",
+              "@displaygroup": "8",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T7_MAIN_CURSEDSTAFF_CRYSTAL",
               "@displaygroup": "8",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
@@ -5877,6 +6087,11 @@
               "@displaygroup": "8"
             },
             {
+              "@uniquename": "T7_CAPEITEM_SMUGGLER",
+              "@category": "@BUILDING_ITEMS_CATEGORY_ACCESSOIRES",
+              "@displaygroup": "8"
+            },
+            {
               "@uniquename": "T7_BAG",
               "@category": "@BUILDING_ITEMS_CATEGORY_ACCESSOIRES",
               "@displaygroup": "8"
@@ -6426,6 +6641,11 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
+              "@uniquename": "T6_2H_KNUCKLES_CRYSTAL",
+              "@displaygroup": "8",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
               "@uniquename": "T6_2H_BOW",
               "@displaygroup": "8",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
@@ -6457,6 +6677,11 @@
             },
             {
               "@uniquename": "T6_2H_BOW_AVALON",
+              "@displaygroup": "8",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T6_2H_BOW_CRYSTAL",
               "@displaygroup": "8",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
@@ -6527,6 +6752,11 @@
             },
             {
               "@uniquename": "T6_MAIN_CURSEDSTAFF_AVALON",
+              "@displaygroup": "8",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T6_MAIN_CURSEDSTAFF_CRYSTAL",
               "@displaygroup": "8",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
@@ -7306,6 +7536,11 @@
               "@displaygroup": "8"
             },
             {
+              "@uniquename": "T6_CAPEITEM_SMUGGLER",
+              "@category": "@BUILDING_ITEMS_CATEGORY_ACCESSOIRES",
+              "@displaygroup": "8"
+            },
+            {
               "@uniquename": "T6_BAG",
               "@category": "@BUILDING_ITEMS_CATEGORY_ACCESSOIRES",
               "@displaygroup": "8"
@@ -7850,6 +8085,11 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
+              "@uniquename": "T5_2H_KNUCKLES_CRYSTAL",
+              "@displaygroup": "8",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
               "@uniquename": "T5_2H_BOW",
               "@displaygroup": "8",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
@@ -7881,6 +8121,11 @@
             },
             {
               "@uniquename": "T5_2H_BOW_AVALON",
+              "@displaygroup": "8",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T5_2H_BOW_CRYSTAL",
               "@displaygroup": "8",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
@@ -7951,6 +8196,11 @@
             },
             {
               "@uniquename": "T5_MAIN_CURSEDSTAFF_AVALON",
+              "@displaygroup": "8",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T5_MAIN_CURSEDSTAFF_CRYSTAL",
               "@displaygroup": "8",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
@@ -8730,6 +8980,11 @@
               "@displaygroup": "8"
             },
             {
+              "@uniquename": "T5_CAPEITEM_SMUGGLER",
+              "@category": "@BUILDING_ITEMS_CATEGORY_ACCESSOIRES",
+              "@displaygroup": "8"
+            },
+            {
               "@uniquename": "T5_BAG",
               "@category": "@BUILDING_ITEMS_CATEGORY_ACCESSOIRES",
               "@displaygroup": "8"
@@ -9274,6 +9529,11 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
+              "@uniquename": "T4_2H_KNUCKLES_CRYSTAL",
+              "@displaygroup": "8",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
               "@uniquename": "T4_2H_BOW",
               "@displaygroup": "8",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
@@ -9305,6 +9565,11 @@
             },
             {
               "@uniquename": "T4_2H_BOW_AVALON",
+              "@displaygroup": "8",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T4_2H_BOW_CRYSTAL",
               "@displaygroup": "8",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
@@ -9375,6 +9640,11 @@
             },
             {
               "@uniquename": "T4_MAIN_CURSEDSTAFF_AVALON",
+              "@displaygroup": "8",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T4_MAIN_CURSEDSTAFF_CRYSTAL",
               "@displaygroup": "8",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
@@ -10150,6 +10420,11 @@
             },
             {
               "@uniquename": "T4_CAPEITEM_AVALON",
+              "@category": "@BUILDING_ITEMS_CATEGORY_ACCESSOIRES",
+              "@displaygroup": "8"
+            },
+            {
+              "@uniquename": "T4_CAPEITEM_SMUGGLER",
               "@category": "@BUILDING_ITEMS_CATEGORY_ACCESSOIRES",
               "@displaygroup": "8"
             },
@@ -12566,6 +12841,11 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
+              "@uniquename": "T4_OFF_SHIELD_AVALON",
+              "@displaygroup": "4",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
               "@uniquename": "T4_MAIN_SWORD_CRYSTAL",
               "@displaygroup": "4",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
@@ -12576,12 +12856,12 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
-              "@uniquename": "T4_OFF_SHIELD_AVALON",
+              "@uniquename": "T4_MAIN_MACE_CRYSTAL",
               "@displaygroup": "4",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
-              "@uniquename": "T4_MAIN_MACE_CRYSTAL",
+              "@uniquename": "T4_2H_KNUCKLES_CRYSTAL",
               "@displaygroup": "4",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
@@ -13092,6 +13372,11 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
+              "@uniquename": "T4_OFF_SHIELD_AVALON",
+              "@displaygroup": "4",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
               "@uniquename": "T4_MAIN_SWORD_CRYSTAL",
               "@displaygroup": "4",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
@@ -13102,12 +13387,12 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
-              "@uniquename": "T4_OFF_SHIELD_AVALON",
+              "@uniquename": "T4_MAIN_MACE_CRYSTAL",
               "@displaygroup": "4",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
-              "@uniquename": "T4_MAIN_MACE_CRYSTAL",
+              "@uniquename": "T4_2H_KNUCKLES_CRYSTAL",
               "@displaygroup": "4",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
@@ -13342,6 +13627,11 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
+              "@uniquename": "T5_OFF_SHIELD_AVALON",
+              "@displaygroup": "5",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
               "@uniquename": "T5_MAIN_SWORD_CRYSTAL",
               "@displaygroup": "5",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
@@ -13352,12 +13642,12 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
-              "@uniquename": "T5_OFF_SHIELD_AVALON",
+              "@uniquename": "T5_MAIN_MACE_CRYSTAL",
               "@displaygroup": "5",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
-              "@uniquename": "T5_MAIN_MACE_CRYSTAL",
+              "@uniquename": "T5_2H_KNUCKLES_CRYSTAL",
               "@displaygroup": "5",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
@@ -14003,6 +14293,11 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
+              "@uniquename": "T4_OFF_SHIELD_AVALON",
+              "@displaygroup": "4",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
               "@uniquename": "T4_MAIN_SWORD_CRYSTAL",
               "@displaygroup": "4",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
@@ -14013,12 +14308,12 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
-              "@uniquename": "T4_OFF_SHIELD_AVALON",
+              "@uniquename": "T4_MAIN_MACE_CRYSTAL",
               "@displaygroup": "4",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
-              "@uniquename": "T4_MAIN_MACE_CRYSTAL",
+              "@uniquename": "T4_2H_KNUCKLES_CRYSTAL",
               "@displaygroup": "4",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
@@ -14253,6 +14548,11 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
+              "@uniquename": "T5_OFF_SHIELD_AVALON",
+              "@displaygroup": "5",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
               "@uniquename": "T5_MAIN_SWORD_CRYSTAL",
               "@displaygroup": "5",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
@@ -14263,12 +14563,12 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
-              "@uniquename": "T5_OFF_SHIELD_AVALON",
+              "@uniquename": "T5_MAIN_MACE_CRYSTAL",
               "@displaygroup": "5",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
-              "@uniquename": "T5_MAIN_MACE_CRYSTAL",
+              "@uniquename": "T5_2H_KNUCKLES_CRYSTAL",
               "@displaygroup": "5",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
@@ -14503,6 +14803,11 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
+              "@uniquename": "T6_OFF_SHIELD_AVALON",
+              "@displaygroup": "6",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
               "@uniquename": "T6_MAIN_SWORD_CRYSTAL",
               "@displaygroup": "6",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
@@ -14513,12 +14818,12 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
-              "@uniquename": "T6_OFF_SHIELD_AVALON",
+              "@uniquename": "T6_MAIN_MACE_CRYSTAL",
               "@displaygroup": "6",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
-              "@uniquename": "T6_MAIN_MACE_CRYSTAL",
+              "@uniquename": "T6_2H_KNUCKLES_CRYSTAL",
               "@displaygroup": "6",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
@@ -15299,6 +15604,11 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
+              "@uniquename": "T4_OFF_SHIELD_AVALON",
+              "@displaygroup": "4",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
               "@uniquename": "T4_MAIN_SWORD_CRYSTAL",
               "@displaygroup": "4",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
@@ -15309,12 +15619,12 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
-              "@uniquename": "T4_OFF_SHIELD_AVALON",
+              "@uniquename": "T4_MAIN_MACE_CRYSTAL",
               "@displaygroup": "4",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
-              "@uniquename": "T4_MAIN_MACE_CRYSTAL",
+              "@uniquename": "T4_2H_KNUCKLES_CRYSTAL",
               "@displaygroup": "4",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
@@ -15549,6 +15859,11 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
+              "@uniquename": "T5_OFF_SHIELD_AVALON",
+              "@displaygroup": "5",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
               "@uniquename": "T5_MAIN_SWORD_CRYSTAL",
               "@displaygroup": "5",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
@@ -15559,12 +15874,12 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
-              "@uniquename": "T5_OFF_SHIELD_AVALON",
+              "@uniquename": "T5_MAIN_MACE_CRYSTAL",
               "@displaygroup": "5",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
-              "@uniquename": "T5_MAIN_MACE_CRYSTAL",
+              "@uniquename": "T5_2H_KNUCKLES_CRYSTAL",
               "@displaygroup": "5",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
@@ -15799,6 +16114,11 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
+              "@uniquename": "T6_OFF_SHIELD_AVALON",
+              "@displaygroup": "6",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
               "@uniquename": "T6_MAIN_SWORD_CRYSTAL",
               "@displaygroup": "6",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
@@ -15809,12 +16129,12 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
-              "@uniquename": "T6_OFF_SHIELD_AVALON",
+              "@uniquename": "T6_MAIN_MACE_CRYSTAL",
               "@displaygroup": "6",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
-              "@uniquename": "T6_MAIN_MACE_CRYSTAL",
+              "@uniquename": "T6_2H_KNUCKLES_CRYSTAL",
               "@displaygroup": "6",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
@@ -16049,6 +16369,11 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
+              "@uniquename": "T7_OFF_SHIELD_AVALON",
+              "@displaygroup": "7",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
               "@uniquename": "T7_MAIN_SWORD_CRYSTAL",
               "@displaygroup": "7",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
@@ -16059,12 +16384,12 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
-              "@uniquename": "T7_OFF_SHIELD_AVALON",
+              "@uniquename": "T7_MAIN_MACE_CRYSTAL",
               "@displaygroup": "7",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
-              "@uniquename": "T7_MAIN_MACE_CRYSTAL",
+              "@uniquename": "T7_2H_KNUCKLES_CRYSTAL",
               "@displaygroup": "7",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
@@ -16979,6 +17304,11 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
+              "@uniquename": "T4_OFF_SHIELD_AVALON",
+              "@displaygroup": "4",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
               "@uniquename": "T4_MAIN_SWORD_CRYSTAL",
               "@displaygroup": "4",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
@@ -16989,12 +17319,12 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
-              "@uniquename": "T4_OFF_SHIELD_AVALON",
+              "@uniquename": "T4_MAIN_MACE_CRYSTAL",
               "@displaygroup": "4",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
-              "@uniquename": "T4_MAIN_MACE_CRYSTAL",
+              "@uniquename": "T4_2H_KNUCKLES_CRYSTAL",
               "@displaygroup": "4",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
@@ -17229,6 +17559,11 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
+              "@uniquename": "T5_OFF_SHIELD_AVALON",
+              "@displaygroup": "5",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
               "@uniquename": "T5_MAIN_SWORD_CRYSTAL",
               "@displaygroup": "5",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
@@ -17239,12 +17574,12 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
-              "@uniquename": "T5_OFF_SHIELD_AVALON",
+              "@uniquename": "T5_MAIN_MACE_CRYSTAL",
               "@displaygroup": "5",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
-              "@uniquename": "T5_MAIN_MACE_CRYSTAL",
+              "@uniquename": "T5_2H_KNUCKLES_CRYSTAL",
               "@displaygroup": "5",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
@@ -17479,6 +17814,11 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
+              "@uniquename": "T6_OFF_SHIELD_AVALON",
+              "@displaygroup": "6",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
               "@uniquename": "T6_MAIN_SWORD_CRYSTAL",
               "@displaygroup": "6",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
@@ -17489,12 +17829,12 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
-              "@uniquename": "T6_OFF_SHIELD_AVALON",
+              "@uniquename": "T6_MAIN_MACE_CRYSTAL",
               "@displaygroup": "6",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
-              "@uniquename": "T6_MAIN_MACE_CRYSTAL",
+              "@uniquename": "T6_2H_KNUCKLES_CRYSTAL",
               "@displaygroup": "6",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
@@ -17729,6 +18069,11 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
+              "@uniquename": "T7_OFF_SHIELD_AVALON",
+              "@displaygroup": "7",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
               "@uniquename": "T7_MAIN_SWORD_CRYSTAL",
               "@displaygroup": "7",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
@@ -17739,12 +18084,12 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
-              "@uniquename": "T7_OFF_SHIELD_AVALON",
+              "@uniquename": "T7_MAIN_MACE_CRYSTAL",
               "@displaygroup": "7",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
-              "@uniquename": "T7_MAIN_MACE_CRYSTAL",
+              "@uniquename": "T7_2H_KNUCKLES_CRYSTAL",
               "@displaygroup": "7",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
@@ -17979,6 +18324,11 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
+              "@uniquename": "T8_OFF_SHIELD_AVALON",
+              "@displaygroup": "8",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
               "@uniquename": "T8_MAIN_SWORD_CRYSTAL",
               "@displaygroup": "8",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
@@ -17989,12 +18339,12 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
-              "@uniquename": "T8_OFF_SHIELD_AVALON",
+              "@uniquename": "T8_MAIN_MACE_CRYSTAL",
               "@displaygroup": "8",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
-              "@uniquename": "T8_MAIN_MACE_CRYSTAL",
+              "@uniquename": "T8_2H_KNUCKLES_CRYSTAL",
               "@displaygroup": "8",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
@@ -19263,22 +19613,27 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
-              "@uniquename": "T4_2H_GLAIVE_CRYSTAL",
-              "@displaygroup": "4",
-              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
-            },
-            {
               "@uniquename": "T4_OFF_TALISMAN_AVALON",
               "@displaygroup": "4",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
-              "@uniquename": "T4_2H_DOUBLEBLADEDSTAFF_CRYSTAL",
+              "@uniquename": "T4_2H_BOW_CRYSTAL",
+              "@displaygroup": "4",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T4_2H_GLAIVE_CRYSTAL",
               "@displaygroup": "4",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
               "@uniquename": "T4_2H_DAGGERPAIR_CRYSTAL",
+              "@displaygroup": "4",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T4_2H_DOUBLEBLADEDSTAFF_CRYSTAL",
               "@displaygroup": "4",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
@@ -19789,22 +20144,27 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
-              "@uniquename": "T4_2H_GLAIVE_CRYSTAL",
-              "@displaygroup": "4",
-              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
-            },
-            {
-              "@uniquename": "T4_2H_DOUBLEBLADEDSTAFF_CRYSTAL",
-              "@displaygroup": "4",
-              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
-            },
-            {
               "@uniquename": "T4_OFF_TALISMAN_AVALON",
               "@displaygroup": "4",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
+              "@uniquename": "T4_2H_BOW_CRYSTAL",
+              "@displaygroup": "4",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T4_2H_GLAIVE_CRYSTAL",
+              "@displaygroup": "4",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
               "@uniquename": "T4_2H_DAGGERPAIR_CRYSTAL",
+              "@displaygroup": "4",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T4_2H_DOUBLEBLADEDSTAFF_CRYSTAL",
               "@displaygroup": "4",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
@@ -20039,22 +20399,27 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
-              "@uniquename": "T5_2H_GLAIVE_CRYSTAL",
-              "@displaygroup": "5",
-              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
-            },
-            {
-              "@uniquename": "T5_2H_DOUBLEBLADEDSTAFF_CRYSTAL",
-              "@displaygroup": "5",
-              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
-            },
-            {
               "@uniquename": "T5_OFF_TALISMAN_AVALON",
               "@displaygroup": "5",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
+              "@uniquename": "T5_2H_BOW_CRYSTAL",
+              "@displaygroup": "5",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T5_2H_GLAIVE_CRYSTAL",
+              "@displaygroup": "5",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
               "@uniquename": "T5_2H_DAGGERPAIR_CRYSTAL",
+              "@displaygroup": "5",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T5_2H_DOUBLEBLADEDSTAFF_CRYSTAL",
               "@displaygroup": "5",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
@@ -20700,22 +21065,27 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
-              "@uniquename": "T4_2H_GLAIVE_CRYSTAL",
-              "@displaygroup": "4",
-              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
-            },
-            {
-              "@uniquename": "T4_2H_DOUBLEBLADEDSTAFF_CRYSTAL",
-              "@displaygroup": "4",
-              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
-            },
-            {
               "@uniquename": "T4_OFF_TALISMAN_AVALON",
               "@displaygroup": "4",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
+              "@uniquename": "T4_2H_BOW_CRYSTAL",
+              "@displaygroup": "4",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T4_2H_GLAIVE_CRYSTAL",
+              "@displaygroup": "4",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
               "@uniquename": "T4_2H_DAGGERPAIR_CRYSTAL",
+              "@displaygroup": "4",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T4_2H_DOUBLEBLADEDSTAFF_CRYSTAL",
               "@displaygroup": "4",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
@@ -20950,22 +21320,27 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
-              "@uniquename": "T5_2H_GLAIVE_CRYSTAL",
-              "@displaygroup": "5",
-              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
-            },
-            {
-              "@uniquename": "T5_2H_DOUBLEBLADEDSTAFF_CRYSTAL",
-              "@displaygroup": "5",
-              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
-            },
-            {
               "@uniquename": "T5_OFF_TALISMAN_AVALON",
               "@displaygroup": "5",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
+              "@uniquename": "T5_2H_BOW_CRYSTAL",
+              "@displaygroup": "5",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T5_2H_GLAIVE_CRYSTAL",
+              "@displaygroup": "5",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
               "@uniquename": "T5_2H_DAGGERPAIR_CRYSTAL",
+              "@displaygroup": "5",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T5_2H_DOUBLEBLADEDSTAFF_CRYSTAL",
               "@displaygroup": "5",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
@@ -21200,22 +21575,27 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
-              "@uniquename": "T6_2H_GLAIVE_CRYSTAL",
-              "@displaygroup": "6",
-              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
-            },
-            {
-              "@uniquename": "T6_2H_DOUBLEBLADEDSTAFF_CRYSTAL",
-              "@displaygroup": "6",
-              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
-            },
-            {
               "@uniquename": "T6_OFF_TALISMAN_AVALON",
               "@displaygroup": "6",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
+              "@uniquename": "T6_2H_BOW_CRYSTAL",
+              "@displaygroup": "6",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T6_2H_GLAIVE_CRYSTAL",
+              "@displaygroup": "6",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
               "@uniquename": "T6_2H_DAGGERPAIR_CRYSTAL",
+              "@displaygroup": "6",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T6_2H_DOUBLEBLADEDSTAFF_CRYSTAL",
               "@displaygroup": "6",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
@@ -21996,22 +22376,27 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
-              "@uniquename": "T4_2H_GLAIVE_CRYSTAL",
-              "@displaygroup": "4",
-              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
-            },
-            {
-              "@uniquename": "T4_2H_DOUBLEBLADEDSTAFF_CRYSTAL",
-              "@displaygroup": "4",
-              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
-            },
-            {
               "@uniquename": "T4_OFF_TALISMAN_AVALON",
               "@displaygroup": "4",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
+              "@uniquename": "T4_2H_BOW_CRYSTAL",
+              "@displaygroup": "4",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T4_2H_GLAIVE_CRYSTAL",
+              "@displaygroup": "4",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
               "@uniquename": "T4_2H_DAGGERPAIR_CRYSTAL",
+              "@displaygroup": "4",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T4_2H_DOUBLEBLADEDSTAFF_CRYSTAL",
               "@displaygroup": "4",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
@@ -22246,22 +22631,27 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
-              "@uniquename": "T5_2H_GLAIVE_CRYSTAL",
-              "@displaygroup": "5",
-              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
-            },
-            {
-              "@uniquename": "T5_2H_DOUBLEBLADEDSTAFF_CRYSTAL",
-              "@displaygroup": "5",
-              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
-            },
-            {
               "@uniquename": "T5_OFF_TALISMAN_AVALON",
               "@displaygroup": "5",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
+              "@uniquename": "T5_2H_BOW_CRYSTAL",
+              "@displaygroup": "5",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T5_2H_GLAIVE_CRYSTAL",
+              "@displaygroup": "5",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
               "@uniquename": "T5_2H_DAGGERPAIR_CRYSTAL",
+              "@displaygroup": "5",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T5_2H_DOUBLEBLADEDSTAFF_CRYSTAL",
               "@displaygroup": "5",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
@@ -22496,22 +22886,27 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
-              "@uniquename": "T6_2H_GLAIVE_CRYSTAL",
-              "@displaygroup": "6",
-              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
-            },
-            {
-              "@uniquename": "T6_2H_DOUBLEBLADEDSTAFF_CRYSTAL",
-              "@displaygroup": "6",
-              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
-            },
-            {
               "@uniquename": "T6_OFF_TALISMAN_AVALON",
               "@displaygroup": "6",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
+              "@uniquename": "T6_2H_BOW_CRYSTAL",
+              "@displaygroup": "6",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T6_2H_GLAIVE_CRYSTAL",
+              "@displaygroup": "6",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
               "@uniquename": "T6_2H_DAGGERPAIR_CRYSTAL",
+              "@displaygroup": "6",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T6_2H_DOUBLEBLADEDSTAFF_CRYSTAL",
               "@displaygroup": "6",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
@@ -22746,22 +23141,27 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
-              "@uniquename": "T7_2H_GLAIVE_CRYSTAL",
-              "@displaygroup": "7",
-              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
-            },
-            {
-              "@uniquename": "T7_2H_DOUBLEBLADEDSTAFF_CRYSTAL",
-              "@displaygroup": "7",
-              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
-            },
-            {
               "@uniquename": "T7_OFF_TALISMAN_AVALON",
               "@displaygroup": "7",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
+              "@uniquename": "T7_2H_GLAIVE_CRYSTAL",
+              "@displaygroup": "7",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T7_2H_BOW_CRYSTAL",
+              "@displaygroup": "7",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
               "@uniquename": "T7_2H_DAGGERPAIR_CRYSTAL",
+              "@displaygroup": "7",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T7_2H_DOUBLEBLADEDSTAFF_CRYSTAL",
               "@displaygroup": "7",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
@@ -23676,22 +24076,27 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
-              "@uniquename": "T4_2H_GLAIVE_CRYSTAL",
-              "@displaygroup": "4",
-              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
-            },
-            {
-              "@uniquename": "T4_2H_DOUBLEBLADEDSTAFF_CRYSTAL",
-              "@displaygroup": "4",
-              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
-            },
-            {
               "@uniquename": "T4_OFF_TALISMAN_AVALON",
               "@displaygroup": "4",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
+              "@uniquename": "T4_2H_BOW_CRYSTAL",
+              "@displaygroup": "4",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T4_2H_GLAIVE_CRYSTAL",
+              "@displaygroup": "4",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
               "@uniquename": "T4_2H_DAGGERPAIR_CRYSTAL",
+              "@displaygroup": "4",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T4_2H_DOUBLEBLADEDSTAFF_CRYSTAL",
               "@displaygroup": "4",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
@@ -23926,22 +24331,27 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
-              "@uniquename": "T5_2H_GLAIVE_CRYSTAL",
-              "@displaygroup": "5",
-              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
-            },
-            {
-              "@uniquename": "T5_2H_DOUBLEBLADEDSTAFF_CRYSTAL",
-              "@displaygroup": "5",
-              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
-            },
-            {
               "@uniquename": "T5_OFF_TALISMAN_AVALON",
               "@displaygroup": "5",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
+              "@uniquename": "T5_2H_BOW_CRYSTAL",
+              "@displaygroup": "5",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T5_2H_GLAIVE_CRYSTAL",
+              "@displaygroup": "5",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
               "@uniquename": "T5_2H_DAGGERPAIR_CRYSTAL",
+              "@displaygroup": "5",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T5_2H_DOUBLEBLADEDSTAFF_CRYSTAL",
               "@displaygroup": "5",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
@@ -24176,22 +24586,27 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
-              "@uniquename": "T6_2H_GLAIVE_CRYSTAL",
-              "@displaygroup": "6",
-              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
-            },
-            {
-              "@uniquename": "T6_2H_DOUBLEBLADEDSTAFF_CRYSTAL",
-              "@displaygroup": "6",
-              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
-            },
-            {
               "@uniquename": "T6_OFF_TALISMAN_AVALON",
               "@displaygroup": "6",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
+              "@uniquename": "T6_2H_BOW_CRYSTAL",
+              "@displaygroup": "6",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T6_2H_GLAIVE_CRYSTAL",
+              "@displaygroup": "6",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
               "@uniquename": "T6_2H_DAGGERPAIR_CRYSTAL",
+              "@displaygroup": "6",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T6_2H_DOUBLEBLADEDSTAFF_CRYSTAL",
               "@displaygroup": "6",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
@@ -24426,22 +24841,27 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
-              "@uniquename": "T7_2H_GLAIVE_CRYSTAL",
-              "@displaygroup": "7",
-              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
-            },
-            {
-              "@uniquename": "T7_2H_DOUBLEBLADEDSTAFF_CRYSTAL",
-              "@displaygroup": "7",
-              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
-            },
-            {
               "@uniquename": "T7_OFF_TALISMAN_AVALON",
               "@displaygroup": "7",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
+              "@uniquename": "T7_2H_BOW_CRYSTAL",
+              "@displaygroup": "7",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T7_2H_GLAIVE_CRYSTAL",
+              "@displaygroup": "7",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
               "@uniquename": "T7_2H_DAGGERPAIR_CRYSTAL",
+              "@displaygroup": "7",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T7_2H_DOUBLEBLADEDSTAFF_CRYSTAL",
               "@displaygroup": "7",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
@@ -24676,22 +25096,27 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
-              "@uniquename": "T8_2H_GLAIVE_CRYSTAL",
-              "@displaygroup": "8",
-              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
-            },
-            {
-              "@uniquename": "T8_2H_DOUBLEBLADEDSTAFF_CRYSTAL",
-              "@displaygroup": "8",
-              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
-            },
-            {
               "@uniquename": "T8_OFF_TALISMAN_AVALON",
               "@displaygroup": "8",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
+              "@uniquename": "T8_2H_BOW_CRYSTAL",
+              "@displaygroup": "8",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T8_2H_GLAIVE_CRYSTAL",
+              "@displaygroup": "8",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
               "@uniquename": "T8_2H_DAGGERPAIR_CRYSTAL",
+              "@displaygroup": "8",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T8_2H_DOUBLEBLADEDSTAFF_CRYSTAL",
               "@displaygroup": "8",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
@@ -25818,17 +26243,17 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
-              "@uniquename": "T4_OFF_ORB_MORGANA",
-              "@displaygroup": "4",
-              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
-            },
-            {
               "@uniquename": "T4_MAIN_FIRESTAFF_KEEPER",
               "@displaygroup": "4",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
               "@uniquename": "T4_MAIN_FROSTSTAFF_KEEPER",
+              "@displaygroup": "4",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T4_OFF_ORB_MORGANA",
               "@displaygroup": "4",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
@@ -25918,17 +26343,22 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
+              "@uniquename": "T4_OFF_CENSER_AVALON",
+              "@displaygroup": "4",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T4_MAIN_CURSEDSTAFF_CRYSTAL",
+              "@displaygroup": "4",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
               "@uniquename": "T4_2H_ARCANESTAFF_CRYSTAL",
               "@displaygroup": "4",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
               "@uniquename": "T4_2H_FROSTSTAFF_CRYSTAL",
-              "@displaygroup": "4",
-              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
-            },
-            {
-              "@uniquename": "T4_OFF_CENSER_AVALON",
               "@displaygroup": "4",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
@@ -26295,17 +26725,17 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
-              "@uniquename": "T4_OFF_ORB_MORGANA",
-              "@displaygroup": "4",
-              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
-            },
-            {
               "@uniquename": "T4_MAIN_FIRESTAFF_KEEPER",
               "@displaygroup": "4",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
               "@uniquename": "T4_MAIN_FROSTSTAFF_KEEPER",
+              "@displaygroup": "4",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T4_OFF_ORB_MORGANA",
               "@displaygroup": "4",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
@@ -26395,17 +26825,22 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
+              "@uniquename": "T4_OFF_CENSER_AVALON",
+              "@displaygroup": "4",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T4_MAIN_CURSEDSTAFF_CRYSTAL",
+              "@displaygroup": "4",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
               "@uniquename": "T4_2H_ARCANESTAFF_CRYSTAL",
               "@displaygroup": "4",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
               "@uniquename": "T4_2H_FROSTSTAFF_CRYSTAL",
-              "@displaygroup": "4",
-              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
-            },
-            {
-              "@uniquename": "T4_OFF_CENSER_AVALON",
               "@displaygroup": "4",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
@@ -26510,17 +26945,17 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
-              "@uniquename": "T5_OFF_ORB_MORGANA",
-              "@displaygroup": "5",
-              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
-            },
-            {
               "@uniquename": "T5_MAIN_FIRESTAFF_KEEPER",
               "@displaygroup": "5",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
               "@uniquename": "T5_MAIN_FROSTSTAFF_KEEPER",
+              "@displaygroup": "5",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T5_OFF_ORB_MORGANA",
               "@displaygroup": "5",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
@@ -26610,17 +27045,22 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
+              "@uniquename": "T5_OFF_CENSER_AVALON",
+              "@displaygroup": "5",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T5_MAIN_CURSEDSTAFF_CRYSTAL",
+              "@displaygroup": "5",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
               "@uniquename": "T5_2H_ARCANESTAFF_CRYSTAL",
               "@displaygroup": "5",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
               "@uniquename": "T5_2H_FROSTSTAFF_CRYSTAL",
-              "@displaygroup": "5",
-              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
-            },
-            {
-              "@uniquename": "T5_OFF_CENSER_AVALON",
               "@displaygroup": "5",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
@@ -27222,17 +27662,22 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
+              "@uniquename": "T4_OFF_CENSER_AVALON",
+              "@displaygroup": "4",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T4_MAIN_CURSEDSTAFF_CRYSTAL",
+              "@displaygroup": "4",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
               "@uniquename": "T4_2H_ARCANESTAFF_CRYSTAL",
               "@displaygroup": "4",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
               "@uniquename": "T4_2H_FROSTSTAFF_CRYSTAL",
-              "@displaygroup": "4",
-              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
-            },
-            {
-              "@uniquename": "T4_OFF_CENSER_AVALON",
               "@displaygroup": "4",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
@@ -27437,17 +27882,22 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
+              "@uniquename": "T5_OFF_CENSER_AVALON",
+              "@displaygroup": "5",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T5_MAIN_CURSEDSTAFF_CRYSTAL",
+              "@displaygroup": "5",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
               "@uniquename": "T5_2H_ARCANESTAFF_CRYSTAL",
               "@displaygroup": "5",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
               "@uniquename": "T5_2H_FROSTSTAFF_CRYSTAL",
-              "@displaygroup": "5",
-              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
-            },
-            {
-              "@uniquename": "T5_OFF_CENSER_AVALON",
               "@displaygroup": "5",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
@@ -27652,17 +28102,22 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
+              "@uniquename": "T6_OFF_CENSER_AVALON",
+              "@displaygroup": "6",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T6_MAIN_CURSEDSTAFF_CRYSTAL",
+              "@displaygroup": "6",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
               "@uniquename": "T6_2H_ARCANESTAFF_CRYSTAL",
               "@displaygroup": "6",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
               "@uniquename": "T6_2H_FROSTSTAFF_CRYSTAL",
-              "@displaygroup": "6",
-              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
-            },
-            {
-              "@uniquename": "T6_OFF_CENSER_AVALON",
               "@displaygroup": "6",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
@@ -28399,17 +28854,22 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
+              "@uniquename": "T4_OFF_CENSER_AVALON",
+              "@displaygroup": "4",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T4_MAIN_CURSEDSTAFF_CRYSTAL",
+              "@displaygroup": "4",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
               "@uniquename": "T4_2H_ARCANESTAFF_CRYSTAL",
               "@displaygroup": "4",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
               "@uniquename": "T4_2H_FROSTSTAFF_CRYSTAL",
-              "@displaygroup": "4",
-              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
-            },
-            {
-              "@uniquename": "T4_OFF_CENSER_AVALON",
               "@displaygroup": "4",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
@@ -28614,17 +29074,22 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
+              "@uniquename": "T5_OFF_CENSER_AVALON",
+              "@displaygroup": "5",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T5_MAIN_CURSEDSTAFF_CRYSTAL",
+              "@displaygroup": "5",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
               "@uniquename": "T5_2H_ARCANESTAFF_CRYSTAL",
               "@displaygroup": "5",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
               "@uniquename": "T5_2H_FROSTSTAFF_CRYSTAL",
-              "@displaygroup": "5",
-              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
-            },
-            {
-              "@uniquename": "T5_OFF_CENSER_AVALON",
               "@displaygroup": "5",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
@@ -28829,17 +29294,22 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
+              "@uniquename": "T6_OFF_CENSER_AVALON",
+              "@displaygroup": "6",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T6_MAIN_CURSEDSTAFF_CRYSTAL",
+              "@displaygroup": "6",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
               "@uniquename": "T6_2H_ARCANESTAFF_CRYSTAL",
               "@displaygroup": "6",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
               "@uniquename": "T6_2H_FROSTSTAFF_CRYSTAL",
-              "@displaygroup": "6",
-              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
-            },
-            {
-              "@uniquename": "T6_OFF_CENSER_AVALON",
               "@displaygroup": "6",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
@@ -29044,17 +29514,22 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
+              "@uniquename": "T7_OFF_CENSER_AVALON",
+              "@displaygroup": "7",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T7_MAIN_CURSEDSTAFF_CRYSTAL",
+              "@displaygroup": "7",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
               "@uniquename": "T7_2H_ARCANESTAFF_CRYSTAL",
               "@displaygroup": "7",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
               "@uniquename": "T7_2H_FROSTSTAFF_CRYSTAL",
-              "@displaygroup": "7",
-              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
-            },
-            {
-              "@uniquename": "T7_OFF_CENSER_AVALON",
               "@displaygroup": "7",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
@@ -29925,17 +30400,22 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
+              "@uniquename": "T4_OFF_CENSER_AVALON",
+              "@displaygroup": "4",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T4_MAIN_CURSEDSTAFF_CRYSTAL",
+              "@displaygroup": "4",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
               "@uniquename": "T4_2H_ARCANESTAFF_CRYSTAL",
               "@displaygroup": "4",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
               "@uniquename": "T4_2H_FROSTSTAFF_CRYSTAL",
-              "@displaygroup": "4",
-              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
-            },
-            {
-              "@uniquename": "T4_OFF_CENSER_AVALON",
               "@displaygroup": "4",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
@@ -30140,17 +30620,22 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
+              "@uniquename": "T5_OFF_CENSER_AVALON",
+              "@displaygroup": "5",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T5_MAIN_CURSEDSTAFF_CRYSTAL",
+              "@displaygroup": "5",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
               "@uniquename": "T5_2H_ARCANESTAFF_CRYSTAL",
               "@displaygroup": "5",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
               "@uniquename": "T5_2H_FROSTSTAFF_CRYSTAL",
-              "@displaygroup": "5",
-              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
-            },
-            {
-              "@uniquename": "T5_OFF_CENSER_AVALON",
               "@displaygroup": "5",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
@@ -30355,17 +30840,22 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
+              "@uniquename": "T6_OFF_CENSER_AVALON",
+              "@displaygroup": "6",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T6_MAIN_CURSEDSTAFF_CRYSTAL",
+              "@displaygroup": "6",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
               "@uniquename": "T6_2H_ARCANESTAFF_CRYSTAL",
               "@displaygroup": "6",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
               "@uniquename": "T6_2H_FROSTSTAFF_CRYSTAL",
-              "@displaygroup": "6",
-              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
-            },
-            {
-              "@uniquename": "T6_OFF_CENSER_AVALON",
               "@displaygroup": "6",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
@@ -30570,17 +31060,22 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
+              "@uniquename": "T7_OFF_CENSER_AVALON",
+              "@displaygroup": "7",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T7_MAIN_CURSEDSTAFF_CRYSTAL",
+              "@displaygroup": "7",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
               "@uniquename": "T7_2H_ARCANESTAFF_CRYSTAL",
               "@displaygroup": "7",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
               "@uniquename": "T7_2H_FROSTSTAFF_CRYSTAL",
-              "@displaygroup": "7",
-              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
-            },
-            {
-              "@uniquename": "T7_OFF_CENSER_AVALON",
               "@displaygroup": "7",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
@@ -30785,17 +31280,22 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
+              "@uniquename": "T8_OFF_CENSER_AVALON",
+              "@displaygroup": "8",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T8_MAIN_CURSEDSTAFF_CRYSTAL",
+              "@displaygroup": "8",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
               "@uniquename": "T8_2H_ARCANESTAFF_CRYSTAL",
               "@displaygroup": "8",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
               "@uniquename": "T8_2H_FROSTSTAFF_CRYSTAL",
-              "@displaygroup": "8",
-              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
-            },
-            {
-              "@uniquename": "T8_OFF_CENSER_AVALON",
               "@displaygroup": "8",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
@@ -41392,6 +41892,11 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_ACCESSOIRES"
             },
             {
+              "@uniquename": "T4_CAPEITEM_SMUGGLER",
+              "@displaygroup": "4",
+              "@category": "@BUILDING_ITEMS_CATEGORY_ACCESSOIRES"
+            },
+            {
               "@uniquename": "T4_BACKPACK_GATHERER_FIBER",
               "@displaygroup": "4",
               "@category": "@BUILDING_ITEMS_CATEGORY_ACCESSOIRES"
@@ -42044,6 +42549,16 @@
             },
             {
               "@uniquename": "T5_CAPEITEM_AVALON",
+              "@displaygroup": "5",
+              "@category": "@BUILDING_ITEMS_CATEGORY_ACCESSOIRES"
+            },
+            {
+              "@uniquename": "T4_CAPEITEM_SMUGGLER",
+              "@displaygroup": "4",
+              "@category": "@BUILDING_ITEMS_CATEGORY_ACCESSOIRES"
+            },
+            {
+              "@uniquename": "T5_CAPEITEM_SMUGGLER",
               "@displaygroup": "5",
               "@category": "@BUILDING_ITEMS_CATEGORY_ACCESSOIRES"
             },
@@ -43000,6 +43515,21 @@
             },
             {
               "@uniquename": "T6_CAPEITEM_AVALON",
+              "@displaygroup": "6",
+              "@category": "@BUILDING_ITEMS_CATEGORY_ACCESSOIRES"
+            },
+            {
+              "@uniquename": "T4_CAPEITEM_SMUGGLER",
+              "@displaygroup": "4",
+              "@category": "@BUILDING_ITEMS_CATEGORY_ACCESSOIRES"
+            },
+            {
+              "@uniquename": "T5_CAPEITEM_SMUGGLER",
+              "@displaygroup": "5",
+              "@category": "@BUILDING_ITEMS_CATEGORY_ACCESSOIRES"
+            },
+            {
+              "@uniquename": "T6_CAPEITEM_SMUGGLER",
               "@displaygroup": "6",
               "@category": "@BUILDING_ITEMS_CATEGORY_ACCESSOIRES"
             },
@@ -44256,6 +44786,26 @@
             },
             {
               "@uniquename": "T7_CAPEITEM_AVALON",
+              "@displaygroup": "7",
+              "@category": "@BUILDING_ITEMS_CATEGORY_ACCESSOIRES"
+            },
+            {
+              "@uniquename": "T4_CAPEITEM_SMUGGLER",
+              "@displaygroup": "4",
+              "@category": "@BUILDING_ITEMS_CATEGORY_ACCESSOIRES"
+            },
+            {
+              "@uniquename": "T5_CAPEITEM_SMUGGLER",
+              "@displaygroup": "5",
+              "@category": "@BUILDING_ITEMS_CATEGORY_ACCESSOIRES"
+            },
+            {
+              "@uniquename": "T6_CAPEITEM_SMUGGLER",
+              "@displaygroup": "6",
+              "@category": "@BUILDING_ITEMS_CATEGORY_ACCESSOIRES"
+            },
+            {
+              "@uniquename": "T7_CAPEITEM_SMUGGLER",
               "@displaygroup": "7",
               "@category": "@BUILDING_ITEMS_CATEGORY_ACCESSOIRES"
             },
@@ -45806,6 +46356,31 @@
             },
             {
               "@uniquename": "T8_CAPEITEM_AVALON",
+              "@displaygroup": "8",
+              "@category": "@BUILDING_ITEMS_CATEGORY_ACCESSOIRES"
+            },
+            {
+              "@uniquename": "T4_CAPEITEM_SMUGGLER",
+              "@displaygroup": "4",
+              "@category": "@BUILDING_ITEMS_CATEGORY_ACCESSOIRES"
+            },
+            {
+              "@uniquename": "T5_CAPEITEM_SMUGGLER",
+              "@displaygroup": "5",
+              "@category": "@BUILDING_ITEMS_CATEGORY_ACCESSOIRES"
+            },
+            {
+              "@uniquename": "T6_CAPEITEM_SMUGGLER",
+              "@displaygroup": "6",
+              "@category": "@BUILDING_ITEMS_CATEGORY_ACCESSOIRES"
+            },
+            {
+              "@uniquename": "T7_CAPEITEM_SMUGGLER",
+              "@displaygroup": "7",
+              "@category": "@BUILDING_ITEMS_CATEGORY_ACCESSOIRES"
+            },
+            {
+              "@uniquename": "T8_CAPEITEM_SMUGGLER",
               "@displaygroup": "8",
               "@category": "@BUILDING_ITEMS_CATEGORY_ACCESSOIRES"
             },
@@ -51764,11 +52339,19 @@
         "@tier": "1",
         "@hideonclustermap": "true",
         "@isblackmarketbank": "true"
+      },
+      {
+        "@uniquename": "T1_BANK_SMUGGLERS_DEN",
+        "@tier": "1",
+        "@hideonclustermap": "true",
+        "@issmugglersdenbank": "true"
       }
     ],
     "marketplacebuilding": [
       {
         "@uniquename": "MARKETPLACE",
+        "@avatar": "Gui/Avatars/Buildings/NPC_MARKETPLACE",
+        "@tutorial": "MARKET_PLACE",
         "@tier": "8",
         "@iconAtlas": "RefMiniMapAtlas",
         "@iconSprite": "marketplace",
@@ -51780,6 +52363,8 @@
       },
       {
         "@uniquename": "MARKETPLACE_SMALL",
+        "@avatar": "Gui/Avatars/Buildings/NPC_MARKETPLACE",
+        "@tutorial": "MARKET_PLACE",
         "@tier": "8",
         "@iconAtlas": "RefMiniMapAtlas",
         "@iconSprite": "marketplace",
@@ -51791,6 +52376,8 @@
       },
       {
         "@uniquename": "MARKETPLACE_MINIATURE",
+        "@avatar": "Gui/Avatars/Buildings/NPC_MARKETPLACE",
+        "@tutorial": "MARKET_PLACE",
         "@tier": "8",
         "@iconAtlas": "RefMiniMapAtlas",
         "@iconSprite": "marketplace",
@@ -51803,6 +52390,8 @@
     ],
     "blackmarketbuilding": {
       "@uniquename": "BLACKMARKET",
+      "@avatar": "Gui/Avatars/Buildings/NPC_BLACKMARKET",
+      "@tutorial": "BLACK_MARKET",
       "@tier": "8",
       "@iconAtlas": "RefMiniMapAtlas",
       "@iconSprite": "marketplace",
@@ -51811,6 +52400,20 @@
       "AudioInfo": {
         "@name": "NPC_BLACKMARKET",
         "@emitteranchor": "NPC_BLACKMARKET_DON_01"
+      }
+    },
+    "smugglermarketbuilding": {
+      "@uniquename": "SMUGGLERMARKET",
+      "@avatar": "Gui/Avatars/Buildings/NPC_SMUGGLERMARKET",
+      "@tutorial": "SMUGGLERS_MARKET_INFO",
+      "@tier": "8",
+      "@iconAtlas": "RefMiniMapAtlas",
+      "@iconSprite": "marketplace",
+      "@hideonclustermap": "true",
+      "@usesbuildingplacementrules": "false",
+      "AudioInfo": {
+        "@name": "NPC_SMUGGLER_MARKET",
+        "@emitteranchor": "NPC_BLACK_BANK_TRADER_01"
       }
     },
     "castlegate": [
@@ -55551,6 +56154,81 @@
             "@uniquename": "T8_ARTEFACT_2H_HOLYSTAFF_CRYSTAL",
             "@displaygroup": "8",
             "@category": "@BUILDING_ITEMS_CATEGORY_ARTIFACTS"
+          },
+          {
+            "@uniquename": "T4_ARTEFACT_2H_BOW_CRYSTAL",
+            "@displaygroup": "4",
+            "@category": "@BUILDING_ITEMS_CATEGORY_ARTIFACTS"
+          },
+          {
+            "@uniquename": "T5_ARTEFACT_2H_BOW_CRYSTAL",
+            "@displaygroup": "5",
+            "@category": "@BUILDING_ITEMS_CATEGORY_ARTIFACTS"
+          },
+          {
+            "@uniquename": "T6_ARTEFACT_2H_BOW_CRYSTAL",
+            "@displaygroup": "6",
+            "@category": "@BUILDING_ITEMS_CATEGORY_ARTIFACTS"
+          },
+          {
+            "@uniquename": "T7_ARTEFACT_2H_BOW_CRYSTAL",
+            "@displaygroup": "7",
+            "@category": "@BUILDING_ITEMS_CATEGORY_ARTIFACTS"
+          },
+          {
+            "@uniquename": "T8_ARTEFACT_2H_BOW_CRYSTAL",
+            "@displaygroup": "8",
+            "@category": "@BUILDING_ITEMS_CATEGORY_ARTIFACTS"
+          },
+          {
+            "@uniquename": "T4_ARTEFACT_2H_KNUCKLES_CRYSTAL",
+            "@displaygroup": "4",
+            "@category": "@BUILDING_ITEMS_CATEGORY_ARTIFACTS"
+          },
+          {
+            "@uniquename": "T5_ARTEFACT_2H_KNUCKLES_CRYSTAL",
+            "@displaygroup": "5",
+            "@category": "@BUILDING_ITEMS_CATEGORY_ARTIFACTS"
+          },
+          {
+            "@uniquename": "T6_ARTEFACT_2H_KNUCKLES_CRYSTAL",
+            "@displaygroup": "6",
+            "@category": "@BUILDING_ITEMS_CATEGORY_ARTIFACTS"
+          },
+          {
+            "@uniquename": "T7_ARTEFACT_2H_KNUCKLES_CRYSTAL",
+            "@displaygroup": "7",
+            "@category": "@BUILDING_ITEMS_CATEGORY_ARTIFACTS"
+          },
+          {
+            "@uniquename": "T8_ARTEFACT_2H_KNUCKLES_CRYSTAL",
+            "@displaygroup": "8",
+            "@category": "@BUILDING_ITEMS_CATEGORY_ARTIFACTS"
+          },
+          {
+            "@uniquename": "T4_ARTEFACT_MAIN_CURSEDSTAFF_CRYSTAL",
+            "@displaygroup": "4",
+            "@category": "@BUILDING_ITEMS_CATEGORY_ARTIFACTS"
+          },
+          {
+            "@uniquename": "T5_ARTEFACT_MAIN_CURSEDSTAFF_CRYSTAL",
+            "@displaygroup": "5",
+            "@category": "@BUILDING_ITEMS_CATEGORY_ARTIFACTS"
+          },
+          {
+            "@uniquename": "T6_ARTEFACT_MAIN_CURSEDSTAFF_CRYSTAL",
+            "@displaygroup": "6",
+            "@category": "@BUILDING_ITEMS_CATEGORY_ARTIFACTS"
+          },
+          {
+            "@uniquename": "T7_ARTEFACT_MAIN_CURSEDSTAFF_CRYSTAL",
+            "@displaygroup": "7",
+            "@category": "@BUILDING_ITEMS_CATEGORY_ARTIFACTS"
+          },
+          {
+            "@uniquename": "T8_ARTEFACT_MAIN_CURSEDSTAFF_CRYSTAL",
+            "@displaygroup": "8",
+            "@category": "@BUILDING_ITEMS_CATEGORY_ARTIFACTS"
           }
         ]
       },
@@ -56621,7 +57299,7 @@
         "@tier": "2",
         "@placecost": "100",
         "@furniturelimit": "25",
-        "@residentslimit": "10",
+        "@residentslimit": "100",
         "@laborerslimit": "7",
         "@upgradeableto": "T3_GUILDHALL",
         "@durability": "13500",
@@ -56699,7 +57377,7 @@
         "@tier": "3",
         "@placecost": "100",
         "@furniturelimit": "35",
-        "@residentslimit": "15",
+        "@residentslimit": "150",
         "@laborerslimit": "10",
         "@upgradeableto": "T4_GUILDHALL",
         "@durability": "36000",
@@ -56775,7 +57453,7 @@
         "@tier": "4",
         "@placecost": "100",
         "@furniturelimit": "50",
-        "@residentslimit": "20",
+        "@residentslimit": "200",
         "@laborerslimit": "10",
         "@upgradeableto": "T5_GUILDHALL",
         "@durability": "108000",
@@ -56851,7 +57529,7 @@
         "@tier": "5",
         "@placecost": "100",
         "@furniturelimit": "70",
-        "@residentslimit": "25",
+        "@residentslimit": "225",
         "@laborerslimit": "15",
         "@upgradeableto": "T6_GUILDHALL",
         "@durability": "324000",
@@ -56927,7 +57605,7 @@
         "@tier": "6",
         "@placecost": "100",
         "@furniturelimit": "70",
-        "@residentslimit": "30",
+        "@residentslimit": "250",
         "@laborerslimit": "15",
         "@upgradeableto": "T7_GUILDHALL",
         "@durability": "972000",
@@ -57003,7 +57681,7 @@
         "@tier": "7",
         "@placecost": "100",
         "@furniturelimit": "70",
-        "@residentslimit": "35",
+        "@residentslimit": "275",
         "@laborerslimit": "15",
         "@upgradeableto": "T8_GUILDHALL",
         "@durability": "2916000",
@@ -57079,7 +57757,7 @@
         "@tier": "8",
         "@placecost": "100",
         "@furniturelimit": "70",
-        "@residentslimit": "40",
+        "@residentslimit": "300",
         "@laborerslimit": "15",
         "@durability": "8748000",
         "@durabilityloss": "0",
