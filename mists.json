@@ -50,6 +50,14 @@
           "@wispsstaggeredspawninterval": "0",
           "@wispsstaggeredspawnintervalstart": "0",
           "@minimapdisplayinterestareaextend": "100"
+        },
+        {
+          "@type": "resourcemists",
+          "@instancerandomdungeondifficultygroup": "mists",
+          "@wispsspawninsecbeforeclustershutdown": "120",
+          "@wispsstaggeredspawninterval": "0",
+          "@wispsstaggeredspawnintervalstart": "0",
+          "@minimapdisplayinterestareaextend": "100"
         }
       ]
     },
@@ -136,61 +144,6 @@
               }
             }
           ]
-        }
-      ]
-    },
-    "mistcitystanding": {
-      "@max": "10000000",
-      "rank": [
-        {
-          "@minstanding": "0",
-          "@title": "@MISTCITY_STANDING_RANK_1",
-          "@pointmultiplier": "1"
-        },
-        {
-          "@minstanding": "50000",
-          "@title": "@MISTCITY_STANDING_RANK_2",
-          "@pointmultiplier": "1"
-        },
-        {
-          "@minstanding": "150000",
-          "@title": "@MISTCITY_STANDING_RANK_3",
-          "@pointmultiplier": "1"
-        },
-        {
-          "@minstanding": "300000",
-          "@title": "@MISTCITY_STANDING_RANK_4",
-          "@pointmultiplier": "1"
-        },
-        {
-          "@minstanding": "600000",
-          "@title": "@MISTCITY_STANDING_RANK_5",
-          "@pointmultiplier": "1"
-        },
-        {
-          "@minstanding": "1000000",
-          "@title": "@MISTCITY_STANDING_RANK_6",
-          "@pointmultiplier": "1"
-        },
-        {
-          "@minstanding": "1800000",
-          "@title": "@MISTCITY_STANDING_RANK_7",
-          "@pointmultiplier": "1"
-        },
-        {
-          "@minstanding": "3250000",
-          "@title": "@MISTCITY_STANDING_RANK_8",
-          "@pointmultiplier": "1"
-        },
-        {
-          "@minstanding": "5700000",
-          "@title": "@MISTCITY_STANDING_RANK_9",
-          "@pointmultiplier": "1"
-        },
-        {
-          "@minstanding": "10000000",
-          "@title": "@MISTCITY_STANDING_RANK_10",
-          "@pointmultiplier": "1"
         }
       ]
     },
@@ -359,6 +312,26 @@
                 }
               ]
             }
+          },
+          "openworldexitdistribution": {
+            "warningtype": [
+              {
+                "@type": "safe",
+                "@weight": "2092"
+              },
+              {
+                "@type": "yellow",
+                "@weight": "2716"
+              },
+              {
+                "@type": "red",
+                "@weight": "1859"
+              },
+              {
+                "@type": "black",
+                "@weight": "3333"
+              }
+            ]
           }
         },
         {
@@ -572,6 +545,26 @@
                 }
               ]
             }
+          },
+          "openworldexitdistribution": {
+            "warningtype": [
+              {
+                "@type": "safe",
+                "@weight": "1046"
+              },
+              {
+                "@type": "yellow",
+                "@weight": "1358"
+              },
+              {
+                "@type": "red",
+                "@weight": "929"
+              },
+              {
+                "@type": "black",
+                "@weight": "6667"
+              }
+            ]
           }
         },
         {
@@ -785,6 +778,26 @@
                 }
               ]
             }
+          },
+          "openworldexitdistribution": {
+            "warningtype": [
+              {
+                "@type": "safe",
+                "@weight": "1046"
+              },
+              {
+                "@type": "yellow",
+                "@weight": "1358"
+              },
+              {
+                "@type": "red",
+                "@weight": "929"
+              },
+              {
+                "@type": "black",
+                "@weight": "6667"
+              }
+            ]
           }
         },
         {
@@ -828,6 +841,371 @@
               }
             ]
           }
+        },
+        {
+          "@name": "MISTS_RESOURCE_FIBER",
+          "@type": "resourcemists",
+          "@clustertype": "MISTS_RESOURCE_BLACK",
+          "@clusterdisplayname": "Silken Glade",
+          "@maxteamsize": "1",
+          "@mapset": "MAPSET_RESOURCE_FIBER",
+          "@resourcepool": "RESOURCE_BLACK",
+          "@exitsleadtomode": "MISTS_SOLO_BLACK",
+          "difficultylevel": [
+            {
+              "@level": "0",
+              "@minimuminstancepool": "1",
+              "@flexibleinstancepool": "0.05",
+              "@wispmob": "MOB_UNIQUE_MISTS_PORTAL_WISP_RESOURCE",
+              "@wispmobexitvisualizationref": "MISTS_RESOURCE_BLACK",
+              "@wispinstacefillratio": "1",
+              "@rareresourcedistribution": "MISTS_E0",
+              "wispinstancedifficultyrollref": {
+                "@randomdungeonrollref": "MISTS_RESOURCE_INSTANCE_MODE_BLACK"
+              }
+            },
+            {
+              "@level": "1",
+              "@minimuminstancepool": "1",
+              "@flexibleinstancepool": "0.05",
+              "@wispmob": "MOB_UNIQUE_MISTS_PORTAL_WISP_RESOURCE_STANDARD",
+              "@wispmobexitvisualizationref": "MISTS_RESOURCE_BLACK",
+              "@wispinstacefillratio": "1",
+              "@rareresourcedistribution": "MISTS_E1",
+              "wispinstancedifficultyrollref": {
+                "@randomdungeonrollref": "MISTS_RESOURCE_INSTANCE_MODE_BLACK"
+              }
+            },
+            {
+              "@level": "2",
+              "@minimuminstancepool": "1",
+              "@flexibleinstancepool": "0.05",
+              "@wispmob": "MOB_UNIQUE_MISTS_PORTAL_WISP_RESOURCE_UNCOMMON",
+              "@wispmobexitvisualizationref": "MISTS_RESOURCE_BLACK",
+              "@wispinstacefillratio": "1",
+              "@rareresourcedistribution": "MISTS_E2",
+              "wispinstancedifficultyrollref": {
+                "@randomdungeonrollref": "MISTS_RESOURCE_INSTANCE_MODE_BLACK"
+              }
+            },
+            {
+              "@level": "3",
+              "@minimuminstancepool": "1",
+              "@flexibleinstancepool": "0.05",
+              "@wispmob": "MOB_UNIQUE_MISTS_PORTAL_WISP_RESOURCE_RARE",
+              "@wispmobexitvisualizationref": "MISTS_RESOURCE_BLACK",
+              "@wispinstacefillratio": "1",
+              "@rareresourcedistribution": "MISTS_E3",
+              "wispinstancedifficultyrollref": {
+                "@randomdungeonrollref": "MISTS_RESOURCE_INSTANCE_MODE_BLACK"
+              }
+            },
+            {
+              "@level": "4",
+              "@minimuminstancepool": "1",
+              "@flexibleinstancepool": "0.05",
+              "@wispmob": "MOB_UNIQUE_MISTS_PORTAL_WISP_RESOURCE_LEGENDARY",
+              "@wispmobexitvisualizationref": "MISTS_RESOURCE_BLACK",
+              "@wispinstacefillratio": "1",
+              "@rareresourcedistribution": "MISTS_E4",
+              "wispinstancedifficultyrollref": {
+                "@randomdungeonrollref": "MISTS_RESOURCE_INSTANCE_MODE_BLACK"
+              }
+            }
+          ],
+          "treasures": null
+        },
+        {
+          "@name": "MISTS_RESOURCE_HIDE",
+          "@type": "resourcemists",
+          "@clustertype": "MISTS_RESOURCE_BLACK",
+          "@clusterdisplayname": "Misty Wilds",
+          "@maxteamsize": "1",
+          "@mapset": "MAPSET_RESOURCE_HIDE",
+          "@resourcepool": "RESOURCE_BLACK",
+          "@exitsleadtomode": "MISTS_SOLO_BLACK",
+          "difficultylevel": [
+            {
+              "@level": "0",
+              "@minimuminstancepool": "1",
+              "@flexibleinstancepool": "0.05",
+              "@wispmob": "MOB_UNIQUE_MISTS_PORTAL_WISP_RESOURCE",
+              "@wispmobexitvisualizationref": "MISTS_RESOURCE_BLACK",
+              "@wispinstacefillratio": "1",
+              "@rareresourcedistribution": "MISTS_E0",
+              "wispinstancedifficultyrollref": {
+                "@randomdungeonrollref": "MISTS_RESOURCE_INSTANCE_MODE_BLACK"
+              }
+            },
+            {
+              "@level": "1",
+              "@minimuminstancepool": "1",
+              "@flexibleinstancepool": "0.05",
+              "@wispmob": "MOB_UNIQUE_MISTS_PORTAL_WISP_RESOURCE_STANDARD",
+              "@wispmobexitvisualizationref": "MISTS_RESOURCE_BLACK",
+              "@wispinstacefillratio": "1",
+              "@rareresourcedistribution": "MISTS_E1",
+              "wispinstancedifficultyrollref": {
+                "@randomdungeonrollref": "MISTS_RESOURCE_INSTANCE_MODE_BLACK"
+              }
+            },
+            {
+              "@level": "2",
+              "@minimuminstancepool": "1",
+              "@flexibleinstancepool": "0.05",
+              "@wispmob": "MOB_UNIQUE_MISTS_PORTAL_WISP_RESOURCE_UNCOMMON",
+              "@wispmobexitvisualizationref": "MISTS_RESOURCE_BLACK",
+              "@wispinstacefillratio": "1",
+              "@rareresourcedistribution": "MISTS_E2",
+              "wispinstancedifficultyrollref": {
+                "@randomdungeonrollref": "MISTS_RESOURCE_INSTANCE_MODE_BLACK"
+              }
+            },
+            {
+              "@level": "3",
+              "@minimuminstancepool": "1",
+              "@flexibleinstancepool": "0.05",
+              "@wispmob": "MOB_UNIQUE_MISTS_PORTAL_WISP_RESOURCE_RARE",
+              "@wispmobexitvisualizationref": "MISTS_RESOURCE_BLACK",
+              "@wispinstacefillratio": "1",
+              "@rareresourcedistribution": "MISTS_E3",
+              "wispinstancedifficultyrollref": {
+                "@randomdungeonrollref": "MISTS_RESOURCE_INSTANCE_MODE_BLACK"
+              }
+            },
+            {
+              "@level": "4",
+              "@minimuminstancepool": "1",
+              "@flexibleinstancepool": "0.05",
+              "@wispmob": "MOB_UNIQUE_MISTS_PORTAL_WISP_RESOURCE_LEGENDARY",
+              "@wispmobexitvisualizationref": "MISTS_RESOURCE_BLACK",
+              "@wispinstacefillratio": "1",
+              "@rareresourcedistribution": "MISTS_E4",
+              "wispinstancedifficultyrollref": {
+                "@randomdungeonrollref": "MISTS_RESOURCE_INSTANCE_MODE_BLACK"
+              }
+            }
+          ],
+          "treasures": null
+        },
+        {
+          "@name": "MISTS_RESOURCE_ORE",
+          "@type": "resourcemists",
+          "@clustertype": "MISTS_RESOURCE_BLACK",
+          "@clusterdisplayname": "Ironheart Vale",
+          "@maxteamsize": "1",
+          "@mapset": "MAPSET_RESOURCE_ORE",
+          "@resourcepool": "RESOURCE_BLACK",
+          "@exitsleadtomode": "MISTS_SOLO_BLACK",
+          "difficultylevel": [
+            {
+              "@level": "0",
+              "@minimuminstancepool": "1",
+              "@flexibleinstancepool": "0.05",
+              "@wispmob": "MOB_UNIQUE_MISTS_PORTAL_WISP_RESOURCE",
+              "@wispmobexitvisualizationref": "MISTS_RESOURCE_BLACK",
+              "@wispinstacefillratio": "1",
+              "@rareresourcedistribution": "MISTS_E0",
+              "wispinstancedifficultyrollref": {
+                "@randomdungeonrollref": "MISTS_RESOURCE_INSTANCE_MODE_BLACK"
+              }
+            },
+            {
+              "@level": "1",
+              "@minimuminstancepool": "1",
+              "@flexibleinstancepool": "0.05",
+              "@wispmob": "MOB_UNIQUE_MISTS_PORTAL_WISP_RESOURCE_STANDARD",
+              "@wispmobexitvisualizationref": "MISTS_RESOURCE_BLACK",
+              "@wispinstacefillratio": "1",
+              "@rareresourcedistribution": "MISTS_E1",
+              "wispinstancedifficultyrollref": {
+                "@randomdungeonrollref": "MISTS_RESOURCE_INSTANCE_MODE_BLACK"
+              }
+            },
+            {
+              "@level": "2",
+              "@minimuminstancepool": "1",
+              "@flexibleinstancepool": "0.05",
+              "@wispmob": "MOB_UNIQUE_MISTS_PORTAL_WISP_RESOURCE_UNCOMMON",
+              "@wispmobexitvisualizationref": "MISTS_RESOURCE_BLACK",
+              "@wispinstacefillratio": "1",
+              "@rareresourcedistribution": "MISTS_E2",
+              "wispinstancedifficultyrollref": {
+                "@randomdungeonrollref": "MISTS_RESOURCE_INSTANCE_MODE_BLACK"
+              }
+            },
+            {
+              "@level": "3",
+              "@minimuminstancepool": "1",
+              "@flexibleinstancepool": "0.05",
+              "@wispmob": "MOB_UNIQUE_MISTS_PORTAL_WISP_RESOURCE_RARE",
+              "@wispmobexitvisualizationref": "MISTS_RESOURCE_BLACK",
+              "@wispinstacefillratio": "1",
+              "@rareresourcedistribution": "MISTS_E3",
+              "wispinstancedifficultyrollref": {
+                "@randomdungeonrollref": "MISTS_RESOURCE_INSTANCE_MODE_BLACK"
+              }
+            },
+            {
+              "@level": "4",
+              "@minimuminstancepool": "1",
+              "@flexibleinstancepool": "0.05",
+              "@wispmob": "MOB_UNIQUE_MISTS_PORTAL_WISP_RESOURCE_LEGENDARY",
+              "@wispmobexitvisualizationref": "MISTS_RESOURCE_BLACK",
+              "@wispinstacefillratio": "1",
+              "@rareresourcedistribution": "MISTS_E4",
+              "wispinstancedifficultyrollref": {
+                "@randomdungeonrollref": "MISTS_RESOURCE_INSTANCE_MODE_BLACK"
+              }
+            }
+          ],
+          "treasures": null
+        },
+        {
+          "@name": "MISTS_RESOURCE_ROCK",
+          "@type": "resourcemists",
+          "@clustertype": "MISTS_RESOURCE_BLACK",
+          "@clusterdisplayname": "Veiled Crags",
+          "@maxteamsize": "1",
+          "@mapset": "MAPSET_RESOURCE_ROCK",
+          "@resourcepool": "RESOURCE_BLACK",
+          "@exitsleadtomode": "MISTS_SOLO_BLACK",
+          "difficultylevel": [
+            {
+              "@level": "0",
+              "@minimuminstancepool": "1",
+              "@flexibleinstancepool": "0.05",
+              "@wispmob": "MOB_UNIQUE_MISTS_PORTAL_WISP_RESOURCE",
+              "@wispmobexitvisualizationref": "MISTS_RESOURCE_BLACK",
+              "@wispinstacefillratio": "1",
+              "@rareresourcedistribution": "MISTS_E0",
+              "wispinstancedifficultyrollref": {
+                "@randomdungeonrollref": "MISTS_RESOURCE_INSTANCE_MODE_BLACK"
+              }
+            },
+            {
+              "@level": "1",
+              "@minimuminstancepool": "1",
+              "@flexibleinstancepool": "0.05",
+              "@wispmob": "MOB_UNIQUE_MISTS_PORTAL_WISP_RESOURCE_STANDARD",
+              "@wispmobexitvisualizationref": "MISTS_RESOURCE_BLACK",
+              "@wispinstacefillratio": "1",
+              "@rareresourcedistribution": "MISTS_E1",
+              "wispinstancedifficultyrollref": {
+                "@randomdungeonrollref": "MISTS_RESOURCE_INSTANCE_MODE_BLACK"
+              }
+            },
+            {
+              "@level": "2",
+              "@minimuminstancepool": "1",
+              "@flexibleinstancepool": "0.05",
+              "@wispmob": "MOB_UNIQUE_MISTS_PORTAL_WISP_RESOURCE_UNCOMMON",
+              "@wispmobexitvisualizationref": "MISTS_RESOURCE_BLACK",
+              "@wispinstacefillratio": "1",
+              "@rareresourcedistribution": "MISTS_E2",
+              "wispinstancedifficultyrollref": {
+                "@randomdungeonrollref": "MISTS_RESOURCE_INSTANCE_MODE_BLACK"
+              }
+            },
+            {
+              "@level": "3",
+              "@minimuminstancepool": "1",
+              "@flexibleinstancepool": "0.05",
+              "@wispmob": "MOB_UNIQUE_MISTS_PORTAL_WISP_RESOURCE_RARE",
+              "@wispmobexitvisualizationref": "MISTS_RESOURCE_BLACK",
+              "@wispinstacefillratio": "1",
+              "@rareresourcedistribution": "MISTS_E3",
+              "wispinstancedifficultyrollref": {
+                "@randomdungeonrollref": "MISTS_RESOURCE_INSTANCE_MODE_BLACK"
+              }
+            },
+            {
+              "@level": "4",
+              "@minimuminstancepool": "1",
+              "@flexibleinstancepool": "0.05",
+              "@wispmob": "MOB_UNIQUE_MISTS_PORTAL_WISP_RESOURCE_LEGENDARY",
+              "@wispmobexitvisualizationref": "MISTS_RESOURCE_BLACK",
+              "@wispinstacefillratio": "1",
+              "@rareresourcedistribution": "MISTS_E4",
+              "wispinstancedifficultyrollref": {
+                "@randomdungeonrollref": "MISTS_RESOURCE_INSTANCE_MODE_BLACK"
+              }
+            }
+          ],
+          "treasures": null
+        },
+        {
+          "@name": "MISTS_RESOURCE_WOOD",
+          "@type": "resourcemists",
+          "@clustertype": "MISTS_RESOURCE_BLACK",
+          "@clusterdisplayname": "Whispering Woods",
+          "@maxteamsize": "1",
+          "@mapset": "MAPSET_RESOURCE_WOOD",
+          "@resourcepool": "RESOURCE_BLACK",
+          "@exitsleadtomode": "MISTS_SOLO_BLACK",
+          "difficultylevel": [
+            {
+              "@level": "0",
+              "@minimuminstancepool": "1",
+              "@flexibleinstancepool": "0.05",
+              "@wispmob": "MOB_UNIQUE_MISTS_PORTAL_WISP_RESOURCE",
+              "@wispmobexitvisualizationref": "MISTS_RESOURCE_BLACK",
+              "@wispinstacefillratio": "1",
+              "@rareresourcedistribution": "MISTS_E0",
+              "wispinstancedifficultyrollref": {
+                "@randomdungeonrollref": "MISTS_RESOURCE_INSTANCE_MODE_BLACK"
+              }
+            },
+            {
+              "@level": "1",
+              "@minimuminstancepool": "1",
+              "@flexibleinstancepool": "0.05",
+              "@wispmob": "MOB_UNIQUE_MISTS_PORTAL_WISP_RESOURCE_STANDARD",
+              "@wispmobexitvisualizationref": "MISTS_RESOURCE_BLACK",
+              "@wispinstacefillratio": "1",
+              "@rareresourcedistribution": "MISTS_E1",
+              "wispinstancedifficultyrollref": {
+                "@randomdungeonrollref": "MISTS_RESOURCE_INSTANCE_MODE_BLACK"
+              }
+            },
+            {
+              "@level": "2",
+              "@minimuminstancepool": "1",
+              "@flexibleinstancepool": "0.05",
+              "@wispmob": "MOB_UNIQUE_MISTS_PORTAL_WISP_RESOURCE_UNCOMMON",
+              "@wispmobexitvisualizationref": "MISTS_RESOURCE_BLACK",
+              "@wispinstacefillratio": "1",
+              "@rareresourcedistribution": "MISTS_E2",
+              "wispinstancedifficultyrollref": {
+                "@randomdungeonrollref": "MISTS_RESOURCE_INSTANCE_MODE_BLACK"
+              }
+            },
+            {
+              "@level": "3",
+              "@minimuminstancepool": "1",
+              "@flexibleinstancepool": "0.05",
+              "@wispmob": "MOB_UNIQUE_MISTS_PORTAL_WISP_RESOURCE_RARE",
+              "@wispmobexitvisualizationref": "MISTS_RESOURCE_BLACK",
+              "@wispinstacefillratio": "1",
+              "@rareresourcedistribution": "MISTS_E3",
+              "wispinstancedifficultyrollref": {
+                "@randomdungeonrollref": "MISTS_RESOURCE_INSTANCE_MODE_BLACK"
+              }
+            },
+            {
+              "@level": "4",
+              "@minimuminstancepool": "1",
+              "@flexibleinstancepool": "0.05",
+              "@wispmob": "MOB_UNIQUE_MISTS_PORTAL_WISP_RESOURCE_LEGENDARY",
+              "@wispmobexitvisualizationref": "MISTS_RESOURCE_BLACK",
+              "@wispinstacefillratio": "1",
+              "@rareresourcedistribution": "MISTS_E4",
+              "wispinstancedifficultyrollref": {
+                "@randomdungeonrollref": "MISTS_RESOURCE_INSTANCE_MODE_BLACK"
+              }
+            }
+          ],
+          "treasures": null
         }
       ]
     },
@@ -3672,6 +4050,931 @@
               "@clustershutdowntime": "1050"
             }
           ]
+        },
+        {
+          "@name": "MAPSET_RESOURCE_FIBER",
+          "map": [
+            {
+              "@id": "RESOURCE_SMALL_STANDARD_01",
+              "@mastertemplate": "MISTS_100_S1",
+              "@templatepool": "BLACK_RESOURCE_FIBER_COMMON",
+              "@subbiome": "green",
+              "@softplayerlimitmin": "1",
+              "@softplayerlimitmax": "1",
+              "@hardplayercapspace": "0",
+              "@weight": "1",
+              "@clusterclosetime": "300",
+              "@clustershutdowntime": "450",
+              "@clustertier": "6",
+              "@mindifficulty": "0",
+              "@maxdifficulty": "1"
+            },
+            {
+              "@id": "RESOURCE_SMALL_STANDARD_02",
+              "@mastertemplate": "MISTS_101_S1",
+              "@templatepool": "BLACK_RESOURCE_FIBER_COMMON",
+              "@subbiome": "green",
+              "@softplayerlimitmin": "1",
+              "@softplayerlimitmax": "1",
+              "@hardplayercapspace": "0",
+              "@weight": "1",
+              "@clusterclosetime": "300",
+              "@clustershutdowntime": "450",
+              "@clustertier": "6",
+              "@mindifficulty": "0",
+              "@maxdifficulty": "1"
+            },
+            {
+              "@id": "RESOURCE_SMALL_STANDARD_03",
+              "@mastertemplate": "MISTS_102_S1",
+              "@templatepool": "BLACK_RESOURCE_FIBER_COMMON",
+              "@subbiome": "green",
+              "@softplayerlimitmin": "1",
+              "@softplayerlimitmax": "1",
+              "@hardplayercapspace": "0",
+              "@weight": "1",
+              "@clusterclosetime": "300",
+              "@clustershutdowntime": "450",
+              "@clustertier": "6",
+              "@mindifficulty": "0",
+              "@maxdifficulty": "1"
+            },
+            {
+              "@id": "RESOURCE_SMALL_STANDARD_04",
+              "@mastertemplate": "MISTS_103_S1",
+              "@templatepool": "BLACK_RESOURCE_FIBER_COMMON",
+              "@subbiome": "green",
+              "@softplayerlimitmin": "1",
+              "@softplayerlimitmax": "1",
+              "@hardplayercapspace": "0",
+              "@weight": "1",
+              "@clusterclosetime": "300",
+              "@clustershutdowntime": "450",
+              "@clustertier": "6",
+              "@mindifficulty": "0",
+              "@maxdifficulty": "1"
+            },
+            {
+              "@id": "RESOURCE_SMALL_UNCOMMON_01",
+              "@mastertemplate": "MISTS_100_S1",
+              "@templatepool": "BLACK_RESOURCE_FIBER_UNCOMMON",
+              "@subbiome": "red",
+              "@softplayerlimitmin": "1",
+              "@softplayerlimitmax": "1",
+              "@hardplayercapspace": "0",
+              "@weight": "1",
+              "@clusterclosetime": "300",
+              "@clustershutdowntime": "450",
+              "@clustertier": "7",
+              "@mindifficulty": "1",
+              "@maxdifficulty": "2"
+            },
+            {
+              "@id": "RESOURCE_SMALL_UNCOMMON_02",
+              "@mastertemplate": "MISTS_101_S1",
+              "@templatepool": "BLACK_RESOURCE_FIBER_UNCOMMON",
+              "@subbiome": "red",
+              "@softplayerlimitmin": "1",
+              "@softplayerlimitmax": "1",
+              "@hardplayercapspace": "0",
+              "@weight": "1",
+              "@clusterclosetime": "300",
+              "@clustershutdowntime": "450",
+              "@clustertier": "7",
+              "@mindifficulty": "1",
+              "@maxdifficulty": "2"
+            },
+            {
+              "@id": "RESOURCE_SMALL_UNCOMMON_03",
+              "@mastertemplate": "MISTS_102_S1",
+              "@templatepool": "BLACK_RESOURCE_FIBER_UNCOMMON",
+              "@subbiome": "red",
+              "@softplayerlimitmin": "1",
+              "@softplayerlimitmax": "1",
+              "@hardplayercapspace": "0",
+              "@weight": "1",
+              "@clusterclosetime": "300",
+              "@clustershutdowntime": "450",
+              "@clustertier": "7",
+              "@mindifficulty": "1",
+              "@maxdifficulty": "2"
+            },
+            {
+              "@id": "RESOURCE_SMALL_UNCOMMON_04",
+              "@mastertemplate": "MISTS_103_S1",
+              "@templatepool": "BLACK_RESOURCE_FIBER_UNCOMMON",
+              "@subbiome": "red",
+              "@softplayerlimitmin": "1",
+              "@softplayerlimitmax": "1",
+              "@hardplayercapspace": "0",
+              "@weight": "1",
+              "@clusterclosetime": "300",
+              "@clustershutdowntime": "450",
+              "@clustertier": "7",
+              "@mindifficulty": "1",
+              "@maxdifficulty": "2"
+            },
+            {
+              "@id": "RESOURCE_MEDIUM_01",
+              "@mastertemplate": "MISTS_200_M1",
+              "@templatepool": "BLACK_RESOURCE_FIBER_UNCOMMON",
+              "@subbiome": "dead",
+              "@softplayerlimitmin": "2",
+              "@softplayerlimitmax": "3",
+              "@hardplayercapspace": "1",
+              "@weight": "1",
+              "@clusterclosetime": "720",
+              "@clustershutdowntime": "900",
+              "@clustertier": "7",
+              "@mindifficulty": "3",
+              "@maxdifficulty": "4"
+            },
+            {
+              "@id": "RESOURCE_MEDIUM_02",
+              "@mastertemplate": "MISTS_201_M1",
+              "@templatepool": "BLACK_RESOURCE_FIBER_UNCOMMON",
+              "@subbiome": "dead",
+              "@softplayerlimitmin": "2",
+              "@softplayerlimitmax": "3",
+              "@hardplayercapspace": "1",
+              "@weight": "1",
+              "@clusterclosetime": "720",
+              "@clustershutdowntime": "900",
+              "@clustertier": "7",
+              "@mindifficulty": "3",
+              "@maxdifficulty": "4"
+            },
+            {
+              "@id": "RESOURCE_MEDIUM_03",
+              "@mastertemplate": "MISTS_202_M1",
+              "@templatepool": "BLACK_RESOURCE_FIBER_RARE",
+              "@subbiome": "dead",
+              "@softplayerlimitmin": "2",
+              "@softplayerlimitmax": "3",
+              "@hardplayercapspace": "1",
+              "@weight": "1",
+              "@clusterclosetime": "720",
+              "@clustershutdowntime": "900",
+              "@clustertier": "8",
+              "@mindifficulty": "3",
+              "@maxdifficulty": "4"
+            },
+            {
+              "@id": "RESOURCE_MEDIUM_04",
+              "@mastertemplate": "MISTS_203_M1",
+              "@templatepool": "BLACK_RESOURCE_FIBER_RARE",
+              "@subbiome": "dead",
+              "@softplayerlimitmin": "2",
+              "@softplayerlimitmax": "3",
+              "@hardplayercapspace": "1",
+              "@weight": "1",
+              "@clusterclosetime": "720",
+              "@clustershutdowntime": "900",
+              "@clustertier": "8",
+              "@mindifficulty": "3",
+              "@maxdifficulty": "4"
+            }
+          ]
+        },
+        {
+          "@name": "MAPSET_RESOURCE_HIDE",
+          "map": [
+            {
+              "@id": "RESOURCE_SMALL_STANDARD_01",
+              "@mastertemplate": "MISTS_100_S1",
+              "@templatepool": "BLACK_RESOURCE_HIDE_COMMON",
+              "@subbiome": "green",
+              "@softplayerlimitmin": "1",
+              "@softplayerlimitmax": "1",
+              "@hardplayercapspace": "0",
+              "@weight": "1",
+              "@clusterclosetime": "300",
+              "@clustershutdowntime": "450",
+              "@clustertier": "6",
+              "@mindifficulty": "0",
+              "@maxdifficulty": "1"
+            },
+            {
+              "@id": "RESOURCE_SMALL_STANDARD_02",
+              "@mastertemplate": "MISTS_101_S1",
+              "@templatepool": "BLACK_RESOURCE_HIDE_COMMON",
+              "@subbiome": "green",
+              "@softplayerlimitmin": "1",
+              "@softplayerlimitmax": "1",
+              "@hardplayercapspace": "0",
+              "@weight": "1",
+              "@clusterclosetime": "300",
+              "@clustershutdowntime": "450",
+              "@clustertier": "6",
+              "@mindifficulty": "0",
+              "@maxdifficulty": "1"
+            },
+            {
+              "@id": "RESOURCE_SMALL_STANDARD_03",
+              "@mastertemplate": "MISTS_102_S1",
+              "@templatepool": "BLACK_RESOURCE_HIDE_COMMON",
+              "@subbiome": "green",
+              "@softplayerlimitmin": "1",
+              "@softplayerlimitmax": "1",
+              "@hardplayercapspace": "0",
+              "@weight": "1",
+              "@clusterclosetime": "300",
+              "@clustershutdowntime": "450",
+              "@clustertier": "6",
+              "@mindifficulty": "0",
+              "@maxdifficulty": "1"
+            },
+            {
+              "@id": "RESOURCE_SMALL_STANDARD_04",
+              "@mastertemplate": "MISTS_103_S1",
+              "@templatepool": "BLACK_RESOURCE_HIDE_COMMON",
+              "@subbiome": "green",
+              "@softplayerlimitmin": "1",
+              "@softplayerlimitmax": "1",
+              "@hardplayercapspace": "0",
+              "@weight": "1",
+              "@clusterclosetime": "300",
+              "@clustershutdowntime": "450",
+              "@clustertier": "6",
+              "@mindifficulty": "0",
+              "@maxdifficulty": "1"
+            },
+            {
+              "@id": "RESOURCE_SMALL_UNCOMMON_01",
+              "@mastertemplate": "MISTS_100_S1",
+              "@templatepool": "BLACK_RESOURCE_HIDE_UNCOMMON",
+              "@subbiome": "red",
+              "@softplayerlimitmin": "1",
+              "@softplayerlimitmax": "1",
+              "@hardplayercapspace": "0",
+              "@weight": "1",
+              "@clusterclosetime": "300",
+              "@clustershutdowntime": "450",
+              "@clustertier": "7",
+              "@mindifficulty": "1",
+              "@maxdifficulty": "2"
+            },
+            {
+              "@id": "RESOURCE_SMALL_UNCOMMON_02",
+              "@mastertemplate": "MISTS_101_S1",
+              "@templatepool": "BLACK_RESOURCE_HIDE_UNCOMMON",
+              "@subbiome": "red",
+              "@softplayerlimitmin": "1",
+              "@softplayerlimitmax": "1",
+              "@hardplayercapspace": "0",
+              "@weight": "1",
+              "@clusterclosetime": "300",
+              "@clustershutdowntime": "450",
+              "@clustertier": "7",
+              "@mindifficulty": "1",
+              "@maxdifficulty": "2"
+            },
+            {
+              "@id": "RESOURCE_SMALL_UNCOMMON_03",
+              "@mastertemplate": "MISTS_102_S1",
+              "@templatepool": "BLACK_RESOURCE_HIDE_UNCOMMON",
+              "@subbiome": "red",
+              "@softplayerlimitmin": "1",
+              "@softplayerlimitmax": "1",
+              "@hardplayercapspace": "0",
+              "@weight": "1",
+              "@clusterclosetime": "300",
+              "@clustershutdowntime": "450",
+              "@clustertier": "7",
+              "@mindifficulty": "1",
+              "@maxdifficulty": "2"
+            },
+            {
+              "@id": "RESOURCE_SMALL_UNCOMMON_04",
+              "@mastertemplate": "MISTS_103_S1",
+              "@templatepool": "BLACK_RESOURCE_HIDE_UNCOMMON",
+              "@subbiome": "red",
+              "@softplayerlimitmin": "1",
+              "@softplayerlimitmax": "1",
+              "@hardplayercapspace": "0",
+              "@weight": "1",
+              "@clusterclosetime": "300",
+              "@clustershutdowntime": "450",
+              "@clustertier": "7",
+              "@mindifficulty": "1",
+              "@maxdifficulty": "2"
+            },
+            {
+              "@id": "RESOURCE_MEDIUM_01",
+              "@mastertemplate": "MISTS_200_M1",
+              "@templatepool": "BLACK_RESOURCE_HIDE_UNCOMMON",
+              "@subbiome": "dead",
+              "@softplayerlimitmin": "2",
+              "@softplayerlimitmax": "3",
+              "@hardplayercapspace": "1",
+              "@weight": "1",
+              "@clusterclosetime": "720",
+              "@clustershutdowntime": "900",
+              "@clustertier": "7",
+              "@mindifficulty": "3",
+              "@maxdifficulty": "4"
+            },
+            {
+              "@id": "RESOURCE_MEDIUM_02",
+              "@mastertemplate": "MISTS_201_M1",
+              "@templatepool": "BLACK_RESOURCE_HIDE_UNCOMMON",
+              "@subbiome": "dead",
+              "@softplayerlimitmin": "2",
+              "@softplayerlimitmax": "3",
+              "@hardplayercapspace": "1",
+              "@weight": "1",
+              "@clusterclosetime": "720",
+              "@clustershutdowntime": "900",
+              "@clustertier": "7",
+              "@mindifficulty": "3",
+              "@maxdifficulty": "4"
+            },
+            {
+              "@id": "RESOURCE_MEDIUM_03",
+              "@mastertemplate": "MISTS_202_M1",
+              "@templatepool": "BLACK_RESOURCE_HIDE_RARE",
+              "@subbiome": "dead",
+              "@softplayerlimitmin": "2",
+              "@softplayerlimitmax": "3",
+              "@hardplayercapspace": "1",
+              "@weight": "1",
+              "@clusterclosetime": "720",
+              "@clustershutdowntime": "900",
+              "@clustertier": "8",
+              "@mindifficulty": "3",
+              "@maxdifficulty": "4"
+            },
+            {
+              "@id": "RESOURCE_MEDIUM_04",
+              "@mastertemplate": "MISTS_203_M1",
+              "@templatepool": "BLACK_RESOURCE_HIDE_RARE",
+              "@subbiome": "dead",
+              "@softplayerlimitmin": "2",
+              "@softplayerlimitmax": "3",
+              "@hardplayercapspace": "1",
+              "@weight": "1",
+              "@clusterclosetime": "720",
+              "@clustershutdowntime": "900",
+              "@clustertier": "8",
+              "@mindifficulty": "3",
+              "@maxdifficulty": "4"
+            }
+          ]
+        },
+        {
+          "@name": "MAPSET_RESOURCE_ORE",
+          "map": [
+            {
+              "@id": "RESOURCE_SMALL_STANDARD_01",
+              "@mastertemplate": "MISTS_100_S1",
+              "@templatepool": "BLACK_RESOURCE_ORE_COMMON",
+              "@subbiome": "green",
+              "@softplayerlimitmin": "1",
+              "@softplayerlimitmax": "1",
+              "@hardplayercapspace": "0",
+              "@weight": "1",
+              "@clusterclosetime": "300",
+              "@clustershutdowntime": "450",
+              "@clustertier": "6",
+              "@mindifficulty": "0",
+              "@maxdifficulty": "1"
+            },
+            {
+              "@id": "RESOURCE_SMALL_STANDARD_02",
+              "@mastertemplate": "MISTS_101_S1",
+              "@templatepool": "BLACK_RESOURCE_ORE_COMMON",
+              "@subbiome": "green",
+              "@softplayerlimitmin": "1",
+              "@softplayerlimitmax": "1",
+              "@hardplayercapspace": "0",
+              "@weight": "1",
+              "@clusterclosetime": "300",
+              "@clustershutdowntime": "450",
+              "@clustertier": "6",
+              "@mindifficulty": "0",
+              "@maxdifficulty": "1"
+            },
+            {
+              "@id": "RESOURCE_SMALL_STANDARD_03",
+              "@mastertemplate": "MISTS_102_S1",
+              "@templatepool": "BLACK_RESOURCE_ORE_COMMON",
+              "@subbiome": "green",
+              "@softplayerlimitmin": "1",
+              "@softplayerlimitmax": "1",
+              "@hardplayercapspace": "0",
+              "@weight": "1",
+              "@clusterclosetime": "300",
+              "@clustershutdowntime": "450",
+              "@clustertier": "6",
+              "@mindifficulty": "0",
+              "@maxdifficulty": "1"
+            },
+            {
+              "@id": "RESOURCE_SMALL_STANDARD_04",
+              "@mastertemplate": "MISTS_103_S1",
+              "@templatepool": "BLACK_RESOURCE_ORE_COMMON",
+              "@subbiome": "green",
+              "@softplayerlimitmin": "1",
+              "@softplayerlimitmax": "1",
+              "@hardplayercapspace": "0",
+              "@weight": "1",
+              "@clusterclosetime": "300",
+              "@clustershutdowntime": "450",
+              "@clustertier": "6",
+              "@mindifficulty": "0",
+              "@maxdifficulty": "1"
+            },
+            {
+              "@id": "RESOURCE_SMALL_UNCOMMON_01",
+              "@mastertemplate": "MISTS_100_S1",
+              "@templatepool": "BLACK_RESOURCE_ORE_UNCOMMON",
+              "@subbiome": "red",
+              "@softplayerlimitmin": "1",
+              "@softplayerlimitmax": "1",
+              "@hardplayercapspace": "0",
+              "@weight": "1",
+              "@clusterclosetime": "300",
+              "@clustershutdowntime": "450",
+              "@clustertier": "7",
+              "@mindifficulty": "1",
+              "@maxdifficulty": "2"
+            },
+            {
+              "@id": "RESOURCE_SMALL_UNCOMMON_02",
+              "@mastertemplate": "MISTS_101_S1",
+              "@templatepool": "BLACK_RESOURCE_ORE_UNCOMMON",
+              "@subbiome": "red",
+              "@softplayerlimitmin": "1",
+              "@softplayerlimitmax": "1",
+              "@hardplayercapspace": "0",
+              "@weight": "1",
+              "@clusterclosetime": "300",
+              "@clustershutdowntime": "450",
+              "@clustertier": "7",
+              "@mindifficulty": "1",
+              "@maxdifficulty": "2"
+            },
+            {
+              "@id": "RESOURCE_SMALL_UNCOMMON_03",
+              "@mastertemplate": "MISTS_102_S1",
+              "@templatepool": "BLACK_RESOURCE_ORE_UNCOMMON",
+              "@subbiome": "red",
+              "@softplayerlimitmin": "1",
+              "@softplayerlimitmax": "1",
+              "@hardplayercapspace": "0",
+              "@weight": "1",
+              "@clusterclosetime": "300",
+              "@clustershutdowntime": "450",
+              "@clustertier": "7",
+              "@mindifficulty": "1",
+              "@maxdifficulty": "2"
+            },
+            {
+              "@id": "RESOURCE_SMALL_UNCOMMON_04",
+              "@mastertemplate": "MISTS_103_S1",
+              "@templatepool": "BLACK_RESOURCE_ORE_UNCOMMON",
+              "@subbiome": "red",
+              "@softplayerlimitmin": "1",
+              "@softplayerlimitmax": "1",
+              "@hardplayercapspace": "0",
+              "@weight": "1",
+              "@clusterclosetime": "300",
+              "@clustershutdowntime": "450",
+              "@clustertier": "7",
+              "@mindifficulty": "1",
+              "@maxdifficulty": "2"
+            },
+            {
+              "@id": "RESOURCE_MEDIUM_01",
+              "@mastertemplate": "MISTS_200_M1",
+              "@templatepool": "BLACK_RESOURCE_ORE_UNCOMMON",
+              "@subbiome": "dead",
+              "@softplayerlimitmin": "2",
+              "@softplayerlimitmax": "3",
+              "@hardplayercapspace": "1",
+              "@weight": "1",
+              "@clusterclosetime": "720",
+              "@clustershutdowntime": "900",
+              "@clustertier": "7",
+              "@mindifficulty": "3",
+              "@maxdifficulty": "4"
+            },
+            {
+              "@id": "RESOURCE_MEDIUM_02",
+              "@mastertemplate": "MISTS_201_M1",
+              "@templatepool": "BLACK_RESOURCE_ORE_UNCOMMON",
+              "@subbiome": "dead",
+              "@softplayerlimitmin": "2",
+              "@softplayerlimitmax": "3",
+              "@hardplayercapspace": "1",
+              "@weight": "1",
+              "@clusterclosetime": "720",
+              "@clustershutdowntime": "900",
+              "@clustertier": "7",
+              "@mindifficulty": "3",
+              "@maxdifficulty": "4"
+            },
+            {
+              "@id": "RESOURCE_MEDIUM_03",
+              "@mastertemplate": "MISTS_202_M1",
+              "@templatepool": "BLACK_RESOURCE_ORE_RARE",
+              "@subbiome": "dead",
+              "@softplayerlimitmin": "2",
+              "@softplayerlimitmax": "3",
+              "@hardplayercapspace": "1",
+              "@weight": "1",
+              "@clusterclosetime": "720",
+              "@clustershutdowntime": "900",
+              "@clustertier": "8",
+              "@mindifficulty": "3",
+              "@maxdifficulty": "4"
+            },
+            {
+              "@id": "RESOURCE_MEDIUM_04",
+              "@mastertemplate": "MISTS_203_M1",
+              "@templatepool": "BLACK_RESOURCE_ORE_RARE",
+              "@subbiome": "dead",
+              "@softplayerlimitmin": "2",
+              "@softplayerlimitmax": "3",
+              "@hardplayercapspace": "1",
+              "@weight": "1",
+              "@clusterclosetime": "720",
+              "@clustershutdowntime": "900",
+              "@clustertier": "8",
+              "@mindifficulty": "3",
+              "@maxdifficulty": "4"
+            }
+          ]
+        },
+        {
+          "@name": "MAPSET_RESOURCE_ROCK",
+          "map": [
+            {
+              "@id": "RESOURCE_SMALL_STANDARD_01",
+              "@mastertemplate": "MISTS_100_S1",
+              "@templatepool": "BLACK_RESOURCE_ROCK_COMMON",
+              "@subbiome": "green",
+              "@softplayerlimitmin": "1",
+              "@softplayerlimitmax": "1",
+              "@hardplayercapspace": "0",
+              "@weight": "1",
+              "@clusterclosetime": "300",
+              "@clustershutdowntime": "450",
+              "@clustertier": "6",
+              "@mindifficulty": "0",
+              "@maxdifficulty": "1"
+            },
+            {
+              "@id": "RESOURCE_SMALL_STANDARD_02",
+              "@mastertemplate": "MISTS_101_S1",
+              "@templatepool": "BLACK_RESOURCE_ROCK_COMMON",
+              "@subbiome": "green",
+              "@softplayerlimitmin": "1",
+              "@softplayerlimitmax": "1",
+              "@hardplayercapspace": "0",
+              "@weight": "1",
+              "@clusterclosetime": "300",
+              "@clustershutdowntime": "450",
+              "@clustertier": "6",
+              "@mindifficulty": "0",
+              "@maxdifficulty": "1"
+            },
+            {
+              "@id": "RESOURCE_SMALL_STANDARD_03",
+              "@mastertemplate": "MISTS_102_S1",
+              "@templatepool": "BLACK_RESOURCE_ROCK_COMMON",
+              "@subbiome": "green",
+              "@softplayerlimitmin": "1",
+              "@softplayerlimitmax": "1",
+              "@hardplayercapspace": "0",
+              "@weight": "1",
+              "@clusterclosetime": "300",
+              "@clustershutdowntime": "450",
+              "@clustertier": "6",
+              "@mindifficulty": "0",
+              "@maxdifficulty": "1"
+            },
+            {
+              "@id": "RESOURCE_SMALL_STANDARD_04",
+              "@mastertemplate": "MISTS_103_S1",
+              "@templatepool": "BLACK_RESOURCE_ROCK_COMMON",
+              "@subbiome": "green",
+              "@softplayerlimitmin": "1",
+              "@softplayerlimitmax": "1",
+              "@hardplayercapspace": "0",
+              "@weight": "1",
+              "@clusterclosetime": "300",
+              "@clustershutdowntime": "450",
+              "@clustertier": "6",
+              "@mindifficulty": "0",
+              "@maxdifficulty": "1"
+            },
+            {
+              "@id": "RESOURCE_SMALL_UNCOMMON_01",
+              "@mastertemplate": "MISTS_100_S1",
+              "@templatepool": "BLACK_RESOURCE_ROCK_UNCOMMON",
+              "@subbiome": "red",
+              "@softplayerlimitmin": "1",
+              "@softplayerlimitmax": "1",
+              "@hardplayercapspace": "0",
+              "@weight": "1",
+              "@clusterclosetime": "300",
+              "@clustershutdowntime": "450",
+              "@clustertier": "7",
+              "@mindifficulty": "1",
+              "@maxdifficulty": "2"
+            },
+            {
+              "@id": "RESOURCE_SMALL_UNCOMMON_02",
+              "@mastertemplate": "MISTS_101_S1",
+              "@templatepool": "BLACK_RESOURCE_ROCK_UNCOMMON",
+              "@subbiome": "red",
+              "@softplayerlimitmin": "1",
+              "@softplayerlimitmax": "1",
+              "@hardplayercapspace": "0",
+              "@weight": "1",
+              "@clusterclosetime": "300",
+              "@clustershutdowntime": "450",
+              "@clustertier": "7",
+              "@mindifficulty": "1",
+              "@maxdifficulty": "2"
+            },
+            {
+              "@id": "RESOURCE_SMALL_UNCOMMON_03",
+              "@mastertemplate": "MISTS_102_S1",
+              "@templatepool": "BLACK_RESOURCE_ROCK_UNCOMMON",
+              "@subbiome": "red",
+              "@softplayerlimitmin": "1",
+              "@softplayerlimitmax": "1",
+              "@hardplayercapspace": "0",
+              "@weight": "1",
+              "@clusterclosetime": "300",
+              "@clustershutdowntime": "450",
+              "@clustertier": "7",
+              "@mindifficulty": "1",
+              "@maxdifficulty": "2"
+            },
+            {
+              "@id": "RESOURCE_SMALL_UNCOMMON_04",
+              "@mastertemplate": "MISTS_103_S1",
+              "@templatepool": "BLACK_RESOURCE_ROCK_UNCOMMON",
+              "@subbiome": "red",
+              "@softplayerlimitmin": "1",
+              "@softplayerlimitmax": "1",
+              "@hardplayercapspace": "0",
+              "@weight": "1",
+              "@clusterclosetime": "300",
+              "@clustershutdowntime": "450",
+              "@clustertier": "7",
+              "@mindifficulty": "1",
+              "@maxdifficulty": "2"
+            },
+            {
+              "@id": "RESOURCE_MEDIUM_01",
+              "@mastertemplate": "MISTS_200_M1",
+              "@templatepool": "BLACK_RESOURCE_ROCK_UNCOMMON",
+              "@subbiome": "dead",
+              "@softplayerlimitmin": "2",
+              "@softplayerlimitmax": "3",
+              "@hardplayercapspace": "1",
+              "@weight": "1",
+              "@clusterclosetime": "720",
+              "@clustershutdowntime": "900",
+              "@clustertier": "7",
+              "@mindifficulty": "3",
+              "@maxdifficulty": "4"
+            },
+            {
+              "@id": "RESOURCE_MEDIUM_02",
+              "@mastertemplate": "MISTS_201_M1",
+              "@templatepool": "BLACK_RESOURCE_ROCK_UNCOMMON",
+              "@subbiome": "dead",
+              "@softplayerlimitmin": "2",
+              "@softplayerlimitmax": "3",
+              "@hardplayercapspace": "1",
+              "@weight": "1",
+              "@clusterclosetime": "720",
+              "@clustershutdowntime": "900",
+              "@clustertier": "7",
+              "@mindifficulty": "3",
+              "@maxdifficulty": "4"
+            },
+            {
+              "@id": "RESOURCE_MEDIUM_03",
+              "@mastertemplate": "MISTS_202_M1",
+              "@templatepool": "BLACK_RESOURCE_ROCK_RARE",
+              "@subbiome": "dead",
+              "@softplayerlimitmin": "2",
+              "@softplayerlimitmax": "3",
+              "@hardplayercapspace": "1",
+              "@weight": "1",
+              "@clusterclosetime": "720",
+              "@clustershutdowntime": "900",
+              "@clustertier": "8",
+              "@mindifficulty": "3",
+              "@maxdifficulty": "4"
+            },
+            {
+              "@id": "RESOURCE_MEDIUM_04",
+              "@mastertemplate": "MISTS_203_M1",
+              "@templatepool": "BLACK_RESOURCE_ROCK_RARE",
+              "@subbiome": "dead",
+              "@softplayerlimitmin": "2",
+              "@softplayerlimitmax": "3",
+              "@hardplayercapspace": "1",
+              "@weight": "1",
+              "@clusterclosetime": "720",
+              "@clustershutdowntime": "900",
+              "@clustertier": "8",
+              "@mindifficulty": "3",
+              "@maxdifficulty": "4"
+            }
+          ]
+        },
+        {
+          "@name": "MAPSET_RESOURCE_WOOD",
+          "map": [
+            {
+              "@id": "RESOURCE_SMALL_STANDARD_01",
+              "@mastertemplate": "MISTS_100_S1",
+              "@templatepool": "BLACK_RESOURCE_WOOD_COMMON",
+              "@subbiome": "green",
+              "@softplayerlimitmin": "1",
+              "@softplayerlimitmax": "1",
+              "@hardplayercapspace": "0",
+              "@weight": "1",
+              "@clusterclosetime": "300",
+              "@clustershutdowntime": "450",
+              "@clustertier": "6",
+              "@mindifficulty": "0",
+              "@maxdifficulty": "1"
+            },
+            {
+              "@id": "RESOURCE_SMALL_STANDARD_02",
+              "@mastertemplate": "MISTS_101_S1",
+              "@templatepool": "BLACK_RESOURCE_WOOD_COMMON",
+              "@subbiome": "green",
+              "@softplayerlimitmin": "1",
+              "@softplayerlimitmax": "1",
+              "@hardplayercapspace": "0",
+              "@weight": "1",
+              "@clusterclosetime": "300",
+              "@clustershutdowntime": "450",
+              "@clustertier": "6",
+              "@mindifficulty": "0",
+              "@maxdifficulty": "1"
+            },
+            {
+              "@id": "RESOURCE_SMALL_STANDARD_03",
+              "@mastertemplate": "MISTS_102_S1",
+              "@templatepool": "BLACK_RESOURCE_WOOD_COMMON",
+              "@subbiome": "green",
+              "@softplayerlimitmin": "1",
+              "@softplayerlimitmax": "1",
+              "@hardplayercapspace": "0",
+              "@weight": "1",
+              "@clusterclosetime": "300",
+              "@clustershutdowntime": "450",
+              "@clustertier": "6",
+              "@mindifficulty": "0",
+              "@maxdifficulty": "1"
+            },
+            {
+              "@id": "RESOURCE_SMALL_STANDARD_04",
+              "@mastertemplate": "MISTS_103_S1",
+              "@templatepool": "BLACK_RESOURCE_WOOD_COMMON",
+              "@subbiome": "green",
+              "@softplayerlimitmin": "1",
+              "@softplayerlimitmax": "1",
+              "@hardplayercapspace": "0",
+              "@weight": "1",
+              "@clusterclosetime": "300",
+              "@clustershutdowntime": "450",
+              "@clustertier": "6",
+              "@mindifficulty": "0",
+              "@maxdifficulty": "1"
+            },
+            {
+              "@id": "RESOURCE_SMALL_UNCOMMON_01",
+              "@mastertemplate": "MISTS_100_S1",
+              "@templatepool": "BLACK_RESOURCE_WOOD_UNCOMMON",
+              "@subbiome": "red",
+              "@softplayerlimitmin": "1",
+              "@softplayerlimitmax": "1",
+              "@hardplayercapspace": "0",
+              "@weight": "1",
+              "@clusterclosetime": "300",
+              "@clustershutdowntime": "450",
+              "@clustertier": "7",
+              "@mindifficulty": "1",
+              "@maxdifficulty": "2"
+            },
+            {
+              "@id": "RESOURCE_SMALL_UNCOMMON_02",
+              "@mastertemplate": "MISTS_101_S1",
+              "@templatepool": "BLACK_RESOURCE_WOOD_UNCOMMON",
+              "@subbiome": "red",
+              "@softplayerlimitmin": "1",
+              "@softplayerlimitmax": "1",
+              "@hardplayercapspace": "0",
+              "@weight": "1",
+              "@clusterclosetime": "300",
+              "@clustershutdowntime": "450",
+              "@clustertier": "7",
+              "@mindifficulty": "1",
+              "@maxdifficulty": "2"
+            },
+            {
+              "@id": "RESOURCE_SMALL_UNCOMMON_03",
+              "@mastertemplate": "MISTS_102_S1",
+              "@templatepool": "BLACK_RESOURCE_WOOD_UNCOMMON",
+              "@subbiome": "red",
+              "@softplayerlimitmin": "1",
+              "@softplayerlimitmax": "1",
+              "@hardplayercapspace": "0",
+              "@weight": "1",
+              "@clusterclosetime": "300",
+              "@clustershutdowntime": "450",
+              "@clustertier": "7",
+              "@mindifficulty": "1",
+              "@maxdifficulty": "2"
+            },
+            {
+              "@id": "RESOURCE_SMALL_UNCOMMON_04",
+              "@mastertemplate": "MISTS_103_S1",
+              "@templatepool": "BLACK_RESOURCE_WOOD_UNCOMMON",
+              "@subbiome": "red",
+              "@softplayerlimitmin": "1",
+              "@softplayerlimitmax": "1",
+              "@hardplayercapspace": "0",
+              "@weight": "1",
+              "@clusterclosetime": "300",
+              "@clustershutdowntime": "450",
+              "@clustertier": "7",
+              "@mindifficulty": "1",
+              "@maxdifficulty": "2"
+            },
+            {
+              "@id": "RESOURCE_MEDIUM_01",
+              "@mastertemplate": "MISTS_200_M1",
+              "@templatepool": "BLACK_RESOURCE_WOOD_UNCOMMON",
+              "@subbiome": "dead",
+              "@softplayerlimitmin": "2",
+              "@softplayerlimitmax": "3",
+              "@hardplayercapspace": "1",
+              "@weight": "1",
+              "@clusterclosetime": "720",
+              "@clustershutdowntime": "900",
+              "@clustertier": "7",
+              "@mindifficulty": "3",
+              "@maxdifficulty": "4"
+            },
+            {
+              "@id": "RESOURCE_MEDIUM_02",
+              "@mastertemplate": "MISTS_201_M1",
+              "@templatepool": "BLACK_RESOURCE_WOOD_UNCOMMON",
+              "@subbiome": "dead",
+              "@softplayerlimitmin": "2",
+              "@softplayerlimitmax": "3",
+              "@hardplayercapspace": "1",
+              "@weight": "1",
+              "@clusterclosetime": "720",
+              "@clustershutdowntime": "900",
+              "@clustertier": "7",
+              "@mindifficulty": "3",
+              "@maxdifficulty": "4"
+            },
+            {
+              "@id": "RESOURCE_MEDIUM_03",
+              "@mastertemplate": "MISTS_202_M1",
+              "@templatepool": "BLACK_RESOURCE_WOOD_RARE",
+              "@subbiome": "dead",
+              "@softplayerlimitmin": "2",
+              "@softplayerlimitmax": "3",
+              "@hardplayercapspace": "1",
+              "@weight": "1",
+              "@clusterclosetime": "720",
+              "@clustershutdowntime": "900",
+              "@clustertier": "8",
+              "@mindifficulty": "3",
+              "@maxdifficulty": "4"
+            },
+            {
+              "@id": "RESOURCE_MEDIUM_04",
+              "@mastertemplate": "MISTS_203_M1",
+              "@templatepool": "BLACK_RESOURCE_WOOD_RARE",
+              "@subbiome": "dead",
+              "@softplayerlimitmin": "2",
+              "@softplayerlimitmax": "3",
+              "@hardplayercapspace": "1",
+              "@weight": "1",
+              "@clusterclosetime": "720",
+              "@clustershutdowntime": "900",
+              "@clustertier": "8",
+              "@mindifficulty": "3",
+              "@maxdifficulty": "4"
+            }
+          ]
         }
       ]
     },
@@ -4078,10 +5381,24 @@
                 {
                   "@category": "none",
                   "@weight": "1",
-                  "template": {
-                    "@id": "MISTS_S_FILL_NON_LANDSCAPE_01",
-                    "@weight": "10"
-                  }
+                  "template": [
+                    {
+                      "@id": "MISTS_S_FILL_NON_LANDSCAPE_01",
+                      "@weight": "10",
+                      "@maxdifficulty": "0"
+                    },
+                    {
+                      "@id": "MISTS_S_EXIT_NON_CITY_01",
+                      "@weight": "9144",
+                      "@mindifficulty": "1",
+                      "@unique": "true"
+                    },
+                    {
+                      "@id": "MISTS_S_FILL_NON_LANDSCAPE_01",
+                      "@weight": "856",
+                      "@mindifficulty": "1"
+                    }
+                  ]
                 },
                 {
                   "@category": "misc",
@@ -4090,26 +5407,22 @@
                   "template": [
                     {
                       "@id": "MISTS_S_EXIT_NON_CITY_01",
-                      "@weight": "25"
-                    },
-                    {
-                      "@id": "MISTS_S_EXIT_NON_ROADS_01",
-                      "@weight": "10",
-                      "@maxdifficulty": "0"
-                    },
-                    {
-                      "@id": "MISTS_S_FILL_NON_LANDSCAPE_01",
-                      "@weight": "65",
-                      "@maxdifficulty": "0"
-                    },
-                    {
-                      "@id": "MISTS_S_EXIT_NON_ROADS_01",
-                      "@weight": "50",
-                      "@mindifficulty": "1"
-                    },
-                    {
-                      "@id": "MISTS_S_FILL_NON_LANDSCAPE_01",
                       "@weight": "25",
+                      "@maxdifficulty": "0"
+                    },
+                    {
+                      "@id": "MISTS_S_EXIT_NON_ROADS_01",
+                      "@weight": "25",
+                      "@maxdifficulty": "0"
+                    },
+                    {
+                      "@id": "MISTS_S_FILL_NON_LANDSCAPE_01",
+                      "@weight": "50",
+                      "@maxdifficulty": "0"
+                    },
+                    {
+                      "@id": "MISTS_S_EXIT_NON_ROADS_01",
+                      "@weight": "100",
                       "@mindifficulty": "1"
                     }
                   ]
@@ -4509,29 +5822,26 @@
                 {
                   "@category": "none",
                   "@weight": "1",
-                  "template": {
-                    "@id": "MISTS_S_FILL_NON_LANDSCAPE_01",
-                    "@weight": "10"
-                  }
+                  "template": [
+                    {
+                      "@id": "MISTS_S_EXIT_NON_CITY_01",
+                      "@weight": "9144",
+                      "@unique": "true"
+                    },
+                    {
+                      "@id": "MISTS_S_FILL_NON_LANDSCAPE_01",
+                      "@weight": "856"
+                    }
+                  ]
                 },
                 {
                   "@category": "misc",
                   "@weight": "9999999",
                   "@unique": "true",
-                  "template": [
-                    {
-                      "@id": "MISTS_S_EXIT_NON_CITY_01",
-                      "@weight": "25"
-                    },
-                    {
-                      "@id": "MISTS_S_EXIT_NON_ROADS_01",
-                      "@weight": "50"
-                    },
-                    {
-                      "@id": "MISTS_S_FILL_NON_LANDSCAPE_01",
-                      "@weight": "25"
-                    }
-                  ]
+                  "template": {
+                    "@id": "MISTS_S_EXIT_NON_ROADS_01",
+                    "@weight": "100"
+                  }
                 }
               ]
             }
@@ -4932,29 +6242,26 @@
                 {
                   "@category": "none",
                   "@weight": "1",
-                  "template": {
-                    "@id": "MISTS_S_FILL_NON_LANDSCAPE_01",
-                    "@weight": "10"
-                  }
+                  "template": [
+                    {
+                      "@id": "MISTS_S_EXIT_NON_CITY_01",
+                      "@weight": "9144",
+                      "@unique": "true"
+                    },
+                    {
+                      "@id": "MISTS_S_FILL_NON_LANDSCAPE_01",
+                      "@weight": "856"
+                    }
+                  ]
                 },
                 {
                   "@category": "misc",
                   "@weight": "9999999",
                   "@unique": "true",
-                  "template": [
-                    {
-                      "@id": "MISTS_S_EXIT_NON_CITY_01",
-                      "@weight": "25"
-                    },
-                    {
-                      "@id": "MISTS_S_EXIT_NON_ROADS_01",
-                      "@weight": "50"
-                    },
-                    {
-                      "@id": "MISTS_S_FILL_NON_LANDSCAPE_01",
-                      "@weight": "25"
-                    }
-                  ]
+                  "template": {
+                    "@id": "MISTS_S_EXIT_NON_ROADS_01",
+                    "@weight": "100"
+                  }
                 }
               ]
             }
@@ -5345,10 +6652,24 @@
                 {
                   "@category": "none",
                   "@weight": "1",
-                  "template": {
-                    "@id": "MISTS_S_FILL_NON_LANDSCAPE_01",
-                    "@weight": "10"
-                  }
+                  "template": [
+                    {
+                      "@id": "MISTS_S_FILL_NON_LANDSCAPE_01",
+                      "@weight": "10",
+                      "@maxdifficulty": "0"
+                    },
+                    {
+                      "@id": "MISTS_S_EXIT_NON_CITY_01",
+                      "@weight": "9144",
+                      "@mindifficulty": "1",
+                      "@unique": "true"
+                    },
+                    {
+                      "@id": "MISTS_S_FILL_NON_LANDSCAPE_01",
+                      "@weight": "856",
+                      "@mindifficulty": "1"
+                    }
+                  ]
                 },
                 {
                   "@category": "misc",
@@ -5356,17 +6677,23 @@
                   "@unique": "true",
                   "template": [
                     {
-                      "@id": "MISTS_S_EXIT_NON_ROADS_01",
-                      "@weight": "9"
-                    },
-                    {
-                      "@id": "MISTS_S_FILL_NON_LANDSCAPE_01",
-                      "@weight": "81",
+                      "@id": "MISTS_S_EXIT_NON_CITY_01",
+                      "@weight": "25",
                       "@maxdifficulty": "0"
                     },
                     {
-                      "@id": "MISTS_S_EXIT_NON_CITY_01",
-                      "@weight": "1",
+                      "@id": "MISTS_S_EXIT_NON_ROADS_01",
+                      "@weight": "25",
+                      "@maxdifficulty": "0"
+                    },
+                    {
+                      "@id": "MISTS_S_FILL_NON_LANDSCAPE_01",
+                      "@weight": "50",
+                      "@maxdifficulty": "0"
+                    },
+                    {
+                      "@id": "MISTS_S_EXIT_NON_ROADS_01",
+                      "@weight": "100",
                       "@mindifficulty": "1"
                     }
                   ]
@@ -5772,25 +7099,26 @@
                 {
                   "@category": "none",
                   "@weight": "1",
-                  "template": {
-                    "@id": "MISTS_S_FILL_NON_LANDSCAPE_01",
-                    "@weight": "10"
-                  }
+                  "template": [
+                    {
+                      "@id": "MISTS_S_EXIT_NON_CITY_01",
+                      "@weight": "9144",
+                      "@unique": "true"
+                    },
+                    {
+                      "@id": "MISTS_S_FILL_NON_LANDSCAPE_01",
+                      "@weight": "856"
+                    }
+                  ]
                 },
                 {
                   "@category": "misc",
                   "@weight": "9999999",
                   "@unique": "true",
-                  "template": [
-                    {
-                      "@id": "MISTS_S_EXIT_NON_CITY_01",
-                      "@weight": "1"
-                    },
-                    {
-                      "@id": "MISTS_S_EXIT_NON_ROADS_01",
-                      "@weight": "9"
-                    }
-                  ]
+                  "template": {
+                    "@id": "MISTS_S_EXIT_NON_ROADS_01",
+                    "@weight": "100"
+                  }
                 }
               ]
             }
@@ -6201,27 +7529,1198 @@
                 {
                   "@category": "none",
                   "@weight": "1",
-                  "template": {
-                    "@id": "MISTS_S_FILL_NON_LANDSCAPE_01",
-                    "@weight": "10"
-                  }
+                  "template": [
+                    {
+                      "@id": "MISTS_S_EXIT_NON_CITY_01",
+                      "@weight": "9144",
+                      "@unique": "true"
+                    },
+                    {
+                      "@id": "MISTS_S_FILL_NON_LANDSCAPE_01",
+                      "@weight": "856"
+                    }
+                  ]
                 },
                 {
                   "@category": "misc",
                   "@weight": "9999999",
                   "@unique": "true",
-                  "template": [
-                    {
-                      "@id": "MISTS_S_EXIT_NON_CITY_01",
-                      "@weight": "1"
-                    },
-                    {
-                      "@id": "MISTS_S_EXIT_NON_ROADS_01",
-                      "@weight": "9"
-                    }
-                  ]
+                  "template": {
+                    "@id": "MISTS_S_EXIT_NON_ROADS_01",
+                    "@weight": "100"
+                  }
                 }
               ]
+            }
+          ]
+        },
+        {
+          "@id": "BLACK_RESOURCE_FIBER_COMMON",
+          "size": [
+            {
+              "@name": "medium",
+              "type": {
+                "@category": "resource",
+                "@weight": "1",
+                "rolllayertag": {
+                  "layertag": {
+                    "@name": "t6",
+                    "@weight": "1"
+                  }
+                },
+                "template": [
+                  {
+                    "@id": "MISTS_M_RES_NON_FIBER_01",
+                    "@weight": "1",
+                    "@unique": "true",
+                    "@layertags": "fiber"
+                  },
+                  {
+                    "@id": "MISTS_M_RES_NON_FIBER_02",
+                    "@weight": "1",
+                    "@unique": "true",
+                    "@layertags": "fiber"
+                  },
+                  {
+                    "@id": "MISTS_M_RES_NON_FIBER_03",
+                    "@weight": "1",
+                    "@unique": "true",
+                    "@layertags": "fiber"
+                  }
+                ]
+              }
+            },
+            {
+              "@name": "small",
+              "type": {
+                "@category": "resource",
+                "@weight": "1",
+                "rolllayertag": {
+                  "layertag": {
+                    "@name": "t6",
+                    "@weight": "1"
+                  }
+                },
+                "template": [
+                  {
+                    "@id": "MISTS_S_RES_NON_FIBER_01",
+                    "@weight": "1",
+                    "@layertags": "fiber"
+                  },
+                  {
+                    "@id": "MISTS_S_RES_NON_FIBER_02",
+                    "@weight": "1",
+                    "@layertags": "fiber"
+                  },
+                  {
+                    "@id": "MISTS_S_RES_NON_FIBER_03",
+                    "@weight": "1",
+                    "@layertags": "fiber"
+                  },
+                  {
+                    "@id": "MISTS_S_RES_NON_FIBER_04",
+                    "@weight": "1",
+                    "@layertags": "fiber"
+                  },
+                  {
+                    "@id": "MISTS_S_RES_NON_FIBER_05",
+                    "@weight": "1",
+                    "@layertags": "fiber"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "@id": "BLACK_RESOURCE_HIDE_COMMON",
+          "size": [
+            {
+              "@name": "medium",
+              "type": {
+                "@category": "resource",
+                "@weight": "1",
+                "rolllayertag": {
+                  "layertag": {
+                    "@name": "t6",
+                    "@weight": "1"
+                  }
+                },
+                "template": [
+                  {
+                    "@id": "MISTS_M_RES_NON_WOOD-HIDE_01",
+                    "@weight": "1",
+                    "@unique": "true",
+                    "@layertags": "hide"
+                  },
+                  {
+                    "@id": "MISTS_M_RES_NON_WOOD-HIDE_02",
+                    "@weight": "1",
+                    "@unique": "true",
+                    "@layertags": "hide"
+                  },
+                  {
+                    "@id": "MISTS_M_RES_NON_WOOD-HIDE_03",
+                    "@weight": "1",
+                    "@unique": "true",
+                    "@layertags": "hide"
+                  }
+                ]
+              }
+            },
+            {
+              "@name": "small",
+              "type": {
+                "@category": "resource",
+                "@weight": "1",
+                "rolllayertag": {
+                  "layertag": {
+                    "@name": "t6",
+                    "@weight": "1"
+                  }
+                },
+                "template": [
+                  {
+                    "@id": "MISTS_S_RES_NON_WOOD-HIDE_01",
+                    "@weight": "1",
+                    "@layertags": "hide"
+                  },
+                  {
+                    "@id": "MISTS_S_RES_NON_WOOD-HIDE_02",
+                    "@weight": "1",
+                    "@layertags": "hide"
+                  },
+                  {
+                    "@id": "MISTS_S_RES_NON_WOOD-HIDE_03",
+                    "@weight": "1",
+                    "@layertags": "hide"
+                  },
+                  {
+                    "@id": "MISTS_S_RES_NON_WOOD-HIDE_04",
+                    "@weight": "1",
+                    "@layertags": "hide"
+                  },
+                  {
+                    "@id": "MISTS_S_RES_NON_WOOD-HIDE_05",
+                    "@weight": "1",
+                    "@layertags": "hide"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "@id": "BLACK_RESOURCE_ORE_COMMON",
+          "size": [
+            {
+              "@name": "medium",
+              "type": {
+                "@category": "resource",
+                "@weight": "1",
+                "rolllayertag": {
+                  "layertag": {
+                    "@name": "t6",
+                    "@weight": "1"
+                  }
+                },
+                "template": [
+                  {
+                    "@id": "MISTS_M_RES_NON_ROCK-ORE_01",
+                    "@weight": "1",
+                    "@unique": "true",
+                    "@layertags": "ore"
+                  },
+                  {
+                    "@id": "MISTS_M_RES_NON_ROCK-ORE_02",
+                    "@weight": "1",
+                    "@unique": "true",
+                    "@layertags": "ore"
+                  },
+                  {
+                    "@id": "MISTS_M_RES_NON_ROCK-ORE_03",
+                    "@weight": "1",
+                    "@unique": "true",
+                    "@layertags": "ore"
+                  }
+                ]
+              }
+            },
+            {
+              "@name": "small",
+              "type": {
+                "@category": "resource",
+                "@weight": "1",
+                "rolllayertag": {
+                  "layertag": {
+                    "@name": "t6",
+                    "@weight": "1"
+                  }
+                },
+                "template": [
+                  {
+                    "@id": "MISTS_S_RES_NON_ROCK-ORE_01",
+                    "@weight": "1",
+                    "@layertags": "ore"
+                  },
+                  {
+                    "@id": "MISTS_S_RES_NON_ROCK-ORE_02",
+                    "@weight": "1",
+                    "@layertags": "ore"
+                  },
+                  {
+                    "@id": "MISTS_S_RES_NON_ROCK-ORE_03",
+                    "@weight": "1",
+                    "@layertags": "ore"
+                  },
+                  {
+                    "@id": "MISTS_S_RES_NON_ROCK-ORE_04",
+                    "@weight": "1",
+                    "@layertags": "ore"
+                  },
+                  {
+                    "@id": "MISTS_S_RES_NON_ROCK-ORE_05",
+                    "@weight": "1",
+                    "@layertags": "ore"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "@id": "BLACK_RESOURCE_ROCK_COMMON",
+          "size": [
+            {
+              "@name": "medium",
+              "type": {
+                "@category": "resource",
+                "@weight": "1",
+                "rolllayertag": {
+                  "layertag": {
+                    "@name": "t6",
+                    "@weight": "1"
+                  }
+                },
+                "template": [
+                  {
+                    "@id": "MISTS_M_RES_NON_ROCK-ORE_01",
+                    "@weight": "1",
+                    "@unique": "true",
+                    "@layertags": "rock"
+                  },
+                  {
+                    "@id": "MISTS_M_RES_NON_ROCK-ORE_02",
+                    "@weight": "1",
+                    "@unique": "true",
+                    "@layertags": "rock"
+                  },
+                  {
+                    "@id": "MISTS_M_RES_NON_ROCK-ORE_03",
+                    "@weight": "1",
+                    "@unique": "true",
+                    "@layertags": "rock"
+                  }
+                ]
+              }
+            },
+            {
+              "@name": "small",
+              "type": {
+                "@category": "resource",
+                "@weight": "1",
+                "rolllayertag": {
+                  "layertag": {
+                    "@name": "t6",
+                    "@weight": "1"
+                  }
+                },
+                "template": [
+                  {
+                    "@id": "MISTS_S_RES_NON_ROCK-ORE_01",
+                    "@weight": "1",
+                    "@layertags": "rock"
+                  },
+                  {
+                    "@id": "MISTS_S_RES_NON_ROCK-ORE_02",
+                    "@weight": "1",
+                    "@layertags": "rock"
+                  },
+                  {
+                    "@id": "MISTS_S_RES_NON_ROCK-ORE_03",
+                    "@weight": "1",
+                    "@layertags": "rock"
+                  },
+                  {
+                    "@id": "MISTS_S_RES_NON_ROCK-ORE_04",
+                    "@weight": "1",
+                    "@layertags": "rock"
+                  },
+                  {
+                    "@id": "MISTS_S_RES_NON_ROCK-ORE_05",
+                    "@weight": "1",
+                    "@layertags": "rock"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "@id": "BLACK_RESOURCE_WOOD_COMMON",
+          "size": [
+            {
+              "@name": "medium",
+              "type": {
+                "@category": "resource",
+                "@weight": "1",
+                "rolllayertag": {
+                  "layertag": {
+                    "@name": "t6",
+                    "@weight": "1"
+                  }
+                },
+                "template": [
+                  {
+                    "@id": "MISTS_M_RES_NON_WOOD-HIDE_01",
+                    "@weight": "1",
+                    "@unique": "true",
+                    "@layertags": "wood"
+                  },
+                  {
+                    "@id": "MISTS_M_RES_NON_WOOD-HIDE_02",
+                    "@weight": "1",
+                    "@unique": "true",
+                    "@layertags": "wood"
+                  },
+                  {
+                    "@id": "MISTS_M_RES_NON_WOOD-HIDE_03",
+                    "@weight": "1",
+                    "@unique": "true",
+                    "@layertags": "wood"
+                  }
+                ]
+              }
+            },
+            {
+              "@name": "small",
+              "type": {
+                "@category": "resource",
+                "@weight": "1",
+                "rolllayertag": {
+                  "layertag": {
+                    "@name": "t6",
+                    "@weight": "1"
+                  }
+                },
+                "template": [
+                  {
+                    "@id": "MISTS_S_RES_NON_WOOD-HIDE_01",
+                    "@weight": "1",
+                    "@layertags": "wood"
+                  },
+                  {
+                    "@id": "MISTS_S_RES_NON_WOOD-HIDE_02",
+                    "@weight": "1",
+                    "@layertags": "wood"
+                  },
+                  {
+                    "@id": "MISTS_S_RES_NON_WOOD-HIDE_03",
+                    "@weight": "1",
+                    "@layertags": "wood"
+                  },
+                  {
+                    "@id": "MISTS_S_RES_NON_WOOD-HIDE_04",
+                    "@weight": "1",
+                    "@layertags": "wood"
+                  },
+                  {
+                    "@id": "MISTS_S_RES_NON_WOOD-HIDE_05",
+                    "@weight": "1",
+                    "@layertags": "wood"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "@id": "BLACK_RESOURCE_FIBER_UNCOMMON",
+          "size": [
+            {
+              "@name": "medium",
+              "type": {
+                "@category": "resource",
+                "@weight": "1",
+                "rolllayertag": {
+                  "layertag": {
+                    "@name": "t7",
+                    "@weight": "1"
+                  }
+                },
+                "template": [
+                  {
+                    "@id": "MISTS_M_RES_NON_FIBER_01",
+                    "@weight": "1",
+                    "@unique": "true",
+                    "@layertags": "fiber"
+                  },
+                  {
+                    "@id": "MISTS_M_RES_NON_FIBER_02",
+                    "@weight": "1",
+                    "@unique": "true",
+                    "@layertags": "fiber"
+                  },
+                  {
+                    "@id": "MISTS_M_RES_NON_FIBER_03",
+                    "@weight": "1",
+                    "@unique": "true",
+                    "@layertags": "fiber"
+                  }
+                ]
+              }
+            },
+            {
+              "@name": "small",
+              "type": {
+                "@category": "resource",
+                "@weight": "1",
+                "rolllayertag": {
+                  "layertag": {
+                    "@name": "t7",
+                    "@weight": "1"
+                  }
+                },
+                "template": [
+                  {
+                    "@id": "MISTS_S_RES_NON_FIBER_01",
+                    "@weight": "1",
+                    "@layertags": "fiber"
+                  },
+                  {
+                    "@id": "MISTS_S_RES_NON_FIBER_02",
+                    "@weight": "1",
+                    "@layertags": "fiber"
+                  },
+                  {
+                    "@id": "MISTS_S_RES_NON_FIBER_03",
+                    "@weight": "1",
+                    "@layertags": "fiber"
+                  },
+                  {
+                    "@id": "MISTS_S_RES_NON_FIBER_04",
+                    "@weight": "1",
+                    "@layertags": "fiber"
+                  },
+                  {
+                    "@id": "MISTS_S_RES_NON_FIBER_05",
+                    "@weight": "1",
+                    "@layertags": "fiber"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "@id": "BLACK_RESOURCE_HIDE_UNCOMMON",
+          "size": [
+            {
+              "@name": "medium",
+              "type": {
+                "@category": "resource",
+                "@weight": "1",
+                "rolllayertag": {
+                  "layertag": {
+                    "@name": "t7",
+                    "@weight": "1"
+                  }
+                },
+                "template": [
+                  {
+                    "@id": "MISTS_M_RES_NON_WOOD-HIDE_01",
+                    "@weight": "1",
+                    "@unique": "true",
+                    "@layertags": "hide"
+                  },
+                  {
+                    "@id": "MISTS_M_RES_NON_WOOD-HIDE_02",
+                    "@weight": "1",
+                    "@unique": "true",
+                    "@layertags": "hide"
+                  },
+                  {
+                    "@id": "MISTS_M_RES_NON_WOOD-HIDE_03",
+                    "@weight": "1",
+                    "@unique": "true",
+                    "@layertags": "hide"
+                  }
+                ]
+              }
+            },
+            {
+              "@name": "small",
+              "type": {
+                "@category": "resource",
+                "@weight": "1",
+                "rolllayertag": {
+                  "layertag": {
+                    "@name": "t7",
+                    "@weight": "1"
+                  }
+                },
+                "template": [
+                  {
+                    "@id": "MISTS_S_RES_NON_WOOD-HIDE_01",
+                    "@weight": "1",
+                    "@layertags": "hide"
+                  },
+                  {
+                    "@id": "MISTS_S_RES_NON_WOOD-HIDE_02",
+                    "@weight": "1",
+                    "@layertags": "hide"
+                  },
+                  {
+                    "@id": "MISTS_S_RES_NON_WOOD-HIDE_03",
+                    "@weight": "1",
+                    "@layertags": "hide"
+                  },
+                  {
+                    "@id": "MISTS_S_RES_NON_WOOD-HIDE_04",
+                    "@weight": "1",
+                    "@layertags": "hide"
+                  },
+                  {
+                    "@id": "MISTS_S_RES_NON_WOOD-HIDE_05",
+                    "@weight": "1",
+                    "@layertags": "hide"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "@id": "BLACK_RESOURCE_ORE_UNCOMMON",
+          "size": [
+            {
+              "@name": "medium",
+              "type": {
+                "@category": "resource",
+                "@weight": "1",
+                "rolllayertag": {
+                  "layertag": {
+                    "@name": "t7",
+                    "@weight": "1"
+                  }
+                },
+                "template": [
+                  {
+                    "@id": "MISTS_M_RES_NON_ROCK-ORE_01",
+                    "@weight": "1",
+                    "@unique": "true",
+                    "@layertags": "ore"
+                  },
+                  {
+                    "@id": "MISTS_M_RES_NON_ROCK-ORE_02",
+                    "@weight": "1",
+                    "@unique": "true",
+                    "@layertags": "ore"
+                  },
+                  {
+                    "@id": "MISTS_M_RES_NON_ROCK-ORE_03",
+                    "@weight": "1",
+                    "@unique": "true",
+                    "@layertags": "ore"
+                  }
+                ]
+              }
+            },
+            {
+              "@name": "small",
+              "type": {
+                "@category": "resource",
+                "@weight": "1",
+                "rolllayertag": {
+                  "layertag": {
+                    "@name": "t7",
+                    "@weight": "1"
+                  }
+                },
+                "template": [
+                  {
+                    "@id": "MISTS_S_RES_NON_ROCK-ORE_01",
+                    "@weight": "1",
+                    "@layertags": "ore"
+                  },
+                  {
+                    "@id": "MISTS_S_RES_NON_ROCK-ORE_02",
+                    "@weight": "1",
+                    "@layertags": "ore"
+                  },
+                  {
+                    "@id": "MISTS_S_RES_NON_ROCK-ORE_03",
+                    "@weight": "1",
+                    "@layertags": "ore"
+                  },
+                  {
+                    "@id": "MISTS_S_RES_NON_ROCK-ORE_04",
+                    "@weight": "1",
+                    "@layertags": "ore"
+                  },
+                  {
+                    "@id": "MISTS_S_RES_NON_ROCK-ORE_05",
+                    "@weight": "1",
+                    "@layertags": "ore"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "@id": "BLACK_RESOURCE_ROCK_UNCOMMON",
+          "size": [
+            {
+              "@name": "medium",
+              "type": {
+                "@category": "resource",
+                "@weight": "1",
+                "rolllayertag": {
+                  "layertag": {
+                    "@name": "t7",
+                    "@weight": "1"
+                  }
+                },
+                "template": [
+                  {
+                    "@id": "MISTS_M_RES_NON_ROCK-ORE_01",
+                    "@weight": "1",
+                    "@unique": "true",
+                    "@layertags": "rock"
+                  },
+                  {
+                    "@id": "MISTS_M_RES_NON_ROCK-ORE_02",
+                    "@weight": "1",
+                    "@unique": "true",
+                    "@layertags": "rock"
+                  },
+                  {
+                    "@id": "MISTS_M_RES_NON_ROCK-ORE_03",
+                    "@weight": "1",
+                    "@unique": "true",
+                    "@layertags": "rock"
+                  }
+                ]
+              }
+            },
+            {
+              "@name": "small",
+              "type": {
+                "@category": "resource",
+                "@weight": "1",
+                "rolllayertag": {
+                  "layertag": {
+                    "@name": "t7",
+                    "@weight": "1"
+                  }
+                },
+                "template": [
+                  {
+                    "@id": "MISTS_S_RES_NON_ROCK-ORE_01",
+                    "@weight": "1",
+                    "@layertags": "rock"
+                  },
+                  {
+                    "@id": "MISTS_S_RES_NON_ROCK-ORE_02",
+                    "@weight": "1",
+                    "@layertags": "rock"
+                  },
+                  {
+                    "@id": "MISTS_S_RES_NON_ROCK-ORE_03",
+                    "@weight": "1",
+                    "@layertags": "rock"
+                  },
+                  {
+                    "@id": "MISTS_S_RES_NON_ROCK-ORE_04",
+                    "@weight": "1",
+                    "@layertags": "rock"
+                  },
+                  {
+                    "@id": "MISTS_S_RES_NON_ROCK-ORE_05",
+                    "@weight": "1",
+                    "@layertags": "rock"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "@id": "BLACK_RESOURCE_WOOD_UNCOMMON",
+          "size": [
+            {
+              "@name": "medium",
+              "type": {
+                "@category": "resource",
+                "@weight": "1",
+                "rolllayertag": {
+                  "layertag": {
+                    "@name": "t7",
+                    "@weight": "1"
+                  }
+                },
+                "template": [
+                  {
+                    "@id": "MISTS_M_RES_NON_WOOD-HIDE_01",
+                    "@weight": "1",
+                    "@unique": "true",
+                    "@layertags": "wood"
+                  },
+                  {
+                    "@id": "MISTS_M_RES_NON_WOOD-HIDE_02",
+                    "@weight": "1",
+                    "@unique": "true",
+                    "@layertags": "wood"
+                  },
+                  {
+                    "@id": "MISTS_M_RES_NON_WOOD-HIDE_03",
+                    "@weight": "1",
+                    "@unique": "true",
+                    "@layertags": "wood"
+                  }
+                ]
+              }
+            },
+            {
+              "@name": "small",
+              "type": {
+                "@category": "resource",
+                "@weight": "1",
+                "rolllayertag": {
+                  "layertag": {
+                    "@name": "t7",
+                    "@weight": "1"
+                  }
+                },
+                "template": [
+                  {
+                    "@id": "MISTS_S_RES_NON_WOOD-HIDE_01",
+                    "@weight": "1",
+                    "@layertags": "wood"
+                  },
+                  {
+                    "@id": "MISTS_S_RES_NON_WOOD-HIDE_02",
+                    "@weight": "1",
+                    "@layertags": "wood"
+                  },
+                  {
+                    "@id": "MISTS_S_RES_NON_WOOD-HIDE_03",
+                    "@weight": "1",
+                    "@layertags": "wood"
+                  },
+                  {
+                    "@id": "MISTS_S_RES_NON_WOOD-HIDE_04",
+                    "@weight": "1",
+                    "@layertags": "wood"
+                  },
+                  {
+                    "@id": "MISTS_S_RES_NON_WOOD-HIDE_05",
+                    "@weight": "1",
+                    "@layertags": "wood"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "@id": "BLACK_RESOURCE_FIBER_RARE",
+          "size": [
+            {
+              "@name": "medium",
+              "type": {
+                "@category": "resource",
+                "@weight": "1",
+                "rolllayertag": {
+                  "layertag": {
+                    "@name": "t8",
+                    "@weight": "1"
+                  }
+                },
+                "template": [
+                  {
+                    "@id": "MISTS_M_RES_NON_FIBER_01",
+                    "@weight": "1",
+                    "@unique": "true",
+                    "@layertags": "fiber"
+                  },
+                  {
+                    "@id": "MISTS_M_RES_NON_FIBER_02",
+                    "@weight": "1",
+                    "@unique": "true",
+                    "@layertags": "fiber"
+                  },
+                  {
+                    "@id": "MISTS_M_RES_NON_FIBER_03",
+                    "@weight": "1",
+                    "@unique": "true",
+                    "@layertags": "fiber"
+                  }
+                ]
+              }
+            },
+            {
+              "@name": "small",
+              "type": {
+                "@category": "resource",
+                "@weight": "1",
+                "rolllayertag": {
+                  "layertag": {
+                    "@name": "t8",
+                    "@weight": "1"
+                  }
+                },
+                "template": [
+                  {
+                    "@id": "MISTS_S_RES_NON_FIBER_01",
+                    "@weight": "1",
+                    "@layertags": "fiber"
+                  },
+                  {
+                    "@id": "MISTS_S_RES_NON_FIBER_02",
+                    "@weight": "1",
+                    "@layertags": "fiber"
+                  },
+                  {
+                    "@id": "MISTS_S_RES_NON_FIBER_03",
+                    "@weight": "1",
+                    "@layertags": "fiber"
+                  },
+                  {
+                    "@id": "MISTS_S_RES_NON_FIBER_04",
+                    "@weight": "1",
+                    "@layertags": "fiber"
+                  },
+                  {
+                    "@id": "MISTS_S_RES_NON_FIBER_05",
+                    "@weight": "1",
+                    "@layertags": "fiber"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "@id": "BLACK_RESOURCE_HIDE_RARE",
+          "size": [
+            {
+              "@name": "medium",
+              "type": {
+                "@category": "resource",
+                "@weight": "1",
+                "rolllayertag": {
+                  "layertag": {
+                    "@name": "t8",
+                    "@weight": "1"
+                  }
+                },
+                "template": [
+                  {
+                    "@id": "MISTS_M_RES_NON_WOOD-HIDE_01",
+                    "@weight": "1",
+                    "@unique": "true",
+                    "@layertags": "hide"
+                  },
+                  {
+                    "@id": "MISTS_M_RES_NON_WOOD-HIDE_02",
+                    "@weight": "1",
+                    "@unique": "true",
+                    "@layertags": "hide"
+                  },
+                  {
+                    "@id": "MISTS_M_RES_NON_WOOD-HIDE_03",
+                    "@weight": "1",
+                    "@unique": "true",
+                    "@layertags": "hide"
+                  }
+                ]
+              }
+            },
+            {
+              "@name": "small",
+              "type": {
+                "@category": "resource",
+                "@weight": "1",
+                "rolllayertag": {
+                  "layertag": {
+                    "@name": "t8",
+                    "@weight": "1"
+                  }
+                },
+                "template": [
+                  {
+                    "@id": "MISTS_S_RES_NON_WOOD-HIDE_01",
+                    "@weight": "1",
+                    "@layertags": "hide"
+                  },
+                  {
+                    "@id": "MISTS_S_RES_NON_WOOD-HIDE_02",
+                    "@weight": "1",
+                    "@layertags": "hide"
+                  },
+                  {
+                    "@id": "MISTS_S_RES_NON_WOOD-HIDE_03",
+                    "@weight": "1",
+                    "@layertags": "hide"
+                  },
+                  {
+                    "@id": "MISTS_S_RES_NON_WOOD-HIDE_04",
+                    "@weight": "1",
+                    "@layertags": "hide"
+                  },
+                  {
+                    "@id": "MISTS_S_RES_NON_WOOD-HIDE_05",
+                    "@weight": "1",
+                    "@layertags": "hide"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "@id": "BLACK_RESOURCE_ORE_RARE",
+          "size": [
+            {
+              "@name": "medium",
+              "type": {
+                "@category": "resource",
+                "@weight": "1",
+                "rolllayertag": {
+                  "layertag": {
+                    "@name": "t8",
+                    "@weight": "1"
+                  }
+                },
+                "template": [
+                  {
+                    "@id": "MISTS_M_RES_NON_ROCK-ORE_01",
+                    "@weight": "1",
+                    "@unique": "true",
+                    "@layertags": "ore"
+                  },
+                  {
+                    "@id": "MISTS_M_RES_NON_ROCK-ORE_02",
+                    "@weight": "1",
+                    "@unique": "true",
+                    "@layertags": "ore"
+                  },
+                  {
+                    "@id": "MISTS_M_RES_NON_ROCK-ORE_03",
+                    "@weight": "1",
+                    "@unique": "true",
+                    "@layertags": "ore"
+                  }
+                ]
+              }
+            },
+            {
+              "@name": "small",
+              "type": {
+                "@category": "resource",
+                "@weight": "1",
+                "rolllayertag": {
+                  "layertag": {
+                    "@name": "t8",
+                    "@weight": "1"
+                  }
+                },
+                "template": [
+                  {
+                    "@id": "MISTS_S_RES_NON_ROCK-ORE_01",
+                    "@weight": "1",
+                    "@layertags": "ore"
+                  },
+                  {
+                    "@id": "MISTS_S_RES_NON_ROCK-ORE_02",
+                    "@weight": "1",
+                    "@layertags": "ore"
+                  },
+                  {
+                    "@id": "MISTS_S_RES_NON_ROCK-ORE_03",
+                    "@weight": "1",
+                    "@layertags": "ore"
+                  },
+                  {
+                    "@id": "MISTS_S_RES_NON_ROCK-ORE_04",
+                    "@weight": "1",
+                    "@layertags": "ore"
+                  },
+                  {
+                    "@id": "MISTS_S_RES_NON_ROCK-ORE_05",
+                    "@weight": "1",
+                    "@layertags": "ore"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "@id": "BLACK_RESOURCE_ROCK_RARE",
+          "size": [
+            {
+              "@name": "medium",
+              "type": {
+                "@category": "resource",
+                "@weight": "1",
+                "rolllayertag": {
+                  "layertag": {
+                    "@name": "t8",
+                    "@weight": "1"
+                  }
+                },
+                "template": [
+                  {
+                    "@id": "MISTS_M_RES_NON_ROCK-ORE_01",
+                    "@weight": "1",
+                    "@unique": "true",
+                    "@layertags": "rock"
+                  },
+                  {
+                    "@id": "MISTS_M_RES_NON_ROCK-ORE_02",
+                    "@weight": "1",
+                    "@unique": "true",
+                    "@layertags": "rock"
+                  },
+                  {
+                    "@id": "MISTS_M_RES_NON_ROCK-ORE_03",
+                    "@weight": "1",
+                    "@unique": "true",
+                    "@layertags": "rock"
+                  }
+                ]
+              }
+            },
+            {
+              "@name": "small",
+              "type": {
+                "@category": "resource",
+                "@weight": "1",
+                "rolllayertag": {
+                  "layertag": {
+                    "@name": "t8",
+                    "@weight": "1"
+                  }
+                },
+                "template": [
+                  {
+                    "@id": "MISTS_S_RES_NON_ROCK-ORE_01",
+                    "@weight": "1",
+                    "@layertags": "rock"
+                  },
+                  {
+                    "@id": "MISTS_S_RES_NON_ROCK-ORE_02",
+                    "@weight": "1",
+                    "@layertags": "rock"
+                  },
+                  {
+                    "@id": "MISTS_S_RES_NON_ROCK-ORE_03",
+                    "@weight": "1",
+                    "@layertags": "rock"
+                  },
+                  {
+                    "@id": "MISTS_S_RES_NON_ROCK-ORE_04",
+                    "@weight": "1",
+                    "@layertags": "rock"
+                  },
+                  {
+                    "@id": "MISTS_S_RES_NON_ROCK-ORE_05",
+                    "@weight": "1",
+                    "@layertags": "rock"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "@id": "BLACK_RESOURCE_WOOD_RARE",
+          "size": [
+            {
+              "@name": "medium",
+              "type": {
+                "@category": "resource",
+                "@weight": "1",
+                "rolllayertag": {
+                  "layertag": {
+                    "@name": "t8",
+                    "@weight": "1"
+                  }
+                },
+                "template": [
+                  {
+                    "@id": "MISTS_M_RES_NON_WOOD-HIDE_01",
+                    "@weight": "1",
+                    "@unique": "true",
+                    "@layertags": "wood"
+                  },
+                  {
+                    "@id": "MISTS_M_RES_NON_WOOD-HIDE_02",
+                    "@weight": "1",
+                    "@unique": "true",
+                    "@layertags": "wood"
+                  },
+                  {
+                    "@id": "MISTS_M_RES_NON_WOOD-HIDE_03",
+                    "@weight": "1",
+                    "@unique": "true",
+                    "@layertags": "wood"
+                  }
+                ]
+              }
+            },
+            {
+              "@name": "small",
+              "type": {
+                "@category": "resource",
+                "@weight": "1",
+                "rolllayertag": {
+                  "layertag": {
+                    "@name": "t8",
+                    "@weight": "1"
+                  }
+                },
+                "template": [
+                  {
+                    "@id": "MISTS_S_RES_NON_WOOD-HIDE_01",
+                    "@weight": "1",
+                    "@layertags": "wood"
+                  },
+                  {
+                    "@id": "MISTS_S_RES_NON_WOOD-HIDE_02",
+                    "@weight": "1",
+                    "@layertags": "wood"
+                  },
+                  {
+                    "@id": "MISTS_S_RES_NON_WOOD-HIDE_03",
+                    "@weight": "1",
+                    "@layertags": "wood"
+                  },
+                  {
+                    "@id": "MISTS_S_RES_NON_WOOD-HIDE_04",
+                    "@weight": "1",
+                    "@layertags": "wood"
+                  },
+                  {
+                    "@id": "MISTS_S_RES_NON_WOOD-HIDE_05",
+                    "@weight": "1",
+                    "@layertags": "wood"
+                  }
+                ]
+              }
             }
           ]
         }
@@ -7492,64 +9991,638 @@
               ]
             }
           ]
-        }
-      ]
-    },
-    "cagedwisps": {
-      "cagedwisp": [
-        {
-          "@uniquename": "CAGED_WISP_MORGANA",
-          "@cageopendurationsec": "3",
-          "rewards": {
-            "pvpchallengeobjective": {
-              "reward": [
-                {
-                  "@clusterdangerbonustype": "mistsyellow",
-                  "@objectivename": "PVPCHALLENGE_MISTS_CAGED_WISP"
-                },
-                {
-                  "@clusterdangerbonustype": "mistsblack",
-                  "@objectivename": "PVPCHALLENGE_MISTS_CAGED_WISP"
-                }
-              ]
-            }
-          }
         },
         {
-          "@uniquename": "CAGED_WISP_HERETIC",
-          "@cageopendurationsec": "3",
-          "rewards": {
-            "pvpchallengeobjective": {
-              "reward": [
+          "@name": "RESOURCE_BLACK",
+          "@mininitialfill": "0.8",
+          "@maxinitialfill": "1",
+          "resourcepooltier": [
+            {
+              "@tier": "4",
+              "resourceenchantment": [
                 {
-                  "@clusterdangerbonustype": "mistsyellow",
-                  "@objectivename": "PVPCHALLENGE_MISTS_CAGED_WISP"
+                  "@level": "0",
+                  "resource": [
+                    {
+                      "@type": "rock",
+                      "@amount": "32891",
+                      "@resourcespersecond": "0.126895586"
+                    },
+                    {
+                      "@type": "fiber",
+                      "@amount": "32891",
+                      "@resourcespersecond": "0.126895586"
+                    },
+                    {
+                      "@type": "ore",
+                      "@amount": "32891",
+                      "@resourcespersecond": "0.126895586"
+                    },
+                    {
+                      "@type": "wood",
+                      "@amount": "32891",
+                      "@resourcespersecond": "0.126895586"
+                    },
+                    {
+                      "@type": "hide",
+                      "@amount": "32891",
+                      "@resourcespersecond": "0.126895586"
+                    }
+                  ]
                 },
                 {
-                  "@clusterdangerbonustype": "mistsblack",
-                  "@objectivename": "PVPCHALLENGE_MISTS_CAGED_WISP"
+                  "@level": "1",
+                  "resource": [
+                    {
+                      "@type": "rock",
+                      "@amount": "1284",
+                      "@resourcespersecond": "0.004953081"
+                    },
+                    {
+                      "@type": "fiber",
+                      "@amount": "1284",
+                      "@resourcespersecond": "0.004953081"
+                    },
+                    {
+                      "@type": "ore",
+                      "@amount": "1284",
+                      "@resourcespersecond": "0.004953081"
+                    },
+                    {
+                      "@type": "wood",
+                      "@amount": "1284",
+                      "@resourcespersecond": "0.004953081"
+                    },
+                    {
+                      "@type": "hide",
+                      "@amount": "1284",
+                      "@resourcespersecond": "0.004953081"
+                    }
+                  ]
+                },
+                {
+                  "@level": "2",
+                  "resource": [
+                    {
+                      "@type": "rock",
+                      "@amount": "257",
+                      "@resourcespersecond": "0.000990616"
+                    },
+                    {
+                      "@type": "fiber",
+                      "@amount": "257",
+                      "@resourcespersecond": "0.000990616"
+                    },
+                    {
+                      "@type": "ore",
+                      "@amount": "257",
+                      "@resourcespersecond": "0.000990616"
+                    },
+                    {
+                      "@type": "wood",
+                      "@amount": "257",
+                      "@resourcespersecond": "0.000990616"
+                    },
+                    {
+                      "@type": "hide",
+                      "@amount": "257",
+                      "@resourcespersecond": "0.000990616"
+                    }
+                  ]
+                },
+                {
+                  "@level": "3",
+                  "resource": [
+                    {
+                      "@type": "rock",
+                      "@amount": "100",
+                      "@resourcespersecond": "0.000198123"
+                    },
+                    {
+                      "@type": "fiber",
+                      "@amount": "100",
+                      "@resourcespersecond": "0.000198123"
+                    },
+                    {
+                      "@type": "ore",
+                      "@amount": "100",
+                      "@resourcespersecond": "0.000198123"
+                    },
+                    {
+                      "@type": "wood",
+                      "@amount": "1000",
+                      "@resourcespersecond": "0.000198123"
+                    },
+                    {
+                      "@type": "hide",
+                      "@amount": "100",
+                      "@resourcespersecond": "0.000198123"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "@tier": "5",
+              "resourceenchantment": [
+                {
+                  "@level": "0",
+                  "resource": [
+                    {
+                      "@type": "rock",
+                      "@amount": "3184",
+                      "@resourcespersecond": "0.122860104"
+                    },
+                    {
+                      "@type": "fiber",
+                      "@amount": "3184",
+                      "@resourcespersecond": "0.122860104"
+                    },
+                    {
+                      "@type": "ore",
+                      "@amount": "3184",
+                      "@resourcespersecond": "0.122860104"
+                    },
+                    {
+                      "@type": "wood",
+                      "@amount": "3184",
+                      "@resourcespersecond": "0.122860104"
+                    },
+                    {
+                      "@type": "hide",
+                      "@amount": "3184",
+                      "@resourcespersecond": "0.122860104"
+                    }
+                  ]
+                },
+                {
+                  "@level": "1",
+                  "resource": [
+                    {
+                      "@type": "rock",
+                      "@amount": "1657",
+                      "@resourcespersecond": "0.006394087"
+                    },
+                    {
+                      "@type": "fiber",
+                      "@amount": "1657",
+                      "@resourcespersecond": "0.006394087"
+                    },
+                    {
+                      "@type": "ore",
+                      "@amount": "1657",
+                      "@resourcespersecond": "0.006394087"
+                    },
+                    {
+                      "@type": "wood",
+                      "@amount": "1657",
+                      "@resourcespersecond": "0.006394087"
+                    },
+                    {
+                      "@type": "hide",
+                      "@amount": "1657",
+                      "@resourcespersecond": "0.006394087"
+                    }
+                  ]
+                },
+                {
+                  "@level": "2",
+                  "resource": [
+                    {
+                      "@type": "rock",
+                      "@amount": "332",
+                      "@resourcespersecond": "0.001278817"
+                    },
+                    {
+                      "@type": "fiber",
+                      "@amount": "332",
+                      "@resourcespersecond": "0.001278817"
+                    },
+                    {
+                      "@type": "ore",
+                      "@amount": "332",
+                      "@resourcespersecond": "0.001278817"
+                    },
+                    {
+                      "@type": "wood",
+                      "@amount": "332",
+                      "@resourcespersecond": "0.001278817"
+                    },
+                    {
+                      "@type": "hide",
+                      "@amount": "332",
+                      "@resourcespersecond": "0.001278817"
+                    }
+                  ]
+                },
+                {
+                  "@level": "3",
+                  "resource": [
+                    {
+                      "@type": "rock",
+                      "@amount": "100",
+                      "@resourcespersecond": "0.000255763"
+                    },
+                    {
+                      "@type": "fiber",
+                      "@amount": "100",
+                      "@resourcespersecond": "0.000255763"
+                    },
+                    {
+                      "@type": "ore",
+                      "@amount": "100",
+                      "@resourcespersecond": "0.000255763"
+                    },
+                    {
+                      "@type": "wood",
+                      "@amount": "100",
+                      "@resourcespersecond": "0.000255763"
+                    },
+                    {
+                      "@type": "hide",
+                      "@amount": "100",
+                      "@resourcespersecond": "0.000255763"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "@tier": "6",
+              "resourceenchantment": [
+                {
+                  "@level": "0",
+                  "resource": [
+                    {
+                      "@type": "rock",
+                      "@amount": "9677",
+                      "@resourcespersecond": "0.037333488"
+                    },
+                    {
+                      "@type": "fiber",
+                      "@amount": "9677",
+                      "@resourcespersecond": "0.037333488"
+                    },
+                    {
+                      "@type": "ore",
+                      "@amount": "9677",
+                      "@resourcespersecond": "0.037333488"
+                    },
+                    {
+                      "@type": "wood",
+                      "@amount": "9677",
+                      "@resourcespersecond": "0.037333488"
+                    },
+                    {
+                      "@type": "hide",
+                      "@amount": "9677",
+                      "@resourcespersecond": "0.037333488"
+                    }
+                  ]
+                },
+                {
+                  "@level": "1",
+                  "resource": [
+                    {
+                      "@type": "rock",
+                      "@amount": "755",
+                      "@resourcespersecond": "0.002914456"
+                    },
+                    {
+                      "@type": "fiber",
+                      "@amount": "755",
+                      "@resourcespersecond": "0.002914456"
+                    },
+                    {
+                      "@type": "ore",
+                      "@amount": "755",
+                      "@resourcespersecond": "0.002914456"
+                    },
+                    {
+                      "@type": "wood",
+                      "@amount": "755",
+                      "@resourcespersecond": "0.002914456"
+                    },
+                    {
+                      "@type": "hide",
+                      "@amount": "755",
+                      "@resourcespersecond": "0.002914456"
+                    }
+                  ]
+                },
+                {
+                  "@level": "2",
+                  "resource": [
+                    {
+                      "@type": "rock",
+                      "@amount": "151",
+                      "@resourcespersecond": "0.000582891"
+                    },
+                    {
+                      "@type": "fiber",
+                      "@amount": "151",
+                      "@resourcespersecond": "0.000582891"
+                    },
+                    {
+                      "@type": "ore",
+                      "@amount": "151",
+                      "@resourcespersecond": "0.000582891"
+                    },
+                    {
+                      "@type": "wood",
+                      "@amount": "151",
+                      "@resourcespersecond": "0.000582891"
+                    },
+                    {
+                      "@type": "hide",
+                      "@amount": "151",
+                      "@resourcespersecond": "0.000582891"
+                    }
+                  ]
+                },
+                {
+                  "@level": "3",
+                  "resource": [
+                    {
+                      "@type": "rock",
+                      "@amount": "100",
+                      "@resourcespersecond": "0.000116578"
+                    },
+                    {
+                      "@type": "fiber",
+                      "@amount": "100",
+                      "@resourcespersecond": "0.000116578"
+                    },
+                    {
+                      "@type": "ore",
+                      "@amount": "100",
+                      "@resourcespersecond": "0.000116578"
+                    },
+                    {
+                      "@type": "wood",
+                      "@amount": "100",
+                      "@resourcespersecond": "0.000116578"
+                    },
+                    {
+                      "@type": "hide",
+                      "@amount": "100",
+                      "@resourcespersecond": "0.000116578"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "@tier": "7",
+              "resourceenchantment": [
+                {
+                  "@level": "0",
+                  "resource": [
+                    {
+                      "@type": "rock",
+                      "@amount": "3158",
+                      "@resourcespersecond": "0.012181929"
+                    },
+                    {
+                      "@type": "fiber",
+                      "@amount": "3158",
+                      "@resourcespersecond": "0.012181929"
+                    },
+                    {
+                      "@type": "ore",
+                      "@amount": "3158",
+                      "@resourcespersecond": "0.012181929"
+                    },
+                    {
+                      "@type": "wood",
+                      "@amount": "3158",
+                      "@resourcespersecond": "0.012181929"
+                    },
+                    {
+                      "@type": "hide",
+                      "@amount": "3158",
+                      "@resourcespersecond": "0.012181929"
+                    }
+                  ]
+                },
+                {
+                  "@level": "1",
+                  "resource": [
+                    {
+                      "@type": "rock",
+                      "@amount": "345",
+                      "@resourcespersecond": "0.001331146"
+                    },
+                    {
+                      "@type": "fiber",
+                      "@amount": "345",
+                      "@resourcespersecond": "0.001331146"
+                    },
+                    {
+                      "@type": "ore",
+                      "@amount": "345",
+                      "@resourcespersecond": "0.001331146"
+                    },
+                    {
+                      "@type": "wood",
+                      "@amount": "345",
+                      "@resourcespersecond": "0.001331146"
+                    },
+                    {
+                      "@type": "hide",
+                      "@amount": "345",
+                      "@resourcespersecond": "0.001331146"
+                    }
+                  ]
+                },
+                {
+                  "@level": "2",
+                  "resource": [
+                    {
+                      "@type": "rock",
+                      "@amount": "100",
+                      "@resourcespersecond": "0.000266229"
+                    },
+                    {
+                      "@type": "fiber",
+                      "@amount": "100",
+                      "@resourcespersecond": "0.000266229"
+                    },
+                    {
+                      "@type": "ore",
+                      "@amount": "100",
+                      "@resourcespersecond": "0.000266229"
+                    },
+                    {
+                      "@type": "wood",
+                      "@amount": "100",
+                      "@resourcespersecond": "0.000266229"
+                    },
+                    {
+                      "@type": "hide",
+                      "@amount": "100",
+                      "@resourcespersecond": "0.000266229"
+                    }
+                  ]
+                },
+                {
+                  "@level": "3",
+                  "resource": [
+                    {
+                      "@type": "rock",
+                      "@amount": "100",
+                      "@resourcespersecond": "0.000053246"
+                    },
+                    {
+                      "@type": "fiber",
+                      "@amount": "100",
+                      "@resourcespersecond": "0.000053246"
+                    },
+                    {
+                      "@type": "ore",
+                      "@amount": "100",
+                      "@resourcespersecond": "0.000053246"
+                    },
+                    {
+                      "@type": "wood",
+                      "@amount": "100",
+                      "@resourcespersecond": "0.000053246"
+                    },
+                    {
+                      "@type": "hide",
+                      "@amount": "100",
+                      "@resourcespersecond": "0.000053246"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "@tier": "8",
+              "resourceenchantment": [
+                {
+                  "@level": "0",
+                  "resource": [
+                    {
+                      "@type": "rock",
+                      "@amount": "810",
+                      "@resourcespersecond": "0.003124129"
+                    },
+                    {
+                      "@type": "fiber",
+                      "@amount": "810",
+                      "@resourcespersecond": "0.003124129"
+                    },
+                    {
+                      "@type": "ore",
+                      "@amount": "810",
+                      "@resourcespersecond": "0.003124129"
+                    },
+                    {
+                      "@type": "wood",
+                      "@amount": "810",
+                      "@resourcespersecond": "0.003124129"
+                    },
+                    {
+                      "@type": "hide",
+                      "@amount": "810",
+                      "@resourcespersecond": "0.003124129"
+                    }
+                  ]
+                },
+                {
+                  "@level": "1",
+                  "resource": [
+                    {
+                      "@type": "rock",
+                      "@amount": "100",
+                      "@resourcespersecond": "0.000290347"
+                    },
+                    {
+                      "@type": "fiber",
+                      "@amount": "100",
+                      "@resourcespersecond": "0.000290347"
+                    },
+                    {
+                      "@type": "ore",
+                      "@amount": "100",
+                      "@resourcespersecond": "0.000290347"
+                    },
+                    {
+                      "@type": "wood",
+                      "@amount": "100",
+                      "@resourcespersecond": "0.000290347"
+                    },
+                    {
+                      "@type": "hide",
+                      "@amount": "100",
+                      "@resourcespersecond": "0.000290347"
+                    }
+                  ]
+                },
+                {
+                  "@level": "2",
+                  "resource": [
+                    {
+                      "@type": "rock",
+                      "@amount": "100",
+                      "@resourcespersecond": "0.000058069"
+                    },
+                    {
+                      "@type": "fiber",
+                      "@amount": "100",
+                      "@resourcespersecond": "0.000058069"
+                    },
+                    {
+                      "@type": "ore",
+                      "@amount": "100",
+                      "@resourcespersecond": "0.000058069"
+                    },
+                    {
+                      "@type": "wood",
+                      "@amount": "100",
+                      "@resourcespersecond": "0.000058069"
+                    },
+                    {
+                      "@type": "hide",
+                      "@amount": "100",
+                      "@resourcespersecond": "0.000058069"
+                    }
+                  ]
+                },
+                {
+                  "@level": "3",
+                  "resource": [
+                    {
+                      "@type": "rock",
+                      "@amount": "100",
+                      "@resourcespersecond": "0.000011614"
+                    },
+                    {
+                      "@type": "fiber",
+                      "@amount": "100",
+                      "@resourcespersecond": "0.000011614"
+                    },
+                    {
+                      "@type": "ore",
+                      "@amount": "100",
+                      "@resourcespersecond": "0.000011614"
+                    },
+                    {
+                      "@type": "wood",
+                      "@amount": "100",
+                      "@resourcespersecond": "0.000011614"
+                    },
+                    {
+                      "@type": "hide",
+                      "@amount": "100",
+                      "@resourcespersecond": "0.000011614"
+                    }
+                  ]
                 }
               ]
             }
-          }
-        },
-        {
-          "@uniquename": "CAGED_WISP_UNDEAD",
-          "@cageopendurationsec": "3",
-          "rewards": {
-            "pvpchallengeobjective": {
-              "reward": [
-                {
-                  "@clusterdangerbonustype": "mistsyellow",
-                  "@objectivename": "PVPCHALLENGE_MISTS_CAGED_WISP"
-                },
-                {
-                  "@clusterdangerbonustype": "mistsblack",
-                  "@objectivename": "PVPCHALLENGE_MISTS_CAGED_WISP"
-                }
-              ]
-            }
-          }
+          ]
         }
       ]
     }

@@ -4763,6 +4763,18 @@
     <OnSpellHit name="Play_beartrap_impact" />
   </WwiseEventInfo>
 
+  <WwiseEventInfo name="SPELL_CRYSTAL_BOW_AIR_RAID_RISE" >
+	<OnCastFinished name="Play_crystal_bow_riseup" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_CRYSTAL_BOW_AIR_RAID_SHOOT" >
+	<OnCastFinished name="Play_crystal_bow_shoot_raid_arrow" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_CRYSTAL_BOW_AIR_RAID_LOWER" >
+	<OnSpellRemoved name="Play_crystal_bow_lower" />
+  </WwiseEventInfo>
+
   <WwiseEventInfo name="SPELL_CROSSBOW_DIVINE_SHOT_CAST" >
     <OnCastStart name="Play_grail_crossbow_cannon_load" />
     <OnCastInterrupted name="Stop_grail_crossbow_cannon_load" />
@@ -5768,6 +5780,27 @@
   <WwiseEventInfo name="SPELL_SHIELD_ARCANE">
     <OnSpellHit name="Play_shield_arcane" />
   </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_DUAL_NATURE_CAST">
+	<OnCastFinished name="Play_crystal_nature_staff_dual_nature_cast" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_DUAL_NATURE_HEAL">
+	<OnSpellAdded name="Play_crystal_nature_staff_dual_nature_protect_lp" />
+    <OnSpellRemoved name="Stop_crystal_nature_staff_dual_nature_protect_lp" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_DUAL_NATURE_DAMAGE">
+	<OnSpellAdded name="Play_crystal_nature_staff_dual_nature_destruct_lp" />
+	<OnSpellRemoved name="Stop_crystal_nature_staff_dual_nature_destruct_lp" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_DUAL_NATURE_FLIP_DESTRUCT">
+	  <OnCastFinished name="Play_crystal_nature_staff_dual_nature_flip_destruct" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_DUAL_NATURE_FLIP_PROTECT">
+      <OnCastFinished name="Play_crystal_nature_staff_dual_nature_flip_protect" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_DUAL_NATURE_SHIELD">
+	  <OnSpellAdded name="Play_crystal_nature_staff_dual_nature_shield_lp" /> 
+	  <OnSpellRemoved name="Stop_crystal_nature_staff_dual_nature_shield_lp" />
+  </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_GRAIL_DAMAGEBEAM_SHOT_CAST">
     <OnCastFinished name="Play_grail_damage_beam_shot" />
@@ -6703,6 +6736,10 @@
   <WwiseEventInfo name="SPELL_ARMOR_AVALON_LIGHTNING_PULSE">
 	<OnCastFinished name="Play_armor_avalon_lightning_pulse"/>
   </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_ARMOR_SMUGGLER_POTION_COOLDOWN_RESET">
+	<OnSpellHit name="Play_cast_buff_potion_cooldown_reset"/>
+  </WwiseEventInfo>
 	
   <WwiseEventInfo name="SPELL_SPRINTHOT_BUFF_IMPACT">
     <OnCastFinished name="Play_speed_increase" />
@@ -6931,6 +6968,8 @@
 
   <WwiseEventInfo name="SPELL_RHINO_CHARGE">
     <OnCastStart name="Play_rhino_charge_cast" />
+	<OnCastCanceled name="Stop_rhino_charge_cast" />
+	<OnCastInterrupted name="Stop_rhino_charge_cast" />
     <OnCastFinished name="Play_rhino_charge_start" />
   </WwiseEventInfo>
 
@@ -7327,7 +7366,7 @@
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_GUARDIAN_FORESTSPIRIT_ROOT_CAST">
     <OnCastStart name="Play_guardian_forestspirit_cast"/>
-    <OnCastFinished name="Play_melee_impact_rock_medium" />
+    <OnCastFinished name="Play_guardian_forestspirit_pierce" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_CRITTER_COUGAR_POUNCE">
     <OnCastStart name="Play_cougar_pounce_load"/>
@@ -7349,6 +7388,17 @@
     <OnCastCanceled name="Stop_dryad_start"/>
     <OnCastInterrupted name="Stop_dryad_start" />
   </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_CRITTER_DRYAD_TENDRILS_CAST" >
+	<OnCastStart name="Play_dryad_tendril_load" />
+	<OnCastCanceled name="Stop_dryad_tendril_load"/>
+	<OnCastInterrupted name="Stop_dryad_tendril_load" />
+	<OnCastFinished name="Play_dryad_tendril_cast" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_CRITTER_ROCK_ELEMENTAL_LOAD_TREMOR">
+	<OnCastStart name="Play_rock_elemental_load_tremor"/>
+	<OnCastCanceled name="Stop_rock_elemental_load_tremor" />
+	<OnCastInterrupted name="Stop_rock_elemental_load_tremor"/>
+  </WwiseEventInfo>
 
   <!--Guardians-->
   <WwiseEventInfo name="SPELL_GUARDIAN_GIANT_ROAR">
@@ -7365,7 +7415,13 @@
     <OnCastStart name="Play_root_frost"/>
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_GUARDIAN_STEPPE_AVALANCHE" >
+	<OnCastStart name="Play_guardian_mammoth_cast_load_avalanche" />
+	<OnCastCanceled name="Stop_guardian_mammoth_cast_load_avalanche" />
+	<OnCastInterrupted name="Stop_guardian_mammoth_cast_load_avalanche" />
     <OnCastFinished name="Play_rock_avalanche" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_GUARDIAN_STEPPE_AVALANCHE_IMPACT" >
+	<OnSpellHit name="Play_guardian_mammoth_impact_avalanche" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_GUARDIAN_SUMMON_ROCK_AVALANCHE" >
 	<OnCastFinished name="Play_rock_elemental_avalanche" />
@@ -9717,7 +9773,27 @@
 	<OnCastCanceled name="Stop_sentry_mage_summon_lightning_ring_load" />
 	<OnCastInterrupted name="Stop_sentry_mage_summon_lightning_ring_load" />
   </WwiseEventInfo>
-	
+
+  <WwiseEventInfo name="SPELL_ROYAL_MAGE_ENIGMABLADE">
+	<OnCastStart name="Play_arcane_cast_load_damage_medium" />
+	<OnCastCanceled name="Stop_arcane_cast_load_damage_medium" />
+	<OnCastInterrupted name="Stop_arcane_cast_load_damage_medium" />
+	<OnCastFinished name="Play_arcane_cast_damage_medium_enigmablade" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="MELEE_ROYAL_SMALLCAST_HEROICCLEAVE">
+	<OnCastStart name="Play_melee_load_medium_windy" />
+	<OnCastCanceled name="Stop_melee_load_medium_windy" />
+	<OnCastInterrupted name="Stop_melee_load_medium_windy" />
+	<OnCastFinished name="Play_melee_swoosh_heroiccleave" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="MELEE_ROYAL_SPLITTINGSLASH_SWORD">
+	<OnCastStart name="Play_melee_load_medium_energetic" />
+	<OnCastCanceled name="Stop_melee_load_medium_energetic" />
+	<OnCastInterrupted name="Stop_melee_load_medium_energetic" />
+	<OnCastFinished name="Play_melee_splittingstrike_swoosh" />
+  </WwiseEventInfo>
 
 	<!-- Demons -->
   
@@ -10669,6 +10745,14 @@
     <NpcType name="saddler"/>
   </WwiseSwitchInfo>
 
+  <WwiseSwitchInfo name="NPC_SMUGGLER_MARKET">
+	<NpcType name="smugglermarket"/>      
+  </WwiseSwitchInfo>
+
+  <WwiseSwitchInfo name="NPC_SMUGGLER_FACTION_TRADER">
+	<NpcType name="smuggler_faction_trader"/>      
+  </WwiseSwitchInfo>
+
   <WwiseSwitchInfo name="NPC_SIEGE_CAMP">
     <NpcType name="siege_camp"/>
   </WwiseSwitchInfo>
@@ -11104,7 +11188,17 @@
     <Hideout_Attackstate name="None"/>
     <GlobalEnvironmentEffect name="cave"/>
   </WwiseClusterStateOverwrite>
-  
+
+  <!--Black Banks-->
+  <WwiseClusterStateOverwrite clustername="BLACKBANK-*">
+	<Environment name="BlackBankEnv"/>
+	<Biom name="None"/>
+	<SubBiom name="None"/>
+	<MobFaction name="None"/>
+	<Music name="BlackBank"/>
+	<GlobalEnvironmentEffect name="cave"/>
+  </WwiseClusterStateOverwrite>
+	
   <!--Debug-->
   <WwiseClusterStateOverwrite clustername="Debug_DBG_.*_.*_.*_NON"> 
     <Environment name="WorldEnv"/>
@@ -11248,6 +11342,57 @@
 		<GlobalEnvironmentEffect name="forest"/>
 	</WwiseClusterStateOverwrite>
 
+	<!--Ressource    Mists e.g. 
+	RESOURCE-SMALL-01_RMI_MI_RED_T6_MOR_MIS -->
+	<WwiseClusterStateOverwrite clustername=".*-.*-.*_RMI_MI_RED_*">
+		<Environment name="WorldEnv"/>
+		<SubEnvironment name="None"/>
+		<Biom name="Mists"/>
+		<SubBiom name="Red"/>
+		<MobFaction name="None"/>
+		<Music name="World"/>
+		<GlobalEnvironmentEffect name="forest"/>
+	</WwiseClusterStateOverwrite>
+
+	<WwiseClusterStateOverwrite clustername=".*-.*-.*_RMI_MI_GREEN_*">
+		<Environment name="WorldEnv"/>
+		<SubEnvironment name="None"/>
+		<Biom name="Mists"/>
+		<SubBiom name="Green"/>
+		<MobFaction name="None"/>
+		<Music name="World"/>
+		<GlobalEnvironmentEffect name="forest"/>
+	</WwiseClusterStateOverwrite>
+
+	<WwiseClusterStateOverwrite clustername=".*-.*-.*_RMI_MI_DED_*">
+		<Environment name="WorldEnv"/>
+		<SubEnvironment name="None"/>
+		<Biom name="Mists"/>
+		<SubBiom name="Dead"/>
+		<MobFaction name="None"/>
+		<Music name="World"/>
+		<GlobalEnvironmentEffect name="forest"/>
+	</WwiseClusterStateOverwrite>
+
+	<WwiseClusterStateOverwrite clustername=".*-.*-.*_RMI_MI_NON_*">
+		<Environment name="WorldEnv"/>
+		<SubEnvironment name="None"/>
+		<Biom name="Mists"/>
+		<SubBiom name="Green"/>
+		<MobFaction name="None"/>
+		<Music name="World"/>
+		<GlobalEnvironmentEffect name="forest"/>
+	</WwiseClusterStateOverwrite>
+
+	<WwiseClusterStateOverwrite clustername=".*-.*-.*_RMI_MI_AUTO_*">
+		<Environment name="WorldEnv"/>
+		<SubEnvironment name="None"/>
+		<Biom name="Mists"/>
+		<SubBiom name="Green"/>
+		<MobFaction name="None"/>
+		<Music name="World"/>
+		<GlobalEnvironmentEffect name="forest"/>
+	</WwiseClusterStateOverwrite>
 	
 	<!--***********************************************************-->
   <!--**    Cluster State Overwrites for Tutorial Clusters     ***-->
@@ -11855,6 +12000,21 @@
 	<OnCastFinished name="Play_vanity_aj_island_hat_fancy_flowersbloom"/>
   </WwiseEventInfo>
 
+  <WwiseEventInfo name="SPELL_VANITY_SKULL_UNDEAD_AJ">
+	<OnCastFinished name="Play_vanity_aj_creature_60"/>
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_VANITY_SKULL_DEMON_AJ">
+	<OnCastFinished name="Play_vanity_aj_creature_100"/>
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_VANITY_DESTINYSTONES_CHANNEL_CASTER" >
+	<OnChannelingStart name="Play_vanity_aj_destiny_stones_start" />
+	<OnChannelingCancelled name="Play_vanity_aj_destiny_stones_end" />
+	<OnChannelingInterrupted name="Play_vanity_aj_destiny_stones_end" />
+	<OnChannelingEnd name="Play_vanity_aj_destiny_stones_end" />
+  </WwiseEventInfo>
+
 	<QuestStateEvent name="TUT_FIRST_QUEST_ACCEPTED">
      <States>
        <Music name="Tutorial"/>
@@ -11870,4 +12030,11 @@
   <QuestStateEvent name="TUT_FINISH_SHIP_ARRIVES">
     <Event name="Play_ui_jingle_tutorial_finished"/>
   </QuestStateEvent>
+
+    <OverrideInfo name="NPC_SMUGGLER_FACTION_TRADER">
+        <CraftItemOverride itemuniquename="QUESTITEM_STANDING_SMUGGLER" sfxevent="Play_NPC_Action_02" />
+    </OverrideInfo>
+    <OverrideInfo name="NPC_SMUGGLER_MARKET">
+        <BuildingActionOverride eventtype="start" componenttype="repairitem" sfxevent="" />
+    </OverrideInfo>
 </AudioInfos>
