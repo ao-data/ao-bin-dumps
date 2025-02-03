@@ -52,7 +52,14 @@
                      wispsspawninsecbeforeclustershutdown="300"
                      wispsstaggeredspawninterval="0"
                      wispsstaggeredspawnintervalstart="0"
-                     minimapdisplayinterestareaextend="100"/> <!-- No difficulty used for the dungeons as there is only difficulty 0 -->
+                     minimapdisplayinterestareaextend="100"/> <!-- No difficulty used for the dungeons as there is only difficulty 0 -->   
+    <!-- TODO: check if the difficulty group can stay the same as for regular mists or should be its own thing -->
+    <modetypesetting type="resourcemists" 
+                     instancerandomdungeondifficultygroup="mists" 
+                     wispsspawninsecbeforeclustershutdown="120"
+                     wispsstaggeredspawninterval="0"
+                     wispsstaggeredspawnintervalstart="0"
+                     minimapdisplayinterestareaextend="100"/>
   </globalsettings>
 
   <mistdungeonsettings>
@@ -88,20 +95,6 @@
     </RoomSetting>    
     
   </mistdungeonsettings>
-
-
-  <mistcitystanding max="10000000">
-    <rank minstanding="0" title="@MISTCITY_STANDING_RANK_1" pointmultiplier="1" />
-    <rank minstanding="50000" title="@MISTCITY_STANDING_RANK_2" pointmultiplier="1" />
-    <rank minstanding="150000" title="@MISTCITY_STANDING_RANK_3" pointmultiplier="1" />
-    <rank minstanding="300000" title="@MISTCITY_STANDING_RANK_4" pointmultiplier="1"/>
-    <rank minstanding="600000" title="@MISTCITY_STANDING_RANK_5" pointmultiplier="1" />
-    <rank minstanding="1000000" title="@MISTCITY_STANDING_RANK_6" pointmultiplier="1" />
-    <rank minstanding="1800000" title="@MISTCITY_STANDING_RANK_7" pointmultiplier="1" />
-    <rank minstanding="3250000" title="@MISTCITY_STANDING_RANK_8" pointmultiplier="1" />
-    <rank minstanding="5700000" title="@MISTCITY_STANDING_RANK_9" pointmultiplier="1" />
-    <rank minstanding="10000000" title="@MISTCITY_STANDING_RANK_10" pointmultiplier="1" />
-  </mistcitystanding>
   
   <mistsmodes>
 
@@ -148,6 +141,12 @@
             <exit tier="7" weight="6" randomdungeonexitvisualizationref="T7_MISTS_DUNGEON_SOLO_YELLOW" mindifficulty="0"/>
           </exitsettings>
         </specialexitsettings>
+		<openworldexitdistribution>
+			<warningtype type="safe" weight="2092"/>
+			<warningtype type="yellow" weight="2716"/>
+			<warningtype type="red" weight="1859"/>
+			<warningtype type="black" weight="3333"/>
+		</openworldexitdistribution>
     </mistsmode>
     
     <!--NON-LETHAL-->
@@ -214,6 +213,12 @@
             <exit tier="8" weight="6" randomdungeonexitvisualizationref="T8_MISTS_DUNGEON_SOLO_BLACK" mindifficulty="0"/>
           </exitsettings>
         </specialexitsettings>
+		<openworldexitdistribution>
+			<warningtype type="safe" weight="1046"/>
+			<warningtype type="yellow" weight="1358"/>
+			<warningtype type="red" weight="929"/>
+			<warningtype type="black" weight="6667"/>
+		</openworldexitdistribution>
       </mistsmode>
       
    <!--LETHAL-->
@@ -236,7 +241,7 @@
         </treasures>
       </mistsmode>
       
-         <!--LETHAL-->
+    <!--LETHAL-->
     <mistsmode
       name="MISTS_DUO_BLACK"
       type="mists"
@@ -280,6 +285,12 @@
             <exit tier="8" weight="6" randomdungeonexitvisualizationref="T8_MISTS_DUNGEON_DUO_BLACK" mindifficulty="0"/>
           </exitsettings>
         </specialexitsettings>
+		<openworldexitdistribution>
+			<warningtype type="safe" weight="1046"/>
+			<warningtype type="yellow" weight="1358"/>
+			<warningtype type="red" weight="929"/>
+			<warningtype type="black" weight="6667"/>
+		</openworldexitdistribution>
       </mistsmode>
       
       <mistsmode
@@ -301,6 +312,138 @@
           <subtype name="COFFER" rolls="3" chance="1" initialblocktimeseconds="180" finalblocktimeseconds="570" />
         </treasures>
       </mistsmode>
+
+      <!--RESOURCE TODO: Check values after testing -->
+    <mistsmode
+      name="MISTS_RESOURCE_FIBER"
+      type="resourcemists"
+      clustertype="MISTS_RESOURCE_BLACK"
+      clusterdisplayname="Silken Glade" 
+      maxteamsize="1"
+      mapset="MAPSET_RESOURCE_FIBER"
+      resourcepool="RESOURCE_BLACK"
+      exitsleadtomode="MISTS_SOLO_BLACK">
+      <difficultylevel level="0" minimuminstancepool="1" flexibleinstancepool="0.05" wispmob="MOB_UNIQUE_MISTS_PORTAL_WISP_RESOURCE" wispmobexitvisualizationref="MISTS_RESOURCE_BLACK" wispinstacefillratio="1" rareresourcedistribution="MISTS_E0">
+        <wispinstancedifficultyrollref randomdungeonrollref="MISTS_RESOURCE_INSTANCE_MODE_BLACK" />
+      </difficultylevel>
+      <difficultylevel level="1" minimuminstancepool="1" flexibleinstancepool="0.05" wispmob="MOB_UNIQUE_MISTS_PORTAL_WISP_RESOURCE_STANDARD" wispmobexitvisualizationref="MISTS_RESOURCE_BLACK" wispinstacefillratio="1" rareresourcedistribution="MISTS_E1">
+        <wispinstancedifficultyrollref randomdungeonrollref="MISTS_RESOURCE_INSTANCE_MODE_BLACK" />
+      </difficultylevel>
+      <difficultylevel level="2" minimuminstancepool="1" flexibleinstancepool="0.05" wispmob="MOB_UNIQUE_MISTS_PORTAL_WISP_RESOURCE_UNCOMMON" wispmobexitvisualizationref="MISTS_RESOURCE_BLACK" wispinstacefillratio="1" rareresourcedistribution="MISTS_E2">
+        <wispinstancedifficultyrollref randomdungeonrollref="MISTS_RESOURCE_INSTANCE_MODE_BLACK" />
+      </difficultylevel>
+      <difficultylevel level="3" minimuminstancepool="1" flexibleinstancepool="0.05" wispmob="MOB_UNIQUE_MISTS_PORTAL_WISP_RESOURCE_RARE" wispmobexitvisualizationref="MISTS_RESOURCE_BLACK" wispinstacefillratio="1" rareresourcedistribution="MISTS_E3">
+        <wispinstancedifficultyrollref randomdungeonrollref="MISTS_RESOURCE_INSTANCE_MODE_BLACK" />
+      </difficultylevel>
+      <difficultylevel level="4" minimuminstancepool="1" flexibleinstancepool="0.05" wispmob="MOB_UNIQUE_MISTS_PORTAL_WISP_RESOURCE_LEGENDARY" wispmobexitvisualizationref="MISTS_RESOURCE_BLACK" wispinstacefillratio="1" rareresourcedistribution="MISTS_E4">
+        <wispinstancedifficultyrollref randomdungeonrollref="MISTS_RESOURCE_INSTANCE_MODE_BLACK" />
+      </difficultylevel>
+      <treasures/>
+    </mistsmode>
+    <mistsmode
+      name="MISTS_RESOURCE_HIDE"
+      type="resourcemists"
+      clustertype="MISTS_RESOURCE_BLACK"
+      clusterdisplayname="Misty Wilds"
+      maxteamsize="1"
+      mapset="MAPSET_RESOURCE_HIDE"
+      resourcepool="RESOURCE_BLACK"
+      exitsleadtomode="MISTS_SOLO_BLACK">
+      <difficultylevel level="0" minimuminstancepool="1" flexibleinstancepool="0.05" wispmob="MOB_UNIQUE_MISTS_PORTAL_WISP_RESOURCE" wispmobexitvisualizationref="MISTS_RESOURCE_BLACK" wispinstacefillratio="1" rareresourcedistribution="MISTS_E0">
+        <wispinstancedifficultyrollref randomdungeonrollref="MISTS_RESOURCE_INSTANCE_MODE_BLACK" />
+      </difficultylevel>
+      <difficultylevel level="1" minimuminstancepool="1" flexibleinstancepool="0.05" wispmob="MOB_UNIQUE_MISTS_PORTAL_WISP_RESOURCE_STANDARD" wispmobexitvisualizationref="MISTS_RESOURCE_BLACK" wispinstacefillratio="1" rareresourcedistribution="MISTS_E1">
+        <wispinstancedifficultyrollref randomdungeonrollref="MISTS_RESOURCE_INSTANCE_MODE_BLACK" />
+      </difficultylevel>
+      <difficultylevel level="2" minimuminstancepool="1" flexibleinstancepool="0.05" wispmob="MOB_UNIQUE_MISTS_PORTAL_WISP_RESOURCE_UNCOMMON" wispmobexitvisualizationref="MISTS_RESOURCE_BLACK" wispinstacefillratio="1" rareresourcedistribution="MISTS_E2">
+        <wispinstancedifficultyrollref randomdungeonrollref="MISTS_RESOURCE_INSTANCE_MODE_BLACK" />
+      </difficultylevel>
+      <difficultylevel level="3" minimuminstancepool="1" flexibleinstancepool="0.05" wispmob="MOB_UNIQUE_MISTS_PORTAL_WISP_RESOURCE_RARE" wispmobexitvisualizationref="MISTS_RESOURCE_BLACK" wispinstacefillratio="1" rareresourcedistribution="MISTS_E3">
+        <wispinstancedifficultyrollref randomdungeonrollref="MISTS_RESOURCE_INSTANCE_MODE_BLACK" />
+      </difficultylevel>
+      <difficultylevel level="4" minimuminstancepool="1" flexibleinstancepool="0.05" wispmob="MOB_UNIQUE_MISTS_PORTAL_WISP_RESOURCE_LEGENDARY" wispmobexitvisualizationref="MISTS_RESOURCE_BLACK" wispinstacefillratio="1" rareresourcedistribution="MISTS_E4">
+        <wispinstancedifficultyrollref randomdungeonrollref="MISTS_RESOURCE_INSTANCE_MODE_BLACK" />
+      </difficultylevel>
+      <treasures/>
+    </mistsmode>
+    <mistsmode
+      name="MISTS_RESOURCE_ORE"
+      type="resourcemists"
+      clustertype="MISTS_RESOURCE_BLACK"
+      clusterdisplayname="Ironheart Vale"
+      maxteamsize="1"
+      mapset="MAPSET_RESOURCE_ORE"
+      resourcepool="RESOURCE_BLACK"
+      exitsleadtomode="MISTS_SOLO_BLACK">
+      <difficultylevel level="0" minimuminstancepool="1" flexibleinstancepool="0.05" wispmob="MOB_UNIQUE_MISTS_PORTAL_WISP_RESOURCE" wispmobexitvisualizationref="MISTS_RESOURCE_BLACK" wispinstacefillratio="1" rareresourcedistribution="MISTS_E0">
+        <wispinstancedifficultyrollref randomdungeonrollref="MISTS_RESOURCE_INSTANCE_MODE_BLACK" />
+      </difficultylevel>
+      <difficultylevel level="1" minimuminstancepool="1" flexibleinstancepool="0.05" wispmob="MOB_UNIQUE_MISTS_PORTAL_WISP_RESOURCE_STANDARD" wispmobexitvisualizationref="MISTS_RESOURCE_BLACK" wispinstacefillratio="1" rareresourcedistribution="MISTS_E1">
+        <wispinstancedifficultyrollref randomdungeonrollref="MISTS_RESOURCE_INSTANCE_MODE_BLACK" />
+      </difficultylevel>
+      <difficultylevel level="2" minimuminstancepool="1" flexibleinstancepool="0.05" wispmob="MOB_UNIQUE_MISTS_PORTAL_WISP_RESOURCE_UNCOMMON" wispmobexitvisualizationref="MISTS_RESOURCE_BLACK" wispinstacefillratio="1" rareresourcedistribution="MISTS_E2">
+        <wispinstancedifficultyrollref randomdungeonrollref="MISTS_RESOURCE_INSTANCE_MODE_BLACK" />
+      </difficultylevel>
+      <difficultylevel level="3" minimuminstancepool="1" flexibleinstancepool="0.05" wispmob="MOB_UNIQUE_MISTS_PORTAL_WISP_RESOURCE_RARE" wispmobexitvisualizationref="MISTS_RESOURCE_BLACK" wispinstacefillratio="1" rareresourcedistribution="MISTS_E3">
+        <wispinstancedifficultyrollref randomdungeonrollref="MISTS_RESOURCE_INSTANCE_MODE_BLACK" />
+      </difficultylevel>
+      <difficultylevel level="4" minimuminstancepool="1" flexibleinstancepool="0.05" wispmob="MOB_UNIQUE_MISTS_PORTAL_WISP_RESOURCE_LEGENDARY" wispmobexitvisualizationref="MISTS_RESOURCE_BLACK" wispinstacefillratio="1" rareresourcedistribution="MISTS_E4">
+        <wispinstancedifficultyrollref randomdungeonrollref="MISTS_RESOURCE_INSTANCE_MODE_BLACK" />
+      </difficultylevel>
+      <treasures/>
+    </mistsmode>
+    <mistsmode
+      name="MISTS_RESOURCE_ROCK"
+      type="resourcemists"
+      clustertype="MISTS_RESOURCE_BLACK"
+      clusterdisplayname="Veiled Crags"
+      maxteamsize="1"
+      mapset="MAPSET_RESOURCE_ROCK"
+      resourcepool="RESOURCE_BLACK"
+      exitsleadtomode="MISTS_SOLO_BLACK">
+      <difficultylevel level="0" minimuminstancepool="1" flexibleinstancepool="0.05" wispmob="MOB_UNIQUE_MISTS_PORTAL_WISP_RESOURCE" wispmobexitvisualizationref="MISTS_RESOURCE_BLACK" wispinstacefillratio="1" rareresourcedistribution="MISTS_E0">           
+        <wispinstancedifficultyrollref randomdungeonrollref="MISTS_RESOURCE_INSTANCE_MODE_BLACK" />                                 
+      </difficultylevel>                                                                                                            
+      <difficultylevel level="1" minimuminstancepool="1" flexibleinstancepool="0.05" wispmob="MOB_UNIQUE_MISTS_PORTAL_WISP_RESOURCE_STANDARD" wispmobexitvisualizationref="MISTS_RESOURCE_BLACK" wispinstacefillratio="1" rareresourcedistribution="MISTS_E1">           
+        <wispinstancedifficultyrollref randomdungeonrollref="MISTS_RESOURCE_INSTANCE_MODE_BLACK" />                                 
+      </difficultylevel>                                                                                                            
+      <difficultylevel level="2" minimuminstancepool="1" flexibleinstancepool="0.05" wispmob="MOB_UNIQUE_MISTS_PORTAL_WISP_RESOURCE_UNCOMMON" wispmobexitvisualizationref="MISTS_RESOURCE_BLACK" wispinstacefillratio="1" rareresourcedistribution="MISTS_E2">           
+        <wispinstancedifficultyrollref randomdungeonrollref="MISTS_RESOURCE_INSTANCE_MODE_BLACK" />                                 
+      </difficultylevel>                                                                                                            
+      <difficultylevel level="3" minimuminstancepool="1" flexibleinstancepool="0.05" wispmob="MOB_UNIQUE_MISTS_PORTAL_WISP_RESOURCE_RARE" wispmobexitvisualizationref="MISTS_RESOURCE_BLACK" wispinstacefillratio="1" rareresourcedistribution="MISTS_E3">           
+        <wispinstancedifficultyrollref randomdungeonrollref="MISTS_RESOURCE_INSTANCE_MODE_BLACK" />                                 
+      </difficultylevel>                                                                                                            
+      <difficultylevel level="4" minimuminstancepool="1" flexibleinstancepool="0.05" wispmob="MOB_UNIQUE_MISTS_PORTAL_WISP_RESOURCE_LEGENDARY" wispmobexitvisualizationref="MISTS_RESOURCE_BLACK" wispinstacefillratio="1" rareresourcedistribution="MISTS_E4">
+        <wispinstancedifficultyrollref randomdungeonrollref="MISTS_RESOURCE_INSTANCE_MODE_BLACK" />
+      </difficultylevel>
+      <treasures/>
+    </mistsmode>
+    <mistsmode
+      name="MISTS_RESOURCE_WOOD"
+      type="resourcemists"
+      clustertype="MISTS_RESOURCE_BLACK"
+      clusterdisplayname="Whispering Woods"
+      maxteamsize="1"
+      mapset="MAPSET_RESOURCE_WOOD"
+      resourcepool="RESOURCE_BLACK"
+      exitsleadtomode="MISTS_SOLO_BLACK">
+      <difficultylevel level="0" minimuminstancepool="1" flexibleinstancepool="0.05" wispmob="MOB_UNIQUE_MISTS_PORTAL_WISP_RESOURCE" wispmobexitvisualizationref="MISTS_RESOURCE_BLACK" wispinstacefillratio="1" rareresourcedistribution="MISTS_E0">
+        <wispinstancedifficultyrollref randomdungeonrollref="MISTS_RESOURCE_INSTANCE_MODE_BLACK" />
+      </difficultylevel>
+      <difficultylevel level="1" minimuminstancepool="1" flexibleinstancepool="0.05" wispmob="MOB_UNIQUE_MISTS_PORTAL_WISP_RESOURCE_STANDARD" wispmobexitvisualizationref="MISTS_RESOURCE_BLACK" wispinstacefillratio="1" rareresourcedistribution="MISTS_E1">
+        <wispinstancedifficultyrollref randomdungeonrollref="MISTS_RESOURCE_INSTANCE_MODE_BLACK" />
+      </difficultylevel>
+      <difficultylevel level="2" minimuminstancepool="1" flexibleinstancepool="0.05" wispmob="MOB_UNIQUE_MISTS_PORTAL_WISP_RESOURCE_UNCOMMON" wispmobexitvisualizationref="MISTS_RESOURCE_BLACK" wispinstacefillratio="1" rareresourcedistribution="MISTS_E2">
+        <wispinstancedifficultyrollref randomdungeonrollref="MISTS_RESOURCE_INSTANCE_MODE_BLACK" />
+      </difficultylevel>
+      <difficultylevel level="3" minimuminstancepool="1" flexibleinstancepool="0.05" wispmob="MOB_UNIQUE_MISTS_PORTAL_WISP_RESOURCE_RARE" wispmobexitvisualizationref="MISTS_RESOURCE_BLACK" wispinstacefillratio="1" rareresourcedistribution="MISTS_E3">
+        <wispinstancedifficultyrollref randomdungeonrollref="MISTS_RESOURCE_INSTANCE_MODE_BLACK" />
+      </difficultylevel>
+      <difficultylevel level="4" minimuminstancepool="1" flexibleinstancepool="0.05" wispmob="MOB_UNIQUE_MISTS_PORTAL_WISP_RESOURCE_LEGENDARY" wispmobexitvisualizationref="MISTS_RESOURCE_BLACK" wispinstacefillratio="1" rareresourcedistribution="MISTS_E4">
+        <wispinstancedifficultyrollref randomdungeonrollref="MISTS_RESOURCE_INSTANCE_MODE_BLACK" />
+      </difficultylevel>
+      <treasures/>
+    </mistsmode>
     
   </mistsmodes>
 
@@ -533,6 +676,88 @@
       <map id="DUO_BLACK_DUNGEON_02" mastertemplate="MISTS_DNG_UND_01" templatepool="BLACK_RARE" clustertier="7" requiredentrancetier="7" subbiome="green" softplayerlimitmin="12" softplayerlimitmax="12" hardplayercapspace="2" weight="1" clusterclosetime="130" clustershutdowntime="1050" />
       <map id="DUO_BLACK_DUNGEON_03" mastertemplate="MISTS_DNG_UND_01" templatepool="BLACK_RARE" clustertier="8" requiredentrancetier="8" subbiome="green" softplayerlimitmin="12" softplayerlimitmax="12" hardplayercapspace="2" weight="1" clusterclosetime="130" clustershutdowntime="1050" />
     </mapset>
+
+    <!-- TODO: Recheck values after balancing and testing -->
+    <mapset name="MAPSET_RESOURCE_FIBER">
+      <map id="RESOURCE_SMALL_STANDARD_01" mastertemplate="MISTS_100_S1" templatepool="BLACK_RESOURCE_FIBER_COMMON" subbiome="green" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="1" clusterclosetime="300" clustershutdowntime="450" clustertier="6" mindifficulty="0" maxdifficulty="1" />
+      <map id="RESOURCE_SMALL_STANDARD_02" mastertemplate="MISTS_101_S1" templatepool="BLACK_RESOURCE_FIBER_COMMON" subbiome="green" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="1" clusterclosetime="300" clustershutdowntime="450" clustertier="6" mindifficulty="0" maxdifficulty="1" />
+      <map id="RESOURCE_SMALL_STANDARD_03" mastertemplate="MISTS_102_S1" templatepool="BLACK_RESOURCE_FIBER_COMMON" subbiome="green" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="1" clusterclosetime="300" clustershutdowntime="450" clustertier="6" mindifficulty="0" maxdifficulty="1" />
+      <map id="RESOURCE_SMALL_STANDARD_04" mastertemplate="MISTS_103_S1" templatepool="BLACK_RESOURCE_FIBER_COMMON" subbiome="green" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="1" clusterclosetime="300" clustershutdowntime="450" clustertier="6" mindifficulty="0" maxdifficulty="1" />
+
+      <map id="RESOURCE_SMALL_UNCOMMON_01" mastertemplate="MISTS_100_S1" templatepool="BLACK_RESOURCE_FIBER_UNCOMMON" subbiome="red" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="1" clusterclosetime="300" clustershutdowntime="450" clustertier="7" mindifficulty="1" maxdifficulty="2" />
+      <map id="RESOURCE_SMALL_UNCOMMON_02" mastertemplate="MISTS_101_S1" templatepool="BLACK_RESOURCE_FIBER_UNCOMMON" subbiome="red" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="1" clusterclosetime="300" clustershutdowntime="450" clustertier="7" mindifficulty="1" maxdifficulty="2" />
+      <map id="RESOURCE_SMALL_UNCOMMON_03" mastertemplate="MISTS_102_S1" templatepool="BLACK_RESOURCE_FIBER_UNCOMMON" subbiome="red" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="1" clusterclosetime="300" clustershutdowntime="450" clustertier="7" mindifficulty="1" maxdifficulty="2" />
+      <map id="RESOURCE_SMALL_UNCOMMON_04" mastertemplate="MISTS_103_S1" templatepool="BLACK_RESOURCE_FIBER_UNCOMMON" subbiome="red" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="1" clusterclosetime="300" clustershutdowntime="450" clustertier="7" mindifficulty="1" maxdifficulty="2" />
+
+      <map id="RESOURCE_MEDIUM_01" mastertemplate="MISTS_200_M1" templatepool="BLACK_RESOURCE_FIBER_UNCOMMON" subbiome="dead" softplayerlimitmin="2" softplayerlimitmax="3" hardplayercapspace="1" weight="1" clusterclosetime="720" clustershutdowntime="900" clustertier="7" mindifficulty="3" maxdifficulty="4" />
+      <map id="RESOURCE_MEDIUM_02" mastertemplate="MISTS_201_M1" templatepool="BLACK_RESOURCE_FIBER_UNCOMMON" subbiome="dead" softplayerlimitmin="2" softplayerlimitmax="3" hardplayercapspace="1" weight="1" clusterclosetime="720" clustershutdowntime="900" clustertier="7" mindifficulty="3" maxdifficulty="4" />
+      <map id="RESOURCE_MEDIUM_03" mastertemplate="MISTS_202_M1" templatepool="BLACK_RESOURCE_FIBER_RARE" subbiome="dead" softplayerlimitmin="2" softplayerlimitmax="3" hardplayercapspace="1" weight="1" clusterclosetime="720" clustershutdowntime="900" clustertier="8" mindifficulty="3" maxdifficulty="4" />
+      <map id="RESOURCE_MEDIUM_04" mastertemplate="MISTS_203_M1" templatepool="BLACK_RESOURCE_FIBER_RARE" subbiome="dead" softplayerlimitmin="2" softplayerlimitmax="3" hardplayercapspace="1" weight="1" clusterclosetime="720" clustershutdowntime="900" clustertier="8" mindifficulty="3" maxdifficulty="4" />
+    </mapset>
+    <mapset name="MAPSET_RESOURCE_HIDE">
+      <map id="RESOURCE_SMALL_STANDARD_01" mastertemplate="MISTS_100_S1" templatepool="BLACK_RESOURCE_HIDE_COMMON" subbiome="green" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="1" clusterclosetime="300" clustershutdowntime="450" clustertier="6" mindifficulty="0" maxdifficulty="1" />
+      <map id="RESOURCE_SMALL_STANDARD_02" mastertemplate="MISTS_101_S1" templatepool="BLACK_RESOURCE_HIDE_COMMON" subbiome="green" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="1" clusterclosetime="300" clustershutdowntime="450" clustertier="6" mindifficulty="0" maxdifficulty="1" />
+      <map id="RESOURCE_SMALL_STANDARD_03" mastertemplate="MISTS_102_S1" templatepool="BLACK_RESOURCE_HIDE_COMMON" subbiome="green" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="1" clusterclosetime="300" clustershutdowntime="450" clustertier="6" mindifficulty="0" maxdifficulty="1" />
+      <map id="RESOURCE_SMALL_STANDARD_04" mastertemplate="MISTS_103_S1" templatepool="BLACK_RESOURCE_HIDE_COMMON" subbiome="green" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="1" clusterclosetime="300" clustershutdowntime="450" clustertier="6" mindifficulty="0" maxdifficulty="1" />
+
+      <map id="RESOURCE_SMALL_UNCOMMON_01" mastertemplate="MISTS_100_S1" templatepool="BLACK_RESOURCE_HIDE_UNCOMMON" subbiome="red" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="1" clusterclosetime="300" clustershutdowntime="450" clustertier="7" mindifficulty="1" maxdifficulty="2" />
+      <map id="RESOURCE_SMALL_UNCOMMON_02" mastertemplate="MISTS_101_S1" templatepool="BLACK_RESOURCE_HIDE_UNCOMMON" subbiome="red" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="1" clusterclosetime="300" clustershutdowntime="450" clustertier="7" mindifficulty="1" maxdifficulty="2" />
+      <map id="RESOURCE_SMALL_UNCOMMON_03" mastertemplate="MISTS_102_S1" templatepool="BLACK_RESOURCE_HIDE_UNCOMMON" subbiome="red" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="1" clusterclosetime="300" clustershutdowntime="450" clustertier="7" mindifficulty="1" maxdifficulty="2" />
+      <map id="RESOURCE_SMALL_UNCOMMON_04" mastertemplate="MISTS_103_S1" templatepool="BLACK_RESOURCE_HIDE_UNCOMMON" subbiome="red" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="1" clusterclosetime="300" clustershutdowntime="450" clustertier="7" mindifficulty="1" maxdifficulty="2" />
+
+      <map id="RESOURCE_MEDIUM_01" mastertemplate="MISTS_200_M1" templatepool="BLACK_RESOURCE_HIDE_UNCOMMON" subbiome="dead" softplayerlimitmin="2" softplayerlimitmax="3" hardplayercapspace="1" weight="1" clusterclosetime="720" clustershutdowntime="900" clustertier="7" mindifficulty="3" maxdifficulty="4" />
+      <map id="RESOURCE_MEDIUM_02" mastertemplate="MISTS_201_M1" templatepool="BLACK_RESOURCE_HIDE_UNCOMMON" subbiome="dead" softplayerlimitmin="2" softplayerlimitmax="3" hardplayercapspace="1" weight="1" clusterclosetime="720" clustershutdowntime="900" clustertier="7" mindifficulty="3" maxdifficulty="4" />
+      <map id="RESOURCE_MEDIUM_03" mastertemplate="MISTS_202_M1" templatepool="BLACK_RESOURCE_HIDE_RARE" subbiome="dead" softplayerlimitmin="2" softplayerlimitmax="3" hardplayercapspace="1" weight="1" clusterclosetime="720" clustershutdowntime="900" clustertier="8" mindifficulty="3" maxdifficulty="4" />
+      <map id="RESOURCE_MEDIUM_04" mastertemplate="MISTS_203_M1" templatepool="BLACK_RESOURCE_HIDE_RARE" subbiome="dead" softplayerlimitmin="2" softplayerlimitmax="3" hardplayercapspace="1" weight="1" clusterclosetime="720" clustershutdowntime="900" clustertier="8" mindifficulty="3" maxdifficulty="4" />
+    </mapset>
+    <mapset name="MAPSET_RESOURCE_ORE">
+      <map id="RESOURCE_SMALL_STANDARD_01" mastertemplate="MISTS_100_S1" templatepool="BLACK_RESOURCE_ORE_COMMON" subbiome="green" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="1" clusterclosetime="300" clustershutdowntime="450" clustertier="6" mindifficulty="0" maxdifficulty="1" />
+      <map id="RESOURCE_SMALL_STANDARD_02" mastertemplate="MISTS_101_S1" templatepool="BLACK_RESOURCE_ORE_COMMON" subbiome="green" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="1" clusterclosetime="300" clustershutdowntime="450" clustertier="6" mindifficulty="0" maxdifficulty="1" />
+      <map id="RESOURCE_SMALL_STANDARD_03" mastertemplate="MISTS_102_S1" templatepool="BLACK_RESOURCE_ORE_COMMON" subbiome="green" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="1" clusterclosetime="300" clustershutdowntime="450" clustertier="6" mindifficulty="0" maxdifficulty="1" />
+      <map id="RESOURCE_SMALL_STANDARD_04" mastertemplate="MISTS_103_S1" templatepool="BLACK_RESOURCE_ORE_COMMON" subbiome="green" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="1" clusterclosetime="300" clustershutdowntime="450" clustertier="6" mindifficulty="0" maxdifficulty="1" />
+
+      <map id="RESOURCE_SMALL_UNCOMMON_01" mastertemplate="MISTS_100_S1" templatepool="BLACK_RESOURCE_ORE_UNCOMMON" subbiome="red" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="1" clusterclosetime="300" clustershutdowntime="450" clustertier="7" mindifficulty="1" maxdifficulty="2" />
+      <map id="RESOURCE_SMALL_UNCOMMON_02" mastertemplate="MISTS_101_S1" templatepool="BLACK_RESOURCE_ORE_UNCOMMON" subbiome="red" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="1" clusterclosetime="300" clustershutdowntime="450" clustertier="7" mindifficulty="1" maxdifficulty="2" />
+      <map id="RESOURCE_SMALL_UNCOMMON_03" mastertemplate="MISTS_102_S1" templatepool="BLACK_RESOURCE_ORE_UNCOMMON" subbiome="red" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="1" clusterclosetime="300" clustershutdowntime="450" clustertier="7" mindifficulty="1" maxdifficulty="2" />
+      <map id="RESOURCE_SMALL_UNCOMMON_04" mastertemplate="MISTS_103_S1" templatepool="BLACK_RESOURCE_ORE_UNCOMMON" subbiome="red" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="1" clusterclosetime="300" clustershutdowntime="450" clustertier="7" mindifficulty="1" maxdifficulty="2" />
+
+      <map id="RESOURCE_MEDIUM_01" mastertemplate="MISTS_200_M1" templatepool="BLACK_RESOURCE_ORE_UNCOMMON" subbiome="dead" softplayerlimitmin="2" softplayerlimitmax="3" hardplayercapspace="1" weight="1" clusterclosetime="720" clustershutdowntime="900" clustertier="7" mindifficulty="3" maxdifficulty="4" />
+      <map id="RESOURCE_MEDIUM_02" mastertemplate="MISTS_201_M1" templatepool="BLACK_RESOURCE_ORE_UNCOMMON" subbiome="dead" softplayerlimitmin="2" softplayerlimitmax="3" hardplayercapspace="1" weight="1" clusterclosetime="720" clustershutdowntime="900" clustertier="7" mindifficulty="3" maxdifficulty="4" />
+      <map id="RESOURCE_MEDIUM_03" mastertemplate="MISTS_202_M1" templatepool="BLACK_RESOURCE_ORE_RARE" subbiome="dead" softplayerlimitmin="2" softplayerlimitmax="3" hardplayercapspace="1" weight="1" clusterclosetime="720" clustershutdowntime="900" clustertier="8" mindifficulty="3" maxdifficulty="4" />
+      <map id="RESOURCE_MEDIUM_04" mastertemplate="MISTS_203_M1" templatepool="BLACK_RESOURCE_ORE_RARE" subbiome="dead" softplayerlimitmin="2" softplayerlimitmax="3" hardplayercapspace="1" weight="1" clusterclosetime="720" clustershutdowntime="900" clustertier="8" mindifficulty="3" maxdifficulty="4" />
+    </mapset>
+    <mapset name="MAPSET_RESOURCE_ROCK">
+      <map id="RESOURCE_SMALL_STANDARD_01" mastertemplate="MISTS_100_S1" templatepool="BLACK_RESOURCE_ROCK_COMMON" subbiome="green" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="1" clusterclosetime="300" clustershutdowntime="450" clustertier="6" mindifficulty="0" maxdifficulty="1" />
+      <map id="RESOURCE_SMALL_STANDARD_02" mastertemplate="MISTS_101_S1" templatepool="BLACK_RESOURCE_ROCK_COMMON" subbiome="green" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="1" clusterclosetime="300" clustershutdowntime="450" clustertier="6" mindifficulty="0" maxdifficulty="1" />
+      <map id="RESOURCE_SMALL_STANDARD_03" mastertemplate="MISTS_102_S1" templatepool="BLACK_RESOURCE_ROCK_COMMON" subbiome="green" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="1" clusterclosetime="300" clustershutdowntime="450" clustertier="6" mindifficulty="0" maxdifficulty="1" />
+      <map id="RESOURCE_SMALL_STANDARD_04" mastertemplate="MISTS_103_S1" templatepool="BLACK_RESOURCE_ROCK_COMMON" subbiome="green" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="1" clusterclosetime="300" clustershutdowntime="450" clustertier="6" mindifficulty="0" maxdifficulty="1" />
+
+      <map id="RESOURCE_SMALL_UNCOMMON_01" mastertemplate="MISTS_100_S1" templatepool="BLACK_RESOURCE_ROCK_UNCOMMON" subbiome="red" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="1" clusterclosetime="300" clustershutdowntime="450" clustertier="7" mindifficulty="1" maxdifficulty="2" />
+      <map id="RESOURCE_SMALL_UNCOMMON_02" mastertemplate="MISTS_101_S1" templatepool="BLACK_RESOURCE_ROCK_UNCOMMON" subbiome="red" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="1" clusterclosetime="300" clustershutdowntime="450" clustertier="7" mindifficulty="1" maxdifficulty="2" />
+      <map id="RESOURCE_SMALL_UNCOMMON_03" mastertemplate="MISTS_102_S1" templatepool="BLACK_RESOURCE_ROCK_UNCOMMON" subbiome="red" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="1" clusterclosetime="300" clustershutdowntime="450" clustertier="7" mindifficulty="1" maxdifficulty="2" />
+      <map id="RESOURCE_SMALL_UNCOMMON_04" mastertemplate="MISTS_103_S1" templatepool="BLACK_RESOURCE_ROCK_UNCOMMON" subbiome="red" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="1" clusterclosetime="300" clustershutdowntime="450" clustertier="7" mindifficulty="1" maxdifficulty="2" />
+
+      <map id="RESOURCE_MEDIUM_01" mastertemplate="MISTS_200_M1" templatepool="BLACK_RESOURCE_ROCK_UNCOMMON" subbiome="dead" softplayerlimitmin="2" softplayerlimitmax="3" hardplayercapspace="1" weight="1" clusterclosetime="720" clustershutdowntime="900" clustertier="7" mindifficulty="3" maxdifficulty="4" />
+      <map id="RESOURCE_MEDIUM_02" mastertemplate="MISTS_201_M1" templatepool="BLACK_RESOURCE_ROCK_UNCOMMON" subbiome="dead" softplayerlimitmin="2" softplayerlimitmax="3" hardplayercapspace="1" weight="1" clusterclosetime="720" clustershutdowntime="900" clustertier="7" mindifficulty="3" maxdifficulty="4" />
+      <map id="RESOURCE_MEDIUM_03" mastertemplate="MISTS_202_M1" templatepool="BLACK_RESOURCE_ROCK_RARE" subbiome="dead" softplayerlimitmin="2" softplayerlimitmax="3" hardplayercapspace="1" weight="1" clusterclosetime="720" clustershutdowntime="900" clustertier="8" mindifficulty="3" maxdifficulty="4" />
+      <map id="RESOURCE_MEDIUM_04" mastertemplate="MISTS_203_M1" templatepool="BLACK_RESOURCE_ROCK_RARE" subbiome="dead" softplayerlimitmin="2" softplayerlimitmax="3" hardplayercapspace="1" weight="1" clusterclosetime="720" clustershutdowntime="900" clustertier="8" mindifficulty="3" maxdifficulty="4" />
+    </mapset>
+    <mapset name="MAPSET_RESOURCE_WOOD">
+      <map id="RESOURCE_SMALL_STANDARD_01" mastertemplate="MISTS_100_S1" templatepool="BLACK_RESOURCE_WOOD_COMMON" subbiome="green" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="1" clusterclosetime="300" clustershutdowntime="450" clustertier="6" mindifficulty="0" maxdifficulty="1" />
+      <map id="RESOURCE_SMALL_STANDARD_02" mastertemplate="MISTS_101_S1" templatepool="BLACK_RESOURCE_WOOD_COMMON" subbiome="green" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="1" clusterclosetime="300" clustershutdowntime="450" clustertier="6" mindifficulty="0" maxdifficulty="1" />
+      <map id="RESOURCE_SMALL_STANDARD_03" mastertemplate="MISTS_102_S1" templatepool="BLACK_RESOURCE_WOOD_COMMON" subbiome="green" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="1" clusterclosetime="300" clustershutdowntime="450" clustertier="6" mindifficulty="0" maxdifficulty="1" />
+      <map id="RESOURCE_SMALL_STANDARD_04" mastertemplate="MISTS_103_S1" templatepool="BLACK_RESOURCE_WOOD_COMMON" subbiome="green" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="1" clusterclosetime="300" clustershutdowntime="450" clustertier="6" mindifficulty="0" maxdifficulty="1" />
+
+      <map id="RESOURCE_SMALL_UNCOMMON_01" mastertemplate="MISTS_100_S1" templatepool="BLACK_RESOURCE_WOOD_UNCOMMON" subbiome="red" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="1" clusterclosetime="300" clustershutdowntime="450" clustertier="7" mindifficulty="1" maxdifficulty="2" />
+      <map id="RESOURCE_SMALL_UNCOMMON_02" mastertemplate="MISTS_101_S1" templatepool="BLACK_RESOURCE_WOOD_UNCOMMON" subbiome="red" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="1" clusterclosetime="300" clustershutdowntime="450" clustertier="7" mindifficulty="1" maxdifficulty="2" />
+      <map id="RESOURCE_SMALL_UNCOMMON_03" mastertemplate="MISTS_102_S1" templatepool="BLACK_RESOURCE_WOOD_UNCOMMON" subbiome="red" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="1" clusterclosetime="300" clustershutdowntime="450" clustertier="7" mindifficulty="1" maxdifficulty="2" />
+      <map id="RESOURCE_SMALL_UNCOMMON_04" mastertemplate="MISTS_103_S1" templatepool="BLACK_RESOURCE_WOOD_UNCOMMON" subbiome="red" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="1" clusterclosetime="300" clustershutdowntime="450" clustertier="7" mindifficulty="1" maxdifficulty="2" />
+
+      <map id="RESOURCE_MEDIUM_01" mastertemplate="MISTS_200_M1" templatepool="BLACK_RESOURCE_WOOD_UNCOMMON" subbiome="dead" softplayerlimitmin="2" softplayerlimitmax="3" hardplayercapspace="1" weight="1" clusterclosetime="720" clustershutdowntime="900" clustertier="7" mindifficulty="3" maxdifficulty="4" />
+      <map id="RESOURCE_MEDIUM_02" mastertemplate="MISTS_201_M1" templatepool="BLACK_RESOURCE_WOOD_UNCOMMON" subbiome="dead" softplayerlimitmin="2" softplayerlimitmax="3" hardplayercapspace="1" weight="1" clusterclosetime="720" clustershutdowntime="900" clustertier="7" mindifficulty="3" maxdifficulty="4" />
+      <map id="RESOURCE_MEDIUM_03" mastertemplate="MISTS_202_M1" templatepool="BLACK_RESOURCE_WOOD_RARE" subbiome="dead" softplayerlimitmin="2" softplayerlimitmax="3" hardplayercapspace="1" weight="1" clusterclosetime="720" clustershutdowntime="900" clustertier="8" mindifficulty="3" maxdifficulty="4" />
+      <map id="RESOURCE_MEDIUM_04" mastertemplate="MISTS_203_M1" templatepool="BLACK_RESOURCE_WOOD_RARE" subbiome="dead" softplayerlimitmin="2" softplayerlimitmax="3" hardplayercapspace="1" weight="1" clusterclosetime="720" clustershutdowntime="900" clustertier="8" mindifficulty="3" maxdifficulty="4" />
+    </mapset>
   </mistsmaps>
 
   <factionweightingtable>
@@ -635,16 +860,20 @@
           <template id="MISTS_S_RES_NON_WOOD-HIDE_05" weight="1" layertags="hide"/>
         </type>
         <type category="none" weight="1">
-          <template id="MISTS_S_FILL_NON_LANDSCAPE_01" weight="10"/>
+          <!--Unenchanted-->
+		  <template id="MISTS_S_FILL_NON_LANDSCAPE_01" weight="10" maxdifficulty="0"/>
+	      <!--Enchanted-->
+		  <!--25% Compounding over 3 slots-->
+		  <template id="MISTS_S_EXIT_NON_CITY_01" weight="9144" mindifficulty="1" unique="true"/>
+		  <template id="MISTS_S_FILL_NON_LANDSCAPE_01" weight="856" mindifficulty="1"/>
         </type>
         <type category="misc" weight="9999999" unique="true">
-          <template id="MISTS_S_EXIT_NON_CITY_01" weight="25"/>
-          <!--Unenchanted-->
-          <template id="MISTS_S_EXIT_NON_ROADS_01" weight="10" maxdifficulty="0"/>
-          <template id="MISTS_S_FILL_NON_LANDSCAPE_01" weight="65" maxdifficulty="0"/>
+		  <!--Unenchanted-->
+		  <template id="MISTS_S_EXIT_NON_CITY_01" weight="25" maxdifficulty="0"/>
+          <template id="MISTS_S_EXIT_NON_ROADS_01" weight="25" maxdifficulty="0"/>
+          <template id="MISTS_S_FILL_NON_LANDSCAPE_01" weight="50" maxdifficulty="0"/>
           <!--Enchanted-->
-          <template id="MISTS_S_EXIT_NON_ROADS_01" weight="50" mindifficulty="1"/>
-          <template id="MISTS_S_FILL_NON_LANDSCAPE_01" weight="25" mindifficulty="1"/>
+          <template id="MISTS_S_EXIT_NON_ROADS_01" weight="100" mindifficulty="1"/>
         </type>
       </size>
     </templatepool>
@@ -742,14 +971,14 @@
           <template id="MISTS_S_RES_NON_WOOD-HIDE_04" weight="1" layertags="hide"/>
           <template id="MISTS_S_RES_NON_WOOD-HIDE_05" weight="1" layertags="hide"/>
         </type>
-        <type category="none" weight="1">
-          <template id="MISTS_S_FILL_NON_LANDSCAPE_01" weight="10"/>
-        </type>
-        <type category="misc" weight="9999999" unique="true">
-          <template id="MISTS_S_EXIT_NON_CITY_01" weight="25"/>
-          <template id="MISTS_S_EXIT_NON_ROADS_01" weight="50"/>
-          <template id="MISTS_S_FILL_NON_LANDSCAPE_01" weight="25"/>
-        </type>
+		  <type category="none" weight="1">
+			<!--25% Compounding over 3 slots-->
+			<template id="MISTS_S_EXIT_NON_CITY_01" weight="9144" unique="true"/>
+			<template id="MISTS_S_FILL_NON_LANDSCAPE_01" weight="856"/>
+		  </type>
+		  <type category="misc" weight="9999999" unique="true">
+			<template id="MISTS_S_EXIT_NON_ROADS_01" weight="100"/>
+		  </type>
       </size>
     </templatepool>
 
@@ -848,13 +1077,13 @@
           <template id="MISTS_S_RES_NON_WOOD-HIDE_05" weight="1" layertags="hide"/>
         </type>
         <type category="none" weight="1">
-          <template id="MISTS_S_FILL_NON_LANDSCAPE_01" weight="10"/>
-        </type>
+		  <!--25% Compounding over 3 slots-->
+		  <template id="MISTS_S_EXIT_NON_CITY_01" weight="9144" unique="true"/>
+		  <template id="MISTS_S_FILL_NON_LANDSCAPE_01" weight="856"/>
+		</type>
         <type category="misc" weight="9999999" unique="true">
-          <template id="MISTS_S_EXIT_NON_CITY_01" weight="25"/>
-          <template id="MISTS_S_EXIT_NON_ROADS_01" weight="50"/>
-          <template id="MISTS_S_FILL_NON_LANDSCAPE_01" weight="25"/>
-        </type>
+		  <template id="MISTS_S_EXIT_NON_ROADS_01" weight="100"/>
+		</type>
       </size>
     </templatepool>
 
@@ -951,14 +1180,20 @@
           <template id="MISTS_S_RES_NON_WOOD-HIDE_05" weight="1" layertags="hide"/>
         </type>
         <type category="none" weight="1">
-          <template id="MISTS_S_FILL_NON_LANDSCAPE_01" weight="10"/>
+          <!--Unenchanted-->
+		  <template id="MISTS_S_FILL_NON_LANDSCAPE_01" weight="10" maxdifficulty="0"/>
+	      <!--Enchanted-->
+		  <!--25% Compounding over 3 slots-->
+		  <template id="MISTS_S_EXIT_NON_CITY_01" weight="9144" mindifficulty="1" unique="true"/>
+		  <template id="MISTS_S_FILL_NON_LANDSCAPE_01" weight="856" mindifficulty="1"/>
         </type>
         <type category="misc" weight="9999999" unique="true">
-          <!--Roads Chance 10% in unenchanted, 90% in enchanted-->
-          <template id="MISTS_S_EXIT_NON_ROADS_01" weight="9"/>
-          <template id="MISTS_S_FILL_NON_LANDSCAPE_01" weight="81" maxdifficulty="0"/>
-          <!--City Chance 0% in unenchanted, 10% in enchanted-->
-          <template id="MISTS_S_EXIT_NON_CITY_01" weight="1" mindifficulty="1"/>
+		  <!--Unenchanted-->
+		  <template id="MISTS_S_EXIT_NON_CITY_01" weight="25" maxdifficulty="0"/>
+          <template id="MISTS_S_EXIT_NON_ROADS_01" weight="25" maxdifficulty="0"/>
+          <template id="MISTS_S_FILL_NON_LANDSCAPE_01" weight="50" maxdifficulty="0"/>
+          <!--Enchanted-->
+          <template id="MISTS_S_EXIT_NON_ROADS_01" weight="100" mindifficulty="1"/>
         </type>
       </size>
     </templatepool>
@@ -1058,11 +1293,12 @@
           <template id="MISTS_S_RES_NON_WOOD-HIDE_05" weight="1" layertags="hide"/>
         </type>
         <type category="none" weight="1">
-          <template id="MISTS_S_FILL_NON_LANDSCAPE_01" weight="10"/>
+		  <!--25% Compounding over 3 slots-->
+		  <template id="MISTS_S_EXIT_NON_CITY_01" weight="9144" unique="true"/>
+		  <template id="MISTS_S_FILL_NON_LANDSCAPE_01" weight="856"/>
         </type>
         <type category="misc" weight="9999999" unique="true">
-          <template id="MISTS_S_EXIT_NON_CITY_01" weight="1"/>
-          <template id="MISTS_S_EXIT_NON_ROADS_01" weight="9"/>
+          <template id="MISTS_S_EXIT_NON_ROADS_01" weight="100"/>
         </type>
       </size>
     </templatepool>
@@ -1164,11 +1400,374 @@
           <template id="MISTS_S_RES_NON_WOOD-HIDE_05" weight="1" layertags="hide"/>
         </type>
         <type category="none" weight="1">
-          <template id="MISTS_S_FILL_NON_LANDSCAPE_01" weight="10"/>
+		  <!--25% Compounding over 3 slots-->
+	      <template id="MISTS_S_EXIT_NON_CITY_01" weight="9144" unique="true"/>
+	      <template id="MISTS_S_FILL_NON_LANDSCAPE_01" weight="856"/>
         </type>
         <type category="misc" weight="9999999" unique="true">
-          <template id="MISTS_S_EXIT_NON_CITY_01" weight="1"/>
-          <template id="MISTS_S_EXIT_NON_ROADS_01" weight="9"/>
+          <template id="MISTS_S_EXIT_NON_ROADS_01" weight="100"/>
+        </type>
+      </size>
+    </templatepool>
+
+    <!-- TODO: Recheck values after balancing and testing -->
+    <templatepool id="BLACK_RESOURCE_FIBER_COMMON">
+      <size name="medium">
+        <type category="resource" weight="1">
+          <rolllayertag>
+            <layertag name="t6" weight="1"/>
+          </rolllayertag>
+          <template id="MISTS_M_RES_NON_FIBER_01" weight="1" unique="true" layertags="fiber"/>
+          <template id="MISTS_M_RES_NON_FIBER_02" weight="1" unique="true" layertags="fiber"/>
+          <template id="MISTS_M_RES_NON_FIBER_03" weight="1" unique="true" layertags="fiber"/>
+        </type>
+      </size>
+      <size name="small">
+        <type category="resource" weight="1">
+          <rolllayertag>
+            <layertag name="t6" weight ="1"/>
+          </rolllayertag>
+          <template id="MISTS_S_RES_NON_FIBER_01" weight="1" layertags="fiber"/>
+          <template id="MISTS_S_RES_NON_FIBER_02" weight="1" layertags="fiber"/>
+          <template id="MISTS_S_RES_NON_FIBER_03" weight="1" layertags="fiber"/>
+          <template id="MISTS_S_RES_NON_FIBER_04" weight="1" layertags="fiber"/>
+          <template id="MISTS_S_RES_NON_FIBER_05" weight="1" layertags="fiber"/>
+        </type>
+      </size>
+    </templatepool>
+    <templatepool id="BLACK_RESOURCE_HIDE_COMMON">
+      <size name="medium">
+        <type category="resource" weight="1">
+          <rolllayertag>
+            <layertag name="t6" weight="1"/>
+          </rolllayertag>
+          <template id="MISTS_M_RES_NON_WOOD-HIDE_01" weight="1" unique="true" layertags="hide"/>
+          <template id="MISTS_M_RES_NON_WOOD-HIDE_02" weight="1" unique="true" layertags="hide"/>
+          <template id="MISTS_M_RES_NON_WOOD-HIDE_03" weight="1" unique="true" layertags="hide"/>
+        </type>
+      </size>
+      <size name="small">
+        <type category="resource" weight="1">
+          <rolllayertag>
+            <layertag name="t6" weight ="1"/>
+          </rolllayertag>
+          <template id="MISTS_S_RES_NON_WOOD-HIDE_01" weight="1" layertags="hide"/>
+          <template id="MISTS_S_RES_NON_WOOD-HIDE_02" weight="1" layertags="hide"/>
+          <template id="MISTS_S_RES_NON_WOOD-HIDE_03" weight="1" layertags="hide"/>
+          <template id="MISTS_S_RES_NON_WOOD-HIDE_04" weight="1" layertags="hide"/>
+          <template id="MISTS_S_RES_NON_WOOD-HIDE_05" weight="1" layertags="hide"/>
+        </type>
+      </size>
+    </templatepool>
+    <templatepool id="BLACK_RESOURCE_ORE_COMMON">
+      <size name="medium">
+        <type category="resource" weight="1">
+          <rolllayertag>
+            <layertag name="t6" weight="1"/>
+          </rolllayertag>
+          <template id="MISTS_M_RES_NON_ROCK-ORE_01" weight="1" unique="true" layertags="ore"/>
+          <template id="MISTS_M_RES_NON_ROCK-ORE_02" weight="1" unique="true" layertags="ore"/>
+          <template id="MISTS_M_RES_NON_ROCK-ORE_03" weight="1" unique="true" layertags="ore"/>
+        </type>
+      </size>
+      <size name="small">
+        <type category="resource" weight="1">
+          <rolllayertag>
+            <layertag name="t6" weight ="1"/>
+          </rolllayertag>
+          <template id="MISTS_S_RES_NON_ROCK-ORE_01" weight="1" layertags="ore"/>
+          <template id="MISTS_S_RES_NON_ROCK-ORE_02" weight="1" layertags="ore"/>
+          <template id="MISTS_S_RES_NON_ROCK-ORE_03" weight="1" layertags="ore"/>
+          <template id="MISTS_S_RES_NON_ROCK-ORE_04" weight="1" layertags="ore"/>
+          <template id="MISTS_S_RES_NON_ROCK-ORE_05" weight="1" layertags="ore"/>
+        </type>
+      </size>
+    </templatepool>
+    <templatepool id="BLACK_RESOURCE_ROCK_COMMON">
+      <size name="medium">
+        <type category="resource" weight="1">
+          <rolllayertag>
+            <layertag name="t6" weight="1"/>
+          </rolllayertag>
+          <template id="MISTS_M_RES_NON_ROCK-ORE_01" weight="1" unique="true" layertags="rock"/>
+          <template id="MISTS_M_RES_NON_ROCK-ORE_02" weight="1" unique="true" layertags="rock"/>
+          <template id="MISTS_M_RES_NON_ROCK-ORE_03" weight="1" unique="true" layertags="rock"/>
+        </type>
+      </size>
+      <size name="small">
+        <type category="resource" weight="1">
+          <rolllayertag>
+            <layertag name="t6" weight ="1"/>
+          </rolllayertag>
+          <template id="MISTS_S_RES_NON_ROCK-ORE_01" weight="1" layertags="rock"/>
+          <template id="MISTS_S_RES_NON_ROCK-ORE_02" weight="1" layertags="rock"/>
+          <template id="MISTS_S_RES_NON_ROCK-ORE_03" weight="1" layertags="rock"/>
+          <template id="MISTS_S_RES_NON_ROCK-ORE_04" weight="1" layertags="rock"/>
+          <template id="MISTS_S_RES_NON_ROCK-ORE_05" weight="1" layertags="rock"/>
+        </type>
+      </size>
+    </templatepool>
+    <templatepool id="BLACK_RESOURCE_WOOD_COMMON">
+      <size name="medium">
+        <type category="resource" weight="1">
+          <rolllayertag>
+            <layertag name="t6" weight="1"/>
+          </rolllayertag>
+          <template id="MISTS_M_RES_NON_WOOD-HIDE_01" weight="1" unique="true" layertags="wood"/>
+          <template id="MISTS_M_RES_NON_WOOD-HIDE_02" weight="1" unique="true" layertags="wood"/>
+          <template id="MISTS_M_RES_NON_WOOD-HIDE_03" weight="1" unique="true" layertags="wood"/>
+        </type>
+      </size>
+      <size name="small">
+        <type category="resource" weight="1">
+          <rolllayertag>
+            <layertag name="t6" weight ="1"/>
+          </rolllayertag>
+          <template id="MISTS_S_RES_NON_WOOD-HIDE_01" weight="1" layertags="wood"/>
+          <template id="MISTS_S_RES_NON_WOOD-HIDE_02" weight="1" layertags="wood"/>
+          <template id="MISTS_S_RES_NON_WOOD-HIDE_03" weight="1" layertags="wood"/>
+          <template id="MISTS_S_RES_NON_WOOD-HIDE_04" weight="1" layertags="wood"/>
+          <template id="MISTS_S_RES_NON_WOOD-HIDE_05" weight="1" layertags="wood"/>
+        </type>
+      </size>
+    </templatepool>
+    <templatepool id="BLACK_RESOURCE_FIBER_UNCOMMON">
+      <size name="medium">
+        <type category="resource" weight="1">
+          <rolllayertag>
+            <layertag name="t7" weight="1"/>
+          </rolllayertag>
+          <template id="MISTS_M_RES_NON_FIBER_01" weight="1" unique="true" layertags="fiber"/>
+          <template id="MISTS_M_RES_NON_FIBER_02" weight="1" unique="true" layertags="fiber"/>
+          <template id="MISTS_M_RES_NON_FIBER_03" weight="1" unique="true" layertags="fiber"/>
+        </type>
+      </size>
+      <size name="small">
+        <type category="resource" weight="1">
+          <rolllayertag>
+            <layertag name="t7" weight="1"/>
+          </rolllayertag>
+          <template id="MISTS_S_RES_NON_FIBER_01" weight="1" layertags="fiber"/>
+          <template id="MISTS_S_RES_NON_FIBER_02" weight="1" layertags="fiber"/>
+          <template id="MISTS_S_RES_NON_FIBER_03" weight="1" layertags="fiber"/>
+          <template id="MISTS_S_RES_NON_FIBER_04" weight="1" layertags="fiber"/>
+          <template id="MISTS_S_RES_NON_FIBER_05" weight="1" layertags="fiber"/>
+        </type>
+      </size>
+    </templatepool>
+    <templatepool id="BLACK_RESOURCE_HIDE_UNCOMMON">
+      <size name="medium">
+        <type category="resource" weight="1">
+          <rolllayertag>
+            <layertag name="t7" weight="1"/>
+          </rolllayertag>
+          <template id="MISTS_M_RES_NON_WOOD-HIDE_01" weight="1" unique="true" layertags="hide"/>
+          <template id="MISTS_M_RES_NON_WOOD-HIDE_02" weight="1" unique="true" layertags="hide"/>
+          <template id="MISTS_M_RES_NON_WOOD-HIDE_03" weight="1" unique="true" layertags="hide"/>
+        </type>
+      </size>
+      <size name="small">
+        <type category="resource" weight="1">
+          <rolllayertag>
+            <layertag name="t7" weight="1"/>
+          </rolllayertag>
+          <template id="MISTS_S_RES_NON_WOOD-HIDE_01" weight="1" layertags="hide"/>
+          <template id="MISTS_S_RES_NON_WOOD-HIDE_02" weight="1" layertags="hide"/>
+          <template id="MISTS_S_RES_NON_WOOD-HIDE_03" weight="1" layertags="hide"/>
+          <template id="MISTS_S_RES_NON_WOOD-HIDE_04" weight="1" layertags="hide"/>
+          <template id="MISTS_S_RES_NON_WOOD-HIDE_05" weight="1" layertags="hide"/>
+        </type>
+      </size>
+    </templatepool>
+    <templatepool id="BLACK_RESOURCE_ORE_UNCOMMON">
+      <size name="medium">
+        <type category="resource" weight="1">
+          <rolllayertag>
+            <layertag name="t7" weight="1"/>
+          </rolllayertag>
+          <template id="MISTS_M_RES_NON_ROCK-ORE_01" weight="1" unique="true" layertags="ore"/>
+          <template id="MISTS_M_RES_NON_ROCK-ORE_02" weight="1" unique="true" layertags="ore"/>
+          <template id="MISTS_M_RES_NON_ROCK-ORE_03" weight="1" unique="true" layertags="ore"/>
+        </type>
+      </size>
+      <size name="small">
+        <type category="resource" weight="1">
+          <rolllayertag>
+            <layertag name="t7" weight="1"/>
+          </rolllayertag>
+          <template id="MISTS_S_RES_NON_ROCK-ORE_01" weight="1" layertags="ore"/>
+          <template id="MISTS_S_RES_NON_ROCK-ORE_02" weight="1" layertags="ore"/>
+          <template id="MISTS_S_RES_NON_ROCK-ORE_03" weight="1" layertags="ore"/>
+          <template id="MISTS_S_RES_NON_ROCK-ORE_04" weight="1" layertags="ore"/>
+          <template id="MISTS_S_RES_NON_ROCK-ORE_05" weight="1" layertags="ore"/>
+        </type>
+      </size>
+    </templatepool>
+    <templatepool id="BLACK_RESOURCE_ROCK_UNCOMMON">
+      <size name="medium">
+        <type category="resource" weight="1">
+          <rolllayertag>
+            <layertag name="t7" weight="1"/>
+          </rolllayertag>
+          <template id="MISTS_M_RES_NON_ROCK-ORE_01" weight="1" unique="true" layertags="rock"/>
+          <template id="MISTS_M_RES_NON_ROCK-ORE_02" weight="1" unique="true" layertags="rock"/>
+          <template id="MISTS_M_RES_NON_ROCK-ORE_03" weight="1" unique="true" layertags="rock"/>
+        </type>
+      </size>
+      <size name="small">
+        <type category="resource" weight="1">
+          <rolllayertag>
+            <layertag name="t7" weight="1"/>
+          </rolllayertag>
+          <template id="MISTS_S_RES_NON_ROCK-ORE_01" weight="1" layertags="rock"/>
+          <template id="MISTS_S_RES_NON_ROCK-ORE_02" weight="1" layertags="rock"/>
+          <template id="MISTS_S_RES_NON_ROCK-ORE_03" weight="1" layertags="rock"/>
+          <template id="MISTS_S_RES_NON_ROCK-ORE_04" weight="1" layertags="rock"/>
+          <template id="MISTS_S_RES_NON_ROCK-ORE_05" weight="1" layertags="rock"/>
+        </type>
+      </size>
+    </templatepool>
+    <templatepool id="BLACK_RESOURCE_WOOD_UNCOMMON">
+      <size name="medium">
+        <type category="resource" weight="1">
+          <rolllayertag>
+            <layertag name="t7" weight="1"/>
+          </rolllayertag>
+          <template id="MISTS_M_RES_NON_WOOD-HIDE_01" weight="1" unique="true" layertags="wood"/>
+          <template id="MISTS_M_RES_NON_WOOD-HIDE_02" weight="1" unique="true" layertags="wood"/>
+          <template id="MISTS_M_RES_NON_WOOD-HIDE_03" weight="1" unique="true" layertags="wood"/>
+        </type>
+      </size>
+      <size name="small">
+        <type category="resource" weight="1">
+          <rolllayertag>
+            <layertag name="t7" weight="1"/>
+          </rolllayertag>
+          <template id="MISTS_S_RES_NON_WOOD-HIDE_01" weight="1" layertags="wood"/>
+          <template id="MISTS_S_RES_NON_WOOD-HIDE_02" weight="1" layertags="wood"/>
+          <template id="MISTS_S_RES_NON_WOOD-HIDE_03" weight="1" layertags="wood"/>
+          <template id="MISTS_S_RES_NON_WOOD-HIDE_04" weight="1" layertags="wood"/>
+          <template id="MISTS_S_RES_NON_WOOD-HIDE_05" weight="1" layertags="wood"/>
+        </type>
+      </size>
+    </templatepool>
+    <templatepool id="BLACK_RESOURCE_FIBER_RARE">
+      <size name="medium">
+        <type category="resource" weight="1">
+          <rolllayertag>
+            <layertag name="t8" weight="1"/>
+          </rolllayertag>
+          <template id="MISTS_M_RES_NON_FIBER_01" weight="1" unique="true" layertags="fiber"/>
+          <template id="MISTS_M_RES_NON_FIBER_02" weight="1" unique="true" layertags="fiber"/>
+          <template id="MISTS_M_RES_NON_FIBER_03" weight="1" unique="true" layertags="fiber"/>
+        </type>
+      </size>
+      <size name="small">
+        <type category="resource" weight="1">
+          <rolllayertag>
+            <layertag name="t8" weight="1"/>
+          </rolllayertag>
+          <template id="MISTS_S_RES_NON_FIBER_01" weight="1" layertags="fiber"/>
+          <template id="MISTS_S_RES_NON_FIBER_02" weight="1" layertags="fiber"/>
+          <template id="MISTS_S_RES_NON_FIBER_03" weight="1" layertags="fiber"/>
+          <template id="MISTS_S_RES_NON_FIBER_04" weight="1" layertags="fiber"/>
+          <template id="MISTS_S_RES_NON_FIBER_05" weight="1" layertags="fiber"/>
+        </type>
+      </size>
+    </templatepool>
+    <templatepool id="BLACK_RESOURCE_HIDE_RARE">
+      <size name="medium">
+        <type category="resource" weight="1">
+          <rolllayertag>
+            <layertag name="t8" weight="1"/>
+          </rolllayertag>
+          <template id="MISTS_M_RES_NON_WOOD-HIDE_01" weight="1" unique="true" layertags="hide"/>
+          <template id="MISTS_M_RES_NON_WOOD-HIDE_02" weight="1" unique="true" layertags="hide"/>
+          <template id="MISTS_M_RES_NON_WOOD-HIDE_03" weight="1" unique="true" layertags="hide"/>
+        </type>
+      </size>
+      <size name="small">
+        <type category="resource" weight="1">
+          <rolllayertag>
+            <layertag name="t8" weight="1"/>
+          </rolllayertag>
+          <template id="MISTS_S_RES_NON_WOOD-HIDE_01" weight="1" layertags="hide"/>
+          <template id="MISTS_S_RES_NON_WOOD-HIDE_02" weight="1" layertags="hide"/>
+          <template id="MISTS_S_RES_NON_WOOD-HIDE_03" weight="1" layertags="hide"/>
+          <template id="MISTS_S_RES_NON_WOOD-HIDE_04" weight="1" layertags="hide"/>
+          <template id="MISTS_S_RES_NON_WOOD-HIDE_05" weight="1" layertags="hide"/>
+        </type>
+      </size>
+    </templatepool>
+    <templatepool id="BLACK_RESOURCE_ORE_RARE">
+      <size name="medium">
+        <type category="resource" weight="1">
+          <rolllayertag>
+            <layertag name="t8" weight="1"/>
+          </rolllayertag>
+          <template id="MISTS_M_RES_NON_ROCK-ORE_01" weight="1" unique="true" layertags="ore"/>
+          <template id="MISTS_M_RES_NON_ROCK-ORE_02" weight="1" unique="true" layertags="ore"/>
+          <template id="MISTS_M_RES_NON_ROCK-ORE_03" weight="1" unique="true" layertags="ore"/>
+        </type>
+      </size>
+      <size name="small">
+        <type category="resource" weight="1">
+          <rolllayertag>
+            <layertag name="t8" weight="1"/>
+          </rolllayertag>
+          <template id="MISTS_S_RES_NON_ROCK-ORE_01" weight="1" layertags="ore"/>
+          <template id="MISTS_S_RES_NON_ROCK-ORE_02" weight="1" layertags="ore"/>
+          <template id="MISTS_S_RES_NON_ROCK-ORE_03" weight="1" layertags="ore"/>
+          <template id="MISTS_S_RES_NON_ROCK-ORE_04" weight="1" layertags="ore"/>
+          <template id="MISTS_S_RES_NON_ROCK-ORE_05" weight="1" layertags="ore"/>
+        </type>
+      </size>
+    </templatepool>
+    <templatepool id="BLACK_RESOURCE_ROCK_RARE">
+      <size name="medium">
+        <type category="resource" weight="1">
+          <rolllayertag>
+            <layertag name="t8" weight="1"/>
+          </rolllayertag>
+          <template id="MISTS_M_RES_NON_ROCK-ORE_01" weight="1" unique="true" layertags="rock"/>
+          <template id="MISTS_M_RES_NON_ROCK-ORE_02" weight="1" unique="true" layertags="rock"/>
+          <template id="MISTS_M_RES_NON_ROCK-ORE_03" weight="1" unique="true" layertags="rock"/>
+        </type>
+      </size>
+      <size name="small">
+        <type category="resource" weight="1">
+          <rolllayertag>
+            <layertag name="t8" weight="1"/>
+          </rolllayertag>
+          <template id="MISTS_S_RES_NON_ROCK-ORE_01" weight="1" layertags="rock"/>
+          <template id="MISTS_S_RES_NON_ROCK-ORE_02" weight="1" layertags="rock"/>
+          <template id="MISTS_S_RES_NON_ROCK-ORE_03" weight="1" layertags="rock"/>
+          <template id="MISTS_S_RES_NON_ROCK-ORE_04" weight="1" layertags="rock"/>
+          <template id="MISTS_S_RES_NON_ROCK-ORE_05" weight="1" layertags="rock"/>
+        </type>
+      </size>
+    </templatepool>
+    <templatepool id="BLACK_RESOURCE_WOOD_RARE">
+      <size name="medium">
+        <type category="resource" weight="1">
+          <rolllayertag>
+            <layertag name="t8" weight="1"/>
+          </rolllayertag>
+          <template id="MISTS_M_RES_NON_WOOD-HIDE_01" weight="1" unique="true" layertags="wood"/>
+          <template id="MISTS_M_RES_NON_WOOD-HIDE_02" weight="1" unique="true" layertags="wood"/>
+          <template id="MISTS_M_RES_NON_WOOD-HIDE_03" weight="1" unique="true" layertags="wood"/>
+        </type>
+      </size>
+      <size name="small">
+        <type category="resource" weight="1">
+          <rolllayertag>
+            <layertag name="t8" weight="1"/>
+          </rolllayertag>
+          <template id="MISTS_S_RES_NON_WOOD-HIDE_01" weight="1" layertags="wood"/>
+          <template id="MISTS_S_RES_NON_WOOD-HIDE_02" weight="1" layertags="wood"/>
+          <template id="MISTS_S_RES_NON_WOOD-HIDE_03" weight="1" layertags="wood"/>
+          <template id="MISTS_S_RES_NON_WOOD-HIDE_04" weight="1" layertags="wood"/>
+          <template id="MISTS_S_RES_NON_WOOD-HIDE_05" weight="1" layertags="wood"/>
         </type>
       </size>
     </templatepool>
@@ -1481,33 +2080,158 @@
           </resourceenchantment>
         </resourcepooltier>
       </resourcepool>
-    
+      <!--TODO: check initialfill values and resource attributes for balancing -->
+    <resourcepool name="RESOURCE_BLACK" mininitialfill="0.8" maxinitialfill="1">
+        <resourcepooltier tier="4">
+          <resourceenchantment level="0">
+            <resource type="rock" amount="32891" resourcespersecond="0.126895586"/>
+            <resource type="fiber" amount="32891" resourcespersecond="0.126895586"/>
+            <resource type="ore" amount="32891" resourcespersecond="0.126895586"/>
+            <resource type="wood" amount="32891" resourcespersecond="0.126895586"/>
+            <resource type="hide" amount="32891" resourcespersecond="0.126895586"/>
+          </resourceenchantment>
+          <resourceenchantment level="1">
+            <resource type="rock" amount="1284" resourcespersecond="0.004953081"/>
+            <resource type="fiber" amount="1284" resourcespersecond="0.004953081"/>
+            <resource type="ore" amount="1284" resourcespersecond="0.004953081"/>
+            <resource type="wood" amount="1284" resourcespersecond="0.004953081"/>
+            <resource type="hide" amount="1284" resourcespersecond="0.004953081"/>
+          </resourceenchantment>
+          <resourceenchantment level="2">
+            <resource type="rock" amount="257" resourcespersecond="0.000990616"/>
+            <resource type="fiber" amount="257" resourcespersecond="0.000990616"/>
+            <resource type="ore" amount="257" resourcespersecond="0.000990616"/>
+            <resource type="wood" amount="257" resourcespersecond="0.000990616"/>
+            <resource type="hide" amount="257" resourcespersecond="0.000990616"/>
+          </resourceenchantment>
+          <resourceenchantment level="3">
+            <resource type="rock" amount="100" resourcespersecond="0.000198123"/>
+            <resource type="fiber" amount="100" resourcespersecond="0.000198123"/>
+            <resource type="ore" amount="100" resourcespersecond="0.000198123"/>
+            <resource type="wood" amount="1000" resourcespersecond="0.000198123"/>
+            <resource type="hide" amount="100" resourcespersecond="0.000198123"/>
+          </resourceenchantment>
+        </resourcepooltier>
+        <resourcepooltier tier="5">
+          <resourceenchantment level="0">
+            <resource type="rock" amount="3184" resourcespersecond="0.122860104"/>
+            <resource type="fiber" amount="3184" resourcespersecond="0.122860104"/>
+            <resource type="ore" amount="3184" resourcespersecond="0.122860104"/>
+            <resource type="wood" amount="3184" resourcespersecond="0.122860104"/>
+            <resource type="hide" amount="3184" resourcespersecond="0.122860104"/>
+          </resourceenchantment>
+          <resourceenchantment level="1">
+            <resource type="rock" amount="1657" resourcespersecond="0.006394087"/>
+            <resource type="fiber" amount="1657" resourcespersecond="0.006394087"/>
+            <resource type="ore" amount="1657" resourcespersecond="0.006394087"/>
+            <resource type="wood" amount="1657" resourcespersecond="0.006394087"/>
+            <resource type="hide" amount="1657" resourcespersecond="0.006394087"/>
+          </resourceenchantment>
+          <resourceenchantment level="2">
+            <resource type="rock" amount="332" resourcespersecond="0.001278817"/>
+            <resource type="fiber" amount="332" resourcespersecond="0.001278817"/>
+            <resource type="ore" amount="332" resourcespersecond="0.001278817"/>
+            <resource type="wood" amount="332" resourcespersecond="0.001278817"/>
+            <resource type="hide" amount="332" resourcespersecond="0.001278817"/>
+          </resourceenchantment>
+          <resourceenchantment level="3">
+            <resource type="rock" amount="100" resourcespersecond="0.000255763"/>
+            <resource type="fiber" amount="100" resourcespersecond="0.000255763"/>
+            <resource type="ore" amount="100" resourcespersecond="0.000255763"/>
+            <resource type="wood" amount="100" resourcespersecond="0.000255763"/>
+            <resource type="hide" amount="100" resourcespersecond="0.000255763"/>
+          </resourceenchantment>
+        </resourcepooltier>
+        <resourcepooltier tier="6">
+          <resourceenchantment level="0">
+            <resource type="rock" amount="9677" resourcespersecond="0.037333488"/>
+            <resource type="fiber" amount="9677" resourcespersecond="0.037333488"/>
+            <resource type="ore" amount="9677" resourcespersecond="0.037333488"/>
+            <resource type="wood" amount="9677" resourcespersecond="0.037333488"/>
+            <resource type="hide" amount="9677" resourcespersecond="0.037333488"/>
+          </resourceenchantment>
+          <resourceenchantment level="1">
+            <resource type="rock" amount="755" resourcespersecond="0.002914456"/>
+            <resource type="fiber" amount="755" resourcespersecond="0.002914456"/>
+            <resource type="ore" amount="755" resourcespersecond="0.002914456"/>
+            <resource type="wood" amount="755" resourcespersecond="0.002914456"/>
+            <resource type="hide" amount="755" resourcespersecond="0.002914456"/>
+          </resourceenchantment>
+          <resourceenchantment level="2">
+            <resource type="rock" amount="151" resourcespersecond="0.000582891"/>
+            <resource type="fiber" amount="151" resourcespersecond="0.000582891"/>
+            <resource type="ore" amount="151" resourcespersecond="0.000582891"/>
+            <resource type="wood" amount="151" resourcespersecond="0.000582891"/>
+            <resource type="hide" amount="151" resourcespersecond="0.000582891"/>
+          </resourceenchantment>
+          <resourceenchantment level="3">
+            <resource type="rock" amount="100" resourcespersecond="0.000116578"/>
+            <resource type="fiber" amount="100" resourcespersecond="0.000116578"/>
+            <resource type="ore" amount="100" resourcespersecond="0.000116578"/>
+            <resource type="wood" amount="100" resourcespersecond="0.000116578"/>
+            <resource type="hide" amount="100" resourcespersecond="0.000116578"/>
+          </resourceenchantment>
+        </resourcepooltier>
+        <resourcepooltier tier="7">
+          <resourceenchantment level="0">
+            <resource type="rock" amount="3158" resourcespersecond="0.012181929"/>
+            <resource type="fiber" amount="3158" resourcespersecond="0.012181929"/>
+            <resource type="ore" amount="3158" resourcespersecond="0.012181929"/>
+            <resource type="wood" amount="3158" resourcespersecond="0.012181929"/>
+            <resource type="hide" amount="3158" resourcespersecond="0.012181929"/>
+          </resourceenchantment>
+          <resourceenchantment level="1">
+            <resource type="rock" amount="345" resourcespersecond="0.001331146"/>
+            <resource type="fiber" amount="345" resourcespersecond="0.001331146"/>
+            <resource type="ore" amount="345" resourcespersecond="0.001331146"/>
+            <resource type="wood" amount="345" resourcespersecond="0.001331146"/>
+            <resource type="hide" amount="345" resourcespersecond="0.001331146"/>
+          </resourceenchantment>
+          <resourceenchantment level="2">
+            <resource type="rock" amount="100" resourcespersecond="0.000266229"/>
+            <resource type="fiber" amount="100" resourcespersecond="0.000266229"/>
+            <resource type="ore" amount="100" resourcespersecond="0.000266229"/>
+            <resource type="wood" amount="100" resourcespersecond="0.000266229"/>
+            <resource type="hide" amount="100" resourcespersecond="0.000266229"/>
+          </resourceenchantment>
+          <resourceenchantment level="3">
+            <resource type="rock" amount="100" resourcespersecond="0.000053246"/>
+            <resource type="fiber" amount="100" resourcespersecond="0.000053246"/>
+            <resource type="ore" amount="100" resourcespersecond="0.000053246"/>
+            <resource type="wood" amount="100" resourcespersecond="0.000053246"/>
+            <resource type="hide" amount="100" resourcespersecond="0.000053246"/>
+          </resourceenchantment>
+        </resourcepooltier>
+        <resourcepooltier tier="8">
+          <resourceenchantment level="0">
+            <resource type="rock" amount="810" resourcespersecond="0.003124129"/>
+            <resource type="fiber" amount="810" resourcespersecond="0.003124129"/>
+            <resource type="ore" amount="810" resourcespersecond="0.003124129"/>
+            <resource type="wood" amount="810" resourcespersecond="0.003124129"/>
+            <resource type="hide" amount="810" resourcespersecond="0.003124129"/>
+          </resourceenchantment>
+          <resourceenchantment level="1">
+            <resource type="rock" amount="100" resourcespersecond="0.000290347"/>
+            <resource type="fiber" amount="100" resourcespersecond="0.000290347"/>
+            <resource type="ore" amount="100" resourcespersecond="0.000290347"/>
+            <resource type="wood" amount="100" resourcespersecond="0.000290347"/>
+            <resource type="hide" amount="100" resourcespersecond="0.000290347"/>
+          </resourceenchantment>
+          <resourceenchantment level="2">
+            <resource type="rock" amount="100" resourcespersecond="0.000058069"/>
+            <resource type="fiber" amount="100" resourcespersecond="0.000058069"/>
+            <resource type="ore" amount="100" resourcespersecond="0.000058069"/>
+            <resource type="wood" amount="100" resourcespersecond="0.000058069"/>
+            <resource type="hide" amount="100" resourcespersecond="0.000058069"/>
+          </resourceenchantment>
+          <resourceenchantment level="3">
+            <resource type="rock" amount="100" resourcespersecond="0.000011614"/>
+            <resource type="fiber" amount="100" resourcespersecond="0.000011614"/>
+            <resource type="ore" amount="100" resourcespersecond="0.000011614"/>
+            <resource type="wood" amount="100" resourcespersecond="0.000011614"/>
+            <resource type="hide" amount="100" resourcespersecond="0.000011614"/>
+          </resourceenchantment>
+        </resourcepooltier>
+      </resourcepool>
   </resourcepools>
-
-  <cagedwisps>
-    <cagedwisp uniquename="CAGED_WISP_MORGANA" cageopendurationsec="3">
-      <rewards>
-        <pvpchallengeobjective>
-          <reward clusterdangerbonustype="mistsyellow" objectivename="PVPCHALLENGE_MISTS_CAGED_WISP" />
-          <reward clusterdangerbonustype="mistsblack" objectivename="PVPCHALLENGE_MISTS_CAGED_WISP" />
-        </pvpchallengeobjective>
-      </rewards>
-    </cagedwisp>
-    <cagedwisp uniquename="CAGED_WISP_HERETIC" cageopendurationsec="3">
-      <rewards>
-        <pvpchallengeobjective>
-          <reward clusterdangerbonustype="mistsyellow" objectivename="PVPCHALLENGE_MISTS_CAGED_WISP" />
-          <reward clusterdangerbonustype="mistsblack" objectivename="PVPCHALLENGE_MISTS_CAGED_WISP" />
-        </pvpchallengeobjective>
-      </rewards>
-    </cagedwisp>
-    <cagedwisp uniquename="CAGED_WISP_UNDEAD" cageopendurationsec="3">
-      <rewards>
-        <pvpchallengeobjective>
-          <reward clusterdangerbonustype="mistsyellow" objectivename="PVPCHALLENGE_MISTS_CAGED_WISP" />
-          <reward clusterdangerbonustype="mistsblack" objectivename="PVPCHALLENGE_MISTS_CAGED_WISP" />
-        </pvpchallengeobjective>
-      </rewards>
-    </cagedwisp>
-  </cagedwisps>
 </mists>
