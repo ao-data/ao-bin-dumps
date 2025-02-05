@@ -2,8 +2,8 @@
 <patch xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="patch.xsd">
 
 	<!--Outpost Small Treasures-->
-	<remove sel="TreasureDistribution/Events/Event[@name='CASTLE_OUTPOST_STANDARD']/Weekdays" />
-	<add sel="TreasureDistribution/Events/Event[@name='CASTLE_OUTPOST_STANDARD']" aschild="true">
+	<remove sel="TreasureDistribution/ScheduledEvents/ScheduledEvent[@name='CASTLE_OUTPOST_STANDARD']/Weekdays" />
+	<add sel="TreasureDistribution/ScheduledEvents/ScheduledEvent[@name='CASTLE_OUTPOST_STANDARD']" aschild="true">
       <![CDATA[
       <Weekdays clustertime="false">
         <Weekday day="Monday">
@@ -79,10 +79,10 @@
 	</add>
 	
 	<!--Outpost Big Treasures-->
-	<remove sel="TreasureDistribution/Events/Event[@name='CASTLE_OUTPOST_WEEKEND']/Weekdays/Weekday[@day='Saturday']" />
-	<remove sel="TreasureDistribution/Events/Event[@name='CASTLE_OUTPOST_WEEKEND']/Weekdays/Weekday[@day='Sunday']" />
+	<remove sel="TreasureDistribution/ScheduledEvents/ScheduledEvent[@name='CASTLE_OUTPOST_WEEKEND']/Weekdays/Weekday[@day='Saturday']" />
+	<remove sel="TreasureDistribution/ScheduledEvents/ScheduledEvent[@name='CASTLE_OUTPOST_WEEKEND']/Weekdays/Weekday[@day='Sunday']" />
 
-	<add sel="TreasureDistribution/Events/Event[@name='CASTLE_OUTPOST_WEEKEND']/Weekdays" aschild="true">
+	<add sel="TreasureDistribution/ScheduledEvents/ScheduledEvent[@name='CASTLE_OUTPOST_WEEKEND']/Weekdays" aschild="true">
       <![CDATA[
 	    <Weekday day="Saturday">
           <Start   utc="17:59:00"/>
@@ -97,9 +97,9 @@
 	</add>
 
 	<!--Castle Small Treasures-->
-	<remove sel="TreasureDistribution/Events/Event[@name='CASTLE_STANDARD']/Weekdays" />
+	<remove sel="TreasureDistribution/ScheduledEvents/ScheduledEvent[@name='CASTLE_STANDARD']/Weekdays" />
 	
-	<add sel="TreasureDistribution/Events/Event[@name='CASTLE_STANDARD']" aschild="true">
+	<add sel="TreasureDistribution/ScheduledEvents/ScheduledEvent[@name='CASTLE_STANDARD']" aschild="true">
 	  <![CDATA[
       <Weekdays clustertime="false">
         <Weekday day="Monday">
@@ -175,10 +175,10 @@
 	</add>
 	
 	<!--Castle Big Treasures-->
-	<remove sel="TreasureDistribution/Events/Event[@name='CASTLE_WEEKEND']/Weekdays/Weekday[@day='Saturday']" />
-	<remove sel="TreasureDistribution/Events/Event[@name='CASTLE_WEEKEND']/Weekdays/Weekday[@day='Sunday']" />
+	<remove sel="TreasureDistribution/ScheduledEvents/ScheduledEvent[@name='CASTLE_WEEKEND']/Weekdays/Weekday[@day='Saturday']" />
+	<remove sel="TreasureDistribution/ScheduledEvents/ScheduledEvent[@name='CASTLE_WEEKEND']/Weekdays/Weekday[@day='Sunday']" />
 
-	<add sel="TreasureDistribution/Events/Event[@name='CASTLE_WEEKEND']/Weekdays" aschild="true">
+	<add sel="TreasureDistribution/ScheduledEvents/ScheduledEvent[@name='CASTLE_WEEKEND']/Weekdays" aschild="true">
 	  <![CDATA[
 	    <Weekday day="Saturday">
           <Start   utc="17:59:00"/>
