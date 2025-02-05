@@ -1342,7 +1342,7 @@
 
 			<ItemLossEvent>
 				<ThrownOutAvalonRoads>
-					<DurabilityLoss minfactor="0.2" maxfactor="0.4" />
+					<DurabilityLoss minfactor="0.2" maxfactor="0.4" minimumremainingfactor="0.01"/>
 					<StackLoss factor="0.33">
 						<Override itemtype="equipmentitem" factor="0"/>
 						<Override itemtype="mount" factor="0"/>
@@ -1351,7 +1351,7 @@
 				</ThrownOutAvalonRoads>
 
 				<AliveToDead>
-					<DurabilityLoss minfactor="0.2" maxfactor="0.4">
+					<DurabilityLoss minfactor="0.2" maxfactor="0.4"  minimumremainingfactor="0.01">
 						<Override itemtype="rewardtoken" minfactor="1" maxfactor="1"/>
 					</DurabilityLoss>
 					<StackLoss factor="0.33">
@@ -1369,7 +1369,7 @@
 				</AliveToKnockedOut>
 
 				<KnockedOutToDead>
-					<DurabilityLoss minfactor="0.15" maxfactor="0.35">
+					<DurabilityLoss minfactor="0.15" maxfactor="0.35"  minimumremainingfactor="0.01">
 						<Override itemtype="rewardtoken" minfactor="1" maxfactor="1"/>
 					</DurabilityLoss>
 					<StackLoss factor="0.33">
