@@ -817,6 +817,7 @@
         <ItemType name="hideoutitem" />
         <ItemType name="consumableitem" />
         <ItemType name="siegebanner" />
+        <ItemType name="rewardtoken" />
 			</ItemtypesNotLeavingTrash>
 			<!-- for more attackers count not listed the next lowest will be taken -->
 			<MultipleAttackerMultiplier durabilityloss="1.00" stackloss="1.00">
@@ -848,6 +849,7 @@
 					</DurabilityLoss>
 					<StackLoss factor="0.33">
 						<Override itemtype="rewardtoken" factor="1" />
+            <Override itemtype="trashitem" factor="1" />
 					</StackLoss>
 				</AliveToDead>
 
@@ -866,6 +868,7 @@
 					</DurabilityLoss>
 					<StackLoss factor="0.33">
 						<Override itemtype="rewardtoken" factor="1" />
+            <Override itemtype="trashitem" factor="1" />
 					</StackLoss>
 				</KnockedOutToDead>
 			</ItemLossEvent>
