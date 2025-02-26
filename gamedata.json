@@ -3451,6 +3451,9 @@
             },
             {
               "@name": "siegebanner"
+            },
+            {
+              "@name": "rewardtoken"
             }
           ]
         },
@@ -3548,10 +3551,16 @@
             },
             "StackLoss": {
               "@factor": "0.33",
-              "Override": {
-                "@itemtype": "rewardtoken",
-                "@factor": "1"
-              }
+              "Override": [
+                {
+                  "@itemtype": "rewardtoken",
+                  "@factor": "1"
+                },
+                {
+                  "@itemtype": "trashitem",
+                  "@factor": "1"
+                }
+              ]
             }
           },
           "AliveToKnockedOut": {
@@ -3588,10 +3597,16 @@
             },
             "StackLoss": {
               "@factor": "0.33",
-              "Override": {
-                "@itemtype": "rewardtoken",
-                "@factor": "1"
-              }
+              "Override": [
+                {
+                  "@itemtype": "rewardtoken",
+                  "@factor": "1"
+                },
+                {
+                  "@itemtype": "trashitem",
+                  "@factor": "1"
+                }
+              ]
             }
           }
         }
