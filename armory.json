@@ -88,7 +88,7 @@
           "@name": "zvz",
           "and": {
             "duration": {
-              "@mindurationminutes": "5"
+              "@mindurationminutes": "2"
             },
             "or": {
               "metric": [
@@ -101,8 +101,16 @@
                   "@minvalue": "5000"
                 },
                 {
+                  "@name": "damagereceived",
+                  "@minvalue": "5000"
+                },
+                {
                   "@name": "kills",
                   "@minvalue": "3"
+                },
+                {
+                  "@name": "pvpfamegained",
+                  "@minvalue": "1000"
                 }
               ]
             }
@@ -271,7 +279,7 @@
               },
               {
                 "duration": {
-                  "@mindurationminutes": "10"
+                  "@mindurationminutes": "5"
                 },
                 "or": {
                   "metric": [
@@ -291,6 +299,40 @@
         },
         {
           "@name": "castle",
+          "or": {
+            "duration": {
+              "@mindurationminutes": "2"
+            },
+            "and": [
+              {
+                "metric": [
+                  {
+                    "@name": "pvpfamegained",
+                    "@minvalue": "500"
+                  },
+                  {
+                    "@name": "kills",
+                    "@minvalue": "1"
+                  }
+                ]
+              },
+              {
+                "metric": [
+                  {
+                    "@name": "pvefamegained",
+                    "@minvalue": "500"
+                  },
+                  {
+                    "@name": "mobskilled",
+                    "@minvalue": "1"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "@name": "fortification",
           "and": {
             "duration": {
               "@mindurationminutes": "5"
@@ -298,26 +340,14 @@
             "or": {
               "metric": [
                 {
+                  "@name": "buildingdamage",
+                  "@minvalue": "1000"
+                },
+                {
                   "@name": "pvpfamegained",
-                  "@minvalue": "1"
-                },
-                {
-                  "@name": "pvefamegained",
-                  "@minvalue": "1"
-                },
-                {
-                  "@name": "mobskilled",
                   "@minvalue": "1"
                 }
               ]
-            }
-          }
-        },
-        {
-          "@name": "fortification",
-          "and": {
-            "duration": {
-              "@mindurationminutes": "10"
             }
           }
         },
@@ -343,9 +373,9 @@
         },
         {
           "@name": "gathering",
-          "and": {
+          "or": {
             "duration": {
-              "@mindurationminutes": "10"
+              "@mindurationminutes": "5"
             },
             "metric": {
               "@name": "pvefamegained",
@@ -355,9 +385,9 @@
         },
         {
           "@name": "fishing",
-          "and": {
+          "or": {
             "duration": {
-              "@mindurationminutes": "10"
+              "@mindurationminutes": "5"
             },
             "metric": {
               "@name": "pvefamegained",
@@ -403,7 +433,7 @@
         },
         {
           "@name": "hardcoreexpeditions",
-          "and": {
+          "or": {
             "duration": {
               "@mindurationminutes": "10"
             },
@@ -417,12 +447,12 @@
           "@name": "homebase",
           "and": {
             "duration": {
-              "@mindurationminutes": "10"
+              "@mindurationminutes": "5"
             },
             "metric": [
               {
                 "@name": "pvefamegained",
-                "@minvalue": "1"
+                "@minvalue": "500"
               },
               {
                 "@name": "mobskilled",

@@ -42,11 +42,13 @@
 
         <activity name="zvz">
             <and>
-                <duration mindurationminutes="5"/>
+                <duration mindurationminutes="2"/>
                 <or>
                     <metric name="damagedealt" minvalue="5000"/>
                     <metric name="healingdone" minvalue="5000"/>
+                    <metric name="damagereceived" minvalue="5000"/>
                     <metric name="kills" minvalue="3"/>
+                    <metric name="pvpfamegained" minvalue="1000"/>
                 </or>
             </and>
         </activity>
@@ -129,7 +131,7 @@
                     </or>
                 </and>
                 <and> <!-- PvE Scenario -->
-                    <duration mindurationminutes="10"/>
+                    <duration mindurationminutes="5"/>
                     <or>
                         <metric name="pvefamegained" minvalue="1000"/>
                         <metric name="mobskilled" minvalue="5"/>
@@ -139,19 +141,26 @@
         </activity>
 
         <activity name="castle">
-            <and>
-                <duration mindurationminutes="5"/>
-                <or>
-                    <metric name="pvpfamegained" minvalue="1"/>
-                    <metric name="pvefamegained" minvalue="1"/>
+            <or>
+                <duration mindurationminutes="2"/>
+                <and>
+                    <metric name="pvpfamegained" minvalue="500"/>
+                    <metric name="kills" minvalue="1"/>
+                </and>
+                <and>
+                    <metric name="pvefamegained" minvalue="500"/>
                     <metric name="mobskilled" minvalue="1"/>
-                </or>
-            </and>
+                </and>
+            </or>
         </activity>
 
         <activity name="fortification">
             <and>
-                <duration mindurationminutes="10"/>
+                <duration mindurationminutes="5"/>
+                <or>
+                    <metric name="buildingdamage" minvalue="1000"/>
+                    <metric name="pvpfamegained" minvalue="1"/>
+                </or>
             </and>
         </activity>
 
@@ -166,17 +175,17 @@
         </activity>
 
         <activity name="gathering">
-            <and>
-                <duration mindurationminutes="10"/>
+            <or>
+                <duration mindurationminutes="5"/>
                 <metric name="pvefamegained" minvalue="1000"/>
-            </and>
+            </or>
         </activity>
 
         <activity name="fishing">
-            <and>
-                <duration mindurationminutes="10"/>
+            <or>
+                <duration mindurationminutes="5"/>
                 <metric name="pvefamegained" minvalue="1000"/>
-            </and>
+            </or>
         </activity>
 
         <activity name="solodungeons">
@@ -201,16 +210,16 @@
         </activity>
 
         <activity name="hardcoreexpeditions">
-            <and>
+            <or>
                 <duration mindurationminutes="10"/>
                 <metric name="mobskilled" minvalue="10"/>
-            </and>
+            </or>
         </activity>
 
         <activity name="homebase">
             <and>
-                <duration mindurationminutes="10"/>
-                <metric name="pvefamegained" minvalue="1"/>
+                <duration mindurationminutes="5"/>
+                <metric name="pvefamegained" minvalue="500"/>
                 <metric name="mobskilled" minvalue="1"/>
             </and>
         </activity>
