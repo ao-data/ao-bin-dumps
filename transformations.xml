@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <transformations xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="transformations.xsd">
   <transformation uniquename="PANTHER" prefab="MOB_SHAPESHIFTER_PANTHER_01" avatarname="SHAPEPANTHER1" nametagoffset="1" prefabscale="0.7" idleanimoffset="0" attackcollisionradius="0.75" attacktype="melee" attackrange="2.5" abilitypower="0" abilitypowerscaled="120" attackdamage="0" attackdamagescaled="23" attackspeed="2" movespeed="5.5" hitpointsmax="0" hitpointsmaxscaled="1100" hitpointsregeneration="0" hitpointsregenerationscaled="11" energymax="0" energymaxscaled="120" energyregeneration="0" energyregenerationscaled="3" physicalarmor="0" physicalarmorscaled="87" magicresistance="0" magicresistancescaled="76" crowdcontrolresistance="0" crowdcontrolresistancescaled="24" magicspelldamagebonus="0.4" physicalspelldamagebonus="0.4" physicalattackdamagebonusscaled="0.4" magicattackdamagebonusscaled="0.4" bonusccdurationvsmobs="0" bonusccdurationvsplayers="0" focusfireprotectionpenetration="0.5" turnspeed="20">
     <spells>
@@ -12,21 +12,21 @@
     <attackvariations attackchaintime="2">
       <attack attackdamagefactor="1" attackdamagetimefactor="0.64" attackspeedfactor="1" attacktype="melee">
         <attackvfx prefab="FX/ClientPrefabs/fx_spell_panther_autoattack_impact" socket="damage" constraintpreset="inWorldWithRotate" target="target" />
-        <attackvfx prefab= "FX/ClientPrefabs/fx_spell_panther_autoattack_upright" socket="floor"  target="self" constraintpreset="inWorldWithRotate" event="onAttackHit"/>
+        <attackvfx prefab="FX/ClientPrefabs/fx_spell_panther_autoattack_upright" socket="floor" target="self" constraintpreset="inWorldWithRotate" event="onAttackHit" />
       </attack>
       <attack attackdamagefactor="1" attackdamagetimefactor="0.64" attackspeedfactor="1" attacktype="melee">
         <attackvfx prefab="FX/ClientPrefabs/fx_spell_panther_autoattack_impact" socket="damage" constraintpreset="inWorldWithRotate" target="target" />
-        <attackvfx prefab= "FX/ClientPrefabs/fx_spell_panther_autoattack_left" socket="floor"  target="self" constraintpreset="inWorldWithRotate" event="onAttackHit"/>
+        <attackvfx prefab="FX/ClientPrefabs/fx_spell_panther_autoattack_left" socket="floor" target="self" constraintpreset="inWorldWithRotate" event="onAttackHit" />
       </attack>
       <attack attackdamagefactor="1" attackdamagetimefactor="0.64" attackspeedfactor="1" attacktype="melee">
        <attackvfx prefab="FX/ClientPrefabs/fx_spell_panther_autoattack_impact" socket="damage" constraintpreset="inWorldWithRotate" target="target" />
-       <attackvfx prefab= "FX/ClientPrefabs/fx_spell_panther_autoattack_right" socket="floor"  target="self" constraintpreset="inWorldWithRotate" event="onAttackHit"/>
+       <attackvfx prefab="FX/ClientPrefabs/fx_spell_panther_autoattack_right" socket="floor" target="self" constraintpreset="inWorldWithRotate" event="onAttackHit" />
       </attack>
     </attackvariations>
     <SocketPreset name="MOB_SHAPE_PANTHER" />
     <AssetVfxPreset name="MOB_SHAPESHIFTER_PANTHER" />
     <AudioInfo name="SHAPESHIFTER_PANTHER" />
-    <SpawnVfx spawnVfxPrefab="FX/ClientPrefabs/fx_spell_shapeshifter_transform_panther"/>
+    <SpawnVfx spawnVfxPrefab="FX/ClientPrefabs/fx_spell_shapeshifter_transform_panther" />
   </transformation>
   
   <transformation uniquename="ENT" prefab="MOB_SHAPESHIFTER_ENT_01" avatarname="SHAPEENT1" nametagoffset="3" prefabscale="0.8" attackcollisionradius="0.75" attacktype="ranged" attackrange="9" abilitypower="0" abilitypowerscaled="120" attackdamage="0" attackdamagescaled="20" attackspeed="1.35" movespeed="5.5" hitpointsmax="0" hitpointsmaxscaled="1200" hitpointsregeneration="0" hitpointsregenerationscaled="12" energymax="0" energymaxscaled="120" energyregeneration="0" energyregenerationscaled="3" physicalarmor="0" physicalarmorscaled="108" magicresistance="0" magicresistancescaled="108" crowdcontrolresistance="0" crowdcontrolresistancescaled="30" magicspelldamagebonus="0.2" physicalspelldamagebonus="0.2" physicalattackdamagebonusscaled="0.2" magicattackdamagebonusscaled="0.2" bonusccdurationvsmobs="0.2" bonusccdurationvsplayers="0.2" healbonus="0.4" turnspeed="20">
@@ -39,8 +39,8 @@
       <passivespell uniquename="PASSIVE_SHAPE_ENT" />
 	</passivespells>
 	  <attackvariations attackchaintime="2">
-      <attack attackdamagefactor="1" attackdamagetimefactor="1" attackspeedfactor="1" attacktype="magic"/>
-      <attack attackdamagefactor="1" attackdamagetimefactor="1" attackspeedfactor="1" attacktype="magic"/>
+      <attack attackdamagefactor="1" attackdamagetimefactor="1" attackspeedfactor="1" attacktype="magic" />
+      <attack attackdamagefactor="1" attackdamagetimefactor="1" attackspeedfactor="1" attacktype="magic" />
     </attackvariations>
 		<projectile prefab="FX/ClientPrefabs/fx_spell_ent_autoattack_projectile" startsocket="head" hitsocket="damage" flyspeed="30">
 			<impactvfx prefab="FX/ClientPrefabs/fx_spell_ent_autoattack_impact" impactsocket="damage" />
@@ -48,7 +48,7 @@
     <SocketPreset name="MOB_SHAPE_ENT" />
     <AssetVfxPreset name="MOB_SHAPESHIFTER_ENT" />
     <AudioInfo name="SHAPESHIFTER_ENT" />
-    <SpawnVfx spawnVfxPrefab="FX/ClientPrefabs/fx_spell_shapeshifter_transform_ent"/>
+    <SpawnVfx spawnVfxPrefab="FX/ClientPrefabs/fx_spell_shapeshifter_transform_ent" />
   </transformation>
 
   <transformation uniquename="BEAR" prefab="MOB_SHAPESHIFTER_DIREBEAR_01" avatarname="SHAPEDIREBEAR1" nametagoffset="1" prefabscale="1.15" idleanimoffset="0" attackcollisionradius="0.75" attacktype="melee" attackrange="3" abilitypower="0" abilitypowerscaled="120" attackdamage="0" attackdamagescaled="50" attackspeed="0.9" movespeed="5.5" hitpointsmax="0" hitpointsmaxscaled="1600" hitpointsregeneration="0" hitpointsregenerationscaled="14" energymax="0" energymaxscaled="120" energyregeneration="0" energyregenerationscaled="3" physicalarmor="0" physicalarmorscaled="124" magicresistance="0" magicresistancescaled="112" crowdcontrolresistance="0" crowdcontrolresistancescaled="40" magicspelldamagebonus="0.1" physicalspelldamagebonus="0.1" physicalattackdamagebonusscaled="0.1" magicattackdamagebonusscaled="0.1" bonusccdurationvsmobs="0.4" bonusccdurationvsplayers="0.4" threatbonus="0.5" focusfireprotectionpenetration="0.2" turnspeed="20">
@@ -63,20 +63,20 @@
     <attackvariations attackchaintime="2">
       <attack attackdamagefactor="1" attackspeedfactor="1" attackdamagetimefactor="1.4" attacktype="melee">
         <attackvfx prefab="FX/ClientPrefabs/fx_spell_bear_autoattack_impact" socket="damage" constraintpreset="inWorldWithRotate" target="target" />
-         <attackvfx prefab= "FX/ClientPrefabs/fx_spell_bear_autoattack_right" socket="floor"  target="self" constraintpreset="inWorldWithRotate" event="onAttackHit"/>
+         <attackvfx prefab="FX/ClientPrefabs/fx_spell_bear_autoattack_right" socket="floor" target="self" constraintpreset="inWorldWithRotate" event="onAttackHit" />
       </attack>
       <attack attackdamagefactor="1" attackspeedfactor="1" attackdamagetimefactor="1.4" attacktype="melee">
         <attackvfx prefab="FX/ClientPrefabs/fx_spell_bear_autoattack_impact" socket="damage" constraintpreset="inWorldWithRotate" target="target" />
-         <attackvfx prefab= "FX/ClientPrefabs/fx_spell_bear_autoattack_left" socket="floor"  target="self" constraintpreset="inWorldWithRotate" event="onAttackHit"/>
+         <attackvfx prefab="FX/ClientPrefabs/fx_spell_bear_autoattack_left" socket="floor" target="self" constraintpreset="inWorldWithRotate" event="onAttackHit" />
       </attack>
     </attackvariations>
     <SocketPreset name="MOB_SHAPE_BEAR" />
     <AssetVfxPreset name="MOB_SHAPESHIFTER_BEAR" />
     <AudioInfo name="SHAPESHIFTER_WEREBEAR" />
-    <SpawnVfx spawnVfxPrefab="FX/ClientPrefabs/fx_spell_shapeshifter_transform_bear"/>
+    <SpawnVfx spawnVfxPrefab="FX/ClientPrefabs/fx_spell_shapeshifter_transform_bear" />
   </transformation>
 
-  <transformation uniquename="WEREWOLF" prefab="MOB_SHAPESHIFTER_WEREWOLF_01" avatarname="SHAPEWEREWOLF1" attackupperbodyblendtime="0.0135" nametagoffset="1.5" prefabscale="0.95" attackcollisionradius="0.75" attacktype="melee" attackrange="3" abilitypower="0" abilitypowerscaled="120" attackdamage="0" attackdamagescaled="25" attackspeed="1.8" movespeed="5.5" hitpointsmax="0" hitpointsmaxscaled="1100" hitpointsregeneration="0" hitpointsregenerationscaled="12.5" energymax="0" energymaxscaled="120" energyregeneration="0" energyregenerationscaled="3" physicalarmor="0" physicalarmorscaled="92" magicresistance="0" magicresistancescaled="92" crowdcontrolresistance="0" crowdcontrolresistancescaled="26" magicspelldamagebonus="0.3" physicalspelldamagebonus="0.3" physicalattackdamagebonusscaled="0.3" magicattackdamagebonusscaled="0.3" bonusccdurationvsmobs="0.1" bonusccdurationvsplayers="0.1" focusfireprotectionpenetration="0.3" turnspeed="20" healbonus="0.3">
+  <transformation uniquename="WEREWOLF" prefab="MOB_SHAPESHIFTER_WEREWOLF_01" avatarname="SHAPEWEREWOLF1" attackupperbodyblendtime="0.0135" nametagoffset="1.5" prefabscale="0.95" attackcollisionradius="0.75" attacktype="melee" attackrange="3" abilitypower="0" abilitypowerscaled="120" attackdamage="0" attackdamagescaled="25" attackspeed="1.8" movespeed="5.5" hitpointsmax="0" hitpointsmaxscaled="1000" hitpointsregeneration="0" hitpointsregenerationscaled="12.5" energymax="0" energymaxscaled="120" energyregeneration="0" energyregenerationscaled="3" physicalarmor="0" physicalarmorscaled="92" magicresistance="0" magicresistancescaled="92" crowdcontrolresistance="0" crowdcontrolresistancescaled="26" magicspelldamagebonus="0.3" physicalspelldamagebonus="0.3" physicalattackdamagebonusscaled="0.3" magicattackdamagebonusscaled="0.3" bonusccdurationvsmobs="0.1" bonusccdurationvsplayers="0.1" focusfireprotectionpenetration="0.3" turnspeed="20" healbonus="0.3">
     <spells>
       <spell uniquename="WEREWOLF_TEAR_APART" slot="mainhand1" />
       <spell uniquename="WEREWOLF_DASH" slot="mainhand2" />
@@ -87,20 +87,20 @@
     </passivespells>
     <attackvariations attackchaintime="2">
       <attack attackdamagefactor="1" attackdamagetimefactor="0.64" attackspeedfactor="1" attacktype="melee">
-        <attackvfx prefab= "FX/ClientPrefabs/fx_spell_werewolf_autoattack_left" socket="floor"  target="self" constraintpreset="inWorldWithRotate" event="onAttackHit"/>
+        <attackvfx prefab="FX/ClientPrefabs/fx_spell_werewolf_autoattack_left" socket="floor" target="self" constraintpreset="inWorldWithRotate" event="onAttackHit" />
       </attack>
 	    <attack attackdamagefactor="1" attackdamagetimefactor="0.64" attackspeedfactor="1" attacktype="melee">
-        <attackvfx prefab= "FX/ClientPrefabs/fx_spell_werewolf_autoattack_right" socket="floor"  target="self" constraintpreset="inWorldWithRotate" event="onAttackHit"/>
+        <attackvfx prefab="FX/ClientPrefabs/fx_spell_werewolf_autoattack_right" socket="floor" target="self" constraintpreset="inWorldWithRotate" event="onAttackHit" />
       </attack>
       <attack attackdamagefactor="1" attackdamagetimefactor="0.8" attackspeedfactor="0.67" attacktype="melee">
-        <attackvfx prefab= "FX/ClientPrefabs/fx_spell_werewolf_autoattack" socket="floor"  target="self" constraintpreset="inWorldWithRotate" event="onAttackHit"/>
+        <attackvfx prefab="FX/ClientPrefabs/fx_spell_werewolf_autoattack" socket="floor" target="self" constraintpreset="inWorldWithRotate" event="onAttackHit" />
       </attack>
     </attackvariations>
     <SocketPreset name="MOB_SHAPE_WEREWOLF" />
     <AssetVfxPreset name="MOB_SHAPESHIFTER_WEREWOLF" />
-    <AudioInfo name="SHAPESHIFTER_WEREWOLF"/>
-    <LayerBlendInfo name="Instant_In_Out"/>
-    <SpawnVfx spawnVfxPrefab="FX/ClientPrefabs/fx_spell_shapeshifter_transform_werewolf"/>
+    <AudioInfo name="SHAPESHIFTER_WEREWOLF" />
+    <LayerBlendInfo name="Instant_In_Out" />
+    <SpawnVfx spawnVfxPrefab="FX/ClientPrefabs/fx_spell_shapeshifter_transform_werewolf" />
   </transformation>
   
   <transformation uniquename="IMP" prefab="MOB_SHAPESHIFTER_IMP_01" avatarname="SHAPEIMP1" nametagoffset="2" prefabscale="0.75" attackcollisionradius="0.75" attacktype="magic" attackrange="12" abilitypower="0" abilitypowerscaled="120" attackdamage="0" attackdamagescaled="17" attackspeed="1.75" movespeed="5.5" hitpointsmax="0" hitpointsmaxscaled="1000" hitpointsregeneration="0" hitpointsregenerationscaled="10" energymax="0"  energymaxscaled="120" energyregeneration="0" energyregenerationscaled="3" physicalarmor="0" physicalarmorscaled="60" magicresistance="0" magicresistancescaled="69" crowdcontrolresistance="0" crowdcontrolresistancescaled="20" magicspelldamagebonus="0.5" physicalspelldamagebonus="0.5" physicalattackdamagebonusscaled="0.5" magicattackdamagebonusscaled="0.5" bonusccdurationvsmobs="0" bonusccdurationvsplayers="0" turnspeed="20">
@@ -122,8 +122,8 @@
     </projectile>
     <SocketPreset name="MOB_SHAPE_IMP" />
     <AssetVfxPreset name="MOB_SHAPESHIFTER_IMP" />
-    <AudioInfo name="SHAPESHIFTER_IMP"/>
-    <SpawnVfx spawnVfxPrefab="FX/ClientPrefabs/fx_spell_shapeshifter_transform_imp"/>
+    <AudioInfo name="SHAPESHIFTER_IMP" />
+    <SpawnVfx spawnVfxPrefab="FX/ClientPrefabs/fx_spell_shapeshifter_transform_imp" />
   </transformation>
 
   <transformation uniquename="ROCK_ELEMENTAL" prefab="MOB_SHAPESHIFTER_ROCK_ELEMENTAL_01" avatarname="SHAPEELEMENTAL1" attackupperbodyblendtime="0.75" nametagoffset="3" prefabscale="1.15" attackcollisionradius="0.75" attacktype="melee" attackrange="4" abilitypower="0" abilitypowerscaled="120" attackdamage="0" attackdamagescaled="58" attackspeed="0.67" movespeed="4.5" hitpointsmax="0" hitpointsmaxscaled="1700" hitpointsregeneration="0" hitpointsregenerationscaled="17" energymax="0" energymaxscaled="120" energyregeneration="0" energyregenerationscaled="3" physicalarmor="0" physicalarmorscaled="140" magicresistance="0" magicresistancescaled="126" crowdcontrolresistance="0" crowdcontrolresistancescaled="50" magicspelldamagebonus="0" physicalspelldamagebonus="0" physicalattackdamagebonusscaled="0" magicattackdamagebonusscaled="0" bonusccdurationvsmobs="0.5" bonusccdurationvsplayers="0.5" threatbonus="0.5" focusfireprotectionpenetration="0.2" turnspeed="10">
@@ -141,8 +141,8 @@
     </attackvariations>
     <SocketPreset name="MOB_SHAPE_ROCK_ELEMENTAL" />
     <AssetVfxPreset name="MOB_SHAPESHIFTER_ROCK_ELEMENTAL" />
-    <AudioInfo name="SHAPESHIFTER_ELEMENTAL"/>
-    <SpawnVfx spawnVfxPrefab="FX/ClientPrefabs/fx_spell_shapeshifter_transform_rock_elemental"/>
+    <AudioInfo name="SHAPESHIFTER_ELEMENTAL" />
+    <SpawnVfx spawnVfxPrefab="FX/ClientPrefabs/fx_spell_shapeshifter_transform_rock_elemental" />
   </transformation>
 
   <transformation uniquename="AVALONIAN_EAGLE" prefab="MOB_SHAPESHIFTER_EAGLE_01" avatarname="SHAPEEAGLE1" nametagoffset="3.5" prefabscale="0.6" attackcollisionradius="0.75" attacktype="magic" attackrange="15" abilitypower="0" abilitypowerscaled="120" attackdamage="0" attackdamagescaled="37" attackspeed="0.8" movespeed="5.5" hitpointsmax="0" hitpointsmaxscaled="1200" hitpointsregeneration="0" hitpointsregenerationscaled="12" energymax="0" energymaxscaled="120" energyregeneration="0" energyregenerationscaled="3" physicalarmor="0" physicalarmorscaled="68" magicresistance="0" magicresistancescaled="78" crowdcontrolresistance="0" crowdcontrolresistancescaled="22" magicspelldamagebonus="0.45" physicalspelldamagebonus="0.45" physicalattackdamagebonusscaled="0.45" magicattackdamagebonusscaled="0.45" bonusccdurationvsmobs="0" bonusccdurationvsplayers="0" turnspeed="20">    
@@ -155,17 +155,17 @@
       <passivespell uniquename="PASSIVE_SHAPE_EAGLE" />
     </passivespells>
     <attackvariations attackchaintime="2">
-      <attack attackdamagefactor="1" attackdamagetimefactor="1" attackspeedfactor="1.45" attacktype="magic"/>
-      <attack attackdamagefactor="1" attackdamagetimefactor="1" attackspeedfactor="1.78" attacktype="magic"/>
-      <attack attackdamagefactor="1" attackdamagetimefactor="1" attackspeedfactor="1.78" attacktype="magic"/>
+      <attack attackdamagefactor="1" attackdamagetimefactor="1" attackspeedfactor="1.45" attacktype="magic" />
+      <attack attackdamagefactor="1" attackdamagetimefactor="1" attackspeedfactor="1.78" attacktype="magic" />
+      <attack attackdamagefactor="1" attackdamagetimefactor="1" attackspeedfactor="1.78" attacktype="magic" />
     </attackvariations>    
     <projectile prefab="FX/ClientPrefabs/fx_spell_eagle_autoattack_projectile" startsocket="head" hitsocket="damage" flyspeed="50" ignoresocketscale="true">
-      <impactvfx prefab="FX/ClientPrefabs/fx_spell_eagle_autoattack_impact" impactsocket="damage" ignoresocketscale="true"/>
+      <impactvfx prefab="FX/ClientPrefabs/fx_spell_eagle_autoattack_impact" impactsocket="damage" ignoresocketscale="true" />
     </projectile>
     <SocketPreset name="MOB_SHAPE_EAGLE" />
     <AssetVfxPreset name="MOB_SHAPESHIFTER_EAGLE" />
     <AudioInfo name="SHAPESHIFTER_EAGLE" />
-    <SpawnVfx spawnVfxPrefab="FX/ClientPrefabs/fx_spell_shapeshifter_transform_eagle"/>
+    <SpawnVfx spawnVfxPrefab="FX/ClientPrefabs/fx_spell_shapeshifter_transform_eagle" />
   </transformation>
 
   <passivetransformation uniquename="WOLPERTINGER" prefab="MOB_HIDE_WOLPERTINGER_01" prefabscale="2" attackcollisionradius="0.75" turnspeed="20">
@@ -174,7 +174,7 @@
     <SocketPreset name="MOB_AVALON_EAGLE" />
     <AssetVfxPreset name="MOB_MISTDRAGONHAWK" />
     <AudioInfo name="MOB_WOLPERTINGER" />
-    <SpawnVfx spawnVfxPrefab="FX/ClientPrefabs/fx_spell_shapeshifter_transform"/>
+    <SpawnVfx spawnVfxPrefab="FX/ClientPrefabs/fx_spell_shapeshifter_transform" />
   </passivetransformation>
   
   <passivetransformation uniquename="RAT" prefab="MOB_FOULRAT_01" prefabscale="1" attackcollisionradius="0.75" turnspeed="20">
@@ -183,7 +183,7 @@
     <SocketPreset name="MOB_WOLF" />
     <AssetVfxPreset name="MOB_WOLF" />
     <AudioInfo name="MOB_RAT" />
-    <SpawnVfx spawnVfxPrefab="FX/ClientPrefabs/fx_spell_shapeshifter_transform"/>
+    <SpawnVfx spawnVfxPrefab="FX/ClientPrefabs/fx_spell_shapeshifter_transform" />
   </passivetransformation>
 
   <passivetransformation uniquename="TOAD" prefab="MOB_HIDE_GIANTTOAD_01" prefabscale="1.2" attackcollisionradius="0.75" turnspeed="20">
@@ -192,7 +192,7 @@
     <SocketPreset name="MOB_TOAD" />
     <AssetVfxPreset name="MOB_WOLF" />
     <AudioInfo name="MOB_TOAD" />
-    <SpawnVfx spawnVfxPrefab="FX/ClientPrefabs/fx_spell_shapeshifter_transform"/>
+    <SpawnVfx spawnVfxPrefab="FX/ClientPrefabs/fx_spell_shapeshifter_transform" />
   </passivetransformation>
 
   <passivetransformation uniquename="MARMOT" prefab="MOB_HIDE_MARMOT_01" prefabscale="2" attackcollisionradius="0.75" turnspeed="20">
@@ -201,7 +201,7 @@
     <SocketPreset name="MOB_MARMOT" />
     <AssetVfxPreset name="MOB_MISTDRAGONHAWK" />
     <AudioInfo name="MOB_RABBIT" />
-    <SpawnVfx spawnVfxPrefab="FX/ClientPrefabs/fx_spell_shapeshifter_transform"/>
+    <SpawnVfx spawnVfxPrefab="FX/ClientPrefabs/fx_spell_shapeshifter_transform" />
   </passivetransformation>
 
   <passivetransformation uniquename="RABBIT" prefab="MOB_HIDE_RABBIT_01" prefabscale="2" attackcollisionradius="0.75" turnspeed="20">
@@ -210,7 +210,7 @@
     <SocketPreset name="MOB_MARMOT" />
     <AssetVfxPreset name="MOB_MISTDRAGONHAWK" />
     <AudioInfo name="MOB_RABBIT" />
-    <SpawnVfx spawnVfxPrefab="FX/ClientPrefabs/fx_spell_shapeshifter_transform"/>
+    <SpawnVfx spawnVfxPrefab="FX/ClientPrefabs/fx_spell_shapeshifter_transform" />
   </passivetransformation>
 
 </transformations>
