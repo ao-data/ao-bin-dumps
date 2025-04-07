@@ -3338,6 +3338,14 @@
   <WwiseSwitchInfo name="ITEM_AVALON_CANNON">
     <WeaponType name="avalon_cannon"/>
   </WwiseSwitchInfo>
+
+  <WwiseSwitchInfo name="ITEM_DUALCROSSBOW_CRYSTAL_SMALL">
+	<WeaponType name="bolt_crystal_small"/>
+  </WwiseSwitchInfo>
+
+  <WwiseSwitchInfo name="ITEM_DUALCROSSBOW_CRYSTAL_MEDIUM">
+	<WeaponType name="bolt_crystal_medium"/>
+  </WwiseSwitchInfo>
   
   <WwiseSwitchInfo name="ITEM_STAFF_CURSED">
     <WeaponType name="cursed"/>
@@ -4786,6 +4794,10 @@
     <OnChannelingInterrupted name="Stop_grail_crossbow_cannon_channel" />
     <OnChannelingCancelled name="Stop_grail_crossbow_cannon_channel" />
   </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_CRYSTAL_CROSSBOW_FLICKERSHOT" >
+	<OnCastFinished name="Play_crystal_crossbow_flickershot_cast" />
+  </WwiseEventInfo>	
   
   <WwiseEventInfo name="SPELL_ROCK_HIT_MEDIUM">
     <OnSpellHit name="Play_rock_impact_medium" />
@@ -5324,6 +5336,12 @@
 	<OnCastStart name="Play_fire_cast_load_big_livingtorch" />
 	<OnCastInterrupted name="Stop_fire_cast_load_big_livingtorch" />
 	<OnCastCanceled name="Stop_fire_cast_load_big_livingtorch" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_FIRE_CAST_FLAMEDASH_E">
+	<OnCastFinished name="Play_fire_cast_big_crystalstaff_dash" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_FIRE_FLAMEDASH_EXPLOSION_BIG">
+	<OnCastFinished name="Play_fire_impact_big_crystalstaff_explosion" />
   </WwiseEventInfo>
     
   <WwiseEventInfo name="SPELL_FROST_START_MEDIUM">
