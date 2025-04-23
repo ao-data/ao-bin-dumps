@@ -8771,6 +8771,65 @@
     <OnCastFinished name="Play_fire_cast_huge" />
   </WwiseEventInfo>
 
+  <WwiseEventInfo name="DEMON_HAZARD_GLUE_EXPLODE">
+	<OnSpellHit name="Play_mob_hazard_glue_explosion"/>
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="DEMON_STATUE_SPAWN">
+	<OnSpellHit name="Play_demon_statue_spawn_fx"/>
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="DEMON_STATUE_EXPLODE">
+	<OnCastFinished name="Play_demon_statue_die_explode"/>
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="DEMON_SORCERER_CHANNELING_LOAD">
+	<OnChannelingStart name="Play_demon_sorcerer_load_vo" />
+	<OnChannelingCancelled name="Stop_demon_sorcerer_load_vo" />
+	<OnChannelingEnd name="Stop_demon_sorcerer_load_vo" />
+	<OnChannelingInterrupted name="Stop_demon_sorcerer_load_vo" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="DEMON_SORCERER_EXHALE_CAST">
+	<OnCastFinished name="Play_demon_sorcerer_exhale_vo"/>
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="DEMON_SORCERER_BOSS_RELOAD_CAST">
+	<OnCastStart name="Play_demon_sorcerer_boss_load_vo"/>
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="DEMON_SORCERER_BOSS_RELOAD_CHANNEL">
+	<OnChannelingStart name="Play_demon_sorcerer_boss_reload_channel" />
+	<OnChannelingCancelled name="Stop_demon_sorcerer_boss_reload_channel" />
+	<OnChannelingEnd name="Stop_demon_sorcerer_boss_reload_channel" />
+	<OnChannelingInterrupted name="Stop_demon_sorcerer_boss_reload_channel" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="DEMON_SORCERER_BOSS_RUPTURE">
+	<OnCastFinished name="Play_demon_sorcerer_boss_cast_short_vo" />
+	<OnSpellHit name="Play_fire_cast_medium" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="DEMON_SORCERER_FIRESTORM_PILLAR_SPELLHIT">
+	<OnSpellHit name="Play_fire_flamepillar_instanced" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="DEMON_SORCERER_BOSS_EXHALE">
+	<OnCastStart name="Play_demon_sorcerer_boss_cast_vo"/>
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="DEMON_SORCERER_BOSS_PHASECHANGE">
+	<OnCastStart name="Play_demon_sorcerer_boss_phasechange_vo"/>
+	<OnCastFinished name="Play_fire_cast_big" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="DEMON_CHAINED_BOSS_FIREBEAM_CHANNEL">
+	<OnChannelingStart name="Play_demon_boss_fire_beam_loop" />
+	<OnChannelingCancelled name="Stop_demon_boss_fire_beam_loop" />
+	<OnChannelingEnd name="Stop_demon_boss_fire_beam_loop" />
+	<OnChannelingInterrupted name="Stop_demon_boss_fire_beam_loop" />
+  </WwiseEventInfo>
+	
   <WwiseEventInfo name="DEMON_MAGMATHROWER_TRAP_CAST">
     <OnCastFinished name="Play_demon_magmathrower_cast_shoot" />
   </WwiseEventInfo>
@@ -9813,67 +9872,6 @@
 	<OnCastFinished name="Play_melee_splittingstrike_swoosh" />
   </WwiseEventInfo>
 
-	<!-- Demons -->
-  
-  <WwiseEventInfo name="DEMON_HAZARD_GLUE_EXPLODE">
-    <OnSpellHit name="Play_mob_hazard_glue_explosion"/>
-  </WwiseEventInfo>
-
-  <WwiseEventInfo name="DEMON_STATUE_SPAWN">
-    <OnSpellHit name="Play_demon_statue_spawn_fx"/>
-  </WwiseEventInfo>
-
-  <WwiseEventInfo name="DEMON_STATUE_EXPLODE">
-    <OnCastFinished name="Play_demon_statue_die_explode"/>
-  </WwiseEventInfo>
-
-  <WwiseEventInfo name="DEMON_SORCERER_CHANNELING_LOAD">
-    <OnChannelingStart name="Play_demon_sorcerer_load_vo" />
-    <OnChannelingCancelled name="Stop_demon_sorcerer_load_vo" />
-    <OnChannelingEnd name="Stop_demon_sorcerer_load_vo" />
-    <OnChannelingInterrupted name="Stop_demon_sorcerer_load_vo" />
-  </WwiseEventInfo>
-
-  <WwiseEventInfo name="DEMON_SORCERER_EXHALE_CAST">
-    <OnCastFinished name="Play_demon_sorcerer_exhale_vo"/>
-  </WwiseEventInfo>
-  
-  <WwiseEventInfo name="DEMON_SORCERER_BOSS_RELOAD_CAST">
-    <OnCastStart name="Play_demon_sorcerer_boss_load_vo"/>
-  </WwiseEventInfo>
-
-  <WwiseEventInfo name="DEMON_SORCERER_BOSS_RELOAD_CHANNEL">
-    <OnChannelingStart name="Play_demon_sorcerer_boss_reload_channel" />
-    <OnChannelingCancelled name="Stop_demon_sorcerer_boss_reload_channel" />
-    <OnChannelingEnd name="Stop_demon_sorcerer_boss_reload_channel" />
-    <OnChannelingInterrupted name="Stop_demon_sorcerer_boss_reload_channel" />
-  </WwiseEventInfo>
-  
-  <WwiseEventInfo name="DEMON_SORCERER_BOSS_RUPTURE">    
-    <OnCastFinished name="Play_demon_sorcerer_boss_cast_short_vo" />
-    <OnSpellHit name="Play_fire_cast_medium" />
-  </WwiseEventInfo>
-
-  <WwiseEventInfo name="DEMON_SORCERER_FIRESTORM_PILLAR_SPELLHIT">
-    <OnSpellHit name="Play_fire_flamepillar_instanced" />
-  </WwiseEventInfo>
-
-  <WwiseEventInfo name="DEMON_SORCERER_BOSS_EXHALE">
-    <OnCastStart name="Play_demon_sorcerer_boss_cast_vo"/>
-  </WwiseEventInfo>
-  
-  <WwiseEventInfo name="DEMON_SORCERER_BOSS_PHASECHANGE">
-    <OnCastStart name="Play_demon_sorcerer_boss_phasechange_vo"/>
-    <OnCastFinished name="Play_fire_cast_big" /> 
-  </WwiseEventInfo>
-
-  <WwiseEventInfo name="DEMON_CHAINED_BOSS_FIREBEAM_CHANNEL">
-    <OnChannelingStart name="Play_demon_boss_fire_beam_loop" />
-    <OnChannelingCancelled name="Stop_demon_boss_fire_beam_loop" />
-    <OnChannelingEnd name="Stop_demon_boss_fire_beam_loop" />
-    <OnChannelingInterrupted name="Stop_demon_boss_fire_beam_loop" />
-  </WwiseEventInfo>
-
   <!-- Anniversary Statues -->
 	
   <WwiseEventInfo name="ANNIVERSARY_STATUE_HAMMER_WHIRWIND_STOMP">
@@ -10142,10 +10140,10 @@
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_MOUNT_TOWN_PORTAL_SHORT">
-	  <OnCastStart name="Play_mount_cast_load_teleport_short"/>
-	  <OnCastCanceled name="Stop_mount_cast_load_teleport_short" />
-	  <OnCastInterrupted name="Stop_mount_cast_load_teleport_short" /> 
-	  <OnCastFinished name="Play_mount_cast_teleport_short" keepAliveInWorld="true" />
+	<OnCastStart name="Play_mount_cast_load_teleport_short"/>
+	<OnCastCanceled name="Stop_mount_cast_load_teleport_short" />
+	<OnCastInterrupted name="Stop_mount_cast_load_teleport_short" /> 
+	<OnCastFinished name="Play_mount_cast_teleport_short" keepAliveInWorld="true" />
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_MOUNT_TOWN_PORTAL_LONG">
