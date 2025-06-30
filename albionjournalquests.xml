@@ -1,0 +1,1659 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<journalquests xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="albionjournalquests.xsd">
+  <!--######################################################################-->
+  <!--######################################################################-->
+  <!--########################### PVE MISSIONS #############################-->
+  <!--######################################################################-->
+  <!--######################################################################-->
+  <!-- Finish a t3 solo random dungeon -->
+  <quest uniquename="QUEST_TUTORIAL_ROLE_PVE_SOLO_DUNGEON">
+    <tasks>
+      <!-- Go into a blue zone cluster-->
+      <missionstep>
+        <gotocluster worldclustertype="SAFEAREA" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_GOTO_SAFEZONE"/>
+      </missionstep>
+      <!-- Enter a Solo Dungeon -->
+      <extendedmissionstep applybuff="T3_RANDOM_DUNGEON_SOLO_TUTORIAL">
+        <preactions>
+          <openhintbox uniquename="JOURNAL_QUEST_SOLO_DUNGEON"/>
+        </preactions>
+        <missions>
+          <gotocluster clustertype="RandomDungeon" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_ENTER_RANDOM_DUNGEON"/>
+        </missions>
+      </extendedmissionstep>
+      <!-- Defeat a Heretic Boss-->
+      <missionstep>
+        <or textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_DEFEAT_BOSS" hideindetailsui="true">
+          <killmob mobid="T2_MOB_RD_HERETIC_LUMBERJACK_BOSS" count="1" countpartykills="true"/>
+          <killmob mobid="T2_MOB_RD_HERETIC_BRAWLER_BOSS" count="1" countpartykills="true"/>
+          <killmob mobid="T2_MOB_RD_HERETIC_OVERSEER_BOSS" count="1" countpartykills="true"/>
+          <killmob mobid="T2_MOB_RD_HERETIC_DYNAMITE_BOSS" count="1" countpartykills="true"/>
+          <killmob mobid="T3_MOB_RD_HERETIC_LUMBERJACK_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T3_MOB_RD_HERETIC_BRAWLER_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T3_MOB_RD_HERETIC_OVERSEER_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T3_MOB_RD_HERETIC_DYNAMITE_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T4_MOB_RD_HERETIC_LUMBERJACK_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T4_MOB_RD_HERETIC_BRAWLER_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T4_MOB_RD_HERETIC_OVERSEER_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T4_MOB_RD_HERETIC_DYNAMITE_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T4_MOB_RD_UNDEAD_NECROMANCER_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T4_MOB_RD_UNDEAD_GENERAL_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T4_MOB_RD_UNDEAD_GHOST_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T4_MOB_RD_UNDEAD_HERO_DUALWIELD_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T4_MOB_RD_KEEPER_WITCH_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T4_MOB_RD_KEEPER_CHIEFTAIN_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T4_MOB_RD_KEEPER_SEER_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T4_MOB_RD_KEEPER_ANCIENT_GIANT_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T5_MOB_RD_MORGANA_TORTURER_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T5_MOB_RD_MORGANA_CULTIST_MAGISTRA_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T5_MOB_RD_MORGANA_CULTIST_RAVEN_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T5_MOB_RD_MORGANA_CULTIST_FANG_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T5_MOB_RD_HERETIC_LUMBERJACK_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T5_MOB_RD_HERETIC_BRAWLER_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T5_MOB_RD_HERETIC_OVERSEER_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T5_MOB_RD_HERETIC_DYNAMITE_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T5_MOB_RD_UNDEAD_NECROMANCER_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T5_MOB_RD_UNDEAD_GENERAL_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T5_MOB_RD_UNDEAD_GHOST_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T5_MOB_RD_UNDEAD_HERO_DUALWIELD_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T5_MOB_RD_KEEPER_WITCH_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T5_MOB_RD_KEEPER_CHIEFTAIN_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T5_MOB_RD_KEEPER_SEER_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T5_MOB_RD_KEEPER_ANCIENT_GIANT_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T5_MOB_RD_MORGANA_TORTURER_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T5_MOB_RD_MORGANA_CULTIST_MAGISTRA_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T5_MOB_RD_MORGANA_CULTIST_RAVEN_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T5_MOB_RD_MORGANA_CULTIST_FANG_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T6_MOB_RD_HERETIC_LUMBERJACK_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T6_MOB_RD_HERETIC_BRAWLER_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T6_MOB_RD_HERETIC_OVERSEER_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T6_MOB_RD_HERETIC_DYNAMITE_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T6_MOB_RD_UNDEAD_NECROMANCER_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T6_MOB_RD_UNDEAD_GENERAL_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T6_MOB_RD_UNDEAD_GHOST_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T6_MOB_RD_UNDEAD_HERO_DUALWIELD_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T6_MOB_RD_KEEPER_WITCH_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T6_MOB_RD_KEEPER_CHIEFTAIN_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T6_MOB_RD_KEEPER_SEER_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T6_MOB_RD_KEEPER_ANCIENT_GIANT_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T6_MOB_RD_MORGANA_TORTURER_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T6_MOB_RD_MORGANA_CULTIST_MAGISTRA_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T6_MOB_RD_MORGANA_CULTIST_RAVEN_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T6_MOB_RD_MORGANA_CULTIST_FANG_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T7_MOB_RD_HERETIC_LUMBERJACK_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T7_MOB_RD_HERETIC_BRAWLER_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T7_MOB_RD_HERETIC_OVERSEER_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T7_MOB_RD_HERETIC_DYNAMITE_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T7_MOB_RD_UNDEAD_NECROMANCER_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T7_MOB_RD_UNDEAD_GENERAL_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T7_MOB_RD_UNDEAD_GHOST_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T7_MOB_RD_UNDEAD_HERO_DUALWIELD_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T7_MOB_RD_KEEPER_WITCH_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T7_MOB_RD_KEEPER_CHIEFTAIN_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T7_MOB_RD_KEEPER_SEER_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T7_MOB_RD_KEEPER_ANCIENT_GIANT_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T7_MOB_RD_MORGANA_TORTURER_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T7_MOB_RD_MORGANA_CULTIST_MAGISTRA_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T7_MOB_RD_MORGANA_CULTIST_RAVEN_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T7_MOB_RD_MORGANA_CULTIST_FANG_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T8_MOB_RD_HERETIC_LUMBERJACK_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T8_MOB_RD_HERETIC_BRAWLER_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T8_MOB_RD_HERETIC_OVERSEER_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T8_MOB_RD_HERETIC_DYNAMITE_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T8_MOB_RD_UNDEAD_NECROMANCER_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T8_MOB_RD_UNDEAD_GENERAL_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T8_MOB_RD_UNDEAD_GHOST_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T8_MOB_RD_UNDEAD_HERO_DUALWIELD_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T8_MOB_RD_KEEPER_WITCH_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T8_MOB_RD_KEEPER_CHIEFTAIN_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T8_MOB_RD_KEEPER_SEER_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T8_MOB_RD_KEEPER_ANCIENT_GIANT_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T8_MOB_RD_MORGANA_TORTURER_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T8_MOB_RD_MORGANA_CULTIST_MAGISTRA_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T8_MOB_RD_MORGANA_CULTIST_RAVEN_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T8_MOB_RD_MORGANA_CULTIST_FANG_BOSS" count="1" countpartykills="true" />
+        </or>
+      </missionstep>
+      <!-- Loot a Heretic Chest--><!--
+      <extendedmissionstep>
+        <missions>
+          <unlocklootchest count="1" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_OPEN_CHEST" hideindetailsui="true">
+            <validchest name="HERETIC_SOLO_CHEST_BOSS_UNCOMMON" />
+            <validchest name="HERETIC_SOLO_CHEST_BOSS_RARE" />
+            <validchest name="HERETIC_SOLO_CHEST_BOSS_LEGENDARY" />
+          </unlocklootchest>
+        </missions>
+      </extendedmissionstep>-->
+    </tasks>
+  </quest>
+
+  <!-- Earn 10k Silver from the market-->
+  <quest uniquename="QUEST_TUTORIAL_ROLE_PVE_SELL_ITEMS">
+    <variables>
+      <dynamiccluster name="STARTERTOWN" selection="closest">
+        <clusterlist>
+          <cluster id="1006"/>
+          <cluster id="4006"/>
+          <cluster id="0004"/>
+          <cluster id="2002"/>
+          <cluster id="3002"/>
+        </clusterlist>
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <!-- Go to the closest Starter Town-->
+      <missionstep>
+        <gotocluster clustervariable="STARTERTOWN" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_RETURN_TO_CROSS"  hideindetailsui="true"/>
+      </missionstep>
+      <!-- Go to the marketplace-->
+      <extendedmissionstep>
+        <preactions>
+          <openhintbox uniquename="JOURNAL_QUEST_CLAIM_REWARDS"/>
+        </preactions>
+        <missions>
+          <interactwithbuilding buildingid="MARKETPLACE_SMALL" locationmarkerid="MARKETPLACE" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_GOTO_MARKETPLACE"/>
+        </missions>
+      </extendedmissionstep>
+      <!-- Sell Item worth 10,000 Silver-->
+      <extendedmissionstep>
+        <preactions>
+          <openhintbox uniquename="JOURNAL_QUEST_SELL_ITEMS"/>
+        </preactions>
+        <missions>
+          <havemarketsilverearned markettype="any" value="10000" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_EARN_SILVER" />
+        </missions>
+      </extendedmissionstep>
+    </tasks>
+  </quest>
+  
+  <!-- Wear Full T3 -->
+  <quest uniquename="QUEST_TUTORIAL_ROLE_PVE_EQUIP_T3">
+    <variables>
+      <dynamiccluster name="STARTERTOWN" selection="closest">
+        <clusterlist>
+          <cluster id="1006"/>
+          <cluster id="4006"/>
+          <cluster id="0004"/>
+          <cluster id="2002"/>
+          <cluster id="3002"/>
+        </clusterlist>
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <!-- Sanity Check Mission: Have T3 Gear unlocked-->
+      <missionstep>
+        <or textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_UNLOCK_T3_WEAPONS" hideindetailsui="true">
+          <unlockachievement achievement="COMBAT_HUNTER" masterylevel="1"/>
+          <unlockachievement achievement="COMBAT_WARRIOR" masterylevel="1"/>
+          <unlockachievement achievement="COMBAT_MAGE" masterylevel="1"/>
+        </or>
+        <or textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_UNLOCK_T3_ARMOR" hideindetailsui="true">
+          <unlockachievement achievement="COMBAT_LEATHER" masterylevel="1"/>
+          <unlockachievement achievement="COMBAT_PLATE" masterylevel="1"/>
+          <unlockachievement achievement="COMBAT_CLOTH" masterylevel="1"/>
+        </or>
+        <unlockachievement achievement="ADVENTURER_JOURNEYMAN" masterylevel="1"  hideindetailsui="true" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_UNLOCK_T3_ADVENTURER"/>
+      </missionstep>
+      <!-- Sanity Check: Be in a Starter Cross-->
+      <missionstep>
+        <gotocluster clustervariable="STARTERTOWN" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_RETURN_TO_CROSS"  hideindetailsui="true"/>
+      </missionstep>
+      <!-- Sanity Check: Go to the marketplace-->
+      <missionstep>
+        <interactwithbuilding buildingid="MARKETPLACE_SMALL" locationmarkerid="MARKETPLACE" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_GOTO_MARKETPLACE"/>
+      </missionstep>
+      <!-- Buy T3 Gear-->
+      <!-- You have unlocked a bunch of new Weapons-->
+      <extendedmissionstep>
+        <preactions>
+          <openhintbox uniquename="JOURNAL_QUEST_BUY_EQUIPMENT"/>
+        </preactions>
+        <missions>
+          <acquireitem count="1" listtype="or" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_BUY_T3_HEAD">
+          <item id="T3_HEAD_CLOTH_SET1"/>
+          <item id="T3_HEAD_LEATHER_SET1"/>
+          <item id="T3_HEAD_PLATE_SET1"/>
+        </acquireitem>
+        <acquireitem count="1" listtype="or" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_BUY_T3_ARMOR">
+          <item id="T3_ARMOR_CLOTH_SET1"/>
+          <item id="T3_ARMOR_LEATHER_SET1"/>
+          <item id="T3_ARMOR_PLATE_SET1"/>
+        </acquireitem>
+        <acquireitem count="1" listtype="or" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_BUY_T3_SHOES">
+          <item id="T3_SHOES_CLOTH_SET1"/>
+          <item id="T3_SHOES_LEATHER_SET1"/>
+          <item id="T3_SHOES_PLATE_SET1"/>
+        </acquireitem>
+        <acquireitem count="1" itemid="T3_CAPE" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_BUY_T3_CAPE"/>
+        <or textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_BUY_T3_WEAPON_AND_OFFHAND" hideindetailsui="true">
+          <acquireitem count="1">
+            <item id="T3_2H_BOW"/>
+            <item id="T3_2H_CROSSBOW"/>
+            <item id="T3_2H_QUARTERSTAFF"/>
+            <item id="T3_2H_KNUCKLES_SET1"/>
+            <item id="T3_2H_SHAPESHIFTER_SET1"/>
+          </acquireitem>
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_CURSEDSTAFF"/>
+            <item id="T3_OFF_BOOK"/>
+          </acquireitem>
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_CURSEDSTAFF"/>
+            <item id="T3_OFF_SHIELD"/>
+          </acquireitem>
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_CURSEDSTAFF"/>
+            <item id="T3_OFF_TORCH"/>
+          </acquireitem>
+
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_FIRESTAFF"/>
+            <item id="T3_OFF_BOOK"/>
+          </acquireitem>
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_FIRESTAFF"/>
+            <item id="T3_OFF_SHIELD"/>
+          </acquireitem>
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_FIRESTAFF"/>
+            <item id="T3_OFF_TORCH"/>
+          </acquireitem>
+
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_FROSTSTAFF"/>
+            <item id="T3_OFF_BOOK"/>
+          </acquireitem>
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_FROSTSTAFF"/>
+            <item id="T3_OFF_SHIELD"/>
+          </acquireitem>
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_FROSTSTAFF"/>
+            <item id="T3_OFF_TORCH"/>
+          </acquireitem>
+
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_ARCANESTAFF"/>
+            <item id="T3_OFF_BOOK"/>
+          </acquireitem>
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_ARCANESTAFF"/>
+            <item id="T3_OFF_SHIELD"/>
+          </acquireitem>
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_ARCANESTAFF"/>
+            <item id="T3_OFF_TORCH"/>
+          </acquireitem>
+
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_HOLYSTAFF"/>
+            <item id="T3_OFF_BOOK"/>
+          </acquireitem>
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_HOLYSTAFF"/>
+            <item id="T3_OFF_SHIELD"/>
+          </acquireitem>
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_HOLYSTAFF"/>
+            <item id="T3_OFF_TORCH"/>
+          </acquireitem>
+
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_AXE"/>
+            <item id="T3_OFF_BOOK"/>
+          </acquireitem>
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_AXE"/>
+            <item id="T3_OFF_SHIELD"/>
+          </acquireitem>
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_AXE"/>
+            <item id="T3_OFF_TORCH"/>
+          </acquireitem>
+
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_SWORD"/>
+            <item id="T3_OFF_BOOK"/>
+          </acquireitem>
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_SWORD"/>
+            <item id="T3_OFF_SHIELD"/>
+          </acquireitem>
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_SWORD"/>
+            <item id="T3_OFF_TORCH"/>
+          </acquireitem>
+
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_HAMMER"/>
+            <item id="T3_OFF_BOOK"/>
+          </acquireitem>
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_HAMMER"/>
+            <item id="T3_OFF_SHIELD"/>
+          </acquireitem>
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_HAMMER"/>
+            <item id="T3_OFF_TORCH"/>
+          </acquireitem>
+
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_MACE"/>
+            <item id="T3_OFF_BOOK"/>
+          </acquireitem>
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_MACE"/>
+            <item id="T3_OFF_SHIELD"/>
+          </acquireitem>
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_MACE"/>
+            <item id="T3_OFF_TORCH"/>
+          </acquireitem>
+
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_NATURESTAFF"/>
+            <item id="T3_OFF_BOOK"/>
+          </acquireitem>
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_NATURESTAFF"/>
+            <item id="T3_OFF_SHIELD"/>
+          </acquireitem>
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_NATURESTAFF"/>
+            <item id="T3_OFF_TORCH"/>
+          </acquireitem>
+
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_DAGGER"/>
+            <item id="T3_OFF_BOOK"/>
+          </acquireitem>
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_DAGGER"/>
+            <item id="T3_OFF_SHIELD"/>
+          </acquireitem>
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_DAGGER"/>
+            <item id="T3_OFF_TORCH"/>
+          </acquireitem>
+
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_SPEAR"/>
+            <item id="T3_OFF_BOOK"/>
+          </acquireitem>
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_SPEAR"/>
+            <item id="T3_OFF_SHIELD"/>
+          </acquireitem>
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_SPEAR"/>
+            <item id="T3_OFF_TORCH"/>
+          </acquireitem>
+        </or>
+        </missions>
+      </extendedmissionstep>
+      <missionstep>
+        <haveavgitempower itempower="600" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_EQUIP_ITEMS"/>
+      </missionstep>
+    </tasks>
+  </quest>
+
+  <!-- Kill 10 Mobs in a static dungeon -->
+  <quest uniquename="QUEST_TUTORIAL_ROLE_PVE_STATIC_DUNGEON">
+    <variables>
+      <dynamiccluster name="STATIC_DUNGEON" selection="closest">
+        <clusterlist>
+          <cluster id="0202"/>
+          <cluster id="1212"/>
+          <cluster id="2214"/>
+          <cluster id="3210"/>
+          <cluster id="4203"/>
+        </clusterlist>
+      </dynamiccluster>
+    </variables>	  
+    <tasks>
+      <!-- Go to a static cluster-->
+      <missionstep>
+	    <gotocluster clustervariable="STATIC_DUNGEON" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_STATIC_DUNGEON" hideindetailsui="true"/>
+      </missionstep>
+      <!-- go to the static area-->
+      <extendedmissionstep locationmarkerid="STATIC_DUNGEON" markedonminimap="true" markedinworld="true">
+        <missions>
+          <gotolocation locationmarkerid="STATIC_DUNGEON_TRIGGER" markedinworld="false" markedonminimap="false" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_STATIC_DUNGEON" hideindetailsui="true"/>
+        </missions>
+      </extendedmissionstep>
+      <!-- ??? -->
+      <extendedmissionstep locationmarkerid="STATIC_DUNGEON_1" markedinworld="true" markedonminimap="true">
+        <preactions>
+          <openhintbox uniquename="STATIC_DUNGEON"/>
+        </preactions>
+        <missions>
+          <gotolocation locationmarkerid="STATIC_DUNGEON_3" markedinworld="false" markedonminimap="false" textloca="@MISSIONS_T2_TUTORIAL_TEACH_COMBAT3_SIDETEXT" hideindetailsui="true"/>
+        </missions>
+      </extendedmissionstep>
+      <!-- ??? -->
+      <extendedmissionstep>
+        <missions>
+          <or locationmarkerid="STATIC_DUNGEON_2" markedonminimap="true" hideindetailsui="false" hideinhud="false" textloca="@MISSIONS_T2_TUTORIAL_TEACH_COMBAT3_SIDETEXT1">
+            <gotocluster clusterdirect="DNG-HER-01-MAIN-01"/>
+            <gotocluster clusterdirect="DNG-HER-01-MAIN-02"/>
+            <gotocluster clusterdirect="DNG-HER-01-MAIN-03"/>
+            <gotocluster clusterdirect="DNG-HER-01-MAIN-04"/>
+            <gotocluster clusterdirect="DNG-HER-01-MAIN-05"/>
+          </or>
+        </missions>
+      </extendedmissionstep>
+      <!-- ??? -->
+      <extendedmissionstep>
+        <missions>
+          <or textloca="@MISSIONS_T2_TUTORIAL_TEACH_COMBAT3_SIDETEXT_KILL_MOBS">
+            <killmob count="12" faction="HERETIC" mintier="3" countpartykills="true" clusterdirect="DNG-HER-01-MAIN-01"/>
+            <killmob count="12" faction="HERETIC" mintier="3" countpartykills="true" clusterdirect="DNG-HER-01-MAIN-02"/>
+            <killmob count="12" faction="HERETIC" mintier="3" countpartykills="true" clusterdirect="DNG-HER-01-MAIN-03"/>
+            <killmob count="12" faction="HERETIC" mintier="3" countpartykills="true" clusterdirect="DNG-HER-01-MAIN-04"/>
+            <killmob count="12" faction="HERETIC" mintier="3" countpartykills="true" clusterdirect="DNG-HER-01-MAIN-05"/>
+          </or>
+        </missions>
+      </extendedmissionstep>
+    </tasks>
+  </quest>
+
+
+  <!-- Unlock a T4 Weapon Combat Node -->
+<quest uniquename="QUEST_TUTORIAL_ROLE_PVE_UNLOCK_T4">
+    <tasks>
+      <!-- Open the Destiny Board-->
+      <missionstep>
+        <usefunction count="1" function="OpenDestinyBoard" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_OPEN_DESTINY_BOARD"/>
+      </missionstep>
+      <extendedmissionstep>
+        <preactions>
+          <openhintbox uniquename="LEARNAUTOLEARN_01" />
+        </preactions>
+        <missions>
+		  <or textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_ACTIVATE_QUICK_LEARN">
+		    <usefunction function="EnabledGlobalAutoLearn"></usefunction>
+			<havelearningpoints value="0" compareless="true"/>
+		  </or>
+		</missions>
+      </extendedmissionstep>
+      <missionstep>
+        <or textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_UNLOCK_T4_WEAPON">
+          <unlockachievement achievement="COMBAT_SWORDS" masterylevel="1" />
+          <unlockachievement achievement="COMBAT_AXES" masterylevel="1" />
+          <unlockachievement achievement="COMBAT_MACES" masterylevel="1" />
+          <unlockachievement achievement="COMBAT_HAMMERS" masterylevel="1" />
+          <unlockachievement achievement="COMBAT_KNUCKLES" masterylevel="1" />
+          <unlockachievement achievement="COMBAT_CROSSBOWS" masterylevel="1" />
+          <unlockachievement achievement="COMBAT_BOWS" masterylevel="1" />
+          <unlockachievement achievement="COMBAT_DAGGERS" masterylevel="1" />
+          <unlockachievement achievement="COMBAT_SPEARS" masterylevel="1" />
+          <unlockachievement achievement="COMBAT_QUARTERSTAFFS" masterylevel="1" />
+          <unlockachievement achievement="COMBAT_SHAPESHIFTER" masterylevel="1" />
+          <unlockachievement achievement="COMBAT_NATURESTAFFS" masterylevel="1" />
+          <unlockachievement achievement="COMBAT_FIRESTAFFS" masterylevel="1" />
+          <unlockachievement achievement="COMBAT_HOLYSTAFFS" masterylevel="1" />
+          <unlockachievement achievement="COMBAT_ARCANESTAFFS" masterylevel="1" />
+          <unlockachievement achievement="COMBAT_FROSTSTAFFS" masterylevel="1" />
+          <unlockachievement achievement="COMBAT_CURSEDSTAFFS" masterylevel="1" />
+        </or>
+        <or textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_UNLOCK_T4_SHOES">
+          <unlockachievement achievement="COMBAT_LEATHER_SHOES" masterylevel="1" />
+          <unlockachievement achievement="COMBAT_CLOTH_SHOES" masterylevel="1" />
+          <unlockachievement achievement="COMBAT_PLATE_SHOES" masterylevel="1" />
+        </or>
+        <or textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_UNLOCK_T4_ARMOR">
+          <unlockachievement achievement="COMBAT_LEATHER_ARMORS" masterylevel="1" />
+          <unlockachievement achievement="COMBAT_CLOTH_ARMORS" masterylevel="1" />
+          <unlockachievement achievement="COMBAT_PLATE_ARMORS" masterylevel="1" />
+        </or>
+        <or textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_UNLOCK_T4_HELMET">
+          <unlockachievement achievement="COMBAT_LEATHER_HEADS" masterylevel="1" />
+          <unlockachievement achievement="COMBAT_CLOTH_HEADS" masterylevel="1" />
+          <unlockachievement achievement="COMBAT_PLATE_HEADS" masterylevel="1" />
+        </or>
+      </missionstep>
+    </tasks>
+  </quest>
+  
+  <!-- Equip All T4 Items -->
+  <quest uniquename="QUEST_TUTORIAL_ROLE_PVE_EQUIP_T4">
+    <variables>
+      <dynamiccluster name="ROYALCITY" selection="closest">
+        <clusterlist>
+          <cluster id="1000"/>			
+          <cluster id="4000"/>
+          <cluster id="0000"/>
+          <cluster id="2000"/>
+          <cluster id="3004"/>
+        </clusterlist>
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <!-- Be in a Royal City -->
+      <missionstep>
+        <gotocluster clustervariable="ROYALCITY" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_GOTO_ROYALCITY"  hideindetailsui="true"/>
+      </missionstep>
+      <!-- Go to the marketplace-->
+      <missionstep>
+        <gotolocation gotolocationmarkerid="MARKETPLACE" markedinworld="true" locationmarkerid="MARKETPLACE" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_GOTO_MARKETPLACE"/>
+      </missionstep>
+      <!-- Buy T4 Gear-->
+      <missionstep>
+        <haveavgitempower itempower="700" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_BUY_T4_GEAR"/>
+      </missionstep>
+    </tasks>
+  </quest>
+
+  <!-- Finish a solo Expedition -->
+  <quest uniquename="QUEST_TUTORIAL_ROLE_PVE_FINISH_EXPEDITION">
+    <variables>
+      <dynamiccluster name="ROYALCITY" selection="closest">
+        <clusterlist>
+          <cluster id="1000"/>			
+          <cluster id="4000"/>
+          <cluster id="0000"/>
+          <cluster id="2000"/>
+          <cluster id="3004"/>
+        </clusterlist>
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <!-- Go to a Royal City-->
+      <missionstep>
+        <gotocluster clustervariable="ROYALCITY" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_GOTO_ROYALCITY"/>
+      </missionstep>
+      <!-- Go to the Expedition Master-->
+      <missionstep>
+        <gotolocation locationmarkerid="EXPEDITION" markedinworld="true" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_GOTO_EXPIDITION_AGENT"/>
+      </missionstep>
+      <!-- Complete an Expedition-->
+      <extendedmissionstep>
+        <missions>
+          <finishexpedition name="HERETIC_MINE" nameloca="@EXP_TITLE_T3_EXP_STD_HERETIC_MINE" count="1" type="any" locationmarkerid="EXPEDITION" markedonminimap="true" markedinworld="true" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_FINISH_EXPEDITION"/>
+        </missions>
+      </extendedmissionstep>
+    </tasks>
+  </quest>
+
+  <!-- Track a in the blue yellow zone open world  -->
+  <quest uniquename="QUEST_TUTORIAL_ROLE_PVE_TRACKING">
+    <tasks>
+      <!--  Get a Tracking Toolkit  -->
+      <extendedmissionstep>
+        <preactions>
+          <openhintbox uniquename="JOURNAL_QUEST_CLAIM_REWARDS"/>
+        </preactions>
+        <missions>
+          <acquireitem itemid="T3_2H_TOOL_TRACKING" count="1" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_OBTAIN_TRACKING_TOOLKIT"/>
+        </missions>
+      </extendedmissionstep>
+      <!--  Go out into the Blue Zone  -->
+      <missionstep>
+		<any count="1" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_GOTO_SAFEZONE">
+          <gotocluster worldclustertype="SAFEAREA" />
+		  <gotocluster worldclustertype="OPENPVP_YELLOW" />			
+		</any>
+      </missionstep>
+      <!-- IDEALLY WE WOULD HAVE SOMETHING TO CHECK FOR STARTING A HUNT-->
+      <!--  Hunt a Creature  -->
+      <extendedmissionstep>
+        <preactions>
+          <openhintbox uniquename="JOURNAL_QUEST_TRACK_CREATURE"/>
+        </preactions>
+        <missions>
+          <any count="1" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_FINISH_HUNT">
+            <killmob count="1" countpartykills="true">
+              <mobid name="T3_MOB_TR_HERETIC_MAGE_BOSS" />
+              <mobid name="T3_MOB_TR_UNDEAD_ARCHER_BOSS" />
+              <mobid name="T3_MOB_TR_KEEPER_BERSERK_BOSS" />
+              <mobid name="T3_MOB_TR_NEUTRAL_PANTHER_BOSS" />
+              <mobid name="T4_MOB_TR_SILVER_KEEPER_EARTHDAUGHTER_BOSS" />
+              <mobid name="T4_MOB_TR_SILVER_UNDEAD_HARVESTER_BOSS" />
+              <mobid name="T4_MOB_TR_SILVER_HERETIC_SHADOWMASK_BOSS" />
+              <mobid name="T4_MOB_TR_NEUTRAL_PANTHER_BOSS" />
+              <mobid name="T4_MOB_TR_NEUTRAL_ENT_BOSS" />
+              <mobid name="T4_MOB_TR_NEUTRAL_DIREBEAR_BOSS" />
+            </killmob>
+          </any>
+        </missions>
+      </extendedmissionstep>
+    </tasks>
+  </quest>
+
+  <!-- Visit Showroom Island -->
+  <quest uniquename="QUEST_TUTORIAL_ROLE_PVE_SHOWROOM_ISLAND">
+    <variables>
+      <dynamiccluster name="ROYALCITY" selection="closest">
+        <clusterlist>
+          <cluster id="1000"/>			
+          <cluster id="4000"/>
+          <cluster id="0000"/>
+          <cluster id="2000"/>
+          <cluster id="3004"/>
+        </clusterlist>
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <!-- Go to the royal city-->
+      <missionstep>
+        <gotocluster clustervariable="ROYALCITY" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_GOTO_ROYALCITY"/>
+      </missionstep>
+      <!-- Visit the island merchant-->
+      <extendedmissionstep>
+        <missions>
+          <gotolocation locationmarkerid="ISLAND" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_GOTO_ISLAND_MERCHANT"/>
+        </missions>
+      </extendedmissionstep>
+      <!-- Go to Showroom Island-->
+      <extendedmissionstep>
+        <preactions>
+          <openhintbox uniquename="JOURNAL_QUEST_HINT_HIGHLIGHT_SHOWROOM"/>
+        </preactions>
+        <missions>
+          <gotocluster worldclustertype="SHOWROOMISLAND" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_GOTO_SHOWROOM_ISLAND">
+            <IfClusterId value="SHOWROOM" op="contains" />
+          </gotocluster>
+        </missions>
+      </extendedmissionstep>
+      <!-- Finish Island Tour -->
+      <extendedmissionstep>
+        <!-- Hint: YOU FINISHED ITTTTTTT-->
+        <preactions>
+          <openhintbox uniquename="CHAPTER_COMPLETE_PVE"/>
+        </preactions>
+        <missions>
+          <finishquest name="MISSIONS_SHOWROOM_ISLAND_TOUR" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_TOUR_SHOWROOM_ISLAND"/>
+        </missions>
+      </extendedmissionstep>
+    </tasks>
+  </quest>
+  
+  
+  <!--######################################################################-->
+  <!--######################################################################-->
+  <!--########################### PVP MISSIONS #############################-->
+  <!--######################################################################-->
+  <!--######################################################################-->
+
+  <!-- Finish a solo random dungeon -->
+  <quest uniquename="QUEST_TUTORIAL_ROLE_PVP_SOLO_DUNGEON">
+    <tasks>
+      <!-- Go into a blue zone cluster-->
+      <missionstep>
+        <gotocluster worldclustertype="SAFEAREA" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_GOTO_SAFEZONE"/>
+      </missionstep>
+      <!-- Enter a Solo Dungeon -->
+      <extendedmissionstep applybuff="T3_RANDOM_DUNGEON_SOLO_TUTORIAL">
+        <preactions>
+          <openhintbox uniquename="JOURNAL_QUEST_SOLO_DUNGEON"/>
+        </preactions>
+        <missions>
+          <gotocluster clustertype="RandomDungeon" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_ENTER_RANDOM_DUNGEON"/>
+        </missions>
+      </extendedmissionstep>
+      <!-- Defeat a Heretic Boss-->
+      <missionstep>
+        <or textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_DEFEAT_BOSS" hideindetailsui="true">
+          <killmob mobid="T2_MOB_RD_HERETIC_LUMBERJACK_BOSS" count="1" countpartykills="true"/>
+          <killmob mobid="T2_MOB_RD_HERETIC_BRAWLER_BOSS" count="1" countpartykills="true"/>
+          <killmob mobid="T2_MOB_RD_HERETIC_OVERSEER_BOSS" count="1" countpartykills="true"/>
+          <killmob mobid="T2_MOB_RD_HERETIC_DYNAMITE_BOSS" count="1" countpartykills="true"/>
+          <killmob mobid="T3_MOB_RD_HERETIC_LUMBERJACK_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T3_MOB_RD_HERETIC_BRAWLER_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T3_MOB_RD_HERETIC_OVERSEER_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T3_MOB_RD_HERETIC_DYNAMITE_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T4_MOB_RD_HERETIC_LUMBERJACK_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T4_MOB_RD_HERETIC_BRAWLER_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T4_MOB_RD_HERETIC_OVERSEER_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T4_MOB_RD_HERETIC_DYNAMITE_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T4_MOB_RD_UNDEAD_NECROMANCER_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T4_MOB_RD_UNDEAD_GENERAL_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T4_MOB_RD_UNDEAD_GHOST_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T4_MOB_RD_UNDEAD_HERO_DUALWIELD_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T4_MOB_RD_KEEPER_WITCH_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T4_MOB_RD_KEEPER_CHIEFTAIN_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T4_MOB_RD_KEEPER_SEER_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T4_MOB_RD_KEEPER_ANCIENT_GIANT_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T5_MOB_RD_MORGANA_TORTURER_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T5_MOB_RD_MORGANA_CULTIST_MAGISTRA_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T5_MOB_RD_MORGANA_CULTIST_RAVEN_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T5_MOB_RD_MORGANA_CULTIST_FANG_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T5_MOB_RD_HERETIC_LUMBERJACK_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T5_MOB_RD_HERETIC_BRAWLER_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T5_MOB_RD_HERETIC_OVERSEER_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T5_MOB_RD_HERETIC_DYNAMITE_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T5_MOB_RD_UNDEAD_NECROMANCER_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T5_MOB_RD_UNDEAD_GENERAL_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T5_MOB_RD_UNDEAD_GHOST_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T5_MOB_RD_UNDEAD_HERO_DUALWIELD_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T5_MOB_RD_KEEPER_WITCH_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T5_MOB_RD_KEEPER_CHIEFTAIN_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T5_MOB_RD_KEEPER_SEER_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T5_MOB_RD_KEEPER_ANCIENT_GIANT_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T5_MOB_RD_MORGANA_TORTURER_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T5_MOB_RD_MORGANA_CULTIST_MAGISTRA_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T5_MOB_RD_MORGANA_CULTIST_RAVEN_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T5_MOB_RD_MORGANA_CULTIST_FANG_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T6_MOB_RD_HERETIC_LUMBERJACK_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T6_MOB_RD_HERETIC_BRAWLER_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T6_MOB_RD_HERETIC_OVERSEER_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T6_MOB_RD_HERETIC_DYNAMITE_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T6_MOB_RD_UNDEAD_NECROMANCER_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T6_MOB_RD_UNDEAD_GENERAL_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T6_MOB_RD_UNDEAD_GHOST_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T6_MOB_RD_UNDEAD_HERO_DUALWIELD_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T6_MOB_RD_KEEPER_WITCH_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T6_MOB_RD_KEEPER_CHIEFTAIN_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T6_MOB_RD_KEEPER_SEER_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T6_MOB_RD_KEEPER_ANCIENT_GIANT_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T6_MOB_RD_MORGANA_TORTURER_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T6_MOB_RD_MORGANA_CULTIST_MAGISTRA_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T6_MOB_RD_MORGANA_CULTIST_RAVEN_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T6_MOB_RD_MORGANA_CULTIST_FANG_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T7_MOB_RD_HERETIC_LUMBERJACK_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T7_MOB_RD_HERETIC_BRAWLER_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T7_MOB_RD_HERETIC_OVERSEER_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T7_MOB_RD_HERETIC_DYNAMITE_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T7_MOB_RD_UNDEAD_NECROMANCER_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T7_MOB_RD_UNDEAD_GENERAL_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T7_MOB_RD_UNDEAD_GHOST_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T7_MOB_RD_UNDEAD_HERO_DUALWIELD_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T7_MOB_RD_KEEPER_WITCH_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T7_MOB_RD_KEEPER_CHIEFTAIN_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T7_MOB_RD_KEEPER_SEER_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T7_MOB_RD_KEEPER_ANCIENT_GIANT_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T7_MOB_RD_MORGANA_TORTURER_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T7_MOB_RD_MORGANA_CULTIST_MAGISTRA_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T7_MOB_RD_MORGANA_CULTIST_RAVEN_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T7_MOB_RD_MORGANA_CULTIST_FANG_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T8_MOB_RD_HERETIC_LUMBERJACK_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T8_MOB_RD_HERETIC_BRAWLER_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T8_MOB_RD_HERETIC_OVERSEER_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T8_MOB_RD_HERETIC_DYNAMITE_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T8_MOB_RD_UNDEAD_NECROMANCER_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T8_MOB_RD_UNDEAD_GENERAL_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T8_MOB_RD_UNDEAD_GHOST_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T8_MOB_RD_UNDEAD_HERO_DUALWIELD_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T8_MOB_RD_KEEPER_WITCH_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T8_MOB_RD_KEEPER_CHIEFTAIN_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T8_MOB_RD_KEEPER_SEER_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T8_MOB_RD_KEEPER_ANCIENT_GIANT_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T8_MOB_RD_MORGANA_TORTURER_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T8_MOB_RD_MORGANA_CULTIST_MAGISTRA_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T8_MOB_RD_MORGANA_CULTIST_RAVEN_BOSS" count="1" countpartykills="true" />
+          <killmob mobid="T8_MOB_RD_MORGANA_CULTIST_FANG_BOSS" count="1" countpartykills="true" />
+        </or>
+      </missionstep>
+      <!-- Loot a Heretic Chest-->
+      <!--<extendedmissionstep>
+        <missions>
+          <unlocklootchest count="1" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_OPEN_CHEST" hideindetailsui="true">
+            <validchest name="HERETIC_SOLO_CHEST_BOSS_UNCOMMON" />
+            <validchest name="HERETIC_SOLO_CHEST_BOSS_RARE" />
+            <validchest name="HERETIC_SOLO_CHEST_BOSS_LEGENDARY" />
+          </unlocklootchest>
+        </missions>
+      </extendedmissionstep>-->
+    </tasks>
+  </quest>
+
+  
+  <!-- Earn 10k Silver from the market -->
+  <!-- This quest is the same as ROLE_PVE_02 -->
+  <quest uniquename="QUEST_TUTORIAL_ROLE_PVP_SELL_ITEMS">
+    <variables>
+      <dynamiccluster name="STARTERTOWN" selection="closest">
+        <clusterlist>
+          <cluster id="1006"/>
+          <cluster id="4006"/>
+          <cluster id="0004"/>
+          <cluster id="2002"/>
+          <cluster id="3002"/>
+        </clusterlist>
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <!-- Go to the closest Starter Town-->
+      <missionstep>
+        <gotocluster clustervariable="STARTERTOWN" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_RETURN_TO_CROSS"  hideindetailsui="true"/>
+      </missionstep>
+      <!-- Go to the marketplace-->
+      <extendedmissionstep>
+        <preactions>
+          <openhintbox uniquename="JOURNAL_QUEST_CLAIM_REWARDS"/>
+        </preactions>
+        <missions>
+          <interactwithbuilding buildingid="MARKETPLACE_SMALL" locationmarkerid="MARKETPLACE" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_GOTO_MARKETPLACE"/>
+        </missions>
+      </extendedmissionstep>
+      <!-- Sell Item worth 10,000 Silver-->
+      <extendedmissionstep>
+        <preactions>
+          <openhintbox uniquename="JOURNAL_QUEST_SELL_ITEMS"/>
+        </preactions>
+        <missions>
+          <havemarketsilverearned markettype="any" value="10000" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_EARN_SILVER" />
+        </missions>
+      </extendedmissionstep>
+    </tasks>
+  </quest>
+  
+  <!-- Wear Full T3 -->  
+  <quest uniquename="QUEST_TUTORIAL_ROLE_PVP_EQUIP_T3">
+    <variables>
+      <dynamiccluster name="STARTERTOWN" selection="closest">
+        <clusterlist>
+          <cluster id="1006"/>
+          <cluster id="4006"/>
+          <cluster id="0004"/>
+          <cluster id="2002"/>
+          <cluster id="3002"/>
+        </clusterlist>
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <!-- Sanity Check Mission: Have T3 Gear unlocked-->
+      <missionstep>
+        <or textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_UNLOCK_T3_WEAPONS" hideindetailsui="true">
+          <unlockachievement achievement="COMBAT_HUNTER" masterylevel="1"/>
+          <unlockachievement achievement="COMBAT_WARRIOR" masterylevel="1"/>
+          <unlockachievement achievement="COMBAT_MAGE" masterylevel="1"/>
+        </or>
+        <or textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_UNLOCK_T3_ARMOR" hideindetailsui="true">
+          <unlockachievement achievement="COMBAT_LEATHER" masterylevel="1"/>
+          <unlockachievement achievement="COMBAT_PLATE" masterylevel="1"/>
+          <unlockachievement achievement="COMBAT_CLOTH" masterylevel="1"/>
+        </or>
+        <unlockachievement achievement="ADVENTURER_JOURNEYMAN" masterylevel="1"  hideindetailsui="true" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_UNLOCK_T3_ADVENTURER"/>
+      </missionstep>
+      <!-- Sanity Check: Be in a Starter Cross-->
+      <missionstep>
+        <gotocluster clustervariable="STARTERTOWN" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_RETURN_TO_CROSS"  hideindetailsui="true"/>
+      </missionstep>
+      <!-- Sanity Check: Go to the marketplace-->
+      <missionstep>
+        <interactwithbuilding buildingid="MARKETPLACE_SMALL" locationmarkerid="MARKETPLACE" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_GOTO_MARKETPLACE"/>
+      </missionstep>
+      <!-- Buy T3 Gear-->
+      <!-- You have unlocked a bunch of new Weapons-->
+      <extendedmissionstep>
+        <preactions>
+          <openhintbox uniquename="JOURNAL_QUEST_BUY_EQUIPMENT"/>
+        </preactions>
+        <missions>
+          <acquireitem count="1" listtype="or" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_BUY_T3_HEAD">
+          <item id="T3_HEAD_CLOTH_SET1"/>
+          <item id="T3_HEAD_LEATHER_SET1"/>
+          <item id="T3_HEAD_PLATE_SET1"/>
+        </acquireitem>
+        <acquireitem count="1" listtype="or" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_BUY_T3_ARMOR">
+          <item id="T3_ARMOR_CLOTH_SET1"/>
+          <item id="T3_ARMOR_LEATHER_SET1"/>
+          <item id="T3_ARMOR_PLATE_SET1"/>
+        </acquireitem>
+        <acquireitem count="1" listtype="or" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_BUY_T3_SHOES">
+          <item id="T3_SHOES_CLOTH_SET1"/>
+          <item id="T3_SHOES_LEATHER_SET1"/>
+          <item id="T3_SHOES_PLATE_SET1"/>
+        </acquireitem>
+        <acquireitem count="1" itemid="T3_CAPE" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_BUY_T3_CAPE"/>
+        <or textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_BUY_T3_WEAPON_AND_OFFHAND" hideindetailsui="true">
+          <acquireitem count="1">
+            <item id="T3_2H_BOW"/>
+            <item id="T3_2H_CROSSBOW"/>
+            <item id="T3_2H_QUARTERSTAFF"/>
+            <item id="T3_2H_KNUCKLES_SET1"/>
+            <item id="T3_2H_SHAPESHIFTER_SET1"/>
+          </acquireitem>
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_CURSEDSTAFF"/>
+            <item id="T3_OFF_BOOK"/>
+          </acquireitem>
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_CURSEDSTAFF"/>
+            <item id="T3_OFF_SHIELD"/>
+          </acquireitem>
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_CURSEDSTAFF"/>
+            <item id="T3_OFF_TORCH"/>
+          </acquireitem>
+
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_FIRESTAFF"/>
+            <item id="T3_OFF_BOOK"/>
+          </acquireitem>
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_FIRESTAFF"/>
+            <item id="T3_OFF_SHIELD"/>
+          </acquireitem>
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_FIRESTAFF"/>
+            <item id="T3_OFF_TORCH"/>
+          </acquireitem>
+
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_FROSTSTAFF"/>
+            <item id="T3_OFF_BOOK"/>
+          </acquireitem>
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_FROSTSTAFF"/>
+            <item id="T3_OFF_SHIELD"/>
+          </acquireitem>
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_FROSTSTAFF"/>
+            <item id="T3_OFF_TORCH"/>
+          </acquireitem>
+
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_ARCANESTAFF"/>
+            <item id="T3_OFF_BOOK"/>
+          </acquireitem>
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_ARCANESTAFF"/>
+            <item id="T3_OFF_SHIELD"/>
+          </acquireitem>
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_ARCANESTAFF"/>
+            <item id="T3_OFF_TORCH"/>
+          </acquireitem>
+
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_HOLYSTAFF"/>
+            <item id="T3_OFF_BOOK"/>
+          </acquireitem>
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_HOLYSTAFF"/>
+            <item id="T3_OFF_SHIELD"/>
+          </acquireitem>
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_HOLYSTAFF"/>
+            <item id="T3_OFF_TORCH"/>
+          </acquireitem>
+
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_AXE"/>
+            <item id="T3_OFF_BOOK"/>
+          </acquireitem>
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_AXE"/>
+            <item id="T3_OFF_SHIELD"/>
+          </acquireitem>
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_AXE"/>
+            <item id="T3_OFF_TORCH"/>
+          </acquireitem>
+
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_SWORD"/>
+            <item id="T3_OFF_BOOK"/>
+          </acquireitem>
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_SWORD"/>
+            <item id="T3_OFF_SHIELD"/>
+          </acquireitem>
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_SWORD"/>
+            <item id="T3_OFF_TORCH"/>
+          </acquireitem>
+
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_HAMMER"/>
+            <item id="T3_OFF_BOOK"/>
+          </acquireitem>
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_HAMMER"/>
+            <item id="T3_OFF_SHIELD"/>
+          </acquireitem>
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_HAMMER"/>
+            <item id="T3_OFF_TORCH"/>
+          </acquireitem>
+
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_MACE"/>
+            <item id="T3_OFF_BOOK"/>
+          </acquireitem>
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_MACE"/>
+            <item id="T3_OFF_SHIELD"/>
+          </acquireitem>
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_MACE"/>
+            <item id="T3_OFF_TORCH"/>
+          </acquireitem>
+
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_NATURESTAFF"/>
+            <item id="T3_OFF_BOOK"/>
+          </acquireitem>
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_NATURESTAFF"/>
+            <item id="T3_OFF_SHIELD"/>
+          </acquireitem>
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_NATURESTAFF"/>
+            <item id="T3_OFF_TORCH"/>
+          </acquireitem>
+
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_DAGGER"/>
+            <item id="T3_OFF_BOOK"/>
+          </acquireitem>
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_DAGGER"/>
+            <item id="T3_OFF_SHIELD"/>
+          </acquireitem>
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_DAGGER"/>
+            <item id="T3_OFF_TORCH"/>
+          </acquireitem>
+
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_SPEAR"/>
+            <item id="T3_OFF_BOOK"/>
+          </acquireitem>
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_SPEAR"/>
+            <item id="T3_OFF_SHIELD"/>
+          </acquireitem>
+          <acquireitem count="1" listtype="and">
+            <item id="T3_MAIN_SPEAR"/>
+            <item id="T3_OFF_TORCH"/>
+          </acquireitem>
+        </or>
+        </missions>
+      </extendedmissionstep>
+      <missionstep>
+        <haveavgitempower itempower="600" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_EQUIP_ITEMS"/>
+      </missionstep>
+    </tasks>
+  </quest>
+  
+  <!-- Finish an Arena match -->
+  <quest uniquename="QUEST_TUTORIAL_ROLE_PVP_ARENA">
+    <variables>
+      <dynamiccluster name="STARTERTOWN" selection="closest">
+        <clusterlist>
+          <cluster id="1006"/>
+          <cluster id="4006"/>
+          <cluster id="0004"/>
+          <cluster id="2002"/>
+          <cluster id="3002"/>
+        </clusterlist>
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <!-- Sanity Check: Be in a Starter Cross-->
+      <missionstep>
+        <gotocluster clustervariable="STARTERTOWN" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_RETURN_TO_CROSS"  hideindetailsui="true"/>
+      </missionstep>
+      <!-- Go to the the Arena Master -->
+      <missionstep>
+        <gotolocation locationmarkerid="ARENA" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_GOTO_ARENA"/>
+      </missionstep>
+      <!-- Sign up for an arena match and wait-->
+      <missionstep>
+        <finisharenamatch result="win" matchtype="arena" rankedmode="unranked" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_FINISH_ARENA"/>
+      </missionstep>
+    </tasks>
+  </quest>
+  
+  <!-- Unlock a T4 Combat Weapon Node in the Destiny Board -->
+  <quest uniquename="QUEST_TUTORIAL_ROLE_PVP_UNLOCK_T4">
+    <tasks>
+      <!-- Open the Destiny Board-->
+      <missionstep>
+        <usefunction count="1" function="OpenDestinyBoard" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_OPEN_DESTINY_BOARD"/>
+      </missionstep>
+      <extendedmissionstep>
+        <preactions>
+          <openhintbox uniquename="LEARNAUTOLEARN_01" />
+        </preactions>
+        <missions>
+			<or textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_ACTIVATE_QUICK_LEARN">
+				<usefunction function="EnabledGlobalAutoLearn"></usefunction>
+				<havelearningpoints value="0" compareless="true"/>
+			</or>
+        </missions>
+      </extendedmissionstep>
+      <missionstep>
+        <or textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_UNLOCK_T4_WEAPON">
+          <unlockachievement achievement="COMBAT_SWORDS" masterylevel="1" />
+          <unlockachievement achievement="COMBAT_AXES" masterylevel="1" />
+          <unlockachievement achievement="COMBAT_MACES" masterylevel="1" />
+          <unlockachievement achievement="COMBAT_HAMMERS" masterylevel="1" />
+          <unlockachievement achievement="COMBAT_KNUCKLES" masterylevel="1" />
+          <unlockachievement achievement="COMBAT_CROSSBOWS" masterylevel="1" />
+          <unlockachievement achievement="COMBAT_BOWS" masterylevel="1" />
+          <unlockachievement achievement="COMBAT_DAGGERS" masterylevel="1" />
+          <unlockachievement achievement="COMBAT_SPEARS" masterylevel="1" />
+          <unlockachievement achievement="COMBAT_QUARTERSTAFFS" masterylevel="1" />
+          <unlockachievement achievement="COMBAT_SHAPESHIFTER" masterylevel="1" />
+          <unlockachievement achievement="COMBAT_NATURESTAFFS" masterylevel="1" />
+          <unlockachievement achievement="COMBAT_FIRESTAFFS" masterylevel="1" />
+          <unlockachievement achievement="COMBAT_HOLYSTAFFS" masterylevel="1" />
+          <unlockachievement achievement="COMBAT_ARCANESTAFFS" masterylevel="1" />
+          <unlockachievement achievement="COMBAT_FROSTSTAFFS" masterylevel="1" />
+          <unlockachievement achievement="COMBAT_CURSEDSTAFFS" masterylevel="1" />
+        </or>
+        <or textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_UNLOCK_T4_SHOES">
+          <unlockachievement achievement="COMBAT_LEATHER_SHOES" masterylevel="1" />
+          <unlockachievement achievement="COMBAT_CLOTH_SHOES" masterylevel="1" />
+          <unlockachievement achievement="COMBAT_PLATE_SHOES" masterylevel="1" />
+        </or>
+        <or textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_UNLOCK_T4_ARMOR">
+          <unlockachievement achievement="COMBAT_LEATHER_ARMORS" masterylevel="1" />
+          <unlockachievement achievement="COMBAT_CLOTH_ARMORS" masterylevel="1" />
+          <unlockachievement achievement="COMBAT_PLATE_ARMORS" masterylevel="1" />
+        </or>
+        <or textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_UNLOCK_T4_HELMET">
+          <unlockachievement achievement="COMBAT_LEATHER_HEADS" masterylevel="1" />
+          <unlockachievement achievement="COMBAT_CLOTH_HEADS" masterylevel="1" />
+          <unlockachievement achievement="COMBAT_PLATE_HEADS" masterylevel="1" />
+        </or>
+      </missionstep>
+    </tasks>
+  </quest>
+  
+  <!-- Wear full T4 gear -->
+  <quest uniquename="QUEST_TUTORIAL_ROLE_PVP_EQUIP_T4">
+    <variables>
+      <dynamiccluster name="ROYALCITY" selection="closest">
+        <clusterlist>
+          <cluster id="1000"/>			
+          <cluster id="4000"/>
+          <cluster id="0000"/>
+          <cluster id="2000"/>
+          <cluster id="3004"/>
+        </clusterlist>
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <!-- Be in a Royal City -->
+      <missionstep>
+        <gotocluster clustervariable="ROYALCITY" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_GOTO_ROYALCITY"  hideindetailsui="true"/>
+      </missionstep>
+      <!-- Go to the marketplace-->
+      <missionstep>
+        <gotolocation gotolocationmarkerid="MARKETPLACE" markedinworld="true" locationmarkerid="MARKETPLACE" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_GOTO_MARKETPLACE"/>
+      </missionstep>
+      <!-- Buy T4 Gear-->
+      <missionstep>
+        <haveavgitempower itempower="700" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_BUY_T4_GEAR"/>
+      </missionstep>
+    </tasks>
+  </quest>
+
+  <!-- Defeat the Boss in a Corrupted Dungeon -->
+  <quest uniquename="QUEST_TUTORIAL_ROLE_PVP_PLAY_CD">
+    <tasks>
+      <!-- Sanity Check: Have T4 equipped-->
+      <missionstep>
+        <haveavgitempower itempower="700" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_EQUIP_T4"/>
+      </missionstep>
+      <!-- Go to a Hell Den-->
+      <missionstep>
+        <gotocluster worldclustertype="PLAYERCITY_HELLDEN" locationmarkerid="HELLDEN" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_ENTER_HELLDEN"/>
+      </missionstep>
+      <!-- Go to Corrupted Dungeon Portal-->
+      <missionstep>
+        <gotolocation locationmarkerid="CORRUPTED_DUNGEON" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_GOTO_CORRUPTED_PORTAL"/>
+      </missionstep>
+      <extendedmissionstep>
+        <missions>
+          <gotocluster clustertype="CorruptedDungeon" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_GOTO_CORRUPTED_DUNGEON"/>
+        </missions>
+      </extendedmissionstep>
+      <missionstep>
+        <killmob textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_DEFEAT_CORRUPTED_BOSS">
+          <mobid name="T5_MOB_CD_DEMON_BRUTE_BOSS" />
+          <mobid name="T5_MOB_CD_DEMON_SORCERER_BOSS" />
+        </killmob>
+      </missionstep>
+    </tasks>
+  </quest>
+  
+  <!-- Fight against a Player in a Corrupted Dungeon -->
+  <quest uniquename="QUEST_TUTORIAL_ROLE_PVP_FIGHT_IN_CD">
+    <tasks>
+      <!-- GG go next -->
+      <missionstep>
+        <gotocluster clustertype="CorruptedDungeon" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_ANOTHER_CORRUPTED"/>
+      </missionstep>
+      <!-- Hint: Use Shrine to force player encounter-->
+      <extendedmissionstep>
+        <preactions>
+          <openhintbox uniquename="JOURNAL_QUEST_HINT_USE_CORRUPTED_DUNGEON_SHRINE"/>
+        </preactions>
+        <missions>
+        <!--<or textloca="@MISSIONS_JOURNAL_ROLE_PVP_12_SIDETEXT_01"> 
+          <killplayer count="1">
+            <or>
+              <IfClusterArcheType op="equals" value="CORRUPTED_DUNGEON_BEGINNER" />
+              <IfClusterArcheType op="equals" value="CORRUPTED_DUNGEON_INTERMEDIATE" />
+              <IfClusterArcheType op="equals" value="CORRUPTED_DUNGEON_PRO" />
+            </or>
+          </killplayer>
+          <knockdownplayer count="1" specialcondition="KillCorruptedDungeonHost">
+            <or>
+              <IfClusterArcheType op="equals" value="CORRUPTED_DUNGEON_BEGINNER" />
+              <IfClusterArcheType op="equals" value="CORRUPTED_DUNGEON_INTERMEDIATE" />
+              <IfClusterArcheType op="equals" value="CORRUPTED_DUNGEON_PRO" />
+            </or>
+          </knockdownplayer>
+          <knockdownplayer count="1" specialcondition="KillCorruptedDungeonInvader">
+            <or>
+              <IfClusterArcheType op="equals" value="CORRUPTED_DUNGEON_BEGINNER" />
+              <IfClusterArcheType op="equals" value="CORRUPTED_DUNGEON_INTERMEDIATE" />
+              <IfClusterArcheType op="equals" value="CORRUPTED_DUNGEON_PRO" />
+            </or>
+          </knockdownplayer>
+          <die count="1" >
+            <or>
+              <IfClusterArcheType op="equals" value="CORRUPTED_DUNGEON_BEGINNER" />
+              <IfClusterArcheType op="equals" value="CORRUPTED_DUNGEON_INTERMEDIATE" />
+              <IfClusterArcheType op="equals" value="CORRUPTED_DUNGEON_PRO" />
+            </or>
+          </die>
+          <playerbattle count="1" >
+            <or>
+              <IfClusterArcheType op="equals" value="CORRUPTED_DUNGEON_BEGINNER" />
+              <IfClusterArcheType op="equals" value="CORRUPTED_DUNGEON_INTERMEDIATE" />
+              <IfClusterArcheType op="equals" value="CORRUPTED_DUNGEON_PRO" />
+            </or>
+          </playerbattle>
+        </or>-->
+            <leavecombat count="1" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_BATTLE_PLAYER_IN_CORRUPTED">
+              <IfWasInPvpInLastFight/>
+              <or>
+                <IfClusterArcheType op="equals" value="CORRUPTED_DUNGEON_BEGINNER" />
+                <IfClusterArcheType op="equals" value="CORRUPTED_DUNGEON_INTERMEDIATE" />
+                <IfClusterArcheType op="equals" value="CORRUPTED_DUNGEON_PRO" />
+              </or>
+            </leavecombat>
+          </missions>
+      </extendedmissionstep>
+    </tasks>
+  </quest>
+
+  <!-- Visit Showroom Island -->
+  <quest uniquename="QUEST_TUTORIAL_ROLE_PVP_SHOWROOM_ISLAND">
+    <variables>
+      <dynamiccluster name="ROYALCITY" selection="closest">
+        <clusterlist>
+          <cluster id="1000"/>			
+          <cluster id="4000"/>
+          <cluster id="0000"/>
+          <cluster id="2000"/>
+          <cluster id="3004"/>
+        </clusterlist>
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <!-- Go to the royal city-->
+      <missionstep>
+        <gotocluster clustervariable="ROYALCITY" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_GOTO_ROYALCITY"/>
+      </missionstep>
+      <!-- Visit the island merchant-->
+      <missionstep>
+        <gotolocation locationmarkerid="ISLAND" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_GOTO_ISLAND_MERCHANT"/>
+      </missionstep>
+      <!-- Go to Showroom Island-->
+      <extendedmissionstep>
+        <preactions>
+          <openhintbox uniquename="JOURNAL_QUEST_HINT_HIGHLIGHT_SHOWROOM"/>
+        </preactions>
+        <missions>
+          <gotocluster worldclustertype="SHOWROOMISLAND" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_GOTO_SHOWROOM_ISLAND">
+            <IfClusterId value="SHOWROOM" op="contains" />
+          </gotocluster>
+        </missions>
+      </extendedmissionstep>
+      <!-- Finish Island Tour -->
+      <extendedmissionstep>
+        <!-- Hint: YOU FINISHED ITTTTTTT-->
+        <preactions>
+          <openhintbox uniquename="CHAPTER_COMPLETE_PVP"/>
+        </preactions>
+        <missions>
+          <finishquest name="MISSIONS_SHOWROOM_ISLAND_TOUR" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_TOUR_SHOWROOM_ISLAND"/>
+        </missions>
+      </extendedmissionstep>
+    </tasks>
+  </quest>
+  
+  
+  <!--######################################################################-->
+  <!--######################################################################-->
+  <!--####################### GATHERING MISSIONS ###########################-->
+  <!--######################################################################-->
+  <!--######################################################################-->
+    
+  <!-- Gather 80 T2 Resources-->
+  <quest uniquename="QUEST_TUTORIAL_ROLE_GATHERING_GATHER_T2">
+    <tasks>
+      <!-- Go into the Safe Zone-->
+      <missionstep>
+        <gotocluster worldclustertype="SAFEAREA" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_GOTO_SAFEZONE"/>
+      </missionstep>
+      <!-- Gather T2 Resources -->
+      <extendedmissionstep>
+        <missions>
+          <gather count="80" mintier="2" maxtier="2" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_GATHER_T2" />
+        </missions>
+      </extendedmissionstep>
+    </tasks>
+  </quest>
+  
+  <!-- Sell 80 Items on the Marketplace-->
+  <quest uniquename="QUEST_TUTORIAL_ROLE_GATHERING_SELL_ITEMS">
+    <variables>
+      <dynamiccluster name="STARTERTOWN" selection="closest">
+        <clusterlist>
+          <cluster id="1006"/>
+          <cluster id="4006"/>
+          <cluster id="0004"/>
+          <cluster id="2002"/>
+          <cluster id="3002"/>
+        </clusterlist>
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <!-- Go to the closest Starter Town-->
+      <missionstep>
+        <gotocluster clustervariable="STARTERTOWN" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_RETURN_TO_CROSS"  hideindetailsui="true"/>
+      </missionstep>
+      <!-- Go to the marketplace-->
+	  <missionstep>
+	    <usefunction function="InteractWithMarketplace" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_GOTO_MARKETPLACE" locationmarkerid="MARKETPLACE" />
+	  </missionstep>
+	  <!-- Sell 80 Items -->
+      <!-- Hint: Sell Items on the right hand side of the Marketplace UI-->
+      <extendedmissionstep>
+        <preactions>
+          <openhintbox uniquename="JOURNAL_QUEST_SELL_ITEMS_GATHERING"/>
+        </preactions>
+        <missions>
+          <marketsellitem count="80" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_SELL_ITEMS_TO_MARKET"/>
+        </missions>
+      </extendedmissionstep>
+    </tasks>
+  </quest>
+
+  <!-- Buy any T2 Gathering Tool -->
+  <quest uniquename="QUEST_TUTORIAL_ROLE_GATHERING_BUY_TOOL">
+    <variables>
+      <dynamiccluster name="STARTERTOWN" selection="closest">
+        <clusterlist>
+          <cluster id="1006"/>
+          <cluster id="4006"/>
+          <cluster id="0004"/>
+          <cluster id="2002"/>
+          <cluster id="3002"/>
+        </clusterlist>
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <!-- Sanity Check: Can use T2 tools-->
+      <missionstep>
+          <unlockachievement achievement="GATHER_TRAINEE" masterylevel="1" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_UNLOCK_T2_GATHERING"/>
+      </missionstep>
+      <!-- Sanity Check: Be in Startertown-->
+      <missionstep>
+        <gotocluster clustervariable="STARTERTOWN" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_RETURN_TO_CROSS"/>
+      </missionstep>
+      <!-- Sanity Check: Go to the marketplace-->
+      <missionstep>
+        <interactwithbuilding buildingid="MARKETPLACE_SMALL" locationmarkerid="MARKETPLACE" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_GOTO_MARKETPLACE"/>
+      </missionstep>
+      <!-- Buy a Tool at the marketplace-->
+      <extendedmissionstep>
+		<preactions>
+		  <openhintbox uniquename="JOURNAL_QUEST_BUY_EQUIPMENT"/>
+		</preactions>		  
+        <missions>
+          <marketbuyitem count="1" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_BUY_T2_TOOL">
+            <or>
+              <IfItemId op="equals" value="T2_2H_TOOL_PICK" />
+              <IfItemId op="equals" value="T2_2H_TOOL_AXE" />
+              <IfItemId op="equals" value="T2_2H_TOOL_SICKLE" />
+              <IfItemId op="equals" value="T2_2H_TOOL_KNIFE" />
+              <IfItemId op="equals" value="T2_2H_TOOL_HAMMER" />
+            </or>
+          </marketbuyitem>
+        </missions>
+      </extendedmissionstep>
+    </tasks>
+  </quest>
+  
+  <!-- Gather Resources in two different Biomes-->
+  <quest uniquename="QUEST_TUTORIAL_ROLE_GATHERING_BIOMES">
+    <variables>
+      <dynamiccluster name="STARTERTOWN" selection="closest">
+        <clusterlist>
+          <cluster id="1006"/>
+          <cluster id="4006"/>
+          <cluster id="0004"/>
+          <cluster id="2002"/>
+          <cluster id="3002"/>
+        </clusterlist>
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <!-- Open the World Map-->
+      <extendedmissionstep>
+        <preactions>
+          <openhintbox uniquename="JOURNAL_QUEST_HINT_BIOMES"/>
+        </preactions>
+        <missions>
+          <usefunction function="OpenWorldMap" count="1" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_OPEN_WORLDMAP"/>
+        </missions>
+      </extendedmissionstep>
+    </tasks>
+  </quest>
+  
+  <!-- Unlock T3 Gathering-->
+  <quest uniquename="QUEST_TUTORIAL_ROLE_GATHERING_UNLOCK_T3">	  
+    <tasks>
+      <!-- Open the Destiny Board-->
+      <missionstep>
+        <usefunction count="1" function="OpenDestinyBoard" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_OPEN_DESTINY_BOARD"/>
+      </missionstep>
+      <!-- Go to a Safearea-->
+      <extendedmissionstep>
+        <preactions>
+          <openhintbox uniquename="LEARNAUTOLEARN_01" />
+        </preactions>
+        <missions>
+			<or textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_ACTIVATE_QUICK_LEARN">
+				<usefunction function="EnabledGlobalAutoLearn"></usefunction>
+				<havelearningpoints value="0" compareless="true"/>
+			</or>
+        </missions>
+      </extendedmissionstep>
+      <missionstep>
+        <gotocluster worldclustertype="SAFEAREA" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_GOTO_SAFEZONE"/>
+      </missionstep>
+      <!-- Earn Gathering fame until you unlock a T3 gathering node-->
+      <extendedmissionstep>
+        <missions>
+          <or textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_UNLOCK_T3_GATHERING">
+            <unlockachievement achievement="GATHER_ROCK_T3" masterylevel="1" />
+            <unlockachievement achievement="GATHER_WOOD_T3" masterylevel="1" />
+            <unlockachievement achievement="GATHER_HIDE_T3" masterylevel="1" />
+            <unlockachievement achievement="GATHER_ORE_T3" masterylevel="1" />
+            <unlockachievement achievement="GATHER_FIBER_T3" masterylevel="1" />
+          </or>
+        </missions>
+      </extendedmissionstep>
+    </tasks>
+  </quest>
+  <!-- Gather XX T4 Resources-->
+  <quest uniquename="QUEST_TUTORIAL_ROLE_GATHERING_GATHER_T4">
+    <variables>
+      <dynamiccluster name="ROYALCITY" selection="closest">
+        <clusterlist>
+          <cluster id="1000"/>			
+          <cluster id="4000"/>
+          <cluster id="0000"/>
+          <cluster id="2000"/>
+          <cluster id="3004"/>
+        </clusterlist>
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <!-- Sanity Check: Have T3 Gathering unlocked-->
+      <missionstep>
+        <or textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_UNLOCK_T3_GATHERING">
+          <unlockachievement achievement="GATHER_WOOD_T3" masterylevel="1"  hideindetailsui="true" />
+          <unlockachievement achievement="GATHER_ROCK_T3" masterylevel="1"  hideindetailsui="true" />
+          <unlockachievement achievement="GATHER_FIBER_T3" masterylevel="1"  hideindetailsui="true" />
+          <unlockachievement achievement="GATHER_HIDE_T3" masterylevel="1"  hideindetailsui="true" />
+          <unlockachievement achievement="GATHER_ORE_T3" masterylevel="1"  hideindetailsui="true" />
+        </or>
+        
+      </missionstep>
+      <!-- Go to Royal City-->
+      <missionstep>
+        <gotocluster clustervariable="ROYALCITY" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_GOTO_ROYALCITY"/>
+      </missionstep>
+      <!-- Go to the marketplace-->
+      <missionstep>
+        <gotolocation locationmarkerid="MARKETPLACE" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_GOTO_MARKETPLACE"/>
+      </missionstep>		
+      <!-- Have a T3 Tool-->
+      <missionstep>
+        <acquireitem count="1" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_BUY_T3_TOOL">
+          <item id="T3_2H_TOOL_PICK"/>
+          <item id="T3_2H_TOOL_HAMMER"/>
+          <item id="T3_2H_TOOL_AXE"/>
+          <item id="T3_2H_TOOL_SICKLE"/>
+          <item id="T3_2H_TOOL_KNIFE"/>
+        </acquireitem>
+      </missionstep>
+      <!--Gather T4 Resources-->
+      <!--Hint: You can go to a Tier 3 or 4 cluster to find Tier 4 resources-->
+      <extendedmissionstep>
+        <preactions>
+          <openhintbox uniquename="JOURNAL_QUEST_HINT_USE_WORLDMAP"/>
+        </preactions>
+        <missions>
+          <gather count="50" mintier="4" maxtier="4" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_GATHER_T4"/>
+        </missions>
+      </extendedmissionstep>
+    </tasks>
+  </quest>
+  
+  <!-- Ride an Ox-->
+  <quest uniquename="QUEST_TUTORIAL_ROLE_GATHERING_RIDE_OX">
+    <variables>
+      <dynamiccluster name="ROYALCITY" selection="closest">
+        <clusterlist>
+          <cluster id="1000"/>			
+          <cluster id="4000"/>
+          <cluster id="0000"/>
+          <cluster id="2000"/>
+          <cluster id="3004"/>
+        </clusterlist>
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <!-- Sanity Check: Have T3 Adventurer unlocked-->
+      <missionstep>
+        <unlockachievement achievement="ADVENTURER_JOURNEYMAN" masterylevel="1"  hideindetailsui="true" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_UNLOCK_T3_ADVENTURER"/>
+      </missionstep>
+      <!-- Go to Royal City-->
+      <missionstep>
+        <gotocluster clustervariable="ROYALCITY" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_GOTO_ROYALCITY"/>
+      </missionstep>
+      <!-- Go to the marketplace-->
+      <missionstep>
+        <gotolocation locationmarkerid="MARKETPLACE" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_GOTO_MARKETPLACE"/>
+      </missionstep>
+      <!-- Buy a Transport Ox-->
+      <missionstep>
+        <acquireitem count="1" itemid="T3_MOUNT_OX" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_BUY_T3_OX">
+        </acquireitem>
+      </missionstep>
+      <missionstep>
+        <mount itemid="T3_MOUNT_OX" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_RIDE_T3_OX"/>
+      </missionstep>
+     </tasks>
+  </quest>
+  
+  <!-- Catch 5 Fish-->
+  <quest uniquename="QUEST_TUTORIAL_ROLE_GATHERING_FISHING">
+    <tasks>
+      <!-- Get a Fishing Rod-->
+      <extendedmissionstep>
+        <preactions>
+          <openhintbox uniquename="JOURNAL_QUEST_CLAIM_REWARDS"/>
+        </preactions>
+        <missions>
+          <acquireitem count="1" itemid="T3_2H_TOOL_FISHINGROD" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_OBTAIN_T3_FISHING_ROD"/>
+        </missions>
+      </extendedmissionstep>
+      <!-- Leave the City-->
+      <missionstep>
+          <gotocluster clustertype="World" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_GOTO_SAFEZONE"/>
+      </missionstep>
+      <!-- Catch 5 Fish-->
+      <extendedmissionstep>
+        <preactions>
+          <openhintbox uniquename="FISHING_INFO"/>
+        </preactions>
+        <missions>
+          <fish count="5" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_FISH"/>
+        </missions>
+      </extendedmissionstep>
+    </tasks>
+  </quest>
+  
+  <!-- Visit Showroom Island-->
+  <quest uniquename="QUEST_TUTORIAL_ROLE_GATHERING_SHOWROOM_ISLAND">
+    <variables>
+      <dynamiccluster name="ROYALCITY" selection="closest">
+        <clusterlist>
+          <cluster id="1000"/>			
+          <cluster id="4000"/>
+          <cluster id="0000"/>
+          <cluster id="2000"/>
+          <cluster id="3004"/>
+        </clusterlist>
+      </dynamiccluster>
+    </variables>
+    <tasks>
+      <!-- Go to the royal city-->
+      <missionstep>
+        <gotocluster clustervariable="ROYALCITY" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_GOTO_ROYALCITY"/>
+      </missionstep>
+      <!-- Visit the island merchant-->
+      <missionstep>
+        <gotolocation locationmarkerid="ISLAND" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_GOTO_ISLAND_MERCHANT"/>
+      </missionstep>
+      <!-- Go to Showroom Island-->
+      <extendedmissionstep>
+        <preactions>
+          <openhintbox uniquename="JOURNAL_QUEST_HINT_HIGHLIGHT_SHOWROOM"/>
+        </preactions>
+        <missions>
+          <gotocluster worldclustertype="SHOWROOMISLAND" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_GOTO_SHOWROOM_ISLAND">
+            <IfClusterId value="SHOWROOM" op="contains" />
+          </gotocluster>
+        </missions>
+      </extendedmissionstep>
+      <!-- Finish Island Tour -->
+      <extendedmissionstep>
+        <!-- Hint: YOU FINISHED ITTTTTTT-->
+        <preactions>
+          <openhintbox uniquename="CHAPTER_COMPLETE_GATHERING"/>
+        </preactions>
+        <missions>
+          <finishquest name="MISSIONS_SHOWROOM_ISLAND_TOUR" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_TOUR_SHOWROOM_ISLAND"/>
+        </missions>
+      </extendedmissionstep>
+    </tasks>
+  </quest>
+
+
+</journalquests>

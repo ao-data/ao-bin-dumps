@@ -168,6 +168,10 @@
         "GroupBonus": {
           "Group": [
             {
+              "@size": "2",
+              "@bonusfactor": "1.1"
+            },
+            {
               "@size": "3",
               "@bonusfactor": "1.17"
             },
@@ -1014,6 +1018,9 @@
           "@demonskull": "0",
           "@totem": "0",
           "@censer": "0",
+          "@crystalshield": "0",
+          "@crystaltorch": "0",
+          "@crystalbook": "0",
           "@transformation": "1.0"
         },
         "ccrshare": {
@@ -1031,12 +1038,15 @@
           "@horn": "0",
           "@cane": "0",
           "@lamp": "0",
-          "@talisman": "1.2",
+          "@talisman": "1.8",
           "@book": "0",
           "@orb": "0",
           "@demonskull": "0",
           "@totem": "0",
           "@censer": "0",
+          "@crystalshield": "0",
+          "@crystaltorch": "-1.2",
+          "@crystalbook": "0",
           "@transformation": "1.0"
         },
         "hitpointsshare": {
@@ -1060,6 +1070,9 @@
           "@demonskull": "0",
           "@totem": "0.25",
           "@censer": "0",
+          "@crystalshield": "0",
+          "@crystaltorch": "0",
+          "@crystalbook": "0",
           "@transformation": "1.0"
         },
         "energyshare": {
@@ -1083,6 +1096,9 @@
           "@demonskull": "0",
           "@totem": "0",
           "@censer": "0",
+          "@crystalshield": "0.125",
+          "@crystaltorch": "0",
+          "@crystalbook": "0",
           "@transformation": "1.0"
         },
         "trackingtime": {
@@ -3538,6 +3554,10 @@
                 {
                   "@itemtype": "transformationweapon",
                   "@factor": "0"
+                },
+                {
+                  "@itemtype": "trashitem",
+                  "@factor": "1"
                 }
               ]
             }
@@ -3555,6 +3575,36 @@
             },
             "StackLoss": {
               "@factor": "0.33",
+              "Override": [
+                {
+                  "@itemtype": "rewardtoken",
+                  "@factor": "1"
+                },
+                {
+                  "@itemtype": "trashitem",
+                  "@factor": "1"
+                }
+              ]
+            }
+          },
+          "AliveToDeadOrange": {
+            "DurabilityLoss": [
+              {
+                "@minfactor": "0.05",
+                "@maxfactor": "0.05",
+                "@minimumremainingfactor": "0.01",
+                "@target": "equipment"
+              },
+              {
+                "@minfactor": "0.2",
+                "@maxfactor": "0.4",
+                "@minimumremainingfactor": "0.01",
+                "@target": "inventory"
+              }
+            ],
+            "StackLoss": {
+              "@factor": "0.33",
+              "@target": "inventory",
               "Override": [
                 {
                   "@itemtype": "rewardtoken",
@@ -3601,6 +3651,28 @@
             },
             "StackLoss": {
               "@factor": "0.33",
+              "Override": [
+                {
+                  "@itemtype": "rewardtoken",
+                  "@factor": "1"
+                },
+                {
+                  "@itemtype": "trashitem",
+                  "@factor": "1"
+                }
+              ]
+            }
+          },
+          "KnockedOutToDeadOrange": {
+            "DurabilityLoss": {
+              "@minfactor": "0.15",
+              "@maxfactor": "0.35",
+              "@minimumremainingfactor": "0.01",
+              "@target": "inventory"
+            },
+            "StackLoss": {
+              "@factor": "0.33",
+              "@target": "inventory",
               "Override": [
                 {
                   "@itemtype": "rewardtoken",
@@ -3865,6 +3937,7 @@
     "ActionSplitSettings": {
       "@defaultcraftstacksize": "40",
       "@defaultstudystacksize": "40",
+      "@defaultmeldstacksize": "10",
       "SplitSetting": [
         {
           "@craftingcategory": "fiber",
@@ -3944,6 +4017,10 @@
         ]
       }
     },
+    "LearningPoints": {
+      "@payoutdaytimeref": "DOWNTIME",
+      "@ctalpthreshold": "50"
+    },
     "ClusterDangerBonusTypes": {
       "@globalmoblootfactor": "0.9",
       "@globalmobsilverlootfactor": "0.9",
@@ -3965,6 +4042,16 @@
           "@moblootfactor": "1.33",
           "@mobsilverlootfactor": "1.53",
           "@questscalingfactor": "2.4",
+          "@gatheringfamefactor": "1",
+          "@fishingfamefactor": "1"
+        },
+        {
+          "@type": "orange",
+          "@icon": "orange",
+          "@famefactor": "2.9",
+          "@moblootfactor": "1.80",
+          "@mobsilverlootfactor": "2",
+          "@questscalingfactor": "2.9",
           "@gatheringfamefactor": "1",
           "@fishingfamefactor": "1"
         },
@@ -4116,30 +4203,30 @@
         {
           "@type": "corrupted_beginner",
           "@icon": "corruptedbeginner",
-          "@famefactor": "3.2",
+          "@famefactor": "2.4",
           "@moblootfactor": "1.33",
           "@mobsilverlootfactor": "1.53",
-          "@questscalingfactor": "3.2",
+          "@questscalingfactor": "2.4",
           "@gatheringfamefactor": "1",
           "@fishingfamefactor": "1"
         },
         {
           "@type": "corrupted_intermediate",
           "@icon": "corruptedintermediate",
-          "@famefactor": "5.1",
+          "@famefactor": "4.2",
           "@moblootfactor": "2.6",
           "@mobsilverlootfactor": "3",
-          "@questscalingfactor": "5.1",
+          "@questscalingfactor": "4.2",
           "@gatheringfamefactor": "1",
           "@fishingfamefactor": "1"
         },
         {
           "@type": "corrupted_pro",
           "@icon": "corruptedpro",
-          "@famefactor": "3.5",
+          "@famefactor": "4.2",
           "@moblootfactor": "2.6",
           "@mobsilverlootfactor": "3",
-          "@questscalingfactor": "3.5",
+          "@questscalingfactor": "4.2",
           "@gatheringfamefactor": "1",
           "@fishingfamefactor": "1"
         },
@@ -4195,6 +4282,16 @@
         },
         {
           "@type": "mistsdungeonblack",
+          "@icon": "black",
+          "@famefactor": "4.2",
+          "@moblootfactor": "2.6",
+          "@mobsilverlootfactor": "3",
+          "@questscalingfactor": "4.2",
+          "@gatheringfamefactor": "1",
+          "@fishingfamefactor": "1"
+        },
+        {
+          "@type": "helldungeonblack",
           "@icon": "black",
           "@famefactor": "4.2",
           "@moblootfactor": "2.6",
@@ -4282,7 +4379,7 @@
       "@enteringeffectprefab": "FX/ClientPrefabs/fx_expeditions_teleport_loop",
       "@enteringeffectsuccessprefab": "FX/ClientPrefabs/fx_expeditions_teleport_no_intro",
       "@arrivingeffectspell": "EXPEDITIONSPAWN",
-      "@penaltyduration": "900",
+      "@penaltyduration": "180",
       "ExpeditionBonusRewardTimer": {
         "ResetTimer": {
           "@utctime": "23:00"
@@ -4539,7 +4636,9 @@
           "@trashchance": "0.15",
           "@durabilityloss": "0.3",
           "@fakeslotspell": "OVERCHARGE",
-          "@spelleffect": "OVER_CHARGED"
+          "@spelleffect": "OVER_CHARGED",
+          "@titleloca": "@OVERCHARGE_TITLE_GENERIC",
+          "@tooltiploca": "@OVERCHARGE_HUD_TOOLTIP"
         },
         {
           "@bonus": "100",
@@ -4548,7 +4647,9 @@
           "@trashchance": "0.30",
           "@durabilityloss": "0.6",
           "@fakeslotspell": "OVERCHARGE2",
-          "@spelleffect": "OVER_CHARGED2"
+          "@spelleffect": "OVER_CHARGED2",
+          "@titleloca": "@OVERCHARGE_TITLE_GENERIC_2",
+          "@tooltiploca": "@OVERCHARGE_HUD_TOOLTIP_ADD_STACK"
         }
       ]
     },
@@ -5603,7 +5704,7 @@
       "@availableuntil": "2024-07-21T11:00:00Z"
     },
     "DeathRecap": {
-      "@timeframe": "10"
+      "@timeframe": "180"
     },
     "ClusterQualityOverlay": {
       "Quality": [
@@ -5720,33 +5821,33 @@
             },
             {
               "@mobtier": "3",
-              "@mobbonusdamage": "0.15",
-              "@mobbonusdefense": "0.15"
+              "@mobbonusdamage": "0",
+              "@mobbonusdefense": "0"
             },
             {
               "@mobtier": "4",
-              "@mobbonusdamage": "0.5",
-              "@mobbonusdefense": "0.5"
+              "@mobbonusdamage": "0",
+              "@mobbonusdefense": "0"
             },
             {
               "@mobtier": "5",
-              "@mobbonusdamage": "0.95",
-              "@mobbonusdefense": "0.97"
+              "@mobbonusdamage": "0",
+              "@mobbonusdefense": "0"
             },
             {
               "@mobtier": "6",
-              "@mobbonusdamage": "1.55",
-              "@mobbonusdefense": "1.58"
+              "@mobbonusdamage": "0",
+              "@mobbonusdefense": "0"
             },
             {
               "@mobtier": "7",
-              "@mobbonusdamage": "2.3",
-              "@mobbonusdefense": "2.42"
+              "@mobbonusdamage": "0",
+              "@mobbonusdefense": "0"
             },
             {
               "@mobtier": "8",
-              "@mobbonusdamage": "3.3",
-              "@mobbonusdefense": "3.53"
+              "@mobbonusdamage": "0",
+              "@mobbonusdefense": "0"
             }
           ]
         },
@@ -5765,33 +5866,33 @@
             },
             {
               "@mobtier": "3",
-              "@mobbonusdamage": "0.15",
-              "@mobbonusdefense": "0.15"
+              "@mobbonusdamage": "0",
+              "@mobbonusdefense": "0"
             },
             {
               "@mobtier": "4",
-              "@mobbonusdamage": "0.5",
-              "@mobbonusdefense": "0.5"
+              "@mobbonusdamage": "0",
+              "@mobbonusdefense": "0"
             },
             {
               "@mobtier": "5",
-              "@mobbonusdamage": "0.95",
-              "@mobbonusdefense": "0.97"
+              "@mobbonusdamage": "0",
+              "@mobbonusdefense": "0"
             },
             {
               "@mobtier": "6",
-              "@mobbonusdamage": "1.55",
-              "@mobbonusdefense": "1.58"
+              "@mobbonusdamage": "0",
+              "@mobbonusdefense": "0"
             },
             {
               "@mobtier": "7",
-              "@mobbonusdamage": "2.3",
-              "@mobbonusdefense": "2.42"
+              "@mobbonusdamage": "0",
+              "@mobbonusdefense": "0"
             },
             {
               "@mobtier": "8",
-              "@mobbonusdamage": "3.3",
-              "@mobbonusdefense": "3.53"
+              "@mobbonusdamage": "0",
+              "@mobbonusdefense": "0"
             }
           ]
         },
@@ -5815,28 +5916,28 @@
             },
             {
               "@mobtier": "4",
-              "@mobbonusdamage": "0.3",
-              "@mobbonusdefense": "0.31"
+              "@mobbonusdamage": "0",
+              "@mobbonusdefense": "0"
             },
             {
               "@mobtier": "5",
-              "@mobbonusdamage": "0.7",
-              "@mobbonusdefense": "0.72"
+              "@mobbonusdamage": "0",
+              "@mobbonusdefense": "0"
             },
             {
               "@mobtier": "6",
-              "@mobbonusdamage": "1.22",
-              "@mobbonusdefense": "1.24"
+              "@mobbonusdamage": "0",
+              "@mobbonusdefense": "0"
             },
             {
               "@mobtier": "7",
-              "@mobbonusdamage": "1.87",
-              "@mobbonusdefense": "1.97"
+              "@mobbonusdamage": "0",
+              "@mobbonusdefense": "0"
             },
             {
               "@mobtier": "8",
-              "@mobbonusdamage": "2.74",
-              "@mobbonusdefense": "2.96"
+              "@mobbonusdamage": "0",
+              "@mobbonusdefense": "0"
             }
           ]
         },
@@ -5865,23 +5966,23 @@
             },
             {
               "@mobtier": "5",
-              "@mobbonusdamage": "0.3",
-              "@mobbonusdefense": "0.31"
+              "@mobbonusdamage": "0",
+              "@mobbonusdefense": "0"
             },
             {
               "@mobtier": "6",
-              "@mobbonusdamage": "0.7",
-              "@mobbonusdefense": "0.72"
+              "@mobbonusdamage": "0",
+              "@mobbonusdefense": "0"
             },
             {
               "@mobtier": "7",
-              "@mobbonusdamage": "1.2",
-              "@mobbonusdefense": "1.28"
+              "@mobbonusdamage": "0",
+              "@mobbonusdefense": "0"
             },
             {
               "@mobtier": "8",
-              "@mobbonusdamage": "1.87",
-              "@mobbonusdefense": "2.02"
+              "@mobbonusdamage": "0",
+              "@mobbonusdefense": "0"
             }
           ]
         },
@@ -5911,22 +6012,22 @@
             {
               "@mobtier": "5",
               "@mobbonusdamage": "0",
-              "@mobbonusdefense": "0.01"
+              "@mobbonusdefense": "0"
             },
             {
               "@mobtier": "6",
-              "@mobbonusdamage": "0.31",
-              "@mobbonusdefense": "0.32"
+              "@mobbonusdamage": "0",
+              "@mobbonusdefense": "0"
             },
             {
               "@mobtier": "7",
-              "@mobbonusdamage": "0.69",
-              "@mobbonusdefense": "0.76"
+              "@mobbonusdamage": "0",
+              "@mobbonusdefense": "0"
             },
             {
               "@mobtier": "8",
-              "@mobbonusdamage": "1.21",
-              "@mobbonusdefense": "1.32"
+              "@mobbonusdamage": "0",
+              "@mobbonusdefense": "0"
             }
           ]
         },
@@ -5956,22 +6057,22 @@
             {
               "@mobtier": "5",
               "@mobbonusdamage": "0",
-              "@mobbonusdefense": "0.01"
+              "@mobbonusdefense": "0"
             },
             {
               "@mobtier": "6",
               "@mobbonusdamage": "0",
-              "@mobbonusdefense": "0.01"
+              "@mobbonusdefense": "0"
             },
             {
               "@mobtier": "7",
-              "@mobbonusdamage": "0.29",
-              "@mobbonusdefense": "0.35"
+              "@mobbonusdamage": "0",
+              "@mobbonusdefense": "0"
             },
             {
               "@mobtier": "8",
-              "@mobbonusdamage": "0.69",
-              "@mobbonusdefense": "0.77"
+              "@mobbonusdamage": "0",
+              "@mobbonusdefense": "0"
             }
           ]
         },
@@ -6001,22 +6102,22 @@
             {
               "@mobtier": "5",
               "@mobbonusdamage": "0",
-              "@mobbonusdefense": "0.01"
+              "@mobbonusdefense": "0"
             },
             {
               "@mobtier": "6",
               "@mobbonusdamage": "0",
-              "@mobbonusdefense": "0.01"
+              "@mobbonusdefense": "0"
             },
             {
               "@mobtier": "7",
               "@mobbonusdamage": "0",
-              "@mobbonusdefense": "0.04"
+              "@mobbonusdefense": "0"
             },
             {
               "@mobtier": "8",
-              "@mobbonusdamage": "0.3",
-              "@mobbonusdefense": "0.37"
+              "@mobbonusdamage": "0",
+              "@mobbonusdefense": "0"
             }
           ]
         },
@@ -6046,22 +6147,22 @@
             {
               "@mobtier": "5",
               "@mobbonusdamage": "0",
-              "@mobbonusdefense": "0.01"
+              "@mobbonusdefense": "0"
             },
             {
               "@mobtier": "6",
               "@mobbonusdamage": "0",
-              "@mobbonusdefense": "0.01"
+              "@mobbonusdefense": "0"
             },
             {
               "@mobtier": "7",
               "@mobbonusdamage": "0",
-              "@mobbonusdefense": "0.04"
+              "@mobbonusdefense": "0"
             },
             {
               "@mobtier": "8",
               "@mobbonusdamage": "0",
-              "@mobbonusdefense": "0.05"
+              "@mobbonusdefense": "0"
             }
           ]
         }

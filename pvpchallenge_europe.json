@@ -12,21 +12,33 @@
         "@fametomightfactor": "0.0016",
         "@famescaling": "1",
         "@mighttofavorfactor": "0.2635",
-        "@solorandomdungeonfactor": "0.33"
+        "@solorandomdungeonfactor": "0.33",
+        "dangerbonustypemultiplier": {
+          "@pvpwarningtype": "orange",
+          "@mightandfavormultiplier": "0"
+        }
       },
       "gathering": {
         "@objectivetype": "PVPCHALLENGE_GATHERING",
         "@personaltype": "GATHERING",
         "@fametomightfactor": "0.017",
         "@famescaling": "1",
-        "@mighttofavorfactor": "0.2635"
+        "@mighttofavorfactor": "0.2635",
+        "dangerbonustypemultiplier": {
+          "@pvpwarningtype": "orange",
+          "@mightandfavormultiplier": "0"
+        }
       },
       "fishing": {
         "@objectivetype": "PVPCHALLENGE_FISHING",
         "@personaltype": "FISHING",
         "@fametomightfactor": "0.017",
         "@famescaling": "1",
-        "@mighttofavorfactor": "0.2635"
+        "@mighttofavorfactor": "0.2635",
+        "dangerbonustypemultiplier": {
+          "@pvpwarningtype": "orange",
+          "@mightandfavormultiplier": "0"
+        }
       },
       "territoryenergycollection": {
         "@objectivetype": "PVPCHALLENGE_TERRITORY",
@@ -37,14 +49,22 @@
         "@mighttofavorfactor": "0",
         "@energytomightfactor": "14",
         "@energytomightexponent": "0.64",
-        "@indirectobjective": "true"
+        "@indirectobjective": "true",
+        "dangerbonustypemultiplier": {
+          "@pvpwarningtype": "orange",
+          "@mightandfavormultiplier": "0"
+        }
       },
       "tracking": {
         "@objectivetype": "PVPCHALLENGE_GATHERING",
         "@personaltype": "GATHERING",
         "@fametomightfactor": "0.0525",
         "@famescaling": "1",
-        "@mighttofavorfactor": "0.2635"
+        "@mighttofavorfactor": "0.2635",
+        "dangerbonustypemultiplier": {
+          "@pvpwarningtype": "orange",
+          "@mightandfavormultiplier": "0"
+        }
       },
       "objective": [
         {
@@ -258,6 +278,20 @@
           }
         },
         {
+          "@uniquename": "PVPCHALLENGE_MISTS_CAGED_WISP",
+          "@personaltype": "CAGEDWISP",
+          "@might": "0",
+          "@favor": "0",
+          "@pvekillfame": "1560",
+          "@pvekillfametier": "4",
+          "@mindivisor": "2",
+          "@usequestscalingfactor": "true",
+          "standingreward": {
+            "@type": "mistcity",
+            "@value": "160"
+          }
+        },
+        {
           "@uniquename": "PVPCHALLENGE_SMUGGLERS_CRATE_0",
           "@objectivetype": "SMUGGLERSCRATES",
           "@might": "1624.382",
@@ -460,20 +494,6 @@
           "@completionchatlocatag": "@CHATMESSAGE_OBJECTIVE_COMPLETED"
         },
         {
-          "@uniquename": "PVPCHALLENGE_MISTS_CAGED_WISP",
-          "@personaltype": "CAGEDWISP",
-          "@might": "0",
-          "@favor": "0",
-          "@pvekillfame": "1560",
-          "@pvekillfametier": "4",
-          "@mindivisor": "2",
-          "@usequestscalingfactor": "true",
-          "standingreward": {
-            "@type": "mistcity",
-            "@value": "160"
-          }
-        },
-        {
           "@uniquename": "PVPCHALLENGE_TREASURES_MINI_0",
           "@objectivetype": "TREASURES",
           "@might": "198.77",
@@ -586,39 +606,189 @@
           "@mindivisor": "10"
         },
         {
+          "@uniquename": "PVPCHALLENGE_TREASURES_MINI_ORANGE_0",
+          "@objectivetype": "TREASURES",
+          "@might": "66.26",
+          "@favor": "0",
+          "@mindivisor": "1"
+        },
+        {
+          "@uniquename": "PVPCHALLENGE_TREASURES_MINI_ORANGE_1",
+          "@objectivetype": "TREASURES",
+          "@might": "99.39",
+          "@favor": "0",
+          "@mindivisor": "1"
+        },
+        {
+          "@uniquename": "PVPCHALLENGE_TREASURES_MINI_ORANGE_2",
+          "@objectivetype": "TREASURES",
+          "@might": "198.77",
+          "@favor": "0",
+          "@mindivisor": "1"
+        },
+        {
+          "@uniquename": "PVPCHALLENGE_TREASURES_MINI_ORANGE_3",
+          "@objectivetype": "TREASURES",
+          "@might": "397.54",
+          "@favor": "0",
+          "@mindivisor": "1"
+        },
+        {
+          "@uniquename": "PVPCHALLENGE_TREASURES_SMALL_ORANGE_0",
+          "@objectivetype": "TREASURES",
+          "@might": "198.77",
+          "@favor": "0",
+          "@mindivisor": "1"
+        },
+        {
+          "@uniquename": "PVPCHALLENGE_TREASURES_SMALL_ORANGE_1",
+          "@objectivetype": "TREASURES",
+          "@might": "298.15",
+          "@favor": "0",
+          "@mindivisor": "1"
+        },
+        {
+          "@uniquename": "PVPCHALLENGE_TREASURES_SMALL_ORANGE_2",
+          "@objectivetype": "TREASURES",
+          "@might": "596.3",
+          "@favor": "0",
+          "@mindivisor": "1"
+        },
+        {
+          "@uniquename": "PVPCHALLENGE_TREASURES_SMALL_ORANGE_3",
+          "@objectivetype": "TREASURES",
+          "@might": "1192.61",
+          "@favor": "0",
+          "@mindivisor": "1"
+        },
+        {
+          "@uniquename": "PVPCHALLENGE_TREASURES_VAULT_ORANGE_0",
+          "@objectivetype": "TREASURES",
+          "@might": "596.30",
+          "@favor": "0",
+          "@mindivisor": "3"
+        },
+        {
+          "@uniquename": "PVPCHALLENGE_TREASURES_VAULT_ORANGE_1",
+          "@objectivetype": "TREASURES",
+          "@might": "894.45",
+          "@favor": "0",
+          "@mindivisor": "3"
+        },
+        {
+          "@uniquename": "PVPCHALLENGE_TREASURES_VAULT_ORANGE_2",
+          "@objectivetype": "TREASURES",
+          "@might": "1788.91",
+          "@favor": "0",
+          "@mindivisor": "3"
+        },
+        {
+          "@uniquename": "PVPCHALLENGE_TREASURES_VAULT_ORANGE_3",
+          "@objectivetype": "TREASURES",
+          "@might": "3577.82",
+          "@favor": "0",
+          "@mindivisor": "3"
+        },
+        {
           "@uniquename": "PVPCHALLENGE_HELLGATE_2V2",
           "@objectivetype": "HELLGATE2V2",
           "@might": "618.39",
           "@favor": "162.95",
-          "@mindivisor": "2"
+          "@mindivisor": "2",
+          "standingreward": {
+            "@type": "hell",
+            "@value": "12918"
+          }
         },
         {
           "@uniquename": "PVPCHALLENGE_HELLGATE_5V5",
           "@objectivetype": "HELLGATE5V5",
           "@might": "2393.54",
           "@favor": "630.70",
-          "@mindivisor": "5"
+          "@mindivisor": "5",
+          "standingreward": {
+            "@type": "hell",
+            "@value": "77412"
+          }
         },
         {
-          "@uniquename": "PVPCHALLENGE_HELLGATE_10V10",
-          "@objectivetype": "HELLGATE10V10",
-          "@might": "6982.17",
-          "@favor": "1839.80",
-          "@mindivisor": "10"
+          "@uniquename": "PVPCHALLENGE_HELLGATE_2V2_YELLOW",
+          "@objectivetype": "HELLGATE2V2",
+          "@might": "0",
+          "@favor": "0",
+          "@mindivisor": "2",
+          "standingreward": {
+            "@type": "hell",
+            "@value": "12918"
+          }
+        },
+        {
+          "@uniquename": "PVPCHALLENGE_HELLGATE_5V5_YELLOW",
+          "@objectivetype": "HELLGATE5V5",
+          "@might": "0",
+          "@favor": "0",
+          "@mindivisor": "5",
+          "standingreward": {
+            "@type": "hell",
+            "@value": "77412"
+          }
+        },
+        {
+          "@uniquename": "PVPCHALLENGE_CORRUPTED_HUNTER",
+          "@objectivetype": "CORRUPTED_STALKER",
+          "@personaltype": "CORRUPTED_STALKER",
+          "@might": "0",
+          "@favor": "0",
+          "standingreward": {
+            "@type": "hell",
+            "@value": "5959"
+          }
         },
         {
           "@uniquename": "PVPCHALLENGE_CORRUPTED_STALKER",
           "@objectivetype": "CORRUPTED_STALKER",
           "@personaltype": "CORRUPTED_STALKER",
           "@might": "148.41",
-          "@favor": "39.11"
+          "@favor": "39.11",
+          "standingreward": {
+            "@type": "hell",
+            "@value": "7211"
+          }
         },
         {
           "@uniquename": "PVPCHALLENGE_CORRUPTED_SLAYER",
           "@objectivetype": "CORRUPTED_SLAYER",
           "@personaltype": "CORRUPTED_SLAYER",
           "@might": "180.88",
-          "@favor": "47.66"
+          "@favor": "47.66",
+          "standingreward": {
+            "@type": "hell",
+            "@value": "8788"
+          }
+        },
+        {
+          "@uniquename": "PVPCHALLENGE_HELL_DUNGEON_TREASURE_SHRINE_SOUL_DELIVERY",
+          "@objectivetype": "HELLDUNGEON",
+          "@might": "231.90",
+          "@favor": "0",
+          "@mindivisor": "3",
+          "@usequestscalingfactor": "false",
+          "standingreward": {
+            "@type": "hell",
+            "@value": "25000"
+          }
+        },
+        {
+          "@uniquename": "PVPCHALLENGE_HELL_DUNGEON_PLAYER_FIRST_KILL",
+          "@objectivetype": "HELLDUNGEON",
+          "@might": "231.90",
+          "@favor": "0",
+          "@mindivisor": "3",
+          "@usequestscalingfactor": "false",
+          "standingreward": {
+            "@type": "hell",
+            "@value": "25000"
+          }
         },
         {
           "@uniquename": "PVPCHALLENGE_CRYSTALLEAGUE_5V5_LVL1_WIN",
@@ -1151,11 +1321,11 @@
           }
         },
         {
-          "@uniquename": "HELLGATE10V10",
-          "@displayname": "@SEASONS_MIGHT_CATEGORY_HELLGATE10V10",
-          "@progressiontable": "PROGRESSION_HELLGATE_10V10",
+          "@uniquename": "HELLDUNGEON",
+          "@displayname": "@SEASONS_MIGHT_CATEGORY_HELLDUNGEON",
+          "@progressiontable": "PROGRESSION_HELLDUNGEON",
           "objectivemapping": {
-            "@objectivetype": "HELLGATE10V10"
+            "@objectivetype": "HELLDUNGEON"
           }
         },
         {

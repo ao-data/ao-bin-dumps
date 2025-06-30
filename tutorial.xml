@@ -60,51 +60,59 @@
     <state uniquename="COMBATCLEAR" previousstate="COMBAT" triggerhint="COMBATCLEAR" hidedestinyboard="true"
            showdestinyboardflyout="false"/>
     <!--DESTINYBOARD INTRO -  hidedestinyboard="false" showdestinyboardflyout="true"-->
-    <state uniquename="DESTINYBOARDINTRO" previousstate="COMBATCLEAR" triggerhint="DESTINYBOARDINTRO"
+    <state uniquename="DESTINYBOARDINTRO" previousstate="MOUNTAINCLEAR" triggerhint="DESTINYBOARDINTRO_01"
            hidedestinyboard="false" showdestinyboardflyout="true"/>
     <state uniquename="DESTINYBOARDINTROCLEAR" previousstate="DESTINYBOARDINTRO" triggerhint="DESTINYBOARDINTRO_08"
            hidedestinyboard="false" showdestinyboardflyout="true"/>
     <!--WhereAreMyFriends-->
-    <state uniquename="WHEREAREMYFRIENDS" previousstate="DESTINYBOARDINTROCLEAR" triggerhint="SOFTCLEAR"
-           hidedestinyboard="false" showdestinyboardflyout="true"/>
+    <!-- <state uniquename="WHEREAREMYFRIENDS" previousstate="DESTINYBOARDINTROCLEAR" triggerhint="SOFTCLEAR"
+           hidedestinyboard="false" showdestinyboardflyout="true"/>-->
     <!--MARKETPLACE HUB-->
-    <state uniquename="MARKETPLACEINTRO" previousstate="WHEREAREMYFRIENDS" triggerhint="MARKETPLACEINTRO_01"
-           resetquestonrevisit="true" hidedestinyboard="false" showdestinyboardflyout="true"/>
+    <state uniquename="MARKETPLACEINTRO" previousstate="COMBATCLEAR" triggerhint="MARKETPLACEINTRO_01"
+           resetquestonrevisit="true" hidedestinyboard="true"
+           showdestinyboardflyout="false"/>
     <state uniquename="MARKETPLACEINTROCLEAR" previousstate="MARKETPLACEINTRO" triggerhint="CLEAR"
-           hidedestinyboard="false" showdestinyboardflyout="true"/>
+           hidedestinyboard="true"
+           showdestinyboardflyout="false"/>
     <state uniquename="BUYMOUNT" previousstate="MARKETPLACEINTROCLEAR" triggerhint="MARKETPLACEINTRO_01"
-           resetquestonrevisit="true" hidedestinyboard="false" showdestinyboardflyout="true"/>
-    <state uniquename="COLLECTITEM" previousstate="BUYMOUNT" triggerhint="BUYMOUNT_04" hidedestinyboard="false"
-           showdestinyboardflyout="true"/>
-    <state uniquename="EQUIPMULE" previousstate="COLLECTITEM" triggerhint="EQUIPMULE" hidedestinyboard="false"
-           showdestinyboardflyout="true"/>
-    <state uniquename="MOUNTMULE" previousstate="EQUIPMULE" triggerhint="MOUNTMULE" hidedestinyboard="false"
-           showdestinyboardflyout="true"/>
-    <state uniquename="FINDWOUNDEDCRAFTER" previousstate="MOUNTMULE" triggerhint="SOFTCLEAR" hidedestinyboard="false"
-           showdestinyboardflyout="true"/>
+           resetquestonrevisit="true" hidedestinyboard="true"
+           showdestinyboardflyout="false"/>
+    <state uniquename="COLLECTITEM" previousstate="BUYMOUNT" triggerhint="BUYMOUNT_04" hidedestinyboard="true"
+           showdestinyboardflyout="false"/>
+    <state uniquename="EQUIPMULE" previousstate="COLLECTITEM" triggerhint="EQUIPMULE" hidedestinyboard="true"
+           showdestinyboardflyout="false"/>
+    <state uniquename="MOUNTMULE" previousstate="EQUIPMULE" triggerhint="MOUNTMULE" hidedestinyboard="true"
+           showdestinyboardflyout="false"/>
+    <state uniquename="FINDWOUNDEDCRAFTER" previousstate="MOUNTMULE" triggerhint="SOFTCLEAR" hidedestinyboard="true"
+           showdestinyboardflyout="false"/>
     <!--TOOLS HUB-->
-    <state uniquename="CRAFTTOOLSINFO" previousstate="FINDWOUNDEDCRAFTER" triggerhint="CRAFTTOOLSINFO" hidedestinyboard="false"
-           showdestinyboardflyout="true"/>
-    <state uniquename="CRAFTTOOLS" previousstate="CRAFTTOOLSINFO" triggerhint="CRAFTTOOLS" hidedestinyboard="false"
-           showdestinyboardflyout="true"/>
+    <state uniquename="CRAFTTOOLSINFO" previousstate="FINDWOUNDEDCRAFTER" triggerhint="CRAFTTOOLSINFO" hidedestinyboard="true"
+           showdestinyboardflyout="false"/>
+    <state uniquename="CRAFTTOOLS" previousstate="CRAFTTOOLSINFO" triggerhint="CRAFTTOOLS" hidedestinyboard="true"
+           showdestinyboardflyout="false"/>
     <!--MAP INTRO HUB-->
     <state uniquename="HIGHLIGHTMAPBUTTON" previousstate="CRAFTTOOLS" triggerhint="MAPINTRO"
            hidedestinyboard="false" showdestinyboardflyout="true"/>
-    <state uniquename="MAPINTRO" previousstate="HIGHLIGHTMAPBUTTON" triggerhint="MAPINTRO_01" resetquestonrevisit="true"
+    <state uniquename="MAPINTRO" previousstate="HIGHLIGHTMAPBUTTON" triggerhint="MAPINTRO_01B" resetquestonrevisit="true"
            hidedestinyboard="false" showdestinyboardflyout="true"/>
-    <state uniquename="MAPINTROCLEAR" previousstate="MAPINTRO" triggerhint="CLEAR" hidedestinyboard="false"
-           showdestinyboardflyout="true"/>
+    <state uniquename="MAPINTROCLEAR" previousstate="MAPINTRO" triggerhint="CLEAR" hidedestinyboard="true"
+           showdestinyboardflyout="false"/>
     <!--GATHER-->
     <state uniquename="FOREST" previousstate="MAPINTROCLEAR" triggerhint="FOREST" infobuttonhint="BUTTONFOREST"
-           hidedestinyboard="false" showdestinyboardflyout="true"/>
+           hidedestinyboard="true"
+           showdestinyboardflyout="false"/>
     <state uniquename="BIGHINTRECALL" previousstate="FOREST" triggerhint="BIGHINTRECALL" infobuttonhint="BUTTONFOREST"
-           hidedestinyboard="false" showdestinyboardflyout="true"/>
+           hidedestinyboard="true"
+           showdestinyboardflyout="false"/>
     <state uniquename="FORESTCLEAR" previousstate="BIGHINTRECALL" triggerhint="CLEAR" infobuttonhint="BUTTONFOREST"
-           hidedestinyboard="false" showdestinyboardflyout="true"/>
+           hidedestinyboard="true"
+           showdestinyboardflyout="false"/>
     <state uniquename="MOUNTAIN" previousstate="FORESTCLEAR" triggerhint="MOUNTAIN" infobuttonhint="BUTTONMOUNTAIN"
-           hidedestinyboard="false" showdestinyboardflyout="true"/>
+           hidedestinyboard="true"
+           showdestinyboardflyout="false"/>
     <state uniquename="MOUNTAINCLEAR" previousstate="MOUNTAIN" triggerhint="CLEAR" infobuttonhint="BUTTONMOUNTAIN"
-           hidedestinyboard="false" showdestinyboardflyout="true"/>
+           hidedestinyboard="true"
+           showdestinyboardflyout="false"/>
     <!--LP-->
     <state uniquename="LEARNLP" previousstate="MOUNTAINCLEAR" triggerhint="LEARNLP_01" hidedestinyboard="false"
            showdestinyboardflyout="true"/>
@@ -115,7 +123,7 @@
     <state uniquename="CLEARUSELP" previousstate="USELP" triggerhint="CLEAR" hidedestinyboard="false"
            showdestinyboardflyout="true"/>
     <!--GEAR-->
-    <state uniquename="INFO1" previousstate="CLEARUSELP" triggerhint="INFO1" hidedestinyboard="false"
+    <state uniquename="INFO1" previousstate="DESTINYBOARDINTROCLEAR" triggerhint="INFO1" hidedestinyboard="false"
            showdestinyboardflyout="true"/>
     <state uniquename="INFO2" previousstate="INFO1" triggerhint="INFO2" hidedestinyboard="false"
            showdestinyboardflyout="true"/>
@@ -125,7 +133,7 @@
            showdestinyboardflyout="true"/>
     <state uniquename="GETGEARCLEAR" previousstate="WHATYOUWEAR" triggerhint="CLEAR" hidedestinyboard="false"
            showdestinyboardflyout="true"/>
-    <state uniquename="SILVER" previousstate="GETGEARCLEAR" triggerhint="SILVER" infobuttonhint="BUTTONINFO1"
+    <state uniquename="SILVER" previousstate="GETGEARCLEAR" triggerhint="CLEAR" infobuttonhint="BUTTONINFO1"
            hidedestinyboard="false" showdestinyboardflyout="true"/>
     <!--CLEAR STATES-->
     <state uniquename="SWORDGLOWOFF" triggerhint="CLEAR" previousstate="FIRSTSPELL"/>
@@ -135,7 +143,7 @@
     <state uniquename="HARDCLEARPREDB" triggerhint="CLEAR" hidedestinyboard="true" showdestinyboardflyout="false"/>
     <state uniquename="HARDCLEARAFTERDB" triggerhint="CLEAR" hidedestinyboard="false" showdestinyboardflyout="true"/>
 
-    <state uniquename="SHIPFIXED"/>
+    <state uniquename="SHIPFIXED" triggerhint="CLEAR" hidedestinyboard="false" showdestinyboardflyout="false"/>
     <state uniquename="SOUNDSHIPARRIVES" audiochange="TUT_FINISH_SHIP_ARRIVES"/>
     <!--DEAD STATES-->
 
@@ -148,13 +156,24 @@
    -->
 
     <!--END STATE-->
-    <endstate uniquename="FINISH" previousstate="SILVER"/>
+    <endstate uniquename="FINISH" previousstate="SOUNDSHIPARRIVES"/>
 
     <!---->
     <!--H I N T S-->
     <!---->
 
-    <!--Explanations-->
+    <hint uniquename="JOURNALFIRSTGUITUTORIAL_HINT1"
+          blockworldinteraction="true"
+          hidemessage="true"
+          timeout="2"
+          nexthint="JOURNALFIRSTGUITUTORIAL_HINT2"/>
+
+  <hint uniquename="JOURNALFIRSTGUITUTORIAL_HINT2"
+          hidemessage="true"
+          timeout="0.01"
+          requiredgui="Journal"/>
+
+  <!--Explanations-->
     <!--<hint uniquename="ITEM" explanation="item"   setnextstateonend="true" delay="1"/>-->
     <hint uniquename="FOREST" explanation="VerticalTemplate" title="@TUTORIAL_BIGHINT_BIOME1_TITLE">
         <entry imagepath="Gui/TutorialExplanations/TutorialForest2" scale="1.2">
@@ -205,9 +224,8 @@
           triggerui="firstquest" endtriggerui="clear" completebutton="true"/>
 
 
-    <hint uniquename="WHATYOUWEAR" explanation="WhatYouWear" blockworldinteraction="true" setnextstateonend="true"/>
-    <hint uniquename="WHATYOUWEAR_MOBILE" explanation="VerticalTemplate" title="@TUTORIAL_BIGHINT_WHATYOUWEAR_TITLE"
-          setnextstateonend="true">
+    <hint uniquename="WHATYOUWEAR" explanation="WhatYouWear" blockworldinteraction="true" />
+    <hint uniquename="WHATYOUWEAR_MOBILE" explanation="VerticalTemplate" title="@TUTORIAL_BIGHINT_WHATYOUWEAR_TITLE">
         <entry imagepath="Gui/TutorialExplanations/TutorialYAWYW2" scale="2">
             <content title="@TUTORIAL_BIGHINT_WHATYOUWEAR_TEXT1_TITLE" text="@TUTORIAL_BIGHINT_WHATYOUWEAR_TEXT1_INFO"/>
         </entry>
@@ -284,11 +302,11 @@
     <!--HIGHLIGHTS-->
     <hint uniquename="INTERACTIONBUTTONHIGHLIGHT" triggerui="dynamicinteraction"/>
     <hint uniquename="MOUNTBUTTONHIGHLIGHT" triggerui="mountbutton"/>
-    <hint uniquename="INVENTORYBUTTONHIGHLIGHT" triggerui="inventorybutton"/>
+    <hint uniquename="INVENTORYBUTTONHIGHLIGHT" triggerui="inventorybutton" />
 
 
     <!--CLEARS-->
-    <hint uniquename="CLEAR" triggerui="clear"/>
+    <hint uniquename="CLEAR" triggerui="clear" />
     <hint uniquename="DELAYEDCLEAR" triggerui="clear"/>
     <hint uniquename="INTERACTCLEAR" triggerui="clear" delay="3"/>
     <hint uniquename="VERYDELAYEDCLEAR" triggerui="clear" delay="5"/>
@@ -302,9 +320,9 @@
     <hint uniquename="FIRSTSTEPS" title="@HINT_TITLE_FIRSTSTEPS" infotext="@HINT_INFO_FIRSTSTEPS"
           triggerui="controlsmovement" delay="5"/>
     <hint uniquename="FIRSTQUEST" title="@HINT_TITLE_FIRSTQUEST" infotext="@HINT_INFO_FIRSTQUEST" completebutton="true"
-          triggerui="firstquest"/>
+          triggerui="firstquest" delay="10"/>
     <hint uniquename="QUESTMARKER" title="@HINT_TITLE_QUESTMARKER" infotext="@HINT_INFO_QUESTMARKER"
-          triggerui="firstquestmap" endtriggerui="clear" delay="3"/>
+          triggerui="firstquestmap" endtriggerui="clear" delay="10"/>
 
     <hint uniquename="USESPELL" title="@HINT_TITLE_USESPELL" infotext="@HINT_INFO_USESPELL" setnextstateonend="true"
           triggerui="usespell"/>
@@ -330,57 +348,55 @@
 
 
     <!--DESTINYBOARD-->
-    <hint uniquename="DESTINYBOARDINTRO" title="@HINT_TITLE_DESTINYBOARDINTRO" infotext="@HINT_INFO_DESTINYBOARDINTRO"
-          nexthint="DESTINYBOARDINTRO_01" blockworldinteraction="true" skiptonextstate="false" delay="5"
-          triggerui="destinyboardbuttonhighlight" endtriggerui="destinyboardstart"/>
+    <hint uniquename="DESTINYBOARDINTRO" triggerui="destinyboardbuttonhighlight" endtriggerui="destinyboardstart"/>
     <hint uniquename="DESTINYBOARDINTRO_01" title="@HINT_TITLE_DESTINYBOARDINTRO_01"
-          infotext="@HINT_INFO_DESTINYBOARDINTRO_01" nexthint="DESTINYBOARDINTRO_02" blockworldinteraction="true"
-          skiptonextstate="false" triggerui="destinyboardstart" mobileposition="BottomRight"/>
-    <hint uniquename="DESTINYBOARDINTRO_02" title="@HINT_TITLE_DESTINYBOARDINTRO_02"
-          infotext="@HINT_INFO_DESTINYBOARDINTRO_02" nexthint="DESTINYBOARDINTRO_03" blockworldinteraction="true"
-          skiptonextstate="true" triggerui="destinyboardstart" mobileposition="BottomRight"/>
+          infotext="@HINT_INFO_DESTINYBOARDINTRO_NUE_01"
+          nexthint="DESTINYBOARDINTRO_02"
+          blockworldinteraction="true"
+          skiptonextstate="false"
+          triggerui="destinyboardstart"
+          mobileposition="BottomRight"/>
+    <hint uniquename="DESTINYBOARDINTRO_02"
+          title="@HINT_TITLE_DESTINYBOARDINTRO_02"
+          infotext="@HINT_INFO_DESTINYBOARDINTRO_NUE_02"
+          nexthint="DESTINYBOARDINTRO_03"
+          blockworldinteraction="true"
+          skiptonextstate="false"
+          triggerui="destinyboardstart"
+          mobileposition="BottomRight"/>
     <hint uniquename="DESTINYBOARDINTRO_03" title="@HINT_TITLE_DESTINYBOARDINTRO_03"
-          infotext="@HINT_INFO_DESTINYBOARDINTRO_03" nexthint="DESTINYBOARDINTRO_04" blockworldinteraction="true"
-          skiptonextstate="true" triggerui="destinyboardcombat" mobileposition="BottomRight"/>
-    <hint uniquename="DESTINYBOARDINTRO_04" title="@HINT_TITLE_DESTINYBOARDINTRO_04"
-          infotext="@HINT_INFO_DESTINYBOARDINTRO_04" nexthint="DESTINYBOARDINTRO_05" blockworldinteraction="true"
-          skiptonextstate="true" triggerui="destinyboardgather" mobileposition="BottomRight"/>
-    <hint uniquename="DESTINYBOARDINTRO_05" title="@HINT_TITLE_DESTINYBOARDINTRO_05"
-          infotext="@HINT_INFO_DESTINYBOARDINTRO_05" nexthint="DESTINYBOARDINTRO_07" blockworldinteraction="true"
-          skiptonextstate="true" triggerui="destinyboardcraft" mobileposition="BottomRight"
-          endtriggerui="destinyboardadventure"/>
-    <!--<hint uniquename="DESTINYBOARDINTRO_06" title="@HINT_TITLE_DESTINYBOARDINTRO_06" infotext="@HINT_INFO_DESTINYBOARDINTRO_06" nexthint="DESTINYBOARDINTRO_07" blockworldinteraction="true" skiptonextstate="true" triggerui="destinyboardadventure"/>-->
+          infotext="@HINT_INFO_DESTINYBOARDINTRO_NUE_03" nexthint="DESTINYBOARDINTRO_04" blockworldinteraction="true"
+          skiptonextstate="false" triggerui="destinyboardstart" mobileposition="BottomRight"/>
+    <hint uniquename="DESTINYBOARDINTRO_04" title="@HINT_TITLE_DESTINYBOARDINTRO_06"
+          infotext="@HINT_INFO_DESTINYBOARDINTRO_NUE_04" nexthint="DESTINYBOARDINTRO_05" blockworldinteraction="true"
+          skiptonextstate="false" triggerui="destinyboardcombat" mobileposition="BottomRight"/>
+    <hint uniquename="DESTINYBOARDINTRO_05" title="@HINT_TITLE_DESTINYBOARDINTRO_06"
+          infotext="@HINT_INFO_DESTINYBOARDINTRO_NUE_05" nexthint="DESTINYBOARDINTRO_06" blockworldinteraction="true"
+          skiptonextstate="false" triggerui="destinyboardcombat" mobileposition="BottomRight" />
+	  <hint uniquename="DESTINYBOARDINTRO_06" title="@HINT_TITLE_DESTINYBOARDINTRO_06" infotext="@HINT_INFO_DESTINYBOARDINTRO_NUE_06" blockworldinteraction="true" completebutton="true" triggerui="destinyboardgather"/>
+	<!--
     <hint uniquename="DESTINYBOARDINTRO_07" title="@HINT_TITLE_DESTINYBOARDINTRO_07"
-          infotext="@HINT_INFO_DESTINYBOARDINTRO_07" nexthint="TRACKERINTRO_01" blockworldinteraction="true"
+          infotext="@HINT_INFO_DESTINYBOARDINTRO_08" nexthint="TRACKERINTRO_03" blockworldinteraction="true"
           skiptonextstate="true" triggerui="destinyboardcombat" mobileposition="BottomRight"/>
-    <hint uniquename="TRACKERINTRO_01" title="@HINT_TITLE_TRACKERINTRO_01" infotext="@HINT_INFO_TRACKERINTRO_01"
-          nexthint="TRACKERINTRO_02" blockworldinteraction="true" skiptonextstate="true"
-          triggerui="destinyboardrequirements" mobileposition="BottomRight"/>
-    <hint uniquename="TRACKERINTRO_02" title="@HINT_TITLE_TRACKERINTRO_02" infotext="@HINT_INFO_TRACKERINTRO_02"
-          nexthint="TRACKERINTRO_03" blockworldinteraction="true" skiptonextstate="true"
-          triggerui="destinyboardcombattrack" mobileposition="BottomRight"/>
-    <hint uniquename="TRACKERINTRO_03" title="@HINT_TITLE_TRACKERINTRO_03" infotext="@HINT_INFO_TRACKERINTRO_03"
-          nexthint="DESTINYBOARDINTRO_08" blockworldinteraction="true" triggerui="destinyboardbutton"
-          skiptonextstate="true" completebutton="true" setnextstateonend="true" mobileposition="BottomRight"
-          endtriggerui="firstquest"/>
+	-->
 
-    <hint uniquename="DESTINYBOARDINTRO_08" mobileposition="BottomRight" triggerui="firstquest"/>
+    <hint uniquename="DESTINYBOARDINTRO_08" mobileposition="BottomRight" endtriggerui="firstquest" completebutton="true"/>
     <!--MARKET PLACE-->
     <hint uniquename="MARKETPLACEINTRO_01" title="@HINT_TITLE_MARKETPLACEINTRO_01"
-          infotext="@HINT_INFO_MARKETPLACEINTRO_01" nexthint="BUYMOUNT_01" mobileposition="BottomRight"
+          infotext="@HINT_INFO_MARKETPLACEINTRO_01_NEW" nexthint="BUYMOUNT_03" mobileposition="BottomLeft"
           blockworldinteraction="true"/>
     <!--<hint uniquename="MARKETPLACEINTRO_02" title="@HINT_TITLE_MARKETPLACEINTRO_02" infotext="@HINT_INFO_MARKETPLACEINTRO_02" completebutton="true" setnextstateonend="true" blockworldinteraction="true"/>-->
     <hint uniquename="BUYMOUNT_01" title="@HINT_TITLE_BUYMOUNT_01" infotext="@HINT_INFO_BUYMOUNT_01"
           triggerui="marketplacesearch" blockworldinteraction="true" nexthint="BUYMOUNT_02"
-          mobileposition="BottomRight"/>
+          mobileposition="BottomLeft"/>
     <hint uniquename="BUYMOUNT_02" title="@HINT_TITLE_BUYMOUNT_02" infotext="@HINT_INFO_BUYMOUNT_02"
-          triggerui="marketplacebuy" blockworldinteraction="true" nexthint="BUYMOUNT_03" mobileposition="BottomRight"/>
+          triggerui="marketplacebuy" blockworldinteraction="true" nexthint="BUYMOUNT_03" mobileposition="BottomLeft"/>
     <hint uniquename="BUYMOUNT_03" title="@HINT_TITLE_BUYMOUNT_03" infotext="@HINT_INFO_BUYMOUNT_03_PERCIVAL"
-          triggerui="marketplacemount" mobileposition="BottomRight"/>
+          triggerui="marketplacemount" mobileposition="BottomLeft"/>
     <hint uniquename="BUYMOUNT_04" title="@HINT_TITLE_BUYMOUNT_04" infotext="@HINT_INFO_BUYMOUNT_04"
           triggerui="marketplacecollect" blockworldinteraction="true" nexthint="BUYMOUNT_05"
-          mobileposition="BottomRight"/>
-    <hint uniquename="BUYMOUNT_05" triggerui="marketplacecollecttabhighlight" mobileposition="BottomRight"/>
+          mobileposition="BottomLeft"/>
+    <hint uniquename="BUYMOUNT_05" triggerui="marketplacecollecttabhighlight" mobileposition="BottomLeft"/>
     <!--MOUNT-->
     <hint uniquename="EQUIPMULE" title="@HINT_TITLE_EQUIPMULE" infotext="@HINT_INFO_EQUIPMULE"
           triggerui="inventorybutton" delay="1"/>
@@ -392,36 +408,46 @@
           triggerui="toolmakeraxepickaxe"/>
     <hint uniquename="CRAFTTOOLS" delay="5" triggerui="toolmakeraxepickaxe"/>
     <!--MAP-->
-    <hint uniquename="MAPINTRO" triggerui="clustermapbutton"/>
-
-
-    <hint uniquename="MAPINTRO_01" title="@HINT_TITLE_MAPINTRO_01" infotext="@HINT_INFO_MAPINTRO_01"
-          nexthint="MAPINTRO_01A" blockworldinteraction="true" skiptonextstate="true"/>
+    <hint uniquename="MAPINTRO" title="@HINT_TITLE_MAPINTRO_01B" infotext="@HINT_INFO_MAPINTRO_01B"
+		  blockworldinteraction="false" completebutton="false" endtriggerui="clear" triggerui="clustermapbutton"
+          mobileposition="BottomRight" />
+	<!--
+    <hint uniquename="MAPINTRO" title="@HINT_TITLE_MAPINTRO_01B" infotext="@HINT_INFO_MAPINTRO_01B"
+		  blockworldinteraction="true" triggerui="clustermapbutton" completebutton="true" endtriggerui="clear" mobileposition="BottomRight" />	
+    <hint uniquename="MAPINTRO_01" title="@HINT_TITLE_MAPINTRO_01" infotext="@HINT_INFO_MAPINTRO_01"		  
+          blockworldinteraction="true" completebutton="true" mobileposition="BottomRight" nexthint="MAPINTRO_02"/>
     <hint uniquename="MAPINTRO_01A" title="@HINT_TITLE_MAPINTRO_01A" infotext="@HINT_INFO_MAPINTRO_01A"
           nexthint="MAPINTRO_01B" blockworldinteraction="true" skiptonextstate="true" triggerui="worldmap"
           mobileposition="BottomRight"/>
-    <hint uniquename="MAPINTRO_01B" title="@HINT_TITLE_MAPINTRO_01B" infotext="@HINT_INFO_MAPINTRO_01B"
+          -->
+    <hint uniquename="MAPINTRO_01B" title="@HINT_TITLE_MAPINTRO_02" infotext="@HINT_INFO_MAPINTRO_01B_NEW"
           nexthint="MAPINTRO_02" blockworldinteraction="true" skiptonextstate="true" triggerui="clustermap"
           mobileposition="BottomRight"/>
     <hint uniquename="MAPINTRO_02" title="@HINT_TITLE_MAPINTRO_02" infotext="@HINT_INFO_MAPINTRO_02"
-          nexthint="MAPINTRO_03" blockworldinteraction="true" skiptonextstate="true" triggerui="clustermapinfo"
+          nexthint="MAPINTRO_05" blockworldinteraction="true" triggerui="clustermapinfo"
           mobileposition="BottomRight"/>
+	<!--
     <hint uniquename="MAPINTRO_03" title="@HINT_TITLE_MAPINTRO_02" infotext="@HINT_INFO_MAPINTRO_03"
           nexthint="MAPINTRO_04" blockworldinteraction="true" skiptonextstate="true" triggerui="clustermapleftdetail"
           mobileposition="BottomRight"/>
     <hint uniquename="MAPINTRO_04" title="@HINT_TITLE_MAPINTRO_02" infotext="@HINT_INFO_MAPINTRO_04"
           nexthint="MAPINTRO_05" blockworldinteraction="true" skiptonextstate="true" triggerui="clustermapmiddledetail"
           mobileposition="BottomRight"/>
-    <hint uniquename="MAPINTRO_05" title="@HINT_TITLE_MAPINTRO_02" infotext="@HINT_INFO_MAPINTRO_05"
-          nexthint="MAPINTRO_07" blockworldinteraction="true" skiptonextstate="true" triggerui="clustermaprightdetail"
+	-->
+    <hint uniquename="MAPINTRO_05" title="@HINT_TITLE_MAPINTRO_06" infotext="@HINT_INFO_MAPINTRO_05"
+          nexthint="MAPINTRO_06" blockworldinteraction="true" triggerui="clustermaprightdetail"
           mobileposition="BottomRight"/>
-    <!--<hint uniquename="MAPINTRO_06" title="@HINT_TITLE_MAPINTRO_06" infotext="@HINT_INFO_MAPINTRO_06" nexthint="MAPINTRO_07"  blockworldinteraction="true" skiptonextstate="true" triggerui="clustermaprightdetail"/>-->
+    <hint uniquename="MAPINTRO_06" title="@HINT_TITLE_MAPINTRO_07" infotext="@HINT_INFO_MAPINTRO_06"
+		  blockworldinteraction="true" completebutton="true" setnextstateonend="true" triggerui="clustermaprightdetail"
+          mobileposition="BottomRight" endtriggerui="clear" />
+	<!--
     <hint uniquename="MAPINTRO_07" title="@HINT_TITLE_MAPINTRO_07" infotext="@HINT_INFO_MAPINTRO_07"
-          nexthint="MAPINTRO_08" blockworldinteraction="true" skiptonextstate="true" triggerui="clustermaprightdetail"
-          mobileposition="BottomRight"/>
+          blockworldinteraction="true" completebutton="true" setnextstateonend="true" triggerui="clustermaprightdetail"
+          mobileposition="BottomRight" endtriggerui="clear" />
     <hint uniquename="MAPINTRO_08" title="@HINT_TITLE_MAPINTRO_08" infotext="@HINT_INFO_MAPINTRO_08"
           blockworldinteraction="true" completebutton="true" setnextstateonend="true" triggerui="clustermaprightdetail"
           mobileposition="BottomRight" endtriggerui="clear"/>
+	-->
 
     <!--COMBAT 2 - Spacebar -->
     <hint uniquename="COMBAT2" title="@HINT_TITLE_COMBAT2" infotext="@HINT_INFO_COMBAT2" completebutton="true"/>
@@ -454,11 +480,40 @@
           mobileposition="BottomRight"/>
     <hint uniquename="USELP_03" title="@HINT_TITLE_USELP_03" infotext="@HINT_INFO_USELP_03" completebutton="true"/>
 
+    <hint uniquename="LEARNAUTOLEARN_01" title="@TUTORIAL_BIGHINT_LEARNAUTOLEARN_TITLE" infotext="@TUTORIAL_BIGHINT_LEARNAUTOLEARN_TEXT1_INFO" nexthint="LEARNAUTOLEARN_02" 
+          blockworldinteraction="true" mobileposition="BottomRight"/>
+    <hint uniquename="LEARNAUTOLEARN_02" title="@TUTORIAL_BIGHINT_LEARNAUTOLEARN_TEXT2_TITLE" infotext="@TUTORIAL_BIGHINT_LEARNAUTOLEARN_TEXT2_INFO" nexthint="LEARNAUTOLEARN_03"
+          triggerui="destinyboardquicklearnbutton" blockworldinteraction="true" mobileposition="BottomRight"/>
+    <hint uniquename="LEARNAUTOLEARN_03" title="@TUTORIAL_BIGHINT_LEARNAUTOLEARN_TEXT3_TITLE" infotext="@TUTORIAL_BIGHINT_LEARNAUTOLEARN_TEXT3_INFO" nexthint="LEARNAUTOLEARN_04"
+          triggerui="destinyboardlplocation" blockworldinteraction="true" mobileposition="BottomRight"/>
+    <hint uniquename="LEARNAUTOLEARN_04" explanation="HorizontalTemplate" title="@TUTORIAL_BIGHINT_LEARNAUTOLEARN_TITLE3" triggerui="destinyboardlplocation" blockworldinteraction="true" completebutton="true">
+        <entry imagepath="Gui/TutorialExplanations/TutorialLearnAutoLearnBanner" scale="1.8">
+            <content title="@TUTORIAL_BIGHINT_LEARNAUTOLEARN_TEXT4_TITLE" text="@TUTORIAL_BIGHINT_LEARNAUTOLEARN_TEXT4_INFO"/>
+        </entry>
+    </hint>
+    <!--LEARNAUTOLEARN-->
+    <!-- <hint uniquename="LEARNAUTOLEARN_01" explanation="VerticalTemplate" title="@TUTORIAL_BIGHINT_LEARNAUTOLEARN_TITLE" triggerui="destinyboardquicklearnbutton" completebutton="true" blockworldinteraction="true" nexthint="LEARNAUTOLEARN_02">
+        <entry imagepath="Gui/TutorialExplanations/TutorialLearnAutoLearn1" scale="1.2">
+            <content title="@TUTORIAL_BIGHINT_LEARNAUTOLEARN_TEXT1_TITLE" text="@TUTORIAL_BIGHINT_LEARNAUTOLEARN_TEXT1_INFO"/>
+        </entry>
+        <entry imagepath="Gui/TutorialExplanations/TutorialLearnAutoLearn2" scale="1.2">
+            <content title="@TUTORIAL_BIGHINT_LEARNAUTOLEARN_TEXT2_TITLE" text="@TUTORIAL_BIGHINT_LEARNAUTOLEARN_TEXT2_INFO"/>
+        </entry>
+    </hint>
+    <hint uniquename="LEARNAUTOLEARN_02" explanation="VerticalTemplate" title="@TUTORIAL_BIGHINT_LEARNAUTOLEARN_TITLE2" triggerui="destinyboardlplocation" blockworldinteraction="true" completebutton="true">
+        <entry imagepath="Gui/TutorialExplanations/TutorialLearnAutoLearn3" scale="1.2">
+            <content title="@TUTORIAL_BIGHINT_LEARNAUTOLEARN_TEXT3_TITLE" text="@TUTORIAL_BIGHINT_LEARNAUTOLEARN_TEXT3_INFO"/>
+        </entry>
+        <entry imagepath="Gui/TutorialExplanations/TutorialLearnAutoLearn4" scale="1.2">
+            <content title="@TUTORIAL_BIGHINT_LEARNAUTOLEARN_TEXT4_TITLE" text="@TUTORIAL_BIGHINT_LEARNAUTOLEARN_TEXT4_INFO"/>
+        </entry>
+    </hint> -->
+
     <!--TRACKER-->
-    <hint uniquename="TRACKERINTRO" title="@HINT_TITLE_TRACKERINTRO" infotext="@HINT_INFO_TRACKERINTRO"
+    <!--<hint uniquename="TRACKERINTRO" title="@HINT_TITLE_TRACKERINTRO" infotext="@HINT_INFO_TRACKERINTRO"
           nexthint="TRACKERINTRO_03" blockworldinteraction="true" triggerui="destinyboardbuttonhighlight"/>
 
-    <hint uniquename="TRACKERINTRO_04" triggerui="destinyboardcombat"/>
+    <hint uniquename="TRACKERINTRO_04" triggerui="destinyboardcombat"/>-->
     <!--GETGEAR-->
     <hint uniquename="GETGEAR_02" title="@HINT_TITLE_GETGEAR_02" infotext="@HINT_INFO_GETGEAR_02" nexthint="GETGEAR_03"
           blockworldinteraction="true" skiptonextstate="true"/>
@@ -871,15 +926,16 @@
 
     <!-- STATIC DUNGEONS -->
     <!-- Hint during the tutorial phase -->
-    <hint uniquename="STATIC_DUNGEON" explanation="VerticalTemplate" title="@TUTORIAL_BIGHINT_STATIC_DUNGEON_TITLE"
+    <hint uniquename="STATIC_DUNGEON" explanation="VerticalTemplate" title="@TUTORIAL_BIGHINT_STATIC_DUNGEON_TEXT2_TITLE"
           completebutton="true">
+		<!--
         <entry imagepath="Gui/TutorialExplanations/TUTORIAL_STATIC_DUNGEON_1" scale="1.2">
             <content title="@TUTORIAL_BIGHINT_STATIC_DUNGEON_TEXT1_TITLE"
                      text="@TUTORIAL_BIGHINT_STATIC_DUNGEON_TEXT1_INFO"/>
         </entry>
+		-->
         <entry imagepath="Gui/TutorialExplanations/TUTORIAL_STATIC_DUNGEON_2" scale="1.2">
-            <content title="@TUTORIAL_BIGHINT_STATIC_DUNGEON_TEXT2_TITLE"
-                     text="@TUTORIAL_BIGHINT_STATIC_DUNGEON_TEXT2_INFO"/>
+            <content text="@TUTORIAL_BIGHINT_STATIC_DUNGEON_TEXT2_INFO"/>
         </entry>
     </hint>
     <!-- Hint for the Albion Journal -->
@@ -934,6 +990,23 @@
     <hint uniquename="OPENWORLD" explanation="VerticalTemplate" title="@TUTORIAL_BIGHINT_OPENWORLD_TITLE" delay="1">
         <entry imagepath="Gui/TutorialExplanations/TUTORIAL_OPENWORLD" scale="2">
             <content title="@TUTORIAL_BIGHINT_OPENWORLD_TEXT1_TITLE" text="@TUTORIAL_BIGHINT_OPENWORLD_TEXT1_INFO"/>
+        </entry>
+    </hint>
+  
+  <!-- CHAPTER COMPLETION POPUPS-->
+	<hint uniquename="CHAPTER_COMPLETE_PVE" explanation="HorizontalTemplate" title="@TUTORIAL_BIGHINT_CHAPTER_COMPLETE_PVE_TITLE">
+		<entry imagepath="Gui/TutorialExplanations/BANNER_META_FRIENDS_2" scale="1.8">
+			<content title="@TUTORIAL_BIGHINT_CHAPTER_COMPLETE_PVE_TEXT1_TITLE" text="@TUTORIAL_BIGHINT_CHAPTER_COMPLETE_PVE_TEXT1_INFO"/>
+		</entry>
+	</hint>
+	<hint uniquename="CHAPTER_COMPLETE_PVP" explanation="HorizontalTemplate" title="@TUTORIAL_BIGHINT_CHAPTER_COMPLETE_PVP_TITLE">
+		<entry imagepath="Gui/TutorialExplanations/BANNER_META_FRIENDS_2" scale="1.8">
+            <content title="@TUTORIAL_BIGHINT_CHAPTER_COMPLETE_PVP_TEXT1_TITLE" text="@TUTORIAL_BIGHINT_CHAPTER_COMPLETE_PVP_TEXT1_INFO"/>
+        </entry>
+    </hint>
+    <hint uniquename="CHAPTER_COMPLETE_GATHERING" explanation="HorizontalTemplate" title="@TUTORIAL_BIGHINT_CHAPTER_COMPLETE_GATHERING_TITLE">
+        <entry imagepath="Gui/TutorialExplanations/BANNER_META_FRIENDS_2" scale="1.8">
+            <content title="@TUTORIAL_BIGHINT_CHAPTER_COMPLETE_GATHERING_TEXT1_TITLE" text="@TUTORIAL_BIGHINT_CHAPTER_COMPLETE_GATHERING_TEXT1_INFO"/>
         </entry>
     </hint>
 
@@ -1124,7 +1197,7 @@
 
     <!-- Personal Season -->
     <hint uniquename="PERSONAL_SEASON_INFO" explanation="VerticalTemplate" title="@TUTORIAL_ADC_TITLE"
-          dontshow_decisiontag="PersonalSeasonInfo">
+          dontshow_decisiontag="PersonalSeasonInfo" >
         <entry imagepath="Gui/TutorialExplanations/ADVENTURER_CHALLENGE_META_BANNER" scale="1.2">
             <content title="@TUTORIAL_ADC_POINTS_SUB_TITLE" text="@TUTORIAL_ADC_POINTS_TEXT"/>
         </entry>
@@ -1203,6 +1276,26 @@
             <content title="@HELLGATES_TUTORIAL_SUBTITLE_PVE" text="@HELLGATES_TUTORIAL_DESC_PVE"/>
         </entry>
     </hint>
+
+    <!-- Hell Dungeon -->
+    <hint uniquename="HELLDUNGEON_BASIC_INFO" explanation="VerticalTemplate" title="@HELLDUNGEONS_TUTORIAL_TITLE">
+      <entry imagepath="Gui/TutorialExplanations/TutorialHellDungeonsInfo" scale="1.2">
+        <content title="@HELLDUNGEONS_TUTORIAL_SUBTITLE_PVP" text="@HELLDUNGEONS_TUTORIAL_DESC_PVP"/>
+      </entry>
+      <entry imagepath="Gui/TutorialExplanations/TutorialHellDungeonsSoulsAndAltars" scale="1.2">
+        <content title="@HELLDUNGEONS_TUTORIAL_SUBTITLE_CONDITIONS" text="@HELLDUNGEONS_TUTORIAL_DESC_CONDITIONS"/>
+      </entry>
+    </hint>
+
+  <!-- Hell Den -->
+  <hint uniquename="HELL_DEN_BASIC_INFO" explanation="VerticalTemplate" title="@HELL_DEN_TUTORIAL_TITLE">
+    <entry imagepath="Gui/TutorialExplanations/TutorialHellDenForbidden" scale="1.2">
+      <content title="@HELL_DEN_TUTORIAL_SUBTITLE_FORBIDDEN" text="@HELL_DEN_TUTORIAL_DESC_FORBIDDEN"/>
+    </entry>
+    <entry imagepath="Gui/TutorialExplanations/TutorialHellDenInfernal" scale="1.2">
+      <content title="@HELL_DEN_TUTORIAL_SUBTITLE_ENTRANCE" text="@HELL_DEN_TUTORIAL_DESC_ENTRANCE"/>
+    </entry>
+  </hint>
 
     <!-- Faction Warfare -->
     <hint uniquename="FACTION_WARFARE_INFO" explanation="VerticalTemplate"
@@ -1472,10 +1565,20 @@
 
     <!-- AUTO LEARN -->
     <hint uniquename="AUTO_LEARN" explanation="VerticalTemplate" title="@TUTORIAL_AUTO_LEARN_TITLE">
-        <entry imagepath="Gui/TutorialExplanations/TutorialAUTOLEARN" scale="2.1">
+        <!-- <entry imagepath="Gui/TutorialExplanations/TutorialAUTOLEARN" scale="2.1">
             <content title="@TUTORIAL_AUTO_LEARN_CONTENT_TITLE" text="@TUTORIAL_AUTO_LEARN_CONTENT_TEXT"/>
+        </entry> -->
+        <entry imagepath="Gui/TutorialExplanations/TutorialAUTOLEARN1" scale="1.2">
+            <content title="@TUTORIAL_AUTO_LEARN_CONTENT_1_TITLE" text="@TUTORIAL_AUTO_LEARN_CONTENT_1_TEXT"/>
+        </entry>
+        <entry imagepath="Gui/TutorialExplanations/TutorialAUTOLEARN2" scale="1.2">
+            <content title="@TUTORIAL_AUTO_LEARN_CONTENT_2_TITLE" text="@TUTORIAL_AUTO_LEARN_CONTENT_2_TEXT"/>
+        </entry>
+        <entry imagepath="Gui/TutorialExplanations/TutorialAUTOLEARN3" scale="1.2">
+            <content title="@TUTORIAL_AUTO_LEARN_CONTENT_3_TITLE" text="@TUTORIAL_AUTO_LEARN_CONTENT_3_TEXT"/>
         </entry>
     </hint>
+
 
     <!-- GUILD JOIN -->
     <hint uniquename="GUILD_JOIN" explanation="GuildJoin" title="@TUTORIAL_GUILD_JOIN_TITLE"
@@ -2283,7 +2386,122 @@
             <content text="@TUTORIAL_CLUSTER_REWARD_SCALING_INFO_TEXT"/>
         </entry>
     </hint>
+
+
+
+  <!--#####################################################################-->
+  <!--#####################################################################-->
+  <!--####################### JOURNAL QUEST HINTS #########################-->
+  <!--#####################################################################-->
+  <!--#####################################################################-->
+
+
+  <hint uniquename="JOURNAL_QUEST_SOLO_DUNGEON" explanation="HorizontalTemplate" title="@JOURNAL_QUEST_BIGHINT_SOLO_DUNGEON_TITLE" completebutton="true">
+    <entry imagepath="Gui/TutorialExplanations/TutorialSoloRandomDungeonsIntro" scale="2">
+      <content text="@JOURNAL_QUEST_BIGHINT_SOLO_DUNGEON_TEXT"/>
+    </entry>
+  </hint>
   
+  <hint uniquename="JOURNAL_QUEST_SELL_ITEMS" title="@JOURNAL_QUEST_HINT_SELL_ITEMS_TITLE" infotext="@JOURNAL_QUEST_HINT_SELL_ITEMS_TEXT"  nexthint="JOURNAL_QUEST_SELL_ITEMS_HINT2" triggerui="marketplacesell" />
+  <hint uniquename="JOURNAL_QUEST_SELL_ITEMS_HINT2" title="@JOURNAL_QUEST_HINT_SELL_ITEMS_TITLE" infotext="@JOURNAL_QUEST_HINT_SELL_ITEMS_TEXT_HINT2" nexthint="JOURNAL_QUEST_SELL_ITEMS_HINT3" triggerui="marketplacesell" />
+  <hint uniquename="JOURNAL_QUEST_SELL_ITEMS_HINT3" title="@JOURNAL_QUEST_HINT_SELL_ITEMS_TITLE" infotext="@JOURNAL_QUEST_HINT_SELL_ITEMS_TEXT_HINT3" completebutton="true" triggerui="marketplacesell" endtriggerui="clearonlytriggeruis"/>
+
+	<hint uniquename="JOURNAL_QUEST_SELL_ITEMS_GATHERING" title="@JOURNAL_QUEST_HINT_SELL_ITEMS_TITLE" infotext="@JOURNAL_QUEST_HINT_SELL_ITEMS_TEXT"  nexthint="JOURNAL_QUEST_SELL_ITEMS_GATHERING_HINT2" triggerui="marketplacesell" />	
+	<hint uniquename="JOURNAL_QUEST_SELL_ITEMS_GATHERING_HINT2" title="@JOURNAL_QUEST_HINT_SELL_ITEMS_TITLE" infotext="@JOURNAL_QUEST_HINT_SELL_ITEMS_GATHERING_TEXT" completebutton="true" triggerui="marketplacesell" endtriggerui="clearonlytriggeruis"/>
+
+	<hint uniquename="JOURNAL_QUEST_BUY_EQUIPMENT" title="@JOURNAL_QUEST_BUY_EQUIPMENT_TITLE" infotext="@JOURNAL_QUEST_BUY_EQUIPMENT_TEXT" nexthint="JOURNAL_QUEST_BUY_EQUIPMENT_HINT2"/>
+  <hint uniquename="JOURNAL_QUEST_BUY_EQUIPMENT_HINT2" title="@JOURNAL_QUEST_BUY_EQUIPMENT_TITLE" infotext="@JOURNAL_QUEST_BUY_EQUIPMENT_HINT2_TEXT" nexthint="JOURNAL_QUEST_BUY_EQUIPMENT_HINT3"/>
+  <hint uniquename="JOURNAL_QUEST_BUY_EQUIPMENT_HINT3" title="@JOURNAL_QUEST_BUY_EQUIPMENT_TITLE" infotext="@JOURNAL_QUEST_BUY_EQUIPMENT_HINT3_TEXT" completebutton="true"/>
+	
+  <hint uniquename="JOURNAL_QUEST_CLAIM_REWARDS" title="@JOURNAL_QUEST_HINT_CLAIM_REWARDS_TITLE" infotext="@JOURNAL_QUEST_HINT_CLAIM_REWARDS_TEXT" completebutton="true" delay="2"/>
+
+  <hint uniquename="JOURNAL_QUEST_TRACK_CREATURE" infotext="@JOURNAL_QUEST_HINT_TRACK_CREATURE_TEXT" completebutton="true" delay="2"/>
+
+  <hint uniquename="JOURNAL_QUEST_HINT_USE_CORRUPTED_DUNGEON_SHRINE" infotext="@JOURNAL_QUEST_HINT_USE_CORRUPTED_DUNGEON_SHRINE_TEXT" completebutton="true"/>
+
+  <hint uniquename="JOURNAL_QUEST_HINT_BIOMES" title="@JOURNAL_QUEST_HINT_BIOMES_TITLE" infotext="@JOURNAL_QUEST_HINT_BIOMES_TEXT" completebutton="true"/>
+
+  <hint uniquename="JOURNAL_QUEST_HINT_USE_WORLDMAP" infotext="@JOURNAL_QUEST_HINT_USE_WORLDMAP_TEXT" completebutton="true"/>
+
+  <hint uniquename="JOURNAL_QUEST_HINT_HIGHLIGHT_SHOWROOM" infotext="@JOURNAL_QUEST_HINT_GOTO_SHOWROOM_TEXT" triggerui="islandmerchantshowroom" completebutton="true"/>
+  
+  <!-- Showroom Island Hints-->
+  <hint uniquename="JOURNAL_QUEST_SHOWROOM_ISLAND_INTRO" title="@JOURNAL_QUEST_SHOWROOM_ISLAND_INTRO_TITLE" infotext="@JOURNAL_QUEST_SHOWROOM_ISLAND_INTRO_TEXT" completebutton="true" />	
+  <hint uniquename="JOURNAL_QUEST_SHOWROOM_ISLAND_PASTURE" title="@JOURNAL_QUEST_SHOWROOM_ISLAND_PASTURE_TITLE" infotext="@JOURNAL_QUEST_SHOWROOM_ISLAND_PASTURE_TEXT" completebutton="true" />
+  <hint uniquename="JOURNAL_QUEST_SHOWROOM_ISLAND_COMBAT_AREA" title="@JOURNAL_QUEST_SHOWROOM_ISLAND_COMBAT_AREA_TITLE" infotext="@JOURNAL_QUEST_SHOWROOM_ISLAND_COMBAT_AREA_TEXT" completebutton="true" />
+  <hint uniquename="JOURNAL_QUEST_SHOWROOM_ISLAND_KENNEL" title="@JOURNAL_QUEST_SHOWROOM_ISLAND_KENNEL_TITLE" infotext="@JOURNAL_QUEST_SHOWROOM_ISLAND_KENNEL_TEXT" completebutton="true" />
+  <hint uniquename="JOURNAL_QUEST_SHOWROOM_ISLAND_CROPS" title="@JOURNAL_QUEST_SHOWROOM_ISLAND_CROPS_TITLE" infotext="@JOURNAL_QUEST_SHOWROOM_ISLAND_CROPS_TEXT" completebutton="true" />
+  <hint uniquename="JOURNAL_QUEST_SHOWROOM_ISLAND_WINDMILL" title="@JOURNAL_QUEST_SHOWROOM_ISLAND_WINDMILL_TITLE" infotext="@JOURNAL_QUEST_SHOWROOM_ISLAND_WINDMILL_TEXT" completebutton="true" />
+  <hint uniquename="JOURNAL_QUEST_SHOWROOM_ISLAND_HOUSING" title="@JOURNAL_QUEST_SHOWROOM_ISLAND_HOUSING_TITLE" infotext="@JOURNAL_QUEST_SHOWROOM_ISLAND_HOUSING_TEXT" completebutton="true" nexthint="JOURNAL_QUEST_SHOWROOM_ISLAND_PREMIUM" />
+  <hint uniquename="JOURNAL_QUEST_SHOWROOM_ISLAND_PREMIUM" title="@JOURNAL_QUEST_SHOWROOM_ISLAND_PREMIUM_TITLE" infotext="@JOURNAL_QUEST_SHOWROOM_ISLAND_PREMIUM_TEXT" completebutton="true" premiumbutton="true" />
+
+	<!-- Journal Tutorial After fist Starter Subcategory was completed -->
+    <hint uniquename="JOURNALFULLGUITUTORIAL_HINT1"
+          title="@JOURNALFULLGUITUTORIAL_HINT1_TITLE"
+          infotext="@JOURNALFULLGUITUTORIAL_HINT1_TEXT"
+          nexthint="JOURNALFULLGUITUTORIAL_HINT2"
+          blockworldinteraction="true"
+          triggerui="journaluicompletedpath"
+          requiredgui="Journal"
+          delay="4"/>
+    <hint uniquename="JOURNALFULLGUITUTORIAL_HINT2"
+          title="@JOURNALFULLGUITUTORIAL_HINT2_TITLE"
+          infotext="@JOURNALFULLGUITUTORIAL_HINT2_TEXT"
+          nexthint="JOURNALFULLGUITUTORIAL_HINT3"
+          blockworldinteraction="true"
+          triggerui="journaluinavigation" />
+    <hint uniquename="JOURNALFULLGUITUTORIAL_HINT3"
+          title="@JOURNALFULLGUITUTORIAL_HINT3_TITLE"
+          infotext="@JOURNALFULLGUITUTORIAL_HINT3_TEXT"
+          nexthint="JOURNALFULLGUITUTORIAL_HINT4"
+          previoushint="JOURNALFULLGUITUTORIAL_HINT2"
+          blockworldinteraction="true"
+          triggerui="journaluinavigationsubcategory" />
+    <hint uniquename="JOURNALFULLGUITUTORIAL_HINT4"
+          title="@JOURNALFULLGUITUTORIAL_HINT4_TITLE"
+          infotext="@JOURNALFULLGUITUTORIAL_HINT4_TEXT"
+          nexthint="JOURNALFULLGUITUTORIAL_HINT5"
+          previoushint="JOURNALFULLGUITUTORIAL_HINT3"
+          blockworldinteraction="true"
+          triggerui="journaluimissions" />
+    <hint uniquename="JOURNALFULLGUITUTORIAL_HINT5"
+          title="@JOURNALFULLGUITUTORIAL_HINT5_TITLE"
+          infotext="@JOURNALFULLGUITUTORIAL_HINT5_TEXT"
+          nexthint="JOURNALFULLGUITUTORIAL_HINT6"
+          previoushint="JOURNALFULLGUITUTORIAL_HINT4"
+          blockworldinteraction="true"
+          triggerui="journaluiunclaimedrewards" />
+    <hint uniquename="JOURNALFULLGUITUTORIAL_HINT6"
+          title="@JOURNALFULLGUITUTORIAL_HINT6_TITLE"
+          infotext="@JOURNALFULLGUITUTORIAL_HINT6_TEXT"
+          nexthint="JOURNALFULLGUITUTORIAL_HINT7"
+          previoushint="JOURNALFULLGUITUTORIAL_HINT5"
+          blockworldinteraction="true"
+          triggerui="journaluisummary" />
+    <hint uniquename="JOURNALFULLGUITUTORIAL_HINT7"
+          title="@JOURNALFULLGUITUTORIAL_HINT7_TITLE"
+          infotext="@JOURNALFULLGUITUTORIAL_HINT7_TEXT"
+          nexthint="JOURNALFULLGUITUTORIAL_HINT8"
+          previoushint="JOURNALFULLGUITUTORIAL_HINT6"
+          blockworldinteraction="true"
+          triggerui="journaluitrackedmissions" />
+    <hint uniquename="JOURNALFULLGUITUTORIAL_HINT8"
+          title="@JOURNALFULLGUITUTORIAL_HINT8_TITLE"
+          infotext="@JOURNALFULLGUITUTORIAL_HINT8_TEXT"
+          nexthint="JOURNALFULLGUITUTORIAL_HINT9"
+          previoushint="JOURNALFULLGUITUTORIAL_HINT7"
+          blockworldinteraction="true"
+          triggerui="journalhudtracker"
+          endtriggerui="loadselectedhudlayout"
+    />
+    <hint uniquename="JOURNALFULLGUITUTORIAL_HINT9"
+          title="@JOURNALFULLGUITUTORIAL_HINT9_TITLE"
+          infotext="@JOURNALFULLGUITUTORIAL_HINT9_TEXT"
+          previoushint="JOURNALFULLGUITUTORIAL_HINT8"
+          triggerui="clear"
+          completebutton="true"
+    />
+    
 	<!-- Beta Welcome Europe-->
     <texthint uniquename="BETA_WELCOME_EUROPE" explanation="TextOnlyTemplate" title="@ASIA_BETA_WELCOME_POPUP_TITLE">
         <label text="@ASIA_BETA_WELCOME_POPUP_TEXT_1"/>
@@ -2296,7 +2514,4 @@
         <item itemid="T1_ARMOR_LEATHER_SET1"/>
         <item itemid="T1_SHOES_LEATHER_SET1"/>
     </startgear>
-	
-	
-
 </tutorial>

@@ -111,6 +111,14 @@
 	<ShapeshifterType name="eagle"/>
   </WwiseSwitchInfo>
 
+  <WwiseSwitchInfo name="SHAPESHIFTER_CRYSTALCOBRA">
+	<CharType name="shapeshifter"/>
+	<Size name="small"/>
+	<ArmorType name="crystal"/>
+	<WeaponType name="bite_medium"/>
+	<ShapeshifterType name="crystalcobra"/>
+  </WwiseSwitchInfo>
+
   <!--*************************************************************************************************************************************************************-->
   <!--MOUNTS-->
   <!--*************************************************************************************************************************************************************-->
@@ -3712,6 +3720,12 @@
     <OnCastCanceled name="Stop_melee_tar_ring_cast" />
     <OnCastInterrupted name="Stop_melee_tar_ring_cast" />
   </WwiseEventInfo>
+  <WwiseEventInfo name="MELEE_CRYSTAL_HAMMER_CAST_WAVE">
+	<OnCastFinished name="Play_crystal_hammer_cast_wave" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="MELEE_CRYSTAL_HAMMER_MARK_IMPACT" >
+	<OnSpellHit name="Play_crystal_hammer_impact_mark" />
+  </WwiseEventInfo>
 
   <WwiseEventInfo name="MELEE_SWOOSH_SMALL_SHARP">
 	<OnCastFinished name="Play_melee_swoosh_small_sharp" />
@@ -6041,6 +6055,21 @@
 	<OnSpellHit name="Play_melee_impact_small_heavy" />
   </WwiseEventInfo>
 
+  <WwiseEventInfo name="SPELL_SHAPESHIFTER_CRYSTAL_COBRA_SPIT_CAST" >
+	<OnCastStart name="Play_mob_crystal_cobra_bite_castload" />
+	<OnCastFinished name="Play_mob_crystal_cobra_spit" />
+	<OnSpellHit name="Play_mob_crystal_cobra_poison_spit_impact" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_SHAPESHIFTER_CRYSTAL_COBRA_CAST_INTIMIDATE" >
+	<OnCastStart name="Play_mob_crystal_cobra_intimidate_start" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_SHAPESHIFTER_CRYSTAL_COBRA_CHANNEL_INTIMIDATE">
+	<OnChannelingStart name="Play_mob_crystal_cobra_intimidate_loop"/>
+	<OnChannelingCancelled name="Play_mob_crystal_cobra_intimidate_stop"/>
+	<OnChannelingEnd name="Play_mob_crystal_cobra_intimidate_stop" />
+	<OnChannelingInterrupted name="Play_mob_crystal_cobra_intimidate_stop" />
+  </WwiseEventInfo>
+
 	<!-- Tracking -->
 
   <WwiseEventInfo name="SPELL_TRACKING_PANTHER_ENRAGE" >
@@ -6574,6 +6603,9 @@
 	<OnCastFinished name="Play_melee_merciless_finish_swoosh" />
 	<OnSpellHit name="Play_swiftcut_impact" />
   </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_HIT_DAMAGE_INCREASE">
+    <OnSpellHit name="Play_damage_increase" />
+  </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_INVISIBILITY">
     <OnCastFinished name="Play_cast_invisibility" />
@@ -6873,6 +6905,35 @@
   <WwiseEventInfo name="SPELL_ACTIVATE_SWORD_SHRINE_BUFF">
 	<OnSpellHit name="Play_mist_dungeon_activate_buff_sword" />
 	<OnSpellRemoved name="Play_shrink" />
+  </WwiseEventInfo>
+
+  <!-- Hell Dungeon Shrines -->
+  <WwiseEventInfo name="SPELL_HELLDUNGEON_RESURRECTION">
+	  <OnSpellHit name="Play_spell_helldungeon_resurrection" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_COLLECT_WRATH_SHRINE_BUFF">
+	  <OnSpellHit name="Play_helldungeon_activate_buff_wrath" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_ACTIVATE_WRATH_SHRINE_BUFF">
+	  <OnSpellHit name="Play_helldungeon_buff_wrath_cast" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_COLLECT_CRUELTY_SHRINE_BUFF">
+	  <OnSpellHit name="Play_helldungeon_activate_buff_cruelty" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_ACTIVATE_CRUELTY_SHRINE_BUFF">
+	  <OnSpellHit name="Play_helldungeon_buff_cruelty_cast" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_COLLECT_DOMINANCE_SHRINE_BUFF">
+	  <OnSpellHit name="Play_helldungeon_activate_buff_dominion" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_ACTIVATE_DOMINANCE_SHRINE_BUFF">
+	  <OnSpellHit name="Play_helldungeon_buff_dominion_cast" />
   </WwiseEventInfo>
 
   <!-- Kill Emotes -->
@@ -7215,6 +7276,22 @@
     <OnSpellHit name="Play_spider_cocoon_spawn" />
   </WwiseEventInfo>
 
+  <WwiseEventInfo name="SPELL_MOUNT_SPIDER_HELL_JUMP_CAST" >
+	<OnCastFinished name="Play_spider_shoot_web" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_MOUNT_SPIDER_HELL_DASH_GROUND" >
+	<OnCastFinished name="Play_spider_spell_dash_to_ground" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_MOUNT_SPIDER_LAND_AFTER_DASH">
+	<OnSpellHit name="Play_spider_land_on_ground" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_MOUNT_SPIDER_LAND_PASSIVE">
+	<OnCastFinished name="Play_spider_land_on_ground_soft" />
+  </WwiseEventInfo>
+
   <WwiseEventInfo name="SPELL_MOUNT_BASTION_BEAM">
     <OnCastStart name="Play_bastion_cast_beam_load" />
     <OnCastFinished name="Play_bastion_shoot_beam" />
@@ -7486,6 +7563,11 @@
   <WwiseEventInfo name="SPELL_HIDE_BOAR_RAGE">
     <OnCastStart name="Play_mob_hide_direboar_cast_spell"/>
     <OnCastFinished name="Play_crowd_control_buff" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_HIDE_BOAR_DASH">
+	<OnCastStart name="Play_mob_boar_dash_load"/>
+	<OnCastFinished name="Play_mob_boar_dash" />
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_HIDE_BEARS_RAGE">
@@ -7810,15 +7892,25 @@
     <OnChannelingCancelled name="Stop_overseer_swirl" />
     <OnChannelingInterrupted name="Stop_overseer_swirl" />
     <OnChannelingEnd name="Stop_overseer_swirl" />
-    <OnChannelingHit name="Play_whip_haul" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_HERETIC_OVERSEER_SWIRL_IMPACT">
+	<OnSpellHit name="Play_whip_haul" />
   </WwiseEventInfo>
   
   <WwiseEventInfo name="SPELL_HERETIC_OVERSEER_HAUL">
-    <OnCastStart name="Play_melee_swoosh_small_autoattack" />
+    <OnCastStart name="Play_overseer_load_short" />
   </WwiseEventInfo>
   
   <WwiseEventInfo name="SPELL_HERETIC_OVERSEER_HAUL_PULL">
     <OnCastFinished name="Play_overseer_pull" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_HERETIC_OVERSEER_FLAGELLATE">
+	<OnCastStart name="Play_melee_load_medium_energetic" />
+	<OnCastCanceled name="Stop_melee_load_medium_energetic" />
+	<OnCastInterrupted name="Stop_melee_load_medium_energetic" />
+	<OnCastFinished name="Play_melee_swoosh_small_speedy_instant" />
   </WwiseEventInfo>
   
   <WwiseEventInfo name="SPELL_HERETIC_GIBSON_ENRAGE">
@@ -7910,6 +8002,11 @@
     <OnSpellHit name="Play_melee_impact_medium" >
       <ImpactType/>
     </OnSpellHit>
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_HERETIC_TUTORIAL_BRAWLER_MINIBOSS_DOUBLESLAP">
+	<OnCastStart name="Play_brawler_boss_tutorial_doubleslap" />
+	<OnCastCanceled name="Stop_brawler_load_slap" />
+	<OnCastInterrupted name="Stop_brawler_load_slap" />
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_HERETIC_SHADOWMASK_AOE">
@@ -10582,7 +10679,27 @@
 	<FarmAnimalType name="owl_baby"/>
   </WwiseSwitchInfo>
 
-  <!-- FURNITURE & FORTIFICATIONS -->
+  <WwiseSwitchInfo name="FARMABLE_SPIDER_BABY">
+	<CharType name="farmanimal"/>
+	<FarmAnimalType name="spider_baby"/>
+  </WwiseSwitchInfo>
+
+  <WwiseEventInfo name="FARMABLE_SPIDER_BABY">
+	<OnOpened name="Play_ui_open_spider_baby"/>
+	<OnPlaceItemStarted name="Play_ui_open_spider_baby"/>
+  </WwiseEventInfo>
+	
+  <WwiseSwitchInfo name="FARMABLE_SPIDER">
+	<CharType name="farmanimal"/>
+	<FarmAnimalType name="spider"/>
+  </WwiseSwitchInfo>
+
+  <WwiseEventInfo name="FARMABLE_SPIDER">
+	<OnOpened name="Play_ui_open_spider"/>
+	<OnPlaceItemStarted name="Play_ui_open_spider"/>
+  </WwiseEventInfo>
+	
+	<!-- FURNITURE & FORTIFICATIONS -->
    <WwiseEventInfo name="HIDEOUT_PLACEABLE_ITEM">
     <OnPlaceItemStarted name="Play_ui_action_place_hideout_start" />
     <OnPlaceItemCanceled name="Stop_ui_action_craft" />
@@ -10711,6 +10828,10 @@
 
   <WwiseSwitchInfo name="NPC_FORGE">
     <NpcType name="forge"/>
+  </WwiseSwitchInfo>
+
+  <WwiseSwitchInfo name="NPC_HELL_ANTIQUARIAN">
+	<NpcType name="hell_antiquarian"/>
   </WwiseSwitchInfo>
 
   <WwiseSwitchInfo name="NPC_HUNTERSLODGE">
@@ -10891,14 +11012,27 @@
 	<ClusterTypes name="Dungeon"/>
 	<MobFaction name="Keeper"/>
   </WwiseGlobalEnvironmentEffect>
+
+
+	<!--Hellgate Reverb = Dungeon Hell (old) -->
   
   <WwiseGlobalEnvironmentEffect name="dungeon_hell">
     <ClusterTypes name="Hellgate"/>
   </WwiseGlobalEnvironmentEffect>
-  
+
+	<!--HellDungeon = Dungeon_HellDungeon -->
+
+  <WwiseGlobalEnvironmentEffect name="dungeon_helldungeon">
+	<ClusterTypes name="HellDungeon"/>
+  </WwiseGlobalEnvironmentEffect>
+
+	<!--Arena Default = Arena -->
+	
   <WwiseGlobalEnvironmentEffect name="arena">
     <ClusterTypes name="Arena"/>    
   </WwiseGlobalEnvironmentEffect>
+
+	<!--Hideout Default = Homecave -->
   
   <WwiseGlobalEnvironmentEffect name="cave">
     <ClusterTypes name="Hideout"/>    
@@ -11087,7 +11221,62 @@
     <GlobalEnvironmentEffect name="castle"/>
   </WwiseClusterStateOverwrite>
 
-  <!--Mist City-->
+  <!-- Caerleon Hell Den -->
+  <WwiseClusterStateOverwrite clustername="0000-HellDen_*">
+	<Environment name="HellDenEnv"/>
+	<Biom name="Highland"/>
+	<SubBiom name="Dead"/>
+	<MobFaction name="None"/>
+	<Music name="City"/>
+	<GlobalEnvironmentEffect name="castle"/>
+  </WwiseClusterStateOverwrite>
+
+  <WwiseClusterStateOverwrite clustername="1000-HellDen_*">
+ 	<Environment name="HellDenEnv"/>
+	<Biom name="Highland"/>
+	<SubBiom name="Dead"/>
+	<MobFaction name="None"/>
+	<Music name="City"/>
+	<GlobalEnvironmentEffect name="castle"/>
+  </WwiseClusterStateOverwrite>
+
+  <WwiseClusterStateOverwrite clustername="2000-HellDen_*">
+	<Environment name="HellDenEnv"/>
+	<Biom name="Highland"/>
+	<SubBiom name="Dead"/>
+	<MobFaction name="None"/>
+	<Music name="City"/>
+	<GlobalEnvironmentEffect name="castle"/>
+  </WwiseClusterStateOverwrite>
+
+  <WwiseClusterStateOverwrite clustername="3003-HellDen_*">
+	<Environment name="HellDenEnv"/>
+	<Biom name="Highland"/>
+	<SubBiom name="Dead"/>
+	<MobFaction name="None"/>
+	<Music name="City"/>
+	<GlobalEnvironmentEffect name="castle"/>
+  </WwiseClusterStateOverwrite>
+
+  <WwiseClusterStateOverwrite clustername="3004-HellDen_*">
+	<Environment name="HellDenEnv"/>
+	<Biom name="Highland"/>
+	<SubBiom name="Dead"/>
+	<MobFaction name="None"/>
+	<Music name="City"/>
+	<GlobalEnvironmentEffect name="castle"/>
+  </WwiseClusterStateOverwrite>
+
+  <WwiseClusterStateOverwrite clustername="4000-HellDen_*">
+	<Environment name="HellDenEnv"/>
+	<Biom name="Highland"/>
+	<SubBiom name="Dead"/>
+	<MobFaction name="None"/>
+	<Music name="City"/>
+	<GlobalEnvironmentEffect name="castle"/>
+  </WwiseClusterStateOverwrite>
+
+	<!--Mist City-->
   <WwiseClusterStateOverwrite clustername="5000_CTY_.*_.*_T1_NON">
 	<Environment name="CityEnv"/>
 	<Biom name="Mists"/>
@@ -11454,9 +11643,60 @@
     <MobFaction name="None"/>
     <Music name="territory"/>
   </WwiseClusterStateOverwrite>
-    
-  
-  <!--***********************************************************-->
+
+	<!--***********************************************************-->
+	<!--*** Cluster State Overwrites for Player Island Showrooms ***-->
+	<!--***********************************************************-->
+
+  <WwiseClusterStateOverwrite clustername="ISLAND-PLAYER-FOREST-0001e-SHOWROOM_*">
+	<Environment name="IslandEnv"/>
+	<Biom name="Forest"/>
+	<SubBiom name="Green"/>
+	<MobFaction name="None"/>
+	<Music name="Island"/>
+  </WwiseClusterStateOverwrite>
+
+  <WwiseClusterStateOverwrite clustername="ISLAND-PLAYER-CAERLEON-0001e-SHOWROOM_WRL_HL_DEAD_T3_HER_ROY">
+	<Environment name="IslandEnv"/>
+	<Biom name="Highland"/>
+	<SubBiom name="Dead"/>
+	<MobFaction name="None"/>
+	<Music name="Island"/>
+  </WwiseClusterStateOverwrite>
+
+  <WwiseClusterStateOverwrite clustername="ISLAND-PLAYER-HIGHLAND-0001e-SHOWROOM_*">
+	<Environment name="IslandEnv"/>
+	<Biom name="Highland"/>
+	<SubBiom name="Green"/>
+	<MobFaction name="None"/>
+	<Music name="Island"/>
+  </WwiseClusterStateOverwrite>
+
+  <WwiseClusterStateOverwrite clustername="ISLAND-PLAYER-MOUNTAIN-0001e-SHOWROOM_*">
+	<Environment name="IslandEnv"/>
+	<Biom name="Mountain"/>
+	<SubBiom name="Green"/>
+	<MobFaction name="None"/>
+	<Music name="Island"/>
+  </WwiseClusterStateOverwrite>
+
+  <WwiseClusterStateOverwrite clustername="ISLAND-PLAYER-STEPPE-0001e-SHOWROOM_*">
+	<Environment name="IslandEnv"/>
+	<Biom name="Steppe"/>
+	<SubBiom name="Green"/>
+	<MobFaction name="None"/>
+	<Music name="Island"/>
+  </WwiseClusterStateOverwrite>
+
+  <WwiseClusterStateOverwrite clustername="ISLAND-PLAYER-SWAMP-0001e-SHOWROOM_*">
+	<Environment name="IslandEnv"/>
+	<Biom name="Swamp"/>
+	<SubBiom name="Green"/>
+	<MobFaction name="None"/>
+	<Music name="Island"/>
+  </WwiseClusterStateOverwrite>
+
+	<!--***********************************************************-->
   <!--**    Cluster State Overwrites for Faction Dungeons     ***-->
   <!--***********************************************************-->
   

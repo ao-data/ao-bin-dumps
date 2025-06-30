@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<helldungeons xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="helldungeons.xsd">
+    <globalsettings
+        minimumspawndistance="120"
+        clusterclosinglocatag="@HELLDUNGEON_LIFE_CYCLE_CLOSING"
+
+        citypartyentrancetimer="60"
+        downwardpartyentrancetimer="300"
+        staticentranceblockerdebuff="HELL_DUNGEON_JOINED_FROM_STATIC_ENTRANCE_DEBUFF"
+        soulcarriabletype="HELL_DUNGEON_SOUL"
+        soulcarriablerarity="0"
+        shutdownprocessstackspell="HELLDUNGEON_STACK"
+        shutdownprocessdamagespell="HELLDUNGEON_DAMAGE"
+        shutdownprocessspellinterval="60"
+        staticentranceopentimer="300"
+        staticentranceclosetimer="300"
+        downwardexitspreferredmindistance="100"
+        chestexitclosetimeseconds="60"
+        chestexitprefabtilename="HIGHLAND_DEAD_DNG_HELL_EXIT_CHEST"
+        chestexitchannelseconds="2"
+        resurrectioneffectspell="HELL_DUNGEON_RESURRECTION_EFFECT"
+        mobsoulvfxprefab="FX/ClientPrefabs/fx_hell_dungeon_mob_death_ghost"
+        mobsoulvfxspawnprefab="FX/ClientPrefabs/fx_hell_dungeon_mob_death_ghost_spawn"
+    >
+
+        <modetypesetting type="helldungeon"
+                         minimapdisplayinterestareaextend="100"/>
+    </globalsettings>
+
+    <helldungeonsouldropsetups>
+        <helldungeonsouldropsetup name="HELL_DUNGEON_ORANGE_SOUL_SETUP">
+            <mobcategory category="standard" chance="0.02"/>
+            <mobcategory category="veteran" chance="0.02"/>
+            <mobcategory category="champion" chance="0.02"/>
+            <mobcategory category="miniboss" chance="1"/>
+            <mobcategory category="boss" chance="1"/>
+            <mobcategory category="critter" chance="0"/>
+            <mobcategory category="trash" chance="0"/>
+            <mobcategory category="harmless" chance="0"/>
+            <mobcategory category="chest" chance="0"/>
+            <mobcategory category="environment" chance="0"/>
+            <mobcategory category="summon" chance="0"/>
+            <mobcategory category="vanity" chance="0"/>
+            <mobcategory category="other" chance="0"/>
+        </helldungeonsouldropsetup>
+    </helldungeonsouldropsetups>
+
+    <helldungeonmodes>
+        <helldungeonmode
+            name="HELL_DUNGEON_DUO_ORANGE"
+            type="helldungeon"
+            clustertype="HELL_DUNGEON_DUO_ORANGE"
+            clusterdisplayname="The Depths"
+            maxteamsize="2"
+            mapset="MAPSET_DUO_ORANGE_DUNGEON"
+            soulexitopenduration="30"
+            itempowerrequirement="900"
+            playerfirstkillmightreward="PVPCHALLENGE_HELL_DUNGEON_PLAYER_FIRST_KILL"
+            instancerandomdungeondifficultygroup="helldungeons_2v2">
+            <difficultylevel level="0" minimuminstancepool="1" flexibleinstancepool="0.05" lootchestkeyspawndelayinseconds="300" keyspawnminimumdistance="350"/>
+            <difficultylevel level="1" minimuminstancepool="1" flexibleinstancepool="0.05" lootchestkeyspawndelayinseconds="300" keyspawnminimumdistance="350"/>
+            <difficultylevel level="2" minimuminstancepool="1" flexibleinstancepool="0.05" lootchestkeyspawndelayinseconds="300" keyspawnminimumdistance="350"/>
+            <treasures>
+                <subtype name="CHEST" rolls="1" chance="1" initialblocktimeseconds="360" finalblocktimeseconds="685" mindifficulty="1"/>
+                <subtype name="COFFER" rolls="3" chance="1" initialblocktimeseconds="180" finalblocktimeseconds="570"/>
+            </treasures>
+        </helldungeonmode>
+        <helldungeonmode
+            name="HELL_DUNGEON_TRIO_ORANGE"
+            type="helldungeon"
+            clustertype="HELL_DUNGEON_TRIO_ORANGE"
+            clusterdisplayname="The Depths"
+            maxteamsize="3"
+            mapset="MAPSET_TRIO_ORANGE_DUNGEON"
+            soulexitopenduration="30"
+            itempowerrequirement="900"
+            playerfirstkillmightreward="PVPCHALLENGE_HELL_DUNGEON_PLAYER_FIRST_KILL"
+            instancerandomdungeondifficultygroup="helldungeons_3v3">
+            <difficultylevel level="0" minimuminstancepool="1" flexibleinstancepool="0.05" lootchestkeyspawndelayinseconds="300" keyspawnminimumdistance="350"/>
+            <difficultylevel level="1" minimuminstancepool="1" flexibleinstancepool="0.05" lootchestkeyspawndelayinseconds="300" keyspawnminimumdistance="350"/>
+            <difficultylevel level="2" minimuminstancepool="1" flexibleinstancepool="0.05" lootchestkeyspawndelayinseconds="300" keyspawnminimumdistance="350"/>
+            <treasures>
+                <subtype name="CHEST" rolls="1" chance="1" initialblocktimeseconds="360" finalblocktimeseconds="685" mindifficulty="1"/>
+                <subtype name="COFFER" rolls="3" chance="1" initialblocktimeseconds="180" finalblocktimeseconds="570"/>
+            </treasures>
+        </helldungeonmode>
+    </helldungeonmodes>
+
+    <helldungeonmaps>
+        <mapset name="MAPSET_DUO_ORANGE_DUNGEON">
+          <map id="DUO_ORANGE_HELL_DUNGEON_01" difficultylevel="0" mastertemplate="HELLDNG_MASTER_01_LVL1" templatepool="ORANGE_LEVEL1_DUO" souldropsetup="HELL_DUNGEON_ORANGE_SOUL_SETUP" clustertier="6" subbiome="dead" softplayerlimitmin="16" softplayerlimitmax="16" hardplayercapspace="2" weight="1" downwardexitsopenmin="5" downwardexitsopenmax="8" clusterclosetime="300" clustermaximumstarttimeoffset="360" clustershutdownstart="900" clustershutdowndamagestart="1080" clustershutdowntime="1200"/>
+          <map id="DUO_ORANGE_HELL_DUNGEON_02" difficultylevel="1" mastertemplate="HELLDNG_MASTER_01_LVL2" templatepool="ORANGE_LEVEL2_DUO" souldropsetup="HELL_DUNGEON_ORANGE_SOUL_SETUP" clustertier="7" subbiome="dead" softplayerlimitmin="16" softplayerlimitmax="16" hardplayercapspace="2" weight="1" downwardexitsopenmin="5" downwardexitsopenmax="8" clusterclosetime="300" clustermaximumstarttimeoffset="360" clustershutdownstart="900" clustershutdowndamagestart="1080" clustershutdowntime="1200"/>
+          <map id="DUO_ORANGE_HELL_DUNGEON_03" difficultylevel="2" mastertemplate="HELLDNG_MASTER_01_LVL3" templatepool="ORANGE_LEVEL3_DUO" souldropsetup="HELL_DUNGEON_ORANGE_SOUL_SETUP" clustertier="8" subbiome="dead" softplayerlimitmin="16" softplayerlimitmax="16" hardplayercapspace="2" weight="1" downwardexitsopenmin="0" downwardexitsopenmax="0" clusterclosetime="300" clustermaximumstarttimeoffset="360" clustershutdownstart="900" clustershutdowndamagestart="1080" clustershutdowntime="1200"/>
+        </mapset>
+        <mapset name="MAPSET_TRIO_ORANGE_DUNGEON">
+          <map id="TRIO_ORANGE_HELL_DUNGEON_01" difficultylevel="0" mastertemplate="HELLDNG_MASTER_01_LVL1" templatepool="ORANGE_LEVEL1_TRIO" souldropsetup="HELL_DUNGEON_ORANGE_SOUL_SETUP" clustertier="6" subbiome="dead" softplayerlimitmin="24" softplayerlimitmax="24" hardplayercapspace="3" weight="1" downwardexitsopenmin="5" downwardexitsopenmax="8" clusterclosetime="300" clustermaximumstarttimeoffset="360" clustershutdownstart="900" clustershutdowndamagestart="1080" clustershutdowntime="1200"/>
+          <map id="TRIO_ORANGE_HELL_DUNGEON_02" difficultylevel="1" mastertemplate="HELLDNG_MASTER_01_LVL2" templatepool="ORANGE_LEVEL2_TRIO" souldropsetup="HELL_DUNGEON_ORANGE_SOUL_SETUP" clustertier="7" subbiome="dead" softplayerlimitmin="24" softplayerlimitmax="24" hardplayercapspace="3" weight="1" downwardexitsopenmin="5" downwardexitsopenmax="8" clusterclosetime="300" clustermaximumstarttimeoffset="360" clustershutdownstart="900" clustershutdowndamagestart="1080" clustershutdowntime="1200"/>
+          <map id="TRIO_ORANGE_HELL_DUNGEON_03" difficultylevel="2" mastertemplate="HELLDNG_MASTER_01_LVL3" templatepool="ORANGE_LEVEL3_TRIO" souldropsetup="HELL_DUNGEON_ORANGE_SOUL_SETUP" clustertier="8" subbiome="dead" softplayerlimitmin="24" softplayerlimitmax="24" hardplayercapspace="3" weight="1" downwardexitsopenmin="0" downwardexitsopenmax="0" clusterclosetime="300" clustermaximumstarttimeoffset="360" clustershutdownstart="900" clustershutdowndamagestart="1080" clustershutdowntime="1200"/>
+      </mapset>
+    </helldungeonmaps>
+
+    <helldungeondifficultyleveluimapping>
+        <difficultylevel level="0" name="@HELL_DUNGEON_DIFFICULTY_LEVEL_1"/>
+        <difficultylevel level="1" name="@HELL_DUNGEON_DIFFICULTY_LEVEL_2"/>
+        <difficultylevel level="2" name="@HELL_DUNGEON_DIFFICULTY_LEVEL_3"/>
+    </helldungeondifficultyleveluimapping>
+
+    <factionweightingtable>
+        <faction id="HERETIC" weight="1"/>
+    </factionweightingtable>
+
+    <helldungeontemplates>
+        <templatepool id="ORANGE_LEVEL1_DUO">
+            <size name="medium">
+                <type category="mobcamp" weight="1">
+					<rolllayertag>
+            <layertag name="bossduo" weight="0"/>
+            <layertag name="minibossduo" weight="0"/>
+            <layertag name="noboss" weight="100"/>
+					</rolllayertag>
+                    <template id="HELLDNG_L_STANDARD_01_LVL1" weight="1" unique="false"/>
+                </type>
+            </size>
+            <size name="small">
+                <type category="mobcamp" weight="1">
+					<rolllayertag>
+            <layertag name="bossduo" weight="0"/>
+            <layertag name="minibossduo" weight="0"/>
+            <layertag name="noboss" weight="100"/>
+					</rolllayertag>
+                    <template id="HELLDNG_M_STANDARD_01" weight="1" unique="true"/>
+                    <template id="HELLDNG_M_STANDARD_02" weight="1" unique="true"/>
+                    <template id="HELLDNG_M_STANDARD_03" weight="1" unique="true"/>
+                    <template id="HELLDNG_M_STANDARD_04" weight="1" unique="true"/>
+                    <template id="HELLDNG_M_STANDARD_05" weight="1" unique="true"/>
+                    <!--  <template id="HELLDNG_M_STANDARD_02" weight="1" unique="false"/>-->
+                </type>
+            </size>
+        </templatepool>
+        <templatepool id="ORANGE_LEVEL1_TRIO">
+            <size name="medium">
+                <type category="mobcamp" weight="1">
+                  <template id="HELLDNG_L_STANDARD_01_LVL1" weight="1" unique="false"/>
+                  <rolllayertag>
+                    <layertag name="bosstrio" weight="0"/>
+                    <layertag name="minibosstrio" weight="0"/>
+                    <layertag name="noboss" weight="100"/>
+                  </rolllayertag>
+                </type>
+            </size>
+            <size name="small">
+                <type category="mobcamp" weight="1">
+					<rolllayertag>
+            <layertag name="bosstrio" weight="0"/>
+            <layertag name="minibosstrio" weight="0"/>
+            <layertag name="noboss" weight="100"/>
+					</rolllayertag>
+                    <template id="HELLDNG_M_STANDARD_01" weight="1" unique="true"/>
+                    <template id="HELLDNG_M_STANDARD_02" weight="1" unique="true"/>
+                    <template id="HELLDNG_M_STANDARD_03" weight="1" unique="true"/>
+                    <template id="HELLDNG_M_STANDARD_04" weight="1" unique="true"/>
+                    <template id="HELLDNG_M_STANDARD_05" weight="1" unique="true"/>
+                    <!--  <template id="HELLDNG_M_STANDARD_02" weight="1" unique="false"/>-->
+                </type>
+            </size>
+        </templatepool>
+        <templatepool id="ORANGE_LEVEL2_DUO">
+            <size name="medium">
+                <type category="mobcamp" weight="1">
+                    <rolllayertag>
+                      <layertag name="keychestspawnduo" weight="0"/>
+                      <layertag name="bossduo" weight="16"/>
+                      <layertag name="minibossduo" weight="34"/>
+                      <layertag name="noboss" weight="50"/>
+                   </rolllayertag>
+                    <template id="HELLDNG_L_STANDARD_01_LVL2" weight="1" unique="true"/>
+                </type>
+            </size>
+            <size name="small">
+                <type category="mobcamp" weight="1">
+					<rolllayertag>
+            <layertag name="bossduo" weight="16"/>
+            <layertag name="minibossduo" weight="34"/>
+            <layertag name="noboss" weight="50"/>
+					</rolllayertag>
+                    <template id="HELLDNG_M_STANDARD_01_LVL2" weight="1" unique="true"/>
+                    <template id="HELLDNG_M_STANDARD_02_LVL2" weight="1" unique="true"/>
+                    <template id="HELLDNG_M_STANDARD_03_LVL2" weight="1" unique="true"/>
+                    <template id="HELLDNG_M_STANDARD_04_LVL2" weight="1" unique="true"/>
+                    <template id="HELLDNG_M_STANDARD_05_LVL2" weight="1" unique="true"/>
+                    <!--  <template id="HELLDNG_M_STANDARD_02" weight="1" unique="false"/>-->
+                </type>
+            </size>
+        </templatepool>
+        <templatepool id="ORANGE_LEVEL2_TRIO">
+            <size name="medium">
+                <type category="mobcamp" weight="1">
+                    <rolllayertag>
+                      <layertag name="keychestspawntrio" weight="0"/>
+                      <layertag name="bosstrio" weight="16"/>
+                      <layertag name="minibosstrio" weight="34"/>
+                      <layertag name="noboss" weight="50"/>
+                   </rolllayertag>
+                    <template id="HELLDNG_L_STANDARD_01_LVL2" weight="1" unique="true"/>
+                </type>
+            </size>
+            <size name="small">
+                <type category="mobcamp" weight="1">
+					<rolllayertag>
+            <layertag name="bosstrio" weight="16"/>
+            <layertag name="minibosstrio" weight="34"/>
+            <layertag name="noboss" weight="50"/>
+					</rolllayertag>
+                    <template id="HELLDNG_M_STANDARD_01_LVL2" weight="1" unique="true"/>
+                    <template id="HELLDNG_M_STANDARD_02_LVL2" weight="1" unique="true"/>
+                    <template id="HELLDNG_M_STANDARD_03_LVL2" weight="1" unique="true"/>
+                    <template id="HELLDNG_M_STANDARD_04_LVL2" weight="1" unique="true"/>
+                    <template id="HELLDNG_M_STANDARD_05_LVL2" weight="1" unique="true"/>
+                    <!--  <template id="HELLDNG_M_STANDARD_02" weight="1" unique="false"/>-->
+                </type>
+            </size>
+        </templatepool>
+        <templatepool id="ORANGE_LEVEL3_DUO">
+            <size name="medium">
+                <type category="mobcamp" weight="1">
+                    <rolllayertag>
+                      <layertag name="keychestspawnduo" weight="1"/>
+                   </rolllayertag>
+                    <template id="HELLDNG_L_STANDARD_01_LVL3" weight="1" unique="true"/>
+                </type>
+            </size>
+            <size name="small">
+                <type category="mobcamp" weight="1">
+					<rolllayertag>
+            <layertag name="bossduo" weight="33"/>
+            <layertag name="minibossduo" weight="67"/>
+            <layertag name="noboss" weight="0"/>
+					</rolllayertag>
+                    <template id="HELLDNG_M_STANDARD_01_LVL3" weight="1" unique="true"/>
+                    <template id="HELLDNG_M_STANDARD_02_LVL3" weight="1" unique="true"/>
+                    <template id="HELLDNG_M_STANDARD_03_LVL3" weight="1" unique="true"/>
+                    <template id="HELLDNG_M_STANDARD_04_LVL3" weight="1" unique="true"/>
+                    <template id="HELLDNG_M_STANDARD_05_LVL3" weight="1" unique="true"/>
+                    <!--  <template id="HELLDNG_M_STANDARD_02" weight="1" unique="false"/>-->
+                </type>
+            </size>
+        </templatepool>
+        <templatepool id="ORANGE_LEVEL3_TRIO">
+            <size name="medium">
+                <type category="mobcamp" weight="1">
+                    <rolllayertag>
+                      <layertag name="keychestspawntrio" weight="1"/>
+                   </rolllayertag>
+                    <template id="HELLDNG_L_STANDARD_01_LVL3" weight="1" unique="true"/>
+                </type>
+            </size>
+            <size name="small">
+                <type category="mobcamp" weight="1">
+					<rolllayertag>
+            <layertag name="bosstrio" weight="33"/>
+            <layertag name="minibosstrio" weight="67"/>
+            <layertag name="noboss" weight="0"/>
+					</rolllayertag>
+                    <template id="HELLDNG_M_STANDARD_01_LVL3" weight="1" unique="true"/>
+                    <template id="HELLDNG_M_STANDARD_02_LVL3" weight="1" unique="true"/>
+                    <template id="HELLDNG_M_STANDARD_03_LVL3" weight="1" unique="true"/>
+                    <template id="HELLDNG_M_STANDARD_04_LVL3" weight="1" unique="true"/>
+                    <template id="HELLDNG_M_STANDARD_05_LVL3" weight="1" unique="true"/>
+                    <!--  <template id="HELLDNG_M_STANDARD_02" weight="1" unique="false"/>-->
+                </type>
+            </size>
+        </templatepool>
+    </helldungeontemplates>
+</helldungeons>
