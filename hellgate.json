@@ -14,6 +14,7 @@
       "@mobdespawndelay": "2.4",
       "@mobdespawnspell": "HELLGATE_MOBDESPAWN_SPELL",
       "@pvpmatchstartspell": "HELLGATE_MATCH_START_SPELL",
+      "@pvpmatchendspell": "HELLGATE_MATCH_END_SPELL",
       "@enteringstarteffectprefab": "FX/ClientPrefabs/fx_hellgate_cast_loop",
       "@enteringsuccesseffectprefab": "FX/ClientPrefabs/fx_hellgate_teleport",
       "@exitprefab": "Prefabs/ENV_PREFABS/SHARED/BUILDINGS/PORTALS/SHARED_HELLGATE_DUNGEON_EXIT_10x10_PORTAL_02",
@@ -26,10 +27,14 @@
     "hellgatemodes": {
       "hellgatemode": [
         {
-          "@name": "hellgate_1v1",
-          "@teamsize": "1",
+          "@name": "hellgate_2v2_non_lethal",
+          "@teamsize": "2",
           "@teamamount": "2",
-          "@mapset": "test",
+          "@pvplootchestspawnpoint": "HELL_STD_PVP_NORMAL",
+          "@pvelootchestspawnpoint": "HELL_STD_PVE_NORMAL",
+          "@pointsrequirement": "100",
+          "@itempowerrequirement": "700",
+          "@mapset": "2v2_non_lethal",
           "@arearestrictiondelay": "90",
           "@arearestrictionvelocity": "0.30",
           "@arearestrictionspellwarningarea": "HELLGATE_WARNING",
@@ -37,26 +42,57 @@
           "@arearestrictionspellentered": "HELLGATE_ENTERED",
           "@finalarearestrictionvelocity": "0.2",
           "@finalarearestrictionbreak": "120",
-          "@itempowerrequirement": "500",
-          "@pvplootchestspawnpoint": "HELL_HRD_PVP_NORMAL",
-          "@pvelootchestspawnpoint": "HELL_HRD_PVE_NORMAL",
-          "@rewardconstant": "82.70936908",
-          "@rewardceiling": "0.5",
+          "@rewardconstant": "43.44769151",
+          "@rewardceiling": "0.2",
           "@rewardscaling": "0.4",
           "@ratingscaling": "0.2",
-          "@infamymin": "-0.1",
-          "@infamymax": "0.9",
+          "@infamymin": "-0.2",
+          "@infamymax": "0.8",
           "@pvpmmrloss": "0.1",
           "@pvpmmrgain": "0.08",
           "@mmrkillbonus": "0",
-          "@pointsrequirement": "100",
-          "@minmatchmmr": "500",
+          "@minmatchmmr": "100",
           "@lowerscalingbase": "1.00006932",
           "@upperscalingbase": "0.99993069",
           "@timefactor": "0.53279922",
           "@timepower": "1.94910649",
           "@boundconstant": "10000",
-          "@chainexitvisualization": "HELLGATE_CHAIN_EXIT"
+          "@chainexitvisualization": "HELLGATE_CHAIN_EXIT",
+          "@mightreward": "PVPCHALLENGE_HELLGATE_2V2_YELLOW"
+        },
+        {
+          "@name": "hellgate_5v5_non_lethal",
+          "@teamsize": "5",
+          "@teamamount": "2",
+          "@pvplootchestspawnpoint": "HELL_STD_PVP_VETERAN",
+          "@pvelootchestspawnpoint": "HELL_STD_PVE_VETERAN",
+          "@pointsrequirement": "100",
+          "@itempowerrequirement": "700",
+          "@mapset": "5v5_non_lethal",
+          "@arearestrictiondelay": "90",
+          "@arearestrictionvelocity": "0.30",
+          "@arearestrictionspellwarningarea": "HELLGATE_WARNING",
+          "@arearestrictionspelldamagearea": "HELLGATE_DAMAGE",
+          "@arearestrictionspellentered": "HELLGATE_ENTERED",
+          "@finalarearestrictionvelocity": "0.2",
+          "@finalarearestrictionbreak": "120",
+          "@rewardconstant": "43.44769151",
+          "@rewardceiling": "0.2",
+          "@rewardscaling": "0.4",
+          "@ratingscaling": "0.2",
+          "@infamymin": "-0.4",
+          "@infamymax": "0.8",
+          "@pvpmmrloss": "0.1",
+          "@pvpmmrgain": "0.08",
+          "@mmrkillbonus": "0",
+          "@minmatchmmr": "100",
+          "@lowerscalingbase": "1.00006932",
+          "@upperscalingbase": "0.99993069",
+          "@timefactor": "0.53279922",
+          "@timepower": "1.94910649",
+          "@boundconstant": "10000",
+          "@chainexitvisualization": "HELLGATE_CHAIN_EXIT",
+          "@mightreward": "PVPCHALLENGE_HELLGATE_5V5_YELLOW"
         },
         {
           "@name": "hellgate_2v2",
@@ -75,7 +111,7 @@
           "@finalarearestrictionvelocity": "0.2",
           "@finalarearestrictionbreak": "120",
           "@rewardconstant": "82.70936908",
-          "@rewardceiling": "0.5",
+          "@rewardceiling": "0.2",
           "@rewardscaling": "0.4",
           "@ratingscaling": "0.2",
           "@infamymin": "-0.2",
@@ -99,7 +135,7 @@
           "@pvplootchestspawnpoint": "HELL_HRD_PVP_VETERAN",
           "@pvelootchestspawnpoint": "HELL_HRD_PVE_VETERAN",
           "@pointsrequirement": "500",
-          "@itempowerrequirement": "1000",
+          "@itempowerrequirement": "900",
           "@mapset": "5v5",
           "@arearestrictiondelay": "90",
           "@arearestrictionvelocity": "0.30",
@@ -109,7 +145,7 @@
           "@finalarearestrictionvelocity": "0.2",
           "@finalarearestrictionbreak": "120",
           "@rewardconstant": "82.70936908",
-          "@rewardceiling": "0.5",
+          "@rewardceiling": "0.2",
           "@rewardscaling": "0.4",
           "@ratingscaling": "0.2",
           "@infamymin": "-0.4",
@@ -125,199 +161,11 @@
           "@boundconstant": "10000",
           "@chainexitvisualization": "HELLGATE_CHAIN_EXIT",
           "@mightreward": "PVPCHALLENGE_HELLGATE_5V5"
-        },
-        {
-          "@name": "hellgate_10v10",
-          "@teamsize": "10",
-          "@teamamount": "2",
-          "@pvplootchestspawnpoint": "HELL_HRD_PVP_ELITE",
-          "@pvelootchestspawnpoint": "HELL_HRD_PVE_ELITE",
-          "@pointsrequirement": "500",
-          "@itempowerrequirement": "1000",
-          "@mapset": "10v10",
-          "@arearestrictiondelay": "90",
-          "@arearestrictionvelocity": "0.30",
-          "@arearestrictionspellwarningarea": "HELLGATE_WARNING",
-          "@arearestrictionspelldamagearea": "HELLGATE_DAMAGE",
-          "@arearestrictionspellentered": "HELLGATE_ENTERED",
-          "@finalarearestrictionvelocity": "0.2",
-          "@finalarearestrictionbreak": "120",
-          "@rewardconstant": "82.70936908",
-          "@rewardceiling": "0.5",
-          "@rewardscaling": "0.4",
-          "@ratingscaling": "0.2",
-          "@infamymin": "-0.6",
-          "@infamymax": "0.8",
-          "@pvpmmrloss": "0.1",
-          "@pvpmmrgain": "0.08",
-          "@mmrkillbonus": "0",
-          "@minmatchmmr": "500",
-          "@lowerscalingbase": "1.00006932",
-          "@upperscalingbase": "0.99993069",
-          "@timefactor": "0.53279922",
-          "@timepower": "1.94910649",
-          "@boundconstant": "10000",
-          "@chainexitvisualization": "HELLGATE_CHAIN_EXIT",
-          "@mightreward": "PVPCHALLENGE_HELLGATE_10V10"
-        },
-        {
-          "@name": "hellgate_2v2_non_lethal",
-          "@teamsize": "2",
-          "@teamamount": "2",
-          "@pvplootchestspawnpoint": "HELL_STD_PVP_NORMAL",
-          "@pvelootchestspawnpoint": "HELL_STD_PVE_NORMAL",
-          "@pointsrequirement": "100",
-          "@itempowerrequirement": "800",
-          "@mapset": "2v2_non_lethal",
-          "@arearestrictiondelay": "90",
-          "@arearestrictionvelocity": "0.30",
-          "@arearestrictionspellwarningarea": "HELLGATE_WARNING",
-          "@arearestrictionspelldamagearea": "HELLGATE_DAMAGE",
-          "@arearestrictionspellentered": "HELLGATE_ENTERED",
-          "@finalarearestrictionvelocity": "0.2",
-          "@finalarearestrictionbreak": "120",
-          "@rewardconstant": "43.44769151",
-          "@rewardceiling": "0.5",
-          "@rewardscaling": "0.4",
-          "@ratingscaling": "0.2",
-          "@infamymin": "-0.2",
-          "@infamymax": "0.8",
-          "@pvpmmrloss": "0.1",
-          "@pvpmmrgain": "0.08",
-          "@mmrkillbonus": "0",
-          "@minmatchmmr": "100",
-          "@lowerscalingbase": "1.00006932",
-          "@upperscalingbase": "0.99993069",
-          "@timefactor": "0.53279922",
-          "@timepower": "1.94910649",
-          "@boundconstant": "10000",
-          "@chainexitvisualization": "HELLGATE_CHAIN_EXIT"
-        },
-        {
-          "@name": "hellgate_5v5_non_lethal",
-          "@teamsize": "5",
-          "@teamamount": "2",
-          "@pvplootchestspawnpoint": "HELL_STD_PVP_VETERAN",
-          "@pvelootchestspawnpoint": "HELL_STD_PVE_VETERAN",
-          "@pointsrequirement": "100",
-          "@itempowerrequirement": "800",
-          "@mapset": "5v5_non_lethal",
-          "@arearestrictiondelay": "90",
-          "@arearestrictionvelocity": "0.30",
-          "@arearestrictionspellwarningarea": "HELLGATE_WARNING",
-          "@arearestrictionspelldamagearea": "HELLGATE_DAMAGE",
-          "@arearestrictionspellentered": "HELLGATE_ENTERED",
-          "@finalarearestrictionvelocity": "0.2",
-          "@finalarearestrictionbreak": "120",
-          "@rewardconstant": "43.44769151",
-          "@rewardceiling": "0.5",
-          "@rewardscaling": "0.4",
-          "@ratingscaling": "0.2",
-          "@infamymin": "-0.4",
-          "@infamymax": "0.8",
-          "@pvpmmrloss": "0.1",
-          "@pvpmmrgain": "0.08",
-          "@mmrkillbonus": "0",
-          "@minmatchmmr": "100",
-          "@lowerscalingbase": "1.00006932",
-          "@upperscalingbase": "0.99993069",
-          "@timefactor": "0.53279922",
-          "@timepower": "1.94910649",
-          "@boundconstant": "10000",
-          "@chainexitvisualization": "HELLGATE_CHAIN_EXIT"
-        },
-        {
-          "@name": "hellgate_10v10_non_lethal",
-          "@teamsize": "10",
-          "@teamamount": "2",
-          "@pvplootchestspawnpoint": "HELL_STD_PVP_ELITE",
-          "@pvelootchestspawnpoint": "HELL_STD_PVE_ELITE",
-          "@pointsrequirement": "100",
-          "@itempowerrequirement": "800",
-          "@mapset": "10v10_non_lethal",
-          "@arearestrictiondelay": "90",
-          "@arearestrictionvelocity": "0.30",
-          "@arearestrictionspellwarningarea": "HELLGATE_WARNING",
-          "@arearestrictionspelldamagearea": "HELLGATE_DAMAGE",
-          "@arearestrictionspellentered": "HELLGATE_ENTERED",
-          "@finalarearestrictionvelocity": "0.2",
-          "@finalarearestrictionbreak": "120",
-          "@rewardconstant": "43.44769151",
-          "@rewardceiling": "0.5",
-          "@rewardscaling": "0.4",
-          "@ratingscaling": "0.2",
-          "@infamymin": "-0.6",
-          "@infamymax": "0.8",
-          "@pvpmmrloss": "0.1",
-          "@pvpmmrgain": "0.08",
-          "@mmrkillbonus": "0",
-          "@minmatchmmr": "100",
-          "@lowerscalingbase": "1.00006932",
-          "@upperscalingbase": "0.99993069",
-          "@timefactor": "0.53279922",
-          "@timepower": "1.94910649",
-          "@boundconstant": "10000",
-          "@chainexitvisualization": "HELLGATE_CHAIN_EXIT"
         }
       ]
     },
     "hellgatemaps": {
       "mapset": [
-        {
-          "@name": "test",
-          "map": [
-            {
-              "@id": "HELLGATE-01-2v2-01",
-              "@layer": "2",
-              "@weight": "32"
-            },
-            {
-              "@id": "HELLGATE-02-2v2-01",
-              "@layer": "2",
-              "@weight": "32"
-            },
-            {
-              "@id": "HELLGATE-03-2v2-01",
-              "@layer": "2",
-              "@weight": "10"
-            },
-            {
-              "@id": "HELLGATE-04-2v2-01",
-              "@layer": "2",
-              "@weight": "10"
-            },
-            {
-              "@id": "HELLGATE-05-2v2-01",
-              "@layer": "2",
-              "@weight": "32"
-            },
-            {
-              "@id": "HELLGATE-06-2v2-01",
-              "@layer": "2",
-              "@weight": "5"
-            },
-            {
-              "@id": "HELLGATE-07-2v2-01",
-              "@layer": "2",
-              "@weight": "10"
-            },
-            {
-              "@id": "HELLGATE-08-2v2-01",
-              "@layer": "2",
-              "@weight": "32"
-            },
-            {
-              "@id": "HELLGATE-09-2v2-01",
-              "@layer": "2",
-              "@weight": "32"
-            },
-            {
-              "@id": "HELLGATE-10-2v2-01",
-              "@layer": "2",
-              "@weight": "5"
-            }
-          ]
-        },
         {
           "@name": "2v2",
           "map": [
@@ -429,61 +277,6 @@
           ]
         },
         {
-          "@name": "10v10",
-          "map": [
-            {
-              "@id": "HELLGATE-01-10v10-01-HRD",
-              "@layer": "2",
-              "@weight": "32"
-            },
-            {
-              "@id": "HELLGATE-02-10v10-01-HRD",
-              "@layer": "2",
-              "@weight": "32"
-            },
-            {
-              "@id": "HELLGATE-03-10v10-01-HRD",
-              "@layer": "2",
-              "@weight": "10"
-            },
-            {
-              "@id": "HELLGATE-04-10v10-01-HRD",
-              "@layer": "2",
-              "@weight": "10"
-            },
-            {
-              "@id": "HELLGATE-05-10v10-01-HRD",
-              "@layer": "2",
-              "@weight": "32"
-            },
-            {
-              "@id": "HELLGATE-06-10v10-01-HRD",
-              "@layer": "2",
-              "@weight": "5"
-            },
-            {
-              "@id": "HELLGATE-07-10v10-01-HRD",
-              "@layer": "2",
-              "@weight": "10"
-            },
-            {
-              "@id": "HELLGATE-08-10v10-01-HRD",
-              "@layer": "2",
-              "@weight": "32"
-            },
-            {
-              "@id": "HELLGATE-09-10v10-01-HRD",
-              "@layer": "2",
-              "@weight": "32"
-            },
-            {
-              "@id": "HELLGATE-10-10v10-01-HRD",
-              "@layer": "2",
-              "@weight": "5"
-            }
-          ]
-        },
-        {
           "@name": "2v2_non_lethal",
           "map": [
             {
@@ -588,61 +381,6 @@
             },
             {
               "@id": "HELLGATE-10-5v5-01",
-              "@layer": "2",
-              "@weight": "5"
-            }
-          ]
-        },
-        {
-          "@name": "10v10_non_lethal",
-          "map": [
-            {
-              "@id": "HELLGATE-01-10v10-01",
-              "@layer": "2",
-              "@weight": "32"
-            },
-            {
-              "@id": "HELLGATE-02-10v10-01",
-              "@layer": "2",
-              "@weight": "32"
-            },
-            {
-              "@id": "HELLGATE-03-10v10-01",
-              "@layer": "2",
-              "@weight": "10"
-            },
-            {
-              "@id": "HELLGATE-04-10v10-01",
-              "@layer": "2",
-              "@weight": "10"
-            },
-            {
-              "@id": "HELLGATE-05-10v10-01",
-              "@layer": "2",
-              "@weight": "32"
-            },
-            {
-              "@id": "HELLGATE-06-10v10-01",
-              "@layer": "2",
-              "@weight": "5"
-            },
-            {
-              "@id": "HELLGATE-07-10v10-01",
-              "@layer": "2",
-              "@weight": "10"
-            },
-            {
-              "@id": "HELLGATE-08-10v10-01",
-              "@layer": "2",
-              "@weight": "32"
-            },
-            {
-              "@id": "HELLGATE-09-10v10-01",
-              "@layer": "2",
-              "@weight": "32"
-            },
-            {
-              "@id": "HELLGATE-10-10v10-01",
               "@layer": "2",
               "@weight": "5"
             }
@@ -826,91 +564,6 @@
           "@mode": "H5",
           "@title": "@HELLGATE_5V5_MMR_REACHED_HEADLINE",
           "@description": "@HELLGATE_5V5_MMR_REACHED_TEXT",
-          "milestone": [
-            {
-              "@value": "50"
-            },
-            {
-              "@value": "100"
-            },
-            {
-              "@value": "250"
-            },
-            {
-              "@value": "500"
-            },
-            {
-              "@value": "1000"
-            },
-            {
-              "@value": "2500"
-            },
-            {
-              "@value": "5000"
-            },
-            {
-              "@value": "7500"
-            },
-            {
-              "@value": "10000"
-            },
-            {
-              "@value": "25000"
-            },
-            {
-              "@value": "50000"
-            },
-            {
-              "@value": "75000"
-            },
-            {
-              "@value": "100000"
-            },
-            {
-              "@value": "250000"
-            },
-            {
-              "@value": "500000"
-            },
-            {
-              "@value": "750000"
-            },
-            {
-              "@value": "1000000"
-            },
-            {
-              "@value": "2000000"
-            },
-            {
-              "@value": "3000000"
-            },
-            {
-              "@value": "4000000"
-            },
-            {
-              "@value": "5000000"
-            },
-            {
-              "@value": "6000000"
-            },
-            {
-              "@value": "7000000"
-            },
-            {
-              "@value": "8000000"
-            },
-            {
-              "@value": "9000000"
-            },
-            {
-              "@value": "10000000"
-            }
-          ]
-        },
-        {
-          "@mode": "H10",
-          "@title": "@HELLGATE_10V10_MMR_REACHED_HEADLINE",
-          "@description": "@HELLGATE_10V10_MMR_REACHED_TEXT",
           "milestone": [
             {
               "@value": "50"

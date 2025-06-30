@@ -1,238 +1,471 @@
 <?xml version="1.0" encoding="utf-8"?>
 <armory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="armory.xsd">
-    <sessionrequirements defaultmindurationminutes="10">
-        <activity name="openworldsolo">
-            <or>
+    <tagdefinitions>
+        <taggroup id="groupsize" name="@ARMORY_TAG_GROUP_SIZE">
+            <tag id="solo" name="@ARMORY_TAG_GROUP_SIZE_SOLO"/>         <!-- 1 player only -->
+            <tag id="small_group" name="@ARMORY_TAG_GROUP_SIZE_SMALL"/> <!-- 1-3 players -->
+            <tag id="medium_group" name="@ARMORY_TAG_GROUP_SIZE_MEDIUM"/> <!-- 4-10 players -->
+            <tag id="large_group" name="@ARMORY_TAG_GROUP_SIZE_LARGE"/>  <!-- 11-20 players -->
+            <tag id="zerg" name="@ARMORY_TAG_GROUP_SIZE_ZERG"/>         <!-- 21+ players -->
+        </taggroup>
+        <taggroup id="activitytype" name="@ARMORY_TAG_GROUP_ACTIVITY_TYPE">
+            <tag id="pve" name="@ARMORY_TAG_ACTIVITY_TYPE_PVE"/>
+            <tag id="pvp" name="@ARMORY_TAG_ACTIVITY_TYPE_PVP"/>
+            <tag id="gathering" name="@ARMORY_TAG_ACTIVITY_TYPE_GATHERING"/>
+
+            <tag id="openworld" name="@ARMORY_TAG_ACTIVITY_TYPE_OPENWORLD"/>
+            <tag id="instanced" name="@ARMORY_TAG_ACTIVITY_TYPE_INSTANCED"/>
+            <tag id="dungeons" name="@ARMORY_TAG_ACTIVITY_TYPE_DUNGEONS"/>
+
+            <tag id="competitive" name="@ARMORY_TAG_ACTIVITY_TYPE_COMPETITIVE"/>
+            <tag id="conquering" name="@ARMORY_TAG_ACTIVITY_TYPE_CONQUERING"/>
+        </taggroup>
+    </tagdefinitions>
+
+    <activities>
+        <!-- name and description are optional, fallback always to @ARMORY_ACTIVITY_{ACTIVITY}_NAME, @ARMORY_ACTIVITY_{ACTIVITY}_DESC -->
+        <activity uniquename="openworldsolo" image="">
+            <tags>
+                <tag ref="solo"/>
+                <tag ref="openworld"/>
+                <tag ref="pve"/>
+                <tag ref="pvp"/>
+            </tags>
+            <datasetrequirements>
+                <or>
+                    <and>
+                        <duration mindurationminutes="5"/>
+                        <metric name="pvpfamegained" minvalue="1"/>
+                    </and>
+                    <and>
+                        <duration mindurationminutes="5"/>
+                        <metric name="pvefamegained" minvalue="1"/>
+                    </and>
+                </or>
+            </datasetrequirements>
+        </activity>
+        <activity uniquename="openworldgroup" image="">
+            <tags>
+                <tag ref="small_group"/>
+                <tag ref="openworld"/>
+                <tag ref="pve"/>
+                <tag ref="pvp"/>
+            </tags>
+            <datasetrequirements>
+                <or>
+                    <and>
+                        <duration mindurationminutes="10"/>
+                        <metric name="pvpfamegained" minvalue="1"/>
+                    </and>
+                    <and>
+                        <duration mindurationminutes="10"/>
+                        <metric name="pvefamegained" minvalue="1"/>
+                    </and>
+                </or>
+            </datasetrequirements>
+        </activity>
+        <activity uniquename="openworldlargegroup" image="">
+            <tags>
+                <tag ref="large_group"/>
+                <tag ref="openworld"/>
+                <tag ref="pve"/>
+                <tag ref="pvp"/>
+            </tags>
+            <datasetrequirements>
+                <or>
+                    <and>
+                        <duration mindurationminutes="10"/>
+                        <metric name="pvpfamegained" minvalue="1"/>
+                    </and>
+                    <and>
+                        <duration mindurationminutes="10"/>
+                        <metric name="pvefamegained" minvalue="1"/>
+                    </and>
+                </or>
+            </datasetrequirements>
+        </activity>
+        <activity uniquename="zvz" image="">
+            <tags>
+                <tag ref="zerg"/>
+                <tag ref="openworld"/>
+                <tag ref="pve"/>
+                <tag ref="pvp"/>
+                <tag ref="conquering"/>
+            </tags>
+            <datasetrequirements>
+                <and>
+                    <duration mindurationminutes="2"/>
+                    <or>
+                        <metric name="damagedealt" minvalue="5000"/>
+                        <metric name="healingdone" minvalue="5000"/>
+                        <metric name="damagereceived" minvalue="5000"/>
+                        <metric name="kills" minvalue="3"/>
+                        <metric name="pvpfamegained" minvalue="1000"/>
+                    </or>
+                </and>
+            </datasetrequirements>
+        </activity>
+        <activity uniquename="corrupteddungeons" image="">
+            <tags>
+                <tag ref="solo"/>
+                <tag ref="instanced"/>
+                <tag ref="pve"/>
+                <tag ref="pvp"/>
+                <tag ref="competitive"/>
+            </tags>
+            <datasetrequirements>
+                <or>
+                    <metric name="successwin" minvalue="1"/>
+                    <metric name="kills" minvalue="1"/>
+                </or>
+            </datasetrequirements>
+        </activity>
+        <activity uniquename="hellgate2v2" image="">
+            <tags>
+                <tag ref="small_group"/>
+                <tag ref="instanced"/>
+                <tag ref="pve"/>
+                <tag ref="pvp"/>
+                <tag ref="competitive"/>
+            </tags>
+            <datasetrequirements>
+                <or>
+                    <metric name="successwin" minvalue="1"/>
+                    <metric name="kills" minvalue="1"/>
+                </or>
+            </datasetrequirements>
+        </activity>
+        <activity uniquename="hellgate5v5" image="">
+            <tags>
+                <tag ref="medium_group"/>
+                <tag ref="instanced"/>
+                <tag ref="pve"/>
+                <tag ref="pvp"/>
+                <tag ref="competitive"/>
+            </tags>
+            <datasetrequirements>
+                <or>
+                    <metric name="successwin" minvalue="1"/>
+                    <metric name="kills" minvalue="1"/>
+                </or>
+            </datasetrequirements>
+        </activity>
+        <activity uniquename="crystalleague5v5" image="">
+            <tags>
+                <tag ref="medium_group"/>
+                <tag ref="instanced"/>
+                <tag ref="pvp"/>
+                <tag ref="competitive"/>
+            </tags>
+            <datasetrequirements>
                 <and>
                     <duration mindurationminutes="5"/>
-                    <metric name="pvpfamegained" minvalue="1"/>
+                    <or>
+                        <metric name="damagedealt" minvalue="5000"/>
+                        <metric name="healingdone" minvalue="5000"/>
+                        <metric name="damagereceived" minvalue="5000"/>
+                    </or>
                 </and>
+            </datasetrequirements>
+        </activity>
+        <activity uniquename="crystalleague20v20" image="">
+            <tags>
+                <tag ref="large_group"/>
+                <tag ref="instanced"/>
+                <tag ref="pvp"/>
+                <tag ref="competitive"/>
+            </tags>
+            <datasetrequirements>
                 <and>
                     <duration mindurationminutes="5"/>
-                    <metric name="pvefamegained" minvalue="1"/>
+                    <or>
+                        <metric name="damagedealt" minvalue="5000"/>
+                        <metric name="healingdone" minvalue="5000"/>
+                        <metric name="damagereceived" minvalue="5000"/>
+                    </or>
                 </and>
-            </or>
+            </datasetrequirements>
         </activity>
-
-        <activity name="openworldgroup">
-            <or>
+        <activity uniquename="crystalarena" image="">
+            <tags>
+                <tag ref="medium_group"/>
+                <tag ref="instanced"/>
+                <tag ref="pvp"/>
+                <tag ref="competitive"/>
+            </tags>
+            <datasetrequirements>
                 <and>
-                    <duration mindurationminutes="10"/>
-                    <metric name="pvpfamegained" minvalue="1"/>
-                </and>
-                <and>
-                    <duration mindurationminutes="10"/>
-                    <metric name="pvefamegained" minvalue="1"/>
-                </and>
-            </or>
-        </activity>
-
-        <activity name="openworldlargegroup">
-            <or>
-                <and>
-                    <duration mindurationminutes="10"/>
-                    <metric name="pvpfamegained" minvalue="1"/>
-                </and>
-                <and>
-                    <duration mindurationminutes="10"/>
-                    <metric name="pvefamegained" minvalue="1"/>
-                </and>
-            </or>
-        </activity>
-
-        <activity name="zvz">
-            <and>
-                <duration mindurationminutes="2"/>
-                <or>
-                    <metric name="damagedealt" minvalue="5000"/>
-                    <metric name="healingdone" minvalue="5000"/>
-                    <metric name="damagereceived" minvalue="5000"/>
-                    <metric name="kills" minvalue="3"/>
-                    <metric name="pvpfamegained" minvalue="1000"/>
-                </or>
-            </and>
-        </activity>
-
-        <activity name="corrupteddungeons">
-            <or>
-                <metric name="successwin" minvalue="1"/>
-                <metric name="kills" minvalue="1"/>
-            </or>
-        </activity>
-
-        <activity name="hellgate2v2">
-            <or>
-                <metric name="successwin" minvalue="1"/>
-                <metric name="kills" minvalue="1"/>
-            </or>
-        </activity>
-
-        <activity name="hellgate5v5">
-            <or>
-                <metric name="successwin" minvalue="1"/>
-                <metric name="kills" minvalue="1"/>
-            </or>
-        </activity>
-
-        <activity name="hellgate10v10">
-            <or>
-                <metric name="successwin" minvalue="1"/>
-                <metric name="kills" minvalue="1"/>
-            </or>
-        </activity>
-
-        <activity name="crystalleague5v5">
-            <and>
-                <duration mindurationminutes="5"/>
-                <or>
-                    <metric name="damagedealt" minvalue="5000"/>
-                    <metric name="healingdone" minvalue="5000"/>
-                </or>
-            </and>
-        </activity>
-
-        <activity name="crystalleague20v20">
-            <and>
-                <duration mindurationminutes="5"/>
-                <or>
-                    <metric name="damagedealt" minvalue="5000"/>
-                    <metric name="healingdone" minvalue="5000"/>
-                </or>
-            </and>
-        </activity>
-
-        <activity name="crystalarena">
-            <and>
-                <duration mindurationminutes="5"/>
-                <or>
-                    <metric name="damagedealt" minvalue="5000"/>
-                    <metric name="healingdone" minvalue="5000"/>
-                </or>
-            </and>
-        </activity>
-
-        <activity name="arena">
-            <and>
-                <duration mindurationminutes="5"/>
-                <or>
-                    <metric name="damagedealt" minvalue="5000"/>
-                    <metric name="healingdone" minvalue="5000"/>
-                </or>
-            </and>
-        </activity>
-
-        <activity name="mists">
-            <or>
-                <and> <!-- PvP Combat Scenario -->
                     <duration mindurationminutes="5"/>
+                    <or>
+                        <metric name="damagedealt" minvalue="5000"/>
+                        <metric name="healingdone" minvalue="5000"/>
+                        <metric name="damagereceived" minvalue="5000"/>
+                    </or>
+                </and>
+            </datasetrequirements>
+        </activity>
+        <activity uniquename="arena" image="">
+            <tags>
+                <tag ref="medium_group"/>
+                <tag ref="instanced"/>
+                <tag ref="pvp"/>
+                <tag ref="competitive"/>
+            </tags>
+            <datasetrequirements>
+                <and>
+                    <duration mindurationminutes="5"/>
+                    <or>
+                        <metric name="damagedealt" minvalue="5000"/>
+                        <metric name="healingdone" minvalue="5000"/>
+                        <metric name="damagereceived" minvalue="5000"/>
+                    </or>
+                </and>
+            </datasetrequirements>
+        </activity>
+        <activity uniquename="mists" image="">
+            <tags>
+                <tag ref="small_group"/>
+                <tag ref="instanced"/>
+                <tag ref="pve"/>
+                <tag ref="pvp"/>
+                <tag ref="gathering"/>
+            </tags>
+            <datasetrequirements>
+                <or>
+                    <and> <!-- PvP Combat Scenario -->
+                        <duration mindurationminutes="5"/>
+                        <or>
+                            <metric name="pvpfamegained" minvalue="1"/>
+                            <metric name="kills" minvalue="1"/>
+                        </or>
+                    </and>
+                    <and> <!-- PvE Scenario -->
+                        <duration mindurationminutes="5"/>
+                        <or>
+                            <metric name="pvefamegained" minvalue="1000"/>
+                            <metric name="mobskilled" minvalue="5"/>
+                        </or>
+                    </and>
+                </or>
+            </datasetrequirements>
+        </activity>
+        <activity uniquename="factionwarfare" image="">
+            <tags>
+                <tag ref="medium_group"/>
+                <tag ref="large_group"/>
+                <tag ref="zerg"/>
+                <tag ref="openworld"/>
+                <tag ref="pvp"/>
+                <tag ref="conquering"/>
+            </tags>
+            <datasetrequirements>
+                <and>
+                    <duration mindurationminutes="10"/>
                     <or>
                         <metric name="pvpfamegained" minvalue="1"/>
-                        <metric name="kills" minvalue="1"/>
+                        <metric name="pvefamegained" minvalue="1"/>
                     </or>
                 </and>
-                <and> <!-- PvE Scenario -->
+            </datasetrequirements>
+        </activity>
+        <activity uniquename="castle" image="">
+            <tags>
+                <tag ref="large_group"/>
+                <tag ref="openworld"/>
+                <tag ref="pvp"/>
+                <tag ref="conquering"/>
+            </tags>
+            <datasetrequirements>
+                <or>
+                    <duration mindurationminutes="2"/>
+                    <and>
+                        <metric name="pvpfamegained" minvalue="500"/>
+                        <metric name="kills" minvalue="1"/>
+                    </and>
+                    <and>
+                        <metric name="pvefamegained" minvalue="500"/>
+                        <metric name="mobskilled" minvalue="1"/>
+                    </and>
+                </or>
+            </datasetrequirements>
+        </activity>
+        <activity uniquename="fortification" image="">
+            <tags>
+                <tag ref="large_group"/>
+                <tag ref="zerg"/>
+                <tag ref="openworld"/>
+                <tag ref="pvp"/>
+                <tag ref="conquering"/>
+            </tags>
+            <datasetrequirements>
+                <and>
                     <duration mindurationminutes="5"/>
                     <or>
-                        <metric name="pvefamegained" minvalue="1000"/>
-                        <metric name="mobskilled" minvalue="5"/>
+                        <metric name="buildingdamage" minvalue="1000"/>
+                        <metric name="pvpfamegained" minvalue="1"/>
                     </or>
                 </and>
-            </or>
+            </datasetrequirements>
         </activity>
-
-        <activity name="castle">
-            <or>
-                <duration mindurationminutes="2"/>
+        <activity uniquename="avalonianroads" image="">
+            <tags>
+                <tag ref="medium_group"/>
+                <tag ref="instanced"/>
+                <tag ref="pvp"/>
+                <tag ref="pve"/>
+            </tags>
+            <datasetrequirements>
                 <and>
-                    <metric name="pvpfamegained" minvalue="500"/>
-                    <metric name="kills" minvalue="1"/>
+                    <duration mindurationminutes="10"/>
+                    <or>
+                        <metric name="pvpfamegained" minvalue="1"/>
+                        <metric name="pvefamegained" minvalue="1"/>
+                    </or>
                 </and>
+            </datasetrequirements>
+        </activity>
+        <activity uniquename="gathering" image="">
+            <tags>
+                <tag ref="solo"/>
+                <tag ref="openworld"/>
+                <tag ref="gathering"/>
+            </tags>
+            <datasetrequirements>
+                <or>
+                    <duration mindurationminutes="5"/>
+                    <metric name="pvefamegained" minvalue="1000"/>
+                </or>
+            </datasetrequirements>
+        </activity>
+        <activity uniquename="solodungeons" image="">
+            <tags>
+                <tag ref="solo"/>
+                <tag ref="small_group"/>
+                <tag ref="instanced"/>
+                <tag ref="dungeons"/>
+                <tag ref="pve"/>
+            </tags>
+            <datasetrequirements>
                 <and>
+                    <duration mindurationminutes="10"/>
+                    <metric name="mobskilled" minvalue="10"/>
+                </and>
+            </datasetrequirements>
+        </activity>
+        <activity uniquename="groupdungeons" image="">
+            <tags>
+                <tag ref="small_group"/>
+                <tag ref="medium_group"/>
+                <tag ref="instanced"/>
+                <tag ref="dungeons"/>
+                <tag ref="pve"/>
+            </tags>
+            <datasetrequirements>
+                <or>
+                    <duration mindurationminutes="10"/>
+                    <metric name="mobskilled" minvalue="10"/>
+                </or>
+            </datasetrequirements>
+        </activity>
+        <activity uniquename="avaloniandungeons" image="">
+            <tags>
+                <tag ref="large_group"/>
+                <tag ref="instanced"/>
+                <tag ref="dungeons"/>
+                <tag ref="pve"/>
+            </tags>
+            <datasetrequirements>
+                <or>
+                    <duration mindurationminutes="10"/>
+                    <metric name="mobskilled" minvalue="10"/>
+                </or>
+            </datasetrequirements>
+        </activity>
+        <activity uniquename="hardcoreexpeditions" image="">
+            <tags>
+                <tag ref="medium_group"/>
+                <tag ref="instanced"/>
+                <tag ref="dungeons"/>
+                <tag ref="pve"/>
+            </tags>
+            <datasetrequirements>
+                <or>
+                    <duration mindurationminutes="10"/>
+                    <metric name="mobskilled" minvalue="10"/>
+                </or>
+            </datasetrequirements>
+        </activity>
+        <activity uniquename="homebase" image="">
+            <tags>
+                <tag ref="medium_group"/>
+                <tag ref="openworld"/>
+                <tag ref="pve"/>
+            </tags>
+            <datasetrequirements>
+                <and>
+                    <duration mindurationminutes="5"/>
                     <metric name="pvefamegained" minvalue="500"/>
                     <metric name="mobskilled" minvalue="1"/>
                 </and>
-            </or>
+            </datasetrequirements>
         </activity>
-
-        <activity name="fortification">
-            <and>
-                <duration mindurationminutes="5"/>
+        <activity uniquename="tracking" image="">
+            <tags>
+                <tag ref="solo"/>
+                <tag ref="small_group"/>
+                <tag ref="openworld"/>
+                <tag ref="pve"/>
+                <tag ref="gathering"/>
+            </tags>
+            <datasetrequirements>
                 <or>
-                    <metric name="buildingdamage" minvalue="1000"/>
-                    <metric name="pvpfamegained" minvalue="1"/>
+                    <and>
+                        <duration mindurationminutes="5"/>
+                        <metric name="damagedealt" minvalue="1000"/>
+                    </and>
+                    <metric name="successwin" minvalue="1"/>
                 </or>
-            </and>
+            </datasetrequirements>
         </activity>
-
-        <activity name="avalonianroads">
-            <and>
-                <duration mindurationminutes="10"/>
+        <activity uniquename="helldungeons2v2" image="">
+            <tags>
+                <tag ref="small_group"/>
+                <tag ref="instanced"/>
+                <tag ref="dungeons"/>
+                <tag ref="pvp"/>
+                <tag ref="pve"/>
+            </tags>
+            <datasetrequirements>
                 <or>
-                    <metric name="pvpfamegained" minvalue="1"/>
-                    <metric name="pvefamegained" minvalue="1"/>
+                    <and>
+                        <duration mindurationminutes="5"/>
+                        <or>
+                            <metric name="pvpfamegained" minvalue="1"/>
+                            <metric name="kills" minvalue="1"/>
+                        </or>
+                    </and>
                 </or>
-            </and>
+            </datasetrequirements>
         </activity>
-
-        <activity name="gathering">
-            <or>
-                <duration mindurationminutes="5"/>
-                <metric name="pvefamegained" minvalue="1000"/>
-            </or>
+        <activity uniquename="helldungeons3v3" image="">
+            <tags>
+                <tag ref="small_group"/>
+                <tag ref="instanced"/>
+                <tag ref="dungeons"/>
+                <tag ref="pvp"/>
+                <tag ref="pve"/>
+            </tags>
+            <datasetrequirements>
+                <or>
+                    <and>
+                        <duration mindurationminutes="5"/>
+                        <or>
+                            <metric name="pvpfamegained" minvalue="1"/>
+                            <metric name="kills" minvalue="1"/>
+                        </or>
+                    </and>
+                </or>
+            </datasetrequirements>
         </activity>
-
-        <activity name="fishing">
-            <or>
-                <duration mindurationminutes="5"/>
-                <metric name="pvefamegained" minvalue="1000"/>
-            </or>
-        </activity>
-
-        <activity name="solodungeons">
-            <and>
-                <duration mindurationminutes="10"/>
-                <metric name="mobskilled" minvalue="10"/>
-            </and>
-        </activity>
-
-        <activity name="groupdungeons">
-            <and>
-                <duration mindurationminutes="10"/>
-                <metric name="mobskilled" minvalue="10"/>
-            </and>
-        </activity>
-
-        <activity name="avaloniandungeons">
-            <and>
-                <duration mindurationminutes="10"/>
-                <metric name="mobskilled" minvalue="10"/>
-            </and>
-        </activity>
-
-        <activity name="hardcoreexpeditions">
-            <or>
-                <duration mindurationminutes="10"/>
-                <metric name="mobskilled" minvalue="10"/>
-            </or>
-        </activity>
-
-        <activity name="homebase">
-            <and>
-                <duration mindurationminutes="5"/>
-                <metric name="pvefamegained" minvalue="500"/>
-                <metric name="mobskilled" minvalue="1"/>
-            </and>
-        </activity>
-
-        <activity name="tracking">
-            <or>
-                <and>
-                    <duration mindurationminutes="5"/>
-                    <metric name="damagedealt" minvalue="1000"/>
-                </and>
-                <metric name="successwin" minvalue="1"/>
-            </or>
-        </activity>
-
-    </sessionrequirements>
+    </activities>
 </armory>

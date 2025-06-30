@@ -49,6 +49,7 @@
 		<DecayingItemSettings marketplaceblockhours="24" />
 		<Fame pvpfamesharingradius="50" pvefamesharingradius="50">
 			<GroupBonus>
+        		<Group size="2" bonusfactor="1.1" />
 				<Group size="3" bonusfactor="1.17" />
 				<Group size="4" bonusfactor="1.33" />
 				<Group size="5" bonusfactor="1.4" />
@@ -138,10 +139,10 @@
 
 			<legendaryitemtraits armorbase="100" ccrbase="100" attackdamageprogression="1.0918" abilitypowerprogression="1.0918" ccpowerprogression="1.0564" hitpointsprogression="1.06" energyprogression="1.0918" armorprogression="1.03" crowdcontrolresistanceprogression="1.0564" fishingspeedprogression="1.3" attackrangebonus="1" attackspeedbonus="1" bonusccdurationvsmobs="1" bonusccdurationvsplayers="1" bonusdamagevsmobs="1" bonusdamagevsplayers="1" bonusdefensevsmobs="1" bonusdefensevsplayers="1" energycostreduction="1" energyregenerationbonus="1" healbonus="1" healmodifier="1" hitpointsregenerationbonus="1" magicattackdamagebonus="1" magicspelldamagebonus="1" movespeedbonus="1" physicalattackdamagebonus="1" physicalspelldamagebonus="1" threatbonus="1.16" magiccasttimereduction="false" magiccooldownreduction="false" />
 
-			<armorshare head="0" armor="1.0" shoes="0" mainhand="0" cape="0" shield="0" towershield="0" skullshield="0" spikedshield="0" avalonshield="0" torch="0" horn="0" cane="0" lamp="0" talisman="0" book="0" orb="0" demonskull="0" totem="0" censer="0" transformation="1.0" />
-			<ccrshare head="0" armor="1.0" shoes="0" mainhand="0" cape="0" shield="0.60" towershield="0" skullshield="0" spikedshield="0" avalonshield="0" torch="0" horn="0" cane="0" lamp="0" talisman="1.2" book="0" orb="0" demonskull="0" totem="0" censer="0" transformation="1.0" />
-			<hitpointsshare head="0.25" armor="0.5" shoes="0.25" mainhand="0" cape="0" shield="0" towershield="0" skullshield="0" spikedshield="0" avalonshield="0" torch="0" horn="0" cane="0" lamp="0" talisman="0" book="0" orb="0" demonskull="0" totem="0.25" censer="0" transformation="1.0" />
-			<energyshare head="0.5" armor="0.25" shoes="0.15" mainhand="0" cape="0.10" shield="0" towershield="0" skullshield="0" spikedshield="0" avalonshield="0" torch="0" horn="0" cane="0" lamp="0" talisman="0" book="0.15" orb="0.5" demonskull="0" totem="0" censer="0" transformation="1.0" />
+			<armorshare head="0" armor="1.0" shoes="0" mainhand="0" cape="0" shield="0" towershield="0" skullshield="0" spikedshield="0" avalonshield="0" torch="0" horn="0" cane="0" lamp="0" talisman="0" book="0" orb="0" demonskull="0" totem="0" censer="0" crystalshield="0" crystaltorch="0" crystalbook="0" transformation="1.0" />
+			<ccrshare head="0" armor="1.0" shoes="0" mainhand="0" cape="0" shield="0.60" towershield="0" skullshield="0" spikedshield="0" avalonshield="0" torch="0" horn="0" cane="0" lamp="0" talisman="1.8" book="0" orb="0" demonskull="0" totem="0" censer="0" crystalshield="0" crystaltorch="-1.2" crystalbook="0" transformation="1.0" />
+			<hitpointsshare head="0.25" armor="0.5" shoes="0.25" mainhand="0" cape="0" shield="0" towershield="0" skullshield="0" spikedshield="0" avalonshield="0" torch="0" horn="0" cane="0" lamp="0" talisman="0" book="0" orb="0" demonskull="0" totem="0.25" censer="0" crystalshield="0" crystaltorch="0" crystalbook="0" transformation="1.0" />
+			<energyshare head="0.5" armor="0.25" shoes="0.15" mainhand="0" cape="0.10" shield="0" towershield="0" skullshield="0" spikedshield="0" avalonshield="0" torch="0" horn="0" cane="0" lamp="0" talisman="0" book="0.15" orb="0.5" demonskull="0" totem="0" censer="0" crystalshield="0.125" crystaltorch="0" crystalbook="0" transformation="1.0" />
 			<!-- IP correction so Tracking Tools basically start at 0 IP on T3 when calculating the track interaction time-->
 			<trackingtime base="0" />
 		</ItemPowerProgression>
@@ -841,6 +842,7 @@
 						<Override itemtype="mount" factor="0" />
 						<Override itemtype="weapon" factor="0" />
             <Override itemtype="transformationweapon" factor="0" />
+            <Override itemtype="trashitem" factor="1" />
 					</StackLoss>
 				</ThrownOutAvalonRoads>
 
@@ -850,9 +852,18 @@
 					</DurabilityLoss>
 					<StackLoss factor="0.33">
 						<Override itemtype="rewardtoken" factor="1" />
-            <Override itemtype="trashitem" factor="1" />
+						<Override itemtype="trashitem" factor="1" />
 					</StackLoss>
 				</AliveToDead>
+
+				<AliveToDeadOrange>
+					<DurabilityLoss minfactor="0.05" maxfactor="0.05" minimumremainingfactor="0.01" target="equipment" />
+					<DurabilityLoss minfactor="0.2" maxfactor="0.4" minimumremainingfactor="0.01" target="inventory" />
+					<StackLoss factor="0.33" target="inventory">
+						<Override itemtype="rewardtoken" factor="1" />
+						<Override itemtype="trashitem" factor="1" />
+					</StackLoss>
+				</AliveToDeadOrange>
 
 				<AliveToKnockedOut silverdropcapperitem="700">
 					<DurabilityLoss minfactor="0.05" maxfactor="0.05" minimumremainingfactor="0.01">
@@ -869,9 +880,17 @@
 					</DurabilityLoss>
 					<StackLoss factor="0.33">
 						<Override itemtype="rewardtoken" factor="1" />
-            <Override itemtype="trashitem" factor="1" />
+						<Override itemtype="trashitem" factor="1" />
 					</StackLoss>
 				</KnockedOutToDead>
+
+				<KnockedOutToDeadOrange>
+					<DurabilityLoss minfactor="0.15" maxfactor="0.35" minimumremainingfactor="0.01" target="inventory" />
+					<StackLoss factor="0.33" target="inventory">
+						<Override itemtype="rewardtoken" factor="1" />
+						<Override itemtype="trashitem" factor="1" />
+					</StackLoss>
+				</KnockedOutToDeadOrange>
 			</ItemLossEvent>
 		</ItemLoss>
 		<Repair>
@@ -951,7 +970,7 @@
 		<Resource tier="7" time="0.0104" maxstack="999" />
 		<Resource tier="8" time="0.0156" maxstack="999" />
 	</RepairBuilding>
-	<ActionSplitSettings defaultcraftstacksize="40" defaultstudystacksize="40">
+	<ActionSplitSettings defaultcraftstacksize="40" defaultstudystacksize="40" defaultmeldstacksize="10">
 		<SplitSetting craftingcategory="fiber" craftstacksize="200" studystacksize="200" />
 		<SplitSetting craftingcategory="wood" craftstacksize="200" studystacksize="200" />
 		<SplitSetting craftingcategory="rock" craftstacksize="200" studystacksize="200" />
@@ -975,9 +994,11 @@
 			<StatBonus attribute="learningpoints" change="500" />
 		</Reward>
 	</PremiumLifeTimeRewards>
+  <LearningPoints payoutdaytimeref="DOWNTIME" ctalpthreshold="50" />
 	<ClusterDangerBonusTypes globalmoblootfactor="0.9" globalmobsilverlootfactor="0.9">
 		<ClusterDangerBonus type="safe" icon="safe" famefactor="2.15" moblootfactor="1.25" mobsilverlootfactor="1.45" questscalingfactor="2.15" gatheringfamefactor="1" fishingfamefactor="1" />
 		<ClusterDangerBonus type="yellow" icon="yellow" famefactor="2.4" moblootfactor="1.33" mobsilverlootfactor="1.53" questscalingfactor="2.4" gatheringfamefactor="1" fishingfamefactor="1" />
+		<ClusterDangerBonus type="orange" icon="orange" famefactor="2.9" moblootfactor="1.80" mobsilverlootfactor="2" questscalingfactor="2.9" gatheringfamefactor="1" fishingfamefactor="1" />
 		<ClusterDangerBonus type="red" icon="red" famefactor="3.3" moblootfactor="2.25" mobsilverlootfactor="2.6" questscalingfactor="3.3" gatheringfamefactor="1" fishingfamefactor="1" />
 		<ClusterDangerBonus type="black" icon="black" famefactor="4.2" moblootfactor="2.6" mobsilverlootfactor="3" questscalingfactor="4.2" gatheringfamefactor="1" fishingfamefactor="1" />
 
@@ -994,15 +1015,16 @@
 		<ClusterDangerBonus type="hell_lethal_2v2" icon="helllethal2v2" famefactor="4.2" moblootfactor="2.6" mobsilverlootfactor="3" questscalingfactor="4.2" gatheringfamefactor="1" fishingfamefactor="1" />
 		<ClusterDangerBonus type="hell_lethal_5v5" icon="helllethal5v5" famefactor="4.2" moblootfactor="2.6" mobsilverlootfactor="3" questscalingfactor="4.2" gatheringfamefactor="1" fishingfamefactor="1" />
 		<ClusterDangerBonus type="hell_lethal_10v10" icon="helllethal10v10" famefactor="4.2" moblootfactor="2.6" mobsilverlootfactor="3" questscalingfactor="4.2" gatheringfamefactor="1" fishingfamefactor="1" />
-		<ClusterDangerBonus type="corrupted_beginner" icon="corruptedbeginner" famefactor="3.2" moblootfactor="1.33" mobsilverlootfactor="1.53" questscalingfactor="3.2" gatheringfamefactor="1" fishingfamefactor="1" />
-		<ClusterDangerBonus type="corrupted_intermediate" icon="corruptedintermediate" famefactor="5.1" moblootfactor="2.6" mobsilverlootfactor="3" questscalingfactor="5.1" gatheringfamefactor="1" fishingfamefactor="1" />
-		<ClusterDangerBonus type="corrupted_pro" icon="corruptedpro" famefactor="3.5" moblootfactor="2.6" mobsilverlootfactor="3" questscalingfactor="3.5" gatheringfamefactor="1" fishingfamefactor="1" />
+		<ClusterDangerBonus type="corrupted_beginner" icon="corruptedbeginner" famefactor="2.4" moblootfactor="1.33" mobsilverlootfactor="1.53" questscalingfactor="2.4" gatheringfamefactor="1" fishingfamefactor="1" />
+		<ClusterDangerBonus type="corrupted_intermediate" icon="corruptedintermediate" famefactor="4.2" moblootfactor="2.6" mobsilverlootfactor="3" questscalingfactor="4.2" gatheringfamefactor="1" fishingfamefactor="1" />
+		<ClusterDangerBonus type="corrupted_pro" icon="corruptedpro" famefactor="4.2" moblootfactor="2.6" mobsilverlootfactor="3" questscalingfactor="4.2" gatheringfamefactor="1" fishingfamefactor="1" />
 		<ClusterDangerBonus type="expedition" icon="safe" famefactor="1" moblootfactor="0.5" mobsilverlootfactor="0.5" questscalingfactor="1" gatheringfamefactor="1" fishingfamefactor="1" />
 		<ClusterDangerBonus type="tunnel" icon="black" famefactor="4.2" moblootfactor="3" mobsilverlootfactor="3.45" questscalingfactor="4.2" gatheringfamefactor="1" fishingfamefactor="1" />
 		<ClusterDangerBonus type="mistsyellow" icon="yellow" famefactor="1.8" moblootfactor="1.33" mobsilverlootfactor="1.53" questscalingfactor="1.8" gatheringfamefactor="1" fishingfamefactor="1" />
 		<ClusterDangerBonus type="mistsblack" icon="black" famefactor="3.16" moblootfactor="2.6" mobsilverlootfactor="3" questscalingfactor="3.16" gatheringfamefactor="1" fishingfamefactor="1" />
 		<ClusterDangerBonus type="mistsdungeonyellow" icon="yellow" famefactor="2.4" moblootfactor="1.33" mobsilverlootfactor="1.53" questscalingfactor="2.4" gatheringfamefactor="1" fishingfamefactor="1" />
 		<ClusterDangerBonus type="mistsdungeonblack" icon="black" famefactor="4.2" moblootfactor="2.6" mobsilverlootfactor="3" questscalingfactor="4.2" gatheringfamefactor="1" fishingfamefactor="1" />
+		<ClusterDangerBonus type="helldungeonblack" icon="black" famefactor="4.2" moblootfactor="2.6" mobsilverlootfactor="3" questscalingfactor="4.2" gatheringfamefactor="1" fishingfamefactor="1" />
 	</ClusterDangerBonusTypes>
 	<QuestScalingByClusterTier>
 		<Tier tier="1" scalingfactor="1" />
@@ -1020,7 +1042,7 @@
 	<constructionSiteTearDownSettings lootlifetime="172800" lootprotection="86400" />
 	<!--ExitSettings are used for random dungeon exits-->
 	<ExitSettings channeledexitusagetime="2" defaultexitusagedistance="5" />
-	<Expedition useexittimeinsec="5" timekickvoteisblockedafterjoininsec="300" kickvotecooldowninsec="300" abandonvotecooldowninsec="300" abandonvoteinitialcooldowninsec="300" invitationrequesttimeout="30" startrequesttimeout="60" enteringduration="10" enteringeffectprefab="FX/ClientPrefabs/fx_expeditions_teleport_loop" enteringeffectsuccessprefab="FX/ClientPrefabs/fx_expeditions_teleport_no_intro" arrivingeffectspell="EXPEDITIONSPAWN" penaltyduration="900">
+	<Expedition useexittimeinsec="5" timekickvoteisblockedafterjoininsec="300" kickvotecooldowninsec="300" abandonvotecooldowninsec="300" abandonvoteinitialcooldowninsec="300" invitationrequesttimeout="30" startrequesttimeout="60" enteringduration="10" enteringeffectprefab="FX/ClientPrefabs/fx_expeditions_teleport_loop" enteringeffectsuccessprefab="FX/ClientPrefabs/fx_expeditions_teleport_no_intro" arrivingeffectspell="EXPEDITIONSPAWN" penaltyduration="180">
 		<ExpeditionBonusRewardTimer>
 			<ResetTimer utctime="23:00" />
 		</ExpeditionBonusRewardTimer>
@@ -1102,8 +1124,8 @@
 		<endvfx prefab="FX/ClientPrefabs/OverChargeVfx/overcharge_end" socket="floor" constraintpreset="pointconstraint" />
 		<itemtrashedvfx prefab="FX/ClientPrefabs/OverChargeVfx/overcharge_itemtrashed" socket="damage" constraintpreset="inworld" />
 		<endwarningvfx prefab="FX/ClientPrefabs/OverChargeVfx/overcharge_endwarning" socket="damage" constraintpreset="inworld" />
-		<stack bonus="100" duration="1800" overchargeitemcount="10" trashchance="0.15" durabilityloss="0.3" fakeslotspell="OVERCHARGE" spelleffect="OVER_CHARGED" />
-		<stack bonus="100" duration="3600" overchargeitemcount="0" trashchance="0.30" durabilityloss="0.6" fakeslotspell="OVERCHARGE2" spelleffect="OVER_CHARGED2" />
+		<stack bonus="100" duration="1800" overchargeitemcount="10" trashchance="0.15" durabilityloss="0.3" fakeslotspell="OVERCHARGE" spelleffect="OVER_CHARGED" titleloca="@OVERCHARGE_TITLE_GENERIC" tooltiploca="@OVERCHARGE_HUD_TOOLTIP" />
+		<stack bonus="100" duration="3600" overchargeitemcount="0" trashchance="0.30" durabilityloss="0.6" fakeslotspell="OVERCHARGE2" spelleffect="OVER_CHARGED2" titleloca="@OVERCHARGE_TITLE_GENERIC_2" tooltiploca="@OVERCHARGE_HUD_TOOLTIP_ADD_STACK" />
 	</OverCharge>
 	<AlliancePenalty>
 		<Penalty territorythreshold="15" energydrainfactor="0.03" silverpenalty="0" famepenalty="0" />
@@ -1374,7 +1396,7 @@
 	<FurnituresPlacementRules openworldfurnituremindistance="10" lootplacementblockadditionalborder="2" />
 	<BatchUseSkillBook maxfame="10000000" />
 	<CharacterAndGuildNameReservation availableuntil="2024-07-21T11:00:00Z" />
-	<DeathRecap timeframe="10" />
+	<DeathRecap timeframe="180" />
 	<ClusterQualityOverlay>
 		<Quality value="Q6" color="300542ff" />
 		<Quality value="Q5" color="5B0C7Dff" />
@@ -1404,82 +1426,82 @@
 		<reavertier tier="1">
 			<mobreaverbonus mobtier="1" mobbonusdamage="0" mobbonusdefense="0" />
 			<mobreaverbonus mobtier="2" mobbonusdamage="0" mobbonusdefense="0" />
-			<mobreaverbonus mobtier="3" mobbonusdamage="0.15" mobbonusdefense="0.15" />
-			<mobreaverbonus mobtier="4" mobbonusdamage="0.5" mobbonusdefense="0.5" />
-			<mobreaverbonus mobtier="5" mobbonusdamage="0.95" mobbonusdefense="0.97" />
-			<mobreaverbonus mobtier="6" mobbonusdamage="1.55" mobbonusdefense="1.58" />
-			<mobreaverbonus mobtier="7" mobbonusdamage="2.3" mobbonusdefense="2.42" />
-			<mobreaverbonus mobtier="8" mobbonusdamage="3.3" mobbonusdefense="3.53" />
+			<mobreaverbonus mobtier="3" mobbonusdamage="0" mobbonusdefense="0" />
+			<mobreaverbonus mobtier="4" mobbonusdamage="0" mobbonusdefense="0" />
+			<mobreaverbonus mobtier="5" mobbonusdamage="0" mobbonusdefense="0" />
+			<mobreaverbonus mobtier="6" mobbonusdamage="0" mobbonusdefense="0" />
+			<mobreaverbonus mobtier="7" mobbonusdamage="0" mobbonusdefense="0" />
+			<mobreaverbonus mobtier="8" mobbonusdamage="0" mobbonusdefense="0" />
 		</reavertier>
     <reavertier tier="2">
       <mobreaverbonus mobtier="1" mobbonusdamage="0" mobbonusdefense="0" />
       <mobreaverbonus mobtier="2" mobbonusdamage="0" mobbonusdefense="0" />
-      <mobreaverbonus mobtier="3" mobbonusdamage="0.15" mobbonusdefense="0.15" />
-      <mobreaverbonus mobtier="4" mobbonusdamage="0.5" mobbonusdefense="0.5" />
-      <mobreaverbonus mobtier="5" mobbonusdamage="0.95" mobbonusdefense="0.97" />
-      <mobreaverbonus mobtier="6" mobbonusdamage="1.55" mobbonusdefense="1.58" />
-      <mobreaverbonus mobtier="7" mobbonusdamage="2.3" mobbonusdefense="2.42" />
-      <mobreaverbonus mobtier="8" mobbonusdamage="3.3" mobbonusdefense="3.53" />
+      <mobreaverbonus mobtier="3" mobbonusdamage="0" mobbonusdefense="0" />
+      <mobreaverbonus mobtier="4" mobbonusdamage="0" mobbonusdefense="0" />
+      <mobreaverbonus mobtier="5" mobbonusdamage="0" mobbonusdefense="0" />
+      <mobreaverbonus mobtier="6" mobbonusdamage="0" mobbonusdefense="0" />
+      <mobreaverbonus mobtier="7" mobbonusdamage="0" mobbonusdefense="0" />
+      <mobreaverbonus mobtier="8" mobbonusdamage="0" mobbonusdefense="0" />
     </reavertier>
 		<reavertier tier="3">
 			<mobreaverbonus mobtier="1" mobbonusdamage="0" mobbonusdefense="0" />
 			<mobreaverbonus mobtier="2" mobbonusdamage="0" mobbonusdefense="0" />
 			<mobreaverbonus mobtier="3" mobbonusdamage="0" mobbonusdefense="0" />
-			<mobreaverbonus mobtier="4" mobbonusdamage="0.3" mobbonusdefense="0.31" />
-			<mobreaverbonus mobtier="5" mobbonusdamage="0.7" mobbonusdefense="0.72" />
-			<mobreaverbonus mobtier="6" mobbonusdamage="1.22" mobbonusdefense="1.24" />
-			<mobreaverbonus mobtier="7" mobbonusdamage="1.87" mobbonusdefense="1.97" />
-			<mobreaverbonus mobtier="8" mobbonusdamage="2.74" mobbonusdefense="2.96" />
+			<mobreaverbonus mobtier="4" mobbonusdamage="0" mobbonusdefense="0" />
+			<mobreaverbonus mobtier="5" mobbonusdamage="0" mobbonusdefense="0" />
+			<mobreaverbonus mobtier="6" mobbonusdamage="0" mobbonusdefense="0" />
+			<mobreaverbonus mobtier="7" mobbonusdamage="0" mobbonusdefense="0" />
+			<mobreaverbonus mobtier="8" mobbonusdamage="0" mobbonusdefense="0" />
 		</reavertier>
 		<reavertier tier="4">
 			<mobreaverbonus mobtier="1" mobbonusdamage="0" mobbonusdefense="0" />
 			<mobreaverbonus mobtier="2" mobbonusdamage="0" mobbonusdefense="0" />
 			<mobreaverbonus mobtier="3" mobbonusdamage="0" mobbonusdefense="0" />
 			<mobreaverbonus mobtier="4" mobbonusdamage="0" mobbonusdefense="0" />
-			<mobreaverbonus mobtier="5" mobbonusdamage="0.3" mobbonusdefense="0.31" />
-			<mobreaverbonus mobtier="6" mobbonusdamage="0.7" mobbonusdefense="0.72" />
-			<mobreaverbonus mobtier="7" mobbonusdamage="1.2" mobbonusdefense="1.28" />
-			<mobreaverbonus mobtier="8" mobbonusdamage="1.87" mobbonusdefense="2.02" />
+			<mobreaverbonus mobtier="5" mobbonusdamage="0" mobbonusdefense="0" />
+			<mobreaverbonus mobtier="6" mobbonusdamage="0" mobbonusdefense="0" />
+			<mobreaverbonus mobtier="7" mobbonusdamage="0" mobbonusdefense="0" />
+			<mobreaverbonus mobtier="8" mobbonusdamage="0" mobbonusdefense="0" />
 		</reavertier>
 		<reavertier tier="5">
 			<mobreaverbonus mobtier="1" mobbonusdamage="0" mobbonusdefense="0" />
 			<mobreaverbonus mobtier="2" mobbonusdamage="0" mobbonusdefense="0" />
 			<mobreaverbonus mobtier="3" mobbonusdamage="0" mobbonusdefense="0" />
 			<mobreaverbonus mobtier="4" mobbonusdamage="0" mobbonusdefense="0" />
-			<mobreaverbonus mobtier="5" mobbonusdamage="0" mobbonusdefense="0.01" />
-			<mobreaverbonus mobtier="6" mobbonusdamage="0.31" mobbonusdefense="0.32" />
-			<mobreaverbonus mobtier="7" mobbonusdamage="0.69" mobbonusdefense="0.76" />
-			<mobreaverbonus mobtier="8" mobbonusdamage="1.21" mobbonusdefense="1.32" />
+			<mobreaverbonus mobtier="5" mobbonusdamage="0" mobbonusdefense="0" />
+			<mobreaverbonus mobtier="6" mobbonusdamage="0" mobbonusdefense="0" />
+			<mobreaverbonus mobtier="7" mobbonusdamage="0" mobbonusdefense="0" />
+			<mobreaverbonus mobtier="8" mobbonusdamage="0" mobbonusdefense="0" />
 		</reavertier>
 		<reavertier tier="6">
 			<mobreaverbonus mobtier="1" mobbonusdamage="0" mobbonusdefense="0" />
 			<mobreaverbonus mobtier="2" mobbonusdamage="0" mobbonusdefense="0" />
 			<mobreaverbonus mobtier="3" mobbonusdamage="0" mobbonusdefense="0" />
 			<mobreaverbonus mobtier="4" mobbonusdamage="0" mobbonusdefense="0" />
-			<mobreaverbonus mobtier="5" mobbonusdamage="0" mobbonusdefense="0.01" />
-			<mobreaverbonus mobtier="6" mobbonusdamage="0" mobbonusdefense="0.01" />
-			<mobreaverbonus mobtier="7" mobbonusdamage="0.29" mobbonusdefense="0.35" />
-			<mobreaverbonus mobtier="8" mobbonusdamage="0.69" mobbonusdefense="0.77" />
+			<mobreaverbonus mobtier="5" mobbonusdamage="0" mobbonusdefense="0" />
+			<mobreaverbonus mobtier="6" mobbonusdamage="0" mobbonusdefense="0" />
+			<mobreaverbonus mobtier="7" mobbonusdamage="0" mobbonusdefense="0" />
+			<mobreaverbonus mobtier="8" mobbonusdamage="0" mobbonusdefense="0" />
 		</reavertier>
 		<reavertier tier="7">
 			<mobreaverbonus mobtier="1" mobbonusdamage="0" mobbonusdefense="0" />
 			<mobreaverbonus mobtier="2" mobbonusdamage="0" mobbonusdefense="0" />
 			<mobreaverbonus mobtier="3" mobbonusdamage="0" mobbonusdefense="0" />
 			<mobreaverbonus mobtier="4" mobbonusdamage="0" mobbonusdefense="0" />
-			<mobreaverbonus mobtier="5" mobbonusdamage="0" mobbonusdefense="0.01" />
-			<mobreaverbonus mobtier="6" mobbonusdamage="0" mobbonusdefense="0.01" />
-			<mobreaverbonus mobtier="7" mobbonusdamage="0" mobbonusdefense="0.04" />
-			<mobreaverbonus mobtier="8" mobbonusdamage="0.3" mobbonusdefense="0.37" />
+			<mobreaverbonus mobtier="5" mobbonusdamage="0" mobbonusdefense="0" />
+			<mobreaverbonus mobtier="6" mobbonusdamage="0" mobbonusdefense="0" />
+			<mobreaverbonus mobtier="7" mobbonusdamage="0" mobbonusdefense="0" />
+			<mobreaverbonus mobtier="8" mobbonusdamage="0" mobbonusdefense="0" />
 		</reavertier>
 		<reavertier tier="8">
 			<mobreaverbonus mobtier="1" mobbonusdamage="0" mobbonusdefense="0" />
 			<mobreaverbonus mobtier="2" mobbonusdamage="0" mobbonusdefense="0" />
 			<mobreaverbonus mobtier="3" mobbonusdamage="0" mobbonusdefense="0" />
 			<mobreaverbonus mobtier="4" mobbonusdamage="0" mobbonusdefense="0" />
-			<mobreaverbonus mobtier="5" mobbonusdamage="0" mobbonusdefense="0.01" />
-			<mobreaverbonus mobtier="6" mobbonusdamage="0" mobbonusdefense="0.01" />
-			<mobreaverbonus mobtier="7" mobbonusdamage="0" mobbonusdefense="0.04" />
-			<mobreaverbonus mobtier="8" mobbonusdamage="0" mobbonusdefense="0.05" />
+			<mobreaverbonus mobtier="5" mobbonusdamage="0" mobbonusdefense="0" />
+			<mobreaverbonus mobtier="6" mobbonusdamage="0" mobbonusdefense="0" />
+			<mobreaverbonus mobtier="7" mobbonusdamage="0" mobbonusdefense="0" />
+			<mobreaverbonus mobtier="8" mobbonusdamage="0" mobbonusdefense="0" />
 		</reavertier>
 	</mobreaverbonuses>
 </AO-GameData>

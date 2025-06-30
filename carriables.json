@@ -628,7 +628,8 @@
           "@carrybuff": "SMUGGLERS_CRATE_CARRY_BUFF_1",
           "@mightreward": "PVPCHALLENGE_SMUGGLERS_CRATE_0",
           "@claimvfxspell": "SMUGGLERS_CRATE_CLAIMVFX_STANDARD",
-          "@minimapmarker": "minimap_smugglers_crate_standard",
+          "@minimapmarker": "smuggler_crate_0",
+          "@statebasedminimapmarker": "false",
           "@dropicon": "SMUGGLERS_CRATE_DROP_0",
           "@displayname": "@SMUGGLERS_CRATE_RARITY_0",
           "@displaycolor": "99FF00FF",
@@ -650,7 +651,8 @@
           "@carrybuff": "SMUGGLERS_CRATE_CARRY_BUFF_2",
           "@mightreward": "PVPCHALLENGE_SMUGGLERS_CRATE_1",
           "@claimvfxspell": "SMUGGLERS_CRATE_CLAIMVFX_UNCOMMON",
-          "@minimapmarker": "minimap_smugglers_crate_uncommon",
+          "@minimapmarker": "smuggler_crate_1",
+          "@statebasedminimapmarker": "false",
           "@dropicon": "SMUGGLERS_CRATE_DROP_1",
           "@displayname": "@SMUGGLERS_CRATE_RARITY_1",
           "@displaycolor": "1F8CF2FF",
@@ -672,7 +674,8 @@
           "@carrybuff": "SMUGGLERS_CRATE_CARRY_BUFF_3",
           "@mightreward": "PVPCHALLENGE_SMUGGLERS_CRATE_2",
           "@claimvfxspell": "SMUGGLERS_CRATE_CLAIMVFX_RARE",
-          "@minimapmarker": "minimap_smugglers_crate_common",
+          "@minimapmarker": "smuggler_crate_2",
+          "@statebasedminimapmarker": "false",
           "@dropicon": "SMUGGLERS_CRATE_DROP_2",
           "@displayname": "@SMUGGLERS_CRATE_RARITY_2",
           "@displaycolor": "CC12C9FF",
@@ -694,7 +697,8 @@
           "@carrybuff": "SMUGGLERS_CRATE_CARRY_BUFF_4",
           "@mightreward": "PVPCHALLENGE_SMUGGLERS_CRATE_3",
           "@claimvfxspell": "SMUGGLERS_CRATE_CLAIMVFX_LEGENDARY",
-          "@minimapmarker": "minimap_smugglers_crate_legendary",
+          "@minimapmarker": "smuggler_crate_3",
+          "@statebasedminimapmarker": "false",
           "@dropicon": "SMUGGLERS_CRATE_DROP_3",
           "@displayname": "@SMUGGLERS_CRATE_RARITY_3",
           "@displaycolor": "F2BA4FFF",
@@ -711,6 +715,81 @@
           "@initialspawnpickupdelaysec": "1.5"
         }
       ]
+    },
+    "helldungeonsoul": {
+      "@uniquename": "HELL_DUNGEON_SOUL",
+      "@deliverduration": "3",
+      "@pickupduration": "0.5",
+      "@displayname": "@HELL_DUNGEON_SOUL",
+      "@raritydesc": "@HELL_DUNGEON_SOUL_TOOLTIP_RARITY",
+      "@proximitytooltipoptionentry": "Smugglers",
+      "rarity": {
+        "@raritylevel": "0",
+        "@tileid": "UNIQUE_HELL_DUNGEONS_SOUL_PICKABLE",
+        "@carrybuff": "HELL_DUNGEONS_SOUL_CARRIABLE",
+        "@claimvfxspell": "HELL_DUNGEONS_SOUL_CLAIMVFX",
+        "@dropicon": "HELL_SOUL_WHITE_DROP",
+        "@displayname": "@HELL_DUNGEON_SOUL",
+        "@displaycolor": "99FF00FF",
+        "@activitytrackingradius": "30",
+        "@playerlistlimit": "40",
+        "@playerlefttimeout": "1800",
+        "@pickupsound": "Play_helldungeon_soul_pick_up",
+        "@initialdropsound": "Play_helldungeon_soul_claimable_start",
+        "@dropsound": "Play_helldungeon_soul_drop",
+        "@claimsuccesssoundontarget": "Play_energy_raw_transfer_into_territory",
+        "@expirysound": "Play_raw_energy_teleport",
+        "@claimchannelstartevent": "Play_helldungeon_soul_channel",
+        "@claimchannelfinishedevent": "Stop_helldungeon_soul_channel",
+        "@initialspawnpickupdelaysec": "1.5",
+        "targetoverride": [
+          {
+            "@targettype": "soulexit",
+            "@claimsuccesssoundontarget": "Play_helldungeon_soul_drop"
+          },
+          {
+            "@targettype": "soulshrine",
+            "@claimsuccesssoundontarget": "Play_helldungeon_soul_drop",
+            "@mightreward": "PVPCHALLENGE_HELL_DUNGEON_TREASURE_SHRINE_SOUL_DELIVERY"
+          },
+          {
+            "@targettype": "resurrectionshrine",
+            "@claimsuccesssoundontarget": "Play_helldungeon_soul_drop"
+          }
+        ]
+      }
+    },
+    "carriablekey": {
+      "@uniquename": "HELL_DUNGEON_KEY",
+      "@keytype": "helldungeonchestkey",
+      "@deliverduration": "3",
+      "@pickupduration": "0.5",
+      "@displayname": "@HELL_DUNGEON_KEY",
+      "@raritydesc": "@HELL_DUNGEON_KEY_TOOLTIP_RARITY",
+      "@minimapintervalstarttype": "Relative",
+      "@pingintervalseconds": "10",
+      "rarity": {
+        "@raritylevel": "0",
+        "@tileid": "UNIQUE_HELL_DUNGEONS_KEY_PICKABLE",
+        "@carrybuff": "HELL_DUNGEONS_KEY_CARRIABLE",
+        "@claimvfxspell": "HELL_DUNGEONS_KEY_CLAIMVFX",
+        "@minimapmarker": "hell_key",
+        "@statebasedminimapmarker": "false",
+        "@dropicon": "HELL_KEY_DROP",
+        "@displayname": "@HELL_DUNGEON_KEY",
+        "@displaycolor": "99FF00FF",
+        "@activitytrackingradius": "30",
+        "@playerlistlimit": "40",
+        "@playerlefttimeout": "1800",
+        "@pickupsound": "Play_helldungeon_key_pick_up",
+        "@initialdropsound": "Play_helldungeon_key_drop",
+        "@dropsound": "Play_helldungeon_key_drop",
+        "@claimsuccesssoundontarget": "Play_helldungeon_chest_key_transfer",
+        "@expirysound": "Play_helldungeon_key_drop",
+        "@claimchannelstartevent": "Play_helldungeon_key_channel",
+        "@claimchannelfinishedevent": "Stop_helldungeon_key_channel",
+        "@initialspawnpickupdelaysec": "1.5"
+      }
     }
   }
 }

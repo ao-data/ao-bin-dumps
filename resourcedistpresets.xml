@@ -8,6 +8,24 @@
   
   type defaults to "World" if not specified
   pvprules defaults to "PvpDisabled,FactionPvpOnly,PvpForced,PvpAllowed" if not specified
+  difficulty defaults to "D0,D1,D2,D3,D4"
+  
+  so be aware that the defaults (that exhaust the whole value range of the attribute) can be picked first
+  because the eval goes from top to bottom or in other words:
+  
+  if multiple presets fit the clusters data
+  the first in the xml will be chosen
+  
+  (and attributes like quality,pvprules or difficulty include ALL values by default (if no value is explicity set in the preset))
+  
+  so better make sure that a more specific filter is added BEFORE a more general one
+  like this:
+  
+  (this is a more specific filter...)
+  <preset name="T5_MI_MIS_WLD_PA" tier="5" biome="Mists" type="Mists" continent="Mists" difficulty="D2,D3,D4">
+  (... than this because this doesn't filter for difficulty (or rather accepts any difficulty))
+  <preset name="T5_MI_MIS_WLD_PA" tier="5" biome="Mists" type="Mists" continent="Mists" >
+  
 
  -->
 
@@ -57,7 +75,52 @@
       <roamingmob tier="7" amount="5"/>
     </low>
   </preset>
-  
+
+  <!--HELL DUNGEONS -->
+  <preset name="T8_HL_ROY_HD" tier="8" biome="Highland" type="HellDungeon" continent="Royal" pvprules="PvpForced">
+    <high>
+      <mobcamp tier="8" amount="1" />
+      <roamingmob   tier="8" amount="0" />
+    </high>
+    <medium>
+      <mobcamp tier="7" amount="1" />	  
+      <roamingmob tier="7" amount="0" />
+    </medium>
+	<low>
+      <mobcamp tier="6" amount="1" />
+      <roamingmob tier="6" amount="0" />
+	</low>
+  </preset>
+
+  <preset name="T7_HL_ROY_HD" tier="7" biome="Highland" type="HellDungeon" continent="Royal" pvprules="PvpForced">
+    <high>
+      <mobcamp tier="8" amount="1" />
+      <roamingmob   tier="8" amount="0" />
+    </high>
+    <medium>
+      <mobcamp tier="7" amount="1" />	  
+      <roamingmob tier="7" amount="0" />
+    </medium>
+	<low>
+      <mobcamp tier="6" amount="1" />
+      <roamingmob tier="6" amount="0" />
+	</low>
+  </preset>
+
+  <preset name="T6_HL_ROY_HD" tier="6" biome="Highland" type="HellDungeon" continent="Royal" pvprules="PvpForced">
+    <high>
+      <mobcamp tier="8" amount="1" />
+      <roamingmob   tier="8" amount="0" />
+    </high>
+    <medium>
+      <mobcamp tier="7" amount="1" />	  
+      <roamingmob tier="7" amount="0" />
+    </medium>
+	<low>
+     <mobcamp tier="6" amount="1" />
+	</low>
+  </preset>
+
   <!--MISTS-->
   <preset name="T5_MI_MIS_WLD_PA" tier="5" biome="Mists" type="Mists" continent="Mists" pvprules="PvpAllowed">
     <high>
@@ -321,27 +384,27 @@
     </low>
   </preset>
 
-  <preset name="T6_MI_RMI_WLD_PF" tier="6" biome="Mists" type="ResourceMists" continent="Mists" pvprules="PvpForced">
+  <preset name="T6_MI_RMI_WLD_PF_S" tier="6" biome="Mists" type="ResourceMists" continent="Mists" pvprules="PvpForced" difficulty="D0,D1,D2">
     <high>
     </high>
     <medium>
-      <fiber tier="4" amount="1" />
-      <hide  tier="4" amount="2" />
-      <ore   tier="4" amount="4" />
-      <rock  tier="4" amount="4" />
-      <wood  tier="4" amount="1" />
+      <fiber tier="4" amount="3" />
+      <hide  tier="4" amount="3" />
+      <ore   tier="4" amount="3" />
+      <rock  tier="4" amount="3" />
+      <wood  tier="4" amount="3" />
 
-      <fiber tier="5" amount="1" />
-      <hide  tier="5" amount="4" />
-      <ore   tier="5" amount="7" />
-      <rock  tier="5" amount="7" />
-      <wood  tier="5" amount="4" />
+      <fiber tier="5" amount="2" />
+      <hide  tier="5" amount="2" />
+      <ore   tier="5" amount="2" />
+      <rock  tier="5" amount="2" />
+      <wood  tier="5" amount="2" />
 
       <fiber tier="6" amount="1" />
-      <hide  tier="6" amount="7" />
-      <ore   tier="6" amount="12" />
-      <rock  tier="6" amount="12" />
-      <wood  tier="6" amount="6" />
+      <hide  tier="6" amount="1" />
+      <ore   tier="6" amount="1" />
+      <rock  tier="6" amount="1" />
+      <wood  tier="6" amount="1" />
 
       <mobcamp tier="6" amount="0" />
       <roamingmob tier="6" amount="0" />
@@ -349,27 +412,27 @@
     <low>
     </low>
   </preset>
-  <preset name="T7_MI_RMI_WLD_PF" tier="7" biome="Mists" type="ResourceMists" continent="Mists" pvprules="PvpForced">
+  <preset name="T7_MI_RMI_WLD_PF_S" tier="7" biome="Mists" type="ResourceMists" continent="Mists" pvprules="PvpForced" difficulty="D0,D1,D2">
     <high>
     </high>
     <medium>
-      <fiber tier="5" amount="1" />
+      <fiber tier="4" amount="3" />
+      <hide  tier="4" amount="3" />
+      <ore   tier="4" amount="3" />
+      <rock  tier="4" amount="3" />
+      <wood  tier="4" amount="3" />
+
+      <fiber tier="5" amount="2" />
       <hide  tier="5" amount="2" />
-      <ore   tier="5" amount="5" />
-      <rock  tier="5" amount="5" />
+      <ore   tier="5" amount="2" />
+      <rock  tier="5" amount="2" />
       <wood  tier="5" amount="2" />
 
       <fiber tier="6" amount="1" />
-      <hide  tier="6" amount="7" />
-      <ore   tier="6" amount="12" />
-      <rock  tier="6" amount="12" />
-      <wood  tier="6" amount="5" />
-
-      <fiber tier="7" amount="1" />
-      <hide  tier="7" amount="4" />
-      <ore   tier="7" amount="6" />
-      <rock  tier="7" amount="6" />
-      <wood  tier="7" amount="4" />
+      <hide  tier="6" amount="1" />
+      <ore   tier="6" amount="1" />
+      <rock  tier="6" amount="1" />
+      <wood  tier="6" amount="1" />
 
       <mobcamp tier="7" amount="0" />
       <roamingmob tier="7" amount="0" />
@@ -377,27 +440,84 @@
     <low>
     </low>
   </preset>
-  <preset name="T8_MI_RMI_WLD_PF" tier="8" biome="Mists" type="ResourceMists" continent="Mists" pvprules="PvpForced">
+  <preset name="T8_MI_RMI_WLD_PF_S" tier="8" biome="Mists" type="ResourceMists" continent="Mists" pvprules="PvpForced" difficulty="D0,D1,D2">
     <high>
     </high>
     <medium>
-      <fiber tier="6" amount="1" />
-      <hide  tier="6" amount="8" />
-      <ore   tier="6" amount="14" />
-      <rock  tier="6" amount="14" />
-      <wood  tier="6" amount="6" />
+      <fiber tier="5" amount="3" />
+      <hide  tier="5" amount="3" />
+      <ore   tier="5" amount="3" />
+      <rock  tier="5" amount="3" />
+      <wood  tier="5" amount="3" />
       
+      <fiber tier="6" amount="2" />
+      <hide  tier="6" amount="2" />
+      <ore   tier="6" amount="2" />
+      <rock  tier="6" amount="2" />
+      <wood  tier="6" amount="2" />
+
       <fiber tier="7" amount="1" />
+      <hide  tier="7" amount="1" />
+      <ore   tier="7" amount="1" />
+      <rock  tier="7" amount="1" />
+      <wood  tier="7" amount="1" />
+
+      <mobcamp tier="8" amount="0" />
+      <roamingmob tier="8" amount="0" />
+    </medium>
+    <low>
+    </low>
+  </preset>
+
+  <preset name="T7_MI_RMI_WLD_PF_M" tier="7" biome="Mists" type="ResourceMists" continent="Mists" pvprules="PvpForced" difficulty="D3,D4">
+    <high>
+    </high>
+    <medium>
+      <fiber tier="5" amount="7" />
+      <hide  tier="5" amount="7" />
+      <ore   tier="5" amount="7" />
+      <rock  tier="5" amount="7" />
+      <wood  tier="5" amount="7" />
+
+      <fiber tier="6" amount="5" />
+      <hide  tier="6" amount="5" />
+      <ore   tier="6" amount="5" />
+      <rock  tier="6" amount="5" />
+      <wood  tier="6" amount="5" />
+
+      <fiber tier="7" amount="3" />
       <hide  tier="7" amount="3" />
-      <ore   tier="7" amount="5" />
-      <rock  tier="7" amount="5" />
+      <ore   tier="7" amount="3" />
+      <rock  tier="7" amount="3" />
       <wood  tier="7" amount="3" />
 
-      <fiber tier="8" amount="1" />
-      <hide  tier="8" amount="2" />
-      <ore   tier="8" amount="4" />
-      <rock  tier="8" amount="4" />
-      <wood  tier="8" amount="2" />
+      <mobcamp tier="7" amount="0" />
+      <roamingmob tier="7" amount="0" />
+    </medium>
+    <low>
+    </low>
+  </preset>
+  <preset name="T8_MI_RMI_WLD_PF_M" tier="8" biome="Mists" type="ResourceMists" continent="Mists" pvprules="PvpForced" difficulty="D3,D4">
+    <high>
+    </high>
+    <medium>
+      <fiber tier="6" amount="7" />
+      <hide  tier="6" amount="7" />
+      <ore   tier="6" amount="7" />
+      <rock  tier="6" amount="7" />
+      <wood  tier="6" amount="7" />
+      
+      <fiber tier="7" amount="5" />
+      <hide  tier="7" amount="5" />
+      <ore   tier="7" amount="5" />
+      <rock  tier="7" amount="5" />
+      <wood  tier="7" amount="5" />
+
+      <fiber tier="8" amount="3" />
+      <hide  tier="8" amount="3" />
+      <ore   tier="8" amount="3" />
+      <rock  tier="8" amount="3" />
+      <wood  tier="8" amount="3" />
 
       <mobcamp tier="8" amount="0" />
       <roamingmob tier="8" amount="0" />
@@ -485,7 +605,7 @@
       <hide tier="4" amount="107"/>
       <rock tier="4" amount="53"/>
       <mobcamp tier="5" amount="12" />
-      <roamingmob tier="5" amount="300" />
+      <roamingmob tier="5" amount="270" />
     </medium>
     <low>
       <wood tier="4" amount="20"/>
@@ -513,7 +633,7 @@
       <hide tier="4" amount="107"/>
       <rock tier="4" amount="53"/>
       <mobcamp tier="5" amount="12" />
-      <roamingmob tier="5" amount="300" />
+      <roamingmob tier="5" amount="270" />
     </medium>
     <low>
       <wood tier="4" amount="20"/>
@@ -541,7 +661,7 @@
       <hide tier="4" amount="107"/>
       <rock tier="4" amount="53"/>
       <mobcamp tier="5" amount="12" />
-      <roamingmob tier="5" amount="300" />
+      <roamingmob tier="5" amount="270" />
     </medium>
     <low>
       <wood tier="4" amount="20"/>
@@ -569,7 +689,7 @@
       <hide tier="4" amount="107"/>
       <rock tier="4" amount="53"/>
       <mobcamp tier="5" amount="12" />
-      <roamingmob tier="5" amount="300" />
+      <roamingmob tier="5" amount="270" />
     </medium>
     <low>
       <wood tier="4" amount="20"/>
@@ -597,7 +717,7 @@
       <hide tier="4" amount="107"/>
       <rock tier="4" amount="53"/>
       <mobcamp tier="5" amount="12" />
-      <roamingmob tier="5" amount="300" />
+      <roamingmob tier="5" amount="270" />
     </medium>
     <low>
       <wood tier="4" amount="20"/>
@@ -625,7 +745,7 @@
       <hide tier="4" amount="107"/>
       <rock tier="4" amount="53"/>
       <mobcamp tier="5" amount="12" />
-      <roamingmob tier="5" amount="300" />
+      <roamingmob tier="5" amount="270" />
     </medium>
     <low>
       <wood tier="4" amount="20"/>
@@ -851,7 +971,7 @@
       <ore tier="4" amount="107"/>
       <wood tier="4" amount="53"/>
       <mobcamp tier="5" amount="12" />
-      <roamingmob tier="5" amount="320" />
+      <roamingmob tier="5" amount="300" />
     </medium>
     <low>
       <rock tier="4" amount="20"/>
@@ -879,7 +999,7 @@
       <ore tier="4" amount="107"/>
       <wood tier="4" amount="53"/>
       <mobcamp tier="5" amount="12" />
-      <roamingmob tier="5" amount="320" />
+      <roamingmob tier="5" amount="300" />
     </medium>
     <low>
       <rock tier="4" amount="20"/>
@@ -907,7 +1027,7 @@
       <ore tier="4" amount="107"/>
       <wood tier="4" amount="53"/>
       <mobcamp tier="5" amount="12" />
-      <roamingmob tier="5" amount="320" />
+      <roamingmob tier="5" amount="300" />
     </medium>
     <low>
       <rock tier="4" amount="20"/>
@@ -935,7 +1055,7 @@
       <ore tier="4" amount="107"/>
       <wood tier="4" amount="53"/>
       <mobcamp tier="5" amount="12" />
-      <roamingmob tier="5" amount="320" />
+      <roamingmob tier="5" amount="300" />
     </medium>
     <low>
       <rock tier="4" amount="20"/>
@@ -963,7 +1083,7 @@
       <ore tier="4" amount="107"/>
       <wood tier="4" amount="53"/>
       <mobcamp tier="5" amount="12" />
-      <roamingmob tier="5" amount="320" />
+      <roamingmob tier="5" amount="300" />
     </medium>
     <low>
       <rock tier="4" amount="20"/>
@@ -991,7 +1111,7 @@
       <ore tier="4" amount="107"/>
       <wood tier="4" amount="53"/>
       <mobcamp tier="5" amount="12" />
-      <roamingmob tier="5" amount="320" />
+      <roamingmob tier="5" amount="300" />
     </medium>
     <low>
       <rock tier="4" amount="20"/>
@@ -1217,7 +1337,7 @@
       <rock tier="4" amount="107"/>
       <fiber tier="4" amount="53"/>
       <mobcamp tier="5" amount="12" />
-      <roamingmob tier="5" amount="320" />
+      <roamingmob tier="5" amount="300" />
     </medium>
     <low>
       <ore tier="4" amount="20"/>
@@ -1245,7 +1365,7 @@
       <rock tier="4" amount="107"/>
       <fiber tier="4" amount="53"/>
       <mobcamp tier="5" amount="12" />
-      <roamingmob tier="5" amount="320" />
+      <roamingmob tier="5" amount="300" />
     </medium>
     <low>
       <ore tier="4" amount="20"/>
@@ -1273,7 +1393,7 @@
       <rock tier="4" amount="107"/>
       <fiber tier="4" amount="53"/>
       <mobcamp tier="5" amount="12" />
-      <roamingmob tier="5" amount="320" />
+      <roamingmob tier="5" amount="300" />
     </medium>
     <low>
       <ore tier="4" amount="20"/>
@@ -1301,7 +1421,7 @@
       <rock tier="4" amount="107"/>
       <fiber tier="4" amount="53"/>
       <mobcamp tier="5" amount="12" />
-      <roamingmob tier="5" amount="320" />
+      <roamingmob tier="5" amount="300" />
     </medium>
     <low>
       <ore tier="4" amount="20"/>
@@ -1329,7 +1449,7 @@
       <rock tier="4" amount="107"/>
       <fiber tier="4" amount="53"/>
       <mobcamp tier="5" amount="12" />
-      <roamingmob tier="5" amount="320" />
+      <roamingmob tier="5" amount="300" />
     </medium>
     <low>
       <ore tier="4" amount="20"/>
@@ -1357,7 +1477,7 @@
       <rock tier="4" amount="107"/>
       <fiber tier="4" amount="53"/>
       <mobcamp tier="5" amount="12" />
-      <roamingmob tier="5" amount="320" />
+      <roamingmob tier="5" amount="300" />
     </medium>
     <low>
       <ore tier="4" amount="20"/>
@@ -1583,7 +1703,7 @@
       <fiber tier="4" amount="107"/>
       <ore tier="4" amount="53"/>
       <mobcamp tier="5" amount="12" />
-      <roamingmob tier="5" amount="300" />
+      <roamingmob tier="5" amount="270" />
     </medium>
     <low>
       <hide tier="4" amount="20"/>
@@ -1611,7 +1731,7 @@
       <fiber tier="4" amount="107"/>
       <ore tier="4" amount="53"/>
       <mobcamp tier="5" amount="12" />
-      <roamingmob tier="5" amount="300" />
+      <roamingmob tier="5" amount="270" />
     </medium>
     <low>
       <hide tier="4" amount="20"/>
@@ -1639,7 +1759,7 @@
       <fiber tier="4" amount="107"/>
       <ore tier="4" amount="53"/>
       <mobcamp tier="5" amount="12" />
-      <roamingmob tier="5" amount="300" />
+      <roamingmob tier="5" amount="270" />
     </medium>
     <low>
       <hide tier="4" amount="20"/>
@@ -1667,7 +1787,7 @@
       <fiber tier="4" amount="107"/>
       <ore tier="4" amount="53"/>
       <mobcamp tier="5" amount="12" />
-      <roamingmob tier="5" amount="300" />
+      <roamingmob tier="5" amount="270" />
     </medium>
     <low>
       <hide tier="4" amount="20"/>
@@ -1695,7 +1815,7 @@
       <fiber tier="4" amount="107"/>
       <ore tier="4" amount="53"/>
       <mobcamp tier="5" amount="12" />
-      <roamingmob tier="5" amount="300" />
+      <roamingmob tier="5" amount="270" />
     </medium>
     <low>
       <hide tier="4" amount="20"/>
@@ -1723,7 +1843,7 @@
       <fiber tier="4" amount="107"/>
       <ore tier="4" amount="53"/>
       <mobcamp tier="5" amount="12" />
-      <roamingmob tier="5" amount="300" />
+      <roamingmob tier="5" amount="270" />
     </medium>
     <low>
       <hide tier="4" amount="20"/>
@@ -1949,7 +2069,7 @@
       <wood tier="4" amount="107"/>
       <hide tier="4" amount="53"/>
       <mobcamp tier="5" amount="12" />
-      <roamingmob tier="5" amount="300" />
+      <roamingmob tier="5" amount="270" />
     </medium>
     <low>
       <fiber tier="4" amount="20"/>
@@ -1977,7 +2097,7 @@
       <wood tier="4" amount="107"/>
       <hide tier="4" amount="53"/>
       <mobcamp tier="5" amount="12" />
-      <roamingmob tier="5" amount="300" />
+      <roamingmob tier="5" amount="270" />
     </medium>
     <low>
       <fiber tier="4" amount="20"/>
@@ -2005,7 +2125,7 @@
       <wood tier="4" amount="107"/>
       <hide tier="4" amount="53"/>
       <mobcamp tier="5" amount="12" />
-      <roamingmob tier="5" amount="300" />
+      <roamingmob tier="5" amount="270" />
     </medium>
     <low>
       <fiber tier="4" amount="20"/>
@@ -2033,7 +2153,7 @@
       <wood tier="4" amount="107"/>
       <hide tier="4" amount="53"/>
       <mobcamp tier="5" amount="12" />
-      <roamingmob tier="5" amount="300" />
+      <roamingmob tier="5" amount="270" />
     </medium>
     <low>
       <fiber tier="4" amount="20"/>
@@ -2061,7 +2181,7 @@
       <wood tier="4" amount="107"/>
       <hide tier="4" amount="53"/>
       <mobcamp tier="5" amount="12" />
-      <roamingmob tier="5" amount="300" />
+      <roamingmob tier="5" amount="270" />
     </medium>
     <low>
       <fiber tier="4" amount="20"/>
@@ -2089,7 +2209,7 @@
       <wood tier="4" amount="107"/>
       <hide tier="4" amount="53"/>
       <mobcamp tier="5" amount="12" />
-      <roamingmob tier="5" amount="300" />
+      <roamingmob tier="5" amount="270" />
     </medium>
     <low>
       <fiber tier="4" amount="20"/>
@@ -2315,7 +2435,7 @@
       <hide tier="5" amount="57"/>
       <rock tier="5" amount="29"/>
       <mobcamp tier="6" amount="14" />
-      <roamingmob tier="6" amount="300" />
+      <roamingmob tier="6" amount="270" />
     </medium>
     <low>
       <wood tier="5" amount="94"/>
@@ -2340,7 +2460,7 @@
       <hide tier="5" amount="57"/>
       <rock tier="5" amount="29"/>
       <mobcamp tier="6" amount="14" />
-      <roamingmob tier="6" amount="300" />
+      <roamingmob tier="6" amount="270" />
     </medium>
     <low>
       <wood tier="5" amount="94"/>
@@ -2365,7 +2485,7 @@
       <hide tier="5" amount="57"/>
       <rock tier="5" amount="29"/>
       <mobcamp tier="6" amount="14" />
-      <roamingmob tier="6" amount="300" />
+      <roamingmob tier="6" amount="270" />
     </medium>
     <low>
       <wood tier="5" amount="94"/>
@@ -2390,7 +2510,7 @@
       <hide tier="5" amount="57"/>
       <rock tier="5" amount="29"/>
       <mobcamp tier="6" amount="14" />
-      <roamingmob tier="6" amount="300" />
+      <roamingmob tier="6" amount="270" />
     </medium>
     <low>
       <wood tier="5" amount="94"/>
@@ -2415,7 +2535,7 @@
       <hide tier="5" amount="57"/>
       <rock tier="5" amount="29"/>
       <mobcamp tier="6" amount="14" />
-      <roamingmob tier="6" amount="300" />
+      <roamingmob tier="6" amount="270" />
     </medium>
     <low>
       <wood tier="5" amount="94"/>
@@ -2440,7 +2560,7 @@
       <hide tier="5" amount="57"/>
       <rock tier="5" amount="29"/>
       <mobcamp tier="6" amount="14" />
-      <roamingmob tier="6" amount="300" />
+      <roamingmob tier="6" amount="270" />
     </medium>
     <low>
       <wood tier="5" amount="94"/>
@@ -2645,7 +2765,7 @@
       <ore tier="5" amount="57"/>
       <wood tier="5" amount="29"/>
       <mobcamp tier="6" amount="14" />
-      <roamingmob tier="6" amount="320" />
+      <roamingmob tier="6" amount="300" />
     </medium>
     <low>
       <rock tier="5" amount="94"/>
@@ -2670,7 +2790,7 @@
       <ore tier="5" amount="57"/>
       <wood tier="5" amount="29"/>
       <mobcamp tier="6" amount="14" />
-      <roamingmob tier="6" amount="320" />
+      <roamingmob tier="6" amount="300" />
     </medium>
     <low>
       <rock tier="5" amount="94"/>
@@ -2695,7 +2815,7 @@
       <ore tier="5" amount="57"/>
       <wood tier="5" amount="29"/>
       <mobcamp tier="6" amount="14" />
-      <roamingmob tier="6" amount="320" />
+      <roamingmob tier="6" amount="300" />
     </medium>
     <low>
       <rock tier="5" amount="94"/>
@@ -2720,7 +2840,7 @@
       <ore tier="5" amount="57"/>
       <wood tier="5" amount="29"/>
       <mobcamp tier="6" amount="14" />
-      <roamingmob tier="6" amount="320" />
+      <roamingmob tier="6" amount="300" />
     </medium>
     <low>
       <rock tier="5" amount="94"/>
@@ -2745,7 +2865,7 @@
       <ore tier="5" amount="57"/>
       <wood tier="5" amount="29"/>
       <mobcamp tier="6" amount="14" />
-      <roamingmob tier="6" amount="320" />
+      <roamingmob tier="6" amount="300" />
     </medium>
     <low>
       <rock tier="5" amount="94"/>
@@ -2770,7 +2890,7 @@
       <ore tier="5" amount="57"/>
       <wood tier="5" amount="29"/>
       <mobcamp tier="6" amount="14" />
-      <roamingmob tier="6" amount="320" />
+      <roamingmob tier="6" amount="300" />
     </medium>
     <low>
       <rock tier="5" amount="94"/>
@@ -2975,7 +3095,7 @@
       <rock tier="5" amount="57"/>
       <fiber tier="5" amount="29"/>
       <mobcamp tier="6" amount="14" />
-      <roamingmob tier="6" amount="320" />
+      <roamingmob tier="6" amount="300" />
     </medium>
     <low>
       <ore tier="5" amount="94"/>
@@ -3000,7 +3120,7 @@
       <rock tier="5" amount="57"/>
       <fiber tier="5" amount="29"/>
       <mobcamp tier="6" amount="14" />
-      <roamingmob tier="6" amount="320" />
+      <roamingmob tier="6" amount="300" />
     </medium>
     <low>
       <ore tier="5" amount="94"/>
@@ -3025,7 +3145,7 @@
       <rock tier="5" amount="57"/>
       <fiber tier="5" amount="29"/>
       <mobcamp tier="6" amount="14" />
-      <roamingmob tier="6" amount="320" />
+      <roamingmob tier="6" amount="300" />
     </medium>
     <low>
       <ore tier="5" amount="94"/>
@@ -3050,7 +3170,7 @@
       <rock tier="5" amount="57"/>
       <fiber tier="5" amount="29"/>
       <mobcamp tier="6" amount="14" />
-      <roamingmob tier="6" amount="320" />
+      <roamingmob tier="6" amount="300" />
     </medium>
     <low>
       <ore tier="5" amount="94"/>
@@ -3075,7 +3195,7 @@
       <rock tier="5" amount="57"/>
       <fiber tier="5" amount="29"/>
       <mobcamp tier="6" amount="14" />
-      <roamingmob tier="6" amount="320" />
+      <roamingmob tier="6" amount="300" />
     </medium>
     <low>
       <ore tier="5" amount="94"/>
@@ -3100,7 +3220,7 @@
       <rock tier="5" amount="57"/>
       <fiber tier="5" amount="29"/>
       <mobcamp tier="6" amount="14" />
-      <roamingmob tier="6" amount="320" />
+      <roamingmob tier="6" amount="300" />
     </medium>
     <low>
       <ore tier="5" amount="94"/>
@@ -3305,7 +3425,7 @@
       <fiber tier="5" amount="57"/>
       <ore tier="5" amount="29"/>
       <mobcamp tier="6" amount="14" />
-      <roamingmob tier="6" amount="300" />
+      <roamingmob tier="6" amount="270" />
     </medium>
     <low>
       <hide tier="5" amount="94"/>
@@ -3330,7 +3450,7 @@
       <fiber tier="5" amount="57"/>
       <ore tier="5" amount="29"/>
       <mobcamp tier="6" amount="14" />
-      <roamingmob tier="6" amount="300" />
+      <roamingmob tier="6" amount="270" />
     </medium>
     <low>
       <hide tier="5" amount="94"/>
@@ -3355,7 +3475,7 @@
       <fiber tier="5" amount="57"/>
       <ore tier="5" amount="29"/>
       <mobcamp tier="6" amount="14" />
-      <roamingmob tier="6" amount="300" />
+      <roamingmob tier="6" amount="270" />
     </medium>
     <low>
       <hide tier="5" amount="94"/>
@@ -3380,7 +3500,7 @@
       <fiber tier="5" amount="57"/>
       <ore tier="5" amount="29"/>
       <mobcamp tier="6" amount="14" />
-      <roamingmob tier="6" amount="300" />
+      <roamingmob tier="6" amount="270" />
     </medium>
     <low>
       <hide tier="5" amount="94"/>
@@ -3405,7 +3525,7 @@
       <fiber tier="5" amount="57"/>
       <ore tier="5" amount="29"/>
       <mobcamp tier="6" amount="14" />
-      <roamingmob tier="6" amount="300" />
+      <roamingmob tier="6" amount="270" />
     </medium>
     <low>
       <hide tier="5" amount="94"/>
@@ -3430,7 +3550,7 @@
       <fiber tier="5" amount="57"/>
       <ore tier="5" amount="29"/>
       <mobcamp tier="6" amount="14" />
-      <roamingmob tier="6" amount="300" />
+      <roamingmob tier="6" amount="270" />
     </medium>
     <low>
       <hide tier="5" amount="94"/>
@@ -3635,7 +3755,7 @@
       <wood tier="5" amount="57"/>
       <hide tier="5" amount="29"/>
       <mobcamp tier="6" amount="14" />
-      <roamingmob tier="6" amount="300" />
+      <roamingmob tier="6" amount="270" />
     </medium>
     <low>
       <fiber tier="5" amount="94"/>
@@ -3660,7 +3780,7 @@
       <wood tier="5" amount="57"/>
       <hide tier="5" amount="29"/>
       <mobcamp tier="6" amount="14" />
-      <roamingmob tier="6" amount="300" />
+      <roamingmob tier="6" amount="270" />
     </medium>
     <low>
       <fiber tier="5" amount="94"/>
@@ -3685,7 +3805,7 @@
       <wood tier="5" amount="57"/>
       <hide tier="5" amount="29"/>
       <mobcamp tier="6" amount="14" />
-      <roamingmob tier="6" amount="300" />
+      <roamingmob tier="6" amount="270" />
     </medium>
     <low>
       <fiber tier="5" amount="94"/>
@@ -3710,7 +3830,7 @@
       <wood tier="5" amount="57"/>
       <hide tier="5" amount="29"/>
       <mobcamp tier="6" amount="14" />
-      <roamingmob tier="6" amount="300" />
+      <roamingmob tier="6" amount="270" />
     </medium>
     <low>
       <fiber tier="5" amount="94"/>
@@ -3735,7 +3855,7 @@
       <wood tier="5" amount="57"/>
       <hide tier="5" amount="29"/>
       <mobcamp tier="6" amount="14" />
-      <roamingmob tier="6" amount="300" />
+      <roamingmob tier="6" amount="270" />
     </medium>
     <low>
       <fiber tier="5" amount="94"/>
@@ -3760,7 +3880,7 @@
       <wood tier="5" amount="57"/>
       <hide tier="5" amount="29"/>
       <mobcamp tier="6" amount="14" />
-      <roamingmob tier="6" amount="300" />
+      <roamingmob tier="6" amount="270" />
     </medium>
     <low>
       <fiber tier="5" amount="94"/>
@@ -3965,7 +4085,7 @@
       <hide tier="6" amount="91"/>
       <rock tier="6" amount="45"/>
       <mobcamp tier="7" amount="14" />
-      <roamingmob tier="7" amount="300" />
+      <roamingmob tier="7" amount="270" />
     </medium>
     <low>
       <wood tier="6" amount="48"/>
@@ -3990,7 +4110,7 @@
       <hide tier="6" amount="91"/>
       <rock tier="6" amount="45"/>
       <mobcamp tier="7" amount="14" />
-      <roamingmob tier="7" amount="300" />
+      <roamingmob tier="7" amount="270" />
     </medium>
     <low>
       <wood tier="6" amount="48"/>
@@ -4015,7 +4135,7 @@
       <hide tier="6" amount="91"/>
       <rock tier="6" amount="45"/>
       <mobcamp tier="7" amount="14" />
-      <roamingmob tier="7" amount="300" />
+      <roamingmob tier="7" amount="270" />
     </medium>
     <low>
       <wood tier="6" amount="48"/>
@@ -4040,7 +4160,7 @@
       <hide tier="6" amount="91"/>
       <rock tier="6" amount="45"/>
       <mobcamp tier="7" amount="14" />
-      <roamingmob tier="7" amount="300" />
+      <roamingmob tier="7" amount="270" />
     </medium>
     <low>
       <wood tier="6" amount="48"/>
@@ -4065,7 +4185,7 @@
       <hide tier="6" amount="91"/>
       <rock tier="6" amount="45"/>
       <mobcamp tier="7" amount="14" />
-      <roamingmob tier="7" amount="300" />
+      <roamingmob tier="7" amount="270" />
     </medium>
     <low>
       <wood tier="6" amount="48"/>
@@ -4090,7 +4210,7 @@
       <hide tier="6" amount="91"/>
       <rock tier="6" amount="45"/>
       <mobcamp tier="7" amount="14" />
-      <roamingmob tier="7" amount="300" />
+      <roamingmob tier="7" amount="270" />
     </medium>
     <low>
       <wood tier="6" amount="48"/>
@@ -4295,7 +4415,7 @@
       <ore tier="6" amount="91"/>
       <wood tier="6" amount="45"/>
       <mobcamp tier="7" amount="14" />
-      <roamingmob tier="7" amount="320" />
+      <roamingmob tier="7" amount="300" />
     </medium>
     <low>
       <rock tier="6" amount="48"/>
@@ -4320,7 +4440,7 @@
       <ore tier="6" amount="91"/>
       <wood tier="6" amount="45"/>
       <mobcamp tier="7" amount="14" />
-      <roamingmob tier="7" amount="320" />
+      <roamingmob tier="7" amount="300" />
     </medium>
     <low>
       <rock tier="6" amount="48"/>
@@ -4345,7 +4465,7 @@
       <ore tier="6" amount="91"/>
       <wood tier="6" amount="45"/>
       <mobcamp tier="7" amount="14" />
-      <roamingmob tier="7" amount="320" />
+      <roamingmob tier="7" amount="300" />
     </medium>
     <low>
       <rock tier="6" amount="48"/>
@@ -4370,7 +4490,7 @@
       <ore tier="6" amount="91"/>
       <wood tier="6" amount="45"/>
       <mobcamp tier="7" amount="14" />
-      <roamingmob tier="7" amount="320" />
+      <roamingmob tier="7" amount="300" />
     </medium>
     <low>
       <rock tier="6" amount="48"/>
@@ -4395,7 +4515,7 @@
       <ore tier="6" amount="91"/>
       <wood tier="6" amount="45"/>
       <mobcamp tier="7" amount="14" />
-      <roamingmob tier="7" amount="320" />
+      <roamingmob tier="7" amount="300" />
     </medium>
     <low>
       <rock tier="6" amount="48"/>
@@ -4420,7 +4540,7 @@
       <ore tier="6" amount="91"/>
       <wood tier="6" amount="45"/>
       <mobcamp tier="7" amount="14" />
-      <roamingmob tier="7" amount="320" />
+      <roamingmob tier="7" amount="300" />
     </medium>
     <low>
       <rock tier="6" amount="48"/>
@@ -4625,7 +4745,7 @@
       <rock tier="6" amount="91"/>
       <fiber tier="6" amount="45"/>
       <mobcamp tier="7" amount="14" />
-      <roamingmob tier="7" amount="320" />
+      <roamingmob tier="7" amount="300" />
     </medium>
     <low>
       <ore tier="6" amount="48"/>
@@ -4650,7 +4770,7 @@
       <rock tier="6" amount="91"/>
       <fiber tier="6" amount="45"/>
       <mobcamp tier="7" amount="14" />
-      <roamingmob tier="7" amount="320" />
+      <roamingmob tier="7" amount="300" />
     </medium>
     <low>
       <ore tier="6" amount="48"/>
@@ -4675,7 +4795,7 @@
       <rock tier="6" amount="91"/>
       <fiber tier="6" amount="45"/>
       <mobcamp tier="7" amount="14" />
-      <roamingmob tier="7" amount="320" />
+      <roamingmob tier="7" amount="300" />
     </medium>
     <low>
       <ore tier="6" amount="48"/>
@@ -4700,7 +4820,7 @@
       <rock tier="6" amount="91"/>
       <fiber tier="6" amount="45"/>
       <mobcamp tier="7" amount="14" />
-      <roamingmob tier="7" amount="320" />
+      <roamingmob tier="7" amount="300" />
     </medium>
     <low>
       <ore tier="6" amount="48"/>
@@ -4725,7 +4845,7 @@
       <rock tier="6" amount="91"/>
       <fiber tier="6" amount="45"/>
       <mobcamp tier="7" amount="14" />
-      <roamingmob tier="7" amount="320" />
+      <roamingmob tier="7" amount="300" />
     </medium>
     <low>
       <ore tier="6" amount="48"/>
@@ -4750,7 +4870,7 @@
       <rock tier="6" amount="91"/>
       <fiber tier="6" amount="45"/>
       <mobcamp tier="7" amount="14" />
-      <roamingmob tier="7" amount="320" />
+      <roamingmob tier="7" amount="300" />
     </medium>
     <low>
       <ore tier="6" amount="48"/>
@@ -4955,7 +5075,7 @@
       <fiber tier="6" amount="91"/>
       <ore tier="6" amount="45"/>
       <mobcamp tier="7" amount="14" />
-      <roamingmob tier="7" amount="300" />
+      <roamingmob tier="7" amount="270" />
     </medium>
     <low>
       <hide tier="6" amount="48"/>
@@ -4980,7 +5100,7 @@
       <fiber tier="6" amount="91"/>
       <ore tier="6" amount="45"/>
       <mobcamp tier="7" amount="14" />
-      <roamingmob tier="7" amount="300" />
+      <roamingmob tier="7" amount="270" />
     </medium>
     <low>
       <hide tier="6" amount="48"/>
@@ -5005,7 +5125,7 @@
       <fiber tier="6" amount="91"/>
       <ore tier="6" amount="45"/>
       <mobcamp tier="7" amount="14" />
-      <roamingmob tier="7" amount="300" />
+      <roamingmob tier="7" amount="270" />
     </medium>
     <low>
       <hide tier="6" amount="48"/>
@@ -5030,7 +5150,7 @@
       <fiber tier="6" amount="91"/>
       <ore tier="6" amount="45"/>
       <mobcamp tier="7" amount="14" />
-      <roamingmob tier="7" amount="300" />
+      <roamingmob tier="7" amount="270" />
     </medium>
     <low>
       <hide tier="6" amount="48"/>
@@ -5055,7 +5175,7 @@
       <fiber tier="6" amount="91"/>
       <ore tier="6" amount="45"/>
       <mobcamp tier="7" amount="14" />
-      <roamingmob tier="7" amount="300" />
+      <roamingmob tier="7" amount="270" />
     </medium>
     <low>
       <hide tier="6" amount="48"/>
@@ -5080,7 +5200,7 @@
       <fiber tier="6" amount="91"/>
       <ore tier="6" amount="45"/>
       <mobcamp tier="7" amount="14" />
-      <roamingmob tier="7" amount="300" />
+      <roamingmob tier="7" amount="270" />
     </medium>
     <low>
       <hide tier="6" amount="48"/>
@@ -5285,7 +5405,7 @@
       <wood tier="6" amount="91"/>
       <hide tier="6" amount="45"/>
       <mobcamp tier="7" amount="14" />
-      <roamingmob tier="7" amount="300" />
+      <roamingmob tier="7" amount="270" />
     </medium>
     <low>
       <fiber tier="6" amount="48"/>
@@ -5310,7 +5430,7 @@
       <wood tier="6" amount="91"/>
       <hide tier="6" amount="45"/>
       <mobcamp tier="7" amount="14" />
-      <roamingmob tier="7" amount="300" />
+      <roamingmob tier="7" amount="270" />
     </medium>
     <low>
       <fiber tier="6" amount="48"/>
@@ -5335,7 +5455,7 @@
       <wood tier="6" amount="91"/>
       <hide tier="6" amount="45"/>
       <mobcamp tier="7" amount="14" />
-      <roamingmob tier="7" amount="300" />
+      <roamingmob tier="7" amount="270" />
     </medium>
     <low>
       <fiber tier="6" amount="48"/>
@@ -5360,7 +5480,7 @@
       <wood tier="6" amount="91"/>
       <hide tier="6" amount="45"/>
       <mobcamp tier="7" amount="14" />
-      <roamingmob tier="7" amount="300" />
+      <roamingmob tier="7" amount="270" />
     </medium>
     <low>
       <fiber tier="6" amount="48"/>
@@ -5385,7 +5505,7 @@
       <wood tier="6" amount="91"/>
       <hide tier="6" amount="45"/>
       <mobcamp tier="7" amount="14" />
-      <roamingmob tier="7" amount="300" />
+      <roamingmob tier="7" amount="270" />
     </medium>
     <low>
       <fiber tier="6" amount="48"/>
@@ -5410,7 +5530,7 @@
       <wood tier="6" amount="91"/>
       <hide tier="6" amount="45"/>
       <mobcamp tier="7" amount="14" />
-      <roamingmob tier="7" amount="300" />
+      <roamingmob tier="7" amount="270" />
     </medium>
     <low>
       <fiber tier="6" amount="48"/>
@@ -5618,7 +5738,7 @@
       <hide tier="6" amount="90"/>
       <rock tier="6" amount="60"/>
       <mobcamp tier="8" amount="14" />
-      <roamingmob tier="8" amount="300" />
+      <roamingmob tier="8" amount="270" />
     </medium>
     <low>
       <wood tier="6" amount="110"/>
@@ -5643,7 +5763,7 @@
       <hide tier="6" amount="90"/>
       <rock tier="6" amount="60"/>
       <mobcamp tier="8" amount="14" />
-      <roamingmob tier="8" amount="300" />
+      <roamingmob tier="8" amount="270" />
     </medium>
     <low>
       <wood tier="6" amount="110"/>
@@ -5668,7 +5788,7 @@
       <hide tier="6" amount="90"/>
       <rock tier="6" amount="60"/>
       <mobcamp tier="8" amount="14" />
-      <roamingmob tier="8" amount="300" />
+      <roamingmob tier="8" amount="270" />
     </medium>
     <low>
       <wood tier="6" amount="110"/>
@@ -5693,7 +5813,7 @@
       <hide tier="6" amount="90"/>
       <rock tier="6" amount="60"/>
       <mobcamp tier="8" amount="14" />
-      <roamingmob tier="8" amount="300" />
+      <roamingmob tier="8" amount="270" />
     </medium>
     <low>
       <wood tier="6" amount="110"/>
@@ -5718,7 +5838,7 @@
       <hide tier="6" amount="90"/>
       <rock tier="6" amount="60"/>
       <mobcamp tier="8" amount="14" />
-      <roamingmob tier="8" amount="300" />
+      <roamingmob tier="8" amount="270" />
     </medium>
     <low>
       <wood tier="6" amount="110"/>
@@ -5743,7 +5863,7 @@
       <hide tier="6" amount="90"/>
       <rock tier="6" amount="60"/>
       <mobcamp tier="8" amount="14" />
-      <roamingmob tier="8" amount="300" />
+      <roamingmob tier="8" amount="270" />
     </medium>
     <low>
       <wood tier="6" amount="110"/>
@@ -5948,7 +6068,7 @@
       <ore tier="6" amount="90"/>
       <wood tier="6" amount="60"/>
       <mobcamp tier="8" amount="14" />
-      <roamingmob tier="8" amount="320" />
+      <roamingmob tier="8" amount="300" />
     </medium>
     <low>
       <rock tier="6" amount="110"/>
@@ -5973,7 +6093,7 @@
       <ore tier="6" amount="90"/>
       <wood tier="6" amount="60"/>
       <mobcamp tier="8" amount="14" />
-      <roamingmob tier="8" amount="320" />
+      <roamingmob tier="8" amount="300" />
     </medium>
     <low>
       <rock tier="6" amount="110"/>
@@ -5998,7 +6118,7 @@
       <ore tier="6" amount="90"/>
       <wood tier="6" amount="60"/>
       <mobcamp tier="8" amount="14" />
-      <roamingmob tier="8" amount="320" />
+      <roamingmob tier="8" amount="300" />
     </medium>
     <low>
       <rock tier="6" amount="110"/>
@@ -6023,7 +6143,7 @@
       <ore tier="6" amount="90"/>
       <wood tier="6" amount="60"/>
       <mobcamp tier="8" amount="14" />
-      <roamingmob tier="8" amount="320" />
+      <roamingmob tier="8" amount="300" />
     </medium>
     <low>
       <rock tier="6" amount="110"/>
@@ -6048,7 +6168,7 @@
       <ore tier="6" amount="90"/>
       <wood tier="6" amount="60"/>
       <mobcamp tier="8" amount="14" />
-      <roamingmob tier="8" amount="320" />
+      <roamingmob tier="8" amount="300" />
     </medium>
     <low>
       <rock tier="6" amount="110"/>
@@ -6073,7 +6193,7 @@
       <ore tier="6" amount="90"/>
       <wood tier="6" amount="60"/>
       <mobcamp tier="8" amount="14" />
-      <roamingmob tier="8" amount="320" />
+      <roamingmob tier="8" amount="300" />
     </medium>
     <low>
       <rock tier="6" amount="110"/>
@@ -6278,7 +6398,7 @@
       <rock tier="6" amount="90"/>
       <fiber tier="6" amount="60"/>
       <mobcamp tier="8" amount="14" />
-      <roamingmob tier="8" amount="320" />
+      <roamingmob tier="8" amount="300" />
     </medium>
     <low>
       <ore tier="6" amount="110"/>
@@ -6303,7 +6423,7 @@
       <rock tier="6" amount="90"/>
       <fiber tier="6" amount="60"/>
       <mobcamp tier="8" amount="14" />
-      <roamingmob tier="8" amount="320" />
+      <roamingmob tier="8" amount="300" />
     </medium>
     <low>
       <ore tier="6" amount="110"/>
@@ -6328,7 +6448,7 @@
       <rock tier="6" amount="90"/>
       <fiber tier="6" amount="60"/>
       <mobcamp tier="8" amount="14" />
-      <roamingmob tier="8" amount="320" />
+      <roamingmob tier="8" amount="300" />
     </medium>
     <low>
       <ore tier="6" amount="110"/>
@@ -6353,7 +6473,7 @@
       <rock tier="6" amount="90"/>
       <fiber tier="6" amount="60"/>
       <mobcamp tier="8" amount="14" />
-      <roamingmob tier="8" amount="320" />
+      <roamingmob tier="8" amount="300" />
     </medium>
     <low>
       <ore tier="6" amount="110"/>
@@ -6378,7 +6498,7 @@
       <rock tier="6" amount="90"/>
       <fiber tier="6" amount="60"/>
       <mobcamp tier="8" amount="14" />
-      <roamingmob tier="8" amount="320" />
+      <roamingmob tier="8" amount="300" />
     </medium>
     <low>
       <ore tier="6" amount="110"/>
@@ -6403,7 +6523,7 @@
       <rock tier="6" amount="90"/>
       <fiber tier="6" amount="60"/>
       <mobcamp tier="8" amount="14" />
-      <roamingmob tier="8" amount="320" />
+      <roamingmob tier="8" amount="300" />
     </medium>
     <low>
       <ore tier="6" amount="110"/>
@@ -6608,7 +6728,7 @@
       <fiber tier="6" amount="90"/>
       <ore tier="6" amount="60"/>
       <mobcamp tier="8" amount="14" />
-      <roamingmob tier="8" amount="300" />
+      <roamingmob tier="8" amount="270" />
     </medium>
     <low>
       <hide tier="6" amount="110"/>
@@ -6633,7 +6753,7 @@
       <fiber tier="6" amount="90"/>
       <ore tier="6" amount="60"/>
       <mobcamp tier="8" amount="14" />
-      <roamingmob tier="8" amount="300" />
+      <roamingmob tier="8" amount="270" />
     </medium>
     <low>
       <hide tier="6" amount="110"/>
@@ -6658,7 +6778,7 @@
       <fiber tier="6" amount="90"/>
       <ore tier="6" amount="60"/>
       <mobcamp tier="8" amount="14" />
-      <roamingmob tier="8" amount="300" />
+      <roamingmob tier="8" amount="270" />
     </medium>
     <low>
       <hide tier="6" amount="110"/>
@@ -6683,7 +6803,7 @@
       <fiber tier="6" amount="90"/>
       <ore tier="6" amount="60"/>
       <mobcamp tier="8" amount="14" />
-      <roamingmob tier="8" amount="300" />
+      <roamingmob tier="8" amount="270" />
     </medium>
     <low>
       <hide tier="6" amount="110"/>
@@ -6708,7 +6828,7 @@
       <fiber tier="6" amount="90"/>
       <ore tier="6" amount="60"/>
       <mobcamp tier="8" amount="14" />
-      <roamingmob tier="8" amount="300" />
+      <roamingmob tier="8" amount="270" />
     </medium>
     <low>
       <hide tier="6" amount="110"/>
@@ -6733,7 +6853,7 @@
       <fiber tier="6" amount="90"/>
       <ore tier="6" amount="60"/>
       <mobcamp tier="8" amount="14" />
-      <roamingmob tier="8" amount="300" />
+      <roamingmob tier="8" amount="270" />
     </medium>
     <low>
       <hide tier="6" amount="110"/>
@@ -6938,7 +7058,7 @@
       <wood tier="6" amount="90"/>
       <hide tier="6" amount="60"/>
       <mobcamp tier="8" amount="14" />
-      <roamingmob tier="8" amount="300" />
+      <roamingmob tier="8" amount="270" />
     </medium>
     <low>
       <fiber tier="6" amount="110"/>
@@ -6963,7 +7083,7 @@
       <wood tier="6" amount="90"/>
       <hide tier="6" amount="60"/>
       <mobcamp tier="8" amount="14" />
-      <roamingmob tier="8" amount="300" />
+      <roamingmob tier="8" amount="270" />
     </medium>
     <low>
       <fiber tier="6" amount="110"/>
@@ -6988,7 +7108,7 @@
       <wood tier="6" amount="90"/>
       <hide tier="6" amount="60"/>
       <mobcamp tier="8" amount="14" />
-      <roamingmob tier="8" amount="300" />
+      <roamingmob tier="8" amount="270" />
     </medium>
     <low>
       <fiber tier="6" amount="110"/>
@@ -7013,7 +7133,7 @@
       <wood tier="6" amount="90"/>
       <hide tier="6" amount="60"/>
       <mobcamp tier="8" amount="14" />
-      <roamingmob tier="8" amount="300" />
+      <roamingmob tier="8" amount="270" />
     </medium>
     <low>
       <fiber tier="6" amount="110"/>
@@ -7038,7 +7158,7 @@
       <wood tier="6" amount="90"/>
       <hide tier="6" amount="60"/>
       <mobcamp tier="8" amount="14" />
-      <roamingmob tier="8" amount="300" />
+      <roamingmob tier="8" amount="270" />
     </medium>
     <low>
       <fiber tier="6" amount="110"/>
@@ -7063,7 +7183,7 @@
       <wood tier="6" amount="90"/>
       <hide tier="6" amount="60"/>
       <mobcamp tier="8" amount="14" />
-      <roamingmob tier="8" amount="300" />
+      <roamingmob tier="8" amount="270" />
     </medium>
     <low>
       <fiber tier="6" amount="110"/>
@@ -7265,7 +7385,7 @@
       <rock tier="2" amount="66" />
       <wood tier="2" amount="200" />
       <mobcamp tier="2" amount="12" />
-      <roamingmob tier="2" amount="150" />
+      <roamingmob tier="2" amount="300" />
     </medium>
     <low></low>
   </preset>
@@ -7280,7 +7400,7 @@
       <rock tier="2" amount="200" />
       <wood tier="2" amount="66" />
       <mobcamp tier="2" amount="12" />
-      <roamingmob tier="2" amount="200" />
+      <roamingmob tier="2" amount="300" />
     </medium>
     <low></low>
   </preset>
@@ -7295,7 +7415,7 @@
       <ore tier="2" amount="200" />
       <rock tier="2" amount="133" />
       <mobcamp tier="2" amount="12" />
-      <roamingmob tier="2" amount="200" />
+      <roamingmob tier="2" amount="300" />
     </medium>
     <low></low>
   </preset>
@@ -7310,7 +7430,7 @@
       <hide tier="2" amount="200" />
       <ore tier="2" amount="66" />
       <mobcamp tier="2" amount="12" />
-      <roamingmob tier="2" amount="150" />
+      <roamingmob tier="2" amount="300" />
     </medium>
     <low></low>
   </preset>
@@ -7325,7 +7445,7 @@
       <hide tier="2" amount="66" />
       <wood tier="2" amount="133" />
       <mobcamp tier="2" amount="12" />
-      <roamingmob tier="2" amount="150" />
+      <roamingmob tier="2" amount="300" />
     </medium>
     <low></low>
   </preset>
@@ -7925,7 +8045,7 @@
       <rock tier="3" amount="66" />
       <wood tier="3" amount="200" />
       <mobcamp tier="4" amount="12" />
-      <roamingmob tier="4" amount="300" />
+      <roamingmob tier="4" amount="270" />
     </medium>
     <low>
       <hide tier="2" amount="133" />
@@ -7946,7 +8066,7 @@
       <rock tier="3" amount="200" />
       <wood tier="3" amount="66" />
       <mobcamp tier="4" amount="12" />
-      <roamingmob tier="4" amount="320" />
+      <roamingmob tier="4" amount="300" />
     </medium>
     <low>
       <ore tier="2" amount="133" />
@@ -7965,7 +8085,7 @@
       <ore tier="3" amount="200" />
       <rock tier="3" amount="133" />
       <mobcamp tier="4" amount="12" />
-      <roamingmob tier="4" amount="320" />
+      <roamingmob tier="4" amount="300" />
     </medium>
     <low>
       <fiber tier="2" amount="66" />
@@ -7984,7 +8104,7 @@
       <hide tier="3" amount="200" />
       <ore tier="3" amount="66" />
       <mobcamp tier="4" amount="12" />
-      <roamingmob tier="4" amount="320" />
+      <roamingmob tier="4" amount="300" />
     </medium>
     <low>
       <fiber tier="2" amount="133" />
@@ -8003,7 +8123,7 @@
       <hide tier="3" amount="66" />
       <wood tier="3" amount="133" />
       <mobcamp tier="4" amount="12" />
-      <roamingmob tier="4" amount="300" />
+      <roamingmob tier="4" amount="270" />
     </medium>
     <low>
       <fiber tier="2" amount="200" />
@@ -8247,7 +8367,7 @@
       <rock tier="5" amount="63" />
       <wood tier="5" amount="190" />
       <mobcamp tier="4" amount="12" />
-      <roamingmob tier="4" amount="300" />
+      <roamingmob tier="4" amount="270" />
       <hide tier="6" amount="24" />
       <rock tier="6" amount="12" />
       <wood tier="6" amount="10" />
@@ -8272,7 +8392,7 @@
       <rock tier="5" amount="190" />
       <wood tier="5" amount="63" />
       <mobcamp tier="4" amount="12" />
-      <roamingmob tier="4" amount="320" />
+      <roamingmob tier="4" amount="300" />
       <ore tier="6" amount="24" />
       <rock tier="6" amount="10" />
       <wood tier="6" amount="12" />
@@ -8297,7 +8417,7 @@
       <ore tier="5" amount="190" />
       <rock tier="5" amount="126" />
       <mobcamp tier="4" amount="12" />
-      <roamingmob tier="4" amount="320" />
+      <roamingmob tier="4" amount="300" />
       <fiber tier="6" amount="12" />
       <ore tier="6" amount="10" />
       <rock tier="6" amount="24" />
@@ -8322,7 +8442,7 @@
       <hide tier="5" amount="190" />
       <ore tier="5" amount="63" />
       <mobcamp tier="4" amount="12" />
-      <roamingmob tier="4" amount="320" />
+      <roamingmob tier="4" amount="300" />
       <fiber tier="6" amount="24" />
       <hide tier="6" amount="10" />
       <ore tier="6" amount="12" />
@@ -8347,7 +8467,7 @@
       <hide tier="5" amount="63" />
       <wood tier="5" amount="126" />
       <mobcamp tier="4" amount="12" />
-      <roamingmob tier="4" amount="300" />
+      <roamingmob tier="4" amount="270" />
       <fiber tier="6" amount="10" />
       <hide tier="6" amount="12" />
       <wood tier="6" amount="24" />
@@ -8522,7 +8642,7 @@
       <rock tier="5" amount="63" />
       <wood tier="5" amount="190" />
       <mobcamp tier="4" amount="12" />
-      <roamingmob tier="4" amount="300" />
+      <roamingmob tier="4" amount="270" />
       <hide tier="6" amount="24" />
       <rock tier="6" amount="12" />
       <wood tier="6" amount="10" />
@@ -8547,7 +8667,7 @@
       <rock tier="5" amount="190" />
       <wood tier="5" amount="63" />
       <mobcamp tier="4" amount="12" />
-      <roamingmob tier="4" amount="320" />
+      <roamingmob tier="4" amount="300" />
       <ore tier="6" amount="24" />
       <rock tier="6" amount="10" />
       <wood tier="6" amount="12" />
@@ -8572,7 +8692,7 @@
       <ore tier="5" amount="190" />
       <rock tier="5" amount="126" />
       <mobcamp tier="4" amount="12" />
-      <roamingmob tier="4" amount="320" />
+      <roamingmob tier="4" amount="300" />
       <fiber tier="6" amount="12" />
       <ore tier="6" amount="10" />
       <rock tier="6" amount="24" />
@@ -8597,7 +8717,7 @@
       <hide tier="5" amount="190" />
       <ore tier="5" amount="63" />
       <mobcamp tier="4" amount="12" />
-      <roamingmob tier="4" amount="300" />
+      <roamingmob tier="4" amount="270" />
       <fiber tier="6" amount="24" />
       <hide tier="6" amount="10" />
       <ore tier="6" amount="12" />
@@ -8622,7 +8742,7 @@
       <hide tier="5" amount="63" />
       <wood tier="5" amount="126" />
       <mobcamp tier="4" amount="12" />
-      <roamingmob tier="4" amount="300" />
+      <roamingmob tier="4" amount="270" />
       <fiber tier="6" amount="10" />
       <hide tier="6" amount="12" />
       <wood tier="6" amount="24" />
@@ -8797,7 +8917,7 @@
       <rock tier="4" amount="66" />
       <wood tier="4" amount="200" />
       <mobcamp tier="5" amount="12" />
-      <roamingmob tier="5" amount="300" />
+      <roamingmob tier="5" amount="270" />
     </medium>
     <low>
       <hide tier="3" amount="133" />
@@ -8816,7 +8936,7 @@
       <rock tier="4" amount="200" />
       <wood tier="4" amount="66" />
       <mobcamp tier="5" amount="12" />
-      <roamingmob tier="5" amount="320" />
+      <roamingmob tier="5" amount="300" />
     </medium>
     <low>
       <ore tier="3" amount="133" />
@@ -8835,7 +8955,7 @@
       <ore tier="4" amount="200" />
       <rock tier="4" amount="133" />
       <mobcamp tier="5" amount="12" />
-      <roamingmob tier="5" amount="320" />
+      <roamingmob tier="5" amount="300" />
     </medium>
     <low>
       <fiber tier="3" amount="66" />
@@ -8854,7 +8974,7 @@
       <hide tier="4" amount="200" />
       <ore tier="4" amount="66" />
       <mobcamp tier="5" amount="12" />
-      <roamingmob tier="5" amount="300" />
+      <roamingmob tier="5" amount="270" />
     </medium>
     <low>
       <fiber tier="3" amount="133" />
@@ -8873,7 +8993,7 @@
       <hide tier="4" amount="66" />
       <wood tier="4" amount="133" />
       <mobcamp tier="5" amount="12" />
-      <roamingmob tier="5" amount="300" />
+      <roamingmob tier="5" amount="270" />
     </medium>
     <low>
       <fiber tier="3" amount="200" />
@@ -9012,7 +9132,7 @@
       <rock tier="5" amount="63" />
       <wood tier="5" amount="190" />
       <mobcamp tier="5" amount="12" />
-      <roamingmob tier="5" amount="300" />
+      <roamingmob tier="5" amount="270" />
       <hide tier="6" amount="24" />
       <rock tier="6" amount="12" />
       <wood tier="6" amount="10" />
@@ -9037,7 +9157,7 @@
       <rock tier="5" amount="190" />
       <wood tier="5" amount="63" />
       <mobcamp tier="5" amount="12" />
-      <roamingmob tier="5" amount="320" />
+      <roamingmob tier="5" amount="300" />
       <ore tier="6" amount="24" />
       <rock tier="6" amount="10" />
       <wood tier="6" amount="12" />
@@ -9062,7 +9182,7 @@
       <ore tier="5" amount="190" />
       <rock tier="5" amount="126" />
       <mobcamp tier="5" amount="12" />
-      <roamingmob tier="5" amount="320" />
+      <roamingmob tier="5" amount="300" />
       <fiber tier="6" amount="12" />
       <ore tier="6" amount="10" />
       <rock tier="6" amount="24" />
@@ -9087,7 +9207,7 @@
       <hide tier="5" amount="190" />
       <ore tier="5" amount="63" />
       <mobcamp tier="5" amount="12" />
-      <roamingmob tier="5" amount="300" />
+      <roamingmob tier="5" amount="270" />
       <fiber tier="6" amount="24" />
       <hide tier="6" amount="10" />
       <ore tier="6" amount="12" />
@@ -9112,7 +9232,7 @@
       <hide tier="5" amount="63" />
       <wood tier="5" amount="126" />
       <mobcamp tier="5" amount="12" />
-      <roamingmob tier="5" amount="300" />
+      <roamingmob tier="5" amount="270" />
       <fiber tier="6" amount="10" />
       <hide tier="6" amount="12" />
       <wood tier="6" amount="24" />
@@ -9287,7 +9407,7 @@
       <rock tier="5" amount="63" />
       <wood tier="5" amount="190" />
       <mobcamp tier="5" amount="12" />
-      <roamingmob tier="5" amount="300" />
+      <roamingmob tier="5" amount="270" />
       <hide tier="6" amount="24" />
       <rock tier="6" amount="12" />
       <wood tier="6" amount="10" />
@@ -9312,7 +9432,7 @@
       <rock tier="5" amount="190" />
       <wood tier="5" amount="63" />
       <mobcamp tier="5" amount="12" />
-      <roamingmob tier="5" amount="320" />
+      <roamingmob tier="5" amount="300" />
       <ore tier="6" amount="24" />
       <rock tier="6" amount="10" />
       <wood tier="6" amount="12" />
@@ -9337,7 +9457,7 @@
       <ore tier="5" amount="190" />
       <rock tier="5" amount="126" />
       <mobcamp tier="5" amount="12" />
-      <roamingmob tier="5" amount="320" />
+      <roamingmob tier="5" amount="300" />
       <fiber tier="6" amount="12" />
       <ore tier="6" amount="10" />
       <rock tier="6" amount="24" />
@@ -9362,7 +9482,7 @@
       <hide tier="5" amount="190" />
       <ore tier="5" amount="63" />
       <mobcamp tier="5" amount="12" />
-      <roamingmob tier="5" amount="300" />
+      <roamingmob tier="5" amount="270" />
       <fiber tier="6" amount="24" />
       <hide tier="6" amount="10" />
       <ore tier="6" amount="12" />
@@ -9387,7 +9507,7 @@
       <hide tier="5" amount="63" />
       <wood tier="5" amount="126" />
       <mobcamp tier="5" amount="12" />
-      <roamingmob tier="5" amount="300" />
+      <roamingmob tier="5" amount="270" />
       <fiber tier="6" amount="10" />
       <hide tier="6" amount="12" />
       <wood tier="6" amount="24" />
@@ -9565,7 +9685,7 @@
       <rock tier="6" amount="75" />
       <wood tier="6" amount="200" />
       <mobcamp tier="5" amount="12" />
-      <roamingmob tier="5" amount="300" />
+      <roamingmob tier="5" amount="270" />
     </medium>
     <low>
       <hide tier="5" amount="86" />
@@ -9590,7 +9710,7 @@
       <rock tier="6" amount="200" />
       <wood tier="6" amount="75" />
       <mobcamp tier="5" amount="12" />
-      <roamingmob tier="5" amount="320" />
+      <roamingmob tier="5" amount="300" />
     </medium>
     <low>
       <ore tier="5" amount="86" />
@@ -9615,7 +9735,7 @@
       <ore tier="6" amount="200" />
       <rock tier="6" amount="150" />
       <mobcamp tier="5" amount="12" />
-      <roamingmob tier="5" amount="320" />
+      <roamingmob tier="5" amount="300" />
     </medium>
     <low>
       <fiber tier="5" amount="43" />
@@ -9640,7 +9760,7 @@
       <hide tier="6" amount="200" />
       <ore tier="6" amount="75" />
       <mobcamp tier="5" amount="12" />
-      <roamingmob tier="5" amount="300" />
+      <roamingmob tier="5" amount="270" />
     </medium>
     <low>
       <fiber tier="5" amount="86" />
@@ -9665,7 +9785,7 @@
       <hide tier="6" amount="75" />
       <wood tier="6" amount="150" />
       <mobcamp tier="5" amount="12" />
-      <roamingmob tier="5" amount="300" />
+      <roamingmob tier="5" amount="270" />
     </medium>
     <low>
       <fiber tier="5" amount="130" />
@@ -9837,7 +9957,7 @@
       <rock tier="5" amount="66" />
       <wood tier="5" amount="200" />
       <mobcamp tier="6" amount="12" />
-      <roamingmob tier="6" amount="300" />
+      <roamingmob tier="6" amount="270" />
     </medium>
     <low>
       <hide tier="4" amount="133" />
@@ -9856,7 +9976,7 @@
       <rock tier="5" amount="200" />
       <wood tier="5" amount="66" />
       <mobcamp tier="6" amount="12" />
-      <roamingmob tier="6" amount="320" />
+      <roamingmob tier="6" amount="300" />
     </medium>
     <low>
       <ore tier="4" amount="133" />
@@ -9875,7 +9995,7 @@
       <ore tier="5" amount="200" />
       <rock tier="5" amount="133" />
       <mobcamp tier="6" amount="12" />
-      <roamingmob tier="6" amount="320" />
+      <roamingmob tier="6" amount="300" />
     </medium>
     <low>
       <fiber tier="4" amount="66" />
@@ -9894,7 +10014,7 @@
       <hide tier="5" amount="200" />
       <ore tier="5" amount="66" />
       <mobcamp tier="6" amount="12" />
-      <roamingmob tier="6" amount="300" />
+      <roamingmob tier="6" amount="270" />
     </medium>
     <low>
       <fiber tier="4" amount="133" />
@@ -9913,7 +10033,7 @@
       <hide tier="5" amount="66" />
       <wood tier="5" amount="133" />
       <mobcamp tier="6" amount="12" />
-      <roamingmob tier="6" amount="300" />
+      <roamingmob tier="6" amount="270" />
     </medium>
     <low>
       <fiber tier="4" amount="200" />
@@ -10052,7 +10172,7 @@
       <rock tier="5" amount="63" />
       <wood tier="5" amount="190" />
       <mobcamp tier="6" amount="12" />
-      <roamingmob tier="6" amount="300" />
+      <roamingmob tier="6" amount="270" />
       <hide tier="6" amount="24" />
       <rock tier="6" amount="12" />
       <wood tier="6" amount="10" />
@@ -10077,7 +10197,7 @@
       <rock tier="5" amount="190" />
       <wood tier="5" amount="63" />
       <mobcamp tier="6" amount="12" />
-      <roamingmob tier="6" amount="320" />
+      <roamingmob tier="6" amount="300" />
       <ore tier="6" amount="24" />
       <rock tier="6" amount="10" />
       <wood tier="6" amount="12" />
@@ -10102,7 +10222,7 @@
       <ore tier="5" amount="190" />
       <rock tier="5" amount="126" />
       <mobcamp tier="6" amount="12" />
-      <roamingmob tier="6" amount="320" />
+      <roamingmob tier="6" amount="300" />
       <fiber tier="6" amount="12" />
       <ore tier="6" amount="10" />
       <rock tier="6" amount="24" />
@@ -10127,7 +10247,7 @@
       <hide tier="5" amount="190" />
       <ore tier="5" amount="63" />
       <mobcamp tier="6" amount="12" />
-      <roamingmob tier="6" amount="300" />
+      <roamingmob tier="6" amount="270" />
       <fiber tier="6" amount="24" />
       <hide tier="6" amount="10" />
       <ore tier="6" amount="12" />
@@ -10152,7 +10272,7 @@
       <hide tier="5" amount="63" />
       <wood tier="5" amount="126" />
       <mobcamp tier="6" amount="12" />
-      <roamingmob tier="6" amount="300" />
+      <roamingmob tier="6" amount="270" />
       <fiber tier="6" amount="10" />
       <hide tier="6" amount="12" />
       <wood tier="6" amount="24" />
@@ -10330,7 +10450,7 @@
       <rock tier="6" amount="75" />
       <wood tier="6" amount="200" />
       <mobcamp tier="6" amount="12" />
-      <roamingmob tier="6" amount="300" />
+      <roamingmob tier="6" amount="270" />
     </medium>
     <low>
       <hide tier="5" amount="86" />
@@ -10355,7 +10475,7 @@
       <rock tier="6" amount="200" />
       <wood tier="6" amount="75" />
       <mobcamp tier="6" amount="12" />
-      <roamingmob tier="6" amount="320" />
+      <roamingmob tier="6" amount="300" />
     </medium>
     <low>
       <ore tier="5" amount="86" />
@@ -10380,7 +10500,7 @@
       <ore tier="6" amount="200" />
       <rock tier="6" amount="150" />
       <mobcamp tier="6" amount="12" />
-      <roamingmob tier="6" amount="320" />
+      <roamingmob tier="6" amount="300" />
     </medium>
     <low>
       <fiber tier="5" amount="43" />
@@ -10405,7 +10525,7 @@
       <hide tier="6" amount="200" />
       <ore tier="6" amount="75" />
       <mobcamp tier="6" amount="12" />
-      <roamingmob tier="6" amount="300" />
+      <roamingmob tier="6" amount="270" />
     </medium>
     <low>
       <fiber tier="5" amount="86" />
@@ -10430,7 +10550,7 @@
       <hide tier="6" amount="75" />
       <wood tier="6" amount="150" />
       <mobcamp tier="6" amount="12" />
-      <roamingmob tier="6" amount="300" />
+      <roamingmob tier="6" amount="270" />
     </medium>
     <low>
       <fiber tier="5" amount="130" />
@@ -10608,7 +10728,7 @@
       <rock tier="7" amount="0" />
       <wood tier="7" amount="0" />
       <mobcamp tier="6" amount="12" />
-      <roamingmob tier="6" amount="300" />
+      <roamingmob tier="6" amount="270" />
       <hide tier="6" amount="150" />
       <rock tier="6" amount="75" />
       <wood tier="6" amount="200" />
@@ -10636,7 +10756,7 @@
       <rock tier="7" amount="0" />
       <wood tier="7" amount="0" />
       <mobcamp tier="6" amount="12" />
-      <roamingmob tier="6" amount="320" />
+      <roamingmob tier="6" amount="300" />
       <ore tier="6" amount="150" />
       <rock tier="6" amount="200" />
       <wood tier="6" amount="75" />
@@ -10664,7 +10784,7 @@
       <ore tier="7" amount="0" />
       <rock tier="7" amount="0" />
       <mobcamp tier="6" amount="12" />
-      <roamingmob tier="6" amount="320" />
+      <roamingmob tier="6" amount="300" />
       <fiber tier="6" amount="75" />
       <ore tier="6" amount="200" />
       <rock tier="6" amount="150" />
@@ -10692,7 +10812,7 @@
       <hide tier="7" amount="0" />
       <ore tier="7" amount="0" />
       <mobcamp tier="6" amount="12" />
-      <roamingmob tier="6" amount="300" />
+      <roamingmob tier="6" amount="270" />
       <fiber tier="6" amount="150" />
       <hide tier="6" amount="200" />
       <ore tier="6" amount="75" />
@@ -10720,7 +10840,7 @@
       <hide tier="7" amount="0" />
       <wood tier="7" amount="0" />
       <mobcamp tier="6" amount="12" />
-      <roamingmob tier="6" amount="300" />
+      <roamingmob tier="6" amount="270" />
       <fiber tier="6" amount="200" />
       <hide tier="6" amount="75" />
       <wood tier="6" amount="150" />
@@ -10913,7 +11033,7 @@
       <hide tier="5" amount="115" />
       <rock tier="5" amount="57" />
       <mobcamp tier="7" amount="12" />
-      <roamingmob tier="7" amount="300" />
+      <roamingmob tier="7" amount="270" />
     </medium>
     <low>
       <wood tier="5" amount="29" />
@@ -10941,7 +11061,7 @@
       <ore tier="5" amount="115" />
       <wood tier="5" amount="57" />
       <mobcamp tier="7" amount="12" />
-      <roamingmob tier="7" amount="320" />
+      <roamingmob tier="7" amount="300" />
     </medium>
     <low>
       <rock tier="5" amount="29" />
@@ -10969,7 +11089,7 @@
       <rock tier="5" amount="115" />
       <fiber tier="5" amount="57" />
       <mobcamp tier="7" amount="12" />
-      <roamingmob tier="7" amount="320" />
+      <roamingmob tier="7" amount="300" />
     </medium>
     <low>
       <ore tier="5" amount="29" />
@@ -10997,7 +11117,7 @@
       <fiber tier="5" amount="115" />
       <ore tier="5" amount="57" />
       <mobcamp tier="7" amount="12" />
-      <roamingmob tier="7" amount="300" />
+      <roamingmob tier="7" amount="270" />
     </medium>
     <low>
       <hide tier="5" amount="29" />
@@ -11025,7 +11145,7 @@
       <wood tier="5" amount="115" />
       <hide tier="5" amount="57" />
       <mobcamp tier="7" amount="12" />
-      <roamingmob tier="7" amount="300" />
+      <roamingmob tier="7" amount="270" />
     </medium>
     <low>
       <fiber tier="5" amount="29" />
@@ -11215,7 +11335,7 @@
       <rock tier="6" amount="75" />
       <wood tier="6" amount="200" />
       <mobcamp tier="7" amount="12" />
-      <roamingmob tier="7" amount="300" />
+      <roamingmob tier="7" amount="270" />
     </medium>
     <low>
       <hide tier="5" amount="86" />
@@ -11240,7 +11360,7 @@
       <rock tier="6" amount="200" />
       <wood tier="6" amount="75" />
       <mobcamp tier="7" amount="12" />
-      <roamingmob tier="7" amount="320" />
+      <roamingmob tier="7" amount="300" />
     </medium>
     <low>
       <ore tier="5" amount="86" />
@@ -11265,7 +11385,7 @@
       <ore tier="6" amount="200" />
       <rock tier="6" amount="150" />
       <mobcamp tier="7" amount="12" />
-      <roamingmob tier="7" amount="320" />
+      <roamingmob tier="7" amount="300" />
     </medium>
     <low>
       <fiber tier="5" amount="43" />
@@ -11290,7 +11410,7 @@
       <hide tier="6" amount="200" />
       <ore tier="6" amount="75" />
       <mobcamp tier="7" amount="12" />
-      <roamingmob tier="7" amount="300" />
+      <roamingmob tier="7" amount="270" />
     </medium>
     <low>
       <fiber tier="5" amount="86" />
@@ -11315,7 +11435,7 @@
       <hide tier="6" amount="75" />
       <wood tier="6" amount="150" />
       <mobcamp tier="7" amount="12" />
-      <roamingmob tier="7" amount="300" />
+      <roamingmob tier="7" amount="270" />
     </medium>
     <low>
       <fiber tier="5" amount="130" />
@@ -11493,7 +11613,7 @@
       <rock tier="7" amount="0" />
       <wood tier="7" amount="0" />
       <mobcamp tier="7" amount="12" />
-      <roamingmob tier="7" amount="300" />
+      <roamingmob tier="7" amount="270" />
       <hide tier="6" amount="150" />
       <rock tier="6" amount="75" />
       <wood tier="6" amount="200" />
@@ -11521,7 +11641,7 @@
       <rock tier="7" amount="0" />
       <wood tier="7" amount="0" />
       <mobcamp tier="7" amount="12" />
-      <roamingmob tier="7" amount="320" />
+      <roamingmob tier="7" amount="300" />
       <ore tier="6" amount="150" />
       <rock tier="6" amount="200" />
       <wood tier="6" amount="75" />
@@ -11549,7 +11669,7 @@
       <ore tier="7" amount="0" />
       <rock tier="7" amount="0" />
       <mobcamp tier="7" amount="12" />
-      <roamingmob tier="7" amount="320" />
+      <roamingmob tier="7" amount="300" />
       <fiber tier="6" amount="75" />
       <ore tier="6" amount="200" />
       <rock tier="6" amount="150" />
@@ -11577,7 +11697,7 @@
       <hide tier="7" amount="0" />
       <ore tier="7" amount="0" />
       <mobcamp tier="7" amount="12" />
-      <roamingmob tier="7" amount="300" />
+      <roamingmob tier="7" amount="270" />
       <fiber tier="6" amount="150" />
       <hide tier="6" amount="200" />
       <ore tier="6" amount="75" />
@@ -11605,7 +11725,7 @@
       <hide tier="7" amount="0" />
       <wood tier="7" amount="0" />
       <mobcamp tier="7" amount="12" />
-      <roamingmob tier="7" amount="300" />
+      <roamingmob tier="7" amount="270" />
       <fiber tier="6" amount="200" />
       <hide tier="6" amount="75" />
       <wood tier="6" amount="150" />
@@ -11798,7 +11918,7 @@
       <rock tier="7" amount="0" />
       <wood tier="7" amount="0" />
       <mobcamp tier="7" amount="12" />
-      <roamingmob tier="7" amount="300" />
+      <roamingmob tier="7" amount="270" />
       <hide tier="6" amount="150" />
       <rock tier="6" amount="75" />
       <wood tier="6" amount="200" />
@@ -11826,7 +11946,7 @@
       <rock tier="7" amount="0" />
       <wood tier="7" amount="0" />
       <mobcamp tier="7" amount="12" />
-      <roamingmob tier="7" amount="320" />
+      <roamingmob tier="7" amount="300" />
       <ore tier="6" amount="150" />
       <rock tier="6" amount="200" />
       <wood tier="6" amount="75" />
@@ -11854,7 +11974,7 @@
       <ore tier="7" amount="0" />
       <rock tier="7" amount="0" />
       <mobcamp tier="7" amount="12" />
-      <roamingmob tier="7" amount="320" />
+      <roamingmob tier="7" amount="300" />
       <fiber tier="6" amount="75" />
       <ore tier="6" amount="200" />
       <rock tier="6" amount="150" />
@@ -11882,7 +12002,7 @@
       <hide tier="7" amount="0" />
       <ore tier="7" amount="0" />
       <mobcamp tier="7" amount="12" />
-      <roamingmob tier="7" amount="300" />
+      <roamingmob tier="7" amount="270" />
       <fiber tier="6" amount="150" />
       <hide tier="6" amount="200" />
       <ore tier="6" amount="75" />
@@ -11910,7 +12030,7 @@
       <hide tier="7" amount="0" />
       <wood tier="7" amount="0" />
       <mobcamp tier="7" amount="12" />
-      <roamingmob tier="7" amount="300" />
+      <roamingmob tier="7" amount="270" />
       <fiber tier="6" amount="200" />
       <hide tier="6" amount="75" />
       <wood tier="6" amount="150" />
@@ -12097,7 +12217,7 @@
       <rock tier="5" amount="66" />
       <wood tier="5" amount="200" />
       <mobcamp tier="8" amount="12" />
-      <roamingmob tier="8" amount="300" />
+      <roamingmob tier="8" amount="270" />
     </medium>
     <low>
       <hide tier="4" amount="133" />
@@ -12116,7 +12236,7 @@
       <rock tier="5" amount="200" />
       <wood tier="5" amount="66" />
       <mobcamp tier="8" amount="12" />
-      <roamingmob tier="8" amount="320" />
+      <roamingmob tier="8" amount="300" />
     </medium>
     <low>
       <ore tier="4" amount="133" />
@@ -12135,7 +12255,7 @@
       <ore tier="5" amount="200" />
       <rock tier="5" amount="133" />
       <mobcamp tier="8" amount="12" />
-      <roamingmob tier="8" amount="320" />
+      <roamingmob tier="8" amount="300" />
     </medium>
     <low>
       <fiber tier="4" amount="66" />
@@ -12154,7 +12274,7 @@
       <hide tier="5" amount="200" />
       <ore tier="5" amount="66" />
       <mobcamp tier="8" amount="12" />
-      <roamingmob tier="8" amount="300" />
+      <roamingmob tier="8" amount="270" />
     </medium>
     <low>
       <fiber tier="4" amount="133" />
@@ -12173,7 +12293,7 @@
       <hide tier="5" amount="66" />
       <wood tier="5" amount="133" />
       <mobcamp tier="8" amount="12" />
-      <roamingmob tier="8" amount="300" />
+      <roamingmob tier="8" amount="270" />
     </medium>
     <low>
       <fiber tier="4" amount="200" />
@@ -12318,7 +12438,7 @@
       <rock tier="7" amount="0" />
       <wood tier="7" amount="0" />
       <mobcamp tier="8" amount="12" />
-      <roamingmob tier="8" amount="300" />
+      <roamingmob tier="8" amount="270" />
       <hide tier="6" amount="150" />
       <rock tier="6" amount="75" />
       <wood tier="6" amount="200" />
@@ -12346,7 +12466,7 @@
       <rock tier="7" amount="0" />
       <wood tier="7" amount="0" />
       <mobcamp tier="8" amount="12" />
-      <roamingmob tier="8" amount="320" />
+      <roamingmob tier="8" amount="300" />
       <ore tier="6" amount="150" />
       <rock tier="6" amount="200" />
       <wood tier="6" amount="75" />
@@ -12374,7 +12494,7 @@
       <ore tier="7" amount="0" />
       <rock tier="7" amount="0" />
       <mobcamp tier="8" amount="12" />
-      <roamingmob tier="8" amount="320" />
+      <roamingmob tier="8" amount="300" />
       <fiber tier="6" amount="75" />
       <ore tier="6" amount="200" />
       <rock tier="6" amount="150" />
@@ -12402,7 +12522,7 @@
       <hide tier="7" amount="0" />
       <ore tier="7" amount="0" />
       <mobcamp tier="8" amount="12" />
-      <roamingmob tier="8" amount="300" />
+      <roamingmob tier="8" amount="270" />
       <fiber tier="6" amount="150" />
       <hide tier="6" amount="200" />
       <ore tier="6" amount="75" />
@@ -12430,7 +12550,7 @@
       <hide tier="7" amount="0" />
       <wood tier="7" amount="0" />
       <mobcamp tier="8" amount="12" />
-      <roamingmob tier="8" amount="300" />
+      <roamingmob tier="8" amount="270" />
       <fiber tier="6" amount="200" />
       <hide tier="6" amount="75" />
       <wood tier="6" amount="150" />
@@ -12623,7 +12743,7 @@
       <rock tier="7" amount="0" />
       <wood tier="7" amount="0" />
       <mobcamp tier="8" amount="12" />
-      <roamingmob tier="8" amount="300" />
+      <roamingmob tier="8" amount="270" />
       <hide tier="6" amount="150" />
       <rock tier="6" amount="75" />
       <wood tier="6" amount="200" />
@@ -12651,7 +12771,7 @@
       <rock tier="7" amount="0" />
       <wood tier="7" amount="0" />
       <mobcamp tier="8" amount="12" />
-      <roamingmob tier="8" amount="320" />
+      <roamingmob tier="8" amount="300" />
       <ore tier="6" amount="150" />
       <rock tier="6" amount="200" />
       <wood tier="6" amount="75" />
@@ -12679,7 +12799,7 @@
       <ore tier="7" amount="0" />
       <rock tier="7" amount="0" />
       <mobcamp tier="8" amount="12" />
-      <roamingmob tier="8" amount="320" />
+      <roamingmob tier="8" amount="300" />
       <fiber tier="6" amount="75" />
       <ore tier="6" amount="200" />
       <rock tier="6" amount="150" />
@@ -12707,7 +12827,7 @@
       <hide tier="7" amount="0" />
       <ore tier="7" amount="0" />
       <mobcamp tier="8" amount="12" />
-      <roamingmob tier="8" amount="300" />
+      <roamingmob tier="8" amount="270" />
       <fiber tier="6" amount="150" />
       <hide tier="6" amount="200" />
       <ore tier="6" amount="75" />
@@ -12735,7 +12855,7 @@
       <hide tier="7" amount="0" />
       <wood tier="7" amount="0" />
       <mobcamp tier="8" amount="12" />
-      <roamingmob tier="8" amount="300" />
+      <roamingmob tier="8" amount="270" />
       <fiber tier="6" amount="200" />
       <hide tier="6" amount="75" />
       <wood tier="6" amount="150" />
@@ -12928,7 +13048,7 @@
       <rock tier="7" amount="0" />
       <wood tier="7" amount="0" />
       <mobcamp tier="8" amount="12" />
-      <roamingmob tier="8" amount="300" />
+      <roamingmob tier="8" amount="270" />
       <hide tier="6" amount="150" />
       <rock tier="6" amount="75" />
       <wood tier="6" amount="200" />
@@ -12956,7 +13076,7 @@
       <rock tier="7" amount="0" />
       <wood tier="7" amount="0" />
       <mobcamp tier="8" amount="12" />
-      <roamingmob tier="8" amount="320" />
+      <roamingmob tier="8" amount="300" />
       <ore tier="6" amount="150" />
       <rock tier="6" amount="200" />
       <wood tier="6" amount="75" />
@@ -12984,7 +13104,7 @@
       <ore tier="7" amount="0" />
       <rock tier="7" amount="0" />
       <mobcamp tier="8" amount="12" />
-      <roamingmob tier="8" amount="320" />
+      <roamingmob tier="8" amount="300" />
       <fiber tier="6" amount="75" />
       <ore tier="6" amount="200" />
       <rock tier="6" amount="150" />
@@ -13012,7 +13132,7 @@
       <hide tier="7" amount="0" />
       <ore tier="7" amount="0" />
       <mobcamp tier="8" amount="12" />
-      <roamingmob tier="8" amount="300" />
+      <roamingmob tier="8" amount="270" />
       <fiber tier="6" amount="150" />
       <hide tier="6" amount="200" />
       <ore tier="6" amount="75" />
@@ -13040,7 +13160,7 @@
       <hide tier="7" amount="0" />
       <wood tier="7" amount="0" />
       <mobcamp tier="8" amount="12" />
-      <roamingmob tier="8" amount="300" />
+      <roamingmob tier="8" amount="270" />
       <fiber tier="6" amount="200" />
       <hide tier="6" amount="75" />
       <wood tier="6" amount="150" />

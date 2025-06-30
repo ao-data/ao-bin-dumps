@@ -6,6 +6,66 @@
   "buildings": {
     "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
     "@xsi:noNamespaceSchemaLocation": "buildings.xsd",
+    "simplebehaviourbuilding": {
+      "@uniquename": "T1_TUTORIAL_CAPTAIN_TIA_JOURNAL_01",
+      "@tier": "1",
+      "@percharacterstates": "true",
+      "@iconAtlas": "RefItemAtlas",
+      "@iconSprite": "UNIQUE_INGREDIENT_ANCHOR_FOUNDER_LEGENDARY",
+      "@uispritename": "Gui/Avatars/Buildings/TYPE_FORGE",
+      "@uinpcspritename": "Gui/Avatars/Buildings/NPC_WORKBENCH",
+      "@hideonclustermap": "true",
+      "AudioInfo": {
+        "@name": "NPC_TUTORIAL_TIA"
+      },
+      "triggerablestate": [
+        {
+          "@name": "HIDDEN",
+          "@visible": "false",
+          "@default": "true"
+        },
+        {
+          "@name": "IDLE_WITH_JOURNAL",
+          "animatorstatebool": [
+            {
+              "@name": "Presenting",
+              "@value": "false"
+            },
+            {
+              "@name": "HasJournal",
+              "@value": "true"
+            }
+          ]
+        },
+        {
+          "@name": "PRESENTING",
+          "animatorstatebool": [
+            {
+              "@name": "Presenting",
+              "@value": "true"
+            },
+            {
+              "@name": "HasJournal",
+              "@value": "true"
+            }
+          ]
+        },
+        {
+          "@name": "IDLE_EMPTY_HANDED",
+          "@onleaveclusterstate": "HIDDEN",
+          "animatorstatebool": [
+            {
+              "@name": "HasJournal",
+              "@value": "false"
+            },
+            {
+              "@name": "Presenting",
+              "@value": "false"
+            }
+          ]
+        }
+      ]
+    },
     "hideoutbuilding": {
       "@uniquename": "UNIQUE_HIDEOUT",
       "@tier": "4",
@@ -317,6 +377,10 @@
       {
         "@template": "T1_BANK",
         "@uniquename": "SWAMP_GREEN_T1_BANK_PORTAL"
+      },
+      {
+        "@template": "T1_BANK",
+        "@uniquename": "HIGHLAND_DEAD_BANK_HELL_DEN"
       },
       {
         "@template": "T1_BANK",
@@ -852,6 +916,7 @@
         "@uispritename": "Gui/Avatars/Buildings/TYPE_REPAIRSHOP",
         "@repaircostfactor": "0.9",
         "@destructionreturnfactor": "0",
+        "@descriptionlocatag": "@BUILDINGS_REPAIRSHOP_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T4_MEAL_SANDWICH",
@@ -885,6 +950,7 @@
         "@repaircostfactor": "0.9",
         "@destructionreturnfactor": "0",
         "@constructioninfo": "@BUILDBUILDING_DETAILS_INFO_REPAIRSHOP",
+        "@descriptionlocatag": "@BUILDINGS_REPAIRSHOP_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T4_MEAL_SANDWICH",
@@ -937,6 +1003,7 @@
         "@uisoundevent": "Play_ui_select_repairshop",
         "@repaircostfactor": "0.9",
         "@destructionreturnfactor": "0",
+        "@descriptionlocatag": "@BUILDINGS_REPAIRSHOP_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T4_MEAL_SANDWICH",
@@ -989,6 +1056,7 @@
         "@uisoundevent": "Play_ui_select_repairshop",
         "@repaircostfactor": "0.9",
         "@destructionreturnfactor": "0",
+        "@descriptionlocatag": "@BUILDINGS_REPAIRSHOP_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T4_MEAL_SANDWICH",
@@ -1041,6 +1109,7 @@
         "@uisoundevent": "Play_ui_select_repairshop",
         "@repaircostfactor": "0.9",
         "@destructionreturnfactor": "0",
+        "@descriptionlocatag": "@BUILDINGS_REPAIRSHOP_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T4_MEAL_SANDWICH",
@@ -1093,6 +1162,7 @@
         "@uisoundevent": "Play_ui_select_repairshop",
         "@repaircostfactor": "0.9",
         "@destructionreturnfactor": "0",
+        "@descriptionlocatag": "@BUILDINGS_REPAIRSHOP_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T4_MEAL_SANDWICH",
@@ -1145,6 +1215,7 @@
         "@uisoundevent": "Play_ui_select_repairshop",
         "@repaircostfactor": "0.9",
         "@destructionreturnfactor": "0",
+        "@descriptionlocatag": "@BUILDINGS_REPAIRSHOP_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T4_MEAL_SANDWICH",
@@ -1196,6 +1267,7 @@
         "@uisoundevent": "Play_ui_select_repairshop",
         "@repaircostfactor": "0.9",
         "@destructionreturnfactor": "0",
+        "@descriptionlocatag": "@BUILDINGS_REPAIRSHOP_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T4_MEAL_SANDWICH",
@@ -1255,6 +1327,7 @@
         "@repaircostfactor": "0.9",
         "@destructionreturnfactor": "0",
         "@initialnutrition": "0.00013",
+        "@descriptionlocatag": "@BUILDINGS_WEAVINGMILL_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T3_MEAL_OMELETTE",
@@ -1298,6 +1371,7 @@
         "@repaircostfactor": "0.9",
         "@destructionreturnfactor": "0",
         "@initialnutrition": "0.00013",
+        "@descriptionlocatag": "@BUILDINGS_TANNERY_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T3_MEAL_PIE",
@@ -1341,6 +1415,7 @@
         "@destructionreturnfactor": "0",
         "@initialnutrition": "0.00013",
         "@allowsstudy": "false",
+        "@descriptionlocatag": "@BUILDINGS_HUNTERSLODGE_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T6_MEAL_SALAD",
@@ -1457,6 +1532,7 @@
         "@destructionreturnfactor": "0",
         "@initialnutrition": "0.00013",
         "@allowsstudy": "false",
+        "@descriptionlocatag": "@BUILDINGS_FORGE_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T6_MEAL_STEW",
@@ -1531,6 +1607,7 @@
         "@repaircostfactor": "0.9",
         "@destructionreturnfactor": "0",
         "@initialnutrition": "0.00013",
+        "@descriptionlocatag": "@BUILDINGS_CARPENTERSWORKSHOP_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T1_MEAL_SOUP",
@@ -1590,6 +1667,7 @@
         "@destructionreturnfactor": "0",
         "@initialnutrition": "0.00013",
         "@allowsstudy": "false",
+        "@descriptionlocatag": "@BUILDINGS_TOOLMAKER_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T4_MEAL_SALAD",
@@ -1665,6 +1743,7 @@
         "@destructionreturnfactor": "0",
         "@initialnutrition": "0.00013",
         "@allowsstudy": "false",
+        "@descriptionlocatag": "@BUILDINGS_MAGICITEMS_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T6_MEAL_SANDWICH",
@@ -1730,6 +1809,7 @@
         "@repaircostfactor": "0.9",
         "@destructionreturnfactor": "0",
         "@initialnutrition": "0.00013",
+        "@descriptionlocatag": "@BUILDINGS_SMELTER_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T3_MEAL_SOUP",
@@ -1873,7 +1953,7 @@
         "@uispritename": "Gui/Avatars/Buildings/NPC_SMUGGLER_01",
         "@firstname": "@BUILDINGS_SMUGGLERS_DEN_TRADER_TITLE",
         "@surname": "@BUILDINGS_SMUGGLERS_DEN_TRADER",
-        "@uisoundevent": "Play_ui_select_toolmaker",
+        "@uisoundevent": "Play_ui_select_smuggler_trader",
         "@showstanding": "smugglers",
         "@hideonclustermap": "true",
         "craftingitemlist": {
@@ -1942,6 +2022,85 @@
         },
         "AudioInfo": {
           "@name": "NPC_SMUGGLER_FACTION_TRADER"
+        }
+      },
+      {
+        "@uniquename": "HIGHLAND_DEAD_HELL_DEN_NPC_SHOP",
+        "@tier": "8",
+        "@nutritionstorage": "0",
+        "@randomidleanimoffset": "false",
+        "@placecost": "0",
+        "@displaygroup": "8",
+        "@allowsstudy": "false",
+        "@isshop": "true",
+        "@animateonguiopen": "true",
+        "@craftanimation": "none",
+        "@defaultcostfactorfriends": "0",
+        "@defaultcostfactorusers": "0",
+        "@durability": "1",
+        "@durabilityloss": "0",
+        "@category": "none",
+        "@craftcapacity": "0",
+        "@craftcapacityregeneration": "0",
+        "@usesbuildingplacementrules": "false",
+        "@iconAtlas": "RefMiniMapAtlas",
+        "@iconSprite": "hell_hellden_npc",
+        "@uispritename": "Gui/Avatars/Buildings/NPC_FACTIONTRADER_HELL",
+        "@surname": "@BUILDINGS_HELL_DEN_NPC_SHOP_NAME",
+        "@uisoundevent": "Play_ui_select_hellden_vendor",
+        "@showstanding": "hell",
+        "@hideonclustermap": "true",
+        "craftingitemlist": {
+          "craftitem": [
+            {
+              "@uniquename": "T4_CAPEITEM_DEMON_BP",
+              "@category": "@BUILDING_ITEMS_CATEGORY_FAVOR",
+              "@displaygroup": "1"
+            },
+            {
+              "@uniquename": "T5_CAPEITEM_DEMON_BP",
+              "@category": "@BUILDING_ITEMS_CATEGORY_FAVOR",
+              "@displaygroup": "1"
+            },
+            {
+              "@uniquename": "T6_CAPEITEM_DEMON_BP",
+              "@category": "@BUILDING_ITEMS_CATEGORY_FAVOR",
+              "@displaygroup": "1"
+            },
+            {
+              "@uniquename": "T7_CAPEITEM_DEMON_BP",
+              "@category": "@BUILDING_ITEMS_CATEGORY_FAVOR",
+              "@displaygroup": "1"
+            },
+            {
+              "@uniquename": "T8_CAPEITEM_DEMON_BP",
+              "@category": "@BUILDING_ITEMS_CATEGORY_FAVOR",
+              "@displaygroup": "1"
+            },
+            {
+              "@uniquename": "T5_FARM_SPIDER_HELL_BABY",
+              "@category": "@BUILDING_ITEMS_CATEGORY_FAVOR",
+              "@displaygroup": "1"
+            },
+            {
+              "@uniquename": "T8_FARM_SPIDER_HELL_BABY",
+              "@category": "@BUILDING_ITEMS_CATEGORY_FAVOR",
+              "@displaygroup": "1"
+            },
+            {
+              "@uniquename": "UNIQUE_AVATARRING_HELLDUNGEON",
+              "@category": "@BUILDING_ITEMS_CATEGORY_FAVOR",
+              "@displaygroup": "1"
+            },
+            {
+              "@uniquename": "UNIQUE_AVATAR_HELLDUNGEON",
+              "@category": "@BUILDING_ITEMS_CATEGORY_FAVOR",
+              "@displaygroup": "1"
+            }
+          ]
+        },
+        "AudioInfo": {
+          "@name": "NPC_HELL_ANTIQUARIAN"
         }
       },
       {
@@ -2199,6 +2358,11 @@
             },
             {
               "@uniquename": "T8_2H_HAMMER_AVALON",
+              "@displaygroup": "8",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T8_2H_HAMMER_CRYSTAL",
               "@displaygroup": "8",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
@@ -2638,6 +2802,11 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
+              "@uniquename": "T8_2H_SHAPESHIFTER_CRYSTAL",
+              "@displaygroup": "8",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
               "@uniquename": "T8_OFF_SHIELD",
               "@displaygroup": "8",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
@@ -2709,6 +2878,21 @@
             },
             {
               "@uniquename": "T8_OFF_CENSER_AVALON",
+              "@displaygroup": "8",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T8_OFF_SHIELD_CRYSTAL_PROTOTYPE",
+              "@displaygroup": "8",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T8_OFF_ORB_CRYSTAL_PROTOTYPE",
+              "@displaygroup": "8",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T8_OFF_TORCH_CRYSTAL_PROTOTYPE",
               "@displaygroup": "8",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
@@ -3675,6 +3859,11 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
+              "@uniquename": "T8_2H_HAMMER_CRYSTAL",
+              "@displaygroup": "8",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
               "@uniquename": "T8_MAIN_MACE",
               "@displaygroup": "8",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
@@ -4106,6 +4295,11 @@
             },
             {
               "@uniquename": "T8_2H_SHAPESHIFTER_AVALON",
+              "@displaygroup": "8",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T8_2H_SHAPESHIFTER_CRYSTAL",
               "@displaygroup": "8",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
@@ -5147,6 +5341,11 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
+              "@uniquename": "T7_2H_HAMMER_CRYSTAL",
+              "@displaygroup": "8",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
               "@uniquename": "T7_MAIN_MACE",
               "@displaygroup": "8",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
@@ -5578,6 +5777,11 @@
             },
             {
               "@uniquename": "T7_2H_SHAPESHIFTER_AVALON",
+              "@displaygroup": "8",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T7_2H_SHAPESHIFTER_CRYSTAL",
               "@displaygroup": "8",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
@@ -6611,6 +6815,11 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
+              "@uniquename": "T6_2H_HAMMER_CRYSTAL",
+              "@displaygroup": "8",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
               "@uniquename": "T6_MAIN_MACE",
               "@displaygroup": "8",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
@@ -7042,6 +7251,11 @@
             },
             {
               "@uniquename": "T6_2H_SHAPESHIFTER_AVALON",
+              "@displaygroup": "8",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T6_2H_SHAPESHIFTER_CRYSTAL",
               "@displaygroup": "8",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
@@ -8070,6 +8284,11 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
+              "@uniquename": "T5_2H_HAMMER_CRYSTAL",
+              "@displaygroup": "8",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
               "@uniquename": "T5_MAIN_MACE",
               "@displaygroup": "8",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
@@ -8501,6 +8720,11 @@
             },
             {
               "@uniquename": "T5_2H_SHAPESHIFTER_AVALON",
+              "@displaygroup": "8",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T5_2H_SHAPESHIFTER_CRYSTAL",
               "@displaygroup": "8",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
@@ -9529,6 +9753,11 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
+              "@uniquename": "T4_2H_HAMMER_CRYSTAL",
+              "@displaygroup": "8",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
               "@uniquename": "T4_MAIN_MACE",
               "@displaygroup": "8",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
@@ -9960,6 +10189,11 @@
             },
             {
               "@uniquename": "T4_2H_SHAPESHIFTER_AVALON",
+              "@displaygroup": "8",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T4_2H_SHAPESHIFTER_CRYSTAL",
               "@displaygroup": "8",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
@@ -12083,6 +12317,11 @@
               "@displaygroup": "5"
             },
             {
+              "@uniquename": "UNIQUE_UNLOCK_HEAD_VANITY_PIRATE_NON_TRADABLE",
+              "@category": "@BUILDING_ITEMS_CATEGORY_COMMUNITY",
+              "@displaygroup": "5"
+            },
+            {
               "@uniquename": "UNIQUE_UNLOCK_SHOES_VANITY_DRESS_BLUE_NON_TRADABLE",
               "@category": "@BUILDING_ITEMS_CATEGORY_COMMUNITY",
               "@displaygroup": "5"
@@ -12404,6 +12643,7 @@
         "@repaircostfactor": "0.9",
         "@destructionreturnfactor": "0",
         "@initialnutrition": "0.00013",
+        "@descriptionlocatag": "@BUILDINGS_FORGE_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T6_MEAL_STEW",
@@ -12495,6 +12735,7 @@
         "@repaircostfactor": "0.9",
         "@destructionreturnfactor": "0",
         "@initialnutrition": "0.06528",
+        "@descriptionlocatag": "@BUILDINGS_FORGE_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T6_MEAL_STEW",
@@ -12636,6 +12877,7 @@
         "@repaircostfactor": "0.9",
         "@destructionreturnfactor": "0",
         "@initialnutrition": "0.11245",
+        "@descriptionlocatag": "@BUILDINGS_FORGE_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T6_MEAL_STEW",
@@ -12947,6 +13189,11 @@
             },
             {
               "@uniquename": "T4_MAIN_MACE_CRYSTAL",
+              "@displaygroup": "4",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T4_2H_HAMMER_CRYSTAL",
               "@displaygroup": "4",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
@@ -13172,6 +13419,7 @@
         "@repaircostfactor": "0.9",
         "@destructionreturnfactor": "0",
         "@initialnutrition": "0.19434",
+        "@descriptionlocatag": "@BUILDINGS_FORGE_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T6_MEAL_STEW",
@@ -13483,6 +13731,11 @@
             },
             {
               "@uniquename": "T4_MAIN_MACE_CRYSTAL",
+              "@displaygroup": "4",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T4_2H_HAMMER_CRYSTAL",
               "@displaygroup": "4",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
@@ -13743,6 +13996,11 @@
             },
             {
               "@uniquename": "T5_MAIN_MACE_CRYSTAL",
+              "@displaygroup": "5",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T5_2H_HAMMER_CRYSTAL",
               "@displaygroup": "5",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
@@ -14103,6 +14361,7 @@
         "@repaircostfactor": "0.9",
         "@destructionreturnfactor": "0",
         "@initialnutrition": "0.33547",
+        "@descriptionlocatag": "@BUILDINGS_FORGE_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T6_MEAL_STEW",
@@ -14418,6 +14677,11 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
+              "@uniquename": "T4_2H_HAMMER_CRYSTAL",
+              "@displaygroup": "4",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
               "@uniquename": "T4_2H_KNUCKLES_CRYSTAL",
               "@displaygroup": "4",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
@@ -14678,6 +14942,11 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
+              "@uniquename": "T5_2H_HAMMER_CRYSTAL",
+              "@displaygroup": "5",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
               "@uniquename": "T5_2H_KNUCKLES_CRYSTAL",
               "@displaygroup": "5",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
@@ -14934,6 +15203,11 @@
             },
             {
               "@uniquename": "T6_MAIN_MACE_CRYSTAL",
+              "@displaygroup": "6",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T6_2H_HAMMER_CRYSTAL",
               "@displaygroup": "6",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
@@ -15429,6 +15703,7 @@
         "@repaircostfactor": "0.9",
         "@destructionreturnfactor": "0",
         "@initialnutrition": "0.57925",
+        "@descriptionlocatag": "@BUILDINGS_FORGE_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T6_MEAL_STEW",
@@ -15744,6 +16019,11 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
+              "@uniquename": "T4_2H_HAMMER_CRYSTAL",
+              "@displaygroup": "4",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
               "@uniquename": "T4_2H_KNUCKLES_CRYSTAL",
               "@displaygroup": "4",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
@@ -16000,6 +16280,11 @@
             },
             {
               "@uniquename": "T5_MAIN_MACE_CRYSTAL",
+              "@displaygroup": "5",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T5_2H_HAMMER_CRYSTAL",
               "@displaygroup": "5",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
@@ -16264,6 +16549,11 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
+              "@uniquename": "T6_2H_HAMMER_CRYSTAL",
+              "@displaygroup": "6",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
               "@uniquename": "T6_2H_KNUCKLES_CRYSTAL",
               "@displaygroup": "6",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
@@ -16520,6 +16810,11 @@
             },
             {
               "@uniquename": "T7_MAIN_MACE_CRYSTAL",
+              "@displaygroup": "7",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T7_2H_HAMMER_CRYSTAL",
               "@displaygroup": "7",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
@@ -17149,6 +17444,7 @@
         "@repaircostfactor": "0.9",
         "@destructionreturnfactor": "0",
         "@initialnutrition": "1",
+        "@descriptionlocatag": "@BUILDINGS_FORGE_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T6_MEAL_STEW",
@@ -17464,6 +17760,11 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
+              "@uniquename": "T4_2H_HAMMER_CRYSTAL",
+              "@displaygroup": "4",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
               "@uniquename": "T4_2H_KNUCKLES_CRYSTAL",
               "@displaygroup": "4",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
@@ -17720,6 +18021,11 @@
             },
             {
               "@uniquename": "T5_MAIN_MACE_CRYSTAL",
+              "@displaygroup": "5",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T5_2H_HAMMER_CRYSTAL",
               "@displaygroup": "5",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
@@ -17984,6 +18290,11 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
+              "@uniquename": "T6_2H_HAMMER_CRYSTAL",
+              "@displaygroup": "6",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
               "@uniquename": "T6_2H_KNUCKLES_CRYSTAL",
               "@displaygroup": "6",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
@@ -18244,6 +18555,11 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
+              "@uniquename": "T7_2H_HAMMER_CRYSTAL",
+              "@displaygroup": "7",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
               "@uniquename": "T7_2H_KNUCKLES_CRYSTAL",
               "@displaygroup": "7",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
@@ -18500,6 +18816,11 @@
             },
             {
               "@uniquename": "T8_MAIN_MACE_CRYSTAL",
+              "@displaygroup": "8",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T8_2H_HAMMER_CRYSTAL",
               "@displaygroup": "8",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
@@ -19266,6 +19587,7 @@
         "@repaircostfactor": "0.9",
         "@destructionreturnfactor": "0",
         "@initialnutrition": "0.00013",
+        "@descriptionlocatag": "@BUILDINGS_HUNTERSLODGE_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T6_MEAL_SALAD",
@@ -19357,6 +19679,7 @@
         "@repaircostfactor": "0.9",
         "@destructionreturnfactor": "0",
         "@initialnutrition": "0.06528",
+        "@descriptionlocatag": "@BUILDINGS_HUNTERSLODGE_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T6_MEAL_SALAD",
@@ -19498,6 +19821,7 @@
         "@repaircostfactor": "0.9",
         "@destructionreturnfactor": "0",
         "@initialnutrition": "0.11245",
+        "@descriptionlocatag": "@BUILDINGS_HUNTERSLODGE_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T6_MEAL_SALAD",
@@ -19784,6 +20108,11 @@
             },
             {
               "@uniquename": "T4_2H_BOW_CRYSTAL",
+              "@displaygroup": "4",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T4_2H_SHAPESHIFTER_CRYSTAL",
               "@displaygroup": "4",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
@@ -20034,6 +20363,7 @@
         "@repaircostfactor": "0.9",
         "@destructionreturnfactor": "0",
         "@initialnutrition": "0.19434",
+        "@descriptionlocatag": "@BUILDINGS_HUNTERSLODGE_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T6_MEAL_SALAD",
@@ -20320,6 +20650,11 @@
             },
             {
               "@uniquename": "T4_2H_BOW_CRYSTAL",
+              "@displaygroup": "4",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T4_2H_SHAPESHIFTER_CRYSTAL",
               "@displaygroup": "4",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
@@ -20580,6 +20915,11 @@
             },
             {
               "@uniquename": "T5_2H_BOW_CRYSTAL",
+              "@displaygroup": "5",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T5_2H_SHAPESHIFTER_CRYSTAL",
               "@displaygroup": "5",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
@@ -20965,6 +21305,7 @@
         "@repaircostfactor": "0.9",
         "@destructionreturnfactor": "0",
         "@initialnutrition": "0.33547",
+        "@descriptionlocatag": "@BUILDINGS_HUNTERSLODGE_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T6_MEAL_SALAD",
@@ -21255,6 +21596,11 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
+              "@uniquename": "T4_2H_SHAPESHIFTER_CRYSTAL",
+              "@displaygroup": "4",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
               "@uniquename": "T4_MAIN_NATURESTAFF_CRYSTAL",
               "@displaygroup": "4",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
@@ -21515,6 +21861,11 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
+              "@uniquename": "T5_2H_SHAPESHIFTER_CRYSTAL",
+              "@displaygroup": "5",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
               "@uniquename": "T5_MAIN_NATURESTAFF_CRYSTAL",
               "@displaygroup": "5",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
@@ -21771,6 +22122,11 @@
             },
             {
               "@uniquename": "T6_2H_BOW_CRYSTAL",
+              "@displaygroup": "6",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T6_2H_SHAPESHIFTER_CRYSTAL",
               "@displaygroup": "6",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
@@ -22291,6 +22647,7 @@
         "@repaircostfactor": "0.9",
         "@destructionreturnfactor": "0",
         "@initialnutrition": "0.57925",
+        "@descriptionlocatag": "@BUILDINGS_HUNTERSLODGE_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T6_MEAL_SALAD",
@@ -22581,6 +22938,11 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
+              "@uniquename": "T4_2H_SHAPESHIFTER_CRYSTAL",
+              "@displaygroup": "4",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
               "@uniquename": "T4_MAIN_NATURESTAFF_CRYSTAL",
               "@displaygroup": "4",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
@@ -22837,6 +23199,11 @@
             },
             {
               "@uniquename": "T5_2H_BOW_CRYSTAL",
+              "@displaygroup": "5",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T5_2H_SHAPESHIFTER_CRYSTAL",
               "@displaygroup": "5",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
@@ -23101,6 +23468,11 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
+              "@uniquename": "T6_2H_SHAPESHIFTER_CRYSTAL",
+              "@displaygroup": "6",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
               "@uniquename": "T6_MAIN_NATURESTAFF_CRYSTAL",
               "@displaygroup": "6",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
@@ -23357,6 +23729,11 @@
             },
             {
               "@uniquename": "T7_2H_BOW_CRYSTAL",
+              "@displaygroup": "7",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T7_2H_SHAPESHIFTER_CRYSTAL",
               "@displaygroup": "7",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
@@ -24011,6 +24388,7 @@
         "@repaircostfactor": "0.9",
         "@destructionreturnfactor": "0",
         "@initialnutrition": "1",
+        "@descriptionlocatag": "@BUILDINGS_HUNTERSLODGE_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T6_MEAL_SALAD",
@@ -24301,6 +24679,11 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
+              "@uniquename": "T4_2H_SHAPESHIFTER_CRYSTAL",
+              "@displaygroup": "4",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
               "@uniquename": "T4_MAIN_NATURESTAFF_CRYSTAL",
               "@displaygroup": "4",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
@@ -24557,6 +24940,11 @@
             },
             {
               "@uniquename": "T5_2H_BOW_CRYSTAL",
+              "@displaygroup": "5",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T5_2H_SHAPESHIFTER_CRYSTAL",
               "@displaygroup": "5",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
@@ -24821,6 +25209,11 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
+              "@uniquename": "T6_2H_SHAPESHIFTER_CRYSTAL",
+              "@displaygroup": "6",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
               "@uniquename": "T6_MAIN_NATURESTAFF_CRYSTAL",
               "@displaygroup": "6",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
@@ -25081,6 +25474,11 @@
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
             {
+              "@uniquename": "T7_2H_SHAPESHIFTER_CRYSTAL",
+              "@displaygroup": "7",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
               "@uniquename": "T7_MAIN_NATURESTAFF_CRYSTAL",
               "@displaygroup": "7",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
@@ -25337,6 +25735,11 @@
             },
             {
               "@uniquename": "T8_2H_BOW_CRYSTAL",
+              "@displaygroup": "8",
+              "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
+            },
+            {
+              "@uniquename": "T8_2H_SHAPESHIFTER_CRYSTAL",
               "@displaygroup": "8",
               "@category": "@BUILDING_ITEMS_CATEGORY_WEAPONS"
             },
@@ -26129,6 +26532,7 @@
         "@repaircostfactor": "0.9",
         "@destructionreturnfactor": "0",
         "@initialnutrition": "0.00013",
+        "@descriptionlocatag": "@BUILDINGS_MAGICITEMS_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T6_MEAL_SANDWICH",
@@ -26211,6 +26615,7 @@
         "@repaircostfactor": "0.9",
         "@destructionreturnfactor": "0",
         "@initialnutrition": "0.06528",
+        "@descriptionlocatag": "@BUILDINGS_MAGICITEMS_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T6_MEAL_SANDWICH",
@@ -26338,6 +26743,7 @@
         "@repaircostfactor": "0.9",
         "@destructionreturnfactor": "0",
         "@initialnutrition": "0.11245",
+        "@descriptionlocatag": "@BUILDINGS_MAGICITEMS_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T6_MEAL_SANDWICH",
@@ -26825,6 +27231,7 @@
         "@repaircostfactor": "0.9",
         "@destructionreturnfactor": "0",
         "@initialnutrition": "0.19434",
+        "@descriptionlocatag": "@BUILDINGS_MAGICITEMS_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T6_MEAL_SANDWICH",
@@ -27672,6 +28079,7 @@
         "@repaircostfactor": "0.9",
         "@destructionreturnfactor": "0",
         "@initialnutrition": "0.33547",
+        "@descriptionlocatag": "@BUILDINGS_MAGICITEMS_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T6_MEAL_SANDWICH",
@@ -28879,6 +29287,7 @@
         "@repaircostfactor": "0.9",
         "@destructionreturnfactor": "0",
         "@initialnutrition": "0.57925",
+        "@descriptionlocatag": "@BUILDINGS_MAGICITEMS_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T6_MEAL_SANDWICH",
@@ -30445,6 +30854,7 @@
         "@repaircostfactor": "0.9",
         "@destructionreturnfactor": "0",
         "@initialnutrition": "1",
+        "@descriptionlocatag": "@BUILDINGS_MAGICITEMS_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T6_MEAL_SANDWICH",
@@ -32373,6 +32783,7 @@
         "@repaircostfactor": "0.9",
         "@destructionreturnfactor": "0",
         "@initialnutrition": "0.00013",
+        "@descriptionlocatag": "@BUILDINGS_SMELTER_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T3_MEAL_SOUP",
@@ -32433,6 +32844,7 @@
         "@repaircostfactor": "0.9",
         "@destructionreturnfactor": "0",
         "@initialnutrition": "0.06528",
+        "@descriptionlocatag": "@BUILDINGS_SMELTER_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T3_MEAL_SOUP",
@@ -32500,6 +32912,7 @@
         "@repaircostfactor": "0.9",
         "@destructionreturnfactor": "0",
         "@initialnutrition": "0.11245",
+        "@descriptionlocatag": "@BUILDINGS_SMELTER_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T3_MEAL_SOUP",
@@ -32612,6 +33025,7 @@
         "@repaircostfactor": "0.9",
         "@destructionreturnfactor": "0",
         "@initialnutrition": "0.19434",
+        "@descriptionlocatag": "@BUILDINGS_SMELTER_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T3_MEAL_SOUP",
@@ -32774,6 +33188,7 @@
         "@repaircostfactor": "0.9",
         "@destructionreturnfactor": "0",
         "@initialnutrition": "0.33547",
+        "@descriptionlocatag": "@BUILDINGS_SMELTER_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T3_MEAL_SOUP",
@@ -32986,6 +33401,7 @@
         "@repaircostfactor": "0.9",
         "@destructionreturnfactor": "0",
         "@initialnutrition": "0.57925",
+        "@descriptionlocatag": "@BUILDINGS_SMELTER_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T3_MEAL_SOUP",
@@ -33247,6 +33663,7 @@
         "@repaircostfactor": "0.9",
         "@destructionreturnfactor": "0",
         "@initialnutrition": "1",
+        "@descriptionlocatag": "@BUILDINGS_SMELTER_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T3_MEAL_SOUP",
@@ -33560,6 +33977,7 @@
         "@repaircostfactor": "0.9",
         "@destructionreturnfactor": "0",
         "@initialnutrition": "0.00013",
+        "@descriptionlocatag": "@BUILDINGS_CARPENTERSWORKSHOP_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T1_MEAL_SOUP",
@@ -33620,6 +34038,7 @@
         "@repaircostfactor": "0.9",
         "@destructionreturnfactor": "0",
         "@initialnutrition": "0.06528",
+        "@descriptionlocatag": "@BUILDINGS_CARPENTERSWORKSHOP_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T1_MEAL_SOUP",
@@ -33687,6 +34106,7 @@
         "@repaircostfactor": "0.9",
         "@destructionreturnfactor": "0",
         "@initialnutrition": "0.11245",
+        "@descriptionlocatag": "@BUILDINGS_CARPENTERSWORKSHOP_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T1_MEAL_SOUP",
@@ -33799,6 +34219,7 @@
         "@repaircostfactor": "0.9",
         "@destructionreturnfactor": "0",
         "@initialnutrition": "0.19434",
+        "@descriptionlocatag": "@BUILDINGS_CARPENTERSWORKSHOP_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T1_MEAL_SOUP",
@@ -33961,6 +34382,7 @@
         "@repaircostfactor": "0.9",
         "@destructionreturnfactor": "0",
         "@initialnutrition": "0.33547",
+        "@descriptionlocatag": "@BUILDINGS_CARPENTERSWORKSHOP_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T1_MEAL_SOUP",
@@ -34173,6 +34595,7 @@
         "@repaircostfactor": "0.9",
         "@destructionreturnfactor": "0",
         "@initialnutrition": "0.57925",
+        "@descriptionlocatag": "@BUILDINGS_CARPENTERSWORKSHOP_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T1_MEAL_SOUP",
@@ -34434,6 +34857,7 @@
         "@repaircostfactor": "0.9",
         "@destructionreturnfactor": "0",
         "@initialnutrition": "1",
+        "@descriptionlocatag": "@BUILDINGS_CARPENTERSWORKSHOP_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T1_MEAL_SOUP",
@@ -34747,6 +35171,7 @@
         "@repaircostfactor": "0.9",
         "@destructionreturnfactor": "0",
         "@initialnutrition": "0.00013",
+        "@descriptionlocatag": "@BUILDINGS_STONEMASONRY_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T2_MEAL_SALAD",
@@ -34807,6 +35232,7 @@
         "@repaircostfactor": "0.9",
         "@destructionreturnfactor": "0",
         "@initialnutrition": "0.06528",
+        "@descriptionlocatag": "@BUILDINGS_STONEMASONRY_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T2_MEAL_SALAD",
@@ -34874,6 +35300,7 @@
         "@repaircostfactor": "0.9",
         "@destructionreturnfactor": "0",
         "@initialnutrition": "0.11245",
+        "@descriptionlocatag": "@BUILDINGS_STONEMASONRY_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T2_MEAL_SALAD",
@@ -34946,6 +35373,7 @@
         "@repaircostfactor": "0.9",
         "@destructionreturnfactor": "0",
         "@initialnutrition": "0.19434",
+        "@descriptionlocatag": "@BUILDINGS_STONEMASONRY_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T2_MEAL_SALAD",
@@ -35028,6 +35456,7 @@
         "@repaircostfactor": "0.9",
         "@destructionreturnfactor": "0",
         "@initialnutrition": "0.33547",
+        "@descriptionlocatag": "@BUILDINGS_STONEMASONRY_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T2_MEAL_SALAD",
@@ -35120,6 +35549,7 @@
         "@repaircostfactor": "0.9",
         "@destructionreturnfactor": "0",
         "@initialnutrition": "0.57925",
+        "@descriptionlocatag": "@BUILDINGS_STONEMASONRY_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T2_MEAL_SALAD",
@@ -35221,6 +35651,7 @@
         "@repaircostfactor": "0.9",
         "@destructionreturnfactor": "0",
         "@initialnutrition": "1",
+        "@descriptionlocatag": "@BUILDINGS_STONEMASONRY_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T2_MEAL_SALAD",
@@ -35334,6 +35765,7 @@
         "@repaircostfactor": "0.9",
         "@destructionreturnfactor": "0",
         "@initialnutrition": "0.00013",
+        "@descriptionlocatag": "@BUILDINGS_TANNERY_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T3_MEAL_PIE",
@@ -35394,6 +35826,7 @@
         "@repaircostfactor": "0.9",
         "@destructionreturnfactor": "0",
         "@initialnutrition": "0.06528",
+        "@descriptionlocatag": "@BUILDINGS_TANNERY_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T3_MEAL_PIE",
@@ -35461,6 +35894,7 @@
         "@repaircostfactor": "0.9",
         "@destructionreturnfactor": "0",
         "@initialnutrition": "0.11245",
+        "@descriptionlocatag": "@BUILDINGS_TANNERY_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T3_MEAL_PIE",
@@ -35573,6 +36007,7 @@
         "@repaircostfactor": "0.9",
         "@destructionreturnfactor": "0",
         "@initialnutrition": "0.19434",
+        "@descriptionlocatag": "@BUILDINGS_TANNERY_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T3_MEAL_PIE",
@@ -35735,6 +36170,7 @@
         "@repaircostfactor": "0.9",
         "@destructionreturnfactor": "0",
         "@initialnutrition": "0.33547",
+        "@descriptionlocatag": "@BUILDINGS_TANNERY_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T3_MEAL_PIE",
@@ -35947,6 +36383,7 @@
         "@repaircostfactor": "0.9",
         "@destructionreturnfactor": "0",
         "@initialnutrition": "0.57925",
+        "@descriptionlocatag": "@BUILDINGS_TANNERY_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T3_MEAL_PIE",
@@ -36208,6 +36645,7 @@
         "@repaircostfactor": "0.9",
         "@destructionreturnfactor": "0",
         "@initialnutrition": "1",
+        "@descriptionlocatag": "@BUILDINGS_TANNERY_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T3_MEAL_PIE",
@@ -36521,6 +36959,7 @@
         "@repaircostfactor": "0.9",
         "@destructionreturnfactor": "0",
         "@initialnutrition": "0.00013",
+        "@descriptionlocatag": "@BUILDINGS_WEAVINGMILL_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T3_MEAL_OMELETTE",
@@ -36581,6 +37020,7 @@
         "@repaircostfactor": "0.9",
         "@destructionreturnfactor": "0",
         "@initialnutrition": "0.06528",
+        "@descriptionlocatag": "@BUILDINGS_WEAVINGMILL_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T3_MEAL_OMELETTE",
@@ -36648,6 +37088,7 @@
         "@repaircostfactor": "0.9",
         "@destructionreturnfactor": "0",
         "@initialnutrition": "0.11245",
+        "@descriptionlocatag": "@BUILDINGS_WEAVINGMILL_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T3_MEAL_OMELETTE",
@@ -36760,6 +37201,7 @@
         "@repaircostfactor": "0.9",
         "@destructionreturnfactor": "0",
         "@initialnutrition": "0.19434",
+        "@descriptionlocatag": "@BUILDINGS_WEAVINGMILL_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T3_MEAL_OMELETTE",
@@ -36922,6 +37364,7 @@
         "@repaircostfactor": "0.9",
         "@destructionreturnfactor": "0",
         "@initialnutrition": "0.33547",
+        "@descriptionlocatag": "@BUILDINGS_WEAVINGMILL_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T3_MEAL_OMELETTE",
@@ -37134,6 +37577,7 @@
         "@repaircostfactor": "0.9",
         "@destructionreturnfactor": "0",
         "@initialnutrition": "0.57925",
+        "@descriptionlocatag": "@BUILDINGS_WEAVINGMILL_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T3_MEAL_OMELETTE",
@@ -37395,6 +37839,7 @@
         "@repaircostfactor": "0.9",
         "@destructionreturnfactor": "0",
         "@initialnutrition": "1",
+        "@descriptionlocatag": "@BUILDINGS_WEAVINGMILL_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T3_MEAL_OMELETTE",
@@ -41590,6 +42035,7 @@
         "@repaircostfactor": "0.9",
         "@destructionreturnfactor": "0",
         "@initialnutrition": "0.00013",
+        "@descriptionlocatag": "@BUILDINGS_TOOLMAKER_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T4_MEAL_SALAD",
@@ -41726,6 +42172,7 @@
         "@repaircostfactor": "0.9",
         "@destructionreturnfactor": "0",
         "@initialnutrition": "0.06528",
+        "@descriptionlocatag": "@BUILDINGS_TOOLMAKER_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T4_MEAL_SALAD",
@@ -41927,6 +42374,7 @@
         "@repaircostfactor": "0.9",
         "@destructionreturnfactor": "0",
         "@initialnutrition": "0.11245",
+        "@descriptionlocatag": "@BUILDINGS_TOOLMAKER_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T4_MEAL_SALAD",
@@ -42433,6 +42881,7 @@
         "@repaircostfactor": "0.9",
         "@destructionreturnfactor": "0",
         "@initialnutrition": "0.19434",
+        "@descriptionlocatag": "@BUILDINGS_TOOLMAKER_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T4_MEAL_SALAD",
@@ -43244,6 +43693,7 @@
         "@repaircostfactor": "0.9",
         "@destructionreturnfactor": "0",
         "@initialnutrition": "0.33547",
+        "@descriptionlocatag": "@BUILDINGS_TOOLMAKER_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T4_MEAL_SALAD",
@@ -44360,6 +44810,7 @@
         "@repaircostfactor": "0.9",
         "@destructionreturnfactor": "0",
         "@initialnutrition": "0.57925",
+        "@descriptionlocatag": "@BUILDINGS_TOOLMAKER_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T4_MEAL_SALAD",
@@ -45775,6 +46226,7 @@
         "@repaircostfactor": "0.9",
         "@destructionreturnfactor": "0",
         "@initialnutrition": "1",
+        "@descriptionlocatag": "@BUILDINGS_TOOLMAKER_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T4_MEAL_SALAD",
@@ -47498,6 +47950,7 @@
         "@repaircostfactor": "0.9",
         "@destructionreturnfactor": "0",
         "@initialnutrition": "0.06528",
+        "@descriptionlocatag": "@BUILDINGS_STABLE_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T4_MEAL_STEW",
@@ -47565,6 +48018,7 @@
         "@repaircostfactor": "0.9",
         "@destructionreturnfactor": "0",
         "@initialnutrition": "0.11245",
+        "@descriptionlocatag": "@BUILDINGS_STABLE_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T4_MEAL_STEW",
@@ -47647,6 +48101,7 @@
         "@repaircostfactor": "0.9",
         "@destructionreturnfactor": "0",
         "@initialnutrition": "0.19434",
+        "@descriptionlocatag": "@BUILDINGS_STABLE_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T4_MEAL_STEW",
@@ -47698,6 +48153,11 @@
             },
             {
               "@uniquename": "T5_MOUNT_COUGAR_KEEPER",
+              "@category": "@BUILDING_ITEMS_CATEGORY_MOUNTS_RARE",
+              "@displaygroup": "5"
+            },
+            {
+              "@uniquename": "T5_MOUNT_SPIDER_HELL",
               "@category": "@BUILDING_ITEMS_CATEGORY_MOUNTS_RARE",
               "@displaygroup": "5"
             },
@@ -47784,6 +48244,7 @@
         "@repaircostfactor": "0.9",
         "@destructionreturnfactor": "0",
         "@initialnutrition": "0.33547",
+        "@descriptionlocatag": "@BUILDINGS_STABLE_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T4_MEAL_STEW",
@@ -47860,6 +48321,11 @@
             },
             {
               "@uniquename": "T5_MOUNT_COUGAR_KEEPER",
+              "@category": "@BUILDING_ITEMS_CATEGORY_MOUNTS_RARE",
+              "@displaygroup": "5"
+            },
+            {
+              "@uniquename": "T5_MOUNT_SPIDER_HELL",
               "@category": "@BUILDING_ITEMS_CATEGORY_MOUNTS_RARE",
               "@displaygroup": "5"
             },
@@ -47946,6 +48412,7 @@
         "@repaircostfactor": "0.9",
         "@destructionreturnfactor": "0",
         "@initialnutrition": "0.57925",
+        "@descriptionlocatag": "@BUILDINGS_STABLE_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T4_MEAL_STEW",
@@ -48056,6 +48523,11 @@
               "@displaygroup": "5"
             },
             {
+              "@uniquename": "T5_MOUNT_SPIDER_HELL",
+              "@category": "@BUILDING_ITEMS_CATEGORY_MOUNTS_RARE",
+              "@displaygroup": "5"
+            },
+            {
               "@uniquename": "T5_MOUNT_MOABIRD_FW_BRIDGEWATCH",
               "@category": "@BUILDING_ITEMS_CATEGORY_MOUNTS_RARE",
               "@displaygroup": "5"
@@ -48137,6 +48609,7 @@
         "@repaircostfactor": "0.9",
         "@destructionreturnfactor": "0",
         "@initialnutrition": "1",
+        "@descriptionlocatag": "@BUILDINGS_STABLE_DESC",
         "favoritedish": {
           "dish": {
             "@item": "T4_MEAL_STEW",
@@ -48293,6 +48766,16 @@
             },
             {
               "@uniquename": "T8_MOUNT_RABBIT_EASTER_DARK",
+              "@category": "@BUILDING_ITEMS_CATEGORY_MOUNTS_RARE",
+              "@displaygroup": "8"
+            },
+            {
+              "@uniquename": "T5_MOUNT_SPIDER_HELL",
+              "@category": "@BUILDING_ITEMS_CATEGORY_MOUNTS_RARE",
+              "@displaygroup": "5"
+            },
+            {
+              "@uniquename": "T8_MOUNT_SPIDER_HELL",
               "@category": "@BUILDING_ITEMS_CATEGORY_MOUNTS_RARE",
               "@displaygroup": "8"
             },
@@ -50909,6 +51392,7 @@
         "@iconSprite": "outpost_caerleon",
         "@uispritename": "Gui/Avatars/Buildings/NPC_FACTIONTRADER_CAERLEON",
         "@hideonclustermap": "true",
+        "@descriptionlocatag": "@BUILDINGS_FACTION_TRADER_DESC",
         "craftingitemlist": {
           "@recipefilter": "CAERLEON_GREEN_FACTION_TRADER",
           "craftitem": [
@@ -50979,6 +51463,7 @@
         "@iconSprite": "outpost_forest",
         "@uispritename": "Gui/Avatars/Buildings/NPC_FACTIONTRADER_FOREST",
         "@hideonclustermap": "true",
+        "@descriptionlocatag": "@BUILDINGS_FACTION_TRADER_DESC",
         "craftingitemlist": {
           "@recipefilter": "FOREST_GREEN_FACTION_TRADER",
           "craftitem": [
@@ -51049,6 +51534,7 @@
         "@iconSprite": "outpost_highland",
         "@uispritename": "Gui/Avatars/Buildings/NPC_FACTIONTRADER_HIGHLAND",
         "@hideonclustermap": "true",
+        "@descriptionlocatag": "@BUILDINGS_FACTION_TRADER_DESC",
         "craftingitemlist": {
           "@recipefilter": "HIGHLAND_GREEN_FACTION_TRADER",
           "craftitem": [
@@ -51119,6 +51605,7 @@
         "@iconSprite": "outpost_steppe",
         "@uispritename": "Gui/Avatars/Buildings/NPC_FACTIONTRADER_STEPPE",
         "@hideonclustermap": "true",
+        "@descriptionlocatag": "@BUILDINGS_FACTION_TRADER_DESC",
         "craftingitemlist": {
           "@recipefilter": "STEPPE_GREEN_FACTION_TRADER",
           "craftitem": [
@@ -51189,6 +51676,7 @@
         "@iconSprite": "outpost_mountain",
         "@uispritename": "Gui/Avatars/Buildings/NPC_FACTIONTRADER_MOUNTAIN",
         "@hideonclustermap": "true",
+        "@descriptionlocatag": "@BUILDINGS_FACTION_TRADER_DESC",
         "craftingitemlist": {
           "@recipefilter": "MOUNTAIN_GREEN_FACTION_TRADER",
           "craftitem": [
@@ -51259,6 +51747,7 @@
         "@iconSprite": "outpost_swamp",
         "@uispritename": "Gui/Avatars/Buildings/NPC_FACTIONTRADER_SWAMP",
         "@hideonclustermap": "true",
+        "@descriptionlocatag": "@BUILDINGS_FACTION_TRADER_DESC",
         "craftingitemlist": {
           "@recipefilter": "SWAMP_GREEN_FACTION_TRADER",
           "craftitem": [
@@ -51329,6 +51818,7 @@
         "@iconSprite": "outpost_caerleon",
         "@uispritename": "Gui/Avatars/Buildings/NPC_FACTIONTRADER_CAERLEON",
         "@hideonclustermap": "true",
+        "@descriptionlocatag": "@BUILDINGS_FACTION_TRADER_DESC",
         "craftingitemlist": {
           "@recipefilter": "CAERLEON_GREEN_FACTION_TRADER",
           "craftitem": [
@@ -51409,6 +51899,8 @@
       "@uisoundevent": "Play_ui_select_artifactfoundry",
       "@unlocked": "false",
       "@accessrightspreset": "public",
+      "@replicateWorkingStateToClient": "false",
+      "@descriptionlocatag": "@BUILDINGS_MELDBUILDING_DESC",
       "favoritedish": {
         "dish": {
           "@item": "T6_MEAL_SALAD",
@@ -51707,36 +52199,6 @@
             "@uniquename": "T6_CORRUPTED_LETHAL_MAP",
             "@category": "@BUILDING_ITEMS_CATEGORY_FRAGMENTS",
             "@displaygroup": "6"
-          },
-          {
-            "@uniquename": "T5_HELLGATE_2V2_NON_LETHAL_1_MAP",
-            "@category": "@BUILDING_ITEMS_CATEGORY_FRAGMENTS",
-            "@displaygroup": "5"
-          },
-          {
-            "@uniquename": "T5_HELLGATE_5V5_NON_LETHAL_1_MAP",
-            "@category": "@BUILDING_ITEMS_CATEGORY_FRAGMENTS",
-            "@displaygroup": "5"
-          },
-          {
-            "@uniquename": "T5_HELLGATE_10V10_NON_LETHAL_1_MAP",
-            "@category": "@BUILDING_ITEMS_CATEGORY_FRAGMENTS",
-            "@displaygroup": "5"
-          },
-          {
-            "@uniquename": "T6_HELLGATE_2V2_LETHAL_1_MAP",
-            "@category": "@BUILDING_ITEMS_CATEGORY_FRAGMENTS",
-            "@displaygroup": "6"
-          },
-          {
-            "@uniquename": "T7_HELLGATE_5V5_LETHAL_1_MAP",
-            "@category": "@BUILDING_ITEMS_CATEGORY_FRAGMENTS",
-            "@displaygroup": "7"
-          },
-          {
-            "@uniquename": "T8_HELLGATE_10V10_LETHAL_1_MAP",
-            "@category": "@BUILDING_ITEMS_CATEGORY_FRAGMENTS",
-            "@displaygroup": "8"
           }
         ]
       },
@@ -51746,7 +52208,7 @@
             "@tier": "4",
             "@powerlevel": "1",
             "@aspect": "red",
-            "@time": "2",
+            "@time": "1",
             "@lootlist": "MELD_4_1_RED_LOOT",
             "neededitem": {
               "@uniquename": "T4_RUNE",
@@ -51757,7 +52219,7 @@
             "@tier": "4",
             "@powerlevel": "1",
             "@aspect": "blue",
-            "@time": "2",
+            "@time": "1",
             "@lootlist": "MELD_4_1_BLUE_LOOT",
             "neededitem": {
               "@uniquename": "T4_RUNE",
@@ -51768,7 +52230,7 @@
             "@tier": "4",
             "@powerlevel": "1",
             "@aspect": "green",
-            "@time": "2",
+            "@time": "1",
             "@lootlist": "MELD_4_1_GREEN_LOOT",
             "neededitem": {
               "@uniquename": "T4_RUNE",
@@ -51779,7 +52241,7 @@
             "@tier": "4",
             "@powerlevel": "1",
             "@aspect": "all",
-            "@time": "2",
+            "@time": "1",
             "@lootlist": "MELD_4_1_ALL_LOOT",
             "neededitem": {
               "@uniquename": "T4_RUNE",
@@ -51790,7 +52252,7 @@
             "@tier": "4",
             "@powerlevel": "2",
             "@aspect": "red",
-            "@time": "2",
+            "@time": "1",
             "@lootlist": "MELD_4_2_RED_LOOT",
             "neededitem": {
               "@uniquename": "T4_SOUL",
@@ -51801,7 +52263,7 @@
             "@tier": "4",
             "@powerlevel": "2",
             "@aspect": "blue",
-            "@time": "2",
+            "@time": "1",
             "@lootlist": "MELD_4_2_BLUE_LOOT",
             "neededitem": {
               "@uniquename": "T4_SOUL",
@@ -51812,7 +52274,7 @@
             "@tier": "4",
             "@powerlevel": "2",
             "@aspect": "green",
-            "@time": "2",
+            "@time": "1",
             "@lootlist": "MELD_4_2_GREEN_LOOT",
             "neededitem": {
               "@uniquename": "T4_SOUL",
@@ -51823,7 +52285,7 @@
             "@tier": "4",
             "@powerlevel": "2",
             "@aspect": "all",
-            "@time": "2",
+            "@time": "1",
             "@lootlist": "MELD_4_2_ALL_LOOT",
             "neededitem": {
               "@uniquename": "T4_SOUL",
@@ -51834,7 +52296,7 @@
             "@tier": "4",
             "@powerlevel": "3",
             "@aspect": "red",
-            "@time": "2",
+            "@time": "1",
             "@lootlist": "MELD_4_3_RED_LOOT",
             "neededitem": {
               "@uniquename": "T4_RELIC",
@@ -51845,7 +52307,7 @@
             "@tier": "4",
             "@powerlevel": "3",
             "@aspect": "blue",
-            "@time": "2",
+            "@time": "1",
             "@lootlist": "MELD_4_3_BLUE_LOOT",
             "neededitem": {
               "@uniquename": "T4_RELIC",
@@ -51856,7 +52318,7 @@
             "@tier": "4",
             "@powerlevel": "3",
             "@aspect": "green",
-            "@time": "2",
+            "@time": "1",
             "@lootlist": "MELD_4_3_GREEN_LOOT",
             "neededitem": {
               "@uniquename": "T4_RELIC",
@@ -51867,7 +52329,7 @@
             "@tier": "4",
             "@powerlevel": "3",
             "@aspect": "all",
-            "@time": "2",
+            "@time": "1",
             "@lootlist": "MELD_4_3_ALL_LOOT",
             "neededitem": {
               "@uniquename": "T4_RELIC",
@@ -51878,7 +52340,7 @@
             "@tier": "4",
             "@powerlevel": "4",
             "@aspect": "red",
-            "@time": "2",
+            "@time": "1",
             "@lootlist": "MELD_4_4_RED_LOOT",
             "neededitem": {
               "@uniquename": "T4_SHARD_AVALONIAN",
@@ -51889,7 +52351,7 @@
             "@tier": "4",
             "@powerlevel": "4",
             "@aspect": "blue",
-            "@time": "2",
+            "@time": "1",
             "@lootlist": "MELD_4_4_BLUE_LOOT",
             "neededitem": {
               "@uniquename": "T4_SHARD_AVALONIAN",
@@ -51900,7 +52362,7 @@
             "@tier": "4",
             "@powerlevel": "4",
             "@aspect": "green",
-            "@time": "2",
+            "@time": "1",
             "@lootlist": "MELD_4_4_GREEN_LOOT",
             "neededitem": {
               "@uniquename": "T4_SHARD_AVALONIAN",
@@ -51911,7 +52373,7 @@
             "@tier": "4",
             "@powerlevel": "4",
             "@aspect": "all",
-            "@time": "2",
+            "@time": "1",
             "@lootlist": "MELD_4_4_ALL_LOOT",
             "neededitem": {
               "@uniquename": "T4_SHARD_AVALONIAN",
@@ -51922,7 +52384,7 @@
             "@tier": "5",
             "@powerlevel": "1",
             "@aspect": "red",
-            "@time": "2",
+            "@time": "1",
             "@lootlist": "MELD_5_1_RED_LOOT",
             "neededitem": {
               "@uniquename": "T5_RUNE",
@@ -51933,7 +52395,7 @@
             "@tier": "5",
             "@powerlevel": "1",
             "@aspect": "blue",
-            "@time": "2",
+            "@time": "1",
             "@lootlist": "MELD_5_1_BLUE_LOOT",
             "neededitem": {
               "@uniquename": "T5_RUNE",
@@ -51944,7 +52406,7 @@
             "@tier": "5",
             "@powerlevel": "1",
             "@aspect": "green",
-            "@time": "2",
+            "@time": "1",
             "@lootlist": "MELD_5_1_GREEN_LOOT",
             "neededitem": {
               "@uniquename": "T5_RUNE",
@@ -51955,7 +52417,7 @@
             "@tier": "5",
             "@powerlevel": "1",
             "@aspect": "all",
-            "@time": "2",
+            "@time": "1",
             "@lootlist": "MELD_5_1_ALL_LOOT",
             "neededitem": {
               "@uniquename": "T5_RUNE",
@@ -51966,7 +52428,7 @@
             "@tier": "5",
             "@powerlevel": "2",
             "@aspect": "red",
-            "@time": "2",
+            "@time": "1",
             "@lootlist": "MELD_5_2_RED_LOOT",
             "neededitem": {
               "@uniquename": "T5_SOUL",
@@ -51977,7 +52439,7 @@
             "@tier": "5",
             "@powerlevel": "2",
             "@aspect": "blue",
-            "@time": "2",
+            "@time": "1",
             "@lootlist": "MELD_5_2_BLUE_LOOT",
             "neededitem": {
               "@uniquename": "T5_SOUL",
@@ -51988,7 +52450,7 @@
             "@tier": "5",
             "@powerlevel": "2",
             "@aspect": "green",
-            "@time": "2",
+            "@time": "1",
             "@lootlist": "MELD_5_2_GREEN_LOOT",
             "neededitem": {
               "@uniquename": "T5_SOUL",
@@ -51999,7 +52461,7 @@
             "@tier": "5",
             "@powerlevel": "2",
             "@aspect": "all",
-            "@time": "2",
+            "@time": "1",
             "@lootlist": "MELD_5_2_ALL_LOOT",
             "neededitem": {
               "@uniquename": "T5_SOUL",
@@ -52010,7 +52472,7 @@
             "@tier": "5",
             "@powerlevel": "3",
             "@aspect": "red",
-            "@time": "2",
+            "@time": "1",
             "@lootlist": "MELD_5_3_RED_LOOT",
             "neededitem": {
               "@uniquename": "T5_RELIC",
@@ -52021,7 +52483,7 @@
             "@tier": "5",
             "@powerlevel": "3",
             "@aspect": "blue",
-            "@time": "2",
+            "@time": "1",
             "@lootlist": "MELD_5_3_BLUE_LOOT",
             "neededitem": {
               "@uniquename": "T5_RELIC",
@@ -52032,7 +52494,7 @@
             "@tier": "5",
             "@powerlevel": "3",
             "@aspect": "green",
-            "@time": "2",
+            "@time": "1",
             "@lootlist": "MELD_5_3_GREEN_LOOT",
             "neededitem": {
               "@uniquename": "T5_RELIC",
@@ -52043,7 +52505,7 @@
             "@tier": "5",
             "@powerlevel": "3",
             "@aspect": "all",
-            "@time": "2",
+            "@time": "1",
             "@lootlist": "MELD_5_3_ALL_LOOT",
             "neededitem": {
               "@uniquename": "T5_RELIC",
@@ -52054,7 +52516,7 @@
             "@tier": "5",
             "@powerlevel": "4",
             "@aspect": "red",
-            "@time": "2",
+            "@time": "1",
             "@lootlist": "MELD_5_4_RED_LOOT",
             "neededitem": {
               "@uniquename": "T5_SHARD_AVALONIAN",
@@ -52065,7 +52527,7 @@
             "@tier": "5",
             "@powerlevel": "4",
             "@aspect": "blue",
-            "@time": "2",
+            "@time": "1",
             "@lootlist": "MELD_5_4_BLUE_LOOT",
             "neededitem": {
               "@uniquename": "T5_SHARD_AVALONIAN",
@@ -52076,7 +52538,7 @@
             "@tier": "5",
             "@powerlevel": "4",
             "@aspect": "green",
-            "@time": "2",
+            "@time": "1",
             "@lootlist": "MELD_5_4_GREEN_LOOT",
             "neededitem": {
               "@uniquename": "T5_SHARD_AVALONIAN",
@@ -52087,7 +52549,7 @@
             "@tier": "5",
             "@powerlevel": "4",
             "@aspect": "all",
-            "@time": "2",
+            "@time": "1",
             "@lootlist": "MELD_5_4_ALL_LOOT",
             "neededitem": {
               "@uniquename": "T5_SHARD_AVALONIAN",
@@ -52098,7 +52560,7 @@
             "@tier": "6",
             "@powerlevel": "1",
             "@aspect": "red",
-            "@time": "2",
+            "@time": "1",
             "@lootlist": "MELD_6_1_RED_LOOT",
             "neededitem": {
               "@uniquename": "T6_RUNE",
@@ -52109,7 +52571,7 @@
             "@tier": "6",
             "@powerlevel": "1",
             "@aspect": "blue",
-            "@time": "2",
+            "@time": "1",
             "@lootlist": "MELD_6_1_BLUE_LOOT",
             "neededitem": {
               "@uniquename": "T6_RUNE",
@@ -52120,7 +52582,7 @@
             "@tier": "6",
             "@powerlevel": "1",
             "@aspect": "green",
-            "@time": "2",
+            "@time": "1",
             "@lootlist": "MELD_6_1_GREEN_LOOT",
             "neededitem": {
               "@uniquename": "T6_RUNE",
@@ -52131,7 +52593,7 @@
             "@tier": "6",
             "@powerlevel": "1",
             "@aspect": "all",
-            "@time": "2",
+            "@time": "1",
             "@lootlist": "MELD_6_1_ALL_LOOT",
             "neededitem": {
               "@uniquename": "T6_RUNE",
@@ -52142,7 +52604,7 @@
             "@tier": "6",
             "@powerlevel": "2",
             "@aspect": "red",
-            "@time": "2",
+            "@time": "1",
             "@lootlist": "MELD_6_2_RED_LOOT",
             "neededitem": {
               "@uniquename": "T6_SOUL",
@@ -52153,7 +52615,7 @@
             "@tier": "6",
             "@powerlevel": "2",
             "@aspect": "blue",
-            "@time": "2",
+            "@time": "1",
             "@lootlist": "MELD_6_2_BLUE_LOOT",
             "neededitem": {
               "@uniquename": "T6_SOUL",
@@ -52164,7 +52626,7 @@
             "@tier": "6",
             "@powerlevel": "2",
             "@aspect": "green",
-            "@time": "2",
+            "@time": "1",
             "@lootlist": "MELD_6_2_GREEN_LOOT",
             "neededitem": {
               "@uniquename": "T6_SOUL",
@@ -52175,7 +52637,7 @@
             "@tier": "6",
             "@powerlevel": "2",
             "@aspect": "all",
-            "@time": "2",
+            "@time": "1",
             "@lootlist": "MELD_6_2_ALL_LOOT",
             "neededitem": {
               "@uniquename": "T6_SOUL",
@@ -52186,7 +52648,7 @@
             "@tier": "6",
             "@powerlevel": "3",
             "@aspect": "red",
-            "@time": "2",
+            "@time": "1",
             "@lootlist": "MELD_6_3_RED_LOOT",
             "neededitem": {
               "@uniquename": "T6_RELIC",
@@ -52197,7 +52659,7 @@
             "@tier": "6",
             "@powerlevel": "3",
             "@aspect": "blue",
-            "@time": "2",
+            "@time": "1",
             "@lootlist": "MELD_6_3_BLUE_LOOT",
             "neededitem": {
               "@uniquename": "T6_RELIC",
@@ -52208,7 +52670,7 @@
             "@tier": "6",
             "@powerlevel": "3",
             "@aspect": "green",
-            "@time": "2",
+            "@time": "1",
             "@lootlist": "MELD_6_3_GREEN_LOOT",
             "neededitem": {
               "@uniquename": "T6_RELIC",
@@ -52219,7 +52681,7 @@
             "@tier": "6",
             "@powerlevel": "3",
             "@aspect": "all",
-            "@time": "2",
+            "@time": "1",
             "@lootlist": "MELD_6_3_ALL_LOOT",
             "neededitem": {
               "@uniquename": "T6_RELIC",
@@ -52230,7 +52692,7 @@
             "@tier": "6",
             "@powerlevel": "4",
             "@aspect": "red",
-            "@time": "2",
+            "@time": "1",
             "@lootlist": "MELD_6_4_RED_LOOT",
             "neededitem": {
               "@uniquename": "T6_SHARD_AVALONIAN",
@@ -52241,7 +52703,7 @@
             "@tier": "6",
             "@powerlevel": "4",
             "@aspect": "blue",
-            "@time": "2",
+            "@time": "1",
             "@lootlist": "MELD_6_4_BLUE_LOOT",
             "neededitem": {
               "@uniquename": "T6_SHARD_AVALONIAN",
@@ -52252,7 +52714,7 @@
             "@tier": "6",
             "@powerlevel": "4",
             "@aspect": "green",
-            "@time": "2",
+            "@time": "1",
             "@lootlist": "MELD_6_4_GREEN_LOOT",
             "neededitem": {
               "@uniquename": "T6_SHARD_AVALONIAN",
@@ -52263,7 +52725,7 @@
             "@tier": "6",
             "@powerlevel": "4",
             "@aspect": "all",
-            "@time": "2",
+            "@time": "1",
             "@lootlist": "MELD_6_4_ALL_LOOT",
             "neededitem": {
               "@uniquename": "T6_SHARD_AVALONIAN",
@@ -52274,7 +52736,7 @@
             "@tier": "7",
             "@powerlevel": "1",
             "@aspect": "red",
-            "@time": "2",
+            "@time": "1",
             "@lootlist": "MELD_7_1_RED_LOOT",
             "neededitem": {
               "@uniquename": "T7_RUNE",
@@ -52285,7 +52747,7 @@
             "@tier": "7",
             "@powerlevel": "1",
             "@aspect": "blue",
-            "@time": "2",
+            "@time": "1",
             "@lootlist": "MELD_7_1_BLUE_LOOT",
             "neededitem": {
               "@uniquename": "T7_RUNE",
@@ -52296,7 +52758,7 @@
             "@tier": "7",
             "@powerlevel": "1",
             "@aspect": "green",
-            "@time": "2",
+            "@time": "1",
             "@lootlist": "MELD_7_1_GREEN_LOOT",
             "neededitem": {
               "@uniquename": "T7_RUNE",
@@ -52307,7 +52769,7 @@
             "@tier": "7",
             "@powerlevel": "1",
             "@aspect": "all",
-            "@time": "2",
+            "@time": "1",
             "@lootlist": "MELD_7_1_ALL_LOOT",
             "neededitem": {
               "@uniquename": "T7_RUNE",
@@ -52318,7 +52780,7 @@
             "@tier": "7",
             "@powerlevel": "2",
             "@aspect": "red",
-            "@time": "2",
+            "@time": "1",
             "@lootlist": "MELD_7_2_RED_LOOT",
             "neededitem": {
               "@uniquename": "T7_SOUL",
@@ -52329,7 +52791,7 @@
             "@tier": "7",
             "@powerlevel": "2",
             "@aspect": "blue",
-            "@time": "2",
+            "@time": "1",
             "@lootlist": "MELD_7_2_BLUE_LOOT",
             "neededitem": {
               "@uniquename": "T7_SOUL",
@@ -52340,7 +52802,7 @@
             "@tier": "7",
             "@powerlevel": "2",
             "@aspect": "green",
-            "@time": "2",
+            "@time": "1",
             "@lootlist": "MELD_7_2_GREEN_LOOT",
             "neededitem": {
               "@uniquename": "T7_SOUL",
@@ -52351,7 +52813,7 @@
             "@tier": "7",
             "@powerlevel": "2",
             "@aspect": "all",
-            "@time": "2",
+            "@time": "1",
             "@lootlist": "MELD_7_2_ALL_LOOT",
             "neededitem": {
               "@uniquename": "T7_SOUL",
@@ -52362,7 +52824,7 @@
             "@tier": "7",
             "@powerlevel": "3",
             "@aspect": "red",
-            "@time": "2",
+            "@time": "1",
             "@lootlist": "MELD_7_3_RED_LOOT",
             "neededitem": {
               "@uniquename": "T7_RELIC",
@@ -52373,7 +52835,7 @@
             "@tier": "7",
             "@powerlevel": "3",
             "@aspect": "blue",
-            "@time": "2",
+            "@time": "1",
             "@lootlist": "MELD_7_3_BLUE_LOOT",
             "neededitem": {
               "@uniquename": "T7_RELIC",
@@ -52384,7 +52846,7 @@
             "@tier": "7",
             "@powerlevel": "3",
             "@aspect": "green",
-            "@time": "2",
+            "@time": "1",
             "@lootlist": "MELD_7_3_GREEN_LOOT",
             "neededitem": {
               "@uniquename": "T7_RELIC",
@@ -52395,7 +52857,7 @@
             "@tier": "7",
             "@powerlevel": "3",
             "@aspect": "all",
-            "@time": "2",
+            "@time": "1",
             "@lootlist": "MELD_7_3_ALL_LOOT",
             "neededitem": {
               "@uniquename": "T7_RELIC",
@@ -52406,7 +52868,7 @@
             "@tier": "7",
             "@powerlevel": "4",
             "@aspect": "red",
-            "@time": "2",
+            "@time": "1",
             "@lootlist": "MELD_7_4_RED_LOOT",
             "neededitem": {
               "@uniquename": "T7_SHARD_AVALONIAN",
@@ -52417,7 +52879,7 @@
             "@tier": "7",
             "@powerlevel": "4",
             "@aspect": "blue",
-            "@time": "2",
+            "@time": "1",
             "@lootlist": "MELD_7_4_BLUE_LOOT",
             "neededitem": {
               "@uniquename": "T7_SHARD_AVALONIAN",
@@ -52428,7 +52890,7 @@
             "@tier": "7",
             "@powerlevel": "4",
             "@aspect": "green",
-            "@time": "2",
+            "@time": "1",
             "@lootlist": "MELD_7_4_GREEN_LOOT",
             "neededitem": {
               "@uniquename": "T7_SHARD_AVALONIAN",
@@ -52439,7 +52901,7 @@
             "@tier": "7",
             "@powerlevel": "4",
             "@aspect": "all",
-            "@time": "2",
+            "@time": "1",
             "@lootlist": "MELD_7_4_ALL_LOOT",
             "neededitem": {
               "@uniquename": "T7_SHARD_AVALONIAN",
@@ -52450,7 +52912,7 @@
             "@tier": "8",
             "@powerlevel": "1",
             "@aspect": "red",
-            "@time": "2",
+            "@time": "1",
             "@lootlist": "MELD_8_1_RED_LOOT",
             "neededitem": {
               "@uniquename": "T8_RUNE",
@@ -52461,7 +52923,7 @@
             "@tier": "8",
             "@powerlevel": "1",
             "@aspect": "blue",
-            "@time": "2",
+            "@time": "1",
             "@lootlist": "MELD_8_1_BLUE_LOOT",
             "neededitem": {
               "@uniquename": "T8_RUNE",
@@ -52472,7 +52934,7 @@
             "@tier": "8",
             "@powerlevel": "1",
             "@aspect": "green",
-            "@time": "2",
+            "@time": "1",
             "@lootlist": "MELD_8_1_GREEN_LOOT",
             "neededitem": {
               "@uniquename": "T8_RUNE",
@@ -52483,7 +52945,7 @@
             "@tier": "8",
             "@powerlevel": "1",
             "@aspect": "all",
-            "@time": "2",
+            "@time": "1",
             "@lootlist": "MELD_8_1_ALL_LOOT",
             "neededitem": {
               "@uniquename": "T8_RUNE",
@@ -52494,7 +52956,7 @@
             "@tier": "8",
             "@powerlevel": "2",
             "@aspect": "red",
-            "@time": "2",
+            "@time": "1",
             "@lootlist": "MELD_8_2_RED_LOOT",
             "neededitem": {
               "@uniquename": "T8_SOUL",
@@ -52505,7 +52967,7 @@
             "@tier": "8",
             "@powerlevel": "2",
             "@aspect": "blue",
-            "@time": "2",
+            "@time": "1",
             "@lootlist": "MELD_8_2_BLUE_LOOT",
             "neededitem": {
               "@uniquename": "T8_SOUL",
@@ -52516,7 +52978,7 @@
             "@tier": "8",
             "@powerlevel": "2",
             "@aspect": "green",
-            "@time": "2",
+            "@time": "1",
             "@lootlist": "MELD_8_2_GREEN_LOOT",
             "neededitem": {
               "@uniquename": "T8_SOUL",
@@ -52527,7 +52989,7 @@
             "@tier": "8",
             "@powerlevel": "2",
             "@aspect": "all",
-            "@time": "2",
+            "@time": "1",
             "@lootlist": "MELD_8_2_ALL_LOOT",
             "neededitem": {
               "@uniquename": "T8_SOUL",
@@ -52538,7 +53000,7 @@
             "@tier": "8",
             "@powerlevel": "3",
             "@aspect": "red",
-            "@time": "2",
+            "@time": "1",
             "@lootlist": "MELD_8_3_RED_LOOT",
             "neededitem": {
               "@uniquename": "T8_RELIC",
@@ -52549,7 +53011,7 @@
             "@tier": "8",
             "@powerlevel": "3",
             "@aspect": "blue",
-            "@time": "2",
+            "@time": "1",
             "@lootlist": "MELD_8_3_BLUE_LOOT",
             "neededitem": {
               "@uniquename": "T8_RELIC",
@@ -52560,7 +53022,7 @@
             "@tier": "8",
             "@powerlevel": "3",
             "@aspect": "green",
-            "@time": "2",
+            "@time": "1",
             "@lootlist": "MELD_8_3_GREEN_LOOT",
             "neededitem": {
               "@uniquename": "T8_RELIC",
@@ -52571,7 +53033,7 @@
             "@tier": "8",
             "@powerlevel": "3",
             "@aspect": "all",
-            "@time": "2",
+            "@time": "1",
             "@lootlist": "MELD_8_3_ALL_LOOT",
             "neededitem": {
               "@uniquename": "T8_RELIC",
@@ -52582,7 +53044,7 @@
             "@tier": "8",
             "@powerlevel": "4",
             "@aspect": "red",
-            "@time": "2",
+            "@time": "1",
             "@lootlist": "MELD_8_4_RED_LOOT",
             "neededitem": {
               "@uniquename": "T8_SHARD_AVALONIAN",
@@ -52593,7 +53055,7 @@
             "@tier": "8",
             "@powerlevel": "4",
             "@aspect": "blue",
-            "@time": "2",
+            "@time": "1",
             "@lootlist": "MELD_8_4_BLUE_LOOT",
             "neededitem": {
               "@uniquename": "T8_SHARD_AVALONIAN",
@@ -52604,7 +53066,7 @@
             "@tier": "8",
             "@powerlevel": "4",
             "@aspect": "green",
-            "@time": "2",
+            "@time": "1",
             "@lootlist": "MELD_8_4_GREEN_LOOT",
             "neededitem": {
               "@uniquename": "T8_SHARD_AVALONIAN",
@@ -52615,7 +53077,7 @@
             "@tier": "8",
             "@powerlevel": "4",
             "@aspect": "all",
-            "@time": "2",
+            "@time": "1",
             "@lootlist": "MELD_8_4_ALL_LOOT",
             "neededitem": {
               "@uniquename": "T8_SHARD_AVALONIAN",
@@ -52647,13 +53109,17 @@
         "@uniquename": "T1_BANK",
         "@tier": "1",
         "@hideonclustermap": "true",
-        "@isblackmarketbank": "false"
+        "@isblackmarketbank": "false",
+        "@iconSprite": "bank",
+        "@iconAtlas": "RefMiniMapAtlas",
+        "@descriptionlocatag": "@BUILDINGS_BANK_DESC"
       },
       {
         "@uniquename": "T1_BANK_OUTLAND",
         "@tier": "1",
         "@hideonclustermap": "true",
-        "@isblackmarketbank": "true"
+        "@isblackmarketbank": "true",
+        "@descriptionlocatag": "@BUILDINGS_BANK_DESC"
       },
       {
         "@uniquename": "T1_BANK_SMUGGLERS_DEN",
@@ -52672,6 +53138,7 @@
         "@iconSprite": "marketplace",
         "@hideonclustermap": "true",
         "@usesbuildingplacementrules": "false",
+        "@descriptionlocatag": "@BUILDINGS_MARKETPLACE_DESC",
         "AudioInfo": {
           "@name": "NPC_MARKETPLACE"
         }
@@ -52685,6 +53152,7 @@
         "@iconSprite": "marketplace",
         "@hideonclustermap": "true",
         "@usesbuildingplacementrules": "false",
+        "@descriptionlocatag": "@BUILDINGS_MARKETPLACE_DESC",
         "AudioInfo": {
           "@name": "NPC_MARKETPLACE"
         }
@@ -52698,6 +53166,7 @@
         "@iconSprite": "marketplace",
         "@hideonclustermap": "true",
         "@usesbuildingplacementrules": "false",
+        "@descriptionlocatag": "@BUILDINGS_MARKETPLACE_DESC",
         "AudioInfo": {
           "@name": "NPC_MARKETPLACE"
         }
@@ -55998,6 +56467,12 @@
               "@uniquename": "T5_FARM_OWL_FW_BRECILIEN_GROWN"
             },
             {
+              "@uniquename": "T5_FARM_SPIDER_HELL_BABY"
+            },
+            {
+              "@uniquename": "T5_FARM_SPIDER_HELL_GROWN"
+            },
+            {
               "@uniquename": "T8_FARM_MOABIRD_FW_BRIDGEWATCH_BABY"
             },
             {
@@ -56038,6 +56513,12 @@
             },
             {
               "@uniquename": "T8_FARM_OWL_FW_BRECILIEN_GROWN"
+            },
+            {
+              "@uniquename": "T8_FARM_SPIDER_HELL_BABY"
+            },
+            {
+              "@uniquename": "T8_FARM_SPIDER_HELL_GROWN"
             }
           ]
         }
@@ -56617,6 +57098,56 @@
           },
           {
             "@uniquename": "T8_ARTEFACT_MAIN_FIRESTAFF_CRYSTAL",
+            "@displaygroup": "8",
+            "@category": "@BUILDING_ITEMS_CATEGORY_ARTIFACTS"
+          },
+          {
+            "@uniquename": "T4_ARTEFACT_2H_HAMMER_CRYSTAL",
+            "@displaygroup": "4",
+            "@category": "@BUILDING_ITEMS_CATEGORY_ARTIFACTS"
+          },
+          {
+            "@uniquename": "T5_ARTEFACT_2H_HAMMER_CRYSTAL",
+            "@displaygroup": "5",
+            "@category": "@BUILDING_ITEMS_CATEGORY_ARTIFACTS"
+          },
+          {
+            "@uniquename": "T6_ARTEFACT_2H_HAMMER_CRYSTAL",
+            "@displaygroup": "6",
+            "@category": "@BUILDING_ITEMS_CATEGORY_ARTIFACTS"
+          },
+          {
+            "@uniquename": "T7_ARTEFACT_2H_HAMMER_CRYSTAL",
+            "@displaygroup": "7",
+            "@category": "@BUILDING_ITEMS_CATEGORY_ARTIFACTS"
+          },
+          {
+            "@uniquename": "T8_ARTEFACT_2H_HAMMER_CRYSTAL",
+            "@displaygroup": "8",
+            "@category": "@BUILDING_ITEMS_CATEGORY_ARTIFACTS"
+          },
+          {
+            "@uniquename": "T4_ARTEFACT_2H_SHAPESHIFTER_CRYSTAL",
+            "@displaygroup": "4",
+            "@category": "@BUILDING_ITEMS_CATEGORY_ARTIFACTS"
+          },
+          {
+            "@uniquename": "T5_ARTEFACT_2H_SHAPESHIFTER_CRYSTAL",
+            "@displaygroup": "5",
+            "@category": "@BUILDING_ITEMS_CATEGORY_ARTIFACTS"
+          },
+          {
+            "@uniquename": "T6_ARTEFACT_2H_SHAPESHIFTER_CRYSTAL",
+            "@displaygroup": "6",
+            "@category": "@BUILDING_ITEMS_CATEGORY_ARTIFACTS"
+          },
+          {
+            "@uniquename": "T7_ARTEFACT_2H_SHAPESHIFTER_CRYSTAL",
+            "@displaygroup": "7",
+            "@category": "@BUILDING_ITEMS_CATEGORY_ARTIFACTS"
+          },
+          {
+            "@uniquename": "T8_ARTEFACT_2H_SHAPESHIFTER_CRYSTAL",
             "@displaygroup": "8",
             "@category": "@BUILDING_ITEMS_CATEGORY_ARTIFACTS"
           }

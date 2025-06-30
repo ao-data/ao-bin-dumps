@@ -28,6 +28,16 @@
       <difficulty level="3" mobmodifier="MOB_MISTS_BUFF_03" silverfactor="1.5609" lootfactor="1.5609" mobfamefactor="1.5609" questscalingfactor="1.5609" gatheringfamefactor="1" fishingfamefactor="1"/>
       <difficulty level="4" mobmodifier="MOB_MISTS_BUFF_04" silverfactor="1.8106" lootfactor="1.8106" mobfamefactor="1.8106" questscalingfactor="1.8106" gatheringfamefactor="1" fishingfamefactor="1"/>    
     </difficultygroup>
+    <difficultygroup name="helldungeons_2v2">
+      <difficulty level="0" mobmodifier="MOB_HELLDUNGEON_BUFF_01" silverfactor="1"   lootfactor="1"     mobfamefactor="1.0"   questscalingfactor="1.0"   gatheringfamefactor="1" fishingfamefactor="1"/>
+      <difficulty level="1" mobmodifier="MOB_HELLDUNGEON_BUFF_02" silverfactor="1"   lootfactor="1.1"   mobfamefactor="1.1"   questscalingfactor="1.1"   gatheringfamefactor="1" fishingfamefactor="1"/>
+      <difficulty level="2" mobmodifier="MOB_HELLDUNGEON_BUFF_03" silverfactor="1"   lootfactor="1.2"   mobfamefactor="1.5"   questscalingfactor="1.5"   gatheringfamefactor="1" fishingfamefactor="1"/>
+    </difficultygroup>
+    <difficultygroup name="helldungeons_3v3">
+      <difficulty level="0" mobmodifier="MOB_HELLDUNGEON_BUFF_01" silverfactor="1"   lootfactor="1.5"   mobfamefactor="1.5"   questscalingfactor="1.5"   gatheringfamefactor="1" fishingfamefactor="1"/>
+      <difficulty level="1" mobmodifier="MOB_HELLDUNGEON_BUFF_02" silverfactor="1"   lootfactor="1.65"  mobfamefactor="1.6"   questscalingfactor="1.6"   gatheringfamefactor="1" fishingfamefactor="1"/>
+      <difficulty level="2" mobmodifier="MOB_HELLDUNGEON_BUFF_03" silverfactor="1"   lootfactor="1.8"   mobfamefactor="1.7"   questscalingfactor="1.7"   gatheringfamefactor="1" fishingfamefactor="1"/>
+    </difficultygroup>
   </DifficultyLevels>
   
   <RandomLevelRerolls>
@@ -153,8 +163,8 @@
 
   <ClusterTypeMappings defaultClustertype="DUNGEON_SAFEAREA">
     <!--Open World Cluster-->
-    <ClusterTypeMapping clustertype="SAFEAREA" dungeonclustertype="DUNGEON_SAFEAREA"/>
-    <ClusterTypeMapping clustertype="OPENPVP_YELLOW" dungeonclustertype="DUNGEON_YELLOW"/>
+    <ClusterTypeMapping clustertype="SAFEAREA" dungeonclustertype="RD_SAFEAREA"/>
+    <ClusterTypeMapping clustertype="OPENPVP_YELLOW" dungeonclustertype="RD_YELLOW"/>
     <ClusterTypeMapping clustertype="OPENPVP_RED" dungeonclustertype="DUNGEON_RED"/>
     
     <ClusterTypeMapping clustertype="OPENPVP_BLACK_1" dungeonclustertype="RD_DUNGEON_BLACK_1"/>
@@ -164,16 +174,16 @@
     <ClusterTypeMapping clustertype="OPENPVP_BLACK_5" dungeonclustertype="RD_DUNGEON_BLACK_5"/>
     <ClusterTypeMapping clustertype="OPENPVP_BLACK_6" dungeonclustertype="RD_DUNGEON_BLACK_6"/>
     <!--Passage Cluster-->
-    <ClusterTypeMapping clustertype="PASSAGE_SAFEAREA" dungeonclustertype="DUNGEON_SAFEAREA"/>
-    <ClusterTypeMapping clustertype="PASSAGE_YELLOW" dungeonclustertype="DUNGEON_YELLOW"/>
+    <ClusterTypeMapping clustertype="PASSAGE_SAFEAREA" dungeonclustertype="RD_SAFEAREA"/>
+    <ClusterTypeMapping clustertype="PASSAGE_YELLOW" dungeonclustertype="RD_YELLOW"/>
     <ClusterTypeMapping clustertype="PASSAGE_RED" dungeonclustertype="DUNGEON_RED"/>
     <ClusterTypeMapping clustertype="PASSAGE_BLACK" dungeonclustertype="RD_DUNGEON_BLACK"/>
     <!--Cities-->
-    <ClusterTypeMapping clustertype="PLAYERCITY_SAFEAREA_NOFURNITURE" dungeonclustertype="DUNGEON_SAFEAREA"/>
+    <ClusterTypeMapping clustertype="PLAYERCITY_SAFEAREA_NOFURNITURE" dungeonclustertype="RD_SAFEAREA"/>
     <ClusterTypeMapping clustertype="PLAYERCITY_BLACK_NOFURNITURE" dungeonclustertype="RD_DUNGEON_BLACK"/>    
     <!--Dungeons-->
-    <ClusterTypeMapping clustertype="DUNGEON_SAFEAREA" dungeonclustertype="DUNGEON_SAFEAREA"/>
-    <ClusterTypeMapping clustertype="DUNGEON_YELLOW" dungeonclustertype="DUNGEON_YELLOW"/>
+    <ClusterTypeMapping clustertype="DUNGEON_SAFEAREA" dungeonclustertype="RD_SAFEAREA"/>
+    <ClusterTypeMapping clustertype="DUNGEON_YELLOW" dungeonclustertype="RD_YELLOW"/>
     <ClusterTypeMapping clustertype="DUNGEON_RED" dungeonclustertype="DUNGEON_RED"/>
     <ClusterTypeMapping clustertype="DUNGEON_BLACK" dungeonclustertype="RD_DUNGEON_BLACK"/>    
     <ClusterTypeMapping clustertype="DUNGEON_BLACK_1" dungeonclustertype="RD_DUNGEON_BLACK_1"/>
@@ -431,14 +441,6 @@
           <RandomExit name="T4_PORTAL_CONSUMABLE_SOLO" weight="0"/>          
           <RandomExit name="T4_PORTAL_CONSUMABLE" weight="0" />
           <RandomExit name="T5_PORTAL_CONSUMABLE" weight="0" />
-          
-          <RandomExit name="HELLGATE_2V2_LETHAL" weight="0" />
-          <RandomExit name="HELLGATE_5V5_LETHAL" weight="0" />
-          <RandomExit name="HELLGATE_10V10_LETHAL" weight="0" />
-          
-          <RandomExit name="HELLGATE_2V2_NON_LETHAL" weight="0" />
-          <RandomExit name="HELLGATE_5V5_NON_LETHAL" weight="0" />
-          <RandomExit name="HELLGATE_10V10_NON_LETHAL" weight="0" />
         </ClusterTier>
         <ClusterTier tier="5" maxfillratio="0.8">
           <RandomExit name="MISTS_SOLO_BLACK" weight="1" randomlevelrerollref="MISTS_OPEN_WORLD_MODE_BLACK_SOLO" />
@@ -451,15 +453,6 @@
           <RandomExit name="T4_PORTAL_CONSUMABLE" weight="0" />
           <RandomExit name="T5_PORTAL_CONSUMABLE" weight="0" />
           <RandomExit name="T6_PORTAL_CONSUMABLE" weight="0" />
-          
-          <RandomExit name="HELLGATE_2V2_LETHAL" weight="0" />
-          <RandomExit name="HELLGATE_5V5_LETHAL" weight="0" />
-          <RandomExit name="HELLGATE_10V10_LETHAL" weight="0" />
-          
-          <RandomExit name="HELLGATE_2V2_NON_LETHAL" weight="0" />
-          <RandomExit name="HELLGATE_5V5_NON_LETHAL" weight="0" />
-          <RandomExit name="HELLGATE_10V10_NON_LETHAL" weight="0" />
-
         </ClusterTier>
         <ClusterTier tier="6" maxfillratio="0.8">
           <RandomExit name="MISTS_SOLO_BLACK" weight="1" randomlevelrerollref="MISTS_OPEN_WORLD_MODE_BLACK_SOLO" />
@@ -472,15 +465,6 @@
           <RandomExit name="T5_PORTAL_CONSUMABLE" weight="0" />
           <RandomExit name="T6_PORTAL_CONSUMABLE" weight="0" />
           <RandomExit name="T7_PORTAL_CONSUMABLE" weight="0" />
-          
-          <RandomExit name="HELLGATE_2V2_LETHAL" weight="0" />
-          <RandomExit name="HELLGATE_5V5_LETHAL" weight="0" />
-          <RandomExit name="HELLGATE_10V10_LETHAL" weight="0" />
-          
-          <RandomExit name="HELLGATE_2V2_NON_LETHAL" weight="0" />
-          <RandomExit name="HELLGATE_5V5_NON_LETHAL" weight="0" />
-          <RandomExit name="HELLGATE_10V10_NON_LETHAL" weight="0" />
-
         </ClusterTier>
         <ClusterTier tier="7" maxfillratio="0.8">
           <RandomExit name="MISTS_SOLO_BLACK" weight="1" randomlevelrerollref="MISTS_OPEN_WORLD_MODE_BLACK_SOLO" />
@@ -493,15 +477,6 @@
           <RandomExit name="T6_PORTAL_CONSUMABLE" weight="0" />
           <RandomExit name="T7_PORTAL_CONSUMABLE" weight="0" />
           <RandomExit name="T8_PORTAL_CONSUMABLE" weight="0" />
-          
-          <RandomExit name="HELLGATE_2V2_LETHAL" weight="0" />
-          <RandomExit name="HELLGATE_5V5_LETHAL" weight="0" />
-          <RandomExit name="HELLGATE_10V10_LETHAL" weight="0" />
-          
-          <RandomExit name="HELLGATE_2V2_NON_LETHAL" weight="0" />
-          <RandomExit name="HELLGATE_5V5_NON_LETHAL" weight="0" />
-          <RandomExit name="HELLGATE_10V10_NON_LETHAL" weight="0" />
-
         </ClusterTier>
         <ClusterTier tier="8" maxfillratio="0.8">
           <RandomExit name="MISTS_SOLO_BLACK" weight="1" randomlevelrerollref="MISTS_OPEN_WORLD_MODE_BLACK_SOLO" />
@@ -513,15 +488,6 @@
           <RandomExit name="T8_PORTAL_CONSUMABLE_SOLO" weight="0"/>
           <RandomExit name="T7_PORTAL_CONSUMABLE" weight="0" />
           <RandomExit name="T8_PORTAL_CONSUMABLE" weight="0" />
-          
-          <RandomExit name="HELLGATE_2V2_LETHAL" weight="0" />
-          <RandomExit name="HELLGATE_5V5_LETHAL" weight="0" />
-          <RandomExit name="HELLGATE_10V10_LETHAL" weight="0" />
-          
-          <RandomExit name="HELLGATE_2V2_NON_LETHAL" weight="0" />
-          <RandomExit name="HELLGATE_5V5_NON_LETHAL" weight="0" />
-          <RandomExit name="HELLGATE_10V10_NON_LETHAL" weight="0" />
-
         </ClusterTier>
       </Subtype>
       <!--those are the nodes distributed by the resource distribution system in the Roads-->
@@ -529,66 +495,22 @@
         <ClusterTier tier="4" maxfillratio="0.67">
           <RandomExit name="MISTS_SOLO_BLACK" weight="1" randomlevelrerollref="MISTS_OPEN_WORLD_MODE_BLACK_SOLO" />
           <RandomExit name="MISTS_DUO_BLACK" weight="1" randomlevelrerollref="MISTS_OPEN_WORLD_MODE_BLACK_DUO" />
-
-          <RandomExit name="HELLGATE_2V2_LETHAL" weight="0" />
-          <RandomExit name="HELLGATE_5V5_LETHAL" weight="0" />
-          <RandomExit name="HELLGATE_10V10_LETHAL" weight="0" />
-
-          <RandomExit name="HELLGATE_2V2_NON_LETHAL" weight="0" />
-          <RandomExit name="HELLGATE_5V5_NON_LETHAL" weight="0" />
-          <RandomExit name="HELLGATE_10V10_NON_LETHAL" weight="0" />
         </ClusterTier>
         <ClusterTier tier="5" maxfillratio="0.67">
           <RandomExit name="MISTS_SOLO_BLACK" weight="1" randomlevelrerollref="MISTS_OPEN_WORLD_MODE_BLACK_SOLO" />
           <RandomExit name="MISTS_DUO_BLACK" weight="1" randomlevelrerollref="MISTS_OPEN_WORLD_MODE_BLACK_DUO" />
-
-          <RandomExit name="HELLGATE_2V2_LETHAL" weight="0" />
-          <RandomExit name="HELLGATE_5V5_LETHAL" weight="0" />
-          <RandomExit name="HELLGATE_10V10_LETHAL" weight="0" />
-
-          <RandomExit name="HELLGATE_2V2_NON_LETHAL" weight="0" />
-          <RandomExit name="HELLGATE_5V5_NON_LETHAL" weight="0" />
-          <RandomExit name="HELLGATE_10V10_NON_LETHAL" weight="0" />
-
         </ClusterTier>
         <ClusterTier tier="6" maxfillratio="0.67">
           <RandomExit name="MISTS_SOLO_BLACK" weight="1" randomlevelrerollref="MISTS_OPEN_WORLD_MODE_BLACK_SOLO" />
           <RandomExit name="MISTS_DUO_BLACK" weight="1" randomlevelrerollref="MISTS_OPEN_WORLD_MODE_BLACK_DUO" />
-
-          <RandomExit name="HELLGATE_2V2_LETHAL" weight="0" />
-          <RandomExit name="HELLGATE_5V5_LETHAL" weight="0" />
-          <RandomExit name="HELLGATE_10V10_LETHAL" weight="0" />
-
-          <RandomExit name="HELLGATE_2V2_NON_LETHAL" weight="0" />
-          <RandomExit name="HELLGATE_5V5_NON_LETHAL" weight="0" />
-          <RandomExit name="HELLGATE_10V10_NON_LETHAL" weight="0" />
-
         </ClusterTier>
         <ClusterTier tier="7" maxfillratio="0.67">
           <RandomExit name="MISTS_SOLO_BLACK" weight="1" randomlevelrerollref="MISTS_OPEN_WORLD_MODE_BLACK_SOLO" />
           <RandomExit name="MISTS_DUO_BLACK" weight="1" randomlevelrerollref="MISTS_OPEN_WORLD_MODE_BLACK_DUO" />
-
-          <RandomExit name="HELLGATE_2V2_LETHAL" weight="0" />
-          <RandomExit name="HELLGATE_5V5_LETHAL" weight="0" />
-          <RandomExit name="HELLGATE_10V10_LETHAL" weight="0" />
-
-          <RandomExit name="HELLGATE_2V2_NON_LETHAL" weight="0" />
-          <RandomExit name="HELLGATE_5V5_NON_LETHAL" weight="0" />
-          <RandomExit name="HELLGATE_10V10_NON_LETHAL" weight="0" />
-
         </ClusterTier>
         <ClusterTier tier="8" maxfillratio="0.67">
           <RandomExit name="MISTS_SOLO_BLACK" weight="1" randomlevelrerollref="MISTS_OPEN_WORLD_MODE_BLACK_SOLO" />
           <RandomExit name="MISTS_DUO_BLACK" weight="1" randomlevelrerollref="MISTS_OPEN_WORLD_MODE_BLACK_DUO" />
-
-          <RandomExit name="HELLGATE_2V2_LETHAL" weight="0" />
-          <RandomExit name="HELLGATE_5V5_LETHAL" weight="0" />
-          <RandomExit name="HELLGATE_10V10_LETHAL" weight="0" />
-
-          <RandomExit name="HELLGATE_2V2_NON_LETHAL" weight="0" />
-          <RandomExit name="HELLGATE_5V5_NON_LETHAL" weight="0" />
-          <RandomExit name="HELLGATE_10V10_NON_LETHAL" weight="0" />
-
         </ClusterTier>
       </Subtype>
     </Continent>
@@ -602,10 +524,6 @@
 
           <RandomExit name="T5_PORTAL_CONSUMABLE_SOLO" weight="0"/>
           <RandomExit name="T5_PORTAL_ROYAL_CONSUMABLE_SOLO" weight="0"/>
-          
-          <RandomExit name="HELLGATE_2V2_NON_LETHAL" weight="0" />
-          <RandomExit name="HELLGATE_5V5_NON_LETHAL" weight="0" />
-          <RandomExit name="HELLGATE_10V10_NON_LETHAL" weight="0" />
         </ClusterTier>
         <ClusterTier tier="6" maxfillratio="0.75">
           <RandomExit name="MISTS_SOLO_BLACK" weight="34" randomlevelrerollref="MISTS_OPEN_WORLD_MODE_BLACK_SOLO" />
@@ -616,10 +534,6 @@
 
           <RandomExit name="T6_PORTAL_CONSUMABLE_SOLO" weight="0"/>
           <RandomExit name="T7_PORTAL_CONSUMABLE_SOLO" weight="0"/>
-
-          <RandomExit name="HELLGATE_2V2_LETHAL" weight="0" />
-          <RandomExit name="HELLGATE_5V5_LETHAL" weight="0" />
-          <RandomExit name="HELLGATE_10V10_LETHAL" weight="0" />
         </ClusterTier>
       </Subtype>
       <Subtype name="VETERAN">
@@ -648,8 +562,8 @@
 
           <RandomExit name="T4_PORTAL_CONSUMABLE_SOLO" weight="0"/>
           <RandomExit name="T4_PORTAL_ROYAL_CONSUMABLE_SOLO" weight="0"/>
+          <RandomExit name="T4_PORTAL_ROYAL_TUTORIAL_NO_HERETIC_SOLO" weight="0"/>
 
-          <RandomExit name="HELLGATE_2V2_NON_LETHAL" weight="0" />
         </ClusterTier>
         <ClusterTier tier="5" maxfillratio="0.84">
           <RandomExit name="MISTS_SOLO_YELLOW" weight="52" randomlevelrerollref="MISTS_OPEN_WORLD_MODE_YELLOW_SOLO" />
@@ -660,11 +574,6 @@
           <RandomExit name="T5_PORTAL_ROYAL_CONSUMABLE_SOLO" weight="0"/>
 
           <RandomExit name="T5_KEEPER_BOSSROOM_SOLO" weight="0" />
-
-          <!--Spawns 6 2v2 Hellgates-->
-          <RandomExit name="HELLGATE_2V2_NON_LETHAL" weight="4" />
-          <RandomExit name="HELLGATE_5V5_NON_LETHAL" weight="0" />
-          <RandomExit name="HELLGATE_10V10_NON_LETHAL" weight="0" />
         </ClusterTier>
         <ClusterTier tier="6" maxfillratio="0.84" playersarelethal="false">
           <RandomExit name="MISTS_SOLO_YELLOW" weight="46" randomlevelrerollref="MISTS_OPEN_WORLD_MODE_YELLOW_SOLO" />
@@ -676,11 +585,6 @@
           <RandomExit name="T7_PORTAL_CONSUMABLE_SOLO" weight="0"/>
 
           <RandomExit name="T6_MORGANA_BOSSROOM_SOLO" weight="0" />
-
-          <!--Spawns 6 2v2 Hellgates-->
-          <RandomExit name="HELLGATE_2V2_NON_LETHAL" weight="4" />
-          <RandomExit name="HELLGATE_5V5_NON_LETHAL" weight="0" />
-          <RandomExit name="HELLGATE_10V10_NON_LETHAL" weight="0" />
         </ClusterTier>
         <ClusterTier tier="6" maxfillratio="0.78" playersarelethal="true">
           <RandomExit name="MISTS_SOLO_BLACK" weight="35" randomlevelrerollref="MISTS_OPEN_WORLD_MODE_BLACK_SOLO" />
@@ -693,11 +597,6 @@
           <RandomExit name="T7_PORTAL_CONSUMABLE_SOLO" weight="0"/>
 
           <RandomExit name="T6_MORGANA_BOSSROOM_SOLO" weight="0" />
-
-          <!--Spawns 5 2v2 Hellgates-->
-          <RandomExit name="HELLGATE_2V2_LETHAL" weight="4" />
-          <RandomExit name="HELLGATE_5V5_LETHAL" weight="0" />
-          <RandomExit name="HELLGATE_10V10_LETHAL" weight="0" />
         </ClusterTier>
         <ClusterTier tier="7" maxfillratio="0.72">
           <RandomExit name="MISTS_SOLO_BLACK" weight="38" randomlevelrerollref="MISTS_OPEN_WORLD_MODE_BLACK_SOLO" />
@@ -709,11 +608,6 @@
           <RandomExit name="T7_PORTAL_CONSUMABLE_SOLO" weight="0"/>
 
           <RandomExit name="T7_UNDEAD_BOSSROOM_SOLO" weight="0" />
-
-          <!--Spawns 5 2v2 Hellgates-->
-          <RandomExit name="HELLGATE_2V2_LETHAL" weight="4" />
-          <RandomExit name="HELLGATE_5V5_LETHAL" weight="0" />
-          <RandomExit name="HELLGATE_10V10_LETHAL" weight="0" />
         </ClusterTier>
       </Subtype>
       <Subtype name="VETERAN">
@@ -833,13 +727,6 @@
           <RandomExit name="T6_PORTAL_CONSUMABLE_SOLO" weight="0"/>
           <RandomExit name="T7_PORTAL_CONSUMABLE_SOLO" weight="0"/>
           <RandomExit name="T8_PORTAL_CONSUMABLE_SOLO" weight="0"/>
-          
-          <RandomExit name="HELLGATE_2V2_LETHAL" weight="5" />
-          <RandomExit name="HELLGATE_5V5_LETHAL" weight="0" />
-          <RandomExit name="HELLGATE_10V10_LETHAL" weight="0" />
-          <RandomExit name="HELLGATE_2V2_NON_LETHAL" weight="0" />
-          <RandomExit name="HELLGATE_5V5_NON_LETHAL" weight="0" />
-          <RandomExit name="HELLGATE_10V10_NON_LETHAL" weight="0" />
 
           <RandomExit name="T5_KEEPER_BOSSROOM_SOLO" weight="0" />
         </ClusterTier>
@@ -854,13 +741,6 @@
           <RandomExit name="T7_PORTAL_CONSUMABLE_SOLO" weight="0"/>
           <RandomExit name="T8_PORTAL_CONSUMABLE_SOLO" weight="0"/>
           
-          <RandomExit name="HELLGATE_2V2_LETHAL" weight="5" />
-          <RandomExit name="HELLGATE_5V5_LETHAL" weight="0" />
-          <RandomExit name="HELLGATE_10V10_LETHAL" weight="0" />
-          <RandomExit name="HELLGATE_2V2_NON_LETHAL" weight="0" />
-          <RandomExit name="HELLGATE_5V5_NON_LETHAL" weight="0" />
-          <RandomExit name="HELLGATE_10V10_NON_LETHAL" weight="0" />
-          
           <RandomExit name="T6_MORGANA_BOSSROOM_SOLO" weight="0" />
         </ClusterTier>
         <ClusterTier tier="7" maxfillratio="0.75">
@@ -872,13 +752,6 @@
 
           <RandomExit name="T7_PORTAL_CONSUMABLE_SOLO" weight="0"/>
           <RandomExit name="T8_PORTAL_CONSUMABLE_SOLO" weight="0"/>
-          
-          <RandomExit name="HELLGATE_2V2_LETHAL" weight="5" />
-          <RandomExit name="HELLGATE_5V5_LETHAL" weight="0" />
-          <RandomExit name="HELLGATE_10V10_LETHAL" weight="0" />
-          <RandomExit name="HELLGATE_2V2_NON_LETHAL" weight="0" />
-          <RandomExit name="HELLGATE_5V5_NON_LETHAL" weight="0" />
-          <RandomExit name="HELLGATE_10V10_NON_LETHAL" weight="0" />
 
           <RandomExit name="T7_UNDEAD_BOSSROOM_SOLO" weight="0" />
         </ClusterTier>
@@ -890,13 +763,6 @@
           <RandomExit name="T8_PORTAL_SOLO" weight="26" randomlevelrerollref="SOLO_OUTLANDS"/>
 
           <RandomExit name="T8_PORTAL_CONSUMABLE_SOLO" weight="0"/>
-          
-          <RandomExit name="HELLGATE_2V2_LETHAL" weight="5" />
-          <RandomExit name="HELLGATE_5V5_LETHAL" weight="0" />
-          <RandomExit name="HELLGATE_10V10_LETHAL" weight="0" />
-          <RandomExit name="HELLGATE_2V2_NON_LETHAL" weight="0" />
-          <RandomExit name="HELLGATE_5V5_NON_LETHAL" weight="0" />
-          <RandomExit name="HELLGATE_10V10_NON_LETHAL" weight="0" />
 
           <RandomExit name="T8_MORGANA_BOSSROOM_SOLO" weight="0" />
         </ClusterTier>
@@ -913,11 +779,6 @@
           <RandomExit name="T6_PORTAL_CONSUMABLE" weight="0" />
           <RandomExit name="T7_PORTAL_CONSUMABLE" weight="0" />
           <RandomExit name="T8_PORTAL_CONSUMABLE" weight="0" />
-          
-          <RandomExit name="HELLGATE_5V5_LETHAL" weight="0" />
-          <RandomExit name="HELLGATE_5V5_NON_LETHAL" weight="0" />
-          <RandomExit name="HELLGATE_10V10_LETHAL" weight="0" />
-          <RandomExit name="HELLGATE_10V10_NON_LETHAL" weight="0" />
 
           <RandomExit name="T5_KEEPER_BOSSROOM_VETERAN" weight="0" />
         </ClusterTier>
@@ -933,10 +794,6 @@
           <RandomExit name="T8_PORTAL_CONSUMABLE" weight="0" />
           
           <RandomExit name="T6_AVALON_ELITE" weight="0" />
-          <RandomExit name="HELLGATE_5V5_LETHAL" weight="0" />
-          <RandomExit name="HELLGATE_5V5_NON_LETHAL" weight="0" />
-          <RandomExit name="HELLGATE_10V10_LETHAL" weight="0" />
-          <RandomExit name="HELLGATE_10V10_NON_LETHAL" weight="0" />
 
           <RandomExit name="T6_MORGANA_BOSSROOM_VETERAN" weight="0" />
         </ClusterTier>
@@ -951,10 +808,6 @@
           <RandomExit name="T8_PORTAL_CONSUMABLE" weight="0" />
           
           <RandomExit name="T7_AVALON_ELITE" weight="0" />
-          <RandomExit name="HELLGATE_5V5_LETHAL" weight="0" />
-          <RandomExit name="HELLGATE_5V5_NON_LETHAL" weight="0" />
-          <RandomExit name="HELLGATE_10V10_LETHAL" weight="0" />
-          <RandomExit name="HELLGATE_10V10_NON_LETHAL" weight="0" />
 
           <RandomExit name="T7_UNDEAD_BOSSROOM_VETERAN" weight="0" />
         </ClusterTier>
@@ -966,11 +819,6 @@
           <RandomExit name="T8_PORTAL" weight="9" randomlevelrerollref="VETERAN_OUTLANDS"/>
           
           <RandomExit name="T8_PORTAL_CONSUMABLE" weight="0" />
-          
-          <RandomExit name="HELLGATE_5V5_LETHAL" weight="0" />
-          <RandomExit name="HELLGATE_5V5_NON_LETHAL" weight="0" />
-          <RandomExit name="HELLGATE_10V10_LETHAL" weight="0" />
-          <RandomExit name="HELLGATE_10V10_NON_LETHAL" weight="0" />
 
           <RandomExit name="T8_MORGANA_BOSSROOM_VETERAN" weight="0" />
         </ClusterTier>
@@ -1060,43 +908,6 @@
 
   <!-- Random Exit types -->
   <RandomExitVisualizations>
-
-    <!-- Hellgates -->
-    <Visualization name="HELLGATE_2V2_LETHAL">
-      <fallback>
-        <prefab weight="1" name="SHARED_HELLGATE_ENTRANCE_2V2_LETHAL" />
-      </fallback>      
-    </Visualization>
-
-    <Visualization name="HELLGATE_5V5_LETHAL">
-      <fallback>
-        <prefab weight="1" name="SHARED_HELLGATE_ENTRANCE_5V5_LETHAL" />        
-      </fallback>      
-    </Visualization>
-
-    <Visualization name="HELLGATE_10V10_LETHAL">
-      <fallback>
-        <prefab weight="1" name="SHARED_HELLGATE_ENTRANCE_10V10_LETHAL" />        
-      </fallback>      
-    </Visualization>
-
-    <Visualization name="HELLGATE_2V2_NON_LETHAL">
-      <fallback>
-        <prefab weight="1" name="SHARED_HELLGATE_ENTRANCE_2V2_NON_LETHAL" />        
-      </fallback>      
-    </Visualization>
-
-    <Visualization name="HELLGATE_5V5_NON_LETHAL">
-      <fallback>
-        <prefab weight="1" name="SHARED_HELLGATE_ENTRANCE_5V5_NON_LETHAL" />        
-      </fallback>      
-    </Visualization>
-
-    <Visualization name="HELLGATE_10V10_NON_LETHAL">
-      <fallback>
-        <prefab weight="1" name="SHARED_HELLGATE_ENTRANCE_10V10_NON_LETHAL" />        
-      </fallback>      
-    </Visualization>
     
     <!--Portal to chain hellgates-->
     <Visualization name="HELLGATE_CHAIN_EXIT">
@@ -2661,48 +2472,6 @@
 
   <RandomExits>   
     <!--  ##########################  -->
-    <!-- ###   HELLGATE TEST  ### -->
-    <!--  ##########################  -->
-    <!--LETHAL-->
-    <RandomExit name="HELLGATE_2V2_LETHAL" cooldown="60" activationtime="0" lifetimeafterlastuse="5">
-      <RandomDungeonGenerators>
-        <HellgateGenerator hellgatemode="hellgate_2v2"/>
-      </RandomDungeonGenerators>
-      <Visualization ref="HELLGATE_2V2_LETHAL"/>
-    </RandomExit>
-    <RandomExit name="HELLGATE_5V5_LETHAL" cooldown="60" activationtime="0" lifetimeafterlastuse="5">
-      <RandomDungeonGenerators>
-        <HellgateGenerator hellgatemode="hellgate_5v5" />
-      </RandomDungeonGenerators>
-      <Visualization ref="HELLGATE_5V5_LETHAL"/>
-    </RandomExit>
-    <RandomExit name="HELLGATE_10V10_LETHAL" cooldown="60" activationtime="0" lifetimeafterlastuse="5">
-      <RandomDungeonGenerators>
-        <HellgateGenerator hellgatemode="hellgate_10v10"/>
-      </RandomDungeonGenerators>
-      <Visualization ref="HELLGATE_10V10_LETHAL"/>
-    </RandomExit>
-    <!--NON LETHAL-->
-    <RandomExit name="HELLGATE_2V2_NON_LETHAL" cooldown="60" activationtime="0" lifetimeafterlastuse="5">
-      <RandomDungeonGenerators>
-        <HellgateGenerator hellgatemode="hellgate_2v2_non_lethal"/>
-      </RandomDungeonGenerators>
-      <Visualization ref="HELLGATE_2V2_NON_LETHAL"/>
-    </RandomExit>
-    <RandomExit name="HELLGATE_5V5_NON_LETHAL" cooldown="60" activationtime="0" lifetimeafterlastuse="5">
-      <RandomDungeonGenerators>
-        <HellgateGenerator hellgatemode="hellgate_5v5_non_lethal" />
-      </RandomDungeonGenerators>
-      <Visualization ref="HELLGATE_5V5_NON_LETHAL"/>
-    </RandomExit>
-    <RandomExit name="HELLGATE_10V10_NON_LETHAL" cooldown="60" activationtime="0" lifetimeafterlastuse="5">
-      <RandomDungeonGenerators>
-        <HellgateGenerator hellgatemode="hellgate_10v10_non_lethal"/>
-      </RandomDungeonGenerators>
-      <Visualization ref="HELLGATE_10V10_NON_LETHAL"/>
-    </RandomExit>
-
-    <!--  ##########################  -->
     <!-- ###  Corrupted Dungeons  ### -->
     <!--  ##########################  -->
 	  
@@ -2752,7 +2521,7 @@
     <!--Consumable-->
     <RandomExit name="T2_PORTAL_ROYAL_CONSUMABLE_SOLO" activationtime="0" cooldown="30" lifetimeafterlastuse="30" >
       <RandomDungeonGenerators>
-        <GeneratedRandomDungeon generatorName="HERETIC_RANDOM_DUNGEON_PORTAL_SOLO_T3" tier="3" weight="1" />
+        <GeneratedRandomDungeon generatorName="HERETIC_RANDOM_DUNGEON_PORTAL_SOLO_T3" tier="2" weight="1" />
       </RandomDungeonGenerators>
       <Visualization ref="PORTAL_SOLO"/>
     </RandomExit>
@@ -2768,6 +2537,14 @@
         <GeneratedRandomDungeon generatorName="MORGANA_RANDOM_DUNGEON_PORTAL_CONSUMABLE_SOLO" tier="4" weight="1" />
         <GeneratedRandomDungeon generatorName="KEEPER_RANDOM_DUNGEON_PORTAL_CONSUMABLE_SOLO" tier="4" weight="1" />
         <GeneratedRandomDungeon generatorName="HERETIC_RANDOM_DUNGEON_PORTAL_CONSUMABLE_SOLO" tier="4" weight="1" />
+      </RandomDungeonGenerators>
+      <Visualization ref="PORTAL_SOLO"/>
+    </RandomExit>
+    <RandomExit name="T4_PORTAL_ROYAL_TUTORIAL_NO_HERETIC_SOLO" activationtime="60" cooldown="30" lifetimeafterlastuse="30" >
+      <RandomDungeonGenerators>
+        <GeneratedRandomDungeon generatorName="UNDEAD_RANDOM_DUNGEON_PORTAL_CONSUMABLE_SOLO" tier="4" weight="1" />
+        <GeneratedRandomDungeon generatorName="MORGANA_RANDOM_DUNGEON_PORTAL_CONSUMABLE_SOLO" tier="4" weight="1" />
+        <GeneratedRandomDungeon generatorName="KEEPER_RANDOM_DUNGEON_PORTAL_CONSUMABLE_SOLO" tier="4" weight="1" />
       </RandomDungeonGenerators>
       <Visualization ref="PORTAL_SOLO"/>
     </RandomExit>

@@ -30,6 +30,13 @@
   
   <!--Tracking Loot Lists-->
   <!--Silver Tracking Mob Loot -->
+  <Lootlist name="T3_TRACKING_LOOT_SOLO">
+    <Item type="T1_SILVERBAG_NONTRADABLE" chance="2.066734" />
+    <LootListReference name="T3_DIRECTLOOTDROP_WHITE" chance="9.690163" />
+    <LootListReference name="T4_DIRECTLOOTDROP_WHITE" chance="4.152927" />
+    <LootListReference name="T4_FRAGMENT_LOOT" chance="2.701747" />
+    <LootListReference name="TREASURES_STANDARD_LOOT" chance="0.086114" />
+  </Lootlist>
   <Lootlist name="T4_TRACKING_LOOT_SOLO">
     <Item type="T1_SILVERBAG_NONTRADABLE" chance="7.5375" scalewithgoldeconomy="true" ignoreforactivitychest="true"/>
     <LootListReference name="T4_DIRECTLOOTDROP_WHITE" chance="15.14597" />
@@ -1475,11 +1482,6 @@
   </Lootlist>
   <Lootlist name="T5_RANDOM_DUNGEON_TOKEN">
     <OR>
-      <OR weight="25">
-        <Item type="T5_HELLGATE_2V2_NON_LETHAL_1_MAP" enchantmentlevel="0" weight="10" />
-        <Item type="T5_HELLGATE_5V5_NON_LETHAL_1_MAP" enchantmentlevel="0" weight="2" />
-        <Item type="T5_HELLGATE_10V10_NON_LETHAL_1_MAP" enchantmentlevel="0" weight="1" />
-      </OR>
       <OR weight="8">
         <Item type="T5_RANDOM_DUNGEON_TOKEN_D1" enchantmentlevel="1" weight="81" />
         <Item type="T5_RANDOM_DUNGEON_TOKEN_D2" enchantmentlevel="2" weight="9" />
@@ -1496,9 +1498,6 @@
   </Lootlist>
   <Lootlist name="T6_RANDOM_DUNGEON_TOKEN">
     <OR>
-      <OR weight="20">
-        <Item type="T6_HELLGATE_2V2_LETHAL_1_MAP" enchantmentlevel="0" weight="1" />
-      </OR>
       <OR weight="2">
         <Item type="T6_RANDOM_DUNGEON_ELITE_TOKEN_D1" enchantmentlevel="1" weight="81" />
         <Item type="T6_RANDOM_DUNGEON_ELITE_TOKEN_D2" enchantmentlevel="2" weight="9" />
@@ -1521,9 +1520,6 @@
   </Lootlist>
   <Lootlist name="T7_RANDOM_DUNGEON_TOKEN">
     <OR>
-      <OR weight="4">
-        <Item type="T7_HELLGATE_5V5_LETHAL_1_MAP" enchantmentlevel="0" weight="1" />
-      </OR>
       <OR weight="2">
         <Item type="T7_RANDOM_DUNGEON_ELITE_TOKEN_D1" enchantmentlevel="1" weight="81" />
         <Item type="T7_RANDOM_DUNGEON_ELITE_TOKEN_D2" enchantmentlevel="2" weight="9" />
@@ -1546,9 +1542,6 @@
   </Lootlist>
   <Lootlist name="T8_RANDOM_DUNGEON_TOKEN">
     <OR>
-      <OR weight="1">
-        <Item type="T8_HELLGATE_10V10_LETHAL_1_MAP" enchantmentlevel="0" weight="1" />
-      </OR>
       <OR weight="2">
         <Item type="T8_RANDOM_DUNGEON_ELITE_TOKEN_D1" enchantmentlevel="1" weight="81" />
         <Item type="T8_RANDOM_DUNGEON_ELITE_TOKEN_D2" enchantmentlevel="2" weight="9" />
@@ -7502,7 +7495,6 @@
       <Item type="T4_CAPEITEM_UNDEAD_BP" amount="1" />
       <Item type="T4_CAPEITEM_KEEPER_BP" amount="1" />
       <Item type="T4_CAPEITEM_MORGANA_BP" amount="1" />
-      <Item type="T4_CAPEITEM_DEMON_BP" amount="1" />
     </OR>
   </Lootlist>
   <Lootlist name="T5_FACTION_CAPES">
@@ -7511,7 +7503,6 @@
       <Item type="T5_CAPEITEM_UNDEAD_BP" amount="1" />
       <Item type="T5_CAPEITEM_KEEPER_BP" amount="1" />
       <Item type="T5_CAPEITEM_MORGANA_BP" amount="1" />
-      <Item type="T5_CAPEITEM_DEMON_BP" amount="1" />
     </OR>
   </Lootlist>
   <Lootlist name="T6_FACTION_CAPES">
@@ -7520,7 +7511,6 @@
       <Item type="T6_CAPEITEM_UNDEAD_BP" amount="1" />
       <Item type="T6_CAPEITEM_KEEPER_BP" amount="1" />
       <Item type="T6_CAPEITEM_MORGANA_BP" amount="1" />
-      <Item type="T6_CAPEITEM_DEMON_BP" amount="1" />
     </OR>
   </Lootlist>
   <Lootlist name="T7_FACTION_CAPES">
@@ -7529,7 +7519,6 @@
       <Item type="T7_CAPEITEM_UNDEAD_BP" amount="1" />
       <Item type="T7_CAPEITEM_KEEPER_BP" amount="1" />
       <Item type="T7_CAPEITEM_MORGANA_BP" amount="1" />
-      <Item type="T7_CAPEITEM_DEMON_BP" amount="1" />
     </OR>
   </Lootlist>
   <Lootlist name="T8_FACTION_CAPES">
@@ -7538,7 +7527,6 @@
       <Item type="T8_CAPEITEM_UNDEAD_BP" amount="1" />
       <Item type="T8_CAPEITEM_KEEPER_BP" amount="1" />
       <Item type="T8_CAPEITEM_MORGANA_BP" amount="1" />
-      <Item type="T8_CAPEITEM_DEMON_BP" amount="1" />
     </OR>
   </Lootlist>
 
@@ -7569,13 +7557,6 @@
       <Item type="T4_CAPEITEM_MORGANA_BP" amount="1" weight="9" />
       <Item type="T5_CAPEITEM_MORGANA_BP" amount="1" weight="3" />
       <Item type="T6_CAPEITEM_MORGANA_BP" amount="1" weight="1" />
-    </OR>
-  </Lootlist>
-  <Lootlist name="LOOT_DEMON_FACTION_CAPES">
-    <OR>
-      <Item type="T4_CAPEITEM_DEMON_BP" amount="1" weight="9" />
-      <Item type="T5_CAPEITEM_DEMON_BP" amount="1" weight="3" />
-      <Item type="T6_CAPEITEM_DEMON_BP" amount="1" weight="1" />
     </OR>
   </Lootlist>
   <Lootlist name="LOOT_AVALON_FACTION_CAPES">
@@ -8168,13 +8149,6 @@
       <Item type="T7_CAPEITEM_MORGANA_BP" amount="1" weight="0.6" />
       <Item type="T8_CAPEITEM_MORGANA_BP" amount="1" weight="0.12" />
     </OR>
-    <OR weight="1">
-      <Item type="T4_CAPEITEM_DEMON_BP" amount="1" weight="7" />
-      <Item type="T5_CAPEITEM_DEMON_BP" amount="1" weight="5" />
-      <Item type="T6_CAPEITEM_DEMON_BP" amount="1" weight="3" />
-      <Item type="T7_CAPEITEM_DEMON_BP" amount="1" weight="0.6" />
-      <Item type="T8_CAPEITEM_DEMON_BP" amount="1" weight="0.12" />
-    </OR>
   </Lootlist>
   <Lootlist name="LOOT_CAPE_BP">
     <OR>
@@ -8197,11 +8171,6 @@
         <Item type="T6_CAPEITEM_MORGANA_BP" amount="1" weight="1" />
         <Item type="T7_CAPEITEM_MORGANA_BP" amount="1" weight="0.2" />
         <Item type="T8_CAPEITEM_MORGANA_BP" amount="1" weight="0.04" />
-      </OR>
-      <OR weight="1">
-        <Item type="T6_CAPEITEM_DEMON_BP" amount="1" weight="1" />
-        <Item type="T7_CAPEITEM_DEMON_BP" amount="1" weight="0.2" />
-        <Item type="T8_CAPEITEM_DEMON_BP" amount="1" weight="0.04" />
       </OR>
     </OR>
   </Lootlist>
@@ -8337,7 +8306,6 @@
     <LootListReference name="T5_DIRECTLOOTDROP_WHITE" chance="4.651868" />
     <LootListReference name="T6_DIRECTLOOTDROP_WHITE" chance="1.550623" />
     <LootListReference name="HELL_FRAGMENT_LOOT" chance="3.755039" />
-    <LootListReference name="LOOT_DEMON_FACTION_CAPES" chance="0.049" />
     <OR chance="0.16">
       <LootListReference name="MELD_4_1_ALL_LOOT" weight="225" />
       <LootListReference name="MELD_4_2_ALL_LOOT" weight="75" />
@@ -8350,11 +8318,11 @@
       <LootListReference name="MELD_6_3_ALL_LOOT" weight="25" />
     </OR>
     <OR chance="0.1">
-      <LootListReference name="T4_FACTION_CAPES" chance="0.2" />
-      <LootListReference name="T5_FACTION_CAPES" chance="0.2" />
-      <LootListReference name="T6_FACTION_CAPES" chance="0.2" />
-      <LootListReference name="T7_FACTION_CAPES" chance="0.04" />
-      <LootListReference name="T8_FACTION_CAPES" chance="0.008" />
+      <LootListReference name="T4_FACTION_CAPES" weight="2" />
+      <LootListReference name="T5_FACTION_CAPES" weight="2" />
+      <LootListReference name="T6_FACTION_CAPES" weight="2" />
+      <LootListReference name="T7_FACTION_CAPES" weight="0.4" />
+      <LootListReference name="T8_FACTION_CAPES" weight="0.08" />
     </OR>
   </Lootlist>
   <Lootlist name="DEMON_BOSS_LOOT">
@@ -8364,7 +8332,6 @@
     <LootListReference name="T7_DIRECTLOOTDROP_WHITE" chance="10.901222" />
     <LootListReference name="T8_DIRECTLOOTDROP_WHITE" chance="2.707658" />
     <LootListReference name="FRAGMENT_LOOT_10X" chance="6.614583" />
-    <LootListReference name="LOOT_DEMON_FACTION_CAPES" chance="0.244985" />
     <OR chance="0.8">
       <LootListReference name="MELD_4_1_ALL_LOOT" weight="225" />
       <LootListReference name="MELD_4_2_ALL_LOOT" weight="75" />
@@ -8383,11 +8350,11 @@
       <LootListReference name="MELD_8_3_ALL_LOOT" weight="1" />
     </OR>
     <OR chance="0.1">
-      <LootListReference name="T4_FACTION_CAPES" chance="1" />
-      <LootListReference name="T5_FACTION_CAPES" chance="1" />
-      <LootListReference name="T6_FACTION_CAPES" chance="1" />
-      <LootListReference name="T7_FACTION_CAPES" chance="0.2" />
-      <LootListReference name="T8_FACTION_CAPES" chance="0.04" />
+      <LootListReference name="T4_FACTION_CAPES" weight="1" />
+      <LootListReference name="T5_FACTION_CAPES" weight="1" />
+      <LootListReference name="T6_FACTION_CAPES" weight="1" />
+      <LootListReference name="T7_FACTION_CAPES" weight="0.2" />
+      <LootListReference name="T8_FACTION_CAPES" weight="0.04" />
     </OR>
   </Lootlist>
   <Lootlist name="HELLGATE_ARTEFACT_LOOT"> <!--current est. value: 27,738 Silver-->
@@ -8411,11 +8378,11 @@
   </Lootlist>
   <Lootlist name="HELLGATE_FACTION_CAPES">
     <OR>
-      <LootListReference name="T4_FACTION_CAPES" chance="1" />
-      <LootListReference name="T5_FACTION_CAPES" chance="1" />
-      <LootListReference name="T6_FACTION_CAPES" chance="1" />
-      <LootListReference name="T7_FACTION_CAPES" chance="0.2" />
-      <LootListReference name="T8_FACTION_CAPES" chance="0.04" />
+      <LootListReference name="T4_FACTION_CAPES" weight="1" />
+      <LootListReference name="T5_FACTION_CAPES" weight="1" />
+      <LootListReference name="T6_FACTION_CAPES" weight="1" />
+      <LootListReference name="T7_FACTION_CAPES" weight="0.2" />
+      <LootListReference name="T8_FACTION_CAPES" weight="0.04" />
     </OR>
   </Lootlist>
     
@@ -20176,9 +20143,9 @@
         <Item type="T6_SHOES_LEATHER_FEY" amount="1" useblackmarket="true" enchantmentlevel="4" weight="4" />
         <Item type="T6_SHOES_CLOTH_FEY" amount="1" useblackmarket="true" enchantmentlevel="0" weight="1024" />
         <Item type="T6_SHOES_CLOTH_FEY" amount="1" useblackmarket="true" enchantmentlevel="1" weight="256" />
-        <Item type="T6_ARMOR_CLOTH_FEY" amount="1" useblackmarket="true" enchantmentlevel="2" weight="64" />
-        <Item type="T6_ARMOR_CLOTH_FEY" amount="1" useblackmarket="true" enchantmentlevel="3" weight="16" />
-        <Item type="T6_ARMOR_CLOTH_FEY" amount="1" useblackmarket="true" enchantmentlevel="4" weight="4" />
+        <Item type="T6_SHOES_CLOTH_FEY" amount="1" useblackmarket="true" enchantmentlevel="2" weight="64" />
+        <Item type="T6_SHOES_CLOTH_FEY" amount="1" useblackmarket="true" enchantmentlevel="3" weight="16" />
+        <Item type="T6_SHOES_CLOTH_FEY" amount="1" useblackmarket="true" enchantmentlevel="4" weight="4" />
       </OR>
       <OR weight="1.38">
         <Item type="T6_CAPE" amount="1" useblackmarket="true" enchantmentlevel="0" weight="65536" />
@@ -29422,7 +29389,7 @@
 		<LootListReference name="T8_DIRECTLOOTDROP_WHITE" chance="15.076503" />
 	</Lootlist>
 
-	<!-- ########################################################################################## -->
+  <!-- ########################################################################################## -->
   <!-- ################################# MISTS DUNGEON CHESTS ################################### -->
   <!-- ########################################################################################## -->
 
@@ -29602,7 +29569,189 @@
     <LootListReference name="T6_DIRECTLOOTDROP_WHITE" chance="220.00901220" /> 
     <LootListReference name="T7_DIRECTLOOTDROP_WHITE" chance="54.11075940" /> 
     <LootListReference name="T8_DIRECTLOOTDROP_WHITE" chance="18.15960510" /> 
+  </Lootlist>   
+	
+  <!-- ########################################################################################## -->
+  <!-- ################################## HELL DUNGEON CHESTS ################################### -->
+  <!-- ########################################################################################## -->
+
+  <!--standard-->     
+  <Lootlist name="T5_HELL_DUNGEON_STANDARD">   
+    <LootListReference name="T4_FRAGMENT_LOOT" chance="10.42529130" /> 
+    <LootListReference name="T5_LOOT_EXPEDITION_TOKEN" chance="0.00057870" /> 
+    <LootListReference name="T5_LOOT_RD_TOKEN" chance="0.00950850" /> 
+    <LootListReference name="TREASURES_STANDARD_LOOT" chance="0.12952980" /> 
+    <LootListReference name="T4_DIRECTLOOTDROP_WHITE" chance="1.98568440" /> 
+    <LootListReference name="T5_DIRECTLOOTDROP_WHITE" chance="6.80580180" /> 
+    <LootListReference name="T6_DIRECTLOOTDROP_WHITE" chance="1.03662270" /> 
+    <LootListReference name="T7_DIRECTLOOTDROP_WHITE" chance="0.26261460" /> 
   </Lootlist>     
+  <Lootlist name="T6_HELL_DUNGEON_STANDARD">   
+    <LootListReference name="T4_FRAGMENT_LOOT" chance="10.42529130" /> 
+    <LootListReference name="T6_LOOT_EXPEDITION_TOKEN" chance="0.00057870" /> 
+    <LootListReference name="T6_LOOT_RD_TOKEN" chance="0.00950850" /> 
+    <LootListReference name="TREASURES_STANDARD_LOOT" chance="0.12952980" /> 
+    <LootListReference name="T4_DIRECTLOOTDROP_WHITE" chance="2.30112810" /> 
+    <LootListReference name="T5_DIRECTLOOTDROP_WHITE" chance="2.84086440" /> 
+    <LootListReference name="T6_DIRECTLOOTDROP_WHITE" chance="3.59010000" /> 
+    <LootListReference name="T7_DIRECTLOOTDROP_WHITE" chance="0.60866910" /> 
+    <LootListReference name="T8_DIRECTLOOTDROP_WHITE" chance="0.15320340" /> 
+  </Lootlist>     
+  <Lootlist name="T7_HELL_DUNGEON_STANDARD">   
+    <LootListReference name="T4_FRAGMENT_LOOT" chance="12.17275920" /> 
+    <LootListReference name="T7_LOOT_EXPEDITION_TOKEN" chance="0.00067680" /> 
+    <LootListReference name="T7_LOOT_RD_TOKEN" chance="0.01110600" /> 
+    <LootListReference name="TREASURES_STANDARD_LOOT" chance="0.15124410" /> 
+    <LootListReference name="T5_DIRECTLOOTDROP_WHITE" chance="2.60770500" /> 
+    <LootListReference name="T6_DIRECTLOOTDROP_WHITE" chance="4.86317070" /> 
+    <LootListReference name="T7_DIRECTLOOTDROP_WHITE" chance="1.11742290" /> 
+    <LootListReference name="T8_DIRECTLOOTDROP_WHITE" chance="0.28125630" /> 
+  </Lootlist>     
+  <Lootlist name="T8_HELL_DUNGEON_STANDARD">   
+    <Item type="T1_SILVERBAG_NONTRADABLE" chance="4.80152790" scalewithgoldeconomy="true" ignoreforactivitychest="true"/>
+    <LootListReference name="T4_FRAGMENT_LOOT" chance="16.10208900" /> 
+    <LootListReference name="T8_LOOT_EXPEDITION_TOKEN" chance="0.00089370" /> 
+    <LootListReference name="T8_LOOT_RD_TOKEN" chance="0.01468890" /> 
+    <LootListReference name="TREASURES_STANDARD_LOOT" chance="0.20006370" /> 
+    <LootListReference name="T6_DIRECTLOOTDROP_WHITE" chance="6.94259460" /> 
+    <LootListReference name="T7_DIRECTLOOTDROP_WHITE" chance="1.70751780" /> 
+    <LootListReference name="T8_DIRECTLOOTDROP_WHITE" chance="0.57304350" /> 
+  </Lootlist>     
+  <!--uncommon-->     
+  <Lootlist name="T5_HELL_DUNGEON_UNCOMMON">   
+    <Item type="T1_SILVERBAG_NONTRADABLE" chance="8.03307960" scalewithgoldeconomy="true" ignoreforactivitychest="true"/>
+    <LootListReference name="T4_FRAGMENT_LOOT" chance="26.93922390" /> 
+    <LootListReference name="T5_LOOT_EXPEDITION_TOKEN" chance="0.00149580" /> 
+    <LootListReference name="T5_LOOT_RD_TOKEN" chance="0.02457540" /> 
+    <LootListReference name="TREASURES_STANDARD_LOOT" chance="0.33471090" /> 
+    <LootListReference name="T4_DIRECTLOOTDROP_WHITE" chance="7.86551130" /> 
+    <LootListReference name="T5_DIRECTLOOTDROP_WHITE" chance="26.95852890" /> 
+    <LootListReference name="T6_DIRECTLOOTDROP_WHITE" chance="4.10617440" /> 
+    <LootListReference name="T7_DIRECTLOOTDROP_WHITE" chance="1.04024430" /> 
+  </Lootlist>     
+  <Lootlist name="T6_HELL_DUNGEON_UNCOMMON">   
+    <Item type="T1_SILVERBAG_NONTRADABLE" chance="10.80561060" scalewithgoldeconomy="true" ignoreforactivitychest="true"/>
+    <LootListReference name="T4_FRAGMENT_LOOT" chance="36.23700690" /> 
+    <LootListReference name="T6_LOOT_EXPEDITION_TOKEN" chance="0.00200970" /> 
+    <LootListReference name="T6_LOOT_RD_TOKEN" chance="0.03305790" /> 
+    <LootListReference name="TREASURES_STANDARD_LOOT" chance="0.45023580" /> 
+    <LootListReference name="T4_DIRECTLOOTDROP_WHITE" chance="9.11502810" /> 
+    <LootListReference name="T5_DIRECTLOOTDROP_WHITE" chance="11.25298620" /> 
+    <LootListReference name="T6_DIRECTLOOTDROP_WHITE" chance="14.22077760" /> 
+    <LootListReference name="T7_DIRECTLOOTDROP_WHITE" chance="2.41099920" /> 
+    <LootListReference name="T8_DIRECTLOOTDROP_WHITE" chance="0.60685110" /> 
+  </Lootlist>     
+  <Lootlist name="T7_HELL_DUNGEON_UNCOMMON">   
+    <Item type="T1_SILVERBAG_NONTRADABLE" chance="13.80019590" scalewithgoldeconomy="true" ignoreforactivitychest="true"/>
+    <LootListReference name="FRAGMENT_LOOT_10X" chance="4.62794670" /> 
+    <LootListReference name="T7_LOOT_EXPEDITION_TOKEN" chance="0.00256950" /> 
+    <LootListReference name="T7_LOOT_RD_TOKEN" chance="0.04221720" /> 
+    <LootListReference name="TREASURES_STANDARD_LOOT" chance="0.57500910" /> 
+    <LootListReference name="T5_DIRECTLOOTDROP_WHITE" chance="10.32941250" /> 
+    <LootListReference name="T6_DIRECTLOOTDROP_WHITE" chance="19.26355860" /> 
+    <LootListReference name="T7_DIRECTLOOTDROP_WHITE" chance="4.42624410" /> 
+    <LootListReference name="T8_DIRECTLOOTDROP_WHITE" chance="1.11408840" /> 
+  </Lootlist>     
+  <Lootlist name="T8_HELL_DUNGEON_UNCOMMON">   
+    <Item type="T1_SILVERBAG_NONTRADABLE" chance="18.25485660" scalewithgoldeconomy="true" ignoreforactivitychest="true"/>
+    <LootListReference name="FRAGMENT_LOOT_10X" chance="6.12183060" /> 
+    <LootListReference name="T8_LOOT_EXPEDITION_TOKEN" chance="0.00339660" /> 
+    <LootListReference name="T8_LOOT_RD_TOKEN" chance="0.05584410" /> 
+    <LootListReference name="TREASURES_STANDARD_LOOT" chance="0.76062060" /> 
+    <LootListReference name="T6_DIRECTLOOTDROP_WHITE" chance="27.50037480" /> 
+    <LootListReference name="T7_DIRECTLOOTDROP_WHITE" chance="6.76365930" /> 
+    <LootListReference name="T8_DIRECTLOOTDROP_WHITE" chance="2.26988910" /> 
+  </Lootlist>     
+  <!--rare-->     
+  <Lootlist name="T5_HELL_DUNGEON_RARE">   
+    <Item type="T1_SILVERBAG_NONTRADABLE" chance="24.09923970" scalewithgoldeconomy="true" ignoreforactivitychest="true"/>
+    <LootListReference name="FRAGMENT_LOOT_10X" chance="8.08176690" /> 
+    <LootListReference name="T5_LOOT_EXPEDITION_TOKEN" chance="0.00448380" /> 
+    <LootListReference name="T5_LOOT_RD_TOKEN" chance="0.07372440" /> 
+    <LootListReference name="TREASURES_STANDARD_LOOT" chance="1.00413630" /> 
+    <LootListReference name="T4_DIRECTLOOTDROP_WHITE" chance="23.59654110" /> 
+    <LootListReference name="T5_DIRECTLOOTDROP_WHITE" chance="80.87560110" /> 
+    <LootListReference name="T6_DIRECTLOOTDROP_WHITE" chance="12.31852410" /> 
+    <LootListReference name="T7_DIRECTLOOTDROP_WHITE" chance="3.12074190" /> 
+  </Lootlist>     
+  <Lootlist name="T6_HELL_DUNGEON_RARE">   
+    <Item type="T1_SILVERBAG_NONTRADABLE" chance="32.41683270" scalewithgoldeconomy="true" ignoreforactivitychest="true"/>
+    <LootListReference name="FRAGMENT_LOOT_10X" chance="10.87110090" /> 
+    <LootListReference name="T6_LOOT_EXPEDITION_TOKEN" chance="0.00603090" /> 
+    <LootListReference name="T6_LOOT_RD_TOKEN" chance="0.09916920" /> 
+    <LootListReference name="TREASURES_STANDARD_LOOT" chance="1.35070290" /> 
+    <LootListReference name="T4_DIRECTLOOTDROP_WHITE" chance="27.34508970" /> 
+    <LootListReference name="T5_DIRECTLOOTDROP_WHITE" chance="33.75896040" /> 
+    <LootListReference name="T6_DIRECTLOOTDROP_WHITE" chance="42.66234180" /> 
+    <LootListReference name="T7_DIRECTLOOTDROP_WHITE" chance="7.23300210" /> 
+    <LootListReference name="T8_DIRECTLOOTDROP_WHITE" chance="1.82055150" /> 
+  </Lootlist>     
+  <Lootlist name="T7_HELL_DUNGEON_RARE">   
+    <Item type="T4_SILVERBAG_NONTRADABLE" chance="4.14006030" scalewithgoldeconomy="true" ignoreforactivitychest="true"/>
+    <LootListReference name="FRAGMENT_LOOT_10X" chance="13.88383650" /> 
+    <LootListReference name="T7_LOOT_EXPEDITION_TOKEN" chance="0.00770220" /> 
+    <LootListReference name="T7_LOOT_RD_TOKEN" chance="0.12665430" /> 
+    <LootListReference name="TREASURES_STANDARD_LOOT" chance="1.72502280" /> 
+    <LootListReference name="T5_DIRECTLOOTDROP_WHITE" chance="30.98824740" /> 
+    <LootListReference name="T6_DIRECTLOOTDROP_WHITE" chance="57.79068570" /> 
+    <LootListReference name="T7_DIRECTLOOTDROP_WHITE" chance="13.27872690" /> 
+    <LootListReference name="T8_DIRECTLOOTDROP_WHITE" chance="3.34226250" /> 
+  </Lootlist>     
+  <Lootlist name="T8_HELL_DUNGEON_RARE">   
+    <Item type="T4_SILVERBAG_NONTRADABLE" chance="5.47645500" scalewithgoldeconomy="true" ignoreforactivitychest="true"/>
+    <LootListReference name="FRAGMENT_LOOT_10X" chance="18.36549720" /> 
+    <LootListReference name="T8_LOOT_EXPEDITION_TOKEN" chance="0.01018890" /> 
+    <LootListReference name="T8_LOOT_RD_TOKEN" chance="0.16753770" /> 
+    <LootListReference name="TREASURES_STANDARD_LOOT" chance="2.28185820" /> 
+    <LootListReference name="T6_DIRECTLOOTDROP_WHITE" chance="82.50114510" /> 
+    <LootListReference name="T7_DIRECTLOOTDROP_WHITE" chance="20.29098420" /> 
+    <LootListReference name="T8_DIRECTLOOTDROP_WHITE" chance="6.80966820" /> 
+  </Lootlist>     
+  <!--legendary-->     
+  <Lootlist name="T5_HELL_DUNGEON_LEGENDARY">   
+    <Item type="T4_SILVERBAG_NONTRADABLE" chance="6.42663630" scalewithgoldeconomy="true" ignoreforactivitychest="true"/>
+    <LootListReference name="FRAGMENT_LOOT_10X" chance="21.55195800" /> 
+    <LootListReference name="T5_LOOT_EXPEDITION_TOKEN" chance="0.01195740" /> 
+    <LootListReference name="T5_LOOT_RD_TOKEN" chance="0.19660500" /> 
+    <LootListReference name="TREASURES_STANDARD_LOOT" chance="2.67776460" /> 
+    <LootListReference name="T4_DIRECTLOOTDROP_WHITE" chance="62.92580940" /> 
+    <LootListReference name="T5_DIRECTLOOTDROP_WHITE" chance="215.6741128" /> 
+    <LootListReference name="T6_DIRECTLOOTDROP_WHITE" chance="32.85028890" /> 
+    <LootListReference name="T7_DIRECTLOOTDROP_WHITE" chance="8.32219740" /> 
+  </Lootlist>     
+  <Lootlist name="T6_HELL_DUNGEON_LEGENDARY">   
+    <Item type="T4_SILVERBAG_NONTRADABLE" chance="8.64472140" scalewithgoldeconomy="true" ignoreforactivitychest="true"/>
+    <LootListReference name="FRAGMENT_LOOT_10X" chance="28.99038510" /> 
+    <LootListReference name="T6_LOOT_EXPEDITION_TOKEN" chance="0.01608390" /> 
+    <LootListReference name="T6_LOOT_RD_TOKEN" chance="0.26446140" /> 
+    <LootListReference name="TREASURES_STANDARD_LOOT" chance="3.60196740" /> 
+    <LootListReference name="T4_DIRECTLOOTDROP_WHITE" chance="72.92221020" /> 
+    <LootListReference name="T5_DIRECTLOOTDROP_WHITE" chance="90.02633760" /> 
+    <LootListReference name="T6_DIRECTLOOTDROP_WHITE" chance="113.76932760" /> 
+    <LootListReference name="T7_DIRECTLOOTDROP_WHITE" chance="19.28852640" /> 
+    <LootListReference name="T8_DIRECTLOOTDROP_WHITE" chance="4.85493210" /> 
+  </Lootlist>     
+  <Lootlist name="T7_HELL_DUNGEON_LEGENDARY">   
+    <Item type="T4_SILVERBAG_NONTRADABLE" chance="11.04045300" scalewithgoldeconomy="true" ignoreforactivitychest="true"/>
+    <LootListReference name="FRAGMENT_LOOT_10X" chance="37.02456450" /> 
+    <LootListReference name="T7_LOOT_EXPEDITION_TOKEN" chance="0.02054520" /> 
+    <LootListReference name="T7_LOOT_RD_TOKEN" chance="0.33775380" /> 
+    <LootListReference name="TREASURES_STANDARD_LOOT" chance="4.60018980" /> 
+    <LootListReference name="T5_DIRECTLOOTDROP_WHITE" chance="82.63756890" /> 
+    <LootListReference name="T6_DIRECTLOOTDROP_WHITE" chance="154.11267360" /> 
+    <LootListReference name="T7_DIRECTLOOTDROP_WHITE" chance="35.41090050" /> 
+    <LootListReference name="T8_DIRECTLOOTDROP_WHITE" chance="8.91294120" /> 
+  </Lootlist>     
+  <Lootlist name="T8_HELL_DUNGEON_LEGENDARY">   
+    <Item type="T4_SILVERBAG_NONTRADABLE" chance="14.60428020" scalewithgoldeconomy="true" ignoreforactivitychest="true"/>
+    <LootListReference name="FRAGMENT_LOOT_10X" chance="48.97597770" /> 
+    <LootListReference name="T8_LOOT_EXPEDITION_TOKEN" chance="0.02717370" /> 
+    <LootListReference name="T8_LOOT_RD_TOKEN" chance="0.44677710" /> 
+    <LootListReference name="TREASURES_STANDARD_LOOT" chance="6.08511600" /> 
+    <LootListReference name="T6_DIRECTLOOTDROP_WHITE" chance="220.00901220" /> 
+    <LootListReference name="T7_DIRECTLOOTDROP_WHITE" chance="54.11075940" /> 
+    <LootListReference name="T8_DIRECTLOOTDROP_WHITE" chance="18.15960510" /> 
+  </Lootlist>  
   
   <!--###########################################-->
   <!--New Conquerer Chest Setup-->

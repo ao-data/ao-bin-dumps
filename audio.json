@@ -201,6 +201,24 @@
         }
       },
       {
+        "@name": "SHAPESHIFTER_CRYSTALCOBRA",
+        "CharType": {
+          "@name": "shapeshifter"
+        },
+        "Size": {
+          "@name": "small"
+        },
+        "ArmorType": {
+          "@name": "crystal"
+        },
+        "WeaponType": {
+          "@name": "bite_medium"
+        },
+        "ShapeshifterType": {
+          "@name": "crystalcobra"
+        }
+      },
+      {
         "@name": "MOUNT_HORSE",
         "CharType": {
           "@name": "mount"
@@ -8211,6 +8229,24 @@
         }
       },
       {
+        "@name": "FARMABLE_SPIDER_BABY",
+        "CharType": {
+          "@name": "farmanimal"
+        },
+        "FarmAnimalType": {
+          "@name": "spider_baby"
+        }
+      },
+      {
+        "@name": "FARMABLE_SPIDER",
+        "CharType": {
+          "@name": "farmanimal"
+        },
+        "FarmAnimalType": {
+          "@name": "spider"
+        }
+      },
+      {
         "@name": "HIDEOUT_PLACEABLE_ITEM",
         "ArmorType": {
           "@name": "castlegate_small"
@@ -8328,6 +8364,12 @@
         "@name": "NPC_FORGE",
         "NpcType": {
           "@name": "forge"
+        }
+      },
+      {
+        "@name": "NPC_HELL_ANTIQUARIAN",
+        "NpcType": {
+          "@name": "hell_antiquarian"
         }
       },
       {
@@ -9193,6 +9235,18 @@
         },
         "OnCastInterrupted": {
           "@name": "Stop_melee_tar_ring_cast"
+        }
+      },
+      {
+        "@name": "MELEE_CRYSTAL_HAMMER_CAST_WAVE",
+        "OnCastFinished": {
+          "@name": "Play_crystal_hammer_cast_wave"
+        }
+      },
+      {
+        "@name": "MELEE_CRYSTAL_HAMMER_MARK_IMPACT",
+        "OnSpellHit": {
+          "@name": "Play_crystal_hammer_impact_mark"
         }
       },
       {
@@ -13834,6 +13888,39 @@
         }
       },
       {
+        "@name": "SPELL_SHAPESHIFTER_CRYSTAL_COBRA_SPIT_CAST",
+        "OnCastStart": {
+          "@name": "Play_mob_crystal_cobra_bite_castload"
+        },
+        "OnCastFinished": {
+          "@name": "Play_mob_crystal_cobra_spit"
+        },
+        "OnSpellHit": {
+          "@name": "Play_mob_crystal_cobra_poison_spit_impact"
+        }
+      },
+      {
+        "@name": "SPELL_SHAPESHIFTER_CRYSTAL_COBRA_CAST_INTIMIDATE",
+        "OnCastStart": {
+          "@name": "Play_mob_crystal_cobra_intimidate_start"
+        }
+      },
+      {
+        "@name": "SPELL_SHAPESHIFTER_CRYSTAL_COBRA_CHANNEL_INTIMIDATE",
+        "OnChannelingStart": {
+          "@name": "Play_mob_crystal_cobra_intimidate_loop"
+        },
+        "OnChannelingCancelled": {
+          "@name": "Play_mob_crystal_cobra_intimidate_stop"
+        },
+        "OnChannelingEnd": {
+          "@name": "Play_mob_crystal_cobra_intimidate_stop"
+        },
+        "OnChannelingInterrupted": {
+          "@name": "Play_mob_crystal_cobra_intimidate_stop"
+        }
+      },
+      {
         "@name": "SPELL_TRACKING_PANTHER_ENRAGE",
         "OnCastFinished": {
           "@name": "Play_tracking_panther_enrage"
@@ -14882,6 +14969,12 @@
         }
       },
       {
+        "@name": "SPELL_HIT_DAMAGE_INCREASE",
+        "OnSpellHit": {
+          "@name": "Play_damage_increase"
+        }
+      },
+      {
         "@name": "SPELL_INVISIBILITY",
         "OnCastFinished": {
           "@name": "Play_cast_invisibility"
@@ -15414,6 +15507,48 @@
         },
         "OnSpellRemoved": {
           "@name": "Play_shrink"
+        }
+      },
+      {
+        "@name": "SPELL_HELLDUNGEON_RESURRECTION",
+        "OnSpellHit": {
+          "@name": "Play_spell_helldungeon_resurrection"
+        }
+      },
+      {
+        "@name": "SPELL_COLLECT_WRATH_SHRINE_BUFF",
+        "OnSpellHit": {
+          "@name": "Play_helldungeon_activate_buff_wrath"
+        }
+      },
+      {
+        "@name": "SPELL_ACTIVATE_WRATH_SHRINE_BUFF",
+        "OnSpellHit": {
+          "@name": "Play_helldungeon_buff_wrath_cast"
+        }
+      },
+      {
+        "@name": "SPELL_COLLECT_CRUELTY_SHRINE_BUFF",
+        "OnSpellHit": {
+          "@name": "Play_helldungeon_activate_buff_cruelty"
+        }
+      },
+      {
+        "@name": "SPELL_ACTIVATE_CRUELTY_SHRINE_BUFF",
+        "OnSpellHit": {
+          "@name": "Play_helldungeon_buff_cruelty_cast"
+        }
+      },
+      {
+        "@name": "SPELL_COLLECT_DOMINANCE_SHRINE_BUFF",
+        "OnSpellHit": {
+          "@name": "Play_helldungeon_activate_buff_dominion"
+        }
+      },
+      {
+        "@name": "SPELL_ACTIVATE_DOMINANCE_SHRINE_BUFF",
+        "OnSpellHit": {
+          "@name": "Play_helldungeon_buff_dominion_cast"
         }
       },
       {
@@ -16044,6 +16179,30 @@
         }
       },
       {
+        "@name": "SPELL_MOUNT_SPIDER_HELL_JUMP_CAST",
+        "OnCastFinished": {
+          "@name": "Play_spider_shoot_web"
+        }
+      },
+      {
+        "@name": "SPELL_MOUNT_SPIDER_HELL_DASH_GROUND",
+        "OnCastFinished": {
+          "@name": "Play_spider_spell_dash_to_ground"
+        }
+      },
+      {
+        "@name": "SPELL_MOUNT_SPIDER_LAND_AFTER_DASH",
+        "OnSpellHit": {
+          "@name": "Play_spider_land_on_ground"
+        }
+      },
+      {
+        "@name": "SPELL_MOUNT_SPIDER_LAND_PASSIVE",
+        "OnCastFinished": {
+          "@name": "Play_spider_land_on_ground_soft"
+        }
+      },
+      {
         "@name": "SPELL_MOUNT_BASTION_BEAM",
         "OnCastStart": {
           "@name": "Play_bastion_cast_beam_load"
@@ -16566,6 +16725,15 @@
         },
         "OnCastFinished": {
           "@name": "Play_crowd_control_buff"
+        }
+      },
+      {
+        "@name": "SPELL_HIDE_BOAR_DASH",
+        "OnCastStart": {
+          "@name": "Play_mob_boar_dash_load"
+        },
+        "OnCastFinished": {
+          "@name": "Play_mob_boar_dash"
         }
       },
       {
@@ -17171,21 +17339,39 @@
         },
         "OnChannelingEnd": {
           "@name": "Stop_overseer_swirl"
-        },
-        "OnChannelingHit": {
+        }
+      },
+      {
+        "@name": "SPELL_HERETIC_OVERSEER_SWIRL_IMPACT",
+        "OnSpellHit": {
           "@name": "Play_whip_haul"
         }
       },
       {
         "@name": "SPELL_HERETIC_OVERSEER_HAUL",
         "OnCastStart": {
-          "@name": "Play_melee_swoosh_small_autoattack"
+          "@name": "Play_overseer_load_short"
         }
       },
       {
         "@name": "SPELL_HERETIC_OVERSEER_HAUL_PULL",
         "OnCastFinished": {
           "@name": "Play_overseer_pull"
+        }
+      },
+      {
+        "@name": "SPELL_HERETIC_OVERSEER_FLAGELLATE",
+        "OnCastStart": {
+          "@name": "Play_melee_load_medium_energetic"
+        },
+        "OnCastCanceled": {
+          "@name": "Stop_melee_load_medium_energetic"
+        },
+        "OnCastInterrupted": {
+          "@name": "Stop_melee_load_medium_energetic"
+        },
+        "OnCastFinished": {
+          "@name": "Play_melee_swoosh_small_speedy_instant"
         }
       },
       {
@@ -17358,6 +17544,18 @@
         "OnSpellHit": {
           "@name": "Play_melee_impact_medium",
           "ImpactType": null
+        }
+      },
+      {
+        "@name": "SPELL_HERETIC_TUTORIAL_BRAWLER_MINIBOSS_DOUBLESLAP",
+        "OnCastStart": {
+          "@name": "Play_brawler_boss_tutorial_doubleslap"
+        },
+        "OnCastCanceled": {
+          "@name": "Stop_brawler_load_slap"
+        },
+        "OnCastInterrupted": {
+          "@name": "Stop_brawler_load_slap"
         }
       },
       {
@@ -22018,6 +22216,24 @@
         }
       },
       {
+        "@name": "FARMABLE_SPIDER_BABY",
+        "OnOpened": {
+          "@name": "Play_ui_open_spider_baby"
+        },
+        "OnPlaceItemStarted": {
+          "@name": "Play_ui_open_spider_baby"
+        }
+      },
+      {
+        "@name": "FARMABLE_SPIDER",
+        "OnOpened": {
+          "@name": "Play_ui_open_spider"
+        },
+        "OnPlaceItemStarted": {
+          "@name": "Play_ui_open_spider"
+        }
+      },
+      {
         "@name": "HIDEOUT_PLACEABLE_ITEM",
         "OnPlaceItemStarted": {
           "@name": "Play_ui_action_place_hideout_start"
@@ -22485,6 +22701,12 @@
         }
       },
       {
+        "@name": "dungeon_helldungeon",
+        "ClusterTypes": {
+          "@name": "HellDungeon"
+        }
+      },
+      {
         "@name": "arena",
         "ClusterTypes": {
           "@name": "Arena"
@@ -22892,6 +23114,132 @@
         },
         "Music": {
           "@name": "None"
+        },
+        "GlobalEnvironmentEffect": {
+          "@name": "castle"
+        }
+      },
+      {
+        "@clustername": "0000-HellDen_*",
+        "Environment": {
+          "@name": "HellDenEnv"
+        },
+        "Biom": {
+          "@name": "Highland"
+        },
+        "SubBiom": {
+          "@name": "Dead"
+        },
+        "MobFaction": {
+          "@name": "None"
+        },
+        "Music": {
+          "@name": "City"
+        },
+        "GlobalEnvironmentEffect": {
+          "@name": "castle"
+        }
+      },
+      {
+        "@clustername": "1000-HellDen_*",
+        "Environment": {
+          "@name": "HellDenEnv"
+        },
+        "Biom": {
+          "@name": "Highland"
+        },
+        "SubBiom": {
+          "@name": "Dead"
+        },
+        "MobFaction": {
+          "@name": "None"
+        },
+        "Music": {
+          "@name": "City"
+        },
+        "GlobalEnvironmentEffect": {
+          "@name": "castle"
+        }
+      },
+      {
+        "@clustername": "2000-HellDen_*",
+        "Environment": {
+          "@name": "HellDenEnv"
+        },
+        "Biom": {
+          "@name": "Highland"
+        },
+        "SubBiom": {
+          "@name": "Dead"
+        },
+        "MobFaction": {
+          "@name": "None"
+        },
+        "Music": {
+          "@name": "City"
+        },
+        "GlobalEnvironmentEffect": {
+          "@name": "castle"
+        }
+      },
+      {
+        "@clustername": "3003-HellDen_*",
+        "Environment": {
+          "@name": "HellDenEnv"
+        },
+        "Biom": {
+          "@name": "Highland"
+        },
+        "SubBiom": {
+          "@name": "Dead"
+        },
+        "MobFaction": {
+          "@name": "None"
+        },
+        "Music": {
+          "@name": "City"
+        },
+        "GlobalEnvironmentEffect": {
+          "@name": "castle"
+        }
+      },
+      {
+        "@clustername": "3004-HellDen_*",
+        "Environment": {
+          "@name": "HellDenEnv"
+        },
+        "Biom": {
+          "@name": "Highland"
+        },
+        "SubBiom": {
+          "@name": "Dead"
+        },
+        "MobFaction": {
+          "@name": "None"
+        },
+        "Music": {
+          "@name": "City"
+        },
+        "GlobalEnvironmentEffect": {
+          "@name": "castle"
+        }
+      },
+      {
+        "@clustername": "4000-HellDen_*",
+        "Environment": {
+          "@name": "HellDenEnv"
+        },
+        "Biom": {
+          "@name": "Highland"
+        },
+        "SubBiom": {
+          "@name": "Dead"
+        },
+        "MobFaction": {
+          "@name": "None"
+        },
+        "Music": {
+          "@name": "City"
         },
         "GlobalEnvironmentEffect": {
           "@name": "castle"
@@ -23540,6 +23888,114 @@
         },
         "Music": {
           "@name": "territory"
+        }
+      },
+      {
+        "@clustername": "ISLAND-PLAYER-FOREST-0001e-SHOWROOM_*",
+        "Environment": {
+          "@name": "IslandEnv"
+        },
+        "Biom": {
+          "@name": "Forest"
+        },
+        "SubBiom": {
+          "@name": "Green"
+        },
+        "MobFaction": {
+          "@name": "None"
+        },
+        "Music": {
+          "@name": "Island"
+        }
+      },
+      {
+        "@clustername": "ISLAND-PLAYER-CAERLEON-0001e-SHOWROOM_WRL_HL_DEAD_T3_HER_ROY",
+        "Environment": {
+          "@name": "IslandEnv"
+        },
+        "Biom": {
+          "@name": "Highland"
+        },
+        "SubBiom": {
+          "@name": "Dead"
+        },
+        "MobFaction": {
+          "@name": "None"
+        },
+        "Music": {
+          "@name": "Island"
+        }
+      },
+      {
+        "@clustername": "ISLAND-PLAYER-HIGHLAND-0001e-SHOWROOM_*",
+        "Environment": {
+          "@name": "IslandEnv"
+        },
+        "Biom": {
+          "@name": "Highland"
+        },
+        "SubBiom": {
+          "@name": "Green"
+        },
+        "MobFaction": {
+          "@name": "None"
+        },
+        "Music": {
+          "@name": "Island"
+        }
+      },
+      {
+        "@clustername": "ISLAND-PLAYER-MOUNTAIN-0001e-SHOWROOM_*",
+        "Environment": {
+          "@name": "IslandEnv"
+        },
+        "Biom": {
+          "@name": "Mountain"
+        },
+        "SubBiom": {
+          "@name": "Green"
+        },
+        "MobFaction": {
+          "@name": "None"
+        },
+        "Music": {
+          "@name": "Island"
+        }
+      },
+      {
+        "@clustername": "ISLAND-PLAYER-STEPPE-0001e-SHOWROOM_*",
+        "Environment": {
+          "@name": "IslandEnv"
+        },
+        "Biom": {
+          "@name": "Steppe"
+        },
+        "SubBiom": {
+          "@name": "Green"
+        },
+        "MobFaction": {
+          "@name": "None"
+        },
+        "Music": {
+          "@name": "Island"
+        }
+      },
+      {
+        "@clustername": "ISLAND-PLAYER-SWAMP-0001e-SHOWROOM_*",
+        "Environment": {
+          "@name": "IslandEnv"
+        },
+        "Biom": {
+          "@name": "Swamp"
+        },
+        "SubBiom": {
+          "@name": "Green"
+        },
+        "MobFaction": {
+          "@name": "None"
+        },
+        "Music": {
+          "@name": "Island"
         }
       },
       {

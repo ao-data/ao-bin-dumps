@@ -588,23 +588,6 @@
         <!---->
         <!-- For a tutorial popup use same unique name as used in tutorial xml -->
         <!---->
-
-        <popup uniquename="JOURNAL_INTRODUCTION" priority="11" type="JournalIntroduction">
-            <categories>
-                <category name="JournalIntroduction" />
-                <category name="GameFeature" />
-            </categories>
-            <triggers>
-                <trigger action="ClusterChange" />
-            </triggers>
-            <conditions>
-                <and>
-                    <IfIsInStarterCluster /> 
-                    <IfTutorialCompletedThisSession />
-                    <IfHasSeenPopup uniquename="JOURNAL_INTRODUCTION" frequency="AllTime" operation="less" amount="1" targetfilter="character" />
-                </and>
-            </conditions>
-        </popup>
         
         <popup uniquename="PORTAL_CITY_INFO" priority="10" type="GenericTutorial">
             <categories>

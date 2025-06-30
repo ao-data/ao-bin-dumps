@@ -2,15 +2,14 @@
 <mists xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="mists.xsd">
   <globalsettings
     mistscityentrancetargetclusterid="5001"
-    
+    clusterclosinglocatag="@MISTS_LIFE_CYCLE_CLOSING"
     portaldisappearancetimer="30"
     
     portalrespawntime="120"
     minimumspawndistance="120"
     initialresourceblocktime="20"
-    finalresourceblocktime ="20"
+    finalresourceblocktime="300"
     cityduoentrancetimer="60"
-    cityentrancecooldown="300"
     cityentrancevisibleradius="15"
     
     opengatedistance="8"
@@ -53,7 +52,7 @@
                      wispsstaggeredspawninterval="0"
                      wispsstaggeredspawnintervalstart="0"
                      minimapdisplayinterestareaextend="100"/> <!-- No difficulty used for the dungeons as there is only difficulty 0 -->   
-    <!-- TODO: check if the difficulty group can stay the same as for regular mists or should be its own thing -->
+
     <modetypesetting type="resourcemists" 
                      instancerandomdungeondifficultygroup="mists" 
                      wispsspawninsecbeforeclustershutdown="120"
@@ -313,7 +312,6 @@
         </treasures>
       </mistsmode>
 
-      <!--RESOURCE TODO: Check values after testing -->
     <mistsmode
       name="MISTS_RESOURCE_FIBER"
       type="resourcemists"
@@ -677,86 +675,165 @@
       <map id="DUO_BLACK_DUNGEON_03" mastertemplate="MISTS_DNG_UND_01" templatepool="BLACK_RARE" clustertier="8" requiredentrancetier="8" subbiome="green" softplayerlimitmin="12" softplayerlimitmax="12" hardplayercapspace="2" weight="1" clusterclosetime="130" clustershutdowntime="1050" />
     </mapset>
 
-    <!-- TODO: Recheck values after balancing and testing -->
     <mapset name="MAPSET_RESOURCE_FIBER">
-      <map id="RESOURCE_SMALL_STANDARD_01" mastertemplate="MISTS_100_S1" templatepool="BLACK_RESOURCE_FIBER_COMMON" subbiome="green" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="1" clusterclosetime="300" clustershutdowntime="450" clustertier="6" mindifficulty="0" maxdifficulty="1" />
-      <map id="RESOURCE_SMALL_STANDARD_02" mastertemplate="MISTS_101_S1" templatepool="BLACK_RESOURCE_FIBER_COMMON" subbiome="green" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="1" clusterclosetime="300" clustershutdowntime="450" clustertier="6" mindifficulty="0" maxdifficulty="1" />
-      <map id="RESOURCE_SMALL_STANDARD_03" mastertemplate="MISTS_102_S1" templatepool="BLACK_RESOURCE_FIBER_COMMON" subbiome="green" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="1" clusterclosetime="300" clustershutdowntime="450" clustertier="6" mindifficulty="0" maxdifficulty="1" />
-      <map id="RESOURCE_SMALL_STANDARD_04" mastertemplate="MISTS_103_S1" templatepool="BLACK_RESOURCE_FIBER_COMMON" subbiome="green" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="1" clusterclosetime="300" clustershutdowntime="450" clustertier="6" mindifficulty="0" maxdifficulty="1" />
+      <map id="RESOURCE_SMALL_STANDARD_01" mastertemplate="MISTS_100_S1" templatepool="BLACK_RESOURCE_FIBER_COMMON" subbiome="green" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="80" clusterclosetime="300" clustershutdowntime="450" clustertier="6" mindifficulty="0" maxdifficulty="2" />
+      <map id="RESOURCE_SMALL_STANDARD_02" mastertemplate="MISTS_101_S1" templatepool="BLACK_RESOURCE_FIBER_COMMON" subbiome="green" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="80" clusterclosetime="300" clustershutdowntime="450" clustertier="6" mindifficulty="0" maxdifficulty="2" />
+      <map id="RESOURCE_SMALL_STANDARD_03" mastertemplate="MISTS_102_S1" templatepool="BLACK_RESOURCE_FIBER_COMMON" subbiome="green" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="80" clusterclosetime="300" clustershutdowntime="450" clustertier="6" mindifficulty="0" maxdifficulty="2" />
+      <map id="RESOURCE_SMALL_STANDARD_04" mastertemplate="MISTS_103_S1" templatepool="BLACK_RESOURCE_FIBER_COMMON" subbiome="green" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="80" clusterclosetime="300" clustershutdowntime="450" clustertier="6" mindifficulty="0" maxdifficulty="2" />
 
-      <map id="RESOURCE_SMALL_UNCOMMON_01" mastertemplate="MISTS_100_S1" templatepool="BLACK_RESOURCE_FIBER_UNCOMMON" subbiome="red" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="1" clusterclosetime="300" clustershutdowntime="450" clustertier="7" mindifficulty="1" maxdifficulty="2" />
-      <map id="RESOURCE_SMALL_UNCOMMON_02" mastertemplate="MISTS_101_S1" templatepool="BLACK_RESOURCE_FIBER_UNCOMMON" subbiome="red" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="1" clusterclosetime="300" clustershutdowntime="450" clustertier="7" mindifficulty="1" maxdifficulty="2" />
-      <map id="RESOURCE_SMALL_UNCOMMON_03" mastertemplate="MISTS_102_S1" templatepool="BLACK_RESOURCE_FIBER_UNCOMMON" subbiome="red" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="1" clusterclosetime="300" clustershutdowntime="450" clustertier="7" mindifficulty="1" maxdifficulty="2" />
-      <map id="RESOURCE_SMALL_UNCOMMON_04" mastertemplate="MISTS_103_S1" templatepool="BLACK_RESOURCE_FIBER_UNCOMMON" subbiome="red" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="1" clusterclosetime="300" clustershutdowntime="450" clustertier="7" mindifficulty="1" maxdifficulty="2" />
+      <map id="RESOURCE_SMALL_UNCOMMON_01" mastertemplate="MISTS_100_S1" templatepool="BLACK_RESOURCE_FIBER_UNCOMMON" subbiome="red" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="48" clusterclosetime="300" clustershutdowntime="450" clustertier="7" mindifficulty="1" maxdifficulty="2" />
+      <map id="RESOURCE_SMALL_UNCOMMON_02" mastertemplate="MISTS_101_S1" templatepool="BLACK_RESOURCE_FIBER_UNCOMMON" subbiome="red" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="48" clusterclosetime="300" clustershutdowntime="450" clustertier="7" mindifficulty="1" maxdifficulty="2" />
+      <map id="RESOURCE_SMALL_UNCOMMON_03" mastertemplate="MISTS_102_S1" templatepool="BLACK_RESOURCE_FIBER_UNCOMMON" subbiome="red" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="48" clusterclosetime="300" clustershutdowntime="450" clustertier="7" mindifficulty="1" maxdifficulty="2" />
+      <map id="RESOURCE_SMALL_UNCOMMON_04" mastertemplate="MISTS_103_S1" templatepool="BLACK_RESOURCE_FIBER_UNCOMMON" subbiome="red" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="48" clusterclosetime="300" clustershutdowntime="450" clustertier="7" mindifficulty="1" maxdifficulty="2" />
 
-      <map id="RESOURCE_MEDIUM_01" mastertemplate="MISTS_200_M1" templatepool="BLACK_RESOURCE_FIBER_UNCOMMON" subbiome="dead" softplayerlimitmin="2" softplayerlimitmax="3" hardplayercapspace="1" weight="1" clusterclosetime="720" clustershutdowntime="900" clustertier="7" mindifficulty="3" maxdifficulty="4" />
-      <map id="RESOURCE_MEDIUM_02" mastertemplate="MISTS_201_M1" templatepool="BLACK_RESOURCE_FIBER_UNCOMMON" subbiome="dead" softplayerlimitmin="2" softplayerlimitmax="3" hardplayercapspace="1" weight="1" clusterclosetime="720" clustershutdowntime="900" clustertier="7" mindifficulty="3" maxdifficulty="4" />
-      <map id="RESOURCE_MEDIUM_03" mastertemplate="MISTS_202_M1" templatepool="BLACK_RESOURCE_FIBER_RARE" subbiome="dead" softplayerlimitmin="2" softplayerlimitmax="3" hardplayercapspace="1" weight="1" clusterclosetime="720" clustershutdowntime="900" clustertier="8" mindifficulty="3" maxdifficulty="4" />
-      <map id="RESOURCE_MEDIUM_04" mastertemplate="MISTS_203_M1" templatepool="BLACK_RESOURCE_FIBER_RARE" subbiome="dead" softplayerlimitmin="2" softplayerlimitmax="3" hardplayercapspace="1" weight="1" clusterclosetime="720" clustershutdowntime="900" clustertier="8" mindifficulty="3" maxdifficulty="4" />
+      <!-- Spike -->
+      <map id="RESOURCE_SMALL_UNCOMMON_05" mastertemplate="MISTS_100_S1" templatepool="BLACK_RESOURCE_FIBER_UNCOMMON" subbiome="red" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="52" clusterclosetime="300" clustershutdowntime="450" clustertier="7" mindifficulty="2" maxdifficulty="2" />
+      <map id="RESOURCE_SMALL_UNCOMMON_06" mastertemplate="MISTS_101_S1" templatepool="BLACK_RESOURCE_FIBER_UNCOMMON" subbiome="red" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="52" clusterclosetime="300" clustershutdowntime="450" clustertier="7" mindifficulty="2" maxdifficulty="2" />
+      <map id="RESOURCE_SMALL_UNCOMMON_07" mastertemplate="MISTS_102_S1" templatepool="BLACK_RESOURCE_FIBER_UNCOMMON" subbiome="red" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="52" clusterclosetime="300" clustershutdowntime="450" clustertier="7" mindifficulty="2" maxdifficulty="2" />
+      <map id="RESOURCE_SMALL_UNCOMMON_08" mastertemplate="MISTS_103_S1" templatepool="BLACK_RESOURCE_FIBER_UNCOMMON" subbiome="red" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="52" clusterclosetime="300" clustershutdowntime="450" clustertier="7" mindifficulty="2" maxdifficulty="2" />
+
+      <map id="RESOURCE_SMALL_RARE_01" mastertemplate="MISTS_100_S1" templatepool="BLACK_RESOURCE_FIBER_RARE" subbiome="dead" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="20" clusterclosetime="300" clustershutdowntime="450" clustertier="8" mindifficulty="2" maxdifficulty="2" />
+      <map id="RESOURCE_SMALL_RARE_02" mastertemplate="MISTS_101_S1" templatepool="BLACK_RESOURCE_FIBER_RARE" subbiome="dead" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="20" clusterclosetime="300" clustershutdowntime="450" clustertier="8" mindifficulty="2" maxdifficulty="2" />
+      <map id="RESOURCE_SMALL_RARE_03" mastertemplate="MISTS_102_S1" templatepool="BLACK_RESOURCE_FIBER_RARE" subbiome="dead" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="20" clusterclosetime="300" clustershutdowntime="450" clustertier="8" mindifficulty="2" maxdifficulty="2" />
+      <map id="RESOURCE_SMALL_RARE_04" mastertemplate="MISTS_103_S1" templatepool="BLACK_RESOURCE_FIBER_RARE" subbiome="dead" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="20" clusterclosetime="300" clustershutdowntime="450" clustertier="8" mindifficulty="2" maxdifficulty="2" />
+
+      <map id="RESOURCE_MEDIUM_UNCOMMON_01" mastertemplate="MISTS_200_M1" templatepool="BLACK_RESOURCE_FIBER_UNCOMMON" subbiome="red" softplayerlimitmin="2" softplayerlimitmax="3" hardplayercapspace="1" weight="65" clusterclosetime="566" clustershutdowntime="900" clustertier="7" mindifficulty="3" maxdifficulty="3" />
+      <map id="RESOURCE_MEDIUM_UNCOMMON_02" mastertemplate="MISTS_201_M1" templatepool="BLACK_RESOURCE_FIBER_UNCOMMON" subbiome="red" softplayerlimitmin="2" softplayerlimitmax="3" hardplayercapspace="1" weight="65" clusterclosetime="566" clustershutdowntime="900" clustertier="7" mindifficulty="3" maxdifficulty="3" />
+      <map id="RESOURCE_MEDIUM_UNCOMMON_03" mastertemplate="MISTS_202_M1" templatepool="BLACK_RESOURCE_FIBER_UNCOMMON" subbiome="red" softplayerlimitmin="2" softplayerlimitmax="3" hardplayercapspace="1" weight="65" clusterclosetime="566" clustershutdowntime="900" clustertier="7" mindifficulty="3" maxdifficulty="3" />
+      <map id="RESOURCE_MEDIUM_UNCOMMON_04" mastertemplate="MISTS_203_M1" templatepool="BLACK_RESOURCE_FIBER_UNCOMMON" subbiome="red" softplayerlimitmin="2" softplayerlimitmax="3" hardplayercapspace="1" weight="65" clusterclosetime="566" clustershutdowntime="900" clustertier="7" mindifficulty="3" maxdifficulty="3" />
+
+      <map id="RESOURCE_MEDIUM_RARE_01" mastertemplate="MISTS_200_M1" templatepool="BLACK_RESOURCE_FIBER_RARE" subbiome="dead" softplayerlimitmin="2" softplayerlimitmax="3" hardplayercapspace="1" weight="35" clusterclosetime="566" clustershutdowntime="900" clustertier="8" mindifficulty="3" maxdifficulty="4" />
+      <map id="RESOURCE_MEDIUM_RARE_02" mastertemplate="MISTS_201_M1" templatepool="BLACK_RESOURCE_FIBER_RARE" subbiome="dead" softplayerlimitmin="2" softplayerlimitmax="3" hardplayercapspace="1" weight="35" clusterclosetime="566" clustershutdowntime="900" clustertier="8" mindifficulty="3" maxdifficulty="4" />
+      <map id="RESOURCE_MEDIUM_RARE_03" mastertemplate="MISTS_202_M1" templatepool="BLACK_RESOURCE_FIBER_RARE" subbiome="dead" softplayerlimitmin="2" softplayerlimitmax="3" hardplayercapspace="1" weight="35" clusterclosetime="566" clustershutdowntime="900" clustertier="8" mindifficulty="3" maxdifficulty="4" />
+      <map id="RESOURCE_MEDIUM_RARE_04" mastertemplate="MISTS_203_M1" templatepool="BLACK_RESOURCE_FIBER_RARE" subbiome="dead" softplayerlimitmin="2" softplayerlimitmax="3" hardplayercapspace="1" weight="35" clusterclosetime="566" clustershutdowntime="900" clustertier="8" mindifficulty="3" maxdifficulty="4" />
     </mapset>
     <mapset name="MAPSET_RESOURCE_HIDE">
-      <map id="RESOURCE_SMALL_STANDARD_01" mastertemplate="MISTS_100_S1" templatepool="BLACK_RESOURCE_HIDE_COMMON" subbiome="green" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="1" clusterclosetime="300" clustershutdowntime="450" clustertier="6" mindifficulty="0" maxdifficulty="1" />
-      <map id="RESOURCE_SMALL_STANDARD_02" mastertemplate="MISTS_101_S1" templatepool="BLACK_RESOURCE_HIDE_COMMON" subbiome="green" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="1" clusterclosetime="300" clustershutdowntime="450" clustertier="6" mindifficulty="0" maxdifficulty="1" />
-      <map id="RESOURCE_SMALL_STANDARD_03" mastertemplate="MISTS_102_S1" templatepool="BLACK_RESOURCE_HIDE_COMMON" subbiome="green" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="1" clusterclosetime="300" clustershutdowntime="450" clustertier="6" mindifficulty="0" maxdifficulty="1" />
-      <map id="RESOURCE_SMALL_STANDARD_04" mastertemplate="MISTS_103_S1" templatepool="BLACK_RESOURCE_HIDE_COMMON" subbiome="green" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="1" clusterclosetime="300" clustershutdowntime="450" clustertier="6" mindifficulty="0" maxdifficulty="1" />
+      <map id="RESOURCE_SMALL_STANDARD_01" mastertemplate="MISTS_100_S1" templatepool="BLACK_RESOURCE_HIDE_COMMON" subbiome="green" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="80" clusterclosetime="300" clustershutdowntime="450" clustertier="6" mindifficulty="0" maxdifficulty="2" />
+      <map id="RESOURCE_SMALL_STANDARD_02" mastertemplate="MISTS_101_S1" templatepool="BLACK_RESOURCE_HIDE_COMMON" subbiome="green" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="80" clusterclosetime="300" clustershutdowntime="450" clustertier="6" mindifficulty="0" maxdifficulty="2" />
+      <map id="RESOURCE_SMALL_STANDARD_03" mastertemplate="MISTS_102_S1" templatepool="BLACK_RESOURCE_HIDE_COMMON" subbiome="green" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="80" clusterclosetime="300" clustershutdowntime="450" clustertier="6" mindifficulty="0" maxdifficulty="2" />
+      <map id="RESOURCE_SMALL_STANDARD_04" mastertemplate="MISTS_103_S1" templatepool="BLACK_RESOURCE_HIDE_COMMON" subbiome="green" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="80" clusterclosetime="300" clustershutdowntime="450" clustertier="6" mindifficulty="0" maxdifficulty="2" />
 
-      <map id="RESOURCE_SMALL_UNCOMMON_01" mastertemplate="MISTS_100_S1" templatepool="BLACK_RESOURCE_HIDE_UNCOMMON" subbiome="red" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="1" clusterclosetime="300" clustershutdowntime="450" clustertier="7" mindifficulty="1" maxdifficulty="2" />
-      <map id="RESOURCE_SMALL_UNCOMMON_02" mastertemplate="MISTS_101_S1" templatepool="BLACK_RESOURCE_HIDE_UNCOMMON" subbiome="red" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="1" clusterclosetime="300" clustershutdowntime="450" clustertier="7" mindifficulty="1" maxdifficulty="2" />
-      <map id="RESOURCE_SMALL_UNCOMMON_03" mastertemplate="MISTS_102_S1" templatepool="BLACK_RESOURCE_HIDE_UNCOMMON" subbiome="red" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="1" clusterclosetime="300" clustershutdowntime="450" clustertier="7" mindifficulty="1" maxdifficulty="2" />
-      <map id="RESOURCE_SMALL_UNCOMMON_04" mastertemplate="MISTS_103_S1" templatepool="BLACK_RESOURCE_HIDE_UNCOMMON" subbiome="red" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="1" clusterclosetime="300" clustershutdowntime="450" clustertier="7" mindifficulty="1" maxdifficulty="2" />
+      <map id="RESOURCE_SMALL_UNCOMMON_01" mastertemplate="MISTS_100_S1" templatepool="BLACK_RESOURCE_HIDE_UNCOMMON" subbiome="red" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="48" clusterclosetime="300" clustershutdowntime="450" clustertier="7" mindifficulty="1" maxdifficulty="2" />
+      <map id="RESOURCE_SMALL_UNCOMMON_02" mastertemplate="MISTS_101_S1" templatepool="BLACK_RESOURCE_HIDE_UNCOMMON" subbiome="red" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="48" clusterclosetime="300" clustershutdowntime="450" clustertier="7" mindifficulty="1" maxdifficulty="2" />
+      <map id="RESOURCE_SMALL_UNCOMMON_03" mastertemplate="MISTS_102_S1" templatepool="BLACK_RESOURCE_HIDE_UNCOMMON" subbiome="red" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="48" clusterclosetime="300" clustershutdowntime="450" clustertier="7" mindifficulty="1" maxdifficulty="2" />
+      <map id="RESOURCE_SMALL_UNCOMMON_04" mastertemplate="MISTS_103_S1" templatepool="BLACK_RESOURCE_HIDE_UNCOMMON" subbiome="red" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="48" clusterclosetime="300" clustershutdowntime="450" clustertier="7" mindifficulty="1" maxdifficulty="2" />
 
-      <map id="RESOURCE_MEDIUM_01" mastertemplate="MISTS_200_M1" templatepool="BLACK_RESOURCE_HIDE_UNCOMMON" subbiome="dead" softplayerlimitmin="2" softplayerlimitmax="3" hardplayercapspace="1" weight="1" clusterclosetime="720" clustershutdowntime="900" clustertier="7" mindifficulty="3" maxdifficulty="4" />
-      <map id="RESOURCE_MEDIUM_02" mastertemplate="MISTS_201_M1" templatepool="BLACK_RESOURCE_HIDE_UNCOMMON" subbiome="dead" softplayerlimitmin="2" softplayerlimitmax="3" hardplayercapspace="1" weight="1" clusterclosetime="720" clustershutdowntime="900" clustertier="7" mindifficulty="3" maxdifficulty="4" />
-      <map id="RESOURCE_MEDIUM_03" mastertemplate="MISTS_202_M1" templatepool="BLACK_RESOURCE_HIDE_RARE" subbiome="dead" softplayerlimitmin="2" softplayerlimitmax="3" hardplayercapspace="1" weight="1" clusterclosetime="720" clustershutdowntime="900" clustertier="8" mindifficulty="3" maxdifficulty="4" />
-      <map id="RESOURCE_MEDIUM_04" mastertemplate="MISTS_203_M1" templatepool="BLACK_RESOURCE_HIDE_RARE" subbiome="dead" softplayerlimitmin="2" softplayerlimitmax="3" hardplayercapspace="1" weight="1" clusterclosetime="720" clustershutdowntime="900" clustertier="8" mindifficulty="3" maxdifficulty="4" />
+      <!-- Spike -->
+      <map id="RESOURCE_SMALL_UNCOMMON_05" mastertemplate="MISTS_100_S1" templatepool="BLACK_RESOURCE_HIDE_UNCOMMON" subbiome="red" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="52" clusterclosetime="300" clustershutdowntime="450" clustertier="7" mindifficulty="2" maxdifficulty="2" />
+      <map id="RESOURCE_SMALL_UNCOMMON_06" mastertemplate="MISTS_101_S1" templatepool="BLACK_RESOURCE_HIDE_UNCOMMON" subbiome="red" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="52" clusterclosetime="300" clustershutdowntime="450" clustertier="7" mindifficulty="2" maxdifficulty="2" />
+      <map id="RESOURCE_SMALL_UNCOMMON_07" mastertemplate="MISTS_102_S1" templatepool="BLACK_RESOURCE_HIDE_UNCOMMON" subbiome="red" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="52" clusterclosetime="300" clustershutdowntime="450" clustertier="7" mindifficulty="2" maxdifficulty="2" />
+      <map id="RESOURCE_SMALL_UNCOMMON_08" mastertemplate="MISTS_103_S1" templatepool="BLACK_RESOURCE_HIDE_UNCOMMON" subbiome="red" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="52" clusterclosetime="300" clustershutdowntime="450" clustertier="7" mindifficulty="2" maxdifficulty="2" />
+
+      <map id="RESOURCE_SMALL_RARE_01" mastertemplate="MISTS_100_S1" templatepool="BLACK_RESOURCE_HIDE_RARE" subbiome="dead" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="20" clusterclosetime="300" clustershutdowntime="450" clustertier="8" mindifficulty="2" maxdifficulty="2" />
+      <map id="RESOURCE_SMALL_RARE_02" mastertemplate="MISTS_101_S1" templatepool="BLACK_RESOURCE_HIDE_RARE" subbiome="dead" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="20" clusterclosetime="300" clustershutdowntime="450" clustertier="8" mindifficulty="2" maxdifficulty="2" />
+      <map id="RESOURCE_SMALL_RARE_03" mastertemplate="MISTS_102_S1" templatepool="BLACK_RESOURCE_HIDE_RARE" subbiome="dead" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="20" clusterclosetime="300" clustershutdowntime="450" clustertier="8" mindifficulty="2" maxdifficulty="2" />
+      <map id="RESOURCE_SMALL_RARE_04" mastertemplate="MISTS_103_S1" templatepool="BLACK_RESOURCE_HIDE_RARE" subbiome="dead" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="20" clusterclosetime="300" clustershutdowntime="450" clustertier="8" mindifficulty="2" maxdifficulty="2" />
+
+      <map id="RESOURCE_MEDIUM_UNCOMMON_01" mastertemplate="MISTS_200_M1" templatepool="BLACK_RESOURCE_HIDE_UNCOMMON" subbiome="red" softplayerlimitmin="2" softplayerlimitmax="3" hardplayercapspace="1" weight="65" clusterclosetime="566" clustershutdowntime="900" clustertier="7" mindifficulty="3" maxdifficulty="3" />
+      <map id="RESOURCE_MEDIUM_UNCOMMON_02" mastertemplate="MISTS_201_M1" templatepool="BLACK_RESOURCE_HIDE_UNCOMMON" subbiome="red" softplayerlimitmin="2" softplayerlimitmax="3" hardplayercapspace="1" weight="65" clusterclosetime="566" clustershutdowntime="900" clustertier="7" mindifficulty="3" maxdifficulty="3" />
+      <map id="RESOURCE_MEDIUM_UNCOMMON_03" mastertemplate="MISTS_202_M1" templatepool="BLACK_RESOURCE_HIDE_UNCOMMON" subbiome="red" softplayerlimitmin="2" softplayerlimitmax="3" hardplayercapspace="1" weight="65" clusterclosetime="566" clustershutdowntime="900" clustertier="7" mindifficulty="3" maxdifficulty="3" />
+      <map id="RESOURCE_MEDIUM_UNCOMMON_04" mastertemplate="MISTS_203_M1" templatepool="BLACK_RESOURCE_HIDE_UNCOMMON" subbiome="red" softplayerlimitmin="2" softplayerlimitmax="3" hardplayercapspace="1" weight="65" clusterclosetime="566" clustershutdowntime="900" clustertier="7" mindifficulty="3" maxdifficulty="3" />
+
+      <map id="RESOURCE_MEDIUM_RARE_01" mastertemplate="MISTS_200_M1" templatepool="BLACK_RESOURCE_HIDE_RARE" subbiome="dead" softplayerlimitmin="2" softplayerlimitmax="3" hardplayercapspace="1" weight="35" clusterclosetime="566" clustershutdowntime="900" clustertier="8" mindifficulty="3" maxdifficulty="4" />
+      <map id="RESOURCE_MEDIUM_RARE_02" mastertemplate="MISTS_201_M1" templatepool="BLACK_RESOURCE_HIDE_RARE" subbiome="dead" softplayerlimitmin="2" softplayerlimitmax="3" hardplayercapspace="1" weight="35" clusterclosetime="566" clustershutdowntime="900" clustertier="8" mindifficulty="3" maxdifficulty="4" />
+      <map id="RESOURCE_MEDIUM_RARE_03" mastertemplate="MISTS_202_M1" templatepool="BLACK_RESOURCE_HIDE_RARE" subbiome="dead" softplayerlimitmin="2" softplayerlimitmax="3" hardplayercapspace="1" weight="35" clusterclosetime="566" clustershutdowntime="900" clustertier="8" mindifficulty="3" maxdifficulty="4" />
+      <map id="RESOURCE_MEDIUM_RARE_04" mastertemplate="MISTS_203_M1" templatepool="BLACK_RESOURCE_HIDE_RARE" subbiome="dead" softplayerlimitmin="2" softplayerlimitmax="3" hardplayercapspace="1" weight="35" clusterclosetime="566" clustershutdowntime="900" clustertier="8" mindifficulty="3" maxdifficulty="4" />
     </mapset>
     <mapset name="MAPSET_RESOURCE_ORE">
-      <map id="RESOURCE_SMALL_STANDARD_01" mastertemplate="MISTS_100_S1" templatepool="BLACK_RESOURCE_ORE_COMMON" subbiome="green" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="1" clusterclosetime="300" clustershutdowntime="450" clustertier="6" mindifficulty="0" maxdifficulty="1" />
-      <map id="RESOURCE_SMALL_STANDARD_02" mastertemplate="MISTS_101_S1" templatepool="BLACK_RESOURCE_ORE_COMMON" subbiome="green" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="1" clusterclosetime="300" clustershutdowntime="450" clustertier="6" mindifficulty="0" maxdifficulty="1" />
-      <map id="RESOURCE_SMALL_STANDARD_03" mastertemplate="MISTS_102_S1" templatepool="BLACK_RESOURCE_ORE_COMMON" subbiome="green" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="1" clusterclosetime="300" clustershutdowntime="450" clustertier="6" mindifficulty="0" maxdifficulty="1" />
-      <map id="RESOURCE_SMALL_STANDARD_04" mastertemplate="MISTS_103_S1" templatepool="BLACK_RESOURCE_ORE_COMMON" subbiome="green" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="1" clusterclosetime="300" clustershutdowntime="450" clustertier="6" mindifficulty="0" maxdifficulty="1" />
+      <map id="RESOURCE_SMALL_STANDARD_01" mastertemplate="MISTS_100_S1" templatepool="BLACK_RESOURCE_ORE_COMMON" subbiome="green" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="80" clusterclosetime="300" clustershutdowntime="450" clustertier="6" mindifficulty="0" maxdifficulty="2" />
+      <map id="RESOURCE_SMALL_STANDARD_02" mastertemplate="MISTS_101_S1" templatepool="BLACK_RESOURCE_ORE_COMMON" subbiome="green" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="80" clusterclosetime="300" clustershutdowntime="450" clustertier="6" mindifficulty="0" maxdifficulty="2" />
+      <map id="RESOURCE_SMALL_STANDARD_03" mastertemplate="MISTS_102_S1" templatepool="BLACK_RESOURCE_ORE_COMMON" subbiome="green" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="80" clusterclosetime="300" clustershutdowntime="450" clustertier="6" mindifficulty="0" maxdifficulty="2" />
+      <map id="RESOURCE_SMALL_STANDARD_04" mastertemplate="MISTS_103_S1" templatepool="BLACK_RESOURCE_ORE_COMMON" subbiome="green" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="80" clusterclosetime="300" clustershutdowntime="450" clustertier="6" mindifficulty="0" maxdifficulty="2" />
 
-      <map id="RESOURCE_SMALL_UNCOMMON_01" mastertemplate="MISTS_100_S1" templatepool="BLACK_RESOURCE_ORE_UNCOMMON" subbiome="red" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="1" clusterclosetime="300" clustershutdowntime="450" clustertier="7" mindifficulty="1" maxdifficulty="2" />
-      <map id="RESOURCE_SMALL_UNCOMMON_02" mastertemplate="MISTS_101_S1" templatepool="BLACK_RESOURCE_ORE_UNCOMMON" subbiome="red" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="1" clusterclosetime="300" clustershutdowntime="450" clustertier="7" mindifficulty="1" maxdifficulty="2" />
-      <map id="RESOURCE_SMALL_UNCOMMON_03" mastertemplate="MISTS_102_S1" templatepool="BLACK_RESOURCE_ORE_UNCOMMON" subbiome="red" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="1" clusterclosetime="300" clustershutdowntime="450" clustertier="7" mindifficulty="1" maxdifficulty="2" />
-      <map id="RESOURCE_SMALL_UNCOMMON_04" mastertemplate="MISTS_103_S1" templatepool="BLACK_RESOURCE_ORE_UNCOMMON" subbiome="red" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="1" clusterclosetime="300" clustershutdowntime="450" clustertier="7" mindifficulty="1" maxdifficulty="2" />
+      <map id="RESOURCE_SMALL_UNCOMMON_01" mastertemplate="MISTS_100_S1" templatepool="BLACK_RESOURCE_ORE_UNCOMMON" subbiome="red" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="48" clusterclosetime="300" clustershutdowntime="450" clustertier="7" mindifficulty="1" maxdifficulty="2" />
+      <map id="RESOURCE_SMALL_UNCOMMON_02" mastertemplate="MISTS_101_S1" templatepool="BLACK_RESOURCE_ORE_UNCOMMON" subbiome="red" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="48" clusterclosetime="300" clustershutdowntime="450" clustertier="7" mindifficulty="1" maxdifficulty="2" />
+      <map id="RESOURCE_SMALL_UNCOMMON_03" mastertemplate="MISTS_102_S1" templatepool="BLACK_RESOURCE_ORE_UNCOMMON" subbiome="red" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="48" clusterclosetime="300" clustershutdowntime="450" clustertier="7" mindifficulty="1" maxdifficulty="2" />
+      <map id="RESOURCE_SMALL_UNCOMMON_04" mastertemplate="MISTS_103_S1" templatepool="BLACK_RESOURCE_ORE_UNCOMMON" subbiome="red" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="48" clusterclosetime="300" clustershutdowntime="450" clustertier="7" mindifficulty="1" maxdifficulty="2" />
 
-      <map id="RESOURCE_MEDIUM_01" mastertemplate="MISTS_200_M1" templatepool="BLACK_RESOURCE_ORE_UNCOMMON" subbiome="dead" softplayerlimitmin="2" softplayerlimitmax="3" hardplayercapspace="1" weight="1" clusterclosetime="720" clustershutdowntime="900" clustertier="7" mindifficulty="3" maxdifficulty="4" />
-      <map id="RESOURCE_MEDIUM_02" mastertemplate="MISTS_201_M1" templatepool="BLACK_RESOURCE_ORE_UNCOMMON" subbiome="dead" softplayerlimitmin="2" softplayerlimitmax="3" hardplayercapspace="1" weight="1" clusterclosetime="720" clustershutdowntime="900" clustertier="7" mindifficulty="3" maxdifficulty="4" />
-      <map id="RESOURCE_MEDIUM_03" mastertemplate="MISTS_202_M1" templatepool="BLACK_RESOURCE_ORE_RARE" subbiome="dead" softplayerlimitmin="2" softplayerlimitmax="3" hardplayercapspace="1" weight="1" clusterclosetime="720" clustershutdowntime="900" clustertier="8" mindifficulty="3" maxdifficulty="4" />
-      <map id="RESOURCE_MEDIUM_04" mastertemplate="MISTS_203_M1" templatepool="BLACK_RESOURCE_ORE_RARE" subbiome="dead" softplayerlimitmin="2" softplayerlimitmax="3" hardplayercapspace="1" weight="1" clusterclosetime="720" clustershutdowntime="900" clustertier="8" mindifficulty="3" maxdifficulty="4" />
+      <!-- Spike -->
+      <map id="RESOURCE_SMALL_UNCOMMON_05" mastertemplate="MISTS_100_S1" templatepool="BLACK_RESOURCE_ORE_UNCOMMON" subbiome="red" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="52" clusterclosetime="300" clustershutdowntime="450" clustertier="7" mindifficulty="2" maxdifficulty="2" />
+      <map id="RESOURCE_SMALL_UNCOMMON_06" mastertemplate="MISTS_101_S1" templatepool="BLACK_RESOURCE_ORE_UNCOMMON" subbiome="red" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="52" clusterclosetime="300" clustershutdowntime="450" clustertier="7" mindifficulty="2" maxdifficulty="2" />
+      <map id="RESOURCE_SMALL_UNCOMMON_07" mastertemplate="MISTS_102_S1" templatepool="BLACK_RESOURCE_ORE_UNCOMMON" subbiome="red" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="52" clusterclosetime="300" clustershutdowntime="450" clustertier="7" mindifficulty="2" maxdifficulty="2" />
+      <map id="RESOURCE_SMALL_UNCOMMON_08" mastertemplate="MISTS_103_S1" templatepool="BLACK_RESOURCE_ORE_UNCOMMON" subbiome="red" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="52" clusterclosetime="300" clustershutdowntime="450" clustertier="7" mindifficulty="2" maxdifficulty="2" />
+
+      <map id="RESOURCE_SMALL_RARE_01" mastertemplate="MISTS_100_S1" templatepool="BLACK_RESOURCE_ORE_RARE" subbiome="dead" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="20" clusterclosetime="300" clustershutdowntime="450" clustertier="8" mindifficulty="2" maxdifficulty="2" />
+      <map id="RESOURCE_SMALL_RARE_02" mastertemplate="MISTS_101_S1" templatepool="BLACK_RESOURCE_ORE_RARE" subbiome="dead" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="20" clusterclosetime="300" clustershutdowntime="450" clustertier="8" mindifficulty="2" maxdifficulty="2" />
+      <map id="RESOURCE_SMALL_RARE_03" mastertemplate="MISTS_102_S1" templatepool="BLACK_RESOURCE_ORE_RARE" subbiome="dead" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="20" clusterclosetime="300" clustershutdowntime="450" clustertier="8" mindifficulty="2" maxdifficulty="2" />
+      <map id="RESOURCE_SMALL_RARE_04" mastertemplate="MISTS_103_S1" templatepool="BLACK_RESOURCE_ORE_RARE" subbiome="dead" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="20" clusterclosetime="300" clustershutdowntime="450" clustertier="8" mindifficulty="2" maxdifficulty="2" />
+
+      <map id="RESOURCE_MEDIUM_UNCOMMON_01" mastertemplate="MISTS_200_M1" templatepool="BLACK_RESOURCE_ORE_UNCOMMON" subbiome="red" softplayerlimitmin="2" softplayerlimitmax="3" hardplayercapspace="1" weight="65" clusterclosetime="566" clustershutdowntime="900" clustertier="7" mindifficulty="3" maxdifficulty="3" />
+      <map id="RESOURCE_MEDIUM_UNCOMMON_02" mastertemplate="MISTS_201_M1" templatepool="BLACK_RESOURCE_ORE_UNCOMMON" subbiome="red" softplayerlimitmin="2" softplayerlimitmax="3" hardplayercapspace="1" weight="65" clusterclosetime="566" clustershutdowntime="900" clustertier="7" mindifficulty="3" maxdifficulty="3" />
+      <map id="RESOURCE_MEDIUM_UNCOMMON_03" mastertemplate="MISTS_202_M1" templatepool="BLACK_RESOURCE_ORE_UNCOMMON" subbiome="red" softplayerlimitmin="2" softplayerlimitmax="3" hardplayercapspace="1" weight="65" clusterclosetime="566" clustershutdowntime="900" clustertier="7" mindifficulty="3" maxdifficulty="3" />
+      <map id="RESOURCE_MEDIUM_UNCOMMON_04" mastertemplate="MISTS_203_M1" templatepool="BLACK_RESOURCE_ORE_UNCOMMON" subbiome="red" softplayerlimitmin="2" softplayerlimitmax="3" hardplayercapspace="1" weight="65" clusterclosetime="566" clustershutdowntime="900" clustertier="7" mindifficulty="3" maxdifficulty="3" />
+
+      <map id="RESOURCE_MEDIUM_RARE_01" mastertemplate="MISTS_200_M1" templatepool="BLACK_RESOURCE_ORE_RARE" subbiome="dead" softplayerlimitmin="2" softplayerlimitmax="3" hardplayercapspace="1" weight="35" clusterclosetime="566" clustershutdowntime="900" clustertier="8" mindifficulty="3" maxdifficulty="4" />
+      <map id="RESOURCE_MEDIUM_RARE_02" mastertemplate="MISTS_201_M1" templatepool="BLACK_RESOURCE_ORE_RARE" subbiome="dead" softplayerlimitmin="2" softplayerlimitmax="3" hardplayercapspace="1" weight="35" clusterclosetime="566" clustershutdowntime="900" clustertier="8" mindifficulty="3" maxdifficulty="4" />
+      <map id="RESOURCE_MEDIUM_RARE_03" mastertemplate="MISTS_202_M1" templatepool="BLACK_RESOURCE_ORE_RARE" subbiome="dead" softplayerlimitmin="2" softplayerlimitmax="3" hardplayercapspace="1" weight="35" clusterclosetime="566" clustershutdowntime="900" clustertier="8" mindifficulty="3" maxdifficulty="4" />
+      <map id="RESOURCE_MEDIUM_RARE_04" mastertemplate="MISTS_203_M1" templatepool="BLACK_RESOURCE_ORE_RARE" subbiome="dead" softplayerlimitmin="2" softplayerlimitmax="3" hardplayercapspace="1" weight="35" clusterclosetime="566" clustershutdowntime="900" clustertier="8" mindifficulty="3" maxdifficulty="4" />
     </mapset>
     <mapset name="MAPSET_RESOURCE_ROCK">
-      <map id="RESOURCE_SMALL_STANDARD_01" mastertemplate="MISTS_100_S1" templatepool="BLACK_RESOURCE_ROCK_COMMON" subbiome="green" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="1" clusterclosetime="300" clustershutdowntime="450" clustertier="6" mindifficulty="0" maxdifficulty="1" />
-      <map id="RESOURCE_SMALL_STANDARD_02" mastertemplate="MISTS_101_S1" templatepool="BLACK_RESOURCE_ROCK_COMMON" subbiome="green" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="1" clusterclosetime="300" clustershutdowntime="450" clustertier="6" mindifficulty="0" maxdifficulty="1" />
-      <map id="RESOURCE_SMALL_STANDARD_03" mastertemplate="MISTS_102_S1" templatepool="BLACK_RESOURCE_ROCK_COMMON" subbiome="green" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="1" clusterclosetime="300" clustershutdowntime="450" clustertier="6" mindifficulty="0" maxdifficulty="1" />
-      <map id="RESOURCE_SMALL_STANDARD_04" mastertemplate="MISTS_103_S1" templatepool="BLACK_RESOURCE_ROCK_COMMON" subbiome="green" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="1" clusterclosetime="300" clustershutdowntime="450" clustertier="6" mindifficulty="0" maxdifficulty="1" />
+      <map id="RESOURCE_SMALL_STANDARD_01" mastertemplate="MISTS_100_S1" templatepool="BLACK_RESOURCE_ROCK_COMMON" subbiome="green" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="80" clusterclosetime="300" clustershutdowntime="450" clustertier="6" mindifficulty="0" maxdifficulty="2" />
+      <map id="RESOURCE_SMALL_STANDARD_02" mastertemplate="MISTS_101_S1" templatepool="BLACK_RESOURCE_ROCK_COMMON" subbiome="green" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="80" clusterclosetime="300" clustershutdowntime="450" clustertier="6" mindifficulty="0" maxdifficulty="2" />
+      <map id="RESOURCE_SMALL_STANDARD_03" mastertemplate="MISTS_102_S1" templatepool="BLACK_RESOURCE_ROCK_COMMON" subbiome="green" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="80" clusterclosetime="300" clustershutdowntime="450" clustertier="6" mindifficulty="0" maxdifficulty="2" />
+      <map id="RESOURCE_SMALL_STANDARD_04" mastertemplate="MISTS_103_S1" templatepool="BLACK_RESOURCE_ROCK_COMMON" subbiome="green" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="80" clusterclosetime="300" clustershutdowntime="450" clustertier="6" mindifficulty="0" maxdifficulty="2" />
 
-      <map id="RESOURCE_SMALL_UNCOMMON_01" mastertemplate="MISTS_100_S1" templatepool="BLACK_RESOURCE_ROCK_UNCOMMON" subbiome="red" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="1" clusterclosetime="300" clustershutdowntime="450" clustertier="7" mindifficulty="1" maxdifficulty="2" />
-      <map id="RESOURCE_SMALL_UNCOMMON_02" mastertemplate="MISTS_101_S1" templatepool="BLACK_RESOURCE_ROCK_UNCOMMON" subbiome="red" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="1" clusterclosetime="300" clustershutdowntime="450" clustertier="7" mindifficulty="1" maxdifficulty="2" />
-      <map id="RESOURCE_SMALL_UNCOMMON_03" mastertemplate="MISTS_102_S1" templatepool="BLACK_RESOURCE_ROCK_UNCOMMON" subbiome="red" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="1" clusterclosetime="300" clustershutdowntime="450" clustertier="7" mindifficulty="1" maxdifficulty="2" />
-      <map id="RESOURCE_SMALL_UNCOMMON_04" mastertemplate="MISTS_103_S1" templatepool="BLACK_RESOURCE_ROCK_UNCOMMON" subbiome="red" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="1" clusterclosetime="300" clustershutdowntime="450" clustertier="7" mindifficulty="1" maxdifficulty="2" />
+      <map id="RESOURCE_SMALL_UNCOMMON_01" mastertemplate="MISTS_100_S1" templatepool="BLACK_RESOURCE_ROCK_UNCOMMON" subbiome="red" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="48" clusterclosetime="300" clustershutdowntime="450" clustertier="7" mindifficulty="1" maxdifficulty="2" />
+      <map id="RESOURCE_SMALL_UNCOMMON_02" mastertemplate="MISTS_101_S1" templatepool="BLACK_RESOURCE_ROCK_UNCOMMON" subbiome="red" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="48" clusterclosetime="300" clustershutdowntime="450" clustertier="7" mindifficulty="1" maxdifficulty="2" />
+      <map id="RESOURCE_SMALL_UNCOMMON_03" mastertemplate="MISTS_102_S1" templatepool="BLACK_RESOURCE_ROCK_UNCOMMON" subbiome="red" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="48" clusterclosetime="300" clustershutdowntime="450" clustertier="7" mindifficulty="1" maxdifficulty="2" />
+      <map id="RESOURCE_SMALL_UNCOMMON_04" mastertemplate="MISTS_103_S1" templatepool="BLACK_RESOURCE_ROCK_UNCOMMON" subbiome="red" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="48" clusterclosetime="300" clustershutdowntime="450" clustertier="7" mindifficulty="1" maxdifficulty="2" />
 
-      <map id="RESOURCE_MEDIUM_01" mastertemplate="MISTS_200_M1" templatepool="BLACK_RESOURCE_ROCK_UNCOMMON" subbiome="dead" softplayerlimitmin="2" softplayerlimitmax="3" hardplayercapspace="1" weight="1" clusterclosetime="720" clustershutdowntime="900" clustertier="7" mindifficulty="3" maxdifficulty="4" />
-      <map id="RESOURCE_MEDIUM_02" mastertemplate="MISTS_201_M1" templatepool="BLACK_RESOURCE_ROCK_UNCOMMON" subbiome="dead" softplayerlimitmin="2" softplayerlimitmax="3" hardplayercapspace="1" weight="1" clusterclosetime="720" clustershutdowntime="900" clustertier="7" mindifficulty="3" maxdifficulty="4" />
-      <map id="RESOURCE_MEDIUM_03" mastertemplate="MISTS_202_M1" templatepool="BLACK_RESOURCE_ROCK_RARE" subbiome="dead" softplayerlimitmin="2" softplayerlimitmax="3" hardplayercapspace="1" weight="1" clusterclosetime="720" clustershutdowntime="900" clustertier="8" mindifficulty="3" maxdifficulty="4" />
-      <map id="RESOURCE_MEDIUM_04" mastertemplate="MISTS_203_M1" templatepool="BLACK_RESOURCE_ROCK_RARE" subbiome="dead" softplayerlimitmin="2" softplayerlimitmax="3" hardplayercapspace="1" weight="1" clusterclosetime="720" clustershutdowntime="900" clustertier="8" mindifficulty="3" maxdifficulty="4" />
+      <!-- Spike -->
+      <map id="RESOURCE_SMALL_UNCOMMON_05" mastertemplate="MISTS_100_S1" templatepool="BLACK_RESOURCE_ROCK_UNCOMMON" subbiome="red" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="52" clusterclosetime="300" clustershutdowntime="450" clustertier="7" mindifficulty="2" maxdifficulty="2" />
+      <map id="RESOURCE_SMALL_UNCOMMON_06" mastertemplate="MISTS_101_S1" templatepool="BLACK_RESOURCE_ROCK_UNCOMMON" subbiome="red" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="52" clusterclosetime="300" clustershutdowntime="450" clustertier="7" mindifficulty="2" maxdifficulty="2" />
+      <map id="RESOURCE_SMALL_UNCOMMON_07" mastertemplate="MISTS_102_S1" templatepool="BLACK_RESOURCE_ROCK_UNCOMMON" subbiome="red" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="52" clusterclosetime="300" clustershutdowntime="450" clustertier="7" mindifficulty="2" maxdifficulty="2" />
+      <map id="RESOURCE_SMALL_UNCOMMON_08" mastertemplate="MISTS_103_S1" templatepool="BLACK_RESOURCE_ROCK_UNCOMMON" subbiome="red" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="52" clusterclosetime="300" clustershutdowntime="450" clustertier="7" mindifficulty="2" maxdifficulty="2" />
+
+      <map id="RESOURCE_SMALL_RARE_01" mastertemplate="MISTS_100_S1" templatepool="BLACK_RESOURCE_ROCK_RARE" subbiome="dead" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="20" clusterclosetime="300" clustershutdowntime="450" clustertier="8" mindifficulty="2" maxdifficulty="2" />
+      <map id="RESOURCE_SMALL_RARE_02" mastertemplate="MISTS_101_S1" templatepool="BLACK_RESOURCE_ROCK_RARE" subbiome="dead" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="20" clusterclosetime="300" clustershutdowntime="450" clustertier="8" mindifficulty="2" maxdifficulty="2" />
+      <map id="RESOURCE_SMALL_RARE_03" mastertemplate="MISTS_102_S1" templatepool="BLACK_RESOURCE_ROCK_RARE" subbiome="dead" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="20" clusterclosetime="300" clustershutdowntime="450" clustertier="8" mindifficulty="2" maxdifficulty="2" />
+      <map id="RESOURCE_SMALL_RARE_04" mastertemplate="MISTS_103_S1" templatepool="BLACK_RESOURCE_ROCK_RARE" subbiome="dead" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="20" clusterclosetime="300" clustershutdowntime="450" clustertier="8" mindifficulty="2" maxdifficulty="2" />
+
+      <map id="RESOURCE_MEDIUM_UNCOMMON_01" mastertemplate="MISTS_200_M1" templatepool="BLACK_RESOURCE_ROCK_UNCOMMON" subbiome="red" softplayerlimitmin="2" softplayerlimitmax="3" hardplayercapspace="1" weight="65" clusterclosetime="566" clustershutdowntime="900" clustertier="7" mindifficulty="3" maxdifficulty="3" />
+      <map id="RESOURCE_MEDIUM_UNCOMMON_02" mastertemplate="MISTS_201_M1" templatepool="BLACK_RESOURCE_ROCK_UNCOMMON" subbiome="red" softplayerlimitmin="2" softplayerlimitmax="3" hardplayercapspace="1" weight="65" clusterclosetime="566" clustershutdowntime="900" clustertier="7" mindifficulty="3" maxdifficulty="3" />
+      <map id="RESOURCE_MEDIUM_UNCOMMON_03" mastertemplate="MISTS_202_M1" templatepool="BLACK_RESOURCE_ROCK_UNCOMMON" subbiome="red" softplayerlimitmin="2" softplayerlimitmax="3" hardplayercapspace="1" weight="65" clusterclosetime="566" clustershutdowntime="900" clustertier="7" mindifficulty="3" maxdifficulty="3" />
+      <map id="RESOURCE_MEDIUM_UNCOMMON_04" mastertemplate="MISTS_203_M1" templatepool="BLACK_RESOURCE_ROCK_UNCOMMON" subbiome="red" softplayerlimitmin="2" softplayerlimitmax="3" hardplayercapspace="1" weight="65" clusterclosetime="566" clustershutdowntime="900" clustertier="7" mindifficulty="3" maxdifficulty="3" />
+
+      <map id="RESOURCE_MEDIUM_RARE_01" mastertemplate="MISTS_200_M1" templatepool="BLACK_RESOURCE_ROCK_RARE" subbiome="dead" softplayerlimitmin="2" softplayerlimitmax="3" hardplayercapspace="1" weight="35" clusterclosetime="566" clustershutdowntime="900" clustertier="8" mindifficulty="3" maxdifficulty="4" />
+      <map id="RESOURCE_MEDIUM_RARE_02" mastertemplate="MISTS_201_M1" templatepool="BLACK_RESOURCE_ROCK_RARE" subbiome="dead" softplayerlimitmin="2" softplayerlimitmax="3" hardplayercapspace="1" weight="35" clusterclosetime="566" clustershutdowntime="900" clustertier="8" mindifficulty="3" maxdifficulty="4" />
+      <map id="RESOURCE_MEDIUM_RARE_03" mastertemplate="MISTS_202_M1" templatepool="BLACK_RESOURCE_ROCK_RARE" subbiome="dead" softplayerlimitmin="2" softplayerlimitmax="3" hardplayercapspace="1" weight="35" clusterclosetime="566" clustershutdowntime="900" clustertier="8" mindifficulty="3" maxdifficulty="4" />
+      <map id="RESOURCE_MEDIUM_RARE_04" mastertemplate="MISTS_203_M1" templatepool="BLACK_RESOURCE_ROCK_RARE" subbiome="dead" softplayerlimitmin="2" softplayerlimitmax="3" hardplayercapspace="1" weight="35" clusterclosetime="566" clustershutdowntime="900" clustertier="8" mindifficulty="3" maxdifficulty="4" />
     </mapset>
     <mapset name="MAPSET_RESOURCE_WOOD">
-      <map id="RESOURCE_SMALL_STANDARD_01" mastertemplate="MISTS_100_S1" templatepool="BLACK_RESOURCE_WOOD_COMMON" subbiome="green" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="1" clusterclosetime="300" clustershutdowntime="450" clustertier="6" mindifficulty="0" maxdifficulty="1" />
-      <map id="RESOURCE_SMALL_STANDARD_02" mastertemplate="MISTS_101_S1" templatepool="BLACK_RESOURCE_WOOD_COMMON" subbiome="green" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="1" clusterclosetime="300" clustershutdowntime="450" clustertier="6" mindifficulty="0" maxdifficulty="1" />
-      <map id="RESOURCE_SMALL_STANDARD_03" mastertemplate="MISTS_102_S1" templatepool="BLACK_RESOURCE_WOOD_COMMON" subbiome="green" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="1" clusterclosetime="300" clustershutdowntime="450" clustertier="6" mindifficulty="0" maxdifficulty="1" />
-      <map id="RESOURCE_SMALL_STANDARD_04" mastertemplate="MISTS_103_S1" templatepool="BLACK_RESOURCE_WOOD_COMMON" subbiome="green" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="1" clusterclosetime="300" clustershutdowntime="450" clustertier="6" mindifficulty="0" maxdifficulty="1" />
+      <map id="RESOURCE_SMALL_STANDARD_01" mastertemplate="MISTS_100_S1" templatepool="BLACK_RESOURCE_WOOD_COMMON" subbiome="green" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="80" clusterclosetime="300" clustershutdowntime="450" clustertier="6" mindifficulty="0" maxdifficulty="2" />
+      <map id="RESOURCE_SMALL_STANDARD_02" mastertemplate="MISTS_101_S1" templatepool="BLACK_RESOURCE_WOOD_COMMON" subbiome="green" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="80" clusterclosetime="300" clustershutdowntime="450" clustertier="6" mindifficulty="0" maxdifficulty="2" />
+      <map id="RESOURCE_SMALL_STANDARD_03" mastertemplate="MISTS_102_S1" templatepool="BLACK_RESOURCE_WOOD_COMMON" subbiome="green" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="80" clusterclosetime="300" clustershutdowntime="450" clustertier="6" mindifficulty="0" maxdifficulty="2" />
+      <map id="RESOURCE_SMALL_STANDARD_04" mastertemplate="MISTS_103_S1" templatepool="BLACK_RESOURCE_WOOD_COMMON" subbiome="green" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="80" clusterclosetime="300" clustershutdowntime="450" clustertier="6" mindifficulty="0" maxdifficulty="2" />
 
-      <map id="RESOURCE_SMALL_UNCOMMON_01" mastertemplate="MISTS_100_S1" templatepool="BLACK_RESOURCE_WOOD_UNCOMMON" subbiome="red" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="1" clusterclosetime="300" clustershutdowntime="450" clustertier="7" mindifficulty="1" maxdifficulty="2" />
-      <map id="RESOURCE_SMALL_UNCOMMON_02" mastertemplate="MISTS_101_S1" templatepool="BLACK_RESOURCE_WOOD_UNCOMMON" subbiome="red" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="1" clusterclosetime="300" clustershutdowntime="450" clustertier="7" mindifficulty="1" maxdifficulty="2" />
-      <map id="RESOURCE_SMALL_UNCOMMON_03" mastertemplate="MISTS_102_S1" templatepool="BLACK_RESOURCE_WOOD_UNCOMMON" subbiome="red" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="1" clusterclosetime="300" clustershutdowntime="450" clustertier="7" mindifficulty="1" maxdifficulty="2" />
-      <map id="RESOURCE_SMALL_UNCOMMON_04" mastertemplate="MISTS_103_S1" templatepool="BLACK_RESOURCE_WOOD_UNCOMMON" subbiome="red" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="1" clusterclosetime="300" clustershutdowntime="450" clustertier="7" mindifficulty="1" maxdifficulty="2" />
+      <map id="RESOURCE_SMALL_UNCOMMON_01" mastertemplate="MISTS_100_S1" templatepool="BLACK_RESOURCE_WOOD_UNCOMMON" subbiome="red" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="48" clusterclosetime="300" clustershutdowntime="450" clustertier="7" mindifficulty="1" maxdifficulty="2" />
+      <map id="RESOURCE_SMALL_UNCOMMON_02" mastertemplate="MISTS_101_S1" templatepool="BLACK_RESOURCE_WOOD_UNCOMMON" subbiome="red" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="48" clusterclosetime="300" clustershutdowntime="450" clustertier="7" mindifficulty="1" maxdifficulty="2" />
+      <map id="RESOURCE_SMALL_UNCOMMON_03" mastertemplate="MISTS_102_S1" templatepool="BLACK_RESOURCE_WOOD_UNCOMMON" subbiome="red" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="48" clusterclosetime="300" clustershutdowntime="450" clustertier="7" mindifficulty="1" maxdifficulty="2" />
+      <map id="RESOURCE_SMALL_UNCOMMON_04" mastertemplate="MISTS_103_S1" templatepool="BLACK_RESOURCE_WOOD_UNCOMMON" subbiome="red" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="48" clusterclosetime="300" clustershutdowntime="450" clustertier="7" mindifficulty="1" maxdifficulty="2" />
 
-      <map id="RESOURCE_MEDIUM_01" mastertemplate="MISTS_200_M1" templatepool="BLACK_RESOURCE_WOOD_UNCOMMON" subbiome="dead" softplayerlimitmin="2" softplayerlimitmax="3" hardplayercapspace="1" weight="1" clusterclosetime="720" clustershutdowntime="900" clustertier="7" mindifficulty="3" maxdifficulty="4" />
-      <map id="RESOURCE_MEDIUM_02" mastertemplate="MISTS_201_M1" templatepool="BLACK_RESOURCE_WOOD_UNCOMMON" subbiome="dead" softplayerlimitmin="2" softplayerlimitmax="3" hardplayercapspace="1" weight="1" clusterclosetime="720" clustershutdowntime="900" clustertier="7" mindifficulty="3" maxdifficulty="4" />
-      <map id="RESOURCE_MEDIUM_03" mastertemplate="MISTS_202_M1" templatepool="BLACK_RESOURCE_WOOD_RARE" subbiome="dead" softplayerlimitmin="2" softplayerlimitmax="3" hardplayercapspace="1" weight="1" clusterclosetime="720" clustershutdowntime="900" clustertier="8" mindifficulty="3" maxdifficulty="4" />
-      <map id="RESOURCE_MEDIUM_04" mastertemplate="MISTS_203_M1" templatepool="BLACK_RESOURCE_WOOD_RARE" subbiome="dead" softplayerlimitmin="2" softplayerlimitmax="3" hardplayercapspace="1" weight="1" clusterclosetime="720" clustershutdowntime="900" clustertier="8" mindifficulty="3" maxdifficulty="4" />
+      <!-- Spike -->
+      <map id="RESOURCE_SMALL_UNCOMMON_05" mastertemplate="MISTS_100_S1" templatepool="BLACK_RESOURCE_WOOD_UNCOMMON" subbiome="red" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="52" clusterclosetime="300" clustershutdowntime="450" clustertier="7" mindifficulty="2" maxdifficulty="2" />
+      <map id="RESOURCE_SMALL_UNCOMMON_06" mastertemplate="MISTS_101_S1" templatepool="BLACK_RESOURCE_WOOD_UNCOMMON" subbiome="red" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="52" clusterclosetime="300" clustershutdowntime="450" clustertier="7" mindifficulty="2" maxdifficulty="2" />
+      <map id="RESOURCE_SMALL_UNCOMMON_07" mastertemplate="MISTS_102_S1" templatepool="BLACK_RESOURCE_WOOD_UNCOMMON" subbiome="red" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="52" clusterclosetime="300" clustershutdowntime="450" clustertier="7" mindifficulty="2" maxdifficulty="2" />
+      <map id="RESOURCE_SMALL_UNCOMMON_08" mastertemplate="MISTS_103_S1" templatepool="BLACK_RESOURCE_WOOD_UNCOMMON" subbiome="red" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="52" clusterclosetime="300" clustershutdowntime="450" clustertier="7" mindifficulty="2" maxdifficulty="2" />
+
+      <map id="RESOURCE_SMALL_RARE_01" mastertemplate="MISTS_100_S1" templatepool="BLACK_RESOURCE_WOOD_RARE" subbiome="dead" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="20" clusterclosetime="300" clustershutdowntime="450" clustertier="8" mindifficulty="2" maxdifficulty="2" />
+      <map id="RESOURCE_SMALL_RARE_02" mastertemplate="MISTS_101_S1" templatepool="BLACK_RESOURCE_WOOD_RARE" subbiome="dead" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="20" clusterclosetime="300" clustershutdowntime="450" clustertier="8" mindifficulty="2" maxdifficulty="2" />
+      <map id="RESOURCE_SMALL_RARE_03" mastertemplate="MISTS_102_S1" templatepool="BLACK_RESOURCE_WOOD_RARE" subbiome="dead" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="20" clusterclosetime="300" clustershutdowntime="450" clustertier="8" mindifficulty="2" maxdifficulty="2" />
+      <map id="RESOURCE_SMALL_RARE_04" mastertemplate="MISTS_103_S1" templatepool="BLACK_RESOURCE_WOOD_RARE" subbiome="dead" softplayerlimitmin="1" softplayerlimitmax="1" hardplayercapspace="0" weight="20" clusterclosetime="300" clustershutdowntime="450" clustertier="8" mindifficulty="2" maxdifficulty="2" />
+
+      <map id="RESOURCE_MEDIUM_UNCOMMON_01" mastertemplate="MISTS_200_M1" templatepool="BLACK_RESOURCE_WOOD_UNCOMMON" subbiome="red" softplayerlimitmin="2" softplayerlimitmax="3" hardplayercapspace="1" weight="65" clusterclosetime="566" clustershutdowntime="900" clustertier="7" mindifficulty="3" maxdifficulty="3" />
+      <map id="RESOURCE_MEDIUM_UNCOMMON_02" mastertemplate="MISTS_201_M1" templatepool="BLACK_RESOURCE_WOOD_UNCOMMON" subbiome="red" softplayerlimitmin="2" softplayerlimitmax="3" hardplayercapspace="1" weight="65" clusterclosetime="566" clustershutdowntime="900" clustertier="7" mindifficulty="3" maxdifficulty="3" />
+      <map id="RESOURCE_MEDIUM_UNCOMMON_03" mastertemplate="MISTS_202_M1" templatepool="BLACK_RESOURCE_WOOD_UNCOMMON" subbiome="red" softplayerlimitmin="2" softplayerlimitmax="3" hardplayercapspace="1" weight="65" clusterclosetime="566" clustershutdowntime="900" clustertier="7" mindifficulty="3" maxdifficulty="3" />
+      <map id="RESOURCE_MEDIUM_UNCOMMON_04" mastertemplate="MISTS_203_M1" templatepool="BLACK_RESOURCE_WOOD_UNCOMMON" subbiome="red" softplayerlimitmin="2" softplayerlimitmax="3" hardplayercapspace="1" weight="65" clusterclosetime="566" clustershutdowntime="900" clustertier="7" mindifficulty="3" maxdifficulty="3" />
+
+      <map id="RESOURCE_MEDIUM_RARE_01" mastertemplate="MISTS_200_M1" templatepool="BLACK_RESOURCE_WOOD_RARE" subbiome="dead" softplayerlimitmin="2" softplayerlimitmax="3" hardplayercapspace="1" weight="35" clusterclosetime="566" clustershutdowntime="900" clustertier="8" mindifficulty="3" maxdifficulty="4" />
+      <map id="RESOURCE_MEDIUM_RARE_02" mastertemplate="MISTS_201_M1" templatepool="BLACK_RESOURCE_WOOD_RARE" subbiome="dead" softplayerlimitmin="2" softplayerlimitmax="3" hardplayercapspace="1" weight="35" clusterclosetime="566" clustershutdowntime="900" clustertier="8" mindifficulty="3" maxdifficulty="4" />
+      <map id="RESOURCE_MEDIUM_RARE_03" mastertemplate="MISTS_202_M1" templatepool="BLACK_RESOURCE_WOOD_RARE" subbiome="dead" softplayerlimitmin="2" softplayerlimitmax="3" hardplayercapspace="1" weight="35" clusterclosetime="566" clustershutdowntime="900" clustertier="8" mindifficulty="3" maxdifficulty="4" />
+      <map id="RESOURCE_MEDIUM_RARE_04" mastertemplate="MISTS_203_M1" templatepool="BLACK_RESOURCE_WOOD_RARE" subbiome="dead" softplayerlimitmin="2" softplayerlimitmax="3" hardplayercapspace="1" weight="35" clusterclosetime="566" clustershutdowntime="900" clustertier="8" mindifficulty="3" maxdifficulty="4" />
     </mapset>
   </mistsmaps>
 
@@ -1410,7 +1487,6 @@
       </size>
     </templatepool>
 
-    <!-- TODO: Recheck values after balancing and testing -->
     <templatepool id="BLACK_RESOURCE_FIBER_COMMON">
       <size name="medium">
         <type category="resource" weight="1">
@@ -1778,152 +1854,152 @@
     <resourcepool name="YELLOW" mininitialfill="0.4" maxinitialfill="0.6">
       <resourcepooltier tier="4">
         <resourceenchantment level="0">
-          <resource type="rock" amount="493370" resourcespersecond="1.90343380"/>
-          <resource type="fiber" amount="493370" resourcespersecond="1.90343380"/>
-          <resource type="ore" amount="493370" resourcespersecond="1.90343380"/>
-          <resource type="wood" amount="493370" resourcespersecond="1.90343380"/>
-          <resource type="hide" amount="493370" resourcespersecond="1.90343380"/>
+          <resource type="rock" amount="493370" resourcespersecond="5.71030140" />
+          <resource type="fiber" amount="493370" resourcespersecond="5.71030140" />
+          <resource type="ore" amount="493370" resourcespersecond="5.71030140" />
+          <resource type="wood" amount="493370" resourcespersecond="5.71030140" />
+          <resource type="hide" amount="493370" resourcespersecond="5.71030140" />
         </resourceenchantment>
         <resourceenchantment level="1">
-          <resource type="rock" amount="19258" resourcespersecond="0.07429622"/>
-          <resource type="fiber" amount="19258" resourcespersecond="0.07429622"/>
-          <resource type="ore" amount="19258" resourcespersecond="0.07429622"/>
-          <resource type="wood" amount="19258" resourcespersecond="0.07429622"/>
-          <resource type="hide" amount="19258" resourcespersecond="0.07429622"/>
+          <resource type="rock" amount="19258" resourcespersecond="0.22288866" />
+          <resource type="fiber" amount="19258" resourcespersecond="0.22288866" />
+          <resource type="ore" amount="19258" resourcespersecond="0.22288866" />
+          <resource type="wood" amount="19258" resourcespersecond="0.22288866" />
+          <resource type="hide" amount="19258" resourcespersecond="0.22288866" />
         </resourceenchantment>
         <resourceenchantment level="2">
-          <resource type="rock" amount="3852" resourcespersecond="0.01485924"/>
-          <resource type="fiber" amount="3852" resourcespersecond="0.01485924"/>
-          <resource type="ore" amount="3852" resourcespersecond="0.01485924"/>
-          <resource type="wood" amount="3852" resourcespersecond="0.01485924"/>
-          <resource type="hide" amount="3852" resourcespersecond="0.01485924"/>
+          <resource type="rock" amount="3852" resourcespersecond="0.04457772" />
+          <resource type="fiber" amount="3852" resourcespersecond="0.04457772" />
+          <resource type="ore" amount="3852" resourcespersecond="0.04457772" />
+          <resource type="wood" amount="3852" resourcespersecond="0.04457772" />
+          <resource type="hide" amount="3852" resourcespersecond="0.04457772" />
         </resourceenchantment>
         <resourceenchantment level="3">
-          <resource type="rock" amount="1000" resourcespersecond="0.00297185"/>
-          <resource type="fiber" amount="1000" resourcespersecond="0.00297185"/>
-          <resource type="ore" amount="1000" resourcespersecond="0.00297185"/>
-          <resource type="wood" amount="1000" resourcespersecond="0.00297185"/>
-          <resource type="hide" amount="1000" resourcespersecond="0.00297185"/>
+          <resource type="rock" amount="1000" resourcespersecond="0.00891555" />
+          <resource type="fiber" amount="1000" resourcespersecond="0.00891555" />
+          <resource type="ore" amount="1000" resourcespersecond="0.00891555" />
+          <resource type="wood" amount="1000" resourcespersecond="0.00891555" />
+          <resource type="hide" amount="1000" resourcespersecond="0.00891555" />
         </resourceenchantment>
       </resourcepooltier>
       <resourcepooltier tier="5">
         <resourceenchantment level="0">
-          <resource type="rock" amount="212908" resourcespersecond="0.82140592"/>
-          <resource type="fiber" amount="212908" resourcespersecond="0.82140592"/>
-          <resource type="ore" amount="212908" resourcespersecond="0.82140592"/>
-          <resource type="wood" amount="212908" resourcespersecond="0.82140592"/>
-          <resource type="hide" amount="212908" resourcespersecond="0.82140592"/>
+          <resource type="rock" amount="212908" resourcespersecond="2.46421776" />
+          <resource type="fiber" amount="212908" resourcespersecond="2.46421776" />
+          <resource type="ore" amount="212908" resourcespersecond="2.46421776" />
+          <resource type="wood" amount="212908" resourcespersecond="2.46421776" />
+          <resource type="hide" amount="212908" resourcespersecond="2.46421776" />
         </resourceenchantment>
         <resourceenchantment level="1">
-          <resource type="rock" amount="11081" resourcespersecond="0.04274896"/>
-          <resource type="fiber" amount="11081" resourcespersecond="0.04274896"/>
-          <resource type="ore" amount="11081" resourcespersecond="0.04274896"/>
-          <resource type="wood" amount="11081" resourcespersecond="0.04274896"/>
-          <resource type="hide" amount="11081" resourcespersecond="0.04274896"/>
+          <resource type="rock" amount="11081" resourcespersecond="0.12824688" />
+          <resource type="fiber" amount="11081" resourcespersecond="0.12824688" />
+          <resource type="ore" amount="11081" resourcespersecond="0.12824688" />
+          <resource type="wood" amount="11081" resourcespersecond="0.12824688" />
+          <resource type="hide" amount="11081" resourcespersecond="0.12824688" />
         </resourceenchantment>
         <resourceenchantment level="2">
-          <resource type="rock" amount="2216" resourcespersecond="0.00854979"/>
-          <resource type="fiber" amount="2216" resourcespersecond="0.00854979"/>
-          <resource type="ore" amount="2216" resourcespersecond="0.00854979"/>
-          <resource type="wood" amount="2216" resourcespersecond="0.00854979"/>
-          <resource type="hide" amount="2216" resourcespersecond="0.00854979"/>
+          <resource type="rock" amount="2216" resourcespersecond="0.02564937" />
+          <resource type="fiber" amount="2216" resourcespersecond="0.02564937" />
+          <resource type="ore" amount="2216" resourcespersecond="0.02564937" />
+          <resource type="wood" amount="2216" resourcespersecond="0.02564937" />
+          <resource type="hide" amount="2216" resourcespersecond="0.02564937" />
         </resourceenchantment>
         <resourceenchantment level="3">
-          <resource type="rock" amount="0" resourcespersecond="0"/>
-          <resource type="fiber" amount="0" resourcespersecond="0"/>
-          <resource type="ore" amount="0" resourcespersecond="0"/>
-          <resource type="wood" amount="0" resourcespersecond="0"/>
-          <resource type="hide" amount="0" resourcespersecond="0"/>
+          <resource type="rock" amount="0" resourcespersecond="0" />
+          <resource type="fiber" amount="0" resourcespersecond="0" />
+          <resource type="ore" amount="0" resourcespersecond="0" />
+          <resource type="wood" amount="0" resourcespersecond="0" />
+          <resource type="hide" amount="0" resourcespersecond="0" />
         </resourceenchantment>
       </resourcepooltier>
       <resourcepooltier tier="6">
         <resourceenchantment level="0">
-          <resource type="rock" amount="6284" resourcespersecond="0.02424403"/>
-          <resource type="fiber" amount="6284" resourcespersecond="0.02424403"/>
-          <resource type="ore" amount="6284" resourcespersecond="0.02424403"/>
-          <resource type="wood" amount="6284" resourcespersecond="0.02424403"/>
-          <resource type="hide" amount="6284" resourcespersecond="0.02424403"/>
+          <resource type="rock" amount="6284" resourcespersecond="0.07273209" />
+          <resource type="fiber" amount="6284" resourcespersecond="0.07273209" />
+          <resource type="ore" amount="6284" resourcespersecond="0.07273209" />
+          <resource type="wood" amount="6284" resourcespersecond="0.07273209" />
+          <resource type="hide" amount="6284" resourcespersecond="0.07273209" />
         </resourceenchantment>
         <resourceenchantment level="1">
-          <resource type="rock" amount="1000" resourcespersecond="0.00189262"/>
-          <resource type="fiber" amount="1000" resourcespersecond="0.00189262"/>
-          <resource type="ore" amount="1000" resourcespersecond="0.00189262"/>
-          <resource type="wood" amount="1000" resourcespersecond="0.00189262"/>
-          <resource type="hide" amount="1000" resourcespersecond="0.00189262"/>
+          <resource type="rock" amount="1000" resourcespersecond="0.00567786" />
+          <resource type="fiber" amount="1000" resourcespersecond="0.00567786" />
+          <resource type="ore" amount="1000" resourcespersecond="0.00567786" />
+          <resource type="wood" amount="1000" resourcespersecond="0.00567786" />
+          <resource type="hide" amount="1000" resourcespersecond="0.00567786" />
         </resourceenchantment>
         <resourceenchantment level="2">
-          <resource type="rock" amount="0" resourcespersecond="0"/>
-          <resource type="fiber" amount="0" resourcespersecond="0"/>
-          <resource type="ore" amount="0" resourcespersecond="0"/>
-          <resource type="wood" amount="0" resourcespersecond="0"/>
-          <resource type="hide" amount="0" resourcespersecond="0"/>
+          <resource type="rock" amount="0" resourcespersecond="0" />
+          <resource type="fiber" amount="0" resourcespersecond="0" />
+          <resource type="ore" amount="0" resourcespersecond="0" />
+          <resource type="wood" amount="0" resourcespersecond="0" />
+          <resource type="hide" amount="0" resourcespersecond="0" />
         </resourceenchantment>
         <resourceenchantment level="3">
-          <resource type="rock" amount="0" resourcespersecond="0"/>
-          <resource type="fiber" amount="0" resourcespersecond="0"/>
-          <resource type="ore" amount="0" resourcespersecond="0"/>
-          <resource type="wood" amount="0" resourcespersecond="0"/>
-          <resource type="hide" amount="0" resourcespersecond="0"/>
+          <resource type="rock" amount="0" resourcespersecond="0" />
+          <resource type="fiber" amount="0" resourcespersecond="0" />
+          <resource type="ore" amount="0" resourcespersecond="0" />
+          <resource type="wood" amount="0" resourcespersecond="0" />
+          <resource type="hide" amount="0" resourcespersecond="0" />
         </resourceenchantment>
       </resourcepooltier>
       <resourcepooltier tier="7">
         <resourceenchantment level="0">
-          <resource type="rock" amount="1000" resourcespersecond="0.00282297"/>
-          <resource type="fiber" amount="1000" resourcespersecond="0.00282297"/>
-          <resource type="ore" amount="1000" resourcespersecond="0.00282297"/>
-          <resource type="wood" amount="1000" resourcespersecond="0.00282297"/>
-          <resource type="hide" amount="1000" resourcespersecond="0.00282297"/>
+          <resource type="rock" amount="1000" resourcespersecond="0.00846891" />
+          <resource type="fiber" amount="1000" resourcespersecond="0.00846891" />
+          <resource type="ore" amount="1000" resourcespersecond="0.00846891" />
+          <resource type="wood" amount="1000" resourcespersecond="0.00846891" />
+          <resource type="hide" amount="1000" resourcespersecond="0.00846891" />
         </resourceenchantment>
         <resourceenchantment level="1">
-            <resource type="rock" amount="0" resourcespersecond="0"/>
-            <resource type="fiber" amount="0" resourcespersecond="0"/>
-            <resource type="ore" amount="0" resourcespersecond="0"/>
-            <resource type="wood" amount="0" resourcespersecond="0"/>
-            <resource type="hide" amount="0" resourcespersecond="0"/>
+            <resource type="rock" amount="0" resourcespersecond="0" />
+            <resource type="fiber" amount="0" resourcespersecond="0" />
+            <resource type="ore" amount="0" resourcespersecond="0" />
+            <resource type="wood" amount="0" resourcespersecond="0" />
+            <resource type="hide" amount="0" resourcespersecond="0" />
         </resourceenchantment>
         <resourceenchantment level="2">
-          <resource type="rock" amount="0" resourcespersecond="0"/>
-          <resource type="fiber" amount="0" resourcespersecond="0"/>
-          <resource type="ore" amount="0" resourcespersecond="0"/>
-          <resource type="wood" amount="0" resourcespersecond="0"/>
-          <resource type="hide" amount="0" resourcespersecond="0"/>
+          <resource type="rock" amount="0" resourcespersecond="0" />
+          <resource type="fiber" amount="0" resourcespersecond="0" />
+          <resource type="ore" amount="0" resourcespersecond="0" />
+          <resource type="wood" amount="0" resourcespersecond="0" />
+          <resource type="hide" amount="0" resourcespersecond="0" />
         </resourceenchantment>
         <resourceenchantment level="3">
-          <resource type="rock" amount="0" resourcespersecond="0"/>
-          <resource type="fiber" amount="0" resourcespersecond="0"/>
-          <resource type="ore" amount="0" resourcespersecond="0"/>
-          <resource type="wood" amount="0" resourcespersecond="0"/>
-          <resource type="hide" amount="0" resourcespersecond="0"/>
+          <resource type="rock" amount="0" resourcespersecond="0" />
+          <resource type="fiber" amount="0" resourcespersecond="0" />
+          <resource type="ore" amount="0" resourcespersecond="0" />
+          <resource type="wood" amount="0" resourcespersecond="0" />
+          <resource type="hide" amount="0" resourcespersecond="0" />
         </resourceenchantment>
       </resourcepooltier>
       <resourcepooltier tier="8">
         <resourceenchantment level="0">
-          <resource type="rock" amount="0" resourcespersecond="0"/>
-          <resource type="fiber" amount="0" resourcespersecond="0"/>
-          <resource type="ore" amount="0" resourcespersecond="0"/>
-          <resource type="wood" amount="0" resourcespersecond="0"/>
-          <resource type="hide" amount="0" resourcespersecond="0"/>
+          <resource type="rock" amount="0" resourcespersecond="0" />
+          <resource type="fiber" amount="0" resourcespersecond="0" />
+          <resource type="ore" amount="0" resourcespersecond="0" />
+          <resource type="wood" amount="0" resourcespersecond="0" />
+          <resource type="hide" amount="0" resourcespersecond="0" />
         </resourceenchantment>
         <resourceenchantment level="1">
-          <resource type="rock" amount="0" resourcespersecond="0"/>
-          <resource type="fiber" amount="0" resourcespersecond="0"/>
-          <resource type="ore" amount="0" resourcespersecond="0"/>
-          <resource type="wood" amount="0" resourcespersecond="0"/>
-          <resource type="hide" amount="0" resourcespersecond="0"/>
+          <resource type="rock" amount="0" resourcespersecond="0" />
+          <resource type="fiber" amount="0" resourcespersecond="0" />
+          <resource type="ore" amount="0" resourcespersecond="0" />
+          <resource type="wood" amount="0" resourcespersecond="0" />
+          <resource type="hide" amount="0" resourcespersecond="0" />
         </resourceenchantment>
         <resourceenchantment level="2">
-          <resource type="rock" amount="0" resourcespersecond="0"/>
-          <resource type="fiber" amount="0" resourcespersecond="0"/>
-          <resource type="ore" amount="0" resourcespersecond="0"/>
-          <resource type="wood" amount="0" resourcespersecond="0"/>
-          <resource type="hide" amount="0" resourcespersecond="0"/>
+          <resource type="rock" amount="0" resourcespersecond="0" />
+          <resource type="fiber" amount="0" resourcespersecond="0" />
+          <resource type="ore" amount="0" resourcespersecond="0" />
+          <resource type="wood" amount="0" resourcespersecond="0" />
+          <resource type="hide" amount="0" resourcespersecond="0" />
         </resourceenchantment>
         <resourceenchantment level="3">
-          <resource type="rock" amount="0" resourcespersecond="0"/>
-          <resource type="fiber" amount="0" resourcespersecond="0"/>
-          <resource type="ore" amount="0" resourcespersecond="0"/>
-          <resource type="wood" amount="0" resourcespersecond="0"/>
-          <resource type="hide" amount="0" resourcespersecond="0"/>
+          <resource type="rock" amount="0" resourcespersecond="0" />
+          <resource type="fiber" amount="0" resourcespersecond="0" />
+          <resource type="ore" amount="0" resourcespersecond="0" />
+          <resource type="wood" amount="0" resourcespersecond="0" />
+          <resource type="hide" amount="0" resourcespersecond="0" />
         </resourceenchantment>
       </resourcepooltier>
     </resourcepool>
@@ -1931,305 +2007,304 @@
       <resourcepool name="BLACK" mininitialfill="0.4" maxinitialfill="0.6">
         <resourcepooltier tier="4">
           <resourceenchantment level="0">
-            <resource type="rock" amount="328913" resourcespersecond="1.26895586"/>
-            <resource type="fiber" amount="328913" resourcespersecond="1.26895586"/>
-            <resource type="ore" amount="328913" resourcespersecond="1.26895586"/>
-            <resource type="wood" amount="328913" resourcespersecond="1.26895586"/>
-            <resource type="hide" amount="328913" resourcespersecond="1.26895586"/>
+            <resource type="rock" amount="328913" resourcespersecond="3.80686758" />
+            <resource type="fiber" amount="328913" resourcespersecond="3.80686758" />
+            <resource type="ore" amount="328913" resourcespersecond="3.80686758" />
+            <resource type="wood" amount="328913" resourcespersecond="3.80686758" />
+            <resource type="hide" amount="328913" resourcespersecond="3.80686758" />
           </resourceenchantment>
           <resourceenchantment level="1">
-            <resource type="rock" amount="12838" resourcespersecond="0.04953081"/>
-            <resource type="fiber" amount="12838" resourcespersecond="0.04953081"/>
-            <resource type="ore" amount="12838" resourcespersecond="0.04953081"/>
-            <resource type="wood" amount="12838" resourcespersecond="0.04953081"/>
-            <resource type="hide" amount="12838" resourcespersecond="0.04953081"/>
+            <resource type="rock" amount="12838" resourcespersecond="0.14859243" />
+            <resource type="fiber" amount="12838" resourcespersecond="0.14859243" />
+            <resource type="ore" amount="12838" resourcespersecond="0.14859243" />
+            <resource type="wood" amount="12838" resourcespersecond="0.14859243" />
+            <resource type="hide" amount="12838" resourcespersecond="0.14859243" />
           </resourceenchantment>
           <resourceenchantment level="2">
-            <resource type="rock" amount="2568" resourcespersecond="0.00990616"/>
-            <resource type="fiber" amount="2568" resourcespersecond="0.00990616"/>
-            <resource type="ore" amount="2568" resourcespersecond="0.00990616"/>
-            <resource type="wood" amount="2568" resourcespersecond="0.00990616"/>
-            <resource type="hide" amount="2568" resourcespersecond="0.00990616"/>
+            <resource type="rock" amount="2568" resourcespersecond="0.02971848" />
+            <resource type="fiber" amount="2568" resourcespersecond="0.02971848" />
+            <resource type="ore" amount="2568" resourcespersecond="0.02971848" />
+            <resource type="wood" amount="2568" resourcespersecond="0.02971848" />
+            <resource type="hide" amount="2568" resourcespersecond="0.02971848" />
           </resourceenchantment>
           <resourceenchantment level="3">
-            <resource type="rock" amount="1000" resourcespersecond="0.00198123"/>
-            <resource type="fiber" amount="1000" resourcespersecond="0.00198123"/>
-            <resource type="ore" amount="1000" resourcespersecond="0.00198123"/>
-            <resource type="wood" amount="1000" resourcespersecond="0.00198123"/>
-            <resource type="hide" amount="1000" resourcespersecond="0.00198123"/>
+            <resource type="rock" amount="1000" resourcespersecond="0.00594369" />
+            <resource type="fiber" amount="1000" resourcespersecond="0.00594369" />
+            <resource type="ore" amount="1000" resourcespersecond="0.00594369" />
+            <resource type="wood" amount="1000" resourcespersecond="0.00594369" />
+            <resource type="hide" amount="1000" resourcespersecond="0.00594369" />
           </resourceenchantment>
         </resourcepooltier>
         <resourcepooltier tier="5">
           <resourceenchantment level="0">
-            <resource type="rock" amount="318453" resourcespersecond="1.22860104"/>
-            <resource type="fiber" amount="318453" resourcespersecond="1.22860104"/>
-            <resource type="ore" amount="318453" resourcespersecond="1.22860104"/>
-            <resource type="wood" amount="318453" resourcespersecond="1.22860104"/>
-            <resource type="hide" amount="318453" resourcespersecond="1.22860104"/>
+            <resource type="rock" amount="318453" resourcespersecond="3.68580312" />
+            <resource type="fiber" amount="318453" resourcespersecond="3.68580312" />
+            <resource type="ore" amount="318453" resourcespersecond="3.68580312" />
+            <resource type="wood" amount="318453" resourcespersecond="3.68580312" />
+            <resource type="hide" amount="318453" resourcespersecond="3.68580312" />
           </resourceenchantment>
           <resourceenchantment level="1">
-            <resource type="rock" amount="16573" resourcespersecond="0.06394087"/>
-            <resource type="fiber" amount="16573" resourcespersecond="0.06394087"/>
-            <resource type="ore" amount="16573" resourcespersecond="0.06394087"/>
-            <resource type="wood" amount="16573" resourcespersecond="0.06394087"/>
-            <resource type="hide" amount="16573" resourcespersecond="0.06394087"/>
+            <resource type="rock" amount="16573" resourcespersecond="0.19182261" />
+            <resource type="fiber" amount="16573" resourcespersecond="0.19182261" />
+            <resource type="ore" amount="16573" resourcespersecond="0.19182261" />
+            <resource type="wood" amount="16573" resourcespersecond="0.19182261" />
+            <resource type="hide" amount="16573" resourcespersecond="0.19182261" />
           </resourceenchantment>
           <resourceenchantment level="2">
-            <resource type="rock" amount="3315" resourcespersecond="0.01278817"/>
-            <resource type="fiber" amount="3315" resourcespersecond="0.01278817"/>
-            <resource type="ore" amount="3315" resourcespersecond="0.01278817"/>
-            <resource type="wood" amount="3315" resourcespersecond="0.01278817"/>
-            <resource type="hide" amount="3315" resourcespersecond="0.01278817"/>
+            <resource type="rock" amount="3315" resourcespersecond="0.03836451" />
+            <resource type="fiber" amount="3315" resourcespersecond="0.03836451" />
+            <resource type="ore" amount="3315" resourcespersecond="0.03836451" />
+            <resource type="wood" amount="3315" resourcespersecond="0.03836451" />
+            <resource type="hide" amount="3315" resourcespersecond="0.03836451" />
           </resourceenchantment>
           <resourceenchantment level="3">
-            <resource type="rock" amount="1000" resourcespersecond="0.00255763"/>
-            <resource type="fiber" amount="1000" resourcespersecond="0.00255763"/>
-            <resource type="ore" amount="1000" resourcespersecond="0.00255763"/>
-            <resource type="wood" amount="1000" resourcespersecond="0.00255763"/>
-            <resource type="hide" amount="1000" resourcespersecond="0.00255763"/>
+            <resource type="rock" amount="1000" resourcespersecond="0.00767289" />
+            <resource type="fiber" amount="1000" resourcespersecond="0.00767289" />
+            <resource type="ore" amount="1000" resourcespersecond="0.00767289" />
+            <resource type="wood" amount="1000" resourcespersecond="0.00767289" />
+            <resource type="hide" amount="1000" resourcespersecond="0.00767289" />
           </resourceenchantment>
         </resourcepooltier>
         <resourcepooltier tier="6">
           <resourceenchantment level="0">
-            <resource type="rock" amount="96768" resourcespersecond="0.37333488"/>
-            <resource type="fiber" amount="96768" resourcespersecond="0.37333488"/>
-            <resource type="ore" amount="96768" resourcespersecond="0.37333488"/>
-            <resource type="wood" amount="96768" resourcespersecond="0.37333488"/>
-            <resource type="hide" amount="96768" resourcespersecond="0.37333488"/>
+            <resource type="rock" amount="96768" resourcespersecond="1.12000464" />
+            <resource type="fiber" amount="96768" resourcespersecond="1.12000464" />
+            <resource type="ore" amount="96768" resourcespersecond="1.12000464" />
+            <resource type="wood" amount="96768" resourcespersecond="1.12000464" />
+            <resource type="hide" amount="96768" resourcespersecond="1.12000464" />
           </resourceenchantment>
           <resourceenchantment level="1">
-            <resource type="rock" amount="7554" resourcespersecond="0.02914456"/>
-            <resource type="fiber" amount="7554" resourcespersecond="0.02914456"/>
-            <resource type="ore" amount="7554" resourcespersecond="0.02914456"/>
-            <resource type="wood" amount="7554" resourcespersecond="0.02914456"/>
-            <resource type="hide" amount="7554" resourcespersecond="0.02914456"/>
+            <resource type="rock" amount="7554" resourcespersecond="0.08743368" />
+            <resource type="fiber" amount="7554" resourcespersecond="0.08743368" />
+            <resource type="ore" amount="7554" resourcespersecond="0.08743368" />
+            <resource type="wood" amount="7554" resourcespersecond="0.08743368" />
+            <resource type="hide" amount="7554" resourcespersecond="0.08743368" />
           </resourceenchantment>
           <resourceenchantment level="2">
-            <resource type="rock" amount="1511" resourcespersecond="0.00582891"/>
-            <resource type="fiber" amount="1511" resourcespersecond="0.00582891"/>
-            <resource type="ore" amount="1511" resourcespersecond="0.00582891"/>
-            <resource type="wood" amount="1511" resourcespersecond="0.00582891"/>
-            <resource type="hide" amount="1511" resourcespersecond="0.00582891"/>
+            <resource type="rock" amount="1511" resourcespersecond="0.01748673" />
+            <resource type="fiber" amount="1511" resourcespersecond="0.01748673" />
+            <resource type="ore" amount="1511" resourcespersecond="0.01748673" />
+            <resource type="wood" amount="1511" resourcespersecond="0.01748673" />
+            <resource type="hide" amount="1511" resourcespersecond="0.01748673" />
           </resourceenchantment>
           <resourceenchantment level="3">
-            <resource type="rock" amount="1000" resourcespersecond="0.00116578"/>
-            <resource type="fiber" amount="1000" resourcespersecond="0.00116578"/>
-            <resource type="ore" amount="1000" resourcespersecond="0.00116578"/>
-            <resource type="wood" amount="1000" resourcespersecond="0.00116578"/>
-            <resource type="hide" amount="1000" resourcespersecond="0.00116578"/>
+            <resource type="rock" amount="1000" resourcespersecond="0.00349734" />
+            <resource type="fiber" amount="1000" resourcespersecond="0.00349734" />
+            <resource type="ore" amount="1000" resourcespersecond="0.00349734" />
+            <resource type="wood" amount="1000" resourcespersecond="0.00349734" />
+            <resource type="hide" amount="1000" resourcespersecond="0.00349734" />
           </resourceenchantment>
         </resourcepooltier>
         <resourcepooltier tier="7">
           <resourceenchantment level="0">
-            <resource type="rock" amount="31576" resourcespersecond="0.12181929"/>
-            <resource type="fiber" amount="31576" resourcespersecond="0.12181929"/>
-            <resource type="ore" amount="31576" resourcespersecond="0.12181929"/>
-            <resource type="wood" amount="31576" resourcespersecond="0.12181929"/>
-            <resource type="hide" amount="31576" resourcespersecond="0.12181929"/>
+            <resource type="rock" amount="31576" resourcespersecond="0.36545787" />
+            <resource type="fiber" amount="31576" resourcespersecond="0.36545787" />
+            <resource type="ore" amount="31576" resourcespersecond="0.36545787" />
+            <resource type="wood" amount="31576" resourcespersecond="0.36545787" />
+            <resource type="hide" amount="31576" resourcespersecond="0.36545787" />
           </resourceenchantment>
           <resourceenchantment level="1">
-            <resource type="rock" amount="3450" resourcespersecond="0.01331146"/>
-            <resource type="fiber" amount="3450" resourcespersecond="0.01331146"/>
-            <resource type="ore" amount="3450" resourcespersecond="0.01331146"/>
-            <resource type="wood" amount="3450" resourcespersecond="0.01331146"/>
-            <resource type="hide" amount="3450" resourcespersecond="0.01331146"/>
+            <resource type="rock" amount="3450" resourcespersecond="0.03993438" />
+            <resource type="fiber" amount="3450" resourcespersecond="0.03993438" />
+            <resource type="ore" amount="3450" resourcespersecond="0.03993438" />
+            <resource type="wood" amount="3450" resourcespersecond="0.03993438" />
+            <resource type="hide" amount="3450" resourcespersecond="0.03993438" />
           </resourceenchantment>
           <resourceenchantment level="2">
-            <resource type="rock" amount="1000" resourcespersecond="0.00266229"/>
-            <resource type="fiber" amount="1000" resourcespersecond="0.00266229"/>
-            <resource type="ore" amount="1000" resourcespersecond="0.00266229"/>
-            <resource type="wood" amount="1000" resourcespersecond="0.00266229"/>
-            <resource type="hide" amount="1000" resourcespersecond="0.00266229"/>
+            <resource type="rock" amount="1000" resourcespersecond="0.00798687" />
+            <resource type="fiber" amount="1000" resourcespersecond="0.00798687" />
+            <resource type="ore" amount="1000" resourcespersecond="0.00798687" />
+            <resource type="wood" amount="1000" resourcespersecond="0.00798687" />
+            <resource type="hide" amount="1000" resourcespersecond="0.00798687" />
           </resourceenchantment>
           <resourceenchantment level="3">
-            <resource type="rock" amount="1000" resourcespersecond="0.00053246"/>
-            <resource type="fiber" amount="1000" resourcespersecond="0.00053246"/>
-            <resource type="ore" amount="1000" resourcespersecond="0.00053246"/>
-            <resource type="wood" amount="1000" resourcespersecond="0.00053246"/>
-            <resource type="hide" amount="1000" resourcespersecond="0.00053246"/>
+            <resource type="rock" amount="1000" resourcespersecond="0.00159738" />
+            <resource type="fiber" amount="1000" resourcespersecond="0.00159738" />
+            <resource type="ore" amount="1000" resourcespersecond="0.00159738" />
+            <resource type="wood" amount="1000" resourcespersecond="0.00159738" />
+            <resource type="hide" amount="1000" resourcespersecond="0.00159738" />
           </resourceenchantment>
         </resourcepooltier>
         <resourcepooltier tier="8">
           <resourceenchantment level="0">
-            <resource type="rock" amount="8098" resourcespersecond="0.03124129"/>
-            <resource type="fiber" amount="8098" resourcespersecond="0.03124129"/>
-            <resource type="ore" amount="8098" resourcespersecond="0.03124129"/>
-            <resource type="wood" amount="8098" resourcespersecond="0.03124129"/>
-            <resource type="hide" amount="8098" resourcespersecond="0.03124129"/>
+            <resource type="rock" amount="8098" resourcespersecond="0.09372387" />
+            <resource type="fiber" amount="8098" resourcespersecond="0.09372387" />
+            <resource type="ore" amount="8098" resourcespersecond="0.09372387" />
+            <resource type="wood" amount="8098" resourcespersecond="0.09372387" />
+            <resource type="hide" amount="8098" resourcespersecond="0.09372387" />
           </resourceenchantment>
           <resourceenchantment level="1">
-            <resource type="rock" amount="1000" resourcespersecond="0.00290347"/>
-            <resource type="fiber" amount="1000" resourcespersecond="0.00290347"/>
-            <resource type="ore" amount="1000" resourcespersecond="0.00290347"/>
-            <resource type="wood" amount="1000" resourcespersecond="0.00290347"/>
-            <resource type="hide" amount="1000" resourcespersecond="0.00290347"/>
+            <resource type="rock" amount="1000" resourcespersecond="0.00871041" />
+            <resource type="fiber" amount="1000" resourcespersecond="0.00871041" />
+            <resource type="ore" amount="1000" resourcespersecond="0.00871041" />
+            <resource type="wood" amount="1000" resourcespersecond="0.00871041" />
+            <resource type="hide" amount="1000" resourcespersecond="0.00871041" />
           </resourceenchantment>
           <resourceenchantment level="2">
-            <resource type="rock" amount="1000" resourcespersecond="0.00058069"/>
-            <resource type="fiber" amount="1000" resourcespersecond="0.00058069"/>
-            <resource type="ore" amount="1000" resourcespersecond="0.00058069"/>
-            <resource type="wood" amount="1000" resourcespersecond="0.00058069"/>
-            <resource type="hide" amount="1000" resourcespersecond="0.00058069"/>
+            <resource type="rock" amount="1000" resourcespersecond="0.00174207" />
+            <resource type="fiber" amount="1000" resourcespersecond="0.00174207" />
+            <resource type="ore" amount="1000" resourcespersecond="0.00174207" />
+            <resource type="wood" amount="1000" resourcespersecond="0.00174207" />
+            <resource type="hide" amount="1000" resourcespersecond="0.00174207" />
           </resourceenchantment>
           <resourceenchantment level="3">
-            <resource type="rock" amount="1000" resourcespersecond="0.00011614"/>
-            <resource type="fiber" amount="1000" resourcespersecond="0.00011614"/>
-            <resource type="ore" amount="1000" resourcespersecond="0.00011614"/>
-            <resource type="wood" amount="1000" resourcespersecond="0.00011614"/>
-            <resource type="hide" amount="1000" resourcespersecond="0.00011614"/>
+            <resource type="rock" amount="1000" resourcespersecond="0.00034842" />
+            <resource type="fiber" amount="1000" resourcespersecond="0.00034842" />
+            <resource type="ore" amount="1000" resourcespersecond="0.00034842" />
+            <resource type="wood" amount="1000" resourcespersecond="0.00034842" />
+            <resource type="hide" amount="1000" resourcespersecond="0.00034842" />
           </resourceenchantment>
         </resourcepooltier>
       </resourcepool>
-      <!--TODO: check initialfill values and resource attributes for balancing -->
     <resourcepool name="RESOURCE_BLACK" mininitialfill="0.8" maxinitialfill="1">
         <resourcepooltier tier="4">
           <resourceenchantment level="0">
-            <resource type="rock" amount="32891" resourcespersecond="0.126895586"/>
-            <resource type="fiber" amount="32891" resourcespersecond="0.126895586"/>
-            <resource type="ore" amount="32891" resourcespersecond="0.126895586"/>
-            <resource type="wood" amount="32891" resourcespersecond="0.126895586"/>
-            <resource type="hide" amount="32891" resourcespersecond="0.126895586"/>
+            <resource type="rock" amount="328913" resourcespersecond="0.38068676" />
+            <resource type="fiber" amount="328913" resourcespersecond="0.38068676" />
+            <resource type="ore" amount="328913" resourcespersecond="0.38068676" />
+            <resource type="wood" amount="328913" resourcespersecond="0.38068676" />
+            <resource type="hide" amount="328913" resourcespersecond="0.38068676" />
           </resourceenchantment>
           <resourceenchantment level="1">
-            <resource type="rock" amount="1284" resourcespersecond="0.004953081"/>
-            <resource type="fiber" amount="1284" resourcespersecond="0.004953081"/>
-            <resource type="ore" amount="1284" resourcespersecond="0.004953081"/>
-            <resource type="wood" amount="1284" resourcespersecond="0.004953081"/>
-            <resource type="hide" amount="1284" resourcespersecond="0.004953081"/>
+            <resource type="rock" amount="12838" resourcespersecond="0.01485924" />
+            <resource type="fiber" amount="12838" resourcespersecond="0.01485924" />
+            <resource type="ore" amount="12838" resourcespersecond="0.01485924" />
+            <resource type="wood" amount="12838" resourcespersecond="0.01485924" />
+            <resource type="hide" amount="12838" resourcespersecond="0.01485924" />
           </resourceenchantment>
           <resourceenchantment level="2">
-            <resource type="rock" amount="257" resourcespersecond="0.000990616"/>
-            <resource type="fiber" amount="257" resourcespersecond="0.000990616"/>
-            <resource type="ore" amount="257" resourcespersecond="0.000990616"/>
-            <resource type="wood" amount="257" resourcespersecond="0.000990616"/>
-            <resource type="hide" amount="257" resourcespersecond="0.000990616"/>
+            <resource type="rock" amount="2568" resourcespersecond="0.00297185" />
+            <resource type="fiber" amount="2568" resourcespersecond="0.00297185" />
+            <resource type="ore" amount="2568" resourcespersecond="0.00297185" />
+            <resource type="wood" amount="2568" resourcespersecond="0.00297185" />
+            <resource type="hide" amount="2568" resourcespersecond="0.00297185" />
           </resourceenchantment>
           <resourceenchantment level="3">
-            <resource type="rock" amount="100" resourcespersecond="0.000198123"/>
-            <resource type="fiber" amount="100" resourcespersecond="0.000198123"/>
-            <resource type="ore" amount="100" resourcespersecond="0.000198123"/>
-            <resource type="wood" amount="1000" resourcespersecond="0.000198123"/>
-            <resource type="hide" amount="100" resourcespersecond="0.000198123"/>
+            <resource type="rock" amount="1000" resourcespersecond="0.00059437" />
+            <resource type="fiber" amount="1000" resourcespersecond="0.00059437" />
+            <resource type="ore" amount="1000" resourcespersecond="0.00059437" />
+            <resource type="wood" amount="1000" resourcespersecond="0.00059437" />
+            <resource type="hide" amount="1000" resourcespersecond="0.00059437" />
           </resourceenchantment>
         </resourcepooltier>
         <resourcepooltier tier="5">
           <resourceenchantment level="0">
-            <resource type="rock" amount="3184" resourcespersecond="0.122860104"/>
-            <resource type="fiber" amount="3184" resourcespersecond="0.122860104"/>
-            <resource type="ore" amount="3184" resourcespersecond="0.122860104"/>
-            <resource type="wood" amount="3184" resourcespersecond="0.122860104"/>
-            <resource type="hide" amount="3184" resourcespersecond="0.122860104"/>
+            <resource type="rock" amount="318453" resourcespersecond="0.36858031" />
+            <resource type="fiber" amount="318453" resourcespersecond="0.36858031" />
+            <resource type="ore" amount="318453" resourcespersecond="0.36858031" />
+            <resource type="wood" amount="318453" resourcespersecond="0.36858031" />
+            <resource type="hide" amount="318453" resourcespersecond="0.36858031" />
           </resourceenchantment>
           <resourceenchantment level="1">
-            <resource type="rock" amount="1657" resourcespersecond="0.006394087"/>
-            <resource type="fiber" amount="1657" resourcespersecond="0.006394087"/>
-            <resource type="ore" amount="1657" resourcespersecond="0.006394087"/>
-            <resource type="wood" amount="1657" resourcespersecond="0.006394087"/>
-            <resource type="hide" amount="1657" resourcespersecond="0.006394087"/>
+            <resource type="rock" amount="16573" resourcespersecond="0.01918226" />
+            <resource type="fiber" amount="16573" resourcespersecond="0.01918226" />
+            <resource type="ore" amount="16573" resourcespersecond="0.01918226" />
+            <resource type="wood" amount="16573" resourcespersecond="0.01918226" />
+            <resource type="hide" amount="16573" resourcespersecond="0.01918226" />
           </resourceenchantment>
           <resourceenchantment level="2">
-            <resource type="rock" amount="332" resourcespersecond="0.001278817"/>
-            <resource type="fiber" amount="332" resourcespersecond="0.001278817"/>
-            <resource type="ore" amount="332" resourcespersecond="0.001278817"/>
-            <resource type="wood" amount="332" resourcespersecond="0.001278817"/>
-            <resource type="hide" amount="332" resourcespersecond="0.001278817"/>
+            <resource type="rock" amount="3315" resourcespersecond="0.00383645" />
+            <resource type="fiber" amount="3315" resourcespersecond="0.00383645" />
+            <resource type="ore" amount="3315" resourcespersecond="0.00383645" />
+            <resource type="wood" amount="3315" resourcespersecond="0.00383645" />
+            <resource type="hide" amount="3315" resourcespersecond="0.00383645" />
           </resourceenchantment>
           <resourceenchantment level="3">
-            <resource type="rock" amount="100" resourcespersecond="0.000255763"/>
-            <resource type="fiber" amount="100" resourcespersecond="0.000255763"/>
-            <resource type="ore" amount="100" resourcespersecond="0.000255763"/>
-            <resource type="wood" amount="100" resourcespersecond="0.000255763"/>
-            <resource type="hide" amount="100" resourcespersecond="0.000255763"/>
+            <resource type="rock" amount="1000" resourcespersecond="0.00076729" />
+            <resource type="fiber" amount="1000" resourcespersecond="0.00076729" />
+            <resource type="ore" amount="1000" resourcespersecond="0.00076729" />
+            <resource type="wood" amount="1000" resourcespersecond="0.00076729" />
+            <resource type="hide" amount="1000" resourcespersecond="0.00076729" />
           </resourceenchantment>
         </resourcepooltier>
         <resourcepooltier tier="6">
           <resourceenchantment level="0">
-            <resource type="rock" amount="9677" resourcespersecond="0.037333488"/>
-            <resource type="fiber" amount="9677" resourcespersecond="0.037333488"/>
-            <resource type="ore" amount="9677" resourcespersecond="0.037333488"/>
-            <resource type="wood" amount="9677" resourcespersecond="0.037333488"/>
-            <resource type="hide" amount="9677" resourcespersecond="0.037333488"/>
+            <resource type="rock" amount="96768" resourcespersecond="0.11200046" />
+            <resource type="fiber" amount="96768" resourcespersecond="0.11200046" />
+            <resource type="ore" amount="96768" resourcespersecond="0.11200046" />
+            <resource type="wood" amount="96768" resourcespersecond="0.11200046" />
+            <resource type="hide" amount="96768" resourcespersecond="0.11200046" />
           </resourceenchantment>
           <resourceenchantment level="1">
-            <resource type="rock" amount="755" resourcespersecond="0.002914456"/>
-            <resource type="fiber" amount="755" resourcespersecond="0.002914456"/>
-            <resource type="ore" amount="755" resourcespersecond="0.002914456"/>
-            <resource type="wood" amount="755" resourcespersecond="0.002914456"/>
-            <resource type="hide" amount="755" resourcespersecond="0.002914456"/>
+            <resource type="rock" amount="7554" resourcespersecond="0.00874337" />
+            <resource type="fiber" amount="7554" resourcespersecond="0.00874337" />
+            <resource type="ore" amount="7554" resourcespersecond="0.00874337" />
+            <resource type="wood" amount="7554" resourcespersecond="0.00874337" />
+            <resource type="hide" amount="7554" resourcespersecond="0.00874337" />
           </resourceenchantment>
           <resourceenchantment level="2">
-            <resource type="rock" amount="151" resourcespersecond="0.000582891"/>
-            <resource type="fiber" amount="151" resourcespersecond="0.000582891"/>
-            <resource type="ore" amount="151" resourcespersecond="0.000582891"/>
-            <resource type="wood" amount="151" resourcespersecond="0.000582891"/>
-            <resource type="hide" amount="151" resourcespersecond="0.000582891"/>
+            <resource type="rock" amount="1511" resourcespersecond="0.00174867" />
+            <resource type="fiber" amount="1511" resourcespersecond="0.00174867" />
+            <resource type="ore" amount="1511" resourcespersecond="0.00174867" />
+            <resource type="wood" amount="1511" resourcespersecond="0.00174867" />
+            <resource type="hide" amount="1511" resourcespersecond="0.00174867" />
           </resourceenchantment>
           <resourceenchantment level="3">
-            <resource type="rock" amount="100" resourcespersecond="0.000116578"/>
-            <resource type="fiber" amount="100" resourcespersecond="0.000116578"/>
-            <resource type="ore" amount="100" resourcespersecond="0.000116578"/>
-            <resource type="wood" amount="100" resourcespersecond="0.000116578"/>
-            <resource type="hide" amount="100" resourcespersecond="0.000116578"/>
+            <resource type="rock" amount="1000" resourcespersecond="0.00034973" />
+            <resource type="fiber" amount="1000" resourcespersecond="0.00034973" />
+            <resource type="ore" amount="1000" resourcespersecond="0.00034973" />
+            <resource type="wood" amount="1000" resourcespersecond="0.00034973" />
+            <resource type="hide" amount="1000" resourcespersecond="0.00034973" />
           </resourceenchantment>
         </resourcepooltier>
         <resourcepooltier tier="7">
           <resourceenchantment level="0">
-            <resource type="rock" amount="3158" resourcespersecond="0.012181929"/>
-            <resource type="fiber" amount="3158" resourcespersecond="0.012181929"/>
-            <resource type="ore" amount="3158" resourcespersecond="0.012181929"/>
-            <resource type="wood" amount="3158" resourcespersecond="0.012181929"/>
-            <resource type="hide" amount="3158" resourcespersecond="0.012181929"/>
+            <resource type="rock" amount="31576" resourcespersecond="0.03654579" />
+            <resource type="fiber" amount="31576" resourcespersecond="0.03654579" />
+            <resource type="ore" amount="31576" resourcespersecond="0.03654579" />
+            <resource type="wood" amount="31576" resourcespersecond="0.03654579" />
+            <resource type="hide" amount="31576" resourcespersecond="0.03654579" />
           </resourceenchantment>
           <resourceenchantment level="1">
-            <resource type="rock" amount="345" resourcespersecond="0.001331146"/>
-            <resource type="fiber" amount="345" resourcespersecond="0.001331146"/>
-            <resource type="ore" amount="345" resourcespersecond="0.001331146"/>
-            <resource type="wood" amount="345" resourcespersecond="0.001331146"/>
-            <resource type="hide" amount="345" resourcespersecond="0.001331146"/>
+            <resource type="rock" amount="3450" resourcespersecond="0.00399344" />
+            <resource type="fiber" amount="3450" resourcespersecond="0.00399344" />
+            <resource type="ore" amount="3450" resourcespersecond="0.00399344" />
+            <resource type="wood" amount="3450" resourcespersecond="0.00399344" />
+            <resource type="hide" amount="3450" resourcespersecond="0.00399344" />
           </resourceenchantment>
           <resourceenchantment level="2">
-            <resource type="rock" amount="100" resourcespersecond="0.000266229"/>
-            <resource type="fiber" amount="100" resourcespersecond="0.000266229"/>
-            <resource type="ore" amount="100" resourcespersecond="0.000266229"/>
-            <resource type="wood" amount="100" resourcespersecond="0.000266229"/>
-            <resource type="hide" amount="100" resourcespersecond="0.000266229"/>
+            <resource type="rock" amount="1000" resourcespersecond="0.00079869" />
+            <resource type="fiber" amount="1000" resourcespersecond="0.00079869" />
+            <resource type="ore" amount="1000" resourcespersecond="0.00079869" />
+            <resource type="wood" amount="1000" resourcespersecond="0.00079869" />
+            <resource type="hide" amount="1000" resourcespersecond="0.00079869" />
           </resourceenchantment>
           <resourceenchantment level="3">
-            <resource type="rock" amount="100" resourcespersecond="0.000053246"/>
-            <resource type="fiber" amount="100" resourcespersecond="0.000053246"/>
-            <resource type="ore" amount="100" resourcespersecond="0.000053246"/>
-            <resource type="wood" amount="100" resourcespersecond="0.000053246"/>
-            <resource type="hide" amount="100" resourcespersecond="0.000053246"/>
+            <resource type="rock" amount="1000" resourcespersecond="0.00015974" />
+            <resource type="fiber" amount="1000" resourcespersecond="0.00015974" />
+            <resource type="ore" amount="1000" resourcespersecond="0.00015974" />
+            <resource type="wood" amount="1000" resourcespersecond="0.00015974" />
+            <resource type="hide" amount="1000" resourcespersecond="0.00015974" />
           </resourceenchantment>
         </resourcepooltier>
         <resourcepooltier tier="8">
           <resourceenchantment level="0">
-            <resource type="rock" amount="810" resourcespersecond="0.003124129"/>
-            <resource type="fiber" amount="810" resourcespersecond="0.003124129"/>
-            <resource type="ore" amount="810" resourcespersecond="0.003124129"/>
-            <resource type="wood" amount="810" resourcespersecond="0.003124129"/>
-            <resource type="hide" amount="810" resourcespersecond="0.003124129"/>
+            <resource type="rock" amount="8098" resourcespersecond="0.00937239" />
+            <resource type="fiber" amount="8098" resourcespersecond="0.00937239" />
+            <resource type="ore" amount="8098" resourcespersecond="0.00937239" />
+            <resource type="wood" amount="8098" resourcespersecond="0.00937239" />
+            <resource type="hide" amount="8098" resourcespersecond="0.00937239" />
           </resourceenchantment>
           <resourceenchantment level="1">
-            <resource type="rock" amount="100" resourcespersecond="0.000290347"/>
-            <resource type="fiber" amount="100" resourcespersecond="0.000290347"/>
-            <resource type="ore" amount="100" resourcespersecond="0.000290347"/>
-            <resource type="wood" amount="100" resourcespersecond="0.000290347"/>
-            <resource type="hide" amount="100" resourcespersecond="0.000290347"/>
+            <resource type="rock" amount="1000" resourcespersecond="0.00087104" />
+            <resource type="fiber" amount="1000" resourcespersecond="0.00087104" />
+            <resource type="ore" amount="1000" resourcespersecond="0.00087104" />
+            <resource type="wood" amount="1000" resourcespersecond="0.00087104" />
+            <resource type="hide" amount="1000" resourcespersecond="0.00087104" />
           </resourceenchantment>
           <resourceenchantment level="2">
-            <resource type="rock" amount="100" resourcespersecond="0.000058069"/>
-            <resource type="fiber" amount="100" resourcespersecond="0.000058069"/>
-            <resource type="ore" amount="100" resourcespersecond="0.000058069"/>
-            <resource type="wood" amount="100" resourcespersecond="0.000058069"/>
-            <resource type="hide" amount="100" resourcespersecond="0.000058069"/>
+            <resource type="rock" amount="1000" resourcespersecond="0.00017421" />
+            <resource type="fiber" amount="1000" resourcespersecond="0.00017421" />
+            <resource type="ore" amount="1000" resourcespersecond="0.00017421" />
+            <resource type="wood" amount="1000" resourcespersecond="0.00017421" />
+            <resource type="hide" amount="1000" resourcespersecond="0.00017421" />
           </resourceenchantment>
           <resourceenchantment level="3">
-            <resource type="rock" amount="100" resourcespersecond="0.000011614"/>
-            <resource type="fiber" amount="100" resourcespersecond="0.000011614"/>
-            <resource type="ore" amount="100" resourcespersecond="0.000011614"/>
-            <resource type="wood" amount="100" resourcespersecond="0.000011614"/>
-            <resource type="hide" amount="100" resourcespersecond="0.000011614"/>
+            <resource type="rock" amount="1000" resourcespersecond="0.00003484" />
+            <resource type="fiber" amount="1000" resourcespersecond="0.00003484" />
+            <resource type="ore" amount="1000" resourcespersecond="0.00003484" />
+            <resource type="wood" amount="1000" resourcespersecond="0.00003484" />
+            <resource type="hide" amount="1000" resourcespersecond="0.00003484" />
           </resourceenchantment>
         </resourcepooltier>
       </resourcepool>

@@ -182,6 +182,14 @@
   <!--*************************************************************************************************************************************************************-->
   <!-- VANITY ITEMS -->
   <!--*************************************************************************************************************************************************************-->
+  <SocketInfo name="UNIQUE_ARMOR_VANITY_CORRUPTED_PREACHER">
+    <SocketConstraintMaster name="HUMAN_FEMALE">
+      <Socket socketname="vanity_corrupted_preacher_leftarm" bonename="LeftArm_3" />
+    </SocketConstraintMaster>
+    <SocketConstraintMaster name="HUMAN_MALE">
+      <Socket socketname="vanity_corrupted_preacher_leftarm" bonename="LeftArm_3" />
+    </SocketConstraintMaster>
+  </SocketInfo>
   <SocketInfo name="UNIQUE_HEAD_VANITY_KICKSTARTER_2024_UPGRADE">
     <SocketConstraintMaster name="HUMAN_FEMALE">
       <Socket socketname="kickstarter_head" bonename="Neck_Head" scaling="0.87" />
@@ -549,6 +557,7 @@
     <Socket socketname="halo" bonename="Skeleton_Root" positionOffset="0 1.5 0" />
     <Socket socketname="mainhandprojectile" bonename="Head" positionOffset="-0.075 0 0" rotationOffset="0 270 0" />
     <Socket socketname="head" bonename="Head" rotationOffset="0 270 0" />
+    <Socket socketname="head_clean" bonename="Head" />
     <Socket socketname="tailend" bonename="Tail_13" rotationOffset="0 270 0" />
     <Socket socketname="pelvis" bonename="Spine_1" rotationOffset="0 270 0" />
     <Socket socketname="chest" bonename="Neck_2" rotationOffset="270 0 0" />
@@ -1190,6 +1199,7 @@
     <Socket socketname="fx_bow" bonename="RightArm_3" />
     <Socket socketname="fx_smoke" bonename="Spine_2" />
     <Socket socketname="fx_quiver" bonename="Quiver" />
+    <Socket socketname="fx_escape" bonename="Spine_2" positionOffset="0 0 0" rotationOffset="0 0 0" />
   </SocketInfo>
   <SocketInfo name="MOB_UNDEAD_SOLDIER">
     <Socket socketname="damage" bonename="Spine_2" positionOffset="0 -0.26 0" rotationOffset="90 0 90" />
@@ -2396,6 +2406,20 @@
     <Socket socketname="maintrail" bonename="Skeleton_Root" positionOffset="0 1 0.3" rotationOffset="0 -45 0" />
     <Socket socketname="maintrail_180" bonename="Skeleton_Root" positionOffset="0 1 0.3" rotationOffset="0 45 180" />
   </SocketInfo>
+  <SocketInfo name="MOB_DEMON_SORCERER">
+    <Socket socketname="root" bonename="Skeleton_Root" />
+    <Socket socketname="feet" bonename="Feet" />
+    <Socket socketname="floor" bonename="Skeleton_Root" positionOffset="0 0.1 0" />
+    <Socket socketname="halo" bonename="Skeleton_Root" positionOffset="0 4 0.4" />
+    <Socket socketname="damage" bonename="Chest" rotationOffset="90 0 90" />
+    <Socket socketname="chest" bonename="Chest" />
+    <Socket socketname="mainhand" bonename="RightArm_3" positionOffset="0.4 0.2 0" rotationOffset="-90 0 0" />
+    <Socket socketname="offhand" bonename="LeftArm_3" positionOffset="-0.4 -0.2 0" rotationOffset="90 0 0" />
+    <Socket socketname="beam" bonename="Chest" positionOffset="3.24 -3.36 0" rotationOffset="90 0 0" />
+    <Socket socketname="head" bonename="Head" positionOffset="0.15 -0.2 0" />
+    <Socket socketname="maintrail" bonename="Skeleton_Root" positionOffset="0 1 0.3" rotationOffset="0 -45 0" />
+    <Socket socketname="maintrail_180" bonename="Skeleton_Root" positionOffset="0 1 0.3" rotationOffset="0 45 180" />
+  </SocketInfo>
   <SocketInfo name="MOB_DEMON_SORCERER_BOSS">
     <Socket socketname="root" bonename="Skeleton_Root" />
     <Socket socketname="base" bonename="Floor" />
@@ -2422,6 +2446,7 @@
     <Socket socketname="mainhand" bonename="RightArm_2" />
     <Socket socketname="offhand" bonename="LeftArm_3" />
     <Socket socketname="head" bonename="Head" />
+    <Socket socketname="halo" bonename="Skeleton_Root" positionOffset="0 11 0" />
     <Socket socketname="chest" bonename="Chest" />
     <Socket socketname="leftarm" bonename="LeftArm_2" />
     <Socket socketname="rightarm" bonename="RightArm_2" />
@@ -2619,6 +2644,13 @@
     <Socket socketname="mainhandtrail" bonename="RightHandHardPoint" positionOffset="1.8 0 0" rotationOffset="0 90 0" />
     <Socket socketname="mainhandprojectile" bonename="RightHandHardPoint" positionOffset="0.7 0 0" />
     <Socket socketname="offhandprojectile" bonename="LeftHandHardPoint" positionOffset="-0.7 0 0" />
+  </SocketInfo>
+  <SocketInfo name="2H_RAM_KEEPER">
+    <Socket socketname="mainweaponroot" bonename="RightHandHardPoint" rotationOffset="0 90 180" />
+    <Socket socketname="mainhandtrail" bonename="RightHandHardPoint" positionOffset="1.8 0 0" rotationOffset="0 90 0" />
+    <Socket socketname="mainhandprojectile" bonename="RightHandHardPoint" positionOffset="1.3 0 0" />
+    <Socket socketname="logendone" bonename="RightHandHardPoint" positionOffset="1.45 0.1 -0.25" rotationOffset="0 90 0" />
+    <Socket socketname="logendtwo" bonename="RightHandHardPoint" positionOffset="-0.75 0.1 -0.25" rotationOffset="0 -90 0" />
   </SocketInfo>
   <SocketInfo name="T4_2H_NATURESTAFF_KEEPER">
     <Socket socketname="mainhandprojectile" bonename="RightHandHardPoint" positionOffset="1.1 0 0" rotationOffset="0 90 180" />
@@ -3216,6 +3248,8 @@
     <Socket socketname="fx_eyes_mount" bonename="mount|Spine_1" />
     <Socket socketname="fx_fangs_mount" bonename="mount|Spine_1" />
     <Socket socketname="fx_beam" bonename="mount|Spine_1" positionOffset="0 -0.75 0" rotationOffset="90 90 0" />
+    <Socket socketname="fx_thread_start" bonename="mount|Abdomen" positionOffset="0 0 -2" />
+    <Socket socketname="fx_thread_end" bonename="mount|Skeleton_Root" positionOffset="0 40 0" />
     <Socket socketname="fx_cocoon" bonename="mount|Skeleton_Root" />
   </SocketInfo>
   <SocketInfo name="MOUNT_ENT">
@@ -3554,6 +3588,7 @@
     <Socket socketname="firecone_03" bonename="center" positionOffset="0 1 0" rotationOffset="0 0 0" />
     <Socket socketname="dualaxe" bonename="center" positionOffset="0 0.2 1.5" />
     <Socket socketname="firecone_02" bonename="center" positionOffset="0 0.5 0" />
+    <Socket socketname="crystalwave" bonename="back" positionOffset="0 0.1 0" rotationOffset="0 180 0" />
   </SocketInfo>
   <!--*************************************************************************************************************************************************************-->
   <!--BUILDINGS-->
