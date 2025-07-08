@@ -1571,6 +1571,56 @@
               ]
             }
           }
+        },
+        {
+          "@uniquename": "MOBILE_WEB_SHOP_INCENTIVE",
+          "@priority": "10",
+          "@type": "GenericAdvertisement",
+          "@guitemplate": "GenericAdvertisement",
+          "@title": "@MOBILE_WEB_SHOP_INCENTIVE_POPUP_TITLE",
+          "@description": "@MOBILE_WEB_SHOP_INCENTIVE_POPUP_BODY",
+          "@imagepath": "Gui/EventBasedPopups/IOS_TO_NATIVE_PROMO",
+          "@linkmode": "Url",
+          "@customurl": "https://albiononline.com/shop/",
+          "@buttonloca": "@MOBILE_WEB_SHOP_INCENTIVE_POPUP_BUTTON",
+          "@flagiconpath": "",
+          "@flagpath": "",
+          "categories": {
+            "category": [
+              {
+                "@name": "Advertisement"
+              },
+              {
+                "@name": "Mobile"
+              }
+            ]
+          },
+          "triggers": {
+            "trigger": {
+              "@action": "GameLogin"
+            }
+          },
+          "conditions": {
+            "and": {
+              "IfTutorialCompleted": null,
+              "IfOnPlatform": {
+                "@platform": "Ios"
+              },
+              "IfPlayingFromCountry": {
+                "@isocode": "US"
+              },
+              "IfFeatureIsEnabled": {
+                "@feature": "ShowWebShopLinksOnIos"
+              },
+              "IfHasSeenPopup": {
+                "@uniquename": "MOBILE_WEB_SHOP_INCENTIVE",
+                "@frequency": "Days",
+                "@timefactor": "7",
+                "@operation": "equals",
+                "@amount": "0"
+              }
+            }
+          }
         }
       ]
     }
