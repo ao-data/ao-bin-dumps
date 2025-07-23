@@ -114309,6 +114309,68 @@
         }
       },
       {
+        "@name": "AOCP_SPECIFIC_ITEMS",
+        "OR": {
+          "Item": {
+            "@type": "UNIQUE_UNLOCK_DIREBOAR_FIBER_GATHERER",
+            "@weight": "1"
+          },
+          "OR": {
+            "@weight": "49",
+            "Item": [
+              {
+                "@type": "UNIQUE_TOKEN_AOCP",
+                "@amount": "1",
+                "@weight": "28"
+              },
+              {
+                "@type": "UNIQUE_TOKEN_AOCP",
+                "@amount": "2",
+                "@weight": "9"
+              },
+              {
+                "@type": "UNIQUE_TOKEN_AOCP",
+                "@amount": "5",
+                "@weight": "2"
+              },
+              {
+                "@type": "UNIQUE_TOKEN_AOCP",
+                "@amount": "10",
+                "@weight": "1"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "@name": "COMMUNITY_CHEST_AOCP",
+        "AND": {
+          "LootListReference": [
+            {
+              "@name": "COMMUNITY_CHEST_GENERIC"
+            },
+            {
+              "@name": "AOCP_SPECIFIC_ITEMS",
+              "@chance": "0.5"
+            }
+          ]
+        }
+      },
+      {
+        "@name": "COMMUNITY_CHEST_AOCP_PREMIUM",
+        "AND": {
+          "LootListReference": [
+            {
+              "@name": "COMMUNITY_CHEST_GENERIC_PREMIUM"
+            },
+            {
+              "@name": "AOCP_SPECIFIC_ITEMS",
+              "@chance": "0.5"
+            }
+          ]
+        }
+      },
+      {
         "@name": "T4_WOOD_SKILLBOOK",
         "Item": {
           "@type": "T4_SKILLBOOK_GATHER_WOOD",

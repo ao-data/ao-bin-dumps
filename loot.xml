@@ -28743,6 +28743,35 @@
       </OR>
     </AND>
   </Lootlist>
+  
+  <!-- AOCP specific chests -->
+  <Lootlist name="AOCP_SPECIFIC_ITEMS">
+    <OR>
+      <Item type="UNIQUE_UNLOCK_DIREBOAR_FIBER_GATHERER" weight="1"></Item>
+      <OR weight="49">
+        <Item type="UNIQUE_TOKEN_AOCP" amount="1"  weight="28"/>
+        <Item type="UNIQUE_TOKEN_AOCP" amount="2"  weight="9"/>
+        <Item type="UNIQUE_TOKEN_AOCP" amount="5"  weight="2"/>
+        <Item type="UNIQUE_TOKEN_AOCP" amount="10" weight="1"/>
+      </OR>
+    </OR>
+  </Lootlist>
+  
+  
+  <Lootlist name="COMMUNITY_CHEST_AOCP">
+    <AND>
+      <LootListReference name="COMMUNITY_CHEST_GENERIC"/>
+      <LootListReference name="AOCP_SPECIFIC_ITEMS" chance="0.5"/>
+    </AND>
+  </Lootlist>
+
+  <Lootlist name="COMMUNITY_CHEST_AOCP_PREMIUM">
+    <AND>
+      <LootListReference name="COMMUNITY_CHEST_GENERIC_PREMIUM"/>
+      <LootListReference name="AOCP_SPECIFIC_ITEMS" chance="0.5"/>
+    </AND>
+  </Lootlist>
+  
   <!--Gather Tomes from harvestables-->
   <!--!!!   These Lootlists are called in the harvestable.xml with a chance of 0.001 * yield * maxchargesperharvest !!!
       !!!   This is needed so we have enough decimal places to get the rarities we want                             !!!
