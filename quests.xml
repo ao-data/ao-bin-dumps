@@ -33,7 +33,9 @@
     <rewards>
     </rewards>
   </quest>
-  <quest uniquename="JT_TEST_MISSIONS_SHOW_JOURNAL" previousquests="JT_TEST_MISSIONS_ARRIVE" mobfaction="ROYALARMY" title="@RECEIVEJOURNAL" offertext="@OFFER" progresstext="@PROGRESS" priority="1" minlevel="1" maxlevel="2" tags="gotoa" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@COMPLETE" cancelable="false" playcompletesoundonce="false">
+  <!--!!THIS QUEST NEEDS TO BE PRESENT FOR THE JOURNAL HANDOVER TO WORK & FOR PLAYERS AFTER THE TUTORIAL TO BE ABLE TO USE THE JOURNAL!!-->
+  <!--DO NOT RENAME AND MAKE SURE THAT journalhandover="true" IS SET TO TRUE-->
+  <quest uniquename="JT_TEST_MISSIONS_SHOW_JOURNAL" previousquests="JT_TEST_MISSIONS_ARRIVE" mobfaction="ROYALARMY" title="@RECEIVEJOURNAL" offertext="@OFFER" progresstext="@PROGRESS" priority="1" minlevel="1" maxlevel="2" tags="gotoa" offertimeout="0" questtimeout="3600000" questslotcooldown="0" uicategory="PROMOTION" onceonly="true" completetext="@COMPLETE" cancelable="false" playcompletesoundonce="false" journalhandover="true">
     <tasks>
       <extendedmissionstep>
         <preactions>
@@ -41,7 +43,7 @@
           <openhintbox uniquename="JOURNALFIRSTGUITUTORIAL_HINT1"/>
         </preactions>
         <missions>
-          <usefunction function="CloseAlbionJournal" textloca="@CLOSE_JOURNAL"/>
+          <usefunction function="OpenAlbionJournal" textloca="@CLOSE_JOURNAL"/>
         </missions>
       </extendedmissionstep>
       <extendedcompletionstep>
@@ -2570,7 +2572,7 @@
           <openhintbox uniquename="DESTINYBOARDINTRO"/>
         </preactions>
         <missions>
-          <usefunction function="OpenDestinyBoard" textloca="@MISSIONS_T2_TUTORIAL_TEST_MA_OPEN_DB" hideindetailsui="true"/>
+          <usefunction function="OpenDestinyBoard" textloca="@MISSIONS_T2_TUTORIAL_TEST_MA_OPEN_DB"/>
         </missions>
       </extendedmissionstep>
       <extendedmissionstep locationmarkerid="FORESTENTRANCE">
@@ -2650,7 +2652,7 @@
           <openhintbox uniquename="DESTINYBOARDINTRO"/>
         </preactions>
         <missions>
-          <usefunction function="OpenDestinyBoard" textloca="@MISSIONS_T2_TUTORIAL_TEST_MA_OPEN_DB" hideindetailsui="true"/>
+          <usefunction function="OpenDestinyBoard" textloca="@MISSIONS_T2_TUTORIAL_TEST_MA_OPEN_DB"/>
         </missions>
       </extendedmissionstep>
       <extendedmissionstep locationmarkerid="FORESTENTRANCE">
@@ -2729,7 +2731,7 @@
           <openhintbox uniquename="DESTINYBOARDINTRO"/>
         </preactions>
         <missions>
-          <usefunction function="OpenDestinyBoard" textloca="@MISSIONS_T2_TUTORIAL_TEST_MA_OPEN_DB" hideindetailsui="true"/>
+          <usefunction function="OpenDestinyBoard" textloca="@MISSIONS_T2_TUTORIAL_TEST_MA_OPEN_DB"/>
         </missions>
       </extendedmissionstep>
       <extendedmissionstep locationmarkerid="FORESTENTRANCE">
@@ -2892,8 +2894,7 @@
       <extendedmissionstep locationmarkerid="MARKETPLACE">
         <preactions>
            <settutorialstate state="SILVER"/>
-          <openhintbox uniquename="WHATYOUWEAR" displayonplatform="desktop"/>
-          <openhintbox uniquename="WHATYOUWEAR_MOBILE" displayonplatform="mobile"/>
+          <openhintbox uniquename="INFO_ARMOR"/>
         </preactions>
         <missions>
           <acquireitem textloca="@MISSIONS_T2_TUTORIAL_TEST_O1_SIDETEXT_NEW" count="1" listtype="or">
@@ -2968,8 +2969,7 @@
       <extendedmissionstep locationmarkerid="MARKETPLACE">
         <preactions>
           <settutorialstate state="SILVER"/>
-          <openhintbox uniquename="WHATYOUWEAR" displayonplatform="desktop"/>
-          <openhintbox uniquename="WHATYOUWEAR_MOBILE" displayonplatform="mobile"/>
+          <openhintbox uniquename="INFO_ARMOR"/>
         </preactions>
         <missions>
           <acquireitem textloca="@MISSIONS_T2_TUTORIAL_TEST_O1_SIDETEXT_NEW" count="1" listtype="or">
@@ -3158,7 +3158,7 @@
     <tasks>
       <extendedmissionstep>
 		<missions>
-          <gotolocation locationmarkerid="SHOWROOM_01" textloca="@DESTINYBOARD_DESCRIPTION_GOTOLOCATION_ONENTER"/>
+          <gotolocation locationmarkerid="SHOWROOM_01" textloca="@DESTINYBOARD_DESCRIPTION_GOTOLOCATION_ONENTER" hideindetailsui="true"/>
         </missions>		
       </extendedmissionstep>
       <extendedmissionstep>
@@ -3166,7 +3166,7 @@
 		  <openhintbox uniquename="JOURNAL_QUEST_SHOWROOM_ISLAND_INTRO"/>
 		</preactions>
 		<missions>
-          <gotolocation locationmarkerid="SHOWROOM_02" textloca="@DESTINYBOARD_DESCRIPTION_GOTOLOCATION_ONENTER"/>
+          <gotolocation locationmarkerid="SHOWROOM_02" textloca="@DESTINYBOARD_DESCRIPTION_GOTOLOCATION_ONENTER" hideindetailsui="true"/>
         </missions>
       </extendedmissionstep>
       <extendedmissionstep>
@@ -3174,12 +3174,12 @@
 		  <openhintbox uniquename="JOURNAL_QUEST_SHOWROOM_ISLAND_PASTURE"/>
 		</preactions>		  
         <missions>
-          <gotolocation locationmarkerid="SHOWROOM_04" textloca="@DESTINYBOARD_DESCRIPTION_GOTOLOCATION_ONENTER"/>
+          <gotolocation locationmarkerid="SHOWROOM_04" textloca="@DESTINYBOARD_DESCRIPTION_GOTOLOCATION_ONENTER" hideindetailsui="true"/>
         </missions>
       </extendedmissionstep>
       <extendedmissionstep>
         <missions>
-          <gotolocation locationmarkerid="SHOWROOM_03" textloca="@DESTINYBOARD_DESCRIPTION_GOTOLOCATION_ONENTER"/>
+          <gotolocation locationmarkerid="SHOWROOM_03" textloca="@DESTINYBOARD_DESCRIPTION_GOTOLOCATION_ONENTER" hideindetailsui="true"/>
         </missions>
       </extendedmissionstep>
       <extendedmissionstep>
@@ -3187,22 +3187,17 @@
 		  <openhintbox uniquename="JOURNAL_QUEST_SHOWROOM_ISLAND_COMBAT_AREA"/>
 		</preactions>		  
         <missions>
-          <gotolocation locationmarkerid="SHOWROOM_04" textloca="@DESTINYBOARD_DESCRIPTION_GOTOLOCATION_ONENTER"/>
+          <gotolocation locationmarkerid="SHOWROOM_04" textloca="@DESTINYBOARD_DESCRIPTION_GOTOLOCATION_ONENTER" hideindetailsui="true"/>
         </missions>
       </extendedmissionstep>
       <extendedmissionstep>
         <missions>
-          <gotolocation locationmarkerid="SHOWROOM_05" textloca="@DESTINYBOARD_DESCRIPTION_GOTOLOCATION_ONENTER"/>
+          <gotolocation locationmarkerid="SHOWROOM_05" textloca="@DESTINYBOARD_DESCRIPTION_GOTOLOCATION_ONENTER" hideindetailsui="true"/>
         </missions>
       </extendedmissionstep>
       <extendedmissionstep>
-		  <!--
-        <preactions>
-		  <openhintbox uniquename="JOURNAL_QUEST_SHOWROOM_ISLAND_KENNEL"/>
-		</preactions>
-		  -->
         <missions>
-          <gotolocation locationmarkerid="SHOWROOM_06" textloca="@DESTINYBOARD_DESCRIPTION_GOTOLOCATION_ONENTER"/>
+          <gotolocation locationmarkerid="SHOWROOM_06" textloca="@DESTINYBOARD_DESCRIPTION_GOTOLOCATION_ONENTER" hideindetailsui="true"/>
         </missions>
       </extendedmissionstep>
       <extendedmissionstep>
@@ -3210,12 +3205,12 @@
 		  <openhintbox uniquename="JOURNAL_QUEST_SHOWROOM_ISLAND_CROPS"/>
 		</preactions>		  
         <missions>
-          <gotolocation locationmarkerid="SHOWROOM_07" textloca="@DESTINYBOARD_DESCRIPTION_GOTOLOCATION_ONENTER"/>
+          <gotolocation locationmarkerid="SHOWROOM_07" textloca="@DESTINYBOARD_DESCRIPTION_GOTOLOCATION_ONENTER" hideindetailsui="true"/>
         </missions>
       </extendedmissionstep>
       <extendedmissionstep>
         <missions>
-          <gotolocation locationmarkerid="SHOWROOM_08" textloca="@DESTINYBOARD_DESCRIPTION_GOTOLOCATION_ONENTER"/>
+          <gotolocation locationmarkerid="SHOWROOM_08" textloca="@DESTINYBOARD_DESCRIPTION_GOTOLOCATION_ONENTER" hideindetailsui="true"/>
         </missions>
       </extendedmissionstep>
       <extendedmissionstep>
@@ -3223,12 +3218,12 @@
 		  <openhintbox uniquename="JOURNAL_QUEST_SHOWROOM_ISLAND_WINDMILL"/>
 		</preactions>		  
         <missions>
-          <gotolocation locationmarkerid="SHOWROOM_09" textloca="@DESTINYBOARD_DESCRIPTION_GOTOLOCATION_ONENTER"/>
+          <gotolocation locationmarkerid="SHOWROOM_09" textloca="@DESTINYBOARD_DESCRIPTION_GOTOLOCATION_ONENTER" hideindetailsui="true"/>
         </missions>
       </extendedmissionstep>
       <extendedmissionstep>
         <missions>
-          <gotolocation locationmarkerid="SHOWROOM_10" textloca="@DESTINYBOARD_DESCRIPTION_GOTOLOCATION_ONENTER"/>
+          <gotolocation locationmarkerid="SHOWROOM_10" textloca="@DESTINYBOARD_DESCRIPTION_GOTOLOCATION_ONENTER" hideindetailsui="true"/>
         </missions>		
       </extendedmissionstep>
       <extendedcompletionstep>
@@ -3236,7 +3231,7 @@
 		  <openhintbox uniquename="JOURNAL_QUEST_SHOWROOM_ISLAND_HOUSING"/>
 		</preactions>
 		<missions>
-		  <gotolocation locationmarkerid="SHOWROOM_11" textloca="@DESTINYBOARD_DESCRIPTION_GOTOLOCATION_ONENTER"/>
+		  <gotolocation locationmarkerid="SHOWROOM_11" textloca="@MISSIONS_SHOWROOM_ISLAND_TOUR_COMPLETE_TOUR"/>
 		</missions>
       </extendedcompletionstep>
     </tasks>

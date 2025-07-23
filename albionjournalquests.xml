@@ -442,16 +442,10 @@
           </or>
         </missions>
       </extendedmissionstep>
-      <!-- ??? -->
+      <!-- Kill 10 Static Dungeon Mobs -->
       <extendedmissionstep>
         <missions>
-          <or textloca="@MISSIONS_T2_TUTORIAL_TEACH_COMBAT3_SIDETEXT_KILL_MOBS">
-            <killmob count="12" faction="HERETIC" mintier="3" countpartykills="true" clusterdirect="DNG-HER-01-MAIN-01"/>
-            <killmob count="12" faction="HERETIC" mintier="3" countpartykills="true" clusterdirect="DNG-HER-01-MAIN-02"/>
-            <killmob count="12" faction="HERETIC" mintier="3" countpartykills="true" clusterdirect="DNG-HER-01-MAIN-03"/>
-            <killmob count="12" faction="HERETIC" mintier="3" countpartykills="true" clusterdirect="DNG-HER-01-MAIN-04"/>
-            <killmob count="12" faction="HERETIC" mintier="3" countpartykills="true" clusterdirect="DNG-HER-01-MAIN-05"/>
-          </or>
+          <killmob count="10" mintier="3" maxtier="3" countpartykills="true" category="static" textloca="@MISSIONS_T2_TUTORIAL_TEACH_COMBAT3_SIDETEXT_KILL_MOBS"/>
         </missions>
       </extendedmissionstep>
     </tasks>
@@ -560,14 +554,14 @@
     <tasks>
       <!-- Go to a Royal City-->
       <missionstep>
-        <gotocluster clustervariable="ROYALCITY" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_GOTO_ROYALCITY"/>
+        <gotocluster clustervariable="ROYALCITY" locationmarkerscalebyclustersize="true" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_GOTO_ROYALCITY" />        
       </missionstep>
       <!-- Go to the Expedition Master-->
       <missionstep>
-        <gotolocation locationmarkerid="EXPEDITION" markedinworld="true" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_GOTO_EXPIDITION_AGENT"/>
+        <gotolocation locationmarkerid="EXPEDITION" locationmarkerscalebyclustersize="true" markedinworld="true" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_GOTO_EXPIDITION_AGENT"/>        
       </missionstep>
       <!-- Complete an Expedition-->
-      <extendedmissionstep>
+      <extendedmissionstep >
         <missions>
           <finishexpedition name="HERETIC_MINE" nameloca="@EXP_TITLE_T3_EXP_STD_HERETIC_MINE" count="1" type="any" locationmarkerid="EXPEDITION" markedonminimap="true" markedinworld="true" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_FINISH_EXPEDITION"/>
         </missions>
@@ -613,6 +607,44 @@
               <mobid name="T4_MOB_TR_NEUTRAL_PANTHER_BOSS" />
               <mobid name="T4_MOB_TR_NEUTRAL_ENT_BOSS" />
               <mobid name="T4_MOB_TR_NEUTRAL_DIREBEAR_BOSS" />
+              <mobid name="T4_MOB_TR_NEUTRAL_PANTHER_VETERAN_BOSS" />
+              <mobid name="T4_MOB_TR_NEUTRAL_ENT_VETERAN_BOSS" />
+              <mobid name="T4_MOB_TR_NEUTRAL_DIREBEAR_VETERAN_BOSS" />
+              <mobid name="T4_MOB_TR_SILVER_KEEPER_EARTHDAUGHTER_VETERAN_BOSS" />
+              <mobid name="T4_MOB_TR_SILVER_UNDEAD_HARVESTER_VETERAN_BOSS" />
+              <mobid name="T4_MOB_TR_SILVER_HERETIC_SHADOWMASK_VETERAN_BOSS" />
+              <mobid name="T5_MOB_TR_MORGANA_WEREWOLF_BOSS" />
+              <mobid name="T5_MOB_TR_SILVER_HERETIC_SHADOWMASK_BOSS" />
+              <mobid name="T5_MOB_TR_SILVER_KEEPER_EARTHDAUGHTER_BOSS" />
+              <mobid name="T5_MOB_TR_SILVER_UNDEAD_HARVESTER_BOSS" />
+              <mobid name="T5_MOB_TR_MORGANA_WEREWOLF_VETERAN_BOSS" />
+              <mobid name="T5_MOB_TR_SILVER_HERETIC_SHADOWMASK_VETERAN_BOSS" />
+              <mobid name="T5_MOB_TR_SILVER_KEEPER_EARTHDAUGHTER_VETERAN_BOSS" />
+              <mobid name="T5_MOB_TR_SILVER_UNDEAD_HARVESTER_VETERAN_BOSS" />
+              <mobid name="T6_MOB_TR_DEMON_IMP_BOSS" />
+              <mobid name="T6_MOB_TR_SILVER_HERETIC_SHADOWMASK_BOSS" />
+              <mobid name="T6_MOB_TR_SILVER_KEEPER_EARTHDAUGHTER_BOSS" />
+              <mobid name="T6_MOB_TR_SILVER_UNDEAD_HARVESTER_BOSS" />
+              <mobid name="T6_MOB_TR_DEMON_IMP_VETERAN_BOSS" />
+              <mobid name="T6_MOB_TR_SILVER_HERETIC_SHADOWMASK_VETERAN_BOSS" />
+              <mobid name="T6_MOB_TR_SILVER_KEEPER_EARTHDAUGHTER_VETERAN_BOSS" />
+              <mobid name="T6_MOB_TR_SILVER_UNDEAD_HARVESTER_VETERAN_BOSS" />
+              <mobid name="T7_MOB_TR_KEEPER_ROCKELEMENTAL_BOSS" />
+              <mobid name="T7_MOB_TR_SILVER_HERETIC_SHADOWMASK_BOSS" />
+              <mobid name="T7_MOB_TR_SILVER_KEEPER_EARTHDAUGHTER_BOSS" />
+              <mobid name="T7_MOB_TR_SILVER_UNDEAD_HARVESTER_BOSS" />
+              <mobid name="T7_MOB_TR_KEEPER_ROCKELEMENTAL_VETERAN_BOSS" />
+              <mobid name="T7_MOB_TR_SILVER_HERETIC_SHADOWMASK_VETERAN_BOSS" />
+              <mobid name="T7_MOB_TR_SILVER_KEEPER_EARTHDAUGHTER_VETERAN_BOSS" />
+              <mobid name="T7_MOB_TR_SILVER_UNDEAD_HARVESTER_VETERAN_BOSS" />
+              <mobid name="T8_MOB_TR_AVALON_EAGLE_BOSS" />
+              <mobid name="T8_MOB_TR_SILVER_HERETIC_SHADOWMASK_BOSS" />
+              <mobid name="T8_MOB_TR_SILVER_KEEPER_EARTHDAUGHTER_BOSS" />
+              <mobid name="T8_MOB_TR_SILVER_UNDEAD_HARVESTER_BOSS" />
+              <mobid name="T8_MOB_TR_AVALON_EAGLE_VETERAN_BOSS" />
+              <mobid name="T8_MOB_TR_SILVER_UNDEAD_HARVESTER_VETERAN_BOSS" />
+              <mobid name="T8_MOB_TR_SILVER_KEEPER_EARTHDAUGHTER_VETERAN_BOSS" />
+              <mobid name="T8_MOB_TR_SILVER_HERETIC_SHADOWMASK_VETERAN_BOSS" />
             </killmob>
           </any>
         </missions>
@@ -1603,7 +1635,46 @@
           <openhintbox uniquename="FISHING_INFO"/>
         </preactions>
         <missions>
-          <fish count="5" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_FISH"/>
+          <progresssum sum="5" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_FISH">
+            <fish count="5" item="T1_FISH_FRESHWATER_ALL_COMMON" />
+            <fish count="5" item="T2_FISH_FRESHWATER_ALL_COMMON" />
+            <fish count="5" item="T3_FISH_FRESHWATER_ALL_COMMON" />
+            <fish count="5" item="T4_FISH_FRESHWATER_ALL_COMMON" />
+            <fish count="5" item="T5_FISH_FRESHWATER_ALL_COMMON" />
+            <fish count="5" item="T6_FISH_FRESHWATER_ALL_COMMON" />
+            <fish count="5" item="T7_FISH_FRESHWATER_ALL_COMMON" />
+            <fish count="5" item="T8_FISH_FRESHWATER_ALL_COMMON" />
+            <fish count="5" item="T1_FISH_SALTWATER_ALL_COMMON" />
+            <fish count="5" item="T2_FISH_SALTWATER_ALL_COMMON" />
+            <fish count="5" item="T3_FISH_SALTWATER_ALL_COMMON" />
+            <fish count="5" item="T4_FISH_SALTWATER_ALL_COMMON" />
+            <fish count="5" item="T5_FISH_SALTWATER_ALL_COMMON" />
+            <fish count="5" item="T6_FISH_SALTWATER_ALL_COMMON" />
+            <fish count="5" item="T7_FISH_SALTWATER_ALL_COMMON" />
+            <fish count="5" item="T8_FISH_SALTWATER_ALL_COMMON" />
+            <fish count="5" item="T3_FISH_FRESHWATER_FOREST_RARE" />
+            <fish count="5" item="T5_FISH_FRESHWATER_FOREST_RARE" />
+            <fish count="5" item="T7_FISH_FRESHWATER_FOREST_RARE" />
+            <fish count="5" item="T3_FISH_FRESHWATER_MOUNTAIN_RARE" />
+            <fish count="5" item="T5_FISH_FRESHWATER_MOUNTAIN_RARE" />
+            <fish count="5" item="T7_FISH_FRESHWATER_MOUNTAIN_RARE" />
+            <fish count="5" item="T3_FISH_FRESHWATER_HIGHLANDS_RARE" />
+            <fish count="5" item="T5_FISH_FRESHWATER_HIGHLANDS_RARE" />
+            <fish count="5" item="T7_FISH_FRESHWATER_HIGHLANDS_RARE" />
+            <fish count="5" item="T3_FISH_FRESHWATER_STEPPE_RARE" />
+            <fish count="5" item="T5_FISH_FRESHWATER_STEPPE_RARE" />
+            <fish count="5" item="T7_FISH_FRESHWATER_STEPPE_RARE" />
+            <fish count="5" item="T3_FISH_FRESHWATER_SWAMP_RARE" />
+            <fish count="5" item="T5_FISH_FRESHWATER_SWAMP_RARE" />
+            <fish count="5" item="T7_FISH_FRESHWATER_SWAMP_RARE" />
+            <fish count="5" item="T3_FISH_FRESHWATER_AVALON_RARE" />
+            <fish count="5" item="T5_FISH_FRESHWATER_AVALON_RARE" />
+            <fish count="5" item="T7_FISH_FRESHWATER_AVALON_RARE" />
+            <fish count="5" item="T3_FISH_SALTWATER_ALL_RARE" />
+            <fish count="5" item="T5_FISH_SALTWATER_ALL_RARE" />
+            <fish count="5" item="T7_FISH_SALTWATER_ALL_RARE" />
+            <fish count="5" item="T8_FISH_SALTWATER_ALL_BOSS_SHARK" />
+          </progresssum>
         </missions>
       </extendedmissionstep>
     </tasks>

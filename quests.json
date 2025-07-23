@@ -107,6 +107,7 @@
         "@completetext": "@COMPLETE",
         "@cancelable": "false",
         "@playcompletesoundonce": "false",
+        "@journalhandover": "true",
         "tasks": {
           "extendedmissionstep": {
             "preactions": {
@@ -120,7 +121,7 @@
             },
             "missions": {
               "usefunction": {
-                "@function": "CloseAlbionJournal",
+                "@function": "OpenAlbionJournal",
                 "@textloca": "@CLOSE_JOURNAL"
               }
             }
@@ -2804,8 +2805,7 @@
               "missions": {
                 "usefunction": {
                   "@function": "OpenDestinyBoard",
-                  "@textloca": "@MISSIONS_T2_TUTORIAL_TEST_MA_OPEN_DB",
-                  "@hideindetailsui": "true"
+                  "@textloca": "@MISSIONS_T2_TUTORIAL_TEST_MA_OPEN_DB"
                 }
               }
             },
@@ -3020,8 +3020,7 @@
               "missions": {
                 "usefunction": {
                   "@function": "OpenDestinyBoard",
-                  "@textloca": "@MISSIONS_T2_TUTORIAL_TEST_MA_OPEN_DB",
-                  "@hideindetailsui": "true"
+                  "@textloca": "@MISSIONS_T2_TUTORIAL_TEST_MA_OPEN_DB"
                 }
               }
             },
@@ -3236,8 +3235,7 @@
               "missions": {
                 "usefunction": {
                   "@function": "OpenDestinyBoard",
-                  "@textloca": "@MISSIONS_T2_TUTORIAL_TEST_MA_OPEN_DB",
-                  "@hideindetailsui": "true"
+                  "@textloca": "@MISSIONS_T2_TUTORIAL_TEST_MA_OPEN_DB"
                 }
               }
             },
@@ -3682,16 +3680,9 @@
                 "settutorialstate": {
                   "@state": "SILVER"
                 },
-                "openhintbox": [
-                  {
-                    "@uniquename": "WHATYOUWEAR",
-                    "@displayonplatform": "desktop"
-                  },
-                  {
-                    "@uniquename": "WHATYOUWEAR_MOBILE",
-                    "@displayonplatform": "mobile"
-                  }
-                ]
+                "openhintbox": {
+                  "@uniquename": "INFO_ARMOR"
+                }
               },
               "missions": {
                 "acquireitem": [
@@ -3876,16 +3867,9 @@
                 "settutorialstate": {
                   "@state": "SILVER"
                 },
-                "openhintbox": [
-                  {
-                    "@uniquename": "WHATYOUWEAR",
-                    "@displayonplatform": "desktop"
-                  },
-                  {
-                    "@uniquename": "WHATYOUWEAR_MOBILE",
-                    "@displayonplatform": "mobile"
-                  }
-                ]
+                "openhintbox": {
+                  "@uniquename": "INFO_ARMOR"
+                }
               },
               "missions": {
                 "acquireitem": [
@@ -4334,7 +4318,8 @@
               "missions": {
                 "gotolocation": {
                   "@locationmarkerid": "SHOWROOM_01",
-                  "@textloca": "@DESTINYBOARD_DESCRIPTION_GOTOLOCATION_ONENTER"
+                  "@textloca": "@DESTINYBOARD_DESCRIPTION_GOTOLOCATION_ONENTER",
+                  "@hideindetailsui": "true"
                 }
               }
             },
@@ -4347,7 +4332,8 @@
               "missions": {
                 "gotolocation": {
                   "@locationmarkerid": "SHOWROOM_02",
-                  "@textloca": "@DESTINYBOARD_DESCRIPTION_GOTOLOCATION_ONENTER"
+                  "@textloca": "@DESTINYBOARD_DESCRIPTION_GOTOLOCATION_ONENTER",
+                  "@hideindetailsui": "true"
                 }
               }
             },
@@ -4360,7 +4346,8 @@
               "missions": {
                 "gotolocation": {
                   "@locationmarkerid": "SHOWROOM_04",
-                  "@textloca": "@DESTINYBOARD_DESCRIPTION_GOTOLOCATION_ONENTER"
+                  "@textloca": "@DESTINYBOARD_DESCRIPTION_GOTOLOCATION_ONENTER",
+                  "@hideindetailsui": "true"
                 }
               }
             },
@@ -4368,7 +4355,8 @@
               "missions": {
                 "gotolocation": {
                   "@locationmarkerid": "SHOWROOM_03",
-                  "@textloca": "@DESTINYBOARD_DESCRIPTION_GOTOLOCATION_ONENTER"
+                  "@textloca": "@DESTINYBOARD_DESCRIPTION_GOTOLOCATION_ONENTER",
+                  "@hideindetailsui": "true"
                 }
               }
             },
@@ -4381,7 +4369,8 @@
               "missions": {
                 "gotolocation": {
                   "@locationmarkerid": "SHOWROOM_04",
-                  "@textloca": "@DESTINYBOARD_DESCRIPTION_GOTOLOCATION_ONENTER"
+                  "@textloca": "@DESTINYBOARD_DESCRIPTION_GOTOLOCATION_ONENTER",
+                  "@hideindetailsui": "true"
                 }
               }
             },
@@ -4389,7 +4378,8 @@
               "missions": {
                 "gotolocation": {
                   "@locationmarkerid": "SHOWROOM_05",
-                  "@textloca": "@DESTINYBOARD_DESCRIPTION_GOTOLOCATION_ONENTER"
+                  "@textloca": "@DESTINYBOARD_DESCRIPTION_GOTOLOCATION_ONENTER",
+                  "@hideindetailsui": "true"
                 }
               }
             },
@@ -4397,7 +4387,8 @@
               "missions": {
                 "gotolocation": {
                   "@locationmarkerid": "SHOWROOM_06",
-                  "@textloca": "@DESTINYBOARD_DESCRIPTION_GOTOLOCATION_ONENTER"
+                  "@textloca": "@DESTINYBOARD_DESCRIPTION_GOTOLOCATION_ONENTER",
+                  "@hideindetailsui": "true"
                 }
               }
             },
@@ -4410,7 +4401,8 @@
               "missions": {
                 "gotolocation": {
                   "@locationmarkerid": "SHOWROOM_07",
-                  "@textloca": "@DESTINYBOARD_DESCRIPTION_GOTOLOCATION_ONENTER"
+                  "@textloca": "@DESTINYBOARD_DESCRIPTION_GOTOLOCATION_ONENTER",
+                  "@hideindetailsui": "true"
                 }
               }
             },
@@ -4418,7 +4410,8 @@
               "missions": {
                 "gotolocation": {
                   "@locationmarkerid": "SHOWROOM_08",
-                  "@textloca": "@DESTINYBOARD_DESCRIPTION_GOTOLOCATION_ONENTER"
+                  "@textloca": "@DESTINYBOARD_DESCRIPTION_GOTOLOCATION_ONENTER",
+                  "@hideindetailsui": "true"
                 }
               }
             },
@@ -4431,7 +4424,8 @@
               "missions": {
                 "gotolocation": {
                   "@locationmarkerid": "SHOWROOM_09",
-                  "@textloca": "@DESTINYBOARD_DESCRIPTION_GOTOLOCATION_ONENTER"
+                  "@textloca": "@DESTINYBOARD_DESCRIPTION_GOTOLOCATION_ONENTER",
+                  "@hideindetailsui": "true"
                 }
               }
             },
@@ -4439,7 +4433,8 @@
               "missions": {
                 "gotolocation": {
                   "@locationmarkerid": "SHOWROOM_10",
-                  "@textloca": "@DESTINYBOARD_DESCRIPTION_GOTOLOCATION_ONENTER"
+                  "@textloca": "@DESTINYBOARD_DESCRIPTION_GOTOLOCATION_ONENTER",
+                  "@hideindetailsui": "true"
                 }
               }
             }
@@ -4453,7 +4448,7 @@
             "missions": {
               "gotolocation": {
                 "@locationmarkerid": "SHOWROOM_11",
-                "@textloca": "@DESTINYBOARD_DESCRIPTION_GOTOLOCATION_ONENTER"
+                "@textloca": "@MISSIONS_SHOWROOM_ISLAND_TOUR_COMPLETE_TOUR"
               }
             }
           }
