@@ -12,6 +12,7 @@
       "@citypartyentrancetimer": "60",
       "@downwardpartyentrancetimer": "300",
       "@staticentranceblockerdebuff": "HELL_DUNGEON_JOINED_FROM_STATIC_ENTRANCE_DEBUFF",
+      "@staticentranceblockerdebufflong": "HELL_DUNGEON_JOINED_FROM_STATIC_ENTRANCE_DEBUFF_LONG",
       "@soulcarriabletype": "HELL_DUNGEON_SOUL",
       "@soulcarriablerarity": "0",
       "@shutdownprocessstackspell": "HELLDUNGEON_STACK",
@@ -28,7 +29,8 @@
       "@mobsoulvfxspawnprefab": "FX/ClientPrefabs/fx_hell_dungeon_mob_death_ghost_spawn",
       "modetypesetting": {
         "@type": "helldungeon",
-        "@minimapdisplayinterestareaextend": "100"
+        "@minimapdisplayinterestareaextend": "100",
+        "@playerdeathvisualevent": "HELL_DUNGEON_PLAYER_DEATH_EVENT"
       }
     },
     "helldungeonsouldropsetups": {
@@ -125,12 +127,12 @@
                   "@keyamount": "3"
                 },
                 {
-                  "@keyspawndelayinseconds": "600",
+                  "@keyspawndelayinseconds": "480",
                   "@spawnminimumdistance": "350",
                   "@keyamount": "1"
                 },
                 {
-                  "@keyspawndelayinseconds": "780",
+                  "@keyspawndelayinseconds": "600",
                   "@spawnminimumdistance": "350",
                   "@keyamount": "1"
                 }
@@ -144,7 +146,7 @@
                 "@rolls": "1",
                 "@chance": "1",
                 "@initialblocktimeseconds": "360",
-                "@finalblocktimeseconds": "685",
+                "@finalblocktimeseconds": "540",
                 "@mindifficulty": "1"
               },
               {
@@ -152,7 +154,7 @@
                 "@rolls": "3",
                 "@chance": "1",
                 "@initialblocktimeseconds": "180",
-                "@finalblocktimeseconds": "570"
+                "@finalblocktimeseconds": "480"
               }
             ]
           }
@@ -190,17 +192,17 @@
                   "@keyamount": "5"
                 },
                 {
+                  "@keyspawndelayinseconds": "480",
+                  "@spawnminimumdistance": "350",
+                  "@keyamount": "1"
+                },
+                {
                   "@keyspawndelayinseconds": "600",
                   "@spawnminimumdistance": "350",
                   "@keyamount": "1"
                 },
                 {
-                  "@keyspawndelayinseconds": "780",
-                  "@spawnminimumdistance": "350",
-                  "@keyamount": "1"
-                },
-                {
-                  "@keyspawndelayinseconds": "960",
+                  "@keyspawndelayinseconds": "720",
                   "@spawnminimumdistance": "350",
                   "@keyamount": "1"
                 }
@@ -214,7 +216,7 @@
                 "@rolls": "1",
                 "@chance": "1",
                 "@initialblocktimeseconds": "360",
-                "@finalblocktimeseconds": "685",
+                "@finalblocktimeseconds": "540",
                 "@mindifficulty": "1"
               },
               {
@@ -222,7 +224,7 @@
                 "@rolls": "3",
                 "@chance": "1",
                 "@initialblocktimeseconds": "180",
-                "@finalblocktimeseconds": "570"
+                "@finalblocktimeseconds": "480"
               }
             ]
           }
@@ -250,9 +252,9 @@
               "@downwardexitsopenmax": "8",
               "@clusterclosetime": "300",
               "@clustermaximumstarttimeoffset": "360",
-              "@clustershutdownstart": "900",
-              "@clustershutdowndamagestart": "1080",
-              "@clustershutdowntime": "1200"
+              "@clustershutdownstart": "720",
+              "@clustershutdowndamagestart": "900",
+              "@clustershutdowntime": "1020"
             },
             {
               "@id": "DUO_ORANGE_HELL_DUNGEON_02",
@@ -270,9 +272,9 @@
               "@downwardexitsopenmax": "8",
               "@clusterclosetime": "300",
               "@clustermaximumstarttimeoffset": "360",
-              "@clustershutdownstart": "900",
-              "@clustershutdowndamagestart": "1080",
-              "@clustershutdowntime": "1200"
+              "@clustershutdownstart": "720",
+              "@clustershutdowndamagestart": "900",
+              "@clustershutdowntime": "1020"
             },
             {
               "@id": "DUO_ORANGE_HELL_DUNGEON_03",
@@ -290,9 +292,9 @@
               "@downwardexitsopenmax": "0",
               "@clusterclosetime": "300",
               "@clustermaximumstarttimeoffset": "360",
-              "@clustershutdownstart": "900",
-              "@clustershutdowndamagestart": "1080",
-              "@clustershutdowntime": "1200"
+              "@clustershutdownstart": "720",
+              "@clustershutdowndamagestart": "900",
+              "@clustershutdowntime": "1020"
             }
           ]
         },
@@ -315,9 +317,9 @@
               "@downwardexitsopenmax": "8",
               "@clusterclosetime": "300",
               "@clustermaximumstarttimeoffset": "360",
-              "@clustershutdownstart": "900",
-              "@clustershutdowndamagestart": "1080",
-              "@clustershutdowntime": "1200"
+              "@clustershutdownstart": "720",
+              "@clustershutdowndamagestart": "900",
+              "@clustershutdowntime": "1020"
             },
             {
               "@id": "TRIO_ORANGE_HELL_DUNGEON_02",
@@ -335,9 +337,9 @@
               "@downwardexitsopenmax": "8",
               "@clusterclosetime": "300",
               "@clustermaximumstarttimeoffset": "360",
-              "@clustershutdownstart": "900",
-              "@clustershutdowndamagestart": "1080",
-              "@clustershutdowntime": "1200"
+              "@clustershutdownstart": "720",
+              "@clustershutdowndamagestart": "900",
+              "@clustershutdowntime": "1020"
             },
             {
               "@id": "TRIO_ORANGE_HELL_DUNGEON_03",
@@ -355,9 +357,9 @@
               "@downwardexitsopenmax": "0",
               "@clusterclosetime": "300",
               "@clustermaximumstarttimeoffset": "360",
-              "@clustershutdownstart": "900",
-              "@clustershutdowndamagestart": "1080",
-              "@clustershutdowntime": "1200"
+              "@clustershutdownstart": "720",
+              "@clustershutdowndamagestart": "900",
+              "@clustershutdowntime": "1020"
             }
           ]
         }

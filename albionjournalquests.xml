@@ -141,10 +141,22 @@
       </dynamiccluster>
     </variables>
     <tasks>
-      <!-- Go to the closest Starter Town-->
+      <!-- Mount Up-->
       <missionstep>
-        <gotocluster clustervariable="STARTERTOWN" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_RETURN_TO_CROSS"  hideindetailsui="true"/>
+        <or textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_MOUNT_UP">
+          <mount  hideindetailsui="true"/>
+          <gotocluster clustervariable="STARTERTOWN" hideindetailsui="true"/>
+        </or>
       </missionstep>
+      <!-- Go to the closest Starter Town-->
+      <extendedmissionstep>
+        <preactions>
+          <openhintbox uniquename="JOURNAL_QUEST_JOURNEY_BACK"/>
+        </preactions>
+        <missions>
+          <gotocluster clustervariable="STARTERTOWN" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_RETURN_TO_CROSS"  hideindetailsui="true"/>
+        </missions>
+      </extendedmissionstep>
       <!-- Go to the marketplace-->
       <extendedmissionstep>
         <preactions>
@@ -845,10 +857,22 @@
       </dynamiccluster>
     </variables>
     <tasks>
-      <!-- Go to the closest Starter Town-->
+      <!-- Mount Up-->
       <missionstep>
-        <gotocluster clustervariable="STARTERTOWN" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_RETURN_TO_CROSS"  hideindetailsui="true"/>
+        <or textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_MOUNT_UP">
+          <mount  hideindetailsui="true"/>
+          <gotocluster clustervariable="STARTERTOWN" hideindetailsui="true"/>
+        </or>
       </missionstep>
+      <!-- Go to the closest Starter Town-->
+      <extendedmissionstep>
+        <preactions>
+          <openhintbox uniquename="JOURNAL_QUEST_JOURNEY_BACK"/>
+        </preactions>
+        <missions>
+          <gotocluster clustervariable="STARTERTOWN" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_RETURN_TO_CROSS"  hideindetailsui="true"/>
+        </missions>
+      </extendedmissionstep>
       <!-- Go to the marketplace-->
       <extendedmissionstep>
         <preactions>
@@ -1391,10 +1415,22 @@
       </dynamiccluster>
     </variables>
     <tasks>
-      <!-- Go to the closest Starter Town-->
+      <!-- Mount Up-->
       <missionstep>
-        <gotocluster clustervariable="STARTERTOWN" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_RETURN_TO_CROSS"  hideindetailsui="true"/>
+        <or textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_MOUNT_UP">
+          <mount  hideindetailsui="true"/>
+          <gotocluster clustervariable="STARTERTOWN" hideindetailsui="true"/>
+        </or>
       </missionstep>
+      <!-- Go to the closest Starter Town-->
+      <extendedmissionstep>
+        <preactions>
+          <openhintbox uniquename="JOURNAL_QUEST_JOURNEY_BACK"/>
+        </preactions>
+          <missions>
+            <gotocluster clustervariable="STARTERTOWN" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_RETURN_TO_CROSS"  hideindetailsui="true"/>
+          </missions>
+      </extendedmissionstep>
       <!-- Go to the marketplace-->
 	  <missionstep>
 	    <usefunction function="InteractWithMarketplace" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_GOTO_MARKETPLACE" locationmarkerid="MARKETPLACE" />

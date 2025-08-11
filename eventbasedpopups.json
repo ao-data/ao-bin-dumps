@@ -134,6 +134,7 @@
           "conditions": {
             "and": {
               "IfTutorialCompleted": null,
+              "IfAlbionJournalIsUnlocked": null,
               "not": {
                 "IfHasPremium": null
               },
@@ -176,6 +177,7 @@
           "conditions": {
             "and": {
               "IfTutorialCompleted": null,
+              "IfAlbionJournalIsUnlocked": null,
               "not": [
                 {
                   "IfHasPremium": null
@@ -219,6 +221,7 @@
           "conditions": {
             "and": {
               "IfTutorialCompleted": null,
+              "IfAlbionJournalIsUnlocked": null,
               "not": {
                 "IfHasPremium": null
               },
@@ -257,6 +260,7 @@
           "conditions": {
             "and": {
               "IfTutorialCompleted": null,
+              "IfAlbionJournalIsUnlocked": null,
               "IfHasPremium": null,
               "IfHasPremiumDays": {
                 "@operation": "less",
@@ -304,6 +308,7 @@
           "conditions": {
             "and": {
               "IfTutorialCompleted": null,
+              "IfAlbionJournalIsUnlocked": null,
               "IfHasPremium": null,
               "IfHasPremiumDays": {
                 "@operation": "less",
@@ -347,6 +352,7 @@
           "conditions": {
             "and": {
               "IfTutorialCompleted": null,
+              "IfAlbionJournalIsUnlocked": null,
               "IfHasPremiumDays": {
                 "@operation": "less",
                 "@value": "7"
@@ -396,6 +402,7 @@
           "conditions": {
             "and": {
               "IfTutorialCompleted": null,
+              "IfAlbionJournalIsUnlocked": null,
               "not": {
                 "IfHasPremium": null
               },
@@ -441,6 +448,7 @@
           "conditions": {
             "and": {
               "IfTutorialCompleted": null,
+              "IfAlbionJournalIsUnlocked": null,
               "not": {
                 "IfHasPremium": null
               },
@@ -517,6 +525,7 @@
           "conditions": {
             "and": {
               "IfTutorialCompleted": null,
+              "IfAlbionJournalIsUnlocked": null,
               "not": [
                 {
                   "IfHasPremium": null
@@ -611,6 +620,7 @@
           "conditions": {
             "and": {
               "IfTutorialCompleted": null,
+              "IfAlbionJournalIsUnlocked": null,
               "not": [
                 {
                   "IfHasPremium": null
@@ -655,6 +665,10 @@
           "conditions": {
             "and": {
               "IfTutorialCompleted": null,
+              "IfCharacterOnlineHours": {
+                "@value": "3",
+                "@operation": "greaterOrEqual"
+              },
               "IfHasSeenPopup": {
                 "@uniquename": "FUNDS_LOW",
                 "@frequency": "Today",
@@ -806,6 +820,7 @@
           "conditions": {
             "and": {
               "IfTutorialCompleted": null,
+              "IfAlbionJournalIsUnlocked": null,
               "not": {
                 "IfHasSeenSeasonWinnerPopup": {
                   "@uniquename": "SEASON_WINNER"
@@ -836,6 +851,7 @@
           "conditions": {
             "and": {
               "IfTutorialCompleted": null,
+              "IfAlbionJournalIsUnlocked": null,
               "not": {
                 "IfReceivedCrossPlatformReward": null
               },
@@ -912,6 +928,7 @@
           "conditions": {
             "and": {
               "IfTutorialCompleted": null,
+              "IfAlbionJournalIsUnlocked": null,
               "IfEnabledActivityPopupOnLogin": null,
               "IfHasSeenPopup": {
                 "@uniquename": "ACTIVITY_HUB",
@@ -946,6 +963,7 @@
           "conditions": {
             "and": {
               "IfTutorialCompleted": null,
+              "IfAlbionJournalIsUnlocked": null,
               "not": {
                 "IfHasSeenFeaturedFeature": null
               }
@@ -1147,267 +1165,6 @@
               ]
             }
           }
-        },
-        {
-          "@uniquename": "FOUNDER_PACK_LAST_CHANCE_BUY",
-          "@priority": "10",
-          "@type": "EuropeFounderPacks",
-          "@title": "@EVENT_BASED_POPUPS_FOUNDER_PACK_LAST_CHANCE_BUY_TITLE",
-          "@description": "@EVENT_BASED_POPUPS_FOUNDER_PACK_LAST_CHANCE_BUY_DESCRIPTION",
-          "@imagepath": "Gui/Advertisements/ad_founder_eu_founderpacks",
-          "categories": {
-            "category": {
-              "@name": "Advertisement"
-            }
-          },
-          "triggers": {
-            "trigger": {
-              "@action": "GameLogin"
-            }
-          },
-          "conditions": {
-            "and": {
-              "IfValidDate": {
-                "@end": "2024-06-17T09:00:00"
-              },
-              "IfHasEuropeFounderState": {
-                "@founderState": "none"
-              },
-              "IsEuropeContext": null,
-              "IfOnPlatform": {
-                "@platform": "Desktop"
-              },
-              "IfTutorialCompleted": null,
-              "IfHasSeenPopup": [
-                {
-                  "@uniquename": "FOUNDER_PACK_LAST_CHANCE_BUY",
-                  "@frequency": "Days",
-                  "@operation": "equals",
-                  "@timefactor": "7",
-                  "@amount": "0"
-                },
-                {
-                  "@uniquename": "FOUNDER_PACK_LAST_CHANCE_OFF_MARKET",
-                  "@frequency": "Days",
-                  "@operation": "equals",
-                  "@timefactor": "7",
-                  "@amount": "0"
-                },
-                {
-                  "@uniquename": "FOUNDER_PACK_LAST_CHANCE_CROSS_PURCHASE",
-                  "@frequency": "Days",
-                  "@operation": "equals",
-                  "@timefactor": "7",
-                  "@amount": "0"
-                },
-                {
-                  "@uniquename": "FOUNDER_PACK_LAST_CHANCE_UPGRADE",
-                  "@frequency": "Days",
-                  "@operation": "equals",
-                  "@timefactor": "7",
-                  "@amount": "0"
-                }
-              ]
-            }
-          }
-        },
-        {
-          "@uniquename": "FOUNDER_PACK_LAST_CHANCE_OFF_MARKET",
-          "@priority": "10",
-          "@type": "EuropeFounderPacks",
-          "@title": "@EVENT_BASED_POPUPS_FOUNDER_PACK_LAST_CHANCE_BUY_OFF_MARKET_TITLE",
-          "@description": "@EVENT_BASED_POPUPS_FOUNDER_PACK_LAST_CHANCE_BUY_OFF_MARKET_DESCRIPTION",
-          "@imagepath": "Gui/Advertisements/ad_founder_eu_founderpacks",
-          "categories": {
-            "category": {
-              "@name": "Advertisement"
-            }
-          },
-          "triggers": {
-            "trigger": {
-              "@action": "GameLogin"
-            }
-          },
-          "conditions": {
-            "and": {
-              "IfValidDate": {
-                "@end": "2024-06-17T09:00:00"
-              },
-              "IfHasEuropeFounderState": {
-                "@founderState": "none"
-              },
-              "not": {
-                "IsEuropeContext": null
-              },
-              "IfOnPlatform": {
-                "@platform": "Desktop"
-              },
-              "IfTutorialCompleted": null,
-              "IfHasSeenPopup": [
-                {
-                  "@uniquename": "FOUNDER_PACK_LAST_CHANCE_BUY",
-                  "@frequency": "Days",
-                  "@operation": "equals",
-                  "@timefactor": "7",
-                  "@amount": "0"
-                },
-                {
-                  "@uniquename": "FOUNDER_PACK_LAST_CHANCE_OFF_MARKET",
-                  "@frequency": "Days",
-                  "@operation": "equals",
-                  "@timefactor": "7",
-                  "@amount": "0"
-                },
-                {
-                  "@uniquename": "FOUNDER_PACK_LAST_CHANCE_CROSS_PURCHASE",
-                  "@frequency": "Days",
-                  "@operation": "equals",
-                  "@timefactor": "7",
-                  "@amount": "0"
-                },
-                {
-                  "@uniquename": "FOUNDER_PACK_LAST_CHANCE_UPGRADE",
-                  "@frequency": "Days",
-                  "@operation": "equals",
-                  "@timefactor": "7",
-                  "@amount": "0"
-                }
-              ]
-            }
-          }
-        },
-        {
-          "@uniquename": "FOUNDER_PACK_LAST_CHANCE_CROSS_PURCHASE",
-          "@priority": "10",
-          "@type": "EuropeFounderPacks",
-          "@title": "@EVENT_BASED_POPUPS_FOUNDER_PACK_LAST_CHANCE_CROSS_PURCHASE_TITLE",
-          "@description": "@EVENT_BASED_POPUPS_FOUNDER_PACK_LAST_CHANCE_CROSS_PURCHASE_DESCRIPTION",
-          "@imagepath": "Gui/Advertisements/ad_founder_eu_founderpacks",
-          "categories": {
-            "category": {
-              "@name": "Advertisement"
-            }
-          },
-          "triggers": {
-            "trigger": {
-              "@action": "GameLogin"
-            }
-          },
-          "conditions": {
-            "and": {
-              "IfValidDate": {
-                "@end": "2024-06-17T09:00:00"
-              },
-              "IfHasEuropeFounderState": {
-                "@founderState": "crystal"
-              },
-              "IfOnPlatform": {
-                "@platform": "Desktop"
-              },
-              "IfTutorialCompleted": null,
-              "IfHasSeenPopup": [
-                {
-                  "@uniquename": "FOUNDER_PACK_LAST_CHANCE_BUY",
-                  "@frequency": "Days",
-                  "@operation": "equals",
-                  "@timefactor": "7",
-                  "@amount": "0"
-                },
-                {
-                  "@uniquename": "FOUNDER_PACK_LAST_CHANCE_OFF_MARKET",
-                  "@frequency": "Days",
-                  "@operation": "equals",
-                  "@timefactor": "7",
-                  "@amount": "0"
-                },
-                {
-                  "@uniquename": "FOUNDER_PACK_LAST_CHANCE_CROSS_PURCHASE",
-                  "@frequency": "Days",
-                  "@operation": "equals",
-                  "@timefactor": "7",
-                  "@amount": "0"
-                },
-                {
-                  "@uniquename": "FOUNDER_PACK_LAST_CHANCE_UPGRADE",
-                  "@frequency": "Days",
-                  "@operation": "equals",
-                  "@timefactor": "7",
-                  "@amount": "0"
-                }
-              ]
-            }
-          }
-        },
-        {
-          "@uniquename": "FOUNDER_PACK_LAST_CHANCE_UPGRADE",
-          "@priority": "10",
-          "@type": "EuropeFounderPacks",
-          "@title": "@EVENT_BASED_POPUPS_FOUNDER_PACK_LAST_CHANCE_UPGRADE_TITLE",
-          "@description": "@EVENT_BASED_POPUPS_FOUNDER_PACK_LAST_CHANCE_UPGRADE_DESCRIPTION",
-          "@imagepath": "Gui/Advertisements/ad_founder_eu_founderpacks",
-          "categories": {
-            "category": {
-              "@name": "Advertisement"
-            }
-          },
-          "triggers": {
-            "trigger": {
-              "@action": "GameLogin"
-            }
-          },
-          "conditions": {
-            "and": {
-              "IfValidDate": {
-                "@end": "2024-06-17T09:00:00"
-              },
-              "not": [
-                {
-                  "IfHasEuropeFounderState": {
-                    "@founderState": "none"
-                  }
-                },
-                {
-                  "IfHasEuropeFounderState": {
-                    "@founderState": "crystal"
-                  }
-                }
-              ],
-              "IfOnPlatform": {
-                "@platform": "Desktop"
-              },
-              "IfTutorialCompleted": null,
-              "IfHasSeenPopup": [
-                {
-                  "@uniquename": "FOUNDER_PACK_LAST_CHANCE_BUY",
-                  "@frequency": "Days",
-                  "@operation": "equals",
-                  "@timefactor": "7",
-                  "@amount": "0"
-                },
-                {
-                  "@uniquename": "FOUNDER_PACK_LAST_CHANCE_OFF_MARKET",
-                  "@frequency": "Days",
-                  "@operation": "equals",
-                  "@timefactor": "7",
-                  "@amount": "0"
-                },
-                {
-                  "@uniquename": "FOUNDER_PACK_LAST_CHANCE_CROSS_PURCHASE",
-                  "@frequency": "Days",
-                  "@operation": "equals",
-                  "@timefactor": "7",
-                  "@amount": "0"
-                },
-                {
-                  "@uniquename": "FOUNDER_PACK_LAST_CHANCE_UPGRADE",
-                  "@frequency": "Days",
-                  "@operation": "equals",
-                  "@timefactor": "7",
-                  "@amount": "0"
-                }
-              ]
-            }
-          }
         }
       ],
       "lootchestpopup": {
@@ -1445,7 +1202,7 @@
               "@uniquename": "TWITCH_DROPS",
               "@frequency": "Days",
               "@operation": "equals",
-              "@timefactor": "7",
+              "@timefactor": "14",
               "@amount": "0"
             }
           }
@@ -1498,6 +1255,7 @@
                 "@platform": "Desktop"
               },
               "IfTutorialCompleted": null,
+              "IfAlbionJournalIsUnlocked": null,
               "IfHasSeenPopup": [
                 {
                   "@uniquename": "MASTERY_PACKS_NATIVE_OFFER",
@@ -1553,6 +1311,7 @@
                 }
               },
               "IfTutorialCompleted": null,
+              "IfAlbionJournalIsUnlocked": null,
               "IfHasSeenPopup": [
                 {
                   "@uniquename": "MASTERY_PACKS_NATIVE_OFFER",
@@ -1603,6 +1362,7 @@
           "conditions": {
             "and": {
               "IfTutorialCompleted": null,
+              "IfAlbionJournalIsUnlocked": null,
               "IfOnPlatform": {
                 "@platform": "Ios"
               },
