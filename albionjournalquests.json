@@ -511,13 +511,32 @@
         },
         "tasks": {
           "missionstep": {
-            "gotocluster": {
-              "@clustervariable": "STARTERTOWN",
-              "@textloca": "@MISSIONS_JOURNAL_QUEST_SIDETEXT_RETURN_TO_CROSS",
-              "@hideindetailsui": "true"
+            "or": {
+              "@textloca": "@MISSIONS_JOURNAL_QUEST_SIDETEXT_MOUNT_UP",
+              "mount": {
+                "@hideindetailsui": "true"
+              },
+              "gotocluster": {
+                "@clustervariable": "STARTERTOWN",
+                "@hideindetailsui": "true"
+              }
             }
           },
           "extendedmissionstep": [
+            {
+              "preactions": {
+                "openhintbox": {
+                  "@uniquename": "JOURNAL_QUEST_JOURNEY_BACK"
+                }
+              },
+              "missions": {
+                "gotocluster": {
+                  "@clustervariable": "STARTERTOWN",
+                  "@textloca": "@MISSIONS_JOURNAL_QUEST_SIDETEXT_RETURN_TO_CROSS",
+                  "@hideindetailsui": "true"
+                }
+              }
+            },
             {
               "preactions": {
                 "openhintbox": {
@@ -2338,13 +2357,32 @@
         },
         "tasks": {
           "missionstep": {
-            "gotocluster": {
-              "@clustervariable": "STARTERTOWN",
-              "@textloca": "@MISSIONS_JOURNAL_QUEST_SIDETEXT_RETURN_TO_CROSS",
-              "@hideindetailsui": "true"
+            "or": {
+              "@textloca": "@MISSIONS_JOURNAL_QUEST_SIDETEXT_MOUNT_UP",
+              "mount": {
+                "@hideindetailsui": "true"
+              },
+              "gotocluster": {
+                "@clustervariable": "STARTERTOWN",
+                "@hideindetailsui": "true"
+              }
             }
           },
           "extendedmissionstep": [
+            {
+              "preactions": {
+                "openhintbox": {
+                  "@uniquename": "JOURNAL_QUEST_JOURNEY_BACK"
+                }
+              },
+              "missions": {
+                "gotocluster": {
+                  "@clustervariable": "STARTERTOWN",
+                  "@textloca": "@MISSIONS_JOURNAL_QUEST_SIDETEXT_RETURN_TO_CROSS",
+                  "@hideindetailsui": "true"
+                }
+              }
+            },
             {
               "preactions": {
                 "openhintbox": {
@@ -3488,10 +3526,15 @@
         "tasks": {
           "missionstep": [
             {
-              "gotocluster": {
-                "@clustervariable": "STARTERTOWN",
-                "@textloca": "@MISSIONS_JOURNAL_QUEST_SIDETEXT_RETURN_TO_CROSS",
-                "@hideindetailsui": "true"
+              "or": {
+                "@textloca": "@MISSIONS_JOURNAL_QUEST_SIDETEXT_MOUNT_UP",
+                "mount": {
+                  "@hideindetailsui": "true"
+                },
+                "gotocluster": {
+                  "@clustervariable": "STARTERTOWN",
+                  "@hideindetailsui": "true"
+                }
               }
             },
             {
@@ -3502,19 +3545,35 @@
               }
             }
           ],
-          "extendedmissionstep": {
-            "preactions": {
-              "openhintbox": {
-                "@uniquename": "JOURNAL_QUEST_SELL_ITEMS_GATHERING"
+          "extendedmissionstep": [
+            {
+              "preactions": {
+                "openhintbox": {
+                  "@uniquename": "JOURNAL_QUEST_JOURNEY_BACK"
+                }
+              },
+              "missions": {
+                "gotocluster": {
+                  "@clustervariable": "STARTERTOWN",
+                  "@textloca": "@MISSIONS_JOURNAL_QUEST_SIDETEXT_RETURN_TO_CROSS",
+                  "@hideindetailsui": "true"
+                }
               }
             },
-            "missions": {
-              "marketsellitem": {
-                "@count": "80",
-                "@textloca": "@MISSIONS_JOURNAL_QUEST_SIDETEXT_SELL_ITEMS_TO_MARKET"
+            {
+              "preactions": {
+                "openhintbox": {
+                  "@uniquename": "JOURNAL_QUEST_SELL_ITEMS_GATHERING"
+                }
+              },
+              "missions": {
+                "marketsellitem": {
+                  "@count": "80",
+                  "@textloca": "@MISSIONS_JOURNAL_QUEST_SIDETEXT_SELL_ITEMS_TO_MARKET"
+                }
               }
             }
-          }
+          ]
         }
       },
       {

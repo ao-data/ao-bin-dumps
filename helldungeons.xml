@@ -7,6 +7,7 @@
         citypartyentrancetimer="60"
         downwardpartyentrancetimer="300"
         staticentranceblockerdebuff="HELL_DUNGEON_JOINED_FROM_STATIC_ENTRANCE_DEBUFF"
+        staticentranceblockerdebufflong="HELL_DUNGEON_JOINED_FROM_STATIC_ENTRANCE_DEBUFF_LONG"
         soulcarriabletype="HELL_DUNGEON_SOUL"
         soulcarriablerarity="0"
         shutdownprocessstackspell="HELLDUNGEON_STACK"
@@ -23,8 +24,8 @@
         mobsoulvfxspawnprefab="FX/ClientPrefabs/fx_hell_dungeon_mob_death_ghost_spawn"
     >
 
-        <modetypesetting type="helldungeon"
-                         minimapdisplayinterestareaextend="100"/>
+      <modetypesetting type="helldungeon"
+                       minimapdisplayinterestareaextend="100" playerdeathvisualevent="HELL_DUNGEON_PLAYER_DEATH_EVENT"/>
     </globalsettings>
 
     <helldungeonsouldropsetups>
@@ -61,12 +62,12 @@
             <difficultylevel level="1" minimuminstancepool="1" flexibleinstancepool="0.05"/>
             <difficultylevel level="2" minimuminstancepool="1" flexibleinstancepool="0.05">
               <keyspawn keyspawndelayinseconds="300" spawnminimumdistance="350" keyamount="3"/>
+              <keyspawn keyspawndelayinseconds="480" spawnminimumdistance="350" keyamount="1"/>
               <keyspawn keyspawndelayinseconds="600" spawnminimumdistance="350" keyamount="1"/>
-              <keyspawn keyspawndelayinseconds="780" spawnminimumdistance="350" keyamount="1"/>
             </difficultylevel>
             <treasures>
-                <subtype name="CHEST" rolls="1" chance="1" initialblocktimeseconds="360" finalblocktimeseconds="685" mindifficulty="1"/>
-                <subtype name="COFFER" rolls="3" chance="1" initialblocktimeseconds="180" finalblocktimeseconds="570"/>
+                <subtype name="CHEST" rolls="1" chance="1" initialblocktimeseconds="360" finalblocktimeseconds="540" mindifficulty="1"/>
+                <subtype name="COFFER" rolls="3" chance="1" initialblocktimeseconds="180" finalblocktimeseconds="480"/>
             </treasures>
         </helldungeonmode>
         <helldungeonmode
@@ -84,27 +85,27 @@
             <difficultylevel level="1" minimuminstancepool="1" flexibleinstancepool="0.05"/>
             <difficultylevel level="2" minimuminstancepool="1" flexibleinstancepool="0.05">
               <keyspawn keyspawndelayinseconds="300" spawnminimumdistance="350" keyamount="5"/>
+              <keyspawn keyspawndelayinseconds="480" spawnminimumdistance="350" keyamount="1"/>
               <keyspawn keyspawndelayinseconds="600" spawnminimumdistance="350" keyamount="1"/>
-              <keyspawn keyspawndelayinseconds="780" spawnminimumdistance="350" keyamount="1"/>
-              <keyspawn keyspawndelayinseconds="960" spawnminimumdistance="350" keyamount="1"/>
+              <keyspawn keyspawndelayinseconds="720" spawnminimumdistance="350" keyamount="1"/>
             </difficultylevel>
             <treasures>
-                <subtype name="CHEST" rolls="1" chance="1" initialblocktimeseconds="360" finalblocktimeseconds="685" mindifficulty="1"/>
-                <subtype name="COFFER" rolls="3" chance="1" initialblocktimeseconds="180" finalblocktimeseconds="570"/>
+                <subtype name="CHEST" rolls="1" chance="1" initialblocktimeseconds="360" finalblocktimeseconds="540" mindifficulty="1"/>
+                <subtype name="COFFER" rolls="3" chance="1" initialblocktimeseconds="180" finalblocktimeseconds="480"/>
             </treasures>
         </helldungeonmode>
     </helldungeonmodes>
 
     <helldungeonmaps>
         <mapset name="MAPSET_DUO_ORANGE_DUNGEON">
-          <map id="DUO_ORANGE_HELL_DUNGEON_01" difficultylevel="0" mastertemplate="HELLDNG_MASTER_01_LVL1" templatepool="ORANGE_LEVEL1_DUO" souldropsetup="HELL_DUNGEON_ORANGE_SOUL_SETUP" clustertier="6" subbiome="dead" softplayerlimitmin="16" softplayerlimitmax="16" hardplayercapspace="2" weight="1" downwardexitsopenmin="5" downwardexitsopenmax="8" clusterclosetime="300" clustermaximumstarttimeoffset="360" clustershutdownstart="900" clustershutdowndamagestart="1080" clustershutdowntime="1200"/>
-          <map id="DUO_ORANGE_HELL_DUNGEON_02" difficultylevel="1" mastertemplate="HELLDNG_MASTER_01_LVL2" templatepool="ORANGE_LEVEL2_DUO" souldropsetup="HELL_DUNGEON_ORANGE_SOUL_SETUP" clustertier="7" subbiome="dead" softplayerlimitmin="16" softplayerlimitmax="16" hardplayercapspace="2" weight="1" downwardexitsopenmin="5" downwardexitsopenmax="8" clusterclosetime="300" clustermaximumstarttimeoffset="360" clustershutdownstart="900" clustershutdowndamagestart="1080" clustershutdowntime="1200"/>
-          <map id="DUO_ORANGE_HELL_DUNGEON_03" difficultylevel="2" mastertemplate="HELLDNG_MASTER_01_LVL3" templatepool="ORANGE_LEVEL3_DUO" souldropsetup="HELL_DUNGEON_ORANGE_SOUL_SETUP" clustertier="8" subbiome="dead" softplayerlimitmin="16" softplayerlimitmax="16" hardplayercapspace="2" weight="1" downwardexitsopenmin="0" downwardexitsopenmax="0" clusterclosetime="300" clustermaximumstarttimeoffset="360" clustershutdownstart="900" clustershutdowndamagestart="1080" clustershutdowntime="1200"/>
+          <map id="DUO_ORANGE_HELL_DUNGEON_01" difficultylevel="0" mastertemplate="HELLDNG_MASTER_01_LVL1" templatepool="ORANGE_LEVEL1_DUO" souldropsetup="HELL_DUNGEON_ORANGE_SOUL_SETUP" clustertier="6" subbiome="dead" softplayerlimitmin="16" softplayerlimitmax="16" hardplayercapspace="2" weight="1" downwardexitsopenmin="5" downwardexitsopenmax="8" clusterclosetime="300" clustermaximumstarttimeoffset="360" clustershutdownstart="720" clustershutdowndamagestart="900" clustershutdowntime="1020"/>
+          <map id="DUO_ORANGE_HELL_DUNGEON_02" difficultylevel="1" mastertemplate="HELLDNG_MASTER_01_LVL2" templatepool="ORANGE_LEVEL2_DUO" souldropsetup="HELL_DUNGEON_ORANGE_SOUL_SETUP" clustertier="7" subbiome="dead" softplayerlimitmin="16" softplayerlimitmax="16" hardplayercapspace="2" weight="1" downwardexitsopenmin="5" downwardexitsopenmax="8" clusterclosetime="300" clustermaximumstarttimeoffset="360" clustershutdownstart="720" clustershutdowndamagestart="900" clustershutdowntime="1020"/>
+          <map id="DUO_ORANGE_HELL_DUNGEON_03" difficultylevel="2" mastertemplate="HELLDNG_MASTER_01_LVL3" templatepool="ORANGE_LEVEL3_DUO" souldropsetup="HELL_DUNGEON_ORANGE_SOUL_SETUP" clustertier="8" subbiome="dead" softplayerlimitmin="16" softplayerlimitmax="16" hardplayercapspace="2" weight="1" downwardexitsopenmin="0" downwardexitsopenmax="0" clusterclosetime="300" clustermaximumstarttimeoffset="360" clustershutdownstart="720" clustershutdowndamagestart="900" clustershutdowntime="1020"/>
         </mapset>
         <mapset name="MAPSET_TRIO_ORANGE_DUNGEON">
-          <map id="TRIO_ORANGE_HELL_DUNGEON_01" difficultylevel="0" mastertemplate="HELLDNG_MASTER_01_LVL1" templatepool="ORANGE_LEVEL1_TRIO" souldropsetup="HELL_DUNGEON_ORANGE_SOUL_SETUP" clustertier="6" subbiome="dead" softplayerlimitmin="24" softplayerlimitmax="24" hardplayercapspace="3" weight="1" downwardexitsopenmin="5" downwardexitsopenmax="8" clusterclosetime="300" clustermaximumstarttimeoffset="360" clustershutdownstart="900" clustershutdowndamagestart="1080" clustershutdowntime="1200"/>
-          <map id="TRIO_ORANGE_HELL_DUNGEON_02" difficultylevel="1" mastertemplate="HELLDNG_MASTER_01_LVL2" templatepool="ORANGE_LEVEL2_TRIO" souldropsetup="HELL_DUNGEON_ORANGE_SOUL_SETUP" clustertier="7" subbiome="dead" softplayerlimitmin="24" softplayerlimitmax="24" hardplayercapspace="3" weight="1" downwardexitsopenmin="5" downwardexitsopenmax="8" clusterclosetime="300" clustermaximumstarttimeoffset="360" clustershutdownstart="900" clustershutdowndamagestart="1080" clustershutdowntime="1200"/>
-          <map id="TRIO_ORANGE_HELL_DUNGEON_03" difficultylevel="2" mastertemplate="HELLDNG_MASTER_01_LVL3" templatepool="ORANGE_LEVEL3_TRIO" souldropsetup="HELL_DUNGEON_ORANGE_SOUL_SETUP" clustertier="8" subbiome="dead" softplayerlimitmin="24" softplayerlimitmax="24" hardplayercapspace="3" weight="1" downwardexitsopenmin="0" downwardexitsopenmax="0" clusterclosetime="300" clustermaximumstarttimeoffset="360" clustershutdownstart="900" clustershutdowndamagestart="1080" clustershutdowntime="1200"/>
+          <map id="TRIO_ORANGE_HELL_DUNGEON_01" difficultylevel="0" mastertemplate="HELLDNG_MASTER_01_LVL1" templatepool="ORANGE_LEVEL1_TRIO" souldropsetup="HELL_DUNGEON_ORANGE_SOUL_SETUP" clustertier="6" subbiome="dead" softplayerlimitmin="24" softplayerlimitmax="24" hardplayercapspace="3" weight="1" downwardexitsopenmin="5" downwardexitsopenmax="8" clusterclosetime="300" clustermaximumstarttimeoffset="360" clustershutdownstart="720" clustershutdowndamagestart="900" clustershutdowntime="1020"/>
+          <map id="TRIO_ORANGE_HELL_DUNGEON_02" difficultylevel="1" mastertemplate="HELLDNG_MASTER_01_LVL2" templatepool="ORANGE_LEVEL2_TRIO" souldropsetup="HELL_DUNGEON_ORANGE_SOUL_SETUP" clustertier="7" subbiome="dead" softplayerlimitmin="24" softplayerlimitmax="24" hardplayercapspace="3" weight="1" downwardexitsopenmin="5" downwardexitsopenmax="8" clusterclosetime="300" clustermaximumstarttimeoffset="360" clustershutdownstart="720" clustershutdowndamagestart="900" clustershutdowntime="1020"/>
+          <map id="TRIO_ORANGE_HELL_DUNGEON_03" difficultylevel="2" mastertemplate="HELLDNG_MASTER_01_LVL3" templatepool="ORANGE_LEVEL3_TRIO" souldropsetup="HELL_DUNGEON_ORANGE_SOUL_SETUP" clustertier="8" subbiome="dead" softplayerlimitmin="24" softplayerlimitmax="24" hardplayercapspace="3" weight="1" downwardexitsopenmin="0" downwardexitsopenmax="0" clusterclosetime="300" clustermaximumstarttimeoffset="360" clustershutdownstart="720" clustershutdowndamagestart="900" clustershutdowntime="1020"/>
       </mapset>
     </helldungeonmaps>
 

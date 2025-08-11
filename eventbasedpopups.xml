@@ -75,6 +75,7 @@
             <conditions>
                 <and>
                     <IfTutorialCompleted />
+                    <IfAlbionJournalIsUnlocked/>
                     <not>
                         <IfHasPremium />
                     </not>
@@ -96,6 +97,7 @@
             <conditions>
                 <and>
                     <IfTutorialCompleted />
+                    <IfAlbionJournalIsUnlocked />
                     <not>
                         <IfHasPremium />
                     </not>
@@ -119,6 +121,7 @@
             <conditions>
                 <and>
                     <IfTutorialCompleted />
+                    <IfAlbionJournalIsUnlocked />
                     <not>
                         <IfHasPremium />
                     </not>
@@ -139,6 +142,7 @@
             <conditions>
                 <and>
                     <IfTutorialCompleted />
+                    <IfAlbionJournalIsUnlocked />
                     <IfHasPremium />
                     <IfHasPremiumDays operation="less" value="7" />
                     <not>
@@ -162,6 +166,7 @@
             <conditions>
                 <and>
                     <IfTutorialCompleted />
+                    <IfAlbionJournalIsUnlocked />
                     <IfHasPremium />
                     <IfHasPremiumDays operation="less" value="4" />
                     <IfHasSeenPopup uniquename="DONT_MISS_OUT" frequency="Hours" timefactor="50" operation="less" amount="1" />   
@@ -184,6 +189,7 @@
             <conditions>
                 <and>
                     <IfTutorialCompleted />
+                    <IfAlbionJournalIsUnlocked />
                     <IfHasPremiumDays operation="less" value="7" />
                     <not>
                         <IfHasRecurringSubscription />
@@ -207,6 +213,7 @@
             <conditions>
                 <and>
                     <IfTutorialCompleted />
+                    <IfAlbionJournalIsUnlocked />
                     <not>
                         <IfHasPremium />
                     </not>
@@ -229,6 +236,7 @@
             <conditions>
                 <and>
                     <IfTutorialCompleted />
+                    <IfAlbionJournalIsUnlocked />
                     <not>
                         <IfHasPremium />
                     </not>
@@ -271,6 +279,7 @@
             <conditions>
                 <and>
                     <IfTutorialCompleted />
+                    <IfAlbionJournalIsUnlocked />
                     <not>
                         <IfHasPremium />
                     </not>
@@ -320,6 +329,7 @@
             <conditions>
                 <and>
                     <IfTutorialCompleted />
+                    <IfAlbionJournalIsUnlocked />
                     <not>
                         <IfHasPremium />
                     </not>
@@ -343,6 +353,7 @@
             <conditions>
                 <and>
                     <IfTutorialCompleted />
+                    <IfCharacterOnlineHours value="3" operation="greaterOrEqual"/>
                     <IfHasSeenPopup uniquename="FUNDS_LOW" frequency="Today" operation="less" amount="1" />
                 </and>
             </conditions>
@@ -464,6 +475,7 @@
             <conditions>
                 <and>
                     <IfTutorialCompleted />
+                    <IfAlbionJournalIsUnlocked />
                     <not>
                         <IfHasSeenSeasonWinnerPopup uniquename="SEASON_WINNER" />
                     </not>
@@ -483,6 +495,7 @@
             <conditions>
                 <and>
                     <IfTutorialCompleted />
+                    <IfAlbionJournalIsUnlocked />
                     <not>
                         <IfReceivedCrossPlatformReward />
                     </not>
@@ -519,6 +532,7 @@
             <conditions>
                 <and>
                     <IfTutorialCompleted />
+                    <IfAlbionJournalIsUnlocked />
                     <IfEnabledActivityPopupOnLogin />
                     <IfHasSeenPopup uniquename="ACTIVITY_HUB" frequency="Days" timefactor="1" operation="less" amount="1" targetfilter="character" />
                 </and>
@@ -539,6 +553,7 @@
             <conditions>
                 <and>
                     <IfTutorialCompleted />
+                    <IfAlbionJournalIsUnlocked />
                     <not>
                         <IfHasSeenFeaturedFeature />
                     </not>
@@ -579,6 +594,7 @@
                     <IfTutorialCompleted />
                     <IfCharacterOnlineHours operation="greaterOrEqual" value="5" />
                     <IfHasSeenPopup uniquename="MOBILE_STORE_RATING" frequency="Days" timefactor="7" operation="equals" amount="0" />
+                  
                 </and>
             </conditions>
         </popup>
@@ -661,7 +677,7 @@
                 <not>
                   <IfIsGuestAccount/>
                 </not>
-                <IfHasSeenPopup uniquename="TWITCH_DROPS" frequency="Days" operation="equals" timefactor="7" amount="0"/> 
+                <IfHasSeenPopup uniquename="TWITCH_DROPS" frequency="Days" operation="equals" timefactor="14" amount="0"/> 
             </and>
             </conditions>
             <possibledrops>
@@ -670,113 +686,6 @@
                 <item itemid="UNIQUE_UNLOCK_SKIN_COUGAR_AMETHYST" />
             </possibledrops>
         </lootchestpopup>
-        
-        <popup uniquename="FOUNDER_PACK_LAST_CHANCE_BUY"
-               priority="10"
-               type="EuropeFounderPacks"
-               title="@EVENT_BASED_POPUPS_FOUNDER_PACK_LAST_CHANCE_BUY_TITLE"
-               description="@EVENT_BASED_POPUPS_FOUNDER_PACK_LAST_CHANCE_BUY_DESCRIPTION"
-               imagepath="Gui/Advertisements/ad_founder_eu_founderpacks">
-            <categories>
-                <category name="Advertisement" />
-            </categories>
-            <triggers>
-                <trigger action="GameLogin" />
-            </triggers>
-            <conditions>
-                <and>
-                    <IfValidDate end="2024-06-17T09:00:00" />
-                    <IfHasEuropeFounderState founderState="none"/>
-                    <IsEuropeContext />
-                    <IfOnPlatform platform="Desktop"/>
-                    <IfTutorialCompleted />
-                    <IfHasSeenPopup uniquename="FOUNDER_PACK_LAST_CHANCE_BUY" frequency="Days" operation="equals" timefactor="7" amount="0" />
-                    <IfHasSeenPopup uniquename="FOUNDER_PACK_LAST_CHANCE_OFF_MARKET" frequency="Days" operation="equals" timefactor="7" amount="0" />
-                    <IfHasSeenPopup uniquename="FOUNDER_PACK_LAST_CHANCE_CROSS_PURCHASE" frequency="Days" operation="equals" timefactor="7" amount="0" />
-                    <IfHasSeenPopup uniquename="FOUNDER_PACK_LAST_CHANCE_UPGRADE" frequency="Days" operation="equals" timefactor="7" amount="0" />
-                </and>
-            </conditions>
-        </popup>
-        <popup uniquename="FOUNDER_PACK_LAST_CHANCE_OFF_MARKET"
-               priority="10"
-               type="EuropeFounderPacks"
-               title="@EVENT_BASED_POPUPS_FOUNDER_PACK_LAST_CHANCE_BUY_OFF_MARKET_TITLE"
-               description="@EVENT_BASED_POPUPS_FOUNDER_PACK_LAST_CHANCE_BUY_OFF_MARKET_DESCRIPTION"               imagepath="Gui/Advertisements/ad_founder_eu_founderpacks">
-            <categories>
-                <category name="Advertisement" />
-            </categories>
-            <triggers>
-                <trigger action="GameLogin" />
-            </triggers>
-            <conditions>
-                <and>
-                    <IfValidDate end="2024-06-17T09:00:00" />
-                    <IfHasEuropeFounderState founderState="none"/>
-                    <not>
-                        <IsEuropeContext />
-                    </not>
-                    <IfOnPlatform platform="Desktop"/>
-                    <IfTutorialCompleted />
-                    <IfHasSeenPopup uniquename="FOUNDER_PACK_LAST_CHANCE_BUY" frequency="Days" operation="equals" timefactor="7" amount="0" />
-                    <IfHasSeenPopup uniquename="FOUNDER_PACK_LAST_CHANCE_OFF_MARKET" frequency="Days" operation="equals" timefactor="7" amount="0" />
-                    <IfHasSeenPopup uniquename="FOUNDER_PACK_LAST_CHANCE_CROSS_PURCHASE" frequency="Days" operation="equals" timefactor="7" amount="0" />
-                    <IfHasSeenPopup uniquename="FOUNDER_PACK_LAST_CHANCE_UPGRADE" frequency="Days" operation="equals" timefactor="7" amount="0" />
-                </and>
-            </conditions>
-        </popup>
-        <popup uniquename="FOUNDER_PACK_LAST_CHANCE_CROSS_PURCHASE"
-               priority="10"
-               type="EuropeFounderPacks"
-               title="@EVENT_BASED_POPUPS_FOUNDER_PACK_LAST_CHANCE_CROSS_PURCHASE_TITLE"
-               description="@EVENT_BASED_POPUPS_FOUNDER_PACK_LAST_CHANCE_CROSS_PURCHASE_DESCRIPTION"               imagepath="Gui/Advertisements/ad_founder_eu_founderpacks">
-            <categories>
-                <category name="Advertisement" />
-            </categories>
-            <triggers>
-                <trigger action="GameLogin" />
-            </triggers>
-            <conditions>
-                <and>
-                    <IfValidDate end="2024-06-17T09:00:00" />
-                    <IfHasEuropeFounderState founderState="crystal"/>
-                    <IfOnPlatform platform="Desktop"/>
-                    <IfTutorialCompleted />
-                    <IfHasSeenPopup uniquename="FOUNDER_PACK_LAST_CHANCE_BUY" frequency="Days" operation="equals" timefactor="7" amount="0" />
-                    <IfHasSeenPopup uniquename="FOUNDER_PACK_LAST_CHANCE_OFF_MARKET" frequency="Days" operation="equals" timefactor="7" amount="0" />
-                    <IfHasSeenPopup uniquename="FOUNDER_PACK_LAST_CHANCE_CROSS_PURCHASE" frequency="Days" operation="equals" timefactor="7" amount="0" />
-                    <IfHasSeenPopup uniquename="FOUNDER_PACK_LAST_CHANCE_UPGRADE" frequency="Days" operation="equals" timefactor="7" amount="0" />
-                </and>
-            </conditions>
-        </popup>
-        <popup uniquename="FOUNDER_PACK_LAST_CHANCE_UPGRADE"
-               priority="10"
-               type="EuropeFounderPacks"
-               title="@EVENT_BASED_POPUPS_FOUNDER_PACK_LAST_CHANCE_UPGRADE_TITLE"
-               description="@EVENT_BASED_POPUPS_FOUNDER_PACK_LAST_CHANCE_UPGRADE_DESCRIPTION"               imagepath="Gui/Advertisements/ad_founder_eu_founderpacks">
-            <categories>
-                <category name="Advertisement" />
-            </categories>
-            <triggers>
-                <trigger action="GameLogin" />
-            </triggers>
-            <conditions>
-                <and>
-                    <IfValidDate end="2024-06-17T09:00:00" />
-                    <not> 
-                        <IfHasEuropeFounderState founderState="none"/>
-                    </not>
-                    <not>
-                        <IfHasEuropeFounderState founderState="crystal"/>
-                    </not>
-                    <IfOnPlatform platform="Desktop"/>
-                    <IfTutorialCompleted />
-                    <IfHasSeenPopup uniquename="FOUNDER_PACK_LAST_CHANCE_BUY" frequency="Days" operation="equals" timefactor="7" amount="0" />
-                    <IfHasSeenPopup uniquename="FOUNDER_PACK_LAST_CHANCE_OFF_MARKET" frequency="Days" operation="equals" timefactor="7" amount="0" />
-                    <IfHasSeenPopup uniquename="FOUNDER_PACK_LAST_CHANCE_CROSS_PURCHASE" frequency="Days" operation="equals" timefactor="7" amount="0" />
-                    <IfHasSeenPopup uniquename="FOUNDER_PACK_LAST_CHANCE_UPGRADE" frequency="Days" operation="equals" timefactor="7" amount="0" />
-                </and>
-            </conditions>
-        </popup>
 
         <!-- Kickstart Bundles aka Mastery Packs -->
         <genericadvertisement
@@ -803,6 +712,7 @@
                     <IsEuropeContext />
                     <IfOnPlatform platform="Desktop"/>
                     <IfTutorialCompleted />
+                    <IfAlbionJournalIsUnlocked />
                     <IfHasSeenPopup uniquename="MASTERY_PACKS_NATIVE_OFFER" frequency="Days" operation="equals" timefactor="7" amount="0" />
                     <IfHasSeenPopup uniquename="MASTERY_PACKS_NON_NATIVE_OFFER" frequency="Days" operation="equals" timefactor="7" amount="0" />
                 </and>
@@ -835,6 +745,7 @@
                         <IfOnPlatform platform="Desktop"/>
                     </not>
                     <IfTutorialCompleted/>
+                    <IfAlbionJournalIsUnlocked />
                     <IfHasSeenPopup uniquename="MASTERY_PACKS_NATIVE_OFFER" frequency="Days" operation="equals" timefactor="7" amount="0"/>
                     <IfHasSeenPopup uniquename="MASTERY_PACKS_NON_NATIVE_OFFER" frequency="Days" operation="equals" timefactor="7" amount="0"/>
                 </and>
@@ -864,6 +775,7 @@
             <conditions>
                 <and>
                     <IfTutorialCompleted />
+                    <IfAlbionJournalIsUnlocked />
                     <IfOnPlatform platform="Ios"/>
                     <IfPlayingFromCountry isocode="US"/> 
                     <IfFeatureIsEnabled feature="ShowWebShopLinksOnIos" /> 
