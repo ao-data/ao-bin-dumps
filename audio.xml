@@ -4121,6 +4121,13 @@
   <WwiseEventInfo name="MELEE_DAGGER_BLOODBLADE">
     <OnCastFinished name="Play_melee_bloodblade" />
   </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_DAGGER_BLOODTHIRSTY_BLADE_CAST">
+    <OnCastFinished name="Play_spell_dagger_bloodthirsty_blade_cast" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_DAGGER_BLOODTHIRSTY_BLADE_HIT">
+    <OnSpellHit name="Play_spell_dagger_bloodthirsty_blade_hit" />
+  </WwiseEventInfo>
+
 
   <WwiseEventInfo name="MELEE_CRYSTAL_DAGGER_BLADE_RING_CAST">
 	<OnCastFinished name="Play_crystal_melee_blade_ring_cast" />
@@ -4682,8 +4689,12 @@
     <OnSpellHit name="Play_arrow_impact_medium" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_ARROW_CAST_BIG_HIT_NOAUTO">
-	<OnCastStart name="Play_arrow_cast_big_instant" />
-	<OnSpellHit name="Play_arrow_impact_medium" />
+	  <OnCastStart name="Play_arrow_cast_big_instant" />
+	  <OnSpellHit name="Play_arrow_impact_medium" />
+  </WwiseEventInfo>
+    <WwiseEventInfo name="SPELL_CAST_ARROWRAIN">
+	  <OnCastFinished name="Play_spell_arrow_rain_cast" />
+	  <OnSpellHit name="Play_arrow_impact_medium" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_ARROW_UNDEAD_MINE">
     <OnCastFinished name="Play_arrow_undead_mine" />
@@ -6584,6 +6595,9 @@
   <WwiseEventInfo name="SPELL_HIT_STUN">
     <OnSpellHit name="Play_stun" />
   </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_HIT_PETRIFY">
+    <OnSpellHit name="Play_spell_debuff_petrify_hit" />
+  </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_DASH_SWOOSH" >
     <OnCastFinished name="Play_melee_swoosh_dash" />
   </WwiseEventInfo>
@@ -6610,6 +6624,10 @@
   <WwiseEventInfo name="SPELL_INVISIBILITY">
     <OnCastFinished name="Play_cast_invisibility" />
     <OnSpellRemoved name="Play_end_invisibility" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_AMBUSH_INVISIVILITY">
+    <OnCastFinished name="Play_spell_armor_ambush_invisibility_cast" />
+    <OnSpellRemoved name="Play_spell_armor_ambush_invisibility_end" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_HIT_INVISIBILITY">
 	<OnSpellHit name="Play_cast_invisibility" />
@@ -6805,6 +6823,18 @@
 
   <WwiseEventInfo name="SPELL_CAST_LIFESTEALAURA">
     <OnCastFinished name="Play_spell_armor_lifesteal_aura_cast" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_CAST_EMERGENCY_SHIELD">
+    <OnCastFinished name="Play_spell_buff_emergency_shield_cast" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_CAST_MANADRAIN">
+    <OnCastFinished name="Play_mana_drain_aura_cast" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_CAST_PURGE_HELMET">
+    <OnCastFinished name="Play_spell_armor_purge_helmet_cast" />
   </WwiseEventInfo>
 	
   <WwiseEventInfo name="SPELL_SPRINTHOT_BUFF_IMPACT">

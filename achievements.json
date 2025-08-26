@@ -4,7 +4,7 @@
     "@encoding": "utf-8"
   },
   "achievements": {
-    "@Version": "9c7f75bd-bc0b-4fa0-aaa9-6e856f568ff7",
+    "@Version": "056edd1d-96ec-4a9a-acbf-6ec974c8bb5e",
     "@xsi:noNamespaceSchemaLocation": "achievements.xsd",
     "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
     "template": [
@@ -1778,6 +1778,7 @@
         "@tracking": "trackonstart",
         "@category": "fighting",
         "@ring": "1",
+        "@subcategorylocatag": "@ACHIEVEMENT_SUBCATEGORY_TRAINEE",
         "title": {
           "@tag": "@DESTINYBOARD_TITLE_COMBAT_TRAINEE"
         },
@@ -4341,6 +4342,9 @@
                 },
                 {
                   "@pattern": "T?_OFF_CENSER*"
+                },
+                {
+                  "@pattern": "T?_OFF_TOME*"
                 }
               ]
             },
@@ -4448,6 +4452,9 @@
                 },
                 {
                   "@pattern": "T?_OFF_CENSER*"
+                },
+                {
+                  "@pattern": "T?_OFF_TOME*"
                 }
               ]
             },
@@ -6324,6 +6331,9 @@
             },
             {
               "@pattern": "T?_OFF_CENSER_AVALON"
+            },
+            {
+              "@pattern": "T?_OFF_TOME_CRYSTAL"
             }
           ]
         },
@@ -6346,6 +6356,9 @@
                 },
                 {
                   "@pattern": "T?_OFF_CENSER_AVALON"
+                },
+                {
+                  "@pattern": "T?_OFF_TOME_CRYSTAL"
                 }
               ]
             },
@@ -6366,6 +6379,9 @@
                 },
                 {
                   "@pattern": "T?_OFF_CENSER_AVALON"
+                },
+                {
+                  "@pattern": "T?_OFF_TOME_CRYSTAL"
                 }
               ]
             }
@@ -6394,6 +6410,9 @@
               },
               {
                 "@pattern": "T?_OFF_CENSER_AVALON"
+              },
+              {
+                "@pattern": "T?_OFF_TOME_CRYSTAL"
               }
             ]
           }
@@ -6418,6 +6437,9 @@
             },
             {
               "@id": "COMBAT_BOOKS_AVALON"
+            },
+            {
+              "@id": "COMBAT_BOOKS_CRYSTAL"
             }
           ]
         }
@@ -6469,6 +6491,9 @@
                 },
                 {
                   "@pattern": "T?_OFF_CENSER*"
+                },
+                {
+                  "@pattern": "T?_OFF_TOME*"
                 }
               ]
             },
@@ -6513,6 +6538,9 @@
                 },
                 {
                   "@pattern": "T?_OFF_CENSER*"
+                },
+                {
+                  "@pattern": "T?_OFF_TOME*"
                 }
               ]
             },
@@ -6585,6 +6613,9 @@
                 },
                 {
                   "@pattern": "T?_OFF_CENSER*"
+                },
+                {
+                  "@pattern": "T?_OFF_TOME*"
                 }
               ]
             },
@@ -6629,6 +6660,9 @@
                 },
                 {
                   "@pattern": "T?_OFF_CENSER*"
+                },
+                {
+                  "@pattern": "T?_OFF_TOME*"
                 }
               ]
             },
@@ -6643,6 +6677,254 @@
               },
               "itempattern": {
                 "@pattern": "T?_OFF_BOOK"
+              }
+            }
+          ]
+        },
+        "parentachievements": {
+          "@allrequired": "false",
+          "achievement": {
+            "@id": "COMBAT_BOOKS"
+          }
+        }
+      },
+      {
+        "@id": "COMBAT_BOOKS_CRYSTAL",
+        "@itemforsprite": "T8_OFF_TOME_CRYSTAL",
+        "@category": "fighting",
+        "@ring": "9",
+        "@spriteReward": "OFF_TOME_CRYSTAL",
+        "@subcategorylocatag": "@ACHIEVEMENT_SUBCATEGORY_MAGE",
+        "@re-spectype": "combat",
+        "@usetemplate": "COMBAT_OFF_SPEC",
+        "@respecmodifier": "0.2",
+        "@missiontype": "killmobfame",
+        "@famemultiplier": "1",
+        "@lpmultiplier": "0.125",
+        "title": {
+          "@tag": "@DESTINYBOARD_TITLE_COMBAT_BOOKS_CRYSTAL"
+        },
+        "itemlist": {
+          "itempattern": {
+            "@pattern": "T?_OFF_TOME_CRYSTAL"
+          }
+        },
+        "baserewards": {
+          "bonus": [
+            {
+              "@type": "itemwearbonus",
+              "@attribute": "itempower",
+              "@bonus": "0.025",
+              "@mintier": "4",
+              "@maxtier": "8",
+              "description": {
+                "@tag": "@DESTINYBOARD_COMBAT_CRYSTAL_MAGE_TREEBONUS"
+              },
+              "itempattern": [
+                {
+                  "@pattern": "T?_MAIN_FIRESTAFF*"
+                },
+                {
+                  "@pattern": "T?_2H_FIRESTAFF*"
+                },
+                {
+                  "@pattern": "T?_2H_INFERNOSTAFF*"
+                },
+                {
+                  "@pattern": "T?_2H_FIRE_RINGPAIR*"
+                },
+                {
+                  "@pattern": "T?_MAIN_HOLYSTAFF*"
+                },
+                {
+                  "@pattern": "T?_2H_HOLYSTAFF*"
+                },
+                {
+                  "@pattern": "T?_2H_DIVINESTAFF*"
+                },
+                {
+                  "@pattern": "T?_MAIN_ARCANESTAFF*"
+                },
+                {
+                  "@pattern": "T?_2H_ARCANESTAFF*"
+                },
+                {
+                  "@pattern": "T?_2H_ENIGMATICSTAFF*"
+                },
+                {
+                  "@pattern": "T?_2H_ENIGMATICORB*"
+                },
+                {
+                  "@pattern": "T?_2H_ARCANE_RINGPAIR*"
+                },
+                {
+                  "@pattern": "T?_MAIN_FROSTSTAFF*"
+                },
+                {
+                  "@pattern": "T?_2H_FROSTSTAFF*"
+                },
+                {
+                  "@pattern": "T?_2H_GLACIALSTAFF*"
+                },
+                {
+                  "@pattern": "T?_2H_ICEGAUNTLETS*"
+                },
+                {
+                  "@pattern": "T?_2H_ICECRYSTAL*"
+                },
+                {
+                  "@pattern": "T?_MAIN_CURSEDSTAFF*"
+                },
+                {
+                  "@pattern": "T?_2H_CURSEDSTAFF*"
+                },
+                {
+                  "@pattern": "T?_2H_DEMONICSTAFF*"
+                },
+                {
+                  "@pattern": "T?_2H_SKULLORB*"
+                },
+                {
+                  "@pattern": "T?_OFF_BOOK*"
+                },
+                {
+                  "@pattern": "T?_OFF_ORB*"
+                },
+                {
+                  "@pattern": "T?_OFF_DEMONSKULL*"
+                },
+                {
+                  "@pattern": "T?_OFF_TOTEM*"
+                },
+                {
+                  "@pattern": "T?_OFF_CENSER*"
+                },
+                {
+                  "@pattern": "T?_OFF_TOME*"
+                }
+              ]
+            },
+            {
+              "@type": "itemwearbonus",
+              "@attribute": "itempower",
+              "@bonus": "2",
+              "@mintier": "4",
+              "@maxtier": "8",
+              "description": {
+                "@tag": "@DESTINYBOARD_COMBAT_BOOKS_CRYSTAL_GROUPBONUS"
+              },
+              "itempattern": {
+                "@pattern": "T?_OFF_TOME_CRYSTAL"
+              }
+            }
+          ]
+        },
+        "eliterewards": {
+          "bonus": [
+            {
+              "@type": "itemwearbonus",
+              "@attribute": "itempower",
+              "@bonus": "0.025",
+              "@mintier": "4",
+              "@maxtier": "8",
+              "description": {
+                "@tag": "@DESTINYBOARD_COMBAT_CRYSTAL_MAGE_TREEBONUS"
+              },
+              "itempattern": [
+                {
+                  "@pattern": "T?_MAIN_FIRESTAFF*"
+                },
+                {
+                  "@pattern": "T?_2H_FIRESTAFF*"
+                },
+                {
+                  "@pattern": "T?_2H_INFERNOSTAFF*"
+                },
+                {
+                  "@pattern": "T?_2H_FIRE_RINGPAIR*"
+                },
+                {
+                  "@pattern": "T?_MAIN_HOLYSTAFF*"
+                },
+                {
+                  "@pattern": "T?_2H_HOLYSTAFF*"
+                },
+                {
+                  "@pattern": "T?_2H_DIVINESTAFF*"
+                },
+                {
+                  "@pattern": "T?_MAIN_ARCANESTAFF*"
+                },
+                {
+                  "@pattern": "T?_2H_ARCANESTAFF*"
+                },
+                {
+                  "@pattern": "T?_2H_ENIGMATICSTAFF*"
+                },
+                {
+                  "@pattern": "T?_2H_ENIGMATICORB*"
+                },
+                {
+                  "@pattern": "T?_2H_ARCANE_RINGPAIR*"
+                },
+                {
+                  "@pattern": "T?_MAIN_FROSTSTAFF*"
+                },
+                {
+                  "@pattern": "T?_2H_FROSTSTAFF*"
+                },
+                {
+                  "@pattern": "T?_2H_GLACIALSTAFF*"
+                },
+                {
+                  "@pattern": "T?_2H_ICEGAUNTLETS*"
+                },
+                {
+                  "@pattern": "T?_2H_ICECRYSTAL*"
+                },
+                {
+                  "@pattern": "T?_MAIN_CURSEDSTAFF*"
+                },
+                {
+                  "@pattern": "T?_2H_CURSEDSTAFF*"
+                },
+                {
+                  "@pattern": "T?_2H_DEMONICSTAFF*"
+                },
+                {
+                  "@pattern": "T?_2H_SKULLORB*"
+                },
+                {
+                  "@pattern": "T?_OFF_BOOK*"
+                },
+                {
+                  "@pattern": "T?_OFF_ORB*"
+                },
+                {
+                  "@pattern": "T?_OFF_DEMONSKULL*"
+                },
+                {
+                  "@pattern": "T?_OFF_TOTEM*"
+                },
+                {
+                  "@pattern": "T?_OFF_CENSER*"
+                },
+                {
+                  "@pattern": "T?_OFF_TOME*"
+                }
+              ]
+            },
+            {
+              "@type": "itemwearbonus",
+              "@attribute": "itempower",
+              "@bonus": "2",
+              "@mintier": "4",
+              "@maxtier": "8",
+              "description": {
+                "@tag": "@DESTINYBOARD_COMBAT_BOOKS_CRYSTAL_GROUPBONUS"
+              },
+              "itempattern": {
+                "@pattern": "T?_OFF_TOME_CRYSTAL"
               }
             }
           ]
@@ -6701,6 +6983,9 @@
                 },
                 {
                   "@pattern": "T?_OFF_CENSER*"
+                },
+                {
+                  "@pattern": "T?_OFF_TOME*"
                 }
               ]
             },
@@ -6745,6 +7030,9 @@
                 },
                 {
                   "@pattern": "T?_OFF_CENSER*"
+                },
+                {
+                  "@pattern": "T?_OFF_TOME*"
                 }
               ]
             },
@@ -6817,6 +7105,9 @@
                 },
                 {
                   "@pattern": "T?_OFF_CENSER*"
+                },
+                {
+                  "@pattern": "T?_OFF_TOME*"
                 }
               ]
             },
@@ -6861,6 +7152,9 @@
                 },
                 {
                   "@pattern": "T?_OFF_CENSER*"
+                },
+                {
+                  "@pattern": "T?_OFF_TOME*"
                 }
               ]
             },
@@ -6933,6 +7227,9 @@
                 },
                 {
                   "@pattern": "T?_OFF_CENSER*"
+                },
+                {
+                  "@pattern": "T?_OFF_TOME*"
                 }
               ]
             },
@@ -6977,6 +7274,9 @@
                 },
                 {
                   "@pattern": "T?_OFF_CENSER*"
+                },
+                {
+                  "@pattern": "T?_OFF_TOME*"
                 }
               ]
             },
@@ -12702,6 +13002,9 @@
                 },
                 {
                   "@pattern": "T?_OFF_CENSER*"
+                },
+                {
+                  "@pattern": "T?_OFF_TOME*"
                 }
               ]
             },
@@ -12809,6 +13112,9 @@
                 },
                 {
                   "@pattern": "T?_OFF_CENSER*"
+                },
+                {
+                  "@pattern": "T?_OFF_TOME*"
                 }
               ]
             },
@@ -15112,6 +15418,9 @@
                 },
                 {
                   "@pattern": "T?_OFF_CENSER*"
+                },
+                {
+                  "@pattern": "T?_OFF_TOME*"
                 }
               ]
             },
@@ -15219,6 +15528,9 @@
                 },
                 {
                   "@pattern": "T?_OFF_CENSER*"
+                },
+                {
+                  "@pattern": "T?_OFF_TOME*"
                 }
               ]
             },
@@ -16296,6 +16608,9 @@
                 },
                 {
                   "@pattern": "T?_OFF_CENSER*"
+                },
+                {
+                  "@pattern": "T?_OFF_TOME*"
                 }
               ]
             },
@@ -16403,6 +16718,9 @@
                 },
                 {
                   "@pattern": "T?_OFF_CENSER*"
+                },
+                {
+                  "@pattern": "T?_OFF_TOME*"
                 }
               ]
             },
@@ -18748,6 +19066,9 @@
                 },
                 {
                   "@pattern": "T?_OFF_CENSER*"
+                },
+                {
+                  "@pattern": "T?_OFF_TOME*"
                 }
               ]
             },
@@ -18855,6 +19176,9 @@
                 },
                 {
                   "@pattern": "T?_OFF_CENSER*"
+                },
+                {
+                  "@pattern": "T?_OFF_TOME*"
                 }
               ]
             },
@@ -31116,6 +31440,9 @@
             },
             {
               "@pattern": "T?_OFF_SHIELD_AVALON"
+            },
+            {
+              "@pattern": "T?_OFF_SHIELD_CRYSTAL"
             }
           ]
         },
@@ -31138,6 +31465,9 @@
                 },
                 {
                   "@pattern": "T?_OFF_SHIELD_AVALON"
+                },
+                {
+                  "@pattern": "T?_OFF_SHIELD_CRYSTAL"
                 }
               ]
             },
@@ -31160,6 +31490,9 @@
                 },
                 {
                   "@pattern": "T?_OFF_SHIELD_AVALON"
+                },
+                {
+                  "@pattern": "T?_OFF_SHIELD_CRYSTAL"
                 }
               ]
             }
@@ -31188,6 +31521,9 @@
               },
               {
                 "@pattern": "T?_OFF_SHIELD_AVALON"
+              },
+              {
+                "@pattern": "T?_OFF_SHIELD_CRYSTAL"
               }
             ]
           }
@@ -31212,6 +31548,9 @@
             },
             {
               "@id": "COMBAT_SHIELDS_AVALON"
+            },
+            {
+              "@id": "COMBAT_SHIELDS_CRYSTAL"
             }
           ]
         }
@@ -31309,6 +31648,272 @@
               },
               "itempattern": {
                 "@pattern": "T?_OFF_SHIELD_AVALON"
+              }
+            }
+          ]
+        },
+        "parentachievements": {
+          "@allrequired": "false",
+          "achievement": {
+            "@id": "COMBAT_SHIELDS"
+          }
+        }
+      },
+      {
+        "@id": "COMBAT_SHIELDS_CRYSTAL",
+        "@itemforsprite": "T8_OFF_SHIELD_CRYSTAL",
+        "@category": "fighting",
+        "@ring": "9",
+        "@spriteReward": "OFF_SHIELD_CRYSTAL",
+        "@subcategorylocatag": "@ACHIEVEMENT_SUBCATEGORY_WARRIOR",
+        "@re-spectype": "combat",
+        "@usetemplate": "COMBAT_OFF_SPEC",
+        "@respecmodifier": "0.2",
+        "@missiontype": "killmobfame",
+        "@famemultiplier": "1",
+        "@lpmultiplier": "0.125",
+        "title": {
+          "@tag": "@DESTINYBOARD_TITLE_COMBAT_SHIELDS_CRYSTAL"
+        },
+        "itemlist": {
+          "itempattern": {
+            "@pattern": "T?_OFF_SHIELD_CRYSTAL"
+          }
+        },
+        "baserewards": {
+          "bonus": [
+            {
+              "@type": "itemwearbonus",
+              "@attribute": "itempower",
+              "@bonus": "0.025",
+              "@mintier": "4",
+              "@maxtier": "8",
+              "description": {
+                "@tag": "@DESTINYBOARD_COMBAT_CRYSTAL_WARRIOR_TREEBONUS"
+              },
+              "itempattern": [
+                {
+                  "@pattern": "T?_MAIN_SWORD*"
+                },
+                {
+                  "@pattern": "T?_2H_CLAYMORE*"
+                },
+                {
+                  "@pattern": "T?_2H_DUALSWORD*"
+                },
+                {
+                  "@pattern": "T?_MAIN_SCIMITAR*"
+                },
+                {
+                  "@pattern": "T?_2H_CLEAVER*"
+                },
+                {
+                  "@pattern": "T?_2H_DUALSCIMITAR*"
+                },
+                {
+                  "@pattern": "T?_MAIN_AXE*"
+                },
+                {
+                  "@pattern": "T?_2H_AXE*"
+                },
+                {
+                  "@pattern": "T?_2H_HALBERD*"
+                },
+                {
+                  "@pattern": "T?_2H_SCYTHE*"
+                },
+                {
+                  "@pattern": "T?_2H_DUALAXE*"
+                },
+                {
+                  "@pattern": "T?_MAIN_MACE*"
+                },
+                {
+                  "@pattern": "T?_2H_MACE*"
+                },
+                {
+                  "@pattern": "T?_2H_FLAIL*"
+                },
+                {
+                  "@pattern": "T?_MAIN_ROCKMACE*"
+                },
+                {
+                  "@pattern": "T?_2H_DUALMACE*"
+                },
+                {
+                  "@pattern": "T?_MAIN_HAMMER*"
+                },
+                {
+                  "@pattern": "T?_2H_HAMMER*"
+                },
+                {
+                  "@pattern": "T?_2H_POLEHAMMER*"
+                },
+                {
+                  "@pattern": "T?_2H_DUALHAMMER*"
+                },
+                {
+                  "@pattern": "T?_2H_RAM*"
+                },
+                {
+                  "@pattern": "T?_2H_KNUCKLES*"
+                },
+                {
+                  "@pattern": "T?_2H_CROSSBOW*"
+                },
+                {
+                  "@pattern": "T?_2H_CROSSBOWLARGE*"
+                },
+                {
+                  "@pattern": "T?_MAIN_1HCROSSBOW*"
+                },
+                {
+                  "@pattern": "T?_2H_REPEATINGCROSSBOW*"
+                },
+                {
+                  "@pattern": "T?_2H_DUALCROSSBOW*"
+                },
+                {
+                  "@pattern": "T?_OFF_SHIELD*"
+                },
+                {
+                  "@pattern": "T?_OFF_TOWERSHIELD*"
+                },
+                {
+                  "@pattern": "T?_OFF_SPIKEDSHIELD*"
+                }
+              ]
+            },
+            {
+              "@type": "itemwearbonus",
+              "@attribute": "itempower",
+              "@bonus": "2",
+              "@mintier": "4",
+              "@maxtier": "8",
+              "description": {
+                "@tag": "@DESTINYBOARD_COMBAT_SHIELDS_CRYSTAL_GROUPBONUS"
+              },
+              "itempattern": {
+                "@pattern": "T?_OFF_SHIELD_CRYSTAL"
+              }
+            }
+          ]
+        },
+        "eliterewards": {
+          "bonus": [
+            {
+              "@type": "itemwearbonus",
+              "@attribute": "itempower",
+              "@bonus": "0.025",
+              "@mintier": "4",
+              "@maxtier": "8",
+              "description": {
+                "@tag": "@DESTINYBOARD_COMBAT_CRYSTAL_WARRIOR_TREEBONUS"
+              },
+              "itempattern": [
+                {
+                  "@pattern": "T?_MAIN_SWORD*"
+                },
+                {
+                  "@pattern": "T?_2H_CLAYMORE*"
+                },
+                {
+                  "@pattern": "T?_2H_DUALSWORD*"
+                },
+                {
+                  "@pattern": "T?_MAIN_SCIMITAR*"
+                },
+                {
+                  "@pattern": "T?_2H_CLEAVER*"
+                },
+                {
+                  "@pattern": "T?_2H_DUALSCIMITAR*"
+                },
+                {
+                  "@pattern": "T?_MAIN_AXE*"
+                },
+                {
+                  "@pattern": "T?_2H_AXE*"
+                },
+                {
+                  "@pattern": "T?_2H_HALBERD*"
+                },
+                {
+                  "@pattern": "T?_2H_SCYTHE*"
+                },
+                {
+                  "@pattern": "T?_2H_DUALAXE*"
+                },
+                {
+                  "@pattern": "T?_MAIN_MACE*"
+                },
+                {
+                  "@pattern": "T?_2H_MACE*"
+                },
+                {
+                  "@pattern": "T?_2H_FLAIL*"
+                },
+                {
+                  "@pattern": "T?_MAIN_ROCKMACE*"
+                },
+                {
+                  "@pattern": "T?_2H_DUALMACE*"
+                },
+                {
+                  "@pattern": "T?_MAIN_HAMMER*"
+                },
+                {
+                  "@pattern": "T?_2H_HAMMER*"
+                },
+                {
+                  "@pattern": "T?_2H_POLEHAMMER*"
+                },
+                {
+                  "@pattern": "T?_2H_DUALHAMMER*"
+                },
+                {
+                  "@pattern": "T?_2H_RAM*"
+                },
+                {
+                  "@pattern": "T?_2H_KNUCKLES*"
+                },
+                {
+                  "@pattern": "T?_2H_CROSSBOW*"
+                },
+                {
+                  "@pattern": "T?_2H_CROSSBOWLARGE*"
+                },
+                {
+                  "@pattern": "T?_MAIN_1HCROSSBOW*"
+                },
+                {
+                  "@pattern": "T?_2H_REPEATINGCROSSBOW*"
+                },
+                {
+                  "@pattern": "T?_2H_DUALCROSSBOW*"
+                },
+                {
+                  "@pattern": "T?_OFF_SHIELD*"
+                },
+                {
+                  "@pattern": "T?_OFF_TOWERSHIELD*"
+                },
+                {
+                  "@pattern": "T?_OFF_SPIKEDSHIELD*"
+                }
+              ]
+            },
+            {
+              "@type": "itemwearbonus",
+              "@attribute": "itempower",
+              "@bonus": "2",
+              "@mintier": "4",
+              "@maxtier": "8",
+              "description": {
+                "@tag": "@DESTINYBOARD_COMBAT_SHIELDS_CRYSTAL_GROUPBONUS"
+              },
+              "itempattern": {
+                "@pattern": "T?_OFF_SHIELD_CRYSTAL"
               }
             }
           ]
@@ -34290,6 +34895,9 @@
             },
             {
               "@pattern": "T?_OFF_TALISMAN_AVALON"
+            },
+            {
+              "@pattern": "T?_OFF_TORCH_CRYSTAL"
             }
           ]
         },
@@ -34312,6 +34920,9 @@
                 },
                 {
                   "@pattern": "T?_OFF_TALISMAN_AVALON"
+                },
+                {
+                  "@pattern": "T?_OFF_TORCH_CRYSTAL"
                 }
               ]
             },
@@ -34334,6 +34945,9 @@
                 },
                 {
                   "@pattern": "T?_OFF_TALISMAN_AVALON"
+                },
+                {
+                  "@pattern": "T?_OFF_TORCH_CRYSTAL"
                 }
               ]
             }
@@ -34362,6 +34976,9 @@
               },
               {
                 "@pattern": "T?_OFF_TALISMAN_AVALON"
+              },
+              {
+                "@pattern": "T?_OFF_TORCH_CRYSTAL"
               }
             ]
           }
@@ -34386,6 +35003,9 @@
             },
             {
               "@id": "COMBAT_TORCHES_AVALON"
+            },
+            {
+              "@id": "COMBAT_TORCHES_CRYSTAL"
             }
           ]
         }
@@ -34495,6 +35115,260 @@
               },
               "itempattern": {
                 "@pattern": "T?_OFF_TALISMAN_AVALON"
+              }
+            }
+          ]
+        },
+        "parentachievements": {
+          "@allrequired": "false",
+          "achievement": {
+            "@id": "COMBAT_TORCHES"
+          }
+        }
+      },
+      {
+        "@id": "COMBAT_TORCHES_CRYSTAL",
+        "@itemforsprite": "T8_OFF_TORCH_CRYSTAL",
+        "@category": "fighting",
+        "@ring": "9",
+        "@spriteReward": "OFF_TORCH_CRYSTAL",
+        "@subcategorylocatag": "@ACHIEVEMENT_SUBCATEGORY_HUNTER",
+        "@re-spectype": "combat",
+        "@usetemplate": "COMBAT_OFF_SPEC",
+        "@respecmodifier": "0.2",
+        "@missiontype": "killmobfame",
+        "@famemultiplier": "1",
+        "@lpmultiplier": "0.125",
+        "title": {
+          "@tag": "@DESTINYBOARD_TITLE_COMBAT_TORCHES_CRYSTAL"
+        },
+        "itemlist": {
+          "itempattern": {
+            "@pattern": "T?_OFF_TORCH_CRYSTAL"
+          }
+        },
+        "baserewards": {
+          "bonus": [
+            {
+              "@type": "itemwearbonus",
+              "@attribute": "itempower",
+              "@bonus": "0.025",
+              "@mintier": "4",
+              "@maxtier": "8",
+              "description": {
+                "@tag": "@DESTINYBOARD_COMBAT_CRYSTAL_HUNTER_TREEBONUS"
+              },
+              "itempattern": [
+                {
+                  "@pattern": "T?_2H_BOW*"
+                },
+                {
+                  "@pattern": "T?_2H_WARBOW*"
+                },
+                {
+                  "@pattern": "T?_2H_LONGBOW*"
+                },
+                {
+                  "@pattern": "T?_MAIN_DAGGER*"
+                },
+                {
+                  "@pattern": "T?_2H_DAGGER*"
+                },
+                {
+                  "@pattern": "T?_2H_CLAWPAIR*"
+                },
+                {
+                  "@pattern": "T?_MAIN_RAPIER*"
+                },
+                {
+                  "@pattern": "T?_2H_DUALSICKLE*"
+                },
+                {
+                  "@pattern": "T?_MAIN_SPEAR*"
+                },
+                {
+                  "@pattern": "T?_2H_SPEAR*"
+                },
+                {
+                  "@pattern": "T?_2H_GLAIVE*"
+                },
+                {
+                  "@pattern": "T?_2H_HARPOON*"
+                },
+                {
+                  "@pattern": "T?_2H_TRIDENT*"
+                },
+                {
+                  "@pattern": "T?_2H_QUARTERSTAFF*"
+                },
+                {
+                  "@pattern": "T?_2H_IRONCLADEDSTAFF*"
+                },
+                {
+                  "@pattern": "T?_2H_DOUBLEBLADEDSTAFF*"
+                },
+                {
+                  "@pattern": "T?_2H_COMBATSTAFF*"
+                },
+                {
+                  "@pattern": "T?_2H_TWINSCYTHE*"
+                },
+                {
+                  "@pattern": "T?_2H_ROCKSTAFF*"
+                },
+                {
+                  "@pattern": "T?_2H_SHAPESHIFTER*"
+                },
+                {
+                  "@pattern": "T?_MAIN_NATURESTAFF*"
+                },
+                {
+                  "@pattern": "T?_2H_NATURESTAFF*"
+                },
+                {
+                  "@pattern": "T?_2H_WILDSTAFF*"
+                },
+                {
+                  "@pattern": "T?_OFF_TORCH*"
+                },
+                {
+                  "@pattern": "T?_OFF_HORN*"
+                },
+                {
+                  "@pattern": "T?_OFF_JESTERCANE*"
+                },
+                {
+                  "@pattern": "T?_OFF_LAMP*"
+                },
+                {
+                  "@pattern": "T?_OFF_TALISMAN*"
+                }
+              ]
+            },
+            {
+              "@type": "itemwearbonus",
+              "@attribute": "itempower",
+              "@bonus": "2",
+              "@mintier": "4",
+              "@maxtier": "8",
+              "description": {
+                "@tag": "@DESTINYBOARD_COMBAT_TORCHES_CRYSTAL_GROUPBONUS"
+              },
+              "itempattern": {
+                "@pattern": "T?_OFF_TORCH_CRYSTAL"
+              }
+            }
+          ]
+        },
+        "eliterewards": {
+          "bonus": [
+            {
+              "@type": "itemwearbonus",
+              "@attribute": "itempower",
+              "@bonus": "0.025",
+              "@mintier": "4",
+              "@maxtier": "8",
+              "description": {
+                "@tag": "@DESTINYBOARD_COMBAT_CRYSTAL_HUNTER_TREEBONUS"
+              },
+              "itempattern": [
+                {
+                  "@pattern": "T?_2H_BOW*"
+                },
+                {
+                  "@pattern": "T?_2H_WARBOW*"
+                },
+                {
+                  "@pattern": "T?_2H_LONGBOW*"
+                },
+                {
+                  "@pattern": "T?_MAIN_DAGGER*"
+                },
+                {
+                  "@pattern": "T?_2H_DAGGER*"
+                },
+                {
+                  "@pattern": "T?_2H_CLAWPAIR*"
+                },
+                {
+                  "@pattern": "T?_MAIN_RAPIER*"
+                },
+                {
+                  "@pattern": "T?_2H_DUALSICKLE*"
+                },
+                {
+                  "@pattern": "T?_MAIN_SPEAR*"
+                },
+                {
+                  "@pattern": "T?_2H_SPEAR*"
+                },
+                {
+                  "@pattern": "T?_2H_GLAIVE*"
+                },
+                {
+                  "@pattern": "T?_2H_HARPOON*"
+                },
+                {
+                  "@pattern": "T?_2H_TRIDENT*"
+                },
+                {
+                  "@pattern": "T?_2H_QUARTERSTAFF*"
+                },
+                {
+                  "@pattern": "T?_2H_IRONCLADEDSTAFF*"
+                },
+                {
+                  "@pattern": "T?_2H_DOUBLEBLADEDSTAFF*"
+                },
+                {
+                  "@pattern": "T?_2H_COMBATSTAFF*"
+                },
+                {
+                  "@pattern": "T?_2H_TWINSCYTHE*"
+                },
+                {
+                  "@pattern": "T?_2H_ROCKSTAFF*"
+                },
+                {
+                  "@pattern": "T?_2H_SHAPESHIFTER*"
+                },
+                {
+                  "@pattern": "T?_MAIN_NATURESTAFF*"
+                },
+                {
+                  "@pattern": "T?_2H_NATURESTAFF*"
+                },
+                {
+                  "@pattern": "T?_2H_WILDSTAFF*"
+                },
+                {
+                  "@pattern": "T?_OFF_TORCH*"
+                },
+                {
+                  "@pattern": "T?_OFF_HORN*"
+                },
+                {
+                  "@pattern": "T?_OFF_JESTERCANE*"
+                },
+                {
+                  "@pattern": "T?_OFF_LAMP*"
+                },
+                {
+                  "@pattern": "T?_OFF_TALISMAN*"
+                }
+              ]
+            },
+            {
+              "@type": "itemwearbonus",
+              "@attribute": "itempower",
+              "@bonus": "2",
+              "@mintier": "4",
+              "@maxtier": "8",
+              "description": {
+                "@tag": "@DESTINYBOARD_COMBAT_TORCHES_CRYSTAL_GROUPBONUS"
+              },
+              "itempattern": {
+                "@pattern": "T?_OFF_TORCH_CRYSTAL"
               }
             }
           ]
@@ -35467,6 +36341,9 @@
                 },
                 {
                   "@pattern": "T?_OFF_CENSER*"
+                },
+                {
+                  "@pattern": "T?_OFF_TOME*"
                 }
               ]
             },
@@ -35556,6 +36433,9 @@
                 },
                 {
                   "@pattern": "T?_OFF_CENSER*"
+                },
+                {
+                  "@pattern": "T?_OFF_TOME*"
                 }
               ]
             },
@@ -37552,6 +38432,9 @@
             },
             {
               "@pattern": "T?_OFF_CENSER_AVALON"
+            },
+            {
+              "@pattern": "T?_OFF_TOME_CRYSTAL"
             }
           ]
         },
@@ -37573,6 +38456,9 @@
               },
               {
                 "@pattern": "T?_OFF_CENSER_AVALON"
+              },
+              {
+                "@pattern": "T?_OFF_TOME_CRYSTAL"
               }
             ]
           },
@@ -37600,6 +38486,9 @@
                 },
                 {
                   "@pattern": "T?_OFF_CENSER_AVALON"
+                },
+                {
+                  "@pattern": "T?_OFF_TOME_CRYSTAL"
                 }
               ]
             },
@@ -37626,6 +38515,9 @@
                 },
                 {
                   "@pattern": "T?_OFF_CENSER_AVALON"
+                },
+                {
+                  "@pattern": "T?_OFF_TOME_CRYSTAL"
                 }
               ]
             }
@@ -37651,6 +38543,9 @@
             },
             {
               "@id": "CRAFT_BOOKS_AVALON"
+            },
+            {
+              "@id": "CRAFT_BOOKS_CRYSTAL"
             }
           ]
         }
@@ -37699,6 +38594,9 @@
                 },
                 {
                   "@pattern": "T?_OFF_CENSER*"
+                },
+                {
+                  "@pattern": "T?_OFF_TOME*"
                 }
               ]
             },
@@ -37725,6 +38623,9 @@
                 },
                 {
                   "@pattern": "T?_OFF_CENSER*"
+                },
+                {
+                  "@pattern": "T?_OFF_TOME*"
                 }
               ]
             },
@@ -37805,6 +38706,9 @@
                 },
                 {
                   "@pattern": "T?_OFF_CENSER*"
+                },
+                {
+                  "@pattern": "T?_OFF_TOME*"
                 }
               ]
             },
@@ -37831,6 +38735,9 @@
                 },
                 {
                   "@pattern": "T?_OFF_CENSER*"
+                },
+                {
+                  "@pattern": "T?_OFF_TOME*"
                 }
               ]
             },
@@ -37856,6 +38763,244 @@
               },
               "itempattern": {
                 "@pattern": "T?_OFF_BOOK"
+              }
+            }
+          ]
+        },
+        "parentachievements": {
+          "@allrequired": "false",
+          "achievement": {
+            "@id": "CRAFT_BOOKS"
+          }
+        }
+      },
+      {
+        "@id": "CRAFT_BOOKS_CRYSTAL",
+        "@itemforsprite": "T8_OFF_TOME_CRYSTAL",
+        "@category": "crafting",
+        "@ring": "9",
+        "@spriteReward": "OFF_TOME_CRYSTAL",
+        "@subcategorylocatag": "@ACHIEVEMENT_SUBCATEGORY_CRAFT_MAGE",
+        "@usetemplate": "CRAFT_SPEC",
+        "@missiontype": "craftitemfame",
+        "@famemultiplier": "0.5",
+        "@lpmultiplier": "0.1667",
+        "title": {
+          "@tag": "@DESTINYBOARD_TITLE_CRAFT_BOOKS_CRYSTAL"
+        },
+        "itemlist": {
+          "itempattern": {
+            "@pattern": "T?_OFF_TOME_CRYSTAL"
+          }
+        },
+        "baserewards": {
+          "bonus": [
+            {
+              "@type": "craftingfocuscostreduction",
+              "@bonus": "0.0215",
+              "@mintier": "4",
+              "@maxtier": "8",
+              "description": {
+                "@tag": "@DESTINYBOARD_CRAFT_CRYSTAL_MAGE_TREEBONUS_FOCUS"
+              },
+              "itempattern": [
+                {
+                  "@pattern": "T?_MAIN_FIRESTAFF*"
+                },
+                {
+                  "@pattern": "T?_2H_FIRESTAFF*"
+                },
+                {
+                  "@pattern": "T?_2H_INFERNOSTAFF*"
+                },
+                {
+                  "@pattern": "T?_2H_FIRE_RINGPAIR*"
+                },
+                {
+                  "@pattern": "T?_MAIN_HOLYSTAFF*"
+                },
+                {
+                  "@pattern": "T?_2H_HOLYSTAFF*"
+                },
+                {
+                  "@pattern": "T?_2H_DIVINESTAFF*"
+                },
+                {
+                  "@pattern": "T?_MAIN_ARCANESTAFF*"
+                },
+                {
+                  "@pattern": "T?_2H_ARCANESTAFF*"
+                },
+                {
+                  "@pattern": "T?_2H_ENIGMATICSTAFF*"
+                },
+                {
+                  "@pattern": "T?_2H_ENIGMATICORB*"
+                },
+                {
+                  "@pattern": "T?_2H_ARCANE_RINGPAIR*"
+                },
+                {
+                  "@pattern": "T?_MAIN_FROSTSTAFF*"
+                },
+                {
+                  "@pattern": "T?_2H_FROSTSTAFF*"
+                },
+                {
+                  "@pattern": "T?_2H_GLACIALSTAFF*"
+                },
+                {
+                  "@pattern": "T?_2H_ICEGAUNTLETS*"
+                },
+                {
+                  "@pattern": "T?_2H_ICECRYSTAL*"
+                },
+                {
+                  "@pattern": "T?_MAIN_CURSEDSTAFF*"
+                },
+                {
+                  "@pattern": "T?_2H_CURSEDSTAFF*"
+                },
+                {
+                  "@pattern": "T?_2H_DEMONICSTAFF*"
+                },
+                {
+                  "@pattern": "T?_2H_SKULLORB*"
+                },
+                {
+                  "@pattern": "T?_OFF_BOOK*"
+                },
+                {
+                  "@pattern": "T?_OFF_ORB*"
+                },
+                {
+                  "@pattern": "T?_OFF_DEMONSKULL*"
+                },
+                {
+                  "@pattern": "T?_OFF_TOTEM*"
+                },
+                {
+                  "@pattern": "T?_OFF_CENSER*"
+                },
+                {
+                  "@pattern": "T?_OFF_TOME*"
+                }
+              ]
+            },
+            {
+              "@type": "itemcraftquality",
+              "@bonus": "0.05",
+              "@mintier": "4",
+              "@maxtier": "8",
+              "description": {
+                "@tag": "@DESTINYBOARD_CRAFT_CRYSTAL_MAGE_TREEBONUS_QUALITY"
+              },
+              "itempattern": [
+                {
+                  "@pattern": "T?_MAIN_FIRESTAFF*"
+                },
+                {
+                  "@pattern": "T?_2H_FIRESTAFF*"
+                },
+                {
+                  "@pattern": "T?_2H_INFERNOSTAFF*"
+                },
+                {
+                  "@pattern": "T?_2H_FIRE_RINGPAIR*"
+                },
+                {
+                  "@pattern": "T?_MAIN_HOLYSTAFF*"
+                },
+                {
+                  "@pattern": "T?_2H_HOLYSTAFF*"
+                },
+                {
+                  "@pattern": "T?_2H_DIVINESTAFF*"
+                },
+                {
+                  "@pattern": "T?_MAIN_ARCANESTAFF*"
+                },
+                {
+                  "@pattern": "T?_2H_ARCANESTAFF*"
+                },
+                {
+                  "@pattern": "T?_2H_ENIGMATICSTAFF*"
+                },
+                {
+                  "@pattern": "T?_2H_ENIGMATICORB*"
+                },
+                {
+                  "@pattern": "T?_2H_ARCANE_RINGPAIR*"
+                },
+                {
+                  "@pattern": "T?_MAIN_FROSTSTAFF*"
+                },
+                {
+                  "@pattern": "T?_2H_FROSTSTAFF*"
+                },
+                {
+                  "@pattern": "T?_2H_GLACIALSTAFF*"
+                },
+                {
+                  "@pattern": "T?_2H_ICEGAUNTLETS*"
+                },
+                {
+                  "@pattern": "T?_2H_ICECRYSTAL*"
+                },
+                {
+                  "@pattern": "T?_MAIN_CURSEDSTAFF*"
+                },
+                {
+                  "@pattern": "T?_2H_CURSEDSTAFF*"
+                },
+                {
+                  "@pattern": "T?_2H_DEMONICSTAFF*"
+                },
+                {
+                  "@pattern": "T?_2H_SKULLORB*"
+                },
+                {
+                  "@pattern": "T?_OFF_BOOK*"
+                },
+                {
+                  "@pattern": "T?_OFF_ORB*"
+                },
+                {
+                  "@pattern": "T?_OFF_DEMONSKULL*"
+                },
+                {
+                  "@pattern": "T?_OFF_TOTEM*"
+                },
+                {
+                  "@pattern": "T?_OFF_CENSER*"
+                },
+                {
+                  "@pattern": "T?_OFF_TOME*"
+                }
+              ]
+            },
+            {
+              "@type": "craftingfocuscostreduction",
+              "@bonus": "2.5",
+              "@mintier": "4",
+              "@maxtier": "8",
+              "description": {
+                "@tag": "@DESTINYBOARD_CRAFT_BOOKS_CRYSTAL_GROUPBONUS_FOCUS"
+              },
+              "itempattern": {
+                "@pattern": "T?_OFF_TOME_CRYSTAL"
+              }
+            },
+            {
+              "@type": "itemcraftquality",
+              "@bonus": "6",
+              "@mintier": "4",
+              "@maxtier": "8",
+              "description": {
+                "@tag": "@DESTINYBOARD_CRAFT_BOOKS_CRYSTAL_GROUPBONUS_QUALITY"
+              },
+              "itempattern": {
+                "@pattern": "T?_OFF_TOME_CRYSTAL"
               }
             }
           ]
@@ -37911,6 +39056,9 @@
                 },
                 {
                   "@pattern": "T?_OFF_CENSER*"
+                },
+                {
+                  "@pattern": "T?_OFF_TOME*"
                 }
               ]
             },
@@ -37937,6 +39085,9 @@
                 },
                 {
                   "@pattern": "T?_OFF_CENSER*"
+                },
+                {
+                  "@pattern": "T?_OFF_TOME*"
                 }
               ]
             },
@@ -38017,6 +39168,9 @@
                 },
                 {
                   "@pattern": "T?_OFF_CENSER*"
+                },
+                {
+                  "@pattern": "T?_OFF_TOME*"
                 }
               ]
             },
@@ -38043,6 +39197,9 @@
                 },
                 {
                   "@pattern": "T?_OFF_CENSER*"
+                },
+                {
+                  "@pattern": "T?_OFF_TOME*"
                 }
               ]
             },
@@ -38123,6 +39280,9 @@
                 },
                 {
                   "@pattern": "T?_OFF_CENSER*"
+                },
+                {
+                  "@pattern": "T?_OFF_TOME*"
                 }
               ]
             },
@@ -38149,6 +39309,9 @@
                 },
                 {
                   "@pattern": "T?_OFF_CENSER*"
+                },
+                {
+                  "@pattern": "T?_OFF_TOME*"
                 }
               ]
             },
@@ -44191,6 +45354,9 @@
                 },
                 {
                   "@pattern": "T?_OFF_CENSER*"
+                },
+                {
+                  "@pattern": "T?_OFF_TOME*"
                 }
               ]
             },
@@ -44280,6 +45446,9 @@
                 },
                 {
                   "@pattern": "T?_OFF_CENSER*"
+                },
+                {
+                  "@pattern": "T?_OFF_TOME*"
                 }
               ]
             },
@@ -46465,6 +47634,9 @@
                 },
                 {
                   "@pattern": "T?_OFF_CENSER*"
+                },
+                {
+                  "@pattern": "T?_OFF_TOME*"
                 }
               ]
             },
@@ -46554,6 +47726,9 @@
                 },
                 {
                   "@pattern": "T?_OFF_CENSER*"
+                },
+                {
+                  "@pattern": "T?_OFF_TOME*"
                 }
               ]
             },
@@ -47581,6 +48756,9 @@
                 },
                 {
                   "@pattern": "T?_OFF_CENSER*"
+                },
+                {
+                  "@pattern": "T?_OFF_TOME*"
                 }
               ]
             },
@@ -47670,6 +48848,9 @@
                 },
                 {
                   "@pattern": "T?_OFF_CENSER*"
+                },
+                {
+                  "@pattern": "T?_OFF_TOME*"
                 }
               ]
             },
@@ -49897,6 +51078,9 @@
                 },
                 {
                   "@pattern": "T?_OFF_CENSER*"
+                },
+                {
+                  "@pattern": "T?_OFF_TOME*"
                 }
               ]
             },
@@ -49986,6 +51170,9 @@
                 },
                 {
                   "@pattern": "T?_OFF_CENSER*"
+                },
+                {
+                  "@pattern": "T?_OFF_TOME*"
                 }
               ]
             },
@@ -63932,6 +65119,9 @@
             },
             {
               "@pattern": "T?_OFF_SHIELD_AVALON"
+            },
+            {
+              "@pattern": "T?_OFF_SHIELD_CRYSTAL"
             }
           ]
         },
@@ -63953,6 +65143,9 @@
               },
               {
                 "@pattern": "T?_OFF_SHIELD_AVALON"
+              },
+              {
+                "@pattern": "T?_OFF_SHIELD_CRYSTAL"
               }
             ]
           },
@@ -63980,6 +65173,9 @@
                 },
                 {
                   "@pattern": "T?_OFF_SHIELD_AVALON"
+                },
+                {
+                  "@pattern": "T?_OFF_SHIELD_CRYSTAL"
                 }
               ]
             },
@@ -64006,6 +65202,9 @@
                 },
                 {
                   "@pattern": "T?_OFF_SHIELD_AVALON"
+                },
+                {
+                  "@pattern": "T?_OFF_SHIELD_CRYSTAL"
                 }
               ]
             }
@@ -64031,6 +65230,9 @@
             },
             {
               "@id": "CRAFT_SHIELDS_AVALON"
+            },
+            {
+              "@id": "CRAFT_SHIELDS_CRYSTAL"
             }
           ]
         }
@@ -64118,6 +65320,262 @@
               },
               "itempattern": {
                 "@pattern": "T?_OFF_SHIELD_AVALON"
+              }
+            }
+          ]
+        },
+        "parentachievements": {
+          "@allrequired": "false",
+          "achievement": {
+            "@id": "CRAFT_SHIELDS"
+          }
+        }
+      },
+      {
+        "@id": "CRAFT_SHIELDS_CRYSTAL",
+        "@itemforsprite": "T8_OFF_SHIELD_CRYSTAL",
+        "@category": "crafting",
+        "@ring": "9",
+        "@spriteReward": "OFF_SHIELD_CRYSTAL",
+        "@subcategorylocatag": "@ACHIEVEMENT_SUBCATEGORY_CRAFT_WARRIOR",
+        "@usetemplate": "CRAFT_SPEC",
+        "@missiontype": "craftitemfame",
+        "@famemultiplier": "0.5",
+        "@lpmultiplier": "0.1667",
+        "title": {
+          "@tag": "@DESTINYBOARD_TITLE_CRAFT_SHIELDS_CRYSTAL"
+        },
+        "itemlist": {
+          "itempattern": {
+            "@pattern": "T?_OFF_SHIELD_CRYSTAL"
+          }
+        },
+        "baserewards": {
+          "bonus": [
+            {
+              "@type": "craftingfocuscostreduction",
+              "@bonus": "0.0215",
+              "@mintier": "4",
+              "@maxtier": "8",
+              "description": {
+                "@tag": "@DESTINYBOARD_CRAFT_CRYSTAL_WARRIOR_TREEBONUS_FOCUS"
+              },
+              "itempattern": [
+                {
+                  "@pattern": "T?_MAIN_SWORD*"
+                },
+                {
+                  "@pattern": "T?_2H_CLAYMORE*"
+                },
+                {
+                  "@pattern": "T?_2H_DUALSWORD*"
+                },
+                {
+                  "@pattern": "T?_MAIN_SCIMITAR*"
+                },
+                {
+                  "@pattern": "T?_2H_CLEAVER*"
+                },
+                {
+                  "@pattern": "T?_2H_DUALSCIMITAR*"
+                },
+                {
+                  "@pattern": "T?_MAIN_AXE*"
+                },
+                {
+                  "@pattern": "T?_2H_AXE*"
+                },
+                {
+                  "@pattern": "T?_2H_HALBERD*"
+                },
+                {
+                  "@pattern": "T?_2H_SCYTHE*"
+                },
+                {
+                  "@pattern": "T?_2H_DUALAXE*"
+                },
+                {
+                  "@pattern": "T?_MAIN_MACE*"
+                },
+                {
+                  "@pattern": "T?_2H_MACE*"
+                },
+                {
+                  "@pattern": "T?_2H_FLAIL*"
+                },
+                {
+                  "@pattern": "T?_MAIN_ROCKMACE*"
+                },
+                {
+                  "@pattern": "T?_2H_DUALMACE*"
+                },
+                {
+                  "@pattern": "T?_MAIN_HAMMER*"
+                },
+                {
+                  "@pattern": "T?_2H_HAMMER*"
+                },
+                {
+                  "@pattern": "T?_2H_POLEHAMMER*"
+                },
+                {
+                  "@pattern": "T?_2H_DUALHAMMER*"
+                },
+                {
+                  "@pattern": "T?_2H_RAM*"
+                },
+                {
+                  "@pattern": "T?_2H_KNUCKLES*"
+                },
+                {
+                  "@pattern": "T?_2H_CROSSBOW*"
+                },
+                {
+                  "@pattern": "T?_2H_CROSSBOWLARGE*"
+                },
+                {
+                  "@pattern": "T?_MAIN_1HCROSSBOW*"
+                },
+                {
+                  "@pattern": "T?_2H_REPEATINGCROSSBOW*"
+                },
+                {
+                  "@pattern": "T?_2H_DUALCROSSBOW*"
+                },
+                {
+                  "@pattern": "T?_OFF_SHIELD*"
+                },
+                {
+                  "@pattern": "T?_OFF_TOWERSHIELD*"
+                },
+                {
+                  "@pattern": "T?_OFF_SPIKEDSHIELD*"
+                }
+              ]
+            },
+            {
+              "@type": "itemcraftquality",
+              "@bonus": "0.05",
+              "@mintier": "4",
+              "@maxtier": "8",
+              "description": {
+                "@tag": "@DESTINYBOARD_CRAFT_CRYSTAL_WARRIOR_TREEBONUS_QUALITY"
+              },
+              "itempattern": [
+                {
+                  "@pattern": "T?_MAIN_SWORD*"
+                },
+                {
+                  "@pattern": "T?_2H_CLAYMORE*"
+                },
+                {
+                  "@pattern": "T?_2H_DUALSWORD*"
+                },
+                {
+                  "@pattern": "T?_MAIN_SCIMITAR*"
+                },
+                {
+                  "@pattern": "T?_2H_CLEAVER*"
+                },
+                {
+                  "@pattern": "T?_2H_DUALSCIMITAR*"
+                },
+                {
+                  "@pattern": "T?_MAIN_AXE*"
+                },
+                {
+                  "@pattern": "T?_2H_AXE*"
+                },
+                {
+                  "@pattern": "T?_2H_HALBERD*"
+                },
+                {
+                  "@pattern": "T?_2H_SCYTHE*"
+                },
+                {
+                  "@pattern": "T?_2H_DUALAXE*"
+                },
+                {
+                  "@pattern": "T?_MAIN_MACE*"
+                },
+                {
+                  "@pattern": "T?_2H_MACE*"
+                },
+                {
+                  "@pattern": "T?_2H_FLAIL*"
+                },
+                {
+                  "@pattern": "T?_MAIN_ROCKMACE*"
+                },
+                {
+                  "@pattern": "T?_2H_DUALMACE*"
+                },
+                {
+                  "@pattern": "T?_MAIN_HAMMER*"
+                },
+                {
+                  "@pattern": "T?_2H_HAMMER*"
+                },
+                {
+                  "@pattern": "T?_2H_POLEHAMMER*"
+                },
+                {
+                  "@pattern": "T?_2H_DUALHAMMER*"
+                },
+                {
+                  "@pattern": "T?_2H_RAM*"
+                },
+                {
+                  "@pattern": "T?_2H_KNUCKLES*"
+                },
+                {
+                  "@pattern": "T?_2H_CROSSBOW*"
+                },
+                {
+                  "@pattern": "T?_2H_CROSSBOWLARGE*"
+                },
+                {
+                  "@pattern": "T?_MAIN_1HCROSSBOW*"
+                },
+                {
+                  "@pattern": "T?_2H_REPEATINGCROSSBOW*"
+                },
+                {
+                  "@pattern": "T?_2H_DUALCROSSBOW*"
+                },
+                {
+                  "@pattern": "T?_OFF_SHIELD*"
+                },
+                {
+                  "@pattern": "T?_OFF_TOWERSHIELD*"
+                },
+                {
+                  "@pattern": "T?_OFF_SPIKEDSHIELD*"
+                }
+              ]
+            },
+            {
+              "@type": "craftingfocuscostreduction",
+              "@bonus": "2.5",
+              "@mintier": "4",
+              "@maxtier": "8",
+              "description": {
+                "@tag": "@DESTINYBOARD_CRAFT_SHIELDS_CRYSTAL_GROUPBONUS_FOCUS"
+              },
+              "itempattern": {
+                "@pattern": "T?_OFF_SHIELD_CRYSTAL"
+              }
+            },
+            {
+              "@type": "itemcraftquality",
+              "@bonus": "6",
+              "@mintier": "4",
+              "@maxtier": "8",
+              "description": {
+                "@tag": "@DESTINYBOARD_CRAFT_SHIELDS_CRYSTAL_GROUPBONUS_QUALITY"
+              },
+              "itempattern": {
+                "@pattern": "T?_OFF_SHIELD_CRYSTAL"
               }
             }
           ]
@@ -70210,6 +71668,9 @@
             },
             {
               "@pattern": "T?_OFF_TALISMAN_AVALON"
+            },
+            {
+              "@pattern": "T?_OFF_TORCH_CRYSTAL"
             }
           ]
         },
@@ -70231,6 +71692,9 @@
               },
               {
                 "@pattern": "T?_OFF_TALISMAN_AVALON"
+              },
+              {
+                "@pattern": "T?_OFF_TORCH_CRYSTAL"
               }
             ]
           },
@@ -70258,6 +71722,9 @@
                 },
                 {
                   "@pattern": "T?_OFF_TALISMAN_AVALON"
+                },
+                {
+                  "@pattern": "T?_OFF_TORCH_CRYSTAL"
                 }
               ]
             },
@@ -70284,6 +71751,9 @@
                 },
                 {
                   "@pattern": "T?_OFF_TALISMAN_AVALON"
+                },
+                {
+                  "@pattern": "T?_OFF_TORCH_CRYSTAL"
                 }
               ]
             }
@@ -70309,6 +71779,9 @@
             },
             {
               "@id": "CRAFT_TORCHES_AVALON"
+            },
+            {
+              "@id": "CRAFT_TORCHES_CRYSTAL"
             }
           ]
         }
@@ -70408,6 +71881,250 @@
               },
               "itempattern": {
                 "@pattern": "T?_OFF_TALISMAN_AVALON"
+              }
+            }
+          ]
+        },
+        "parentachievements": {
+          "@allrequired": "false",
+          "achievement": {
+            "@id": "CRAFT_TORCHES"
+          }
+        }
+      },
+      {
+        "@id": "CRAFT_TORCHES_CRYSTAL",
+        "@itemforsprite": "T8_OFF_TORCH_CRYSTAL",
+        "@category": "crafting",
+        "@ring": "9",
+        "@spriteReward": "OFF_TORCH_CRYSTAL",
+        "@subcategorylocatag": "@ACHIEVEMENT_SUBCATEGORY_CRAFT_HUNTER",
+        "@usetemplate": "CRAFT_SPEC",
+        "@missiontype": "craftitemfame",
+        "@famemultiplier": "0.5",
+        "@lpmultiplier": "0.1667",
+        "title": {
+          "@tag": "@DESTINYBOARD_TITLE_CRAFT_TORCHES_CRYSTAL"
+        },
+        "itemlist": {
+          "itempattern": {
+            "@pattern": "T?_OFF_TORCH_CRYSTAL"
+          }
+        },
+        "baserewards": {
+          "bonus": [
+            {
+              "@type": "craftingfocuscostreduction",
+              "@bonus": "0.0215",
+              "@mintier": "4",
+              "@maxtier": "8",
+              "description": {
+                "@tag": "@DESTINYBOARD_CRAFT_CRYSTAL_HUNTER_TREEBONUS_FOCUS"
+              },
+              "itempattern": [
+                {
+                  "@pattern": "T?_2H_BOW*"
+                },
+                {
+                  "@pattern": "T?_2H_WARBOW*"
+                },
+                {
+                  "@pattern": "T?_2H_LONGBOW*"
+                },
+                {
+                  "@pattern": "T?_MAIN_DAGGER*"
+                },
+                {
+                  "@pattern": "T?_2H_DAGGER*"
+                },
+                {
+                  "@pattern": "T?_2H_CLAWPAIR*"
+                },
+                {
+                  "@pattern": "T?_MAIN_RAPIER*"
+                },
+                {
+                  "@pattern": "T?_2H_DUALSICKLE*"
+                },
+                {
+                  "@pattern": "T?_MAIN_SPEAR*"
+                },
+                {
+                  "@pattern": "T?_2H_SPEAR*"
+                },
+                {
+                  "@pattern": "T?_2H_GLAIVE*"
+                },
+                {
+                  "@pattern": "T?_2H_HARPOON*"
+                },
+                {
+                  "@pattern": "T?_2H_TRIDENT*"
+                },
+                {
+                  "@pattern": "T?_2H_QUARTERSTAFF*"
+                },
+                {
+                  "@pattern": "T?_2H_IRONCLADEDSTAFF*"
+                },
+                {
+                  "@pattern": "T?_2H_DOUBLEBLADEDSTAFF*"
+                },
+                {
+                  "@pattern": "T?_2H_COMBATSTAFF*"
+                },
+                {
+                  "@pattern": "T?_2H_TWINSCYTHE*"
+                },
+                {
+                  "@pattern": "T?_2H_ROCKSTAFF*"
+                },
+                {
+                  "@pattern": "T?_2H_SHAPESHIFTER*"
+                },
+                {
+                  "@pattern": "T?_MAIN_NATURESTAFF*"
+                },
+                {
+                  "@pattern": "T?_2H_NATURESTAFF*"
+                },
+                {
+                  "@pattern": "T?_2H_WILDSTAFF*"
+                },
+                {
+                  "@pattern": "T?_OFF_TORCH*"
+                },
+                {
+                  "@pattern": "T?_OFF_HORN*"
+                },
+                {
+                  "@pattern": "T?_OFF_JESTERCANE*"
+                },
+                {
+                  "@pattern": "T?_OFF_LAMP*"
+                },
+                {
+                  "@pattern": "T?_OFF_TALISMAN*"
+                }
+              ]
+            },
+            {
+              "@type": "itemcraftquality",
+              "@bonus": "0.05",
+              "@mintier": "4",
+              "@maxtier": "8",
+              "description": {
+                "@tag": "@DESTINYBOARD_CRAFT_CRYSTAL_HUNTER_TREEBONUS_QUALITY"
+              },
+              "itempattern": [
+                {
+                  "@pattern": "T?_2H_BOW*"
+                },
+                {
+                  "@pattern": "T?_2H_WARBOW*"
+                },
+                {
+                  "@pattern": "T?_2H_LONGBOW*"
+                },
+                {
+                  "@pattern": "T?_MAIN_DAGGER*"
+                },
+                {
+                  "@pattern": "T?_2H_DAGGER*"
+                },
+                {
+                  "@pattern": "T?_2H_CLAWPAIR*"
+                },
+                {
+                  "@pattern": "T?_MAIN_RAPIER*"
+                },
+                {
+                  "@pattern": "T?_2H_DUALSICKLE*"
+                },
+                {
+                  "@pattern": "T?_MAIN_SPEAR*"
+                },
+                {
+                  "@pattern": "T?_2H_SPEAR*"
+                },
+                {
+                  "@pattern": "T?_2H_GLAIVE*"
+                },
+                {
+                  "@pattern": "T?_2H_HARPOON*"
+                },
+                {
+                  "@pattern": "T?_2H_TRIDENT*"
+                },
+                {
+                  "@pattern": "T?_2H_QUARTERSTAFF*"
+                },
+                {
+                  "@pattern": "T?_2H_IRONCLADEDSTAFF*"
+                },
+                {
+                  "@pattern": "T?_2H_DOUBLEBLADEDSTAFF*"
+                },
+                {
+                  "@pattern": "T?_2H_COMBATSTAFF*"
+                },
+                {
+                  "@pattern": "T?_2H_TWINSCYTHE*"
+                },
+                {
+                  "@pattern": "T?_2H_ROCKSTAFF*"
+                },
+                {
+                  "@pattern": "T?_2H_SHAPESHIFTER*"
+                },
+                {
+                  "@pattern": "T?_MAIN_NATURESTAFF*"
+                },
+                {
+                  "@pattern": "T?_2H_NATURESTAFF*"
+                },
+                {
+                  "@pattern": "T?_2H_WILDSTAFF*"
+                },
+                {
+                  "@pattern": "T?_OFF_TORCH*"
+                },
+                {
+                  "@pattern": "T?_OFF_HORN*"
+                },
+                {
+                  "@pattern": "T?_OFF_JESTERCANE*"
+                },
+                {
+                  "@pattern": "T?_OFF_LAMP*"
+                },
+                {
+                  "@pattern": "T?_OFF_TALISMAN*"
+                }
+              ]
+            },
+            {
+              "@type": "craftingfocuscostreduction",
+              "@bonus": "2.5",
+              "@mintier": "4",
+              "@maxtier": "8",
+              "description": {
+                "@tag": "@DESTINYBOARD_CRAFT_TORCHES_CRYSTAL_GROUPBONUS_FOCUS"
+              },
+              "itempattern": {
+                "@pattern": "T?_OFF_TORCH_CRYSTAL"
+              }
+            },
+            {
+              "@type": "itemcraftquality",
+              "@bonus": "6",
+              "@mintier": "4",
+              "@maxtier": "8",
+              "description": {
+                "@tag": "@DESTINYBOARD_CRAFT_TORCHES_CRYSTAL_GROUPBONUS_QUALITY"
+              },
+              "itempattern": {
+                "@pattern": "T?_OFF_TORCH_CRYSTAL"
               }
             }
           ]
