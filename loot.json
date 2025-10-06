@@ -25355,6 +25355,28 @@
         }
       },
       {
+        "@name": "EVENT_ACTIVITY_HUB_HALLOWEEN_LOOT",
+        "Item": [
+          {
+            "@type": "UNIQUE_UNLOCK_SKIN_HORSE_UNDEAD_HALLOWEEN"
+          },
+          {
+            "@type": "UNIQUE_UNLOCK_SKIN_DONKEY_HALLOWEEN"
+          },
+          {
+            "@type": "UNIQUE_CONSUMABLE_EVENT_HALLOWEEN_CANDY_2025"
+          }
+        ]
+      },
+      {
+        "@name": "EVENT_HALLOWEEN_DECAYING_LOOT",
+        "Item": {
+          "@type": "UNIQUE_CONSUMABLE_EVENT_HALLOWEEN_CANDY_2025",
+          "@chance": "1",
+          "@amount": "1-2"
+        }
+      },
+      {
         "@name": "EVENT_HALLOWEEN_2017_LOOT",
         "Item": {
           "@type": "QUESTITEM_TOKEN_EVENT_HALLOWEEN_2017",
@@ -114393,35 +114415,72 @@
       {
         "@name": "AOCP_SPECIFIC_ITEMS",
         "OR": {
-          "Item": {
-            "@type": "UNIQUE_UNLOCK_DIREBOAR_FIBER_GATHERER",
-            "@weight": "1"
-          },
-          "OR": {
-            "@weight": "49",
-            "Item": [
-              {
-                "@type": "UNIQUE_TOKEN_AOCP",
-                "@amount": "1",
-                "@weight": "28"
-              },
-              {
-                "@type": "UNIQUE_TOKEN_AOCP",
-                "@amount": "2",
-                "@weight": "9"
-              },
-              {
-                "@type": "UNIQUE_TOKEN_AOCP",
-                "@amount": "5",
-                "@weight": "2"
-              },
-              {
-                "@type": "UNIQUE_TOKEN_AOCP",
-                "@amount": "10",
-                "@weight": "1"
-              }
-            ]
-          }
+          "OR": [
+            {
+              "@weight": "2",
+              "LootListReference": [
+                {
+                  "@name": "AOCP_FEATURED_ITEMS",
+                  "@weight": "3"
+                },
+                {
+                  "@name": "AOCP_OTHER_ITEMS",
+                  "@weight": "2"
+                }
+              ]
+            },
+            {
+              "@weight": "23",
+              "Item": [
+                {
+                  "@type": "UNIQUE_TOKEN_AOCP",
+                  "@amount": "1",
+                  "@weight": "28"
+                },
+                {
+                  "@type": "UNIQUE_TOKEN_AOCP",
+                  "@amount": "2",
+                  "@weight": "9"
+                },
+                {
+                  "@type": "UNIQUE_TOKEN_AOCP",
+                  "@amount": "5",
+                  "@weight": "2"
+                },
+                {
+                  "@type": "UNIQUE_TOKEN_AOCP",
+                  "@amount": "10",
+                  "@weight": "1"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "@name": "AOCP_FEATURED_ITEMS",
+        "OR": {
+          "Item": [
+            {
+              "@type": "UNIQUE_UNLOCK_OFF_VANITY_PUMPKIN_HAPPY_NON_TRADABLE",
+              "@amount": "1"
+            },
+            {
+              "@type": "UNIQUE_UNLOCK_OFF_VANITY_PUMPKIN_SAD_NON_TRADABLE",
+              "@amount": "1"
+            },
+            {
+              "@type": "UNIQUE_UNLOCK_OFF_VANITY_PUMPKIN_ANGRY_NON_TRADABLE",
+              "@amount": "1"
+            }
+          ]
+        }
+      },
+      {
+        "@name": "AOCP_OTHER_ITEMS",
+        "Item": {
+          "@type": "UNIQUE_UNLOCK_DIREBOAR_FIBER_GATHERER",
+          "@weight": "1"
         }
       },
       {
@@ -119755,7 +119814,7 @@
         }
       },
       {
-        "@name": "LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_S29",
+        "@name": "LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_COMPLETE",
         "OR": {
           "LootListReference": [
             {
@@ -120031,7 +120090,7 @@
             "@evaluateChance": "false"
           },
           {
-            "@name": "LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_S29",
+            "@name": "LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_COMPLETE",
             "@chance": "0.41"
           }
         ]
@@ -120050,7 +120109,7 @@
             "@evaluateChance": "false"
           },
           {
-            "@name": "LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_S29",
+            "@name": "LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_COMPLETE",
             "@chance": "0.7174"
           }
         ]
@@ -120069,7 +120128,7 @@
             "@evaluateChance": "false"
           },
           {
-            "@name": "LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_S29",
+            "@name": "LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_COMPLETE",
             "@chance": "1.23"
           }
         ]
@@ -120088,7 +120147,7 @@
             "@evaluateChance": "false"
           },
           {
-            "@name": "LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_S29",
+            "@name": "LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_COMPLETE",
             "@chance": "2.091"
           }
         ]
@@ -123829,7 +123888,7 @@
               "@weight": "924"
             },
             {
-              "@name": "LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_S29",
+              "@name": "LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_COMPLETE",
               "@weight": "76"
             }
           ]
@@ -123855,7 +123914,7 @@
               "@weight": "842"
             },
             {
-              "@name": "LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_S29",
+              "@name": "LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_COMPLETE",
               "@weight": "158"
             }
           ]
@@ -123881,7 +123940,7 @@
               "@weight": "766"
             },
             {
-              "@name": "LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_S29",
+              "@name": "LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_COMPLETE",
               "@weight": "234"
             }
           ]
@@ -123907,7 +123966,7 @@
               "@weight": "690"
             },
             {
-              "@name": "LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_S29",
+              "@name": "LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_COMPLETE",
               "@weight": "310"
             }
           ]
@@ -123933,7 +123992,7 @@
               "@weight": "615"
             },
             {
-              "@name": "LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_S29",
+              "@name": "LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_COMPLETE",
               "@weight": "385"
             }
           ]
@@ -123959,7 +124018,7 @@
               "@weight": "530"
             },
             {
-              "@name": "LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_S29",
+              "@name": "LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_COMPLETE",
               "@weight": "470"
             }
           ]
@@ -123985,7 +124044,7 @@
               "@weight": "466"
             },
             {
-              "@name": "LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_S29",
+              "@name": "LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_COMPLETE",
               "@weight": "534"
             }
           ]
@@ -124011,7 +124070,7 @@
               "@weight": "402"
             },
             {
-              "@name": "LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_S29",
+              "@name": "LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_COMPLETE",
               "@weight": "598"
             }
           ]
@@ -124037,7 +124096,7 @@
               "@weight": "337"
             },
             {
-              "@name": "LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_S29",
+              "@name": "LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_COMPLETE",
               "@weight": "663"
             }
           ]
@@ -124195,7 +124254,7 @@
               "@weight": "318"
             },
             {
-              "@name": "LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_S29",
+              "@name": "LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_COMPLETE",
               "@weight": "682"
             }
           ]
@@ -124221,7 +124280,7 @@
               "@weight": "289"
             },
             {
-              "@name": "LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_S29",
+              "@name": "LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_COMPLETE",
               "@weight": "711"
             }
           ]
@@ -124247,7 +124306,7 @@
               "@weight": "261"
             },
             {
-              "@name": "LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_S29",
+              "@name": "LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_COMPLETE",
               "@weight": "739"
             }
           ]
@@ -124273,7 +124332,7 @@
               "@weight": "236"
             },
             {
-              "@name": "LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_S29",
+              "@name": "LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_COMPLETE",
               "@weight": "764"
             }
           ]
@@ -124299,7 +124358,7 @@
               "@weight": "211"
             },
             {
-              "@name": "LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_S29",
+              "@name": "LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_COMPLETE",
               "@weight": "789"
             }
           ]
@@ -124325,7 +124384,7 @@
               "@weight": "185"
             },
             {
-              "@name": "LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_S29",
+              "@name": "LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_COMPLETE",
               "@weight": "815"
             }
           ]
@@ -124351,7 +124410,7 @@
               "@weight": "144"
             },
             {
-              "@name": "LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_S29",
+              "@name": "LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_COMPLETE",
               "@weight": "856"
             }
           ]
@@ -124377,7 +124436,7 @@
               "@weight": "123"
             },
             {
-              "@name": "LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_S29",
+              "@name": "LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_COMPLETE",
               "@weight": "877"
             }
           ]
@@ -124403,7 +124462,7 @@
               "@weight": "102"
             },
             {
-              "@name": "LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_S29",
+              "@name": "LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_COMPLETE",
               "@weight": "898"
             }
           ]
@@ -124429,7 +124488,7 @@
               "@weight": "80"
             },
             {
-              "@name": "LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_S29",
+              "@name": "LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_COMPLETE",
               "@weight": "920"
             }
           ]
@@ -124587,7 +124646,7 @@
               "@weight": "87"
             },
             {
-              "@name": "LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_S29",
+              "@name": "LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_COMPLETE",
               "@weight": "913"
             }
           ]
@@ -124608,7 +124667,7 @@
                 "@weight": "77"
               },
               {
-                "@name": "LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_S29",
+                "@name": "LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_COMPLETE",
                 "@weight": "923"
               }
             ]
@@ -124640,7 +124699,7 @@
                 "@weight": "68"
               },
               {
-                "@name": "LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_S29",
+                "@name": "LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_COMPLETE",
                 "@weight": "932"
               }
             ]
@@ -124672,7 +124731,7 @@
                 "@weight": "59"
               },
               {
-                "@name": "LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_S29",
+                "@name": "LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_COMPLETE",
                 "@weight": "941"
               }
             ]
@@ -124704,7 +124763,7 @@
                 "@weight": "51"
               },
               {
-                "@name": "LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_S29",
+                "@name": "LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_COMPLETE",
                 "@weight": "949"
               }
             ]
@@ -124736,7 +124795,7 @@
                 "@weight": "42"
               },
               {
-                "@name": "LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_S29",
+                "@name": "LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_COMPLETE",
                 "@weight": "958"
               }
             ]
@@ -124768,7 +124827,7 @@
                 "@weight": "16"
               },
               {
-                "@name": "LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_S29",
+                "@name": "LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_COMPLETE",
                 "@weight": "984"
               }
             ]
@@ -124800,7 +124859,7 @@
                 "@weight": "9"
               },
               {
-                "@name": "LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_S29",
+                "@name": "LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_COMPLETE",
                 "@weight": "991"
               }
             ]
@@ -124832,7 +124891,7 @@
                 "@weight": "2"
               },
               {
-                "@name": "LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_S29",
+                "@name": "LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_COMPLETE",
                 "@weight": "998"
               }
             ]
@@ -124864,7 +124923,7 @@
                 "@weight": "1"
               },
               {
-                "@name": "LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_S29",
+                "@name": "LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_COMPLETE",
                 "@weight": "999"
               }
             ]
