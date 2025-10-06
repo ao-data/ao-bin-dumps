@@ -7707,6 +7707,14 @@
       <Item weight="115" type="UNIQUE_UNLOCK_VANITY_2H_GUN_ANNIVERSARY" amount="1" />
     </OR>
   </Lootlist>
+  <Lootlist name="EVENT_ACTIVITY_HUB_HALLOWEEN_LOOT">
+    <Item type="UNIQUE_UNLOCK_SKIN_HORSE_UNDEAD_HALLOWEEN"/>
+    <Item type="UNIQUE_UNLOCK_SKIN_DONKEY_HALLOWEEN"/>
+    <Item type="UNIQUE_CONSUMABLE_EVENT_HALLOWEEN_CANDY_2025"/>
+  </Lootlist>
+  <Lootlist name="EVENT_HALLOWEEN_DECAYING_LOOT">
+    <Item type="UNIQUE_CONSUMABLE_EVENT_HALLOWEEN_CANDY_2025" chance="1" amount="1-2" />
+  </Lootlist>
   <Lootlist name="EVENT_HALLOWEEN_2017_LOOT">
     <Item type="QUESTITEM_TOKEN_EVENT_HALLOWEEN_2017" chance="1" amount="1" />
   </Lootlist>
@@ -7715,7 +7723,7 @@
   </Lootlist>
   <Lootlist name="EVENT_EASTER_2018_LOOT">
     <Item type="QUESTITEM_TOKEN_EVENT_EASTER_2018" chance="1" amount="5-14" />
-  </Lootlist>
+  </Lootlist> 
   <Lootlist name="EVENT_EASTER_2020_LOOT">
     <Item type="UNIQUE_CONSUMABLE_EVENT_EASTER_2020_EGG" amount="1-4" />
     <Item type="UNIQUE_CONSUMABLE_EVENT_EASTER_2020_CHOCOLATE" chance="0.25" />
@@ -28768,14 +28776,27 @@
   <!-- AOCP specific chests -->
   <Lootlist name="AOCP_SPECIFIC_ITEMS">
     <OR>
-      <Item type="UNIQUE_UNLOCK_DIREBOAR_FIBER_GATHERER" weight="1"></Item>
-      <OR weight="49">
+      <OR weight="2">
+        <LootListReference name="AOCP_FEATURED_ITEMS" weight="3"/>
+        <LootListReference name="AOCP_OTHER_ITEMS" weight="2"/>
+      </OR>
+      <OR weight="23">
         <Item type="UNIQUE_TOKEN_AOCP" amount="1"  weight="28"/>
         <Item type="UNIQUE_TOKEN_AOCP" amount="2"  weight="9"/>
         <Item type="UNIQUE_TOKEN_AOCP" amount="5"  weight="2"/>
         <Item type="UNIQUE_TOKEN_AOCP" amount="10" weight="1"/>
       </OR>
     </OR>
+  </Lootlist>
+  <Lootlist name="AOCP_FEATURED_ITEMS">
+    <OR>
+      <Item type="UNIQUE_UNLOCK_OFF_VANITY_PUMPKIN_HAPPY_NON_TRADABLE" amount="1"/>
+      <Item type="UNIQUE_UNLOCK_OFF_VANITY_PUMPKIN_SAD_NON_TRADABLE" amount="1"/>
+      <Item type="UNIQUE_UNLOCK_OFF_VANITY_PUMPKIN_ANGRY_NON_TRADABLE" amount="1"/>
+    </OR>
+  </Lootlist>
+  <Lootlist name="AOCP_OTHER_ITEMS">
+    <Item type="UNIQUE_UNLOCK_DIREBOAR_FIBER_GATHERER" weight="1"/>
   </Lootlist>
   
   
@@ -30227,7 +30248,7 @@
       <LootListReference name="CRYSTAL_WEAPON_ARTEFACTS_S28" weight="9" />
     </OR>
   </Lootlist>
-  <Lootlist name="LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_S29">
+  <Lootlist name="LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_COMPLETE">
     <OR>
       <LootListReference name="CRYSTAL_WEAPON_ARTEFACTS_S22" weight="2" />
       <LootListReference name="CRYSTAL_WEAPON_ARTEFACTS_S23" weight="2" />
@@ -30308,26 +30329,26 @@
     <LootListReference name="LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_S28" chance="2.091" />
   </Lootlist>
 
-  <!-- Base List for Season 29-->
+  <!-- Base List for Season 29+-->
   <Lootlist name="CONQUEROR_SEASON_LOOT_BRONZE_S29">
     <LootListReference name="CONQUEROR_SHORT_SEASON_LOOT_BRONZE_BASE" chance="1" evaluateChance="false"/>
     <LootListReference name="LOOT_CONQUERORSCHALLENGE_CRYSTAL_SHARDS" chance="12.5198" evaluateChance="false"/>
-    <LootListReference name="LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_S29" chance="0.41" />
+    <LootListReference name="LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_COMPLETE" chance="0.41" />
   </Lootlist>
   <Lootlist name="CONQUEROR_SEASON_LOOT_SILVER_S29">
     <LootListReference name="CONQUEROR_SHORT_SEASON_LOOT_SILVER_BASE" chance="1" evaluateChance="false"/>
     <LootListReference name="LOOT_CONQUERORSCHALLENGE_CRYSTAL_SHARDS" chance="21.9098" evaluateChance="false"/>
-    <LootListReference name="LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_S29" chance="0.7174" />
+    <LootListReference name="LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_COMPLETE" chance="0.7174" />
   </Lootlist>
   <Lootlist name="CONQUEROR_SEASON_LOOT_GOLD_S29">
     <LootListReference name="CONQUEROR_SHORT_SEASON_LOOT_GOLD_BASE" chance="1" evaluateChance="false"/>
     <LootListReference name="LOOT_CONQUERORSCHALLENGE_CRYSTAL_SHARDS" chance="37.5596" evaluateChance="false"/>
-    <LootListReference name="LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_S29" chance="1.23" />
+    <LootListReference name="LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_COMPLETE" chance="1.23" />
   </Lootlist>
   <Lootlist name="CONQUEROR_SEASON_LOOT_CRYSTAL_S29">
     <LootListReference name="CONQUEROR_SHORT_SEASON_LOOT_CRYSTAL_BASE" chance="1" evaluateChance="false"/>
     <LootListReference name="LOOT_CONQUERORSCHALLENGE_CRYSTAL_SHARDS" chance="63.8508" evaluateChance="false"/>
-    <LootListReference name="LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_S29" chance="2.091" />
+    <LootListReference name="LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_COMPLETE" chance="2.091" />
   </Lootlist>
   
   <!--GVG SEASON 26-->
@@ -31568,7 +31589,7 @@
     <LootListReference name="CONQUEROR_SEASON_LOOT_CRYSTAL_S29" chance="13.3235" evaluateChance="false"/>
     <OR>
       <LootListReference name="LOOT_CONQUERORSCHALLENGE_BATTLEMOUNTS_CRYSTAL" weight="924"/>
-      <LootListReference name="LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_S29" weight="76"/>
+      <LootListReference name="LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_COMPLETE" weight="76"/>
     </OR>
     <LootListReference name="RANDOM_RARE_MOUNT" chance="8.9856"/>
   </Lootlist>
@@ -31576,7 +31597,7 @@
     <LootListReference name="CONQUEROR_SEASON_LOOT_CRYSTAL_S29" chance="12.1765" evaluateChance="false"/>
     <OR>
       <LootListReference name="LOOT_CONQUERORSCHALLENGE_BATTLEMOUNTS_CRYSTAL" weight="842"/>
-      <LootListReference name="LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_S29" weight="158"/>
+      <LootListReference name="LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_COMPLETE" weight="158"/>
     </OR>
     <LootListReference name="RANDOM_RARE_MOUNT" chance="8.2121"/>
   </Lootlist>
@@ -31584,7 +31605,7 @@
     <LootListReference name="CONQUEROR_SEASON_LOOT_CRYSTAL_S29" chance="11.1176" evaluateChance="false"/>
     <OR>
       <LootListReference name="LOOT_CONQUERORSCHALLENGE_BATTLEMOUNTS_CRYSTAL" weight="766"/>
-      <LootListReference name="LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_S29" weight="234"/>
+      <LootListReference name="LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_COMPLETE" weight="234"/>
     </OR>
     <LootListReference name="RANDOM_RARE_MOUNT" chance="7.4979"/>
   </Lootlist>
@@ -31592,7 +31613,7 @@
     <LootListReference name="CONQUEROR_SEASON_LOOT_CRYSTAL_S29" chance="10.0588" evaluateChance="false"/>
     <OR>
       <LootListReference name="LOOT_CONQUERORSCHALLENGE_BATTLEMOUNTS_CRYSTAL" weight="690"/>
-      <LootListReference name="LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_S29" weight="310"/>
+      <LootListReference name="LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_COMPLETE" weight="310"/>
     </OR>
     <LootListReference name="RANDOM_RARE_MOUNT" chance="6.7838"/>
   </Lootlist>
@@ -31600,7 +31621,7 @@
     <LootListReference name="CONQUEROR_SEASON_LOOT_CRYSTAL_S29" chance="9" evaluateChance="false"/>
     <OR>
       <LootListReference name="LOOT_CONQUERORSCHALLENGE_BATTLEMOUNTS_CRYSTAL" weight="615"/>
-      <LootListReference name="LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_S29" weight="385"/>
+      <LootListReference name="LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_COMPLETE" weight="385"/>
     </OR>
     <LootListReference name="RANDOM_RARE_MOUNT" chance="6.0698"/>
   </Lootlist>
@@ -31608,7 +31629,7 @@
     <LootListReference name="CONQUEROR_SEASON_LOOT_GOLD_S29" chance="13.5" evaluateChance="false"/>
     <OR>
       <LootListReference name="LOOT_CONQUERORSCHALLENGE_BATTLEMOUNTS_GOLD" weight="530"/>
-      <LootListReference name="LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_S29" weight="470"/>
+      <LootListReference name="LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_COMPLETE" weight="470"/>
     </OR>
     <LootListReference name="RANDOM_RARE_MOUNT" chance="4.5523"/>
   </Lootlist>
@@ -31616,7 +31637,7 @@
     <LootListReference name="CONQUEROR_SEASON_LOOT_GOLD_S29" chance="12" evaluateChance="false"/>
     <OR>
       <LootListReference name="LOOT_CONQUERORSCHALLENGE_BATTLEMOUNTS_GOLD" weight="466"/>
-      <LootListReference name="LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_S29" weight="534"/>
+      <LootListReference name="LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_COMPLETE" weight="534"/>
     </OR>
     <LootListReference name="RANDOM_RARE_MOUNT" chance="4.0465"/>
   </Lootlist>
@@ -31624,7 +31645,7 @@
     <LootListReference name="CONQUEROR_SEASON_LOOT_GOLD_S29" chance="10.5" evaluateChance="false"/>
     <OR>
       <LootListReference name="LOOT_CONQUERORSCHALLENGE_BATTLEMOUNTS_GOLD" weight="402"/>
-      <LootListReference name="LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_S29" weight="598"/>
+      <LootListReference name="LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_COMPLETE" weight="598"/>
     </OR>
     <LootListReference name="RANDOM_RARE_MOUNT" chance="3.5407"/>
   </Lootlist>
@@ -31632,7 +31653,7 @@
     <LootListReference name="CONQUEROR_SEASON_LOOT_GOLD_S29" chance="9" evaluateChance="false"/>
     <OR>
       <LootListReference name="LOOT_CONQUERORSCHALLENGE_BATTLEMOUNTS_GOLD" weight="337"/>
-      <LootListReference name="LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_S29" weight="663"/>
+      <LootListReference name="LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_COMPLETE" weight="663"/>
     </OR>
     <LootListReference name="RANDOM_RARE_MOUNT" chance="3.0349"/>
   </Lootlist>
@@ -31686,7 +31707,7 @@
     <LootListReference name="CONQUEROR_SEASON_LOOT_CRYSTAL_S29" chance="4.8529" evaluateChance="false"/>
     <OR>
       <LootListReference name="LOOT_CONQUERORSCHALLENGE_BATTLEMOUNTS_CRYSTAL" weight="318"/>
-      <LootListReference name="LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_S29" weight="682"/>
+      <LootListReference name="LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_COMPLETE" weight="682"/>
     </OR>
     <LootListReference name="RANDOM_RARE_MOUNT" chance="3.2729"/>
   </Lootlist>
@@ -31694,7 +31715,7 @@
     <LootListReference name="CONQUEROR_SEASON_LOOT_CRYSTAL_S29" chance="4.4412" evaluateChance="false"/>
     <OR>
       <LootListReference name="LOOT_CONQUERORSCHALLENGE_BATTLEMOUNTS_CRYSTAL" weight="289"/>
-      <LootListReference name="LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_S29" weight="711"/>
+      <LootListReference name="LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_COMPLETE" weight="711"/>
     </OR>
     <LootListReference name="RANDOM_RARE_MOUNT" chance="2.9952"/>
   </Lootlist>
@@ -31702,7 +31723,7 @@
     <LootListReference name="CONQUEROR_SEASON_LOOT_CRYSTAL_S29" chance="4.0588" evaluateChance="false"/>
     <OR>
       <LootListReference name="LOOT_CONQUERORSCHALLENGE_BATTLEMOUNTS_CRYSTAL" weight="261"/>
-      <LootListReference name="LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_S29" weight="739"/>
+      <LootListReference name="LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_COMPLETE" weight="739"/>
     </OR>
     <LootListReference name="RANDOM_RARE_MOUNT" chance="2.7373"/>
   </Lootlist>
@@ -31710,7 +31731,7 @@
     <LootListReference name="CONQUEROR_SEASON_LOOT_CRYSTAL_S29" chance="3.7059" evaluateChance="false"/>
     <OR>
       <LootListReference name="LOOT_CONQUERORSCHALLENGE_BATTLEMOUNTS_CRYSTAL" weight="236"/>
-      <LootListReference name="LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_S29" weight="764"/>
+      <LootListReference name="LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_COMPLETE" weight="764"/>
     </OR>
     <LootListReference name="RANDOM_RARE_MOUNT" chance="2.4993"/>
   </Lootlist>
@@ -31718,7 +31739,7 @@
     <LootListReference name="CONQUEROR_SEASON_LOOT_CRYSTAL_S29" chance="3.3529" evaluateChance="false"/>
     <OR>
       <LootListReference name="LOOT_CONQUERORSCHALLENGE_BATTLEMOUNTS_CRYSTAL" weight="211"/>
-      <LootListReference name="LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_S29" weight="789"/>
+      <LootListReference name="LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_COMPLETE" weight="789"/>
     </OR>
     <LootListReference name="RANDOM_RARE_MOUNT" chance="2.2613"/>
   </Lootlist>
@@ -31726,7 +31747,7 @@
     <LootListReference name="CONQUEROR_SEASON_LOOT_CRYSTAL_S29" chance="3" evaluateChance="false"/>
     <OR>
       <LootListReference name="LOOT_CONQUERORSCHALLENGE_BATTLEMOUNTS_CRYSTAL" weight="185"/>
-      <LootListReference name="LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_S29" weight="815"/>
+      <LootListReference name="LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_COMPLETE" weight="815"/>
     </OR>
     <LootListReference name="RANDOM_RARE_MOUNT" chance="2.0233"/>
   </Lootlist>
@@ -31734,7 +31755,7 @@
     <LootListReference name="CONQUEROR_SEASON_LOOT_GOLD_S29" chance="4.5" evaluateChance="false"/>
     <OR>
       <LootListReference name="LOOT_CONQUERORSCHALLENGE_BATTLEMOUNTS_GOLD" weight="144"/>
-      <LootListReference name="LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_S29" weight="856"/>
+      <LootListReference name="LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_COMPLETE" weight="856"/>
     </OR>
     <LootListReference name="RANDOM_RARE_MOUNT" chance="1.5174"/>
   </Lootlist>
@@ -31742,7 +31763,7 @@
     <LootListReference name="CONQUEROR_SEASON_LOOT_GOLD_S29" chance="4" evaluateChance="false"/>
     <OR>
       <LootListReference name="LOOT_CONQUERORSCHALLENGE_BATTLEMOUNTS_GOLD" weight="123"/>
-      <LootListReference name="LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_S29" weight="877"/>
+      <LootListReference name="LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_COMPLETE" weight="877"/>
     </OR>
     <LootListReference name="RANDOM_RARE_MOUNT" chance="1.3488"/>
   </Lootlist>
@@ -31750,7 +31771,7 @@
     <LootListReference name="CONQUEROR_SEASON_LOOT_GOLD_S29" chance="3.5" evaluateChance="false"/>
     <OR>
       <LootListReference name="LOOT_CONQUERORSCHALLENGE_BATTLEMOUNTS_GOLD" weight="102"/>
-      <LootListReference name="LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_S29" weight="898"/>
+      <LootListReference name="LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_COMPLETE" weight="898"/>
     </OR>
     <LootListReference name="RANDOM_RARE_MOUNT" chance="1.1802"/>
   </Lootlist>
@@ -31758,7 +31779,7 @@
     <LootListReference name="CONQUEROR_SEASON_LOOT_GOLD_S29" chance="3" evaluateChance="false"/>
     <OR>
       <LootListReference name="LOOT_CONQUERORSCHALLENGE_BATTLEMOUNTS_GOLD" weight="80"/>
-      <LootListReference name="LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_S29" weight="920"/>
+      <LootListReference name="LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_COMPLETE" weight="920"/>
     </OR>
     <LootListReference name="RANDOM_RARE_MOUNT" chance="1.0116"/>
   </Lootlist>
@@ -31812,7 +31833,7 @@
     <LootListReference name="CONQUEROR_SEASON_LOOT_CRYSTAL_S29" chance="1.6176" evaluateChance="false"/>
     <OR>
       <LootListReference name="LOOT_CONQUERORSCHALLENGE_BATTLEMOUNTS_CRYSTAL" weight="87"/>
-      <LootListReference name="LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_S29" weight="913"/>
+      <LootListReference name="LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_COMPLETE" weight="913"/>
     </OR>
     <LootListReference name="RANDOM_RARE_MOUNT" chance="1.0909"/>
   </Lootlist>
@@ -31820,7 +31841,7 @@
     <LootListReference name="CONQUEROR_SEASON_LOOT_CRYSTAL_S29" chance="1.4804" evaluateChance="false"/>
     <OR>
       <LootListReference name="LOOT_CONQUERORSCHALLENGE_BATTLEMOUNTS_CRYSTAL" weight="77"/>
-      <LootListReference name="LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_S29" weight="923"/>
+      <LootListReference name="LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_COMPLETE" weight="923"/>
     </OR>
     <OR>
       <LootListReference name="RANDOM_RARE_MOUNT" weight="998"/>
@@ -31831,7 +31852,7 @@
     <LootListReference name="CONQUEROR_SEASON_LOOT_CRYSTAL_S29" chance="1.3529" evaluateChance="false"/>
     <OR>
       <LootListReference name="LOOT_CONQUERORSCHALLENGE_BATTLEMOUNTS_CRYSTAL" weight="68"/>
-      <LootListReference name="LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_S29" weight="932"/>
+      <LootListReference name="LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_COMPLETE" weight="932"/>
     </OR>
     <OR>
       <LootListReference name="RANDOM_RARE_MOUNT" weight="903"/>
@@ -31842,7 +31863,7 @@
     <LootListReference name="CONQUEROR_SEASON_LOOT_CRYSTAL_S29" chance="1.2353" evaluateChance="false"/>
     <OR>
       <LootListReference name="LOOT_CONQUERORSCHALLENGE_BATTLEMOUNTS_CRYSTAL" weight="59"/>
-      <LootListReference name="LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_S29" weight="941"/>
+      <LootListReference name="LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_COMPLETE" weight="941"/>
     </OR>
     <OR>
       <LootListReference name="RANDOM_RARE_MOUNT" weight="815"/>
@@ -31853,7 +31874,7 @@
     <LootListReference name="CONQUEROR_SEASON_LOOT_CRYSTAL_S29" chance="1.1176" evaluateChance="false"/>
     <OR>
       <LootListReference name="LOOT_CONQUERORSCHALLENGE_BATTLEMOUNTS_CRYSTAL" weight="51"/>
-      <LootListReference name="LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_S29" weight="949"/>
+      <LootListReference name="LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_COMPLETE" weight="949"/>
     </OR>
     <OR>
       <LootListReference name="RANDOM_RARE_MOUNT" weight="727"/>
@@ -31864,7 +31885,7 @@
     <LootListReference name="CONQUEROR_SEASON_LOOT_CRYSTAL_S29" chance="1" evaluateChance="false"/>
     <OR>
       <LootListReference name="LOOT_CONQUERORSCHALLENGE_BATTLEMOUNTS_CRYSTAL" weight="42"/>
-      <LootListReference name="LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_S29" weight="958"/>
+      <LootListReference name="LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_COMPLETE" weight="958"/>
     </OR>
     <OR>
       <LootListReference name="RANDOM_RARE_MOUNT" weight="639"/>
@@ -31875,7 +31896,7 @@
     <LootListReference name="CONQUEROR_SEASON_LOOT_GOLD_S29" chance="1.5" evaluateChance="false"/>
     <OR>
       <LootListReference name="LOOT_CONQUERORSCHALLENGE_BATTLEMOUNTS_GOLD" weight="16"/>
-      <LootListReference name="LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_S29" weight="984"/>
+      <LootListReference name="LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_COMPLETE" weight="984"/>
     </OR>
     <OR>
       <LootListReference name="RANDOM_RARE_MOUNT" weight="452"/>
@@ -31886,7 +31907,7 @@
     <LootListReference name="CONQUEROR_SEASON_LOOT_GOLD_S29" chance="1.3333" evaluateChance="false"/>
     <OR>
       <LootListReference name="LOOT_CONQUERORSCHALLENGE_BATTLEMOUNTS_GOLD" weight="9"/>
-      <LootListReference name="LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_S29" weight="991"/>
+      <LootListReference name="LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_COMPLETE" weight="991"/>
     </OR>
     <OR>
       <LootListReference name="RANDOM_RARE_MOUNT" weight="389"/>
@@ -31897,7 +31918,7 @@
     <LootListReference name="CONQUEROR_SEASON_LOOT_GOLD_S29" chance="1.1667" evaluateChance="false"/>
     <OR>
       <LootListReference name="LOOT_CONQUERORSCHALLENGE_BATTLEMOUNTS_GOLD" weight="2"/>
-      <LootListReference name="LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_S29" weight="998"/>
+      <LootListReference name="LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_COMPLETE" weight="998"/>
     </OR>
     <OR>
       <LootListReference name="RANDOM_RARE_MOUNT" weight="327"/>
@@ -31908,7 +31929,7 @@
     <LootListReference name="CONQUEROR_SEASON_LOOT_GOLD_S29" chance="1" evaluateChance="false"/>
     <OR>
       <LootListReference name="LOOT_CONQUERORSCHALLENGE_BATTLEMOUNTS_GOLD" weight="1"/>
-      <LootListReference name="LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_S29" weight="999"/>
+      <LootListReference name="LOOT_CONQUERORSCHALLENGE_SEASON_ARTEFACTS_COMPLETE" weight="999"/>
     </OR>
     <OR>
       <LootListReference name="RANDOM_RARE_MOUNT" weight="265"/>
@@ -31960,6 +31981,6 @@
   </Lootlist>
   <Lootlist name="CONQUEROR_SEASON_SMALL_IRON_REST_LOOT_S29">
     <LootListReference name="CONQUEROR_SEASON_LOOT_BRONZE_S29" chance="1" evaluateChance="false"/>
-  </Lootlist>
+  </Lootlist>  
 
 </LootDefinition>
