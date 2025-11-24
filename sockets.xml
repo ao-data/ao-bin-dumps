@@ -34,6 +34,7 @@
     <Socket socketname="leftleg" bonename="LeftLeg_2" />
     <Socket socketname="rightleg" bonename="RightLeg_2" />
     <Socket socketname="power_crystal" bonename="Spine_1" rotationOffset="90 0 90" />
+    <Socket socketname="carriable_spine2" bonename="Spine_2" rotationOffset="90 0 90" />
     <Socket socketname="raw_energy" bonename="Spine_1" positionOffset="0 0.15 0" rotationOffset="90 0 90" />
     <Socket socketname="vanity_spine1" bonename="Spine_1" />
     <Socket socketname="vanity_leftshoulder" bonename="LeftShoulderArmor" />
@@ -124,6 +125,7 @@
     <Socket socketname="leftleg" bonename="LeftLeg_2" />
     <Socket socketname="rightleg" bonename="RightLeg_2" />
     <Socket socketname="power_crystal" bonename="Spine_1" rotationOffset="90 0 90" />
+    <Socket socketname="carriable_spine2" bonename="Spine_2" rotationOffset="90 0 90" />
     <Socket socketname="raw_energy" bonename="Spine_1" positionOffset="0 0.15 0" rotationOffset="90 0 90" />
     <Socket socketname="vanity_spine1" bonename="Spine_1" positionOffset="-0.0154 0.016 0.0197" scaling="0.92" />
     <Socket socketname="vanity_leftshoulder" bonename="LeftShoulderArmor" positionOffset="0.02 -0.04 -0.02" />
@@ -182,6 +184,14 @@
   <!--*************************************************************************************************************************************************************-->
   <!-- VANITY ITEMS -->
   <!--*************************************************************************************************************************************************************-->
+  <SocketInfo name="UNIQUE_ARMOR_VANITY_FW_COMMANDER">
+    <SocketConstraintMaster name="HUMAN_FEMALE">
+      <Socket socketname="commander_chest" bonename="Spine_3" scaling="0.91" />
+    </SocketConstraintMaster>
+    <SocketConstraintMaster name="HUMAN_MALE">
+      <Socket socketname="commander_chest" bonename="Spine_3" />
+    </SocketConstraintMaster>
+  </SocketInfo>
   <SocketInfo name="UNIQUE_HEAD_VANITY_KNIGHT_GREEN">
     <SocketConstraintMaster name="HUMAN_FEMALE">
       <Socket socketname="green_knight_head" bonename="Neck_Head" scaling="0.87" />
@@ -1130,6 +1140,22 @@
     <Socket socketname="tailend" bonename="TailTip" positionOffset="-1 -0.25 0" />
     <Socket socketname="shoulder" bonename="Chest" positionOffset="0 0.85 0" />
     <Socket socketname="fx_gaze" bonename="Head" />
+  </SocketInfo>
+  <SocketInfo name="MOB_AVALON_KNIGHT_LIONEL">
+    <Socket socketname="floor" bonename="skeleton" positionOffset="0 0.1 0" />
+    <Socket socketname="root" bonename="skeleton" />
+    <Socket socketname="damage" bonename="Spine2" positionOffset="-2 2.2 0" />
+    <Socket socketname="halo" bonename="Head" positionOffset="-2.01 -0.78 0" />
+    <Socket socketname="breath" bonename="Head" positionOffset="-2 2 0" rotationOffset="-40 270 0" />
+    <Socket socketname="beak1" bonename="Jaw" positionOffset="0 -0.1 1" rotationOffset="90 0 0" />
+    <Socket socketname="beak2" bonename="Jaw" positionOffset="0 -0.1 1" rotationOffset="90 90 0" />
+    <Socket socketname="beak_dash_1" bonename="Jaw" positionOffset="0 -0.1 1" rotationOffset="60 0 0" />
+    <Socket socketname="beak_dash_2" bonename="Jaw" positionOffset="0 -0.1 1" rotationOffset="60 90 0" />
+    <Socket socketname="floor_right_leg" bonename="skeleton" positionOffset="-5 0.1 8" />
+    <Socket socketname="floor_left_leg" bonename="skeleton" positionOffset="5 0.1 8" />
+    <Socket socketname="left_claw" bonename="L_hand" positionOffset="0.9 0.15 0" rotationOffset="0 90 0" />
+    <Socket socketname="right_claw" bonename="R_hand" positionOffset="-0.9 0.15 0" rotationOffset="0 270 0" />
+    <Socket socketname="maintrail" bonename="skeleton" positionOffset="0 2 4" />
   </SocketInfo>
   <!-- MISTS -->
   <SocketInfo name="MOB_MISTS_FAIRYDRAGON">
@@ -2336,6 +2362,7 @@
     <Socket socketname="floor" bonename="Skeleton_Root" positionOffset="0 0.1 0" />
     <Socket socketname="floor_noscale" bonename="Skeleton_Root" positionOffset="0 0.1 0" />
     <Socket socketname="head" bonename="Neck_Head" />
+    <Socket socketname="damage" bonename="Spine_2" positionOffset="0 -0.5 0" rotationOffset="90 0 0" />
   </SocketInfo>
   <SocketInfo name="MOB_DEMON_WALLTHROWER_TRAP">
     <Socket socketname="root" bonename="Skeleton_Root" />
@@ -2489,6 +2516,8 @@
   <SocketInfo name="MOB_DEMON_HER_MAGE_FLAME_SUMMON">
     <Socket socketname="root" bonename="Skeleton_Root" />
     <Socket socketname="damage" bonename="Skeleton_Root" positionOffset="0 1.7 0" />
+    <Socket socketname="halo" bonename="Skeleton_Root" positionOffset="0 3 0" />
+    <Socket socketname="floor" bonename="Skeleton_Root" positionOffset="0 0.1 0" />
   </SocketInfo>
   <!--OTHER MOBS-->
   <SocketInfo name="MOB_TERRITORY_COLLECTOR">
@@ -2769,6 +2798,7 @@
   <SocketInfo name="ITEM_1HCROSSBOW">
     <Socket socketname="mainweaponroot" bonename="RightHandHardPoint" positionOffset="0.19 0.09 0.03" rotationOffset="0 90 180" />
     <Socket socketname="mainhandprojectile" bonename="RightHandHardPoint" positionOffset="0.65 0.4 0.04" rotationOffset="-29.6 81.1 -14.9" />
+    <Socket socketname="frontbarrel" bonename="RightFingers" positionOffset="0.56 0 -0.5" rotationOffset="168 -50 0" />
   </SocketInfo>
   <SocketInfo name="TOOL_AXE">
     <Socket socketname="harvestimpact" bonename="RightHandHardPoint" positionOffset="1.23 0.41 0.03" rotationOffset="-90 0 0" />
@@ -2820,13 +2850,15 @@
   </SocketInfo>
   -->
   <SocketInfo name="ITEM_MAIN_CROSSBOW">
-    <Socket socketname="mainhandprojectile" bonename="LeftHandHardPoint" positionOffset="-0.15 0 0" rotationOffset=" 0 270 0" />
+    <Socket socketname="mainhandprojectile" bonename="LeftHandHardPoint" positionOffset="-0.15 0 0" rotationOffset="0 270 0" />
     <Socket socketname="mainhandfingers" bonename="RightFingers" positionOffset="0.01 0.073 0.02" rotationOffset="20.17651 163.5569 244.6132" />
+    <Socket socketname="frontbarrel" bonename="RightFingers" positionOffset="0.55 0 -0.45" rotationOffset="15 125 0" />
   </SocketInfo>
   <SocketInfo name="ITEM_CROSSBOW_LARGE">
     <Socket socketname="mainweaponroot" bonename="RightHandHardPoint" positionOffset="-0.05 0 0.04" rotationOffset="0 90 180" />
     <Socket socketname="mainhand" bonename="RightArm_3" positionOffset="0.07 0.071 -0.031" rotationOffset="11.65891 154.5775 246.3288" />
-    <Socket socketname="mainhandprojectile" bonename="LeftHandHardPoint" positionOffset="-0.45 0 0" rotationOffset=" 0 270 0" />
+    <Socket socketname="mainhandprojectile" bonename="LeftHandHardPoint" positionOffset="-0.45 0 0" rotationOffset="0 270 0" />
+    <Socket socketname="frontbarrel" bonename="RightFingers" positionOffset="0.5 0.25 -1.3" rotationOffset="190 -25 0" />
   </SocketInfo>
   <SocketInfo name="ITEM_MAIN_MAGICSTAFF2H">
     <Socket socketname="mainhandprojectile" bonename="RightHandHardPoint" positionOffset="1.45 0 0" rotationOffset="0 90 0" />
@@ -3100,11 +3132,11 @@
   <SocketInfo name="OFF_TORCH">
     <Socket socketname="offweaponroot" bonename="LeftHandHardPoint" positionOffset="0 0 0" rotationOffset="0 270 0" />
     <Socket socketname="offtorch" bonename="LeftHandHardPoint" positionOffset="-0.99 0 0" rotationOffset="0 0 90" />
-    <Socket socketname="offtorch_crystal_T4" bonename="LeftHandHardPoint" positionOffset="-0.51 0 0" rotationOffset="0 270 0" scaling="0.17"/>
-    <Socket socketname="offtorch_crystal_T5" bonename="LeftHandHardPoint" positionOffset="-0.65 0 0" rotationOffset="0 270 0" scaling="0.20"/>
-    <Socket socketname="offtorch_crystal_T6" bonename="LeftHandHardPoint" positionOffset="-0.78 0 0" rotationOffset="0 270 0" scaling="0.23"/>
-    <Socket socketname="offtorch_crystal_T7" bonename="LeftHandHardPoint" positionOffset="-0.87 0 0" rotationOffset="0 270 0" scaling="0.26"/>
-    <Socket socketname="offtorch_crystal_T8" bonename="LeftHandHardPoint" positionOffset="-0.96 0 0" rotationOffset="0 270 0" scaling="0.28"/>
+    <Socket socketname="offtorch_crystal_T4" bonename="LeftHandHardPoint" positionOffset="-0.51 0 0" rotationOffset="0 270 0" scaling="0.17" />
+    <Socket socketname="offtorch_crystal_T5" bonename="LeftHandHardPoint" positionOffset="-0.65 0 0" rotationOffset="0 270 0" scaling="0.20" />
+    <Socket socketname="offtorch_crystal_T6" bonename="LeftHandHardPoint" positionOffset="-0.78 0 0" rotationOffset="0 270 0" scaling="0.23" />
+    <Socket socketname="offtorch_crystal_T7" bonename="LeftHandHardPoint" positionOffset="-0.87 0 0" rotationOffset="0 270 0" scaling="0.26" />
+    <Socket socketname="offtorch_crystal_T8" bonename="LeftHandHardPoint" positionOffset="-0.96 0 0" rotationOffset="0 270 0" scaling="0.28" />
   </SocketInfo>
   <SocketInfo name="MAIN_FIRESTAFF_KEEPER">
     <Socket socketname="mainhandprojectile" bonename="RightHandHardPoint" positionOffset="1.24 0 0" rotationOffset="0 90 180" />
@@ -3122,6 +3154,8 @@
     <Socket socketname="offhandglowfx" bonename="LeftFingers" rotationOffset="-18.89444 -15 -65.59515" />
     <Socket socketname="mainhandprojectile" bonename="RightHandHardPoint" positionOffset="0 -0.05 -0.05" rotationOffset="-31.72 75 0" />
     <Socket socketname="offhandprojectile" bonename="LeftHandHardPoint" positionOffset="0 0.08 0.06" rotationOffset="61.4 -112 0" />
+    <Socket socketname="frontbarrel" bonename="RightFingers" positionOffset="0.45 0 -0.35" rotationOffset="-195 -50 0" />
+    <Socket socketname="frontbarrelleft" bonename="LeftFingers" positionOffset="-0.45 0 0.35" rotationOffset="-10 -45 0" />
   </SocketInfo>
   <SocketInfo name="2H_DUALCROSSBOW_CRYSTAL">
     <Socket socketname="mainhandrevolvercenter" bonename="RightHandHardPoint" rotationOffset="0 90 0" />
@@ -3132,6 +3166,7 @@
     <Socket socketname="mainhandrightwing" bonename="RightFingers" positionOffset="0.15 -0.2 -0.4" rotationOffset="10.91 -220 0" />
     <Socket socketname="offhandleftwing" bonename="LeftFingers" positionOffset="-0.05 0.1 0.4" rotationOffset="-15 315 0" />
     <Socket socketname="offhandrightwing" bonename="LeftFingers" positionOffset="-0.5 -0.3 0.2" rotationOffset="-16 315 0" />
+    <Socket socketname="frontbarrel" bonename="RightFingers" positionOffset="0.6 -0.09 -0.45" rotationOffset="165 -49 40" />
   </SocketInfo>
   <SocketInfo name="ITEM_2H_ORB">
     <Socket socketname="mainhandprojectile" bonename="RightHandHardPoint" positionOffset="0.17 0.11 0" rotationOffset="0 90 0" />
@@ -3238,6 +3273,7 @@
     <Socket socketname="mainhand" bonename="RightArm_3" />
     <Socket socketname="mainhandprojectilemuzzle" bonename="RightArm_3" positionOffset="0.91 0.5 -1.06" rotationOffset="-162.5 -32.6 -14.8" />
     <Socket socketname="mainhandprojectile" bonename="LeftHandHardPoint" positionOffset="-0.45 0 0" rotationOffset="0 270 0" />
+    <Socket socketname="frontbarrel" bonename="RightFingers" positionOffset="0.5 0.3 -1.4" rotationOffset="190 -20 0" />
   </SocketInfo>
   <!--*************************************************************************************************************************************************************-->
   <!--MOUNTS-->

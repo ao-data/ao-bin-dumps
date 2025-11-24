@@ -13,7 +13,7 @@
   <!-- MIST DUNGEON CHESTS-->
   <!--************************************-->
   <!--Note: The increased T7/T8 chances are to account for increased player caps NOT tier; Duos used to follow this logic as well, but were increased due to relative value-->
-  <LootChest uniquename="MD_UNDEAD_SOLO_BOSS" avatar="RD_CHEST_BOSS" faction="UNDEAD" alertradius="15" spell="OPEN_LOOTCHEST" opensoundevent="Play_open_chest_standard" spawnsoundevent="Play_spawn_loot_standard" namelocatag="@LOOTCHEST_NAME_STANDARD" locklocatag="@CORRUPTED_DUNGEON_CHEST_LOCK_MESSAGE" dangerstate="normal" prefab="LOOTCHEST_REGULAR_01" chesttype="mdsolo">
+  <LootChest uniquename="MD_UNDEAD_SOLO_BOSS" avatar="RD_CHEST_BOSS" faction="UNDEAD" alertradius="15" spell="OPEN_LOOTCHEST" opensoundevent="Play_open_chest_standard" spawnsoundevent="Play_spawn_loot_standard" namelocatag="@LOOTCHEST_NAME_STANDARD" locklocatag="@CORRUPTED_DUNGEON_CHEST_LOCK_MESSAGE" dangerstate="normal" prefab="LOOTCHEST_REGULAR_01" chesttype="mdsoloboss">
     <RareStates hiderarityuntil="OnUnlock">
       <RareState state="standard" weight="59">
         <Loot>
@@ -151,7 +151,7 @@
     </RareStates>
   </LootChest>
 
-  <LootChest uniquename="MD_UNDEAD_DUO_BOSS" avatar="RD_CHEST_BOSS" faction="UNDEAD" alertradius="15" spell="OPEN_LOOTCHEST" opensoundevent="Play_open_chest_standard" spawnsoundevent="Play_spawn_loot_standard" namelocatag="@LOOTCHEST_NAME_STANDARD" locklocatag="@CORRUPTED_DUNGEON_CHEST_LOCK_MESSAGE" dangerstate="normal" prefab="LOOTCHEST_REGULAR_01" chesttype="mdduo">
+  <LootChest uniquename="MD_UNDEAD_DUO_BOSS" avatar="RD_CHEST_BOSS" faction="UNDEAD" alertradius="15" spell="OPEN_LOOTCHEST" opensoundevent="Play_open_chest_standard" spawnsoundevent="Play_spawn_loot_standard" namelocatag="@LOOTCHEST_NAME_STANDARD" locklocatag="@CORRUPTED_DUNGEON_CHEST_LOCK_MESSAGE" dangerstate="normal" prefab="LOOTCHEST_REGULAR_01" chesttype="mdduoboss">
     <RareStates hiderarityuntil="OnUnlock">
       <RareState state="standard" weight="59">
         <Loot>
@@ -9255,7 +9255,7 @@
   </LootChest>
   
   <!--Treasure - Solo-->
-  <LootChest uniquename="TREASURE_SOLO_STANDARD" avatar="TREASURECHEST_COMMON_AVATAR" faction="NONE" alertradius="20" spell="OPEN_TREASURECHEST" opensoundevent="Play_open_chest_standard" spawnsoundevent="Play_spawn_loot_standard" namelocatag="@LOOTCHEST_TREASURE_SOLO_STANDARD" protectiontimeseconds="180" pvpzoneradius="30" mightreward="PVPCHALLENGE_TREASURES_SMALL_0" alwaysrequireschanneling="true" prefab="FOREST_GREEN_LOOTCHEST_TREASURE_SOLO_STANDARD" chesttype="treasurechestsmall">
+  <LootChest uniquename="TREASURE_SOLO_STANDARD" avatar="TREASURECHEST_COMMON_AVATAR" faction="NONE" alertradius="20" spell="OPEN_TREASURECHEST" opensoundevent="Play_open_chest_standard" spawnsoundevent="Play_spawn_loot_standard" namelocatag="@LOOTCHEST_TREASURE_SOLO_STANDARD" protectiontimeseconds="180" pvpzoneradius="30" mightreward="PVPCHALLENGE_TREASURES_SMALL_0" alwaysrequireschanneling="true" prefab="FOREST_GREEN_LOOTCHEST_TREASURE_SOLO_STANDARD" chesttype="treasurechestsmall" factionwarfare="false">
     <Tiles>
       <Biome name="Roads" none="ROADS_LOOTCHEST_TREASURE_SOLO_STANDARD" />
       <Biome name="Mists" green="MISTS_GREEN_LOOTCHEST_TREASURE_SOLO_STANDARD" red="MISTS_RED_LOOTCHEST_TREASURE_SOLO_STANDARD" dead="MISTS_DEAD_LOOTCHEST_TREASURE_SOLO_STANDARD" />
@@ -9287,7 +9287,7 @@
       </RareState>
     </RareStates>
   </LootChest>
-  <LootChest uniquename="TREASURE_SOLO_UNCOMMON" avatar="TREASURECHEST_COMMON_AVATAR" faction="NONE" alertradius="20" spell="OPEN_TREASURECHEST" opensoundevent="Play_open_chest_uncommon" spawnsoundevent="Play_spawn_loot_uncommon" namelocatag="@LOOTCHEST_TREASURE_SOLO_UNCOMMON" protectiontimeseconds="180" pvpzoneradius="30" mightreward="PVPCHALLENGE_TREASURES_SMALL_1" alwaysrequireschanneling="true" prefab="FOREST_GREEN_LOOTCHEST_TREASURE_SOLO_UNCOMMON" chesttype="treasurechestsmall">
+  <LootChest uniquename="TREASURE_SOLO_UNCOMMON" avatar="TREASURECHEST_COMMON_AVATAR" faction="NONE" alertradius="20" spell="OPEN_TREASURECHEST" opensoundevent="Play_open_chest_uncommon" spawnsoundevent="Play_spawn_loot_uncommon" namelocatag="@LOOTCHEST_TREASURE_SOLO_UNCOMMON" protectiontimeseconds="180" pvpzoneradius="30" mightreward="PVPCHALLENGE_TREASURES_SMALL_1" alwaysrequireschanneling="true" prefab="FOREST_GREEN_LOOTCHEST_TREASURE_SOLO_UNCOMMON" chesttype="treasurechestsmall" factionwarfare="false">
     <Tiles>
       <Biome name="Roads" none="ROADS_LOOTCHEST_TREASURE_SOLO_UNCOMMON" />
       <Biome name="Mists" green="MISTS_GREEN_LOOTCHEST_TREASURE_SOLO_UNCOMMON" red="MISTS_RED_LOOTCHEST_TREASURE_SOLO_UNCOMMON" dead="MISTS_DEAD_LOOTCHEST_TREASURE_SOLO_UNCOMMON" />
@@ -9319,7 +9319,7 @@
       </RareState>
     </RareStates>
   </LootChest>
-  <LootChest uniquename="TREASURE_SOLO_RARE" avatar="TREASURECHEST_COMMON_AVATAR" faction="NONE" alertradius="20" spell="OPEN_TREASURECHEST" opensoundevent="Play_open_chest_rare" spawnsoundevent="Play_spawn_loot_rare" namelocatag="@LOOTCHEST_TREASURE_SOLO_RARE" protectiontimeseconds="180" pvpzoneradius="30" mightreward="PVPCHALLENGE_TREASURES_SMALL_2" alwaysrequireschanneling="true" prefab="FOREST_GREEN_LOOTCHEST_TREASURE_SOLO_RARE" chesttype="treasurechestsmall">
+  <LootChest uniquename="TREASURE_SOLO_RARE" avatar="TREASURECHEST_COMMON_AVATAR" faction="NONE" alertradius="20" spell="OPEN_TREASURECHEST" opensoundevent="Play_open_chest_rare" spawnsoundevent="Play_spawn_loot_rare" namelocatag="@LOOTCHEST_TREASURE_SOLO_RARE" protectiontimeseconds="180" pvpzoneradius="30" mightreward="PVPCHALLENGE_TREASURES_SMALL_2" alwaysrequireschanneling="true" prefab="FOREST_GREEN_LOOTCHEST_TREASURE_SOLO_RARE" chesttype="treasurechestsmall" factionwarfare="false">
     <Tiles>
       <Biome name="Roads" none="ROADS_LOOTCHEST_TREASURE_SOLO_RARE" />
       <Biome name="Mists" green="MISTS_GREEN_LOOTCHEST_TREASURE_SOLO_RARE" red="MISTS_RED_LOOTCHEST_TREASURE_SOLO_RARE" dead="MISTS_DEAD_LOOTCHEST_TREASURE_SOLO_RARE" />
@@ -9351,7 +9351,7 @@
       </RareState>
     </RareStates>
   </LootChest>
-  <LootChest uniquename="TREASURE_SOLO_LEGENDARY" avatar="TREASURECHEST_COMMON_AVATAR" faction="NONE" alertradius="20" spell="OPEN_TREASURECHEST" opensoundevent="Play_open_chest_legendary" spawnsoundevent="Play_spawn_loot_legendary" namelocatag="@LOOTCHEST_TREASURE_SOLO_LEGENDARY" protectiontimeseconds="180" pvpzoneradius="30" mightreward="PVPCHALLENGE_TREASURES_SMALL_3" alwaysrequireschanneling="true" prefab="FOREST_GREEN_LOOTCHEST_TREASURE_SOLO_LEGENDARY" chesttype="treasurechestsmall">
+  <LootChest uniquename="TREASURE_SOLO_LEGENDARY" avatar="TREASURECHEST_COMMON_AVATAR" faction="NONE" alertradius="20" spell="OPEN_TREASURECHEST" opensoundevent="Play_open_chest_legendary" spawnsoundevent="Play_spawn_loot_legendary" namelocatag="@LOOTCHEST_TREASURE_SOLO_LEGENDARY" protectiontimeseconds="180" pvpzoneradius="30" mightreward="PVPCHALLENGE_TREASURES_SMALL_3" alwaysrequireschanneling="true" prefab="FOREST_GREEN_LOOTCHEST_TREASURE_SOLO_LEGENDARY" chesttype="treasurechestsmall" factionwarfare="false">
     <Tiles>
       <Biome name="Roads" none="ROADS_LOOTCHEST_TREASURE_SOLO_LEGENDARY" />
       <Biome name="Mists" green="MISTS_GREEN_LOOTCHEST_TREASURE_SOLO_LEGENDARY" red="MISTS_RED_LOOTCHEST_TREASURE_SOLO_LEGENDARY" dead="MISTS_DEAD_LOOTCHEST_TREASURE_SOLO_LEGENDARY" />
@@ -9613,7 +9613,7 @@
   </LootChest>
 
   <!--Treasure - Veteran-->
-  <LootChest uniquename="TREASURE_VETERAN_STANDARD" avatar="TREASURECHEST_VETERAN_AVATAR" faction="NONE" alertradius="20" spell="OPEN_TREASURECHEST" opensoundevent="Play_open_chest_standard" spawnsoundevent="Play_spawn_loot_standard" namelocatag="@LOOTCHEST_TREASURE_VETERAN_STANDARD" protectiontimeseconds="1200" pvpzoneradius="30" mightreward="PVPCHALLENGE_TREASURES_MEDIUM_0" alwaysrequireschanneling="true" prefab="FOREST_GREEN_LOOTCHEST_TREASURE_VETERAN_STANDARD" chesttype="treasurechestmedium">
+  <LootChest uniquename="TREASURE_VETERAN_STANDARD" avatar="TREASURECHEST_VETERAN_AVATAR" faction="NONE" alertradius="20" spell="OPEN_TREASURECHEST" opensoundevent="Play_open_chest_standard" spawnsoundevent="Play_spawn_loot_standard" namelocatag="@LOOTCHEST_TREASURE_VETERAN_STANDARD" protectiontimeseconds="1200" pvpzoneradius="30" mightreward="PVPCHALLENGE_TREASURES_MEDIUM_0" alwaysrequireschanneling="true" prefab="FOREST_GREEN_LOOTCHEST_TREASURE_VETERAN_STANDARD" chesttype="treasurechestmedium" factionwarfare="false">
     <Tiles>
       <Biome name="Roads" none="ROADS_LOOTCHEST_TREASURE_VETERAN_STANDARD" />
       <Biome name="Forest" green="FOREST_GREEN_LOOTCHEST_TREASURE_VETERAN_STANDARD" red="FOREST_RED_LOOTCHEST_TREASURE_VETERAN_STANDARD" dead="FOREST_DEAD_LOOTCHEST_TREASURE_VETERAN_STANDARD" />
@@ -9644,7 +9644,7 @@
       </RareState>
     </RareStates>
   </LootChest>
-  <LootChest uniquename="TREASURE_VETERAN_UNCOMMON" avatar="TREASURECHEST_VETERAN_AVATAR" faction="NONE" alertradius="20" spell="OPEN_TREASURECHEST" opensoundevent="Play_open_chest_uncommon" spawnsoundevent="Play_spawn_loot_uncommon" namelocatag="@LOOTCHEST_TREASURE_VETERAN_UNCOMMON" protectiontimeseconds="1200" pvpzoneradius="30" mightreward="PVPCHALLENGE_TREASURES_MEDIUM_1" alwaysrequireschanneling="true" prefab="FOREST_GREEN_LOOTCHEST_TREASURE_VETERAN_UNCOMMON" chesttype="treasurechestmedium">
+  <LootChest uniquename="TREASURE_VETERAN_UNCOMMON" avatar="TREASURECHEST_VETERAN_AVATAR" faction="NONE" alertradius="20" spell="OPEN_TREASURECHEST" opensoundevent="Play_open_chest_uncommon" spawnsoundevent="Play_spawn_loot_uncommon" namelocatag="@LOOTCHEST_TREASURE_VETERAN_UNCOMMON" protectiontimeseconds="1200" pvpzoneradius="30" mightreward="PVPCHALLENGE_TREASURES_MEDIUM_1" alwaysrequireschanneling="true" prefab="FOREST_GREEN_LOOTCHEST_TREASURE_VETERAN_UNCOMMON" chesttype="treasurechestmedium" factionwarfare="false">
     <Tiles>
       <Biome name="Roads" none="ROADS_LOOTCHEST_TREASURE_VETERAN_UNCOMMON" />
       <Biome name="Forest" green="FOREST_GREEN_LOOTCHEST_TREASURE_VETERAN_UNCOMMON" red="FOREST_RED_LOOTCHEST_TREASURE_VETERAN_UNCOMMON" dead="FOREST_DEAD_LOOTCHEST_TREASURE_VETERAN_UNCOMMON" />
@@ -9675,7 +9675,7 @@
       </RareState>
     </RareStates>
   </LootChest>
-  <LootChest uniquename="TREASURE_VETERAN_RARE" avatar="TREASURECHEST_VETERAN_AVATAR" faction="NONE" alertradius="20" spell="OPEN_TREASURECHEST" opensoundevent="Play_open_chest_rare" spawnsoundevent="Play_spawn_loot_rare" namelocatag="@LOOTCHEST_TREASURE_VETERAN_RARE" protectiontimeseconds="1200" pvpzoneradius="30" mightreward="PVPCHALLENGE_TREASURES_MEDIUM_2" alwaysrequireschanneling="true" prefab="FOREST_GREEN_LOOTCHEST_TREASURE_VETERAN_RARE" chesttype="treasurechestmedium">
+  <LootChest uniquename="TREASURE_VETERAN_RARE" avatar="TREASURECHEST_VETERAN_AVATAR" faction="NONE" alertradius="20" spell="OPEN_TREASURECHEST" opensoundevent="Play_open_chest_rare" spawnsoundevent="Play_spawn_loot_rare" namelocatag="@LOOTCHEST_TREASURE_VETERAN_RARE" protectiontimeseconds="1200" pvpzoneradius="30" mightreward="PVPCHALLENGE_TREASURES_MEDIUM_2" alwaysrequireschanneling="true" prefab="FOREST_GREEN_LOOTCHEST_TREASURE_VETERAN_RARE" chesttype="treasurechestmedium" factionwarfare="false">
     <Tiles>
       <Biome name="Roads" none="ROADS_LOOTCHEST_TREASURE_VETERAN_RARE" />
       <Biome name="Forest" green="FOREST_GREEN_LOOTCHEST_TREASURE_VETERAN_RARE" red="FOREST_RED_LOOTCHEST_TREASURE_VETERAN_RARE" dead="FOREST_DEAD_LOOTCHEST_TREASURE_VETERAN_RARE" />
@@ -9706,7 +9706,7 @@
       </RareState>
     </RareStates>
   </LootChest>
-  <LootChest uniquename="TREASURE_VETERAN_LEGENDARY" avatar="TREASURECHEST_VETERAN_AVATAR" faction="NONE" alertradius="20" spell="OPEN_TREASURECHEST" opensoundevent="Play_open_chest_legendary" spawnsoundevent="Play_spawn_loot_legendary" namelocatag="@LOOTCHEST_TREASURE_VETERAN_LEGENDARY" protectiontimeseconds="1200" pvpzoneradius="30" mightreward="PVPCHALLENGE_TREASURES_MEDIUM_3" alwaysrequireschanneling="true" prefab="FOREST_GREEN_LOOTCHEST_TREASURE_VETERAN_LEGENDARY" chesttype="treasurechestmedium">
+  <LootChest uniquename="TREASURE_VETERAN_LEGENDARY" avatar="TREASURECHEST_VETERAN_AVATAR" faction="NONE" alertradius="20" spell="OPEN_TREASURECHEST" opensoundevent="Play_open_chest_legendary" spawnsoundevent="Play_spawn_loot_legendary" namelocatag="@LOOTCHEST_TREASURE_VETERAN_LEGENDARY" protectiontimeseconds="1200" pvpzoneradius="30" mightreward="PVPCHALLENGE_TREASURES_MEDIUM_3" alwaysrequireschanneling="true" prefab="FOREST_GREEN_LOOTCHEST_TREASURE_VETERAN_LEGENDARY" chesttype="treasurechestmedium" factionwarfare="false">
     <Tiles>
       <Biome name="Roads" none="ROADS_LOOTCHEST_TREASURE_VETERAN_LEGENDARY" />
       <Biome name="Forest" green="FOREST_GREEN_LOOTCHEST_TREASURE_VETERAN_LEGENDARY" red="FOREST_RED_LOOTCHEST_TREASURE_VETERAN_LEGENDARY" dead="FOREST_DEAD_LOOTCHEST_TREASURE_VETERAN_LEGENDARY" />
@@ -9739,7 +9739,7 @@
   </LootChest>
 
   <!--Treasure - Elite-->
-  <LootChest uniquename="TREASURE_ELITE_STANDARD" avatar="TREASURECHEST_EPIC_AVATAR" faction="NONE" alertradius="20" spell="OPEN_TREASURECHEST" opensoundevent="Play_open_chest_standard" spawnsoundevent="Play_spawn_loot_standard" namelocatag="@LOOTCHEST_TREASURE_ELITE_STANDARD" protectiontimeseconds="2400" pvpzoneradius="40" mightreward="PVPCHALLENGE_TREASURES_LARGE_0" alwaysrequireschanneling="true" prefab="FOREST_GREEN_LOOTCHEST_TREASURE_ELITE_STANDARD" chesttype="treasurechestlarge">
+  <LootChest uniquename="TREASURE_ELITE_STANDARD" avatar="TREASURECHEST_EPIC_AVATAR" faction="NONE" alertradius="20" spell="OPEN_TREASURECHEST" opensoundevent="Play_open_chest_standard" spawnsoundevent="Play_spawn_loot_standard" namelocatag="@LOOTCHEST_TREASURE_ELITE_STANDARD" protectiontimeseconds="2400" pvpzoneradius="40" mightreward="PVPCHALLENGE_TREASURES_LARGE_0" alwaysrequireschanneling="true" prefab="FOREST_GREEN_LOOTCHEST_TREASURE_ELITE_STANDARD" chesttype="treasurechestlarge" factionwarfare="false">
     <Tiles>
       <Biome name="Forest" green="FOREST_GREEN_LOOTCHEST_TREASURE_ELITE_STANDARD" red="FOREST_RED_LOOTCHEST_TREASURE_ELITE_STANDARD" dead="FOREST_DEAD_LOOTCHEST_TREASURE_ELITE_STANDARD" />
       <Biome name="Highland" green="HIGHLAND_GREEN_LOOTCHEST_TREASURE_ELITE_STANDARD" red="HIGHLAND_RED_LOOTCHEST_TREASURE_ELITE_STANDARD" dead="HIGHLAND_DEAD_LOOTCHEST_TREASURE_ELITE_STANDARD" />
@@ -9769,7 +9769,7 @@
       </RareState>
     </RareStates>
   </LootChest>
-  <LootChest uniquename="TREASURE_ELITE_UNCOMMON" avatar="TREASURECHEST_EPIC_AVATAR" faction="NONE" alertradius="20" spell="OPEN_TREASURECHEST" opensoundevent="Play_open_chest_uncommon" spawnsoundevent="Play_spawn_loot_uncommon" namelocatag="@LOOTCHEST_TREASURE_ELITE_UNCOMMON" protectiontimeseconds="2400" pvpzoneradius="40" mightreward="PVPCHALLENGE_TREASURES_LARGE_1" alwaysrequireschanneling="true" prefab="FOREST_GREEN_LOOTCHEST_TREASURE_ELITE_UNCOMMON" chesttype="treasurechestlarge">
+  <LootChest uniquename="TREASURE_ELITE_UNCOMMON" avatar="TREASURECHEST_EPIC_AVATAR" faction="NONE" alertradius="20" spell="OPEN_TREASURECHEST" opensoundevent="Play_open_chest_uncommon" spawnsoundevent="Play_spawn_loot_uncommon" namelocatag="@LOOTCHEST_TREASURE_ELITE_UNCOMMON" protectiontimeseconds="2400" pvpzoneradius="40" mightreward="PVPCHALLENGE_TREASURES_LARGE_1" alwaysrequireschanneling="true" prefab="FOREST_GREEN_LOOTCHEST_TREASURE_ELITE_UNCOMMON" chesttype="treasurechestlarge" factionwarfare="false">
     <Tiles>
       <Biome name="Forest" green="FOREST_GREEN_LOOTCHEST_TREASURE_ELITE_UNCOMMON" red="FOREST_RED_LOOTCHEST_TREASURE_ELITE_UNCOMMON" dead="FOREST_DEAD_LOOTCHEST_TREASURE_ELITE_UNCOMMON" />
       <Biome name="Highland" green="HIGHLAND_GREEN_LOOTCHEST_TREASURE_ELITE_UNCOMMON" red="HIGHLAND_RED_LOOTCHEST_TREASURE_ELITE_UNCOMMON" dead="HIGHLAND_DEAD_LOOTCHEST_TREASURE_ELITE_UNCOMMON" />
@@ -9829,7 +9829,7 @@
       </RareState>
     </RareStates>
   </LootChest>
-  <LootChest uniquename="TREASURE_ELITE_LEGENDARY" avatar="TREASURECHEST_EPIC_AVATAR" faction="NONE" alertradius="20" spell="OPEN_TREASURECHEST" opensoundevent="Play_open_chest_legendary" spawnsoundevent="Play_spawn_loot_legendary" namelocatag="@LOOTCHEST_TREASURE_ELITE_LEGENDARY" protectiontimeseconds="2400" pvpzoneradius="40" mightreward="PVPCHALLENGE_TREASURES_LARGE_3" alwaysrequireschanneling="true" prefab="FOREST_GREEN_LOOTCHEST_TREASURE_ELITE_LEGENDARY" chesttype="treasurechestlarge">
+  <LootChest uniquename="TREASURE_ELITE_LEGENDARY" avatar="TREASURECHEST_EPIC_AVATAR" faction="NONE" alertradius="20" spell="OPEN_TREASURECHEST" opensoundevent="Play_open_chest_legendary" spawnsoundevent="Play_spawn_loot_legendary" namelocatag="@LOOTCHEST_TREASURE_ELITE_LEGENDARY" protectiontimeseconds="2400" pvpzoneradius="40" mightreward="PVPCHALLENGE_TREASURES_LARGE_3" alwaysrequireschanneling="true" prefab="FOREST_GREEN_LOOTCHEST_TREASURE_ELITE_LEGENDARY" chesttype="treasurechestlarge" factionwarfare="false">
     <Tiles>
       <Biome name="Forest" green="FOREST_GREEN_LOOTCHEST_TREASURE_ELITE_LEGENDARY" red="FOREST_RED_LOOTCHEST_TREASURE_ELITE_LEGENDARY" dead="FOREST_DEAD_LOOTCHEST_TREASURE_ELITE_LEGENDARY" />
       <Biome name="Highland" green="HIGHLAND_GREEN_LOOTCHEST_TREASURE_ELITE_LEGENDARY" red="HIGHLAND_RED_LOOTCHEST_TREASURE_ELITE_LEGENDARY" dead="HIGHLAND_DEAD_LOOTCHEST_TREASURE_ELITE_LEGENDARY" />
@@ -9860,7 +9860,162 @@
     </RareStates>
   </LootChest>
 
-  <!--Easter Event 2022 Lootchests-->
+  <!--Treasure - Faction Chest - Open World -->
+  <LootChest uniquename="FACTION_TREASURE_SMALL" avatar="TREASURECHEST_COMMON_AVATAR" faction="NONE" alertradius="20" spell="OPEN_TREASURECHEST" opensoundevent="Play_open_chest_standard" spawnsoundevent="Play_spawn_loot_standard" namelocatag="@TREASURE_CHEST_FACTION_SMALL" protectiontimeseconds="180" mightreward="PVPCHALLENGE_TREASURES_SMALL_0" alwaysrequireschanneling="true" prefab="LOOTCHEST_FACTIONWARFARE_SMALL" clusteractivitytype="factionwarfarelootchest" chesttype="factionchestsmall" factionwarfare="true" factionsupplyrewardreference="FACTION_OPEN_WORLD_CHEST_SMALL" eligibilitydistance="45">
+    <Tiles>
+      <Biome name="Forest" green="LOOTCHEST_FACTIONWARFARE_SMALL" red="LOOTCHEST_FACTIONWARFARE_SMALL" dead="LOOTCHEST_FACTIONWARFARE_SMALL" />
+      <Biome name="Highland" green="LOOTCHEST_FACTIONWARFARE_SMALL" red="LOOTCHEST_FACTIONWARFARE_SMALL" dead="LOOTCHEST_FACTIONWARFARE_SMALL" />
+      <Biome name="Mountain" green="LOOTCHEST_FACTIONWARFARE_SMALL" red="LOOTCHEST_FACTIONWARFARE_SMALL" dead="LOOTCHEST_FACTIONWARFARE_SMALL" />
+      <Biome name="Steppe" green="LOOTCHEST_FACTIONWARFARE_SMALL" red="LOOTCHEST_FACTIONWARFARE_SMALL" dead="LOOTCHEST_FACTIONWARFARE_SMALL" />
+      <Biome name="Swamp" green="LOOTCHEST_FACTIONWARFARE_SMALL" red="LOOTCHEST_FACTIONWARFARE_SMALL" dead="LOOTCHEST_FACTIONWARFARE_SMALL" />
+    </Tiles>
+      <RareStates hiderarityuntil="OnUnlock">
+        <RareState state="standard" weight="590" opensoundevent="Play_open_chest_standard" spawnsoundevent="Play_spawn_loot_standard" namelocatag="@LOOTCHEST_TREASURE_FACTION_SMALL_STANDARD" mightreward="PVPCHALLENGE_TREASURES_MINI_0">
+          <Loot>
+            <LootByTier tier="4" >
+              <LootListReference name="TREASURE_CHEST_LOOT_SOLO_STANDARD" />
+            </LootByTier>
+            <LootByTier tier="5">
+              <LootListReference name="TREASURE_CHEST_LOOT_SOLO_STANDARD" />
+            </LootByTier>
+            <LootByTier tier="6">
+              <LootListReference name="TREASURE_CHEST_LOOT_SOLO_STANDARD" />
+            </LootByTier>
+            <LootByTier tier="7">
+              <LootListReference name="TREASURE_CHEST_LOOT_SOLO_STANDARD" />
+            </LootByTier>
+          </Loot>
+      </RareState>
+      <RareState state="uncommon" weight="300" opensoundevent="Play_open_chest_uncommon" spawnsoundevent="Play_spawn_loot_uncommon" namelocatag="@LOOTCHEST_TREASURE_FACTION_SMALL_UNCOMMON" mightreward="PVPCHALLENGE_TREASURES_MINI_1">
+        <Loot>
+          <LootByTier tier="4">
+            <LootListReference name="TREASURE_CHEST_LOOT_SOLO_UNCOMMON" />
+          </LootByTier>
+          <LootByTier tier="5">
+            <LootListReference name="TREASURE_CHEST_LOOT_SOLO_UNCOMMON" />
+          </LootByTier>
+          <LootByTier tier="6">
+            <LootListReference name="TREASURE_CHEST_LOOT_SOLO_UNCOMMON" />
+          </LootByTier>
+          <LootByTier tier="7">
+            <LootListReference name="TREASURE_CHEST_LOOT_SOLO_UNCOMMON" />
+          </LootByTier>
+        </Loot>
+      </RareState>
+      <RareState state="rare" weight="100" opensoundevent="Play_open_chest_rare" spawnsoundevent="Play_spawn_loot_rare" namelocatag="@LOOTCHEST_TREASURE_FACTION_SMALL_RARE" mightreward="PVPCHALLENGE_TREASURES_MINI_2">
+        <Loot>
+          <LootByTier tier="4">
+            <LootListReference name="TREASURE_CHEST_LOOT_SOLO_RARE" />
+          </LootByTier>
+          <LootByTier tier="5">
+            <LootListReference name="TREASURE_CHEST_LOOT_SOLO_RARE" />
+          </LootByTier>
+          <LootByTier tier="6">
+            <LootListReference name="TREASURE_CHEST_LOOT_SOLO_RARE" />
+          </LootByTier>
+          <LootByTier tier="7">
+            <LootListReference name="TREASURE_CHEST_LOOT_SOLO_RARE" />
+          </LootByTier>
+        </Loot>
+      </RareState>
+      <RareState state="legendary" weight="10" opensoundevent="Play_open_chest_legendary" spawnsoundevent="Play_spawn_loot_legendary" namelocatag="@LOOTCHEST_TREASURE_FACTION_SMALL_LEGENDARY" mightreward="PVPCHALLENGE_TREASURES_MINI_3">
+        <Loot>
+          <LootByTier tier="4">
+            <LootListReference name="TREASURE_CHEST_LOOT_SOLO_LEGENDARY" />
+          </LootByTier>
+          <LootByTier tier="5">
+            <LootListReference name="TREASURE_CHEST_LOOT_SOLO_LEGENDARY" />
+          </LootByTier>
+          <LootByTier tier="6">
+            <LootListReference name="TREASURE_CHEST_LOOT_SOLO_LEGENDARY" />
+          </LootByTier>
+          <LootByTier tier="7">
+            <LootListReference name="TREASURE_CHEST_LOOT_SOLO_LEGENDARY" />
+          </LootByTier>
+        </Loot>
+      </RareState>
+
+    </RareStates>
+  </LootChest>
+  <LootChest uniquename="FACTION_TREASURE_MEDIUM" avatar="TREASURECHEST_COMMON_AVATAR" faction="NONE" alertradius="20" spell="OPEN_TREASURECHEST" opensoundevent="Play_open_chest_standard" spawnsoundevent="Play_spawn_loot_standard" namelocatag="@TREASURE_CHEST_FACTION_MEDIUM" protectiontimeseconds="300" mightreward="PVPCHALLENGE_TREASURES_SMALL_0" alwaysrequireschanneling="true" prefab="LOOTCHEST_FACTIONWARFARE_MEDIUM" clusteractivitytype="factionwarfarelootchest" chesttype="factionchestmedium" factionwarfare="true" factionsupplyrewardreference="FACTION_OPEN_WORLD_CHEST_MEDIUM" eligibilitydistance="45">
+    <Tiles>
+      <Biome name="Forest" green="LOOTCHEST_FACTIONWARFARE_MEDIUM" red="LOOTCHEST_FACTIONWARFARE_MEDIUM" dead="LOOTCHEST_FACTIONWARFARE_MEDIUM" />
+      <Biome name="Highland" green="LOOTCHEST_FACTIONWARFARE_MEDIUM" red="LOOTCHEST_FACTIONWARFARE_MEDIUM" dead="LOOTCHEST_FACTIONWARFARE_MEDIUM" />
+      <Biome name="Mountain" green="LOOTCHEST_FACTIONWARFARE_MEDIUM" red="LOOTCHEST_FACTIONWARFARE_MEDIUM" dead="LOOTCHEST_FACTIONWARFARE_MEDIUM" />
+      <Biome name="Steppe" green="LOOTCHEST_FACTIONWARFARE_MEDIUM" red="LOOTCHEST_FACTIONWARFARE_MEDIUM" dead="LOOTCHEST_FACTIONWARFARE_MEDIUM" />
+      <Biome name="Swamp" green="LOOTCHEST_FACTIONWARFARE_MEDIUM" red="LOOTCHEST_FACTIONWARFARE_MEDIUM" dead="LOOTCHEST_FACTIONWARFARE_MEDIUM" />
+    </Tiles>
+    <RareStates hiderarityuntil="OnUnlock">
+      <RareState state="standard" weight="590" opensoundevent="Play_open_chest_standard" spawnsoundevent="Play_spawn_loot_standard" namelocatag="@LOOTCHEST_TREASURE_FACTION_MEDIUM_STANDARD" mightreward="PVPCHALLENGE_TREASURES_MINI_0">
+        <Loot>
+          <LootByTier tier="4" >
+            <LootListReference name="TREASURE_CHEST_LOOT_VETERAN_STANDARD" />
+          </LootByTier>
+          <LootByTier tier="5">
+            <LootListReference name="TREASURE_CHEST_LOOT_VETERAN_STANDARD" />
+          </LootByTier>
+          <LootByTier tier="6">
+            <LootListReference name="TREASURE_CHEST_LOOT_VETERAN_STANDARD" />
+          </LootByTier>
+          <LootByTier tier="7">
+            <LootListReference name="TREASURE_CHEST_LOOT_VETERAN_STANDARD" />
+          </LootByTier>
+        </Loot>
+      </RareState>
+      <RareState state="uncommon" weight="300" opensoundevent="Play_open_chest_uncommon" spawnsoundevent="Play_spawn_loot_uncommon" namelocatag="@LOOTCHEST_TREASURE_FACTION_MEDIUM_UNCOMMON" mightreward="PVPCHALLENGE_TREASURES_MINI_1">
+        <Loot>
+          <LootByTier tier="4">
+            <LootListReference name="TREASURE_CHEST_LOOT_VETERAN_UNCOMMON" />
+          </LootByTier>
+          <LootByTier tier="5">
+            <LootListReference name="TREASURE_CHEST_LOOT_VETERAN_UNCOMMON" />
+          </LootByTier>
+          <LootByTier tier="6">
+            <LootListReference name="TREASURE_CHEST_LOOT_VETERAN_UNCOMMON" />
+          </LootByTier>
+          <LootByTier tier="7">
+            <LootListReference name="TREASURE_CHEST_LOOT_VETERAN_UNCOMMON" />
+          </LootByTier>
+        </Loot>
+      </RareState>
+      <RareState state="rare" weight="100" opensoundevent="Play_open_chest_rare" spawnsoundevent="Play_spawn_loot_rare" namelocatag="@LOOTCHEST_TREASURE_FACTION_MEDIUM_RARE" mightreward="PVPCHALLENGE_TREASURES_MINI_2">
+        <Loot>
+          <LootByTier tier="4">
+            <LootListReference name="TREASURE_CHEST_LOOT_VETERAN_RARE" />
+          </LootByTier>
+          <LootByTier tier="5">
+            <LootListReference name="TREASURE_CHEST_LOOT_VETERAN_RARE" />
+          </LootByTier>
+          <LootByTier tier="6">
+            <LootListReference name="TREASURE_CHEST_LOOT_VETERAN_RARE" />
+          </LootByTier>
+          <LootByTier tier="7">
+            <LootListReference name="TREASURE_CHEST_LOOT_VETERAN_RARE" />
+          </LootByTier>
+        </Loot>
+      </RareState>
+      <RareState state="legendary" weight="10" opensoundevent="Play_open_chest_legendary" spawnsoundevent="Play_spawn_loot_legendary" namelocatag="@LOOTCHEST_TREASURE_FACTION_MEDIUM_LEGENDARY" mightreward="PVPCHALLENGE_TREASURES_MINI_3">
+        <Loot>
+          <LootByTier tier="4">
+            <LootListReference name="TREASURE_CHEST_LOOT_VETERAN_LEGENDARY" />
+          </LootByTier>
+          <LootByTier tier="5">
+            <LootListReference name="TREASURE_CHEST_LOOT_VETERAN_LEGENDARY" />
+          </LootByTier>
+          <LootByTier tier="6">
+            <LootListReference name="TREASURE_CHEST_LOOT_VETERAN_LEGENDARY" />
+          </LootByTier>
+          <LootByTier tier="7">
+            <LootListReference name="TREASURE_CHEST_LOOT_VETERAN_LEGENDARY" />
+          </LootByTier>
+        </Loot>
+      </RareState>
+
+    </RareStates>
+  </LootChest>
+
+
+	<!--Easter Event 2022 Lootchests-->
   <LootChest uniquename="TREASURE_EASTER_VETERAN_STANDARD" avatar="TREASURECHEST_VETERAN_AVATAR" faction="NONE" alertradius="20" spell="OPEN_TREASURECHEST" opensoundevent="Play_open_chest_standard" spawnsoundevent="Play_spawn_loot_standard" namelocatag="@LOOTCHEST_EASTER_TREASURE_VETERAN_STANDARD" protectiontimeseconds="180" pvpzoneradius="30" mightreward="PVPCHALLENGE_TREASURES_SMALL_0" alwaysrequireschanneling="true" prefab="FOREST_GREEN_LOOTCHEST_TREASURE_EASTER_VETERAN_STANDARD" chesttype="tresaurechesteaster">
     <Tiles>
       <Biome name="Forest" green="FOREST_GREEN_LOOTCHEST_TREASURE_EASTER_VETERAN_STANDARD" red="FOREST_RED_LOOTCHEST_TREASURE_EASTER_VETERAN_STANDARD" dead="FOREST_DEAD_LOOTCHEST_TREASURE_EASTER_VETERAN_STANDARD" />
@@ -10144,7 +10299,7 @@
   </LootChest>
 
   <!--Treasure - Castle-->
-  <LootChest uniquename="TREASURE_CASTLE_STANDARD" avatar="TREASURECHEST_EPIC_AVATAR" faction="NONE" alertradius="20" spell="OPEN_TREASURECHEST" opensoundevent="Play_open_chest_standard" spawnsoundevent="Play_spawn_loot_standard" namelocatag="@LOOTCHEST_TREASURE_CASTLE_STANDARD" protectiontimeseconds="3600" pvpzoneradius="40" mightreward="PVPCHALLENGE_TREASURES_LARGE_0" alwaysrequireschanneling="true" prefab="LOOTCHEST_CASTLE_01" requirescastleownership="true" chesttype="treasurecastle">
+  <LootChest uniquename="TREASURE_CASTLE_STANDARD" avatar="TREASURECHEST_EPIC_AVATAR" faction="NONE" alertradius="20" spell="OPEN_TREASURECHEST" opensoundevent="Play_open_chest_standard" spawnsoundevent="Play_spawn_loot_standard" namelocatag="@LOOTCHEST_TREASURE_CASTLE_STANDARD" protectiontimeseconds="3600" pvpzoneradius="40" alwaysrequireschanneling="true" prefab="LOOTCHEST_CASTLE_01" requirescastleownership="true" chesttype="treasurecastle">
     <RareStates hiderarityuntil="OnSpawn">
       <RareState state="standard" weight="590" protectiontimeseconds="3600" mightreward="PVPCHALLENGE_CASTLE_0" namelocatag="@LOOTCHEST_TREASURE_CASTLE_STANDARD" opensoundevent="Play_open_chest_standard" spawnsoundevent="Play_spawn_loot_standard">
         <Loot>
@@ -10167,7 +10322,7 @@
       </RareState>
     </RareStates>
   </LootChest>
-  <LootChest uniquename="TREASURE_CASTLE_UNCOMMON" avatar="TREASURECHEST_EPIC_AVATAR" faction="NONE" alertradius="20" spell="OPEN_TREASURECHEST" opensoundevent="Play_open_chest_standard" spawnsoundevent="Play_spawn_loot_standard" namelocatag="@LOOTCHEST_TREASURE_CASTLE_STANDARD" protectiontimeseconds="3600" pvpzoneradius="40" mightreward="PVPCHALLENGE_TREASURES_LARGE_0" alwaysrequireschanneling="true" prefab="LOOTCHEST_CASTLE_01" requirescastleownership="true" chesttype="treasurecastle">
+  <LootChest uniquename="TREASURE_CASTLE_UNCOMMON" avatar="TREASURECHEST_EPIC_AVATAR" faction="NONE" alertradius="20" spell="OPEN_TREASURECHEST" opensoundevent="Play_open_chest_standard" spawnsoundevent="Play_spawn_loot_standard" namelocatag="@LOOTCHEST_TREASURE_CASTLE_STANDARD" protectiontimeseconds="3600" pvpzoneradius="40" alwaysrequireschanneling="true" prefab="LOOTCHEST_CASTLE_01" requirescastleownership="true" chesttype="treasurecastle">
     <RareStates hiderarityuntil="OnSpawn">
       <RareState state="uncommon" weight="300" protectiontimeseconds="3600" mightreward="PVPCHALLENGE_CASTLE_1" namelocatag="@LOOTCHEST_TREASURE_CASTLE_UNCOMMON" opensoundevent="Play_open_chest_uncommon" spawnsoundevent="Play_spawn_loot_uncommon">
         <Loot>
@@ -10190,7 +10345,7 @@
       </RareState>
     </RareStates>
   </LootChest>
-  <LootChest uniquename="TREASURE_CASTLE_RARE" avatar="TREASURECHEST_EPIC_AVATAR" faction="NONE" alertradius="20" spell="OPEN_TREASURECHEST" opensoundevent="Play_open_chest_standard" spawnsoundevent="Play_spawn_loot_standard" namelocatag="@LOOTCHEST_TREASURE_CASTLE_STANDARD" protectiontimeseconds="3600" pvpzoneradius="40" mightreward="PVPCHALLENGE_TREASURES_LARGE_0" alwaysrequireschanneling="true" prefab="LOOTCHEST_CASTLE_01" requirescastleownership="true" chesttype="treasurecastle">    
+  <LootChest uniquename="TREASURE_CASTLE_RARE" avatar="TREASURECHEST_EPIC_AVATAR" faction="NONE" alertradius="20" spell="OPEN_TREASURECHEST" opensoundevent="Play_open_chest_standard" spawnsoundevent="Play_spawn_loot_standard" namelocatag="@LOOTCHEST_TREASURE_CASTLE_STANDARD" protectiontimeseconds="3600" pvpzoneradius="40" alwaysrequireschanneling="true" prefab="LOOTCHEST_CASTLE_01" requirescastleownership="true" chesttype="treasurecastle">    
     <RareStates hiderarityuntil="OnSpawn">
       <RareState state="rare" protectiontimeseconds="3600" mightreward="PVPCHALLENGE_CASTLE_2" namelocatag="@LOOTCHEST_TREASURE_CASTLE_RARE" opensoundevent="Play_open_chest_rare" spawnsoundevent="Play_spawn_loot_rare">
         <Loot>
@@ -10213,7 +10368,7 @@
       </RareState>
     </RareStates>
   </LootChest>
-  <LootChest uniquename="TREASURE_CASTLE_LEGENDARY" avatar="TREASURECHEST_EPIC_AVATAR" faction="NONE" alertradius="20" spell="OPEN_TREASURECHEST" opensoundevent="Play_open_chest_legendary" spawnsoundevent="Play_spawn_loot_legendary" namelocatag="@LOOTCHEST_TREASURE_CASTLE_LEGENDARY" protectiontimeseconds="3600" pvpzoneradius="40" mightreward="PVPCHALLENGE_CASTLE_3" alwaysrequireschanneling="true" prefab="LOOTCHEST_CASTLE_01" requirescastleownership="true" chesttype="treasurecastle">
+  <LootChest uniquename="TREASURE_CASTLE_LEGENDARY" avatar="TREASURECHEST_EPIC_AVATAR" faction="NONE" alertradius="20" spell="OPEN_TREASURECHEST" opensoundevent="Play_open_chest_legendary" spawnsoundevent="Play_spawn_loot_legendary" namelocatag="@LOOTCHEST_TREASURE_CASTLE_LEGENDARY" protectiontimeseconds="3600" pvpzoneradius="40" alwaysrequireschanneling="true" prefab="LOOTCHEST_CASTLE_01" requirescastleownership="true" chesttype="treasurecastle">
     <RareStates hiderarityuntil="OnSpawn">
       <RareState state="legendary" protectiontimeseconds="3600" mightreward="PVPCHALLENGE_CASTLE_3" namelocatag="@LOOTCHEST_TREASURE_CASTLE_LEGENDARY" opensoundevent="Play_open_chest_legendary" spawnsoundevent="Play_spawn_loot_legendary">
         <Loot>
@@ -10236,7 +10391,210 @@
       </RareState>
     </RareStates>
   </LootChest>
-  
+
+ <!--Treasure - Faction Chest - Faction Camp -->
+ <LootChest uniquename="FACTION_DYNAMIC_CAMP_SMALL_LC" avatar="TREASURECHEST_COMMON_AVATAR" faction="CITY_CAERLEON" alertradius="20" spell="OPEN_TREASURECHEST" opensoundevent="Play_open_chest_standard" spawnsoundevent="Play_spawn_loot_standard" namelocatag="@TREASURE_CHEST_FACTION_SMALL" locklocatag="@CORRUPTED_DUNGEON_CHEST_LOCK_MESSAGE" alwaysrequireschanneling="true" prefab="LOOTCHEST_FACTIONWARFARE_SMALL" clusteractivitytype="factionwarfarecampchest" chesttype="smallfactioncamp" factionwarfare="true" factionsupplyrewardreference="FACTION_CAMP_SMALL" protectedbyquest="true" eligibilitydistance="45" mindivisor="5">
+   <Tiles>
+     <Biome name="Forest" green="LOOTCHEST_FACTIONWARFARE_SMALL" red="LOOTCHEST_FACTIONWARFARE_SMALL" dead="LOOTCHEST_FACTIONWARFARE_SMALL" />
+     <Biome name="Highland" green="LOOTCHEST_FACTIONWARFARE_SMALL" red="LOOTCHEST_FACTIONWARFARE_SMALL" dead="LOOTCHEST_FACTIONWARFARE_SMALL" />
+     <Biome name="Mountain" green="LOOTCHEST_FACTIONWARFARE_SMALL" red="LOOTCHEST_FACTIONWARFARE_SMALL" dead="LOOTCHEST_FACTIONWARFARE_SMALL" />
+     <Biome name="Steppe" green="LOOTCHEST_FACTIONWARFARE_SMALL" red="LOOTCHEST_FACTIONWARFARE_SMALL" dead="LOOTCHEST_FACTIONWARFARE_SMALL" />
+     <Biome name="Swamp" green="LOOTCHEST_FACTIONWARFARE_SMALL" red="LOOTCHEST_FACTIONWARFARE_SMALL" dead="LOOTCHEST_FACTIONWARFARE_SMALL" />
+   </Tiles>
+   <RareStates hiderarityuntil="OnUnlock">
+     <RareState state="standard" weight="590" opensoundevent="Play_open_chest_standard" spawnsoundevent="Play_spawn_loot_standard" namelocatag="@LOOTCHEST_TREASURE_FACTION_SMALL_STANDARD" mightreward="PVPCHALLENGE_TREASURES_MINI_0">
+       <Loot>
+         <LootByTier tier="4">
+            <!--Mob Fame-->
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="4.579055" ignoreforactivitychest="true" />
+            <!--Bonus Fame-->
+            <Item type="T5_SKILLBOOK_NONTRADABLE" chance="1.037475" ignoreforactivitychest="true" />
+            <!--Tier Based Fame (Removed for more Bonus Fame)-->
+            <!--Tradable Fame-->
+            <LootListReference name="FAME_BOOKS_LOOT_CHESTS" chance="0.269125" ignoreforactivitychest="true" />
+          </LootByTier>
+          <LootByTier tier="5">
+            <!--Mob Fame-->
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="4.579055" ignoreforactivitychest="true" />
+            <!--Bonus Fame-->
+            <Item type="T5_SKILLBOOK_NONTRADABLE" chance="2.091335" ignoreforactivitychest="true" />
+            <!--Tier Based Fame (Removed for more Bonus Fame)-->
+            <!--Tradable Fame-->
+            <LootListReference name="FAME_BOOKS_LOOT_CHESTS" chance="0.469125" ignoreforactivitychest="true" />
+          </LootByTier>
+          <LootByTier tier="6">
+            <!--Mob Fame-->
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="4.579055" ignoreforactivitychest="true" />
+            <!--Bonus Fame and Tier Based Fame-->
+            <Item type="T5_SKILLBOOK_NONTRADABLE" chance="3.713875" ignoreforactivitychest="true" />
+            <!--Tradable Fame-->
+            <LootListReference name="FAME_BOOKS_LOOT_CHESTS" chance="0.64289" ignoreforactivitychest="true" />
+          </LootByTier>
+          <LootByTier tier="7">
+            <!--Mob Fame-->
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="4.579055" ignoreforactivitychest="true" />
+            <!--Bonus Fame-->
+            <Item type="T5_SKILLBOOK_NONTRADABLE" chance="1.85759" ignoreforactivitychest="true" />
+            <!--Tier Based Fame-->
+            <Item type="T6_SKILLBOOK_NONTRADABLE" chance="1.58623" ignoreforactivitychest="true" />
+            <!--Tradable Fame-->
+            <LootListReference name="FAME_BOOKS_LOOT_CHESTS" chance="0.86877" ignoreforactivitychest="true" />
+          </LootByTier>
+       </Loot>
+     </RareState>
+     <RareState state="uncommon" weight="300" opensoundevent="Play_open_chest_uncommon" spawnsoundevent="Play_spawn_loot_uncommon" namelocatag="@LOOTCHEST_TREASURE_FACTION_SMALL_UNCOMMON" mightreward="PVPCHALLENGE_TREASURES_MINI_1">
+       <Loot>
+         <LootByTier tier="4">
+           <LootListReference name="T4_FACTION_CHEST_SMALL_UNCOMMON" chance="5"/>
+         </LootByTier>
+         <LootByTier tier="5">
+           <LootListReference name="T5_FACTION_CHEST_SMALL_UNCOMMON" chance="5"/>
+         </LootByTier>
+         <LootByTier tier="6">
+           <LootListReference name="T6_FACTION_CHEST_SMALL_UNCOMMON" chance="5"/>
+         </LootByTier>
+         <LootByTier tier="7">
+           <LootListReference name="T7_FACTION_CHEST_SMALL_UNCOMMON" chance="5"/>
+         </LootByTier>
+       </Loot>
+     </RareState>
+     <RareState state="rare" weight="100" opensoundevent="Play_open_chest_rare" spawnsoundevent="Play_spawn_loot_rare" namelocatag="@LOOTCHEST_TREASURE_FACTION_SMALL_RARE" mightreward="PVPCHALLENGE_TREASURES_MINI_2">
+       <Loot>
+         <LootByTier tier="4">
+           <LootListReference name="T4_FACTION_CHEST_SMALL_RARE" chance="5"/>
+         </LootByTier>
+         <LootByTier tier="5">
+           <LootListReference name="T5_FACTION_CHEST_SMALL_RARE" chance="5"/>
+         </LootByTier>
+         <LootByTier tier="6">
+           <LootListReference name="T6_FACTION_CHEST_SMALL_RARE" chance="5"/>
+         </LootByTier>
+         <LootByTier tier="7">
+           <LootListReference name="T7_FACTION_CHEST_SMALL_RARE" chance="5"/>
+         </LootByTier>
+       </Loot>
+     </RareState>
+     <RareState state="legendary" weight="10" opensoundevent="Play_open_chest_legendary" spawnsoundevent="Play_spawn_loot_legendary" namelocatag="@LOOTCHEST_TREASURE_FACTION_SMALL_LEGENDARY" mightreward="PVPCHALLENGE_TREASURES_MINI_3">
+       <Loot>
+         <LootByTier tier="4">
+           <LootListReference name="T4_FACTION_CHEST_SMALL_LEGENDARY" chance="5"/>
+         </LootByTier>
+         <LootByTier tier="5">
+           <LootListReference name="T5_FACTION_CHEST_SMALL_LEGENDARY" chance="5"/>
+         </LootByTier>
+         <LootByTier tier="6">
+           <LootListReference name="T6_FACTION_CHEST_SMALL_LEGENDARY" chance="5"/>
+         </LootByTier>
+         <LootByTier tier="7">
+           <LootListReference name="T7_FACTION_CHEST_SMALL_LEGENDARY" chance="5"/>
+         </LootByTier>
+       </Loot>
+     </RareState>
+     
+   </RareStates>
+ </LootChest>
+ <LootChest uniquename="FACTION_DYNAMIC_CAMP_MEDIUM_LC" avatar="TREASURECHEST_COMMON_AVATAR" faction="CITY_CAERLEON" alertradius="20" spell="OPEN_TREASURECHEST" opensoundevent="Play_open_chest_standard" spawnsoundevent="Play_spawn_loot_standard" namelocatag="@TREASURE_CHEST_FACTION_MEDIUM" locklocatag="@CORRUPTED_DUNGEON_CHEST_LOCK_MESSAGE" alwaysrequireschanneling="true" prefab="LOOTCHEST_FACTIONWARFARE_MEDIUM" clusteractivitytype="factionwarfarecampchest" chesttype="mediumfactioncamp" factionwarfare="true" factionsupplyrewardreference="FACTION_CAMP_MEDIUM" protectedbyquest="true" eligibilitydistance="90" mindivisor="20">
+   <Tiles>
+     <Biome name="Forest" green="LOOTCHEST_FACTIONWARFARE_MEDIUM" red="LOOTCHEST_FACTIONWARFARE_MEDIUM" dead="LOOTCHEST_FACTIONWARFARE_MEDIUM" />
+     <Biome name="Highland" green="LOOTCHEST_FACTIONWARFARE_MEDIUM" red="LOOTCHEST_FACTIONWARFARE_MEDIUM" dead="LOOTCHEST_FACTIONWARFARE_MEDIUM" />
+     <Biome name="Mountain" green="LOOTCHEST_FACTIONWARFARE_MEDIUM" red="LOOTCHEST_FACTIONWARFARE_MEDIUM" dead="LOOTCHEST_FACTIONWARFARE_MEDIUM" />
+     <Biome name="Steppe" green="LOOTCHEST_FACTIONWARFARE_MEDIUM" red="LOOTCHEST_FACTIONWARFARE_MEDIUM" dead="LOOTCHEST_FACTIONWARFARE_MEDIUM" />
+     <Biome name="Swamp" green="LOOTCHEST_FACTIONWARFARE_MEDIUM" red="LOOTCHEST_FACTIONWARFARE_MEDIUM" dead="LOOTCHEST_FACTIONWARFARE_MEDIUM" />
+   </Tiles>
+   <RareStates hiderarityuntil="OnUnlock">
+     <RareState state="standard" weight="590" opensoundevent="Play_open_chest_standard" spawnsoundevent="Play_spawn_loot_standard" namelocatag="@LOOTCHEST_TREASURE_FACTION_MEDIUM_STANDARD" mightreward="PVPCHALLENGE_TREASURES_MINI_0">
+       <Loot>
+         <LootByTier tier="4">
+            <!--Mob Fame-->
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="28.951" ignoreforactivitychest="true" />
+			      <!--Tier Based Fame-->
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="13.08236" ignoreforactivitychest="true" />
+            <!--Bonus Fame-->
+            <Item type="T5_SKILLBOOK_NONTRADABLE" chance="14.4755" ignoreforactivitychest="true" />
+            <!--Tradable Fame-->
+            <LootListReference name="FAME_BOOKS_LOOT_CHESTS" chance="6.0873" ignoreforactivitychest="true" />
+          </LootByTier>
+          <LootByTier tier="5">
+            <!--Mob Fame-->
+            <Item type="T5_SKILLBOOK_NONTRADABLE" chance="28.951" ignoreforactivitychest="true" />
+			      <!--Tier Based Fame-->
+            <Item type="T5_SKILLBOOK_NONTRADABLE" chance="6.11452" ignoreforactivitychest="true" />
+            <!--Bonus Fame-->
+            <Item type="T6_SKILLBOOK_NONTRADABLE" chance="4.90358" ignoreforactivitychest="true" />
+            <!--Tradable Fame-->
+            <LootListReference name="FAME_BOOKS_LOOT_CHESTS" chance="8.11666" ignoreforactivitychest="true" />
+          </LootByTier>
+          <LootByTier tier="6">
+            <!--Mob Fame-->
+            <Item type="T5_SKILLBOOK_NONTRADABLE" chance="28.951" ignoreforactivitychest="true" />
+            <!--Bonus Fame and Tier Based Fame-->
+            <Item type="T6_SKILLBOOK_NONTRADABLE" chance="14.36042" ignoreforactivitychest="true" />
+            <!--Tradable Fame-->
+            <LootListReference name="FAME_BOOKS_LOOT_CHESTS" chance="11.12286" ignoreforactivitychest="true" />
+          </LootByTier>
+          <LootByTier tier="7">
+            <!--Mob Fame-->
+            <Item type="T5_SKILLBOOK_NONTRADABLE" chance="28.951" ignoreforactivitychest="true" />
+            <!--Bonus Fame-->
+            <Item type="T6_SKILLBOOK_NONTRADABLE" chance="8.65512" ignoreforactivitychest="true" />
+            <!--Tier Based Fame-->
+            <Item type="T7_SKILLBOOK_NONTRADABLE" chance="7.40978" ignoreforactivitychest="true" />
+            <!--Tradable Fame-->
+            <LootListReference name="FAME_BOOKS_LOOT_CHESTS" chance="15.0309" ignoreforactivitychest="true" />
+          </LootByTier>
+       </Loot>
+     </RareState>
+     <RareState state="uncommon" weight="300" opensoundevent="Play_open_chest_uncommon" spawnsoundevent="Play_spawn_loot_uncommon" namelocatag="@LOOTCHEST_TREASURE_FACTION_MEDIUM_UNCOMMON" mightreward="PVPCHALLENGE_TREASURES_MINI_1">
+       <Loot>
+         <LootByTier tier="4">
+           <LootListReference name="T4_FACTION_CHEST_MEDIUM_UNCOMMON" chance="20" />
+         </LootByTier>
+         <LootByTier tier="5">
+           <LootListReference name="T5_FACTION_CHEST_MEDIUM_UNCOMMON" chance="20" />
+         </LootByTier>
+         <LootByTier tier="6">
+           <LootListReference name="T6_FACTION_CHEST_MEDIUM_UNCOMMON" chance="20" />
+         </LootByTier>
+         <LootByTier tier="7">
+           <LootListReference name="T7_FACTION_CHEST_MEDIUM_UNCOMMON" chance="20" />
+         </LootByTier>
+       </Loot>
+     </RareState>
+     <RareState state="rare" weight="100" opensoundevent="Play_open_chest_rare" spawnsoundevent="Play_spawn_loot_rare" namelocatag="@LOOTCHEST_TREASURE_FACTION_MEDIUM_RARE" mightreward="PVPCHALLENGE_TREASURES_MINI_2">
+       <Loot>
+         <LootByTier tier="4">
+           <LootListReference name="T4_FACTION_CHEST_MEDIUM_RARE" chance="20" />
+         </LootByTier>
+         <LootByTier tier="5">
+           <LootListReference name="T5_FACTION_CHEST_MEDIUM_RARE" chance="20" />
+         </LootByTier>
+         <LootByTier tier="6">
+           <LootListReference name="T6_FACTION_CHEST_MEDIUM_RARE" chance="20" />
+         </LootByTier>
+         <LootByTier tier="7">
+           <LootListReference name="T7_FACTION_CHEST_MEDIUM_RARE" chance="20" />
+         </LootByTier>
+       </Loot>
+     </RareState>
+     <RareState state="legendary" weight="10" opensoundevent="Play_open_chest_legendary" spawnsoundevent="Play_spawn_loot_legendary" namelocatag="@LOOTCHEST_TREASURE_FACTION_MEDIUM_LEGENDARY" mightreward="PVPCHALLENGE_TREASURES_MINI_3">
+       <Loot>
+         <LootByTier tier="4">
+           <LootListReference name="T4_FACTION_CHEST_MEDIUM_LEGENDARY" chance="20" />
+         </LootByTier>
+         <LootByTier tier="5">
+           <LootListReference name="T5_FACTION_CHEST_MEDIUM_LEGENDARY" chance="20" />
+         </LootByTier>
+         <LootByTier tier="6">
+           <LootListReference name="T6_FACTION_CHEST_MEDIUM_LEGENDARY" chance="20" />
+         </LootByTier>
+         <LootByTier tier="7">
+           <LootListReference name="T7_FACTION_CHEST_MEDIUM_LEGENDARY" chance="20" />
+         </LootByTier>
+       </Loot>
+     </RareState>
+     
+   </RareStates>
+ </LootChest>
 
   <!--****************************************************************************************-->
   <!--LOOT CHEST SPAWN POINTS -->
@@ -10944,6 +11302,14 @@
     <LootChest name="TREASURE_SOLO_RARE" weight="100" />
     <LootChest name="TREASURE_SOLO_LEGENDARY" weight="10" />
   </LootChestSpawnpoint>
+  <!-- Faction Warfare - Treasure Solo-->
+  <LootChestSpawnpoint name="FACTION_TREASURE_SOLO" despawntimeseconds="300" initialspawntimeseconds="0" respawntimesecondsmin="86400" respawntimesecondsmax="86400" respawn="Never">
+    <LootChest name="FACTION_TREASURE_SMALL" weight="1" />
+  </LootChestSpawnpoint>
+  <!-- Faction Warfare - Treasure Group-->
+  <LootChestSpawnpoint name="FACTION_TREASURE_GROUP" despawntimeseconds="300" initialspawntimeseconds="0" respawntimesecondsmin="86400" respawntimesecondsmax="86400" respawn="Never">
+    <LootChest name="FACTION_TREASURE_MEDIUM" weight="1" />
+  </LootChestSpawnpoint>
   <!--Solo - ROADS-->
   <LootChestSpawnpoint name="ROADS_TREASURE_SOLO" despawntimeseconds="300" initialspawntimeseconds="0" respawntimesecondsmin="86400" respawntimesecondsmax="86400" respawn="Never">
     <LootChest name="TREASURE_SOLO_STANDARD" weight="74" />
@@ -11037,6 +11403,14 @@
     <LootChest name="TREASURE_CASTLE_LEGENDARY" weight="1" />
   </LootChestSpawnpoint>
   
+  <LootChestSpawnpoint name="SPAWNPOINT_FACTION_DYNAMIC_CAMP_SMALL_LC" despawntimeseconds="300" initialspawntimeseconds="0" respawntimesecondsmin="86400" respawntimesecondsmax="86400" respawn="Never">
+    <TooltipDisplay icon="treasure_generic" iconoffset="-16 0" textoffset="-10" />
+    <LootChest name="FACTION_DYNAMIC_CAMP_SMALL_LC" weight="1" />
+  </LootChestSpawnpoint>
+  <LootChestSpawnpoint name="SPAWNPOINT_FACTION_DYNAMIC_CAMP_MEDIUM_LC" despawntimeseconds="300" initialspawntimeseconds="0" respawntimesecondsmin="86400" respawntimesecondsmax="86400" respawn="Never">
+    <TooltipDisplay icon="treasure_generic" iconoffset="-16 0" textoffset="-10" />
+    <LootChest name="FACTION_DYNAMIC_CAMP_MEDIUM_LC" weight="1" />
+  </LootChestSpawnpoint>
 
   <!--########################################################################################-->
   <!--STATIC DUNGEONS-->
@@ -11916,17 +12290,29 @@
     <RareStates hiderarityuntil="OnUnlock">
       <RareState state="standard" weight="59" namelocatag="@DYNAMIC_PERSONALCHEST_MEDIUM_NAME_STANDARD_FAME">
         <Loot>
+          <LootByTier tier="4">
+            <!--Mob Fame-->
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="1.44755" ignoreforactivitychest="true" />
+			      <!--Tier Based Fame-->
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="0.654118" ignoreforactivitychest="true" />
+            <!--Bonus Fame-->
+            <Item type="T5_SKILLBOOK_NONTRADABLE" chance="0.723775" ignoreforactivitychest="true" />
+            <!--Tradable Fame-->
+            <LootListReference name="FAME_BOOKS_LOOT_CHESTS" chance="0.304365" ignoreforactivitychest="true" />
+            <!--Smuggler's Coin-->
+            <Item type="QUESTITEM_TOKEN_SMUGGLER" chance="4.204252" ignoreforactivitychest="true" continent="Outlands" />
+          </LootByTier>
           <LootByTier tier="5">
             <!--Mob Fame-->
             <Item type="T5_SKILLBOOK_NONTRADABLE" chance="1.44755" ignoreforactivitychest="true" />
-			<!--Tier Based Fame-->
+			      <!--Tier Based Fame-->
             <Item type="T5_SKILLBOOK_NONTRADABLE" chance="0.305726" ignoreforactivitychest="true" />
             <!--Bonus Fame-->
             <Item type="T6_SKILLBOOK_NONTRADABLE" chance="0.245179" ignoreforactivitychest="true" />
             <!--Tradable Fame-->
             <LootListReference name="FAME_BOOKS_LOOT_CHESTS" chance="0.405833" ignoreforactivitychest="true" />
-			<!--Smuggler's Coin-->
-			<Item type="QUESTITEM_TOKEN_SMUGGLER" chance="4.204252" ignoreforactivitychest="true" continent="Outlands" />
+			      <!--Smuggler's Coin-->
+			      <Item type="QUESTITEM_TOKEN_SMUGGLER" chance="4.204252" ignoreforactivitychest="true" continent="Outlands" />
           </LootByTier>
           <LootByTier tier="6">
             <!--Mob Fame-->
@@ -11935,8 +12321,8 @@
             <Item type="T6_SKILLBOOK_NONTRADABLE" chance="0.718021" ignoreforactivitychest="true" />
             <!--Tradable Fame-->
             <LootListReference name="FAME_BOOKS_LOOT_CHESTS" chance="0.556143" ignoreforactivitychest="true" />
-			<!--Smuggler's Coin-->
-			<Item type="QUESTITEM_TOKEN_SMUGGLER" chance="4.204252" ignoreforactivitychest="true" continent="Outlands" />
+			      <!--Smuggler's Coin-->
+			      <Item type="QUESTITEM_TOKEN_SMUGGLER" chance="4.204252" ignoreforactivitychest="true" continent="Outlands" />
           </LootByTier>
           <LootByTier tier="7">
             <!--Mob Fame-->
@@ -11947,8 +12333,8 @@
             <Item type="T7_SKILLBOOK_NONTRADABLE" chance="0.370489" ignoreforactivitychest="true" />
             <!--Tradable Fame-->
             <LootListReference name="FAME_BOOKS_LOOT_CHESTS" chance="0.751545" ignoreforactivitychest="true" />
-			<!--Smuggler's Coin-->
-			<Item type="QUESTITEM_TOKEN_SMUGGLER" chance="4.204252" ignoreforactivitychest="true" continent="Outlands" />
+			      <!--Smuggler's Coin-->
+			      <Item type="QUESTITEM_TOKEN_SMUGGLER" chance="4.204252" ignoreforactivitychest="true" continent="Outlands" />
           </LootByTier>
           <LootByTier tier="8">
             <!--Mob Fame-->
@@ -11959,13 +12345,16 @@
             <Item type="T8_SKILLBOOK_NONTRADABLE" chance="0.305901" ignoreforactivitychest="true" />
             <!--Tradable Fame-->
             <LootListReference name="FAME_BOOKS_LOOT_CHESTS" chance="1.022102" ignoreforactivitychest="true" />
-			<!--Smuggler's Coin-->
-			<Item type="QUESTITEM_TOKEN_SMUGGLER" chance="4.204252" ignoreforactivitychest="true" continent="Outlands" />
+			      <!--Smuggler's Coin-->
+			      <Item type="QUESTITEM_TOKEN_SMUGGLER" chance="4.204252" ignoreforactivitychest="true" continent="Outlands" />
           </LootByTier>
         </Loot>
       </RareState>
       <RareState state="uncommon" weight="30" spawnsoundevent="Play_spawn_loot_uncommon" opensoundevent="Play_open_chest_undead" namelocatag="@DYNAMIC_PERSONALCHEST_MEDIUM_NAME_UNCOMMON">
         <Loot>
+          <LootByTier tier="4">
+            <LootListReference name="T4_DYNAMIC_MEDIUM_CAMP_UNCOMMON" />
+          </LootByTier>
           <LootByTier tier="5">
             <LootListReference name="T5_DYNAMIC_MEDIUM_CAMP_UNCOMMON" />
           </LootByTier>
@@ -11982,6 +12371,9 @@
       </RareState>
       <RareState state="rare" weight="10" spawnsoundevent="Play_spawn_loot_rare" opensoundevent="Play_open_chest_undead" namelocatag="@DYNAMIC_PERSONALCHEST_MEDIUM_NAME_RARE">
         <Loot>
+          <LootByTier tier="4">
+            <LootListReference name="T4_DYNAMIC_MEDIUM_CAMP_RARE" />
+          </LootByTier>
           <LootByTier tier="5">
             <LootListReference name="T5_DYNAMIC_MEDIUM_CAMP_RARE" />
           </LootByTier>
@@ -11998,6 +12390,9 @@
       </RareState>
       <RareState state="legendary" weight="1" spawnsoundevent="Play_spawn_loot_legendary" opensoundevent="Play_open_chest_undead" namelocatag="@DYNAMIC_PERSONALCHEST_MEDIUM_NAME_LEGENDARY">
         <Loot>
+          <LootByTier tier="4">
+            <LootListReference name="T4_DYNAMIC_MEDIUM_CAMP_LEGENDARY" />
+          </LootByTier>
           <LootByTier tier="5">
             <LootListReference name="T5_DYNAMIC_MEDIUM_CAMP_LEGENDARY" />
           </LootByTier>
@@ -12025,6 +12420,17 @@
     <RareStates hiderarityuntil="OnUnlock">
       <RareState state="standard" weight="59" namelocatag="@DYNAMIC_PERSONALCHEST_SMALL_NAME_STANDARD_FAME">
         <Loot>
+          <LootByTier tier="4">
+            <!--Mob Fame-->
+            <Item type="T4_SKILLBOOK_NONTRADABLE" chance="0.915811" ignoreforactivitychest="true" />
+            <!--Bonus Fame-->
+            <Item type="T5_SKILLBOOK_NONTRADABLE" chance="0.207495" ignoreforactivitychest="true" />
+            <!--Tier Based Fame (Removed for more Bonus Fame)-->
+            <!--Tradable Fame-->
+            <LootListReference name="FAME_BOOKS_LOOT_CHESTS" chance="0.053825" ignoreforactivitychest="true" />
+			<!--Smuggler's Coin-->
+			<Item type="QUESTITEM_TOKEN_SMUGGLER" chance="1.604738" ignoreforactivitychest="true" continent="Outlands" />
+          </LootByTier>
           <LootByTier tier="5">
             <!--Mob Fame-->
             <Item type="T4_SKILLBOOK_NONTRADABLE" chance="0.915811" ignoreforactivitychest="true" />
@@ -12074,6 +12480,9 @@
       </RareState>
       <RareState state="uncommon" weight="30" spawnsoundevent="Play_spawn_loot_uncommon" opensoundevent="Play_open_chest_undead" namelocatag="@DYNAMIC_PERSONALCHEST_SMALL_NAME_UNCOMMON">
         <Loot>
+          <LootByTier tier="4">
+            <LootListReference name="T4_DYNAMIC_SMALL_CAMP_UNCOMMON" />
+          </LootByTier>
           <LootByTier tier="5">
             <LootListReference name="T5_DYNAMIC_SMALL_CAMP_UNCOMMON" />
           </LootByTier>
@@ -12090,6 +12499,9 @@
       </RareState>
       <RareState state="rare" weight="10" spawnsoundevent="Play_spawn_loot_rare" opensoundevent="Play_open_chest_undead" namelocatag="@DYNAMIC_PERSONALCHEST_SMALL_NAME_RARE">
         <Loot>
+          <LootByTier tier="4">
+            <LootListReference name="T4_DYNAMIC_SMALL_CAMP_RARE" />
+          </LootByTier>
           <LootByTier tier="5">
             <LootListReference name="T5_DYNAMIC_SMALL_CAMP_RARE" />
           </LootByTier>
@@ -12106,6 +12518,9 @@
       </RareState>
       <RareState state="legendary" weight="1" spawnsoundevent="Play_spawn_loot_legendary" opensoundevent="Play_open_chest_undead" namelocatag="@DYNAMIC_PERSONALCHEST_SMALL_NAME_LEGENDARY">
         <Loot>
+          <LootByTier tier="4">
+            <LootListReference name="T4_DYNAMIC_SMALL_CAMP_LEGENDARY" />
+          </LootByTier>
           <LootByTier tier="5">
             <LootListReference name="T5_DYNAMIC_SMALL_CAMP_LEGENDARY" />
           </LootByTier>

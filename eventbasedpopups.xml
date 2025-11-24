@@ -663,7 +663,7 @@
             </conditions>
         </popup>
 
-        <lootchestpopup uniquename="TWITCH_DROPS" type="LootChests" guitemplate="LootChest" priority="0" title="@EVENT_BASED_POPUPS_TITLE_TWITCH_DROPS" description="@EVENT_BASED_POPUPS_DESCRIPTION_TWITCH_DROPS" rewardstitle="@EVENT_BASED_POPUPS_REWARDS_TITLE_TWITCH_DROPS" buttonloca="@EVENT_BASED_POPUPS_BUTTON_TWITCH_DROPS" imagepath="Gui/EventBasedPopups/EVENT_POPUP_TWITCH_DROPS" flagpath="Gui/EventBasedPopups/icons_shop_flag_purple_big" flagiconpath="Gui/EventBasedPopups/icon_twitch_drops">
+        <lootchestpopup uniquename="TWITCH_DROPS" type="LootChests" guitemplate="LootChest" priority="0" title="@EVENT_BASED_POPUPS_TITLE_TWITCH_DROPS" description="@EVENT_BASED_POPUPS_DESCRIPTION_TWITCH_DROPS" rewardstitle="@EVENT_BASED_POPUPS_REWARDS_TITLE_TWITCH_DROPS" buttonloca="@EVENT_BASED_POPUPS_BUTTON_TWITCH_DROPS" imagepath="Gui/EventBasedPopups/EVENT_POPUP_TWITCH_DROPS_02" flagpath="Gui/EventBasedPopups/icons_shop_flag_brown_big" flagiconpath="Gui/EventBasedPopups/icon_twitch_drops">
             <categories>
                 <category name="Advertisement" />
             </categories>
@@ -681,9 +681,9 @@
             </and>
             </conditions>
             <possibledrops>
+                <item itemid="UNIQUE_UNLOCK_DIREBOAR_FIBER_GATHERER" />
+                <item itemid="UNIQUE_UNLOCK_ARMOR_VANITY_KNIGHT_AOCP_NON_TRADABLE" />
                 <item itemid="UNIQUE_UNLOCK_SKIN_GIANTSTAG_ALPACA_BROWN" />
-                <item itemid="UNIQUE_UNLOCK_SKIN_HORSE_UNICORN_AMETHYST" />
-                <item itemid="UNIQUE_UNLOCK_SKIN_COUGAR_AMETHYST" />
             </possibledrops>
         </lootchestpopup>
 
@@ -776,10 +776,19 @@
                 <and>
                     <IfTutorialCompleted />
                     <IfAlbionJournalIsUnlocked />
-                    <IfOnPlatform platform="Ios"/>
-                    <IfPlayingFromCountry isocode="US"/> 
-                    <IfFeatureIsEnabled feature="ShowWebShopLinksOnIos" /> 
-                    <IfHasSeenPopup uniquename="MOBILE_WEB_SHOP_INCENTIVE" frequency="Days" timefactor="7" operation="equals" amount="0" />
+					<IfHasSeenPopup uniquename="MOBILE_WEB_SHOP_INCENTIVE" frequency="Days" timefactor="7" operation="equals" amount="0" />
+					<IfPlayingFromCountry isocode="US"/>
+					<or>
+						<and>
+							<IfOnPlatform platform="Ios"/>
+							<IfFeatureIsEnabled feature="ShowWebShopLinksOnIos" />
+						</and>
+						<and>
+							<IfOnPlatform platform="Android"/>
+							<IfOnPlatform platform="MobileStore"/>
+							<IfFeatureIsEnabled feature="ShowWebShopLinksOnAndroid" />
+						</and>
+					</or>
                 </and>
             </conditions>
         </genericadvertisement>

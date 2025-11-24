@@ -2,27 +2,58 @@
   <criticalscenemembers />
   <tiles>
     <layergroup name="DYNAMIC">
-      <layer id="Layer_01" name="KEEPER_DYN_ACTIVE">
+      <layer id="Layer_01" name="KEEPER_DYN_VAR_DEFAULT_ACTIVE">
+        <tile name="SpawnPoint_LOOTCHEST_KEEPER_DYNAMIC_CAMP_PERSONAL_SMALL" pos="3.5 8 3.5" roty="180" />
+        <tile name="FOREST_RED_KPR_OBELISK_LARGE_B" pos="1.5 8 -10.5" roty="180" scale="1 0.75 1" />
+        <tile name="FOREST_RED_KPR_OBELISK_SMALL_A" pos="11.5 8 12.5" roty="32" />
+        <tile name="KPR_POINTLIGHT_STANDARD_8M_A" pos="-1.31 11.32 -16.86">
+          <pointlight range="8" intensity="6" color="1 0.7591847 0.2720588" />
+        </tile>
+        <tile name="KPR_POINTLIGHT_STANDARD_8M_A" pos="-12.4 12.08 14.2">
+          <pointlight range="8" intensity="6" color="1 0.7591847 0.2720588" />
+        </tile>
+        <tile name="KPR_POINTLIGHT_STANDARD_8M_A" pos="15.11 12.08 16.99">
+          <pointlight range="8" intensity="6" color="1 0.7591847 0.2720588" />
+        </tile>
+        <tile name="KPR_POINTLIGHT_STANDARD_10M_A" pos="-22.18 8.51 -3.34">
+          <pointlight range="10" intensity="6" color="1 0.7591847 0.2720588" />
+        </tile>
+        <tile name="KPR_POINTLIGHT_STANDARD_10M_A" pos="0.65 6.62 23.82">
+          <pointlight range="10" intensity="6" color="1 0.7591847 0.2720588" />
+        </tile>
+        <tile name="KPR_POINTLIGHT_STANDARD_10M_A" pos="22.97 11.37 0.69">
+          <pointlight range="10" intensity="6" color="1 0.7591847 0.2720588" />
+        </tile>
         <tile name="KPR_POINTLIGHT_STANDARD_12M_A" pos="3.73 12.85 2.69">
           <pointlight range="12" intensity="6" color="1 0.7591847 0.2720588" />
         </tile>
-        <tile name="SpawnPoint_LOOTCHEST_KEEPER_DYNAMIC_CAMP_PERSONAL_SMALL" pos="3.5 8 3.5" roty="180" />
-        <tile name="SpawnPoint_RANDOM_ROAMING_DYNAMIC_CAMP_KEEPER_STANDARD_ANY" pos="8 8 9.34" roty="126">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="DYNAMIC_CAMP_KEEPER_STANDARD_ANY_SOLO" />
+        <compoundtile name="_FOREST_RED_KEEPER_DYNAMIC_MAP_SOLO" pos="7 8 13" roty="180" />
+        <tile name="TreasureSpawnpointCoffer" pos="-6 8 4" />
+        <tile name="UnrestrictedPvpZone" pos="0 0 0">
+          <unrestrictedpvpzone radius="35" />
         </tile>
-        <tile name="SpawnPoint_RANDOM_ROAMING_DYNAMIC_CAMP_KEEPER_RANGED" pos="-4.99 8 6.4">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="DYNAMIC_CAMP_KEEPER_RANGED_SOLO" />
+        <tile name="LocalQuestArea" pos="-0.5 8 -0.5">
+          <localquestarea questid="LOCAL_QUEST_SMALL_KEEPER" radius="35" />
         </tile>
-        <tile name="SpawnPoint_RANDOM_ROAMING_DYNAMIC_CAMP_KEEPER_CHAMPION_ANY" pos="11.31 8 6.42" roty="327.12">
+        <tile name="SpawnPoint_RANDOM_ROAMING_DYNAMIC_CAMP_KEEPER_CHAMPION_ANY" pos="-1.64 0 24.1">
           <mobspawnpoint behavior="GUARD" spawnbehavior="DYNAMIC_CAMP_KEEPER_CHAMPION_ANY_SOLO" />
         </tile>
-        <tile name="SpawnPoint_RANDOM_ROAMING_DYNAMIC_CAMP_KEEPER_MELEE" pos="-9.34 7.39 -4.92" roty="258.27">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="DYNAMIC_CAMP_KEEPER_MELEE_SOLO" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_ROAMING_DYNAMIC_CAMP_KEEPER_STANDARD_ANY" pos="5.49 8 -8.37" roty="31.47">
+        <tile name="SpawnPoint_RANDOM_ROAMING_DYNAMIC_CAMP_KEEPER_STANDARD_ANY" pos="24.12 0 1.8" roty="90">
           <mobspawnpoint behavior="GUARD" spawnbehavior="DYNAMIC_CAMP_KEEPER_STANDARD_ANY_SOLO" />
         </tile>
-        <tile name="SpawnPoint_RANDOM_ROAMING_DYNAMIC_CAMP_KEEPER_CHAMPION_ANY" pos="-21.73 0 5.93" roty="180">
+        <tile name="SpawnPoint_RANDOM_ROAMING_DYNAMIC_CAMP_KEEPER_CHAMPION_MINIBOSS_MAGIC" pos="1.69 8 -6.89">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="DYNAMIC_CAMP_KEEPER_CHAMPION_MINIBOSS_MAGIC_SOLO" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_ROAMING_DYNAMIC_CAMP_KEEPER_MAGIC" pos="-2.46 8 9.03" roty="276.28">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="DYNAMIC_CAMP_KEEPER_MAGIC_SOLO" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_ROAMING_DYNAMIC_CAMP_KEEPER_STANDARD_ANY" pos="2.12 0 24.1">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="DYNAMIC_CAMP_KEEPER_STANDARD_ANY_SOLO" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_ROAMING_DYNAMIC_CAMP_KEEPER_STANDARD_ANY" pos="24.12 0 -2.22" roty="90">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="DYNAMIC_CAMP_KEEPER_STANDARD_ANY_SOLO" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_ROAMING_DYNAMIC_CAMP_KEEPER_CHAMPION_ANY" pos="-21.73 0.83 5.93" roty="180">
           <mobspawnpoint behavior="PATROL" spawnbehavior="DYNAMIC_CAMP_KEEPER_CHAMPION_ANY_SOLO">
             <path>
               <waypoint pos="-21.72 5.72" idle="3" pace="WALK" />
@@ -33,76 +64,28 @@
             </path>
           </mobspawnpoint>
         </tile>
-        <tile name="SpawnPoint_RANDOM_ROAMING_DYNAMIC_CAMP_KEEPER_STANDARD_ANY" pos="24.12 0 -2.22" roty="90">
+        <tile name="SpawnPoint_RANDOM_ROAMING_DYNAMIC_CAMP_KEEPER_STANDARD_ANY" pos="5.49 8 -8.37" roty="31.47">
           <mobspawnpoint behavior="GUARD" spawnbehavior="DYNAMIC_CAMP_KEEPER_STANDARD_ANY_SOLO" />
         </tile>
-        <tile name="SpawnPoint_RANDOM_ROAMING_DYNAMIC_CAMP_KEEPER_STANDARD_ANY" pos="2.12 0 24.1">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="DYNAMIC_CAMP_KEEPER_STANDARD_ANY_SOLO" />
+        <tile name="SpawnPoint_RANDOM_ROAMING_DYNAMIC_CAMP_KEEPER_MELEE" pos="-9.34 7.39 -4.92" roty="258">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="DYNAMIC_CAMP_KEEPER_MELEE_SOLO" />
         </tile>
-        <tile name="SpawnPoint_RANDOM_ROAMING_DYNAMIC_CAMP_KEEPER_MAGIC" pos="-2.46 8 9.03" roty="276.28">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="DYNAMIC_CAMP_KEEPER_MAGIC_SOLO" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_ROAMING_DYNAMIC_CAMP_KEEPER_CHAMPION_MINIBOSS_MAGIC" pos="1.69 8 -6.89">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="DYNAMIC_CAMP_KEEPER_CHAMPION_MINIBOSS_MAGIC_SOLO" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_ROAMING_DYNAMIC_CAMP_KEEPER_STANDARD_ANY" pos="24.12 0 1.8" roty="90">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="DYNAMIC_CAMP_KEEPER_STANDARD_ANY_SOLO" />
-        </tile>
-        <tile name="SpawnPoint_RANDOM_ROAMING_DYNAMIC_CAMP_KEEPER_CHAMPION_ANY" pos="-1.64 0 24.1">
+        <tile name="SpawnPoint_RANDOM_ROAMING_DYNAMIC_CAMP_KEEPER_CHAMPION_ANY" pos="11.31 8 6.42" roty="327.12">
           <mobspawnpoint behavior="GUARD" spawnbehavior="DYNAMIC_CAMP_KEEPER_CHAMPION_ANY_SOLO" />
         </tile>
-        <tile name="LocalQuestArea" pos="-0.5 8 -0.5">
-          <localquestarea questid="LOCAL_QUEST_SMALL_KEEPER" radius="35" />
+        <tile name="SpawnPoint_RANDOM_ROAMING_DYNAMIC_CAMP_KEEPER_RANGED" pos="-4.99 8 6.4">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="DYNAMIC_CAMP_KEEPER_RANGED_SOLO" />
         </tile>
-        <tile name="UnrestrictedPvpZone" pos="0 0 0">
-          <unrestrictedpvpzone radius="35" />
+        <tile name="SpawnPoint_RANDOM_ROAMING_DYNAMIC_CAMP_KEEPER_STANDARD_ANY" pos="8 8 9.34" roty="126">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="DYNAMIC_CAMP_KEEPER_STANDARD_ANY_SOLO" />
         </tile>
-        <tile name="FOREST_RED_KPR_BEACON_ACTIVE" pos="-1 0 -20" roty="275" />
-        <tile name="TreasureSpawnpointCoffer" pos="-6 8 4" />
-        <tile name="FOREST_RED_KPR_OBELISK_SMALL_A" pos="-7.5 8 10.5" roty="309" />
-        <tile name="FOREST_RED_KPR_BANNER_ACTIVE" pos="5.5 -1 22.5" roty="150" />
-        <tile name="KPR_POINTLIGHT_STANDARD_10M_A" pos="22.97 11.37 0.69">
-          <pointlight range="10" intensity="6" color="1 0.7591847 0.2720588" />
-        </tile>
-        <tile name="KPR_POINTLIGHT_STANDARD_10M_A" pos="0.65 6.62 23.82">
-          <pointlight range="10" intensity="6" color="1 0.7591847 0.2720588" />
-        </tile>
-        <tile name="KPR_POINTLIGHT_STANDARD_10M_A" pos="-22.18 8.51 -3.34">
-          <pointlight range="10" intensity="6" color="1 0.7591847 0.2720588" />
-        </tile>
-        <tile name="KPR_POINTLIGHT_STANDARD_8M_A" pos="15.11 12.08 16.99">
-          <pointlight range="8" intensity="6" color="1 0.7591847 0.2720588" />
-        </tile>
-        <tile name="KPR_POINTLIGHT_STANDARD_8M_A" pos="-12.4 12.08 14.2">
-          <pointlight range="8" intensity="6" color="1 0.7591847 0.2720588" />
-        </tile>
-        <tile name="KPR_POINTLIGHT_STANDARD_8M_A" pos="-1.31 11.32 -16.86">
-          <pointlight range="8" intensity="6" color="1 0.7591847 0.2720588" />
-        </tile>
-        <tile name="FOREST_RED_KPR_FILL_STORAGE_PILE_C" pos="7 8 -12.5" />
-        <tile name="FOREST_RED_KPR_FILL_STORAGE_PILE_B" pos="0 8 -1" roty="180" />
-        <tile name="FOREST_RED_KPR_OBELISK_SMALL_A" pos="11.5 8 12.5" roty="32" />
-        <tile name="FOREST_RED_KPR_BEACON_ACTIVE" pos="-15 0 16" roty="6" />
-        <tile name="FOREST_RED_KPR_OBELISK_LARGE_B" pos="1.5 8 -10.5" roty="180" scale="1 0.75 1" />
-        <tile name="FOREST_RED_KPR_BANNER_ACTIVE" pos="-20.5 0 -7.5" roty="104.71" />
         <tile name="FOREST_RED_KPR_BANNER_ACTIVE" pos="22.5 -1 -4.5" roty="240" />
-        <tile name="FOREST_RED_KPR_BOWL_COLOR_A" pos="3 9 1" roty="90" />
-        <tile name="FOREST_RED_KPR_BEACON_ACTIVE" pos="18 0 19" roty="108" />
-        <tile name="FOREST_RED_KPR_BANNER_ACTIVE" pos="-5.5 -1 22.5" roty="180" />
-        <compoundtile name="_FOREST_RED_KEEPER_DYNAMIC_MAP_SOLO" pos="7 8 13" roty="180" />
+        <tile name="FOREST_RED_KPR_OBELISK_SMALL_A" pos="-7.5 8 10.5" roty="309" />
       </layer>
-      <layer id="Layer_02" name="KEEPER_DYN_INACTIVE">
-        <tile name="FOREST_RED_KPR_BANNER_INACTIVE" pos="5.5 -1 22.5" roty="150" />
-        <tile name="FOREST_RED_KPR_BEACON_INACTIVE" pos="18 0 19" roty="108" />
+      <layer id="Layer_02" name="KEEPER_DYN_VAR_DEFAULT_INACTIVE">
         <tile name="FOREST_RED_KPR_BANNER_INACTIVE" pos="22.5 -1 -4.5" roty="240" />
-        <tile name="FOREST_RED_KPR_BANNER_INACTIVE" pos="-5.5 -1 22.5" roty="180" />
-        <tile name="FOREST_RED_KPR_BANNER_INACTIVE" pos="-20.5 0 -7.5" roty="90" />
         <tile name="FOREST_RED_KPR_OBELISK_SMALL_A_NO_EMISSIVE" pos="-7.5 8 10.5" roty="309" />
         <tile name="FOREST_RED_KPR_OBELISK_LARGE_B_NO_EMISSIVE" pos="1.5 8 -10.5" roty="180" scale="1 0.75 1" />
-        <tile name="FOREST_RED_KPR_BEACON_INACTIVE" pos="-1 0 -20" roty="275" />
-        <tile name="FOREST_RED_KPR_FILL_STORAGE_PILE_B_EMPTY" pos="0 8 -1" roty="180" />
-        <tile name="FOREST_RED_KPR_FILL_STORAGE_PILE_C_EMPTY" pos="7 8 -12.5" />
-        <tile name="FOREST_RED_KPR_BEACON_INACTIVE" pos="-15 0 16" roty="6" />
         <tile name="FOREST_RED_KPR_OBELISK_SMALL_A_NO_EMISSIVE" pos="11.5 8 12.5" roty="32" />
         <tile name="FOREST_RED_KPR_DYNAMIC_MOBCAMP_MAP_TABLE" pos="7.5 8 13.5" roty="180" />
       </layer>
@@ -122,27 +105,26 @@
         <tile name="FOREST_RED_T1_BUSH_B" pos="-18.5 0 15.5" roty="90" />
         <tile name="FOREST_RED_T1_TREE_GIANT_BEND_A" pos="-15 3 5" rot="3 93 3" />
         <tile name="FOREST_RED_FILL_TREE_MAMMOTH_E" pos="17 3 -17" roty="180" />
-        <tile name="FOREST_RED_T1_TREE_GIANT_BEND_B" pos="16.5 8 -8.5" rot="356 5 355" />
-        <tile name="FOREST_RED_T1_TREE_GIANT_BEND_B" pos="-22 0 17" rot="0 0 2" />
-        <tile name="FOREST_RED_T1_TREE_GIANT_BEND_B" pos="23 0 22" rot="0 356 2" scale="1 1.0176 1" />
-        <tile name="FOREST_RED_GROUND_PATCH_TO_ROAD_CIRCLE_A" pos="3 8 1" scale="3.094973 1 2.370198" />
-        <tile name="FOREST_RED_ROCK_PLATEAU_WALL_A_NOCOL_NORAMP" pos="12 4.51 15" rot="18 14 17" />
-        <tile name="FOREST_RED_ROCK_PLATEAU_WALL_A_NOCOL_NORAMP" pos="16 4 12" rot="9 246 14" />
-        <tile name="FOREST_RED_ROCK_PLATEAU_WALL_A_NORAMP" pos="-6 4 -13" rot="350 36 353" />
-        <tile name="FOREST_RED_ROCK_PLATEAU_WALL_COMP_A_NOCOL_NORAMP" pos="-3 -4 -16" roty="58" />
-        <tile name="FOREST_RED_VEG_FERN_D" pos="-16.5 0 19.5" roty="180" />
-        <tile name="FOREST_RED_KPR_FILL_TABLE_STONE_FUR_A_SMALL" pos="3 8 0.57" />
-        <tile name="FOREST_RED_VEG_FERN_D" pos="5.5 8 14.5" roty="180" />
-        <tile name="FOREST_RED_VEG_FERN_A" pos="-6.5 8 -0.5" roty="180" />
-        <tile name="FOREST_RED_T1_TREE_GIANT_BEND_B" pos="13 8 -11" rot="2 175 358" scale="1 0.8154497 1" />
-        <tile name="FOREST_RED_VEG_FERN_A" pos="22.5 0 -7.5" roty="180" />
-        <tile name="FOREST_RED_T1_TREE_GIANT_BEND_B" pos="-14 0 21" rot="358 357 355" scale="1 0.9295499 1" />
-        <tile name="FOREST_RED_VEG_FERN_A" pos="21.5 0 -21.5" roty="90" />
-        <tile name="FOREST_RED_T1_DECO_TREE_GIANT_B" pos="5 9 -16" />
-        <tile name="FOREST_RED_VEG_FERN_D" pos="15.5 8 -6.5" roty="180" />
-        <tile name="FOREST_RED_PLATEAU_ROCK_DEBRIS_SMALL_C" pos="19 0 16" />
         <tile name="FOREST_RED_PLATEAU_ROCK_DEBRIS_SMALL_C" pos="-20 2 -9" rot="32 273 1" />
-        <tile name="FOREST_RED_T1_BUSH_B" pos="-18.5 1 -18.5" roty="180" />
+        <tile name="FOREST_RED_T1_TREE_GIANT_BEND_B" pos="16.5 8 -8.5" rot="356 5 355" />
+        <tile name="FOREST_RED_T1_TREE_GIANT_BEND_B" pos="23 0 22" rot="0 356 2" scale="1 1.0176 1" />
+        <tile name="FOREST_RED_T1_DECO_TREE_GIANT_B" pos="5 9 -16" />
+        <tile name="FOREST_RED_VEG_FERN_A" pos="21.5 0 -21.5" roty="90" />
+        <tile name="FOREST_RED_T1_TREE_GIANT_BEND_B" pos="-14 0 21" rot="358 357 355" scale="1 0.9295499 1" />
+        <tile name="FOREST_RED_VEG_FERN_A" pos="22.5 0 -7.5" roty="180" />
+        <tile name="FOREST_RED_T1_TREE_GIANT_BEND_B" pos="12 8 -11" rot="2 175 358" scale="1 0.8154497 1" />
+        <tile name="FOREST_RED_VEG_FERN_A" pos="-6.5 8 -0.5" roty="180" />
+        <tile name="FOREST_RED_VEG_FERN_D" pos="15.5 8 -6.5" roty="180" />
+        <tile name="FOREST_RED_VEG_FERN_D" pos="5.5 8 14.5" roty="180" />
+        <tile name="FOREST_RED_VEG_FERN_D" pos="-16.5 0 19.5" roty="180" />
+        <tile name="FOREST_RED_ROCK_PLATEAU_WALL_COMP_A_NOCOL_NORAMP" pos="-3 -4 -16" roty="58" />
+        <tile name="FOREST_RED_ROCK_PLATEAU_WALL_A_NORAMP" pos="-6 4 -13" rot="350 36 353" />
+        <tile name="FOREST_RED_ROCK_PLATEAU_WALL_A_NOCOL_NORAMP" pos="16 4 12" rot="9 246 14" />
+        <tile name="FOREST_RED_ROCK_PLATEAU_WALL_A_NOCOL_NORAMP" pos="12 4.51 15" rot="18 14 17" />
+        <tile name="FOREST_RED_T1_TREE_GIANT_BEND_B" pos="-22 0 17" rot="0 0 2" />
+        <tile name="FOREST_RED_PLATEAU_ROCK_DEBRIS_SMALL_C" pos="-3 8 -10" />
+        <tile name="FOREST_RED_PLATEAU_ROCK_DEBRIS_C" pos="-3 0 -18" roty="232" />
+        <tile name="FOREST_RED_T1_BUSH_B" pos="-4.5 8 -7.5" roty="270" />
         <tile name="FOREST_RED_PLATEAU_PLUG_ROCK_4M_A_DIAGONAL" pos="18 0 10" roty="180" />
         <tile name="FOREST_RED_VEG_GRASS_SMALL_A" pos="17 0 23" />
         <tile name="FOREST_RED_PLATEAU_PLUG_ROCK_4M_A_DIAGONAL" pos="12 0 17" roty="180" />
@@ -157,36 +139,35 @@
         <tile name="FOREST_RED_VEG_LEAFS_C" pos="20.5 0 20.5" />
         <tile name="FOREST_RED_T1_BUSH_B" pos="-9.5 0 23.5" />
         <tile name="FOREST_RED_T1_BUSH_B" pos="23.5 0 13.5" />
+        <tile name="FOREST_RED_T1_BUSH_B" pos="-18.5 1 -18.5" roty="180" />
         <tile name="FOREST_RED_VEG_GRASS_SMALL_A" pos="-24.5 0 -18.5" />
-        <tile name="FOREST_RED_PLATEAU_ROCK_DEBRIS_SMALL_E" pos="14 8 8" roty="45" />
         <tile name="FOREST_RED_VEG_GRASS_SMALL_A" pos="-7.5 8 -7.5" />
-        <tile name="FOREST_RED_T1_BUSH_B" pos="-4.5 8 -7.5" roty="270" />
-        <tile name="FOREST_RED_T1_BUSH_B" pos="23.5 0 -12.5" roty="90" />
-        <tile name="FOREST_RED_T1_BUSH_B" pos="16 8 7" />
-        <tile name="FOREST_RED_VEG_GRASS_SMALL_A" pos="-10.5 0 23.5" />
-        <tile name="FOREST_RED_PLATEAU_PLUG_ROCK_4M_A_DIAGONAL" pos="1 -4 -18" />
-        <tile name="FOREST_RED_VEG_GRASS_B_SMALL" pos="-5 8 14" />
-        <tile name="FOREST_RED_PLATEAU_ROCK_DEBRIS_C" pos="-3 0 -18" roty="232" />
-        <tile name="FOREST_RED_VEG_GRASS_SMALL_A" pos="-2.5 0 -23.5" />
-        <tile name="FOREST_RED_VEG_GRASS_SMALL_A" pos="-9.5 0 -22.5" />
-        <tile name="FOREST_RED_T1_BUSH_B" pos="-14.11 4.15 0.78" roty="270" />
-        <tile name="FOREST_RED_VEG_GRASS_SMALL_A" pos="-18.5 0 -24.5" />
-        <tile name="FOREST_RED_PLATEAU_ROCK_DEBRIS_FLAT_B" pos="-7 8 -1" roty="285" />
-        <tile name="FOREST_RED_T1_BUSH_B" pos="11 0 -23" />
         <tile name="FOREST_RED_PLATEAU_PLUG_ROCK_4M_A_DIAGONAL" pos="15 -1 -17" />
+        <tile name="FOREST_RED_T1_BUSH_B" pos="11 0 -23" />
+        <tile name="FOREST_RED_PLATEAU_ROCK_DEBRIS_FLAT_B" pos="-7 8 -1" roty="285" />
+        <tile name="FOREST_RED_VEG_GRASS_SMALL_A" pos="-18.5 0 -24.5" />
+        <tile name="FOREST_RED_T1_BUSH_B" pos="-14.11 4.15 0.78" roty="270" />
+        <tile name="FOREST_RED_VEG_GRASS_SMALL_A" pos="-9.5 0 -22.5" />
         <tile name="FOREST_RED_PLATEAU_PLUG_ROCK_4M_A_DIAGONAL" pos="16 -1 -18" roty="270" />
-        <tile name="FOREST_RED_PLATEAU_ROCK_DEBRIS_SMALL_C" pos="-3 8 -10" rot="32 273 1" />
+        <tile name="FOREST_RED_VEG_GRASS_SMALL_A" pos="-2.5 0 -23.5" />
+        <tile name="FOREST_RED_VEG_GRASS_B_SMALL" pos="-5 8 14" />
+        <tile name="FOREST_RED_PLATEAU_PLUG_ROCK_4M_A_DIAGONAL" pos="1 -4 -18" />
+        <tile name="FOREST_RED_VEG_GRASS_SMALL_A" pos="-10.5 0 23.5" />
+        <tile name="FOREST_RED_T1_BUSH_B" pos="16 8 7" />
+        <tile name="FOREST_RED_T1_BUSH_B" pos="23.5 0 -12.5" roty="90" />
+        <tile name="FOREST_RED_PLATEAU_ROCK_DEBRIS_SMALL_E" pos="14 8 8" roty="45" />
+        <tile name="FOREST_RED_PLATEAU_ROCK_DEBRIS_SMALL_C" pos="19 0 16" />
       </layer>
-      <layer id="Layer_04" name="MORGANA_DYN_ACTIVE">
+      <layer id="Layer_04" name="MORGANA_DYN_VAR_DEFAULT_ACTIVE">
         <tile name="MOR_POINTLIGHT_STANDARD_10M_A" pos="1.72 13.08 -1.83">
           <pointlight range="10" intensity="6" color="1 0.6039216 0.1294118" />
         </tile>
-        <tile name="FOREST_RED_MOR_TENT_B" pos="7 8 -12" roty="180" />
-        <tile name="FOREST_RED_MOR_STOCKADE_PILLARTORCH_A" pos="4.5 8 15.5" roty="90" />
-        <tile name="FOREST_RED_MOR_BANNER_ACTIVE" pos="-3.5 8 16.5" roty="270" scale="0.8393601 0.83936 0.8393601" />
         <tile name="FOREST_RED_FILL_BLOOD_SPLATTER_LARGE_A_OLD" pos="-5 8 0" roty="60" scale="0.8 1 0.8" />
         <tile name="FOREST_RED_ATMOBUBBLE_CAMP_MOR_SMALL" pos="0 0 0">
-          <atmospherebubble layer="1" radius="45" blend="0.6666667" />
+          <atmospherebubble layer="1" radius="45" blend="0.6666667" blendinduration="0" blendoutduration="0" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_ROAMING_DYNAMIC_CAMP_MORGANA_CHAMPION_ANY" pos="-17.02 2.13 -3.27" roty="288">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="DYNAMIC_CAMP_MORGANA_CHAMPION_ANY_SOLO" />
         </tile>
         <tile name="SpawnPoint_RANDOM_ROAMING_DYNAMIC_CAMP_MORGANA_STANDARD_ANY" pos="24.34 0 -1.42" roty="90">
           <mobspawnpoint behavior="GUARD" spawnbehavior="DYNAMIC_CAMP_MORGANA_STANDARD_ANY_SOLO" />
@@ -197,12 +178,11 @@
         <tile name="SpawnPoint_RANDOM_ROAMING_DYNAMIC_CAMP_MORGANA_STANDARD_ANY" pos="-2.57 8 8.23" roty="255.44">
           <mobspawnpoint behavior="GUARD" spawnbehavior="DYNAMIC_CAMP_MORGANA_STANDARD_ANY_SOLO" />
         </tile>
-        <tile name="SpawnPoint_RANDOM_ROAMING_DYNAMIC_CAMP_MORGANA_CHAMPION_ANY" pos="-17.02 2.13 -3.27" roty="288.39">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="DYNAMIC_CAMP_MORGANA_CHAMPION_ANY_SOLO" />
-        </tile>
-        <tile name="FOREST_RED_MOR_BANNER_ACTIVE" pos="17.5 8 4.5" scale="0.83936 0.83936 0.83936" />
         <tile name="SpawnPoint_RANDOM_ROAMING_DYNAMIC_CAMP_MORGANA_CHAMPION_ANY" pos="-1.7 8 5.1" roty="294.48">
           <mobspawnpoint behavior="GUARD" spawnbehavior="DYNAMIC_CAMP_MORGANA_CHAMPION_ANY_SOLO" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_ROAMING_DYNAMIC_CAMP_MORGANA_STANDARD_ANY" pos="1.78 0 23.96" roty="17.46">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="DYNAMIC_CAMP_MORGANA_STANDARD_ANY_SOLO" />
         </tile>
         <tile name="SpawnPoint_RANDOM_ROAMING_DYNAMIC_CAMP_MORGANA_RANGED" pos="-5.55 8 10.08" roty="148.31">
           <mobspawnpoint behavior="GUARD" spawnbehavior="DYNAMIC_CAMP_MORGANA_RANGED_SOLO" />
@@ -229,12 +209,10 @@
           <unrestrictedpvpzone radius="35" />
         </tile>
         <tile name="SpawnPoint_LOOTCHEST_MORGANA_DYNAMIC_CAMP_PERSONAL_SMALL" pos="10.5 8 11.5" roty="45" />
-        <tile name="SpawnPoint_RANDOM_ROAMING_DYNAMIC_CAMP_MORGANA_STANDARD_ANY" pos="1.78 0 23.96" roty="17.46">
-          <mobspawnpoint behavior="GUARD" spawnbehavior="DYNAMIC_CAMP_MORGANA_STANDARD_ANY_SOLO" />
-        </tile>
-        <tile name="FOREST_RED_MOR_WEAPONCRATE_C" pos="19.5 0 22" roty="8" />
-        <tile name="FOREST_RED_MOR_CAMPFIRE_A" pos="3.5 8 1.5" roty="300" />
-        <tile name="FOREST_RED_MOR_DECAL_IMPACT_BASE_A" pos="-21 0 22" />
+        <tile name="FOREST_RED_MOR_BANNER_ACTIVE" pos="-3.5 8 16.5" roty="270" scale="0.8393601 0.83936 0.8393601" />
+        <tile name="TreasureSpawnpointCoffer" pos="-5 8 5" />
+        <tile name="FOREST_RED_MOR_WEAPONCRATE_C" pos="19.5 0 22" />
+        <tile name="FOREST_RED_MOR_BANNER_ACTIVE" pos="17.5 8 4.5" scale="0.83936 0.83936 0.83936" />
         <tile name="MOR_POINTLIGHT_STANDARD_10M_A" pos="9.65 13.09 10.79">
           <pointlight range="10" intensity="6" color="1 0.6039216 0.1294118" />
         </tile>
@@ -257,72 +235,56 @@
           <pointlight range="8" intensity="6" color="1 0.6039216 0.1294118" />
         </tile>
         <tile name="FOREST_RED_MOR_FILL_WEAPONHOLDER_A" pos="-7.5 8 0" />
-        <tile name="FOREST_RED_MOR_STOCKADE_PILLARTORCH_A" pos="15.5 8 -4.5" roty="180" />
-        <tile name="FOREST_RED_MOR_STOCKADE_PILLARTORCH_A" pos="14.5 8 4.5" roty="180" />
         <tile name="FOREST_RED_MOR_BEACON_ACTIVE" pos="6 0 -22" roty="180" />
         <tile name="FOREST_RED_MOR_BANNER_ACTIVE" pos="17.5 8 -5.5" scale="0.83936 0.83936 0.83936" />
         <tile name="FOREST_RED_MOR_WEAPONCRATE_C" pos="13 8 -8.5" roty="90" />
-        <tile name="FOREST_RED_MOR_DECAL_IMPACT_BASE_A" pos="22 0 -22" roty="270" />
         <tile name="FOREST_RED_MOR_BEACON_ACTIVE" pos="18 0 18" roty="139" />
         <tile name="FOREST_RED_FILL_BLOOD_SPLATTER_SMALL_A_OLD" pos="-2 8 -3" roty="45" />
-        <tile name="FOREST_RED_MOR_FILL_WEAPONHOLDER_C" pos="-7.5 8 4" />
         <tile name="FOREST_RED_MOR_BEACON_ACTIVE" pos="-13 0 17" roty="180" />
-        <tile name="FOREST_RED_MOR_STOCKADE_PILLARTORCH_A" pos="-3.5 8 15.5" roty="90" />
         <tile name="FOREST_RED_MOR_BANNER_ACTIVE" pos="4.5 8 16.5" roty="270" scale="0.8393601 0.83936 0.8393601" />
         <tile name="FOREST_RED_MOR_WEAPONCRATE_A" pos="22 0 17" roty="100" />
-        <tile name="TreasureSpawnpointCoffer" pos="-5 8 5" />
+        <tile name="FOREST_RED_MOR_CAMPFIRE_A" pos="3.5 8 1.5" roty="300" />
+        <tile name="FOREST_RED_MOR_TENT_B" pos="7 8 -12" roty="180" />
         <compoundtile name="_FOREST_RED_MORGANA_DYNAMIC_MAP_SOLO" pos="-8 8 7" roty="180" />
       </layer>
-      <layer id="Layer_05" name="MORGANA_DYN_INACTIVE">
-        <tile name="FOREST_RED_MOR_STOCKADE_PILLARTORCH_A_OFF" pos="-3.5 8 15.5" roty="90" />
-        <tile name="FOREST_RED_MOR_TENT_B_INACTIVE" pos="7 8 -12" roty="180" />
-        <tile name="FOREST_RED_MOR_BEACON_INACTIVE" pos="18 0 18" roty="139" />
-        <tile name="FOREST_RED_MOR_BEACON_INACTIVE" pos="-13 0 17" roty="180" />
-        <tile name="FOREST_RED_MOR_FILL_WEAPONHOLDER_F" pos="-7.5 8 4" />
-        <tile name="FOREST_RED_MOR_STOCKADE_PILLARTORCH_A_OFF" pos="4.5 8 15.5" roty="90" />
-        <tile name="FOREST_RED_MOR_STOCKADE_PILLARTORCH_A_OFF" pos="15.5 8 -4.5" roty="180" />
-        <tile name="FOREST_RED_MOR_BANNER_INACTIVE" pos="17.5 8 4.5" scale="0.83936 0.83936 0.83936" />
-        <tile name="FOREST_RED_MOR_FILL_WEAPONHOLDER_E" pos="-7.5 8 0" />
-        <tile name="FOREST_RED_MOR_WEAPONCRATE_C_BROKEN" pos="19.5 0 22" roty="8" />
-        <tile name="FOREST_RED_MOR_WEAPONCRATE_C_BROKEN" pos="13 8 -8.5" roty="90" />
-        <tile name="FOREST_RED_MOR_BANNER_FALLEN_LARGE_C" pos="3.5 8 8.5" roty="90" scale="0.83936 0.83936 0.83936" />
-        <tile name="FOREST_RED_MOR_STOCKADE_PILLARTORCH_A_OFF" pos="14.5 8 4.5" roty="180" />
-        <tile name="FOREST_RED_MOR_BANNER_INACTIVE" pos="-3.5 8 16.5" roty="270" scale="0.8393601 0.83936 0.8393601" />
-        <tile name="FOREST_RED_MOR_BEACON_INACTIVE" pos="6 0 -22" roty="180" />
-        <tile name="FOREST_RED_MOR_CAMPFIRE_A_OFF" pos="3.5 8 1.5" roty="300" />
+      <layer id="Layer_05" name="MORGANA_DYN_VAR_DEFAULT_INACTIVE">
         <tile name="FOREST_RED_MOR_BANNER_INACTIVE" pos="17.5 8 -5.5" scale="0.83936 0.83936 0.83936" />
+        <tile name="FOREST_RED_MOR_CAMPFIRE_A_OFF" pos="3.5 8 1.5" roty="300" />
+        <tile name="FOREST_RED_MOR_BEACON_INACTIVE" pos="6 0 -22" roty="180" />
+        <tile name="FOREST_RED_MOR_BANNER_INACTIVE" pos="-3.5 8 16.5" roty="270" scale="0.8393601 0.83936 0.8393601" />
+        <tile name="FOREST_RED_MOR_WEAPONCRATE_C_BROKEN" pos="13 8 -8.5" roty="90" />
         <tile name="FOREST_RED_MOR_WEAPONCRATE_A_BROKEN" pos="22 0 17" roty="100" />
+        <tile name="FOREST_RED_MOR_WEAPONCRATE_C_BROKEN" pos="19.5 0 22" roty="8" />
+        <tile name="FOREST_RED_MOR_BANNER_INACTIVE" pos="17.5 8 4.5" scale="0.83936 0.83936 0.83936" />
+        <tile name="FOREST_RED_MOR_BEACON_INACTIVE" pos="-13 0 17" roty="180" />
+        <tile name="FOREST_RED_MOR_BEACON_INACTIVE" pos="18 0 18" roty="139" />
+        <tile name="FOREST_RED_MOR_TENT_B_INACTIVE" pos="7 8 -12" roty="180" />
+        <tile name="FOREST_RED_MOR_FILL_WEAPONHOLDER_E" pos="-7.5 8 0" />
         <tile name="FOREST_RED_MOR_DYNAMIC_MOBCAMP_MAP_TABLE" pos="-7.5 8 7.5" roty="180" />
       </layer>
       <layer id="Layer_06" name="MORGANA_DYN_STATIC">
         <tile name="FOREST_RED_PLATEAU_ROCK_DEBRIS_E_NOCOL" pos="-7.45 6.78 -1.96" rot="353.94 340.25 10.51" />
-        <tile name="FOREST_RED_MOR_STOCKADE_CORNER" pos="-6 8 13" />
+        <tile name="FOREST_RED_VEG_GRASS_SMALL_A" pos="6.33 8 -17.06" roty="63" />
+        <tile name="FOREST_RED_T1_BUSH_B" pos="14.5 0 22.5" roty="270" />
         <tile name="FOREST_RED_T1_DECO_BUSH_A" pos="-10 8 8" roty="90" />
         <tile name="FOREST_RED_VEG_GRASS_SMALL_A" pos="-12.5 0 -23.5" />
-        <tile name="FOREST_RED_MOR_STOCKADE_STRAIGHT_SMALL_B" pos="-5 8 -6.5" rot="0 105 353" />
         <tile name="FOREST_RED_VEG_GRASS_SMALL_A" pos="-6.5 0 23.5" />
         <tile name="FOREST_RED_VEG_GRASS_SMALL_A" pos="-6.5 8 -1.5" />
         <tile name="FOREST_RED_VEG_GRASS_SMALL_A" pos="-6.5 8 16.5" />
         <tile name="FOREST_RED_PLATEAU_ROCK_DEBRIS_SMALL_GATHERING_A_NOCOL" pos="-10 4 3" roty="285" />
         <tile name="FOREST_RED_PLATEAU_PLUG_ROCK_4M_A_DIAGONAL" pos="18 0 -8" roty="180" />
         <tile name="FOREST_RED_ROCK_FALLEN_A_NOCOL" pos="11 5 -15" rot="357 150 355" />
-        <tile name="FOREST_RED_T1_BUSH_B" pos="14.5 0 22.5" roty="270" />
-        <tile name="FOREST_RED_MOR_STOCKADE_CORNER" pos="12 0 12" roty="270" />
-        <tile name="FOREST_RED_MOR_STOCKADE_STRAIGHT_C" pos="8 8 15.5" roty="90" scale="1 1 -1" />
+        <tile name="FOREST_RED_T1_DECO_BUSH_B" pos="-8 7 14" rot="8 27 22" />
         <tile name="FOREST_RED_ROCK_PLATEAU_WALL_DIAGONAL_A_NOCOL" pos="15 0 15" roty="270" />
         <tile name="FOREST_RED_T1_BUSH_A" pos="-1 8 -9" roty="90" />
         <tile name="FOREST_RED_PLATEAU_ROCK_DEBRIS_C" pos="-10 1 -16" roty="232" />
         <tile name="FOREST_RED_PLATEAU_PLUG_ROCK_4M_A_DIAGONAL" pos="18 0 8" roty="270" />
         <tile name="FOREST_RED_VEG_GRASS_SMALL_A" pos="-2.5 8 -4.5" />
         <tile name="FOREST_RED_VEG_GRASS_SMALL_A" pos="10.81 8 -7.21" />
-        <tile name="FOREST_RED_MOR_STOCKADE_CORNER" pos="1 8 -15" roty="270" />
+        <tile name="FOREST_RED_ROCK_CONE_C_NOCOL" pos="-10.5 2 -0.5" />
         <tile name="FOREST_RED_T1_DECO_BUSH_B" pos="-16.5 3 6.5" />
-        <tile name="FOREST_RED_VEG_GRASS_B_SMALL" pos="-22 0 16" />
-        <tile name="FOREST_RED_T1_DECO_BUSH_B" pos="-8 7 14" rot="8 27 22" />
-        <tile name="FOREST_RED_VEG_GRASS_SMALL_A" pos="21.5 0 -17.5" />
-        <tile name="FOREST_RED_VEG_GRASS_SMALL_A" pos="6.33 8 -17.06" roty="63" />
         <tile name="FOREST_RED_T1_DECO_BUSH_B" pos="6 7.38 17" rot="337 164 7" />
-        <tile name="FOREST_RED_GROUND_PATCH_TO_ROAD_CIRCLE_A" pos="-6.93 8 -4.76" roty="330" scale="0.2827 1 1.372786" />
+        <tile name="FOREST_RED_VEG_GRASS_B_SMALL" pos="-16 0 22" />
         <tile name="FOREST_RED_ROCK_PLATEAU_WALL_A_NORAMP" pos="10 3 -19" rot="350 126 353" />
         <tile name="FOREST_RED_ROCK_PLATEAU_WALL_A_NOCOL_NORAMP" pos="15 4 10" rot="14 85 21" />
         <tile name="FOREST_RED_T1_TREE_GIANT_BEND_B" pos="-22 0 18" rot="2 96 3" />
@@ -332,75 +294,61 @@
         <tile name="FOREST_RED_VEG_FERN_A" pos="-9.5 8 -9.5" roty="180" />
         <tile name="FOREST_RED_VEG_FERN_D" pos="22.5 0 13.5" />
         <tile name="FOREST_RED_VEG_FERN_D" pos="-6.5 8 16.5" />
-        <tile name="FOREST_RED_ROCK_CONE_C_NOCOL" pos="-10.5 2 -0.5" />
         <tile name="FOREST_RED_VEG_FERN_A" pos="-3.5 8 13.5" roty="270" />
+        <tile name="FOREST_RED_T1_TREE_GIANT_BEND_B" pos="22.5 0 -16.5" rot="2 6 3" />
         <tile name="FOREST_RED_T1_TREE_GIANT_BEND_B" pos="-20.5 1 -8.5" rot="359 0 0" />
         <tile name="FOREST_RED_T1_TREE_A" pos="-16.5 2 -14.5" />
         <tile name="FOREST_RED_T1_TREE_GIANT_BEND_B" pos="-15 3 3" rot="2 6 3" />
         <tile name="FOREST_RED_PLATEAU_PLUG_ROCK_4M_A_DIAGONAL" pos="18 0 10" roty="270" />
         <tile name="FOREST_RED_T1_TREE_GIANT_BEND_A" pos="-13 5 1" rot="359 81 357" />
-        <tile name="FOREST_RED_MOR_WEAPONCRATE_A_DIAGONAL" pos="12 8 13" />
         <tile name="FOREST_RED_PLATEAU_ROCK_DEBRIS_SMALL_E" pos="-12 4 0" roty="270" />
-        <tile name="FOREST_RED_VEG_GRASS_B_SMALL" pos="-16 0 22" />
-        <tile name="FOREST_RED_MOR_STOCKADE_STRAIGHT_C" pos="14.5 8 8" roty="180" />
         <tile name="FOREST_RED_VEG_GRASS_SMALL_A" pos="15 0 23" />
-        <tile name="FOREST_RED_T1_TREE_GIANT_BEND_B" pos="22.5 0 -16.5" rot="2 6 3" />
+        <tile name="FOREST_RED_VEG_GRASS_B_SMALL" pos="-22 0 16" />
+        <tile name="FOREST_RED_VEG_GRASS_SMALL_A" pos="21.5 0 -17.5" />
         <tile name="FOREST_RED_VEG_GRASS_SMALL_A" pos="13.5 8 2.5" />
-        <tile name="FOREST_RED_T1_BUSH_B" pos="9.5 0 -24.5" roty="180" />
-        <tile name="FOREST_RED_PLATEAU_ROCK_DEBRIS_SPIKES_A" pos="1 6 -13" roty="180" />
+        <tile name="FOREST_RED_PLATEAU_ROCK_DEBRIS_D" pos="0 0 -21" roty="90" />
         <tile name="FOREST_RED_PLATEAU_PLUG_ROCK_4M_A_DIAGONAL" pos="11 0 17" roty="180" />
         <tile name="FOREST_RED_ROCK_SPIKES_LARGE_B_NOCOL" pos="-3 2 -13" rot="323 253 301" />
         <tile name="FOREST_RED_VEG_GRASS_SMALL_A" pos="-23.5 0 -17.5" />
         <tile name="FOREST_RED_T1_BUSH_B" pos="-21.5 1 -8.5" rot="23 270 0" />
-        <tile name="FOREST_RED_GROUND_PATCH_TO_ROAD_A" pos="9.26 8 9.73" roty="50" scale="1.114602 1 1.025561" />
         <tile name="FOREST_RED_VEG_GRASS_SMALL_A" pos="4.08 8 -8.64" />
-        <tile name="FOREST_RED_MOR_STOCKADE_CORNER" pos="-4 8 -10" roty="270" />
         <tile name="FOREST_RED_PLATEAU_ROCK_DEBRIS_SMALL_C" pos="1 8 -13" roty="355" />
         <tile name="FOREST_RED_VEG_GRASS_SMALL_A" pos="-18.5 0 -24.5" />
         <tile name="FOREST_RED_PLATEAU_ROCK_DEBRIS_C" pos="-3 0 -18" roty="232" />
-        <tile name="FOREST_RED_PLATEAU_ROCK_DEBRIS_D" pos="0 0 -21" roty="90" />
         <tile name="FOREST_RED_ROCK_CONE_B_NOCOL" pos="5 1 -19" roty="185.7" />
+        <tile name="FOREST_RED_PLATEAU_PLUG_ROCK_4M_B_BEACH_NOCOL" pos="9 0 -18" />
         <tile name="FOREST_RED_PLATEAU_ROCK_DEBRIS_D" pos="14 0 -20" roty="180" />
-        <tile name="FOREST_RED_MOR_STOCKADE_STRAIGHT_C" pos="-8.5 8 2" roty="359" />
-        <tile name="FOREST_RED_MOR_STOCKADE_STRAIGHT_C" pos="15.5 8 -8" scale="-1 1 1" />
         <tile name="FOREST_RED_PLATEAU_PLUG_ROCK_4M_A_DIAGONAL" pos="1 -4 -18" />
-        <tile name="FOREST_RED_HER_FILL_BARREL_WOOD_A" pos="-7.5 8 -7.5" />
         <tile name="FOREST_RED_PLATEAU_ROCK_DEBRIS_GROUND_B" pos="16.44 8 -6.53" roty="300" />
         <tile name="FOREST_RED_VEG_GRASS_SMALL_A" pos="-24.5 0 -14.5" />
-        <tile name="FOREST_RED_MOR_STOCKADE_STRAIGHT_SMALL_A" pos="-8.5 8 8.5" />
         <tile name="FOREST_RED_VEG_GRASS_SMALL_A" pos="17.5 0 18.5" />
         <tile name="FOREST_RED_VEG_GRASS_SMALL_A" pos="23.5 0 19.5" />
-        <tile name="FOREST_RED_PLATEAU_PLUG_ROCK_4M_B_BEACH_NOCOL" pos="9 0 -18" />
         <tile name="FOREST_RED_VEG_GRASS_SMALL_A" pos="-23.5 0 11.5" />
         <tile name="FOREST_RED_VEG_GRASS_SMALL_A" pos="13.5 8 -3.5" />
         <tile name="FOREST_RED_T1_BUSH_B" pos="-17.5 0 14.5" roty="330" />
-        <tile name="FOREST_RED_GROUND_PATCH_TO_ROAD_CIRCLE_A" pos="4 8 0" scale="2.637979 1 3.007668" />
+        <tile name="FOREST_RED_VEG_GRASS_SMALL_A" pos="24.5 0 17.5" />
+        <tile name="FOREST_RED_T1_BUSH_B" pos="9.5 0 -24.5" roty="180" />
+        <tile name="FOREST_RED_PLATEAU_ROCK_DEBRIS_SPIKES_A" pos="1 6 -13" roty="180" />
         <tile name="FOREST_RED_PLATEAU_ROCK_DEBRIS_SMALL_E" pos="-10 4 -2" roty="270" />
         <tile name="FOREST_RED_T1_BUSH_A" pos="-12.5 0 21.5" />
         <tile name="FOREST_RED_T1_BUSH_B" pos="22.5 0 -14.5" roty="180" />
         <tile name="FOREST_RED_PLATEAU_ROCK_DEBRIS_D" pos="18 0 -18" />
-        <tile name="FOREST_RED_MOR_SLEEPINGMAT_B" pos="13 8 8" roty="90" />
         <tile name="FOREST_RED_PLATEAU_ROCK_DEBRIS_SPIKES_A_DIAG" pos="18 -2 18" roty="90" />
         <tile name="FOREST_RED_VEG_GRASS_SMALL_A" pos="-4.5 8 -4.5" />
+        <tile name="FOREST_RED_ROCK_PLATEAU_WALL_DIAGONAL_A_NOCOL_NORAMP" pos="15 3 -14" />
         <tile name="FOREST_RED_PLATEAU_ROCK_DEBRIS_SMALL_E" pos="-11 4 -1" roty="270" />
-        <tile name="FOREST_RED_T1_BUSH_A" pos="16.5 7 5.5" rot="8 152 22" />
-        <tile name="FOREST_RED_MOR_STOCKADE_CORNER_END" pos="13 8 -15" roty="180" />
         <tile name="FOREST_RED_T1_BUSH_B" pos="-10.5 7 -3.5" />
-        <tile name="FOREST_RED_MOR_STOCKADE_STRAIGHT_C" pos="7 8 -17.5" roty="270" />
         <tile name="FOREST_RED_VEG_GRASS_B_SMALL" pos="2 8 -12" />
         <tile name="FOREST_RED_VEG_GRASS_SMALL_A" pos="23.5 0 -17.5" />
         <tile name="FOREST_RED_PLATEAU_PLUG_ROCK_4M_A_DIAGONAL" pos="8 0 18" roty="90" />
-        <tile name="FOREST_RED_MOR_STOCKADE_STRAIGHT_SMALL_A" pos="13.5 8 13.5" roty="148.4" scale="0.98586 0.98586 0.98586" />
         <tile name="FOREST_RED_T1_BUSH_B" pos="-11.5 1 -20.5" rot="5 109 346" />
         <tile name="FOREST_RED_PLATEAU_PLUG_ROCK_4M_A_DIAGONAL" pos="-7 0 17" roty="180" />
         <tile name="FOREST_RED_VEG_GRASS_SMALL_A" pos="11.5 8 -4.5" />
         <tile name="FOREST_RED_VEG_GRASS_SMALL_A" pos="-4.5 8 -2.5" />
-        <tile name="FOREST_RED_VEG_GRASS_SMALL_A" pos="24.5 0 17.5" />
-        <tile name="FOREST_RED_MOR_SLEEPINGMAT_B" pos="7 8 14" roty="180" />
-        <tile name="FOREST_RED_ROCK_PLATEAU_WALL_DIAGONAL_A_NOCOL_NORAMP" pos="15 3 -14" />
+        <tile name="FOREST_RED_T1_BUSH_A" pos="16.5 7 5.5" rot="8 152 22" />
         <tile name="FOREST_RED_ROCK_PLATEAU_WALL_DIAGONAL_A_NOCOL_NORAMP" pos="1 4 -17" roty="90" />
       </layer>
-      <layer id="Layer_07" name="UNDEAD_DYN_ACTIVE">
+      <layer id="Layer_07" name="UNDEAD_DYN_VAR_DEFAULT_ACTIVE">
         <tile name="MOB_SETS_UND_ENV_FX_FOG_PLANE_A" pos="10 11 -11" roty="31" />
         <tile name="FOREST_RED_UND_CRACK_A" pos="15 8 5" roty="300" />
         <tile name="FOREST_RED_UND_BEACON_SMALL_ACTIVE" pos="-7.5 8 0.5" roty="180" />
@@ -411,7 +359,7 @@
         <tile name="FOREST_RED_UND_TORCH_STANDING_A" pos="4.5 8 -10.5" roty="180" />
         <tile name="FOREST_RED_UND_BEACON_SMALL_ACTIVE" pos="4.5 8 13.5" roty="180" />
         <tile name="FOREST_RED_ATMOBUBBLE_CAMP_UND_SMALL" pos="0 0 0">
-          <atmospherebubble layer="1" radius="45" blend="0.6666667" />
+          <atmospherebubble layer="1" radius="45" blend="0.6666667" blendinduration="0" blendoutduration="0" />
         </tile>
         <tile name="SpawnPoint_RANDOM_ROAMING_DYNAMIC_CAMP_UNDEAD_STANDARD_ANY" pos="7.9 8 5.59" roty="219">
           <mobspawnpoint behavior="GUARD" spawnbehavior="DYNAMIC_CAMP_UNDEAD_STANDARD_ANY_SOLO" />
@@ -435,15 +383,15 @@
         <tile name="SpawnPoint_RANDOM_ROAMING_DYNAMIC_CAMP_UNDEAD_STANDARD_ANY" pos="24.41 0 -1.61" roty="90">
           <mobspawnpoint behavior="GUARD" spawnbehavior="DYNAMIC_CAMP_UNDEAD_STANDARD_ANY_SOLO" />
         </tile>
-        <tile name="SpawnPoint_RANDOM_ROAMING_DYNAMIC_CAMP_UNDEAD_CHAMPION_ANY" pos="-22.08 0 7.37" roty="190.67">
+        <tile name="SpawnPoint_RANDOM_ROAMING_DYNAMIC_CAMP_UNDEAD_CHAMPION_ANY" pos="-22.08 0.36 7.37" roty="191">
           <mobspawnpoint behavior="PATROL" spawnbehavior="DYNAMIC_CAMP_UNDEAD_CHAMPION_ANY_SOLO">
             <path>
-              <waypoint pos="-22.48733 7.314458" idle="3" pace="WALK" />
-              <waypoint pos="-20.74555 2.030593" idle="0" pace="WALK" />
-              <waypoint pos="-20.15611 -3.860405" idle="0" pace="WALK" />
-              <waypoint pos="-20.68338 -6.172763" idle="3" pace="WALK" />
-              <waypoint pos="-20.15611 -3.860405" idle="0" pace="WALK" />
-              <waypoint pos="-20.74555 2.030593" idle="0" pace="WALK" />
+              <waypoint pos="-22.48764 7.316804" idle="3" pace="WALK" />
+              <waypoint pos="-20.7763 2.023002" idle="0" pace="WALK" />
+              <waypoint pos="-20.22078 -3.871291" idle="0" pace="WALK" />
+              <waypoint pos="-20.76134 -6.180573" idle="3" pace="WALK" />
+              <waypoint pos="-20.22078 -3.871291" idle="0" pace="WALK" />
+              <waypoint pos="-20.7763 2.023002" idle="0" pace="WALK" />
             </path>
           </mobspawnpoint>
         </tile>
@@ -510,7 +458,7 @@
         </tile>
         <compoundtile name="_FOREST_RED_UNDEAD_DYNAMIC_MAP_SOLO" pos="8 8 9" roty="270" />
       </layer>
-      <layer id="Layer_08" name="UNDEAD_DYN_INACTIVE">
+      <layer id="Layer_08" name="UNDEAD_DYN_VAR_DEFAULT_INACTIVE">
         <tile name="FOREST_RED_UND_BANNER_INACTIVE" pos="-4.5 0 22.5" roty="270" />
         <tile name="FOREST_RED_UND_BEACON_INACTIVE" pos="-14 0 -20" roty="9" />
         <tile name="FOREST_RED_UND_BEACON_INACTIVE" pos="18.5 0 18.5" roty="9" />
@@ -534,27 +482,26 @@
         <tile name="FOREST_RED_FILL_RUIN_WALL_INNERCORNER_ROUNDED_A" pos="1 2 -11" roty="85" />
         <tile name="FOREST_RED_FILL_GROUND_COBBLESTONES_PATCH_SINGLE_A" pos="9 8 -7" />
         <tile name="FOREST_RED_T1_BUSH_B" pos="5.5 8 11.5" roty="327" />
-        <tile name="FOREST_RED_FILL_RUIN_DEBRIS_A" pos="15 8 6" roty="180" />
         <tile name="FOREST_RED_FILL_RUIN_DEBRIS_CORNER_A" pos="11 8 -11" roty="90" />
-        <tile name="FOREST_RED_UND_BONES_A" pos="-3.5 8 6.5" roty="199" scale="2 2 2" />
+        <tile name="FOREST_RED_VEG_GRASS_B_SMALL" pos="20 0 -16" />
         <tile name="FOREST_RED_VEG_GRASS_SMALL_A" pos="16.5 8 -6.5" />
-        <tile name="FOREST_RED_FILL_RUIN_DEBRIS_A" pos="6 8 14" />
+        <tile name="FOREST_RED_FILL_RUIN_DEBRIS_A" pos="6 8 15" roty="90" />
         <tile name="FOREST_RED_T1_BUSH_A" pos="-5.5 8 4.5" />
         <tile name="FOREST_RED_FILL_RUIN_DEBRIS_A" pos="-6 8 14" roty="195" />
         <tile name="FOREST_RED_PLATEAU_PLUG_ROCK_4M_A_DIAGONAL" pos="18 0 -8" roty="180" />
         <tile name="FOREST_RED_PLATEAU_PLUG_ROCK_4M_A_DIAGONAL" pos="-8 0 18" roty="180" />
-        <tile name="FOREST_RED_VEG_GRASS_B_SMALL" pos="20 0 -16" />
-        <tile name="FOREST_RED_FILL_GROUND_COBBLESTONES_PATCH_SMALL_A" pos="8 8 8" roty="270" scale="1.2 1 1.2" />
+        <tile name="FOREST_RED_FILL_RUIN_DEBRIS_A" pos="15 8 6" roty="180" />
         <tile name="FOREST_RED_PLATEAU_PLUG_ROCK_4M_A_DIAGONAL" pos="15 -1 -15" roty="270" />
+        <tile name="FOREST_RED_T1_DECO_TREE_GIANT_BEND_A" pos="-15.5 3 6.5" />
         <tile name="FOREST_RED_T1_DECO_TREE_GIANT_BEND_A" pos="13.5 9 -16.5" rot="353 354 4" />
+        <tile name="FOREST_RED_FILL_RUIN_DEBRIS_C" pos="-13 4 2" roty="180" />
         <tile name="FOREST_RED_FILL_RUIN_DEBRIS_A" pos="-14 0 15" roty="30" />
         <tile name="FOREST_RED_FILL_RUIN_DEBRIS_A" pos="-4 3 -11" rot="39 194 9" />
         <tile name="FOREST_RED_FILL_RUIN_DEBRIS_A" pos="-10.21 6.27 0.16" rot="23 315 11" />
         <tile name="FOREST_RED_FILL_RUIN_DEBRIS_A" pos="-15 2 -15" roty="195" />
-        <tile name="FOREST_RED_UND_BOOKSHELF_B_NOBLEND" pos="10 5 -13" rot="8 271 22" />
         <tile name="FOREST_RED_FILL_GROUND_COBBLESTONES_PATCH_SMALL_A" pos="-6 8 9" />
         <tile name="FOREST_RED_ROCK_PLATEAU_WALL_DIAGONAL_A_NOCOL_NORAMP" pos="15 4 13" rot="358 109 354" />
-        <tile name="FOREST_RED_T1_DECO_TREE_GIANT_BEND_A" pos="-15.5 3 6.5" />
+        <tile name="FOREST_RED_FILL_GROUND_COBBLESTONES_PATCH_SMALL_A" pos="8 8 8" roty="270" scale="1.2 1 1.2" />
         <tile name="FOREST_RED_ROCK_PLATEAU_WALL_COMP_A_NORAMP" pos="-2 -3 -14" roty="325" />
         <tile name="FOREST_RED_ROCK_PLATEAU_WALL_COMP_A_SHORT_NORAMP" pos="5 -4 -21" rot="359 92 9" />
         <tile name="FOREST_RED_ROCK_PLATEAU_WALL_COMP_A_SHORT_NORAMP" pos="9 -3 -18" rot="359 92 9" />
@@ -564,18 +511,17 @@
         <tile name="FOREST_RED_ROCK_PLATEAU_WALL_COMP_A_NOCOL_NORAMP" pos="16 -3 7" />
         <tile name="FOREST_RED_T1_DECO_TREE_GIANT_BEND_A" pos="6 8 -17" rot="354 168 358" />
         <tile name="FOREST_RED_ROCK_PLATEAU_WALL_A_NORAMP" pos="10 4 17" rot="6 198.79 357.99" />
+        <tile name="FOREST_RED_FILL_RUIN_DEBRIS_A" pos="-2 4 -11" rot="39 194 9" />
         <tile name="FOREST_RED_VEG_GRASS_B_SMALL" pos="-20 0 21" />
-        <tile name="FOREST_RED_UND_TABLE_BROKEN_A" pos="11.5 8 8.5" roty="277" />
-        <tile name="FOREST_RED_T1_BUSH_B" pos="-5.5 8 6.5" roty="327" />
-        <tile name="FOREST_RED_UND_CHAIR_A" pos="10.5 8 11.5" roty="90" />
+        <tile name="FOREST_RED_FILL_RUIN_DEBRIS_LARGE_A" pos="-4 0 -17" roty="270" />
         <tile name="FOREST_RED_FILL_RUIN_DEBRIS_C_NOCOL" pos="-6 2 -14" rot="348 93 333" />
         <tile name="FOREST_RED_FILL_RUIN_WALL_B" pos="8 5 -16" roty="270" />
         <tile name="FOREST_RED_T1_BUSH_B" pos="-3.5 8 -6.5" />
         <tile name="FOREST_RED_FILL_RUIN_TOWER_ROUND_B_BLEND" pos="-1 -1 -14" roty="30" />
         <tile name="FOREST_RED_FILL_RUIN_TOWER_ROUND_B" pos="-1 -11 -14" roty="26" />
         <tile name="FOREST_RED_PLATEAU_PLUG_ROCK_4M_A_DIAGONAL" pos="17 -1 -11" roty="270" />
-        <tile name="FOREST_RED_PLATEAU_PLUG_ROCK_4M_A_DIAGONAL" pos="8 1 -19" roty="270" />
         <tile name="FOREST_RED_VEG_GRASS_B_SMALL" pos="15 0 21" />
+        <tile name="FOREST_RED_VEG_FERN_D" pos="-5.5 8 1.5" />
         <tile name="FOREST_RED_VEG_FERN_D" pos="18.5 0 -21.5" />
         <tile name="FOREST_RED_VEG_FERN_D" pos="22.5 0 15.5" />
         <tile name="FOREST_RED_VEG_FERN_D" pos="-14.5 4 3.5" />
@@ -583,11 +529,10 @@
         <tile name="FOREST_RED_VEG_FERN_B" pos="-18.5 0 17.5" />
         <tile name="FOREST_RED_VEG_FERN_D" pos="-4.5 8 12.5" roty="70.11" />
         <tile name="FOREST_RED_VEG_FERN_A" pos="-12.5 0 22.5" roty="270" />
-        <tile name="FOREST_RED_VEG_FERN_D" pos="-5.5 8 1.5" />
+        <tile name="FOREST_RED_PLATEAU_PLUG_ROCK_4M_A_DIAGONAL" pos="8 1 -19" roty="270" />
         <tile name="FOREST_RED_FILL_RUIN_DEBRIS_CORNER_A" pos="8 8 -12" roty="180" />
         <tile name="FOREST_RED_FILL_RUIN_WALL_B" pos="9 5 14" roty="90" />
         <tile name="FOREST_RED_FILL_RUIN_DEBRIS_B_NOCOL" pos="0 4 -12" rot="305 356 50" />
-        <tile name="FOREST_RED_FILL_RUIN_DEBRIS_LARGE_A" pos="-4 0 -17" roty="270" />
         <tile name="FOREST_RED_PLATEAU_PLUG_ROCK_4M_A_DIAGONAL" pos="13 -1 -19" roty="270" />
         <tile name="FOREST_RED_VEG_GRASS_B_SMALL" pos="-20 0 -23" />
         <tile name="FOREST_RED_T1_DECO_BUSH_B" pos="-10.5 8 7.5" roty="285" />
@@ -595,8 +540,8 @@
         <tile name="FOREST_RED_FILL_RUIN_DEBRIS_HILL_B" pos="-10 0 -17" />
         <tile name="FOREST_RED_PLATEAU_ROCK_DEBRIS_SMALL_GATHERING_B" pos="21 0 16" roty="90" />
         <tile name="FOREST_RED_T1_BUSH_A" pos="-14.5 0 -21.5" rot="3 249 7" />
+        <tile name="FOREST_RED_T1_BUSH_B" pos="-5.5 8 6.5" roty="327" />
         <tile name="FOREST_RED_PLATEAU_ROCK_DEBRIS_SMALL_GATHERING_A" pos="17 0 20" />
-        <tile name="FOREST_RED_FILL_RUIN_DEBRIS_A" pos="-12 1 -17" roty="90" />
         <tile name="FOREST_RED_FILL_RUIN_WALL_A" pos="-8 4 6" />
         <tile name="FOREST_RED_FILL_RUIN_DEBRIS_CORNER_A" pos="20 0 20" roty="180" />
         <tile name="FOREST_RED_FILL_RUIN_WALL_COLUMN_A" pos="13.5 8 11" roty="90" />
@@ -604,8 +549,414 @@
         <tile name="FOREST_RED_VEG_GRASS_SMALL_A" pos="2.5 8 -14.5" />
         <tile name="FOREST_RED_PLATEAU_PLUG_ROCK_4M_A_DIAGONAL" pos="18 0 10" roty="180" />
         <tile name="FOREST_RED_VEG_GRASS_SMALL_A" pos="-7 8 16" />
-        <tile name="FOREST_RED_FILL_RUIN_DEBRIS_C" pos="-13 4 2" roty="180" />
-        <tile name="FOREST_RED_FILL_RUIN_DEBRIS_A" pos="-2 4 -11" rot="39 194 9" />
+        <tile name="FOREST_RED_FILL_RUIN_DEBRIS_A" pos="-12 1 -17" roty="90" />
+        <tile name="FOREST_RED_FILL_RUIN_DEBRIS_A" pos="6 8 11" roty="270" />
+      </layer>
+      <layer id="Layer_10" name="KEEPER_DYN_VAR_FWARFARE_ACTIVE">
+        <tile name="FWARFARE_POINTLIGHT_STANDARD_10M_A" pos="0.65 6.62 23.82">
+          <pointlight range="10" intensity="6" color="1 0.6039216 0.1294118" />
+        </tile>
+        <tile name="SpawnPoint_LOOTCHEST_FACTION_CHEST_SMALL" pos="10 8 10" roty="45.8" />
+        <tile name="SpawnPoint_RANDOM_CITY_CAMP_STANDARD_MAGE_SOLO" pos="11.68 8 7.24" roty="12">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="FACTION_CAMP_STANDARD_MAGE_SOLO" animswitch="work" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_CITY_CAMP_STANDARD_MAGE_SOLO" pos="6.82 8 11.87" roty="77">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="FACTION_CAMP_STANDARD_MAGE_SOLO" animswitch="work" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_CITY_CAMP_ELITE_MELEE_SOLO" pos="2.99 8 -7.94" roty="2">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="FACTION_CAMP_ELITE_MELEE_SOLO" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_CITY_CAMP_ELITE_MELEE_SOLO" pos="6.16 8 -10.92" roty="275.45">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="FACTION_CAMP_ELITE_MELEE_SOLO" animswitch="work" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_CITY_CAMP_ELITE_ANY_SOLO" pos="-5.3 8 6.35" roty="324">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="FACTION_CAMP_ELITE_ANY_SOLO" animswitch="work" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_CITY_CAMP_ELITE_ANY_SOLO" pos="7.73 8 7.56" roty="38">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="FACTION_CAMP_ELITE_ANY_SOLO" animswitch="work" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_CITY_CAMP_STANDARD_MELEE_SOLO" pos="-1.3 0.75 24.12">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="FACTION_CAMP_STANDARD_MELEE_SOLO" animswitch="guard" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_CITY_CAMP_STANDARD_MELEE_SOLO" pos="-20.35 1.38 -2.54" roty="270">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="FACTION_CAMP_STANDARD_MELEE_SOLO" animswitch="guard" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_CITY_CAMP_STANDARD_MELEE_SOLO" pos="24.13 0.75 0.88" roty="90">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="FACTION_CAMP_STANDARD_MELEE_SOLO" animswitch="guard" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_CITY_CAMP_STANDARD_ANY_SOLO" pos="23.89 0.72 -1.79" roty="90">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="FACTION_CAMP_STANDARD_ANY_SOLO" animswitch="guard" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_CITY_CAMP_STANDARD_ANY_SOLO" pos="1.69 0.72 24">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="FACTION_CAMP_STANDARD_ANY_SOLO" animswitch="guard" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_CITY_CAMP_STANDARD_ANY_SOLO" pos="-20.23 1.35 2.31" roty="270">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="FACTION_CAMP_STANDARD_ANY_SOLO" animswitch="guard" />
+        </tile>
+        <tile name="LocalQuestArea" pos="-0.5 8 -0.5">
+          <localquestarea questid="FACTION_CAMP_OPEN_QUEST_SMALL" radius="35" />
+        </tile>
+        <tile name="FOREST_RED_FILL_FIRE_CAMP_RAIDED_ACTIVE" pos="3.5 8 0.5" roty="90" scale="1.5 1.5 1.5" />
+        <tile name="FOREST_RED_FWARFARE_PALISADE_8M_B_ACTIVE" pos="8 8 17.5" roty="270" />
+        <tile name="FOREST_RED_FWARFARE_PALISADE_8M_B_ACTIVE" pos="11 8 -14.5" roty="98" />
+        <tile name="FOREST_RED_FWARFARE_PALISADE_8M_B_ACTIVE" pos="15.5 8 -11" roty="8" />
+        <tile name="FOREST_RED_FWARFARE_BEACON_ACTIVE" pos="-15 0 16" roty="6" />
+        <tile name="FOREST_RED_FWARFARE_BEACON_ACTIVE" pos="-1 0 -20" roty="275" />
+        <tile name="FOREST_RED_FWARFARE_BEACON_ACTIVE" pos="18 0 19" roty="108" />
+        <tile name="FOREST_RED_FWARFARE_TORCH_ACTIVE" pos="17.5 8 4.5" roty="180" />
+        <tile name="FWARFARE_POINTLIGHT_STANDARD_10M_A" pos="6.7 12.85 5.32">
+          <pointlight range="10" intensity="6" color="1 0.6039216 0.1294118" />
+        </tile>
+        <tile name="FWARFARE_POINTLIGHT_STANDARD_8M_A" pos="15.11 12.08 16.99">
+          <pointlight range="8" intensity="6" color="1 0.6039216 0.1294118" />
+        </tile>
+        <tile name="FWARFARE_POINTLIGHT_STANDARD_8M_A" pos="-1.31 11.32 -16.86">
+          <pointlight range="8" intensity="6" color="1 0.6039216 0.1294118" />
+        </tile>
+        <tile name="FWARFARE_POINTLIGHT_STANDARD_8M_A" pos="-12.4 12.08 14.2">
+          <pointlight range="8" intensity="6" color="1 0.6039216 0.1294118" />
+        </tile>
+        <tile name="FWARFARE_POINTLIGHT_STANDARD_10M_A" pos="-22.18 8.51 -3.34">
+          <pointlight range="10" intensity="6" color="1 0.6039216 0.1294118" />
+        </tile>
+        <tile name="FWARFARE_POINTLIGHT_STANDARD_10M_A" pos="22.97 11.37 0.69">
+          <pointlight range="10" intensity="6" color="1 0.6039216 0.1294118" />
+        </tile>
+        <tile name="FOREST_RED_FWARFARE_PALISADE_8M_B_DIAG_ACTIVE" pos="-9 8 2" roty="118" />
+        <tile name="FOREST_RED_ATMOBUBBLE_FWARFARE_CAMP" pos="0 0 0">
+          <atmospherebubble layer="1" radius="25" blend="0.7" blendinduration="0.7" blendoutduration="0.7" />
+        </tile>
+      </layer>
+      <layer id="Layer_11" name="KEEPER_DYN_VAR_FWARFARE_INACTIVE">
+        <tile name="FOREST_RED_FWARFARE_BEACON_INACTIVE" pos="-1 0 -20" roty="275" />
+        <tile name="FOREST_RED_FWARFARE_BEACON_INACTIVE" pos="-15 0 16" roty="6" />
+        <tile name="FOREST_RED_FWARFARE_BEACON_INACTIVE" pos="18 0 19" roty="108" />
+        <tile name="FOREST_RED_FWARFARE_PALISADE_8M_B_INACTIVE" pos="11 8 -14.5" roty="98" />
+        <tile name="FOREST_RED_FWARFARE_PALISADE_8M_B_INACTIVE" pos="15.5 8 -11" roty="8" />
+        <tile name="FOREST_RED_FWARFARE_PALISADE_8M_B_INACTIVE" pos="8 8 17.5" roty="270" />
+        <tile name="FOREST_RED_FWARFARE_PALISADE_8M_B_DIAG_INACTIVE" pos="-9 8 2" roty="118" />
+        <tile name="FOREST_RED_FWARFARE_TORCH_INACTIVE" pos="17.5 8 4.5" roty="180" />
+        <tile name="FOREST_RED_FILL_FIRE_CAMP_RAIDED_INACTIVE" pos="3.5 8 0.5" roty="90" scale="1.5 1.5 1.5" />
+      </layer>
+      <layer id="Layer_12" name="MORGANA_DYN_VAR_FWARFARE_ACTIVE">
+        <tile name="FWARFARE_POINTLIGHT_STANDARD_10M_A" pos="9.65 13.09 10.79">
+          <pointlight range="10" intensity="6" color="1 0.6039216 0.1294118" />
+        </tile>
+        <tile name="LocalQuestArea" pos="-0.5 8 -0.5">
+          <localquestarea questid="FACTION_CAMP_OPEN_QUEST_SMALL" radius="35" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_CITY_CAMP_STANDARD_MELEE_SOLO" pos="-4.66 8 3.48" roty="271">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="FACTION_CAMP_STANDARD_MELEE_SOLO" animswitch="work" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_CITY_CAMP_STANDARD_ANY_SOLO" pos="-4.84 8 0.12" roty="311">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="FACTION_CAMP_STANDARD_ANY_SOLO" animswitch="work" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_CITY_CAMP_STANDARD_ANY_SOLO" pos="-5.18 8 7.07" roty="241">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="FACTION_CAMP_STANDARD_ANY_SOLO" animswitch="work" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_CITY_CAMP_ELITE_MAGE_SOLO" pos="8.34 8 8.12" roty="42.35">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="FACTION_CAMP_ELITE_MAGE_SOLO" animswitch="work" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_CITY_CAMP_ELITE_ANY_SOLO" pos="4.98 8 -7.14" roty="14">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="FACTION_CAMP_ELITE_ANY_SOLO" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_CITY_CAMP_ELITE_ANY_SOLO" pos="6.16 8 10.38" roty="261">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="FACTION_CAMP_ELITE_ANY_SOLO" animswitch="guard" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_CITY_CAMP_STANDARD_MELEE_SOLO" pos="-1.3 0.75 24.12">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="FACTION_CAMP_STANDARD_MELEE_SOLO" animswitch="guard" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_CITY_CAMP_STANDARD_MELEE_SOLO" pos="-20.35 1.38 -2.54" roty="270">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="FACTION_CAMP_STANDARD_MELEE_SOLO" animswitch="guard" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_CITY_CAMP_STANDARD_MELEE_SOLO" pos="24.13 0.75 0.88" roty="90">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="FACTION_CAMP_STANDARD_MELEE_SOLO" animswitch="guard" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_CITY_CAMP_STANDARD_ANY_SOLO" pos="23.89 0.72 -1.79" roty="90">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="FACTION_CAMP_STANDARD_ANY_SOLO" animswitch="guard" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_CITY_CAMP_STANDARD_ANY_SOLO" pos="1.69 0.72 24">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="FACTION_CAMP_STANDARD_ANY_SOLO" animswitch="guard" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_CITY_CAMP_STANDARD_ANY_SOLO" pos="-20.23 1.35 2.31" roty="270">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="FACTION_CAMP_STANDARD_ANY_SOLO" animswitch="guard" />
+        </tile>
+        <tile name="FWARFARE_ENV_FX_SMOKE_A" pos="6.5 12 -9.5" roty="270" />
+        <tile name="SpawnPoint_LOOTCHEST_FACTION_CHEST_SMALL" pos="10.5 8 11.5" roty="45" />
+        <tile name="FOREST_RED_FILL_FIRE_CAMP_RAIDED_ACTIVE" pos="3.5 8 1.5" roty="300" />
+        <tile name="FOREST_RED_FWARFARE_TORCH_ACTIVE" pos="3.5 8 15.5" roty="90" />
+        <tile name="FOREST_RED_FWARFARE_BEACON_ACTIVE" pos="18 0 18" roty="139" />
+        <tile name="FOREST_RED_FWARFARE_BEACON_ACTIVE" pos="6 0 -22" roty="180" />
+        <tile name="FOREST_RED_FWARFARE_BEACON_ACTIVE" pos="-13 0 17" roty="180" />
+        <tile name="FOREST_RED_FWARFARE_PALISADE_8M_B_DIAG_ACTIVE" pos="-4 8 -10" roty="270" />
+        <tile name="FOREST_RED_FWARFARE_PALISADE_8M_B_DIAG_ACTIVE" pos="13 8 -15" roty="180" />
+        <tile name="FOREST_RED_FWARFARE_PALISADE_8M_B_ACTIVE" pos="-8.5 8 2" roty="359" />
+        <tile name="FWARFARE_POINTLIGHT_STANDARD_8M_A" pos="8.61 11.58 -22.16">
+          <pointlight range="8" intensity="6" color="1 0.6039216 0.1294118" />
+        </tile>
+        <tile name="FWARFARE_POINTLIGHT_STANDARD_8M_A" pos="23.41 6.11 19.97">
+          <pointlight range="8" intensity="6" color="1 0.6039216 0.1294118" />
+        </tile>
+        <tile name="FWARFARE_POINTLIGHT_STANDARD_8M_A" pos="-12.34 11.33 15.19">
+          <pointlight range="8" intensity="6" color="1 0.6039216 0.1294118" />
+        </tile>
+        <tile name="FWARFARE_POINTLIGHT_STANDARD_8M_A" pos="-11.66 13.24 -7.28">
+          <pointlight range="8" intensity="6" color="1 0.6039216 0.1294118" />
+        </tile>
+        <tile name="FWARFARE_POINTLIGHT_STANDARD_8M_A" pos="19.8 11.93 -0.8">
+          <pointlight range="8" intensity="6" color="1 0.6039216 0.1294118" />
+        </tile>
+        <tile name="FWARFARE_POINTLIGHT_STANDARD_10M_A" pos="1.72 13.08 -1.83">
+          <pointlight range="10" intensity="6" color="1 0.6039216 0.1294118" />
+        </tile>
+        <tile name="FWARFARE_POINTLIGHT_STANDARD_10M_A" pos="-0.47 11.61 18.19">
+          <pointlight range="10" intensity="6" color="1 0.6039216 0.1294118" />
+        </tile>
+        <tile name="FOREST_RED_FWARFARE_TORCH_ACTIVE" pos="15.5 7 -3.5" />
+        <tile name="FOREST_RED_ATMOBUBBLE_FWARFARE_CAMP" pos="0 0 0">
+          <atmospherebubble layer="1" radius="25" blend="0.7" blendinduration="0.7" blendoutduration="0.7" />
+        </tile>
+      </layer>
+      <layer id="Layer_13" name="MORGANA_DYN_VAR_FWARFARE_INACTIVE">
+        <tile name="FOREST_RED_FWARFARE_BEACON_INACTIVE" pos="18 0 18" roty="139" />
+        <tile name="FOREST_RED_FWARFARE_BEACON_INACTIVE" pos="-13 0 17" roty="180" />
+        <tile name="FOREST_RED_FWARFARE_BEACON_INACTIVE" pos="6 0 -22" roty="180" />
+        <tile name="FOREST_RED_FWARFARE_PALISADE_8M_B_INACTIVE" pos="-8.5 8 2" roty="359" />
+        <tile name="FOREST_RED_FWARFARE_PALISADE_8M_B_DIAG_INACTIVE" pos="-4 8 -10" roty="270" />
+        <tile name="FOREST_RED_FWARFARE_TORCH_INACTIVE" pos="3.5 8 15.5" roty="90" />
+        <tile name="FOREST_RED_FWARFARE_PALISADE_8M_B_DIAG_INACTIVE" pos="13 8 -15" roty="180" />
+        <tile name="FOREST_RED_FWARFARE_TORCH_INACTIVE" pos="15.5 7 -3.5" />
+        <tile name="FOREST_RED_FILL_FIRE_CAMP_RAIDED_INACTIVE" pos="3.5 8 1.5" roty="300" />
+      </layer>
+      <layer id="Layer_14" name="UNDEAD_DYN_VAR_FWARFARE_ACTIVE">
+        <tile name="FWARFARE_ENV_FX_SMOKE_A" pos="11.5 12 -12.5" roty="270" />
+        <tile name="LocalQuestArea" pos="-0.5 0 -0.5">
+          <localquestarea questid="FACTION_CAMP_OPEN_QUEST_SMALL" radius="35" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_CITY_CAMP_STANDARD_RANGED_SOLO" pos="-0.49 8 5.18" roty="37">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="FACTION_CAMP_STANDARD_RANGED_SOLO" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_CITY_CAMP_STANDARD_RANGED_SOLO" pos="0.93 8 8.38" roty="191">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="FACTION_CAMP_STANDARD_RANGED_SOLO" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_CITY_CAMP_STANDARD_MELEE_SOLO" pos="2.69 8 5.71" roty="304">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="FACTION_CAMP_STANDARD_MELEE_SOLO" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_CITY_CAMP_ELITE_RANGED_SOLO" pos="4.08 8 -6.18" roty="126">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="FACTION_CAMP_ELITE_RANGED_SOLO" animswitch="work" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_CITY_CAMP_ELITE_MELEE_SOLO" pos="6.69 8 -4.92" roty="171">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="FACTION_CAMP_ELITE_MELEE_SOLO" animswitch="work" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_CITY_CAMP_ELITE_ANY_SOLO" pos="-7.68 7.98 -4.27" roty="270">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="FACTION_CAMP_ELITE_ANY_SOLO" animswitch="guard" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_CITY_CAMP_STANDARD_MELEE_SOLO" pos="-20.35 1.38 -2.54" roty="270">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="FACTION_CAMP_STANDARD_MELEE_SOLO" animswitch="guard" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_CITY_CAMP_STANDARD_MELEE_SOLO" pos="-1.3 0.75 24.12">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="FACTION_CAMP_STANDARD_MELEE_SOLO" animswitch="guard" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_CITY_CAMP_STANDARD_MELEE_SOLO" pos="24.13 0.75 0.88" roty="90">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="FACTION_CAMP_STANDARD_MELEE_SOLO" animswitch="guard" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_CITY_CAMP_STANDARD_ANY_SOLO" pos="-20.23 1.35 2.31" roty="270">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="FACTION_CAMP_STANDARD_ANY_SOLO" animswitch="guard" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_CITY_CAMP_STANDARD_ANY_SOLO" pos="1.69 0.72 24">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="FACTION_CAMP_STANDARD_ANY_SOLO" animswitch="guard" />
+        </tile>
+        <tile name="SpawnPoint_RANDOM_CITY_CAMP_STANDARD_ANY_SOLO" pos="23.89 0.72 -1.79" roty="90">
+          <mobspawnpoint behavior="GUARD" spawnbehavior="FACTION_CAMP_STANDARD_ANY_SOLO" animswitch="guard" />
+        </tile>
+        <tile name="SpawnPoint_LOOTCHEST_FACTION_CHEST_SMALL" pos="7.5 8 -8.5" roty="169" />
+        <tile name="FOREST_RED_FWARFARE_FIREBOWL_A_FALLEN_ACTIVE" pos="8.5 8 8.5" />
+        <tile name="FOREST_RED_FWARFARE_TORCH_B_ACTIVE" pos="4.5 8 -10.5" roty="180" />
+        <tile name="FOREST_RED_FWARFARE_PALISADE_8M_B_ACTIVE" pos="-8.5 8 4" roty="6" />
+        <tile name="FOREST_RED_FWARFARE_BEACON_ACTIVE" pos="-14 0 -20" roty="9" />
+        <tile name="FOREST_RED_FWARFARE_BEACON_ACTIVE" pos="18.5 0 18.5" roty="9" />
+        <tile name="FOREST_RED_FWARFARE_BEACON_ACTIVE" pos="-15 0 16" roty="94" />
+        <tile name="FWARFARE_POINTLIGHT_STANDARD_12M_A" pos="5.6 12.24 -6.12">
+          <pointlight range="12" intensity="6" color="1 0.6039216 0.1294118" />
+        </tile>
+        <tile name="FWARFARE_POINTLIGHT_STANDARD_10M_A" pos="17.7 11.57 2.39">
+          <pointlight range="10" intensity="6" color="1 0.6039216 0.1294118" />
+        </tile>
+        <tile name="FWARFARE_POINTLIGHT_STANDARD_10M_A" pos="0.82 11.09 16.87">
+          <pointlight range="10" intensity="6" color="1 0.6039216 0.1294118" />
+        </tile>
+        <tile name="FWARFARE_POINTLIGHT_STANDARD_10M_A" pos="-11.6 11.37 -1.8">
+          <pointlight range="10" intensity="6" color="1 0.6039216 0.1294118" />
+        </tile>
+        <tile name="FWARFARE_POINTLIGHT_STANDARD_8M_A" pos="22.25 6.58 22.9">
+          <pointlight range="8" intensity="6" color="1 0.6039216 0.1294118" />
+        </tile>
+        <tile name="FWARFARE_POINTLIGHT_STANDARD_8M_A" pos="-20.65 6.58 16.99">
+          <pointlight range="8" intensity="6" color="1 0.6039216 0.1294118" />
+        </tile>
+        <tile name="FWARFARE_POINTLIGHT_STANDARD_8M_A" pos="-9.92 8.83 -21.58">
+          <pointlight range="8" intensity="6" color="1 0.6039216 0.1294118" />
+        </tile>
+        <tile name="FWARFARE_ENV_FX_SMOKE_A" pos="9.5 12 9.5" roty="270" />
+        <tile name="FOREST_RED_FWARFARE_TORCH_B_ACTIVE" pos="12.5 7 -6.5" />
+        <tile name="FOREST_RED_ATMOBUBBLE_FWARFARE_CAMP" pos="0 0 0">
+          <atmospherebubble layer="1" radius="25" blend="0.7" blendinduration="0.7" blendoutduration="0.7" />
+        </tile>
+      </layer>
+      <layer id="Layer_15" name="UNDEAD_DYN_VAR_FWARFARE_INACTIVE">
+        <tile name="FOREST_RED_FWARFARE_BEACON_INACTIVE" pos="-15 0 16" roty="94" />
+        <tile name="FOREST_RED_FWARFARE_BEACON_INACTIVE" pos="18.5 0 18.5" roty="9" />
+        <tile name="FOREST_RED_FWARFARE_BEACON_INACTIVE" pos="-14 0 -20" roty="9" />
+        <tile name="FOREST_RED_FWARFARE_TORCH_B_INACTIVE" pos="12.5 7 -6.5" />
+        <tile name="FOREST_RED_FWARFARE_PALISADE_8M_B_INACTIVE" pos="-8.5 8 4" roty="6" />
+        <tile name="FOREST_RED_FWARFARE_TORCH_B_INACTIVE" pos="4.5 8 -10.5" roty="180" />
+        <tile name="FOREST_RED_FWARFARE_FIREBOWL_A_FALLEN_INACTIVE" pos="8.5 8 8.5" />
+      </layer>
+      <layer id="Layer_16" name="KEEPER_DYN_VAR_DEFAULT_STATIC">
+        <tile name="FOREST_RED_KPR_FILL_TABLE_STONE_FUR_A_SMALL" pos="3 8 0.57" />
+        <tile name="FOREST_RED_GROUND_PATCH_TO_ROAD_CIRCLE_A" pos="3 8 1" scale="3.094973 1 2.370198" />
+      </layer>
+      <layer id="Layer_17" name="KEEPER_DYN_VAR_FWARFARE_STATIC">
+        <tile name="FOREST_RED_FWARFARE_CRATE_A" pos="-1.5 8 -0.5" roty="180" />
+        <tile name="FOREST_RED_FILL_BLOOD_SPLATTER_SMALL_A" pos="8 8 -5" />
+        <tile name="FOREST_RED_FILL_BLOOD_SPLATTER_SMALL_A" pos="-3 8 9" roty="270" />
+        <tile name="FOREST_RED_FILL_BLOOD_SPLATTER_B" pos="10 8 -3" roty="270" />
+        <tile name="FOREST_RED_FWARFARE_BANNER_STANDING_A_BROKEN" pos="22.5 0 -4.5" roty="180" />
+        <tile name="FOREST_RED_FWARFARE_BANNER_STANDING_A_BROKEN" pos="-20.5 1 -7.5" roty="60.55" />
+        <tile name="FOREST_RED_FWARFARE_BANNER_STANDING_A_BROKEN" pos="-5.5 0 22.5" roty="90" />
+        <tile name="FOREST_RED_FWARFARE_BANNER_STANDING_A_BROKEN" pos="5.5 0 22.5" roty="90" />
+        <tile name="FOREST_RED_FWARFARE_BANNER_FALLEN_A" pos="11 8 -5" roty="154" />
+        <tile name="FOREST_RED_FILL_STORAGE_CRATE_RAIDED_A" pos="0 8 1" roty="90" />
+        <tile name="FOREST_RED_FWARFARE_PALISADE_8M_BOUNTY_DIAG" pos="15 8 15" roty="270" />
+        <tile name="FOREST_RED_FWARFARE_PALISADE_8M_RAIDED_DIAG" pos="-3 8 -10" roty="90" />
+        <tile name="FOREST_RED_FWARFARE_PALISADE_8M_BOUNTY_DIAG" pos="-8 8 16" roty="180" />
+        <tile name="FOREST_RED_FWARFARE_WEAPONHOLDER_A_DIAG" pos="15 8 11" roty="90" />
+        <tile name="FOREST_RED_FWARFARE_CRATE_B" pos="-6 8 10" roty="90" />
+        <tile name="FOREST_RED_FWARFARE_PALISADE_8M_A" pos="-10.5 8 10" rot="0 0 8" />
+        <tile name="FOREST_RED_FWARFARE_GATE_BROKEN_LEFT" pos="4 8 16.5" roty="270" />
+        <tile name="FOREST_RED_FWARFARE_PALISADE_BROKEN_RIGHT" pos="-7 8 -1.5" roty="113" />
+        <tile name="FOREST_RED_FWARFARE_WEAPONHOLDER_A_DIAG" pos="11 8 15" roty="90" />
+        <tile name="FOREST_RED_FWARFARE_CRATE_B_DIAGONAL" pos="11 8 12" />
+        <tile name="FOREST_RED_FWARFARE_CRATE_A" pos="0.5 8 -1.5" roty="90" scale="0.77019 0.77019 0.77019" />
+        <tile name="FOREST_RED_FWARFARE_PALISADE_8M_RAIDED" pos="3 8 -13.5" roty="98" />
+        <tile name="FOREST_RED_GROUND_PATCH_ASH_A" pos="10 8 -13" />
+        <tile name="FOREST_RED_GROUND_PATCH_ASH_A" pos="-7 8 3" />
+        <tile name="FOREST_RED_GROUND_PATCH_MUD_TO_BASE_A" pos="3 8 2" scale="3.442848 1 3.821707" />
+        <tile name="FOREST_RED_FWARFARE_CRATE_B" pos="2 8 -11" />
+        <tile name="FOREST_RED_FWARFARE_PALISADE_BROKEN_LEFT" pos="-5.5 8 -6" roty="180" />
+        <tile name="FOREST_RED_FWARFARE_SIEGE_PALISADE_BROKEN_A" pos="15.5 8 -6.5" />
+        <tile name="FOREST_RED_FWARFARE_PALISADE_8M_A" pos="17.5 8 8" />
+        <tile name="FOREST_RED_FWARFARE_CRATE_C" pos="-8 8 10.5" roty="270" />
+        <tile name="FOREST_RED_FWARFARE_BATTLEFIELD_A" pos="-4.5 8 10.5" roty="90" />
+        <tile name="FOREST_RED_FWARFARE_BATTLEFIELD_B" pos="7.5 8 -6.5" roty="180" />
+      </layer>
+      <layer id="Layer_18" name="MORGANA_DYN_VAR_DEFAULT_STATIC">
+        <tile name="FOREST_RED_GROUND_PATCH_TO_ROAD_A" pos="9.26 8 9.73" roty="50" scale="1.114602 1 1.025561" />
+        <tile name="FOREST_RED_MOR_STOCKADE_STRAIGHT_SMALL_A" pos="-8.5 8 8.5" />
+        <tile name="FOREST_RED_MOR_STOCKADE_STRAIGHT_SMALL_A" pos="13.5 8 13.5" roty="148.4" scale="0.98586 0.98586 0.98586" />
+        <tile name="FOREST_RED_MOR_STOCKADE_STRAIGHT_C" pos="8 8 15.5" roty="90" scale="1 1 -1" />
+        <tile name="FOREST_RED_MOR_STOCKADE_STRAIGHT_C" pos="14.5 8 8" roty="180" />
+        <tile name="FOREST_RED_MOR_STOCKADE_STRAIGHT_C" pos="7 8 -17.5" roty="270" />
+        <tile name="FOREST_RED_MOR_STOCKADE_STRAIGHT_C" pos="-8.5 8 2" roty="359" />
+        <tile name="FOREST_RED_MOR_STOCKADE_STRAIGHT_C" pos="15.5 8 -8" scale="-1 1 1" />
+        <tile name="FOREST_RED_MOR_STOCKADE_CORNER_END" pos="13 8 -15" roty="180" />
+        <tile name="FOREST_RED_MOR_STOCKADE_CORNER" pos="-6 8 13" />
+        <tile name="FOREST_RED_MOR_STOCKADE_CORNER" pos="12 0 12" roty="270" />
+        <tile name="FOREST_RED_MOR_STOCKADE_STRAIGHT_SMALL_B" pos="-5 8 -6.5" rot="0 105 353" />
+        <tile name="FOREST_RED_MOR_STOCKADE_CORNER" pos="1 8 -15" roty="270" />
+        <tile name="FOREST_RED_MOR_SLEEPINGMAT_B" pos="7 8 14" roty="180" />
+        <tile name="FOREST_RED_MOR_SLEEPINGMAT_B" pos="13 8 8" roty="90" />
+        <tile name="FOREST_RED_MOR_STOCKADE_PILLARTORCH_A_OFF" pos="4.5 8 15.5" roty="90" />
+        <tile name="FOREST_RED_MOR_STOCKADE_PILLARTORCH_A_OFF" pos="15.5 8 -4.5" roty="180" />
+        <tile name="FOREST_RED_MOR_BANNER_FALLEN_LARGE_C" pos="3.5 8 8.5" roty="90" scale="0.83936 0.83936 0.83936" />
+        <tile name="FOREST_RED_MOR_STOCKADE_PILLARTORCH_A_OFF" pos="14.5 8 4.5" roty="180" />
+        <tile name="FOREST_RED_MOR_STOCKADE_PILLARTORCH_A_OFF" pos="-3.5 8 15.5" roty="90" />
+        <tile name="FOREST_RED_HER_FILL_BARREL_WOOD_A" pos="-7.5 8 -7.5" />
+        <tile name="FOREST_RED_GROUND_PATCH_TO_ROAD_CIRCLE_A" pos="-6.93 8 -4.76" roty="330" scale="0.2827 1 1.372786" />
+        <tile name="FOREST_RED_GROUND_PATCH_TO_ROAD_CIRCLE_A" pos="4 8 0" scale="2.637979 1 3.007668" />
+        <tile name="FOREST_RED_MOR_STOCKADE_CORNER" pos="-4 8 -10" roty="270" />
+        <tile name="FOREST_RED_MOR_WEAPONCRATE_A_DIAGONAL" pos="12 8 13" />
+      </layer>
+      <layer id="Layer_19" name="MORGANA_DYN_VAR_FWARFARE_STATIC">
+        <tile name="FOREST_RED_FWARFARE_PALISADE_BROKEN_RIGHT" pos="-6.5 8 -7" roty="180" />
+        <tile name="FOREST_RED_FWARFARE_WEAPONHOLDER_B" pos="-7.5 8 1" />
+        <tile name="FOREST_RED_FWARFARE_WEAPONHOLDER_A" pos="-7.5 8 6" />
+        <tile name="FOREST_RED_FILL_GROUND_FOOTSTEPS_A_MUD" pos="-2 8 2" roty="304" />
+        <tile name="FOREST_RED_FILL_GROUND_FOOTSTEPS_A_MUD" pos="3 8 -2" roty="99" />
+        <tile name="FOREST_RED_FILL_GROUND_FOOTSTEPS_A_MUD" pos="5 8 -4" roty="189" />
+        <tile name="FOREST_RED_FILL_GROUND_FOOTSTEPS_B_MUD" pos="4 8 3" roty="341" />
+        <tile name="FOREST_RED_GROUND_PATCH_ASH_A" pos="-7 8 1" />
+        <tile name="FOREST_RED_GROUND_PATCH_MUD_TO_BASE_A" pos="3 8 1" scale="3.435704 1 3.835679" />
+        <tile name="FOREST_RED_GROUND_PATCH_ASH_A" pos="8 8 13" roty="270" />
+        <tile name="FOREST_RED_GROUND_PATCH_ASH_A" pos="13 8 7" />
+        <tile name="FOREST_RED_FILL_BLOOD_SPLATTER_LARGE_A_OLD" pos="9 8 2" roty="60" scale="0.7999999 1 0.7999999" />
+        <tile name="FOREST_RED_FWARFARE_BATTLEFIELD_A" pos="0.5 8 -6.5" roty="90" />
+        <tile name="FOREST_RED_FWARFARE_BANNER_STANDING_LARGE_A_BROKEN" pos="-19.5 1 6.5" />
+        <tile name="FOREST_RED_FWARFARE_BANNER_STANDING_LARGE_A_BROKEN" pos="5.5 0 22.5" roty="90" />
+        <tile name="FOREST_RED_FWARFARE_BANNER_STANDING_LARGE_A_BROKEN" pos="22.5 0 -5.5" roty="180" />
+        <tile name="FOREST_RED_FWARFARE_CRATE_B" pos="13 8 9" rot="359.84 85.47 354.62" />
+        <tile name="FOREST_RED_FWARFARE_CRATE_B" pos="7 8 14" roty="10" />
+        <tile name="FOREST_RED_FWARFARE_GATE_BROKEN_RIGHT" pos="-3 8 15.5" roty="270" />
+        <tile name="FOREST_RED_FWARFARE_CRATE_C" pos="13 8 -8.5" roty="90" />
+        <tile name="FOREST_RED_FILL_BLOOD_SPLATTER_SMALL_A_OLD" pos="-4 8 -1" roty="45" />
+        <tile name="FOREST_RED_HER_FILL_BARREL_WOOD_A" pos="-7.5 8 -7.5" />
+        <tile name="FOREST_RED_FWARFARE_PALISADE_8M_A" pos="7 8 -17.5" roty="270" />
+        <tile name="FOREST_RED_FWARFARE_PALISADE_8M_A" pos="8 8 15.5" roty="90" scale="1 1 -1" />
+        <tile name="FOREST_RED_FWARFARE_PALISADE_8M_A_DIAG" pos="12 0 12" roty="270" />
+        <tile name="FOREST_RED_FWARFARE_PALISADE_8M_A_DIAG" pos="-6 8 13" />
+        <tile name="FOREST_RED_FWARFARE_PALISADE_5M_A" pos="-8.5 8 8.5" />
+        <tile name="FOREST_RED_FWARFARE_BANNER_STANDING_SMALL_A" pos="2.5 8 -10.5" roty="90" />
+        <tile name="FOREST_RED_FWARFARE_PALISADE_8M_BOUNTY" pos="14.5 8 8" />
+        <tile name="FOREST_RED_FWARFARE_PALISADE_8M_RAIDED_DIAG" pos="1 8 -15" roty="90" />
+        <tile name="FOREST_RED_FWARFARE_PALISADE_8M_RAIDED" pos="15.5 8 -8" roty="180" scale="-1 1 1" />
+        <tile name="FOREST_RED_FWARFARE_TENT_HALF_BROKEN_A" pos="7 8 -12" roty="180" />
+        <tile name="FOREST_RED_FWARFARE_CRATE_B_DIAGONAL" pos="12 8 13" />
+        <tile name="FOREST_RED_FWARFARE_CRATE_B" pos="22 0 17" roty="100" />
+        <tile name="FOREST_RED_FWARFARE_CRATE_C" pos="19.5 0 22" roty="8" />
+        <tile name="FOREST_RED_FWARFARE_GATE_BROKEN_RIGHT" pos="14.5 8 5" />
+        <tile name="FOREST_RED_FWARFARE_PALISADE_5M_A" pos="13.5 8 13.5" roty="148" scale="0.98586 0.98586 0.98586" />
+        <tile name="FOREST_RED_GROUND_PATCH_ASH_C" pos="8 8 -11" />
+      </layer>
+      <layer id="Layer_20" name="UNDEAD_DYN_VAR_DEFAULT_STATIC">
+        <tile name="FOREST_RED_UND_CHAIR_A" pos="10.5 8 11.5" roty="90" />
+        <tile name="FOREST_RED_UND_TABLE_BROKEN_A" pos="11.5 8 8.5" roty="277" />
+        <tile name="FOREST_RED_UND_BOOKSHELF_B_NOBLEND" pos="10 5 -13" rot="8 271 22" />
+        <tile name="FOREST_RED_UND_BONES_A" pos="-3.5 8 6.5" roty="199" scale="2 2 2" />
+      </layer>
+      <layer id="Layer_21" name="UNDEAD_DYN_VAR_FWARFARE_STATIC">
+        <tile name="FOREST_RED_FWARFARE_PALISADE_BROKEN_RIGHT" pos="13.5 8 6" />
+        <tile name="FOREST_RED_FWARFARE_CRATE_A" pos="10.5 9 -12.5" roty="90" />
+        <tile name="FOREST_RED_FWARFARE_CRATE_A" pos="11.5 8.88 -10.5" roty="127.37" />
+        <tile name="FOREST_RED_FWARFARE_BANNER_STANDING_LARGE_A_BROKEN" pos="-4.5 0 22.5" roty="121.75" />
+        <tile name="FOREST_RED_FWARFARE_BANNER_STANDING_LARGE_A_BROKEN" pos="-15.5 4 1.5" />
+        <tile name="FOREST_RED_FWARFARE_BANNER_STANDING_LARGE_A_BROKEN" pos="23.5 0 4.5" roty="243" />
+        <tile name="FOREST_RED_FWARFARE_BANNER_STANDING_LARGE_A_BROKEN" pos="22.5 0 -4.5" roty="180" />
+        <tile name="FOREST_RED_FWARFARE_SIEGE_PALISADE_A" pos="13.5 8 -11.5" />
+        <tile name="FOREST_RED_FWARFARE_BATTLEFIELD_A" pos="-22.5 0 14.5" roty="90" />
+        <tile name="FOREST_RED_FWARFARE_BATTLEFIELD_A" pos="-10.5 0 -23.5" roty="90" />
+        <tile name="FOREST_RED_FWARFARE_BATTLEFIELD_A" pos="-1.5 8 6.5" roty="90" />
+        <tile name="FOREST_RED_FWARFARE_BANNER_FALLEN_A" pos="-16 0 23" roty="180" />
+        <tile name="FOREST_RED_FWARFARE_BANNER_FALLEN_A" pos="-5 0 -23" />
+        <tile name="FOREST_RED_FWARFARE_PALISADE_2M_A" pos="-6.5 8 12" roty="171" />
+        <tile name="FOREST_RED_FWARFARE_CRATE_C" pos="12 8 10.5" roty="277" />
+        <tile name="FOREST_RED_GROUND_PATCH_MUD_TO_BASE_B" pos="-2 8 -1" roty="180" scale="2.54021 1 2.977803" />
+        <tile name="FOREST_RED_FWARFARE_PALISADE_2M_A" pos="-6.5 8 10" roty="171" />
+        <tile name="FOREST_RED_FWARFARE_PALISADE_2M_A" pos="-5 8 13.5" roty="261" />
+        <tile name="FOREST_RED_FWARFARE_PALISADE_8M_RAIDED" pos="8 8 14.5" roty="96" />
+        <tile name="FOREST_RED_FILL_BLOOD_SPLATTER_LARGE_A" pos="-22 0 14" roty="270" />
+        <tile name="FOREST_RED_FWARFARE_PALISADE_2M_A" pos="-6 8 13.5" roty="227" />
+        <tile name="FOREST_RED_FWARFARE_GATE_BROKEN_LEFT" pos="14.5 8 -5" />
+        <tile name="FOREST_RED_FILL_BLOOD_SPLATTER_LARGE_A" pos="4 8 9" roty="270" />
+        <tile name="FOREST_RED_FILL_BLOOD_SPLATTER_LARGE_A" pos="11 8 -5" roty="180" />
+        <tile name="FOREST_RED_GROUND_PATCH_ASH_A" pos="-3 8 2" />
+        <tile name="FOREST_RED_FWARFARE_GATE_BROKEN_RIGHT" pos="-4 8 13.5" roty="270" />
+        <tile name="FOREST_RED_FWARFARE_GATE_BROKEN_LEFT" pos="5 8 13.5" roty="270" />
+        <tile name="FOREST_RED_FWARFARE_GATE_BROKEN_RIGHT" pos="-6.5 8 -9" roty="180" />
+        <tile name="FOREST_RED_FWARFARE_GATE_BROKEN_LEFT" pos="-7.5 8 0" roty="180" />
+        <tile name="FOREST_RED_FWARFARE_TENT_SHED_BROKEN_A" pos="8 8 11" roty="270" />
+        <tile name="FOREST_RED_FWARFARE_TENT_SHED_BROKEN_A" pos="10 8 -11" roty="270" />
+        <tile name="FOREST_RED_FWARFARE_PALISADE_2M_A" pos="-7 8 8.5" roty="261" />
+        <tile name="FOREST_RED_FWARFARE_CRATE_A" pos="8.5 9 -11.5" roty="35.66" />
       </layer>
     </layergroup>
     <tile name="FOREST_RED_PLATEAU_8M_CORNER_LARGE_A" pos="15 0 15" />

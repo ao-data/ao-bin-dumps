@@ -9003,10 +9003,20 @@
                 "@positioncooldown": "300",
                 "@activationchance": "0.62361",
                 "@activityquotientactive": "true",
-                "TreasureLootchest": {
-                  "@weight": "1",
-                  "@name": "DEFAULT_CHEST_SOLO"
-                }
+                "TreasureLootchest": [
+                  {
+                    "@weight": "1",
+                    "@name": "DEFAULT_CHEST_SOLO"
+                  },
+                  {
+                    "@weight": "4",
+                    "@name": "FACTION_TREASURE_SMALL"
+                  },
+                  {
+                    "@weight": "1",
+                    "@name": "FACTION_TREASURE_MEDIUM"
+                  }
+                ]
               }
             },
             {
@@ -9018,10 +9028,20 @@
                 "@positioncooldown": "300",
                 "@activationchance": "0.62361",
                 "@activityquotientactive": "true",
-                "TreasureLootchest": {
-                  "@weight": "1",
-                  "@name": "DEFAULT_CHEST_SOLO"
-                }
+                "TreasureLootchest": [
+                  {
+                    "@weight": "1",
+                    "@name": "DEFAULT_CHEST_SOLO"
+                  },
+                  {
+                    "@weight": "4",
+                    "@name": "FACTION_TREASURE_SMALL"
+                  },
+                  {
+                    "@weight": "1",
+                    "@name": "FACTION_TREASURE_MEDIUM"
+                  }
+                ]
               }
             },
             {
@@ -9033,10 +9053,20 @@
                 "@positioncooldown": "300",
                 "@activationchance": "0.62361",
                 "@activityquotientactive": "true",
-                "TreasureLootchest": {
-                  "@weight": "1",
-                  "@name": "DEFAULT_CHEST_SOLO"
-                }
+                "TreasureLootchest": [
+                  {
+                    "@weight": "1",
+                    "@name": "DEFAULT_CHEST_SOLO"
+                  },
+                  {
+                    "@weight": "4",
+                    "@name": "FACTION_TREASURE_SMALL"
+                  },
+                  {
+                    "@weight": "1",
+                    "@name": "FACTION_TREASURE_MEDIUM"
+                  }
+                ]
               }
             }
           ]
@@ -9055,10 +9085,20 @@
                 "@positioncooldown": "300",
                 "@activationchance": "0.62361",
                 "@activityquotientactive": "true",
-                "TreasureLootchest": {
-                  "@weight": "1",
-                  "@name": "DEFAULT_CHEST_SOLO"
-                }
+                "TreasureLootchest": [
+                  {
+                    "@weight": "1",
+                    "@name": "DEFAULT_CHEST_SOLO"
+                  },
+                  {
+                    "@weight": "4",
+                    "@name": "FACTION_TREASURE_SMALL"
+                  },
+                  {
+                    "@weight": "1",
+                    "@name": "FACTION_TREASURE_MEDIUM"
+                  }
+                ]
               }
             },
             {
@@ -9070,10 +9110,20 @@
                 "@positioncooldown": "300",
                 "@activationchance": "0.62361",
                 "@activityquotientactive": "true",
-                "TreasureLootchest": {
-                  "@weight": "1",
-                  "@name": "DEFAULT_CHEST_SOLO"
-                }
+                "TreasureLootchest": [
+                  {
+                    "@weight": "1",
+                    "@name": "DEFAULT_CHEST_SOLO"
+                  },
+                  {
+                    "@weight": "4",
+                    "@name": "FACTION_TREASURE_SMALL"
+                  },
+                  {
+                    "@weight": "1",
+                    "@name": "FACTION_TREASURE_MEDIUM"
+                  }
+                ]
               }
             },
             {
@@ -9085,10 +9135,20 @@
                 "@positioncooldown": "300",
                 "@activationchance": "0.62361",
                 "@activityquotientactive": "true",
-                "TreasureLootchest": {
-                  "@weight": "1",
-                  "@name": "DEFAULT_CHEST_SOLO"
-                }
+                "TreasureLootchest": [
+                  {
+                    "@weight": "1",
+                    "@name": "DEFAULT_CHEST_SOLO"
+                  },
+                  {
+                    "@weight": "4",
+                    "@name": "FACTION_TREASURE_SMALL"
+                  },
+                  {
+                    "@weight": "1",
+                    "@name": "FACTION_TREASURE_MEDIUM"
+                  }
+                ]
               }
             }
           ]
@@ -26333,7 +26393,8 @@
           "@killeventloggingradius": "30",
           "@maxlifetime": "86400",
           "@lootchest": "TREASURE_COFFER_SOLO",
-          "@minimapdisplayinterestareaextend": "100"
+          "@minimapdisplayinterestareaextend": "100",
+          "@notinconflictzone": "true"
         },
         {
           "@uniquename": "DEFAULT_CHEST_SOLO",
@@ -26343,7 +26404,33 @@
           "@description": "@TREASURE_CHEST_SOLO_DESC",
           "@killeventloggingradius": "30",
           "@maxlifetime": "86400",
-          "@lootchest": "DEFAULT_TREASURE_SOLO"
+          "@lootchest": "DEFAULT_TREASURE_SOLO",
+          "@notinconflictzone": "true"
+        },
+        {
+          "@uniquename": "FACTION_TREASURE_SMALL",
+          "@chestcategory": "Coffer",
+          "@minimapicon": "fw_chest_small",
+          "@title": "@TREASURE_CHEST_FACTION_SMALL",
+          "@description": "@TREASURE_CHEST_FACTION_SMALL_DESC",
+          "@killeventloggingradius": "30",
+          "@maxlifetime": "86400",
+          "@lootchest": "FACTION_TREASURE_SOLO",
+          "@minimapdisplayinterestareaextend": "100",
+          "@onlyinconflictzone": "true"
+        },
+        {
+          "@uniquename": "FACTION_TREASURE_MEDIUM",
+          "@chestcategory": "Chest",
+          "@worldmaprange": "3",
+          "@worldmaptreasure": "WORLDMAP_TREASURE_CHEST_FACTION_WARFARE_ELITE",
+          "@minimapicon": "fw_chest_big",
+          "@title": "@TREASURE_CHEST_FACTION_MEDIUM",
+          "@description": "@TREASURE_CHEST_FACTION_MEDIUM_DESC",
+          "@killeventloggingradius": "30",
+          "@maxlifetime": "86400",
+          "@lootchest": "FACTION_TREASURE_GROUP",
+          "@onlyinconflictzone": "true"
         },
         {
           "@uniquename": "ROADS_CHEST_VETERAN",

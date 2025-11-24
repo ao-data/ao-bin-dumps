@@ -133,7 +133,7 @@
            showdestinyboardflyout="true"/>
     <state uniquename="GETGEARCLEAR" previousstate="WHATYOUWEAR" triggerhint="CLEAR" hidedestinyboard="false"
            showdestinyboardflyout="true"/>
-    <state uniquename="SILVER" previousstate="GETGEARCLEAR" triggerhint="CLEAR" infobuttonhint="BUTTONINFO1"
+    <state uniquename="SILVER" previousstate="GETGEARCLEAR" triggerhint="CLEAR" infobuttonhint="INFO_ARMOR"
            hidedestinyboard="false" showdestinyboardflyout="true"/>
     <!--CLEAR STATES-->
     <state uniquename="SWORDGLOWOFF" triggerhint="CLEAR" previousstate="FIRSTSPELL"/>
@@ -534,7 +534,10 @@
     <hint uniquename="GETGEAR_04" title="@HINT_TITLE_GETGEAR_04" infotext="@HINT_INFO_GETGEAR_04"
           blockworldinteraction="true" completebutton="true" setnextstateonend="true"/>
 
-    <!--END-->
+    <hint uniquename="MARKETCATEGORIES" title="@HINT_TITLE_MARKETCATEGORIES" infotext="@HINT_INFO_MARKETCATEGORIES"
+          triggerui="marketplacesearch" blockworldinteraction="true" mobileposition="BottomLeft" completebutton="true"/>
+
+  <!--END-->
     <hint uniquename="END" title="@HINT_TITLE_END" infotext="@HINT_INFO_END" blockworldinteraction="true"/>
 
     <!--AFTER TUT HINTS-->
@@ -1316,40 +1319,40 @@
             <content title="@FACTION_WARFARE_TUTORIAL_SCREEN_1_SUBTITLE_1"
                      text="@FACTION_WARFARE_TUTORIAL_SCREEN_1_DESC_1"/>
         </entry>
-        <entry imagepath="Gui/TutorialExplanations/TutorialFWConquer" scale="1.2">
+        <entry imagepath="Gui/TutorialExplanations/TutorialFWOverlayWagon" scale="1.2">
             <content title="@FACTION_WARFARE_TUTORIAL_SCREEN_1_SUBTITLE_2"
                      text="@FACTION_WARFARE_TUTORIAL_SCREEN_1_DESC_2"/>
         </entry>
     </hint>
     <hint uniquename="FACTION_WARFARE_INFO_2" explanation="VerticalTemplate"
           title="@FACTION_WARFARE_TUTORIAL_SCREEN_2_TITLE" nexthint="FACTION_WARFARE_INFO_3">
-        <entry imagepath="Gui/TutorialExplanations/TutorialFWMapOverlay" scale="1.2">
+        <entry imagepath="Gui/TutorialExplanations/TutorialFWSupply" scale="1.2">
             <content title="@FACTION_WARFARE_TUTORIAL_SCREEN_2_SUBTITLE_1"
                      text="@FACTION_WARFARE_TUTORIAL_SCREEN_2_DESC_1"/>
         </entry>
-        <entry imagepath="Gui/TutorialExplanations/TutorialFWGroup" scale="1.2">
+        <entry imagepath="Gui/TutorialExplanations/TutorialFWDefenderPoints" scale="1.2">
             <content title="@FACTION_WARFARE_TUTORIAL_SCREEN_2_SUBTITLE_2"
                      text="@FACTION_WARFARE_TUTORIAL_SCREEN_2_DESC_2"/>
         </entry>
     </hint>
     <hint uniquename="FACTION_WARFARE_INFO_3" explanation="VerticalTemplate"
           title="@FACTION_WARFARE_TUTORIAL_SCREEN_3_TITLE" nexthint="FACTION_WARFARE_INFO_4">
-        <entry imagepath="Gui/TutorialExplanations/TutorialFWFrontline" scale="1.2">
+        <entry imagepath="Gui/TutorialExplanations/TutoriaslFWFortressSiegeHammer" scale="1.2">
             <content title="@FACTION_WARFARE_TUTORIAL_SCREEN_3_SUBTITLE_1"
                      text="@FACTION_WARFARE_TUTORIAL_SCREEN_3_DESC_1"/>
         </entry>
-        <entry imagepath="Gui/TutorialExplanations/TutorialFWValue" scale="1.2">
+        <entry imagepath="Gui/TutorialExplanations/TutorialFWWeaponCache" scale="1.2">
             <content title="@FACTION_WARFARE_TUTORIAL_SCREEN_3_SUBTITLE_2"
                      text="@FACTION_WARFARE_TUTORIAL_SCREEN_3_DESC_2"/>
         </entry>
     </hint>
     <hint uniquename="FACTION_WARFARE_INFO_4" explanation="VerticalTemplate"
           title="@FACTION_WARFARE_TUTORIAL_SCREEN_4_TITLE" nexthint="FACTION_WARFARE_INFO_5">
-        <entry imagepath="Gui/TutorialExplanations/TutorialFWPoints" scale="1.2">
+        <entry imagepath="Gui/TutorialExplanations/TutorialFWCutOffMap" scale="1.2">
             <content title="@FACTION_WARFARE_TUTORIAL_SCREEN_4_SUBTITLE_1"
                      text="@FACTION_WARFARE_TUTORIAL_SCREEN_4_DESC_1"/>
         </entry>
-        <entry imagepath="Gui/TutorialExplanations/TutorialFWGroup" scale="1.2">
+        <entry imagepath="Gui/TutorialExplanations/TutorialFWCutOffNotification" scale="1.2">
             <content title="@FACTION_WARFARE_TUTORIAL_SCREEN_4_SUBTITLE_2"
                      text="@FACTION_WARFARE_TUTORIAL_SCREEN_4_DESC_2"/>
         </entry>
@@ -1369,7 +1372,7 @@
           title="@FACTION_WARFARE_TUTORIAL_SCREEN_6_TITLE" nexthint="FACTION_WARFARE_INFO">
         <entry imagepath="Gui/TutorialExplanations/TutorialFWRedZoneEvent" scale="1.2">
             <content title="@FACTION_WARFARE_TUTORIAL_SCREEN_6_SUBTITLE_1"
-                     text="@FACTION_WARFARE_TUTORIAL_SCREEN_5_DESC_1"/>
+                     text="@FACTION_WARFARE_TUTORIAL_SCREEN_6_DESC_1"/>
         </entry>
         <entry imagepath="Gui/TutorialExplanations/TutorialFWRedZoneEventConclusion" scale="1.2">
             <content title="@FACTION_WARFARE_TUTORIAL_SCREEN_6_SUBTITLE_2"
@@ -1406,6 +1409,12 @@
         <entry imagepath="Gui/TutorialExplanations/TutorialMightEnergyCrystals" scale="0.65">
             <content title="@TUTORIAL_MIGHT_ENERGY_CRYSTALS_TITLE" text="@TUTORIAL_MIGHT_ENERGY_CRYSTALS_TEXT"/>
         </entry>
+        <entry imagepath="Gui/TutorialExplanations/TutorialMistsIntro" scale="0.65">
+          <content title="@TUTORIAL_MIGHT_MISTS_TITLE" text="@TUTORIAL_MIGHT_MISTS_TEXT"/>
+        </entry>
+        <entry imagepath="Gui/TutorialExplanations/TutorialHellDungeonsSoulsAndAltars" scale="0.65">
+          <content title="@TUTORIAL_MIGHT_HELLDUNGEON_TITLE" text="@TUTORIAL_MIGHT_HELLDUNGEON_TEXT"/>
+        </entry>
     </hint>
 
     <!-- ARENA MATCHES -->
@@ -1428,8 +1437,7 @@
             <content title="@TUTORIAL_CRYSTAL_ARENA_RULES_TITLE" text="@TUTORIAL_CRYSTAL_ARENA_RULES_V2_TEXT"/>
         </entry>
     </hint>
-    <hint uniquename="CRYSTAL_ARENA_RANKS_INFO" explanation="VerticalTemplate"
-          title="@TUTORIAL_CRYSTAL_ARENA_RANKS_AND_SEASONS_TITLE" nexthint="CRYSTAL_ARENA_MATCH_INFO">
+    <hint uniquename="CRYSTAL_ARENA_RANKS_INFO" explanation="VerticalTemplate" title="@TUTORIAL_CRYSTAL_ARENA_RANKS_AND_SEASONS_TITLE">
         <entry imagepath="Gui/TutorialExplanations/TutorialCrystalArenaRanks" scale="2.0">
             <content text="@TUTORIAL_CRYSTAL_ARENA_RANKS_TEXT"/>
         </entry>
@@ -2054,8 +2062,18 @@
             <content title="@TUTORIAL_BIGHINT_HIDE2_TEXT2_TITLE" text="@TUTORIAL_BIGHINT_HIDE2_TEXT2_INFO"/>
         </entry>
     </hint>
-    
-    <!-- JOURNAL - ECONOMY - BUYING/SELLING ITEMS -->
+    <!--- JOURNAL - EXPLORATION - Smugglers-->
+    <hint uniquename="JOURNAL_SMUGGLERS_INFO" explanation="VerticalTemplate" title="@TUTORIAL_EXPLORATION_SMUGGLERS_ACTIVITIES_TITLE">
+      <entry imagepath="Gui/TutorialExplanations/TutorialSmugglersDen" scale="1.2">
+        <content title="@TUTORIAL_EXPLORATION_SMUGGLERS_DEN_TITLE" text="@TUTORIAL_EXPLORATION_SMUGGLERS_DEN_TEXT"/>
+      </entry>
+      <entry imagepath="Gui/TutorialExplanations/TutorialSmugglersCrate" scale="1.2">
+        <content title="@TUTORIAL_EXPLORATION_SMUGGLERS_CRATE_TITLE" text="@TUTORIAL_EXPLORATION_SMUGGLERS_CRATE_TEXT"/>
+      </entry>
+    </hint>
+
+
+  <!-- JOURNAL - ECONOMY - BUYING/SELLING ITEMS -->
     <hint uniquename="JOURNAL_MARKETPLACE_INFO" explanation="VerticalTemplate" title="@TUTORIAL_MARKETPLACE_MAIN_TITLE"
           nexthint="BUYING_SELLING_ITEMS_INFO">
         <entry imagepath="Gui/TutorialExplanations/TutorialMarketplace1" scale="1.2">
@@ -2203,6 +2221,18 @@
         </entry>
         <entry imagepath="Gui/TutorialExplanations/TutorialSAFEPortal2" scale="1.2">
             <content title="@TUTORIAL_OUTLANDS_TELEPORTATION_PORTALS_SUB_TITLE_TWO" text="@TUTORIAL_OUTLANDS_TELEPORTATION_PORTALS_TEXT_TWO"/> 
+        </entry>
+    </hint>
+	
+	<!-- Faction Warfare Transport -->
+    <hint uniquename="FACTION_WARFARE_TRANSPORT"
+          explanation="VerticalTemplate"
+          title="@TUTORIAL_FACTION_WARFARE_TRANSPORT_TITLE">
+        <entry imagepath="Gui/TutorialExplanations/TutorialFactionWarfareTransport1" scale="1.2">
+            <content title="@TUTORIAL_FACTION_WARFARE_TRANSPORT_SUB_TITLE_ONE" text="@TUTORIAL_FACTION_WARFARE_TRANSPORT_TEXT_ONE"/>
+        </entry>
+        <entry imagepath="Gui/TutorialExplanations/TutorialFactionWarfareTransport2" scale="1.2">
+            <content title="@TUTORIAL_FACTION_WARFARE_TRANSPORT_SUB_TITLE_TWO" text="@TUTORIAL_FACTION_WARFARE_TRANSPORT_TEXT_TWO"/> 
         </entry>
     </hint>
 
@@ -2433,11 +2463,11 @@
 
   <hint uniquename="JOURNAL_QUEST_HINT_BIOMES" title="@JOURNAL_QUEST_HINT_BIOMES_TITLE" infotext="@JOURNAL_QUEST_HINT_BIOMES_TEXT" completebutton="true"/>
 
-  <hint uniquename="JOURNAL_QUEST_HINT_USE_WORLDMAP" infotext="@JOURNAL_QUEST_HINT_USE_WORLDMAP_TEXT" completebutton="true"/>
+  <hint uniquename="JOURNAL_QUEST_HINT_USE_WORLDMAP" infotext="@JOURNAL_QUEST_HINT_USE_WORLDMAP_TEXT" completebutton="true" delay="15"/>
 
   <hint uniquename="JOURNAL_QUEST_HINT_HIGHLIGHT_SHOWROOM" infotext="@JOURNAL_QUEST_HINT_GOTO_SHOWROOM_TEXT" triggerui="islandmerchantshowroom" completebutton="true"/>
 
-  <hint uniquename="JOURNAL_QUEST_JOURNEY_BACK" title="@JOURNAL_QUEST_BIGHINT_JOURNEY_BACK_TITLE" infotext="@JOURNAL_QUEST_BIGHINT_JOURNEY_BACK_TEXT" completebutton="true"/>
+  <hint uniquename="JOURNAL_QUEST_JOURNEY_BACK" title="@JOURNAL_QUEST_BIGHINT_JOURNEY_BACK_TITLE" infotext="@JOURNAL_QUEST_BIGHINT_JOURNEY_BACK_TEXT" completebutton="true" triggerui="armorspell"/>
   
   <!-- Showroom Island Hints-->
   <hint uniquename="JOURNAL_QUEST_SHOWROOM_ISLAND_INTRO" title="@JOURNAL_QUEST_SHOWROOM_ISLAND_INTRO_TITLE" infotext="@JOURNAL_QUEST_SHOWROOM_ISLAND_INTRO_TEXT" completebutton="true" />	

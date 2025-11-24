@@ -1594,6 +1594,7 @@
                   "@locationmarkerid": "LIGHTHOUSEUP",
                   "@markedinworld": "true",
                   "@markedonminimap": "true",
+                  "@hideprogress": "true",
                   "usespell": {
                     "@spellnamepart": "DODGE",
                     "@hideinhud": "true",
@@ -1865,7 +1866,7 @@
               },
               "missions": {
                 "selectspell": {
-                  "@itemid": "T1_MAIN_SWORD",
+                  "@activespellslot": "mainhand1",
                   "@textloca": "@MISSIONS_T2_TUTORIAL_TEST_D4_SIDETEXT",
                   "@hideindetailsui": "true"
                 }
@@ -2839,6 +2840,7 @@
                   "@markedinworld": "false",
                   "@markedonminimap": "true",
                   "@hideindetailsui": "true",
+                  "@hideprogress": "true",
                   "gotolocation": [
                     {
                       "@locationmarkerid": "CAMP_A1",
@@ -2878,6 +2880,7 @@
                   "@textloca": "@MISSIONS_T2_TUTORIAL_TEST_MA1_SIDETEXT",
                   "@markedinworld": "true",
                   "@markedonminimap": "true",
+                  "@hideprogress": "true",
                   "gotolocation": [
                     {
                       "@locationmarkerid": "CAMP_A",
@@ -3054,6 +3057,7 @@
                   "@markedinworld": "false",
                   "@markedonminimap": "true",
                   "@hideindetailsui": "true",
+                  "@hideprogress": "true",
                   "gotolocation": [
                     {
                       "@locationmarkerid": "CAMP_A1",
@@ -3093,6 +3097,7 @@
                   "@textloca": "@MISSIONS_T2_TUTORIAL_TEST_MA1_SIDETEXT",
                   "@markedinworld": "true",
                   "@markedonminimap": "true",
+                  "@hideprogress": "true",
                   "gotolocation": [
                     {
                       "@locationmarkerid": "CAMP_A",
@@ -3269,6 +3274,7 @@
                   "@markedinworld": "false",
                   "@markedonminimap": "true",
                   "@hideindetailsui": "true",
+                  "@hideprogress": "true",
                   "gotolocation": [
                     {
                       "@locationmarkerid": "CAMP_A1",
@@ -3308,6 +3314,7 @@
                   "@textloca": "@MISSIONS_T2_TUTORIAL_TEST_MA1_SIDETEXT",
                   "@markedinworld": "true",
                   "@markedonminimap": "true",
+                  "@hideprogress": "true",
                   "gotolocation": [
                     {
                       "@locationmarkerid": "CAMP_A",
@@ -3685,6 +3692,19 @@
                 }
               },
               "missions": {
+                "interactwithbuilding": {
+                  "@buildingid": "FOREST_GREEN_MARKETPLACE_TUTORIAL"
+                }
+              }
+            },
+            {
+              "@locationmarkerid": "MARKETPLACE",
+              "preactions": {
+                "openhintbox": {
+                  "@uniquename": "MARKETCATEGORIES"
+                }
+              },
+              "missions": {
                 "acquireitem": [
                   {
                     "@textloca": "@MISSIONS_T2_TUTORIAL_TEST_O1_SIDETEXT_NEW",
@@ -3748,58 +3768,31 @@
             },
             {
               "missions": {
-                "or": {
+                "selectspell": {
+                  "@activespellslot": "head",
+                  "@minitemtier": "2",
                   "@textloca": "@MISSIONS_T2_TUTORIAL_TEST_O6_SIDETEXT_NEW",
-                  "@hideindetailsui": "true",
-                  "selectspell": [
-                    {
-                      "@itemid": "T2_HEAD_CLOTH_SET1"
-                    },
-                    {
-                      "@itemid": "T2_HEAD_LEATHER_SET1"
-                    },
-                    {
-                      "@itemid": "T2_HEAD_PLATE_SET1"
-                    }
-                  ]
+                  "@hideindetailsui": "true"
                 }
               }
             },
             {
               "missions": {
-                "or": {
+                "selectspell": {
+                  "@activespellslot": "armor",
+                  "@minitemtier": "2",
                   "@textloca": "@MISSIONS_T2_TUTORIAL_TEST_O7_SIDETEXT_NEW",
-                  "@hideindetailsui": "true",
-                  "selectspell": [
-                    {
-                      "@itemid": "T2_ARMOR_CLOTH_SET1"
-                    },
-                    {
-                      "@itemid": "T2_ARMOR_LEATHER_SET1"
-                    },
-                    {
-                      "@itemid": "T2_ARMOR_PLATE_SET1"
-                    }
-                  ]
+                  "@hideindetailsui": "true"
                 }
               }
             },
             {
               "missions": {
-                "or": {
+                "selectspell": {
+                  "@activespellslot": "shoes",
+                  "@minitemtier": "2",
                   "@textloca": "@MISSIONS_T2_TUTORIAL_TEST_O8_SIDETEXT_NEW",
-                  "@hideindetailsui": "true",
-                  "selectspell": [
-                    {
-                      "@itemid": "T2_SHOES_CLOTH_SET1"
-                    },
-                    {
-                      "@itemid": "T2_SHOES_LEATHER_SET1"
-                    },
-                    {
-                      "@itemid": "T2_SHOES_PLATE_SET1"
-                    }
-                  ]
+                  "@hideindetailsui": "true"
                 }
               }
             }
@@ -3869,6 +3862,19 @@
                 },
                 "openhintbox": {
                   "@uniquename": "INFO_ARMOR"
+                }
+              },
+              "missions": {
+                "interactwithbuilding": {
+                  "@buildingid": "FOREST_GREEN_MARKETPLACE_TUTORIAL"
+                }
+              }
+            },
+            {
+              "@locationmarkerid": "MARKETPLACE",
+              "preactions": {
+                "openhintbox": {
+                  "@uniquename": "MARKETCATEGORIES"
                 }
               },
               "missions": {
@@ -3947,58 +3953,31 @@
             },
             {
               "missions": {
-                "or": {
+                "selectspell": {
+                  "@activespellslot": "head",
+                  "@minitemtier": "2",
                   "@textloca": "@MISSIONS_T2_TUTORIAL_TEST_O6_SIDETEXT_NEW",
-                  "@hideindetailsui": "true",
-                  "selectspell": [
-                    {
-                      "@itemid": "T2_HEAD_CLOTH_SET1"
-                    },
-                    {
-                      "@itemid": "T2_HEAD_LEATHER_SET1"
-                    },
-                    {
-                      "@itemid": "T2_HEAD_PLATE_SET1"
-                    }
-                  ]
+                  "@hideindetailsui": "true"
                 }
               }
             },
             {
               "missions": {
-                "or": {
+                "selectspell": {
+                  "@activespellslot": "armor",
+                  "@minitemtier": "2",
                   "@textloca": "@MISSIONS_T2_TUTORIAL_TEST_O7_SIDETEXT_NEW",
-                  "@hideindetailsui": "true",
-                  "selectspell": [
-                    {
-                      "@itemid": "T2_ARMOR_CLOTH_SET1"
-                    },
-                    {
-                      "@itemid": "T2_ARMOR_LEATHER_SET1"
-                    },
-                    {
-                      "@itemid": "T2_ARMOR_PLATE_SET1"
-                    }
-                  ]
+                  "@hideindetailsui": "true"
                 }
               }
             },
             {
               "missions": {
-                "or": {
+                "selectspell": {
+                  "@activespellslot": "shoes",
+                  "@minitemtier": "2",
                   "@textloca": "@MISSIONS_T2_TUTORIAL_TEST_O8_SIDETEXT_NEW",
-                  "@hideindetailsui": "true",
-                  "selectspell": [
-                    {
-                      "@itemid": "T2_SHOES_CLOTH_SET1"
-                    },
-                    {
-                      "@itemid": "T2_SHOES_LEATHER_SET1"
-                    },
-                    {
-                      "@itemid": "T2_SHOES_PLATE_SET1"
-                    }
-                  ]
+                  "@hideindetailsui": "true"
                 }
               }
             }
@@ -4117,6 +4096,7 @@
                 "or": {
                   "@textloca": "@MISSIONS_T2_TUTORIAL_TEST_P6_SIDETEXT",
                   "@hideindetailsui": "true",
+                  "@hideprogress": "true",
                   "usefunction": {
                     "@function": "FinishTutorial"
                   },
