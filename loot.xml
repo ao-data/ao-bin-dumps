@@ -24606,6 +24606,84 @@
     <Item type="T1_FACTION_SWAMP_TOKEN_1" chance="0.333333" />
   </Lootlist>
 
+  <!-- FACTION CHESTS -->
+  <!-- TODO: set up loot lists -->
+  <!-- Standard isn't used -->
+  <Lootlist name="T4_FACTION_CHEST_SMALL_UNCOMMON">
+    <LootListReference name="T4_DYNAMIC_SMALL_CAMP_UNCOMMON"/>
+  </Lootlist>
+  <Lootlist name="T5_FACTION_CHEST_SMALL_UNCOMMON">
+    <LootListReference name="T5_DYNAMIC_SMALL_CAMP_UNCOMMON"/>
+  </Lootlist>
+  <Lootlist name="T6_FACTION_CHEST_SMALL_UNCOMMON">
+    <LootListReference name="T6_DYNAMIC_SMALL_CAMP_UNCOMMON"/>
+  </Lootlist>
+  <Lootlist name="T7_FACTION_CHEST_SMALL_UNCOMMON">
+    <LootListReference name="T7_DYNAMIC_SMALL_CAMP_UNCOMMON"/>
+  </Lootlist>
+  <Lootlist name="T4_FACTION_CHEST_SMALL_RARE">
+    <LootListReference name="T4_DYNAMIC_SMALL_CAMP_RARE"/>
+  </Lootlist>
+  <Lootlist name="T5_FACTION_CHEST_SMALL_RARE">
+    <LootListReference name="T5_DYNAMIC_SMALL_CAMP_RARE"/>
+  </Lootlist>
+  <Lootlist name="T6_FACTION_CHEST_SMALL_RARE">
+    <LootListReference name="T6_DYNAMIC_SMALL_CAMP_RARE"/>
+  </Lootlist>
+  <Lootlist name="T7_FACTION_CHEST_SMALL_RARE">
+    <LootListReference name="T7_DYNAMIC_SMALL_CAMP_RARE"/>
+  </Lootlist>
+  <Lootlist name="T4_FACTION_CHEST_SMALL_LEGENDARY">
+    <LootListReference name="T4_DYNAMIC_SMALL_CAMP_LEGENDARY"/>
+  </Lootlist>
+  <Lootlist name="T5_FACTION_CHEST_SMALL_LEGENDARY">
+    <LootListReference name="T5_DYNAMIC_SMALL_CAMP_LEGENDARY"/>
+  </Lootlist>
+  <Lootlist name="T6_FACTION_CHEST_SMALL_LEGENDARY">
+    <LootListReference name="T6_DYNAMIC_SMALL_CAMP_LEGENDARY"/>
+  </Lootlist>
+  <Lootlist name="T7_FACTION_CHEST_SMALL_LEGENDARY">
+    <LootListReference name="T7_DYNAMIC_SMALL_CAMP_LEGENDARY"/>
+  </Lootlist>
+  
+  <!-- Standard isn't used -->
+  <Lootlist name="T4_FACTION_CHEST_MEDIUM_UNCOMMON">
+    <LootListReference name="T4_DYNAMIC_MEDIUM_CAMP_UNCOMMON"/>
+  </Lootlist>
+  <Lootlist name="T5_FACTION_CHEST_MEDIUM_UNCOMMON">
+    <LootListReference name="T5_DYNAMIC_MEDIUM_CAMP_UNCOMMON"/>
+  </Lootlist>
+  <Lootlist name="T6_FACTION_CHEST_MEDIUM_UNCOMMON">
+    <LootListReference name="T6_DYNAMIC_MEDIUM_CAMP_UNCOMMON"/>
+  </Lootlist>
+  <Lootlist name="T7_FACTION_CHEST_MEDIUM_UNCOMMON">
+    <LootListReference name="T7_DYNAMIC_MEDIUM_CAMP_UNCOMMON"/>
+  </Lootlist>
+  <Lootlist name="T4_FACTION_CHEST_MEDIUM_RARE">
+    <LootListReference name="T4_DYNAMIC_MEDIUM_CAMP_RARE"/>
+  </Lootlist>
+  <Lootlist name="T5_FACTION_CHEST_MEDIUM_RARE">
+    <LootListReference name="T5_DYNAMIC_MEDIUM_CAMP_RARE"/>
+  </Lootlist>
+  <Lootlist name="T6_FACTION_CHEST_MEDIUM_RARE">
+    <LootListReference name="T6_DYNAMIC_MEDIUM_CAMP_RARE"/>
+  </Lootlist>
+  <Lootlist name="T7_FACTION_CHEST_MEDIUM_RARE">
+    <LootListReference name="T7_DYNAMIC_MEDIUM_CAMP_RARE"/>
+  </Lootlist>
+  <Lootlist name="T4_FACTION_CHEST_MEDIUM_LEGENDARY">
+    <LootListReference name="T4_DYNAMIC_MEDIUM_CAMP_LEGENDARY" chance="20" />
+  </Lootlist>
+  <Lootlist name="T5_FACTION_CHEST_MEDIUM_LEGENDARY">
+    <LootListReference name="T5_DYNAMIC_MEDIUM_CAMP_LEGENDARY"/>
+  </Lootlist>
+  <Lootlist name="T6_FACTION_CHEST_MEDIUM_LEGENDARY">
+    <LootListReference name="T6_DYNAMIC_MEDIUM_CAMP_LEGENDARY"/>
+  </Lootlist>
+  <Lootlist name="T7_FACTION_CHEST_MEDIUM_LEGENDARY">
+    <LootListReference name="T7_DYNAMIC_MEDIUM_CAMP_LEGENDARY"/>
+  </Lootlist>
+
   <!-- ########################################################################################## -->
   <!-- ################################# CONQUEROR'S CHALLENGE ################################## -->
   <!-- ########################################################################################## -->
@@ -28790,13 +28868,22 @@
   </Lootlist>
   <Lootlist name="AOCP_FEATURED_ITEMS">
     <OR>
-      <Item type="UNIQUE_UNLOCK_OFF_VANITY_PUMPKIN_HAPPY_NON_TRADABLE" amount="1"/>
-      <Item type="UNIQUE_UNLOCK_OFF_VANITY_PUMPKIN_SAD_NON_TRADABLE" amount="1"/>
-      <Item type="UNIQUE_UNLOCK_OFF_VANITY_PUMPKIN_ANGRY_NON_TRADABLE" amount="1"/>
+      <Item type="UNIQUE_UNLOCK_HEAD_VANITY_KNIGHT_AOCP_NON_TRADABLE" amount="1"/>
+      <Item type="UNIQUE_UNLOCK_ARMOR_VANITY_KNIGHT_AOCP_NON_TRADABLE" amount="1"/>
+      <Item type="UNIQUE_UNLOCK_SHOES_VANITY_KNIGHT_AOCP_NON_TRADABLE" amount="1"/>
+      <Item type="UNIQUE_UNLOCK_CAPE_VANITY_KNIGHT_AOCP_NON_TRADABLE" amount="1"/>
     </OR>
   </Lootlist>
   <Lootlist name="AOCP_OTHER_ITEMS">
-    <Item type="UNIQUE_UNLOCK_DIREBOAR_FIBER_GATHERER" weight="1"/>
+    <OR>
+      <Item type="UNIQUE_UNLOCK_DIREBOAR_FIBER_GATHERER" weight="3"/>
+      <OR weight="12">
+        <Item type="UNIQUE_UNLOCK_OFF_VANITY_PUMPKIN_HAPPY_NON_TRADABLE" amount="1"/>
+        <Item type="UNIQUE_UNLOCK_OFF_VANITY_PUMPKIN_SAD_NON_TRADABLE" amount="1"/>
+        <Item type="UNIQUE_UNLOCK_OFF_VANITY_PUMPKIN_ANGRY_NON_TRADABLE" amount="1"/>
+      </OR>  
+    </OR>
+    
   </Lootlist>
   
   
@@ -29188,6 +29275,16 @@
 
 	<!--standard is not used -->
 	<!--uncommon-->
+  <Lootlist name="T4_DYNAMIC_MEDIUM_CAMP_UNCOMMON">
+		<Item type="T1_SILVERBAG_NONTRADABLE" chance="13.104125" scalewithgoldeconomy="true" ignoreforactivitychest="true"/>
+		<LootListReference name="T4_FRAGMENT_LOOT" chance="43.945160" />
+		<LootListReference name="T4_LOOT_EXPEDITION_TOKEN" chance="0.002440" />
+		<LootListReference name="T4_LOOT_RD_TOKEN" chance="0.040086" />
+		<LootListReference name="TREASURES_STANDARD_LOOT" chance="0.546004" />
+		<LootListReference name="T4_DIRECTLOOTDROP_WHITE" chance="58.95169" />
+		<LootListReference name="T5_DIRECTLOOTDROP_WHITE" chance="14.345757" />
+		<LootListReference name="T6_DIRECTLOOTDROP_WHITE" chance="2.367337" />
+	</Lootlist>
 	<Lootlist name="T5_DYNAMIC_MEDIUM_CAMP_UNCOMMON">
 		<Item type="T1_SILVERBAG_NONTRADABLE" chance="17.472738" scalewithgoldeconomy="true" ignoreforactivitychest="true"/>
 		<LootListReference name="T4_FRAGMENT_LOOT" chance="58.595465" />
@@ -29233,6 +29330,16 @@
 		<LootListReference name="T8_DIRECTLOOTDROP_WHITE" chance="4.937231" />
 	</Lootlist>
 	<!--rare-->
+  <Lootlist name="T4_DYNAMIC_MEDIUM_CAMP_RARE">
+		<Item type="T1_SILVERBAG_NONTRADABLE" chance="39.312378" scalewithgoldeconomy="true" ignoreforactivitychest="true"/>
+		<LootListReference name="FRAGMENT_LOOT_10X" chance="13.183547" />
+		<LootListReference name="T4_LOOT_EXPEDITION_TOKEN" chance="0.007316" />
+		<LootListReference name="T4_LOOT_RD_TOKEN" chance="0.120263" />
+		<LootListReference name="TREASURES_STANDARD_LOOT" chance="1.638016" />
+		<LootListReference name="T4_DIRECTLOOTDROP_WHITE" chance="176.855075" />
+		<LootListReference name="T5_DIRECTLOOTDROP_WHITE" chance="43.037276" />
+		<LootListReference name="T6_DIRECTLOOTDROP_WHITE" chance="7.102014" />
+	</Lootlist>
 	<Lootlist name="T5_DYNAMIC_MEDIUM_CAMP_RARE">
 		<Item type="T1_SILVERBAG_NONTRADABLE" chance="52.41822" scalewithgoldeconomy="true" ignoreforactivitychest="true"/>
 		<LootListReference name="FRAGMENT_LOOT_10X" chance="17.578639" />
@@ -29278,6 +29385,16 @@
 		<LootListReference name="T8_DIRECTLOOTDROP_WHITE" chance="14.811699" />
 	</Lootlist>
 	<!--legendary-->
+  <Lootlist name="T4_DYNAMIC_MEDIUM_CAMP_LEGENDARY">
+		<Item type="T4_SILVERBAG_NONTRADABLE" chance="10.483581" scalewithgoldeconomy="true" ignoreforactivitychest="true"/>
+		<LootListReference name="FRAGMENT_LOOT_10X" chance="35.157072" />
+		<LootListReference name="T4_LOOT_EXPEDITION_TOKEN" chance="0.019505" />
+		<LootListReference name="T4_LOOT_RD_TOKEN" chance="0.320715" />
+		<LootListReference name="TREASURES_STANDARD_LOOT" chance="4.368158" />
+		<LootListReference name="T4_DIRECTLOOTDROP_WHITE" chance="943.227059" />
+		<LootListReference name="T5_DIRECTLOOTDROP_WHITE" chance="229.53213" />
+		<LootListReference name="T6_DIRECTLOOTDROP_WHITE" chance="37.877408" />
+	</Lootlist>
 	<Lootlist name="T5_DYNAMIC_MEDIUM_CAMP_LEGENDARY">
 		<Item type="T4_SILVERBAG_NONTRADABLE" chance="13.978566" scalewithgoldeconomy="true" ignoreforactivitychest="true"/>
 		<LootListReference name="FRAGMENT_LOOT_10X" chance="46.877631" />
@@ -29325,6 +29442,16 @@
 
 	<!--standard is not used -->
 	<!--uncommon-->
+  <Lootlist name="T4_DYNAMIC_SMALL_CAMP_UNCOMMON">
+		<Item type="T1_SILVERBAG_NONTRADABLE" chance="5.001763" scalewithgoldeconomy="true" ignoreforactivitychest="true"/>
+		<LootListReference name="T4_FRAGMENT_LOOT" chance="16.773601" />
+		<LootListReference name="T4_LOOT_EXPEDITION_TOKEN" chance="0.000933" />
+		<LootListReference name="T4_LOOT_RD_TOKEN" chance="0.015299" />
+		<LootListReference name="TREASURES_STANDARD_LOOT" chance="0.208404" />
+		<LootListReference name="T4_DIRECTLOOTDROP_WHITE" chance="31.819937" />
+		<LootListReference name="T5_DIRECTLOOTDROP_WHITE" chance="7.743307" />
+		<LootListReference name="T6_DIRECTLOOTDROP_WHITE" chance="1.277801" />
+	</Lootlist>
 	<Lootlist name="T5_DYNAMIC_SMALL_CAMP_UNCOMMON">
 		<Item type="T1_SILVERBAG_NONTRADABLE" chance="6.669235" scalewithgoldeconomy="true" ignoreforactivitychest="true"/>
 		<LootListReference name="T4_FRAGMENT_LOOT" chance="22.365533" />
@@ -29370,6 +29497,16 @@
 		<LootListReference name="T8_DIRECTLOOTDROP_WHITE" chance="1.884513" />
 	</Lootlist>
 	<!--rare-->
+  <Lootlist name="T4_DYNAMIC_SMALL_CAMP_RARE">
+		<Item type="T1_SILVERBAG_NONTRADABLE" chance="15.005291" scalewithgoldeconomy="true" ignoreforactivitychest="true"/>
+		<LootListReference name="FRAGMENT_LOOT_10X" chance="5.032079" />
+		<LootListReference name="T4_LOOT_EXPEDITION_TOKEN" chance="0.002791" />
+		<LootListReference name="T4_LOOT_RD_TOKEN" chance="0.045904" />
+		<LootListReference name="TREASURES_STANDARD_LOOT" chance="0.625224" />
+		<LootListReference name="T4_DIRECTLOOTDROP_WHITE" chance="95.459834" />
+		<LootListReference name="T5_DIRECTLOOTDROP_WHITE" chance="23.22993" />
+		<LootListReference name="T6_DIRECTLOOTDROP_WHITE" chance="3.833404" />
+	</Lootlist>
 	<Lootlist name="T5_DYNAMIC_SMALL_CAMP_RARE">
 		<Item type="T1_SILVERBAG_NONTRADABLE" chance="20.00771" scalewithgoldeconomy="true" ignoreforactivitychest="true"/>
 		<LootListReference name="FRAGMENT_LOOT_10X" chance="6.709658" />
@@ -29415,6 +29552,16 @@
 		<LootListReference name="T8_DIRECTLOOTDROP_WHITE" chance="5.653537" />
 	</Lootlist>
 	<!--legendary-->
+  <Lootlist name="T4_DYNAMIC_SMALL_CAMP_LEGENDARY">
+		<Item type="T4_SILVERBAG_NONTRADABLE" chance="4.001521" scalewithgoldeconomy="true" ignoreforactivitychest="true"/>
+		<LootListReference name="FRAGMENT_LOOT_10X" chance="13.419239" />
+		<LootListReference name="T4_LOOT_EXPEDITION_TOKEN" chance="0.007444" />
+		<LootListReference name="T4_LOOT_RD_TOKEN" chance="0.122413" />
+		<LootListReference name="TREASURES_STANDARD_LOOT" chance="1.667301" />
+		<LootListReference name="T4_DIRECTLOOTDROP_WHITE" chance="254.566458" />
+		<LootListReference name="T5_DIRECTLOOTDROP_WHITE" chance="61.948161" />
+		<LootListReference name="T6_DIRECTLOOTDROP_WHITE" chance="10.22269" />
+	</Lootlist>
 	<Lootlist name="T5_DYNAMIC_SMALL_CAMP_LEGENDARY">
 		<Item type="T4_SILVERBAG_NONTRADABLE" chance="5.335536" scalewithgoldeconomy="true" ignoreforactivitychest="true"/>
 		<LootListReference name="FRAGMENT_LOOT_10X" chance="17.892904" />

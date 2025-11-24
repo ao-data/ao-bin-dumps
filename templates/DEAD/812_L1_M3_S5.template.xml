@@ -1,10 +1,7 @@
 <template path="Assets/Levels/LEVEL_TEMPLATES/MOUNTAIN/Master/812_L1_M3_S5.unity" unityguid="a0033b81108d61b4db5c6cd42c53ef9d" editorBoundsMin="-465 -465" editorBoundsMax="465 465" colBoundsMin="-465 -465" colBoundsMax="555 555">
   <criticalscenemembers>
-    <criticalscenemember id="tunnelexit_06" type="tunnelexit" layerId="">
-      <tile name="Tunnel_Exit" pos="205 -8 205" />
-    </criticalscenemember>
-    <criticalscenemember id="tunnelexit_01" type="tunnelexit" layerId="">
-      <tile name="Tunnel_Exit" pos="-55 8 295" roty="180" />
+    <criticalscenemember id="tunnelexit_05" type="tunnelexit" layerId="">
+      <tile name="Tunnel_Exit" pos="285 0 -295" roty="180" />
     </criticalscenemember>
     <criticalscenemember id="tunnelexit_02" type="tunnelexit" layerId="">
       <tile name="Tunnel_Exit" pos="-65 4 -75" roty="90" />
@@ -15,11 +12,28 @@
     <criticalscenemember id="tunnelexit_04" type="tunnelexit" layerId="">
       <tile name="Tunnel_Exit" pos="-245 8 35" />
     </criticalscenemember>
-    <criticalscenemember id="tunnelexit_05" type="tunnelexit" layerId="">
-      <tile name="Tunnel_Exit" pos="285 0 -295" roty="180" />
+    <criticalscenemember id="tunnelexit_01" type="tunnelexit" layerId="">
+      <tile name="Tunnel_Exit" pos="-55 8 295" roty="180" />
+    </criticalscenemember>
+    <criticalscenemember id="tunnelexit_06" type="tunnelexit" layerId="">
+      <tile name="Tunnel_Exit" pos="205 -8 205" />
     </criticalscenemember>
   </criticalscenemembers>
   <tiles>
+    <layergroup name="FWARFARE_CACHES">
+      <layer id="Layer_03" name="FWARFARE_WeaponCaches_02">
+        <tile name="SpawnpointFactionWarfareWeaponCache" pos="74 0 -211" />
+        <tile name="SpawnpointFactionWarfareWeaponCache" pos="-60 4 -85" />
+        <tile name="SpawnpointFactionWarfareWeaponCache" pos="-58 4 20" />
+        <tile name="SpawnpointFactionWarfareWeaponCache" pos="19 4 121" />
+        <tile name="SpawnpointFactionWarfareWeaponCache" pos="-71 0 -156" />
+        <tile name="SpawnpointFactionWarfareWeaponCache" pos="67 4 77" />
+        <tile name="SpawnpointFactionWarfareWeaponCache" pos="158 0 53" />
+        <tile name="SpawnpointFactionWarfareWeaponCache" pos="139 4 -9" />
+        <tile name="SpawnpointFactionWarfareWeaponCache" pos="199 -4 -109" />
+        <tile name="SpawnpointFactionWarfareWeaponCache" pos="25 -4 -144" />
+      </layer>
+    </layergroup>
     <layergroup name="Route1">
       <layer id="2afffeae-69b4-40fc-b8c5-6b9b5a6b3821" name="route_01_on">
         <roads nodes="180 315;171.73 292.05;113.18 275.01;101.44 219.88;105.31 134.3;164.29 27.6;170 -25" links="0 1;1 2;2 3;3 4;4 5;5 6" />
@@ -274,6 +288,7 @@
       </layer>
     </layergroup>
     <tile name="CAM_fx_env_snow_mountains" pos="0 0 0" />
+    <tile name="MOUNTAIN_DEAD_GROUND_10x30" pos="400 16 -290" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_20M_A" pos="-445 24 30" roty="90" />
     <tile name="MOUNTAIN_DEAD_GROUND_10x20" pos="-30 16 425" />
     <tile name="MOUNTAIN_DEAD_GROUND_30x30" pos="60 16 -450" roty="90" />
@@ -302,11 +317,11 @@
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_DIAGONAL_RIGHT_20x20_A" pos="-135 4 -85" roty="90" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_A" pos="210 -4 -20" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_CORNER_A" pos="130 0 -180" roty="180" />
-    <tile name="MOUNTAIN_DEAD_WATER_river_OBJ" pos="-390 4 20" roty="270" />
-    <tile name="MOUNTAIN_DEAD_GROUND_10x30" pos="400 16 -290" />
     <tile name="MOUNTAIN_DEAD_GROUND_30x30" pos="-450 24 450" roty="180" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_CORNER_A_OBJ" pos="380 -4 50" roty="270" />
     <tile name="MOUNTAIN_DEAD_WATER_river_20x20_OBJ" pos="65 -8 -185" roty="270" />
+    <tile name="MOUNTAIN_DEAD_GROUND_20x20" pos="55 16 -395" />
+    <tile name="MOUNTAIN_DEAD_PLATEAU_4M_STRAIGHT_A" pos="-30 16 390" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_4M_STRAIGHT_A" pos="-40 16 460" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_4M_STRAIGHT_LARGE_A" pos="-40 16 445" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_4M_STRAIGHT_LARGE_A" pos="-40 16 425" />
@@ -320,9 +335,9 @@
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_CORNER_4MTRANSITION_RIGHT_A" pos="-80 0 -120" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_CORNER_4MTRANSITION_RIGHT_A" pos="210 -4 -20" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_CORNER_4MTRANSITION_RIGHT_A" pos="240 -8 -10" roty="180" />
+    <tile name="MOUNTAIN_DEAD_WATER_river_OBJ" pos="-390 4 20" roty="270" />
     <tile name="MOUNTAIN_DEAD_WATER_river_20x20_OBJ" pos="-455 4 -315" roty="270" />
-    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_20M_A" pos="0 16 425" />
-    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_A" pos="380 -8 280" roty="90" />
+    <tile name="MOUNTAIN_DEAD_GROUND_30x30" pos="-330 24 450" roty="270" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_A" pos="380 -8 260" roty="270" />
     <tile name="MOUNTAIN_DEAD_WATER_river_OBJ" pos="170 -8 60" roty="270" />
     <tile name="MOUNTAIN_DEAD_WATER_river_20x20_OBJ" pos="175 -8 75" roty="270" />
@@ -336,11 +351,11 @@
     <tile name="MOUNTAIN_DEAD_WATER_river_OBJ" pos="-60 -8 -100" roty="270" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_CORNER_A" pos="-20 0 -180" roty="270" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_A" pos="-40 4 -110" roty="90" />
-    <tile name="MOUNTAIN_DEAD_GROUND_20x20" pos="55 16 -395" />
-    <tile name="MOUNTAIN_DEAD_GROUND_30x30" pos="-330 24 450" roty="270" />
+    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_A" pos="380 -8 280" roty="90" />
+    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_20M_A" pos="0 16 425" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_DIAGONAL_RIGHT_20x20_A" pos="-405 24 -295" roty="90" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_CORNER_A" pos="-310 8 -290" roty="180" />
-    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_INNERCORNER_A" pos="-340 8 -290" />
+    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_CORNER_A_OBJ" pos="-230 8 -270" roty="270" />
     <tile name="MOUNTAIN_DEAD_GROUND_10x20" pos="-355 24 400" roty="270" />
     <tile name="MOUNTAIN_DEAD_GROUND_30x30" pos="420 16 -270" />
     <tile name="MOUNTAIN_DEAD_GROUND_30x30" pos="-300 24 450" roty="270" />
@@ -354,9 +369,9 @@
     <tile name="MOUNTAIN_DEAD_GROUND_30x30" pos="-90 24 450" roty="270" />
     <tile name="MOUNTAIN_DEAD_WATER_river_30x30_OBJ" pos="-260 0 -10" roty="270" />
     <tile name="MOUNTAIN_DEAD_GROUND_30x30" pos="-270 20 -450" roty="90" />
+    <tile name="MOUNTAIN_DEAD_WATER_river_30x30_OBJ" pos="-290 0 0" roty="270" />
     <tile name="MOUNTAIN_DEAD_GROUND_10x30" pos="10 16 -420" />
-    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_CORNER_A_OBJ" pos="-230 8 -270" roty="270" />
-    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_CORNER_A" pos="-280 8 -270" roty="180" />
+    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_DIAGONAL_LEFT_20x20_A" pos="385 -8 55" roty="180" />
     <tile name="MOUNTAIN_DEAD_WATER_river_OBJ" pos="-80 -8 -80" roty="270" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_CORNER_A" pos="-390 24 40" />
     <tile name="MOUNTAIN_DEAD_GROUND_30x30" pos="-360 24 -390" roty="270" />
@@ -370,11 +385,11 @@
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_DIAGONAL_RIGHT_20x20_A" pos="-245 8 -45" />
     <tile name="MOUNTAIN_DEAD_GROUND_10x20" pos="245 16 -400" roty="270" />
     <tile name="MOUNTAIN_DEAD_GROUND_30x30" pos="390 16 -450" roty="90" />
-    <tile name="MOUNTAIN_DEAD_GROUND_30x30" pos="310 16 -390" />
-    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_DIAGONAL_LEFT_20x20_A" pos="385 -8 55" roty="180" />
-    <tile name="MOUNTAIN_DEAD_PLATEAU_4M_STRAIGHT_A" pos="-30 16 390" />
-    <tile name="MOUNTAIN_DEAD_WATER_river_30x30_OBJ" pos="-290 0 0" roty="270" />
-    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_DIAGONAL_RIGHT_20x20_A" pos="5 16 405" />
+    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_CORNER_A" pos="-280 8 -270" roty="180" />
+    <tile name="MOUNTAIN_DEAD_PLATEAU_4M_DIAGONAL_LARGE_RIGHT_A" pos="-35 16 405" />
+    <tile name="MOUNTAIN_DEAD_GROUND_30x30" pos="450 16 -330" />
+    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_20M_A" pos="130 0 125" />
+    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_INNERCORNER_A" pos="-340 8 -290" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_CORNER_A" pos="-160 4 -150" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_DIAGONAL_LEFT_20x20_A" pos="-195 4 -245" />
     <tile name="MOUNTAIN_DEAD_GROUND_10x20" pos="-300 24 -395" />
@@ -388,9 +403,9 @@
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_CORNER_A" pos="-10 0 -170" roty="90" />
     <tile name="MOUNTAIN_DEAD_GROUND_30x30" pos="270 16 -450" roty="90" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_CORNER_A" pos="-390 24 10" roty="270" />
+    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_DIAGONAL_RIGHT_20x20_A" pos="5 16 405" />
     <tile name="MOUNTAIN_DEAD_WATER_river_OBJ" pos="180 -8 -130" roty="270" />
-    <tile name="MOUNTAIN_DEAD_GROUND_30x30" pos="450 16 -330" />
-    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_CORNER_A" pos="-200 4 -100" roty="90" />
+    <tile name="MOUNTAIN_DEAD_WATER_river_OBJ" pos="-460 4 -300" roty="270" />
     <tile name="MOUNTAIN_DEAD_WATER_river_OBJ" pos="-170 -8 -150" roty="270" />
     <tile name="MOUNTAIN_DEAD_WATER_river_OBJ" pos="360 -8 260" roty="270" />
     <tile name="MOUNTAIN_DEAD_WATER_river_30x30_OBJ" pos="130 -8 -170" roty="270" />
@@ -404,11 +419,11 @@
     <tile name="MOUNTAIN_DEAD_GROUND_10x30" pos="400 16 -320" />
     <tile name="MOUNTAIN_DEAD_WATER_river_30x30_OBJ" pos="220 -8 -120" roty="270" />
     <tile name="MOUNTAIN_DEAD_WATER_river_OBJ" pos="-390 4 40" roty="270" />
-    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_20M_A" pos="130 0 125" />
-    <tile name="MOUNTAIN_DEAD_WATER_river_OBJ" pos="-460 4 -300" roty="270" />
-    <tile name="MOUNTAIN_DEAD_WATER_river_OBJ" pos="-320 0 -310" roty="270" />
-    <tile name="MOUNTAIN_DEAD_PLATEAU_4M_DIAGONAL_LARGE_RIGHT_A" pos="-35 16 405" />
-    <tile name="MOUNTAIN_DEAD_PLATEAU_4M_DIAGONAL_LARGE_RIGHT_A" pos="-5 16 -395" />
+    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_CORNER_A" pos="-200 4 -100" roty="90" />
+    <tile name="MOUNTAIN_DEAD_GROUND_30x30" pos="310 16 -390" />
+    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_CORNER_4MTRANSITION_RIGHT_A" pos="160 -4 -170" roty="270" />
+    <tile name="MOUNTAIN_DEAD_PLATEAU_4M_STRAIGHT_LARGE_A" pos="0 16 -415" />
+    <compoundtile name="_MOUNTAIN_DEAD_PLATEAU_WALL_INNERCORNER_A_COMP_01" pos="-260 8 -30" roty="270" activelayers="2" />
     <compoundtile name="_MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_20M_A_COMP_01" pos="250 -4 -75" roty="180" activelayers="1" />
     <compoundtile name="_MOUNTAIN_DEAD_PLATEAU_WALL_INNERCORNER_A_COMP_01" pos="-360 8 10" roty="270" activelayers="2" />
     <compoundtile name="_MOUNTAIN_DEAD_PLATEAU_WALL_INNERCORNER_A_COMP_01" pos="-200 4 -170" activelayers="1" />
@@ -437,11 +452,11 @@
     <compoundtile name="_MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_A_COMP_01" pos="-70 0 -120" roty="270" activelayers="1" />
     <compoundtile name="_MOUNTAIN_DEAD_PLATEAU_WALL_INNERCORNER_A_COMP_01" pos="-350 8 40" roty="90" activelayers="2" />
     <compoundtile name="_MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_20M_A_COMP_01" pos="-150 4 -135" roty="180" activelayers="1" />
-    <compoundtile name="_MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_A_COMP_01" pos="-280 8 10" roty="90" activelayers="3" />
-    <compoundtile name="_MOUNTAIN_DEAD_PLATEAU_WALL_INNERCORNER_A_COMP_01" pos="-260 8 -30" roty="270" activelayers="2" />
     <compoundtile name="_MOUNTAIN_DEAD_PLATEAU_WALL_INNERCORNER_A_COMP_01" pos="200 -4 -150" roty="180" activelayers="3" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_A" pos="-180 4 -160" roty="90" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_CORNER_16MTRANSITION_RIGHT_A" pos="10 0 375" />
+    <compoundtile name="_MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_A_COMP_01" pos="170 0 70" activelayers="1" />
+    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_INNERCORNER_A" pos="390 -8 150" roty="270" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_28M_RIVER_WATERFALL_MIDDLE_NOCOL" pos="380 -36 280" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_28M_RIVER_WATERFALL_MIDDLE_NOCOL" pos="380 -36 270" />
     <tile name="MOUNTAIN_DEAD_RIVER_CORNER" pos="130 -8 160" roty="270" />
@@ -455,9 +470,9 @@
     <tile name="MOUNTAIN_DEAD_WATER_FILL_ROCK_8M_DIAGONAL_B_NOCOL" pos="204 -9 -4" />
     <tile name="MOUNTAIN_DEAD_WATER_FILL_ROCK_8M_DIAGONAL_B_NOCOL" pos="162 -9 73" roty="180" />
     <tile name="MOUNTAIN_DEAD_WATER_FILL_ROCK_8M_DIAGONAL_B_NOCOL" pos="131 -9 105" />
+    <compoundtile name="_MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_A_COMP_01" pos="-280 8 10" roty="90" activelayers="3" />
     <tile name="MOUNTAIN_DEAD_WATER_FILL_ROCK_8M_B_NOCOL" pos="128 -9 115" roty="90" />
-    <compoundtile name="_MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_20M_A_COMP_01" pos="-115 4 -100" roty="270" activelayers="2" />
-    <tile name="MOUNTAIN_DEAD_WATER_FILL_ROCK_8M_B_NOCOL" pos="161 -9 79" roty="180" />
+    <tile name="MOUNTAIN_DEAD_WATER_FILL_ROCK_8M_B_NOCOL" pos="195 -9 26" roty="90" />
     <tile name="MOUNTAIN_DEAD_WATER_FILL_ROCK_8M_A_NOCOL" pos="183 -9 42" roty="270" />
     <tile name="MOUNTAIN_DEAD_WATER_FILL_ROCK_8M_A_NOCOL" pos="140 -9 82" />
     <tile name="MOUNTAIN_DEAD_WATER_FILL_ROCK_8M_A_NOCOL" pos="124 -9 123" roty="90" />
@@ -471,11 +486,11 @@
     <tile name="MOUNTAIN_DEAD_WATER_river_OBJ" pos="240 -8 -110" roty="270" />
     <compoundtile name="_MOUNTAIN_DEAD_PLATEAU_WALL_INNERCORNER_A_COMP_01" pos="-250 8 0" roty="90" activelayers="3" />
     <compoundtile name="_MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_A_COMP_01" pos="-370 8 20" roty="270" activelayers="2" />
-    <compoundtile name="_MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_A_COMP_01" pos="170 0 70" activelayers="1" />
-    <tile name="MOUNTAIN_DEAD_WATER_FILL_ROCK_8M_B_NOCOL" pos="195 -9 26" roty="90" />
+    <tile name="MOUNTAIN_DEAD_WATER_FILL_ROCK_8M_B_NOCOL" pos="161 -9 79" roty="180" />
+    <compoundtile name="_MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_20M_A_COMP_01" pos="-115 4 -100" roty="270" activelayers="2" />
     <compoundtile name="_MOUNTAIN_DEAD_PLATEAU_WALL_INNERCORNER_A_COMP_01" pos="-170 4 -150" activelayers="1" />
     <compoundtile name="_MOUNTAIN_DEAD_PLATEAU_WALL_INNERCORNER_A_COMP_01" pos="210 -4 -100" activelayers="2" />
-    <compoundtile name="_MOUNTAIN_DEAD_PLATEAU_WALL_INNERCORNER_A_COMP_01" pos="130 0 110" roty="270" activelayers="1" />
+    <tile name="MOUNTAIN_DEAD_RIVER_WATERFALL_LARGE_4M_MIDDLE_A_OBJ_NOCOL" pos="-225 -8 -35" roty="90" />
     <tile name="MOUNTAIN_DEAD_RIVER_WATERFALL_LARGE_4M_MIDDLE_A_OBJ_NOCOL" pos="-245 -8 -35" roty="90" />
     <tile name="MOUNTAIN_DEAD_RIVER_WATERFALL_LARGE_4M_MIDDLE_A_OBJ_NOCOL" pos="-205 -12 -75" />
     <tile name="MOUNTAIN_DEAD_RIVER_WATERFALL_LARGE_4M_MIDDLE_A_OBJ_NOCOL" pos="-205 -12 -95" />
@@ -489,9 +504,9 @@
     <tile name="MOUNTAIN_DEAD_WATER_river_OBJ" pos="-90 -8 -80" roty="270" />
     <tile name="MOUNTAIN_DEAD_WATER_river_OBJ" pos="-100 -8 -80" roty="270" />
     <tile name="MOUNTAIN_DEAD_WATER_river_OBJ" pos="-90 -8 -90" roty="270" />
+    <tile name="MOUNTAIN_DEAD_RIVER_WATERFALL_LARGE_4M_MIDDLE_A_OBJ_NOCOL" pos="-345 -4 5" />
     <tile name="MOUNTAIN_DEAD_WATER_river_OBJ" pos="-90 -8 -100" roty="270" />
-    <tile name="MOUNTAIN_DEAD_RIVER_WATERFALL_LARGE_4M_MIDDLE_A_OBJ_NOCOL" pos="-225 -8 -35" roty="90" />
-    <tile name="MOUNTAIN_DEAD_WATER_river_OBJ" pos="-100 -8 -100" roty="270" />
+    <tile name="MOUNTAIN_DEAD_WATER_river_OBJ" pos="-100 -8 -110" roty="270" />
     <tile name="MOUNTAIN_DEAD_WATER_river_OBJ" pos="-90 -8 -110" roty="270" />
     <tile name="MOUNTAIN_DEAD_WATER_river_OBJ" pos="30 -8 -180" roty="270" />
     <tile name="MOUNTAIN_DEAD_WATER_river_OBJ" pos="30 -8 -190" roty="270" />
@@ -505,11 +520,11 @@
     <tile name="MOUNTAIN_DEAD_PLATEAU_4M_DIAGONAL_LARGE_LEFT_A" pos="-285 20 -415" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_4M_STRAIGHT_LARGE_A" pos="0 16 -455" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_4M_STRAIGHT_LARGE_A" pos="0 16 -435" />
-    <tile name="MOUNTAIN_DEAD_PLATEAU_4M_STRAIGHT_LARGE_A" pos="0 16 -415" />
-    <tile name="MOUNTAIN_DEAD_WATER_river_OBJ" pos="-100 -8 -110" roty="270" />
-    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_CORNER_4MTRANSITION_RIGHT_A" pos="160 -4 -170" roty="270" />
-    <tile name="MOUNTAIN_DEAD_RIVER_WATERFALL_LARGE_4M_MIDDLE_A_OBJ_NOCOL" pos="-345 -4 5" />
-    <tile name="MOUNTAIN_DEAD_RIVER_WATERFALL_LARGE_4M_MIDDLE_A_OBJ_NOCOL" pos="-345 -4 45" />
+    <tile name="MOUNTAIN_DEAD_WATER_river_OBJ" pos="-100 -8 -100" roty="270" />
+    <tile name="MOUNTAIN_DEAD_PLATEAU_4M_DIAGONAL_LARGE_RIGHT_A" pos="-5 16 -395" />
+    <tile name="MOUNTAIN_DEAD_RIVER_WATERFALL_LARGE_4M_MIDDLE_A_OBJ_NOCOL" pos="-345 -4 25" />
+    <tile name="MOUNTAIN_DEAD_RIVER_WATERFALL_LARGE_4M_MIDDLE_A_OBJ_NOCOL" pos="-405 0 15" />
+    <compoundtile name="_MOUNTAIN_DEAD_PLATEAU_WALL_INNERCORNER_A_COMP_01" pos="130 0 110" roty="270" activelayers="1" />
     <compoundtile name="_MOUNTAIN_DEAD_PLATEAU_WALL_INNERCORNER_A_COMP_01" pos="-20 0 -190" roty="270" activelayers="3" />
     <compoundtile name="_MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_A_COMP_01" pos="160 0 80" roty="270" activelayers="1" />
     <compoundtile name="_MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_20M_A_COMP_01" pos="-5 0 -190" roty="270" activelayers="3" />
@@ -523,9 +538,9 @@
     <compoundtile name="_MOUNTAIN_DEAD_PLATEAU_WALL_INNERCORNER_A_COMP_01" pos="200 0 0" roty="270" activelayers="1" />
     <compoundtile name="_MOUNTAIN_DEAD_PLATEAU_WALL_INNERCORNER_A_COMP_01" pos="-160 4 -90" activelayers="2" />
     <compoundtile name="_MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_20M_A_COMP_01" pos="-240 8 -75" activelayers="2" />
+    <tile name="MOUNTAIN_DEAD_RIVER_WATERFALL_LARGE_4M_MIDDLE_A_OBJ_NOCOL" pos="-345 -4 45" />
     <compoundtile name="_MOUNTAIN_DEAD_PLATEAU_WALL_INNERCORNER_A_COMP_01" pos="-240 8 -250" roty="90" activelayers="1" />
-    <tile name="MOUNTAIN_DEAD_RIVER_WATERFALL_LARGE_4M_MIDDLE_A_OBJ_NOCOL" pos="-345 -4 25" />
-    <compoundtile name="_MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_A_COMP_01" pos="-150 4 -150" roty="180" activelayers="1" />
+    <compoundtile name="_MOUNTAIN_DEAD_PLATEAU_WALL_INNERCORNER_A_COMP_01" pos="-150 4 -160" roty="180" activelayers="1" />
     <compoundtile name="_MOUNTAIN_DEAD_PLATEAU_WALL_INNERCORNER_A_COMP_01" pos="-10 0 -160" roty="90" activelayers="1" />
     <compoundtile name="_MOUNTAIN_DEAD_PLATEAU_WALL_INNERCORNER_A_COMP_01" pos="-290 8 -260" activelayers="1" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_20M_A" pos="-200 4 -215" />
@@ -539,11 +554,11 @@
     <compoundtile name="_MOUNTAIN_DEAD_PLATEAU_WALL_INNERCORNER_A_COMP_01" pos="-300 8 -290" roty="180" activelayers="1" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_CORNER_4MTRANSITION_LEFT_A" pos="330 -4 -240" roty="180" />
     <tile name="MOUNTAIN_DEAD_RIVER_WATERFALL_LARGE_4M_MIDDLE_A_OBJ_NOCOL" pos="-405 0 35" />
-    <tile name="MOUNTAIN_DEAD_RIVER_WATERFALL_LARGE_4M_MIDDLE_A_OBJ_NOCOL" pos="-405 0 15" />
-    <compoundtile name="_MOUNTAIN_DEAD_PLATEAU_WALL_INNERCORNER_A_COMP_01" pos="-150 4 -160" roty="180" activelayers="1" />
+    <compoundtile name="_MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_A_COMP_01" pos="-150 4 -150" roty="180" activelayers="1" />
+    <tile name="MOUNTAIN_DEAD_WATER_river_OBJ" pos="-320 0 -310" roty="270" />
     <tile name="MOUNTAIN_DEAD_WATER_river_20x20_OBJ" pos="45 -8 -195" roty="270" />
     <tile name="MOUNTAIN_DEAD_WATER_river_OBJ" pos="-390 4 30" roty="270" />
-    <tile name="MOUNTAIN_DEAD_WATER_river_OBJ" pos="-450 4 -300" roty="270" />
+    <tile name="MOUNTAIN_DEAD_WATER_river_OBJ" pos="180 -8 -150" roty="270" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_CORNER_A_OBJ" pos="160 0 -170" roty="270" />
     <tile name="MOUNTAIN_DEAD_GROUND_20x20" pos="-245 20 -435" roty="270" />
     <tile name="MOUNTAIN_DEAD_WATER_river_20x20_OBJ" pos="-215 -4 -255" roty="270" />
@@ -572,11 +587,11 @@
     <tile name="MOUNTAIN_DEAD_WATER_river_OBJ" pos="210 -8 -140" roty="270" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_CORNER_A" pos="-310 8 -280" />
     <tile name="MOUNTAIN_DEAD_GROUND_30x30" pos="-420 24 -360" roty="90" />
-    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_A" pos="-190 4 -230" roty="180" />
-    <tile name="MOUNTAIN_DEAD_WATER_river_OBJ" pos="180 -8 -150" roty="270" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_CORNER_A" pos="-260 8 -20" roty="270" />
     <tile name="MOUNTAIN_DEAD_WATER_river_OBJ" pos="-60 -8 -90" roty="270" />
     <tile name="MOUNTAIN_DEAD_WATER_river_OBJ" pos="-310 0 -10" roty="270" />
+    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_DIAGONAL_RIGHT_20x20_A" pos="245 -4 -25" roty="180" />
+    <tile name="MOUNTAIN_DEAD_GROUND_30x30" pos="-420 24 -390" roty="90" />
     <tile name="MOUNTAIN_DEAD_GROUND_30x30" pos="-360 24 420" roty="180" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_CORNER_A_OBJ" pos="40 0 370" roty="270" />
     <tile name="MOUNTAIN_DEAD_GROUND_30x30" pos="-420 24 360" roty="180" />
@@ -590,9 +605,9 @@
     <tile name="MOUNTAIN_DEAD_GROUND_30x30" pos="270 16 -420" roty="90" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_CORNER_A" pos="-290 8 -270" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_A" pos="-460 24 -300" roty="90" />
+    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_A" pos="-190 4 -230" roty="180" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_A" pos="-460 24 30" roty="90" />
-    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_INNERCORNER_A" pos="210 -4 -30" roty="270" />
-    <tile name="MOUNTAIN_DEAD_GROUND_10x30" pos="-270 20 -430" roty="270" />
+    <tile name="MOUNTAIN_DEAD_GROUND_20x20" pos="15 16 -395" />
     <tile name="MOUNTAIN_DEAD_WATER_river_OBJ" pos="270 -8 270" roty="270" />
     <tile name="MOUNTAIN_DEAD_GROUND_30x30" pos="150 16 -420" roty="90" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_CORNER_A" pos="-360 8 20" roty="270" />
@@ -606,11 +621,11 @@
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_INNERCORNER_A" pos="-160 4 -170" roty="180" />
     <tile name="MOUNTAIN_DEAD_GROUND_30x30" pos="-270 24 420" roty="270" />
     <tile name="MOUNTAIN_DEAD_GROUND_10x20" pos="-50 20 455" roty="180" />
-    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_DIAGONAL_RIGHT_20x20_A" pos="245 -4 -25" roty="180" />
-    <tile name="MOUNTAIN_DEAD_GROUND_20x20" pos="15 16 -395" />
+    <tile name="MOUNTAIN_DEAD_GROUND_10x30" pos="-270 20 -430" roty="270" />
+    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_INNERCORNER_A" pos="210 -4 -30" roty="270" />
     <tile name="MOUNTAIN_DEAD_GROUND_30x30" pos="-420 24 60" roty="180" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_DIAGONAL_RIGHT_20x20_A" pos="215 -4 -135" roty="270" />
-    <tile name="MOUNTAIN_DEAD_GROUND_30x30" pos="-210 24 450" roty="270" />
+    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_20M_A" pos="-425 24 10" roty="270" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_CORNER_A" pos="-380 24 -290" />
     <tile name="MOUNTAIN_DEAD_WATER_river_OBJ" pos="-300 0 20" roty="270" />
     <tile name="MOUNTAIN_DEAD_WATER_river_OBJ" pos="140 -8 -150" roty="270" />
@@ -624,9 +639,9 @@
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_INNERCORNER_A" pos="-230 8 -110" roty="270" />
     <tile name="MOUNTAIN_DEAD_GROUND_30x30" pos="420 16 -420" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_CORNER_16MTRANSITION_LEFT_A" pos="-375 8 -290" roty="270" />
+    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_20M_A" pos="-190 4 -215" roty="180" />
     <tile name="MOUNTAIN_DEAD_GROUND_30x30" pos="420 16 -390" />
-    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_20M_A" pos="-425 24 10" roty="270" />
-    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_CORNER_A_OBJ" pos="-220 8 -50" roty="90" />
+    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_CORNER_A_OBJ" pos="10 16 380" />
     <tile name="MOUNTAIN_DEAD_WATER_river_OBJ" pos="-40 -8 -180" roty="270" />
     <tile name="MOUNTAIN_DEAD_GROUND_20x20" pos="-405 24 -5" />
     <tile name="MOUNTAIN_DEAD_WATER_river_OBJ" pos="40 -8 -180" roty="270" />
@@ -640,11 +655,11 @@
     <tile name="MOUNTAIN_DEAD_WATER_river_20x20_OBJ" pos="-235 0 -15" roty="270" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_A" pos="10 16 390" />
     <tile name="MOUNTAIN_DEAD_GROUND_30x30" pos="-120 24 420" roty="270" />
-    <tile name="MOUNTAIN_DEAD_GROUND_30x30" pos="-420 24 420" roty="180" />
-    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_CORNER_A_OBJ" pos="10 16 380" />
-    <tile name="MOUNTAIN_DEAD_GROUND_30x30" pos="-420 24 -390" roty="90" />
-    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_20M_A" pos="-190 4 -215" roty="180" />
-    <tile name="MOUNTAIN_DEAD_WATER_river_20x20_OBJ" pos="-155 -8 -135" roty="270" />
+    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_CORNER_A_OBJ" pos="-220 8 -50" roty="90" />
+    <tile name="MOUNTAIN_DEAD_WATER_river_30x30_OBJ" pos="-230 -4 -80" roty="270" />
+    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_INNERCORNER_A" pos="-80 0 -120" roty="270" />
+    <tile name="MOUNTAIN_DEAD_GROUND_30x30" pos="-450 24 210" roty="180" />
+    <tile name="MOUNTAIN_DEAD_GROUND_30x30" pos="-210 24 450" roty="270" />
     <tile name="MOUNTAIN_DEAD_GROUND_30x30" pos="450 16 -270" />
     <tile name="MOUNTAIN_DEAD_WATER_river_OBJ" pos="-190 -8 -170" roty="270" />
     <tile name="MOUNTAIN_DEAD_WATER_river_20x20_OBJ" pos="15 -8 -195" roty="270" />
@@ -658,9 +673,9 @@
     <tile name="MOUNTAIN_DEAD_WATER_river_OBJ" pos="250 -8 -70" roty="270" />
     <tile name="MOUNTAIN_DEAD_GROUND_20x20" pos="-445 24 -5" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_A" pos="460 16 -240" roty="270" />
+    <tile name="MOUNTAIN_DEAD_WATER_river_20x20_OBJ" pos="-155 -8 -135" roty="270" />
     <tile name="MOUNTAIN_DEAD_GROUND_30x30" pos="-420 24 390" roty="180" />
-    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_INNERCORNER_A" pos="-80 0 -120" roty="270" />
-    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_DIAGONAL_RIGHT_20x20_A" pos="-215 4 -75" roty="180" />
+    <tile name="MOUNTAIN_DEAD_GROUND_10x20" pos="-460 24 -5" />
     <tile name="MOUNTAIN_DEAD_GROUND_30x30" pos="450 16 -300" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_A" pos="-240 8 -60" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_BRIDGE_SIDE_START_LEFT_B" pos="-160 4 -120" roty="270" />
@@ -674,11 +689,11 @@
     <tile name="MOUNTAIN_DEAD_GROUND_10x20" pos="265 16 -400" roty="270" />
     <tile name="MOUNTAIN_DEAD_GROUND_20x20" pos="355 16 -395" roty="90" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_CORNER_A" pos="-380 24 -310" roty="270" />
-    <tile name="MOUNTAIN_DEAD_GROUND_30x30" pos="-450 24 210" roty="180" />
-    <tile name="MOUNTAIN_DEAD_GROUND_10x20" pos="-460 24 -5" />
-    <tile name="MOUNTAIN_DEAD_WATER_river_30x30_OBJ" pos="-230 -4 -80" roty="270" />
+    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_DIAGONAL_RIGHT_20x20_A" pos="-215 4 -75" roty="180" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_CORNER_16MTRANSITION_RIGHT_A" pos="-385 8 10" roty="270" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_DIAGONAL_LEFT_20x20_A" pos="-275 8 -15" roty="90" />
+    <tile name="MOUNTAIN_DEAD_WATER_river_20x20_OBJ" pos="185 -8 55" roty="270" />
+    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_DIAGONAL_RIGHT_20x20_A" pos="-325 8 -305" roty="270" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_A" pos="-210 8 -240" />
     <tile name="MOUNTAIN_DEAD_GROUND_20x20" pos="-315 24 -395" roty="270" />
     <tile name="MOUNTAIN_DEAD_WATER_river_20x20_OBJ" pos="-405 4 -285" roty="270" />
@@ -692,9 +707,9 @@
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_A" pos="140 0 100" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_CORNER_A" pos="400 -8 150" roty="270" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_CORNER_A_LARGE" pos="165 -4 -155" roty="180" />
+    <tile name="MOUNTAIN_DEAD_WATER_river_20x20_OBJ" pos="195 -8 -145" roty="270" />
     <tile name="MOUNTAIN_DEAD_GROUND_20x20" pos="-435 24 -335" roty="270" />
-    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_DIAGONAL_RIGHT_20x20_A" pos="-325 8 -305" roty="270" />
-    <tile name="MOUNTAIN_DEAD_WATER_river_OBJ" pos="220 -8 30" roty="270" />
+    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_DIAGONAL_LEFT_20x20_A" pos="-35 0 -175" roty="90" />
     <tile name="MOUNTAIN_DEAD_GROUND_10x20" pos="-235 24 400" roty="90" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_DIAGONAL_LEFT_20x20_A" pos="-345 8 5" roty="90" />
     <tile name="MOUNTAIN_DEAD_GROUND_30x30" pos="30 16 -450" roty="90" />
@@ -708,11 +723,11 @@
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_INNERCORNER_A" pos="-280 8 -250" />
     <tile name="MOUNTAIN_DEAD_GROUND_30x30" pos="-450 24 60" roty="180" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_20M_A" pos="-455 24 -320" roty="270" />
+    <tile name="MOUNTAIN_DEAD_WATER_river_OBJ" pos="220 -8 30" roty="270" />
     <tile name="MOUNTAIN_DEAD_GROUND_30x30" pos="-450 24 240" roty="180" />
-    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_DIAGONAL_LEFT_20x20_A" pos="-35 0 -175" roty="90" />
-    <tile name="MOUNTAIN_DEAD_GROUND_10x30" pos="-10 16 390" roty="270" />
-    <tile name="MOUNTAIN_DEAD_WATER_river_20x20_OBJ" pos="195 -8 -145" roty="270" />
-    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_20M_A" pos="-425 24 30" roty="90" />
+    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_CORNER_A" pos="230 -4 -30" roty="270" />
+    <tile name="MOUNTAIN_DEAD_GROUND_30x30" pos="-420 24 120" roty="90" />
+    <tile name="MOUNTAIN_DEAD_WATER_river_OBJ" pos="-450 4 -300" roty="270" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_ROCK_DEBRIS_SMALL_E" pos="326 -8 -236" roty="270" />
     <tile name="MOUNTAIN_DEAD_GROUND_20x20" pos="-375 24 395" roty="270" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_DIAGONAL_LEFT_20x20_A" pos="15 0 -195" roty="90" />
@@ -726,9 +741,9 @@
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_20M_A" pos="-445 24 10" roty="270" />
     <tile name="MOUNTAIN_DEAD_GROUND_30x30" pos="420 16 -330" />
     <tile name="MOUNTAIN_DEAD_GROUND_10x20" pos="-20 20 -395" />
+    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_20M_A" pos="-425 24 30" roty="90" />
     <tile name="MOUNTAIN_DEAD_WATER_river_20x20_OBJ" pos="-195 -8 -205" roty="270" />
-    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_CORNER_A" pos="230 -4 -30" roty="270" />
-    <tile name="MOUNTAIN_DEAD_WATER_river_OBJ" pos="220 -8 -80" roty="270" />
+    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_A" pos="140 0 -180" roty="270" />
     <tile name="MOUNTAIN_DEAD_GROUND_30x30" pos="330 16 -450" roty="90" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_CORNER_A" pos="390 -8 260" roty="270" />
     <tile name="MOUNTAIN_DEAD_WATER_river_OBJ" pos="250 -8 -50" roty="270" />
@@ -742,11 +757,11 @@
     <tile name="MOUNTAIN_DEAD_WATER_river_OBJ" pos="230 -8 -40" roty="270" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_CORNER_A" pos="-50 0 -160" roty="270" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_BRIDGE_SIDE_START_LEFT_B" pos="-310 8 0" roty="270" />
-    <tile name="MOUNTAIN_DEAD_GROUND_30x30" pos="-420 24 120" roty="90" />
-    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_A" pos="140 0 -180" roty="270" />
-    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_INNERCORNER_A" pos="390 -8 150" roty="270" />
-    <tile name="MOUNTAIN_DEAD_WATER_river_20x20_OBJ" pos="-405 4 -325" roty="270" />
-    <tile name="MOUNTAIN_DEAD_GROUND_30x30" pos="-450 24 -270" roty="180" />
+    <tile name="MOUNTAIN_DEAD_WATER_river_OBJ" pos="220 -8 -80" roty="270" />
+    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_20M_A" pos="400 -8 195" />
+    <tile name="MOUNTAIN_DEAD_GROUND_10x30" pos="-10 16 390" roty="270" />
+    <tile name="MOUNTAIN_DEAD_WATER_river_OBJ" pos="-280 0 -20" roty="270" />
+    <tile name="MOUNTAIN_DEAD_WATER_river_30x30_OBJ" pos="240 -8 -90" roty="270" />
     <tile name="MOUNTAIN_DEAD_WATER_river_OBJ" pos="220 -8 -100" roty="270" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_CORNER_A_OBJ" pos="-220 8 -110" roty="270" />
     <tile name="MOUNTAIN_DEAD_GROUND_30x30" pos="-420 24 150" roty="90" />
@@ -760,9 +775,9 @@
     <tile name="MOUNTAIN_DEAD_WATER_river_20x20_OBJ" pos="-365 0 -305" roty="270" />
     <tile name="MOUNTAIN_DEAD_WATER_river_30x30_OBJ" pos="-180 -8 -110" roty="270" />
     <tile name="MOUNTAIN_DEAD_WATER_river_OBJ" pos="-210 -4 -270" roty="270" />
+    <tile name="MOUNTAIN_DEAD_GROUND_10x30" pos="-50 20 410" roty="180" />
     <tile name="MOUNTAIN_DEAD_WATER_river_20x20_OBJ" pos="-195 -4 -245" roty="270" />
-    <tile name="MOUNTAIN_DEAD_WATER_river_30x30_OBJ" pos="240 -8 -90" roty="270" />
-    <tile name="MOUNTAIN_DEAD_WATER_river_OBJ" pos="-200 -8 -170" roty="270" />
+    <tile name="MOUNTAIN_DEAD_GROUND_30x30" pos="-150 24 450" roty="270" />
     <tile name="MOUNTAIN_DEAD_GROUND_10x20" pos="-220 24 395" />
     <tile name="MOUNTAIN_DEAD_GROUND_30x30" pos="-390 24 420" roty="180" />
     <tile name="MOUNTAIN_DEAD_GROUND_10x30" pos="-150 24 400" roty="90" />
@@ -776,11 +791,11 @@
     <tile name="MOUNTAIN_DEAD_WATER_river_20x20_OBJ" pos="-235 -4 -55" roty="270" />
     <tile name="MOUNTAIN_DEAD_GROUND_30x30" pos="-450 24 300" roty="180" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_CORNER_A" pos="-210 4 -90" roty="90" />
-    <tile name="MOUNTAIN_DEAD_WATER_river_20x20_OBJ" pos="185 -8 55" roty="270" />
-    <tile name="MOUNTAIN_DEAD_GROUND_30x30" pos="-150 24 450" roty="270" />
-    <tile name="MOUNTAIN_DEAD_WATER_river_OBJ" pos="-280 0 -20" roty="270" />
-    <tile name="MOUNTAIN_DEAD_GROUND_10x30" pos="-50 20 410" roty="180" />
-    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_CORNER_A_LARGE" pos="205 -4 -115" />
+    <tile name="MOUNTAIN_DEAD_WATER_river_OBJ" pos="-200 -8 -170" roty="270" />
+    <tile name="MOUNTAIN_DEAD_WATER_river_20x20_OBJ" pos="-405 4 -325" roty="270" />
+    <tile name="MOUNTAIN_DEAD_GROUND_30x30" pos="360 16 -420" roty="90" />
+    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_CORNER_A" pos="190 0 50" roty="270" />
+    <tile name="MOUNTAIN_DEAD_GROUND_30x30" pos="-450 24 -270" roty="180" />
     <tile name="MOUNTAIN_DEAD_GROUND_20x20" pos="335 16 -395" roty="90" />
     <tile name="MOUNTAIN_DEAD_GROUND_30x30" pos="-150 24 420" roty="270" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_CORNER_A" pos="-300 8 -280" roty="180" />
@@ -794,9 +809,9 @@
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_20M_A" pos="-415 24 -320" roty="270" />
     <tile name="MOUNTAIN_DEAD_GROUND_30x30" pos="-300 24 420" roty="270" />
     <tile name="MOUNTAIN_DEAD_WATER_river_OBJ" pos="-150 -8 -90" roty="270" />
+    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_CORNER_A_LARGE" pos="205 -4 -115" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_A" pos="30 0 -200" roty="270" />
-    <tile name="MOUNTAIN_DEAD_GROUND_30x30" pos="360 16 -420" roty="90" />
-    <tile name="MOUNTAIN_DEAD_WATER_river_30x30_OBJ" pos="-120 -8 -90" roty="270" />
+    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_INNERCORNER_A" pos="-200 4 -90" roty="90" />
     <tile name="MOUNTAIN_DEAD_WATER_river_20x20_OBJ" pos="-25 -8 -185" roty="270" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_CORNER_A_LARGE" pos="-345 8 25" roty="90" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_CORNER_A_OBJ" pos="170 0 -130" />
@@ -810,11 +825,10 @@
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_DIAGONAL_RIGHT_20x20_A" pos="-225 8 -35" roty="180" />
     <tile name="MOUNTAIN_DEAD_WATER_river_OBJ" pos="130 -8 -190" roty="270" />
     <tile name="MOUNTAIN_DEAD_GROUND_30x30" pos="210 16 -420" roty="90" />
-    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_CORNER_A" pos="190 0 50" roty="270" />
-    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_INNERCORNER_A" pos="-200 4 -90" roty="90" />
-    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_20M_A" pos="400 -8 195" />
+    <tile name="MOUNTAIN_DEAD_WATER_river_30x30_OBJ" pos="-120 -8 -90" roty="270" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_20M_A" pos="400 -8 135" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_20M_A" pos="380 -4 35" />
+    <tile name="MOUNTAIN_DEAD_WATER_FILL_ROCK_8M_DIAGONAL_B_NOCOL" pos="140 -9 -143" roty="270" />
     <tile name="MOUNTAIN_DEAD_GROUND_90x90_OBJ_NOCLICK" pos="510 -52 160" roty="270" />
     <tile name="MOUNTAIN_DEAD_GROUND_90x90_OBJ_NOCLICK" pos="420 -52 510" />
     <tile name="MOUNTAIN_DEAD_GROUND_90x90_OBJ_NOCLICK" pos="420 -52 420" />
@@ -1083,9 +1097,10 @@
     <tile name="MOUNTAIN_DEAD_HILL_4M_BASE_LARGE_20X20_STRAIGHT_A_OBJ" pos="5 -52 485" />
     <tile name="MOUNTAIN_DEAD_HILL_4M_BASE_LARGE_20X20_STRAIGHT_A_OBJ" pos="5 -52 465" />
     <compoundtile name="_MOUNTAIN_DEAD_20x20_PINETREES" pos="-115 4 -125" roty="90" activelayers="1" />
-    <tile name="MOUNTAIN_DEAD_GROUND_30x30" pos="-420 24 180" roty="180" />
+    <tile name="MOUNTAIN_DEAD_GROUND_30x30" pos="-420 24 420" roty="180" />
     <compoundtile name="_MOUNTAIN_DEAD_CLIFF_16M_STRAIGHT_A" pos="65 0 -375" roty="180" activelayers="2" />
     <compoundtile name="_MOUNTAIN_DEAD_CLIFF_16M_CORNER_A" pos="-355 8 -335" roty="270" activelayers="3" />
+    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_20M_A" pos="0 16 495" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_A" pos="550 16 -240" roty="270" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_20M_A" pos="515 16 -240" roty="270" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_20M_A" pos="535 16 -240" roty="270" />
@@ -1114,11 +1129,11 @@
     <tile name="MOUNTAIN_DEAD_WATER_FILL_ROCK_LARGE_B_NOCOL" pos="200 -9 -114" />
     <tile name="MOUNTAIN_DEAD_WATER_FILL_ROCK_LARGE_B_NOCOL" pos="226 -9 -132" roty="180" />
     <tile name="MOUNTAIN_DEAD_WATER_FILL_ROCK_LARGE_A_NOCOL" pos="-310 -1 -9" roty="270" />
-    <tile name="MOUNTAIN_DEAD_WATER_FILL_ROCK_LARGE_A_NOCOL" pos="-232 -5 -108" roty="270" />
-    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_20M_A" pos="0 16 495" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_20M_A" pos="0 16 475" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_20M_A" pos="0 16 535" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_20M_A" pos="0 16 515" />
+    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_A" pos="0 16 550" />
+    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_20M_EXTENSION_A" pos="0 -36 535" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_20M_EXTENSION_A" pos="0 -36 495" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_EXTENSION_A" pos="0 -36 460" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_BRIDGE_SIDE_START_RIGHT_C" pos="-330 8 0" roty="90" />
@@ -1132,9 +1147,9 @@
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_20M_EXTENSION_A" pos="0 -24 535" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_20M_EXTENSION_A" pos="0 -24 495" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_EXTENSION_A" pos="0 -24 460" />
+    <tile name="MOUNTAIN_DEAD_WATER_FILL_ROCK_LARGE_A_NOCOL" pos="-232 -5 -108" roty="270" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_DIAGONAL_RIGHT_20x20_A_EXTENSION" pos="5 -24 405" />
-    <tile name="MOUNTAIN_DEAD_WATER_FILL_ROCK_LARGE_A_NOCOL" pos="-132 -9 -109" roty="180" />
-    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_20M_EXTENSION_A" pos="0 -24 475" />
+    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_EXTENSION_A" pos="0 -24 550" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_20M_EXTENSION_A" pos="0 -24 425" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_20M_EXTENSION_A" pos="0 -24 445" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_EXTENSION_A" pos="10 -24 390" />
@@ -1148,11 +1163,11 @@
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_20M_EXTENSION_A" pos="0 -12 425" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_20M_EXTENSION_A" pos="0 -12 445" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_EXTENSION_A" pos="10 -12 390" />
-    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_A" pos="0 16 550" />
-    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_EXTENSION_A" pos="0 -24 550" />
+    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_20M_EXTENSION_A" pos="0 -24 475" />
+    <tile name="MOUNTAIN_DEAD_WATER_FILL_ROCK_LARGE_A_NOCOL" pos="-132 -9 -109" roty="180" />
     <tile name="MOUNTAIN_DEAD_WATER_FILL_ROCK_LARGE_A_NOCOL" pos="8 -9 -199" roty="90" />
     <tile name="MOUNTAIN_DEAD_WATER_FILL_ROCK_C" pos="-186 -9 -182" />
-    <tile name="MOUNTAIN_DEAD_WATER_FILL_ROCK_C" pos="-149 -9 -150" roty="270" />
+    <tile name="MOUNTAIN_DEAD_WATER_FILL_ROCK_8M_B_NOCOL" pos="-204 -9 -204" roty="90" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_BRIDGE_SIDE_START_LEFT_B" pos="-360 8 -300" roty="90" />
     <tile name="MOUNTAIN_DEAD_WATER_FILL_ROCK_8M_B_NOCOL" pos="-206 -5 -265" />
     <tile name="MOUNTAIN_DEAD_WATER_FILL_ROCK_8M_B_NOCOL" pos="-253 -1 1" roty="90" />
@@ -1166,9 +1181,9 @@
     <tile name="MOUNTAIN_DEAD_WATER_FILL_ROCK_8M_A_NOCOL" pos="-244 -5 -244" />
     <tile name="MOUNTAIN_DEAD_WATER_FILL_ROCK_8M_A_NOCOL" pos="-384 3 6" roty="180" />
     <tile name="MOUNTAIN_DEAD_WATER_FILL_ROCK_LARGE_A_NOCOL" pos="215 -9 -92" roty="270" />
+    <tile name="MOUNTAIN_DEAD_WATER_FILL_ROCK_8M_B_NOCOL" pos="-164 -9 -137" roty="270" />
     <tile name="MOUNTAIN_DEAD_WATER_FILL_ROCK_8M_A_NOCOL" pos="-280 -1 15" />
-    <tile name="MOUNTAIN_DEAD_WATER_FILL_ROCK_8M_B_NOCOL" pos="-204 -9 -204" roty="90" />
-    <tile name="MOUNTAIN_DEAD_WATER_FILL_ROCK_8M_A_NOCOL" pos="-216 -5 -61" roty="270" />
+    <tile name="MOUNTAIN_DEAD_WATER_FILL_ROCK_8M_A_NOCOL" pos="-140 -9 -117" roty="180" />
     <tile name="MOUNTAIN_DEAD_WATER_FILL_ROCK_8M_A_NOCOL" pos="-24 -9 -189" roty="270" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_INNERCORNER_A" pos="-360 8 -290" roty="90" />
     <tile name="MOUNTAIN_DEAD_WATER_FILL_ROCK_8M_A_NOCOL" pos="105 -9 -197" roty="180" />
@@ -1182,11 +1197,11 @@
     <tile name="MOUNTAIN_DEAD_WATER_FILL_ROCK_8M_B_NOCOL" pos="226 -9 -71" roty="90" />
     <tile name="MOUNTAIN_DEAD_WATER_FILL_ROCK_LARGE_B_NOCOL" pos="252 -9 -88" roty="90" />
     <tile name="MOUNTAIN_DEAD_WATER_FILL_ROCK_LARGE_A_NOCOL" pos="240 -9 -108" />
-    <tile name="MOUNTAIN_DEAD_WATER_FILL_ROCK_8M_DIAGONAL_B_NOCOL" pos="140 -9 -143" roty="270" />
-    <tile name="MOUNTAIN_DEAD_WATER_FILL_ROCK_8M_A_NOCOL" pos="-140 -9 -117" roty="180" />
-    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_20M_EXTENSION_A" pos="0 -36 535" />
-    <tile name="MOUNTAIN_DEAD_WATER_FILL_ROCK_8M_B_NOCOL" pos="-164 -9 -137" roty="270" />
-    <tile name="MOUNTAIN_DEAD_WATER_FILL_ROCK_8M_B_NOCOL" pos="-343 -1 -315" />
+    <tile name="MOUNTAIN_DEAD_WATER_FILL_ROCK_8M_A_NOCOL" pos="-216 -5 -61" roty="270" />
+    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_20M_EXTENSION_A" pos="0 -36 515" />
+    <tile name="MOUNTAIN_DEAD_WATER_FILL_ROCK_8M_B_NOCOL" pos="-305 -1 -295" />
+    <tile name="MOUNTAIN_DEAD_WATER_FILL_ROCK_8M_B_NOCOL" pos="-408 3 -323" />
+    <tile name="MOUNTAIN_DEAD_WATER_FILL_ROCK_C" pos="-149 -9 -150" roty="270" />
     <tile name="MOUNTAIN_DEAD_WATER_FILL_ROCK_C" pos="-304 -1 -10" />
     <tile name="MOUNTAIN_DEAD_WATER_FILL_ROCK_C" pos="-373 3 42" />
     <tile name="MOUNTAIN_DEAD_WATER_FILL_ROCK_B" pos="-238 -5 -84" roty="270" />
@@ -1200,9 +1215,9 @@
     <tile name="MOUNTAIN_DEAD_WATER_FILL_ROCK_8M_DIAGONAL_B_NOCOL" pos="-221 -5 -249" roty="270" />
     <tile name="MOUNTAIN_DEAD_WATER_FILL_ROCK_8M_DIAGONAL_B_NOCOL" pos="-172 -9 -147" roty="270" />
     <tile name="MOUNTAIN_DEAD_WATER_FILL_ROCK_8M_DIAGONAL_B_NOCOL" pos="-196 -9 -165" roty="270" />
+    <tile name="MOUNTAIN_DEAD_WATER_FILL_ROCK_8M_B_NOCOL" pos="-343 -1 -315" />
     <tile name="MOUNTAIN_DEAD_WATER_FILL_ROCK_8M_DIAGONAL_B_NOCOL" pos="-151 -9 -164" roty="270" />
-    <tile name="MOUNTAIN_DEAD_WATER_FILL_ROCK_8M_B_NOCOL" pos="-305 -1 -295" />
-    <tile name="MOUNTAIN_DEAD_WATER_FILL_ROCK_8M_DIAGONAL_B_NOCOL" pos="-309 -1 26" roty="270" />
+    <tile name="MOUNTAIN_DEAD_WATER_FILL_ROCK_8M_DIAGONAL_B_NOCOL" pos="-284 -1 -16" />
     <tile name="MOUNTAIN_DEAD_WATER_FILL_ROCK_8M_DIAGONAL_B_NOCOL" pos="-246 -1 -4" />
     <tile name="MOUNTAIN_DEAD_WATER_FILL_ROCK_8M_DIAGONAL_B_NOCOL" pos="-238 -5 -92" />
     <tile name="MOUNTAIN_DEAD_WATER_FILL_ROCK_8M_DIAGONAL_B_NOCOL" pos="-134 -9 -81" roty="270" />
@@ -1216,11 +1231,10 @@
     <tile name="MOUNTAIN_DEAD_WATER_FILL_ROCK_8M_DIAGONAL_B_NOCOL" pos="66 -9 -175" roty="270" />
     <tile name="MOUNTAIN_DEAD_WATER_FILL_ROCK_8M_DIAGONAL_B_NOCOL" pos="152 -9 -179" roty="270" />
     <tile name="MOUNTAIN_DEAD_WATER_FILL_ROCK_8M_B_NOCOL" pos="-410 3 -293" roty="180" />
-    <tile name="MOUNTAIN_DEAD_WATER_FILL_ROCK_8M_B_NOCOL" pos="-408 3 -323" />
-    <tile name="MOUNTAIN_DEAD_WATER_FILL_ROCK_8M_DIAGONAL_B_NOCOL" pos="-284 -1 -16" />
-    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_20M_EXTENSION_A" pos="0 -36 515" />
+    <tile name="MOUNTAIN_DEAD_WATER_FILL_ROCK_8M_DIAGONAL_B_NOCOL" pos="-309 -1 26" roty="270" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_INNERCORNER_EXTENSION_A" pos="10 -28 370" roty="270" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_EXTENSION_A" pos="40 -36 370" roty="270" />
+    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_INNERCORNER_EXTENSION_A" pos="10 -40 370" roty="270" />
     <compoundtile name="_MOUNTAIN_DEAD_BLOCKER_CLIFF_16M_STRAIGHT_A" pos="-205 8 370" activelayers="3" />
     <compoundtile name="_MOUNTAIN_DEAD_BLOCKER_CLIFF_16M_STRAIGHT_A" pos="380 0 -285" roty="90" activelayers="1" />
     <compoundtile name="_MOUNTAIN_DEAD_BLOCKER_CLIFF_16M_STRAIGHT_A" pos="-380 8 305" roty="270" activelayers="2" />
@@ -1234,9 +1248,10 @@
     <compoundtile name="_MOUNTAIN_DEAD_BLOCKER_CLIFF_16M_DIAG_LEFT_LARGE_A" pos="-245 8 385" activelayers="2" />
     <compoundtile name="_MOUNTAIN_DEAD_BLOCKER_CLIFF_16M_DIAG_LEFT_A" pos="305 0 -360" roty="180" activelayers="3" />
     <compoundtile name="_MOUNTAIN_DEAD_BLOCKER_CLIFF_16M_DIAG_LEFT_A" pos="-390 8 275" roty="270" activelayers="3" />
-    <tile name="MOUNTAIN_DEAD_WATER_FILL_ROCK_ALGAE_LARGE_A" pos="-236 -5 -86" roty="270" />
+    <tile name="MOUNTAIN_DEAD_WATER_river_20x20_OBJ" pos="-255 -4 -55" roty="270" />
     <compoundtile name="_MOUNTAIN_DEAD_BLOCKER_CLIFF_16M_STRAIGHT_B" pos="-380 8 125" roty="270" activelayers="3" />
-    <tile name="MOUNTAIN_DEAD_WATER_FILL_ROCK_ALGAE_LARGE_A" pos="-231 -5 -93" roty="90" />
+    <tile name="MOUNTAIN_DEAD_WATER_FILL_ROCK_ALGAE_LARGE_A" pos="-236 -5 -86" roty="270" />
+    <tile name="MOUNTAIN_DEAD_WATER_FILL_ROCK_LARGE_A_NOCOL" pos="-258 -1 -27" roty="90" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_ROCK_DEBRIS_SMALL_B" pos="375 -8 256" roty="134" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_ROCK_DEBRIS_SMALL_B" pos="375 -8 283" roty="31" />
     <tile name="MOUNTAIN_DEAD_WATER_FILL_ROCK_B" pos="241 -9 -15" roty="270" />
@@ -1250,9 +1265,8 @@
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_EXTENSION_A" pos="330 -44 -240" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_DIAGONAL_RIGHT_20x20_A_EXTENSION" pos="5 -48 405" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_EXTENSION_A" pos="10 -48 390" />
+    <tile name="MOUNTAIN_DEAD_WATER_FILL_ROCK_ALGAE_LARGE_A" pos="-231 -5 -93" roty="90" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_EXTENSION_A" pos="40 -48 370" roty="270" />
-    <tile name="MOUNTAIN_DEAD_WATER_FILL_ROCK_LARGE_A_NOCOL" pos="-258 -1 -27" roty="90" />
-    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_CORNER_EXTENSION_A" pos="390 -48 300" roty="270" />
     <compoundtile name="_MOUNTAIN_DEAD_BLOCKER_CLIFF_16M_STRAIGHT_B" pos="-380 8 345" roty="270" activelayers="3" />
     <compoundtile name="_MOUNTAIN_DEAD_BLOCKER_CLIFF_16M_STRAIGHT_LARGE_A" pos="-365 8 -240" roty="270" activelayers="1" />
     <compoundtile name="_MOUNTAIN_DEAD_CLIFF_16M_STRAIGHT_10X20_A" pos="130 0 -395" roty="180" activelayers="1" />
@@ -1287,8 +1301,9 @@
     <compoundtile name="_MOUNTAIN_DEAD_BLOCKER_CLIFF_16M_STRAIGHT_LARGE_A" pos="40 0 -365" roty="180" activelayers="2" />
     <compoundtile name="_MOUNTAIN_DEAD_CLIFF_16M_DIAGONAL_LEFT_C" pos="380 0 -355" roty="90" activelayers="3" />
     <compoundtile name="_MOUNTAIN_DEAD_CLIFF_16M_STRAIGHT_10X20_A" pos="-385 8 360" roty="270" activelayers="3" />
-    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_DIAGONAL_LEFT_20x20_A_EXTENSION" pos="385 -48 55" roty="180" />
-    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_20M_EXTENSION_A" pos="400 -48 195" />
+    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_CORNER_EXTENSION_A" pos="390 -48 300" roty="270" />
+    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_CORNER_EXTENSION_A" pos="400 -48 150" roty="270" />
+    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_20M_EXTENSION_A" pos="535 -24 -240" roty="270" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_BRIDGE_SIDE_START_RIGHT_C" pos="-250 8 -250" roty="270" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_20M_EXTENSION_A" pos="445 -24 -240" roty="270" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_DIAGONAL_RIGHT_20x20_A_EXTENSION" pos="405 -12 -245" roty="270" />
@@ -1302,9 +1317,9 @@
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_EXTENSION_A" pos="550 -12 -240" roty="270" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_EXTENSION_A" pos="390 -28 -250" roty="270" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_20M_EXTENSION_A" pos="515 -12 -240" roty="270" />
+    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_BRIDGE_SIDE_START_RIGHT_C" pos="-360 8 -310" roty="90" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_20M_EXTENSION_A" pos="535 -12 -240" roty="270" />
-    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_20M_EXTENSION_A" pos="535 -24 -240" roty="270" />
-    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_20M_EXTENSION_A" pos="445 -12 -240" roty="270" />
+    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_DIAGONAL_LEFT_20x20_A_EXTENSION" pos="385 -36 55" roty="180" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_CORNER_EXTENSION_A" pos="390 -36 260" roty="270" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_CORNER_EXTENSION_A" pos="400 -36 150" roty="270" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_20M_EXTENSION_A" pos="400 -36 195" />
@@ -1318,11 +1333,11 @@
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_CORNER_EXTENSION_A" pos="390 -36 300" roty="270" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_EXTENSION_A" pos="10 -40 380" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_EXTENSION_A" pos="10 -28 380" />
-    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_INNERCORNER_EXTENSION_A" pos="10 -40 370" roty="270" />
-    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_DIAGONAL_LEFT_20x20_A_EXTENSION" pos="385 -36 55" roty="180" />
-    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_CORNER_EXTENSION_A" pos="400 -48 150" roty="270" />
-    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_BRIDGE_SIDE_START_RIGHT_C" pos="-360 8 -310" roty="90" />
-    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_BRIDGE_SIDE_START_LEFT_C" pos="-190 4 -100" roty="90" />
+    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_20M_EXTENSION_A" pos="445 -12 -240" roty="270" />
+    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_DIAGONAL_LEFT_20x20_A_EXTENSION" pos="385 -48 55" roty="180" />
+    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_20M_EXTENSION_A" pos="515 -24 -240" roty="270" />
+    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_EXTENSION_A" pos="550 -24 -240" roty="270" />
+    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_20M_EXTENSION_A" pos="400 -48 195" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_20M_EXTENSION_A" pos="400 -48 135" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_20M_EXTENSION_A" pos="380 -44 35" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_INNERCORNER_EXTENSION_A" pos="390 -48 150" roty="270" />
@@ -1336,9 +1351,9 @@
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_BRIDGE_SIDE_START_LEFT_C" pos="70 0 -200" roty="270" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_EXTENSION_A" pos="380 -28 -250" roty="270" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_DIAGONAL_RIGHT_20x20_A_EXTENSION" pos="405 -36 -245" roty="270" />
+    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_BRIDGE_SIDE_START_LEFT_C" pos="-190 4 -100" roty="90" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_20M_EXTENSION_A" pos="475 -36 -240" roty="270" />
-    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_20M_EXTENSION_A" pos="515 -24 -240" roty="270" />
-    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_EXTENSION_A" pos="460 -36 -240" roty="270" />
+    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_20M_EXTENSION_A" pos="425 -36 -240" roty="270" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_20M_EXTENSION_A" pos="495 -36 -240" roty="270" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_EXTENSION_A" pos="550 -36 -240" roty="270" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_20M_EXTENSION_A" pos="515 -36 -240" roty="270" />
@@ -1352,11 +1367,10 @@
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_BRIDGE_SIDE_START_LEFT_C" pos="-270 8 -250" roty="90" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_20M_EXTENSION_A" pos="495 -24 -240" roty="270" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_BRIDGE_SIDE_START_RIGHT_C" pos="40 0 -200" roty="90" />
-    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_EXTENSION_A" pos="550 -24 -240" roty="270" />
-    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_20M_EXTENSION_A" pos="425 -36 -240" roty="270" />
-    <tile name="FishingZone_FRESHWATER_SPOT_FISH" pos="-301 0 6" />
+    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_EXTENSION_A" pos="460 -36 -240" roty="270" />
+    <tile name="MOUNTAIN_DEAD_GROUND_30x30" pos="-420 24 180" roty="180" />
     <tile name="MOUNTAIN_DEAD_WATER_river_OBJ" pos="-300 0 -290" roty="270" />
-    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_INNERCORNER_A" pos="150 0 -180" roty="180" />
+    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_A" pos="-240 8 -270" roty="270" />
     <compoundtile name="_MOUNTAIN_DEAD_MOBCAMP_20x20_A" pos="-55 8 145" roty="180" />
     <compoundtile name="_MOUNTAIN_DEAD_BBS_GROUP_DUNGEON_20x20" pos="55 4 -115" roty="90" />
     <compoundtile name="_MOUNTAIN_DEAD_BBS_GROUP_DUNGEON_20x20" pos="295 -4 15" />
@@ -1489,9 +1503,10 @@
     <tile name="MOUNTAIN_DEAD_GROUND" pos="-360 8 -320" />
     <tile name="MOUNTAIN_DEAD_GROUND" pos="50 0 160" />
     <tile name="MOUNTAIN_DEAD_GROUND" pos="-80 0 -250" roty="90" />
-    <tile name="MOUNTAIN_DEAD_GROUND" pos="20 0 270" roty="270" />
     <compoundtile name="_MOUNTAIN_DEAD_10x30_B" pos="-30 8 170" roty="180" activelayers="4" />
+    <compoundtile name="_MOUNTAIN_DEAD_20x20_A" pos="-55 8 125" activelayers="3 4" />
     <compoundtile name="_MOUNTAIN_DEAD_10x20_A" pos="-60 8 195" roty="0" activelayers="3" />
+    <compoundtile name="_MOUNTAIN_DEAD_10x20_C" pos="-300 8 -325" />
     <compoundtile name="_MOUNTAIN_DEAD_10x30_B" pos="-260 8 -300" activelayers="4" />
     <compoundtile name="_MOUNTAIN_DEAD_10x30_A" pos="-340 8 -270" roty="0" activelayers="2 4" />
     <compoundtile name="_MOUNTAIN_DEAD_10x20_A" pos="-250 8 -225" roty="0" activelayers="1" />
@@ -1505,8 +1520,8 @@
     <compoundtile name="_MOUNTAIN_DEAD_10x30_A" pos="-310 8 -230" roty="180" activelayers="2 4" />
     <compoundtile name="_MOUNTAIN_DEAD_10x20_A" pos="280 0 -215" roty="180" activelayers="2" />
     <compoundtile name="_MOUNTAIN_DEAD_20x20_B" pos="85 0 -275" roty="90" activelayers="2 4" />
+    <compoundtile name="_MOUNTAIN_DEAD_10x30_C" pos="-280 8 -290" roty="90" activelayers="4" />
     <compoundtile name="_MOUNTAIN_DEAD_20x20_A" pos="55 0 -325" roty="270" activelayers="2 4" />
-    <compoundtile name="_MOUNTAIN_DEAD_10x20_A" pos="130 0 -375" roty="180" activelayers="1" />
     <compoundtile name="_MOUNTAIN_DEAD_20x20_C" pos="165 0 -205" roty="270" activelayers="3 4" />
     <compoundtile name="_MOUNTAIN_DEAD_10x30_B" pos="90 0 -350" activelayers="4" />
     <compoundtile name="_MOUNTAIN_DEAD_20x20_B" pos="195 0 -205" activelayers="1 4" />
@@ -1521,10 +1536,11 @@
     <compoundtile name="_MOUNTAIN_DEAD_10x30_C" pos="210 0 -370" roty="90" activelayers="4" />
     <compoundtile name="_MOUNTAIN_DEAD_30x30_A" pos="50 0 -240" roty="90" activelayers="3 4" />
     <compoundtile name="_MOUNTAIN_DEAD_10x20_A" pos="190 0 -375" activelayers="3" />
-    <compoundtile name="_MOUNTAIN_DEAD_10x20_C" pos="-300 8 -325" />
-    <compoundtile name="_MOUNTAIN_DEAD_10x30_C" pos="-280 8 -290" roty="90" activelayers="4" />
+    <compoundtile name="_MOUNTAIN_DEAD_10x20_A" pos="130 0 -375" roty="180" activelayers="1" />
+    <compoundtile name="_MOUNTAIN_DEAD_10x30_B" pos="50 0 -220" roty="270" activelayers="4" />
     <compoundtile name="_MOUNTAIN_DEAD_10x30_A" pos="-340 8 -340" roty="0" activelayers="3 4" />
-    <compoundtile name="_MOUNTAIN_DEAD_20x20_C" pos="-275 8 -305" roty="90" activelayers="3 4" />
+    <compoundtile name="_MOUNTAIN_DEAD_10x30_B" pos="-300 8 -250" roty="270" activelayers="4" />
+    <compoundtile name="_MOUNTAIN_DEAD_10x10_PINETREES" pos="-270 8 -160" roty="90" activelayers="1" />
     <compoundtile name="_MOUNTAIN_DEAD_10x30_PINETREES" pos="-240 8 -140" roty="270" activelayers="1 4" />
     <compoundtile name="_MOUNTAIN_DEAD_10x20_PINETREES" pos="-250 8 -125" roty="0" activelayers="1" />
     <compoundtile name="_MOUNTAIN_DEAD_10x20_PINETREES" pos="260 -4 -165" roty="0" activelayers="1" />
@@ -1538,9 +1554,9 @@
     <compoundtile name="_MOUNTAIN_DEAD_10x20_PINETREES" pos="135 -8 270" roty="90" activelayers="1" />
     <compoundtile name="_MOUNTAIN_DEAD_10x20_PINETREES" pos="-250 8 -65" roty="0" activelayers="2" />
     <compoundtile name="_MOUNTAIN_DEAD_20x20_PINETREES" pos="135 -8 255" roty="270" activelayers="1 4" />
+    <compoundtile name="_MOUNTAIN_DEAD_20x20_C" pos="-275 8 -305" roty="90" activelayers="3 4" />
     <compoundtile name="_MOUNTAIN_DEAD_10x20_PINETREES" pos="-115 4 -110" roty="90" activelayers="1" />
-    <compoundtile name="_MOUNTAIN_DEAD_10x30_B" pos="50 0 -220" roty="270" activelayers="4" />
-    <compoundtile name="_MOUNTAIN_DEAD_10x10_PINETREES" pos="70 0 110" roty="90" activelayers="1" />
+    <compoundtile name="_MOUNTAIN_DEAD_10x10_PINETREES" pos="-130 4 -120" roty="90" activelayers="1" />
     <compoundtile name="_MOUNTAIN_DEAD_10x20_PINETREES" pos="125 0 -140" roty="90" activelayers="2" />
     <compoundtile name="_MOUNTAIN_DEAD_10x10_PINETREES" pos="110 0 -120" roty="180" activelayers="1" />
     <compoundtile name="_MOUNTAIN_DEAD_10x10_PINETREES" pos="120 0 -150" roty="90" activelayers="2" />
@@ -1554,10 +1570,9 @@
     <compoundtile name="_MOUNTAIN_DEAD_20x20_B" pos="-125 4 -65" roty="270" activelayers="2 4" />
     <compoundtile name="_MOUNTAIN_DEAD_20x20_A" pos="-175 4 -75" roty="0" activelayers="2 4" />
     <compoundtile name="_MOUNTAIN_DEAD_10x20_A" pos="-155 4 -80" roty="90" activelayers="2" />
-    <compoundtile name="_MOUNTAIN_DEAD_10x30_B" pos="-300 8 -250" roty="270" activelayers="4" />
-    <compoundtile name="_MOUNTAIN_DEAD_10x10_PINETREES" pos="-130 4 -120" roty="90" activelayers="1" />
+    <compoundtile name="_MOUNTAIN_DEAD_10x10_PINETREES" pos="70 0 110" roty="90" activelayers="1" />
+    <tile name="MOUNTAIN_DEAD_GROUND" pos="20 0 270" roty="270" />
     <compoundtile name="_MOUNTAIN_DEAD_10x30_A" pos="90 0 -210" roty="90" activelayers="3 4" />
-    <compoundtile name="_MOUNTAIN_DEAD_20x20_A" pos="265 0 -205" activelayers="2 4" />
     <compoundtile name="_MOUNTAIN_DEAD_10x30_C" pos="250 0 -350" roty="0" activelayers="4" />
     <compoundtile name="_MOUNTAIN_DEAD_20x20_B" pos="275 -8 65" activelayers="3 4" />
     <compoundtile name="_MOUNTAIN_DEAD_10x20_A" pos="190 -8 205" roty="180" activelayers="2" />
@@ -1590,7 +1605,7 @@
     <compoundtile name="_MOUNTAIN_DEAD_10x20_C" pos="-175 8 -30" roty="90" />
     <compoundtile name="_MOUNTAIN_DEAD_10x30_C" pos="-130 8 -30" roty="270" activelayers="4" />
     <compoundtile name="_MOUNTAIN_DEAD_10x20_C" pos="-370 8 325" roty="180" />
-    <compoundtile name="_MOUNTAIN_DEAD_20x20_A" pos="-55 8 125" activelayers="3 4" />
+    <compoundtile name="_MOUNTAIN_DEAD_20x20_A" pos="265 0 -205" activelayers="2 4" />
     <compoundtile name="_MOUNTAIN_DEAD_20x20_A" pos="385 -8 115" roty="180" activelayers="3 4" />
     <compoundtile name="_MOUNTAIN_DEAD_10x30_C" pos="260 -8 60" roty="180" activelayers="4" />
     <compoundtile name="_MOUNTAIN_DEAD_10x20_C" pos="15 0 -320" roty="270" />
@@ -1624,8 +1639,8 @@
     <compoundtile name="_MOUNTAIN_DEAD_30x30_A" pos="300 -8 60" roty="180" activelayers="3 4" />
     <compoundtile name="_MOUNTAIN_DEAD_10x20_C" pos="175 -8 120" roty="270" />
     <compoundtile name="_MOUNTAIN_DEAD_10x20_A" pos="280 -4 15" roty="180" activelayers="1" />
+    <compoundtile name="_MOUNTAIN_DEAD_10x10_PINETREES" pos="-250 8 -150" roty="0" activelayers="1" />
     <tile name="MOUNTAIN_DEAD_GROUND" pos="380 -8 150" />
-    <tile name="MOUNTAIN_DEAD_GROUND" pos="-170 4 -110" />
     <tile name="MOUNTAIN_DEAD_GROUND" pos="-130 8 40" roty="270" />
     <tile name="MOUNTAIN_DEAD_WATER_FORD_STRAIGHT_C" pos="340 -8 240" roty="0" />
     <tile name="MOUNTAIN_DEAD_WATER_FORD_FILL_ROCK_4M_A" pos="149 -9 170" roty="270" />
@@ -1827,7 +1842,7 @@
     <tile name="MOUNTAIN_DEAD_GROUND" pos="-70 0 -250" roty="90" />
     <tile name="MOUNTAIN_DEAD_GROUND" pos="-20 0 260" roty="180" />
     <tile name="MOUNTAIN_DEAD_GROUND" pos="-160 4 -220" roty="90" />
-    <compoundtile name="_MOUNTAIN_DEAD_10x10_PINETREES" pos="-270 8 -160" roty="90" activelayers="1" />
+    <tile name="MOUNTAIN_DEAD_GROUND" pos="-170 4 -110" />
     <tile name="MOUNTAIN_DEAD_GROUND" pos="310 0 -300" roty="180" />
     <tile name="MOUNTAIN_DEAD_GROUND" pos="-40 0 -250" />
     <tile name="MOUNTAIN_DEAD_GROUND" pos="370 0 -330" />
@@ -1895,9 +1910,10 @@
     <tile name="MOUNTAIN_DEAD_GROUND" pos="-20 0 -230" />
     <tile name="MOUNTAIN_DEAD_GROUND" pos="-260 8 -270" roty="180" />
     <tile name="MOUNTAIN_DEAD_GROUND" pos="340 0 -280" roty="270" />
-    <compoundtile name="_MOUNTAIN_DEAD_10x10_PINETREES" pos="-250 8 -150" roty="0" activelayers="1" />
+    <tile name="FishingZone_FRESHWATER_SPOT_FISH" pos="-301 0 6" />
     <compoundtile name="_MOUNTAIN_DEAD_10x20_A" pos="-175 4 -290" roty="90" activelayers="1" />
-    <compoundtile name="_MOUNTAIN_DEAD_30x30_A" pos="-170 4 -240" roty="180" activelayers="1 4" />
+    <compoundtile name="_MOUNTAIN_DEAD_10x20_B" pos="-150 4 -245" roty="180" activelayers="1" />
+    <compoundtile name="_MOUNTAIN_DEAD_BASE_HILL_4M_20X20_INNERCORNER_TO_PLATEAU_RIGHT_A" pos="195 -4 -25" activelayers="1" />
     <compoundtile name="_MOUNTAIN_DEAD_BASE_HILL_4M_20X20_CORNER_A" pos="115 0 75" activelayers="1" />
     <compoundtile name="_MOUNTAIN_DEAD_BASE_HILL_4M_20X20_STRAIGHT_A" pos="-225 4 -175" activelayers="1" />
     <compoundtile name="_MOUNTAIN_DEAD_BASE_HILL_4M_20X20_STRAIGHT_C" pos="-5 0 335" />
@@ -1926,11 +1942,11 @@
     <compoundtile name="_MOUNTAIN_DEAD_BASE_HILL_4M_20X30_DIAGONAL_LEFT" pos="260 -8 15" roty="180" />
     <compoundtile name="_MOUNTAIN_DEAD_BASE_HILL_4M_20X20_STRAIGHT_A" pos="-155 4 -45" roty="90" activelayers="2" />
     <compoundtile name="_MOUNTAIN_DEAD_BASE_HILL_4M_20X30_DIAGONAL_LEFT" pos="-250 4 -325" />
-    <compoundtile name="_MOUNTAIN_DEAD_BASE_HILL_4M_20X20_INNERCORNER_A" pos="85 0 75" activelayers="1" />
-    <compoundtile name="_MOUNTAIN_DEAD_BASE_HILL_4M_20X20_INNERCORNER_TO_PLATEAU_RIGHT_A" pos="195 -4 -25" activelayers="1" />
     <compoundtile name="_MOUNTAIN_DEAD_BASE_HILL_4M_20X20_INNERCORNER_TO_PLATEAU_RIGHT_A" pos="165 -4 -185" roty="270" activelayers="2" />
     <compoundtile name="_MOUNTAIN_DEAD_BASE_HILL_4M_20X20_INNERCORNER_TO_PLATEAU_RIGHT_A" pos="135 0 -65" activelayers="1" />
     <compoundtile name="_MOUNTAIN_DEAD_BASE_HILL_4M_20X20_INNERCORNER_TO_PLATEAU_RIGHT_A" pos="255 -8 -5" roty="180" activelayers="1" />
+    <compoundtile name="_MOUNTAIN_DEAD_BASE_HILL_4M_20X20_INNERCORNER_TO_PLATEAU_RIGHT_A" pos="-25 4 95" activelayers="3" />
+    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_CORNER_A_OBJ" pos="130 0 160" roty="270" />
     <tile name="MOUNTAIN_DEAD_GROUND_30x30" pos="240 16 -450" roty="90" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_BRIDGE_SIDE" pos="-160 4 -110" roty="270" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_INNERCORNER_A" pos="-310 8 -300" roty="180" />
@@ -1944,9 +1960,9 @@
     <tile name="MOUNTAIN_DEAD_WATER_river_20x20_OBJ" pos="-345 0 -305" roty="270" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_CORNER_A" pos="390 -8 300" roty="270" />
     <tile name="MOUNTAIN_DEAD_GROUND_10x20" pos="-400 24 55" />
+    <compoundtile name="_MOUNTAIN_DEAD_BASE_HILL_4M_20X20_INNERCORNER_A" pos="85 0 75" activelayers="1" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_CORNER_A" pos="140 0 110" roty="270" />
-    <compoundtile name="_MOUNTAIN_DEAD_BASE_HILL_8M_TO_PLATEAU_8M_RIGHT_A" pos="115 -8 165" roty="270" activelayers="1" />
-    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_DIAGONAL_LEFT_20x20_A" pos="-295 8 15" roty="270" />
+    <tile name="MOUNTAIN_DEAD_GROUND_20x20" pos="-245 20 -415" roty="270" />
     <tile name="MOUNTAIN_DEAD_WATER_river_OBJ" pos="-240 -4 -250" roty="270" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_INNERCORNER_A" pos="-240 8 -90" roty="270" />
     <tile name="MOUNTAIN_DEAD_GROUND_10x30" pos="-450 24 40" roty="90" />
@@ -1960,11 +1976,11 @@
     <tile name="MOUNTAIN_DEAD_HILL_4M_BASE_LARGE_TO_PLATEAU_4M_RIGHT_A" pos="-85 4 -25" roty="90" />
     <compoundtile name="_MOUNTAIN_DEAD_BASE_HILL_4M_20X20_INNERCORNER_TO_PLATEAU_LEFT_A" pos="-225 4 -215" activelayers="1" />
     <compoundtile name="_MOUNTAIN_DEAD_BASE_HILL_4M_20X20_INNERCORNER_TO_PLATEAU_RIGHT_A" pos="-95 0 -125" activelayers="1" />
-    <compoundtile name="_MOUNTAIN_DEAD_BASE_HILL_4M_20X20_INNERCORNER_TO_PLATEAU_RIGHT_A" pos="-25 4 95" activelayers="3" />
-    <tile name="MOUNTAIN_DEAD_GROUND_20x20" pos="-245 20 -415" roty="270" />
+    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_DIAGONAL_LEFT_20x20_A" pos="-295 8 15" roty="270" />
+    <compoundtile name="_MOUNTAIN_DEAD_BASE_HILL_8M_TO_PLATEAU_8M_RIGHT_A" pos="115 -8 165" roty="270" activelayers="1" />
     <compoundtile name="_MOUNTAIN_DEAD_BLOCKER_PLATEAU_4M_DIAG_RIGHT_A" pos="65 0 95" roty="270" activelayers="1" />
     <compoundtile name="_MOUNTAIN_DEAD_BASE_HILL_8M_TO_PLATEAU_8M_LEFT_A" pos="85 -8 165" roty="270" activelayers="1" />
-    <compoundtile name="_MOUNTAIN_DEAD_BLOCKER_PLATEAU_4M_DIAG_RIGHT_A" pos="-45 4 75" roty="90" activelayers="3" />
+    <tile name="MOUNTAIN_DEAD_HILL_4M_BASE_LARGE_10X20_STRAIGHT_A" pos="-225 4 -200" />
     <compoundtile name="_MOUNTAIN_DEAD_PLATEAU_4M_STRAIGHT_A" pos="-220 4 -120" activelayers="1" />
     <compoundtile name="_MOUNTAIN_DEAD_BASE_HILL_4M_TO_PLATEAU_4M_RIGHT_A" pos="35 0 115" activelayers="2" />
     <compoundtile name="_MOUNTAIN_DEAD_PLATEAU_4M_STRAIGHT_LARGE_A" pos="115 0 -110" roty="90" activelayers="1" />
@@ -1978,9 +1994,9 @@
     <compoundtile name="_MOUNTAIN_DEAD_PLATEAU_4M_STRAIGHT_A" pos="150 0 -50" activelayers="1" />
     <compoundtile name="_MOUNTAIN_DEAD_BASE_HILL_4M_TO_PLATEAU_4M_RIGHT_A" pos="285 -8 35" roty="270" activelayers="2" />
     <compoundtile name="_MOUNTAIN_DEAD_BASE_HILL_4M_TO_PLATEAU_4M_RIGHT_A" pos="-5 4 135" activelayers="3" />
+    <compoundtile name="_MOUNTAIN_DEAD_PLATEAU_4M_STRAIGHT_A" pos="50 0 90" roty="270" activelayers="1" />
     <compoundtile name="_MOUNTAIN_DEAD_BLOCKER_PLATEAU_4M_DIAG_RIGHT_A" pos="75 0 -125" roty="90" activelayers="1" />
-    <tile name="MOUNTAIN_DEAD_HILL_4M_BASE_LARGE_10X20_STRAIGHT_A" pos="-225 4 -200" />
-    <compoundtile name="_MOUNTAIN_DEAD_PLATEAU_4M_STRAIGHT_LARGE_A" pos="235 -4 -180" roty="270" activelayers="2" />
+    <compoundtile name="_MOUNTAIN_DEAD_PLATEAU_4M_STRAIGHT_LARGE_A" pos="150 0 -35" activelayers="1" />
     <compoundtile name="_MOUNTAIN_DEAD_CLIFF_8M_INNERCORNER_A" pos="65 -8 165" roty="180" activelayers="1" />
     <tile name="MOUNTAIN_DEAD_HILL_4M_BASE_LARGE_10X20_STRAIGHT_A" pos="100 0 75" roty="270" />
     <compoundtile name="_MOUNTAIN_DEAD_PLATEAU_4M_CORNER" pos="-10 4 100" roty="90" activelayers="3" />
@@ -1994,11 +2010,11 @@
     <compoundtile name="_MOUNTAIN_DEAD_BASE_HILL_4M_TO_PLATEAU_4M_LEFT_A" pos="55 0 -135" roty="90" activelayers="2" />
     <tile name="MOUNTAIN_DEAD_HILL_4M_BASE_LARGE_TO_PLATEAU_4M_CORNER_RIGHT_A" pos="-15 0 -275" />
     <compoundtile name="_MOUNTAIN_DEAD_CLIFF_8M_DIAGONAL_RIGHT_A" pos="60 -8 215" roty="270" activelayers="1" />
-    <compoundtile name="_MOUNTAIN_DEAD_BLOCKER_PLATEAU_4M_CORNER_LARGE_A" pos="145 0 5" activelayers="1" />
-    <compoundtile name="_MOUNTAIN_DEAD_PLATEAU_4M_STRAIGHT_LARGE_A" pos="150 0 -35" activelayers="1" />
-    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_CORNER_A_OBJ" pos="130 0 160" roty="270" />
-    <compoundtile name="_MOUNTAIN_DEAD_PLATEAU_4M_STRAIGHT_A" pos="50 0 90" roty="270" activelayers="1" />
-    <compoundtile name="_MOUNTAIN_DEAD_BASE_HILL_4M_TO_PLATEAU_4M_RIGHT_A" pos="-195 4 -55" roty="90" activelayers="2" />
+    <compoundtile name="_MOUNTAIN_DEAD_PLATEAU_4M_STRAIGHT_LARGE_A" pos="235 -4 -180" roty="270" activelayers="2" />
+    <tile name="MOUNTAIN_DEAD_WATER_river_20x20_OBJ" pos="85 -8 -195" roty="270" />
+    <compoundtile name="_MOUNTAIN_DEAD_CLIFF_8M_INNERCORNER_A" pos="35 -8 285" roty="180" activelayers="2" />
+    <compoundtile name="_MOUNTAIN_DEAD_BLOCKER_PLATEAU_4M_CORNER_LARGE_A" pos="-15 0 285" roty="90" activelayers="3" />
+    <compoundtile name="_MOUNTAIN_DEAD_BLOCKER_PLATEAU_4M_DIAG_RIGHT_A" pos="-45 4 75" roty="90" activelayers="3" />
     <compoundtile name="_MOUNTAIN_DEAD_BLOCKER_PLATEAU_4M_CORNER_LARGE_A" pos="-235 4 -285" roty="90" activelayers="2" />
     <compoundtile name="_MOUNTAIN_DEAD_BASE_HILL_4M_TO_PLATEAU_4M_LEFT_A" pos="-135 4 -45" roty="90" activelayers="2" />
     <compoundtile name="_MOUNTAIN_DEAD_CLIFF_8M_RAMP_SINGLE_RIGHT_A" pos="50 -8 345" activelayers="2" />
@@ -2012,9 +2028,9 @@
     <compoundtile name="_MOUNTAIN_DEAD_BASE_HILL_4M_TO_PLATEAU_4M_LEFT_A" pos="-215 4 -135" activelayers="1" />
     <compoundtile name="_MOUNTAIN_DEAD_BLOCKER_PLATEAU_4M_CORNER_LARGE_A" pos="-95 0 -195" roty="90" activelayers="2" />
     <compoundtile name="_MOUNTAIN_DEAD_BLOCKER_PLATEAU_4M_STRAIGHT_LARGE_A" pos="-55 4 55" activelayers="3" />
+    <compoundtile name="_MOUNTAIN_DEAD_BASE_HILL_4M_TO_PLATEAU_4M_RIGHT_A" pos="-195 4 -55" roty="90" activelayers="2" />
     <compoundtile name="_MOUNTAIN_DEAD_PLATEAU_4M_STRAIGHT_A" pos="-120 4 -40" roty="90" activelayers="2" />
-    <compoundtile name="_MOUNTAIN_DEAD_CLIFF_8M_INNERCORNER_A" pos="35 -8 285" roty="180" activelayers="2" />
-    <compoundtile name="_MOUNTAIN_DEAD_CLIFF_8M_STRAIGHT_10x20_A" pos="-35 0 260" roty="270" activelayers="3" />
+    <compoundtile name="_MOUNTAIN_DEAD_BLOCKER_PLATEAU_4M_CORNER_LARGE_A" pos="285 -4 -195" activelayers="3" />
     <compoundtile name="_MOUNTAIN_DEAD_PLATEAU_4M_CORNER" pos="-210 4 -220" activelayers="1" />
     <tile name="MOUNTAIN_DEAD_HILL_4M_BASE_LARGE_10X20_STRAIGHT_A" pos="-255 4 -340" />
     <compoundtile name="_MOUNTAIN_DEAD_BLOCKER_PLATEAU_4M_STRAIGHT_LARGE_B" pos="-5 4 115" activelayers="2" />
@@ -2028,11 +2044,11 @@
     <compoundtile name="_MOUNTAIN_DEAD_BASE_HILL_4M_TO_PLATEAU_4M_LEFT_A" pos="-65 4 -5" activelayers="2" />
     <compoundtile name="_MOUNTAIN_DEAD_PLATEAU_4M_CORNER" pos="150 0 -60" roty="90" activelayers="1" />
     <tile name="MOUNTAIN_DEAD_HILL_4M_BASE_LARGE_TO_PLATEAU_4M_CORNER_LEFT_A" pos="85 0 105" roty="270" />
-    <compoundtile name="_MOUNTAIN_DEAD_BLOCKER_PLATEAU_4M_CORNER_LARGE_A" pos="-15 0 285" roty="90" activelayers="3" />
-    <compoundtile name="_MOUNTAIN_DEAD_BLOCKER_PLATEAU_4M_CORNER_LARGE_A" pos="285 -4 -195" activelayers="3" />
-    <tile name="MOUNTAIN_DEAD_WATER_river_20x20_OBJ" pos="85 -8 -195" roty="270" />
+    <compoundtile name="_MOUNTAIN_DEAD_CLIFF_8M_STRAIGHT_10x20_A" pos="-35 0 260" roty="270" activelayers="3" />
     <tile name="MOUNTAIN_DEAD_WATER_river_OBJ" pos="50 -8 -180" roty="270" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_A_OBJ_NOCOL" pos="330 -4 -240" />
+    <tile name="MOUNTAIN_DEAD_GROUND_30x30" pos="-240 24 450" roty="270" />
+    <tile name="MOUNTAIN_DEAD_GROUND_30x30" pos="-450 24 390" roty="180" />
     <tile name="MOUNTAIN_DEAD_GROUND_20x20" pos="-15 20 -455" roty="90" />
     <tile name="MOUNTAIN_DEAD_WATER_river_OBJ" pos="-360 4 10" roty="270" />
     <tile name="MOUNTAIN_DEAD_WATER_river_OBJ" pos="160 -8 -160" roty="270" />
@@ -2046,9 +2062,9 @@
     <tile name="MOUNTAIN_DEAD_GROUND_10x30" pos="400 16 -350" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_A" pos="-380 8 40" roty="90" />
     <tile name="MOUNTAIN_DEAD_WATER_river_20x20_OBJ" pos="245 -8 -35" roty="270" />
+    <tile name="MOUNTAIN_DEAD_GROUND_30x30" pos="-450 24 330" roty="180" />
     <tile name="MOUNTAIN_DEAD_WATER_river_30x30_OBJ" pos="210 -8 10" roty="270" />
-    <tile name="MOUNTAIN_DEAD_GROUND_30x30" pos="-450 24 390" roty="180" />
-    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_CORNER_A" pos="190 -4 -130" />
+    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_CORNER_A" pos="-210 8 -250" />
     <tile name="MOUNTAIN_DEAD_GROUND_30x30" pos="-450 24 180" roty="180" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_INNERCORNER_A" pos="-250 8 -270" roty="270" />
     <tile name="MOUNTAIN_DEAD_GROUND_20x20" pos="-455 24 -335" roty="270" />
@@ -2062,11 +2078,11 @@
     <tile name="MOUNTAIN_DEAD_GROUND_30x30" pos="90 16 -420" roty="90" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_20M_A" pos="-445 24 -300" roty="90" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_CORNER_A" pos="-190 4 -170" />
+    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_CORNER_A" pos="190 -4 -130" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_A_OBJ_NOCOL" pos="-40 0 -110" roty="180" />
-    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_CORNER_A" pos="-210 8 -250" />
-    <tile name="MOUNTAIN_DEAD_GROUND_20x20" pos="395 16 -395" roty="90" />
-    <tile name="MOUNTAIN_DEAD_GROUND_30x30" pos="-450 24 330" roty="180" />
-    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_CORNER_A" pos="-220 8 -260" />
+    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_CORNER_A" pos="-80 4 -110" roty="270" />
+    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_CORNER_A_OBJ" pos="210 0 -20" />
+    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_INNERCORNER_A" pos="150 0 -180" roty="180" />
     <tile name="MOUNTAIN_DEAD_GROUND_30x30" pos="-420 24 330" roty="180" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_BRIDGE_SIDE" pos="40 0 -190" roty="90" />
     <tile name="MOUNTAIN_DEAD_WATER_river_20x20_OBJ" pos="195 -8 35" roty="270" />
@@ -2080,9 +2096,9 @@
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_CORNER_A" pos="-60 0 -120" roty="270" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_INNERCORNER_A" pos="-380 8 10" roty="180" />
     <tile name="MOUNTAIN_DEAD_WATER_river_OBJ" pos="120 -8 -190" roty="270" />
+    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_CORNER_A" pos="-220 8 -260" />
     <tile name="MOUNTAIN_DEAD_GROUND_30x30" pos="-450 24 360" roty="180" />
-    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_CORNER_A" pos="-80 4 -110" roty="270" />
-    <tile name="MOUNTAIN_DEAD_GROUND_20x20" pos="-335 24 -395" roty="270" />
+    <tile name="MOUNTAIN_DEAD_GROUND_30x30" pos="-420 24 270" roty="180" />
     <tile name="MOUNTAIN_DEAD_WATER_river_OBJ" pos="-30 -8 -150" roty="270" />
     <tile name="MOUNTAIN_DEAD_WATER_river_OBJ" pos="-220 -4 -50" roty="270" />
     <tile name="MOUNTAIN_DEAD_WATER_river_OBJ" pos="-250 -4 -250" roty="270" />
@@ -2096,11 +2112,11 @@
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_BRIDGE_SIDE_START_RIGHT_B" pos="-160 4 -100" roty="270" />
     <tile name="MOUNTAIN_DEAD_WATER_river_20x20_OBJ" pos="235 -8 -65" roty="270" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_DIAGONAL_RIGHT_20x20_A" pos="-395 24 -315" roty="270" />
-    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_CORNER_A_OBJ" pos="210 0 -20" />
-    <tile name="MOUNTAIN_DEAD_GROUND_30x30" pos="-420 24 270" roty="180" />
-    <compoundtile name="_MOUNTAIN_DEAD_PLATEAU_4M_INNERCORNER_A" pos="-100 4 -20" activelayers="2" />
-    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_A" pos="0 16 460" />
-    <tile name="MOUNTAIN_DEAD_WATER_river_30x30_OBJ" pos="-50 -8 -150" roty="270" />
+    <tile name="MOUNTAIN_DEAD_GROUND_20x20" pos="-335 24 -395" roty="270" />
+    <compoundtile name="_MOUNTAIN_DEAD_BLOCKER_PLATEAU_4M_CORNER_LARGE_A" pos="145 0 5" activelayers="1" />
+    <tile name="MOUNTAIN_DEAD_GROUND_20x20" pos="395 16 -395" roty="90" />
+    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_CORNER_A" pos="-210 4 -260" roty="180" />
+    <tile name="MOUNTAIN_DEAD_WATER_river_20x20_OBJ" pos="-225 -4 -105" roty="270" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_A" pos="210 0 -10" />
     <tile name="MOUNTAIN_DEAD_GROUND_30x30" pos="180 16 -450" roty="90" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_A" pos="-170 4 -170" roty="270" />
@@ -2114,9 +2130,9 @@
     <tile name="MOUNTAIN_DEAD_GROUND_10x30" pos="-400 24 110" roty="180" />
     <tile name="MOUNTAIN_DEAD_GROUND_30x30" pos="420 16 -360" />
     <tile name="MOUNTAIN_DEAD_GROUND_30x30" pos="180 16 -420" roty="90" />
+    <tile name="MOUNTAIN_DEAD_WATER_river_OBJ" pos="150 -8 -180" roty="270" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_INNERCORNER_A" pos="10 0 370" roty="270" />
-    <tile name="MOUNTAIN_DEAD_WATER_river_20x20_OBJ" pos="-225 -4 -105" roty="270" />
-    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_CORNER_A_LARGE" pos="-145 4 -115" roty="180" />
+    <tile name="MOUNTAIN_DEAD_GROUND_30x30" pos="-20 16 450" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_DIAGONAL_LEFT_20x20_A" pos="-25 0 -155" roty="270" />
     <tile name="MOUNTAIN_DEAD_GROUND_30x30" pos="-270 24 450" roty="270" />
     <tile name="MOUNTAIN_DEAD_GROUND_10x30" pos="-400 24 140" roty="180" />
@@ -2130,11 +2146,11 @@
     <tile name="MOUNTAIN_DEAD_GROUND_30x30" pos="450 16 -420" />
     <tile name="MOUNTAIN_DEAD_GROUND_30x30" pos="150 16 -450" roty="90" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_CORNER_A" pos="-160 4 -160" roty="180" />
-    <tile name="MOUNTAIN_DEAD_GROUND_30x30" pos="-240 24 450" roty="270" />
-    <tile name="MOUNTAIN_DEAD_GROUND_30x30" pos="-20 16 450" />
-    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_CORNER_A" pos="-210 4 -260" roty="180" />
-    <tile name="MOUNTAIN_DEAD_WATER_river_OBJ" pos="150 -8 -180" roty="270" />
-    <tile name="MOUNTAIN_DEAD_GROUND_30x30" pos="240 16 -420" roty="90" />
+    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_CORNER_A_LARGE" pos="-145 4 -115" roty="180" />
+    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_A" pos="0 16 460" />
+    <tile name="MOUNTAIN_DEAD_WATER_river_30x30_OBJ" pos="-430 4 -310" roty="270" />
+    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_CORNER_A" pos="220 -4 -100" />
+    <tile name="MOUNTAIN_DEAD_WATER_river_30x30_OBJ" pos="-50 -8 -150" roty="270" />
     <tile name="MOUNTAIN_DEAD_GROUND_10x20" pos="-45 20 390" roty="270" />
     <tile name="MOUNTAIN_DEAD_WATER_river_20x20_OBJ" pos="15 -8 -175" roty="270" />
     <tile name="MOUNTAIN_DEAD_WATER_river_30x30_OBJ" pos="-370 4 30" roty="270" />
@@ -2148,9 +2164,9 @@
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_DIAGONAL_LEFT_20x20_A" pos="-95 4 -105" roty="90" />
     <tile name="MOUNTAIN_DEAD_GROUND_10x30" pos="-370 24 -360" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_A" pos="-120 4 -80" roty="90" />
+    <tile name="MOUNTAIN_DEAD_GROUND_30x30" pos="240 16 -420" roty="90" />
     <tile name="MOUNTAIN_DEAD_GROUND_30x30" pos="-180 24 450" roty="270" />
-    <tile name="MOUNTAIN_DEAD_WATER_river_30x30_OBJ" pos="-430 4 -310" roty="270" />
-    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_DIAGONAL_RIGHT_20x20_A" pos="105 0 -195" roty="270" />
+    <tile name="MOUNTAIN_DEAD_WATER_river_OBJ" pos="-130 -8 -110" roty="270" />
     <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_CORNER_A_OBJ" pos="240 -4 -10" roty="180" />
     <tile name="MOUNTAIN_DEAD_GROUND_30x30" pos="450 16 -450" />
     <tile name="MOUNTAIN_DEAD_GROUND_30x30" pos="-450 24 -390" roty="90" />
@@ -2164,11 +2180,11 @@
     <tile name="MOUNTAIN_DEAD_WATER_river_30x30_OBJ" pos="150 -8 90" roty="270" />
     <tile name="MOUNTAIN_DEAD_WATER_river_20x20_OBJ" pos="-75 -8 -115" roty="270" />
     <tile name="MOUNTAIN_DEAD_WATER_river_20x20_OBJ" pos="-155 -8 -155" roty="270" />
-    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_CORNER_A" pos="220 -4 -100" />
-    <tile name="MOUNTAIN_DEAD_WATER_river_OBJ" pos="-130 -8 -110" roty="270" />
-    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_STRAIGHT_A" pos="-240 8 -270" roty="270" />
-    <compoundtile name="_MOUNTAIN_DEAD_CLIFF_8M_RAMP_LEFT_A" pos="-15 0 175" roty="270" activelayers="2" />
-    <compoundtile name="_MOUNTAIN_DEAD_CLIFF_8M_CORNER_A" pos="55 -8 285" roty="270" activelayers="1" />
+    <tile name="MOUNTAIN_DEAD_PLATEAU_WALL_DIAGONAL_RIGHT_20x20_A" pos="105 0 -195" roty="270" />
+    <compoundtile name="_MOUNTAIN_DEAD_30x30_A" pos="-170 4 -240" roty="180" activelayers="1 4" />
+    <compoundtile name="_MOUNTAIN_DEAD_PLATEAU_4M_INNERCORNER_A" pos="-100 4 -20" activelayers="2" />
+    <compoundtile name="_MOUNTAIN_DEAD_CLIFF_8M_DIAGONAL_LEFT_B" pos="-40 0 245" roty="270" activelayers="3" />
+    <compoundtile name="_MOUNTAIN_DEAD_SUB_10x20_A" pos="270 -8 295" roty="180" activelayers="2" />
     <compoundtile name="_MOUNTAIN_DEAD_SUB_10x30_A" pos="80 0 120" roty="90" activelayers="4" />
     <compoundtile name="_MOUNTAIN_DEAD_SUB_10x20_B" pos="85 -8 250" roty="90" />
     <compoundtile name="_MOUNTAIN_DEAD_SUB_10x30_B" pos="10 0 280" roty="270" activelayers="4" />
@@ -2197,11 +2213,11 @@
     <compoundtile name="_MOUNTAIN_DEAD_SUB_10x30_B" pos="340 -8 280" roty="90" activelayers="4" />
     <compoundtile name="_MOUNTAIN_DEAD_SUB_10x30_A" pos="90 4 60" roty="270" activelayers="4" />
     <compoundtile name="_MOUNTAIN_DEAD_SUB_20x20_C" pos="215 -8 295" roty="90" activelayers="4" />
-    <compoundtile name="_MOUNTAIN_DEAD_SUB_10x20_A" pos="125 -8 240" roty="270" activelayers="1" />
-    <compoundtile name="_MOUNTAIN_DEAD_SUB_10x20_A" pos="270 -8 295" roty="180" activelayers="2" />
     <compoundtile name="_MOUNTAIN_DEAD_SUB_10x20_A" pos="65 0 -210" roty="270" activelayers="3" />
     <compoundtile name="_MOUNTAIN_DEAD_SUB_10x20_B" pos="305 -4 -90" roty="270" />
     <compoundtile name="_MOUNTAIN_DEAD_SUB_10x20_A" pos="335 0 -250" roty="90" activelayers="2" />
+    <compoundtile name="_MOUNTAIN_DEAD_SUB_10x30_B" pos="370 -8 310" roty="180" activelayers="4" />
+    <compoundtile name="_MOUNTAIN_DEAD_10x20_B_ROAM" pos="-55 8 280" roty="270" activelayers="3 4" />
     <compoundtile name="_MOUNTAIN_DEAD_10x20_B_ROAM" pos="-60 8 355" roty="0" activelayers="1 4" />
     <compoundtile name="_MOUNTAIN_DEAD_10x20_B_ROAM" pos="-220 4 -285" roty="0" activelayers="1 4" />
     <compoundtile name="_MOUNTAIN_DEAD_10x20_B_ROAM" pos="20 0 -335" roty="0" activelayers="2 4" />
@@ -2215,9 +2231,9 @@
     <compoundtile name="_MOUNTAIN_DEAD_SUB_10x30_A" pos="200 -4 -90" roty="0" activelayers="4" />
     <compoundtile name="_MOUNTAIN_DEAD_SUB_10x20_A" pos="175 -4 -170" roty="90" activelayers="2" />
     <compoundtile name="_MOUNTAIN_DEAD_SUB_10x30_B" pos="320 -4 -220" roty="90" activelayers="4" />
+    <compoundtile name="_MOUNTAIN_DEAD_SUB_10x20_A" pos="125 -8 240" roty="270" activelayers="1" />
     <compoundtile name="_MOUNTAIN_DEAD_SUB_10x30_A" pos="300 0 -290" activelayers="4" />
-    <compoundtile name="_MOUNTAIN_DEAD_SUB_30x30_C" pos="340 -4 -200" roty="270" activelayers="2 4" />
-    <compoundtile name="_MOUNTAIN_DEAD_SUB_10x20_A" pos="-100 4 -175" activelayers="1" />
+    <compoundtile name="_MOUNTAIN_DEAD_SUB_10x30_A" pos="110 4 -80" roty="180" activelayers="4" />
     <compoundtile name="_MOUNTAIN_DEAD_SUB_20x20_C" pos="15 0 305" roty="270" activelayers="4" />
     <compoundtile name="_MOUNTAIN_DEAD_SUB_10x20_A" pos="-200 4 -155" roty="180" activelayers="1" />
     <compoundtile name="_MOUNTAIN_DEAD_SUB_10x20_A" pos="180 0 -15" roty="180" activelayers="1" />
@@ -2231,11 +2247,11 @@
     <compoundtile name="_MOUNTAIN_DEAD_SUB_10x30_A" pos="230 -8 290" roty="180" activelayers="4" />
     <compoundtile name="_MOUNTAIN_DEAD_SUB_10x20_A" pos="85 -8 180" roty="270" activelayers="1" />
     <compoundtile name="_MOUNTAIN_DEAD_SUB_30x30_A" pos="-300 8 -90" roty="90" activelayers="1 4" />
-    <compoundtile name="_MOUNTAIN_DEAD_SUB_10x30_B" pos="370 -8 310" roty="180" activelayers="4" />
-    <compoundtile name="_MOUNTAIN_DEAD_SUB_10x30_A" pos="110 4 -80" roty="180" activelayers="4" />
+    <compoundtile name="_MOUNTAIN_DEAD_SUB_10x20_A" pos="-100 4 -175" activelayers="1" />
+    <compoundtile name="_MOUNTAIN_DEAD_SUB_30x30_C" pos="340 -4 -200" roty="270" activelayers="2 4" />
     <compoundtile name="_MOUNTAIN_DEAD_SUB_30x30_B" pos="300 -4 -130" roty="180" activelayers="2 4" />
     <compoundtile name="_MOUNTAIN_DEAD_SUB_30x30_C" pos="-260 8 -100" roty="0" activelayers="1 4" />
-    <compoundtile name="_MOUNTAIN_DEAD_SUB_10x20_A" pos="160 0 -115" roty="180" activelayers="3" />
+    <compoundtile name="_MOUNTAIN_DEAD_SUB_10x20_A" pos="250 -4 -145" roty="180" activelayers="2" />
     <compoundtile name="_MOUNTAIN_DEAD_SUB_20x20_B" pos="265 -4 -145" activelayers="2 4" />
     <compoundtile name="_MOUNTAIN_DEAD_SUB_30x30_B" pos="60 0 140" roty="180" activelayers="1 4" />
     <compoundtile name="_MOUNTAIN_DEAD_SUB_10x20_A" pos="-90 0 -245" roty="180" activelayers="1" />
@@ -2249,9 +2265,9 @@
     <compoundtile name="_MOUNTAIN_DEAD_SUB_10x20_A" pos="370 0 -265" roty="180" activelayers="2" />
     <compoundtile name="_MOUNTAIN_DEAD_SUB_20x20_C" pos="-15 4 -355" roty="90" activelayers="4" />
     <compoundtile name="_MOUNTAIN_DEAD_SUB_10x20_A" pos="150 0 -75" roty="180" activelayers="1" />
+    <compoundtile name="_MOUNTAIN_DEAD_SUB_10x20_A" pos="0 0 295" activelayers="3" />
     <compoundtile name="_MOUNTAIN_DEAD_SUB_10x30_A" pos="140 4 -20" roty="180" activelayers="4" />
-    <compoundtile name="_MOUNTAIN_DEAD_SUB_10x20_A" pos="250 -4 -145" roty="180" activelayers="2" />
-    <compoundtile name="_MOUNTAIN_DEAD_SUB_10x20_A" pos="-210 4 -175" activelayers="1" />
+    <compoundtile name="_MOUNTAIN_DEAD_SUB_30x30_C" pos="310 0 -260" roty="90" activelayers="2 4" />
     <compoundtile name="_MOUNTAIN_DEAD_SUB_10x30_A" pos="-50 0 -260" roty="90" activelayers="4" />
     <compoundtile name="_MOUNTAIN_DEAD_SUB_10x30_B" pos="20 0 330" roty="270" activelayers="4" />
     <compoundtile name="_MOUNTAIN_DEAD_SUB_10x20_A" pos="-280 8 -95" roty="180" activelayers="1" />
@@ -2265,11 +2281,11 @@
     <compoundtile name="_MOUNTAIN_DEAD_10x20_C" pos="-155 4 -280" roty="270" />
     <compoundtile name="_MOUNTAIN_DEAD_20x20_B" pos="-225 4 -305" roty="0" activelayers="1 4" />
     <compoundtile name="_MOUNTAIN_DEAD_10x30_A" pos="-200 4 -280" roty="270" activelayers="1 4" />
-    <compoundtile name="_MOUNTAIN_DEAD_10x20_B" pos="-150 4 -245" roty="180" activelayers="1" />
-    <compoundtile name="_MOUNTAIN_DEAD_SUB_30x30_C" pos="310 0 -260" roty="90" activelayers="2 4" />
-    <compoundtile name="_MOUNTAIN_DEAD_10x20_B_ROAM" pos="-55 8 280" roty="270" activelayers="3 4" />
-    <compoundtile name="_MOUNTAIN_DEAD_SUB_10x20_A" pos="0 0 295" activelayers="3" />
-    <compoundtile name="_MOUNTAIN_DEAD_SUB_10x30_B" pos="50 0 180" activelayers="4" />
+    <compoundtile name="_MOUNTAIN_DEAD_SUB_10x20_A" pos="-210 4 -175" activelayers="1" />
+    <compoundtile name="_MOUNTAIN_DEAD_10x20_B_ROAM" pos="250 0 -205" roty="180" activelayers="2 4" />
+    <compoundtile name="_MOUNTAIN_DEAD_SUB_10x20_A" pos="155 -8 300" roty="270" activelayers="1" />
+    <compoundtile name="_MOUNTAIN_DEAD_SUB_10x30_A" pos="190 -4 -160" roty="90" activelayers="4" />
+    <compoundtile name="_MOUNTAIN_DEAD_SUB_10x20_A" pos="160 0 -115" roty="180" activelayers="3" />
     <compoundtile name="_MOUNTAIN_DEAD_SUB_10x30_B" pos="250 -4 -120" roty="0" activelayers="4" />
     <compoundtile name="_MOUNTAIN_DEAD_SUB_10x30_A" pos="-50 4 30" roty="180" activelayers="4" />
     <compoundtile name="_MOUNTAIN_DEAD_SUB_10x20_B" pos="180 0 35" roty="180" />
@@ -2283,9 +2299,9 @@
     <compoundtile name="_MOUNTAIN_DEAD_SUB_10x20_A" pos="85 0 150" roty="270" activelayers="1" />
     <compoundtile name="_MOUNTAIN_DEAD_SUB_10x30_B" pos="370 -8 290" roty="90" activelayers="4" />
     <compoundtile name="_MOUNTAIN_DEAD_SUB_20x20_C" pos="195 -8 285" roty="90" activelayers="4" />
+    <compoundtile name="_MOUNTAIN_DEAD_SUB_10x30_B" pos="50 0 180" activelayers="4" />
     <compoundtile name="_MOUNTAIN_DEAD_SUB_20x20_C" pos="-295 8 -25" roty="90" activelayers="4" />
-    <compoundtile name="_MOUNTAIN_DEAD_SUB_10x20_A" pos="155 -8 300" roty="270" activelayers="1" />
-    <compoundtile name="_MOUNTAIN_DEAD_SUB_10x30_A" pos="-50 4 -20" activelayers="4" />
+    <compoundtile name="_MOUNTAIN_DEAD_SUB_10x20_A" pos="265 -4 -70" roty="90" activelayers="1" />
     <compoundtile name="_MOUNTAIN_DEAD_SUB_10x20_B" pos="-115 4 -160" roty="270" />
     <compoundtile name="_MOUNTAIN_DEAD_SUB_30x30_C" pos="60 4 70" roty="180" activelayers="1 4" />
     <compoundtile name="_MOUNTAIN_DEAD_SUB_10x30_B" pos="-240 4 -350" roty="180" activelayers="4" />
@@ -2299,11 +2315,11 @@
     <compoundtile name="_MOUNTAIN_DEAD_SUB_10x30_A" pos="300 -4 -150" roty="270" activelayers="4" />
     <compoundtile name="_MOUNTAIN_DEAD_SUB_10x20_A" pos="-15 0 -130" roty="270" activelayers="1" />
     <compoundtile name="_MOUNTAIN_DEAD_SUB_10x30_B" pos="-260 8 -80" roty="90" activelayers="4" />
-    <compoundtile name="_MOUNTAIN_DEAD_SUB_10x30_A" pos="190 -4 -160" roty="90" activelayers="4" />
-    <compoundtile name="_MOUNTAIN_DEAD_SUB_10x20_A" pos="265 -4 -70" roty="90" activelayers="1" />
-    <compoundtile name="_MOUNTAIN_DEAD_10x20_B_ROAM" pos="250 0 -205" roty="180" activelayers="2 4" />
+    <compoundtile name="_MOUNTAIN_DEAD_SUB_10x30_A" pos="-50 4 -20" activelayers="4" />
     <compoundtile name="_MOUNTAIN_DEAD_10x20_B_ROAM" pos="280 0 -235" roty="180" activelayers="1 4" />
     <compoundtile name="_MOUNTAIN_DEAD_10x20_B_ROAM" pos="305 -4 -40" roty="270" activelayers="1 4" />
+    <compoundtile name="_MOUNTAIN_DEAD_10x20_B_ROAM" pos="-85 4 -70" roty="270" activelayers="2 4" />
+    <compoundtile name="_MOUNTAIN_DEAD_BBS_TUNNEL_EXIT_20x20" pos="-245 8 35" />
     <compoundtile name="_MOUNTAIN_DEAD_BBS_TUNNEL_EXIT_20x20" pos="-55 8 295" roty="180" />
     <compoundtile name="_MOUNTAIN_DEAD_BBS_TUNNEL_EXIT_20x20" pos="-65 4 -75" roty="90" />
     <compoundtile name="_MOUNTAIN_DEAD_BBS_TUNNEL_EXIT_20x20" pos="285 0 -295" roty="180" />
@@ -2316,9 +2332,9 @@
     <compoundtile name="_MOUNTAIN_DEAD_RIVER_DIAGONAL_LEFT_20x30_A_COMP_02" pos="250 -8 275" roty="180" activelayers="2" />
     <compoundtile name="_MOUNTAIN_DEAD_RIVER_DIAGONAL_LEFT_20x30_A_COMP_02" pos="180 -8 265" roty="180" activelayers="1" />
     <compoundtile name="_MOUNTAIN_DEAD_RIVER_DIAGONAL_LEFT_20x30_A_COMP_02" pos="235 -8 10" roty="270" activelayers="2" />
+    <tile name="MOUNTAIN_DEAD_HILL_4M_BASE_LARGE_10X20_STRAIGHT_A" pos="-10 0 -115" roty="90" />
     <compoundtile name="_MOUNTAIN_DEAD_RIVER_DIAGONAL_RIGHT_20x20_A _COMP_01" pos="315 -8 265" roty="180" activelayers="1" />
-    <compoundtile name="_MOUNTAIN_DEAD_BBS_TUNNEL_EXIT_20x20" pos="-245 8 35" />
-    <compoundtile name="_MOUNTAIN_DEAD_RIVER_DIAGONAL_LEFT_20x20_A _COMP_01" pos="185 -8 245" activelayers="2" />
+    <compoundtile name="_MOUNTAIN_DEAD_RIVER_STRAIGHT_LARGE_A_COMP_01" pos="150 -8 145" roty="270" />
     <compoundtile name="_MOUNTAIN_DEAD_RIVER_DIAGONAL_LEFT_20x20_A _COMP_01" pos="365 -8 275" roty="180" activelayers="3" />
     <compoundtile name="_MOUNTAIN_DEAD_RIVER_INNERCORNER_LARGE_A_COMP_01" pos="155 -8 255" roty="90" activelayers="1" />
     <compoundtile name="_MOUNTAIN_DEAD_RIVER_DIAGONAL_RIGHT_20x20_A _COMP_01" pos="145 -8 235" roty="90" activelayers="1" />
@@ -2329,13 +2345,13 @@
     <compoundtile name="_MOUNTAIN_DEAD_RIVER_INNERCORNER_LARGE_A_COMP_01" pos="225 -8 45" roty="180" activelayers="2" />
     <tile name="MOUNTAIN_DEAD_RIVER_INNERCORNER" pos="350 -8 270" />
     <tile name="MOUNTAIN_DEAD_RIVER_INNERCORNER" pos="370 -8 250" roty="180" />
-    <tile name="MOUNTAIN_DEAD_RIVER_STRAIGHT_A" pos="230 -8 30" roty="90" />
-    <compoundtile name="_MOUNTAIN_DEAD_CLIFF_8M_DIAGONAL_LEFT_B" pos="-40 0 245" roty="270" activelayers="3" />
-    <tile name="MOUNTAIN_DEAD_RIVER_STRAIGHT_A" pos="150 -8 130" roty="90" />
-    <compoundtile name="_MOUNTAIN_DEAD_RIVER_STRAIGHT_LARGE_A_COMP_01" pos="150 -8 145" roty="270" />
-    <tile name="MOUNTAIN_DEAD_HILL_4M_BASE_LARGE_10X20_STRAIGHT_A" pos="-10 0 -115" roty="90" />
+    <compoundtile name="_MOUNTAIN_DEAD_CLIFF_8M_RAMP_LEFT_A" pos="-15 0 175" roty="270" activelayers="2" />
+    <tile name="MOUNTAIN_DEAD_RIVER_CORNER" pos="360 -8 250" roty="90" />
+    <compoundtile name="_MOUNTAIN_DEAD_RIVER_DIAGONAL_LEFT_20x20_A _COMP_01" pos="185 -8 245" activelayers="2" />
     <compoundtile name="_MOUNTAIN_DEAD_CLIFF_8M_NEXTTO_4M_RIGHT" pos="-35 0 275" roty="270" activelayers="3" />
     <compoundtile name="_MOUNTAIN_DEAD_BLOCKER_PLATEAU_4M_DIAG_RIGHT_A" pos="305 -8 35" roty="270" activelayers="3" />
+    <tile name="MOUNTAIN_DEAD_HILL_4M_BASE_LARGE_10X20_STRAIGHT_A" pos="-45 4 340" />
+    <compoundtile name="_MOUNTAIN_DEAD_CLIFF_8M_CORNER_A" pos="55 -8 285" roty="270" activelayers="1" />
     <compoundtile name="_MOUNTAIN_DEAD_BLOCKER_PLATEAU_4M_DIAG_LEFT_A" pos="-65 4 35" activelayers="3" />
     <compoundtile name="_MOUNTAIN_DEAD_BASE_HILL_4M_TO_PLATEAU_4M_RIGHT_A" pos="215 -4 -175" roty="270" activelayers="2" />
     <compoundtile name="_MOUNTAIN_DEAD_CLIFF_8M_DIAGONAL_RIGHT_B" pos="-40 0 215" roty="270" activelayers="1" />
@@ -2364,11 +2380,11 @@
     <compoundtile name="_MOUNTAIN_DEAD_BASE_HILL_4M_TO_PLATEAU_4M_RIGHT_A" pos="-5 0 315" activelayers="2" />
     <tile name="MOUNTAIN_DEAD_HILL_4M_BASE_LARGE_10X20_STRAIGHT_A" pos="180 -4 -185" roty="270" />
     <compoundtile name="_MOUNTAIN_DEAD_BASE_HILL_4M_TO_PLATEAU_4M_LEFT_A" pos="295 -4 -215" activelayers="3" />
-    <tile name="MOUNTAIN_DEAD_HILL_4M_BASE_LARGE_10X20_STRAIGHT_A" pos="-45 4 340" />
+    <tile name="MOUNTAIN_DEAD_RIVER_STRAIGHT_A" pos="150 -8 130" roty="90" />
     <tile name="MOUNTAIN_DEAD_RIVER_CORNER_LARGE_A" pos="175 -8 95" roty="180" />
-    <tile name="MOUNTAIN_DEAD_RIVER_INNERCORNER" pos="190 -8 90" roty="90" />
-    <tile name="MOUNTAIN_DEAD_RIVER_CORNER" pos="360 -8 250" roty="90" />
-    <tile name="MOUNTAIN_DEAD_RIVER_STRAIGHT_A" pos="270 -8 280" />
+    <tile name="MOUNTAIN_DEAD_RIVER_STRAIGHT_A" pos="230 -8 30" roty="90" />
+    <tile name="MOUNTAIN_DEAD_RIVER_CORNER_LARGE_A" pos="155 -8 115" roty="180" />
+    <compoundtile name="_MOUNTAIN_DEAD_SUB_10x20_B_ROAM" pos="315 -4 -210" roty="270" activelayers="4" />
     <compoundtile name="_MOUNTAIN_DEAD_SUB_10x20_B_ROAM" pos="-25 4 360" roty="270" activelayers="4" />
     <compoundtile name="_MOUNTAIN_DEAD_SUB_10x20_B_ROAM" pos="305 -4 -160" roty="90" activelayers="4" />
     <compoundtile name="_MOUNTAIN_DEAD_SUB_10x20_B_ROAM" pos="-185 4 -150" roty="90" activelayers="4" />
@@ -2385,25 +2401,25 @@
     <compoundtile name="_MOUNTAIN_DEAD_SUB_10x20_B_ROAM" pos="-240 8 -105" roty="180" activelayers="4" />
     <compoundtile name="_MOUNTAIN_DEAD_SUB_10x20_B_ROAM" pos="210 -4 -85" roty="180" activelayers="4" />
     <compoundtile name="_MOUNTAIN_DEAD_SUB_10x20_B_ROAM" pos="260 -4 -125" roty="180" activelayers="4" />
-    <compoundtile name="_MOUNTAIN_DEAD_SUB_10x20_B_ROAM" pos="110 4 15" roty="180" activelayers="4" />
-    <compoundtile name="_MOUNTAIN_DEAD_10x20_B_ROAM" pos="-85 4 -70" roty="270" activelayers="2 4" />
     <compoundtile name="_MOUNTAIN_DEAD_10x20_B_ROAM" pos="-325 8 -320" roty="270" activelayers="3 4" />
     <compoundtile name="_MOUNTAIN_DEAD_10x20_B_ROAM" pos="275 -8 50" roty="270" activelayers="3 4" />
     <compoundtile name="_MOUNTAIN_DEAD_10x20_B_ROAM" pos="250 0 -325" roty="180" activelayers="3 4" />
     <compoundtile name="_MOUNTAIN_DEAD_10x20_B_ROAM" pos="-265 8 -280" roty="270" activelayers="1 4" />
     <compoundtile name="_MOUNTAIN_DEAD_10x20_B_ROAM" pos="-230 8 45" roty="180" activelayers="3 4" />
-    <compoundtile name="_MOUNTAIN_DEAD_SUB_10x20_B_ROAM" pos="315 -4 -210" roty="270" activelayers="4" />
     <compoundtile name="_MOUNTAIN_DEAD_10x20_B_ROAM" pos="70 0 -245" roty="180" activelayers="3 4" />
-    <compoundtile name="_MOUNTAIN_DEAD_10x20_B_ROAM" pos="-305 8 -260" roty="270" activelayers="2 4" />
+    <compoundtile name="_MOUNTAIN_DEAD_SUB_10x20_B_ROAM" pos="15 0 320" roty="270" activelayers="4" />
+    <compoundtile name="_MOUNTAIN_DEAD_10x20_B_ROAM" pos="-320 8 365" activelayers="3 4" />
     <compoundtile name="_MOUNTAIN_DEAD_10x20_B_ROAM" pos="85 0 -260" roty="270" activelayers="2 4" />
     <compoundtile name="_MOUNTAIN_DEAD_10x20_B_ROAM" pos="-125 8 50" roty="270" activelayers="3 4" />
     <compoundtile name="_MOUNTAIN_DEAD_10x20_B_ROAM" pos="-375 8 230" roty="90" activelayers="3 4" />
     <compoundtile name="_MOUNTAIN_DEAD_SUB_10x20_B_ROAM" pos="40 0 195" roty="180" activelayers="4" />
     <compoundtile name="_MOUNTAIN_DEAD_SUB_10x20_B_ROAM" pos="5 4 -100" roty="90" activelayers="4" />
-    <compoundtile name="_MOUNTAIN_DEAD_10x20_B_ROAM" pos="-320 8 365" activelayers="3 4" />
-    <tile name="MOUNTAIN_DEAD_RIVER_CORNER_LARGE_A" pos="155 -8 115" roty="180" />
+    <compoundtile name="_MOUNTAIN_DEAD_SUB_10x20_B_ROAM" pos="110 4 15" roty="180" activelayers="4" />
+    <compoundtile name="_MOUNTAIN_DEAD_10x20_B_ROAM" pos="-305 8 -260" roty="270" activelayers="2 4" />
+    <compoundtile name="_MOUNTAIN_DEAD_SUB_10x20_B_ROAM" pos="70 -8 365" roty="0" activelayers="4" />
     <tile name="FishingZone_FRESHWATER_SPOT_TREASURE" pos="374 -8 263" />
-    <compoundtile name="_MOUNTAIN_DEAD_20x20_B" pos="265 0 -295" roty="270" activelayers="3 4" />
+    <tile name="MOUNTAIN_DEAD_GROUND" pos="330 0 -350" />
+    <tile name="MOUNTAIN_DEAD_RIVER_STRAIGHT_A" pos="150 -8 200" roty="90" />
     <tile name="MOUNTAIN_DEAD_RIVER_INNERCORNER" pos="170 -8 110" roty="90" />
     <tile name="MOUNTAIN_DEAD_GROUND" pos="380 -8 230" roty="270" />
     <compoundtile name="_MOUNTAIN_DEAD_10x20_PINETREES" pos="365 -8 360" roty="90" />
@@ -2412,12 +2428,12 @@
     <compoundtile name="_MOUNTAIN_DEAD_10x20_B" pos="-110 4 -65" roty="180" activelayers="1" />
     <tile name="MOUNTAIN_DEAD_GROUND" pos="-100 0 -210" roty="180" />
     <tile name="MOUNTAIN_DEAD_GROUND" pos="0 0 -300" roty="90" />
-    <tile name="MOUNTAIN_DEAD_GROUND" pos="330 0 -350" />
-    <tile name="MOUNTAIN_DEAD_RIVER_CORNER_LARGE_A" pos="165 -8 235" roty="270" />
+    <tile name="MOUNTAIN_DEAD_RIVER_INNERCORNER" pos="190 -8 90" roty="90" />
+    <compoundtile name="_MOUNTAIN_DEAD_20x20_B" pos="265 0 -295" roty="270" activelayers="3 4" />
     <compoundtile name="_MOUNTAIN_DEAD_10x30_A" pos="250 0 -300" roty="180" activelayers="3 4" />
+    <tile name="MOUNTAIN_DEAD_RIVER_CORNER" pos="370 -8 260" roty="90" />
     <compoundtile name="_MOUNTAIN_DEAD_SUB_10x20_B_ROAM" pos="140 4 -45" roty="180" activelayers="4" />
-    <tile name="MOUNTAIN_DEAD_RIVER_STRAIGHT_A" pos="150 -8 200" roty="90" />
-    <tile name="MOUNTAIN_DEAD_GROUND" pos="360 0 -350" />
+    <compoundtile name="_MOUNTAIN_DEAD_SUB_10x20_B_ROAM" pos="-360 8 -5" activelayers="4" />
     <compoundtile name="_MOUNTAIN_DEAD_SUB_10x20_B_ROAM" pos="120 4 -85" roty="0" activelayers="4" />
     <compoundtile name="_MOUNTAIN_DEAD_SUB_10x20_B_ROAM" pos="45 0 -210" roty="270" activelayers="4" />
     <compoundtile name="_MOUNTAIN_DEAD_SUB_10x20_B_ROAM" pos="75 4 -110" roty="90" activelayers="4" />
@@ -2425,18 +2441,17 @@
     <compoundtile name="_MOUNTAIN_DEAD_SUB_10x20_B_ROAM" pos="295 -8 340" roty="90" activelayers="4" />
     <compoundtile name="_MOUNTAIN_DEAD_SUB_10x30_A" pos="270 0 -340" roty="270" />
     <compoundtile name="_MOUNTAIN_DEAD_SUB_10x20_B_ROAM" pos="35 4 60" roty="270" activelayers="4" />
-    <compoundtile name="_MOUNTAIN_DEAD_SUB_10x20_B_ROAM" pos="70 -8 365" roty="0" activelayers="4" />
-    <compoundtile name="_MOUNTAIN_DEAD_SUB_10x20_B_ROAM" pos="15 0 320" roty="270" activelayers="4" />
     <tile name="MOUNTAIN_DEAD_RIVER_CORNER_LARGE_A" pos="205 -8 55" roty="180" />
     <tile name="MOUNTAIN_DEAD_RIVER_INNERCORNER" pos="360 -8 240" roty="180" />
     <tile name="MOUNTAIN_DEAD_RIVER_STRAIGHT_A" pos="150 -8 160" roty="90" />
-    <compoundtile name="_MOUNTAIN_DEAD_SUB_10x20_B_ROAM" pos="-360 8 -5" activelayers="4" />
-    <tile name="MOUNTAIN_DEAD_RIVER_CORNER" pos="370 -8 260" roty="90" />
-    <criticaltile name="Tunnel_Exit" pos="205 -8 205" id="tunnelexit_06" type="tunnelexit" />
-    <criticaltile name="Tunnel_Exit" pos="-55 8 295" roty="180" id="tunnelexit_01" type="tunnelexit" />
+    <tile name="MOUNTAIN_DEAD_RIVER_STRAIGHT_A" pos="270 -8 280" />
+    <tile name="MOUNTAIN_DEAD_GROUND" pos="360 0 -350" />
+    <tile name="MOUNTAIN_DEAD_RIVER_CORNER_LARGE_A" pos="165 -8 235" roty="270" />
+    <criticaltile name="Tunnel_Exit" pos="285 0 -295" roty="180" id="tunnelexit_05" type="tunnelexit" />
     <criticaltile name="Tunnel_Exit" pos="-65 4 -75" roty="90" id="tunnelexit_02" type="tunnelexit" />
     <criticaltile name="Tunnel_Exit" pos="-5 0 -205" roty="180" id="tunnelexit_03" type="tunnelexit" />
     <criticaltile name="Tunnel_Exit" pos="-245 8 35" id="tunnelexit_04" type="tunnelexit" />
-    <criticaltile name="Tunnel_Exit" pos="285 0 -295" roty="180" id="tunnelexit_05" type="tunnelexit" />
+    <criticaltile name="Tunnel_Exit" pos="-55 8 295" roty="180" id="tunnelexit_01" type="tunnelexit" />
+    <criticaltile name="Tunnel_Exit" pos="205 -8 205" id="tunnelexit_06" type="tunnelexit" />
   </tiles>
 </template>

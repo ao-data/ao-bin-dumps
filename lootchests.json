@@ -43,7 +43,7 @@
         "@locklocatag": "@CORRUPTED_DUNGEON_CHEST_LOCK_MESSAGE",
         "@dangerstate": "normal",
         "@prefab": "LOOTCHEST_REGULAR_01",
-        "@chesttype": "mdsolo",
+        "@chesttype": "mdsoloboss",
         "RareStates": {
           "@hiderarityuntil": "OnUnlock",
           "RareState": [
@@ -373,7 +373,7 @@
         "@locklocatag": "@CORRUPTED_DUNGEON_CHEST_LOCK_MESSAGE",
         "@dangerstate": "normal",
         "@prefab": "LOOTCHEST_REGULAR_01",
-        "@chesttype": "mdduo",
+        "@chesttype": "mdduoboss",
         "RareStates": {
           "@hiderarityuntil": "OnUnlock",
           "RareState": [
@@ -29263,6 +29263,7 @@
         "@alwaysrequireschanneling": "true",
         "@prefab": "FOREST_GREEN_LOOTCHEST_TREASURE_SOLO_STANDARD",
         "@chesttype": "treasurechestsmall",
+        "@factionwarfare": "false",
         "Tiles": {
           "Biome": [
             {
@@ -29363,6 +29364,7 @@
         "@alwaysrequireschanneling": "true",
         "@prefab": "FOREST_GREEN_LOOTCHEST_TREASURE_SOLO_UNCOMMON",
         "@chesttype": "treasurechestsmall",
+        "@factionwarfare": "false",
         "Tiles": {
           "Biome": [
             {
@@ -29463,6 +29465,7 @@
         "@alwaysrequireschanneling": "true",
         "@prefab": "FOREST_GREEN_LOOTCHEST_TREASURE_SOLO_RARE",
         "@chesttype": "treasurechestsmall",
+        "@factionwarfare": "false",
         "Tiles": {
           "Biome": [
             {
@@ -29563,6 +29566,7 @@
         "@alwaysrequireschanneling": "true",
         "@prefab": "FOREST_GREEN_LOOTCHEST_TREASURE_SOLO_LEGENDARY",
         "@chesttype": "treasurechestsmall",
+        "@factionwarfare": "false",
         "Tiles": {
           "Biome": [
             {
@@ -30646,6 +30650,7 @@
         "@alwaysrequireschanneling": "true",
         "@prefab": "FOREST_GREEN_LOOTCHEST_TREASURE_VETERAN_STANDARD",
         "@chesttype": "treasurechestmedium",
+        "@factionwarfare": "false",
         "Tiles": {
           "Biome": [
             {
@@ -30740,6 +30745,7 @@
         "@alwaysrequireschanneling": "true",
         "@prefab": "FOREST_GREEN_LOOTCHEST_TREASURE_VETERAN_UNCOMMON",
         "@chesttype": "treasurechestmedium",
+        "@factionwarfare": "false",
         "Tiles": {
           "Biome": [
             {
@@ -30834,6 +30840,7 @@
         "@alwaysrequireschanneling": "true",
         "@prefab": "FOREST_GREEN_LOOTCHEST_TREASURE_VETERAN_RARE",
         "@chesttype": "treasurechestmedium",
+        "@factionwarfare": "false",
         "Tiles": {
           "Biome": [
             {
@@ -30928,6 +30935,7 @@
         "@alwaysrequireschanneling": "true",
         "@prefab": "FOREST_GREEN_LOOTCHEST_TREASURE_VETERAN_LEGENDARY",
         "@chesttype": "treasurechestmedium",
+        "@factionwarfare": "false",
         "Tiles": {
           "Biome": [
             {
@@ -31022,6 +31030,7 @@
         "@alwaysrequireschanneling": "true",
         "@prefab": "FOREST_GREEN_LOOTCHEST_TREASURE_ELITE_STANDARD",
         "@chesttype": "treasurechestlarge",
+        "@factionwarfare": "false",
         "Tiles": {
           "Biome": [
             {
@@ -31112,6 +31121,7 @@
         "@alwaysrequireschanneling": "true",
         "@prefab": "FOREST_GREEN_LOOTCHEST_TREASURE_ELITE_UNCOMMON",
         "@chesttype": "treasurechestlarge",
+        "@factionwarfare": "false",
         "Tiles": {
           "Biome": [
             {
@@ -31292,6 +31302,7 @@
         "@alwaysrequireschanneling": "true",
         "@prefab": "FOREST_GREEN_LOOTCHEST_TREASURE_ELITE_LEGENDARY",
         "@chesttype": "treasurechestlarge",
+        "@factionwarfare": "false",
         "Tiles": {
           "Biome": [
             {
@@ -31365,6 +31376,410 @@
               ]
             }
           }
+        }
+      },
+      {
+        "@uniquename": "FACTION_TREASURE_SMALL",
+        "@avatar": "TREASURECHEST_COMMON_AVATAR",
+        "@faction": "NONE",
+        "@alertradius": "20",
+        "@spell": "OPEN_TREASURECHEST",
+        "@opensoundevent": "Play_open_chest_standard",
+        "@spawnsoundevent": "Play_spawn_loot_standard",
+        "@namelocatag": "@TREASURE_CHEST_FACTION_SMALL",
+        "@protectiontimeseconds": "180",
+        "@mightreward": "PVPCHALLENGE_TREASURES_SMALL_0",
+        "@alwaysrequireschanneling": "true",
+        "@prefab": "LOOTCHEST_FACTIONWARFARE_SMALL",
+        "@clusteractivitytype": "factionwarfarelootchest",
+        "@chesttype": "factionchestsmall",
+        "@factionwarfare": "true",
+        "@factionsupplyrewardreference": "FACTION_OPEN_WORLD_CHEST_SMALL",
+        "@eligibilitydistance": "45",
+        "Tiles": {
+          "Biome": [
+            {
+              "@name": "Forest",
+              "@green": "LOOTCHEST_FACTIONWARFARE_SMALL",
+              "@red": "LOOTCHEST_FACTIONWARFARE_SMALL",
+              "@dead": "LOOTCHEST_FACTIONWARFARE_SMALL"
+            },
+            {
+              "@name": "Highland",
+              "@green": "LOOTCHEST_FACTIONWARFARE_SMALL",
+              "@red": "LOOTCHEST_FACTIONWARFARE_SMALL",
+              "@dead": "LOOTCHEST_FACTIONWARFARE_SMALL"
+            },
+            {
+              "@name": "Mountain",
+              "@green": "LOOTCHEST_FACTIONWARFARE_SMALL",
+              "@red": "LOOTCHEST_FACTIONWARFARE_SMALL",
+              "@dead": "LOOTCHEST_FACTIONWARFARE_SMALL"
+            },
+            {
+              "@name": "Steppe",
+              "@green": "LOOTCHEST_FACTIONWARFARE_SMALL",
+              "@red": "LOOTCHEST_FACTIONWARFARE_SMALL",
+              "@dead": "LOOTCHEST_FACTIONWARFARE_SMALL"
+            },
+            {
+              "@name": "Swamp",
+              "@green": "LOOTCHEST_FACTIONWARFARE_SMALL",
+              "@red": "LOOTCHEST_FACTIONWARFARE_SMALL",
+              "@dead": "LOOTCHEST_FACTIONWARFARE_SMALL"
+            }
+          ]
+        },
+        "RareStates": {
+          "@hiderarityuntil": "OnUnlock",
+          "RareState": [
+            {
+              "@state": "standard",
+              "@weight": "590",
+              "@opensoundevent": "Play_open_chest_standard",
+              "@spawnsoundevent": "Play_spawn_loot_standard",
+              "@namelocatag": "@LOOTCHEST_TREASURE_FACTION_SMALL_STANDARD",
+              "@mightreward": "PVPCHALLENGE_TREASURES_MINI_0",
+              "Loot": {
+                "LootByTier": [
+                  {
+                    "@tier": "4",
+                    "LootListReference": {
+                      "@name": "TREASURE_CHEST_LOOT_SOLO_STANDARD"
+                    }
+                  },
+                  {
+                    "@tier": "5",
+                    "LootListReference": {
+                      "@name": "TREASURE_CHEST_LOOT_SOLO_STANDARD"
+                    }
+                  },
+                  {
+                    "@tier": "6",
+                    "LootListReference": {
+                      "@name": "TREASURE_CHEST_LOOT_SOLO_STANDARD"
+                    }
+                  },
+                  {
+                    "@tier": "7",
+                    "LootListReference": {
+                      "@name": "TREASURE_CHEST_LOOT_SOLO_STANDARD"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "@state": "uncommon",
+              "@weight": "300",
+              "@opensoundevent": "Play_open_chest_uncommon",
+              "@spawnsoundevent": "Play_spawn_loot_uncommon",
+              "@namelocatag": "@LOOTCHEST_TREASURE_FACTION_SMALL_UNCOMMON",
+              "@mightreward": "PVPCHALLENGE_TREASURES_MINI_1",
+              "Loot": {
+                "LootByTier": [
+                  {
+                    "@tier": "4",
+                    "LootListReference": {
+                      "@name": "TREASURE_CHEST_LOOT_SOLO_UNCOMMON"
+                    }
+                  },
+                  {
+                    "@tier": "5",
+                    "LootListReference": {
+                      "@name": "TREASURE_CHEST_LOOT_SOLO_UNCOMMON"
+                    }
+                  },
+                  {
+                    "@tier": "6",
+                    "LootListReference": {
+                      "@name": "TREASURE_CHEST_LOOT_SOLO_UNCOMMON"
+                    }
+                  },
+                  {
+                    "@tier": "7",
+                    "LootListReference": {
+                      "@name": "TREASURE_CHEST_LOOT_SOLO_UNCOMMON"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "@state": "rare",
+              "@weight": "100",
+              "@opensoundevent": "Play_open_chest_rare",
+              "@spawnsoundevent": "Play_spawn_loot_rare",
+              "@namelocatag": "@LOOTCHEST_TREASURE_FACTION_SMALL_RARE",
+              "@mightreward": "PVPCHALLENGE_TREASURES_MINI_2",
+              "Loot": {
+                "LootByTier": [
+                  {
+                    "@tier": "4",
+                    "LootListReference": {
+                      "@name": "TREASURE_CHEST_LOOT_SOLO_RARE"
+                    }
+                  },
+                  {
+                    "@tier": "5",
+                    "LootListReference": {
+                      "@name": "TREASURE_CHEST_LOOT_SOLO_RARE"
+                    }
+                  },
+                  {
+                    "@tier": "6",
+                    "LootListReference": {
+                      "@name": "TREASURE_CHEST_LOOT_SOLO_RARE"
+                    }
+                  },
+                  {
+                    "@tier": "7",
+                    "LootListReference": {
+                      "@name": "TREASURE_CHEST_LOOT_SOLO_RARE"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "@state": "legendary",
+              "@weight": "10",
+              "@opensoundevent": "Play_open_chest_legendary",
+              "@spawnsoundevent": "Play_spawn_loot_legendary",
+              "@namelocatag": "@LOOTCHEST_TREASURE_FACTION_SMALL_LEGENDARY",
+              "@mightreward": "PVPCHALLENGE_TREASURES_MINI_3",
+              "Loot": {
+                "LootByTier": [
+                  {
+                    "@tier": "4",
+                    "LootListReference": {
+                      "@name": "TREASURE_CHEST_LOOT_SOLO_LEGENDARY"
+                    }
+                  },
+                  {
+                    "@tier": "5",
+                    "LootListReference": {
+                      "@name": "TREASURE_CHEST_LOOT_SOLO_LEGENDARY"
+                    }
+                  },
+                  {
+                    "@tier": "6",
+                    "LootListReference": {
+                      "@name": "TREASURE_CHEST_LOOT_SOLO_LEGENDARY"
+                    }
+                  },
+                  {
+                    "@tier": "7",
+                    "LootListReference": {
+                      "@name": "TREASURE_CHEST_LOOT_SOLO_LEGENDARY"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "@uniquename": "FACTION_TREASURE_MEDIUM",
+        "@avatar": "TREASURECHEST_COMMON_AVATAR",
+        "@faction": "NONE",
+        "@alertradius": "20",
+        "@spell": "OPEN_TREASURECHEST",
+        "@opensoundevent": "Play_open_chest_standard",
+        "@spawnsoundevent": "Play_spawn_loot_standard",
+        "@namelocatag": "@TREASURE_CHEST_FACTION_MEDIUM",
+        "@protectiontimeseconds": "300",
+        "@mightreward": "PVPCHALLENGE_TREASURES_SMALL_0",
+        "@alwaysrequireschanneling": "true",
+        "@prefab": "LOOTCHEST_FACTIONWARFARE_MEDIUM",
+        "@clusteractivitytype": "factionwarfarelootchest",
+        "@chesttype": "factionchestmedium",
+        "@factionwarfare": "true",
+        "@factionsupplyrewardreference": "FACTION_OPEN_WORLD_CHEST_MEDIUM",
+        "@eligibilitydistance": "45",
+        "Tiles": {
+          "Biome": [
+            {
+              "@name": "Forest",
+              "@green": "LOOTCHEST_FACTIONWARFARE_MEDIUM",
+              "@red": "LOOTCHEST_FACTIONWARFARE_MEDIUM",
+              "@dead": "LOOTCHEST_FACTIONWARFARE_MEDIUM"
+            },
+            {
+              "@name": "Highland",
+              "@green": "LOOTCHEST_FACTIONWARFARE_MEDIUM",
+              "@red": "LOOTCHEST_FACTIONWARFARE_MEDIUM",
+              "@dead": "LOOTCHEST_FACTIONWARFARE_MEDIUM"
+            },
+            {
+              "@name": "Mountain",
+              "@green": "LOOTCHEST_FACTIONWARFARE_MEDIUM",
+              "@red": "LOOTCHEST_FACTIONWARFARE_MEDIUM",
+              "@dead": "LOOTCHEST_FACTIONWARFARE_MEDIUM"
+            },
+            {
+              "@name": "Steppe",
+              "@green": "LOOTCHEST_FACTIONWARFARE_MEDIUM",
+              "@red": "LOOTCHEST_FACTIONWARFARE_MEDIUM",
+              "@dead": "LOOTCHEST_FACTIONWARFARE_MEDIUM"
+            },
+            {
+              "@name": "Swamp",
+              "@green": "LOOTCHEST_FACTIONWARFARE_MEDIUM",
+              "@red": "LOOTCHEST_FACTIONWARFARE_MEDIUM",
+              "@dead": "LOOTCHEST_FACTIONWARFARE_MEDIUM"
+            }
+          ]
+        },
+        "RareStates": {
+          "@hiderarityuntil": "OnUnlock",
+          "RareState": [
+            {
+              "@state": "standard",
+              "@weight": "590",
+              "@opensoundevent": "Play_open_chest_standard",
+              "@spawnsoundevent": "Play_spawn_loot_standard",
+              "@namelocatag": "@LOOTCHEST_TREASURE_FACTION_MEDIUM_STANDARD",
+              "@mightreward": "PVPCHALLENGE_TREASURES_MINI_0",
+              "Loot": {
+                "LootByTier": [
+                  {
+                    "@tier": "4",
+                    "LootListReference": {
+                      "@name": "TREASURE_CHEST_LOOT_VETERAN_STANDARD"
+                    }
+                  },
+                  {
+                    "@tier": "5",
+                    "LootListReference": {
+                      "@name": "TREASURE_CHEST_LOOT_VETERAN_STANDARD"
+                    }
+                  },
+                  {
+                    "@tier": "6",
+                    "LootListReference": {
+                      "@name": "TREASURE_CHEST_LOOT_VETERAN_STANDARD"
+                    }
+                  },
+                  {
+                    "@tier": "7",
+                    "LootListReference": {
+                      "@name": "TREASURE_CHEST_LOOT_VETERAN_STANDARD"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "@state": "uncommon",
+              "@weight": "300",
+              "@opensoundevent": "Play_open_chest_uncommon",
+              "@spawnsoundevent": "Play_spawn_loot_uncommon",
+              "@namelocatag": "@LOOTCHEST_TREASURE_FACTION_MEDIUM_UNCOMMON",
+              "@mightreward": "PVPCHALLENGE_TREASURES_MINI_1",
+              "Loot": {
+                "LootByTier": [
+                  {
+                    "@tier": "4",
+                    "LootListReference": {
+                      "@name": "TREASURE_CHEST_LOOT_VETERAN_UNCOMMON"
+                    }
+                  },
+                  {
+                    "@tier": "5",
+                    "LootListReference": {
+                      "@name": "TREASURE_CHEST_LOOT_VETERAN_UNCOMMON"
+                    }
+                  },
+                  {
+                    "@tier": "6",
+                    "LootListReference": {
+                      "@name": "TREASURE_CHEST_LOOT_VETERAN_UNCOMMON"
+                    }
+                  },
+                  {
+                    "@tier": "7",
+                    "LootListReference": {
+                      "@name": "TREASURE_CHEST_LOOT_VETERAN_UNCOMMON"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "@state": "rare",
+              "@weight": "100",
+              "@opensoundevent": "Play_open_chest_rare",
+              "@spawnsoundevent": "Play_spawn_loot_rare",
+              "@namelocatag": "@LOOTCHEST_TREASURE_FACTION_MEDIUM_RARE",
+              "@mightreward": "PVPCHALLENGE_TREASURES_MINI_2",
+              "Loot": {
+                "LootByTier": [
+                  {
+                    "@tier": "4",
+                    "LootListReference": {
+                      "@name": "TREASURE_CHEST_LOOT_VETERAN_RARE"
+                    }
+                  },
+                  {
+                    "@tier": "5",
+                    "LootListReference": {
+                      "@name": "TREASURE_CHEST_LOOT_VETERAN_RARE"
+                    }
+                  },
+                  {
+                    "@tier": "6",
+                    "LootListReference": {
+                      "@name": "TREASURE_CHEST_LOOT_VETERAN_RARE"
+                    }
+                  },
+                  {
+                    "@tier": "7",
+                    "LootListReference": {
+                      "@name": "TREASURE_CHEST_LOOT_VETERAN_RARE"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "@state": "legendary",
+              "@weight": "10",
+              "@opensoundevent": "Play_open_chest_legendary",
+              "@spawnsoundevent": "Play_spawn_loot_legendary",
+              "@namelocatag": "@LOOTCHEST_TREASURE_FACTION_MEDIUM_LEGENDARY",
+              "@mightreward": "PVPCHALLENGE_TREASURES_MINI_3",
+              "Loot": {
+                "LootByTier": [
+                  {
+                    "@tier": "4",
+                    "LootListReference": {
+                      "@name": "TREASURE_CHEST_LOOT_VETERAN_LEGENDARY"
+                    }
+                  },
+                  {
+                    "@tier": "5",
+                    "LootListReference": {
+                      "@name": "TREASURE_CHEST_LOOT_VETERAN_LEGENDARY"
+                    }
+                  },
+                  {
+                    "@tier": "6",
+                    "LootListReference": {
+                      "@name": "TREASURE_CHEST_LOOT_VETERAN_LEGENDARY"
+                    }
+                  },
+                  {
+                    "@tier": "7",
+                    "LootListReference": {
+                      "@name": "TREASURE_CHEST_LOOT_VETERAN_LEGENDARY"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
         }
       },
       {
@@ -32341,7 +32756,6 @@
         "@namelocatag": "@LOOTCHEST_TREASURE_CASTLE_STANDARD",
         "@protectiontimeseconds": "3600",
         "@pvpzoneradius": "40",
-        "@mightreward": "PVPCHALLENGE_TREASURES_LARGE_0",
         "@alwaysrequireschanneling": "true",
         "@prefab": "LOOTCHEST_CASTLE_01",
         "@requirescastleownership": "true",
@@ -32404,7 +32818,6 @@
         "@namelocatag": "@LOOTCHEST_TREASURE_CASTLE_STANDARD",
         "@protectiontimeseconds": "3600",
         "@pvpzoneradius": "40",
-        "@mightreward": "PVPCHALLENGE_TREASURES_LARGE_0",
         "@alwaysrequireschanneling": "true",
         "@prefab": "LOOTCHEST_CASTLE_01",
         "@requirescastleownership": "true",
@@ -32467,7 +32880,6 @@
         "@namelocatag": "@LOOTCHEST_TREASURE_CASTLE_STANDARD",
         "@protectiontimeseconds": "3600",
         "@pvpzoneradius": "40",
-        "@mightreward": "PVPCHALLENGE_TREASURES_LARGE_0",
         "@alwaysrequireschanneling": "true",
         "@prefab": "LOOTCHEST_CASTLE_01",
         "@requirescastleownership": "true",
@@ -32529,7 +32941,6 @@
         "@namelocatag": "@LOOTCHEST_TREASURE_CASTLE_LEGENDARY",
         "@protectiontimeseconds": "3600",
         "@pvpzoneradius": "40",
-        "@mightreward": "PVPCHALLENGE_CASTLE_3",
         "@alwaysrequireschanneling": "true",
         "@prefab": "LOOTCHEST_CASTLE_01",
         "@requirescastleownership": "true",
@@ -32578,6 +32989,568 @@
               ]
             }
           }
+        }
+      },
+      {
+        "@uniquename": "FACTION_DYNAMIC_CAMP_SMALL_LC",
+        "@avatar": "TREASURECHEST_COMMON_AVATAR",
+        "@faction": "CITY_CAERLEON",
+        "@alertradius": "20",
+        "@spell": "OPEN_TREASURECHEST",
+        "@opensoundevent": "Play_open_chest_standard",
+        "@spawnsoundevent": "Play_spawn_loot_standard",
+        "@namelocatag": "@TREASURE_CHEST_FACTION_SMALL",
+        "@locklocatag": "@CORRUPTED_DUNGEON_CHEST_LOCK_MESSAGE",
+        "@alwaysrequireschanneling": "true",
+        "@prefab": "LOOTCHEST_FACTIONWARFARE_SMALL",
+        "@clusteractivitytype": "factionwarfarecampchest",
+        "@chesttype": "smallfactioncamp",
+        "@factionwarfare": "true",
+        "@factionsupplyrewardreference": "FACTION_CAMP_SMALL",
+        "@protectedbyquest": "true",
+        "@eligibilitydistance": "45",
+        "@mindivisor": "5",
+        "Tiles": {
+          "Biome": [
+            {
+              "@name": "Forest",
+              "@green": "LOOTCHEST_FACTIONWARFARE_SMALL",
+              "@red": "LOOTCHEST_FACTIONWARFARE_SMALL",
+              "@dead": "LOOTCHEST_FACTIONWARFARE_SMALL"
+            },
+            {
+              "@name": "Highland",
+              "@green": "LOOTCHEST_FACTIONWARFARE_SMALL",
+              "@red": "LOOTCHEST_FACTIONWARFARE_SMALL",
+              "@dead": "LOOTCHEST_FACTIONWARFARE_SMALL"
+            },
+            {
+              "@name": "Mountain",
+              "@green": "LOOTCHEST_FACTIONWARFARE_SMALL",
+              "@red": "LOOTCHEST_FACTIONWARFARE_SMALL",
+              "@dead": "LOOTCHEST_FACTIONWARFARE_SMALL"
+            },
+            {
+              "@name": "Steppe",
+              "@green": "LOOTCHEST_FACTIONWARFARE_SMALL",
+              "@red": "LOOTCHEST_FACTIONWARFARE_SMALL",
+              "@dead": "LOOTCHEST_FACTIONWARFARE_SMALL"
+            },
+            {
+              "@name": "Swamp",
+              "@green": "LOOTCHEST_FACTIONWARFARE_SMALL",
+              "@red": "LOOTCHEST_FACTIONWARFARE_SMALL",
+              "@dead": "LOOTCHEST_FACTIONWARFARE_SMALL"
+            }
+          ]
+        },
+        "RareStates": {
+          "@hiderarityuntil": "OnUnlock",
+          "RareState": [
+            {
+              "@state": "standard",
+              "@weight": "590",
+              "@opensoundevent": "Play_open_chest_standard",
+              "@spawnsoundevent": "Play_spawn_loot_standard",
+              "@namelocatag": "@LOOTCHEST_TREASURE_FACTION_SMALL_STANDARD",
+              "@mightreward": "PVPCHALLENGE_TREASURES_MINI_0",
+              "Loot": {
+                "LootByTier": [
+                  {
+                    "@tier": "4",
+                    "Item": [
+                      {
+                        "@type": "T4_SKILLBOOK_NONTRADABLE",
+                        "@chance": "4.579055",
+                        "@ignoreforactivitychest": "true"
+                      },
+                      {
+                        "@type": "T5_SKILLBOOK_NONTRADABLE",
+                        "@chance": "1.037475",
+                        "@ignoreforactivitychest": "true"
+                      }
+                    ],
+                    "LootListReference": {
+                      "@name": "FAME_BOOKS_LOOT_CHESTS",
+                      "@chance": "0.269125",
+                      "@ignoreforactivitychest": "true"
+                    }
+                  },
+                  {
+                    "@tier": "5",
+                    "Item": [
+                      {
+                        "@type": "T4_SKILLBOOK_NONTRADABLE",
+                        "@chance": "4.579055",
+                        "@ignoreforactivitychest": "true"
+                      },
+                      {
+                        "@type": "T5_SKILLBOOK_NONTRADABLE",
+                        "@chance": "2.091335",
+                        "@ignoreforactivitychest": "true"
+                      }
+                    ],
+                    "LootListReference": {
+                      "@name": "FAME_BOOKS_LOOT_CHESTS",
+                      "@chance": "0.469125",
+                      "@ignoreforactivitychest": "true"
+                    }
+                  },
+                  {
+                    "@tier": "6",
+                    "Item": [
+                      {
+                        "@type": "T4_SKILLBOOK_NONTRADABLE",
+                        "@chance": "4.579055",
+                        "@ignoreforactivitychest": "true"
+                      },
+                      {
+                        "@type": "T5_SKILLBOOK_NONTRADABLE",
+                        "@chance": "3.713875",
+                        "@ignoreforactivitychest": "true"
+                      }
+                    ],
+                    "LootListReference": {
+                      "@name": "FAME_BOOKS_LOOT_CHESTS",
+                      "@chance": "0.64289",
+                      "@ignoreforactivitychest": "true"
+                    }
+                  },
+                  {
+                    "@tier": "7",
+                    "Item": [
+                      {
+                        "@type": "T4_SKILLBOOK_NONTRADABLE",
+                        "@chance": "4.579055",
+                        "@ignoreforactivitychest": "true"
+                      },
+                      {
+                        "@type": "T5_SKILLBOOK_NONTRADABLE",
+                        "@chance": "1.85759",
+                        "@ignoreforactivitychest": "true"
+                      },
+                      {
+                        "@type": "T6_SKILLBOOK_NONTRADABLE",
+                        "@chance": "1.58623",
+                        "@ignoreforactivitychest": "true"
+                      }
+                    ],
+                    "LootListReference": {
+                      "@name": "FAME_BOOKS_LOOT_CHESTS",
+                      "@chance": "0.86877",
+                      "@ignoreforactivitychest": "true"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "@state": "uncommon",
+              "@weight": "300",
+              "@opensoundevent": "Play_open_chest_uncommon",
+              "@spawnsoundevent": "Play_spawn_loot_uncommon",
+              "@namelocatag": "@LOOTCHEST_TREASURE_FACTION_SMALL_UNCOMMON",
+              "@mightreward": "PVPCHALLENGE_TREASURES_MINI_1",
+              "Loot": {
+                "LootByTier": [
+                  {
+                    "@tier": "4",
+                    "LootListReference": {
+                      "@name": "T4_FACTION_CHEST_SMALL_UNCOMMON",
+                      "@chance": "5"
+                    }
+                  },
+                  {
+                    "@tier": "5",
+                    "LootListReference": {
+                      "@name": "T5_FACTION_CHEST_SMALL_UNCOMMON",
+                      "@chance": "5"
+                    }
+                  },
+                  {
+                    "@tier": "6",
+                    "LootListReference": {
+                      "@name": "T6_FACTION_CHEST_SMALL_UNCOMMON",
+                      "@chance": "5"
+                    }
+                  },
+                  {
+                    "@tier": "7",
+                    "LootListReference": {
+                      "@name": "T7_FACTION_CHEST_SMALL_UNCOMMON",
+                      "@chance": "5"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "@state": "rare",
+              "@weight": "100",
+              "@opensoundevent": "Play_open_chest_rare",
+              "@spawnsoundevent": "Play_spawn_loot_rare",
+              "@namelocatag": "@LOOTCHEST_TREASURE_FACTION_SMALL_RARE",
+              "@mightreward": "PVPCHALLENGE_TREASURES_MINI_2",
+              "Loot": {
+                "LootByTier": [
+                  {
+                    "@tier": "4",
+                    "LootListReference": {
+                      "@name": "T4_FACTION_CHEST_SMALL_RARE",
+                      "@chance": "5"
+                    }
+                  },
+                  {
+                    "@tier": "5",
+                    "LootListReference": {
+                      "@name": "T5_FACTION_CHEST_SMALL_RARE",
+                      "@chance": "5"
+                    }
+                  },
+                  {
+                    "@tier": "6",
+                    "LootListReference": {
+                      "@name": "T6_FACTION_CHEST_SMALL_RARE",
+                      "@chance": "5"
+                    }
+                  },
+                  {
+                    "@tier": "7",
+                    "LootListReference": {
+                      "@name": "T7_FACTION_CHEST_SMALL_RARE",
+                      "@chance": "5"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "@state": "legendary",
+              "@weight": "10",
+              "@opensoundevent": "Play_open_chest_legendary",
+              "@spawnsoundevent": "Play_spawn_loot_legendary",
+              "@namelocatag": "@LOOTCHEST_TREASURE_FACTION_SMALL_LEGENDARY",
+              "@mightreward": "PVPCHALLENGE_TREASURES_MINI_3",
+              "Loot": {
+                "LootByTier": [
+                  {
+                    "@tier": "4",
+                    "LootListReference": {
+                      "@name": "T4_FACTION_CHEST_SMALL_LEGENDARY",
+                      "@chance": "5"
+                    }
+                  },
+                  {
+                    "@tier": "5",
+                    "LootListReference": {
+                      "@name": "T5_FACTION_CHEST_SMALL_LEGENDARY",
+                      "@chance": "5"
+                    }
+                  },
+                  {
+                    "@tier": "6",
+                    "LootListReference": {
+                      "@name": "T6_FACTION_CHEST_SMALL_LEGENDARY",
+                      "@chance": "5"
+                    }
+                  },
+                  {
+                    "@tier": "7",
+                    "LootListReference": {
+                      "@name": "T7_FACTION_CHEST_SMALL_LEGENDARY",
+                      "@chance": "5"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "@uniquename": "FACTION_DYNAMIC_CAMP_MEDIUM_LC",
+        "@avatar": "TREASURECHEST_COMMON_AVATAR",
+        "@faction": "CITY_CAERLEON",
+        "@alertradius": "20",
+        "@spell": "OPEN_TREASURECHEST",
+        "@opensoundevent": "Play_open_chest_standard",
+        "@spawnsoundevent": "Play_spawn_loot_standard",
+        "@namelocatag": "@TREASURE_CHEST_FACTION_MEDIUM",
+        "@locklocatag": "@CORRUPTED_DUNGEON_CHEST_LOCK_MESSAGE",
+        "@alwaysrequireschanneling": "true",
+        "@prefab": "LOOTCHEST_FACTIONWARFARE_MEDIUM",
+        "@clusteractivitytype": "factionwarfarecampchest",
+        "@chesttype": "mediumfactioncamp",
+        "@factionwarfare": "true",
+        "@factionsupplyrewardreference": "FACTION_CAMP_MEDIUM",
+        "@protectedbyquest": "true",
+        "@eligibilitydistance": "90",
+        "@mindivisor": "20",
+        "Tiles": {
+          "Biome": [
+            {
+              "@name": "Forest",
+              "@green": "LOOTCHEST_FACTIONWARFARE_MEDIUM",
+              "@red": "LOOTCHEST_FACTIONWARFARE_MEDIUM",
+              "@dead": "LOOTCHEST_FACTIONWARFARE_MEDIUM"
+            },
+            {
+              "@name": "Highland",
+              "@green": "LOOTCHEST_FACTIONWARFARE_MEDIUM",
+              "@red": "LOOTCHEST_FACTIONWARFARE_MEDIUM",
+              "@dead": "LOOTCHEST_FACTIONWARFARE_MEDIUM"
+            },
+            {
+              "@name": "Mountain",
+              "@green": "LOOTCHEST_FACTIONWARFARE_MEDIUM",
+              "@red": "LOOTCHEST_FACTIONWARFARE_MEDIUM",
+              "@dead": "LOOTCHEST_FACTIONWARFARE_MEDIUM"
+            },
+            {
+              "@name": "Steppe",
+              "@green": "LOOTCHEST_FACTIONWARFARE_MEDIUM",
+              "@red": "LOOTCHEST_FACTIONWARFARE_MEDIUM",
+              "@dead": "LOOTCHEST_FACTIONWARFARE_MEDIUM"
+            },
+            {
+              "@name": "Swamp",
+              "@green": "LOOTCHEST_FACTIONWARFARE_MEDIUM",
+              "@red": "LOOTCHEST_FACTIONWARFARE_MEDIUM",
+              "@dead": "LOOTCHEST_FACTIONWARFARE_MEDIUM"
+            }
+          ]
+        },
+        "RareStates": {
+          "@hiderarityuntil": "OnUnlock",
+          "RareState": [
+            {
+              "@state": "standard",
+              "@weight": "590",
+              "@opensoundevent": "Play_open_chest_standard",
+              "@spawnsoundevent": "Play_spawn_loot_standard",
+              "@namelocatag": "@LOOTCHEST_TREASURE_FACTION_MEDIUM_STANDARD",
+              "@mightreward": "PVPCHALLENGE_TREASURES_MINI_0",
+              "Loot": {
+                "LootByTier": [
+                  {
+                    "@tier": "4",
+                    "Item": [
+                      {
+                        "@type": "T4_SKILLBOOK_NONTRADABLE",
+                        "@chance": "28.951",
+                        "@ignoreforactivitychest": "true"
+                      },
+                      {
+                        "@type": "T4_SKILLBOOK_NONTRADABLE",
+                        "@chance": "13.08236",
+                        "@ignoreforactivitychest": "true"
+                      },
+                      {
+                        "@type": "T5_SKILLBOOK_NONTRADABLE",
+                        "@chance": "14.4755",
+                        "@ignoreforactivitychest": "true"
+                      }
+                    ],
+                    "LootListReference": {
+                      "@name": "FAME_BOOKS_LOOT_CHESTS",
+                      "@chance": "6.0873",
+                      "@ignoreforactivitychest": "true"
+                    }
+                  },
+                  {
+                    "@tier": "5",
+                    "Item": [
+                      {
+                        "@type": "T5_SKILLBOOK_NONTRADABLE",
+                        "@chance": "28.951",
+                        "@ignoreforactivitychest": "true"
+                      },
+                      {
+                        "@type": "T5_SKILLBOOK_NONTRADABLE",
+                        "@chance": "6.11452",
+                        "@ignoreforactivitychest": "true"
+                      },
+                      {
+                        "@type": "T6_SKILLBOOK_NONTRADABLE",
+                        "@chance": "4.90358",
+                        "@ignoreforactivitychest": "true"
+                      }
+                    ],
+                    "LootListReference": {
+                      "@name": "FAME_BOOKS_LOOT_CHESTS",
+                      "@chance": "8.11666",
+                      "@ignoreforactivitychest": "true"
+                    }
+                  },
+                  {
+                    "@tier": "6",
+                    "Item": [
+                      {
+                        "@type": "T5_SKILLBOOK_NONTRADABLE",
+                        "@chance": "28.951",
+                        "@ignoreforactivitychest": "true"
+                      },
+                      {
+                        "@type": "T6_SKILLBOOK_NONTRADABLE",
+                        "@chance": "14.36042",
+                        "@ignoreforactivitychest": "true"
+                      }
+                    ],
+                    "LootListReference": {
+                      "@name": "FAME_BOOKS_LOOT_CHESTS",
+                      "@chance": "11.12286",
+                      "@ignoreforactivitychest": "true"
+                    }
+                  },
+                  {
+                    "@tier": "7",
+                    "Item": [
+                      {
+                        "@type": "T5_SKILLBOOK_NONTRADABLE",
+                        "@chance": "28.951",
+                        "@ignoreforactivitychest": "true"
+                      },
+                      {
+                        "@type": "T6_SKILLBOOK_NONTRADABLE",
+                        "@chance": "8.65512",
+                        "@ignoreforactivitychest": "true"
+                      },
+                      {
+                        "@type": "T7_SKILLBOOK_NONTRADABLE",
+                        "@chance": "7.40978",
+                        "@ignoreforactivitychest": "true"
+                      }
+                    ],
+                    "LootListReference": {
+                      "@name": "FAME_BOOKS_LOOT_CHESTS",
+                      "@chance": "15.0309",
+                      "@ignoreforactivitychest": "true"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "@state": "uncommon",
+              "@weight": "300",
+              "@opensoundevent": "Play_open_chest_uncommon",
+              "@spawnsoundevent": "Play_spawn_loot_uncommon",
+              "@namelocatag": "@LOOTCHEST_TREASURE_FACTION_MEDIUM_UNCOMMON",
+              "@mightreward": "PVPCHALLENGE_TREASURES_MINI_1",
+              "Loot": {
+                "LootByTier": [
+                  {
+                    "@tier": "4",
+                    "LootListReference": {
+                      "@name": "T4_FACTION_CHEST_MEDIUM_UNCOMMON",
+                      "@chance": "20"
+                    }
+                  },
+                  {
+                    "@tier": "5",
+                    "LootListReference": {
+                      "@name": "T5_FACTION_CHEST_MEDIUM_UNCOMMON",
+                      "@chance": "20"
+                    }
+                  },
+                  {
+                    "@tier": "6",
+                    "LootListReference": {
+                      "@name": "T6_FACTION_CHEST_MEDIUM_UNCOMMON",
+                      "@chance": "20"
+                    }
+                  },
+                  {
+                    "@tier": "7",
+                    "LootListReference": {
+                      "@name": "T7_FACTION_CHEST_MEDIUM_UNCOMMON",
+                      "@chance": "20"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "@state": "rare",
+              "@weight": "100",
+              "@opensoundevent": "Play_open_chest_rare",
+              "@spawnsoundevent": "Play_spawn_loot_rare",
+              "@namelocatag": "@LOOTCHEST_TREASURE_FACTION_MEDIUM_RARE",
+              "@mightreward": "PVPCHALLENGE_TREASURES_MINI_2",
+              "Loot": {
+                "LootByTier": [
+                  {
+                    "@tier": "4",
+                    "LootListReference": {
+                      "@name": "T4_FACTION_CHEST_MEDIUM_RARE",
+                      "@chance": "20"
+                    }
+                  },
+                  {
+                    "@tier": "5",
+                    "LootListReference": {
+                      "@name": "T5_FACTION_CHEST_MEDIUM_RARE",
+                      "@chance": "20"
+                    }
+                  },
+                  {
+                    "@tier": "6",
+                    "LootListReference": {
+                      "@name": "T6_FACTION_CHEST_MEDIUM_RARE",
+                      "@chance": "20"
+                    }
+                  },
+                  {
+                    "@tier": "7",
+                    "LootListReference": {
+                      "@name": "T7_FACTION_CHEST_MEDIUM_RARE",
+                      "@chance": "20"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "@state": "legendary",
+              "@weight": "10",
+              "@opensoundevent": "Play_open_chest_legendary",
+              "@spawnsoundevent": "Play_spawn_loot_legendary",
+              "@namelocatag": "@LOOTCHEST_TREASURE_FACTION_MEDIUM_LEGENDARY",
+              "@mightreward": "PVPCHALLENGE_TREASURES_MINI_3",
+              "Loot": {
+                "LootByTier": [
+                  {
+                    "@tier": "4",
+                    "LootListReference": {
+                      "@name": "T4_FACTION_CHEST_MEDIUM_LEGENDARY",
+                      "@chance": "20"
+                    }
+                  },
+                  {
+                    "@tier": "5",
+                    "LootListReference": {
+                      "@name": "T5_FACTION_CHEST_MEDIUM_LEGENDARY",
+                      "@chance": "20"
+                    }
+                  },
+                  {
+                    "@tier": "6",
+                    "LootListReference": {
+                      "@name": "T6_FACTION_CHEST_MEDIUM_LEGENDARY",
+                      "@chance": "20"
+                    }
+                  },
+                  {
+                    "@tier": "7",
+                    "LootListReference": {
+                      "@name": "T7_FACTION_CHEST_MEDIUM_LEGENDARY",
+                      "@chance": "20"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
         }
       },
       {
@@ -34571,6 +35544,37 @@
               "Loot": {
                 "LootByTier": [
                   {
+                    "@tier": "4",
+                    "Item": [
+                      {
+                        "@type": "T4_SKILLBOOK_NONTRADABLE",
+                        "@chance": "1.44755",
+                        "@ignoreforactivitychest": "true"
+                      },
+                      {
+                        "@type": "T4_SKILLBOOK_NONTRADABLE",
+                        "@chance": "0.654118",
+                        "@ignoreforactivitychest": "true"
+                      },
+                      {
+                        "@type": "T5_SKILLBOOK_NONTRADABLE",
+                        "@chance": "0.723775",
+                        "@ignoreforactivitychest": "true"
+                      },
+                      {
+                        "@type": "QUESTITEM_TOKEN_SMUGGLER",
+                        "@chance": "4.204252",
+                        "@ignoreforactivitychest": "true",
+                        "@continent": "Outlands"
+                      }
+                    ],
+                    "LootListReference": {
+                      "@name": "FAME_BOOKS_LOOT_CHESTS",
+                      "@chance": "0.304365",
+                      "@ignoreforactivitychest": "true"
+                    }
+                  },
+                  {
                     "@tier": "5",
                     "Item": [
                       {
@@ -34701,6 +35705,12 @@
               "Loot": {
                 "LootByTier": [
                   {
+                    "@tier": "4",
+                    "LootListReference": {
+                      "@name": "T4_DYNAMIC_MEDIUM_CAMP_UNCOMMON"
+                    }
+                  },
+                  {
                     "@tier": "5",
                     "LootListReference": {
                       "@name": "T5_DYNAMIC_MEDIUM_CAMP_UNCOMMON"
@@ -34736,6 +35746,12 @@
               "Loot": {
                 "LootByTier": [
                   {
+                    "@tier": "4",
+                    "LootListReference": {
+                      "@name": "T4_DYNAMIC_MEDIUM_CAMP_RARE"
+                    }
+                  },
+                  {
                     "@tier": "5",
                     "LootListReference": {
                       "@name": "T5_DYNAMIC_MEDIUM_CAMP_RARE"
@@ -34770,6 +35786,12 @@
               "@namelocatag": "@DYNAMIC_PERSONALCHEST_MEDIUM_NAME_LEGENDARY",
               "Loot": {
                 "LootByTier": [
+                  {
+                    "@tier": "4",
+                    "LootListReference": {
+                      "@name": "T4_DYNAMIC_MEDIUM_CAMP_LEGENDARY"
+                    }
+                  },
                   {
                     "@tier": "5",
                     "LootListReference": {
@@ -34858,6 +35880,32 @@
               "@namelocatag": "@DYNAMIC_PERSONALCHEST_SMALL_NAME_STANDARD_FAME",
               "Loot": {
                 "LootByTier": [
+                  {
+                    "@tier": "4",
+                    "Item": [
+                      {
+                        "@type": "T4_SKILLBOOK_NONTRADABLE",
+                        "@chance": "0.915811",
+                        "@ignoreforactivitychest": "true"
+                      },
+                      {
+                        "@type": "T5_SKILLBOOK_NONTRADABLE",
+                        "@chance": "0.207495",
+                        "@ignoreforactivitychest": "true"
+                      },
+                      {
+                        "@type": "QUESTITEM_TOKEN_SMUGGLER",
+                        "@chance": "1.604738",
+                        "@ignoreforactivitychest": "true",
+                        "@continent": "Outlands"
+                      }
+                    ],
+                    "LootListReference": {
+                      "@name": "FAME_BOOKS_LOOT_CHESTS",
+                      "@chance": "0.053825",
+                      "@ignoreforactivitychest": "true"
+                    }
+                  },
                   {
                     "@tier": "5",
                     "Item": [
@@ -34984,6 +36032,12 @@
               "Loot": {
                 "LootByTier": [
                   {
+                    "@tier": "4",
+                    "LootListReference": {
+                      "@name": "T4_DYNAMIC_SMALL_CAMP_UNCOMMON"
+                    }
+                  },
+                  {
                     "@tier": "5",
                     "LootListReference": {
                       "@name": "T5_DYNAMIC_SMALL_CAMP_UNCOMMON"
@@ -35019,6 +36073,12 @@
               "Loot": {
                 "LootByTier": [
                   {
+                    "@tier": "4",
+                    "LootListReference": {
+                      "@name": "T4_DYNAMIC_SMALL_CAMP_RARE"
+                    }
+                  },
+                  {
                     "@tier": "5",
                     "LootListReference": {
                       "@name": "T5_DYNAMIC_SMALL_CAMP_RARE"
@@ -35053,6 +36113,12 @@
               "@namelocatag": "@DYNAMIC_PERSONALCHEST_SMALL_NAME_LEGENDARY",
               "Loot": {
                 "LootByTier": [
+                  {
+                    "@tier": "4",
+                    "LootListReference": {
+                      "@name": "T4_DYNAMIC_SMALL_CAMP_LEGENDARY"
+                    }
+                  },
                   {
                     "@tier": "5",
                     "LootListReference": {
@@ -39481,6 +40547,30 @@
         ]
       },
       {
+        "@name": "FACTION_TREASURE_SOLO",
+        "@despawntimeseconds": "300",
+        "@initialspawntimeseconds": "0",
+        "@respawntimesecondsmin": "86400",
+        "@respawntimesecondsmax": "86400",
+        "@respawn": "Never",
+        "LootChest": {
+          "@name": "FACTION_TREASURE_SMALL",
+          "@weight": "1"
+        }
+      },
+      {
+        "@name": "FACTION_TREASURE_GROUP",
+        "@despawntimeseconds": "300",
+        "@initialspawntimeseconds": "0",
+        "@respawntimesecondsmin": "86400",
+        "@respawntimesecondsmax": "86400",
+        "@respawn": "Never",
+        "LootChest": {
+          "@name": "FACTION_TREASURE_MEDIUM",
+          "@weight": "1"
+        }
+      },
+      {
         "@name": "ROADS_TREASURE_SOLO",
         "@despawntimeseconds": "300",
         "@initialspawntimeseconds": "0",
@@ -39781,6 +40871,40 @@
         "@respawn": "Never",
         "LootChest": {
           "@name": "TREASURE_CASTLE_LEGENDARY",
+          "@weight": "1"
+        }
+      },
+      {
+        "@name": "SPAWNPOINT_FACTION_DYNAMIC_CAMP_SMALL_LC",
+        "@despawntimeseconds": "300",
+        "@initialspawntimeseconds": "0",
+        "@respawntimesecondsmin": "86400",
+        "@respawntimesecondsmax": "86400",
+        "@respawn": "Never",
+        "TooltipDisplay": {
+          "@icon": "treasure_generic",
+          "@iconoffset": "-16 0",
+          "@textoffset": "-10"
+        },
+        "LootChest": {
+          "@name": "FACTION_DYNAMIC_CAMP_SMALL_LC",
+          "@weight": "1"
+        }
+      },
+      {
+        "@name": "SPAWNPOINT_FACTION_DYNAMIC_CAMP_MEDIUM_LC",
+        "@despawntimeseconds": "300",
+        "@initialspawntimeseconds": "0",
+        "@respawntimesecondsmin": "86400",
+        "@respawntimesecondsmax": "86400",
+        "@respawn": "Never",
+        "TooltipDisplay": {
+          "@icon": "treasure_generic",
+          "@iconoffset": "-16 0",
+          "@textoffset": "-10"
+        },
+        "LootChest": {
+          "@name": "FACTION_DYNAMIC_CAMP_MEDIUM_LC",
           "@weight": "1"
         }
       },

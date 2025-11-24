@@ -122,11 +122,21 @@
       "@killatrophy": "0.2",
       "@defensecap": "10000",
       "@payoutinterval": "900",
-      "@contributionscalar": "0.5",
+      "@clustercontributionscaler": "0.5",
+      "@duchycontributionscaler": "0.5",
+      "@supplypointduchycontributionscaler": "0.6",
+      "@duchyvictoryfactionpointreward": "4757781",
+      "@duchyconsolationfactionpointreward": "2854669",
+      "@duchydefendervictoryfactionpointbonus": "4948093",
+      "@duchydefendervictorybonusgroupsize": "1000",
       "@minitempower": "700",
       "@contributiontimeout": "900",
       "@killatrophytimeout": "900",
-      "@campaignstarttime": "0UTC"
+      "@campaignstarttime": "0UTC",
+      "@dynamictemplatecampsreactivationtimersmallcampsec": "900",
+      "@dynamictemplatecampsreactivationtimermediumcampsec": "1800",
+      "@dynamictemplatecampsphasechangedelaysec": "300",
+      "@factionknockdowndurabilitylossscaling": "0.7"
     },
     "redzoneevent": {
       "@mintime": "150",
@@ -252,42 +262,54 @@
     },
     "respawning": {
       "@minimumRespawnDistanceInMeters": "100",
-      "@maximumRespawnDistanceInClusters": "2",
+      "@maximumRespawnDistanceInClusters": "4",
       "@respawnTimeInSeconds": "16",
       "@respawnTimeFallOffInSeconds": "300",
-      "@respawnTimeIncreaseStepInSeconds": "6",
-      "@respawnPerMinute": "4",
-      "@maximumRespawnTimeInSeconds": "60"
+      "@respawnTimeIncreaseStepInSeconds": "3",
+      "@respawnPerMinute": "3",
+      "@maximumRespawnTimeInSeconds": "45"
+    },
+    "portalcost": {
+      "@mintravelcosts": "2000",
+      "@emvcostfactor": "0.05",
+      "@toolscostscalingfactor": "0.5",
+      "@ivbase": "0.98224197",
+      "@ivcoefficient": "102.43388085",
+      "@ivpower": "0.16148053",
+      "@ivboundconstant": "100",
+      "@ivmin": "0",
+      "@ivmax": "4096",
+      "@globalcostfactor": "0.5"
     },
     "DefensiveCombatBonus": {
       "clusterslost": [
         {
-          "@value": "8",
+          "@value": "75",
           "@buff": "FACTIONWARFAREDEFENSIVEBUFF_LVL1",
           "@damagetakenmodifier": "0.95"
         },
         {
-          "@value": "9",
+          "@value": "76",
           "@buff": "FACTIONWARFAREDEFENSIVEBUFF_LVL2",
           "@damagetakenmodifier": "0.90"
         },
         {
-          "@value": "10",
+          "@value": "77",
           "@buff": "FACTIONWARFAREDEFENSIVEBUFF_LVL3",
           "@damagetakenmodifier": "0.80"
         },
         {
-          "@value": "11",
+          "@value": "78",
           "@buff": "FACTIONWARFAREDEFENSIVEBUFF_LVL4",
           "@damagetakenmodifier": "0.70"
         },
         {
-          "@value": "12",
+          "@value": "79",
           "@buff": "FACTIONWARFAREDEFENSIVEBUFF_LVL5",
           "@damagetakenmodifier": "0.60"
         },
         {
-          "@value": "13",
+          "@value": "80",
           "@buff": "FACTIONWARFAREDEFENSIVEBUFF_LVL6",
           "@damagetakenmodifier": "0.50"
         }
@@ -295,21 +317,21 @@
     },
     "pvebonus": [
       {
-        "@clusterdistance": "1",
+        "@type": "owningfaction",
         "@buff": "FACTION_PVE_BONUS_1",
         "@famebonus": "1.05",
         "@silverbonus": "1.05",
         "@lootbonus": "1.05"
       },
       {
-        "@clusterdistance": "2",
+        "@type": "inconflict",
         "@buff": "FACTION_PVE_BONUS_2",
         "@famebonus": "1.10",
         "@silverbonus": "1.10",
         "@lootbonus": "1.10"
       },
       {
-        "@clusterdistance": "3",
+        "@type": "owningfactionandinconflict",
         "@buff": "FACTION_PVE_BONUS_3",
         "@famebonus": "1.15",
         "@silverbonus": "1.15",
@@ -443,7 +465,7 @@
     },
     "factionstanding": {
       "@max": "7500000",
-      "@standingmultiplier": "0.4",
+      "@standingmultiplier": "0.36",
       "@rankretentionmultiplier": "0.9",
       "@rankretentionmax": "240000",
       "@protected": "1400000",
@@ -1398,36 +1420,36 @@
       },
       {
         "@uniquename": "OUTPOST_SAFE_1",
-        "@percentregen": "0.4711",
-        "@percentmax": "0.1167",
+        "@percentregen": "0.6",
+        "@percentmax": "0.4286",
         "@groupsize": "20",
         "@caerleongroupsize": "20"
       },
       {
         "@uniquename": "OUTPOST_SAFE_3",
-        "@percentregen": "0.1570",
-        "@percentmax": "0.0622",
+        "@percentregen": "0.2",
+        "@percentmax": "0.1429",
         "@groupsize": "20",
         "@caerleongroupsize": "20"
       },
       {
         "@uniquename": "OUTPOST_SAFE_5",
-        "@percentregen": "0.0942",
-        "@percentmax": "0.0374",
+        "@percentregen": "0.2",
+        "@percentmax": "0.1429",
         "@groupsize": "20",
         "@caerleongroupsize": "20"
       },
       {
         "@uniquename": "OUTPOST_LETHAL_1",
-        "@percentregen": "0.5234",
-        "@percentmax": "0.2074",
+        "@percentregen": "0.6",
+        "@percentmax": "0.4286",
         "@groupsize": "20",
         "@caerleongroupsize": "10"
       },
       {
         "@uniquename": "OUTPOST_LETHAL_3",
-        "@percentregen": "0.1203",
-        "@percentmax": "0.0944",
+        "@percentregen": "0.2",
+        "@percentmax": "0.1429",
         "@groupsize": "20",
         "@caerleongroupsize": "10"
       }
@@ -1449,14 +1471,14 @@
         "@uniquename": "FW_DEFAULT_SAFE_1",
         "@groupsize": "20",
         "@caerleongroupsize": "20",
-        "@regenrate": "1.7689",
+        "@regenrate": "4.1137",
         "level": [
           {
-            "@requirement": "4427.97",
-            "@bankingfactor": "0.3140"
+            "@requirement": "4442.84",
+            "@bankingfactor": "0"
           },
           {
-            "@requirement": "12857.84",
+            "@requirement": "10366.63",
             "@bankingfactor": "1.0000"
           }
         ]
@@ -1465,18 +1487,22 @@
         "@uniquename": "FW_DEFAULT_SAFE_3",
         "@groupsize": "20",
         "@caerleongroupsize": "20",
-        "@regenrate": "5.3067",
+        "@regenrate": "12.3412",
         "level": [
           {
-            "@requirement": "4427.97",
-            "@bankingfactor": "0.2094"
+            "@requirement": "4442.84",
+            "@bankingfactor": "0"
           },
           {
-            "@requirement": "12857.84",
-            "@bankingfactor": "0.6667"
+            "@requirement": "10366.63",
+            "@bankingfactor": "0"
           },
           {
-            "@requirement": "24106.69",
+            "@requirement": "19398.2",
+            "@bankingfactor": "0"
+          },
+          {
+            "@requirement": "31099.9",
             "@bankingfactor": "1.0000"
           }
         ]
@@ -1485,22 +1511,22 @@
         "@uniquename": "FW_DEFAULT_SAFE_5",
         "@groupsize": "20",
         "@caerleongroupsize": "20",
-        "@regenrate": "8.8445",
+        "@regenrate": "12.3412",
         "level": [
           {
-            "@requirement": "4427.97",
-            "@bankingfactor": "0.1256"
+            "@requirement": "4442.84",
+            "@bankingfactor": "0"
           },
           {
-            "@requirement": "12857.84",
-            "@bankingfactor": "0.4000"
+            "@requirement": "10366.63",
+            "@bankingfactor": "0"
           },
           {
-            "@requirement": "24106.69",
-            "@bankingfactor": "0.6000"
+            "@requirement": "19398.2",
+            "@bankingfactor": "0"
           },
           {
-            "@requirement": "40114.56",
+            "@requirement": "31099.9",
             "@bankingfactor": "1.0000"
           }
         ]
@@ -1509,14 +1535,14 @@
         "@uniquename": "FW_LOW_SAFE_1",
         "@groupsize": "20",
         "@caerleongroupsize": "20",
-        "@regenrate": "1.7109",
+        "@regenrate": "3.8267",
         "level": [
           {
-            "@requirement": "4427.97",
-            "@bankingfactor": "0.3140"
+            "@requirement": "4442.84",
+            "@bankingfactor": "0"
           },
           {
-            "@requirement": "12857.84",
+            "@requirement": "10366.63",
             "@bankingfactor": "1.0000"
           }
         ]
@@ -1525,18 +1551,22 @@
         "@uniquename": "FW_LOW_SAFE_3",
         "@groupsize": "20",
         "@caerleongroupsize": "20",
-        "@regenrate": "5.1327",
+        "@regenrate": "11.4802",
         "level": [
           {
-            "@requirement": "4427.97",
-            "@bankingfactor": "0.2094"
+            "@requirement": "4442.84",
+            "@bankingfactor": "0"
           },
           {
-            "@requirement": "12857.84",
-            "@bankingfactor": "0.6667"
+            "@requirement": "10366.63",
+            "@bankingfactor": "0"
           },
           {
-            "@requirement": "24106.69",
+            "@requirement": "19398.2",
+            "@bankingfactor": "0"
+          },
+          {
+            "@requirement": "31099.9",
             "@bankingfactor": "1.0000"
           }
         ]
@@ -1545,22 +1575,22 @@
         "@uniquename": "FW_LOW_SAFE_5",
         "@groupsize": "20",
         "@caerleongroupsize": "20",
-        "@regenrate": "8.5545",
+        "@regenrate": "11.4802",
         "level": [
           {
-            "@requirement": "4427.97",
-            "@bankingfactor": "0.1256"
+            "@requirement": "4442.84",
+            "@bankingfactor": "0"
           },
           {
-            "@requirement": "12857.84",
-            "@bankingfactor": "0.4000"
+            "@requirement": "10366.63",
+            "@bankingfactor": "0"
           },
           {
-            "@requirement": "24106.69",
-            "@bankingfactor": "0.6000"
+            "@requirement": "19398.2",
+            "@bankingfactor": "0"
           },
           {
-            "@requirement": "40114.56",
+            "@requirement": "31099.9",
             "@bankingfactor": "1.0000"
           }
         ]
@@ -1569,14 +1599,14 @@
         "@uniquename": "FW_HIGH_SAFE_1",
         "@groupsize": "20",
         "@caerleongroupsize": "20",
-        "@regenrate": "1.7994",
+        "@regenrate": "4.2192",
         "level": [
           {
-            "@requirement": "4427.97",
-            "@bankingfactor": "0.3140"
+            "@requirement": "4442.84",
+            "@bankingfactor": "0"
           },
           {
-            "@requirement": "12857.84",
+            "@requirement": "10366.63",
             "@bankingfactor": "1.0000"
           }
         ]
@@ -1585,18 +1615,22 @@
         "@uniquename": "FW_HIGH_SAFE_3",
         "@groupsize": "20",
         "@caerleongroupsize": "20",
-        "@regenrate": "5.3982",
+        "@regenrate": "12.6577",
         "level": [
           {
-            "@requirement": "4427.97",
-            "@bankingfactor": "0.2094"
+            "@requirement": "4442.84",
+            "@bankingfactor": "0"
           },
           {
-            "@requirement": "12857.84",
-            "@bankingfactor": "0.6667"
+            "@requirement": "10366.63",
+            "@bankingfactor": "0"
           },
           {
-            "@requirement": "24106.69",
+            "@requirement": "19398.2",
+            "@bankingfactor": "0"
+          },
+          {
+            "@requirement": "31099.9",
             "@bankingfactor": "1.0000"
           }
         ]
@@ -1605,22 +1639,22 @@
         "@uniquename": "FW_HIGH_SAFE_5",
         "@groupsize": "20",
         "@caerleongroupsize": "20",
-        "@regenrate": "8.9970",
+        "@regenrate": "12.6577",
         "level": [
           {
-            "@requirement": "4427.97",
-            "@bankingfactor": "0.1256"
+            "@requirement": "4442.84",
+            "@bankingfactor": "0"
           },
           {
-            "@requirement": "12857.84",
-            "@bankingfactor": "0.4000"
+            "@requirement": "10366.63",
+            "@bankingfactor": "0"
           },
           {
-            "@requirement": "24106.69",
-            "@bankingfactor": "0.6000"
+            "@requirement": "19398.2",
+            "@bankingfactor": "0"
           },
           {
-            "@requirement": "40114.56",
+            "@requirement": "31099.9",
             "@bankingfactor": "1.0000"
           }
         ]
@@ -1630,18 +1664,18 @@
         "@groupsize": "20",
         "@caerleongroupsize": "10",
         "@regenrate": "7.6977",
-        "@redzoneeventminclustervalue": "12857.84",
+        "@redzoneeventminclustervalue": "10366.63",
         "level": [
           {
-            "@requirement": "4427.97",
-            "@bankingfactor": "0.2094"
+            "@requirement": "4442.84",
+            "@bankingfactor": "0"
           },
           {
-            "@requirement": "12857.84",
-            "@bankingfactor": "0.6667"
+            "@requirement": "10366.63",
+            "@bankingfactor": "0"
           },
           {
-            "@requirement": "24106.69",
+            "@requirement": "19398.2",
             "@bankingfactor": "1.0000"
           }
         ]
@@ -1651,26 +1685,26 @@
         "@groupsize": "20",
         "@caerleongroupsize": "10",
         "@regenrate": "23.0932",
-        "@redzoneeventminclustervalue": "24106.69",
+        "@redzoneeventminclustervalue": "19398.2",
         "level": [
           {
-            "@requirement": "4427.97",
-            "@bankingfactor": "0.0481"
+            "@requirement": "4442.84",
+            "@bankingfactor": "0"
           },
           {
-            "@requirement": "12857.84",
-            "@bankingfactor": "0.1532"
+            "@requirement": "10366.63",
+            "@bankingfactor": "0"
           },
           {
-            "@requirement": "24106.69",
-            "@bankingfactor": "0.2298"
+            "@requirement": "19398.2",
+            "@bankingfactor": "0"
           },
           {
-            "@requirement": "40114.56",
-            "@bankingfactor": "0.3830"
+            "@requirement": "31099.9",
+            "@bankingfactor": "0"
           },
           {
-            "@requirement": "52938.41",
+            "@requirement": "58194.86",
             "@bankingfactor": "1.0000"
           }
         ]
@@ -1685,7 +1719,7 @@
         "@uniquename": "FW_CITY_MAIN",
         "@groupsize": "20",
         "@caerleongroupsize": "10",
-        "@regenrate": "115.88"
+        "@regenrate": "55.70"
       },
       {
         "@uniquename": "FW_CITY_SECONDARY",
@@ -1702,55 +1736,27 @@
     ],
     "clustertypeoverride": [
       {
-        "@clusterid": "0005",
-        "@type": "FW_LETHAL_3"
-      },
-      {
         "@clusterid": "0201",
-        "@type": "FW_HIGH_SAFE_5"
-      },
-      {
-        "@clusterid": "0203",
-        "@type": "FW_HIGH_SAFE_5"
-      },
-      {
-        "@clusterid": "0204",
-        "@type": "FW_HIGH_SAFE_5"
-      },
-      {
-        "@clusterid": "0206",
-        "@type": "FW_HIGH_SAFE_5"
-      },
-      {
-        "@clusterid": "0207",
-        "@type": "FW_HIGH_SAFE_5"
-      },
-      {
-        "@clusterid": "0208",
-        "@type": "FW_LETHAL_1"
-      },
-      {
-        "@clusterid": "0209",
-        "@type": "FW_DEFAULT_SAFE_3"
-      },
-      {
-        "@clusterid": "0210",
         "@type": "FW_HIGH_SAFE_3"
       },
       {
-        "@clusterid": "0211",
-        "@type": "FW_LETHAL_3"
+        "@clusterid": "0203",
+        "@type": "FW_HIGH_SAFE_3"
       },
       {
-        "@clusterid": "0212",
-        "@type": "FW_DEFAULT_SAFE_3"
+        "@clusterid": "0204",
+        "@type": "FW_HIGH_SAFE_3"
       },
       {
-        "@clusterid": "0213",
-        "@type": "FW_DEFAULT_SAFE_5"
+        "@clusterid": "0206",
+        "@type": "FW_HIGH_SAFE_3"
       },
       {
-        "@clusterid": "0215",
+        "@clusterid": "0207",
+        "@type": "FW_HIGH_SAFE_3"
+      },
+      {
+        "@clusterid": "0210",
         "@type": "FW_HIGH_SAFE_3"
       },
       {
@@ -1759,19 +1765,263 @@
       },
       {
         "@clusterid": "0217",
-        "@type": "FW_HIGH_SAFE_5"
+        "@type": "FW_HIGH_SAFE_3"
       },
       {
         "@clusterid": "0218",
         "@type": "FW_HIGH_SAFE_3"
       },
       {
-        "@clusterid": "0219",
-        "@type": "FW_DEFAULT_SAFE_5"
+        "@clusterid": "0220",
+        "@type": "FW_HIGH_SAFE_3"
       },
       {
-        "@clusterid": "0220",
-        "@type": "FW_HIGH_SAFE_5"
+        "@clusterid": "4212",
+        "@type": "FW_HIGH_SAFE_3"
+      },
+      {
+        "@clusterid": "4217",
+        "@type": "FW_HIGH_SAFE_3"
+      },
+      {
+        "@clusterid": "4220",
+        "@type": "FW_HIGH_SAFE_3"
+      },
+      {
+        "@clusterid": "2206",
+        "@type": "FW_LOW_SAFE_3"
+      },
+      {
+        "@clusterid": "2207",
+        "@type": "FW_LOW_SAFE_3"
+      },
+      {
+        "@clusterid": "2208",
+        "@type": "FW_LOW_SAFE_3"
+      },
+      {
+        "@clusterid": "2209",
+        "@type": "FW_LOW_SAFE_3"
+      },
+      {
+        "@clusterid": "2210",
+        "@type": "FW_LOW_SAFE_3"
+      },
+      {
+        "@clusterid": "2211",
+        "@type": "FW_LOW_SAFE_3"
+      },
+      {
+        "@clusterid": "2212",
+        "@type": "FW_LOW_SAFE_3"
+      },
+      {
+        "@clusterid": "2217",
+        "@type": "FW_LOW_SAFE_1"
+      },
+      {
+        "@clusterid": "2218",
+        "@type": "FW_LOW_SAFE_3"
+      },
+      {
+        "@clusterid": "2219",
+        "@type": "FW_LOW_SAFE_3"
+      },
+      {
+        "@clusterid": "2220",
+        "@type": "FW_LOW_SAFE_3"
+      },
+      {
+        "@clusterid": "3213",
+        "@type": "FW_LOW_SAFE_3"
+      },
+      {
+        "@clusterid": "3216",
+        "@type": "FW_LOW_SAFE_3"
+      },
+      {
+        "@clusterid": "3218",
+        "@type": "FW_LOW_SAFE_3"
+      },
+      {
+        "@clusterid": "3219",
+        "@type": "FW_LOW_SAFE_3"
+      },
+      {
+        "@clusterid": "1202",
+        "@type": "FW_DEFAULT_SAFE_1"
+      },
+      {
+        "@clusterid": "1203",
+        "@type": "FW_DEFAULT_SAFE_3"
+      },
+      {
+        "@clusterid": "4201",
+        "@type": "FW_DEFAULT_SAFE_3"
+      },
+      {
+        "@clusterid": "4204",
+        "@type": "FW_DEFAULT_SAFE_3"
+      },
+      {
+        "@clusterid": "4205",
+        "@type": "FW_DEFAULT_SAFE_3"
+      },
+      {
+        "@clusterid": "4206",
+        "@type": "FW_DEFAULT_SAFE_3"
+      },
+      {
+        "@clusterid": "4207",
+        "@type": "FW_DEFAULT_SAFE_3"
+      },
+      {
+        "@clusterid": "4208",
+        "@type": "FW_DEFAULT_SAFE_3"
+      },
+      {
+        "@clusterid": "4209",
+        "@type": "FW_DEFAULT_SAFE_3"
+      },
+      {
+        "@clusterid": "4213",
+        "@type": "FW_DEFAULT_SAFE_3"
+      },
+      {
+        "@clusterid": "4214",
+        "@type": "FW_DEFAULT_SAFE_3"
+      },
+      {
+        "@clusterid": "4218",
+        "@type": "FW_DEFAULT_SAFE_3"
+      },
+      {
+        "@clusterid": "4219",
+        "@type": "FW_DEFAULT_SAFE_3"
+      },
+      {
+        "@clusterid": "4249",
+        "@type": "FW_DEFAULT_SAFE_3"
+      },
+      {
+        "@clusterid": "0209",
+        "@type": "FW_HIGH_SAFE_3"
+      },
+      {
+        "@clusterid": "0212",
+        "@type": "FW_HIGH_SAFE_3"
+      },
+      {
+        "@clusterid": "0219",
+        "@type": "FW_HIGH_SAFE_3"
+      },
+      {
+        "@clusterid": "3203",
+        "@type": "FW_HIGH_SAFE_3"
+      },
+      {
+        "@clusterid": "3204",
+        "@type": "FW_HIGH_SAFE_3"
+      },
+      {
+        "@clusterid": "3205",
+        "@type": "FW_HIGH_SAFE_3"
+      },
+      {
+        "@clusterid": "3206",
+        "@type": "FW_HIGH_SAFE_3"
+      },
+      {
+        "@clusterid": "3207",
+        "@type": "FW_HIGH_SAFE_3"
+      },
+      {
+        "@clusterid": "3212",
+        "@type": "FW_HIGH_SAFE_3"
+      },
+      {
+        "@clusterid": "3214",
+        "@type": "FW_HIGH_SAFE_3"
+      },
+      {
+        "@clusterid": "3217",
+        "@type": "FW_HIGH_SAFE_3"
+      },
+      {
+        "@clusterid": "3220",
+        "@type": "FW_HIGH_SAFE_3"
+      },
+      {
+        "@clusterid": "3249",
+        "@type": "FW_HIGH_SAFE_3"
+      },
+      {
+        "@clusterid": "1007",
+        "@type": "FW_DEFAULT_SAFE_3"
+      },
+      {
+        "@clusterid": "1204",
+        "@type": "FW_DEFAULT_SAFE_3"
+      },
+      {
+        "@clusterid": "1206",
+        "@type": "FW_DEFAULT_SAFE_3"
+      },
+      {
+        "@clusterid": "1207",
+        "@type": "FW_DEFAULT_SAFE_3"
+      },
+      {
+        "@clusterid": "1211",
+        "@type": "FW_DEFAULT_SAFE_3"
+      },
+      {
+        "@clusterid": "1214",
+        "@type": "FW_DEFAULT_SAFE_3"
+      },
+      {
+        "@clusterid": "1215",
+        "@type": "FW_DEFAULT_SAFE_3"
+      },
+      {
+        "@clusterid": "1216",
+        "@type": "FW_DEFAULT_SAFE_3"
+      },
+      {
+        "@clusterid": "1217",
+        "@type": "FW_DEFAULT_SAFE_3"
+      },
+      {
+        "@clusterid": "1218",
+        "@type": "FW_DEFAULT_SAFE_3"
+      },
+      {
+        "@clusterid": "1220",
+        "@type": "FW_DEFAULT_SAFE_3"
+      },
+      {
+        "@clusterid": "1221",
+        "@type": "FW_DEFAULT_SAFE_3"
+      },
+      {
+        "@clusterid": "2213",
+        "@type": "FW_DEFAULT_SAFE_1"
+      },
+      {
+        "@clusterid": "2222",
+        "@type": "FW_DEFAULT_SAFE_3"
+      },
+      {
+        "@clusterid": "0005",
+        "@type": "FW_LETHAL_3"
+      },
+      {
+        "@clusterid": "0208",
+        "@type": "FW_LETHAL_1"
+      },
+      {
+        "@clusterid": "0211",
+        "@type": "FW_LETHAL_3"
       },
       {
         "@clusterid": "0221",
@@ -1786,32 +2036,8 @@
         "@type": "FW_LETHAL_3"
       },
       {
-        "@clusterid": "1007",
-        "@type": "FW_DEFAULT_SAFE_3"
-      },
-      {
-        "@clusterid": "1202",
-        "@type": "FW_LOW_SAFE_1"
-      },
-      {
-        "@clusterid": "1203",
-        "@type": "FW_LOW_SAFE_5"
-      },
-      {
-        "@clusterid": "1204",
-        "@type": "FW_DEFAULT_SAFE_3"
-      },
-      {
         "@clusterid": "1205",
         "@type": "FW_LETHAL_3"
-      },
-      {
-        "@clusterid": "1206",
-        "@type": "FW_DEFAULT_SAFE_5"
-      },
-      {
-        "@clusterid": "1207",
-        "@type": "FW_DEFAULT_SAFE_5"
       },
       {
         "@clusterid": "1209",
@@ -1822,40 +2048,8 @@
         "@type": "FW_LETHAL_1"
       },
       {
-        "@clusterid": "1211",
-        "@type": "FW_DEFAULT_SAFE_5"
-      },
-      {
         "@clusterid": "1213",
         "@type": "FW_LETHAL_3"
-      },
-      {
-        "@clusterid": "1214",
-        "@type": "FW_DEFAULT_SAFE_5"
-      },
-      {
-        "@clusterid": "1215",
-        "@type": "FW_DEFAULT_SAFE_5"
-      },
-      {
-        "@clusterid": "1216",
-        "@type": "FW_DEFAULT_SAFE_5"
-      },
-      {
-        "@clusterid": "1217",
-        "@type": "FW_DEFAULT_SAFE_3"
-      },
-      {
-        "@clusterid": "1218",
-        "@type": "FW_DEFAULT_SAFE_3"
-      },
-      {
-        "@clusterid": "1220",
-        "@type": "FW_DEFAULT_SAFE_5"
-      },
-      {
-        "@clusterid": "1221",
-        "@type": "FW_DEFAULT_SAFE_5"
       },
       {
         "@clusterid": "1222",
@@ -1864,10 +2058,6 @@
       {
         "@clusterid": "1223",
         "@type": "FW_LETHAL_3"
-      },
-      {
-        "@clusterid": "1246",
-        "@type": "FW_LOW_SAFE_3"
       },
       {
         "@clusterid": "2009",
@@ -1890,64 +2080,8 @@
         "@type": "FW_LETHAL_3"
       },
       {
-        "@clusterid": "2206",
-        "@type": "FW_DEFAULT_SAFE_3"
-      },
-      {
-        "@clusterid": "2207",
-        "@type": "FW_DEFAULT_SAFE_3"
-      },
-      {
-        "@clusterid": "2208",
-        "@type": "FW_DEFAULT_SAFE_5"
-      },
-      {
-        "@clusterid": "2209",
-        "@type": "FW_DEFAULT_SAFE_5"
-      },
-      {
-        "@clusterid": "2210",
-        "@type": "FW_DEFAULT_SAFE_5"
-      },
-      {
-        "@clusterid": "2211",
-        "@type": "FW_DEFAULT_SAFE_5"
-      },
-      {
-        "@clusterid": "2212",
-        "@type": "FW_DEFAULT_SAFE_5"
-      },
-      {
-        "@clusterid": "2213",
-        "@type": "FW_DEFAULT_SAFE_1"
-      },
-      {
-        "@clusterid": "2216",
-        "@type": "FW_DEFAULT_SAFE_3"
-      },
-      {
-        "@clusterid": "2217",
-        "@type": "FW_DEFAULT_SAFE_1"
-      },
-      {
-        "@clusterid": "2218",
-        "@type": "FW_DEFAULT_SAFE_3"
-      },
-      {
-        "@clusterid": "2219",
-        "@type": "FW_DEFAULT_SAFE_3"
-      },
-      {
-        "@clusterid": "2220",
-        "@type": "FW_DEFAULT_SAFE_5"
-      },
-      {
         "@clusterid": "2221",
         "@type": "FW_LETHAL_3"
-      },
-      {
-        "@clusterid": "2222",
-        "@type": "FW_DEFAULT_SAFE_3"
       },
       {
         "@clusterid": "3201",
@@ -1958,64 +2092,8 @@
         "@type": "FW_LETHAL_1"
       },
       {
-        "@clusterid": "3203",
-        "@type": "FW_DEFAULT_SAFE_5"
-      },
-      {
-        "@clusterid": "3204",
-        "@type": "FW_DEFAULT_SAFE_5"
-      },
-      {
-        "@clusterid": "3205",
-        "@type": "FW_DEFAULT_SAFE_5"
-      },
-      {
-        "@clusterid": "3206",
-        "@type": "FW_DEFAULT_SAFE_5"
-      },
-      {
-        "@clusterid": "3207",
-        "@type": "FW_DEFAULT_SAFE_5"
-      },
-      {
         "@clusterid": "3208",
         "@type": "FW_LETHAL_3"
-      },
-      {
-        "@clusterid": "3211",
-        "@type": "FW_DEFAULT_SAFE_1"
-      },
-      {
-        "@clusterid": "3212",
-        "@type": "FW_DEFAULT_SAFE_3"
-      },
-      {
-        "@clusterid": "3213",
-        "@type": "FW_DEFAULT_SAFE_5"
-      },
-      {
-        "@clusterid": "3214",
-        "@type": "FW_DEFAULT_SAFE_5"
-      },
-      {
-        "@clusterid": "3216",
-        "@type": "FW_DEFAULT_SAFE_3"
-      },
-      {
-        "@clusterid": "3217",
-        "@type": "FW_DEFAULT_SAFE_3"
-      },
-      {
-        "@clusterid": "3218",
-        "@type": "FW_DEFAULT_SAFE_3"
-      },
-      {
-        "@clusterid": "3219",
-        "@type": "FW_DEFAULT_SAFE_5"
-      },
-      {
-        "@clusterid": "3220",
-        "@type": "FW_DEFAULT_SAFE_5"
       },
       {
         "@clusterid": "3221",
@@ -2030,52 +2108,8 @@
         "@type": "FW_LETHAL_3"
       },
       {
-        "@clusterid": "3249",
-        "@type": "FW_DEFAULT_SAFE_3"
-      },
-      {
-        "@clusterid": "4201",
-        "@type": "FW_LOW_SAFE_5"
-      },
-      {
-        "@clusterid": "4204",
-        "@type": "FW_LOW_SAFE_5"
-      },
-      {
-        "@clusterid": "4205",
-        "@type": "FW_LOW_SAFE_3"
-      },
-      {
-        "@clusterid": "4206",
-        "@type": "FW_LOW_SAFE_5"
-      },
-      {
-        "@clusterid": "4207",
-        "@type": "FW_LOW_SAFE_5"
-      },
-      {
-        "@clusterid": "4208",
-        "@type": "FW_LOW_SAFE_5"
-      },
-      {
-        "@clusterid": "4209",
-        "@type": "FW_LOW_SAFE_3"
-      },
-      {
         "@clusterid": "4211",
         "@type": "FW_LETHAL_3"
-      },
-      {
-        "@clusterid": "4212",
-        "@type": "FW_HIGH_SAFE_5"
-      },
-      {
-        "@clusterid": "4213",
-        "@type": "FW_LOW_SAFE_5"
-      },
-      {
-        "@clusterid": "4214",
-        "@type": "FW_LOW_SAFE_5"
       },
       {
         "@clusterid": "4215",
@@ -2086,27 +2120,11 @@
         "@type": "FW_LETHAL_3"
       },
       {
-        "@clusterid": "4217",
-        "@type": "FW_HIGH_SAFE_3"
-      },
-      {
-        "@clusterid": "4218",
-        "@type": "FW_LOW_SAFE_3"
-      },
-      {
-        "@clusterid": "4219",
-        "@type": "FW_LOW_SAFE_3"
-      },
-      {
-        "@clusterid": "4222",
+        "@clusterid": "4221",
         "@type": "FW_LETHAL_3"
       },
       {
-        "@clusterid": "4220",
-        "@type": "FW_HIGH_SAFE_3"
-      },
-      {
-        "@clusterid": "4221",
+        "@clusterid": "4222",
         "@type": "FW_LETHAL_3"
       },
       {
@@ -2114,15 +2132,15 @@
         "@type": "FW_LETHAL_1"
       },
       {
-        "@clusterid": "4249",
-        "@type": "FW_LOW_SAFE_3"
+        "@clusterid": "0202",
+        "@type": "FW_NO_VALUE"
       },
       {
         "@clusterid": "0205",
         "@type": "FW_NO_VALUE"
       },
       {
-        "@clusterid": "0202",
+        "@clusterid": "0215",
         "@type": "FW_NO_VALUE"
       },
       {
@@ -2130,15 +2148,35 @@
         "@type": "FW_NO_VALUE"
       },
       {
-        "@clusterid": "4202",
+        "@clusterid": "0213",
         "@type": "FW_NO_VALUE"
       },
       {
-        "@clusterid": "4203",
+        "@clusterid": "0214",
         "@type": "FW_NO_VALUE"
       },
       {
-        "@clusterid": "1201",
+        "@clusterid": "3209",
+        "@type": "FW_NO_VALUE"
+      },
+      {
+        "@clusterid": "3210",
+        "@type": "FW_NO_VALUE"
+      },
+      {
+        "@clusterid": "2214",
+        "@type": "FW_NO_VALUE"
+      },
+      {
+        "@clusterid": "2215",
+        "@type": "FW_NO_VALUE"
+      },
+      {
+        "@clusterid": "3211",
+        "@type": "FW_NO_VALUE"
+      },
+      {
+        "@clusterid": "3215",
         "@type": "FW_NO_VALUE"
       },
       {
@@ -2154,27 +2192,23 @@
         "@type": "FW_NO_VALUE"
       },
       {
-        "@clusterid": "2215",
+        "@clusterid": "2216",
         "@type": "FW_NO_VALUE"
       },
       {
-        "@clusterid": "2214",
+        "@clusterid": "1201",
         "@type": "FW_NO_VALUE"
       },
       {
-        "@clusterid": "3215",
+        "@clusterid": "1246",
         "@type": "FW_NO_VALUE"
       },
       {
-        "@clusterid": "3210",
+        "@clusterid": "4202",
         "@type": "FW_NO_VALUE"
       },
       {
-        "@clusterid": "3209",
-        "@type": "FW_NO_VALUE"
-      },
-      {
-        "@clusterid": "0214",
+        "@clusterid": "4203",
         "@type": "FW_NO_VALUE"
       },
       {
@@ -2276,6 +2310,678 @@
       {
         "@clusterid": "CenterCity-DNG-01",
         "@type": "FW_NO_VALUE"
+      }
+    ],
+    "supplygeneration": {
+      "@minpointsforbonus": "1000",
+      "@bonusmindifferencefactor": "1.75",
+      "@bonusmodifier": "0.5",
+      "outpost": {
+        "@pointspersecond": "0.1853"
+      },
+      "supplyevent": [
+        {
+          "@name": "FACTION_CAMP_SMALL",
+          "@points": "100"
+        },
+        {
+          "@name": "FACTION_CAMP_MEDIUM",
+          "@points": "500"
+        },
+        {
+          "@name": "FACTION_OPEN_WORLD_CHEST_SMALL",
+          "@points": "250"
+        },
+        {
+          "@name": "FACTION_OPEN_WORLD_CHEST_MEDIUM",
+          "@points": "1250"
+        }
+      ]
+    },
+    "conflictzonetimer": [
+      {
+        "@timeref": "FW_DUCHY_EVALUATION_TIME_OF_DAY_1"
+      },
+      {
+        "@timeref": "FW_DUCHY_EVALUATION_TIME_OF_DAY_2"
+      },
+      {
+        "@timeref": "FW_DUCHY_EVALUATION_TIME_OF_DAY_3"
+      },
+      {
+        "@timeref": "FW_DUCHY_EVALUATION_TIME_OF_DAY_4"
+      },
+      {
+        "@timeref": "FW_DUCHY_EVALUATION_TIME_OF_DAY_5"
+      }
+    ],
+    "duchy": [
+      {
+        "@uniquename": "DUCHY_CITY_THETFORD",
+        "@defaultfaction": "Swamp",
+        "@ishome": "true",
+        "@islethal": "false",
+        "@worldmapposition": "58 -86",
+        "include": {
+          "@clusterid": "0000"
+        },
+        "forcedneighbor": {
+          "@duchy": "DUCHY_RED_01"
+        }
+      },
+      {
+        "@uniquename": "DUCHY_CITY_LYMHURST",
+        "@defaultfaction": "Forest",
+        "@ishome": "true",
+        "@islethal": "false",
+        "@worldmapposition": "252 -72",
+        "include": {
+          "@clusterid": "1000"
+        },
+        "forcedneighbor": {
+          "@duchy": "DUCHY_RED_04"
+        }
+      },
+      {
+        "@uniquename": "DUCHY_CITY_BRIDGEWATCH",
+        "@defaultfaction": "Steppe",
+        "@ishome": "true",
+        "@islethal": "false",
+        "@worldmapposition": "213 -191",
+        "include": {
+          "@clusterid": "2000"
+        },
+        "forcedneighbor": {
+          "@duchy": "DUCHY_RED_05"
+        }
+      },
+      {
+        "@uniquename": "DUCHY_CITY_MARTLOCK",
+        "@defaultfaction": "Highland",
+        "@ishome": "true",
+        "@islethal": "false",
+        "@worldmapposition": "97 -180",
+        "include": {
+          "@clusterid": "3004"
+        },
+        "forcedneighbor": {
+          "@duchy": "DUCHY_RED_02"
+        }
+      },
+      {
+        "@uniquename": "DUCHY_CITY_FORTSTERLING",
+        "@defaultfaction": "Mountain",
+        "@ishome": "true",
+        "@islethal": "false",
+        "@worldmapposition": "138 -38",
+        "include": {
+          "@clusterid": "4000"
+        },
+        "forcedneighbor": {
+          "@duchy": "DUCHY_RED_03"
+        }
+      },
+      {
+        "@uniquename": "DUCHY_CITY_CAERLEON",
+        "@defaultfaction": "Caerleon",
+        "@ishome": "true",
+        "@islethal": "true",
+        "@worldmapposition": "164 -124",
+        "include": {
+          "@clusterid": "3003"
+        }
+      },
+      {
+        "@uniquename": "DUCHY_RED_01",
+        "@defaultfaction": "Swamp",
+        "@islethal": "true",
+        "@worldmapposition": "126 -77",
+        "@groupsize": "1000",
+        "include": [
+          {
+            "@clusterid": "0211"
+          },
+          {
+            "@clusterid": "4221"
+          },
+          {
+            "@clusterid": "0221"
+          },
+          {
+            "@clusterid": "0222"
+          },
+          {
+            "@clusterid": "4222"
+          },
+          {
+            "@clusterid": "0223"
+          },
+          {
+            "@clusterid": "4215"
+          }
+        ],
+        "blockedneighbor": [
+          {
+            "@duchy": "DUCHY_RED_04"
+          },
+          {
+            "@duchy": "DUCHY_RED_05"
+          }
+        ],
+        "initialconflict": {
+          "@fromduchy": "DUCHY_RED_03"
+        }
+      },
+      {
+        "@uniquename": "DUCHY_RED_02",
+        "@defaultfaction": "Highland",
+        "@islethal": "true",
+        "@worldmapposition": "120 -124",
+        "@groupsize": "1000",
+        "include": [
+          {
+            "@clusterid": "0005"
+          },
+          {
+            "@clusterid": "0208"
+          },
+          {
+            "@clusterid": "3201"
+          },
+          {
+            "@clusterid": "3208"
+          },
+          {
+            "@clusterid": "3202"
+          },
+          {
+            "@clusterid": "3245"
+          }
+        ],
+        "blockedneighbor": [
+          {
+            "@duchy": "DUCHY_RED_03"
+          },
+          {
+            "@duchy": "DUCHY_RED_04"
+          }
+        ],
+        "initialconflict": {
+          "@fromduchy": "DUCHY_RED_01"
+        }
+      },
+      {
+        "@uniquename": "DUCHY_RED_03",
+        "@defaultfaction": "Mountain",
+        "@islethal": "true",
+        "@worldmapposition": "165 -80",
+        "@groupsize": "1000",
+        "include": [
+          {
+            "@clusterid": "1222"
+          },
+          {
+            "@clusterid": "4211"
+          },
+          {
+            "@clusterid": "1205"
+          },
+          {
+            "@clusterid": "4223"
+          },
+          {
+            "@clusterid": "1223"
+          },
+          {
+            "@clusterid": "4216"
+          }
+        ],
+        "blockedneighbor": [
+          {
+            "@duchy": "DUCHY_RED_02"
+          },
+          {
+            "@duchy": "DUCHY_RED_05"
+          }
+        ],
+        "initialconflict": {
+          "@fromduchy": "DUCHY_RED_04"
+        }
+      },
+      {
+        "@uniquename": "DUCHY_RED_04",
+        "@defaultfaction": "Forest",
+        "@islethal": "true",
+        "@worldmapposition": "197 -127",
+        "@groupsize": "1000",
+        "include": [
+          {
+            "@clusterid": "1209"
+          },
+          {
+            "@clusterid": "1213"
+          },
+          {
+            "@clusterid": "2221"
+          },
+          {
+            "@clusterid": "2009"
+          },
+          {
+            "@clusterid": "1210"
+          },
+          {
+            "@clusterid": "2201"
+          }
+        ],
+        "blockedneighbor": [
+          {
+            "@duchy": "DUCHY_RED_01"
+          },
+          {
+            "@duchy": "DUCHY_RED_02"
+          }
+        ],
+        "initialconflict": [
+          {
+            "@fromduchy": "DUCHY_CITY_CAERLEON"
+          },
+          {
+            "@fromduchy": "DUCHY_RED_05"
+          }
+        ]
+      },
+      {
+        "@uniquename": "DUCHY_RED_05",
+        "@defaultfaction": "Steppe",
+        "@islethal": "true",
+        "@worldmapposition": "163 -159",
+        "@groupsize": "1000",
+        "include": [
+          {
+            "@clusterid": "2203"
+          },
+          {
+            "@clusterid": "2204"
+          },
+          {
+            "@clusterid": "3221"
+          },
+          {
+            "@clusterid": "2205"
+          },
+          {
+            "@clusterid": "3222"
+          }
+        ],
+        "blockedneighbor": [
+          {
+            "@duchy": "DUCHY_RED_01"
+          },
+          {
+            "@duchy": "DUCHY_RED_03"
+          }
+        ],
+        "initialconflict": {
+          "@fromduchy": "DUCHY_RED_02"
+        }
+      },
+      {
+        "@uniquename": "DUCHY_YELLOW_01",
+        "@defaultfaction": "Swamp",
+        "@islethal": "false",
+        "@worldmapposition": "79 -47",
+        "@groupsize": "1000",
+        "include": [
+          {
+            "@clusterid": "4217"
+          },
+          {
+            "@clusterid": "0217"
+          },
+          {
+            "@clusterid": "4220"
+          },
+          {
+            "@clusterid": "4205"
+          },
+          {
+            "@clusterid": "4212"
+          },
+          {
+            "@clusterid": "4219"
+          }
+        ]
+      },
+      {
+        "@uniquename": "DUCHY_YELLOW_02",
+        "@defaultfaction": "Swamp",
+        "@islethal": "false",
+        "@worldmapposition": "77 -72",
+        "@groupsize": "1000",
+        "include": [
+          {
+            "@clusterid": "0204"
+          },
+          {
+            "@clusterid": "0201"
+          },
+          {
+            "@clusterid": "0203"
+          },
+          {
+            "@clusterid": "0207"
+          }
+        ]
+      },
+      {
+        "@uniquename": "DUCHY_YELLOW_03",
+        "@defaultfaction": "Swamp",
+        "@islethal": "false",
+        "@worldmapposition": "51 -111",
+        "@groupsize": "1000",
+        "include": [
+          {
+            "@clusterid": "0206"
+          },
+          {
+            "@clusterid": "0216"
+          },
+          {
+            "@clusterid": "0220"
+          },
+          {
+            "@clusterid": "0218"
+          }
+        ],
+        "initialconflict": {
+          "@fromduchy": "DUCHY_YELLOW_04"
+        }
+      },
+      {
+        "@uniquename": "DUCHY_YELLOW_04",
+        "@defaultfaction": "Highland",
+        "@islethal": "false",
+        "@worldmapposition": "54 -141",
+        "@groupsize": "1000",
+        "include": [
+          {
+            "@clusterid": "0209"
+          },
+          {
+            "@clusterid": "0210"
+          },
+          {
+            "@clusterid": "0219"
+          },
+          {
+            "@clusterid": "0212"
+          }
+        ]
+      },
+      {
+        "@uniquename": "DUCHY_YELLOW_05",
+        "@defaultfaction": "Highland",
+        "@islethal": "false",
+        "@worldmapposition": "90 -154",
+        "@groupsize": "1000",
+        "include": [
+          {
+            "@clusterid": "3203"
+          },
+          {
+            "@clusterid": "3206"
+          },
+          {
+            "@clusterid": "3204"
+          },
+          {
+            "@clusterid": "3205"
+          }
+        ]
+      },
+      {
+        "@uniquename": "DUCHY_YELLOW_06",
+        "@defaultfaction": "Highland",
+        "@islethal": "false",
+        "@worldmapposition": "123 -187",
+        "@groupsize": "1000",
+        "include": [
+          {
+            "@clusterid": "3207"
+          },
+          {
+            "@clusterid": "3220"
+          },
+          {
+            "@clusterid": "3214"
+          },
+          {
+            "@clusterid": "3212"
+          }
+        ],
+        "initialconflict": {
+          "@fromduchy": "DUCHY_YELLOW_07"
+        }
+      },
+      {
+        "@uniquename": "DUCHY_YELLOW_07",
+        "@defaultfaction": "Steppe",
+        "@islethal": "false",
+        "@worldmapposition": "152 -212",
+        "@groupsize": "1000",
+        "include": [
+          {
+            "@clusterid": "3217"
+          },
+          {
+            "@clusterid": "3219"
+          },
+          {
+            "@clusterid": "3249"
+          },
+          {
+            "@clusterid": "3218"
+          }
+        ]
+      },
+      {
+        "@uniquename": "DUCHY_YELLOW_08",
+        "@defaultfaction": "Steppe",
+        "@islethal": "false",
+        "@worldmapposition": "185 -198",
+        "@groupsize": "1000",
+        "include": [
+          {
+            "@clusterid": "2219"
+          },
+          {
+            "@clusterid": "2220"
+          },
+          {
+            "@clusterid": "2211"
+          },
+          {
+            "@clusterid": "3216"
+          },
+          {
+            "@clusterid": "3213"
+          }
+        ]
+      },
+      {
+        "@uniquename": "DUCHY_YELLOW_09",
+        "@defaultfaction": "Steppe",
+        "@islethal": "false",
+        "@worldmapposition": "233 -183",
+        "@groupsize": "1000",
+        "include": [
+          {
+            "@clusterid": "2209"
+          },
+          {
+            "@clusterid": "2208"
+          },
+          {
+            "@clusterid": "2210"
+          },
+          {
+            "@clusterid": "2212"
+          },
+          {
+            "@clusterid": "2207"
+          }
+        ],
+        "initialconflict": {
+          "@fromduchy": "DUCHY_YELLOW_12"
+        }
+      },
+      {
+        "@uniquename": "DUCHY_YELLOW_10",
+        "@defaultfaction": "Forest",
+        "@islethal": "false",
+        "@worldmapposition": "230 -52",
+        "@groupsize": "1000",
+        "include": [
+          {
+            "@clusterid": "1216"
+          },
+          {
+            "@clusterid": "1220"
+          },
+          {
+            "@clusterid": "1207"
+          },
+          {
+            "@clusterid": "1211"
+          },
+          {
+            "@clusterid": "1214"
+          },
+          {
+            "@clusterid": "1204"
+          }
+        ],
+        "initialconflict": {
+          "@fromduchy": "DUCHY_YELLOW_15"
+        }
+      },
+      {
+        "@uniquename": "DUCHY_YELLOW_11",
+        "@defaultfaction": "Forest",
+        "@islethal": "false",
+        "@worldmapposition": "245 -110",
+        "@groupsize": "1000",
+        "include": [
+          {
+            "@clusterid": "1215"
+          },
+          {
+            "@clusterid": "1218"
+          },
+          {
+            "@clusterid": "1206"
+          },
+          {
+            "@clusterid": "2222"
+          },
+          {
+            "@clusterid": "1221"
+          }
+        ]
+      },
+      {
+        "@uniquename": "DUCHY_YELLOW_12",
+        "@defaultfaction": "Forest",
+        "@islethal": "false",
+        "@worldmapposition": "268 -146",
+        "@groupsize": "1000",
+        "include": [
+          {
+            "@clusterid": "1217"
+          },
+          {
+            "@clusterid": "2213"
+          },
+          {
+            "@clusterid": "2218"
+          },
+          {
+            "@clusterid": "2206"
+          },
+          {
+            "@clusterid": "2217"
+          }
+        ]
+      },
+      {
+        "@uniquename": "DUCHY_YELLOW_13",
+        "@defaultfaction": "Mountain",
+        "@islethal": "false",
+        "@worldmapposition": "107 -30",
+        "@groupsize": "1000",
+        "include": [
+          {
+            "@clusterid": "4249"
+          },
+          {
+            "@clusterid": "4207"
+          },
+          {
+            "@clusterid": "4201"
+          },
+          {
+            "@clusterid": "4214"
+          }
+        ],
+        "initialconflict": {
+          "@fromduchy": "DUCHY_YELLOW_01"
+        }
+      },
+      {
+        "@uniquename": "DUCHY_YELLOW_14",
+        "@defaultfaction": "Mountain",
+        "@islethal": "false",
+        "@worldmapposition": "156 -37",
+        "@groupsize": "1000",
+        "include": [
+          {
+            "@clusterid": "4208"
+          },
+          {
+            "@clusterid": "4204"
+          },
+          {
+            "@clusterid": "4213"
+          },
+          {
+            "@clusterid": "4206"
+          }
+        ]
+      },
+      {
+        "@uniquename": "DUCHY_YELLOW_15",
+        "@defaultfaction": "Mountain",
+        "@islethal": "false",
+        "@worldmapposition": "196 -33",
+        "@groupsize": "1000",
+        "include": [
+          {
+            "@clusterid": "1202"
+          },
+          {
+            "@clusterid": "1203"
+          },
+          {
+            "@clusterid": "1007"
+          },
+          {
+            "@clusterid": "4209"
+          },
+          {
+            "@clusterid": "4218"
+          }
+        ]
       }
     ]
   }
