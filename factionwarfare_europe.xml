@@ -20,7 +20,7 @@
 	    <logo symbolname="FACTIONSYMBOL_CAERLEON" symbol_r="154" symbol_g="0" symbol_b="0" symbol_emissive="68" color="5" symbol_scale="0.6" symbol_offset_y="-0.1" />
     </faction>
   </factions>
-  <global bonuspointmodifier="0.25" killbonuspointmodifier="0.25" killvalue="0.05" nonlethalmaxkillvalue="500" lethalmaxkillvalue="1500" killatrophy="0.2" defensecap="10000" payoutinterval="900" clustercontributionscaler="0.5" duchycontributionscaler="0.5" supplypointduchycontributionscaler="0.6" duchyvictoryfactionpointreward="4757781" duchyconsolationfactionpointreward="2854669" duchydefendervictoryfactionpointbonus="4948093" duchydefendervictorybonusgroupsize="1000" minitempower="700" contributiontimeout="900" killatrophytimeout="900" campaignstarttime="0UTC" dynamictemplatecampsreactivationtimersmallcampsec="900" dynamictemplatecampsreactivationtimermediumcampsec="1800" dynamictemplatecampsphasechangedelaysec="300" factionknockdowndurabilitylossscaling="0.7" /> 
+  <global bonuspointmodifier="0.25" killbonuspointmodifier="0.25" killvalue="0.05" nonlethalmaxkillvalue="500" lethalmaxkillvalue="1500" killatrophy="0.2" defensecap="10000" payoutinterval="900" clustercontributionscaler="0.4" duchycontributionscaler="0.4" supplypointduchycontributionscaler="0.6" duchyvictoryfactionpointreward="4757781" duchyconsolationfactionpointreward="2854669" duchydefendervictoryfactionpointbonus="4948093" duchydefendervictorybonusgroupsize="1000" minitempower="700" contributiontimeout="900" killatrophytimeout="900" campaignstarttime="0UTC" dynamictemplatecampsreactivationtimersmallcampsecmin="420" dynamictemplatecampsreactivationtimersmallcampsecmax="660" dynamictemplatecampsreactivationtimermediumcampsecmin="900" dynamictemplatecampsreactivationtimermediumcampsecmax="1260" dynamictemplatecampsphasechangedelaysec="300" factionknockdowndurabilitylossscaling="0.7" /> 
   <redzoneevent mintime="150" maxtime="300" duration="60" advancenotification="15" locktime="08:30:00Z" lockduration="120" serverupdelaymin="5" serverupdelaymax="15" clusterreward="55135.23" firstbonus="496217.11" secondbonus="413514.26" thirdbonus="330811.41" fourthbonus="248108.55" fifthbonus="165405.70" minimumdivisor="20" />
   <factionbalancefactor max="1.5" scaling="1" perioddays="7" />
   <activityquotient min="0.75" max="10.0" perioddays="7" interval="900" />
@@ -53,7 +53,7 @@
   <clustercontrolpoints points="1000" gainfactor="0.0055" />
   <respawning minimumRespawnDistanceInMeters="100" maximumRespawnDistanceInClusters="4" respawnTimeInSeconds="16" respawnTimeFallOffInSeconds="300" respawnTimeIncreaseStepInSeconds="3" respawnPerMinute="3" maximumRespawnTimeInSeconds="45" />
 
-  <portalcost mintravelcosts="2000" emvcostfactor="0.05" toolscostscalingfactor="0.5" ivbase="0.98224197" ivcoefficient="102.43388085" ivpower="0.16148053" ivboundconstant="100" ivmin="0" ivmax="4096" globalcostfactor="0.5" />
+  <portalcost mintravelcosts="2500" emvcostfactor="0.05" toolscostscalingfactor="0.5" ipscalingclusterarchetypereference="YELLOW" citytosafeneighborfactor="0" ivbase="0.98224197" ivcoefficient="102.43388085" ivpower="0.16148053" ivboundconstant="100" ivmin="0" ivmax="121344" globalcostfactor="0.25" />
 
   <DefensiveCombatBonus>
     <clusterslost value="75" buff="FACTIONWARFAREDEFENSIVEBUFF_LVL1" damagetakenmodifier="0.95" />
@@ -557,7 +557,7 @@
 
   <!-- DUCHY supply generations -->
   
-  <supplygeneration minpointsforbonus="1000" bonusmindifferencefactor="1.75" bonusmodifier="0.5">
+  <supplygeneration minpointsforbonus="3000" bonusmindifferencefactor="1.3" bonusmodifier="0.75">
     <outpost pointspersecond="0.1853" />
     <supplyevent name="FACTION_CAMP_SMALL" points="100" />
     <supplyevent name="FACTION_CAMP_MEDIUM" points="500" />
@@ -573,6 +573,9 @@
   <conflictzonetimer timeref="FW_DUCHY_EVALUATION_TIME_OF_DAY_3" />
   <conflictzonetimer timeref="FW_DUCHY_EVALUATION_TIME_OF_DAY_4" />
   <conflictzonetimer timeref="FW_DUCHY_EVALUATION_TIME_OF_DAY_5" />
+  <conflictzonetimer timeref="FW_DUCHY_EVALUATION_TIME_OF_DAY_6" />
+  <conflictzonetimer timeref="FW_DUCHY_EVALUATION_TIME_OF_DAY_7" />
+  <conflictzonetimer timeref="FW_DUCHY_EVALUATION_TIME_OF_DAY_8" />
 
   <!-- duchy home citys -->
   <duchy uniquename="DUCHY_CITY_THETFORD" defaultfaction="Swamp" ishome="true" islethal="false" worldmapposition="58 -86">

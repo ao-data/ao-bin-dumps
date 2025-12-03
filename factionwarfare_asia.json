@@ -122,8 +122,8 @@
       "@killatrophy": "0.2",
       "@defensecap": "10000",
       "@payoutinterval": "900",
-      "@clustercontributionscaler": "0.5",
-      "@duchycontributionscaler": "0.5",
+      "@clustercontributionscaler": "0.4",
+      "@duchycontributionscaler": "0.4",
       "@supplypointduchycontributionscaler": "0.6",
       "@duchyvictoryfactionpointreward": "4757781",
       "@duchyconsolationfactionpointreward": "2854669",
@@ -133,8 +133,10 @@
       "@contributiontimeout": "900",
       "@killatrophytimeout": "900",
       "@campaignstarttime": "0UTC",
-      "@dynamictemplatecampsreactivationtimersmallcampsec": "900",
-      "@dynamictemplatecampsreactivationtimermediumcampsec": "1800",
+      "@dynamictemplatecampsreactivationtimersmallcampsecmin": "420",
+      "@dynamictemplatecampsreactivationtimersmallcampsecmax": "660",
+      "@dynamictemplatecampsreactivationtimermediumcampsecmin": "900",
+      "@dynamictemplatecampsreactivationtimermediumcampsecmax": "1260",
       "@dynamictemplatecampsphasechangedelaysec": "300",
       "@factionknockdowndurabilitylossscaling": "0.7"
     },
@@ -270,16 +272,18 @@
       "@maximumRespawnTimeInSeconds": "45"
     },
     "portalcost": {
-      "@mintravelcosts": "2000",
+      "@mintravelcosts": "2500",
       "@emvcostfactor": "0.05",
       "@toolscostscalingfactor": "0.5",
+      "@ipscalingclusterarchetypereference": "YELLOW",
+      "@citytosafeneighborfactor": "0",
       "@ivbase": "0.98224197",
       "@ivcoefficient": "102.43388085",
       "@ivpower": "0.16148053",
       "@ivboundconstant": "100",
       "@ivmin": "0",
-      "@ivmax": "4096",
-      "@globalcostfactor": "0.5"
+      "@ivmax": "121344",
+      "@globalcostfactor": "0.25"
     },
     "DefensiveCombatBonus": {
       "clusterslost": [
@@ -2313,9 +2317,9 @@
       }
     ],
     "supplygeneration": {
-      "@minpointsforbonus": "1000",
-      "@bonusmindifferencefactor": "1.75",
-      "@bonusmodifier": "0.5",
+      "@minpointsforbonus": "3000",
+      "@bonusmindifferencefactor": "1.3",
+      "@bonusmodifier": "0.75",
       "outpost": {
         "@pointspersecond": "0.1853"
       },
@@ -2353,6 +2357,15 @@
       },
       {
         "@timeref": "FW_DUCHY_EVALUATION_TIME_OF_DAY_5"
+      },
+      {
+        "@timeref": "FW_DUCHY_EVALUATION_TIME_OF_DAY_6"
+      },
+      {
+        "@timeref": "FW_DUCHY_EVALUATION_TIME_OF_DAY_7"
+      },
+      {
+        "@timeref": "FW_DUCHY_EVALUATION_TIME_OF_DAY_8"
       }
     ],
     "duchy": [
