@@ -138,7 +138,11 @@
       "@dynamictemplatecampsreactivationtimermediumcampsecmin": "900",
       "@dynamictemplatecampsreactivationtimermediumcampsecmax": "1260",
       "@dynamictemplatecampsphasechangedelaysec": "300",
-      "@factionknockdowndurabilitylossscaling": "0.7"
+      "@caerlonminimumconflicts": "2",
+      "@lethalminimumconflicts": "1",
+      "@nonlethalminimumconflicts": "2",
+      "@factionknockdowndurabilitylossscaling": "0.7",
+      "@factionenlistmentcooldowninmins": "1440"
     },
     "redzoneevent": {
       "@mintime": "150",
@@ -286,36 +290,31 @@
       "@globalcostfactor": "0.25"
     },
     "DefensiveCombatBonus": {
-      "clusterslost": [
+      "@fortressfightnofollowupfightinduchydelaymin": "15",
+      "ownedduchydifference": [
         {
-          "@value": "75",
+          "@value": "2",
           "@buff": "FACTIONWARFAREDEFENSIVEBUFF_LVL1",
-          "@damagetakenmodifier": "0.95"
+          "@damagevsplayersmodifier": "0.05",
+          "@defensevsplayersmodifier": "0.05"
         },
         {
-          "@value": "76",
+          "@value": "3",
           "@buff": "FACTIONWARFAREDEFENSIVEBUFF_LVL2",
-          "@damagetakenmodifier": "0.90"
+          "@damagevsplayersmodifier": "0.10",
+          "@defensevsplayersmodifier": "0.10"
         },
         {
-          "@value": "77",
+          "@value": "4",
           "@buff": "FACTIONWARFAREDEFENSIVEBUFF_LVL3",
-          "@damagetakenmodifier": "0.80"
+          "@damagevsplayersmodifier": "0.15",
+          "@defensevsplayersmodifier": "0.15"
         },
         {
-          "@value": "78",
+          "@value": "5",
           "@buff": "FACTIONWARFAREDEFENSIVEBUFF_LVL4",
-          "@damagetakenmodifier": "0.70"
-        },
-        {
-          "@value": "79",
-          "@buff": "FACTIONWARFAREDEFENSIVEBUFF_LVL5",
-          "@damagetakenmodifier": "0.60"
-        },
-        {
-          "@value": "80",
-          "@buff": "FACTIONWARFAREDEFENSIVEBUFF_LVL6",
-          "@damagetakenmodifier": "0.50"
+          "@damagevsplayersmodifier": "0.20",
+          "@defensevsplayersmodifier": "0.20"
         }
       ]
     },
@@ -2320,6 +2319,7 @@
       "@minpointsforbonus": "3000",
       "@bonusmindifferencefactor": "1.3",
       "@bonusmodifier": "0.75",
+      "@attackerbonusfactor": "1.0",
       "outpost": {
         "@pointspersecond": "0.1853"
       },
