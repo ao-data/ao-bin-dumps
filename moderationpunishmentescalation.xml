@@ -1,9 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ChatModeration lookbackdurationdays="365">
-    <PunishmentReason reason="Breached T&amp;Cs" loca="@PREDEFINED_MOD_CMTOOL_MESSAGE_TERMS_AND_CONDITIONS">
-        <Escalations timeAmount="7" timeType="DAYS" punishmentType="MUTE"/>
+    <PunishmentReason reason="Spam Wave" loca="@PREDEFINED_MOD_CMTOOL_MESSAGE_SPAM_WAVE">
+        <Escalations timeAmount="30" timeType="MINUTES" punishmentType="MUTE"/>
+        <Escalations timeAmount="1" timeType="HOURS" punishmentType="MUTE"/>
+        <Escalations timeAmount="6" timeType="HOURS" punishmentType="MUTE"/>
+        <Escalations timeAmount="12" timeType="HOURS" punishmentType="MUTE"/>
+        <Escalations timeAmount="1" timeType="DAYS" punishmentType="MUTE"/>
+        <Escalations timeAmount="2" timeType="DAYS" punishmentType="MUTE"/>
+        <Escalations timeAmount="4" timeType="DAYS" punishmentType="MUTE"/>
+        <Escalations timeAmount="1" timeType="WEEKS" punishmentType="MUTE"/>
         <Escalations timeAmount="2" timeType="WEEKS" punishmentType="MUTE"/>
-        <Escalations timeAmount="1" timeType="FOREVER" punishmentType="MUTE" gmNotify="true"/>
+    </PunishmentReason>
+    <PunishmentReason reason="Spam/Caps/Rep. Ads" loca="@PREDEFINED_MOD_CMTOOL_MESSAGE_SPAM">
+        <Escalations timeAmount="1" timeType="MINUTES" punishmentType="WARN"/>
+        <Escalations timeAmount="1" timeType="HOURS" punishmentType="MUTE"/>
+        <Escalations timeAmount="3" timeType="HOURS" punishmentType="MUTE"/>
+        <Escalations timeAmount="6" timeType="HOURS" punishmentType="MUTE"/>
+        <Escalations timeAmount="12" timeType="HOURS" punishmentType="MUTE"/>
+        <Escalations timeAmount="1" timeType="DAYS" punishmentType="MUTE"/>
+        <Escalations timeAmount="2" timeType="DAYS" punishmentType="MUTE"/>
+        <Escalations timeAmount="4" timeType="DAYS" punishmentType="MUTE"/>
+        <Escalations timeAmount="1" timeType="WEEKS" punishmentType="MUTE"/>
+        <Escalations timeAmount="2" timeType="WEEKS" punishmentType="MUTE"/>
+        <Escalations timeAmount="4" timeType="WEEKS" punishmentType="MUTE"/>
+    </PunishmentReason>
+    <PunishmentReason reason="Wrong Language Ch." loca="@PREDEFINED_MOD_CMTOOL_MESSAGE_LANG_CHANNEL">
+        <Escalations timeAmount="1" timeType="MINUTES" punishmentType="WARN"/>
+        <Escalations timeAmount="1" timeType="HOURS" punishmentType="MUTE"/>
+        <Escalations timeAmount="3" timeType="HOURS" punishmentType="MUTE"/>
+        <Escalations timeAmount="6" timeType="HOURS" punishmentType="MUTE"/>
+        <Escalations timeAmount="12" timeType="HOURS" punishmentType="MUTE"/>
+        <Escalations timeAmount="1" timeType="DAYS" punishmentType="MUTE"/>
+        <Escalations timeAmount="2" timeType="DAYS" punishmentType="MUTE"/>
+        <Escalations timeAmount="4" timeType="DAYS" punishmentType="MUTE"/>
+        <Escalations timeAmount="1" timeType="WEEKS" punishmentType="MUTE"/>
+        <Escalations timeAmount="2" timeType="WEEKS" punishmentType="MUTE"/>
+        <Escalations timeAmount="4" timeType="WEEKS" punishmentType="MUTE"/>
+    </PunishmentReason>
+    <PunishmentReason reason="Wrong Topic Ch." loca="@PREDEFINED_MOD_CMTOOL_MESSAGE_TOPIC_CHANNEL">
+        <Escalations timeAmount="1" timeType="MINUTES" punishmentType="WARN"/>
+        <Escalations timeAmount="1" timeType="HOURS" punishmentType="MUTE"/>
+        <Escalations timeAmount="3" timeType="HOURS" punishmentType="MUTE"/>
+        <Escalations timeAmount="6" timeType="HOURS" punishmentType="MUTE"/>
+        <Escalations timeAmount="12" timeType="HOURS" punishmentType="MUTE"/>
+        <Escalations timeAmount="1" timeType="DAYS" punishmentType="MUTE"/>
+        <Escalations timeAmount="2" timeType="DAYS" punishmentType="MUTE"/>
+        <Escalations timeAmount="4" timeType="DAYS" punishmentType="MUTE"/>
+        <Escalations timeAmount="1" timeType="WEEKS" punishmentType="MUTE"/>
+        <Escalations timeAmount="2" timeType="WEEKS" punishmentType="MUTE"/>
+        <Escalations timeAmount="4" timeType="WEEKS" punishmentType="MUTE"/>
+    </PunishmentReason>
+    <PunishmentReason reason="Wipe Trolling" loca="@PREDEFINED_MOD_CMTOOL_MESSAGE_WIPE_TROLL">
+        <Escalations timeAmount="1" timeType="MINUTES" punishmentType="WARN"/>
+        <Escalations timeAmount="1" timeType="HOURS" punishmentType="MUTE"/>
+        <Escalations timeAmount="6" timeType="HOURS" punishmentType="MUTE"/>
+        <Escalations timeAmount="12" timeType="HOURS" punishmentType="MUTE"/>
+        <Escalations timeAmount="1" timeType="DAYS" punishmentType="MUTE"/>
+        <Escalations timeAmount="2" timeType="DAYS" punishmentType="MUTE"/>
+        <Escalations timeAmount="4" timeType="DAYS" punishmentType="MUTE"/>
+        <Escalations timeAmount="1" timeType="WEEKS" punishmentType="MUTE"/>
+        <Escalations timeAmount="2" timeType="WEEKS" punishmentType="MUTE"/>
+        <Escalations timeAmount="4" timeType="WEEKS" punishmentType="MUTE"/>
     </PunishmentReason>
     <PunishmentReason reason="Cheat Accusations" loca="@PREDEFINED_MOD_CMTOOL_MESSAGE_CHEAT_ACCUSATION">
         <Escalations timeAmount="1" timeType="MINUTES" punishmentType="WARN"/>
@@ -16,17 +73,6 @@
         <Escalations timeAmount="2" timeType="WEEKS" punishmentType="MUTE"/>
         <Escalations timeAmount="4" timeType="WEEKS" punishmentType="MUTE"/>
         <Escalations timeAmount="8" timeType="WEEKS" punishmentType="MUTE"/>
-        <Escalations timeAmount="1" timeType="FOREVER" punishmentType="MUTE" gmNotify="true"/>
-    </PunishmentReason>
-    <PunishmentReason reason="Discrimination" loca="@PREDEFINED_MOD_CMTOOL_MESSAGE_DISCRIMINATION_BIGOTRY">
-        <Escalations timeAmount="1" timeType="MINUTES" punishmentType="WARN"/>
-        <Escalations timeAmount="1" timeType="HOURS" punishmentType="MUTE"/>
-        <Escalations timeAmount="6" timeType="HOURS" punishmentType="MUTE"/>
-        <Escalations timeAmount="1" timeType="DAYS" punishmentType="MUTE"/>
-        <Escalations timeAmount="4" timeType="DAYS" punishmentType="MUTE"/>
-        <Escalations timeAmount="2" timeType="WEEKS" punishmentType="MUTE"/>
-        <Escalations timeAmount="4" timeType="WEEKS" punishmentType="MUTE"/>
-        <Escalations timeAmount="1" timeType="FOREVER" punishmentType="MUTE" gmNotify="true"/>
     </PunishmentReason>
     <PunishmentReason reason="Discussing Mod Dec." loca="@PREDEFINED_MOD_CMTOOL_MESSAGE_MODDECISION">
         <Escalations timeAmount="1" timeType="MINUTES" punishmentType="WARN"/>
@@ -39,22 +85,45 @@
         <Escalations timeAmount="2" timeType="WEEKS" punishmentType="MUTE"/>
         <Escalations timeAmount="4" timeType="WEEKS" punishmentType="MUTE"/>
         <Escalations timeAmount="8" timeType="WEEKS" punishmentType="MUTE"/>
-        <Escalations timeAmount="1" timeType="FOREVER" punishmentType="MUTE" gmNotify="true"/>
     </PunishmentReason>
-    <PunishmentReason reason="Excessive Toxicity" loca="@PREDEFINED_MOD_CMTOOL_MESSAGE_TOXICITY">
+    <PunishmentReason reason="Disrupt. Pol/Rel Talk" loca="@PREDEFINED_MOD_CMTOOL_MESSAGE_DISCUSSION">
+        <Escalations timeAmount="1" timeType="MINUTES" punishmentType="WARN"/>
+        <Escalations timeAmount="1" timeType="HOURS" punishmentType="MUTE"/>
+        <Escalations timeAmount="3" timeType="HOURS" punishmentType="MUTE"/>
+        <Escalations timeAmount="6" timeType="HOURS" punishmentType="MUTE"/>
+        <Escalations timeAmount="12" timeType="HOURS" punishmentType="MUTE"/>
+        <Escalations timeAmount="1" timeType="DAYS" punishmentType="MUTE"/>
+        <Escalations timeAmount="2" timeType="DAYS" punishmentType="MUTE"/>
+        <Escalations timeAmount="4" timeType="DAYS" punishmentType="MUTE"/>
+        <Escalations timeAmount="1" timeType="WEEKS" punishmentType="MUTE"/>
+        <Escalations timeAmount="2" timeType="WEEKS" punishmentType="MUTE"/>
+        <Escalations timeAmount="4" timeType="WEEKS" punishmentType="MUTE"/>
+    </PunishmentReason>
+    <PunishmentReason reason="Libel" loca="@PREDEFINED_MOD_CMTOOL_MESSAGE_LIBEL">
+        <Escalations timeAmount="1" timeType="MINUTES" punishmentType="WARN"/>
+        <Escalations timeAmount="1" timeType="HOURS" punishmentType="MUTE"/>
+        <Escalations timeAmount="3" timeType="HOURS" punishmentType="MUTE"/>
         <Escalations timeAmount="6" timeType="HOURS" punishmentType="MUTE"/>
         <Escalations timeAmount="12" timeType="HOURS" punishmentType="MUTE"/>
         <Escalations timeAmount="1" timeType="DAYS" punishmentType="MUTE"/>
         <Escalations timeAmount="4" timeType="DAYS" punishmentType="MUTE"/>
         <Escalations timeAmount="1" timeType="WEEKS" punishmentType="MUTE"/>
         <Escalations timeAmount="2" timeType="WEEKS" punishmentType="MUTE"/>
+        <Escalations timeAmount="4" timeType="WEEKS" punishmentType="MUTE"/>
+        <Escalations timeAmount="8" timeType="WEEKS" punishmentType="MUTE"/>
     </PunishmentReason>
-    <PunishmentReason reason="Hate Speech" loca="@PREDEFINED_MOD_CMTOOL_MESSAGE_HATESPEECH">
+    <PunishmentReason reason="Malicious Instig." loca="@PREDEFINED_MOD_CMTOOL_MESSAGE_MALICIOUS_INSTIGATION">
+        <Escalations timeAmount="1" timeType="MINUTES" punishmentType="WARN"/>
+        <Escalations timeAmount="3" timeType="HOURS" punishmentType="MUTE"/>
+        <Escalations timeAmount="6" timeType="HOURS" punishmentType="MUTE"/>
+        <Escalations timeAmount="8" timeType="HOURS" punishmentType="MUTE"/>
+        <Escalations timeAmount="12" timeType="HOURS" punishmentType="MUTE"/>
+        <Escalations timeAmount="1" timeType="DAYS" punishmentType="MUTE"/>
+        <Escalations timeAmount="4" timeType="DAYS" punishmentType="MUTE"/>
         <Escalations timeAmount="1" timeType="WEEKS" punishmentType="MUTE"/>
         <Escalations timeAmount="2" timeType="WEEKS" punishmentType="MUTE"/>
         <Escalations timeAmount="4" timeType="WEEKS" punishmentType="MUTE"/>
         <Escalations timeAmount="8" timeType="WEEKS" punishmentType="MUTE"/>
-        <Escalations timeAmount="1" timeType="FOREVER" punishmentType="MUTE" gmNotify="true"/>
     </PunishmentReason>
     <PunishmentReason reason="Help Ch. Trolling" loca="@PREDEFINED_MOD_CMTOOL_MESSAGE_HELP_TROLLING">
         <Escalations timeAmount="1" timeType="HOURS" punishmentType="MUTE"/>
@@ -67,30 +136,48 @@
         <Escalations timeAmount="2" timeType="WEEKS" punishmentType="MUTE"/>
         <Escalations timeAmount="4" timeType="WEEKS" punishmentType="MUTE"/>
         <Escalations timeAmount="8" timeType="WEEKS" punishmentType="MUTE"/>
-        <Escalations timeAmount="1" timeType="FOREVER" punishmentType="MUTE" gmNotify="true"/>
     </PunishmentReason>
-    <PunishmentReason reason="Improper Content" loca="@PREDEFINED_MOD_CMTOOL_MESSAGE_INAPPROPRIATE_CONTENT">
-        <Escalations timeAmount="12" timeType="HOURS" punishmentType="MUTE"/>
+    <PunishmentReason reason="Spam Wave Instigator" loca="@PREDEFINED_MOD_CMTOOL_MESSAGE_SPAM_WAVE_INSTIGATOR">
+        <Escalations timeAmount="6" timeType="HOURS" punishmentType="MUTE"/>    
         <Escalations timeAmount="1" timeType="DAYS" punishmentType="MUTE"/>
-        <Escalations timeAmount="2" timeType="DAYS" punishmentType="MUTE"/>
+        <Escalations timeAmount="3" timeType="DAYS" punishmentType="MUTE"/>
+        <Escalations timeAmount="5" timeType="DAYS" punishmentType="MUTE"/>
         <Escalations timeAmount="1" timeType="WEEKS" punishmentType="MUTE"/>
         <Escalations timeAmount="2" timeType="WEEKS" punishmentType="MUTE"/>
         <Escalations timeAmount="4" timeType="WEEKS" punishmentType="MUTE"/>
         <Escalations timeAmount="8" timeType="WEEKS" punishmentType="MUTE"/>
-        <Escalations timeAmount="1" timeType="FOREVER" punishmentType="MUTE" gmNotify="true"/>
     </PunishmentReason>
-    <PunishmentReason reason="Libel" loca="@PREDEFINED_MOD_CMTOOL_MESSAGE_LIBEL">
-        <Escalations timeAmount="1" timeType="MINUTES" punishmentType="WARN"/>
-        <Escalations timeAmount="1" timeType="HOURS" punishmentType="MUTE"/>
-        <Escalations timeAmount="6" timeType="HOURS" punishmentType="MUTE"/>
+    <PunishmentReason reason="Discrimination" loca="@PREDEFINED_MOD_CMTOOL_MESSAGE_DISCRIMINATION_BIGOTRY">
+        <Escalations timeAmount="3" timeType="HOURS" punishmentType="MUTE"/>
+        <Escalations timeAmount="12" timeType="HOURS" punishmentType="MUTE"/>
         <Escalations timeAmount="1" timeType="DAYS" punishmentType="MUTE"/>
         <Escalations timeAmount="4" timeType="DAYS" punishmentType="MUTE"/>
+        <Escalations timeAmount="1" timeType="WEEKS" punishmentType="MUTE"/>
         <Escalations timeAmount="2" timeType="WEEKS" punishmentType="MUTE"/>
         <Escalations timeAmount="4" timeType="WEEKS" punishmentType="MUTE"/>
         <Escalations timeAmount="1" timeType="FOREVER" punishmentType="MUTE" gmNotify="true"/>
     </PunishmentReason>
-    <PunishmentReason reason="Malicious Instig." loca="@PREDEFINED_MOD_CMTOOL_MESSAGE_MALICIOUS_INSTIGATION">
-        <Escalations timeAmount="1" timeType="MINUTES" punishmentType="WARN"/>
+    <PunishmentReason reason="Excessive Toxicity" loca="@PREDEFINED_MOD_CMTOOL_MESSAGE_TOXICITY">
+        <Escalations timeAmount="6" timeType="HOURS" punishmentType="MUTE"/>
+        <Escalations timeAmount="12" timeType="HOURS" punishmentType="MUTE"/>
+        <Escalations timeAmount="1" timeType="DAYS" punishmentType="MUTE"/>
+        <Escalations timeAmount="4" timeType="DAYS" punishmentType="MUTE"/>
+        <Escalations timeAmount="1" timeType="WEEKS" punishmentType="MUTE"/>
+        <Escalations timeAmount="2" timeType="WEEKS" punishmentType="MUTE"/>
+        <Escalations timeAmount="4" timeType="WEEKS" punishmentType="MUTE"/>
+        <Escalations timeAmount="1" timeType="FOREVER" punishmentType="MUTE" gmNotify="true"/>
+    </PunishmentReason>
+    <PunishmentReason reason="Improper Content" loca="@PREDEFINED_MOD_CMTOOL_MESSAGE_INAPPROPRIATE_CONTENT">
+        <Escalations timeAmount="6" timeType="HOURS" punishmentType="MUTE"/>
+        <Escalations timeAmount="12" timeType="HOURS" punishmentType="MUTE"/>
+        <Escalations timeAmount="1" timeType="DAYS" punishmentType="MUTE"/>
+        <Escalations timeAmount="4" timeType="DAYS" punishmentType="MUTE"/>
+        <Escalations timeAmount="1" timeType="WEEKS" punishmentType="MUTE"/>
+        <Escalations timeAmount="2" timeType="WEEKS" punishmentType="MUTE"/>
+        <Escalations timeAmount="4" timeType="WEEKS" punishmentType="MUTE"/>
+        <Escalations timeAmount="1" timeType="FOREVER" punishmentType="MUTE" gmNotify="true"/>
+    </PunishmentReason>
+    <PunishmentReason reason="Xtrm Anti Albion/Devs" loca="@PREDEFINED_MOD_CMTOOL_MESSAGE_TOXIC_GAME">
         <Escalations timeAmount="6" timeType="HOURS" punishmentType="MUTE"/>
         <Escalations timeAmount="1" timeType="DAYS" punishmentType="MUTE"/>
         <Escalations timeAmount="4" timeType="DAYS" punishmentType="MUTE"/>
@@ -102,82 +189,25 @@
     <PunishmentReason reason="Mimic Mods/Staff" loca="@PREDEFINED_MOD_CMTOOL_MESSAGE_IMPERSONATING_MOD">
         <Escalations timeAmount="1" timeType="DAYS" punishmentType="MUTE"/>
         <Escalations timeAmount="1" timeType="WEEKS" punishmentType="MUTE"/>
+        <Escalations timeAmount="2" timeType="WEEKS" punishmentType="MUTE"/>
+        <Escalations timeAmount="4" timeType="WEEKS" punishmentType="MUTE"/>
+        <Escalations timeAmount="1" timeType="FOREVER" punishmentType="MUTE" gmNotify="true"/>
+    </PunishmentReason>
+    <PunishmentReason reason="Hate Speech" loca="@PREDEFINED_MOD_CMTOOL_MESSAGE_HATESPEECH">
+        <Escalations timeAmount="1" timeType="WEEKS" punishmentType="MUTE"/>
+        <Escalations timeAmount="2" timeType="WEEKS" punishmentType="MUTE"/>
         <Escalations timeAmount="4" timeType="WEEKS" punishmentType="MUTE"/>
         <Escalations timeAmount="8" timeType="WEEKS" punishmentType="MUTE"/>
         <Escalations timeAmount="1" timeType="FOREVER" punishmentType="MUTE" gmNotify="true"/>
     </PunishmentReason>
-    <PunishmentReason reason="Mod Harassment" loca="@PREDEFINED_MOD_CMTOOL_MESSAGE_HARASSING_MODS">
-        <Escalations timeAmount="1" timeType="HOURS" punishmentType="MUTE"/>
-        <Escalations timeAmount="6" timeType="HOURS" punishmentType="MUTE"/>
-        <Escalations timeAmount="4" timeType="DAYS" punishmentType="MUTE"/>
+    <PunishmentReason reason="Breached T&amp;Cs" loca="@PREDEFINED_MOD_CMTOOL_MESSAGE_TERMS_AND_CONDITIONS">
         <Escalations timeAmount="1" timeType="WEEKS" punishmentType="MUTE"/>
         <Escalations timeAmount="2" timeType="WEEKS" punishmentType="MUTE"/>
-    </PunishmentReason>
-    <PunishmentReason reason="Pol./Rel. Discussion" loca="@PREDEFINED_MOD_CMTOOL_MESSAGE_DISCUSSION">
-        <Escalations timeAmount="1" timeType="MINUTES" punishmentType="WARN"/>
-        <Escalations timeAmount="1" timeType="HOURS" punishmentType="MUTE"/>
-        <Escalations timeAmount="6" timeType="HOURS" punishmentType="MUTE"/>
-        <Escalations timeAmount="1" timeType="DAYS" punishmentType="MUTE"/>
-        <Escalations timeAmount="4" timeType="DAYS" punishmentType="MUTE"/>
-        <Escalations timeAmount="1" timeType="WEEKS" punishmentType="MUTE"/>
-        <Escalations timeAmount="2" timeType="WEEKS" punishmentType="MUTE"/>
+        <Escalations timeAmount="8" timeType="WEEKS" punishmentType="MUTE"/>
+        <Escalations timeAmount="1" timeType="FOREVER" punishmentType="MUTE" gmNotify="true"/>
     </PunishmentReason>
     <PunishmentReason reason="RMT Joke" loca="@PREDEFINED_MOD_CMTOOL_MESSAGE_RMT_JOKE">
-        <Escalations timeAmount="7" timeType="DAYS" punishmentType="MUTE"/>
-        <Escalations timeAmount="1" timeType="FOREVER" punishmentType="MUTE" gmNotify="true"/>
-    </PunishmentReason>
-    <PunishmentReason reason="Spam/Caps/Rep. Ads" loca="@PREDEFINED_MOD_CMTOOL_MESSAGE_SPAM">
-        <Escalations timeAmount="1" timeType="MINUTES" punishmentType="WARN"/>
-        <Escalations timeAmount="1" timeType="HOURS" punishmentType="MUTE"/>
-        <Escalations timeAmount="6" timeType="HOURS" punishmentType="MUTE"/>
         <Escalations timeAmount="1" timeType="DAYS" punishmentType="MUTE"/>
-        <Escalations timeAmount="4" timeType="DAYS" punishmentType="MUTE"/>
-        <Escalations timeAmount="1" timeType="WEEKS" punishmentType="MUTE"/>
-        <Escalations timeAmount="2" timeType="WEEKS" punishmentType="MUTE"/>
-        <Escalations timeAmount="4" timeType="WEEKS" punishmentType="MUTE"/>
-    </PunishmentReason>
-    <PunishmentReason reason="Spam Wave" loca="@PREDEFINED_MOD_CMTOOL_MESSAGE_SPAM_WAVE">
-        <Escalations timeAmount="30" timeType="MINUTES" punishmentType="MUTE"/>
-        <Escalations timeAmount="6" timeType="HOURS" punishmentType="MUTE"/>
-        <Escalations timeAmount="1" timeType="DAYS" punishmentType="MUTE"/>
-        <Escalations timeAmount="1" timeType="WEEKS" punishmentType="MUTE"/>
-        <Escalations timeAmount="2" timeType="WEEKS" punishmentType="MUTE"/>
-    </PunishmentReason>
-    <PunishmentReason reason="Wipe Trolling" loca="@PREDEFINED_MOD_CMTOOL_MESSAGE_WIPE_TROLL">
-        <Escalations timeAmount="1" timeType="HOURS" punishmentType="MUTE"/>
-        <Escalations timeAmount="6" timeType="HOURS" punishmentType="MUTE"/>
-        <Escalations timeAmount="12" timeType="HOURS" punishmentType="MUTE"/>
-        <Escalations timeAmount="1" timeType="DAYS" punishmentType="MUTE"/>
-        <Escalations timeAmount="2" timeType="DAYS" punishmentType="MUTE"/>
-        <Escalations timeAmount="4" timeType="DAYS" punishmentType="MUTE"/>
-        <Escalations timeAmount="1" timeType="WEEKS" punishmentType="MUTE"/>
-        <Escalations timeAmount="2" timeType="WEEKS" punishmentType="MUTE"/>
-        <Escalations timeAmount="4" timeType="WEEKS" punishmentType="MUTE"/>
-        <Escalations timeAmount="8" timeType="WEEKS" punishmentType="MUTE"/>
-    </PunishmentReason>
-    <PunishmentReason reason="Wrong Language Ch." loca="@PREDEFINED_MOD_CMTOOL_MESSAGE_LANG_CHANNEL">
-        <Escalations timeAmount="1" timeType="MINUTES" punishmentType="WARN"/>
-        <Escalations timeAmount="1" timeType="HOURS" punishmentType="MUTE"/>
-        <Escalations timeAmount="6" timeType="HOURS" punishmentType="MUTE"/>
-        <Escalations timeAmount="1" timeType="DAYS" punishmentType="MUTE"/>
-        <Escalations timeAmount="1" timeType="DAYS" punishmentType="MUTE"/>
-        <Escalations timeAmount="1" timeType="DAYS" punishmentType="MUTE"/>
-        <Escalations timeAmount="1" timeType="WEEKS" punishmentType="MUTE"/>
-    </PunishmentReason>
-    <PunishmentReason reason="Wrong Topic Ch." loca="@PREDEFINED_MOD_CMTOOL_MESSAGE_TOPIC_CHANNEL">
-        <Escalations timeAmount="1" timeType="MINUTES" punishmentType="WARN"/>
-        <Escalations timeAmount="1" timeType="HOURS" punishmentType="MUTE"/>
-        <Escalations timeAmount="6" timeType="HOURS" punishmentType="MUTE"/>
-        <Escalations timeAmount="1" timeType="DAYS" punishmentType="MUTE"/>
-        <Escalations timeAmount="2" timeType="DAYS" punishmentType="MUTE"/>
-        <Escalations timeAmount="4" timeType="DAYS" punishmentType="MUTE"/>
-        <Escalations timeAmount="1" timeType="WEEKS" punishmentType="MUTE"/>
-        <Escalations timeAmount="2" timeType="WEEKS" punishmentType="MUTE"/>
-    </PunishmentReason>
-    <PunishmentReason reason="Xtrm Anti Albion/Devs" loca="@PREDEFINED_MOD_CMTOOL_MESSAGE_TOXIC_GAME">
-        <Escalations timeAmount="6" timeType="HOURS" punishmentType="MUTE"/>
-        <Escalations timeAmount="1" timeType="DAYS" punishmentType="MUTE"/>
-        <Escalations timeAmount="1" timeType="WEEKS" punishmentType="MUTE"/>
         <Escalations timeAmount="4" timeType="WEEKS" punishmentType="MUTE"/>
         <Escalations timeAmount="1" timeType="FOREVER" punishmentType="MUTE" gmNotify="true"/>
     </PunishmentReason>
