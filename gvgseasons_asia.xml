@@ -3971,8 +3971,27 @@
           <enable_portalbindingremoval />
         </eventtime>
       </day>
+      
+      <!-- This timeregion split is required to to a negative timregion setup so high that the order of events is wrong. calculateusingclustertimezone does 00:00 - timeregion  -->
+      <day number="28">
+        <eventtime utctime="00:00:01Z" calculateusingclustertimezone="true">
+          <clusterfilter>
+            <timeregion name="US_04_00" />
+          </clusterfilter>
+          <territorybattleend />
+          <territoryraidend />
+          <territoryscoringend />
+        </eventtime>
+      </day>
       <day number="29">
         <eventtime utctime="00:00:01Z" calculateusingclustertimezone="true">
+          <clusterfilter>
+            <timeregion name="US_00_00" />
+            <timeregion name="US_02_00" />
+            <timeregion name="US_18_00" />
+            <timeregion name="US_20_00" />
+            <timeregion name="US_22_00" />
+          </clusterfilter>
           <territorybattleend />
           <territoryraidend />
           <territoryscoringend />
@@ -3980,11 +3999,11 @@
         <eventtime utctime="00:00:00Z">
           <territoriesunclaimable />
           <resetterritories />
+          <territorystoragepayoutonclaimstart />
           <scoremultiplier newmultiplier="2" />
           <disable_portalbindingremoval />
         </eventtime>
-      </day>
-      <day number="29">
+      </day><day number="29">
         <eventtime utctime="14:00:00Z">
           <clusterfilter>
             <timeregion name="US_00_00" />
@@ -4000,6 +4019,7 @@
         </eventtime>
         <eventtime utctime="20:00:01Z" calculateusingclustertimezone="true">
           <territoryscoringstart />
+          <territorystoragepayoutonclaimend />
         </eventtime>
       </day>
       <day number="31">
@@ -4009,22 +4029,39 @@
           <enable_portalbindingremoval />
         </eventtime>
       </day>
-      <day number="57">
+      
+      <!-- This timeregion split is required to to a negative timregion setup so high that the order of events is wrong. calculateusingclustertimezone does 00:00 - timeregion  -->
+      <day number="56">
         <eventtime utctime="00:00:01Z" calculateusingclustertimezone="true">
-          <fortificationpointsreset />
+          <clusterfilter>
+            <timeregion name="US_04_00" />
+          </clusterfilter>
           <territorybattleend />
           <territoryraidend />
           <territoryscoringend />
-          <fortificationpointsgenerationend />
+        </eventtime>
+      </day>
+      <day number="57">
+        <eventtime utctime="00:00:01Z" calculateusingclustertimezone="true">
+          <clusterfilter>
+            <timeregion name="US_00_00" />
+            <timeregion name="US_02_00" />
+            <timeregion name="US_18_00" />
+            <timeregion name="US_20_00" />
+            <timeregion name="US_22_00" />
+          </clusterfilter>
+          <territorybattleend />
+          <territoryraidend />
+          <territoryscoringend />
         </eventtime>
         <eventtime utctime="00:00:00Z">
           <territoriesunclaimable />
           <resetterritories />
           <territorystoragepayoutonclaimstart />
+          <scoremultiplier newmultiplier="2" />
           <disable_portalbindingremoval />
         </eventtime>
-      </day>
-      <day number="57">
+      </day><day number="57">
         <eventtime utctime="14:00:00Z">
           <clusterfilter>
             <timeregion name="US_00_00" />
@@ -4267,6 +4304,7 @@
         <eventtime utctime="00:00:00Z">
           <territoriesunclaimable />
           <resetterritories />
+          <territorystoragepayoutonclaimstart />
           <scoremultiplier newmultiplier="2" />
           <disable_portalbindingremoval />
         </eventtime>
@@ -4287,6 +4325,7 @@
         </eventtime>
         <eventtime utctime="20:00:01Z" calculateusingclustertimezone="true">
           <territoryscoringstart />
+          <territorystoragepayoutonclaimend />
         </eventtime>
       </day>
       <day number="31">

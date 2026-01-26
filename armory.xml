@@ -27,25 +27,6 @@
         <activity uniquename="openworldsolo" image="">
             <tags>
                 <tag ref="solo"/>
-                <tag ref="openworld"/>
-                <tag ref="pve"/>
-                <tag ref="pvp"/>
-            </tags>
-            <datasetrequirements>
-                <or>
-                    <and>
-                        <duration mindurationminutes="5"/>
-                        <metric name="pvpfamegained" minvalue="1"/>
-                    </and>
-                    <and>
-                        <duration mindurationminutes="5"/>
-                        <metric name="pvefamegained" minvalue="1"/>
-                    </and>
-                </or>
-            </datasetrequirements>
-        </activity>
-        <activity uniquename="openworldgroup" image="">
-            <tags>
                 <tag ref="small_group"/>
                 <tag ref="openworld"/>
                 <tag ref="pve"/>
@@ -54,12 +35,32 @@
             <datasetrequirements>
                 <or>
                     <and>
-                        <duration mindurationminutes="10"/>
-                        <metric name="pvpfamegained" minvalue="1"/>
+                        <duration mindurationminutes="5"/>
+                        <metric name="pvpfamegained" minvalue="25000"/>
+                    </and>
+                    <and>
+                        <duration mindurationminutes="5"/>
+                        <metric name="pvefamegained" minvalue="100000"/>
+                    </and>
+                </or>
+            </datasetrequirements>
+        </activity>
+        <activity uniquename="openworldgroup" image="">
+            <tags>
+                <tag ref="medium_group"/>
+                <tag ref="openworld"/>
+                <tag ref="pve"/>
+                <tag ref="pvp"/>
+            </tags>
+            <datasetrequirements>
+                <or>
+                    <and>
+                        <duration mindurationminutes="5"/>
+                        <metric name="pvpfamegained" minvalue="50000"/>
                     </and>
                     <and>
                         <duration mindurationminutes="10"/>
-                        <metric name="pvefamegained" minvalue="1"/>
+                        <metric name="pvefamegained" minvalue="100000"/>
                     </and>
                 </or>
             </datasetrequirements>
@@ -74,12 +75,12 @@
             <datasetrequirements>
                 <or>
                     <and>
-                        <duration mindurationminutes="10"/>
-                        <metric name="pvpfamegained" minvalue="1"/>
+                        <duration mindurationminutes="5"/>
+                        <metric name="pvpfamegained" minvalue="100000"/>
                     </and>
                     <and>
-                        <duration mindurationminutes="10"/>
-                        <metric name="pvefamegained" minvalue="1"/>
+                        <duration mindurationminutes="5"/>
+                        <metric name="pvefamegained" minvalue="200000"/>
                     </and>
                 </or>
             </datasetrequirements>
@@ -94,13 +95,13 @@
             </tags>
             <datasetrequirements>
                 <and>
-                    <duration mindurationminutes="2"/>
+                    <duration mindurationminutes="5"/>
                     <or>
-                        <metric name="damagedealt" minvalue="5000"/>
-                        <metric name="healingdone" minvalue="5000"/>
-                        <metric name="damagereceived" minvalue="5000"/>
-                        <metric name="kills" minvalue="3"/>
-                        <metric name="pvpfamegained" minvalue="1000"/>
+                        <metric name="damagedealt" minvalue="20000"/>
+                        <metric name="healingdone" minvalue="50000"/>
+                        <metric name="damagereceived" minvalue="20000"/>
+                        <metric name="kills" minvalue="2"/>
+                        <metric name="pvpfamegained" minvalue="500000"/>
                     </or>
                 </and>
             </datasetrequirements>
@@ -161,9 +162,9 @@
                 <and>
                     <duration mindurationminutes="5"/>
                     <or>
-                        <metric name="damagedealt" minvalue="5000"/>
-                        <metric name="healingdone" minvalue="5000"/>
-                        <metric name="damagereceived" minvalue="5000"/>
+                        <metric name="damagedealt" minvalue="10000"/>
+                        <metric name="healingdone" minvalue="10000"/>
+                        <metric name="damagereceived" minvalue="10000"/>
                     </or>
                 </and>
             </datasetrequirements>
@@ -179,9 +180,9 @@
                 <and>
                     <duration mindurationminutes="5"/>
                     <or>
-                        <metric name="damagedealt" minvalue="5000"/>
-                        <metric name="healingdone" minvalue="5000"/>
-                        <metric name="damagereceived" minvalue="5000"/>
+                        <metric name="damagedealt" minvalue="10000"/>
+                        <metric name="healingdone" minvalue="10000"/>
+                        <metric name="damagereceived" minvalue="10000"/>
                     </or>
                 </and>
             </datasetrequirements>
@@ -197,9 +198,9 @@
                 <and>
                     <duration mindurationminutes="5"/>
                     <or>
-                        <metric name="damagedealt" minvalue="5000"/>
-                        <metric name="healingdone" minvalue="5000"/>
-                        <metric name="damagereceived" minvalue="5000"/>
+                        <metric name="damagedealt" minvalue="10000"/>
+                        <metric name="healingdone" minvalue="10000"/>
+                        <metric name="damagereceived" minvalue="10000"/>
                     </or>
                 </and>
             </datasetrequirements>
@@ -215,9 +216,9 @@
                 <and>
                     <duration mindurationminutes="5"/>
                     <or>
-                        <metric name="damagedealt" minvalue="5000"/>
-                        <metric name="healingdone" minvalue="5000"/>
-                        <metric name="damagereceived" minvalue="5000"/>
+                        <metric name="damagedealt" minvalue="10000"/>
+                        <metric name="healingdone" minvalue="10000"/>
+                        <metric name="damagereceived" minvalue="10000"/>
                     </or>
                 </and>
             </datasetrequirements>
@@ -234,16 +235,13 @@
                 <or>
                     <and> <!-- PvP Combat Scenario -->
                         <duration mindurationminutes="5"/>
-                        <or>
-                            <metric name="pvpfamegained" minvalue="1"/>
-                            <metric name="kills" minvalue="1"/>
-                        </or>
+                        <metric name="pvpfamegained" minvalue="25000"/>
                     </and>
                     <and> <!-- PvE Scenario -->
                         <duration mindurationminutes="5"/>
                         <or>
-                            <metric name="pvefamegained" minvalue="1000"/>
-                            <metric name="mobskilled" minvalue="5"/>
+                            <metric name="pvefamegained" minvalue="50000"/>
+                            <metric name="mobskilled" minvalue="20"/>
                         </or>
                     </and>
                 </or>
@@ -260,10 +258,13 @@
             </tags>
             <datasetrequirements>
                 <and>
-                    <duration mindurationminutes="10"/>
+                    <duration mindurationminutes="5"/>
                     <or>
-                        <metric name="pvpfamegained" minvalue="1"/>
-                        <metric name="pvefamegained" minvalue="1"/>
+                        <metric name="damagedealt" minvalue="20000"/>
+                        <metric name="healingdone" minvalue="50000"/>
+                        <metric name="damagereceived" minvalue="20000"/>
+                        <metric name="kills" minvalue="2"/>
+                        <metric name="pvpfamegained" minvalue="100000"/>
                     </or>
                 </and>
             </datasetrequirements>
@@ -271,22 +272,22 @@
         <activity uniquename="castle" image="">
             <tags>
                 <tag ref="large_group"/>
+                <tag ref="zerg"/>
                 <tag ref="openworld"/>
                 <tag ref="pvp"/>
                 <tag ref="conquering"/>
             </tags>
             <datasetrequirements>
-                <or>
-                    <duration mindurationminutes="2"/>
-                    <and>
-                        <metric name="pvpfamegained" minvalue="500"/>
-                        <metric name="kills" minvalue="1"/>
-                    </and>
-                    <and>
-                        <metric name="pvefamegained" minvalue="500"/>
-                        <metric name="mobskilled" minvalue="1"/>
-                    </and>
-                </or>
+                <and>
+                  <duration mindurationminutes="5"/>
+                  <or>
+                      <metric name="damagedealt" minvalue="20000"/>
+                      <metric name="healingdone" minvalue="50000"/>
+                      <metric name="damagereceived" minvalue="20000"/>
+                      <metric name="kills" minvalue="2"/>
+                      <metric name="pvpfamegained" minvalue="100000"/>
+                  </or>
+                </and>
             </datasetrequirements>
         </activity>
         <activity uniquename="fortification" image="">
@@ -299,16 +300,21 @@
             </tags>
             <datasetrequirements>
                 <and>
-                    <duration mindurationminutes="5"/>
-                    <or>
-                        <metric name="buildingdamage" minvalue="1000"/>
-                        <metric name="pvpfamegained" minvalue="1"/>
-                    </or>
+                  <duration mindurationminutes="5"/>
+                  <or>
+                      <metric name="damagedealt" minvalue="20000"/>
+                      <metric name="healingdone" minvalue="50000"/>
+                      <metric name="damagereceived" minvalue="20000"/>
+                      <metric name="kills" minvalue="2"/>
+                      <metric name="pvpfamegained" minvalue="100000"/>
+                  </or>
                 </and>
             </datasetrequirements>
         </activity>
         <activity uniquename="avalonianroads" image="">
             <tags>
+                <tag ref="solo"/>
+                <tag ref="small_group"/>
                 <tag ref="medium_group"/>
                 <tag ref="instanced"/>
                 <tag ref="pvp"/>
@@ -316,10 +322,10 @@
             </tags>
             <datasetrequirements>
                 <and>
-                    <duration mindurationminutes="10"/>
+                    <duration mindurationminutes="5"/>
                     <or>
-                        <metric name="pvpfamegained" minvalue="1"/>
-                        <metric name="pvefamegained" minvalue="1"/>
+                        <metric name="pvpfamegained" minvalue="25000"/>
+                        <metric name="pvefamegained" minvalue="50000"/>
                     </or>
                 </and>
             </datasetrequirements>
@@ -331,10 +337,8 @@
                 <tag ref="gathering"/>
             </tags>
             <datasetrequirements>
-                <or>
-                    <duration mindurationminutes="5"/>
-                    <metric name="pvefamegained" minvalue="1000"/>
-                </or>
+                <!--TODO: gatheringfamegained metric-->
+                <duration mindurationminutes="15"/>
             </datasetrequirements>
         </activity>
         <activity uniquename="solodungeons" image="">
@@ -347,8 +351,8 @@
             </tags>
             <datasetrequirements>
                 <and>
-                    <duration mindurationminutes="10"/>
-                    <metric name="mobskilled" minvalue="10"/>
+                    <duration mindurationminutes="5"/>
+                    <metric name="mobskilled" minvalue="20"/>
                 </and>
             </datasetrequirements>
         </activity>
@@ -362,8 +366,8 @@
             </tags>
             <datasetrequirements>
                 <or>
-                    <duration mindurationminutes="10"/>
-                    <metric name="mobskilled" minvalue="10"/>
+                    <duration mindurationminutes="5"/>
+                    <metric name="mobskilled" minvalue="20"/>
                 </or>
             </datasetrequirements>
         </activity>
@@ -376,8 +380,8 @@
             </tags>
             <datasetrequirements>
                 <or>
-                    <duration mindurationminutes="10"/>
-                    <metric name="mobskilled" minvalue="10"/>
+                    <duration mindurationminutes="5"/>
+                    <metric name="mobskilled" minvalue="20"/>
                 </or>
             </datasetrequirements>
         </activity>
@@ -390,8 +394,8 @@
             </tags>
             <datasetrequirements>
                 <or>
-                    <duration mindurationminutes="10"/>
-                    <metric name="mobskilled" minvalue="10"/>
+                    <duration mindurationminutes="5"/>
+                    <metric name="mobskilled" minvalue="20"/>
                 </or>
             </datasetrequirements>
         </activity>
@@ -403,9 +407,8 @@
             </tags>
             <datasetrequirements>
                 <and>
-                    <duration mindurationminutes="5"/>
-                    <metric name="pvefamegained" minvalue="500"/>
-                    <metric name="mobskilled" minvalue="1"/>
+                    <duration mindurationminutes="10"/>
+                    <metric name="pvefamegained" minvalue="500000"/>
                 </and>
             </datasetrequirements>
         </activity>
@@ -413,18 +416,16 @@
             <tags>
                 <tag ref="solo"/>
                 <tag ref="small_group"/>
+                <tag ref="medium_group"/>
                 <tag ref="openworld"/>
                 <tag ref="pve"/>
                 <tag ref="gathering"/>
             </tags>
             <datasetrequirements>
-                <or>
-                    <and>
-                        <duration mindurationminutes="5"/>
-                        <metric name="damagedealt" minvalue="1000"/>
-                    </and>
-                    <metric name="successwin" minvalue="1"/>
-                </or>
+              <and>
+                <metric name="successwin" minvalue="1"/>
+                <metric name="pvefamegained" minvalue="25000"/>
+              </and>
             </datasetrequirements>
         </activity>
         <activity uniquename="helldungeons2v2" image="">
@@ -442,6 +443,7 @@
                         <or>
                             <metric name="pvpfamegained" minvalue="1"/>
                             <metric name="kills" minvalue="1"/>
+                            <metric name="pvefamegained" minvalue="100000"/>
                         </or>
                     </and>
                 </or>
@@ -456,15 +458,14 @@
                 <tag ref="pve"/>
             </tags>
             <datasetrequirements>
-                <or>
-                    <and>
-                        <duration mindurationminutes="5"/>
-                        <or>
-                            <metric name="pvpfamegained" minvalue="1"/>
-                            <metric name="kills" minvalue="1"/>
-                        </or>
-                    </and>
-                </or>
+                <and>
+                    <duration mindurationminutes="5"/>
+                    <or>
+                        <metric name="pvpfamegained" minvalue="1"/>
+                        <metric name="kills" minvalue="1"/>
+                        <metric name="pvefamegained" minvalue="100000"/>
+                    </or>
+                </and>
             </datasetrequirements>
         </activity>
     </activities>
