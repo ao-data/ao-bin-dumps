@@ -5,6 +5,33 @@
   <!-- From now on please add new events at the top of this file. -->
   <fixedevents>
     <!--2025-->
+    <event uniquename="XMAS2026" title="@FIXED_EVENT_XMAS_2022" description="@FIXED_EVENT_XMAS_2022" image="activities_event_xmas" showinactivityboard="true">
+      <activeflag name="christmas" />
+      <mail mailid="MAIL_XMAS_2025" sender="Albion Online">
+        <attacheditem id="T3_VANITY_CONSUMABLE_FIREWORKS_YELLOW_NONTRADABLE" amount="5" />
+        <attacheditem id="T3_VANITY_CONSUMABLE_FIREWORKS_GREEN_NONTRADABLE" amount="5" />
+        <attacheditem id="T3_VANITY_CONSUMABLE_FIREWORKS_RED_NONTRADABLE" amount="5" />
+        <attacheditem id="UNIQUE_CONSUMABLE_EVENT_WINTER_2017" amount="50" />
+      </mail>
+    </event>
+    <event uniquename="HALLOWEEN2026" title="@FIXED_EVENT_HALLOWEEN_2026" description="@FIXED_EVENT_HALLOWEEN_2023_DESC" image="activities_event_halloween" showinactivityboard="true">
+      <activeflag name="halloween" />
+    </event>
+    <event uniquename="ANNIVERSARY_2026" title="@FIXED_EVENT_ANNIVERSARY_2022" description="@FIXED_EVENT_ANNIVERSARY_2025_DESC" image="activities_event_anniversary_2023" showinactivityboard="true">
+      <activeflag name="anniversary" />
+      <mail mailid="MAIL_ANNIVERSARY_2025" sender="Albion Online">
+        <attacheditem id="UNIQUE_AVATAR_ANNIVERSARY_2025" amount="1" />
+        <attacheditem id="UNIQUE_AVATARRING_ANNIVERSARY_2025" amount="1" />
+      </mail>
+    </event>
+    <event uniquename="ANNIVERSARY_PRELUDE_2026">
+      <activeflag name="anniversary_prelude" />
+    </event>
+    <event uniquename="EASTER2026" title="@ACTIVITY_HUB_EASTER_TITLE" description="@FIXED_EVENT_EASTER_DESC" image="activities_event_easter_2023" showinactivityboard="true">
+      <activeflag name="easter" />
+      <activeflag name="res_easter" />
+    </event>
+    <!--2025-->
     <event uniquename="XMAS2025" title="@FIXED_EVENT_XMAS_2022" description="@FIXED_EVENT_XMAS_2022" image="activities_event_xmas" showinactivityboard="true">
       <activeflag name="christmas" />
       <mail mailid="MAIL_XMAS_2025" sender="Albion Online">
@@ -271,6 +298,7 @@
   </dailyevents>
   <!-- event views are created even when the event has showinactivityboard set to false, since is showinactivityboard is for the "header" -->
   <activityhubeventviews>
+    <!--Easter Events-->
     <verticalimagetemplate eventref="EASTER2024" title="@ACTIVITY_HUB_EASTER_TITLE" description="@ACTIVITY_HUB_EASTER_DESCRIPTION" image="activities_event_easter_2023_vertical" tabicon="icon_tab_festivities">
       <infos>
         <info avatarring="RING_MOB_STANDARD" avatar="EVENTEASTERCHEST1" text="@ACTIVITY_HUB_EASTER_INFO_1" />
@@ -297,6 +325,20 @@
         <item uniquename="T8_MOUNT_RABBIT_EASTER_DARK@1" />
       </lootlist>
     </verticalimagetemplate>
+    <verticalimagetemplate eventref="EASTER2026" title="@ACTIVITY_HUB_EASTER_TITLE" description="@ACTIVITY_HUB_EASTER_DESCRIPTION" image="activities_event_easter_2023_vertical" tabicon="icon_tab_festivities">
+      <infos>
+        <info avatarring="RING_MOB_STANDARD" avatar="EVENTEASTERCHEST1" text="@ACTIVITY_HUB_EASTER_INFO_1" />
+        <info avatarring="RING_MOB_STANDARD" avatar="NPC_VANITY_STORE" text="@ACTIVITY_HUB_EASTER_INFO_2" />
+        <info avatarring="RING_MOB_STANDARD" avatar="EASTEREGG1" text="@ACTIVITY_HUB_EASTER_INFO_3" />
+      </infos>
+      <lootlist title="@ACTIVITY_HUB_ANNIVERSARY_LOOT">
+        <item uniquename="UNIQUE_CONSUMABLE_EVENT_EASTER_2020_EGG" />
+        <item uniquename="UNIQUE_CONSUMABLE_EVENT_EASTER_2020_CHOCOLATE" />
+        <item uniquename="T8_MOUNT_RABBIT_EASTER" />
+        <item uniquename="T8_MOUNT_RABBIT_EASTER_DARK@1" />
+      </lootlist>
+    </verticalimagetemplate>
+    <!--Anniversary Events-->
     <verticalimagetemplate eventref="ANNIVERSARY_2022" title="@ACTIVITY_HUB_ANNIVERSARY_TITLE" description="@ACTIVITY_HUB_ANNIVERSARY_DESCRIPTION" image="activities_event_anniversary_vertical" tabicon="icon_tab_festivities">
       <infos>
         <info avatarring="RING_MOB_STANDARD" avatar="ANNIVERSARYSTATUESECONDPLACE" text="@ACTIVITY_HUB_INFO_1" />
@@ -329,6 +371,15 @@
       </infos>
       <fixedlootlist title="@ACTIVITY_HUB_ANNIVERSARY_LOOT" lootlistref="EVENT_ANNIVERSARY_2022_LOOT" visibleitems="4" />
     </verticalimagetemplate>
+    <verticalimagetemplate eventref="ANNIVERSARY_2026" title="@ACTIVITY_HUB_ANNIVERSARY_TITLE" description="@ACTIVITY_HUB_ANNIVERSARY_DESCRIPTION" image="activities_event_anniversary_vertical" tabicon="icon_tab_festivities">
+      <infos>
+        <info avatarring="RING_MOB_STANDARD" avatar="ANNIVERSARYSTATUESECONDPLACE" text="@ACTIVITY_HUB_INFO_1" />
+        <info avatarring="RING_MOB_STANDARD" avatar="ANNIVERSARYSTATUESEASON05" text="@ACTIVITY_HUB_INFO_2" />
+        <info avatarring="RING_MOB_STANDARD" avatar="ANNIVERSARYSTATUESEASON08" text="@ACTIVITY_HUB_INFO_3" />
+      </infos>
+      <fixedlootlist title="@ACTIVITY_HUB_ANNIVERSARY_LOOT" lootlistref="EVENT_ANNIVERSARY_2022_LOOT" visibleitems="4" />
+    </verticalimagetemplate>
+    <!--Halloween Events-->
     <verticalimagetemplate eventref="HALLOWEEN2025" title="@ACTIVITY_HUB_HALLOWEEN_TITLE" description="@ACTIVITY_HUB_HALLOWEEN_DESCRIPTION" image="activities_event_halloween_vertical" tabicon="icon_tab_festivities">
       <infos>
         <info avatarring="RING_MOB_STANDARD" avatar="EVENTHALLOWEENCHEST1" text="@ACTIVITY_HUB_HALLOWEEN_INFO_1" />
@@ -337,6 +388,15 @@
       </infos>
       <fixedlootlist title="@ACTIVITY_HUB_ANNIVERSARY_LOOT" lootlistref="EVENT_ACTIVITY_HUB_HALLOWEEN_LOOT" visibleitems="3" />
     </verticalimagetemplate>
+    <verticalimagetemplate eventref="HALLOWEEN2026" title="@ACTIVITY_HUB_HALLOWEEN_TITLE" description="@ACTIVITY_HUB_HALLOWEEN_DESCRIPTION" image="activities_event_halloween_vertical" tabicon="icon_tab_festivities">
+      <infos>
+        <info avatarring="RING_MOB_STANDARD" avatar="EVENTHALLOWEENCHEST1" text="@ACTIVITY_HUB_HALLOWEEN_INFO_1" />
+        <info avatarring="RING_MOB_STANDARD" avatar="HALLOWEENPUMPKINTRASH1" text="@ACTIVITY_HUB_HALLOWEEN_INFO_2" />
+        <info avatarring="RING_MOB_STANDARD" avatar="HALLOWEENBOSS1" text="@ACTIVITY_HUB_HALLOWEEN_INFO_3" />
+      </infos>
+      <fixedlootlist title="@ACTIVITY_HUB_ANNIVERSARY_LOOT" lootlistref="EVENT_ACTIVITY_HUB_HALLOWEEN_LOOT" visibleitems="3" />
+    </verticalimagetemplate>
+    <!--Christmas Events-->
     <verticalimagetemplate eventref="XMAS2024" title="@ACTIVITY_HUB_XMAS_TITLE" description="@ACTIVITY_HUB_XMAS_DESCRIPTION" image="activities_event_xmas_vertical" tabicon="icon_tab_festivities">
       <infos>
         <info avatarring="RING_MOB_STANDARD" avatar="KEEPERGIANTUNCLEFROST1" text="@ACTIVITY_HUB_XMAS_INFO_1" />
@@ -350,6 +410,18 @@
       </lootlist>
     </verticalimagetemplate>
     <verticalimagetemplate eventref="XMAS2025" title="@ACTIVITY_HUB_XMAS_TITLE" description="@ACTIVITY_HUB_XMAS_DESCRIPTION" image="activities_event_xmas_vertical" tabicon="icon_tab_festivities">
+      <infos>
+        <info avatarring="RING_MOB_STANDARD" avatar="KEEPERGIANTUNCLEFROST1" text="@ACTIVITY_HUB_XMAS_INFO_1" />
+        <info avatarring="RING_MOB_STANDARD" avatar="EVENTWINTERCHEST1" text="@ACTIVITY_HUB_XMAS_INFO_2" />
+      </infos>
+      <lootlist title="@ACTIVITY_HUB_ANNIVERSARY_LOOT">
+        <item uniquename="UNIQUE_CONSUMABLE_EVENT_WINTER_2017" />
+        <item uniquename="UNIQUE_UNLOCK_HEAD_XMAS" />
+        <item uniquename="UNIQUE_FURNITUREITEM_XMAS_PRESENT" />
+        <item uniquename="UNIQUE_UNLOCK_SKIN_GIANTSTAG_XMAS" />
+      </lootlist>
+    </verticalimagetemplate>
+    <verticalimagetemplate eventref="XMAS2026" title="@ACTIVITY_HUB_XMAS_TITLE" description="@ACTIVITY_HUB_XMAS_DESCRIPTION" image="activities_event_xmas_vertical" tabicon="icon_tab_festivities">
       <infos>
         <info avatarring="RING_MOB_STANDARD" avatar="KEEPERGIANTUNCLEFROST1" text="@ACTIVITY_HUB_XMAS_INFO_1" />
         <info avatarring="RING_MOB_STANDARD" avatar="EVENTWINTERCHEST1" text="@ACTIVITY_HUB_XMAS_INFO_2" />

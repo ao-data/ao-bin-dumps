@@ -85,47 +85,6 @@
                 "@ref": "solo"
               },
               {
-                "@ref": "openworld"
-              },
-              {
-                "@ref": "pve"
-              },
-              {
-                "@ref": "pvp"
-              }
-            ]
-          },
-          "datasetrequirements": {
-            "or": {
-              "and": [
-                {
-                  "duration": {
-                    "@mindurationminutes": "5"
-                  },
-                  "metric": {
-                    "@name": "pvpfamegained",
-                    "@minvalue": "1"
-                  }
-                },
-                {
-                  "duration": {
-                    "@mindurationminutes": "5"
-                  },
-                  "metric": {
-                    "@name": "pvefamegained",
-                    "@minvalue": "1"
-                  }
-                }
-              ]
-            }
-          }
-        },
-        {
-          "@uniquename": "openworldgroup",
-          "@image": "",
-          "tags": {
-            "tag": [
-              {
                 "@ref": "small_group"
               },
               {
@@ -144,11 +103,55 @@
               "and": [
                 {
                   "duration": {
-                    "@mindurationminutes": "10"
+                    "@mindurationminutes": "5"
                   },
                   "metric": {
                     "@name": "pvpfamegained",
-                    "@minvalue": "1"
+                    "@minvalue": "25000"
+                  }
+                },
+                {
+                  "duration": {
+                    "@mindurationminutes": "5"
+                  },
+                  "metric": {
+                    "@name": "pvefamegained",
+                    "@minvalue": "100000"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "@uniquename": "openworldgroup",
+          "@image": "",
+          "tags": {
+            "tag": [
+              {
+                "@ref": "medium_group"
+              },
+              {
+                "@ref": "openworld"
+              },
+              {
+                "@ref": "pve"
+              },
+              {
+                "@ref": "pvp"
+              }
+            ]
+          },
+          "datasetrequirements": {
+            "or": {
+              "and": [
+                {
+                  "duration": {
+                    "@mindurationminutes": "5"
+                  },
+                  "metric": {
+                    "@name": "pvpfamegained",
+                    "@minvalue": "50000"
                   }
                 },
                 {
@@ -157,7 +160,7 @@
                   },
                   "metric": {
                     "@name": "pvefamegained",
-                    "@minvalue": "1"
+                    "@minvalue": "100000"
                   }
                 }
               ]
@@ -188,20 +191,20 @@
               "and": [
                 {
                   "duration": {
-                    "@mindurationminutes": "10"
+                    "@mindurationminutes": "5"
                   },
                   "metric": {
                     "@name": "pvpfamegained",
-                    "@minvalue": "1"
+                    "@minvalue": "100000"
                   }
                 },
                 {
                   "duration": {
-                    "@mindurationminutes": "10"
+                    "@mindurationminutes": "5"
                   },
                   "metric": {
                     "@name": "pvefamegained",
-                    "@minvalue": "1"
+                    "@minvalue": "200000"
                   }
                 }
               ]
@@ -233,29 +236,29 @@
           "datasetrequirements": {
             "and": {
               "duration": {
-                "@mindurationminutes": "2"
+                "@mindurationminutes": "5"
               },
               "or": {
                 "metric": [
                   {
                     "@name": "damagedealt",
-                    "@minvalue": "5000"
+                    "@minvalue": "20000"
                   },
                   {
                     "@name": "healingdone",
-                    "@minvalue": "5000"
+                    "@minvalue": "50000"
                   },
                   {
                     "@name": "damagereceived",
-                    "@minvalue": "5000"
+                    "@minvalue": "20000"
                   },
                   {
                     "@name": "kills",
-                    "@minvalue": "3"
+                    "@minvalue": "2"
                   },
                   {
                     "@name": "pvpfamegained",
-                    "@minvalue": "1000"
+                    "@minvalue": "500000"
                   }
                 ]
               }
@@ -401,15 +404,15 @@
                 "metric": [
                   {
                     "@name": "damagedealt",
-                    "@minvalue": "5000"
+                    "@minvalue": "10000"
                   },
                   {
                     "@name": "healingdone",
-                    "@minvalue": "5000"
+                    "@minvalue": "10000"
                   },
                   {
                     "@name": "damagereceived",
-                    "@minvalue": "5000"
+                    "@minvalue": "10000"
                   }
                 ]
               }
@@ -444,15 +447,15 @@
                 "metric": [
                   {
                     "@name": "damagedealt",
-                    "@minvalue": "5000"
+                    "@minvalue": "10000"
                   },
                   {
                     "@name": "healingdone",
-                    "@minvalue": "5000"
+                    "@minvalue": "10000"
                   },
                   {
                     "@name": "damagereceived",
-                    "@minvalue": "5000"
+                    "@minvalue": "10000"
                   }
                 ]
               }
@@ -487,15 +490,15 @@
                 "metric": [
                   {
                     "@name": "damagedealt",
-                    "@minvalue": "5000"
+                    "@minvalue": "10000"
                   },
                   {
                     "@name": "healingdone",
-                    "@minvalue": "5000"
+                    "@minvalue": "10000"
                   },
                   {
                     "@name": "damagereceived",
-                    "@minvalue": "5000"
+                    "@minvalue": "10000"
                   }
                 ]
               }
@@ -530,15 +533,15 @@
                 "metric": [
                   {
                     "@name": "damagedealt",
-                    "@minvalue": "5000"
+                    "@minvalue": "10000"
                   },
                   {
                     "@name": "healingdone",
-                    "@minvalue": "5000"
+                    "@minvalue": "10000"
                   },
                   {
                     "@name": "damagereceived",
-                    "@minvalue": "5000"
+                    "@minvalue": "10000"
                   }
                 ]
               }
@@ -574,17 +577,9 @@
                   "duration": {
                     "@mindurationminutes": "5"
                   },
-                  "or": {
-                    "metric": [
-                      {
-                        "@name": "pvpfamegained",
-                        "@minvalue": "1"
-                      },
-                      {
-                        "@name": "kills",
-                        "@minvalue": "1"
-                      }
-                    ]
+                  "metric": {
+                    "@name": "pvpfamegained",
+                    "@minvalue": "25000"
                   }
                 },
                 {
@@ -595,11 +590,11 @@
                     "metric": [
                       {
                         "@name": "pvefamegained",
-                        "@minvalue": "1000"
+                        "@minvalue": "50000"
                       },
                       {
                         "@name": "mobskilled",
-                        "@minvalue": "5"
+                        "@minvalue": "20"
                       }
                     ]
                   }
@@ -636,17 +631,29 @@
           "datasetrequirements": {
             "and": {
               "duration": {
-                "@mindurationminutes": "10"
+                "@mindurationminutes": "5"
               },
               "or": {
                 "metric": [
                   {
-                    "@name": "pvpfamegained",
-                    "@minvalue": "1"
+                    "@name": "damagedealt",
+                    "@minvalue": "20000"
                   },
                   {
-                    "@name": "pvefamegained",
-                    "@minvalue": "1"
+                    "@name": "healingdone",
+                    "@minvalue": "50000"
+                  },
+                  {
+                    "@name": "damagereceived",
+                    "@minvalue": "20000"
+                  },
+                  {
+                    "@name": "kills",
+                    "@minvalue": "2"
+                  },
+                  {
+                    "@name": "pvpfamegained",
+                    "@minvalue": "100000"
                   }
                 ]
               }
@@ -662,6 +669,9 @@
                 "@ref": "large_group"
               },
               {
+                "@ref": "zerg"
+              },
+              {
                 "@ref": "openworld"
               },
               {
@@ -673,36 +683,34 @@
             ]
           },
           "datasetrequirements": {
-            "or": {
+            "and": {
               "duration": {
-                "@mindurationminutes": "2"
+                "@mindurationminutes": "5"
               },
-              "and": [
-                {
-                  "metric": [
-                    {
-                      "@name": "pvpfamegained",
-                      "@minvalue": "500"
-                    },
-                    {
-                      "@name": "kills",
-                      "@minvalue": "1"
-                    }
-                  ]
-                },
-                {
-                  "metric": [
-                    {
-                      "@name": "pvefamegained",
-                      "@minvalue": "500"
-                    },
-                    {
-                      "@name": "mobskilled",
-                      "@minvalue": "1"
-                    }
-                  ]
-                }
-              ]
+              "or": {
+                "metric": [
+                  {
+                    "@name": "damagedealt",
+                    "@minvalue": "20000"
+                  },
+                  {
+                    "@name": "healingdone",
+                    "@minvalue": "50000"
+                  },
+                  {
+                    "@name": "damagereceived",
+                    "@minvalue": "20000"
+                  },
+                  {
+                    "@name": "kills",
+                    "@minvalue": "2"
+                  },
+                  {
+                    "@name": "pvpfamegained",
+                    "@minvalue": "100000"
+                  }
+                ]
+              }
             }
           }
         },
@@ -736,12 +744,24 @@
               "or": {
                 "metric": [
                   {
-                    "@name": "buildingdamage",
-                    "@minvalue": "1000"
+                    "@name": "damagedealt",
+                    "@minvalue": "20000"
+                  },
+                  {
+                    "@name": "healingdone",
+                    "@minvalue": "50000"
+                  },
+                  {
+                    "@name": "damagereceived",
+                    "@minvalue": "20000"
+                  },
+                  {
+                    "@name": "kills",
+                    "@minvalue": "2"
                   },
                   {
                     "@name": "pvpfamegained",
-                    "@minvalue": "1"
+                    "@minvalue": "100000"
                   }
                 ]
               }
@@ -753,6 +773,12 @@
           "@image": "",
           "tags": {
             "tag": [
+              {
+                "@ref": "solo"
+              },
+              {
+                "@ref": "small_group"
+              },
               {
                 "@ref": "medium_group"
               },
@@ -770,17 +796,17 @@
           "datasetrequirements": {
             "and": {
               "duration": {
-                "@mindurationminutes": "10"
+                "@mindurationminutes": "5"
               },
               "or": {
                 "metric": [
                   {
                     "@name": "pvpfamegained",
-                    "@minvalue": "1"
+                    "@minvalue": "25000"
                   },
                   {
                     "@name": "pvefamegained",
-                    "@minvalue": "1"
+                    "@minvalue": "50000"
                   }
                 ]
               }
@@ -804,14 +830,8 @@
             ]
           },
           "datasetrequirements": {
-            "or": {
-              "duration": {
-                "@mindurationminutes": "5"
-              },
-              "metric": {
-                "@name": "pvefamegained",
-                "@minvalue": "1000"
-              }
+            "duration": {
+              "@mindurationminutes": "15"
             }
           }
         },
@@ -840,11 +860,11 @@
           "datasetrequirements": {
             "and": {
               "duration": {
-                "@mindurationminutes": "10"
+                "@mindurationminutes": "5"
               },
               "metric": {
                 "@name": "mobskilled",
-                "@minvalue": "10"
+                "@minvalue": "20"
               }
             }
           }
@@ -874,11 +894,11 @@
           "datasetrequirements": {
             "or": {
               "duration": {
-                "@mindurationminutes": "10"
+                "@mindurationminutes": "5"
               },
               "metric": {
                 "@name": "mobskilled",
-                "@minvalue": "10"
+                "@minvalue": "20"
               }
             }
           }
@@ -905,11 +925,11 @@
           "datasetrequirements": {
             "or": {
               "duration": {
-                "@mindurationminutes": "10"
+                "@mindurationminutes": "5"
               },
               "metric": {
                 "@name": "mobskilled",
-                "@minvalue": "10"
+                "@minvalue": "20"
               }
             }
           }
@@ -936,11 +956,11 @@
           "datasetrequirements": {
             "or": {
               "duration": {
-                "@mindurationminutes": "10"
+                "@mindurationminutes": "5"
               },
               "metric": {
                 "@name": "mobskilled",
-                "@minvalue": "10"
+                "@minvalue": "20"
               }
             }
           }
@@ -964,18 +984,12 @@
           "datasetrequirements": {
             "and": {
               "duration": {
-                "@mindurationminutes": "5"
+                "@mindurationminutes": "10"
               },
-              "metric": [
-                {
-                  "@name": "pvefamegained",
-                  "@minvalue": "500"
-                },
-                {
-                  "@name": "mobskilled",
-                  "@minvalue": "1"
-                }
-              ]
+              "metric": {
+                "@name": "pvefamegained",
+                "@minvalue": "500000"
+              }
             }
           }
         },
@@ -991,6 +1005,9 @@
                 "@ref": "small_group"
               },
               {
+                "@ref": "medium_group"
+              },
+              {
                 "@ref": "openworld"
               },
               {
@@ -1002,20 +1019,17 @@
             ]
           },
           "datasetrequirements": {
-            "or": {
-              "and": {
-                "duration": {
-                  "@mindurationminutes": "5"
+            "and": {
+              "metric": [
+                {
+                  "@name": "successwin",
+                  "@minvalue": "1"
                 },
-                "metric": {
-                  "@name": "damagedealt",
-                  "@minvalue": "1000"
+                {
+                  "@name": "pvefamegained",
+                  "@minvalue": "25000"
                 }
-              },
-              "metric": {
-                "@name": "successwin",
-                "@minvalue": "1"
-              }
+              ]
             }
           }
         },
@@ -1056,6 +1070,10 @@
                     {
                       "@name": "kills",
                       "@minvalue": "1"
+                    },
+                    {
+                      "@name": "pvefamegained",
+                      "@minvalue": "100000"
                     }
                   ]
                 }
@@ -1086,23 +1104,25 @@
             ]
           },
           "datasetrequirements": {
-            "or": {
-              "and": {
-                "duration": {
-                  "@mindurationminutes": "5"
-                },
-                "or": {
-                  "metric": [
-                    {
-                      "@name": "pvpfamegained",
-                      "@minvalue": "1"
-                    },
-                    {
-                      "@name": "kills",
-                      "@minvalue": "1"
-                    }
-                  ]
-                }
+            "and": {
+              "duration": {
+                "@mindurationminutes": "5"
+              },
+              "or": {
+                "metric": [
+                  {
+                    "@name": "pvpfamegained",
+                    "@minvalue": "1"
+                  },
+                  {
+                    "@name": "kills",
+                    "@minvalue": "1"
+                  },
+                  {
+                    "@name": "pvefamegained",
+                    "@minvalue": "100000"
+                  }
+                ]
               }
             }
           }

@@ -4740,7 +4740,7 @@
     <OnCastStart name="Play_arrow_charge" />
     <OnCastInterrupted name="Stop_arrow_charge" />
     <OnCastCanceled name="Stop_arrow_charge" />
-    <OnCastFinished name="Play_arrow_cast_swoosh_medium" />
+    <OnCastFinished name="Play_arrow_cast_medium_instant" />
 	<OnSpellHit name="Play_arrow_impact_medium_sundershot" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_ARROW_SNIPESHOT">
@@ -4767,7 +4767,7 @@
     <OnCastStart name="Play_bolt_load_silencer" />
     <OnCastInterrupted name="Stop_bolt_load_silencer" />
     <OnCastCanceled name="Stop_bolt_load_silencer" />
-    <OnCastFinished name="Play_arrow_cast_swoosh_medium" />
+    <OnCastFinished name="Play_arrow_cast_medium_instant" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_ARROW_KNOCKBACKSHOT">
     <OnCastStart name="Play_bolt_load_silencer" />
@@ -6730,8 +6730,10 @@
     <OnCastStart name="Play_evasive_jump" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_SWIFT_CUT">
-	<OnCastFinished name="Play_melee_merciless_finish_swoosh" />
-	<OnSpellHit name="Play_swiftcut_impact" />
+	  <OnCastFinished name="Play_melee_merciless_finish_swoosh" />
+  </WwiseEventInfo>
+    <WwiseEventInfo name="SPELL_SWIFT_CUT_IMPACT">
+	  <OnSpellHit name="Play_swiftcut_impact" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_HIT_DAMAGE_INCREASE">
     <OnSpellHit name="Play_damage_increase" />
@@ -7227,6 +7229,10 @@
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_RHINO_DEBUFF">
+	<OnCastStart name="Play_rhino_slow_cast" />
+	<OnCastCanceled name="Stop_rhino_slow_cast" />
+	<OnCastInterrupted name="Stop_rhino_slow_cast" />
+	<OnCastFinished name="Play_rhino_slow_impact" />
     <OnSpellHit name="Play_healing_reduction" />
   </WwiseEventInfo>
 
@@ -7536,6 +7542,9 @@
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_MOB_SPEED_INCREASE">
     <OnCastFinished name="Play_mob_speed_increase"/>
+  </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_HIT_HEALINGREDUCTION">
+	<OnSpellHit name="Play_healing_reduction" />
   </WwiseEventInfo>
 
   <!-- Arcane -->
