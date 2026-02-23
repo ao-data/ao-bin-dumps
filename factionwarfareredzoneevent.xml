@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<factionwarfareredzoneevent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="factionwarfareredzoneevent.xsd">
+  <redzoneevent
+    advancenotificationminutes="15"
+    firstbonus="496217.11"
+    secondbonus="413514.26"
+    thirdbonus="330811.41"
+    fourthbonus="165405.70"
+    fifthbonus="165405.70"
+    sixthbonus="165405.70"
+    minimumdivisor="20"
+  >
+    <phase durationminutes="45" rzesupplymultiplier="1.0" buff="FACTION_PVE_BONUS_RZE_PHASE_1" famebonus="1.15" silverbonus="1.15" lootbonus="1.15">
+      <redzoneclustertreasuremodifier subtype="CHEST" activationchancemultiplier="0.5"/>
+      <redzoneclustertreasuremodifier subtype="FACTIONBANNER" activationchancemultiplier="1.3"/>
+    </phase>
+    <phase durationminutes="30" rzesupplymultiplier="1.5" buff="FACTION_PVE_BONUS_RZE_PHASE_2" famebonus="1.3" silverbonus="1.3" lootbonus="1.3">
+      <redzoneclustertreasuremodifier subtype="CHEST" activationchancemultiplier="2.543"/>
+      <redzoneclustertreasuremodifier subtype="FACTIONBANNER" activationchancemultiplier="0"/>
+    </phase>
+
+    <!-- these times define when an red zone event start is rolled and possible -->
+    <eventstarttime ref="FW_DUCHY_EVALUATION_TIME_OF_DAY_1" offsetseconds="-900" chance="0.3"/>
+    <eventstarttime ref="FW_DUCHY_EVALUATION_TIME_OF_DAY_2" offsetseconds="-900" chance="0.4"/>
+    <eventstarttime ref="FW_DUCHY_EVALUATION_TIME_OF_DAY_3" offsetseconds="-900" chance="0.5"/>
+    <eventstarttime ref="FW_DUCHY_EVALUATION_TIME_OF_DAY_4" offsetseconds="-900" chance="0.5"/>
+    <eventstarttime ref="FW_DUCHY_EVALUATION_TIME_OF_DAY_5" offsetseconds="-900" chance="0.6"/>
+    <eventstarttime ref="FW_DUCHY_EVALUATION_TIME_OF_DAY_6" offsetseconds="-900" chance="0.6"/>
+    <eventstarttime ref="FW_DUCHY_EVALUATION_TIME_OF_DAY_7" offsetseconds="-900" chance="0.6"/>
+    <eventstarttime ref="FW_DUCHY_EVALUATION_TIME_OF_DAY_8" offsetseconds="-900" chance="0.4"/>
+	<eventstarttime ref="FW_RZE_POSSIBLE_START_TIME_OF_DAY_1" offsetseconds="-900" chance="0.3"/>
+	<eventstarttime ref="FW_RZE_POSSIBLE_START_TIME_OF_DAY_2" offsetseconds="-900" chance="0.2"/>
+	<eventstarttime ref="FW_RZE_POSSIBLE_START_TIME_OF_DAY_3" offsetseconds="-900" chance="0.2"/>
+
+    <phasetwoeventsettings activesiegeweaponcachemultispawnchance="0"
+                           activesiegeweaponcachemultispawnamountmin="1"
+                           activesiegeweaponcachemultispawnamountmax="1"
+                           activesiegeweaponcachefirstcachespawndelaysec="480"
+                           activesiegeweaponcachespawnintervalminsec="120"
+                           activesiegeweaponcachespawnintervalmaxsec="120"
+                           activesiegeweaponcacheamountmin="7"
+                           activesiegeweaponcacheamountmax="7"
+                           weaponcachetype="FACTION_FORTRESS_WEAPON_CACHE_RZE"
+                           rewardlootchestname="FACTION_TREASURE_MEDIUM_FORTRESS_RZE">
+      <bufflevel capturecount="1" damagevsplayersmodifier="0.025" defensevsplayersmodifier="0.05">
+        <faction faction="swamp" buffspell="WEAPONCACHE_FORTRESS_GENERAL_BUFF_01_SWAMP"/>
+        <faction faction="forest" buffspell="WEAPONCACHE_FORTRESS_GENERAL_BUFF_01_FOREST"/>
+        <faction faction="mountain" buffspell="WEAPONCACHE_FORTRESS_GENERAL_BUFF_01_MOUNTAIN"/>
+        <faction faction="steppe" buffspell="WEAPONCACHE_FORTRESS_GENERAL_BUFF_01_STEPPE"/>
+        <faction faction="highland" buffspell="WEAPONCACHE_FORTRESS_GENERAL_BUFF_01_HIGHLAND"/>
+        <faction faction="caerleon" buffspell="WEAPONCACHE_FORTRESS_GENERAL_BUFF_01_CAERLEON"/>
+      </bufflevel>
+      <bufflevel capturecount="2" damagevsplayersmodifier="0.05" defensevsplayersmodifier="0.10">
+        <faction faction="swamp" buffspell="WEAPONCACHE_FORTRESS_GENERAL_BUFF_02_SWAMP"/>
+        <faction faction="forest" buffspell="WEAPONCACHE_FORTRESS_GENERAL_BUFF_02_FOREST"/>
+        <faction faction="mountain" buffspell="WEAPONCACHE_FORTRESS_GENERAL_BUFF_02_MOUNTAIN"/>
+        <faction faction="steppe" buffspell="WEAPONCACHE_FORTRESS_GENERAL_BUFF_02_STEPPE"/>
+        <faction faction="highland" buffspell="WEAPONCACHE_FORTRESS_GENERAL_BUFF_02_HIGHLAND"/>
+        <faction faction="caerleon" buffspell="WEAPONCACHE_FORTRESS_GENERAL_BUFF_02_CAERLEON"/>
+      </bufflevel>
+      <bufflevel capturecount="3" damagevsplayersmodifier="0.075" defensevsplayersmodifier="0.15">
+        <faction faction="swamp" buffspell="WEAPONCACHE_FORTRESS_GENERAL_BUFF_03_SWAMP"/>
+        <faction faction="forest" buffspell="WEAPONCACHE_FORTRESS_GENERAL_BUFF_03_FOREST"/>
+        <faction faction="mountain" buffspell="WEAPONCACHE_FORTRESS_GENERAL_BUFF_03_MOUNTAIN"/>
+        <faction faction="steppe" buffspell="WEAPONCACHE_FORTRESS_GENERAL_BUFF_03_STEPPE"/>
+        <faction faction="highland" buffspell="WEAPONCACHE_FORTRESS_GENERAL_BUFF_03_HIGHLAND"/>
+        <faction faction="caerleon" buffspell="WEAPONCACHE_FORTRESS_GENERAL_BUFF_03_CAERLEON"/>
+      </bufflevel>
+      <bufflevel capturecount="4" damagevsplayersmodifier="0.10" defensevsplayersmodifier="0.20">
+        <faction faction="swamp" buffspell="WEAPONCACHE_FORTRESS_GENERAL_BUFF_04_SWAMP"/>
+        <faction faction="forest" buffspell="WEAPONCACHE_FORTRESS_GENERAL_BUFF_04_FOREST"/>
+        <faction faction="mountain" buffspell="WEAPONCACHE_FORTRESS_GENERAL_BUFF_04_MOUNTAIN"/>
+        <faction faction="steppe" buffspell="WEAPONCACHE_FORTRESS_GENERAL_BUFF_04_STEPPE"/>
+        <faction faction="highland" buffspell="WEAPONCACHE_FORTRESS_GENERAL_BUFF_04_HIGHLAND"/>
+        <faction faction="caerleon" buffspell="WEAPONCACHE_FORTRESS_GENERAL_BUFF_04_CAERLEON"/>
+      </bufflevel>
+      <bufflevel capturecount="5" damagevsplayersmodifier="0.125" defensevsplayersmodifier="0.25">
+        <faction faction="swamp" buffspell="WEAPONCACHE_FORTRESS_GENERAL_BUFF_05_SWAMP"/>
+        <faction faction="forest" buffspell="WEAPONCACHE_FORTRESS_GENERAL_BUFF_05_FOREST"/>
+        <faction faction="mountain" buffspell="WEAPONCACHE_FORTRESS_GENERAL_BUFF_05_MOUNTAIN"/>
+        <faction faction="steppe" buffspell="WEAPONCACHE_FORTRESS_GENERAL_BUFF_05_STEPPE"/>
+        <faction faction="highland" buffspell="WEAPONCACHE_FORTRESS_GENERAL_BUFF_05_HIGHLAND"/>
+        <faction faction="caerleon" buffspell="WEAPONCACHE_FORTRESS_GENERAL_BUFF_05_CAERLEON"/>
+      </bufflevel>
+      <bufflevel capturecount="6" damagevsplayersmodifier="0.15" defensevsplayersmodifier="0.30">
+        <faction faction="swamp" buffspell="WEAPONCACHE_FORTRESS_GENERAL_BUFF_06_SWAMP"/>
+        <faction faction="forest" buffspell="WEAPONCACHE_FORTRESS_GENERAL_BUFF_06_FOREST"/>
+        <faction faction="mountain" buffspell="WEAPONCACHE_FORTRESS_GENERAL_BUFF_06_MOUNTAIN"/>
+        <faction faction="steppe" buffspell="WEAPONCACHE_FORTRESS_GENERAL_BUFF_06_STEPPE"/>
+        <faction faction="highland" buffspell="WEAPONCACHE_FORTRESS_GENERAL_BUFF_06_HIGHLAND"/>
+        <faction faction="caerleon" buffspell="WEAPONCACHE_FORTRESS_GENERAL_BUFF_06_CAERLEON"/>
+      </bufflevel>
+      <bufflevel capturecount="7" damagevsplayersmodifier="0.175" defensevsplayersmodifier="0.35">
+        <faction faction="swamp" buffspell="WEAPONCACHE_FORTRESS_GENERAL_BUFF_07_SWAMP"/>
+        <faction faction="forest" buffspell="WEAPONCACHE_FORTRESS_GENERAL_BUFF_07_FOREST"/>
+        <faction faction="mountain" buffspell="WEAPONCACHE_FORTRESS_GENERAL_BUFF_07_MOUNTAIN"/>
+        <faction faction="steppe" buffspell="WEAPONCACHE_FORTRESS_GENERAL_BUFF_07_STEPPE"/>
+        <faction faction="highland" buffspell="WEAPONCACHE_FORTRESS_GENERAL_BUFF_07_HIGHLAND"/>
+        <faction faction="caerleon" buffspell="WEAPONCACHE_FORTRESS_GENERAL_BUFF_07_CAERLEON"/>
+      </bufflevel>
+      <bufflevel capturecount="8" damagevsplayersmodifier="0.20" defensevsplayersmodifier="0.40">
+        <faction faction="swamp" buffspell="WEAPONCACHE_FORTRESS_GENERAL_BUFF_08_SWAMP"/>
+        <faction faction="forest" buffspell="WEAPONCACHE_FORTRESS_GENERAL_BUFF_08_FOREST"/>
+        <faction faction="mountain" buffspell="WEAPONCACHE_FORTRESS_GENERAL_BUFF_08_MOUNTAIN"/>
+        <faction faction="steppe" buffspell="WEAPONCACHE_FORTRESS_GENERAL_BUFF_08_STEPPE"/>
+        <faction faction="highland" buffspell="WEAPONCACHE_FORTRESS_GENERAL_BUFF_08_HIGHLAND"/>
+        <faction faction="caerleon" buffspell="WEAPONCACHE_FORTRESS_GENERAL_BUFF_08_CAERLEON"/>
+      </bufflevel>
+    </phasetwoeventsettings>
+  </redzoneevent>
+</factionwarfareredzoneevent>

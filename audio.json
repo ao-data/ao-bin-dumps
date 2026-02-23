@@ -6945,6 +6945,30 @@
         }
       },
       {
+        "@name": "MOB_TERRITORY_FW_BATTLE_STANDARD",
+        "CharType": {
+          "@name": "mob"
+        },
+        "MobFaction": {
+          "@name": "territory"
+        },
+        "MobType": {
+          "@name": "territory_fw_battle_standard"
+        },
+        "Size": {
+          "@name": "medium"
+        },
+        "ArmorType": {
+          "@name": "crystal"
+        },
+        "WeaponType": {
+          "@name": "arcane"
+        },
+        "MountType": {
+          "@name": "empty"
+        }
+      },
+      {
         "@name": "MOB_EVENT_HALLOWEEN_BOSS",
         "CharType": {
           "@name": "mob"
@@ -9036,6 +9060,12 @@
       },
       {
         "@name": "MOB_TERRITORY_POWER_CORE",
+        "OnMobViewInit": {
+          "@name": "Play_mob_loops"
+        }
+      },
+      {
+        "@name": "MOB_TERRITORY_FW_BATTLE_STANDARD",
         "OnMobViewInit": {
           "@name": "Play_mob_loops"
         }
@@ -21593,9 +21623,6 @@
         },
         "OnCastFinished": {
           "@name": "Play_caerleon_knight_cleave_swing_castfinished"
-        },
-        "OnSpellHit": {
-          "ImpactType": null
         }
       },
       {
@@ -21605,9 +21632,12 @@
         },
         "OnCastFinished": {
           "@name": "Play_caerleon_knight_cleave_enraged_swing"
-        },
+        }
+      },
+      {
+        "@name": "SPELL_CITY_CAERLEON_KNIGHT_CLEAVE_HIT",
         "OnSpellHit": {
-          "ImpactType": null
+          "@name": "Play_caerleon_knight_cleave_cut_impact"
         }
       },
       {

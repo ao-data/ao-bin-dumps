@@ -195,7 +195,7 @@
                   },
                   "metric": {
                     "@name": "pvpfamegained",
-                    "@minvalue": "100000"
+                    "@minvalue": "50000"
                   }
                 },
                 {
@@ -204,7 +204,7 @@
                   },
                   "metric": {
                     "@name": "pvefamegained",
-                    "@minvalue": "200000"
+                    "@minvalue": "100000"
                   }
                 }
               ]
@@ -691,15 +691,15 @@
                 "metric": [
                   {
                     "@name": "damagedealt",
-                    "@minvalue": "20000"
+                    "@minvalue": "10000"
                   },
                   {
                     "@name": "healingdone",
-                    "@minvalue": "50000"
+                    "@minvalue": "25000"
                   },
                   {
                     "@name": "damagereceived",
-                    "@minvalue": "20000"
+                    "@minvalue": "10000"
                   },
                   {
                     "@name": "kills",
@@ -707,7 +707,7 @@
                   },
                   {
                     "@name": "pvpfamegained",
-                    "@minvalue": "100000"
+                    "@minvalue": "50000"
                   }
                 ]
               }
@@ -745,15 +745,15 @@
                 "metric": [
                   {
                     "@name": "damagedealt",
-                    "@minvalue": "20000"
+                    "@minvalue": "10000"
                   },
                   {
                     "@name": "healingdone",
-                    "@minvalue": "50000"
+                    "@minvalue": "25000"
                   },
                   {
                     "@name": "damagereceived",
-                    "@minvalue": "20000"
+                    "@minvalue": "10000"
                   },
                   {
                     "@name": "kills",
@@ -761,7 +761,7 @@
                   },
                   {
                     "@name": "pvpfamegained",
-                    "@minvalue": "100000"
+                    "@minvalue": "50000"
                   }
                 ]
               }
@@ -984,7 +984,7 @@
           "datasetrequirements": {
             "and": {
               "duration": {
-                "@mindurationminutes": "10"
+                "@mindurationminutes": "5"
               },
               "metric": {
                 "@name": "pvefamegained",
@@ -1019,17 +1019,9 @@
             ]
           },
           "datasetrequirements": {
-            "and": {
-              "metric": [
-                {
-                  "@name": "successwin",
-                  "@minvalue": "1"
-                },
-                {
-                  "@name": "pvefamegained",
-                  "@minvalue": "25000"
-                }
-              ]
+            "metric": {
+              "@name": "successwin",
+              "@minvalue": "1"
             }
           }
         },

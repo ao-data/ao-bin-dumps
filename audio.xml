@@ -2877,6 +2877,18 @@
    <WwiseEventInfo name="MOB_TERRITORY_POWER_CORE">
      <OnMobViewInit name="Play_mob_loops"/>
    </WwiseEventInfo>
+  <WwiseSwitchInfo name="MOB_TERRITORY_FW_BATTLE_STANDARD">
+	<CharType name="mob"/>
+	<MobFaction name="territory"/>
+	<MobType name="territory_fw_battle_standard"/>
+	<Size name="medium"/>
+	<ArmorType name="crystal"/>
+	<WeaponType name="arcane"/>
+	<MountType name="empty"/>
+	</WwiseSwitchInfo>
+  <WwiseEventInfo name="MOB_TERRITORY_FW_BATTLE_STANDARD">
+	<OnMobViewInit name="Play_mob_loops"/>
+  </WwiseEventInfo>
 
   <!-- EVENTS-->
   <WwiseSwitchInfo name="MOB_EVENT_HALLOWEEN_BOSS">
@@ -10110,17 +10122,15 @@
     <OnCastCanceled name="Stop_caerleon_knight_cleave_swing_caststart" />
     <OnCastInterrupted name="Stop_caerleon_knight_cleave_swing_caststart" />
     <OnCastFinished name="Play_caerleon_knight_cleave_swing_castfinished" />
-    <OnSpellHit>
-      <ImpactType/>
-    </OnSpellHit>
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_CITY_CAERLEON_KNIGHT_CLEAVE_ENRAGED">
     <OnCastStart name="Play_caerleon_knight_cleave_enraged_cast" />
     <OnCastFinished name="Play_caerleon_knight_cleave_enraged_swing" />
-    <OnSpellHit>
-      <ImpactType/>
-    </OnSpellHit>
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_CITY_CAERLEON_KNIGHT_CLEAVE_HIT">
+	<OnSpellHit name="Play_caerleon_knight_cleave_cut_impact" />
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_CITY_CAERLEON_KNIGHT_JUMP">
