@@ -371,6 +371,7 @@
             <conditions>
                 <and>
                     <IfTutorialCompleted />
+                    <IfAlbionJournalIsUnlocked />
                     <not>
                         <IfHasPremium />
                     </not>
@@ -789,6 +790,37 @@
 							<IfFeatureIsEnabled feature="ShowWebShopLinksOnAndroid" />
 						</and>
 					</or>
+                </and>
+            </conditions>
+        </genericadvertisement>
+
+        <genericadvertisement
+                uniquename="ESSENTIALS_PACK_SALE"
+                priority="9"
+                type="GenericAdvertisement"
+                guitemplate="GenericAdvertisement"
+                title="@EVENT_BASED_POPUPS_ESSENTIALS_PACK_TITLE"
+                description="@EVENT_BASED_POPUPS_ESSENTIALS_PACK_DESCRIPTION"
+                imagepath="Gui/Advertisements/ad_essentialspack"
+                linkmode="Store"
+                buttonloca="@GENERIC_BUY_NOW">
+            <categories>
+                <category name="Advertisement" />
+            </categories>
+            <triggers>
+                <trigger action="GameLogin" />
+            </triggers>
+            <conditions>
+                <and>
+                    <not>
+                        <IfHasPremium />
+                    </not>
+                    <IfAlbionJournalIsUnlocked />
+                    <IfHasSeenPopup uniquename="ESSENTIALS_PACK_SALE"
+                                    frequency="AllTime"
+                                    operation="equals"
+                                    amount="0"
+                                    targetfilter="account" />
                 </and>
             </conditions>
         </genericadvertisement>
