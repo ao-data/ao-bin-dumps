@@ -180,1266 +180,6 @@
         "rewards": ""
       },
       {
-        "@uniquename": "MISSIONS_T2_BRIDGEWATCH_CITYTOUR",
-        "@mobfaction": "ROYALARMY",
-        "@title": "@MISSIONS_T2_BIGCITYTOUR_TITLE",
-        "@offertext": "@MISSIONS_T2_BIGCITYTOUR_OFFERTEXT",
-        "@progresstext": "@MISSIONS_T2_BIGCITYTOUR_PROGRESSTEXT",
-        "@priority": "1",
-        "@minlevel": "1",
-        "@maxlevel": "2",
-        "@tags": "adventurer",
-        "@offertimeout": "0",
-        "@questtimeout": "3600000",
-        "@questslotcooldown": "0",
-        "@uicategory": "PROMOTION",
-        "@onceonly": "true",
-        "@completetext": "@MISSIONS_T2_BIGCITYTOUR_COMPLETIONTEXT",
-        "@cancelable": "true",
-        "@completehintbox": "END_OF_TUTORIAL",
-        "@hideifquestcompleted": "MISSIONS_T2_THETFORT_CITYTOUR MISSIONS_T2_LYMHURST_CITYTOUR MISSIONS_T2_FORTSTERLING_CITYTOUR MISSIONS_T2_MARTLOCK_CITYTOUR",
-        "variables": {
-          "dynamiccluster": [
-            {
-              "@name": "CLUSTER_A",
-              "distancetocluster": {
-                "@mindistance": "1",
-                "@maxdistance": "1"
-              },
-              "presentresource": {
-                "@resourceid": "HIDE",
-                "@tier": "3",
-                "@mincount": "200"
-              }
-            },
-            {
-              "@name": "CLUSTER_B",
-              "distancetocluster": {
-                "@mindistance": "1",
-                "@maxdistance": "1"
-              },
-              "presentresource": {
-                "@resourceid": "HIDE",
-                "@tier": "5",
-                "@mincount": "200"
-              }
-            }
-          ]
-        },
-        "tasks": {
-          "extendedmissionstep": [
-            {
-              "missions": {
-                "gotolocation": {
-                  "@locationmarkerid": "ISLAND",
-                  "@hideindetailsui": "true",
-                  "@markedinworld": "true",
-                  "@markedonminimap": "true",
-                  "@textloca": "@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_ISLAND"
-                }
-              }
-            },
-            {
-              "preactions": {
-                "openhintbox": {
-                  "@uniquename": "ISLANDMERCHANTSMALL"
-                }
-              },
-              "missions": {
-                "gotolocation": {
-                  "@locationmarkerid": "MARKETPLACE",
-                  "@hideindetailsui": "true",
-                  "@markedinworld": "true",
-                  "@markedonminimap": "true",
-                  "@textloca": "@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_MARKET"
-                }
-              }
-            },
-            {
-              "preactions": {
-                "openhintbox": {
-                  "@uniquename": "MARKETPLACE"
-                }
-              },
-              "missions": {
-                "gotolocation": {
-                  "@locationmarkerid": "TRAVEL",
-                  "@hideindetailsui": "true",
-                  "@markedinworld": "true",
-                  "@markedonminimap": "true",
-                  "@textloca": "@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_TRAVEL"
-                }
-              }
-            },
-            {
-              "preactions": {
-                "openhintbox": {
-                  "@uniquename": "TRAVEL"
-                }
-              },
-              "missions": {
-                "gotolocation": {
-                  "@locationmarkerid": "REPAIR",
-                  "@hideindetailsui": "true",
-                  "@markedinworld": "true",
-                  "@markedonminimap": "true",
-                  "@textloca": "@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_REPAIR"
-                }
-              }
-            },
-            {
-              "preactions": {
-                "openhintbox": {
-                  "@uniquename": "REPAIR"
-                }
-              },
-              "missions": {
-                "gotolocation": {
-                  "@locationmarkerid": "BANK",
-                  "@hideindetailsui": "true",
-                  "@markedinworld": "true",
-                  "@markedonminimap": "true",
-                  "@textloca": "@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_BANK"
-                }
-              }
-            }
-          ],
-          "missionstep": {
-            "haveplaytime": {
-              "@seconds": "1",
-              "@hideinhud": "true",
-              "@textloca": "@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"
-            }
-          },
-          "extendedcompletionstep": {
-            "preactions": {
-              "openhintbox": {
-                "@uniquename": "BANK"
-              }
-            },
-            "missions": {
-              "gotoquestgiver": {
-                "@locationmarkerid": "EXPLORER",
-                "@markedinworld": "true",
-                "@markedonminimap": "true"
-              }
-            }
-          }
-        }
-      },
-      {
-        "@uniquename": "MISSIONS_T2_LYMHURST_CITYTOUR",
-        "@mobfaction": "ROYALARMY",
-        "@title": "@MISSIONS_T2_BIGCITYTOUR_TITLE",
-        "@offertext": "@MISSIONS_T2_BIGCITYTOUR_OFFERTEXT",
-        "@progresstext": "@MISSIONS_T2_BIGCITYTOUR_PROGRESSTEXT",
-        "@priority": "1",
-        "@minlevel": "1",
-        "@maxlevel": "2",
-        "@tags": "adventurer",
-        "@offertimeout": "0",
-        "@questtimeout": "3600000",
-        "@questslotcooldown": "0",
-        "@uicategory": "PROMOTION",
-        "@onceonly": "true",
-        "@completetext": "@MISSIONS_T2_BIGCITYTOUR_COMPLETIONTEXT",
-        "@cancelable": "true",
-        "@completehintbox": "END_OF_TUTORIAL",
-        "@hideifquestcompleted": "MISSIONS_T2_THETFORT_CITYTOUR MISSIONS_T2_BRIDGEWATCH_CITYTOUR MISSIONS_T2_FORTSTERLING_CITYTOUR MISSIONS_T2_MARTLOCK_CITYTOUR",
-        "variables": {
-          "dynamiccluster": [
-            {
-              "@name": "CLUSTER_A",
-              "distancetocluster": {
-                "@mindistance": "1",
-                "@maxdistance": "1"
-              },
-              "presentresource": {
-                "@resourceid": "WOOD",
-                "@tier": "3",
-                "@mincount": "200"
-              }
-            },
-            {
-              "@name": "CLUSTER_B",
-              "distancetocluster": {
-                "@mindistance": "1",
-                "@maxdistance": "1"
-              },
-              "presentresource": {
-                "@resourceid": "WOOD",
-                "@tier": "5",
-                "@mincount": "200"
-              }
-            }
-          ]
-        },
-        "tasks": {
-          "extendedmissionstep": [
-            {
-              "missions": {
-                "gotolocation": {
-                  "@locationmarkerid": "EXPEDITION",
-                  "@hideindetailsui": "true",
-                  "@markedinworld": "true",
-                  "@markedonminimap": "true",
-                  "@textloca": "@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_EXPEDITION"
-                }
-              }
-            },
-            {
-              "preactions": {
-                "openhintbox": {
-                  "@uniquename": "EXPEDITION"
-                }
-              },
-              "missions": {
-                "gotolocation": {
-                  "@locationmarkerid": "ARTIFACTFOUNDRY",
-                  "@hideindetailsui": "true",
-                  "@markedinworld": "true",
-                  "@markedonminimap": "true",
-                  "@textloca": "@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_ARTIFACTFOUNDRY"
-                }
-              }
-            },
-            {
-              "preactions": {
-                "openhintbox": {
-                  "@uniquename": "ARTIFACTFOUNDRY"
-                }
-              },
-              "missions": {
-                "gotolocation": {
-                  "@locationmarkerid": "REPAIR",
-                  "@hideindetailsui": "true",
-                  "@markedinworld": "true",
-                  "@markedonminimap": "true",
-                  "@textloca": "@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_REPAIR"
-                }
-              }
-            },
-            {
-              "preactions": {
-                "openhintbox": {
-                  "@uniquename": "REPAIR"
-                }
-              },
-              "missions": {
-                "gotolocation": {
-                  "@locationmarkerid": "FACTION_WARFARE",
-                  "@hideindetailsui": "true",
-                  "@markedinworld": "true",
-                  "@markedonminimap": "true",
-                  "@textloca": "@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_FACTION_WARFARE"
-                }
-              }
-            },
-            {
-              "preactions": {
-                "openhintbox": {
-                  "@uniquename": "FACTION_WARFARE"
-                }
-              },
-              "missions": {
-                "gotolocation": {
-                  "@locationmarkerid": "ISLAND",
-                  "@hideindetailsui": "true",
-                  "@markedinworld": "true",
-                  "@markedonminimap": "true",
-                  "@textloca": "@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_ISLAND"
-                }
-              }
-            },
-            {
-              "preactions": {
-                "openhintbox": {
-                  "@uniquename": "ISLANDMERCHANTSMALL"
-                }
-              },
-              "missions": {
-                "gotolocation": {
-                  "@locationmarkerid": "VANITY",
-                  "@hideindetailsui": "true",
-                  "@markedinworld": "true",
-                  "@markedonminimap": "true",
-                  "@textloca": "@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_VANITY"
-                }
-              }
-            },
-            {
-              "preactions": {
-                "openhintbox": {
-                  "@uniquename": "VANITY"
-                }
-              },
-              "missions": {
-                "gotocluster": {
-                  "@clusterdirect": "1013-HALL-01",
-                  "@locationmarkerid": "CONQUERORSHALL",
-                  "@hideindetailsui": "true",
-                  "@markedinworld": "true",
-                  "@markedonminimap": "true",
-                  "@textloca": "@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_CONQUERORSHALL"
-                }
-              }
-            },
-            {
-              "preactions": {
-                "openhintbox": {
-                  "@uniquename": "CONQUERORSHALL"
-                }
-              },
-              "missions": {
-                "gotolocation": {
-                  "@locationmarkerid": "OUTLANDPORTAL",
-                  "@hideindetailsui": "true",
-                  "@markedinworld": "true",
-                  "@markedonminimap": "true",
-                  "@textloca": "@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_OUTLANDPORTAL"
-                }
-              }
-            },
-            {
-              "preactions": {
-                "openhintbox": {
-                  "@uniquename": "OUTLANDPORTAL"
-                }
-              },
-              "missions": {
-                "gotolocation": {
-                  "@locationmarkerid": "ENERGYMANIPULATOR",
-                  "@hideindetailsui": "true",
-                  "@markedinworld": "true",
-                  "@markedonminimap": "true",
-                  "@textloca": "@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_ENERGYMANIPULATOR"
-                }
-              }
-            },
-            {
-              "preactions": {
-                "openhintbox": {
-                  "@uniquename": "ENERGYMANIPULATOR"
-                }
-              },
-              "missions": {
-                "gotolocation": {
-                  "@locationmarkerid": "ARENA",
-                  "@hideindetailsui": "true",
-                  "@markedinworld": "true",
-                  "@markedonminimap": "true",
-                  "@textloca": "@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_ARENA"
-                }
-              }
-            },
-            {
-              "preactions": {
-                "openhintbox": {
-                  "@uniquename": "ARENA"
-                }
-              },
-              "missions": {
-                "gotolocation": {
-                  "@locationmarkerid": "TRAVEL",
-                  "@hideindetailsui": "true",
-                  "@markedinworld": "true",
-                  "@markedonminimap": "true",
-                  "@textloca": "@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_TRAVEL"
-                }
-              }
-            },
-            {
-              "preactions": {
-                "openhintbox": {
-                  "@uniquename": "TRAVEL"
-                }
-              },
-              "missions": {
-                "gotolocation": {
-                  "@locationmarkerid": "MARKETPLACE",
-                  "@hideindetailsui": "true",
-                  "@markedinworld": "true",
-                  "@markedonminimap": "true",
-                  "@textloca": "@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_MARKET"
-                }
-              }
-            },
-            {
-              "preactions": {
-                "openhintbox": {
-                  "@uniquename": "MARKETPLACE"
-                }
-              },
-              "missions": {
-                "gotolocation": {
-                  "@locationmarkerid": "BANK",
-                  "@hideindetailsui": "true",
-                  "@markedinworld": "true",
-                  "@markedonminimap": "true",
-                  "@textloca": "@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_BANK"
-                }
-              }
-            }
-          ],
-          "missionstep": {
-            "haveplaytime": {
-              "@seconds": "1",
-              "@hideinhud": "true",
-              "@textloca": "@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"
-            }
-          },
-          "extendedcompletionstep": {
-            "preactions": {
-              "openhintbox": {
-                "@uniquename": "BANK"
-              }
-            },
-            "missions": {
-              "gotoquestgiver": {
-                "@locationmarkerid": "EXPLORER",
-                "@markedinworld": "true",
-                "@markedonminimap": "true"
-              }
-            }
-          }
-        },
-        "rewards": ""
-      },
-      {
-        "@uniquename": "MISSIONS_T2_FORTSTERLING_CITYTOUR",
-        "@mobfaction": "ROYALARMY",
-        "@title": "@MISSIONS_T2_BIGCITYTOUR_TITLE",
-        "@offertext": "@MISSIONS_T2_BIGCITYTOUR_OFFERTEXT",
-        "@progresstext": "@MISSIONS_T2_BIGCITYTOUR_PROGRESSTEXT",
-        "@priority": "1",
-        "@minlevel": "1",
-        "@maxlevel": "2",
-        "@tags": "adventurer",
-        "@offertimeout": "0",
-        "@questtimeout": "3600000",
-        "@questslotcooldown": "0",
-        "@uicategory": "PROMOTION",
-        "@onceonly": "true",
-        "@completetext": "@MISSIONS_T2_BIGCITYTOUR_COMPLETIONTEXT",
-        "@cancelable": "true",
-        "@completehintbox": "END_OF_TUTORIAL",
-        "@hideifquestcompleted": "MISSIONS_T2_THETFORT_CITYTOUR MISSIONS_T2_BRIDGEWATCH_CITYTOUR MISSIONS_T2_LYMHURST_CITYTOUR MISSIONS_T2_MARTLOCK_CITYTOUR",
-        "variables": {
-          "dynamiccluster": [
-            {
-              "@name": "CLUSTER_A",
-              "distancetocluster": {
-                "@mindistance": "1",
-                "@maxdistance": "1"
-              },
-              "presentresource": {
-                "@resourceid": "ORE",
-                "@tier": "3",
-                "@mincount": "200"
-              }
-            },
-            {
-              "@name": "CLUSTER_B",
-              "distancetocluster": {
-                "@mindistance": "1",
-                "@maxdistance": "1"
-              },
-              "presentresource": {
-                "@resourceid": "ORE",
-                "@tier": "5",
-                "@mincount": "200"
-              }
-            }
-          ]
-        },
-        "tasks": {
-          "extendedmissionstep": [
-            {
-              "missions": {
-                "gotolocation": {
-                  "@locationmarkerid": "TRAVEL",
-                  "@hideindetailsui": "true",
-                  "@markedinworld": "true",
-                  "@markedonminimap": "true",
-                  "@textloca": "@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_TRAVEL"
-                }
-              }
-            },
-            {
-              "preactions": {
-                "openhintbox": {
-                  "@uniquename": "TRAVEL"
-                }
-              },
-              "missions": {
-                "gotolocation": {
-                  "@locationmarkerid": "VANITY",
-                  "@hideindetailsui": "true",
-                  "@markedinworld": "true",
-                  "@markedonminimap": "true",
-                  "@textloca": "@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_VANITY"
-                }
-              }
-            },
-            {
-              "preactions": {
-                "openhintbox": {
-                  "@uniquename": "VANITY"
-                }
-              },
-              "missions": {
-                "gotocluster": {
-                  "@clusterdirect": "4007-HALL-01",
-                  "@locationmarkerid": "CONQUERORSHALL",
-                  "@hideindetailsui": "true",
-                  "@markedinworld": "true",
-                  "@markedonminimap": "true",
-                  "@textloca": "@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_CONQUERORSHALL"
-                }
-              }
-            },
-            {
-              "preactions": {
-                "openhintbox": {
-                  "@uniquename": "CONQUERORSHALL"
-                }
-              },
-              "missions": {
-                "gotolocation": {
-                  "@locationmarkerid": "OUTLANDPORTAL",
-                  "@hideindetailsui": "true",
-                  "@markedinworld": "true",
-                  "@markedonminimap": "true",
-                  "@textloca": "@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_OUTLANDPORTAL"
-                }
-              }
-            },
-            {
-              "preactions": {
-                "openhintbox": {
-                  "@uniquename": "OUTLANDPORTAL"
-                }
-              },
-              "missions": {
-                "gotolocation": {
-                  "@locationmarkerid": "ENERGYMANIPULATOR",
-                  "@hideindetailsui": "true",
-                  "@markedinworld": "true",
-                  "@markedonminimap": "true",
-                  "@textloca": "@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_ENERGYMANIPULATOR"
-                }
-              }
-            },
-            {
-              "preactions": {
-                "openhintbox": {
-                  "@uniquename": "ENERGYMANIPULATOR"
-                }
-              },
-              "missions": {
-                "gotolocation": {
-                  "@locationmarkerid": "ISLAND",
-                  "@hideindetailsui": "true",
-                  "@markedinworld": "true",
-                  "@markedonminimap": "true",
-                  "@textloca": "@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_ISLAND"
-                }
-              }
-            },
-            {
-              "preactions": {
-                "openhintbox": {
-                  "@uniquename": "ISLANDMERCHANTSMALL"
-                }
-              },
-              "missions": {
-                "gotolocation": {
-                  "@locationmarkerid": "ARENA",
-                  "@hideindetailsui": "true",
-                  "@markedinworld": "true",
-                  "@markedonminimap": "true",
-                  "@textloca": "@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_ARENA"
-                }
-              }
-            },
-            {
-              "preactions": {
-                "openhintbox": {
-                  "@uniquename": "ARENA"
-                }
-              },
-              "missions": {
-                "gotolocation": {
-                  "@locationmarkerid": "EXPEDITION",
-                  "@hideindetailsui": "true",
-                  "@markedinworld": "true",
-                  "@markedonminimap": "true",
-                  "@textloca": "@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_EXPEDITION"
-                }
-              }
-            },
-            {
-              "preactions": {
-                "openhintbox": {
-                  "@uniquename": "EXPEDITION"
-                }
-              },
-              "missions": {
-                "gotolocation": {
-                  "@locationmarkerid": "FACTION_WARFARE",
-                  "@hideindetailsui": "true",
-                  "@markedinworld": "true",
-                  "@markedonminimap": "true",
-                  "@textloca": "@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_FACTION_WARFARE"
-                }
-              }
-            },
-            {
-              "preactions": {
-                "openhintbox": {
-                  "@uniquename": "FACTION_WARFARE"
-                }
-              },
-              "missions": {
-                "gotolocation": {
-                  "@locationmarkerid": "ARTIFACTFOUNDRY",
-                  "@hideindetailsui": "true",
-                  "@markedinworld": "true",
-                  "@markedonminimap": "true",
-                  "@textloca": "@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_ARTIFACTFOUNDRY"
-                }
-              }
-            },
-            {
-              "preactions": {
-                "openhintbox": {
-                  "@uniquename": "ARTIFACTFOUNDRY"
-                }
-              },
-              "missions": {
-                "gotolocation": {
-                  "@locationmarkerid": "MARKETPLACE",
-                  "@hideindetailsui": "true",
-                  "@markedinworld": "true",
-                  "@markedonminimap": "true",
-                  "@textloca": "@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_MARKET"
-                }
-              }
-            },
-            {
-              "preactions": {
-                "openhintbox": {
-                  "@uniquename": "MARKETPLACE"
-                }
-              },
-              "missions": {
-                "gotolocation": {
-                  "@locationmarkerid": "REPAIR",
-                  "@hideindetailsui": "true",
-                  "@markedinworld": "true",
-                  "@markedonminimap": "true",
-                  "@textloca": "@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_REPAIR"
-                }
-              }
-            },
-            {
-              "preactions": {
-                "openhintbox": {
-                  "@uniquename": "REPAIR"
-                }
-              },
-              "missions": {
-                "gotolocation": {
-                  "@locationmarkerid": "BANK",
-                  "@hideindetailsui": "true",
-                  "@markedinworld": "true",
-                  "@markedonminimap": "true",
-                  "@textloca": "@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_BANK"
-                }
-              }
-            }
-          ],
-          "missionstep": {
-            "haveplaytime": {
-              "@seconds": "1",
-              "@hideinhud": "true",
-              "@textloca": "@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"
-            }
-          },
-          "extendedcompletionstep": {
-            "preactions": {
-              "openhintbox": {
-                "@uniquename": "BANK"
-              }
-            },
-            "missions": {
-              "gotoquestgiver": {
-                "@locationmarkerid": "EXPLORER",
-                "@markedinworld": "true",
-                "@markedonminimap": "true"
-              }
-            }
-          }
-        },
-        "rewards": ""
-      },
-      {
-        "@uniquename": "MISSIONS_T2_MARTLOCK_CITYTOUR",
-        "@mobfaction": "ROYALARMY",
-        "@title": "@MISSIONS_T2_BIGCITYTOUR_TITLE",
-        "@offertext": "@MISSIONS_T2_BIGCITYTOUR_OFFERTEXT",
-        "@progresstext": "@MISSIONS_T2_BIGCITYTOUR_PROGRESSTEXT",
-        "@priority": "1",
-        "@minlevel": "1",
-        "@maxlevel": "2",
-        "@tags": "adventurer",
-        "@offertimeout": "0",
-        "@questtimeout": "3600000",
-        "@questslotcooldown": "0",
-        "@uicategory": "PROMOTION",
-        "@onceonly": "true",
-        "@completetext": "@MISSIONS_T2_BIGCITYTOUR_COMPLETIONTEXT",
-        "@cancelable": "true",
-        "@completehintbox": "END_OF_TUTORIAL",
-        "@hideifquestcompleted": "MISSIONS_T2_THETFORT_CITYTOUR MISSIONS_T2_BRIDGEWATCH_CITYTOUR MISSIONS_T2_LYMHURST_CITYTOUR MISSIONS_T2_FORTSTERLING_CITYTOUR",
-        "variables": {
-          "dynamiccluster": [
-            {
-              "@name": "CLUSTER_A",
-              "distancetocluster": {
-                "@mindistance": "1",
-                "@maxdistance": "1"
-              },
-              "presentresource": {
-                "@resourceid": "ROCK",
-                "@tier": "3",
-                "@mincount": "200"
-              }
-            },
-            {
-              "@name": "CLUSTER_B",
-              "distancetocluster": {
-                "@mindistance": "1",
-                "@maxdistance": "1"
-              },
-              "presentresource": {
-                "@resourceid": "ROCK",
-                "@tier": "5",
-                "@mincount": "200"
-              }
-            }
-          ]
-        },
-        "tasks": {
-          "extendedmissionstep": [
-            {
-              "missions": {
-                "gotolocation": {
-                  "@locationmarkerid": "VANITY",
-                  "@hideindetailsui": "true",
-                  "@markedinworld": "true",
-                  "@markedonminimap": "true",
-                  "@textloca": "@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_VANITY"
-                }
-              }
-            },
-            {
-              "preactions": {
-                "openhintbox": {
-                  "@uniquename": "VANITY"
-                }
-              },
-              "missions": {
-                "gotolocation": {
-                  "@locationmarkerid": "ISLAND",
-                  "@hideindetailsui": "true",
-                  "@markedinworld": "true",
-                  "@markedonminimap": "true",
-                  "@textloca": "@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_ISLAND"
-                }
-              }
-            },
-            {
-              "preactions": {
-                "openhintbox": {
-                  "@uniquename": "ISLANDMERCHANTSMALL"
-                }
-              },
-              "missions": {
-                "gotocluster": {
-                  "@clusterdirect": "3014-HALL-01",
-                  "@locationmarkerid": "CONQUERORSHALL",
-                  "@hideindetailsui": "true",
-                  "@markedinworld": "true",
-                  "@markedonminimap": "true",
-                  "@textloca": "@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_CONQUERORSHALL"
-                }
-              }
-            },
-            {
-              "preactions": {
-                "openhintbox": {
-                  "@uniquename": "CONQUERORSHALL"
-                }
-              },
-              "missions": {
-                "gotolocation": {
-                  "@locationmarkerid": "OUTLANDPORTAL",
-                  "@hideindetailsui": "true",
-                  "@markedinworld": "true",
-                  "@markedonminimap": "true",
-                  "@textloca": "@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_OUTLANDPORTAL"
-                }
-              }
-            },
-            {
-              "preactions": {
-                "openhintbox": {
-                  "@uniquename": "OUTLANDPORTAL"
-                }
-              },
-              "missions": {
-                "gotolocation": {
-                  "@locationmarkerid": "ENERGYMANIPULATOR",
-                  "@hideindetailsui": "true",
-                  "@markedinworld": "true",
-                  "@markedonminimap": "true",
-                  "@textloca": "@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_ENERGYMANIPULATOR"
-                }
-              }
-            },
-            {
-              "preactions": {
-                "openhintbox": {
-                  "@uniquename": "ENERGYMANIPULATOR"
-                }
-              },
-              "missions": {
-                "gotolocation": {
-                  "@locationmarkerid": "ARENA",
-                  "@hideindetailsui": "true",
-                  "@markedinworld": "true",
-                  "@markedonminimap": "true",
-                  "@textloca": "@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_ARENA"
-                }
-              }
-            },
-            {
-              "preactions": {
-                "openhintbox": {
-                  "@uniquename": "ARENA"
-                }
-              },
-              "missions": {
-                "gotolocation": {
-                  "@locationmarkerid": "EXPEDITION",
-                  "@hideindetailsui": "true",
-                  "@markedinworld": "true",
-                  "@markedonminimap": "true",
-                  "@textloca": "@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_EXPEDITION"
-                }
-              }
-            },
-            {
-              "preactions": {
-                "openhintbox": {
-                  "@uniquename": "EXPEDITION"
-                }
-              },
-              "missions": {
-                "gotolocation": {
-                  "@locationmarkerid": "MARKETPLACE",
-                  "@hideindetailsui": "true",
-                  "@markedinworld": "true",
-                  "@markedonminimap": "true",
-                  "@textloca": "@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_MARKET"
-                }
-              }
-            },
-            {
-              "preactions": {
-                "openhintbox": {
-                  "@uniquename": "MARKETPLACE"
-                }
-              },
-              "missions": {
-                "gotolocation": {
-                  "@locationmarkerid": "REPAIR",
-                  "@hideindetailsui": "true",
-                  "@markedinworld": "true",
-                  "@markedonminimap": "true",
-                  "@textloca": "@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_REPAIR"
-                }
-              }
-            },
-            {
-              "preactions": {
-                "openhintbox": {
-                  "@uniquename": "REPAIR"
-                }
-              },
-              "missions": {
-                "gotolocation": {
-                  "@locationmarkerid": "FACTION_WARFARE",
-                  "@hideindetailsui": "true",
-                  "@markedinworld": "true",
-                  "@markedonminimap": "true",
-                  "@textloca": "@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_FACTION_WARFARE"
-                }
-              }
-            },
-            {
-              "preactions": {
-                "openhintbox": {
-                  "@uniquename": "FACTION_WARFARE"
-                }
-              },
-              "missions": {
-                "gotolocation": {
-                  "@locationmarkerid": "TRAVEL",
-                  "@hideindetailsui": "true",
-                  "@markedinworld": "true",
-                  "@markedonminimap": "true",
-                  "@textloca": "@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_TRAVEL"
-                }
-              }
-            },
-            {
-              "preactions": {
-                "openhintbox": {
-                  "@uniquename": "TRAVEL"
-                }
-              },
-              "missions": {
-                "gotolocation": {
-                  "@locationmarkerid": "ARTIFACTFOUNDRY",
-                  "@hideindetailsui": "true",
-                  "@markedinworld": "true",
-                  "@markedonminimap": "true",
-                  "@textloca": "@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_ARTIFACTFOUNDRY"
-                }
-              }
-            },
-            {
-              "preactions": {
-                "openhintbox": {
-                  "@uniquename": "ARTIFACTFOUNDRY"
-                }
-              },
-              "missions": {
-                "gotolocation": {
-                  "@locationmarkerid": "BANK",
-                  "@hideindetailsui": "true",
-                  "@markedinworld": "true",
-                  "@markedonminimap": "true",
-                  "@textloca": "@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_BANK"
-                }
-              }
-            }
-          ],
-          "missionstep": {
-            "haveplaytime": {
-              "@seconds": "1",
-              "@hideinhud": "true",
-              "@textloca": "@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"
-            }
-          },
-          "extendedcompletionstep": {
-            "preactions": {
-              "openhintbox": {
-                "@uniquename": "BANK"
-              }
-            },
-            "missions": {
-              "gotoquestgiver": {
-                "@locationmarkerid": "EXPLORER",
-                "@markedinworld": "true",
-                "@markedonminimap": "true"
-              }
-            }
-          }
-        },
-        "rewards": ""
-      },
-      {
-        "@uniquename": "MISSIONS_T2_THETFORT_CITYTOUR",
-        "@mobfaction": "ROYALARMY",
-        "@title": "@MISSIONS_T2_BIGCITYTOUR_TITLE",
-        "@offertext": "@MISSIONS_T2_BIGCITYTOUR_OFFERTEXT",
-        "@progresstext": "@MISSIONS_T2_BIGCITYTOUR_PROGRESSTEXT",
-        "@priority": "1",
-        "@minlevel": "1",
-        "@maxlevel": "2",
-        "@tags": "adventurer",
-        "@offertimeout": "0",
-        "@questtimeout": "3600000",
-        "@questslotcooldown": "0",
-        "@uicategory": "PROMOTION",
-        "@onceonly": "true",
-        "@completetext": "@MISSIONS_T2_BIGCITYTOUR_COMPLETIONTEXT",
-        "@cancelable": "true",
-        "@completehintbox": "END_OF_TUTORIAL",
-        "@hideifquestcompleted": "MISSIONS_T2_BRIDGEWATCH_CITYTOUR MISSIONS_T2_LYMHURST_CITYTOUR MISSIONS_T2_FORTSTERLING_CITYTOUR MISSIONS_T2_MARTLOCK_CITYTOUR",
-        "variables": {
-          "dynamiccluster": [
-            {
-              "@name": "CLUSTER_A",
-              "distancetocluster": {
-                "@mindistance": "1",
-                "@maxdistance": "1"
-              },
-              "presentresource": {
-                "@resourceid": "FIBER",
-                "@tier": "3",
-                "@mincount": "200"
-              }
-            },
-            {
-              "@name": "CLUSTER_B",
-              "distancetocluster": {
-                "@mindistance": "1",
-                "@maxdistance": "1"
-              },
-              "presentresource": {
-                "@resourceid": "FIBER",
-                "@tier": "5",
-                "@mincount": "200"
-              }
-            }
-          ]
-        },
-        "tasks": {
-          "extendedmissionstep": [
-            {
-              "missions": {
-                "gotolocation": {
-                  "@locationmarkerid": "ISLAND",
-                  "@hideindetailsui": "true",
-                  "@markedinworld": "true",
-                  "@markedonminimap": "true",
-                  "@textloca": "@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_ISLAND"
-                }
-              }
-            },
-            {
-              "preactions": {
-                "openhintbox": {
-                  "@uniquename": "ISLANDMERCHANTSMALL"
-                }
-              },
-              "missions": {
-                "gotolocation": {
-                  "@locationmarkerid": "VANITY",
-                  "@hideindetailsui": "true",
-                  "@markedinworld": "true",
-                  "@markedonminimap": "true",
-                  "@textloca": "@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_VANITY"
-                }
-              }
-            },
-            {
-              "preactions": {
-                "openhintbox": {
-                  "@uniquename": "VANITY"
-                }
-              },
-              "missions": {
-                "gotolocation": {
-                  "@locationmarkerid": "ARENA",
-                  "@hideindetailsui": "true",
-                  "@markedinworld": "true",
-                  "@markedonminimap": "true",
-                  "@textloca": "@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_ARENA"
-                }
-              }
-            },
-            {
-              "preactions": {
-                "openhintbox": {
-                  "@uniquename": "ARENA"
-                }
-              },
-              "missions": {
-                "gotocluster": {
-                  "@clusterdirect": "0360-HALL-01",
-                  "@locationmarkerid": "CONQUERORSHALL",
-                  "@hideindetailsui": "true",
-                  "@markedinworld": "true",
-                  "@markedonminimap": "true",
-                  "@textloca": "@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_CONQUERORSHALL"
-                }
-              }
-            },
-            {
-              "preactions": {
-                "openhintbox": {
-                  "@uniquename": "CONQUERORSHALL"
-                }
-              },
-              "missions": {
-                "gotolocation": {
-                  "@locationmarkerid": "OUTLANDPORTAL",
-                  "@hideindetailsui": "true",
-                  "@markedinworld": "true",
-                  "@markedonminimap": "true",
-                  "@textloca": "@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_OUTLANDPORTAL"
-                }
-              }
-            },
-            {
-              "preactions": {
-                "openhintbox": {
-                  "@uniquename": "OUTLANDPORTAL"
-                }
-              },
-              "missions": {
-                "gotolocation": {
-                  "@locationmarkerid": "ENERGYMANIPULATOR",
-                  "@hideindetailsui": "true",
-                  "@markedinworld": "true",
-                  "@markedonminimap": "true",
-                  "@textloca": "@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_ENERGYMANIPULATOR"
-                }
-              }
-            },
-            {
-              "preactions": {
-                "openhintbox": {
-                  "@uniquename": "ENERGYMANIPULATOR"
-                }
-              },
-              "missions": {
-                "gotolocation": {
-                  "@locationmarkerid": "MARKETPLACE",
-                  "@hideindetailsui": "true",
-                  "@markedinworld": "true",
-                  "@markedonminimap": "true",
-                  "@textloca": "@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_MARKET"
-                }
-              }
-            },
-            {
-              "preactions": {
-                "openhintbox": {
-                  "@uniquename": "MARKETPLACE"
-                }
-              },
-              "missions": {
-                "gotolocation": {
-                  "@locationmarkerid": "ARTIFACTFOUNDRY",
-                  "@hideindetailsui": "true",
-                  "@markedinworld": "true",
-                  "@markedonminimap": "true",
-                  "@textloca": "@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_ARTIFACTFOUNDRY"
-                }
-              }
-            },
-            {
-              "preactions": {
-                "openhintbox": {
-                  "@uniquename": "ARTIFACTFOUNDRY"
-                }
-              },
-              "missions": {
-                "gotolocation": {
-                  "@locationmarkerid": "TRAVEL",
-                  "@hideindetailsui": "true",
-                  "@markedinworld": "true",
-                  "@markedonminimap": "true",
-                  "@textloca": "@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_TRAVEL"
-                }
-              }
-            },
-            {
-              "preactions": {
-                "openhintbox": {
-                  "@uniquename": "TRAVEL"
-                }
-              },
-              "missions": {
-                "gotolocation": {
-                  "@locationmarkerid": "EXPEDITION",
-                  "@hideindetailsui": "true",
-                  "@markedinworld": "true",
-                  "@markedonminimap": "true",
-                  "@textloca": "@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_EXPEDITION"
-                }
-              }
-            },
-            {
-              "preactions": {
-                "openhintbox": {
-                  "@uniquename": "EXPEDITION"
-                }
-              },
-              "missions": {
-                "gotolocation": {
-                  "@locationmarkerid": "REPAIR",
-                  "@hideindetailsui": "true",
-                  "@markedinworld": "true",
-                  "@markedonminimap": "true",
-                  "@textloca": "@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_REPAIR"
-                }
-              }
-            },
-            {
-              "preactions": {
-                "openhintbox": {
-                  "@uniquename": "REPAIR"
-                }
-              },
-              "missions": {
-                "gotolocation": {
-                  "@locationmarkerid": "FACTION_WARFARE",
-                  "@hideindetailsui": "true",
-                  "@markedinworld": "true",
-                  "@markedonminimap": "true",
-                  "@textloca": "@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_FACTION_WARFARE"
-                }
-              }
-            },
-            {
-              "preactions": {
-                "openhintbox": {
-                  "@uniquename": "FACTION_WARFARE"
-                }
-              },
-              "missions": {
-                "gotolocation": {
-                  "@locationmarkerid": "BANK",
-                  "@hideindetailsui": "true",
-                  "@markedinworld": "true",
-                  "@markedonminimap": "true",
-                  "@textloca": "@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_BANK"
-                }
-              }
-            }
-          ],
-          "missionstep": {
-            "haveplaytime": {
-              "@seconds": "1",
-              "@hideinhud": "true",
-              "@textloca": "@MISSIONS_T2_TUTORIAL_CITYTOUR_SIDETEXT_STROLL"
-            }
-          },
-          "extendedcompletionstep": {
-            "preactions": {
-              "openhintbox": {
-                "@uniquename": "BANK"
-              }
-            },
-            "missions": {
-              "gotoquestgiver": {
-                "@locationmarkerid": "EXPLORER",
-                "@markedinworld": "true",
-                "@markedonminimap": "true"
-              }
-            }
-          }
-        },
-        "rewards": ""
-      },
-      {
         "@uniquename": "MISSIONS_T2_TUTORIAL_TEST_A",
         "@mobfaction": "ROYALARMY",
         "@title": "@MISSIONS_T2_TUTORIAL_TEST_A_TITLE",
@@ -1499,16 +239,25 @@
               },
               "missions": {
                 "gotolocation": {
-                  "@locationmarkerid": "POINT",
-                  "@seconds": "2",
+                  "@locationmarkerid": "QUESTMARKERBOXTRIGGER02",
                   "@markedinworld": "true",
                   "@markedonminimap": "true",
-                  "@textloca": "@MISSIONS_T2_TUTORIAL_TEST_A1_SIDETEXT",
+                  "@textloca": "@MISSIONS_T2_TUTORIAL_TEST_A_SIDETEXT",
                   "@hideindetailsui": "true"
                 }
               }
             }
           ],
+          "missionstep": {
+            "gotolocation": {
+              "@locationmarkerid": "POINT",
+              "@seconds": "1",
+              "@markedinworld": "true",
+              "@markedonminimap": "true",
+              "@textloca": "@MISSIONS_T2_TUTORIAL_TEST_A1_SIDETEXT",
+              "@hideindetailsui": "true"
+            }
+          },
           "extendedcompletionstep": {
             "preactions": {
               "openhintbox": [
@@ -1519,6 +268,9 @@
                 {
                   "@uniquename": "CLEAR",
                   "@displayonplatform": "desktop"
+                },
+                {
+                  "@uniquename": "INTERACTIONBUTTON_GAMEPAD"
                 }
               ]
             },
@@ -1526,7 +278,8 @@
               "gotoquestgiver": {
                 "@questgivervariable": "CRAFTER",
                 "@locationmarkerid": "INTERACTWITHCRAFTER",
-                "@markedinworld": "false",
+                "@markedinworld": "true",
+                "@markedonminimap": "true",
                 "@textloca": "@MISSIONS_T2_TUTORIAL_TEST_A2_SIDETEXT"
               }
             }
@@ -1583,6 +336,20 @@
             },
             {
               "preactions": {
+                "openhintbox": {
+                  "@uniquename": "GAMEPAD_TARGETING"
+                }
+              },
+              "missions": {
+                "gotolocation": {
+                  "@locationmarkerid": "HERETICS",
+                  "@textloca": "@MISSIONS_T2_TUTORIAL_TEST_B2_SIDETEXT",
+                  "@hideindetailsui": "true"
+                }
+              }
+            },
+            {
+              "preactions": {
                 "settutorialstate": {
                   "@state": "USESPELL"
                 }
@@ -1621,13 +388,6 @@
               "gotolocation": {
                 "@locationmarkerid": "LIGHTHOUSETOP",
                 "@textloca": "@MISSIONS_T2_TUTORIAL_TEST_B1_SIDETEXT",
-                "@hideindetailsui": "true"
-              }
-            },
-            {
-              "gotolocation": {
-                "@locationmarkerid": "HERETICS",
-                "@textloca": "@MISSIONS_T2_TUTORIAL_TEST_B2_SIDETEXT",
                 "@hideindetailsui": "true"
               }
             },
@@ -2835,6 +1595,76 @@
               },
               "missions": {
                 "or": {
+                  "@locationmarkerid": "CAMP_A2",
+                  "@textloca": "@MISSIONS_T2_TUTORIAL_TEST_MA1_SIDETEXT",
+                  "@markedinworld": "true",
+                  "@markedonminimap": "true",
+                  "@hideindetailsui": "true",
+                  "@hideprogress": "true",
+                  "gotolocation": [
+                    {
+                      "@locationmarkerid": "CAMP_A2",
+                      "@textloca": "@MISSIONS_T2_TUTORIAL_TEST_MA1_SIDETEXT",
+                      "@markedinworld": "false",
+                      "@markedonminimap": "true",
+                      "@hideindetailsui": "true"
+                    },
+                    {
+                      "@locationmarkerid": "CAMP_B2",
+                      "@textloca": "@MISSIONS_T2_TUTORIAL_TEST_MA1_SIDETEXT",
+                      "@markedinworld": "false",
+                      "@markedonminimap": "false",
+                      "@hideindetailsui": "true"
+                    },
+                    {
+                      "@locationmarkerid": "CAMP_C2",
+                      "@textloca": "@MISSIONS_T2_TUTORIAL_TEST_MA1_SIDETEXT",
+                      "@markedinworld": "false",
+                      "@markedonminimap": "false",
+                      "@hideindetailsui": "true"
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "missions": {
+                "or": {
+                  "@locationmarkerid": "CAMP_A3",
+                  "@textloca": "@MISSIONS_T2_TUTORIAL_TEST_MA1_SIDETEXT",
+                  "@markedinworld": "true",
+                  "@markedonminimap": "true",
+                  "@hideindetailsui": "true",
+                  "@hideprogress": "true",
+                  "gotolocation": [
+                    {
+                      "@locationmarkerid": "CAMP_A3",
+                      "@textloca": "@MISSIONS_T2_TUTORIAL_TEST_MA1_SIDETEXT",
+                      "@markedinworld": "false",
+                      "@markedonminimap": "true",
+                      "@hideindetailsui": "true"
+                    },
+                    {
+                      "@locationmarkerid": "CAMP_B3",
+                      "@textloca": "@MISSIONS_T2_TUTORIAL_TEST_MA1_SIDETEXT",
+                      "@markedinworld": "false",
+                      "@markedonminimap": "false",
+                      "@hideindetailsui": "true"
+                    },
+                    {
+                      "@locationmarkerid": "CAMP_C3",
+                      "@textloca": "@MISSIONS_T2_TUTORIAL_TEST_MA1_SIDETEXT",
+                      "@markedinworld": "false",
+                      "@markedonminimap": "false",
+                      "@hideindetailsui": "true"
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "missions": {
+                "or": {
                   "@locationmarkerid": "CAMP_A1",
                   "@textloca": "@MISSIONS_T2_TUTORIAL_TEST_MA1_SIDETEXT",
                   "@markedinworld": "false",
@@ -2869,10 +1699,15 @@
             },
             {
               "preactions": {
-                "openhintbox": {
-                  "@uniquename": "COMBAT2",
-                  "@displayonplatform": "desktop"
-                }
+                "openhintbox": [
+                  {
+                    "@uniquename": "COMBAT2",
+                    "@displayonplatform": "desktop"
+                  },
+                  {
+                    "@uniquename": "GAMEPAD_TARGETING"
+                  }
+                ]
               },
               "missions": {
                 "or": {
@@ -3052,6 +1887,76 @@
               },
               "missions": {
                 "or": {
+                  "@locationmarkerid": "CAMP_B2",
+                  "@textloca": "@MISSIONS_T2_TUTORIAL_TEST_MA1_SIDETEXT",
+                  "@markedinworld": "true",
+                  "@markedonminimap": "true",
+                  "@hideindetailsui": "true",
+                  "@hideprogress": "true",
+                  "gotolocation": [
+                    {
+                      "@locationmarkerid": "CAMP_A2",
+                      "@textloca": "@MISSIONS_T2_TUTORIAL_TEST_MA1_SIDETEXT",
+                      "@markedinworld": "false",
+                      "@markedonminimap": "true",
+                      "@hideindetailsui": "true"
+                    },
+                    {
+                      "@locationmarkerid": "CAMP_B2",
+                      "@textloca": "@MISSIONS_T2_TUTORIAL_TEST_MA1_SIDETEXT",
+                      "@markedinworld": "false",
+                      "@markedonminimap": "false",
+                      "@hideindetailsui": "true"
+                    },
+                    {
+                      "@locationmarkerid": "CAMP_C2",
+                      "@textloca": "@MISSIONS_T2_TUTORIAL_TEST_MA1_SIDETEXT",
+                      "@markedinworld": "false",
+                      "@markedonminimap": "false",
+                      "@hideindetailsui": "true"
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "missions": {
+                "or": {
+                  "@locationmarkerid": "CAMP_B3",
+                  "@textloca": "@MISSIONS_T2_TUTORIAL_TEST_MA1_SIDETEXT",
+                  "@markedinworld": "true",
+                  "@markedonminimap": "true",
+                  "@hideindetailsui": "true",
+                  "@hideprogress": "true",
+                  "gotolocation": [
+                    {
+                      "@locationmarkerid": "CAMP_A3",
+                      "@textloca": "@MISSIONS_T2_TUTORIAL_TEST_MA1_SIDETEXT",
+                      "@markedinworld": "false",
+                      "@markedonminimap": "true",
+                      "@hideindetailsui": "true"
+                    },
+                    {
+                      "@locationmarkerid": "CAMP_B3",
+                      "@textloca": "@MISSIONS_T2_TUTORIAL_TEST_MA1_SIDETEXT",
+                      "@markedinworld": "false",
+                      "@markedonminimap": "false",
+                      "@hideindetailsui": "true"
+                    },
+                    {
+                      "@locationmarkerid": "CAMP_C3",
+                      "@textloca": "@MISSIONS_T2_TUTORIAL_TEST_MA1_SIDETEXT",
+                      "@markedinworld": "false",
+                      "@markedonminimap": "false",
+                      "@hideindetailsui": "true"
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "missions": {
+                "or": {
                   "@locationmarkerid": "CAMP_B1",
                   "@textloca": "@MISSIONS_T2_TUTORIAL_TEST_MA1_SIDETEXT",
                   "@markedinworld": "false",
@@ -3086,10 +1991,15 @@
             },
             {
               "preactions": {
-                "openhintbox": {
-                  "@uniquename": "COMBAT2",
-                  "@displayonplatform": "desktop"
-                }
+                "openhintbox": [
+                  {
+                    "@uniquename": "COMBAT2",
+                    "@displayonplatform": "desktop"
+                  },
+                  {
+                    "@uniquename": "GAMEPAD_TARGETING"
+                  }
+                ]
               },
               "missions": {
                 "or": {
@@ -3269,6 +2179,76 @@
               },
               "missions": {
                 "or": {
+                  "@locationmarkerid": "CAMP_C2",
+                  "@textloca": "@MISSIONS_T2_TUTORIAL_TEST_MA1_SIDETEXT",
+                  "@markedinworld": "true",
+                  "@markedonminimap": "true",
+                  "@hideindetailsui": "true",
+                  "@hideprogress": "true",
+                  "gotolocation": [
+                    {
+                      "@locationmarkerid": "CAMP_A2",
+                      "@textloca": "@MISSIONS_T2_TUTORIAL_TEST_MA1_SIDETEXT",
+                      "@markedinworld": "false",
+                      "@markedonminimap": "true",
+                      "@hideindetailsui": "true"
+                    },
+                    {
+                      "@locationmarkerid": "CAMP_B2",
+                      "@textloca": "@MISSIONS_T2_TUTORIAL_TEST_MA1_SIDETEXT",
+                      "@markedinworld": "false",
+                      "@markedonminimap": "false",
+                      "@hideindetailsui": "true"
+                    },
+                    {
+                      "@locationmarkerid": "CAMP_C2",
+                      "@textloca": "@MISSIONS_T2_TUTORIAL_TEST_MA1_SIDETEXT",
+                      "@markedinworld": "false",
+                      "@markedonminimap": "false",
+                      "@hideindetailsui": "true"
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "missions": {
+                "or": {
+                  "@locationmarkerid": "CAMP_C3",
+                  "@textloca": "@MISSIONS_T2_TUTORIAL_TEST_MA1_SIDETEXT",
+                  "@markedinworld": "true",
+                  "@markedonminimap": "true",
+                  "@hideindetailsui": "true",
+                  "@hideprogress": "true",
+                  "gotolocation": [
+                    {
+                      "@locationmarkerid": "CAMP_A3",
+                      "@textloca": "@MISSIONS_T2_TUTORIAL_TEST_MA1_SIDETEXT",
+                      "@markedinworld": "false",
+                      "@markedonminimap": "true",
+                      "@hideindetailsui": "true"
+                    },
+                    {
+                      "@locationmarkerid": "CAMP_B3",
+                      "@textloca": "@MISSIONS_T2_TUTORIAL_TEST_MA1_SIDETEXT",
+                      "@markedinworld": "false",
+                      "@markedonminimap": "false",
+                      "@hideindetailsui": "true"
+                    },
+                    {
+                      "@locationmarkerid": "CAMP_C3",
+                      "@textloca": "@MISSIONS_T2_TUTORIAL_TEST_MA1_SIDETEXT",
+                      "@markedinworld": "false",
+                      "@markedonminimap": "false",
+                      "@hideindetailsui": "true"
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "missions": {
+                "or": {
                   "@locationmarkerid": "CAMP_C1",
                   "@textloca": "@MISSIONS_T2_TUTORIAL_TEST_MA1_SIDETEXT",
                   "@markedinworld": "false",
@@ -3303,10 +2283,15 @@
             },
             {
               "preactions": {
-                "openhintbox": {
-                  "@uniquename": "COMBAT2",
-                  "@displayonplatform": "desktop"
-                }
+                "openhintbox": [
+                  {
+                    "@uniquename": "COMBAT2",
+                    "@displayonplatform": "desktop"
+                  },
+                  {
+                    "@uniquename": "GAMEPAD_TARGETING"
+                  }
+                ]
               },
               "missions": {
                 "or": {
@@ -3693,7 +2678,8 @@
               },
               "missions": {
                 "interactwithbuilding": {
-                  "@buildingid": "FOREST_GREEN_MARKETPLACE_TUTORIAL"
+                  "@buildingid": "FOREST_GREEN_MARKETPLACE_TUTORIAL",
+                  "@textloca": "@MISSIONS_T2_TUTORIAL_TEST_H_SIDETEXT"
                 }
               }
             },
@@ -3866,7 +2852,8 @@
               },
               "missions": {
                 "interactwithbuilding": {
-                  "@buildingid": "FOREST_GREEN_MARKETPLACE_TUTORIAL"
+                  "@buildingid": "FOREST_GREEN_MARKETPLACE_TUTORIAL",
+                  "@textloca": "@MISSIONS_T2_TUTORIAL_TEST_H_SIDETEXT"
                 }
               }
             },
@@ -4072,6 +3059,9 @@
             },
             {
               "preactions": {
+                "openhintbox": {
+                  "@uniquename": "CONTROLLER_TARGET_SELECTION"
+                },
                 "settutorialblocker": {
                   "@id": "SHIPGATE2",
                   "@statetoset": "0"

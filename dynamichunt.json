@@ -209,6 +209,18 @@
               "@mobid": "T8_MOB_TR_SILVER_HERETIC_SHADOWMASK_VETERAN_BOSS",
               "@tracktileref": "TRACK_SILVER_GROUP",
               "@minimapicon": "tracking_target_silver_group"
+            },
+            {
+              "@uniquename": "WITCH_SOLO",
+              "@mobid": "T4_MOB_RD_KEEPER_WITCH_BOSS",
+              "@tracktileref": "TRACK_SILVER_SOLO",
+              "@minimapicon": "tracking_target_silver_solo"
+            },
+            {
+              "@uniquename": "WITCH_GROUP",
+              "@mobid": "T4_MOB_RD_KEEPER_WITCH_VETERAN_BOSS",
+              "@tracktileref": "TRACK_SILVER_SOLO",
+              "@minimapicon": "tracking_target_silver_group"
             }
           ]
         },
@@ -3436,6 +3448,220 @@
           }
         },
         {
+          "@uniquename": "SILVER_SOLO_WITCH",
+          "@type": "solo",
+          "@namelocatag": "@HUNT_GENERAL_SOLO",
+          "@namelocatagwithtarget": "@HUNT_GENERAL_SOLO_WITH_TARGET",
+          "@groupsizemin": "1",
+          "@groupsizemax": "3",
+          "@initialfinalquestchance": "1",
+          "@defaultchancechangeonsuccess": "0.018",
+          "@defaultchancechangeonfailure": "0",
+          "@minquestsuntilfinalquest": "0",
+          "@maxquestsuntilfinalquest": "100",
+          "@maxclusterdistance": "3",
+          "@trackingtime": "18",
+          "variables": {
+            "float": {
+              "@name": "HP_TARGET",
+              "@value": "1.0"
+            },
+            "location": {
+              "@name": "TARGET_LOCATION"
+            },
+            "locationhistory": {
+              "@name": "LOCATION_HISTORY",
+              "@historymaxsize": "10",
+              "@hidefromclient": "true",
+              "@initwithhuntstartposition": "true"
+            }
+          },
+          "finalquests": {
+            "quest": {
+              "@weight": "1",
+              "@name": "FINAL_SOLO_SIMPLE",
+              "@chancechangeonfailure": "1"
+            }
+          },
+          "mainquests": {
+            "questblock": [
+              {
+                "conditions": {
+                  "ifquestcount": {
+                    "@op": "less",
+                    "@type": "all",
+                    "@value": "5"
+                  }
+                },
+                "quest": [
+                  {
+                    "@weight": "6",
+                    "@name": "MAIN_GOTO_SHORT_MEDIUM_RING",
+                    "iflastoccurrence": {
+                      "@op": "greater",
+                      "@value": "1"
+                    }
+                  },
+                  {
+                    "@weight": "2",
+                    "@name": "MAIN_SOLO_SHORT_FIGHT_1",
+                    "iflastoccurrence": {
+                      "@op": "greater",
+                      "@value": "1"
+                    }
+                  },
+                  {
+                    "@weight": "2",
+                    "@name": "MAIN_SOLO_SHORT_FIGHT_2",
+                    "iflastoccurrence": {
+                      "@op": "greater",
+                      "@value": "1"
+                    }
+                  },
+                  {
+                    "@weight": "2",
+                    "@name": "MAIN_SOLO_SHORT_FIGHT_3",
+                    "iflastoccurrence": {
+                      "@op": "greater",
+                      "@value": "1"
+                    }
+                  },
+                  {
+                    "@weight": "15",
+                    "@name": "MAIN_SOLO_SHORT_ESCAPE_TIME",
+                    "ifvarfloat": {
+                      "@variablename": "HP_TARGET",
+                      "@op": "greater",
+                      "@value": "0.5"
+                    }
+                  }
+                ]
+              },
+              {
+                "conditions": {
+                  "ifquestcount": [
+                    {
+                      "@op": "greaterorequal",
+                      "@type": "all",
+                      "@value": "5"
+                    },
+                    {
+                      "@op": "less",
+                      "@type": "all",
+                      "@value": "10"
+                    }
+                  ]
+                },
+                "quest": [
+                  {
+                    "@weight": "6",
+                    "@name": "MAIN_GOTO_SHORT_MEDIUM_RING",
+                    "@chancechangeonsuccess": "0.036",
+                    "iflastoccurrence": {
+                      "@op": "greater",
+                      "@value": "1"
+                    }
+                  },
+                  {
+                    "@weight": "2",
+                    "@name": "MAIN_SOLO_SHORT_FIGHT_1",
+                    "@chancechangeonsuccess": "0.036",
+                    "iflastoccurrence": {
+                      "@op": "greater",
+                      "@value": "1"
+                    }
+                  },
+                  {
+                    "@weight": "2",
+                    "@name": "MAIN_SOLO_SHORT_FIGHT_2",
+                    "@chancechangeonsuccess": "0.036",
+                    "iflastoccurrence": {
+                      "@op": "greater",
+                      "@value": "1"
+                    }
+                  },
+                  {
+                    "@weight": "2",
+                    "@name": "MAIN_SOLO_SHORT_FIGHT_3",
+                    "@chancechangeonsuccess": "0.036",
+                    "iflastoccurrence": {
+                      "@op": "greater",
+                      "@value": "1"
+                    }
+                  },
+                  {
+                    "@weight": "15",
+                    "@name": "MAIN_SOLO_SHORT_ESCAPE_TIME",
+                    "@chancechangeonsuccess": "0.036",
+                    "ifvarfloat": {
+                      "@variablename": "HP_TARGET",
+                      "@op": "greater",
+                      "@value": "0.5"
+                    }
+                  }
+                ]
+              },
+              {
+                "conditions": {
+                  "ifquestcount": {
+                    "@op": "greaterorequal",
+                    "@type": "all",
+                    "@value": "10"
+                  }
+                },
+                "quest": [
+                  {
+                    "@weight": "6",
+                    "@name": "MAIN_GOTO_SHORT_MEDIUM_RING",
+                    "@chancechangeonsuccess": "1",
+                    "iflastoccurrence": {
+                      "@op": "greater",
+                      "@value": "1"
+                    }
+                  },
+                  {
+                    "@weight": "2",
+                    "@name": "MAIN_SOLO_SHORT_FIGHT_1",
+                    "@chancechangeonsuccess": "1",
+                    "iflastoccurrence": {
+                      "@op": "greater",
+                      "@value": "1"
+                    }
+                  },
+                  {
+                    "@weight": "2",
+                    "@name": "MAIN_SOLO_SHORT_FIGHT_2",
+                    "@chancechangeonsuccess": "1",
+                    "iflastoccurrence": {
+                      "@op": "greater",
+                      "@value": "1"
+                    }
+                  },
+                  {
+                    "@weight": "2",
+                    "@name": "MAIN_SOLO_SHORT_FIGHT_3",
+                    "@chancechangeonsuccess": "1",
+                    "iflastoccurrence": {
+                      "@op": "greater",
+                      "@value": "1"
+                    }
+                  },
+                  {
+                    "@weight": "15",
+                    "@name": "MAIN_SOLO_SHORT_ESCAPE_TIME",
+                    "@chancechangeonsuccess": "1",
+                    "ifvarfloat": {
+                      "@variablename": "HP_TARGET",
+                      "@op": "greater",
+                      "@value": "0.5"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
           "@uniquename": "GENERAL_GROUP",
           "@type": "group",
           "@namelocatag": "@HUNT_GENERAL_GROUP",
@@ -6047,6 +6273,219 @@
                     "@weight": "72",
                     "@name": "MAIN_GROUP_SHORT_ESCAPE_TIME",
                     "@chancechangeonsuccess": "0.018",
+                    "ifvarfloat": {
+                      "@variablename": "HP_TARGET",
+                      "@op": "greater",
+                      "@value": "0.5"
+                    }
+                  }
+                ]
+              },
+              {
+                "conditions": {
+                  "ifquestcount": {
+                    "@type": "all",
+                    "@op": "greaterorequal",
+                    "@value": "12"
+                  }
+                },
+                "quest": [
+                  {
+                    "@weight": "18",
+                    "@name": "MAIN_GOTO_SHORT_LARGE_RING",
+                    "@chancechangeonsuccess": "1",
+                    "iflastoccurrence": {
+                      "@op": "greater",
+                      "@value": "1"
+                    }
+                  },
+                  {
+                    "@weight": "3",
+                    "@name": "MAIN_GROUP_SHORT_FIGHT_2",
+                    "@chancechangeonsuccess": "1",
+                    "iflastoccurrence": {
+                      "@op": "greater",
+                      "@value": "1"
+                    }
+                  },
+                  {
+                    "@weight": "9",
+                    "@name": "MAIN_GROUP_SHORT_FIGHT_3",
+                    "@chancechangeonsuccess": "1",
+                    "iflastoccurrence": {
+                      "@op": "greater",
+                      "@value": "1"
+                    }
+                  },
+                  {
+                    "@weight": "6",
+                    "@name": "MAIN_GROUP_SHORT_FIGHT_4",
+                    "@chancechangeonsuccess": "1",
+                    "iflastoccurrence": {
+                      "@op": "greater",
+                      "@value": "1"
+                    }
+                  },
+                  {
+                    "@weight": "72",
+                    "@name": "MAIN_GROUP_SHORT_ESCAPE_TIME",
+                    "@chancechangeonsuccess": "1",
+                    "ifvarfloat": {
+                      "@variablename": "HP_TARGET",
+                      "@op": "greater",
+                      "@value": "0.5"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "@uniquename": "SILVER_GROUP_WITCH",
+          "@type": "group",
+          "@namelocatag": "@HUNT_GENERAL_GROUP",
+          "@namelocatagwithtarget": "@HUNT_GENERAL_GROUP_WITH_TARGET",
+          "@groupsizemin": "4",
+          "@groupsizemax": "8",
+          "@initialfinalquestchance": "1",
+          "@defaultchancechangeonsuccess": "0.018",
+          "@defaultchancechangeonfailure": "0",
+          "@minquestsuntilfinalquest": "0",
+          "@maxquestsuntilfinalquest": "100",
+          "@maxclusterdistance": "5",
+          "@trackingtime": "18",
+          "variables": {
+            "float": {
+              "@name": "HP_TARGET",
+              "@value": "1.0"
+            },
+            "location": {
+              "@name": "TARGET_LOCATION"
+            },
+            "locationhistory": {
+              "@name": "LOCATION_HISTORY",
+              "@historymaxsize": "10",
+              "@hidefromclient": "true",
+              "@initwithhuntstartposition": "true"
+            }
+          },
+          "finalquests": {
+            "quest": {
+              "@name": "FINAL_GROUP_SIMPLE",
+              "@weight": "1"
+            }
+          },
+          "mainquests": {
+            "questblock": [
+              {
+                "conditions": {
+                  "ifquestcount": {
+                    "@type": "all",
+                    "@op": "less",
+                    "@value": "5"
+                  }
+                },
+                "quest": [
+                  {
+                    "@weight": "18",
+                    "@name": "MAIN_GOTO_SHORT_LARGE_RING",
+                    "iflastoccurrence": {
+                      "@op": "greater",
+                      "@value": "1"
+                    }
+                  },
+                  {
+                    "@weight": "3",
+                    "@name": "MAIN_GROUP_SHORT_FIGHT_2",
+                    "iflastoccurrence": {
+                      "@op": "greater",
+                      "@value": "1"
+                    }
+                  },
+                  {
+                    "@weight": "9",
+                    "@name": "MAIN_GROUP_SHORT_FIGHT_3",
+                    "iflastoccurrence": {
+                      "@op": "greater",
+                      "@value": "1"
+                    }
+                  },
+                  {
+                    "@weight": "6",
+                    "@name": "MAIN_GROUP_SHORT_FIGHT_4",
+                    "iflastoccurrence": {
+                      "@op": "greater",
+                      "@value": "1"
+                    }
+                  },
+                  {
+                    "@weight": "72",
+                    "@name": "MAIN_GROUP_SHORT_ESCAPE_TIME",
+                    "ifvarfloat": {
+                      "@variablename": "HP_TARGET",
+                      "@op": "greater",
+                      "@value": "0.5"
+                    }
+                  }
+                ]
+              },
+              {
+                "conditions": {
+                  "ifquestcount": [
+                    {
+                      "@type": "all",
+                      "@op": "greaterorequal",
+                      "@value": "5"
+                    },
+                    {
+                      "@type": "all",
+                      "@op": "less",
+                      "@value": "12"
+                    }
+                  ]
+                },
+                "quest": [
+                  {
+                    "@weight": "18",
+                    "@name": "MAIN_GOTO_SHORT_LARGE_RING",
+                    "@chancechangeonsuccess": "0.036",
+                    "iflastoccurrence": {
+                      "@op": "greater",
+                      "@value": "1"
+                    }
+                  },
+                  {
+                    "@weight": "3",
+                    "@name": "MAIN_GROUP_SHORT_FIGHT_2",
+                    "@chancechangeonsuccess": "0.036",
+                    "iflastoccurrence": {
+                      "@op": "greater",
+                      "@value": "1"
+                    }
+                  },
+                  {
+                    "@weight": "9",
+                    "@name": "MAIN_GROUP_SHORT_FIGHT_3",
+                    "@chancechangeonsuccess": "0.036",
+                    "iflastoccurrence": {
+                      "@op": "greater",
+                      "@value": "1"
+                    }
+                  },
+                  {
+                    "@weight": "6",
+                    "@name": "MAIN_GROUP_SHORT_FIGHT_4",
+                    "@chancechangeonsuccess": "0.036",
+                    "iflastoccurrence": {
+                      "@op": "greater",
+                      "@value": "1"
+                    }
+                  },
+                  {
+                    "@weight": "72",
+                    "@name": "MAIN_GROUP_SHORT_ESCAPE_TIME",
+                    "@chancechangeonsuccess": "0.036",
                     "ifvarfloat": {
                       "@variablename": "HP_TARGET",
                       "@op": "greater",

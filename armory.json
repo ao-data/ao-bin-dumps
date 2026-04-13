@@ -14,23 +14,28 @@
           "tag": [
             {
               "@id": "solo",
-              "@name": "@ARMORY_TAG_GROUP_SIZE_SOLO"
+              "@name": "@ARMORY_TAG_GROUP_SIZE_SOLO",
+              "@shortname": "@ARMORY_TAG_GROUP_SIZE_SOLO_SHORT"
             },
             {
               "@id": "small_group",
-              "@name": "@ARMORY_TAG_GROUP_SIZE_SMALL"
+              "@name": "@ARMORY_TAG_GROUP_SIZE_SMALL",
+              "@shortname": "@ARMORY_TAG_GROUP_SIZE_SMALL_SHORT"
             },
             {
               "@id": "medium_group",
-              "@name": "@ARMORY_TAG_GROUP_SIZE_MEDIUM"
+              "@name": "@ARMORY_TAG_GROUP_SIZE_MEDIUM",
+              "@shortname": "@ARMORY_TAG_GROUP_SIZE_MEDIUM_SHORT"
             },
             {
               "@id": "large_group",
-              "@name": "@ARMORY_TAG_GROUP_SIZE_LARGE"
+              "@name": "@ARMORY_TAG_GROUP_SIZE_LARGE",
+              "@shortname": "@ARMORY_TAG_GROUP_SIZE_LARGE_SHORT"
             },
             {
-              "@id": "zerg",
-              "@name": "@ARMORY_TAG_GROUP_SIZE_ZERG"
+              "@id": "army",
+              "@name": "@ARMORY_TAG_GROUP_SIZE_ARMY",
+              "@shortname": "@ARMORY_TAG_GROUP_SIZE_ARMY_SHORT"
             }
           ]
         },
@@ -40,45 +45,57 @@
           "tag": [
             {
               "@id": "pve",
-              "@name": "@ARMORY_TAG_ACTIVITY_TYPE_PVE"
+              "@name": "@ARMORY_TAG_ACTIVITY_TYPE_PVE",
+              "@shortname": "@ARMORY_TAG_ACTIVITY_TYPE_PVE_SHORT"
             },
             {
               "@id": "pvp",
-              "@name": "@ARMORY_TAG_ACTIVITY_TYPE_PVP"
+              "@name": "@ARMORY_TAG_ACTIVITY_TYPE_PVP",
+              "@shortname": "@ARMORY_TAG_ACTIVITY_TYPE_PVP_SHORT"
             },
             {
               "@id": "gathering",
-              "@name": "@ARMORY_TAG_ACTIVITY_TYPE_GATHERING"
+              "@name": "@ARMORY_TAG_ACTIVITY_TYPE_GATHERING",
+              "@shortname": "@ARMORY_TAG_ACTIVITY_TYPE_GATHERING_SHORT"
             },
             {
               "@id": "openworld",
-              "@name": "@ARMORY_TAG_ACTIVITY_TYPE_OPENWORLD"
+              "@name": "@ARMORY_TAG_ACTIVITY_TYPE_OPENWORLD",
+              "@shortname": "@ARMORY_TAG_ACTIVITY_TYPE_OPENWORLD_SHORT"
             },
             {
               "@id": "instanced",
-              "@name": "@ARMORY_TAG_ACTIVITY_TYPE_INSTANCED"
+              "@name": "@ARMORY_TAG_ACTIVITY_TYPE_INSTANCED",
+              "@shortname": "@ARMORY_TAG_ACTIVITY_TYPE_INSTANCED_SHORT"
             },
             {
               "@id": "dungeons",
-              "@name": "@ARMORY_TAG_ACTIVITY_TYPE_DUNGEONS"
+              "@name": "@ARMORY_TAG_ACTIVITY_TYPE_DUNGEONS",
+              "@shortname": "@ARMORY_TAG_ACTIVITY_TYPE_DUNGEONS_SHORT"
             },
             {
               "@id": "competitive",
-              "@name": "@ARMORY_TAG_ACTIVITY_TYPE_COMPETITIVE"
+              "@name": "@ARMORY_TAG_ACTIVITY_TYPE_COMPETITIVE",
+              "@shortname": "@ARMORY_TAG_ACTIVITY_TYPE_COMPETITIVE_SHORT"
             },
             {
               "@id": "conquering",
-              "@name": "@ARMORY_TAG_ACTIVITY_TYPE_CONQUERING"
+              "@name": "@ARMORY_TAG_ACTIVITY_TYPE_CONQUERING",
+              "@shortname": "@ARMORY_TAG_ACTIVITY_TYPE_CONQUERING_SHORT"
             }
           ]
         }
       ]
     },
+    "settings": {
+      "@confidencefloor": "0.2",
+      "@popularityweight": "0.4"
+    },
     "activities": {
       "activity": [
         {
           "@uniquename": "openworldsolo",
-          "@image": "",
+          "@image": "Gui/Armory/ARMORY_OPEN_WORLD_SOLO",
           "tags": {
             "tag": [
               {
@@ -121,11 +138,37 @@
                 }
               ]
             }
+          },
+          "scoreweights": {
+            "@minuses": "3",
+            "@minusesbaseline": "5",
+            "weight": [
+              {
+                "@metric": "kills",
+                "@value": "0.2"
+              },
+              {
+                "@metric": "deaths",
+                "@value": "-0.2"
+              },
+              {
+                "@metrics": "damagedealt,healingdone",
+                "@value": "0.2"
+              },
+              {
+                "@metric": "pvpfamegained",
+                "@value": "0.2"
+              },
+              {
+                "@metric": "pvefamegained",
+                "@value": "0.3"
+              }
+            ]
           }
         },
         {
           "@uniquename": "openworldgroup",
-          "@image": "",
+          "@image": "Gui/Armory/ARMORY_OPEN_WORLD_GROUP",
           "tags": {
             "tag": [
               {
@@ -165,11 +208,37 @@
                 }
               ]
             }
+          },
+          "scoreweights": {
+            "@minuses": "2",
+            "@minusesbaseline": "3",
+            "weight": [
+              {
+                "@metric": "kills",
+                "@value": "0.2"
+              },
+              {
+                "@metric": "deaths",
+                "@value": "-0.2"
+              },
+              {
+                "@metrics": "damagedealt,healingdone",
+                "@value": "0.2"
+              },
+              {
+                "@metric": "pvpfamegained",
+                "@value": "0.2"
+              },
+              {
+                "@metric": "pvefamegained",
+                "@value": "0.3"
+              }
+            ]
           }
         },
         {
           "@uniquename": "openworldlargegroup",
-          "@image": "",
+          "@image": "Gui/Armory/ARMORY_OPEN_WORLD_LARGE_GROUP",
           "tags": {
             "tag": [
               {
@@ -209,15 +278,40 @@
                 }
               ]
             }
+          },
+          "scoreweights": {
+            "@minuses": "1",
+            "weight": [
+              {
+                "@metric": "kills",
+                "@value": "0.2"
+              },
+              {
+                "@metric": "deaths",
+                "@value": "-0.2"
+              },
+              {
+                "@metrics": "damagereceived,healingdone",
+                "@value": "0.3"
+              },
+              {
+                "@metric": "pvpfamegained",
+                "@value": "0.2"
+              },
+              {
+                "@metric": "pvefamegained",
+                "@value": "0.3"
+              }
+            ]
           }
         },
         {
           "@uniquename": "zvz",
-          "@image": "",
+          "@image": "Gui/Armory/ARMORY_ZvZ",
           "tags": {
             "tag": [
               {
-                "@ref": "zerg"
+                "@ref": "army"
               },
               {
                 "@ref": "openworld"
@@ -263,11 +357,32 @@
                 ]
               }
             }
+          },
+          "scoreweights": {
+            "@minuses": "1",
+            "weight": [
+              {
+                "@metric": "kills",
+                "@value": "0.2"
+              },
+              {
+                "@metric": "deaths",
+                "@value": "-0.2"
+              },
+              {
+                "@metrics": "healingdone,damagereceived",
+                "@value": "0.3"
+              },
+              {
+                "@metric": "pvpfamegained",
+                "@value": "0.3"
+              }
+            ]
           }
         },
         {
           "@uniquename": "corrupteddungeons",
-          "@image": "",
+          "@image": "Gui/Armory/ARMORY_CORRUPTED_DUNGEONS",
           "tags": {
             "tag": [
               {
@@ -300,11 +415,33 @@
                 }
               ]
             }
+          },
+          "scoreweights": {
+            "@minuses": "2",
+            "@minusesbaseline": "5",
+            "weight": [
+              {
+                "@metric": "successwin",
+                "@value": "0.5"
+              },
+              {
+                "@metric": "kills",
+                "@value": "0.2"
+              },
+              {
+                "@metric": "deaths",
+                "@value": "-0.2"
+              },
+              {
+                "@metric": "pvpfamegained",
+                "@value": "0.2"
+              }
+            ]
           }
         },
         {
           "@uniquename": "hellgate2v2",
-          "@image": "",
+          "@image": "Gui/Armory/ARMORY_HELLGATE_2v2",
           "tags": {
             "tag": [
               {
@@ -337,11 +474,33 @@
                 }
               ]
             }
+          },
+          "scoreweights": {
+            "@minuses": "3",
+            "@minusesbaseline": "5",
+            "weight": [
+              {
+                "@metric": "successwin",
+                "@value": "0.5"
+              },
+              {
+                "@metric": "kills",
+                "@value": "0.2"
+              },
+              {
+                "@metric": "deaths",
+                "@value": "-0.2"
+              },
+              {
+                "@metric": "pvpfamegained",
+                "@value": "0.2"
+              }
+            ]
           }
         },
         {
           "@uniquename": "hellgate5v5",
-          "@image": "",
+          "@image": "Gui/Armory/ARMORY_HELLGATE_5v5",
           "tags": {
             "tag": [
               {
@@ -374,11 +533,37 @@
                 }
               ]
             }
+          },
+          "scoreweights": {
+            "@minuses": "1",
+            "@minusesbaseline": "2",
+            "weight": [
+              {
+                "@metric": "successwin",
+                "@value": "0.5"
+              },
+              {
+                "@metric": "kills",
+                "@value": "0.2"
+              },
+              {
+                "@metric": "deaths",
+                "@value": "-0.2"
+              },
+              {
+                "@metric": "pvpfamegained",
+                "@value": "0.2"
+              },
+              {
+                "@metric": "healingdone",
+                "@value": "0.5"
+              }
+            ]
           }
         },
         {
           "@uniquename": "crystalleague5v5",
-          "@image": "",
+          "@image": "Gui/Armory/ARMORY_CRYSTAL_LEAGUE_5v5",
           "tags": {
             "tag": [
               {
@@ -417,11 +602,32 @@
                 ]
               }
             }
+          },
+          "scoreweights": {
+            "@minuses": "1",
+            "weight": [
+              {
+                "@metric": "successwin",
+                "@value": "0.5"
+              },
+              {
+                "@metric": "kills",
+                "@value": "0.2"
+              },
+              {
+                "@metric": "deaths",
+                "@value": "-0.2"
+              },
+              {
+                "@metrics": "damagedealt,healingdone,damagereceived",
+                "@value": "0.2"
+              }
+            ]
           }
         },
         {
           "@uniquename": "crystalleague20v20",
-          "@image": "",
+          "@image": "Gui/Armory/ARMORY_CRYSTAL_LEAGUE_20v20",
           "tags": {
             "tag": [
               {
@@ -460,11 +666,33 @@
                 ]
               }
             }
+          },
+          "scoreweights": {
+            "@minuses": "1",
+            "@minperformancescore": "0.6",
+            "weight": [
+              {
+                "@metric": "successwin",
+                "@value": "0.5"
+              },
+              {
+                "@metric": "kills",
+                "@value": "0.2"
+              },
+              {
+                "@metric": "deaths",
+                "@value": "-0.2"
+              },
+              {
+                "@metrics": "damagedealt,healingdone,damagereceived",
+                "@value": "0.2"
+              }
+            ]
           }
         },
         {
           "@uniquename": "crystalarena",
-          "@image": "",
+          "@image": "Gui/Armory/ARMORY_CRYSTAL_ARENA",
           "tags": {
             "tag": [
               {
@@ -503,11 +731,37 @@
                 ]
               }
             }
+          },
+          "scoreweights": {
+            "@minuses": "3",
+            "@minusesbaseline": "5",
+            "weight": [
+              {
+                "@metric": "successwin",
+                "@value": "0.5"
+              },
+              {
+                "@metric": "kills",
+                "@value": "0.2"
+              },
+              {
+                "@metric": "deaths",
+                "@value": "-0.2"
+              },
+              {
+                "@metrics": "damagedealt,damagereceived",
+                "@value": "0.2"
+              },
+              {
+                "@metric": "healingdone",
+                "@value": "0.1"
+              }
+            ]
           }
         },
         {
           "@uniquename": "arena",
-          "@image": "",
+          "@image": "Gui/Armory/ARMORY_ARENA",
           "tags": {
             "tag": [
               {
@@ -546,11 +800,37 @@
                 ]
               }
             }
+          },
+          "scoreweights": {
+            "@minuses": "3",
+            "@minusesbaseline": "5",
+            "weight": [
+              {
+                "@metric": "successwin",
+                "@value": "0.5"
+              },
+              {
+                "@metric": "kills",
+                "@value": "0.2"
+              },
+              {
+                "@metric": "deaths",
+                "@value": "-0.2"
+              },
+              {
+                "@metrics": "damagedealt,damagereceived",
+                "@value": "0.2"
+              },
+              {
+                "@metric": "healingdone",
+                "@value": "0.1"
+              }
+            ]
           }
         },
         {
           "@uniquename": "mists",
-          "@image": "",
+          "@image": "Gui/Armory/ARMORY_MIST",
           "tags": {
             "tag": [
               {
@@ -601,11 +881,37 @@
                 }
               ]
             }
+          },
+          "scoreweights": {
+            "@minuses": "3",
+            "@minusesbaseline": "5",
+            "weight": [
+              {
+                "@metric": "kills",
+                "@value": "0.2"
+              },
+              {
+                "@metric": "deaths",
+                "@value": "-0.2"
+              },
+              {
+                "@metrics": "damagedealt,healingdone",
+                "@value": "0.2"
+              },
+              {
+                "@metric": "pvpfamegained",
+                "@value": "0.2"
+              },
+              {
+                "@metric": "pvefamegained",
+                "@value": "0.3"
+              }
+            ]
           }
         },
         {
           "@uniquename": "factionwarfare",
-          "@image": "",
+          "@image": "Gui/Armory/ARMORY_FACTION_WARFARE",
           "tags": {
             "tag": [
               {
@@ -615,7 +921,7 @@
                 "@ref": "large_group"
               },
               {
-                "@ref": "zerg"
+                "@ref": "army"
               },
               {
                 "@ref": "openworld"
@@ -658,18 +964,44 @@
                 ]
               }
             }
+          },
+          "scoreweights": {
+            "@minuses": "4",
+            "@minusesbaseline": "5",
+            "weight": [
+              {
+                "@metric": "outpostcaptured",
+                "@value": "0.4"
+              },
+              {
+                "@metric": "kills",
+                "@value": "0.2"
+              },
+              {
+                "@metric": "deaths",
+                "@value": "-0.2"
+              },
+              {
+                "@metrics": "damagedealt,healingdone,damagereceived",
+                "@value": "0.2"
+              },
+              {
+                "@metric": "pvpfamegained",
+                "@value": "0.2"
+              }
+            ]
           }
         },
         {
           "@uniquename": "castle",
-          "@image": "",
+          "@image": "Gui/Armory/ARMORY_CASTLE",
           "tags": {
             "tag": [
               {
                 "@ref": "large_group"
               },
               {
-                "@ref": "zerg"
+                "@ref": "army"
               },
               {
                 "@ref": "openworld"
@@ -712,18 +1044,44 @@
                 ]
               }
             }
+          },
+          "scoreweights": {
+            "@minuses": "1",
+            "@stablebucketcoverage": "2",
+            "weight": [
+              {
+                "@metric": "successwin",
+                "@value": "0.4"
+              },
+              {
+                "@metric": "kills",
+                "@value": "0.2"
+              },
+              {
+                "@metric": "deaths",
+                "@value": "-0.2"
+              },
+              {
+                "@metrics": "damagedealt,healingdone,damagereceived",
+                "@value": "0.2"
+              },
+              {
+                "@metric": "pvpfamegained",
+                "@value": "0.2"
+              }
+            ]
           }
         },
         {
           "@uniquename": "fortification",
-          "@image": "",
+          "@image": "Gui/Armory/ARMORY_FORTIFICATION",
           "tags": {
             "tag": [
               {
                 "@ref": "large_group"
               },
               {
-                "@ref": "zerg"
+                "@ref": "army"
               },
               {
                 "@ref": "openworld"
@@ -766,11 +1124,37 @@
                 ]
               }
             }
+          },
+          "scoreweights": {
+            "@minuses": "2",
+            "@stablebucketcoverage": "2",
+            "weight": [
+              {
+                "@metric": "buildingdamage",
+                "@value": "0.4"
+              },
+              {
+                "@metric": "kills",
+                "@value": "0.2"
+              },
+              {
+                "@metric": "deaths",
+                "@value": "-0.2"
+              },
+              {
+                "@metrics": "damagedealt,healingdone,damagereceived",
+                "@value": "0.2"
+              },
+              {
+                "@metric": "pvpfamegained",
+                "@value": "0.2"
+              }
+            ]
           }
         },
         {
           "@uniquename": "avalonianroads",
-          "@image": "",
+          "@image": "Gui/Armory/ARMORY_AVALONIAN_ROADS",
           "tags": {
             "tag": [
               {
@@ -811,11 +1195,37 @@
                 ]
               }
             }
+          },
+          "scoreweights": {
+            "@minuses": "3",
+            "@minusesbaseline": "5",
+            "weight": [
+              {
+                "@metric": "kills",
+                "@value": "0.2"
+              },
+              {
+                "@metric": "deaths",
+                "@value": "-0.2"
+              },
+              {
+                "@metrics": "damagereceived,healingdone",
+                "@value": "0.2"
+              },
+              {
+                "@metric": "pvpfamegained",
+                "@value": "0.4"
+              },
+              {
+                "@metric": "pvefamegained",
+                "@value": "0.2"
+              }
+            ]
           }
         },
         {
           "@uniquename": "gathering",
-          "@image": "",
+          "@image": "Gui/Armory/ARMORY_GATHERING",
           "tags": {
             "tag": [
               {
@@ -833,11 +1243,25 @@
             "duration": {
               "@mindurationminutes": "15"
             }
+          },
+          "scoreweights": {
+            "@minuses": "2",
+            "@minusesbaseline": "3",
+            "weight": [
+              {
+                "@metric": "deaths",
+                "@value": "-0.40"
+              },
+              {
+                "@metric": "pvefamegained",
+                "@value": "0.60"
+              }
+            ]
           }
         },
         {
           "@uniquename": "solodungeons",
-          "@image": "",
+          "@image": "Gui/Armory/ARMORY_SOLO_DUNGEON",
           "tags": {
             "tag": [
               {
@@ -867,11 +1291,29 @@
                 "@minvalue": "20"
               }
             }
+          },
+          "scoreweights": {
+            "@minuses": "4",
+            "@minusesbaseline": "5",
+            "weight": [
+              {
+                "@metric": "deaths",
+                "@value": "-0.3"
+              },
+              {
+                "@metric": "mobskilled",
+                "@value": "0.2"
+              },
+              {
+                "@metric": "pvefamegained",
+                "@value": "0.4"
+              }
+            ]
           }
         },
         {
           "@uniquename": "groupdungeons",
-          "@image": "",
+          "@image": "Gui/Armory/ARMORY_GROUP_DUNGEON",
           "tags": {
             "tag": [
               {
@@ -901,11 +1343,33 @@
                 "@minvalue": "20"
               }
             }
+          },
+          "scoreweights": {
+            "@minuses": "3",
+            "@minusesbaseline": "5",
+            "weight": [
+              {
+                "@metric": "deaths",
+                "@value": "-0.3"
+              },
+              {
+                "@metric": "mobskilled",
+                "@value": "0.2"
+              },
+              {
+                "@metric": "pvefamegained",
+                "@value": "0.4"
+              },
+              {
+                "@metrics": "damagereceived,healingdone",
+                "@value": "0.4"
+              }
+            ]
           }
         },
         {
           "@uniquename": "avaloniandungeons",
-          "@image": "",
+          "@image": "Gui/Armory/ARMORY_AVALONIAN_DUNGEON",
           "tags": {
             "tag": [
               {
@@ -932,11 +1396,28 @@
                 "@minvalue": "20"
               }
             }
+          },
+          "scoreweights": {
+            "@minuses": "2",
+            "weight": [
+              {
+                "@metric": "deaths",
+                "@value": "-0.2"
+              },
+              {
+                "@metric": "mobskilled",
+                "@value": "0.2"
+              },
+              {
+                "@metric": "pvefamegained",
+                "@value": "0.4"
+              }
+            ]
           }
         },
         {
           "@uniquename": "hardcoreexpeditions",
-          "@image": "",
+          "@image": "Gui/Armory/ARMORY_HARDCORE_EXPEDITION",
           "tags": {
             "tag": [
               {
@@ -963,11 +1444,29 @@
                 "@minvalue": "20"
               }
             }
+          },
+          "scoreweights": {
+            "@minuses": "1",
+            "@minperformancescore": "0",
+            "weight": [
+              {
+                "@metric": "successwin",
+                "@value": "0.5"
+              },
+              {
+                "@metric": "deaths",
+                "@value": "-0.2"
+              },
+              {
+                "@metric": "pvefamegained",
+                "@value": "0.4"
+              }
+            ]
           }
         },
         {
           "@uniquename": "homebase",
-          "@image": "",
+          "@image": "Gui/Armory/ARMORY_HOME_BASE",
           "tags": {
             "tag": [
               {
@@ -991,11 +1490,29 @@
                 "@minvalue": "500000"
               }
             }
+          },
+          "scoreweights": {
+            "@minuses": "1",
+            "@stablebucketcoverage": "2",
+            "weight": [
+              {
+                "@metric": "deaths",
+                "@value": "-0.4"
+              },
+              {
+                "@metric": "mobskilled",
+                "@value": "0.2"
+              },
+              {
+                "@metric": "pvefamegained",
+                "@value": "0.4"
+              }
+            ]
           }
         },
         {
           "@uniquename": "tracking",
-          "@image": "",
+          "@image": "Gui/Armory/ARMORY_TRACKING",
           "tags": {
             "tag": [
               {
@@ -1023,11 +1540,33 @@
               "@name": "successwin",
               "@minvalue": "1"
             }
+          },
+          "scoreweights": {
+            "@minuses": "2",
+            "@minusesbaseline": "3",
+            "weight": [
+              {
+                "@metric": "successwin",
+                "@value": "0.4"
+              },
+              {
+                "@metric": "deaths",
+                "@value": "-0.2"
+              },
+              {
+                "@metric": "pvefamegained",
+                "@value": "0.20"
+              },
+              {
+                "@metrics": "damagereceived,healingdone",
+                "@value": "0.2"
+              }
+            ]
           }
         },
         {
           "@uniquename": "helldungeons2v2",
-          "@image": "",
+          "@image": "Gui/Armory/ARMORY_HELL_DUNGEONS",
           "tags": {
             "tag": [
               {
@@ -1071,11 +1610,37 @@
                 }
               }
             }
+          },
+          "scoreweights": {
+            "@minuses": "3",
+            "@minusesbaseline": "5",
+            "weight": [
+              {
+                "@metric": "kills",
+                "@value": "0.2"
+              },
+              {
+                "@metric": "deaths",
+                "@value": "-0.2"
+              },
+              {
+                "@metrics": "damagedealt,healingdone",
+                "@value": "0.2"
+              },
+              {
+                "@metric": "pvpfamegained",
+                "@value": "0.2"
+              },
+              {
+                "@metric": "pvefamegained",
+                "@value": "0.3"
+              }
+            ]
           }
         },
         {
           "@uniquename": "helldungeons3v3",
-          "@image": "",
+          "@image": "Gui/Armory/ARMORY_HELL_DUNGEONS",
           "tags": {
             "tag": [
               {
@@ -1117,6 +1682,32 @@
                 ]
               }
             }
+          },
+          "scoreweights": {
+            "@minuses": "3",
+            "@minusesbaseline": "5",
+            "weight": [
+              {
+                "@metric": "kills",
+                "@value": "0.2"
+              },
+              {
+                "@metric": "deaths",
+                "@value": "-0.2"
+              },
+              {
+                "@metrics": "damagedealt,healingdone",
+                "@value": "0.2"
+              },
+              {
+                "@metric": "pvpfamegained",
+                "@value": "0.2"
+              },
+              {
+                "@metric": "pvefamegained",
+                "@value": "0.3"
+              }
+            ]
           }
         }
       ]

@@ -6105,6 +6105,54 @@
         }
       },
       {
+        "@name": "MOB_KEEPER_FANATIC_SPEAR",
+        "CharType": {
+          "@name": "mob"
+        },
+        "MobFaction": {
+          "@name": "keeper"
+        },
+        "MobType": {
+          "@name": "keeper_fanatic_spear"
+        },
+        "Size": {
+          "@name": "heavy"
+        },
+        "ArmorType": {
+          "@name": "leather"
+        },
+        "WeaponType": {
+          "@name": "staff_bladed"
+        },
+        "MountType": {
+          "@name": "empty"
+        }
+      },
+      {
+        "@name": "MOB_KEEPER_FANATIC_WARHORN",
+        "CharType": {
+          "@name": "mob"
+        },
+        "MobFaction": {
+          "@name": "keeper"
+        },
+        "MobType": {
+          "@name": "keeper_fanatic_warhorn"
+        },
+        "Size": {
+          "@name": "heavy"
+        },
+        "ArmorType": {
+          "@name": "leather"
+        },
+        "WeaponType": {
+          "@name": "hammer_huge"
+        },
+        "MountType": {
+          "@name": "empty"
+        }
+      },
+      {
         "@name": "MOB_CASTLEGUARD_SOLDIER",
         "CharType": {
           "@name": "mob"
@@ -7611,6 +7659,54 @@
         },
         "WeaponType": {
           "@name": "nature"
+        },
+        "MountType": {
+          "@name": "empty"
+        }
+      },
+      {
+        "@name": "MOB_DRAGON_FIRE",
+        "CharType": {
+          "@name": "mob"
+        },
+        "MobFaction": {
+          "@name": "dragon"
+        },
+        "MobType": {
+          "@name": "dragon_fire"
+        },
+        "Size": {
+          "@name": "huge"
+        },
+        "ArmorType": {
+          "@name": "hide"
+        },
+        "WeaponType": {
+          "@name": "claw_hide_big"
+        },
+        "MountType": {
+          "@name": "empty"
+        }
+      },
+      {
+        "@name": "MOB_DRAGON_DRAKE",
+        "CharType": {
+          "@name": "mob"
+        },
+        "MobFaction": {
+          "@name": "dragon"
+        },
+        "MobType": {
+          "@name": "dragon_drake"
+        },
+        "Size": {
+          "@name": "huge"
+        },
+        "ArmorType": {
+          "@name": "hide"
+        },
+        "WeaponType": {
+          "@name": "claw_hide_medium"
         },
         "MountType": {
           "@name": "empty"
@@ -10718,6 +10814,13 @@
         "@name": "MELEE_HAMMER_SLOWING_CHARGE",
         "OnCastStart": {
           "@name": "Play_hammer_slowing_charge"
+        }
+      },
+      {
+        "@name": "MELEE_IMPACT_SMALL_METALLIC",
+        "OnSpellHit": {
+          "@name": "Play_melee_impact_small_metallic",
+          "ImpactType": null
         }
       },
       {
@@ -14522,7 +14625,7 @@
           "@name": "Stop_tracking_bear_load_roar_big"
         },
         "OnCastFinished": {
-          "@name": "Play_tracking_bear_roar"
+          "@name": "Play_tracking_bear_shockwave"
         }
       },
       {
@@ -15066,6 +15169,12 @@
         "@name": "SPELL_SELF_BUFF",
         "OnCastStart": {
           "@name": "Play_selfbuff_cast"
+        }
+      },
+      {
+        "@name": "SPELL_SELF_BUFF_PURGINGSHIELD",
+        "OnCastStart": {
+          "@name": "Play_cast_purgingshield_buff"
         }
       },
       {
@@ -15731,6 +15840,18 @@
         "@name": "SPELL_CAST_ABYSS_EYES",
         "OnCastFinished": {
           "@name": "Play_spell_armor_abyss_eyes_cast"
+        }
+      },
+      {
+        "@name": "SPELL_CAST_ENFEEBLEAURA",
+        "OnCastStart": {
+          "@name": "Play_armor_enfeeble_aura_cast"
+        },
+        "OnCastCanceled": {
+          "@name": "Stop_armor_enfeeble_aura_cast"
+        },
+        "OnCastInterrupted": {
+          "@name": "Stop_armor_enfeeble_aura_cast"
         }
       },
       {
@@ -17845,6 +17966,10 @@
         },
         "OnCastInterrupted": {
           "@name": "Stop_keeper_berserk_cast_load_smash"
+        },
+        "OnSpellHit": {
+          "@name": "Play_melee_impact_medium_metallic",
+          "ImpactType": null
         }
       },
       {
@@ -17857,6 +17982,10 @@
         },
         "OnCastInterrupted": {
           "@name": "Stop_keeper_berserk_cast_load_smash"
+        },
+        "OnSpellHit": {
+          "@name": "Play_melee_impact_medium_metallic",
+          "ImpactType": null
         }
       },
       {
@@ -18160,6 +18289,12 @@
         "OnCastInterrupted": {
           "@name": "Stop_melee_swoosh_load_medium"
         },
+        "OnCastFinished": {
+          "@name": "Play_keeper_berserk_axe_swoosh_double"
+        }
+      },
+      {
+        "@name": "SPELL_KEEPER_BERSERK_SWING_DOUBLE_NOCAST",
         "OnCastFinished": {
           "@name": "Play_keeper_berserk_axe_swoosh_double"
         }
@@ -22311,6 +22446,90 @@
         "@name": "ANNIVERSARY_STATUE_SHOUT",
         "OnCastFinished": {
           "@name": "Play_anniversary_statue_shout"
+        }
+      },
+      {
+        "@name": "MOB_DRAGON_DRAKE_GRUNT",
+        "OnCastStart": {
+          "@name": "Play_mob_dragon_drake_grunt"
+        }
+      },
+      {
+        "@name": "MOB_DRAGON_DRAKE_ROAR",
+        "OnCastStart": {
+          "@name": "Play_mob_dragon_drake_roar"
+        }
+      },
+      {
+        "@name": "MOB_DRAGON_DRAKE_ROAR_LONG",
+        "OnCastStart": {
+          "@name": "Play_mob_dragon_drake_roar_long"
+        }
+      },
+      {
+        "@name": "MOB_DRAGON_FIRE_LOAD_JUMP",
+        "OnCastStart": {
+          "@name": "Play_mob_dragon_fire_grunt_load_jump"
+        }
+      },
+      {
+        "@name": "MOB_DRAGON_FIRE_LOAD_JUMP_DELAYED",
+        "OnCastStart": {
+          "@name": "Play_mob_dragon_fire_grunt_load_jump_delayed"
+        }
+      },
+      {
+        "@name": "MOB_DRAGON_FIRE_ATTACK_GRUNT_LOAD",
+        "OnCastStart": {
+          "@name": "Play_mob_dragon_fire_grunt"
+        }
+      },
+      {
+        "@name": "MOB_DRAGON_FIRE_ANNOYED",
+        "OnCastFinished": {
+          "@name": "Play_mob_dragon_fire_annoyed"
+        }
+      },
+      {
+        "@name": "MOB_DRAGON_FIRE_CAST",
+        "OnCastFinished": {
+          "@name": "Play_mob_dragon_fire_cast"
+        }
+      },
+      {
+        "@name": "MOB_DRAGON_FIRE_LOAD",
+        "OnCastFinished": {
+          "@name": "Play_mob_dragon_fire_load"
+        }
+      },
+      {
+        "@name": "MOB_DRAGON_FIRE_PHASE_CHANGE",
+        "OnCastFinished": {
+          "@name": "Play_mob_dragon_fire_phase_change"
+        }
+      },
+      {
+        "@name": "MOB_DRAGON_FIRE_ROAR_LONG",
+        "OnCastFinished": {
+          "@name": "Play_mob_dragon_fire_roar_long"
+        }
+      },
+      {
+        "@name": "MOB_DRAGON_FIRE_ROAR",
+        "OnCastFinished": {
+          "@name": "Play_mob_dragon_fire_roar"
+        }
+      },
+      {
+        "@name": "MOB_DRAGON_FIRE_ATTACK_GRUNT",
+        "OnCastFinished": {
+          "@name": "Play_mob_dragon_fire_grunt"
+        }
+      },
+      {
+        "@name": "MOB_DRAGON_FIRE_ROAR_STARTING_AGGRO",
+        "OnCastFinished": {
+          "@name": "Play_mob_dragon_fire_roar_startingaggro"
         }
       },
       {

@@ -842,6 +842,12 @@
         "@delay": "10"
       },
       {
+        "@uniquename": "GAMEPAD_TARGETING",
+        "@title": "@HINT_TITLE_GAMEPAD_TARGETING",
+        "@infotext": "@HINT_INFO_GAMEPAD_TARGETING",
+        "@showoninputscheme": "controllerall"
+      },
+      {
         "@uniquename": "USESPELL",
         "@title": "@HINT_TITLE_USESPELL",
         "@infotext": "@HINT_INFO_USESPELL",
@@ -1058,7 +1064,6 @@
         "@infotext": "@HINT_INFO_MAPINTRO_01B_NEW",
         "@nexthint": "MAPINTRO_02",
         "@blockworldinteraction": "true",
-        "@skiptonextstate": "true",
         "@triggerui": "clustermap",
         "@mobileposition": "BottomRight"
       },
@@ -1095,7 +1100,8 @@
         "@uniquename": "COMBAT2",
         "@title": "@HINT_TITLE_COMBAT2",
         "@infotext": "@HINT_INFO_COMBAT2",
-        "@completebutton": "true"
+        "@completebutton": "true",
+        "@showoninputscheme": "mouseandkeyboard"
       },
       {
         "@uniquename": "LEARNLP_01",
@@ -1242,6 +1248,12 @@
         "@blockworldinteraction": "true",
         "@completebutton": "true",
         "@setnextstateonend": "true"
+      },
+      {
+        "@uniquename": "CONTROLLER_TARGET_SELECTION",
+        "@title": "@HINT_TITLE_CONTROLLER_TARGET_SELECTION",
+        "@infotext": "@HINT_INFO_CONTROLLER_TARGET_SELECTION",
+        "@showoninputscheme": "controllerall"
       },
       {
         "@uniquename": "MARKETCATEGORIES",
@@ -1804,6 +1816,12 @@
         "@infotext": "@HINT_INFO_USE_INTERACT_BUTTON",
         "@triggerui": "dynamicinteraction",
         "@completebutton": "true"
+      },
+      {
+        "@uniquename": "INTERACTIONBUTTON_GAMEPAD",
+        "@title": "@HINT_TITLE_USE_INTERACT_BUTTON",
+        "@infotext": "@HINT_INFO_USE_INTERACT_BUTTON",
+        "@showoninputscheme": "controllerall"
       },
       {
         "@uniquename": "T3_GEAR",
@@ -2954,7 +2972,7 @@
         "@explanation": "VerticalTemplate",
         "@title": "@CLUSTER_ACCESS_PRIORITY_TUTORIAL_TITLE",
         "entry": {
-          "@imagepath": "Gui/TutorialExplanations/TutorialClusterQueue",
+          "@imagepath": "Gui/TutorialExplanations/TutorialRegionAccessPrio",
           "@scale": "2",
           "content": {
             "@text": "@CLUSTER_ACCESS_PRIORITY_TUTORIAL_LIST"
@@ -3394,6 +3412,42 @@
           "@scale": "2.0",
           "content": {
             "@text": "@TUTORIAL_CRYSTAL_ARENA_RANKS_TEXT"
+          }
+        }
+      },
+      {
+        "@uniquename": "1V1_ARENA_MATCH_INFO",
+        "@explanation": "VerticalTemplate",
+        "@title": "@TUTORIAL_1V1_ARENA_TITLE",
+        "@nexthint": "1V1_ARENA_RANKS_INFO",
+        "entry": [
+          {
+            "@imagepath": "Gui/TutorialExplanations/TutorialArena1v1MatchInfo",
+            "@scale": "1.0",
+            "content": {
+              "@title": "@TUTORIAL_1V1_ARENA_SIGN_UP_TITLE",
+              "@text": "@TUTORIAL_1V1_ARENA_SIGN_UP_TEXT"
+            }
+          },
+          {
+            "@imagepath": "Gui/TutorialExplanations/TutorialArena1v1MatchRules",
+            "@scale": "1.0",
+            "content": {
+              "@title": "@TUTORIAL_1V1_ARENA_RULES_TITLE",
+              "@text": "@TUTORIAL_1V1_ARENA_RULES_TEXT"
+            }
+          }
+        ]
+      },
+      {
+        "@uniquename": "1V1_ARENA_RANKS_INFO",
+        "@explanation": "VerticalTemplate",
+        "@title": "@TUTORIAL_1V1_ARENA_RANKS_AND_SEASONS_TITLE",
+        "entry": {
+          "@imagepath": "Gui/TutorialExplanations/TutorialCrystalArenaRanks",
+          "@scale": "2.0",
+          "content": {
+            "@text": "@TUTORIAL_1V1_ARENA_RANKS_TEXT"
           }
         }
       },
@@ -3961,52 +4015,6 @@
         ]
       },
       {
-        "@uniquename": "CONTROLS_FEATURE_CHANGES_MOBILE",
-        "@explanation": "FeatureChoiceTemplate",
-        "@title": "@TUTORIAL_CONTROLS_CHANGE_2023_TITLE",
-        "entry": [
-          {
-            "@imagepath": "Gui/TutorialExplanations/TutorialTargetingLock",
-            "@scale": "2.1",
-            "content": {
-              "@title": "@OPTIONS_AUTOTARGETING_LOCK_TITLE",
-              "@text": "@TUTORIAL_CONTROLS_CHANGE_2023_LOCK_MOBILE"
-            }
-          },
-          {
-            "@imagepath": "Gui/TutorialExplanations/TutorialTargetingPreview",
-            "@scale": "2.1",
-            "content": {
-              "@title": "@TUTORIAL_CONTROLS_CHANGE_OTHER_TITLE",
-              "@text": "@TUTORIAL_CONTROLS_CHANGE_2023_OTHER"
-            }
-          }
-        ]
-      },
-      {
-        "@uniquename": "CONTROLS_FEATURE_CHANGES_CONTROLLER",
-        "@explanation": "FeatureChoiceTemplate",
-        "@title": "@TUTORIAL_CONTROLS_CHANGE_2023_TITLE",
-        "entry": [
-          {
-            "@imagepath": "Gui/TutorialExplanations/TutorialTargetingLock",
-            "@scale": "2.1",
-            "content": {
-              "@title": "@OPTIONS_AUTOTARGETING_LOCK_TITLE",
-              "@text": "@TUTORIAL_CONTROLS_CHANGE_2023_LOCK_CONTROLLER"
-            }
-          },
-          {
-            "@imagepath": "Gui/TutorialExplanations/TutorialTargetingPreview",
-            "@scale": "2.1",
-            "content": {
-              "@title": "@TUTORIAL_CONTROLS_CHANGE_OTHER_TITLE",
-              "@text": "@TUTORIAL_CONTROLS_CHANGE_2023_OTHER"
-            }
-          }
-        ]
-      },
-      {
         "@uniquename": "LEGENDARY_ITEMS_INFO",
         "@explanation": "VerticalTemplate",
         "@title": "@LEGENDARY_ITEMS_TUTORIAL_SCREEN_1_TITLE",
@@ -4476,13 +4484,25 @@
         "@uniquename": "LARGE_SCALE_BATTLES_INFO",
         "@explanation": "VerticalTemplate",
         "@title": "@LARGE_SCALE_BATTLES_INFO_TITLE",
-        "@nexthint": "JOURNAL_CLUSTER_QUEUE_INFO",
+        "@nexthint": "LARGE_SCALE_BATTLES_DISARRAY_INFO",
         "entry": {
           "@imagepath": "Gui/TutorialExplanations/TutorialLargeScaleBattles",
           "@scale": "2",
           "content": {
-            "@title": "@LARGE_SCALE_BATTLES_INFO_SUBTITLE",
             "@text": "@LARGE_SCALE_BATTLES_INFO_TEXT"
+          }
+        }
+      },
+      {
+        "@uniquename": "LARGE_SCALE_BATTLES_DISARRAY_INFO",
+        "@explanation": "VerticalTemplate",
+        "@title": "@LARGE_SCALE_BATTLES_DISARRAY_INFO_TITLE",
+        "@nexthint": "JOURNAL_CLUSTER_QUEUE_INFO",
+        "entry": {
+          "@imagepath": "Gui/TutorialExplanations/TutorialLargeScaleBattleDisarray",
+          "@scale": "2",
+          "content": {
+            "@text": "@LARGE_SCALE_BATTLES_DISARRAY_INFO_TEXT"
           }
         }
       },
@@ -4515,6 +4535,59 @@
             }
           }
         ]
+      },
+      {
+        "@uniquename": "ITEM_EXPLANATION_TIER",
+        "@explanation": "HorizontalTemplate",
+        "@title": "@TUTORIAL_ITEM_ANATOMY_TITLE",
+        "@nexthint": "ITEM_EXPLANATION_ENCHANTMENT",
+        "entry": {
+          "@imagepath": "Gui/TutorialExplanations/TutorialItemAnatomyTier",
+          "@scale": "1.8",
+          "content": {
+            "@title": "@TUTORIAL_ITEM_ANATOMY_TIER_SUBTITLE",
+            "@text": "@TUTORIAL_ITEM_ANATOMY_TIER_INFO"
+          }
+        }
+      },
+      {
+        "@uniquename": "ITEM_EXPLANATION_ENCHANTMENT",
+        "@explanation": "HorizontalTemplate",
+        "@title": "@TUTORIAL_ITEM_ANATOMY_TITLE",
+        "@nexthint": "ITEM_EXPLANATION_QUALITY",
+        "entry": {
+          "@imagepath": "Gui/TutorialExplanations/TutorialItemAnatomyEnchantment",
+          "@scale": "1.8",
+          "content": {
+            "@title": "@TUTORIAL_ITEM_ANATOMY_ENCHANTMENT_SUBTITLE",
+            "@text": "@TUTORIAL_ITEM_ANATOMY_ENCHANTMENT_INFO"
+          }
+        }
+      },
+      {
+        "@uniquename": "ITEM_EXPLANATION_QUALITY",
+        "@explanation": "HorizontalTemplate",
+        "@title": "@TUTORIAL_ITEM_ANATOMY_TITLE",
+        "entry": {
+          "@imagepath": "Gui/TutorialExplanations/TutorialItemAnatomyQuality",
+          "@scale": "1.8",
+          "content": {
+            "@title": "@TUTORIAL_ITEM_ANATOMY_QUALITY_SUBTITLE",
+            "@text": "@TUTORIAL_ITEM_ANATOMY_QUALITY_INFO"
+          }
+        }
+      },
+      {
+        "@uniquename": "GATHERING_TIER_EXPLANATION",
+        "@explanation": "VerticalTemplate",
+        "@title": "@TUTORIAL_GATHERING_TIER_EXPLANATION_TITLE",
+        "entry": {
+          "@imagepath": "Gui/TutorialExplanations/TutorialGatheringTierExplanation",
+          "@scale": "2",
+          "content": {
+            "@text": "@TUTORIAL_GATHERING_TIER_EXPLANATION_INFO"
+          }
+        }
       },
       {
         "@uniquename": "RESOURCE_GATHERING_INFO",
@@ -5442,6 +5515,87 @@
             "@text": "@TUTORIAL_CLUSTER_REWARD_SCALING_INFO_TEXT"
           }
         }
+      },
+      {
+        "@uniquename": "ARMORY_TUTORIAL_HINT0",
+        "@title": "@ARMORY_TUTORIAL_HINT0_TITLE",
+        "@infotext": "@ARMORY_TUTORIAL_HINT0_TEXT",
+        "@blockworldinteraction": "true",
+        "@nexthint": "ARMORY_TUTORIAL_HINT1",
+        "@skiptohint": "ARMORY_TUTORIAL_CLEAR",
+        "@triggerui": "armoryfirsttime",
+        "@requiredgui": "Armory",
+        "@mobileposition": "BottomRight"
+      },
+      {
+        "@uniquename": "ARMORY_TUTORIAL_HINT1",
+        "@title": "@ARMORY_TUTORIAL_HINT1_TITLE",
+        "@infotext": "@ARMORY_TUTORIAL_HINT1_TEXT",
+        "@blockworldinteraction": "true",
+        "@nexthint": "ARMORY_TUTORIAL_HINT2",
+        "@skiptohint": "ARMORY_TUTORIAL_CLEAR",
+        "@triggerui": "armoryexplanation",
+        "@requiredgui": "Armory"
+      },
+      {
+        "@uniquename": "ARMORY_TUTORIAL_HINT2",
+        "@title": "@ARMORY_TUTORIAL_HINT2_TITLE",
+        "@infotext": "@ARMORY_TUTORIAL_HINT2_TEXT",
+        "@blockworldinteraction": "true",
+        "@previoushint": "ARMORY_TUTORIAL_HINT1",
+        "@nexthint": "ARMORY_TUTORIAL_HINT3",
+        "@skiptohint": "ARMORY_TUTORIAL_CLEAR",
+        "@triggerui": "armorysearchbar",
+        "@defaultposition": "Center",
+        "@mobileposition": "BottomRight"
+      },
+      {
+        "@uniquename": "ARMORY_TUTORIAL_HINT3",
+        "@title": "@ARMORY_TUTORIAL_HINT3_TITLE",
+        "@infotext": "@ARMORY_TUTORIAL_HINT3_TEXT",
+        "@blockworldinteraction": "true",
+        "@previoushint": "ARMORY_TUTORIAL_HINT2",
+        "@nexthint": "ARMORY_TUTORIAL_HINT4",
+        "@skiptohint": "ARMORY_TUTORIAL_CLEAR",
+        "@triggerui": "armoryresults",
+        "@mobileposition": "BottomRight"
+      },
+      {
+        "@uniquename": "ARMORY_TUTORIAL_HINT4",
+        "@title": "@ARMORY_TUTORIAL_HINT4_TITLE",
+        "@infotext": "@ARMORY_TUTORIAL_HINT4_TEXT",
+        "@blockworldinteraction": "true",
+        "@previoushint": "ARMORY_TUTORIAL_HINT3",
+        "@nexthint": "ARMORY_TUTORIAL_HINT5",
+        "@skiptohint": "ARMORY_TUTORIAL_CLEAR",
+        "@triggerui": "armorybuilddetails",
+        "@mobileposition": "BottomLeft"
+      },
+      {
+        "@uniquename": "ARMORY_TUTORIAL_HINT5",
+        "@title": "@ARMORY_TUTORIAL_HINT5_TITLE",
+        "@infotext": "@ARMORY_TUTORIAL_HINT5_TEXT",
+        "@blockworldinteraction": "true",
+        "@previoushint": "ARMORY_TUTORIAL_HINT4",
+        "@nexthint": "ARMORY_TUTORIAL_HINT6",
+        "@skiptohint": "ARMORY_TUTORIAL_CLEAR",
+        "@triggerui": "armoryfilterbutton",
+        "@defaultposition": "Center",
+        "@mobileposition": "BottomRight"
+      },
+      {
+        "@uniquename": "ARMORY_TUTORIAL_HINT6",
+        "@title": "@ARMORY_TUTORIAL_HINT6_TITLE",
+        "@infotext": "@ARMORY_TUTORIAL_HINT6_TEXT",
+        "@blockworldinteraction": "true",
+        "@previoushint": "ARMORY_TUTORIAL_HINT5",
+        "@nexthint": "ARMORY_TUTORIAL_CLEAR",
+        "@triggerui": "armoryfilterexplanation",
+        "@completebutton": "true"
+      },
+      {
+        "@uniquename": "ARMORY_TUTORIAL_CLEAR",
+        "@triggerui": "armorycleanup"
       },
       {
         "@uniquename": "JOURNAL_QUEST_SOLO_DUNGEON",

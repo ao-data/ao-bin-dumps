@@ -2454,13 +2454,13 @@
     <MountType name="empty"/>
   </WwiseSwitchInfo>
   <WwiseSwitchInfo name="MOB_KEEPER_GIANT_STANDARD">
-	<CharType name="mob"/>
-	<MobFaction name="keeper"/>
-	<MobType name="keeper_giant"/>
-	<Size name="heavy"/>
-	<ArmorType name="leather"/>
-	<WeaponType name="swoosh_rock"/>
-	<MountType name="empty"/>
+	  <CharType name="mob"/>
+	  <MobFaction name="keeper"/>
+	  <MobType name="keeper_giant"/>
+	  <Size name="heavy"/>
+	  <ArmorType name="leather"/>
+	  <WeaponType name="swoosh_rock"/>
+	  <MountType name="empty"/>
   </WwiseSwitchInfo>
   <WwiseSwitchInfo name="MOB_KEEPER_ANCIENT_GIANT">
     <CharType name="mob"/>
@@ -2524,6 +2524,25 @@
     <ArmorType name="arcane"/>
     <WeaponType name="arcane"/>
     <MountType name="empty"/>
+  </WwiseSwitchInfo>
+
+    <WwiseSwitchInfo name="MOB_KEEPER_FANATIC_SPEAR">
+	  <CharType name="mob"/>
+	  <MobFaction name="keeper"/>
+	  <MobType name="keeper_fanatic_spear"/>
+	  <Size name="heavy"/>
+	  <ArmorType name="leather"/>
+	  <WeaponType name="staff_bladed"/>
+	  <MountType name="empty"/>
+  </WwiseSwitchInfo>
+  <WwiseSwitchInfo name="MOB_KEEPER_FANATIC_WARHORN">
+	  <CharType name="mob"/>
+	  <MobFaction name="keeper"/>
+	  <MobType name="keeper_fanatic_warhorn"/>
+	  <Size name="heavy"/>
+	  <ArmorType name="leather"/>
+	  <WeaponType name="hammer_huge"/>
+	  <MountType name="empty"/>
   </WwiseSwitchInfo>
 
   <!--CASTLEGUARDS-->
@@ -3166,6 +3185,28 @@
 	<WeaponType name="nature"/>
 	<MountType name="empty"/> 
   </WwiseSwitchInfo>
+
+  <!-- DRAGONS -->
+
+  <WwiseSwitchInfo name="MOB_DRAGON_FIRE">
+    <CharType name="mob"/>
+    <MobFaction name="dragon"/>
+    <MobType name="dragon_fire"/>
+    <Size name="huge"/>
+    <ArmorType name="hide"/>
+    <WeaponType name="claw_hide_big"/>
+    <MountType name="empty"/>
+  </WwiseSwitchInfo>
+
+  <WwiseSwitchInfo name="MOB_DRAGON_DRAKE">
+    <CharType name="mob"/>
+    <MobFaction name="dragon"/>
+    <MobType name="dragon_drake"/>
+    <Size name="huge"/>
+    <ArmorType name="hide"/>
+    <WeaponType name="claw_hide_medium"/>
+    <MountType name="empty"/>
+  </WwiseSwitchInfo>
   
   <!--*************************************************************************************************************************************************************-->
   <!--ARMORS-->
@@ -3648,13 +3689,13 @@
     </OnSpellHit>
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_SMALLCAST_HEROICSTRIKE2">
-	<OnCastStart name="Play_melee_heroicstrike" />
+	  <OnCastStart name="Play_melee_heroicstrike" />
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_SMALLCAST_HEROICCLEAVE">
-	<OnCastFinished name="Play_melee_swoosh_heroiccleave" />
-	<OnSpellHit name="Play_melee_impact_small_sharp_add" >
-		<ImpactType/>
-	</OnSpellHit>
+    <OnCastFinished name="Play_melee_swoosh_heroiccleave" />
+    <OnSpellHit name="Play_melee_impact_small_sharp_add" >
+      <ImpactType/>
+    </OnSpellHit>
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_SPLITTINGSLASH_SWORD">
     <OnCastFinished name="Play_melee_splittingstrike_swoosh" />
@@ -3672,63 +3713,63 @@
     <OnSpellHit name="Play_melee_impact_small" />
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_IMPACT_SMALL_SHARP">
-	<OnSpellHit name="Play_melee_impact_small_sharp" />
+	  <OnSpellHit name="Play_melee_impact_small_sharp" />
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_IMPACT_MEDIUM_METALLIC">
-	<OnSpellHit name="Play_melee_impact_medium_metallic" >
-		<ImpactType/>
-	</OnSpellHit>
+    <OnSpellHit name="Play_melee_impact_medium_metallic" >
+      <ImpactType/>
+    </OnSpellHit>
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_SWORD_MIGHTY_BLOW">
     <OnCastFinished name="Play_melee_swoosh_big_double" />
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_SWORD_HAMSTRING_KICK">
-	<OnCastFinished name="Play_melee_hamstring_kick" />
-	<OnSpellHit name="Play_melee_kick_impact_quick_pummeling_limited" />
+    <OnCastFinished name="Play_melee_hamstring_kick" />
+    <OnSpellHit name="Play_melee_kick_impact_quick_pummeling_limited" />
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_SWORD_HAMSTRING_DASH">
     <OnCastFinished name="Play_melee_hamstring_jump" />
   </WwiseEventInfo>
 	
   <WwiseEventInfo name="MELEE_CRYSTAL_SWORD_CHANNEL_LIMITBREAKER" >
-	<OnChannelingStart name="Play_crystal_sword_channel_big_limitbreaker" />
-	<OnChannelingCancelled name="Stop_crystal_sword_channel_big_limitbreaker" />
-	<OnChannelingInterrupted name="Stop_crystal_sword_channel_big_limitbreaker" />
-	<OnChannelingEnd name="Stop_crystal_sword_channel_big_limitbreaker" />
+	  <OnChannelingStart name="Play_crystal_sword_channel_big_limitbreaker" />
+	  <OnChannelingCancelled name="Stop_crystal_sword_channel_big_limitbreaker" />
+	  <OnChannelingInterrupted name="Stop_crystal_sword_channel_big_limitbreaker" />
+	  <OnChannelingEnd name="Stop_crystal_sword_channel_big_limitbreaker" />
   </WwiseEventInfo>
 
   <WwiseEventInfo name="MELEE_CRYSTAL_SWORD_LIMITBREAKER_DOUBLESWING">
-	<OnCastFinished name="Play_crystal_sword_cast_big_limitbreaker" />
+	  <OnCastFinished name="Play_crystal_sword_cast_big_limitbreaker" />
   </WwiseEventInfo>
 
   <WwiseEventInfo name="MELEE_CRYSTAL_SWORD_LIMITBREAKER_GLOW" >
-	<OnSpellAdded name="Play_crystal_sword_loaded_state_loop" />
-	<OnSpellRemoved name="Stop_crystal_sword_loaded_state_loop" />
+	  <OnSpellAdded name="Play_crystal_sword_loaded_state_loop" />
+	  <OnSpellRemoved name="Stop_crystal_sword_loaded_state_loop" />
   </WwiseEventInfo>
 
   <WwiseEventInfo name="MELEE_CRYSTAL_WEAPON_IMPACT_SMALL" >
-	<OnSpellHit name="Play_crystal_melee_impact_small" />
+	  <OnSpellHit name="Play_crystal_melee_impact_small" />
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_CRYSTAL_WEAPON_IMPACT_CUT_SMALL" >
-	<OnSpellHit name="Play_crystal_melee_impact_cut_small" />
+	  <OnSpellHit name="Play_crystal_melee_impact_cut_small" />
   </WwiseEventInfo>
 
   <WwiseEventInfo name="MELEE_CRYSTAL_WEAPON_IMPACT_MEDIUM" >
-	<OnSpellHit name="Play_crystal_melee_impact_medium" />
+	  <OnSpellHit name="Play_crystal_melee_impact_medium" />
   </WwiseEventInfo>
 
   <WwiseEventInfo name="MELEE_CRYSTAL_WEAPON_IMPACT_MEDIUM_WEAPON_HIT">
-	<OnSpellHit name="Play_crystal_melee_impact_medium" >
-	<ImpactType/>
-	</OnSpellHit>
+    <OnSpellHit name="Play_crystal_melee_impact_medium" >
+      <ImpactType/>
+    </OnSpellHit>
   </WwiseEventInfo>
 
   <WwiseEventInfo name="MELEE_CRYSTAL_WEAPON_IMPACT_BIG" >
-	<OnSpellHit name="Play_crystal_melee_impact_big" />
+	  <OnSpellHit name="Play_crystal_melee_impact_big" />
   </WwiseEventInfo>
 
   <WwiseEventInfo name="MELEE_CRYSTAL_WEAPON_IMPACT_BIG_CUT" >
-	<OnSpellHit name="Play_crystal_melee_impact_cut_big" />
+	  <OnSpellHit name="Play_crystal_melee_impact_cut_big" />
   </WwiseEventInfo>
 	
 	<WwiseEventInfo name="MELEE_MEDIUMCAST">
@@ -3801,31 +3842,31 @@
     </OnSpellHit>
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_MEDIUMIMPACT_SHARP">
-	<OnSpellHit name="Play_melee_impact_medium_sharp" >
-		<ImpactType/>
-	</OnSpellHit>
+    <OnSpellHit name="Play_melee_impact_medium_sharp" >
+      <ImpactType/>
+    </OnSpellHit>
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_IMPACT_BIG_HEAVY">
 	<OnSpellHit name="Play_melee_impact_big_heavy" />
-  </WwiseEventInfo>
+    </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_HAMMER_CAST_SHOVE">
-	<OnCastFinished name="Play_hammer_cast_shove" />
+	  <OnCastFinished name="Play_hammer_cast_shove" />
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_IMPACT_SMALL_HEAVY_WEAPONHIT">
-	<OnSpellHit name="Play_melee_impact_small_heavy" >
-		<ImpactType/>
-	</OnSpellHit>
+    <OnSpellHit name="Play_melee_impact_small_heavy" >
+      <ImpactType/>
+    </OnSpellHit>
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_HAMMER_CHANNEL_TREMOR" >
-	<OnChannelingStart name="Play_hammer_triple_groundslam_channel" />
-	<OnChannelingCancelled name="Stop_hammer_triple_groundslam_channel" />
-	<OnChannelingInterrupted name="Stop_hammer_triple_groundslam_channel" />
+    <OnChannelingStart name="Play_hammer_triple_groundslam_channel" />
+    <OnChannelingCancelled name="Stop_hammer_triple_groundslam_channel" />
+    <OnChannelingInterrupted name="Stop_hammer_triple_groundslam_channel" />
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_HAMMER_TREMOR_HIT_SMALL" >
-	<OnSpellHit name="Play_melee_impact_small_heavy" />
+	  <OnSpellHit name="Play_melee_impact_small_heavy" />
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_HAMMER_TREMOR_HIT_MEDIUM" >
-	<OnSpellHit name="Play_melee_impact_medium_heavy" />
+	  <OnSpellHit name="Play_melee_impact_medium_heavy" />
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_TAR_RING_CAST">
     <OnCastStart name="Play_melee_tar_ring_cast" />
@@ -3833,14 +3874,14 @@
     <OnCastInterrupted name="Stop_melee_tar_ring_cast" />
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_CRYSTAL_HAMMER_CAST_WAVE">
-	<OnCastFinished name="Play_crystal_hammer_cast_wave" />
+	  <OnCastFinished name="Play_crystal_hammer_cast_wave" />
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_CRYSTAL_HAMMER_MARK_IMPACT" >
-	<OnSpellHit name="Play_crystal_hammer_impact_mark" />
+	  <OnSpellHit name="Play_crystal_hammer_impact_mark" />
   </WwiseEventInfo>
 
   <WwiseEventInfo name="MELEE_SWOOSH_SMALL_SHARP">
-	<OnCastFinished name="Play_melee_swoosh_small_sharp" />
+	  <OnCastFinished name="Play_melee_swoosh_small_sharp" />
   </WwiseEventInfo>
 	
   <WwiseEventInfo name="MELEE_BIGCAST">
@@ -3850,7 +3891,7 @@
     <OnChannelingStart name="Play_melee_swoosh_big_instant" />
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_BIG_INSTANT_CASTFINISHED">
-	<OnCastFinished name="Play_melee_swoosh_big_instant_attack" />
+	  <OnCastFinished name="Play_melee_swoosh_big_instant_attack" />
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_BIGCAST_BIGIMPACT">
     <OnCastStart name="Play_melee_swoosh_big" />
@@ -3859,12 +3900,12 @@
     </OnSpellHit>
   </WwiseEventInfo> 
   <WwiseEventInfo name="MELEE_IMPACT_BIG_SHARP">
-	<OnSpellHit name="Play_melee_impact_big_sharp" />
+	  <OnSpellHit name="Play_melee_impact_big_sharp" />
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_IMPACT_BIG_SHARP_WEAPONHIT">
     <OnSpellHit name="Play_melee_impact_big_sharp" >
-	  <ImpactType/>
-	</OnSpellHit>
+	    <ImpactType/>
+	  </OnSpellHit>
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_BIGCAST_BIG_ROCK_IMPACT_NO_WEAPON_IMPACT">
     <OnCastStart name="Play_melee_swoosh_small" />
@@ -3886,9 +3927,9 @@
     </OnSpellHit>
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_BIGIMPACT_METALLIC">
-	<OnSpellHit name="Play_melee_impact_big_metallic" >
-		<ImpactType/>
-	</OnSpellHit>
+    <OnSpellHit name="Play_melee_impact_big_metallic" >
+      <ImpactType/>
+    </OnSpellHit>
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_BIGIMPACT_SINGLE">
     <OnSpellHit name="Play_melee_impact_big" />
@@ -3918,7 +3959,7 @@
     </OnSpellHit>
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_IMPACT_BLOODY">
-	<OnSpellHit name="Play_melee_impact_bloody" />
+	  <OnSpellHit name="Play_melee_impact_bloody" />
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_CHARGE">
     <OnCastStart name="Play_charge" />
@@ -3966,22 +4007,22 @@
     </OnSpellHit>
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_CRYSTAL_SPEAR_CAST_RUPTURE">
-	<OnCastStart name="Play_crystal_spear_cast_load_big" />
-	<OnCastCanceled name="Stop_crystal_spear_cast_load_big" />
-	<OnCastInterrupted name="Stop_crystal_spear_cast_load_big" />
-	<OnCastFinished name="Play_crystal_spear_cast_big" />
+    <OnCastStart name="Play_crystal_spear_cast_load_big" />
+    <OnCastCanceled name="Stop_crystal_spear_cast_load_big" />
+    <OnCastInterrupted name="Stop_crystal_spear_cast_load_big" />
+    <OnCastFinished name="Play_crystal_spear_cast_big" />
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_SPIN">
     <OnCastStart name="Play_melee_spin" />
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_SWORD_SPIN">
-	<OnCastFinished name="Play_sword_spin" />
+	  <OnCastFinished name="Play_sword_spin" />
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_AXE_SPIN">
     <OnCastStart name="Play_axe_spin" />
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_AXE_INNERBLEEDING_SPIN">
-	<OnCastStart name="Play_axe_innerbleeding_spin" />
+	  <OnCastStart name="Play_axe_innerbleeding_spin" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_THROW_AXE" >
     <OnCastStart name="Play_emote_foley_armor_move_fast"/>
@@ -4002,15 +4043,15 @@
     </OnSpellHit>
   </WwiseEventInfo>
 	<WwiseEventInfo name="MELEE_SWORD_SPINATTACK_IMPACT">
-	<OnSpellHit name="Play_melee_impact_medium" >
-	  <ImpactType/>
-	</OnSpellHit>
+    <OnSpellHit name="Play_melee_impact_medium" >
+      <ImpactType/>
+    </OnSpellHit>
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_METALLIC_MEDIUMCAST_SMALLIMPACT">
-	<OnCastStart name="Play_melee_swoosh_interrupt" />
-	<OnSpellHit name="Play_melee_impact_small_metallic" >
-		<ImpactType/>
-	</OnSpellHit>
+    <OnCastStart name="Play_melee_swoosh_interrupt" />
+    <OnSpellHit name="Play_melee_impact_small_metallic" >
+      <ImpactType/>
+    </OnSpellHit>
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_STOMP_MEDIUM" >
     <OnCastFinished name="Play_melee_stomp_medium" />
@@ -4082,8 +4123,8 @@
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_GROUNDSTAB">
     <OnCastStart name="Play_swing_slow" />
-	<OnCastCanceled name="Stop_swing_slow" />
-	<OnCastInterrupted name="Stop_swing_slow" />
+    <OnCastCanceled name="Stop_swing_slow" />
+    <OnCastInterrupted name="Stop_swing_slow" />
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_JUMP">
     <OnCastStart name="Play_melee_jump_start" />
@@ -4093,8 +4134,8 @@
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_VACUUMCAST">
     <OnCastStart name="Play_melee_vacuumslash_cast" />
-	<OnCastCanceled name="Stop_melee_vacuumslash_cast" />
-	<OnCastInterrupted name="Stop_melee_vacuumslash_cast" />
+    <OnCastCanceled name="Stop_melee_vacuumslash_cast" />
+    <OnCastInterrupted name="Stop_melee_vacuumslash_cast" />
   </WwiseEventInfo>
 
   <WwiseEventInfo name="MELEE_CAST_FATALBLADE">
@@ -4157,16 +4198,16 @@
     <OnCastFinished name="Play_magicrune_cast" />
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_MACE_PULL" >
-	<OnCastFinished name="Play_mace_pull_cast" />
+	  <OnCastFinished name="Play_mace_pull_cast" />
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_MACE_PULL_HIT" >
-	<OnSpellHit name="Play_pull_displacement_hit" />
+	  <OnSpellHit name="Play_pull_displacement_hit" />
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_MACE_CRYSTAL_SWING" >
-	<OnCastFinished name="Play_crystal_melee_mace_swing" />
+	  <OnCastFinished name="Play_crystal_melee_mace_swing" />
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_MACE_CRYSTAL_SMASH" >
-	<OnCastFinished name="Play_crystal_melee_mace_final_smash" />
+	  <OnCastFinished name="Play_crystal_melee_mace_final_smash" />
   </WwiseEventInfo>
 
   <WwiseEventInfo name="MELEE_HAMMER_IRONBREAKER">
@@ -4174,17 +4215,17 @@
   </WwiseEventInfo>
 
   <WwiseEventInfo name="MELEE_HAMMER_GIANT_SMASH">
-	<OnCastFinished name="Play_hammer_giant_smash" />
+	  <OnCastFinished name="Play_hammer_giant_smash" />
   </WwiseEventInfo>
 
   <WwiseEventInfo name="MELEE_HAMMER_UNDEADHAND_CAST">
-	<OnCastFinished name="Play_melee_jump_small_stomp" />
-	<OnSpellHit name="Play_melee_impact_rock_medium" />
+    <OnCastFinished name="Play_melee_jump_small_stomp" />
+    <OnSpellHit name="Play_melee_impact_rock_medium" />
   </WwiseEventInfo>
 	
   <WwiseEventInfo name="MELEE_CAST_EARTHSHATTER">
     <OnCastFinished name="Play_melee_cast_earthshatterer" />
-	<OnSpellHit name="Play_melee_impact_big_heavy" />
+	  <OnSpellHit name="Play_melee_impact_big_heavy" />
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_CAST_RAM_CHARGE">
     <OnCastStart name="Play_melee_ram_charge_load" />
@@ -4241,11 +4282,11 @@
 
 
   <WwiseEventInfo name="MELEE_CRYSTAL_DAGGER_BLADE_RING_CAST">
-	<OnCastFinished name="Play_crystal_melee_blade_ring_cast" />
+	  <OnCastFinished name="Play_crystal_melee_blade_ring_cast" />
   </WwiseEventInfo>
 
   <WwiseEventInfo name="MELEE_CRYSTAL_DAGGER_BLADE_RING_PULLBACK">
-	<OnCastFinished name="Play_crystal_melee_blade_ring_pullback" />
+	  <OnCastFinished name="Play_crystal_melee_blade_ring_pullback" />
   </WwiseEventInfo>
 
   <WwiseEventInfo name="MELEE_PUNCHCOMBO_CHANNEL">
@@ -4267,7 +4308,7 @@
       <ImpactType/>
     </OnSpellHit>
   </WwiseEventInfo>
-    <WwiseEventInfo name="MELEE_SMALLCAST_AXE_SINGLE">
+  <WwiseEventInfo name="MELEE_SMALLCAST_AXE_SINGLE">
     <OnCastStart name="Play_axe_swoosh_single" />
     <OnSpellHit name="Play_melee_impact_small_add" >
       <ImpactType/>
@@ -4289,7 +4330,7 @@
     <OnCastFinished name="Play_melee_rending_combo" />
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_RENDINGCOMBO_AXE_CASTSTART">
-	<OnCastStart name="Play_melee_rending_combo" />
+	  <OnCastStart name="Play_melee_rending_combo" />
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_RENDINGCOMBO_AXE_JUMP">
     <OnCastFinished name="Play_melee_axe_rendingcombo_jump" />
@@ -4313,21 +4354,21 @@
     <OnChannelingEnd name="Stop_melee_axe_whirlwind" />
     <OnChannelingInterrupted name="Stop_melee_axe_whirlwind" />
     <OnChannelingCancelled name="Stop_melee_axe_whirlwind" />
-	<OnSpellHit name="Play_melee_impact_small" >
+	  <OnSpellHit name="Play_melee_impact_small" >
 		  <ImpactType/>
 	  </OnSpellHit>
   </WwiseEventInfo>
-    <WwiseEventInfo name="MELEE_AXE_WHIRLWIND_ULTIMATE">
+  <WwiseEventInfo name="MELEE_AXE_WHIRLWIND_ULTIMATE">
     <OnChannelingStart name="Play_spell_melee_axe_whirlwind_ultimate" />
     <OnChannelingEnd name="Stop_spell_melee_axe_whirlwind_ultimate" />
     <OnChannelingInterrupted name="Stop_spell_melee_axe_whirlwind_ultimate" />
     <OnChannelingCancelled name="Stop_spell_melee_axe_whirlwind_ultimate" />
-	<OnSpellHit name="Play_melee_impact_small" >
+	  <OnSpellHit name="Play_melee_impact_small" >
 		  <ImpactType/>
 	  </OnSpellHit>
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_AXE_RAGING_BLADES_CAST">
-	<OnCastFinished name="Play_melee_axe_raging_blades_cast" />
+	  <OnCastFinished name="Play_melee_axe_raging_blades_cast" />
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_AXE_TEARAPART">
     <OnCastStart name="Play_axe_tearapart" />
@@ -4336,7 +4377,7 @@
     <OnCastStart name="Play_melee_shockwave" />
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_BLADEDSTAFF_TORNADO">
-	<OnCastFinished name="Play_melee_tornado" />
+	  <OnCastFinished name="Play_melee_tornado" />
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_SCYTHESWING">
     <OnCastStart name="Play_melee_scytheswing" />
@@ -4350,13 +4391,13 @@
     <OnCastInterrupted name="Stop_melee_dualaxe_crawler" />
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_CRYSTAL_SCYTHE_CAST_BIG_DASHSWING">
-	<OnCastFinished name="Play_crystal_scythe_cast_big_dashswing" />
+	  <OnCastFinished name="Play_crystal_scythe_cast_big_dashswing" />
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_LETHAL_CLEAVER">
     <OnCastStart name="Play_lethal_cleaver" />
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_SWOOSH_BIG_SHARP_INSTANT">
-	<OnCastFinished name="Play_melee_swoosh_big_sharp_instant" />
+	  <OnCastFinished name="Play_melee_swoosh_big_sharp_instant" />
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_SMALLCAST_STAFF">
     <OnCastStart name="Play_staff_swoosh" />
@@ -4365,44 +4406,44 @@
     </OnSpellHit>
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_STAFF_CONCUSSIVE_SWING">
-	<OnCastFinished name="Play_quarterstaff_swoosh_small" />
-	<OnSpellHit name="Play_melee_impact_small_sharp_add" >
-	  <ImpactType/>
-	</OnSpellHit>
+    <OnCastFinished name="Play_quarterstaff_swoosh_small" />
+    <OnSpellHit name="Play_melee_impact_small_sharp_add" >
+      <ImpactType/>
+    </OnSpellHit>
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_STAFF_CONCUSSIVE_JUMP">
-	<OnCastFinished name="Play_quarterstaff_swoosh_jump" />
-	<OnSpellHit name="Play_melee_impact_small_heavy" >
-		<ImpactType/>
-	</OnSpellHit>
+	  <OnCastFinished name="Play_quarterstaff_swoosh_jump" />
+    <OnSpellHit name="Play_melee_impact_small_heavy" >
+      <ImpactType/>
+    </OnSpellHit>
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_STAFF_CONCUSSIVE_HIT">
-	<OnSpellHit name="Play_melee_impact_small_sharp_add" >
-		<ImpactType/>
-	</OnSpellHit>
+    <OnSpellHit name="Play_melee_impact_small_sharp_add" >
+      <ImpactType/>
+    </OnSpellHit>
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_STAFF_W_HIT">
-	<OnSpellHit name="Play_melee_impact_small_heavy" >
-		<ImpactType/>
-	</OnSpellHit>
+    <OnSpellHit name="Play_melee_impact_small_heavy" >
+      <ImpactType/>
+    </OnSpellHit>
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_STAFF_SWING_MEDIUM_HIT">
-	<OnCastStart name="Play_quarterstaff_swoosh_medium" />
-	<OnSpellHit name="Play_melee_impact_medium_sharp" >
-		<ImpactType/>
-	</OnSpellHit>
+	  <OnCastStart name="Play_quarterstaff_swoosh_medium" />
+    <OnSpellHit name="Play_melee_impact_medium_sharp" >
+      <ImpactType/>
+    </OnSpellHit>
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_STAFF_CHANNEL_TRIPLECOMBO" >
-	<OnChannelingStart name="Play_quarterstaff_triple_combo" />
-	<OnChannelingCancelled name="Stop_quarterstaff_triple_combo" />
-	<OnChannelingEnd name="Stop_quarterstaff_triple_combo" />
-	<OnChannelingInterrupted name="Stop_quarterstaff_triple_combo" />
+    <OnChannelingStart name="Play_quarterstaff_triple_combo" />
+    <OnChannelingCancelled name="Stop_quarterstaff_triple_combo" />
+    <OnChannelingEnd name="Stop_quarterstaff_triple_combo" />
+    <OnChannelingInterrupted name="Stop_quarterstaff_triple_combo" />
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_STAFF_CHANNEL_SWIRL_SINGLE" >
-	<OnChannelingStart name="Play_quarterstaff_swirl" />
-	<OnChannelingCancelled name="Stop_quarterstaff_swirl" />
-	<OnChannelingEnd name="Stop_quarterstaff_swirl" />
-	<OnChannelingInterrupted name="Stop_quarterstaff_swirl" />
+    <OnChannelingStart name="Play_quarterstaff_swirl" />
+    <OnChannelingCancelled name="Stop_quarterstaff_swirl" />
+    <OnChannelingEnd name="Stop_quarterstaff_swirl" />
+    <OnChannelingInterrupted name="Stop_quarterstaff_swirl" />
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_STAFF_SLAM">
     <OnCastFinished name="Play_melee_slam_swoosh" />
@@ -4422,15 +4463,15 @@
     <OnCastInterrupted name="Stop_melee_mace_load_swoosh" />
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_BLADEDSTAFF_SOARINGSWIPE">
-	<OnCastFinished name="Play_bladedstaff_swipe" />
+	  <OnCastFinished name="Play_bladedstaff_swipe" />
   </WwiseEventInfo>
 
   <WwiseEventInfo name="MELEE_CRYSTAL_BLADEDSTAFF_CAST_SWING">
-	<OnCastFinished name="Play_crystal_bladedstaff_cast_swing" />
+	  <OnCastFinished name="Play_crystal_bladedstaff_cast_swing" />
   </WwiseEventInfo>
 
   <WwiseEventInfo name="MELEE_CRYSTAL_BLADEDSTAFF_CAST_BIG_SWING">
-	<OnCastFinished name="Play_crystal_bladedstaff_cast_big_swing" />
+	  <OnCastFinished name="Play_crystal_bladedstaff_cast_big_swing" />
   </WwiseEventInfo>
 	
   <WwiseEventInfo name="MELEE_MACE_BLESSEDMACE">
@@ -4440,7 +4481,7 @@
     <OnCastFinished name="Play_melee_hammer_swoosh_stab_fast" />
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_SEPERATOR">
-	<OnCastFinished name="Play_melee_seperator" />
+	  <OnCastFinished name="Play_melee_seperator" />
 	<OnSpellHit name="Play_melee_impact_medium_heavy" >
       <ImpactType/>
     </OnSpellHit>
@@ -4460,17 +4501,23 @@
     <OnCastFinished name="Play_melee_soulshaker" />
   </WwiseEventInfo>
   <WwiseEventInfo name="MELEE_HAMMER_SLOWING_CHARGE">
-	<OnCastStart name="Play_hammer_slowing_charge" />
+	  <OnCastStart name="Play_hammer_slowing_charge" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="MELEE_IMPACT_SMALL_METALLIC">
+    <OnSpellHit name="Play_melee_impact_small_metallic" >
+      <ImpactType/>
+    </OnSpellHit>
   </WwiseEventInfo>
 	
-  <WwiseEventInfo name="MELEE_IMPACT_MEDIUM_HEAVY">
-	<OnSpellHit name="Play_melee_impact_medium_heavy" >
-		<ImpactType/>
-	</OnSpellHit>
+	<WwiseEventInfo name="MELEE_IMPACT_MEDIUM_HEAVY">
+    <OnSpellHit name="Play_melee_impact_medium_heavy" >
+      <ImpactType/>
+    </OnSpellHit>
   </WwiseEventInfo>
 
   <WwiseEventInfo name="MELEE_IMPACT_MEDIUM_WINDY">
-	<OnSpellHit name="Play_melee_impact_windy" />
+	  <OnSpellHit name="Play_melee_impact_windy" />
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_KNUCKLES_BASE_SWING_HIT" >
@@ -4503,7 +4550,7 @@
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_KNUCKLES_DASH_SLIDE_KICK_CASTFINISHED" >
-	<OnCastFinished name="Play_melee_dash_slide_kick" />
+	  <OnCastFinished name="Play_melee_dash_slide_kick" />
   </WwiseEventInfo>
 	
   <WwiseEventInfo name="SPELL_KNUCKLES_KICK_Q_IMPACT" >
@@ -4797,9 +4844,9 @@
     <OnCastCanceled name="Stop_bolt_cone_cast" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_BOLT_MULTISHOT_CAST">
-	<OnCastStart name="Play_bolt_multishot_cast" />
-	<OnCastInterrupted name="Stop_bolt_multishot_cast" />
-	<OnCastCanceled name="Stop_bolt_multishot_cast" />
+    <OnCastStart name="Play_bolt_multishot_cast" />
+    <OnCastInterrupted name="Stop_bolt_multishot_cast" />
+    <OnCastCanceled name="Stop_bolt_multishot_cast" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_ARROW_CAST_BIG">
     <OnCastStart name="Play_arrow_cast_big" />
@@ -4925,15 +4972,15 @@
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_CRYSTAL_BOW_AIR_RAID_RISE" >
-	<OnCastFinished name="Play_crystal_bow_riseup" />
+	  <OnCastFinished name="Play_crystal_bow_riseup" />
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_CRYSTAL_BOW_AIR_RAID_SHOOT" >
-	<OnCastFinished name="Play_crystal_bow_shoot_raid_arrow" />
+	  <OnCastFinished name="Play_crystal_bow_shoot_raid_arrow" />
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_CRYSTAL_BOW_AIR_RAID_LOWER" >
-	<OnSpellRemoved name="Play_crystal_bow_lower" />
+	  <OnSpellRemoved name="Play_crystal_bow_lower" />
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_CROSSBOW_DIVINE_SHOT_CAST" >
@@ -4949,7 +4996,7 @@
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_CRYSTAL_CROSSBOW_FLICKERSHOT" >
-	<OnCastFinished name="Play_crystal_crossbow_flickershot_cast" />
+    <OnCastFinished name="Play_crystal_crossbow_flickershot_cast" />
   </WwiseEventInfo>	
   
   <WwiseEventInfo name="SPELL_ROCK_HIT_MEDIUM">
@@ -5135,7 +5182,7 @@
   
   <WwiseEventInfo name="SPELL_CURSED_CAST_SMALL_CURSEDDOT">
     <OnCastFinished name="Play_cursed_cast_small_curseddot" />
-	<OnSpellHit name="Play_cursed_impact_small" />
+	  <OnSpellHit name="Play_cursed_impact_small" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_CURSED_CAST_SMALL_WLOAD">
 	  <OnCastStart name="Play_cursed_cast_load_small_02" />
@@ -5144,23 +5191,23 @@
  	  <OnCastFinished name="Play_cursed_cast_small" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_CURSED_CAST_SMALL">
-	<OnCastFinished name="Play_cursed_cast_small" />
+	  <OnCastFinished name="Play_cursed_cast_small" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_CURSED_CAST_MEDIUM">
-	<OnCastFinished name="Play_cursed_cast_medium" />
+	  <OnCastFinished name="Play_cursed_cast_medium" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_CURSED_CAST_MEDIUM_BLADE">
     <OnCastFinished name="Play_cursed_cast_medium_blade" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_CURSED_CAST_SMALL_BLADE_SICKLE">
-	<OnCastFinished name="Play_cursed_cast_small_blade_sickle" />
+	  <OnCastFinished name="Play_cursed_cast_small_blade_sickle" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_CURSED_CAST_MEDIUM_HIT_MEDIUM">
     <OnCastFinished name="Play_cursed_cast_medium" />
     <OnSpellHit name="Play_cursed_impact_medium" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_CURSED_CAST_BUFF_DAMAGEINCREASE">
-	<OnCastFinished name="Play_cursed_cast_buff_damageincrease" />
+  	<OnCastFinished name="Play_cursed_cast_buff_damageincrease" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_CURSED_CAST_DEATHCURSE">
     <OnCastStart name="Play_cursed_cast_load_big_deathcurse" />
@@ -5172,19 +5219,19 @@
     <OnCastStart name="Play_cursed_cast_medium_cursednova" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_CURSED_CAST_DARKMATTER">
-	<OnCastStart name="Play_cursed_cast_load_darkmatter" />
-	<OnCastInterrupted name="Stop_cursed_cast_load_darkmatter" />
-	<OnCastCanceled name="Stop_cursed_cast_load_darkmatter" />
+    <OnCastStart name="Play_cursed_cast_load_darkmatter" />
+    <OnCastInterrupted name="Stop_cursed_cast_load_darkmatter" />
+    <OnCastCanceled name="Stop_cursed_cast_load_darkmatter" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_CURSED_CAST_ENFEEBLEBLADES">
     <OnCastStart name="Play_cursed_cast_load_big_enfeeble_blades" />
-	<OnCastCanceled name="Stop_cursed_cast_load_big_enfeeble_blades" />
-	<OnCastInterrupted name="Stop_cursed_cast_load_big_enfeeble_blades" />
+  	<OnCastCanceled name="Stop_cursed_cast_load_big_enfeeble_blades" />
+	  <OnCastInterrupted name="Stop_cursed_cast_load_big_enfeeble_blades" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_CURSED_CHANNEL_ENFEEBLEBLADES">
     <OnChannelingStart name="Play_cursed_channel_enfeeble_blades" />
-	<OnChannelingCancelled name="Stop_cursed_channel_enfeeble_blades" />
-	<OnChannelingEnd name="Stop_cursed_channel_enfeeble_blades" />
+	  <OnChannelingCancelled name="Stop_cursed_channel_enfeeble_blades" />
+	  <OnChannelingEnd name="Stop_cursed_channel_enfeeble_blades" />
     <OnChannelingInterrupted name="Stop_cursed_channel_enfeeble_blades" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_CURSED_CAST_HAUNTINGSCREAMS">
@@ -5196,21 +5243,21 @@
     <OnCastStart name="Play_cursed_cast_instant" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_CURSED_CAST_LOAD_MEDIUM">
-	<OnCastStart name="Play_cursed_cast_load_medium_1" />
-	<OnCastCanceled name="Stop_cursed_cast_load_medium_1" />
-	<OnCastInterrupted name="Stop_cursed_cast_load_medium_1" />
+    <OnCastStart name="Play_cursed_cast_load_medium_1" />
+    <OnCastCanceled name="Stop_cursed_cast_load_medium_1" />
+    <OnCastInterrupted name="Stop_cursed_cast_load_medium_1" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_CURSED_HIT_SMALL">
     <OnSpellHit name="Play_cursed_impact_small" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_CURSED_HIT_SMALL_CUT">
-	<OnSpellHit name="Play_cursed_impact_small_cut" />
+	  <OnSpellHit name="Play_cursed_impact_small_cut" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_CURSED_HIT_SMALL_REPEATED">
-	<OnSpellHit name="Play_cursed_impact_small_repeated" />
+	  <OnSpellHit name="Play_cursed_impact_small_repeated" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_CURSED_HIT_SMALL_ADD_BUFF_DAMAGE">
-	<OnSpellHit name="Play_cursed_impact_small_adddamage_buff_add" />
+	  <OnSpellHit name="Play_cursed_impact_small_adddamage_buff_add" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_CURSED_HIT_MEDIUM">
     <OnSpellHit name="Play_cursed_impact_medium" />
@@ -5224,7 +5271,7 @@
     <OnCastStart name="Play_cursed_cast_load_dynamic_curse" />
     <OnCastInterrupted name="Stop_cursed_cast_load_dynamic_curse" />
     <OnCastCanceled name="Stop_cursed_cast_load_dynamic_curse" />
-	<OnSpellHit name="Play_cursed_cast_buff_damageincrease" />
+	  <OnSpellHit name="Play_cursed_cast_buff_damageincrease" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_CURSED_CAST_LOAD_HIT_MEDIUM">
     <OnCastStart name="Play_cursed_cast_start_standard" />
@@ -5234,31 +5281,31 @@
     <OnSpellHit name="Play_cursed_impact_medium" /> 
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_CURSED_CAST_BIG_CATACLYSM">
-	<OnCastStart name="Play_cursed_cast_load_big_cataclysm" />
-	<OnCastInterrupted name="Stop_cursed_cast_load_big_cataclysm" />
-	<OnCastCanceled name="Stop_cursed_cast_load_big_cataclysm" />
-	<OnCastFinished name="Play_cursed_cast_big_cataclysm" />
+    <OnCastStart name="Play_cursed_cast_load_big_cataclysm" />
+    <OnCastInterrupted name="Stop_cursed_cast_load_big_cataclysm" />
+    <OnCastCanceled name="Stop_cursed_cast_load_big_cataclysm" />
+    <OnCastFinished name="Play_cursed_cast_big_cataclysm" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_CURSED_CHANNEL_BIG_AREAOFDECAY">
-	<OnChannelingStart name="Play_cursed_channel_big_areaofdecay" />
-	<OnChannelingCancelled name="Stop_cursed_channel_big_areaofdecay" />
-	<OnChannelingEnd name="Stop_cursed_channel_big_areaofdecay" />
-	<OnChannelingInterrupted name="Stop_cursed_channel_big_areaofdecay" />
+    <OnChannelingStart name="Play_cursed_channel_big_areaofdecay" />
+    <OnChannelingCancelled name="Stop_cursed_channel_big_areaofdecay" />
+    <OnChannelingEnd name="Stop_cursed_channel_big_areaofdecay" />
+    <OnChannelingInterrupted name="Stop_cursed_channel_big_areaofdecay" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_CURSED_IMPACT_BIG_DEATHCURSE_EXPLOSION">
-	<OnSpellHit name="Play_cursed_skull_explosion" />
+    <OnSpellHit name="Play_cursed_skull_explosion" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_CURSED_CAST_BIG_ANGUISHEDSOUL">
-	<OnCastFinished name="Play_cursed_cast_big_anguished_soul" />
+	  <OnCastFinished name="Play_cursed_cast_big_anguished_soul" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_CURSED_IMPACT_BIG">
-	<OnSpellHit name="Play_cursed_impact_big" />
+	  <OnSpellHit name="Play_cursed_impact_big" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_CURSED_IMPACT_BIG_WET">
-	<OnSpellHit name="Play_cursed_impact_big_wet" />
+	  <OnSpellHit name="Play_cursed_impact_big_wet" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_CURSED_CAST_BIG_GHOST_SKELETON">
-	<OnCastFinished name="Play_cursed_cast_big_ghost_skeleton" />
+	  <OnCastFinished name="Play_cursed_cast_big_ghost_skeleton" />
   </WwiseEventInfo>
   
   <WwiseEventInfo name="SPELL_FIRE_CAST_MEDIUM">    
@@ -5393,25 +5440,25 @@
     <OnCastInterrupted name="Stop_fire_cast_load_big" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_FIRE_CAST_IGNITE">
-	<OnCastFinished name="Play_fire_cast_medium_ignite_staff" />
+	  <OnCastFinished name="Play_fire_cast_medium_ignite_staff" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_FIRE_SWIRL_IGNITE">
-	<OnSpellHit name="Play_fire_cast_medium_ignite" />
+	  <OnSpellHit name="Play_fire_cast_medium_ignite" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_FIRE_SWIRL_AOE">
-	<OnSpellHit name="Play_fire_swirl_aoe_explosion" />
+	  <OnSpellHit name="Play_fire_swirl_aoe_explosion" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_FIRE_CAST_LOAD_MEDIUM_FIREARTILLERY">
-	<OnCastStart name="Play_fire_cast_load_medium_long_fireartillery" />
-	<OnCastInterrupted name="Stop_fire_cast_load_medium_long_fireartillery" />
-	<OnCastCanceled name="Stop_fire_cast_load_medium_long_fireartillery" />
+    <OnCastStart name="Play_fire_cast_load_medium_long_fireartillery" />
+    <OnCastInterrupted name="Stop_fire_cast_load_medium_long_fireartillery" />
+    <OnCastCanceled name="Stop_fire_cast_load_medium_long_fireartillery" />
   </WwiseEventInfo>
 	
   <WwiseEventInfo name="SPELL_FIRE_ARTILLERY_SHOOT">
     <OnSpellHit name="Play_fire_cast_medium_shoot_fireartillery_w" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_FIRE_ARTILLERY_IMPACT">
-	<OnSpellHit name="Play_fire_impact_medium_fireartillery_w" />
+	  <OnSpellHit name="Play_fire_impact_medium_fireartillery_w" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_FIRE_EXPLOSION_SMALL">
     <OnSpellHit name="Play_fire_explosion_small" />
@@ -5447,54 +5494,54 @@
     <OnSpellHit name="Play_fire_buff_impact" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_FIRE_KNOCKBACK_IMPACT">
-	<OnSpellHit name="Play_fire_knockback" />
+	  <OnSpellHit name="Play_fire_knockback" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_FIRE_KNOCKBACK_IMPACT_LIMITED">
-	<OnSpellHit name="Play_fire_knockback_multiple" />
+	  <OnSpellHit name="Play_fire_knockback_multiple" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_FIRE_CHANNELING_LOAD_PYROBLAST">
-	<OnChannelingStart name="Play_fire_cast_load_huge" />
-	<OnChannelingCancelled name="Stop_fire_cast_load_huge" />
-	<OnChannelingEnd name="Stop_fire_cast_load_huge" />
-	<OnChannelingInterrupted name="Stop_fire_cast_load_huge" />
+    <OnChannelingStart name="Play_fire_cast_load_huge" />
+    <OnChannelingCancelled name="Stop_fire_cast_load_huge" />
+    <OnChannelingEnd name="Stop_fire_cast_load_huge" />
+    <OnChannelingInterrupted name="Stop_fire_cast_load_huge" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_FIRE_CAST_PYROBLAST">
-	<OnCastFinished name="Play_fire_cast_big_pyroblast_E" />
+	  <OnCastFinished name="Play_fire_cast_big_pyroblast_E" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_FIRE_IMPACT_BIG_PYROBLAST">
-	<OnSpellHit name="Play_fire_impact_big_pyroblast_E" />
+	  <OnSpellHit name="Play_fire_impact_big_pyroblast_E" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_FIRE_IMPACT_BIG_MAGMASPHERE">
-	<OnSpellHit name="Play_fire_impact_big_magmasphere" />
+	  <OnSpellHit name="Play_fire_impact_big_magmasphere" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_FIRE_IMPACT_BIG_E">
-	<OnSpellHit name="Play_fire_impact_big_e" />
+	  <OnSpellHit name="Play_fire_impact_big_e" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_FIRE_CAST_LOAD_BIG_SHORT_FIREPHOENIX">
-	<OnCastStart name="Play_fire_cast_load_big_short_firephoenix_e" />
+	  <OnCastStart name="Play_fire_cast_load_big_short_firephoenix_e" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_FIRE_METEOR">
-	<OnCastStart name="Play_fire_cast_load_big_meteor" />
-	<OnCastInterrupted name="Stop_fire_cast_load_big_meteor" />
-	<OnCastCanceled name="Stop_fire_cast_load_big_meteor" />
-	<OnCastFinished name="Play_fire_cast_big_meteor" />
+    <OnCastStart name="Play_fire_cast_load_big_meteor" />
+    <OnCastInterrupted name="Stop_fire_cast_load_big_meteor" />
+    <OnCastCanceled name="Stop_fire_cast_load_big_meteor" />
+    <OnCastFinished name="Play_fire_cast_big_meteor" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_FIRE_CAST_LOAD_BIG_MAGMASPHERE">
-	<OnCastStart name="Play_fire_cast_load_big_magmasphere" />
-	<OnCastInterrupted name="Stop_fire_cast_load_big_magmasphere" />
-	<OnCastCanceled name="Stop_fire_cast_load_big_magmasphere" />
-	<OnCastFinished name="Play_fire_cast_big_magmasphere" />
+    <OnCastStart name="Play_fire_cast_load_big_magmasphere" />
+    <OnCastInterrupted name="Stop_fire_cast_load_big_magmasphere" />
+    <OnCastCanceled name="Stop_fire_cast_load_big_magmasphere" />
+    <OnCastFinished name="Play_fire_cast_big_magmasphere" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_FIRE_CAST_BIG_HUMANTORCH">
-	<OnCastStart name="Play_fire_cast_load_big_livingtorch" />
-	<OnCastInterrupted name="Stop_fire_cast_load_big_livingtorch" />
-	<OnCastCanceled name="Stop_fire_cast_load_big_livingtorch" />
+    <OnCastStart name="Play_fire_cast_load_big_livingtorch" />
+    <OnCastInterrupted name="Stop_fire_cast_load_big_livingtorch" />
+    <OnCastCanceled name="Stop_fire_cast_load_big_livingtorch" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_FIRE_CAST_FLAMEDASH_E">
-	<OnCastFinished name="Play_fire_cast_big_crystalstaff_dash" />
+    <OnCastFinished name="Play_fire_cast_big_crystalstaff_dash" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_FIRE_FLAMEDASH_EXPLOSION_BIG">
-	<OnCastFinished name="Play_fire_impact_big_crystalstaff_explosion" />
+	  <OnCastFinished name="Play_fire_impact_big_crystalstaff_explosion" />
   </WwiseEventInfo>
     
   <WwiseEventInfo name="SPELL_FROST_START_MEDIUM">
@@ -5513,19 +5560,19 @@
     <OnCastFinished name="Play_frost_cast_small" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_FROST_CAST_SMALL">
-	<OnCastFinished name="Play_frost_cast_small" />
+	  <OnCastFinished name="Play_frost_cast_small" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_FROST_CAST_SMALL_FROSTBITE">
     <OnCastStart name="Play_frost_cast_load_small_frostbite" />
-	<OnCastCanceled name="Stop_frost_cast_load_small_frostbite" />
-	<OnCastInterrupted name="Stop_frost_cast_load_small_frostbite" />
-	<OnCastFinished name="Play_frost_cast_small_frostbite" />
+    <OnCastCanceled name="Stop_frost_cast_load_small_frostbite" />
+    <OnCastInterrupted name="Stop_frost_cast_load_small_frostbite" />
+    <OnCastFinished name="Play_frost_cast_small_frostbite" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_FROST_CAST_MEDIUM_FROSTBOMB">
-	<OnCastFinished name="Play_frost_cast_medium_frostbomb" />
+	  <OnCastFinished name="Play_frost_cast_medium_frostbomb" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_FROST_CAST_TELEPORT">
-	<OnCastFinished name="Play_frost_cast_teleport" />
+	  <OnCastFinished name="Play_frost_cast_teleport" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_FROST_CAST_LOAD_SMALL_2S">
     <OnCastStart name="Play_frost_cast_load_small_long" />
@@ -5552,20 +5599,20 @@
     <OnCastFinished name="Play_frost_cast_big" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_FROST_CAST_LOAD_ICESCULPTURE">
-	<OnCastStart name="Play_frost_cast_load_icesculpture" />
-	<OnCastCanceled name="Stop_frost_cast_load_icesculpture" />
-	<OnCastInterrupted name="Stop_frost_cast_load_icesculpture" />
+    <OnCastStart name="Play_frost_cast_load_icesculpture" />
+    <OnCastCanceled name="Stop_frost_cast_load_icesculpture" />
+    <OnCastInterrupted name="Stop_frost_cast_load_icesculpture" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_FROST_CAST_LOAD_ICESTORM">
-	<OnCastStart name="Play_frost_cast_load_icestorm" />
-	<OnCastCanceled name="Stop_frost_cast_load_icestorm" />
-	<OnCastInterrupted name="Stop_frost_cast_load_icestorm" />
+    <OnCastStart name="Play_frost_cast_load_icestorm" />
+    <OnCastCanceled name="Stop_frost_cast_load_icestorm" />
+    <OnCastInterrupted name="Stop_frost_cast_load_icestorm" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_FROST_CHANNELING_BEAM">
-	<OnChannelingStart name="Play_frost_frost_beam_loop" />
-	<OnChannelingCancelled name="Stop_frost_frost_beam_loop" />
-	<OnChannelingEnd name="Stop_frost_frost_beam_loop" />
-	<OnChannelingInterrupted name="Stop_frost_frost_beam_loop" />
+    <OnChannelingStart name="Play_frost_frost_beam_loop" />
+    <OnChannelingCancelled name="Stop_frost_frost_beam_loop" />
+    <OnChannelingEnd name="Stop_frost_frost_beam_loop" />
+    <OnChannelingInterrupted name="Stop_frost_frost_beam_loop" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_FROST_CAST_GLACIALFIELD">
     <OnCastFinished name="Play_frost_cast_glacialfield" />
@@ -5574,56 +5621,56 @@
     <OnCastFinished name="Play_frost_spawn_iceblock" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_FROST_CAST_BIG_HAIL">
-	<OnCastFinished name="Play_frost_cast_big_hail" />
+	  <OnCastFinished name="Play_frost_cast_big_hail" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_FROST_CAST_BIG_AVALANCHE">
-	<OnCastFinished name="Play_frost_cast_big_avalanche" />
+	  <OnCastFinished name="Play_frost_cast_big_avalanche" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_FROST_CAST_BIG_BLIZZARD_HELL">
-	<OnCastFinished name="Play_frost_cast_big_blizzard_hell" />
+	  <OnCastFinished name="Play_frost_cast_big_blizzard_hell" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_FROST_CAST_BIG_ICE_CRYSTAL_ULTIMATE">
-	<OnCastStart name="Play_frost_cast_load_big_ice_crystal_ultimate" />
-	<OnCastInterrupted name="Stop_frost_cast_load_big_ice_crystal_ultimate" />
-	<OnCastCanceled name="Stop_frost_cast_load_big_ice_crystal_ultimate" />
+    <OnCastStart name="Play_frost_cast_load_big_ice_crystal_ultimate" />
+    <OnCastInterrupted name="Stop_frost_cast_load_big_ice_crystal_ultimate" />
+    <OnCastCanceled name="Stop_frost_cast_load_big_ice_crystal_ultimate" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_FROST_HIT_SMALL">
     <OnSpellHit name="Play_frost_impact_small" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_FROST_HIT_SMALL_WEAPONHIT">
-	<OnSpellHit name="Play_frost_impact_small" >
-		<ImpactType/>
-	</OnSpellHit>
+    <OnSpellHit name="Play_frost_impact_small" >
+      <ImpactType/>
+    </OnSpellHit>
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_FROST_HIT_SMALL_AUTOATTACK">
-	<OnSpellHit name="Play_frost_impact_small_autoattack" />
+  	<OnSpellHit name="Play_frost_impact_small_autoattack" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_FROST_HIT_SMALL_ICECRYSTAL">
-	<OnSpellHit name="Play_frost_impact_small_icecrystal" />
+	  <OnSpellHit name="Play_frost_impact_small_icecrystal" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_FROST_HIT_MEDIUM">
     <OnSpellHit name="Play_frost_impact_medium" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_FROST_HIT_BIG">
-	<OnSpellHit name="Play_frost_impact_big" />
+	  <OnSpellHit name="Play_frost_impact_big" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_FROST_ICEROCK">
     <OnSpellHit name="Play_frost_icerock" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_FROST_IMPACT_AVALANCHE_BALL">
-	<OnSpellHit name="Play_frost_impact_avalanche_ball" />
+	  <OnSpellHit name="Play_frost_impact_avalanche_ball" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_FROST_IMPACT_AVALANCHE_BALL_KNOCKBACK">
-	<OnSpellHit name="Play_frost_impact_avalanche_ball_knockback" />
+	  <OnSpellHit name="Play_frost_impact_avalanche_ball_knockback" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_FROST_HIT_BIG_HAIL">
-	<OnSpellHit name="Play_frost_impact_big_hail" />
+	  <OnSpellHit name="Play_frost_impact_big_hail" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_FROST_EXPLOSION_MEDIUM_LANCE">
-	<OnSpellHit name="Play_frost_explosion_medium_lance" />
+	  <OnSpellHit name="Play_frost_explosion_medium_lance" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_FROST_EXPLOSION_SMALL_ICESCULPTURE">
-	<OnSpellHit name="Play_frost_explosion_small_icesculpture" />
+	  <OnSpellHit name="Play_frost_explosion_small_icesculpture" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_FROST_ICEBLOCK">
     <OnSpellHit name="Play_frost_cast_iceblock" />
@@ -5638,12 +5685,12 @@
     <OnSpellHit name="Play_frost_impact_small" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_FROST_CAST_LANCE">
-	<OnCastStart name="Play_frost_cast_load_medium_lance" />
-	<OnCastCanceled name="Stop_frost_cast_load_medium_lance" />
-	<OnCastInterrupted name="Stop_frost_cast_load_medium_lance" />
+    <OnCastStart name="Play_frost_cast_load_medium_lance" />
+    <OnCastCanceled name="Stop_frost_cast_load_medium_lance" />
+    <OnCastInterrupted name="Stop_frost_cast_load_medium_lance" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_FROST_CAST_LANCE_INSTANT">
-	<OnCastFinished name="Play_frost_cast_medium_lance" />
+	  <OnCastFinished name="Play_frost_cast_medium_lance" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_FROST_FROZENCRYSTAL_CAST">
     <OnCastFinished name="Play_frost_cast_big_frozencrystal" />
@@ -5660,28 +5707,28 @@
     <OnSpellHit name="Play_frost_impact_medium" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_FROST_BUFF_DAMAGE_INCREASE">
-	<OnSpellHit name="Play_frost_buff_damage_increase" />
+	  <OnSpellHit name="Play_frost_buff_damage_increase" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_FROST_TARGETED_CHANNEL_CAST">
-	<OnCastFinished name="Play_frost_targeted_channel_cast" />
+	  <OnCastFinished name="Play_frost_targeted_channel_cast" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_FROST_TARGETED_CHANNEL_SHOT">
-	<OnCastFinished name="Play_frost_targeted_channel_shot_E" />
+	  <OnCastFinished name="Play_frost_targeted_channel_shot_E" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_FROST_IMPACT_SMALL_ICE_SHARDS">
-	<OnSpellHit name="Play_frost_impact_small_ice_shards" />
+	  <OnSpellHit name="Play_frost_impact_small_ice_shards" />
   </WwiseEventInfo>
   
   <WwiseEventInfo name="SPELL_HOLY_CAST_LOAD_GENEROUSHEAL">
-	<OnCastStart name="Play_holy_cast_load_heal_small" />
-	<OnCastCanceled name="Stop_holy_cast_load_heal_small" />
-	<OnCastInterrupted name="Stop_holy_cast_load_heal_small" />
-	<OnCastFinished name="Play_holy_impact_heal_small" />
+    <OnCastStart name="Play_holy_cast_load_heal_small" />
+    <OnCastCanceled name="Stop_holy_cast_load_heal_small" />
+    <OnCastInterrupted name="Stop_holy_cast_load_heal_small" />
+    <OnCastFinished name="Play_holy_impact_heal_small" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_HOLY_CAST_LOAD_HEAL_MEDIUM">
-	<OnCastStart name="Play_holy_cast_load_heal_medium" />
-	<OnCastCanceled name="Stop_holy_cast_load_heal_medium" />
-	<OnCastInterrupted name="Stop_holy_cast_load_heal_medium" />
+    <OnCastStart name="Play_holy_cast_load_heal_medium" />
+    <OnCastCanceled name="Stop_holy_cast_load_heal_medium" />
+    <OnCastInterrupted name="Stop_holy_cast_load_heal_medium" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_HOLY_CAST_LOAD_BIG">
     <OnCastStart name="Play_holy_cast_load_medium" />
@@ -5705,27 +5752,27 @@
     <OnCastFinished name="Play_holy_cast_big" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_HOLY_CAST_LOAD_SMALL_HOLYFLASH">
-	<OnCastStart name="Play_holy_cast_load_small_holyflash" />
-	<OnCastCanceled name="Stop_holy_cast_load_small_holyflash" />
-	<OnCastInterrupted name="Stop_holy_cast_load_small_holyflash" />
-	<OnSpellHit name="Play_holy_impact_heal_small" />
+    <OnCastStart name="Play_holy_cast_load_small_holyflash" />
+    <OnCastCanceled name="Stop_holy_cast_load_small_holyflash" />
+    <OnCastInterrupted name="Stop_holy_cast_load_small_holyflash" />
+    <OnSpellHit name="Play_holy_impact_heal_small" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_HOLY_CAST_MEDIUM_PULSINGHEAL">
-	<OnCastFinished name="Play_holy_cast_heal_medium_pulsingheal" />
+	  <OnCastFinished name="Play_holy_cast_heal_medium_pulsingheal" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_HOLY_CAST_HOLYBLESSING">
-	<OnCastFinished name="Play_holy_cast_buff_medium_holyblessing" />
-	<OnSpellHit name="Play_holy_impact_buff_medium_holyblessing" />
+    <OnCastFinished name="Play_holy_cast_buff_medium_holyblessing" />
+    <OnSpellHit name="Play_holy_impact_buff_medium_holyblessing" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_HOLY_CAST_LOAD_RESURRECTION">
-	<OnCastStart name="Play_holy_cast_load_resurrection_medium" />
-	<OnCastCanceled name="Stop_holy_cast_load_resurrection_medium" />
-	<OnCastInterrupted name="Stop_holy_cast_load_resurrection_medium" />
+    <OnCastStart name="Play_holy_cast_load_resurrection_medium" />
+    <OnCastCanceled name="Stop_holy_cast_load_resurrection_medium" />
+    <OnCastInterrupted name="Stop_holy_cast_load_resurrection_medium" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_HOLY_CAST_LOAD_BIG_ULTIMATE">
-	<OnCastStart name="Play_holy_cast_load_heal_big_ultimate" />
-	<OnCastCanceled name="Stop_holy_cast_load_heal_big_ultimate" />
-	<OnCastInterrupted name="Stop_holy_cast_load_heal_big_ultimate" />
+    <OnCastStart name="Play_holy_cast_load_heal_big_ultimate" />
+    <OnCastCanceled name="Stop_holy_cast_load_heal_big_ultimate" />
+    <OnCastInterrupted name="Stop_holy_cast_load_heal_big_ultimate" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_HOLY_CHANNEL_TOUCH">
     <OnChannelingStart name="Play_holy_touch_loop" />
@@ -5734,7 +5781,7 @@
 	 <OnChannelingInterrupted name="Stop_holy_touch_loop" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_HOLY_IMPACT_DAMAGE_SMALL">
-	<OnSpellHit name="Play_holy_impact_damage_small" />
+	  <OnSpellHit name="Play_holy_impact_damage_small" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_MENDWOUNDS">
     <OnCastStart name="Play_holy_heal_small" />
@@ -5743,16 +5790,16 @@
     <OnSpellHit name="Play_holy_impact_heal_medium" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_HOLY_HEAL_IMPACT_SMALL">
-	<OnSpellHit name="Play_holy_impact_heal_small" />
+	  <OnSpellHit name="Play_holy_impact_heal_small" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_HOLY_SPELLHIT_SMALL">
     <OnSpellHit name="Play_holy_heal_small" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_HOLY_HIT_MEDIUM_ORB">
-	<OnSpellHit name="Play_holy_orb_impact" />
+	  <OnSpellHit name="Play_holy_orb_impact" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_HOLY_CAST_HEAL_BIG_DIVINEPROTECTION">
-	<OnCastFinished name="Play_holy_cast_heal_big_divineprotection" />
+	  <OnCastFinished name="Play_holy_cast_heal_big_divineprotection" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_HOLY_DIVINE_JUMP">
     <OnCastFinished name="Play_holy_divine_jump" />
@@ -5765,9 +5812,9 @@
     <OnSpellHit name="Play_holy_heal_small" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_HOLY_CAST_DISPEL">
-	<OnCastStart name="Play_holy_cast_load_big_dispel" />
-	<OnCastCanceled name="Stop_holy_cast_load_big_dispel" />
-	<OnCastInterrupted name="Stop_holy_cast_load_big_dispel" />
+    <OnCastStart name="Play_holy_cast_load_big_dispel" />
+    <OnCastCanceled name="Stop_holy_cast_load_big_dispel" />
+    <OnCastInterrupted name="Stop_holy_cast_load_big_dispel" />
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_LIGHTNING_CAST_SMALL">
@@ -5980,233 +6027,233 @@
   <!-- SHAPESHIFTER Magic-->
 	
   <WwiseEventInfo name="SPELL_SHAPESHIFTER_TRANSFORM_CREATURE">
-	<OnCastFinished name="Play_shapeshift_transform_to_creature" />
-	<OnSpellRemoved name="Play_shapeshift_transform_to_human" />
+    <OnCastFinished name="Play_shapeshift_transform_to_creature" />
+    <OnSpellRemoved name="Play_shapeshift_transform_to_human" />
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_SHAPESHIFTER_TRANSFORM_CREATURE_ENEMY">
-	<OnSpellAdded name="Play_shapeshifter_transform_to_creature_enemy" />
-	<OnSpellRemoved name="Play_shapeshifter_transform_to_human_enemy" />
+    <OnSpellAdded name="Play_shapeshifter_transform_to_creature_enemy" />
+    <OnSpellRemoved name="Play_shapeshifter_transform_to_human_enemy" />
   </WwiseEventInfo>
 	
   <WwiseEventInfo name="SPELL_SHAPESHIFTER_TRANSFORM_HUMAN">
-	<OnSpellRemoved name="Play_shapeshift_transform_to_human" />
+	  <OnSpellRemoved name="Play_shapeshift_transform_to_human" />
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_SHAPESHIFTER_STACK_HIT" >
-	<OnSpellHit name="Play_shapeshifter_impact_buff_charge" />
+	  <OnSpellHit name="Play_shapeshifter_impact_buff_charge" />
   </WwiseEventInfo>
 	
   <WwiseEventInfo name="SPELL_SHAPESHIFTER_DAMAGE_CAST_LASER_SMALL" >
-	<OnCastStart name="Play_shapeshifter_cast_damage_small_laserbeam" />
-	<OnCastCanceled name="Stop_shapeshifter_cast_damage_small_laserbeam" />
-	<OnCastInterrupted name="Stop_shapeshifter_cast_damage_small_laserbeam" />
+    <OnCastStart name="Play_shapeshifter_cast_damage_small_laserbeam" />
+    <OnCastCanceled name="Stop_shapeshifter_cast_damage_small_laserbeam" />
+    <OnCastInterrupted name="Stop_shapeshifter_cast_damage_small_laserbeam" />
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_SHAPESHIFTER_DAMAGE_CAST_LASER_MEDIUM" >
-	<OnCastStart name="Play_shapeshifter_cast_damage_medium_laserbeam" />
-	<OnCastCanceled name="Stop_shapeshifter_cast_damage_medium_laserbeam" />
-	<OnCastInterrupted name="Stop_shapeshifter_cast_damage_medium_laserbeam" />
+    <OnCastStart name="Play_shapeshifter_cast_damage_medium_laserbeam" />
+    <OnCastCanceled name="Stop_shapeshifter_cast_damage_medium_laserbeam" />
+    <OnCastInterrupted name="Stop_shapeshifter_cast_damage_medium_laserbeam" />
   </WwiseEventInfo>
 	
   <WwiseEventInfo name="SPELL_SHAPESHIFTER_DAMAGE_CAST_ACCENT_SMALL" >
-	<OnCastFinished name="Play_shapeshifter_cast_accent_small" />
+	  <OnCastFinished name="Play_shapeshifter_cast_accent_small" />
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_SHAPESHIFTER_DAMAGE_CAST_SMALL_PROJECTILE">
-	<OnCastStart name="Play_shapeshifter_cast_load_damage_small_projectile" />
-	<OnCastCanceled name="Stop_shapeshifter_cast_load_damage_small_projectile" />
-	<OnCastInterrupted name="Stop_shapeshifter_cast_load_damage_small_projectile" />
-	<OnCastFinished name="Play_shapeshifter_cast_damage_small_projectile" />
+    <OnCastStart name="Play_shapeshifter_cast_load_damage_small_projectile" />
+    <OnCastCanceled name="Stop_shapeshifter_cast_load_damage_small_projectile" />
+    <OnCastInterrupted name="Stop_shapeshifter_cast_load_damage_small_projectile" />
+    <OnCastFinished name="Play_shapeshifter_cast_damage_small_projectile" />
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_SHAPESHIFTER_DAMAGE_CAST_SMALL_CONE_KNOCKBACK">
-	<OnCastFinished name="Play_shapeshifter_cast_small_cone_knockback" />
+	  <OnCastFinished name="Play_shapeshifter_cast_small_cone_knockback" />
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_SHAPESHIFTER_DAMAGE_IMPACT_SMALL" >
-	<OnSpellHit name="Play_shapeshifter_impact_damage_small" />
+	  <OnSpellHit name="Play_shapeshifter_impact_damage_small" />
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_SHAPESHIFTER_DAMAGE_CAST_AOE_MEDIUM" >
-	<OnCastFinished name="Play_shapeshifter_cast_damage_medium_instant_aoe" />
+	  <OnCastFinished name="Play_shapeshifter_cast_damage_medium_instant_aoe" />
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_SHAPESHIFTER_DAMAGE_CAST_MEDIUM_SKILLSHOT_SHOOT" >
-	<OnCastStart name="Play_shapeshifter_cast_load_damage_small_projectile" />
-	<OnCastCanceled name="Stop_shapeshifter_cast_load_damage_small_projectile" />
-	<OnCastInterrupted name="Stop_shapeshifter_cast_load_damage_small_projectile" />
-	<OnCastFinished name="Play_shapeshifter_cast_medium_skillshot_shoot" />
+    <OnCastStart name="Play_shapeshifter_cast_load_damage_small_projectile" />
+    <OnCastCanceled name="Stop_shapeshifter_cast_load_damage_small_projectile" />
+    <OnCastInterrupted name="Stop_shapeshifter_cast_load_damage_small_projectile" />
+    <OnCastFinished name="Play_shapeshifter_cast_medium_skillshot_shoot" />
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_SHAPESHIFTER_DAMAGE_CAST_MEDIUM_PULL">
-	<OnCastStart name="Play_shapeshifter_load_medium_pull" />
-	<OnCastCanceled name="Stop_shapeshifter_load_medium_pull" />
-	<OnCastInterrupted name="Stop_shapeshifter_load_medium_pull" />
-	<OnCastFinished name="Play_shapeshifter_cast_medium_pull" />
+    <OnCastStart name="Play_shapeshifter_load_medium_pull" />
+    <OnCastCanceled name="Stop_shapeshifter_load_medium_pull" />
+    <OnCastInterrupted name="Stop_shapeshifter_load_medium_pull" />
+    <OnCastFinished name="Play_shapeshifter_cast_medium_pull" />
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_SHAPESHIFTER_DAMAGE_CAST_MEDIUM_SHOCKWAVE">
-	<OnCastStart name="Play_shapeshifter_load_medium_shockwave" />
-	<OnCastCanceled name="Stop_shapeshifter_load_medium_shockwave" />
-	<OnCastInterrupted name="Stop_shapeshifter_load_medium_shockwave" />
+    <OnCastStart name="Play_shapeshifter_load_medium_shockwave" />
+    <OnCastCanceled name="Stop_shapeshifter_load_medium_shockwave" />
+    <OnCastInterrupted name="Stop_shapeshifter_load_medium_shockwave" />
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_SHAPESHIFTER_DAMAGE_IMPACT_SMALL_SHOCKWAVE" >
-	<OnSpellHit name="Play_shapeshifter_impact_damage_small_shockwave" />
+	  <OnSpellHit name="Play_shapeshifter_impact_damage_small_shockwave" />
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_SHAPESHIFTER_DAMAGE_IMPACT_MEDIUM" >
-	<OnSpellHit name="Play_shapeshifter_impact_damage_medium" />
+	  <OnSpellHit name="Play_shapeshifter_impact_damage_medium" />
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_SHAPESHIFTER_DAMAGE_IMPACT_MEDIUM_KNOCKBACK" >
-	<OnSpellHit name="Play_shapeshifter_impact_damage_medium_knockback" />
+	  <OnSpellHit name="Play_shapeshifter_impact_damage_medium_knockback" />
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_SHAPESHIFTER_DAMAGE_IMPACT_MEDIUM_PULL" >
-	<OnSpellHit name="Play_shapeshifter_impact_damage_medium_pull" /> 
+	  <OnSpellHit name="Play_shapeshifter_impact_damage_medium_pull" /> 
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_SHAPESHIFTER_CAST_MEDIUM_ALLY_BEAM" >
-	<OnCastFinished name="Play_shapeshifter_cast_medium_ally_beam" />
+	  <OnCastFinished name="Play_shapeshifter_cast_medium_ally_beam" />
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_SHAPESHIFTER_IMPACT_SHRINK" >
-	<OnSpellHit name="Play_shapeshifter_impact_damage_transform_shrink" />
+	  <OnSpellHit name="Play_shapeshifter_impact_damage_transform_shrink" />
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_SHAPESHIFTER_MEDIUM_DASH" >
-	<OnSpellHit name="Play_shapeshifter_cast_medium_dash" />
+	  <OnSpellHit name="Play_shapeshifter_cast_medium_dash" />
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_SHAPESHIFTER_IMP_FIREORB_IMPACT" >
-	<OnSpellHit name="Play_fire_impact_small_q_firebolt" />
+	  <OnSpellHit name="Play_fire_impact_small_q_firebolt" />
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_SHAPESHIFTER_IMP_CAST_FIREBALL" >
-	<OnCastFinished name="Play_shapshifter_imp_cast_fireball" />
+	  <OnCastFinished name="Play_shapshifter_imp_cast_fireball" />
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_SHAPESHIFTER_IMP_CAST_REBIRTH" >
-	<OnCastFinished name="Play_shapeshifter_imp_rebirth" />
+	  <OnCastFinished name="Play_shapeshifter_imp_rebirth" />
   </WwiseEventInfo>
 	
   <WwiseEventInfo name="SPELL_SHAPESHIFTER_IMP_CHANNEL_BEAM">
-	<OnChannelingStart name="Play_shapeshifter_imp_channel_fire_loop" />
-	<OnChannelingCancelled name="Stop_shapeshifter_imp_channel_fire_loop" />
-	<OnChannelingEnd name="Stop_shapeshifter_imp_channel_fire_loop" />
-	<OnChannelingInterrupted name="Stop_shapeshifter_imp_channel_fire_loop" />
+    <OnChannelingStart name="Play_shapeshifter_imp_channel_fire_loop" />
+    <OnChannelingCancelled name="Stop_shapeshifter_imp_channel_fire_loop" />
+    <OnChannelingEnd name="Stop_shapeshifter_imp_channel_fire_loop" />
+    <OnChannelingInterrupted name="Stop_shapeshifter_imp_channel_fire_loop" />
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_SHAPESHIFTER_WEREWOLF_TEARAPART">
-	<OnCastFinished name="Play_shapeshifter_werewolf_cast_tearapart" />
+	  <OnCastFinished name="Play_shapeshifter_werewolf_cast_tearapart" />
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_SHAPESHIFTER_WEREWOLF_CONSUME_PUDDLE" >
-	<OnSpellHit name="Play_shapeshifter_werewolf_consume_blood" />
+	  <OnSpellHit name="Play_shapeshifter_werewolf_consume_blood" />
   </WwiseEventInfo>
 	
   <WwiseEventInfo name="SPELL_SHAPESHIFTER_WEREWOLF_RIPTHROUGH_CAST">
-	<OnCastFinished name="Play_shapeshifter_werewolf_cast_ripthrough"/>
+	  <OnCastFinished name="Play_shapeshifter_werewolf_cast_ripthrough"/>
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_SHAPESHIFTER_EAGLE_BEAM_SHOT_CAST">
-	<OnCastStart name="Play_shapeshifter_eagle_cast_load_beam" />
-	<OnCastCanceled name="Stop_shapeshifter_eagle_cast_load_beam" />
-	<OnCastInterrupted name="Stop_shapeshifter_eagle_cast_load_beam" />
-	<OnCastFinished name="Play_shapeshifter_eagle_cast_beam" />
+    <OnCastStart name="Play_shapeshifter_eagle_cast_load_beam" />
+    <OnCastCanceled name="Stop_shapeshifter_eagle_cast_load_beam" />
+    <OnCastInterrupted name="Stop_shapeshifter_eagle_cast_load_beam" />
+    <OnCastFinished name="Play_shapeshifter_eagle_cast_beam" />
   </WwiseEventInfo>
  
   <WwiseEventInfo name="SPELL_SHAPESHIFTER_EAGLE_AIRSTRIKE_CAST">
-	<OnCastStart name="Play_shapeshifter_eagle_cast_load_explosive_beam" />
-	<OnCastCanceled name="Stop_shapeshifter_eagle_cast_load_explosive_beam" />
-	<OnCastInterrupted name="Stop_shapeshifter_eagle_cast_load_explosive_beam" />
-	<OnCastFinished name="Play_shapeshifter_eagle_cast_explosive_beam" />
+    <OnCastStart name="Play_shapeshifter_eagle_cast_load_explosive_beam" />
+    <OnCastCanceled name="Stop_shapeshifter_eagle_cast_load_explosive_beam" />
+    <OnCastInterrupted name="Stop_shapeshifter_eagle_cast_load_explosive_beam" />
+    <OnCastFinished name="Play_shapeshifter_eagle_cast_explosive_beam" />
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_SHAPESHIFTER_BEAR_SMASH">
-	<OnCastStart name="Play_shapeshifter_bear_cast_ground_smash" />
-	<OnCastCanceled name="Stop_shapeshifter_bear_cast_ground_smash" />
-	<OnCastInterrupted name="Stop_shapeshifter_bear_cast_ground_smash" />
+    <OnCastStart name="Play_shapeshifter_bear_cast_ground_smash" />
+    <OnCastCanceled name="Stop_shapeshifter_bear_cast_ground_smash" />
+    <OnCastInterrupted name="Stop_shapeshifter_bear_cast_ground_smash" />
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_SHAPESHIFTER_BEAR_DASH">
-	<OnCastStart name="Play_shapeshifter_bear_cast_load_dash" />
-	<OnCastFinished name="Play_shapeshifter_bear_dash" />
+    <OnCastStart name="Play_shapeshifter_bear_cast_load_dash" />
+    <OnCastFinished name="Play_shapeshifter_bear_dash" />
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_SHAPESHIFTER_BEAR_ROAR">
-	<OnCastStart name="Play_shapeshifter_bear_roar" />
-	<OnCastCanceled name="Stop_shapeshifter_bear_roar" />
-	<OnCastInterrupted name="Stop_shapeshifter_bear_roar" />
+    <OnCastStart name="Play_shapeshifter_bear_roar" />
+    <OnCastCanceled name="Stop_shapeshifter_bear_roar" />
+    <OnCastInterrupted name="Stop_shapeshifter_bear_roar" />
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_SHAPESHIFTER_PANTHER_CLAWS">
-	<OnCastFinished name="Play_shapeshifter_panther_claws_cast" />
-	<OnSpellHit name="Play_melee_impact_small_sharp" >
-		<ImpactType/>
-	</OnSpellHit>
+    <OnCastFinished name="Play_shapeshifter_panther_claws_cast" />
+    <OnSpellHit name="Play_melee_impact_small_sharp" >
+      <ImpactType/>
+    </OnSpellHit>
   </WwiseEventInfo>
 	
   <WwiseEventInfo name="SPELL_SHAPESHIFTER_PANTHER_POUNCE">
-	<OnCastFinished name="Play_shapeshifter_panther_pounce_cast" />
+    <OnCastFinished name="Play_shapeshifter_panther_pounce_cast" />
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_SHAPESHIFTER_ENT_CHANNEL_TREE">
-	<OnChannelingStart name="Play_shapeshifter_ent_channel_tree" />
-	<OnChannelingCancelled name="Stop_shapeshifter_ent_channel_tree" />
-	<OnChannelingEnd name="Stop_shapeshifter_ent_channel_tree" />
-	<OnChannelingInterrupted name="Stop_shapeshifter_ent_channel_tree" />
+    <OnChannelingStart name="Play_shapeshifter_ent_channel_tree" />
+    <OnChannelingCancelled name="Stop_shapeshifter_ent_channel_tree" />
+    <OnChannelingEnd name="Stop_shapeshifter_ent_channel_tree" />
+    <OnChannelingInterrupted name="Stop_shapeshifter_ent_channel_tree" />
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_SHAPESHIFTER_ENT_HEAL_AREA">
-	<OnCastStart name="Play_shapeshifter_ent_cast_load_buff" />
-	<OnCastCanceled name="Stop_shapeshifter_ent_cast_load_buff" />
-	<OnCastInterrupted name="Stop_shapeshifter_ent_cast_load_buff" />
+    <OnCastStart name="Play_shapeshifter_ent_cast_load_buff" />
+    <OnCastCanceled name="Stop_shapeshifter_ent_cast_load_buff" />
+    <OnCastInterrupted name="Stop_shapeshifter_ent_cast_load_buff" />
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_SHAPESHIFTER_ENT_PASSIVE_BUFF_IMPACT">
-	<OnSpellAdded name="Play_nature_impact_heal_buff_small" /> 
+    <OnSpellAdded name="Play_nature_impact_heal_buff_small" /> 
   </WwiseEventInfo>
 	
   <WwiseEventInfo name="SPELL_SHAPESHIFTER_GOLEM_ADD_IMPACT_SMALL">
-	<OnSpellHit name="Play_melee_impact_small_heavy" />
+	  <OnSpellHit name="Play_melee_impact_small_heavy" />
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_SHAPESHIFTER_GOLEM_CAST_AVALANCHE">
-	<OnCastStart name="Play_shapeshifter_golem_cast_rock_avalanche" />
-	<OnCastCanceled name="Stop_shapeshifter_golem_cast_rock_avalanche" />
-	<OnCastInterrupted name="Stop_shapeshifter_golem_cast_rock_avalanche" />
+    <OnCastStart name="Play_shapeshifter_golem_cast_rock_avalanche" />
+    <OnCastCanceled name="Stop_shapeshifter_golem_cast_rock_avalanche" />
+    <OnCastInterrupted name="Stop_shapeshifter_golem_cast_rock_avalanche" />
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_SHAPESHIFTER_GOLEM_CAST_STOMP">
-	<OnCastStart name="Play_shapeshifter_golem_cast_stomp" />
-	<OnCastCanceled name="Stop_shapeshifter_golem_cast_stomp" />
-	<OnCastInterrupted name="Stop_shapeshifter_golem_cast_stomp" />
-	<OnSpellHit name="Play_self_knockback" />
+    <OnCastStart name="Play_shapeshifter_golem_cast_stomp" />
+    <OnCastCanceled name="Stop_shapeshifter_golem_cast_stomp" />
+    <OnCastInterrupted name="Stop_shapeshifter_golem_cast_stomp" />
+    <OnSpellHit name="Play_self_knockback" />
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_SHAPESHIFTER_GOLEM_THROW_ROCK">
-	<OnCastStart name="Play_shapeshifter_golem_throw_stone" />
-	<OnCastCanceled name="Stop_shapeshifter_golem_throw_stone" />
-	<OnCastInterrupted name="Stop_shapeshifter_golem_throw_stone" />
-	<OnSpellHit name="Play_melee_impact_small_heavy" />
+    <OnCastStart name="Play_shapeshifter_golem_throw_stone" />
+    <OnCastCanceled name="Stop_shapeshifter_golem_throw_stone" />
+    <OnCastInterrupted name="Stop_shapeshifter_golem_throw_stone" />
+    <OnSpellHit name="Play_melee_impact_small_heavy" />
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_SHAPESHIFTER_CRYSTAL_COBRA_SPIT_CAST" >
-	<OnCastStart name="Play_mob_crystal_cobra_bite_castload" />
-	<OnCastFinished name="Play_mob_crystal_cobra_spit" />
-	<OnSpellHit name="Play_mob_crystal_cobra_poison_spit_impact" />
+    <OnCastStart name="Play_mob_crystal_cobra_bite_castload" />
+    <OnCastFinished name="Play_mob_crystal_cobra_spit" />
+    <OnSpellHit name="Play_mob_crystal_cobra_poison_spit_impact" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_SHAPESHIFTER_CRYSTAL_COBRA_CAST_INTIMIDATE" >
-	<OnCastStart name="Play_mob_crystal_cobra_intimidate_start" />
+	  <OnCastStart name="Play_mob_crystal_cobra_intimidate_start" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_SHAPESHIFTER_CRYSTAL_COBRA_CHANNEL_INTIMIDATE">
-	<OnChannelingStart name="Play_mob_crystal_cobra_intimidate_loop"/>
-	<OnChannelingCancelled name="Play_mob_crystal_cobra_intimidate_stop"/>
-	<OnChannelingEnd name="Play_mob_crystal_cobra_intimidate_stop" />
-	<OnChannelingInterrupted name="Play_mob_crystal_cobra_intimidate_stop" />
+    <OnChannelingStart name="Play_mob_crystal_cobra_intimidate_loop"/>
+    <OnChannelingCancelled name="Play_mob_crystal_cobra_intimidate_stop"/>
+    <OnChannelingEnd name="Play_mob_crystal_cobra_intimidate_stop" />
+    <OnChannelingInterrupted name="Play_mob_crystal_cobra_intimidate_stop" />
   </WwiseEventInfo>
 
 	<!-- Tracking -->
@@ -6340,7 +6387,7 @@
 	<OnCastStart name="Play_tracking_bear_load_roar_big" />
 	<OnCastCanceled name="Stop_tracking_bear_load_roar_big" />
 	<OnCastInterrupted name="Stop_tracking_bear_load_roar_big" />
-	<OnCastFinished name="Play_tracking_bear_roar" />
+	<OnCastFinished name="Play_tracking_bear_shockwave" />
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_TRACKING_BEAR_ESCAPE_ROAR">
@@ -6622,6 +6669,9 @@
   <WwiseEventInfo name="SPELL_SELF_BUFF">
     <OnCastStart name="Play_selfbuff_cast" />
   </WwiseEventInfo>
+    <WwiseEventInfo name="SPELL_SELF_BUFF_PURGINGSHIELD">
+    <OnCastStart name="Play_cast_purgingshield_buff" />
+  </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_SELF_BUFF_SPEAR">
 	<OnCastFinished name="Play_self_spell_spear" />
   </WwiseEventInfo>
@@ -6653,7 +6703,7 @@
     <OnSpellHit name="Play_selfbuff_cast" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_SELF_BUFF_SOFTER_HIT">
-	<OnSpellHit name="Play_cast_selfbuff_soft" />
+	  <OnSpellHit name="Play_cast_selfbuff_soft" />
   </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_VITALITY_BUFF_HIT">
     <OnSpellHit name="Play_vitality_increase" />
@@ -6974,7 +7024,13 @@
   <WwiseEventInfo name="SPELL_CAST_ABYSS_EYES">
     <OnCastFinished name="Play_spell_armor_abyss_eyes_cast" />
   </WwiseEventInfo>
-	
+
+  <WwiseEventInfo name="SPELL_CAST_ENFEEBLEAURA">
+   <OnCastStart name="Play_armor_enfeeble_aura_cast" />
+   <OnCastCanceled name="Stop_armor_enfeeble_aura_cast" />
+   <OnCastInterrupted name="Stop_armor_enfeeble_aura_cast" />
+  </WwiseEventInfo>
+
   <WwiseEventInfo name="SPELL_SPRINTHOT_BUFF_IMPACT">
     <OnCastFinished name="Play_speed_increase" />
 	<OnSpellHit name="Play_nature_impact_heal_buff_small" />
@@ -8124,12 +8180,18 @@
 	<OnCastStart name="Play_heretic_lumberjack_strike" />
 	<OnCastCanceled name="Stop_keeper_berserk_cast_load_smash" />
 	<OnCastInterrupted name="Stop_keeper_berserk_cast_load_smash" />
+	<OnSpellHit name="Play_melee_impact_medium_metallic" >
+	  <ImpactType/>
+	</OnSpellHit>
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_HERETIC_LUMBERJACK_STRIKE_SMASH_18CT">
 	<OnCastStart name="Play_heretic_lumberjack_strike_ct18" />
 	<OnCastCanceled name="Stop_keeper_berserk_cast_load_smash" />
 	<OnCastInterrupted name="Stop_keeper_berserk_cast_load_smash" />
+	<OnSpellHit name="Play_melee_impact_medium_metallic" >
+	  <ImpactType/>
+	</OnSpellHit>
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_HERETIC_LUMBERJACK_BLEED">
@@ -8299,6 +8361,10 @@
     <OnCastCanceled name="Stop_melee_swoosh_load_medium" />
     <OnCastInterrupted name="Stop_melee_swoosh_load_medium" />
     <OnCastFinished name="Play_keeper_berserk_axe_swoosh_double"/>
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_KEEPER_BERSERK_SWING_DOUBLE_NOCAST">
+	<OnCastFinished name="Play_keeper_berserk_axe_swoosh_double"/>
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_KEEPER_BERSERK_ROCKSLIDE">
@@ -10481,6 +10547,53 @@
 	<OnCastFinished name="Play_anniversary_statue_shout" />
   </WwiseEventInfo>
 	
+  <!-- Drake & Dragon Spells -->
+
+  <WwiseEventInfo name="MOB_DRAGON_DRAKE_GRUNT">
+	  <OnCastStart name="Play_mob_dragon_drake_grunt" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="MOB_DRAGON_DRAKE_ROAR">
+	  <OnCastStart name="Play_mob_dragon_drake_roar" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="MOB_DRAGON_DRAKE_ROAR_LONG">
+	  <OnCastStart name="Play_mob_dragon_drake_roar_long" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="MOB_DRAGON_FIRE_LOAD_JUMP">
+	  <OnCastStart name="Play_mob_dragon_fire_grunt_load_jump" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="MOB_DRAGON_FIRE_LOAD_JUMP_DELAYED">
+	  <OnCastStart name="Play_mob_dragon_fire_grunt_load_jump_delayed" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="MOB_DRAGON_FIRE_ATTACK_GRUNT_LOAD">
+	  <OnCastStart name="Play_mob_dragon_fire_grunt" />
+  </WwiseEventInfo>
+  
+  <WwiseEventInfo name="MOB_DRAGON_FIRE_ANNOYED">
+	  <OnCastFinished name="Play_mob_dragon_fire_annoyed" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="MOB_DRAGON_FIRE_CAST">
+	  <OnCastFinished name="Play_mob_dragon_fire_cast" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="MOB_DRAGON_FIRE_LOAD">
+	  <OnCastFinished name="Play_mob_dragon_fire_load" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="MOB_DRAGON_FIRE_PHASE_CHANGE">
+	  <OnCastFinished name="Play_mob_dragon_fire_phase_change" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="MOB_DRAGON_FIRE_ROAR_LONG">
+	  <OnCastFinished name="Play_mob_dragon_fire_roar_long" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="MOB_DRAGON_FIRE_ROAR">
+	  <OnCastFinished name="Play_mob_dragon_fire_roar" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="MOB_DRAGON_FIRE_ATTACK_GRUNT">
+	  <OnCastFinished name="Play_mob_dragon_fire_grunt" />
+  </WwiseEventInfo>
+  <WwiseEventInfo name="MOB_DRAGON_FIRE_ROAR_STARTING_AGGRO">
+	  <OnCastFinished name="Play_mob_dragon_fire_roar_startingaggro" />
+  </WwiseEventInfo>
+
 	<!-- Mount Speed -->
 
   <WwiseEventInfo name="SPELL_MOUNT_SPEED">

@@ -2,29 +2,29 @@
 <armory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="armory.xsd">
     <tagdefinitions>
         <taggroup id="groupsize" name="@ARMORY_TAG_GROUP_SIZE">
-            <tag id="solo" name="@ARMORY_TAG_GROUP_SIZE_SOLO"/>         <!-- 1 player only -->
-            <tag id="small_group" name="@ARMORY_TAG_GROUP_SIZE_SMALL"/> <!-- 1-3 players -->
-            <tag id="medium_group" name="@ARMORY_TAG_GROUP_SIZE_MEDIUM"/> <!-- 4-10 players -->
-            <tag id="large_group" name="@ARMORY_TAG_GROUP_SIZE_LARGE"/>  <!-- 11-20 players -->
-            <tag id="zerg" name="@ARMORY_TAG_GROUP_SIZE_ZERG"/>         <!-- 21+ players -->
+            <tag id="solo" name="@ARMORY_TAG_GROUP_SIZE_SOLO" shortname="@ARMORY_TAG_GROUP_SIZE_SOLO_SHORT"/>
+            <tag id="small_group" name="@ARMORY_TAG_GROUP_SIZE_SMALL" shortname="@ARMORY_TAG_GROUP_SIZE_SMALL_SHORT"/>
+            <tag id="medium_group" name="@ARMORY_TAG_GROUP_SIZE_MEDIUM" shortname="@ARMORY_TAG_GROUP_SIZE_MEDIUM_SHORT"/>
+            <tag id="large_group" name="@ARMORY_TAG_GROUP_SIZE_LARGE" shortname="@ARMORY_TAG_GROUP_SIZE_LARGE_SHORT"/>
+            <tag id="army" name="@ARMORY_TAG_GROUP_SIZE_ARMY" shortname="@ARMORY_TAG_GROUP_SIZE_ARMY_SHORT"/>
         </taggroup>
         <taggroup id="activitytype" name="@ARMORY_TAG_GROUP_ACTIVITY_TYPE">
-            <tag id="pve" name="@ARMORY_TAG_ACTIVITY_TYPE_PVE"/>
-            <tag id="pvp" name="@ARMORY_TAG_ACTIVITY_TYPE_PVP"/>
-            <tag id="gathering" name="@ARMORY_TAG_ACTIVITY_TYPE_GATHERING"/>
-
-            <tag id="openworld" name="@ARMORY_TAG_ACTIVITY_TYPE_OPENWORLD"/>
-            <tag id="instanced" name="@ARMORY_TAG_ACTIVITY_TYPE_INSTANCED"/>
-            <tag id="dungeons" name="@ARMORY_TAG_ACTIVITY_TYPE_DUNGEONS"/>
-
-            <tag id="competitive" name="@ARMORY_TAG_ACTIVITY_TYPE_COMPETITIVE"/>
-            <tag id="conquering" name="@ARMORY_TAG_ACTIVITY_TYPE_CONQUERING"/>
+            <tag id="pve" name="@ARMORY_TAG_ACTIVITY_TYPE_PVE" shortname="@ARMORY_TAG_ACTIVITY_TYPE_PVE_SHORT"/>
+            <tag id="pvp" name="@ARMORY_TAG_ACTIVITY_TYPE_PVP" shortname="@ARMORY_TAG_ACTIVITY_TYPE_PVP_SHORT"/>
+            <tag id="gathering" name="@ARMORY_TAG_ACTIVITY_TYPE_GATHERING" shortname="@ARMORY_TAG_ACTIVITY_TYPE_GATHERING_SHORT"/>
+            <tag id="openworld" name="@ARMORY_TAG_ACTIVITY_TYPE_OPENWORLD" shortname="@ARMORY_TAG_ACTIVITY_TYPE_OPENWORLD_SHORT"/>
+            <tag id="instanced" name="@ARMORY_TAG_ACTIVITY_TYPE_INSTANCED" shortname="@ARMORY_TAG_ACTIVITY_TYPE_INSTANCED_SHORT"/>
+            <tag id="dungeons" name="@ARMORY_TAG_ACTIVITY_TYPE_DUNGEONS" shortname="@ARMORY_TAG_ACTIVITY_TYPE_DUNGEONS_SHORT"/>
+            <tag id="competitive" name="@ARMORY_TAG_ACTIVITY_TYPE_COMPETITIVE" shortname="@ARMORY_TAG_ACTIVITY_TYPE_COMPETITIVE_SHORT"/>
+            <tag id="conquering" name="@ARMORY_TAG_ACTIVITY_TYPE_CONQUERING" shortname="@ARMORY_TAG_ACTIVITY_TYPE_CONQUERING_SHORT"/>
         </taggroup>
     </tagdefinitions>
 
+    <settings confidencefloor="0.2"
+              popularityweight="0.4"/>
+
     <activities>
-        <!-- name and description are optional, fallback always to @ARMORY_ACTIVITY_{ACTIVITY}_NAME, @ARMORY_ACTIVITY_{ACTIVITY}_DESC -->
-        <activity uniquename="openworldsolo" image="">
+        <activity uniquename="openworldsolo" image="Gui/Armory/ARMORY_OPEN_WORLD_SOLO">
             <tags>
                 <tag ref="solo"/>
                 <tag ref="small_group"/>
@@ -44,8 +44,15 @@
                     </and>
                 </or>
             </datasetrequirements>
+            <scoreweights minuses="3" minusesbaseline="5">
+                <weight metric="kills" value="0.2"/>
+                <weight metric="deaths" value="-0.2"/>
+                <weight metrics="damagedealt,healingdone" value="0.2"/>
+                <weight metric="pvpfamegained" value="0.2"/>
+                <weight metric="pvefamegained" value="0.3"/>
+            </scoreweights>
         </activity>
-        <activity uniquename="openworldgroup" image="">
+        <activity uniquename="openworldgroup" image="Gui/Armory/ARMORY_OPEN_WORLD_GROUP">
             <tags>
                 <tag ref="medium_group"/>
                 <tag ref="openworld"/>
@@ -64,8 +71,15 @@
                     </and>
                 </or>
             </datasetrequirements>
+            <scoreweights minuses="2" minusesbaseline="3">
+                <weight metric="kills" value="0.2"/>
+                <weight metric="deaths" value="-0.2"/>
+                <weight metrics="damagedealt,healingdone" value="0.2"/>
+                <weight metric="pvpfamegained" value="0.2"/>
+                <weight metric="pvefamegained" value="0.3"/>
+            </scoreweights>
         </activity>
-        <activity uniquename="openworldlargegroup" image="">
+        <activity uniquename="openworldlargegroup" image="Gui/Armory/ARMORY_OPEN_WORLD_LARGE_GROUP">
             <tags>
                 <tag ref="large_group"/>
                 <tag ref="openworld"/>
@@ -84,10 +98,17 @@
                     </and>
                 </or>
             </datasetrequirements>
+            <scoreweights minuses="1">
+                <weight metric="kills" value="0.2"/>
+                <weight metric="deaths" value="-0.2"/>
+                <weight metrics="damagereceived,healingdone" value="0.3"/>
+                <weight metric="pvpfamegained" value="0.2"/>
+                <weight metric="pvefamegained" value="0.3"/>
+            </scoreweights>
         </activity>
-        <activity uniquename="zvz" image="">
+        <activity uniquename="zvz" image="Gui/Armory/ARMORY_ZvZ">
             <tags>
-                <tag ref="zerg"/>
+                <tag ref="army"/>
                 <tag ref="openworld"/>
                 <tag ref="pve"/>
                 <tag ref="pvp"/>
@@ -105,8 +126,14 @@
                     </or>
                 </and>
             </datasetrequirements>
+            <scoreweights minuses="1">
+                <weight metric="kills" value="0.2"/>
+                <weight metric="deaths" value="-0.2"/>
+                <weight metrics="healingdone,damagereceived" value="0.3"/>
+                <weight metric="pvpfamegained" value="0.3"/>
+            </scoreweights>
         </activity>
-        <activity uniquename="corrupteddungeons" image="">
+        <activity uniquename="corrupteddungeons" image="Gui/Armory/ARMORY_CORRUPTED_DUNGEONS">
             <tags>
                 <tag ref="solo"/>
                 <tag ref="instanced"/>
@@ -120,8 +147,14 @@
                     <metric name="kills" minvalue="1"/>
                 </or>
             </datasetrequirements>
+            <scoreweights minuses="2" minusesbaseline="5">
+                <weight metric="successwin" value="0.5"/>
+                <weight metric="kills" value="0.2"/>
+                <weight metric="deaths" value="-0.2"/>
+                <weight metric="pvpfamegained" value="0.2"/>
+            </scoreweights>
         </activity>
-        <activity uniquename="hellgate2v2" image="">
+        <activity uniquename="hellgate2v2" image="Gui/Armory/ARMORY_HELLGATE_2v2">
             <tags>
                 <tag ref="small_group"/>
                 <tag ref="instanced"/>
@@ -135,8 +168,14 @@
                     <metric name="kills" minvalue="1"/>
                 </or>
             </datasetrequirements>
+            <scoreweights minuses="3" minusesbaseline="5">
+                <weight metric="successwin" value="0.5"/>
+                <weight metric="kills" value="0.2"/>
+                <weight metric="deaths" value="-0.2"/>
+                <weight metric="pvpfamegained" value="0.2"/>
+            </scoreweights>
         </activity>
-        <activity uniquename="hellgate5v5" image="">
+        <activity uniquename="hellgate5v5" image="Gui/Armory/ARMORY_HELLGATE_5v5">
             <tags>
                 <tag ref="medium_group"/>
                 <tag ref="instanced"/>
@@ -150,8 +189,15 @@
                     <metric name="kills" minvalue="1"/>
                 </or>
             </datasetrequirements>
+            <scoreweights minuses="1" minusesbaseline="2">
+                <weight metric="successwin" value="0.5"/>
+                <weight metric="kills" value="0.2"/>
+                <weight metric="deaths" value="-0.2"/>
+                <weight metric="pvpfamegained" value="0.2"/>
+                <weight metric="healingdone" value="0.5"/>
+            </scoreweights>
         </activity>
-        <activity uniquename="crystalleague5v5" image="">
+        <activity uniquename="crystalleague5v5" image="Gui/Armory/ARMORY_CRYSTAL_LEAGUE_5v5">
             <tags>
                 <tag ref="medium_group"/>
                 <tag ref="instanced"/>
@@ -168,8 +214,14 @@
                     </or>
                 </and>
             </datasetrequirements>
+            <scoreweights minuses="1">
+                <weight metric="successwin" value="0.5"/>
+                <weight metric="kills" value="0.2"/>
+                <weight metric="deaths" value="-0.2"/>
+                <weight metrics="damagedealt,healingdone,damagereceived" value="0.2"/>
+            </scoreweights>
         </activity>
-        <activity uniquename="crystalleague20v20" image="">
+        <activity uniquename="crystalleague20v20" image="Gui/Armory/ARMORY_CRYSTAL_LEAGUE_20v20">
             <tags>
                 <tag ref="large_group"/>
                 <tag ref="instanced"/>
@@ -186,8 +238,14 @@
                     </or>
                 </and>
             </datasetrequirements>
+            <scoreweights minuses="1" minperformancescore="0.6">
+                <weight metric="successwin" value="0.5"/>
+                <weight metric="kills" value="0.2"/>
+                <weight metric="deaths" value="-0.2"/>
+                <weight metrics="damagedealt,healingdone,damagereceived" value="0.2"/>
+            </scoreweights>
         </activity>
-        <activity uniquename="crystalarena" image="">
+        <activity uniquename="crystalarena" image="Gui/Armory/ARMORY_CRYSTAL_ARENA">
             <tags>
                 <tag ref="medium_group"/>
                 <tag ref="instanced"/>
@@ -204,8 +262,15 @@
                     </or>
                 </and>
             </datasetrequirements>
+            <scoreweights minuses="3" minusesbaseline="5">
+                <weight metric="successwin" value="0.5"/>
+                <weight metric="kills" value="0.2"/>
+                <weight metric="deaths" value="-0.2"/>
+                <weight metrics="damagedealt,damagereceived" value="0.2"/>
+                <weight metric="healingdone" value="0.1"/>
+            </scoreweights>
         </activity>
-        <activity uniquename="arena" image="">
+        <activity uniquename="arena" image="Gui/Armory/ARMORY_ARENA">
             <tags>
                 <tag ref="medium_group"/>
                 <tag ref="instanced"/>
@@ -222,8 +287,15 @@
                     </or>
                 </and>
             </datasetrequirements>
+            <scoreweights minuses="3" minusesbaseline="5">
+              <weight metric="successwin" value="0.5"/>
+              <weight metric="kills" value="0.2"/>
+              <weight metric="deaths" value="-0.2"/>
+              <weight metrics="damagedealt,damagereceived" value="0.2"/>
+              <weight metric="healingdone" value="0.1"/>
+            </scoreweights>
         </activity>
-        <activity uniquename="mists" image="">
+        <activity uniquename="mists" image="Gui/Armory/ARMORY_MIST">
             <tags>
                 <tag ref="small_group"/>
                 <tag ref="instanced"/>
@@ -233,11 +305,11 @@
             </tags>
             <datasetrequirements>
                 <or>
-                    <and> <!-- PvP Combat Scenario -->
+                    <and>
                         <duration mindurationminutes="5"/>
                         <metric name="pvpfamegained" minvalue="25000"/>
                     </and>
-                    <and> <!-- PvE Scenario -->
+                    <and>
                         <duration mindurationminutes="5"/>
                         <or>
                             <metric name="pvefamegained" minvalue="50000"/>
@@ -246,12 +318,19 @@
                     </and>
                 </or>
             </datasetrequirements>
+            <scoreweights minuses="3" minusesbaseline="5">
+                <weight metric="kills" value="0.2"/>
+                <weight metric="deaths" value="-0.2"/>
+                <weight metrics="damagedealt,healingdone" value="0.2"/>
+                <weight metric="pvpfamegained" value="0.2"/>
+                <weight metric="pvefamegained" value="0.3"/>
+            </scoreweights>
         </activity>
-        <activity uniquename="factionwarfare" image="">
+        <activity uniquename="factionwarfare" image="Gui/Armory/ARMORY_FACTION_WARFARE">
             <tags>
                 <tag ref="medium_group"/>
                 <tag ref="large_group"/>
-                <tag ref="zerg"/>
+                <tag ref="army"/>
                 <tag ref="openworld"/>
                 <tag ref="pvp"/>
                 <tag ref="conquering"/>
@@ -268,11 +347,18 @@
                     </or>
                 </and>
             </datasetrequirements>
+            <scoreweights minuses="4" minusesbaseline="5">
+                <weight metric="outpostcaptured" value="0.4"/>
+                <weight metric="kills" value="0.2"/>
+                <weight metric="deaths" value="-0.2"/>
+                <weight metrics="damagedealt,healingdone,damagereceived" value="0.2"/>
+                <weight metric="pvpfamegained" value="0.2"/>
+            </scoreweights>
         </activity>
-        <activity uniquename="castle" image="">
+        <activity uniquename="castle" image="Gui/Armory/ARMORY_CASTLE">
             <tags>
                 <tag ref="large_group"/>
-                <tag ref="zerg"/>
+                <tag ref="army"/>
                 <tag ref="openworld"/>
                 <tag ref="pvp"/>
                 <tag ref="conquering"/>
@@ -289,11 +375,18 @@
                     </or>
                 </and>
             </datasetrequirements>
+            <scoreweights minuses="1" stablebucketcoverage="2">
+                <weight metric="successwin" value="0.4"/>
+                <weight metric="kills" value="0.2"/>
+                <weight metric="deaths" value="-0.2"/>
+                <weight metrics="damagedealt,healingdone,damagereceived" value="0.2"/>
+                <weight metric="pvpfamegained" value="0.2"/>
+            </scoreweights>
         </activity>
-        <activity uniquename="fortification" image="">
+        <activity uniquename="fortification" image="Gui/Armory/ARMORY_FORTIFICATION">
             <tags>
                 <tag ref="large_group"/>
-                <tag ref="zerg"/>
+                <tag ref="army"/>
                 <tag ref="openworld"/>
                 <tag ref="pvp"/>
                 <tag ref="conquering"/>
@@ -310,8 +403,15 @@
                     </or>
                 </and>
             </datasetrequirements>
+            <scoreweights minuses="2" stablebucketcoverage="2">
+                <weight metric="buildingdamage" value="0.4"/>
+                <weight metric="kills" value="0.2"/>
+                <weight metric="deaths" value="-0.2"/>
+                <weight metrics="damagedealt,healingdone,damagereceived" value="0.2"/>
+                <weight metric="pvpfamegained" value="0.2"/>
+            </scoreweights>
         </activity>
-        <activity uniquename="avalonianroads" image="">
+        <activity uniquename="avalonianroads" image="Gui/Armory/ARMORY_AVALONIAN_ROADS">
             <tags>
                 <tag ref="solo"/>
                 <tag ref="small_group"/>
@@ -329,19 +429,29 @@
                     </or>
                 </and>
             </datasetrequirements>
+            <scoreweights minuses="3" minusesbaseline="5">
+                <weight metric="kills" value="0.2"/>
+                <weight metric="deaths" value="-0.2"/>
+                <weight metrics="damagereceived,healingdone" value="0.2"/>
+                <weight metric="pvpfamegained" value="0.4"/>
+                <weight metric="pvefamegained" value="0.2"/>
+            </scoreweights>
         </activity>
-        <activity uniquename="gathering" image="">
+        <activity uniquename="gathering" image="Gui/Armory/ARMORY_GATHERING">
             <tags>
                 <tag ref="solo"/>
                 <tag ref="openworld"/>
                 <tag ref="gathering"/>
             </tags>
             <datasetrequirements>
-                <!--TODO: gatheringfamegained metric-->
                 <duration mindurationminutes="15"/>
             </datasetrequirements>
+            <scoreweights minuses="2" minusesbaseline="3">
+                <weight metric="deaths" value="-0.40"/>
+                <weight metric="pvefamegained" value="0.60"/>
+            </scoreweights>
         </activity>
-        <activity uniquename="solodungeons" image="">
+        <activity uniquename="solodungeons" image="Gui/Armory/ARMORY_SOLO_DUNGEON">
             <tags>
                 <tag ref="solo"/>
                 <tag ref="small_group"/>
@@ -355,8 +465,13 @@
                     <metric name="mobskilled" minvalue="20"/>
                 </and>
             </datasetrequirements>
+            <scoreweights minuses="4" minusesbaseline="5">
+                <weight metric="deaths" value="-0.3"/>
+                <weight metric="mobskilled" value="0.2"/>
+                <weight metric="pvefamegained" value="0.4"/>
+            </scoreweights>
         </activity>
-        <activity uniquename="groupdungeons" image="">
+        <activity uniquename="groupdungeons" image="Gui/Armory/ARMORY_GROUP_DUNGEON">
             <tags>
                 <tag ref="small_group"/>
                 <tag ref="medium_group"/>
@@ -370,8 +485,14 @@
                     <metric name="mobskilled" minvalue="20"/>
                 </or>
             </datasetrequirements>
+            <scoreweights minuses="3" minusesbaseline="5">
+                <weight metric="deaths" value="-0.3"/>
+                <weight metric="mobskilled" value="0.2"/>
+                <weight metric="pvefamegained" value="0.4"/>
+                <weight metrics="damagereceived,healingdone" value="0.4" />
+            </scoreweights>
         </activity>
-        <activity uniquename="avaloniandungeons" image="">
+        <activity uniquename="avaloniandungeons" image="Gui/Armory/ARMORY_AVALONIAN_DUNGEON">
             <tags>
                 <tag ref="large_group"/>
                 <tag ref="instanced"/>
@@ -384,8 +505,13 @@
                     <metric name="mobskilled" minvalue="20"/>
                 </or>
             </datasetrequirements>
+            <scoreweights minuses="2">
+                <weight metric="deaths" value="-0.2"/>
+                <weight metric="mobskilled" value="0.2"/>
+                <weight metric="pvefamegained" value="0.4"/>
+            </scoreweights>
         </activity>
-        <activity uniquename="hardcoreexpeditions" image="">
+        <activity uniquename="hardcoreexpeditions" image="Gui/Armory/ARMORY_HARDCORE_EXPEDITION">
             <tags>
                 <tag ref="medium_group"/>
                 <tag ref="instanced"/>
@@ -398,8 +524,13 @@
                     <metric name="mobskilled" minvalue="20"/>
                 </or>
             </datasetrequirements>
+            <scoreweights minuses="1" minperformancescore="0">
+                <weight metric="successwin" value="0.5"/>
+                <weight metric="deaths" value="-0.2"/>
+                <weight metric="pvefamegained" value="0.4"/>
+            </scoreweights>
         </activity>
-        <activity uniquename="homebase" image="">
+        <activity uniquename="homebase" image="Gui/Armory/ARMORY_HOME_BASE">
             <tags>
                 <tag ref="medium_group"/>
                 <tag ref="openworld"/>
@@ -411,8 +542,13 @@
                     <metric name="pvefamegained" minvalue="500000"/>
                 </and>
             </datasetrequirements>
+            <scoreweights minuses="1" stablebucketcoverage="2">
+                <weight metric="deaths" value="-0.4"/>
+                <weight metric="mobskilled" value="0.2"/>
+                <weight metric="pvefamegained" value="0.4"/>
+            </scoreweights>
         </activity>
-        <activity uniquename="tracking" image="">
+        <activity uniquename="tracking" image="Gui/Armory/ARMORY_TRACKING">
             <tags>
                 <tag ref="solo"/>
                 <tag ref="small_group"/>
@@ -422,10 +558,16 @@
                 <tag ref="gathering"/>
             </tags>
             <datasetrequirements>
-              <metric name="successwin" minvalue="1"/>
+                <metric name="successwin" minvalue="1"/>
             </datasetrequirements>
+            <scoreweights minuses="2" minusesbaseline="3">
+                <weight metric="successwin" value="0.4"/>
+                <weight metric="deaths" value="-0.2"/>
+                <weight metric="pvefamegained" value="0.20"/>
+                <weight metrics="damagereceived,healingdone" value="0.2" />
+            </scoreweights>
         </activity>
-        <activity uniquename="helldungeons2v2" image="">
+        <activity uniquename="helldungeons2v2" image="Gui/Armory/ARMORY_HELL_DUNGEONS">
             <tags>
                 <tag ref="small_group"/>
                 <tag ref="instanced"/>
@@ -445,8 +587,15 @@
                     </and>
                 </or>
             </datasetrequirements>
+            <scoreweights minuses="3" minusesbaseline="5">
+                <weight metric="kills" value="0.2"/>
+                <weight metric="deaths" value="-0.2"/>
+                <weight metrics="damagedealt,healingdone" value="0.2"/>
+                <weight metric="pvpfamegained" value="0.2"/>
+                <weight metric="pvefamegained" value="0.3"/>
+            </scoreweights>
         </activity>
-        <activity uniquename="helldungeons3v3" image="">
+        <activity uniquename="helldungeons3v3" image="Gui/Armory/ARMORY_HELL_DUNGEONS">
             <tags>
                 <tag ref="small_group"/>
                 <tag ref="instanced"/>
@@ -464,6 +613,13 @@
                     </or>
                 </and>
             </datasetrequirements>
+            <scoreweights minuses="3" minusesbaseline="5">
+                <weight metric="kills" value="0.2"/>
+                <weight metric="deaths" value="-0.2"/>
+                <weight metrics="damagedealt,healingdone" value="0.2"/>
+                <weight metric="pvpfamegained" value="0.2"/>
+                <weight metric="pvefamegained" value="0.3"/>
+            </scoreweights>
         </activity>
     </activities>
 </armory>
