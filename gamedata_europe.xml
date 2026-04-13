@@ -25,7 +25,7 @@
 		<MiniMap zergcellsize="40.0" zergmingroupsize="11" maxplayerspermsg="30" staticdungeonminimapdisplayinterestareamodifier="115" />
 		<ClientUpdate moveupdateinms="100" />
 		<Items vanishtimeforunuseditems="432000" />
-		<Guild cost="1000000" guildinvitationdelayinseconds="300" initialclaimterritoryguildfamerequirement="1000000" claimterritoryguildfamerequirement="1000000" territorybuff="GUILD_TERRITORY_BUFF" guildlogochangecooldownminutes="2880" guildchangecooldownminutes="4320" newplayerguildlockgraceperiodminutes="10080" guildlogochangegoldcosts="3000" guildlogochangesilvercosts="0" maxhideouts="6" maxplayers="300" hqdeclarationcooldowndays="14" hqlostblockedaccessrightscooldowndays="7" hqbeforeprimetimeblockingperiodminutes="120">
+		<Guild cost="1000000" guildinvitationdelayinseconds="300" initialclaimterritoryguildfamerequirement="1000000" claimterritoryguildfamerequirement="1000000" territorybuff="GUILD_TERRITORY_BUFF" guildlogochangecooldownminutes="2880" guildchangecooldownminutes="4320" newplayerguildlockgraceperiodminutes="10080" guildlogochangegoldcosts="3000" guildlogochangesilvercosts="0" maxhideouts="6" maxplayers="300" hqdeclarationcooldowndays="14" hqlostblockedaccessrightscooldowndays="7" hqbeforeprimetimeblockingperiodminutes="120" guildleaveprotectioninsecs="30">
 			<guildinvitationlimits declinedinvitefalloffseconds="3600">
 				<invitesdeclined amount="0" cooldownafternewdecline="0" maximumsimultaneousinvites="300" />
 				<invitesdeclined amount="5" cooldownafternewdecline="60" maximumsimultaneousinvites="10" />
@@ -42,7 +42,7 @@
 		</transactionlimits>
 
 		<Territory territoryclaimtimeinsec="15" />
-		<Alliance cost="5000000" upkeeptimerinmin="10080" upkeepcostperguild="0" changecooldownminutes="10080" maxplayers="30000" maxguilds="100" />
+		<Alliance cost="5000000" upkeeptimerinmin="10080" upkeepcostperguild="0" changecooldownminutes="10080" allianceleaveprotectioninsec="30" maxplayers="30000" maxguilds="100" />
 		<GoldMarket setupsellordercost="10" setupbuyordercost="10" swaptransactiongoldpurchaseinterval="5" />
 		<Respawn autorespawntimerinsecs="600" />
 		<PveFameSession sessionconclusiondelaysecs="600" />
@@ -334,7 +334,7 @@
 		<attackers numbergreaterorequal="19" buff="HEALINGSICKNESS_19" />
 		<attackers numbergreaterorequal="20" buff="HEALINGSICKNESS_20" />
 	</PlayerHealingSickness>
-  <ZergDebuff checkfrequency="20">
+  <ZergDebuff checkfrequency="20" mountdisarrayfreeallotment="15">
     <allies numbergreaterorequal="21" debuff="ZERGDEBUFF_LVL1" damagemodifier="0.99" ccdurationmodifier="0.99" amplifieddebuff="ZERGDEBUFF_AMPLIFIED_LVL1" amplifieddamagemodifier="0.79" amplifiedccdurationmodifier="0.79" />
     <allies numbergreaterorequal="22" debuff="ZERGDEBUFF_LVL2" damagemodifier="0.98" ccdurationmodifier="0.98" amplifieddebuff="ZERGDEBUFF_AMPLIFIED_LVL2" amplifieddamagemodifier="0.78" amplifiedccdurationmodifier="0.78" />
     <allies numbergreaterorequal="23" debuff="ZERGDEBUFF_LVL3" damagemodifier="0.97" ccdurationmodifier="0.97" amplifieddebuff="ZERGDEBUFF_AMPLIFIED_LVL3" amplifieddamagemodifier="0.77" amplifiedccdurationmodifier="0.77" />
@@ -402,6 +402,38 @@
     <allies numbergreaterorequal="385" debuff="ZERGDEBUFF_LVL65" damagemodifier="0.35" ccdurationmodifier="0.35" amplifieddebuff="ZERGDEBUFF_AMPLIFIED_LVL65" amplifieddamagemodifier="0.15" amplifiedccdurationmodifier="0.15" />
     <allies numbergreaterorequal="412" debuff="ZERGDEBUFF_LVL66" damagemodifier="0.34" ccdurationmodifier="0.34" amplifieddebuff="ZERGDEBUFF_AMPLIFIED_LVL66" amplifieddamagemodifier="0.14" amplifiedccdurationmodifier="0.14" />
     <allies numbergreaterorequal="445" debuff="ZERGDEBUFF_LVL67" damagemodifier="0.33" ccdurationmodifier="0.33" amplifieddebuff="ZERGDEBUFF_AMPLIFIED_LVL67" amplifieddamagemodifier="0.13" amplifiedccdurationmodifier="0.13" />
+    <allies numbergreaterorequal="480" debuff="ZERGDEBUFF_LVL68" damagemodifier="0.32" ccdurationmodifier="0.32" amplifieddebuff="ZERGDEBUFF_AMPLIFIED_LVL68" amplifieddamagemodifier="0.12" amplifiedccdurationmodifier="0.12" />
+    <allies numbergreaterorequal="522" debuff="ZERGDEBUFF_LVL69" damagemodifier="0.31" ccdurationmodifier="0.31" amplifieddebuff="ZERGDEBUFF_AMPLIFIED_LVL69" amplifieddamagemodifier="0.11" amplifiedccdurationmodifier="0.11" />
+    <allies numbergreaterorequal="572" debuff="ZERGDEBUFF_LVL70" damagemodifier="0.30" ccdurationmodifier="0.30" amplifieddebuff="ZERGDEBUFF_AMPLIFIED_LVL70" amplifieddamagemodifier="0.10" amplifiedccdurationmodifier="0.10" />
+    <allies numbergreaterorequal="632" debuff="ZERGDEBUFF_LVL71" damagemodifier="0.29" ccdurationmodifier="0.29" amplifieddebuff="ZERGDEBUFF_AMPLIFIED_LVL71" amplifieddamagemodifier="0.09" amplifiedccdurationmodifier="0.09" />
+    <allies numbergreaterorequal="706" debuff="ZERGDEBUFF_LVL72" damagemodifier="0.28" ccdurationmodifier="0.28" amplifieddebuff="ZERGDEBUFF_AMPLIFIED_LVL72" amplifieddamagemodifier="0.08" amplifiedccdurationmodifier="0.08" />
+    <allies numbergreaterorequal="800" debuff="ZERGDEBUFF_LVL73" damagemodifier="0.27" ccdurationmodifier="0.27" amplifieddebuff="ZERGDEBUFF_AMPLIFIED_LVL73" amplifieddamagemodifier="0.07" amplifiedccdurationmodifier="0.07" />
+    <allies numbergreaterorequal="924" debuff="ZERGDEBUFF_LVL74" damagemodifier="0.26" ccdurationmodifier="0.26" amplifieddebuff="ZERGDEBUFF_AMPLIFIED_LVL74" amplifieddamagemodifier="0.06" amplifiedccdurationmodifier="0.06" />
+    <allies numbergreaterorequal="1091" debuff="ZERGDEBUFF_LVL75" damagemodifier="0.25" ccdurationmodifier="0.25" amplifieddebuff="ZERGDEBUFF_AMPLIFIED_LVL75" amplifieddamagemodifier="0.05" amplifiedccdurationmodifier="0.05" />
+    <allies numbergreaterorequal="1334" debuff="ZERGDEBUFF_LVL76" damagemodifier="0.24" ccdurationmodifier="0.24" amplifieddebuff="ZERGDEBUFF_AMPLIFIED_LVL76" amplifieddamagemodifier="0.04" amplifiedccdurationmodifier="0.04" />
+    <allies numbergreaterorequal="1715" debuff="ZERGDEBUFF_LVL77" damagemodifier="0.23" ccdurationmodifier="0.23" amplifieddebuff="ZERGDEBUFF_AMPLIFIED_LVL77" amplifieddamagemodifier="0.03" amplifiedccdurationmodifier="0.03" />
+    <allies numbergreaterorequal="2400" debuff="ZERGDEBUFF_LVL78" damagemodifier="0.22" ccdurationmodifier="0.22" amplifieddebuff="ZERGDEBUFF_AMPLIFIED_LVL78" amplifieddamagemodifier="0.02" amplifiedccdurationmodifier="0.02" />
+    <allies numbergreaterorequal="2500" debuff="ZERGDEBUFF_LVL79" damagemodifier="0.21" ccdurationmodifier="0.21" amplifieddebuff="ZERGDEBUFF_AMPLIFIED_LVL79" amplifieddamagemodifier="0.01" amplifiedccdurationmodifier="0.01" />
+    <allies numbergreaterorequal="2600" debuff="ZERGDEBUFF_LVL80" damagemodifier="0.20" ccdurationmodifier="0.20" amplifieddebuff="ZERGDEBUFF_AMPLIFIED_LVL80" amplifieddamagemodifier="0.01" amplifiedccdurationmodifier="0.01" />
+    <allies numbergreaterorequal="2700" debuff="ZERGDEBUFF_LVL81" damagemodifier="0.19" ccdurationmodifier="0.19" amplifieddebuff="ZERGDEBUFF_AMPLIFIED_LVL81" amplifieddamagemodifier="0.01" amplifiedccdurationmodifier="0.01" />
+    <allies numbergreaterorequal="2800" debuff="ZERGDEBUFF_LVL82" damagemodifier="0.18" ccdurationmodifier="0.18" amplifieddebuff="ZERGDEBUFF_AMPLIFIED_LVL82" amplifieddamagemodifier="0.01" amplifiedccdurationmodifier="0.01" />
+    <allies numbergreaterorequal="2900" debuff="ZERGDEBUFF_LVL83" damagemodifier="0.17" ccdurationmodifier="0.17" amplifieddebuff="ZERGDEBUFF_AMPLIFIED_LVL83" amplifieddamagemodifier="0.01" amplifiedccdurationmodifier="0.01" />
+    <allies numbergreaterorequal="3000" debuff="ZERGDEBUFF_LVL84" damagemodifier="0.16" ccdurationmodifier="0.16" amplifieddebuff="ZERGDEBUFF_AMPLIFIED_LVL84" amplifieddamagemodifier="0.01" amplifiedccdurationmodifier="0.01" />
+    <allies numbergreaterorequal="3100" debuff="ZERGDEBUFF_LVL85" damagemodifier="0.15" ccdurationmodifier="0.15" amplifieddebuff="ZERGDEBUFF_AMPLIFIED_LVL85" amplifieddamagemodifier="0.01" amplifiedccdurationmodifier="0.01" />
+    <allies numbergreaterorequal="3200" debuff="ZERGDEBUFF_LVL86" damagemodifier="0.14" ccdurationmodifier="0.14" amplifieddebuff="ZERGDEBUFF_AMPLIFIED_LVL86" amplifieddamagemodifier="0.01" amplifiedccdurationmodifier="0.01" />
+    <allies numbergreaterorequal="3300" debuff="ZERGDEBUFF_LVL87" damagemodifier="0.13" ccdurationmodifier="0.13" amplifieddebuff="ZERGDEBUFF_AMPLIFIED_LVL87" amplifieddamagemodifier="0.01" amplifiedccdurationmodifier="0.01" />
+    <allies numbergreaterorequal="3400" debuff="ZERGDEBUFF_LVL88" damagemodifier="0.12" ccdurationmodifier="0.12" amplifieddebuff="ZERGDEBUFF_AMPLIFIED_LVL88" amplifieddamagemodifier="0.01" amplifiedccdurationmodifier="0.01" />
+    <allies numbergreaterorequal="3500" debuff="ZERGDEBUFF_LVL89" damagemodifier="0.11" ccdurationmodifier="0.11" amplifieddebuff="ZERGDEBUFF_AMPLIFIED_LVL89" amplifieddamagemodifier="0.01" amplifiedccdurationmodifier="0.01" />
+    <allies numbergreaterorequal="3600" debuff="ZERGDEBUFF_LVL90" damagemodifier="0.10" ccdurationmodifier="0.10" amplifieddebuff="ZERGDEBUFF_AMPLIFIED_LVL90" amplifieddamagemodifier="0.01" amplifiedccdurationmodifier="0.01" />
+    <allies numbergreaterorequal="3700" debuff="ZERGDEBUFF_LVL91" damagemodifier="0.09" ccdurationmodifier="0.09" amplifieddebuff="ZERGDEBUFF_AMPLIFIED_LVL91" amplifieddamagemodifier="0.01" amplifiedccdurationmodifier="0.01" />
+    <allies numbergreaterorequal="3800" debuff="ZERGDEBUFF_LVL92" damagemodifier="0.08" ccdurationmodifier="0.08" amplifieddebuff="ZERGDEBUFF_AMPLIFIED_LVL92" amplifieddamagemodifier="0.01" amplifiedccdurationmodifier="0.01" />
+    <allies numbergreaterorequal="3900" debuff="ZERGDEBUFF_LVL93" damagemodifier="0.07" ccdurationmodifier="0.07" amplifieddebuff="ZERGDEBUFF_AMPLIFIED_LVL93" amplifieddamagemodifier="0.01" amplifiedccdurationmodifier="0.01" />
+    <allies numbergreaterorequal="4000" debuff="ZERGDEBUFF_LVL94" damagemodifier="0.06" ccdurationmodifier="0.06" amplifieddebuff="ZERGDEBUFF_AMPLIFIED_LVL94" amplifieddamagemodifier="0.01" amplifiedccdurationmodifier="0.01" />
+    <allies numbergreaterorequal="4100" debuff="ZERGDEBUFF_LVL95" damagemodifier="0.05" ccdurationmodifier="0.05" amplifieddebuff="ZERGDEBUFF_AMPLIFIED_LVL95" amplifieddamagemodifier="0.01" amplifiedccdurationmodifier="0.01" />
+    <allies numbergreaterorequal="4200" debuff="ZERGDEBUFF_LVL96" damagemodifier="0.04" ccdurationmodifier="0.04" amplifieddebuff="ZERGDEBUFF_AMPLIFIED_LVL96" amplifieddamagemodifier="0.01" amplifiedccdurationmodifier="0.01" />
+    <allies numbergreaterorequal="4300" debuff="ZERGDEBUFF_LVL97" damagemodifier="0.03" ccdurationmodifier="0.03" amplifieddebuff="ZERGDEBUFF_AMPLIFIED_LVL97" amplifieddamagemodifier="0.01" amplifiedccdurationmodifier="0.01" />
+    <allies numbergreaterorequal="4400" debuff="ZERGDEBUFF_LVL98" damagemodifier="0.02" ccdurationmodifier="0.02" amplifieddebuff="ZERGDEBUFF_AMPLIFIED_LVL98" amplifieddamagemodifier="0.01" amplifiedccdurationmodifier="0.01" />
+    <allies numbergreaterorequal="4500" debuff="ZERGDEBUFF_LVL99" damagemodifier="0.01" ccdurationmodifier="0.01" amplifieddebuff="ZERGDEBUFF_AMPLIFIED_LVL99" amplifieddamagemodifier="0.01" amplifiedccdurationmodifier="0.01" />
   </ZergDebuff>
 	<RareResources checkintervall="3600">
 		<cluster ContinentType="Outlands" ClusterQuality="High">
@@ -495,11 +527,7 @@
 		<!-- Seconds -->
 		<PartyReadyCheckResultDuration value="30" />
 		<!-- Seconds -->
-		<PartyLeaveDelays>
-			<LeaveDelayInSeconds pvprule="FactionPvpOnly" duration="0" />
-			<LeaveDelayInSeconds pvprule="PvpAllowed" duration="5" />
-			<LeaveDelayInSeconds pvprule="PvpForced" duration="5" />
-		</PartyLeaveDelays>
+		<PartyLeaveProtectionDuration value="30" />
 	</PartySettings>
 
 	<WeightLimits normalmessage="@OVERLOAD_MESSAGE_OUT_OF_OVERLOAD" repeatdelay="10">
@@ -1508,4 +1536,14 @@
 			<mobreaverbonus mobtier="8" mobbonusdamage="0" mobbonusdefense="0" />
 		</reavertier>
 	</mobreaverbonuses>
+  <mobinititalthreat>
+    <initialthreatbytier mobtier="1" threatvalue="100" />
+    <initialthreatbytier mobtier="2" threatvalue="200" />
+    <initialthreatbytier mobtier="3" threatvalue="300" />
+    <initialthreatbytier mobtier="4" threatvalue="400" />
+    <initialthreatbytier mobtier="5" threatvalue="500" />
+    <initialthreatbytier mobtier="6" threatvalue="600" />
+    <initialthreatbytier mobtier="7" threatvalue="700" />
+    <initialthreatbytier mobtier="8" threatvalue="800" />
+  </mobinititalthreat>
 </AO-GameData>

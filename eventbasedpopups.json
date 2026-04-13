@@ -800,6 +800,63 @@
           }
         },
         {
+          "@uniquename": "PLATFORM_ACCOUNT_UPGRADE",
+          "@type": "PlatformAccount",
+          "@priority": "1",
+          "categories": {
+            "category": [
+              {
+                "@name": "PlatformAccount"
+              },
+              {
+                "@name": "Advertisement"
+              }
+            ]
+          },
+          "triggers": {
+            "trigger": {
+              "@action": "GameLogin"
+            }
+          },
+          "conditions": {
+            "or": {
+              "and": [
+                {
+                  "IfIsPlatformAccount": null,
+                  "IfTriggeredThrough": {
+                    "@action": "OpenFastTravelUi"
+                  },
+                  "IfHasSeenPopup": {
+                    "@uniquename": "PLATFORM_ACCOUNT_UPGRADE",
+                    "@frequency": "AllTime",
+                    "@operation": "lessOrEqual",
+                    "@amount": "1"
+                  }
+                },
+                {
+                  "IfIsPlatformAccount": null,
+                  "IfTutorialCompleted": null,
+                  "IfHasSeenPopup": [
+                    {
+                      "@uniquename": "PLATFORM_ACCOUNT_UPGRADE",
+                      "@frequency": "AllTime",
+                      "@operation": "greaterOrEqual",
+                      "@amount": "1"
+                    },
+                    {
+                      "@uniquename": "PLATFORM_ACCOUNT_UPGRADE",
+                      "@frequency": "Hours",
+                      "@timefactor": "12",
+                      "@operation": "equals",
+                      "@amount": "0"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
           "@uniquename": "SEASON_WINNER",
           "@priority": "4",
           "@type": "SeasonWinner",
@@ -1427,7 +1484,11 @@
               "not": {
                 "IfHasPremium": null
               },
-              "IfAlbionJournalIsUnlocked": null,
+              "IfAccountAgeDays": {
+                "@operation": "lessOrEqual",
+                "@value": "30"
+              },
+              "IfTutorialCompleted": null,
               "IfHasSeenPopup": {
                 "@uniquename": "ESSENTIALS_PACK_SALE",
                 "@frequency": "AllTime",

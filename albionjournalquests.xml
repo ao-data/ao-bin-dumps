@@ -211,14 +211,19 @@
         <gotocluster clustervariable="STARTERTOWN" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_RETURN_TO_CROSS"  hideindetailsui="true"/>
       </missionstep>
       <!-- Sanity Check: Go to the marketplace-->
-      <missionstep>
-        <interactwithbuilding buildingid="MARKETPLACE_SMALL" locationmarkerid="MARKETPLACE" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_GOTO_MARKETPLACE"/>
-      </missionstep>
+      <extendedmissionstep>
+        <preactions>
+          <openhintbox uniquename="JOURNAL_QUEST_BUY_EQUIPMENT"/>
+        </preactions>
+        <missions>
+          <interactwithbuilding buildingid="MARKETPLACE_SMALL" locationmarkerid="MARKETPLACE" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_GOTO_MARKETPLACE"/>
+        </missions>
+      </extendedmissionstep>
       <!-- Buy T3 Gear-->
       <!-- You have unlocked a bunch of new Weapons-->
       <extendedmissionstep>
         <preactions>
-          <openhintbox uniquename="JOURNAL_QUEST_BUY_EQUIPMENT"/>
+          <openhintbox uniquename="ITEM_EXPLANATION_TIER"/>
         </preactions>
         <missions>
           <acquireitem count="1" listtype="or" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_BUY_T3_HEAD">
@@ -923,200 +928,202 @@
         <unlockachievement achievement="ADVENTURER_JOURNEYMAN" masterylevel="1"  hideindetailsui="true" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_UNLOCK_T3_ADVENTURER"/>
       </missionstep>
       <!-- Sanity Check: Be in a Starter Cross-->
-      <missionstep>
-        <gotocluster clustervariable="STARTERTOWN" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_RETURN_TO_CROSS"  hideindetailsui="true"/>
-      </missionstep>
       <!-- Sanity Check: Go to the marketplace-->
-      <missionstep>
-        <interactwithbuilding buildingid="MARKETPLACE_SMALL" locationmarkerid="MARKETPLACE" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_GOTO_MARKETPLACE"/>
-      </missionstep>
-      <!-- Buy T3 Gear-->
-      <!-- You have unlocked a bunch of new Weapons-->
       <extendedmissionstep>
         <preactions>
           <openhintbox uniquename="JOURNAL_QUEST_BUY_EQUIPMENT"/>
         </preactions>
         <missions>
+          <interactwithbuilding buildingid="MARKETPLACE_SMALL" locationmarkerid="MARKETPLACE" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_GOTO_MARKETPLACE"/>
+        </missions>
+      </extendedmissionstep>
+      <!-- Buy T3 Gear-->
+      <!-- You have unlocked a bunch of new Weapons-->
+      <extendedmissionstep>
+        <preactions>
+          <openhintbox uniquename="ITEM_EXPLANATION_TIER"/>
+        </preactions>
+        <missions>
           <acquireitem count="1" listtype="or" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_BUY_T3_HEAD">
-          <item id="T3_HEAD_CLOTH_SET1"/>
-          <item id="T3_HEAD_LEATHER_SET1"/>
-          <item id="T3_HEAD_PLATE_SET1"/>
-        </acquireitem>
-        <acquireitem count="1" listtype="or" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_BUY_T3_ARMOR">
-          <item id="T3_ARMOR_CLOTH_SET1"/>
-          <item id="T3_ARMOR_LEATHER_SET1"/>
-          <item id="T3_ARMOR_PLATE_SET1"/>
-        </acquireitem>
-        <acquireitem count="1" listtype="or" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_BUY_T3_SHOES">
-          <item id="T3_SHOES_CLOTH_SET1"/>
-          <item id="T3_SHOES_LEATHER_SET1"/>
-          <item id="T3_SHOES_PLATE_SET1"/>
-        </acquireitem>
-        <acquireitem count="1" itemid="T3_CAPE" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_BUY_T3_CAPE"/>
-        <or textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_BUY_T3_WEAPON_AND_OFFHAND" hideindetailsui="true">
-          <acquireitem count="1">
-            <item id="T3_2H_BOW"/>
-            <item id="T3_2H_CROSSBOW"/>
-            <item id="T3_2H_QUARTERSTAFF"/>
-            <item id="T3_2H_KNUCKLES_SET1"/>
-            <item id="T3_2H_SHAPESHIFTER_SET1"/>
+            <item id="T3_HEAD_CLOTH_SET1"/>
+            <item id="T3_HEAD_LEATHER_SET1"/>
+            <item id="T3_HEAD_PLATE_SET1"/>
           </acquireitem>
-          <acquireitem count="1" listtype="and">
-            <item id="T3_MAIN_CURSEDSTAFF"/>
-            <item id="T3_OFF_BOOK"/>
+          <acquireitem count="1" listtype="or" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_BUY_T3_ARMOR">
+            <item id="T3_ARMOR_CLOTH_SET1"/>
+            <item id="T3_ARMOR_LEATHER_SET1"/>
+            <item id="T3_ARMOR_PLATE_SET1"/>
           </acquireitem>
-          <acquireitem count="1" listtype="and">
-            <item id="T3_MAIN_CURSEDSTAFF"/>
-            <item id="T3_OFF_SHIELD"/>
+          <acquireitem count="1" listtype="or" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_BUY_T3_SHOES">
+            <item id="T3_SHOES_CLOTH_SET1"/>
+            <item id="T3_SHOES_LEATHER_SET1"/>
+            <item id="T3_SHOES_PLATE_SET1"/>
           </acquireitem>
-          <acquireitem count="1" listtype="and">
-            <item id="T3_MAIN_CURSEDSTAFF"/>
-            <item id="T3_OFF_TORCH"/>
-          </acquireitem>
+          <acquireitem count="1" itemid="T3_CAPE" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_BUY_T3_CAPE"/>
+          <or textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_BUY_T3_WEAPON_AND_OFFHAND" hideindetailsui="true">
+            <acquireitem count="1">
+              <item id="T3_2H_BOW"/>
+              <item id="T3_2H_CROSSBOW"/>
+              <item id="T3_2H_QUARTERSTAFF"/>
+              <item id="T3_2H_KNUCKLES_SET1"/>
+              <item id="T3_2H_SHAPESHIFTER_SET1"/>
+            </acquireitem>
+            <acquireitem count="1" listtype="and">
+              <item id="T3_MAIN_CURSEDSTAFF"/>
+              <item id="T3_OFF_BOOK"/>
+            </acquireitem>
+            <acquireitem count="1" listtype="and">
+              <item id="T3_MAIN_CURSEDSTAFF"/>
+              <item id="T3_OFF_SHIELD"/>
+            </acquireitem>
+            <acquireitem count="1" listtype="and">
+              <item id="T3_MAIN_CURSEDSTAFF"/>
+              <item id="T3_OFF_TORCH"/>
+            </acquireitem>
 
-          <acquireitem count="1" listtype="and">
-            <item id="T3_MAIN_FIRESTAFF"/>
-            <item id="T3_OFF_BOOK"/>
-          </acquireitem>
-          <acquireitem count="1" listtype="and">
-            <item id="T3_MAIN_FIRESTAFF"/>
-            <item id="T3_OFF_SHIELD"/>
-          </acquireitem>
-          <acquireitem count="1" listtype="and">
-            <item id="T3_MAIN_FIRESTAFF"/>
-            <item id="T3_OFF_TORCH"/>
-          </acquireitem>
+            <acquireitem count="1" listtype="and">
+              <item id="T3_MAIN_FIRESTAFF"/>
+              <item id="T3_OFF_BOOK"/>
+            </acquireitem>
+            <acquireitem count="1" listtype="and">
+              <item id="T3_MAIN_FIRESTAFF"/>
+              <item id="T3_OFF_SHIELD"/>
+            </acquireitem>
+            <acquireitem count="1" listtype="and">
+              <item id="T3_MAIN_FIRESTAFF"/>
+              <item id="T3_OFF_TORCH"/>
+            </acquireitem>
 
-          <acquireitem count="1" listtype="and">
-            <item id="T3_MAIN_FROSTSTAFF"/>
-            <item id="T3_OFF_BOOK"/>
-          </acquireitem>
-          <acquireitem count="1" listtype="and">
-            <item id="T3_MAIN_FROSTSTAFF"/>
-            <item id="T3_OFF_SHIELD"/>
-          </acquireitem>
-          <acquireitem count="1" listtype="and">
-            <item id="T3_MAIN_FROSTSTAFF"/>
-            <item id="T3_OFF_TORCH"/>
-          </acquireitem>
+            <acquireitem count="1" listtype="and">
+              <item id="T3_MAIN_FROSTSTAFF"/>
+              <item id="T3_OFF_BOOK"/>
+            </acquireitem>
+            <acquireitem count="1" listtype="and">
+              <item id="T3_MAIN_FROSTSTAFF"/>
+              <item id="T3_OFF_SHIELD"/>
+            </acquireitem>
+            <acquireitem count="1" listtype="and">
+              <item id="T3_MAIN_FROSTSTAFF"/>
+              <item id="T3_OFF_TORCH"/>
+            </acquireitem>
 
-          <acquireitem count="1" listtype="and">
-            <item id="T3_MAIN_ARCANESTAFF"/>
-            <item id="T3_OFF_BOOK"/>
-          </acquireitem>
-          <acquireitem count="1" listtype="and">
-            <item id="T3_MAIN_ARCANESTAFF"/>
-            <item id="T3_OFF_SHIELD"/>
-          </acquireitem>
-          <acquireitem count="1" listtype="and">
-            <item id="T3_MAIN_ARCANESTAFF"/>
-            <item id="T3_OFF_TORCH"/>
-          </acquireitem>
+            <acquireitem count="1" listtype="and">
+              <item id="T3_MAIN_ARCANESTAFF"/>
+              <item id="T3_OFF_BOOK"/>
+            </acquireitem>
+            <acquireitem count="1" listtype="and">
+              <item id="T3_MAIN_ARCANESTAFF"/>
+              <item id="T3_OFF_SHIELD"/>
+            </acquireitem>
+            <acquireitem count="1" listtype="and">
+              <item id="T3_MAIN_ARCANESTAFF"/>
+              <item id="T3_OFF_TORCH"/>
+            </acquireitem>
 
-          <acquireitem count="1" listtype="and">
-            <item id="T3_MAIN_HOLYSTAFF"/>
-            <item id="T3_OFF_BOOK"/>
-          </acquireitem>
-          <acquireitem count="1" listtype="and">
-            <item id="T3_MAIN_HOLYSTAFF"/>
-            <item id="T3_OFF_SHIELD"/>
-          </acquireitem>
-          <acquireitem count="1" listtype="and">
-            <item id="T3_MAIN_HOLYSTAFF"/>
-            <item id="T3_OFF_TORCH"/>
-          </acquireitem>
+            <acquireitem count="1" listtype="and">
+              <item id="T3_MAIN_HOLYSTAFF"/>
+              <item id="T3_OFF_BOOK"/>
+            </acquireitem>
+            <acquireitem count="1" listtype="and">
+              <item id="T3_MAIN_HOLYSTAFF"/>
+              <item id="T3_OFF_SHIELD"/>
+            </acquireitem>
+            <acquireitem count="1" listtype="and">
+              <item id="T3_MAIN_HOLYSTAFF"/>
+              <item id="T3_OFF_TORCH"/>
+            </acquireitem>
 
-          <acquireitem count="1" listtype="and">
-            <item id="T3_MAIN_AXE"/>
-            <item id="T3_OFF_BOOK"/>
-          </acquireitem>
-          <acquireitem count="1" listtype="and">
-            <item id="T3_MAIN_AXE"/>
-            <item id="T3_OFF_SHIELD"/>
-          </acquireitem>
-          <acquireitem count="1" listtype="and">
-            <item id="T3_MAIN_AXE"/>
-            <item id="T3_OFF_TORCH"/>
-          </acquireitem>
+            <acquireitem count="1" listtype="and">
+              <item id="T3_MAIN_AXE"/>
+              <item id="T3_OFF_BOOK"/>
+            </acquireitem>
+            <acquireitem count="1" listtype="and">
+              <item id="T3_MAIN_AXE"/>
+              <item id="T3_OFF_SHIELD"/>
+            </acquireitem>
+            <acquireitem count="1" listtype="and">
+              <item id="T3_MAIN_AXE"/>
+              <item id="T3_OFF_TORCH"/>
+            </acquireitem>
 
-          <acquireitem count="1" listtype="and">
-            <item id="T3_MAIN_SWORD"/>
-            <item id="T3_OFF_BOOK"/>
-          </acquireitem>
-          <acquireitem count="1" listtype="and">
-            <item id="T3_MAIN_SWORD"/>
-            <item id="T3_OFF_SHIELD"/>
-          </acquireitem>
-          <acquireitem count="1" listtype="and">
-            <item id="T3_MAIN_SWORD"/>
-            <item id="T3_OFF_TORCH"/>
-          </acquireitem>
+            <acquireitem count="1" listtype="and">
+              <item id="T3_MAIN_SWORD"/>
+              <item id="T3_OFF_BOOK"/>
+            </acquireitem>
+            <acquireitem count="1" listtype="and">
+              <item id="T3_MAIN_SWORD"/>
+              <item id="T3_OFF_SHIELD"/>
+            </acquireitem>
+            <acquireitem count="1" listtype="and">
+              <item id="T3_MAIN_SWORD"/>
+              <item id="T3_OFF_TORCH"/>
+            </acquireitem>
 
-          <acquireitem count="1" listtype="and">
-            <item id="T3_MAIN_HAMMER"/>
-            <item id="T3_OFF_BOOK"/>
-          </acquireitem>
-          <acquireitem count="1" listtype="and">
-            <item id="T3_MAIN_HAMMER"/>
-            <item id="T3_OFF_SHIELD"/>
-          </acquireitem>
-          <acquireitem count="1" listtype="and">
-            <item id="T3_MAIN_HAMMER"/>
-            <item id="T3_OFF_TORCH"/>
-          </acquireitem>
+            <acquireitem count="1" listtype="and">
+              <item id="T3_MAIN_HAMMER"/>
+              <item id="T3_OFF_BOOK"/>
+            </acquireitem>
+            <acquireitem count="1" listtype="and">
+              <item id="T3_MAIN_HAMMER"/>
+              <item id="T3_OFF_SHIELD"/>
+            </acquireitem>
+            <acquireitem count="1" listtype="and">
+              <item id="T3_MAIN_HAMMER"/>
+              <item id="T3_OFF_TORCH"/>
+            </acquireitem>
 
-          <acquireitem count="1" listtype="and">
-            <item id="T3_MAIN_MACE"/>
-            <item id="T3_OFF_BOOK"/>
-          </acquireitem>
-          <acquireitem count="1" listtype="and">
-            <item id="T3_MAIN_MACE"/>
-            <item id="T3_OFF_SHIELD"/>
-          </acquireitem>
-          <acquireitem count="1" listtype="and">
-            <item id="T3_MAIN_MACE"/>
-            <item id="T3_OFF_TORCH"/>
-          </acquireitem>
+            <acquireitem count="1" listtype="and">
+              <item id="T3_MAIN_MACE"/>
+              <item id="T3_OFF_BOOK"/>
+            </acquireitem>
+            <acquireitem count="1" listtype="and">
+              <item id="T3_MAIN_MACE"/>
+              <item id="T3_OFF_SHIELD"/>
+            </acquireitem>
+            <acquireitem count="1" listtype="and">
+              <item id="T3_MAIN_MACE"/>
+              <item id="T3_OFF_TORCH"/>
+            </acquireitem>
 
-          <acquireitem count="1" listtype="and">
-            <item id="T3_MAIN_NATURESTAFF"/>
-            <item id="T3_OFF_BOOK"/>
-          </acquireitem>
-          <acquireitem count="1" listtype="and">
-            <item id="T3_MAIN_NATURESTAFF"/>
-            <item id="T3_OFF_SHIELD"/>
-          </acquireitem>
-          <acquireitem count="1" listtype="and">
-            <item id="T3_MAIN_NATURESTAFF"/>
-            <item id="T3_OFF_TORCH"/>
-          </acquireitem>
+            <acquireitem count="1" listtype="and">
+              <item id="T3_MAIN_NATURESTAFF"/>
+              <item id="T3_OFF_BOOK"/>
+            </acquireitem>
+            <acquireitem count="1" listtype="and">
+              <item id="T3_MAIN_NATURESTAFF"/>
+              <item id="T3_OFF_SHIELD"/>
+            </acquireitem>
+            <acquireitem count="1" listtype="and">
+              <item id="T3_MAIN_NATURESTAFF"/>
+              <item id="T3_OFF_TORCH"/>
+            </acquireitem>
 
-          <acquireitem count="1" listtype="and">
-            <item id="T3_MAIN_DAGGER"/>
-            <item id="T3_OFF_BOOK"/>
-          </acquireitem>
-          <acquireitem count="1" listtype="and">
-            <item id="T3_MAIN_DAGGER"/>
-            <item id="T3_OFF_SHIELD"/>
-          </acquireitem>
-          <acquireitem count="1" listtype="and">
-            <item id="T3_MAIN_DAGGER"/>
-            <item id="T3_OFF_TORCH"/>
-          </acquireitem>
+            <acquireitem count="1" listtype="and">
+              <item id="T3_MAIN_DAGGER"/>
+              <item id="T3_OFF_BOOK"/>
+            </acquireitem>
+            <acquireitem count="1" listtype="and">
+              <item id="T3_MAIN_DAGGER"/>
+              <item id="T3_OFF_SHIELD"/>
+            </acquireitem>
+            <acquireitem count="1" listtype="and">
+              <item id="T3_MAIN_DAGGER"/>
+              <item id="T3_OFF_TORCH"/>
+            </acquireitem>
 
-          <acquireitem count="1" listtype="and">
-            <item id="T3_MAIN_SPEAR"/>
-            <item id="T3_OFF_BOOK"/>
-          </acquireitem>
-          <acquireitem count="1" listtype="and">
-            <item id="T3_MAIN_SPEAR"/>
-            <item id="T3_OFF_SHIELD"/>
-          </acquireitem>
-          <acquireitem count="1" listtype="and">
-            <item id="T3_MAIN_SPEAR"/>
-            <item id="T3_OFF_TORCH"/>
-          </acquireitem>
-        </or>
+            <acquireitem count="1" listtype="and">
+              <item id="T3_MAIN_SPEAR"/>
+              <item id="T3_OFF_BOOK"/>
+            </acquireitem>
+            <acquireitem count="1" listtype="and">
+              <item id="T3_MAIN_SPEAR"/>
+              <item id="T3_OFF_SHIELD"/>
+            </acquireitem>
+            <acquireitem count="1" listtype="and">
+              <item id="T3_MAIN_SPEAR"/>
+              <item id="T3_OFF_TORCH"/>
+            </acquireitem>
+          </or>
         </missions>
       </extendedmissionstep>
       <missionstep>
@@ -1432,9 +1439,14 @@
           </missions>
       </extendedmissionstep>
       <!-- Go to the marketplace-->
-	  <missionstep>
-	    <usefunction function="InteractWithMarketplace" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_GOTO_MARKETPLACE" locationmarkerid="MARKETPLACE" />
-	  </missionstep>
+	  <extendedmissionstep>
+      <preactions>
+        <openhintbox uniquename="JOURNAL_QUEST_JOURNEY_BACK"/>
+      </preactions>
+      <missions>
+	      <usefunction function="InteractWithMarketplace" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_GOTO_MARKETPLACE" locationmarkerid="MARKETPLACE" />  
+      </missions>
+	  </extendedmissionstep>
 	  <!-- Sell 80 Items -->
       <!-- Hint: Sell Items on the right hand side of the Marketplace UI-->
       <extendedmissionstep>
@@ -1471,13 +1483,18 @@
         <gotocluster clustervariable="STARTERTOWN" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_RETURN_TO_CROSS"/>
       </missionstep>
       <!-- Sanity Check: Go to the marketplace-->
-      <missionstep>
-        <interactwithbuilding buildingid="MARKETPLACE_SMALL" locationmarkerid="MARKETPLACE" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_GOTO_MARKETPLACE"/>
-      </missionstep>
+      <extendedmissionstep>
+        <preactions>
+          <openhintbox uniquename="JOURNAL_QUEST_BUY_EQUIPMENT"/>
+        </preactions>
+        <missions>
+          <interactwithbuilding buildingid="MARKETPLACE_SMALL" locationmarkerid="MARKETPLACE" markedinworld="true" markedonminimap="true" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_GOTO_MARKETPLACE"/>
+        </missions>
+      </extendedmissionstep>
       <!-- Buy a Tool at the marketplace-->
       <extendedmissionstep>
 		<preactions>
-		  <openhintbox uniquename="JOURNAL_QUEST_BUY_EQUIPMENT"/>
+      <openhintbox uniquename="RESOURCE_GATHERING_INFO"/>
 		</preactions>		  
         <missions>
           <marketbuyitem count="1" textloca="@MISSIONS_JOURNAL_QUEST_SIDETEXT_BUY_T2_TOOL">

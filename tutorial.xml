@@ -64,9 +64,6 @@
            hidedestinyboard="false" showdestinyboardflyout="true"/>
     <state uniquename="DESTINYBOARDINTROCLEAR" previousstate="DESTINYBOARDINTRO" triggerhint="DESTINYBOARDINTRO_08"
            hidedestinyboard="false" showdestinyboardflyout="true"/>
-    <!--WhereAreMyFriends-->
-    <!-- <state uniquename="WHEREAREMYFRIENDS" previousstate="DESTINYBOARDINTROCLEAR" triggerhint="SOFTCLEAR"
-           hidedestinyboard="false" showdestinyboardflyout="true"/>-->
     <!--MARKETPLACE HUB-->
     <state uniquename="MARKETPLACEINTRO" previousstate="COMBATCLEAR" triggerhint="MARKETPLACEINTRO_01"
            resetquestonrevisit="true" hidedestinyboard="true"
@@ -150,6 +147,8 @@
     <!--
    <state uniquename="ITEM" previousstate="FIRSTSPELLCLEAR" triggerhint="ITEM"/>
    <state uniquename="ITEMCLEAR"  previousstate="ITEM" triggerhint="CLEAR"/>
+   <state uniquename="WHEREAREMYFRIENDS" previousstate="DESTINYBOARDINTROCLEAR" triggerhint="SOFTCLEAR"
+           hidedestinyboard="false" showdestinyboardflyout="true"/>
    <state uniquename="HIGHLIGHTDESTINYBOARDBUTTON" previousstate="MAPINTRO" triggerhint="TRACKERINTRO"/>
    <state uniquename="TRACKERINTRO" previousstate="HIGHLIGHTDESTINYBOARDBUTTON" triggerhint="TRACKERINTRO"/>
    <state uniquename="TRACKERINTROCLEAR" previousstate="TRACKERINTRO" triggerhint="CLEAR"/>
@@ -336,6 +335,8 @@
     <hint uniquename="QUESTMARKER" title="@HINT_TITLE_QUESTMARKER" infotext="@HINT_INFO_QUESTMARKER"
           triggerui="firstquestmap" endtriggerui="clear" delay="10"/>
 
+    <hint uniquename="GAMEPAD_TARGETING" title="@HINT_TITLE_GAMEPAD_TARGETING" infotext="@HINT_INFO_GAMEPAD_TARGETING" showoninputscheme="controllerall"/>
+
     <hint uniquename="USESPELL" title="@HINT_TITLE_USESPELL" infotext="@HINT_INFO_USESPELL" setnextstateonend="true"
           triggerui="usespell"/>
 
@@ -433,7 +434,7 @@
           mobileposition="BottomRight"/>
           -->
     <hint uniquename="MAPINTRO_01B" title="@HINT_TITLE_MAPINTRO_02" infotext="@HINT_INFO_MAPINTRO_01B_NEW"
-          nexthint="MAPINTRO_02" blockworldinteraction="true" skiptonextstate="true" triggerui="clustermap"
+          nexthint="MAPINTRO_02" blockworldinteraction="true" triggerui="clustermap"
           mobileposition="BottomRight"/>
     <hint uniquename="MAPINTRO_02" title="@HINT_TITLE_MAPINTRO_02" infotext="@HINT_INFO_MAPINTRO_02"
           nexthint="MAPINTRO_05" blockworldinteraction="true" triggerui="clustermapinfo"
@@ -462,7 +463,7 @@
 	-->
 
     <!--COMBAT 2 - Spacebar -->
-    <hint uniquename="COMBAT2" title="@HINT_TITLE_COMBAT2" infotext="@HINT_INFO_COMBAT2" completebutton="true"/>
+    <hint uniquename="COMBAT2" title="@HINT_TITLE_COMBAT2" infotext="@HINT_INFO_COMBAT2" completebutton="true" showoninputscheme="mouseandkeyboard"/>
 
     <!--LEARNLP-->
     <hint uniquename="LEARNLP_01" title="@HINT_TITLE_LEARNLP_01" infotext="@HINT_INFO_LEARNLP_01" nexthint="LEARNLP_02"
@@ -503,29 +504,7 @@
             <content title="@TUTORIAL_BIGHINT_LEARNAUTOLEARN_TEXT4_TITLE" text="@TUTORIAL_BIGHINT_LEARNAUTOLEARN_TEXT4_INFO"/>
         </entry>
     </hint>
-    <!--LEARNAUTOLEARN-->
-    <!-- <hint uniquename="LEARNAUTOLEARN_01" explanation="VerticalTemplate" title="@TUTORIAL_BIGHINT_LEARNAUTOLEARN_TITLE" triggerui="destinyboardquicklearnbutton" completebutton="true" blockworldinteraction="true" nexthint="LEARNAUTOLEARN_02">
-        <entry imagepath="Gui/TutorialExplanations/TutorialLearnAutoLearn1" scale="1.2">
-            <content title="@TUTORIAL_BIGHINT_LEARNAUTOLEARN_TEXT1_TITLE" text="@TUTORIAL_BIGHINT_LEARNAUTOLEARN_TEXT1_INFO"/>
-        </entry>
-        <entry imagepath="Gui/TutorialExplanations/TutorialLearnAutoLearn2" scale="1.2">
-            <content title="@TUTORIAL_BIGHINT_LEARNAUTOLEARN_TEXT2_TITLE" text="@TUTORIAL_BIGHINT_LEARNAUTOLEARN_TEXT2_INFO"/>
-        </entry>
-    </hint>
-    <hint uniquename="LEARNAUTOLEARN_02" explanation="VerticalTemplate" title="@TUTORIAL_BIGHINT_LEARNAUTOLEARN_TITLE2" triggerui="destinyboardlplocation" blockworldinteraction="true" completebutton="true">
-        <entry imagepath="Gui/TutorialExplanations/TutorialLearnAutoLearn3" scale="1.2">
-            <content title="@TUTORIAL_BIGHINT_LEARNAUTOLEARN_TEXT3_TITLE" text="@TUTORIAL_BIGHINT_LEARNAUTOLEARN_TEXT3_INFO"/>
-        </entry>
-        <entry imagepath="Gui/TutorialExplanations/TutorialLearnAutoLearn4" scale="1.2">
-            <content title="@TUTORIAL_BIGHINT_LEARNAUTOLEARN_TEXT4_TITLE" text="@TUTORIAL_BIGHINT_LEARNAUTOLEARN_TEXT4_INFO"/>
-        </entry>
-    </hint> -->
 
-    <!--TRACKER-->
-    <!--<hint uniquename="TRACKERINTRO" title="@HINT_TITLE_TRACKERINTRO" infotext="@HINT_INFO_TRACKERINTRO"
-          nexthint="TRACKERINTRO_03" blockworldinteraction="true" triggerui="destinyboardbuttonhighlight"/>
-
-    <hint uniquename="TRACKERINTRO_04" triggerui="destinyboardcombat"/>-->
     <!--GETGEAR-->
     <hint uniquename="GETGEAR_02" title="@HINT_TITLE_GETGEAR_02" infotext="@HINT_INFO_GETGEAR_02" nexthint="GETGEAR_03"
           blockworldinteraction="true" skiptonextstate="true"/>
@@ -533,8 +512,9 @@
           blockworldinteraction="true" skiptonextstate="true"/>
     <hint uniquename="GETGEAR_04" title="@HINT_TITLE_GETGEAR_04" infotext="@HINT_INFO_GETGEAR_04"
           blockworldinteraction="true" completebutton="true" setnextstateonend="true"/>
+    <hint uniquename="CONTROLLER_TARGET_SELECTION" title="@HINT_TITLE_CONTROLLER_TARGET_SELECTION" infotext="@HINT_INFO_CONTROLLER_TARGET_SELECTION" showoninputscheme="controllerall"/>
 
-    <hint uniquename="MARKETCATEGORIES" title="@HINT_TITLE_MARKETCATEGORIES" infotext="@HINT_INFO_MARKETCATEGORIES"
+  <hint uniquename="MARKETCATEGORIES" title="@HINT_TITLE_MARKETCATEGORIES" infotext="@HINT_INFO_MARKETCATEGORIES"
           triggerui="marketplacesearch" blockworldinteraction="true" mobileposition="BottomLeft" completebutton="true"/>
 
   <!--END-->
@@ -753,6 +733,8 @@
           infotext="@HINT_INFO_T2_TUTORIAL_GAINED_FOCUS" nexthint="FOCUS_STONE"/>
     <hint uniquename="INTERACTIONBUTTON" title="@HINT_TITLE_USE_INTERACT_BUTTON"
           infotext="@HINT_INFO_USE_INTERACT_BUTTON" triggerui="dynamicinteraction" completebutton="true"/>
+    <hint uniquename="INTERACTIONBUTTON_GAMEPAD" title="@HINT_TITLE_USE_INTERACT_BUTTON"
+          infotext="@HINT_INFO_USE_INTERACT_BUTTON" showoninputscheme="controllerall"/>
 
 
     <hint uniquename="T3_GEAR" explanation="VerticalTemplate" title="@TUTORIAL_BIGHINT_T3_GEAR_TITLE">
@@ -1245,7 +1227,7 @@
     <!-- Cluster Access -->
     <hint uniquename="CLUSTER_ACCESS_PRIORITY_INFO" explanation="VerticalTemplate"
           title="@CLUSTER_ACCESS_PRIORITY_TUTORIAL_TITLE">
-        <entry imagepath="Gui/TutorialExplanations/TutorialClusterQueue" scale="2">
+        <entry imagepath="Gui/TutorialExplanations/TutorialRegionAccessPrio" scale="2">
             <content text="@CLUSTER_ACCESS_PRIORITY_TUTORIAL_LIST"/>
         </entry>
     </hint>
@@ -1442,6 +1424,22 @@
             <content text="@TUTORIAL_CRYSTAL_ARENA_RANKS_TEXT"/>
         </entry>
     </hint>
+
+	<!-- 1v1 ARENA MATCHES -->
+	<hint uniquename="1V1_ARENA_MATCH_INFO" explanation="VerticalTemplate" title="@TUTORIAL_1V1_ARENA_TITLE"
+          nexthint="1V1_ARENA_RANKS_INFO">
+		<entry imagepath="Gui/TutorialExplanations/TutorialArena1v1MatchInfo" scale="1.0">
+			<content title="@TUTORIAL_1V1_ARENA_SIGN_UP_TITLE" text="@TUTORIAL_1V1_ARENA_SIGN_UP_TEXT"/>
+		</entry>
+		<entry imagepath="Gui/TutorialExplanations/TutorialArena1v1MatchRules" scale="1.0">
+			<content title="@TUTORIAL_1V1_ARENA_RULES_TITLE" text="@TUTORIAL_1V1_ARENA_RULES_TEXT"/>
+		</entry>
+	</hint>
+	<hint uniquename="1V1_ARENA_RANKS_INFO" explanation="VerticalTemplate" title="@TUTORIAL_1V1_ARENA_RANKS_AND_SEASONS_TITLE">
+		<entry imagepath="Gui/TutorialExplanations/TutorialCrystalArenaRanks" scale="2.0">
+			<content text="@TUTORIAL_1V1_ARENA_RANKS_TEXT"/>
+		</entry>
+	</hint>
 
 
     <!-- CUSTOM MATCHES -->
@@ -1688,26 +1686,6 @@
         </entry>
     </hint>
     
-    <!-- CONTROLS UPDATE -->
-    <hint uniquename="CONTROLS_FEATURE_CHANGES_MOBILE" explanation="FeatureChoiceTemplate" title="@TUTORIAL_CONTROLS_CHANGE_2023_TITLE">
-        <entry imagepath="Gui/TutorialExplanations/TutorialTargetingLock" scale="2.1">
-            <content title="@OPTIONS_AUTOTARGETING_LOCK_TITLE" text="@TUTORIAL_CONTROLS_CHANGE_2023_LOCK_MOBILE"/>
-        </entry>
-        <entry imagepath="Gui/TutorialExplanations/TutorialTargetingPreview" scale="2.1">
-            <content title="@TUTORIAL_CONTROLS_CHANGE_OTHER_TITLE" text="@TUTORIAL_CONTROLS_CHANGE_2023_OTHER"/>
-        </entry>
-    </hint>
-
-    <!-- CONTROLS UPDATE -->
-    <hint uniquename="CONTROLS_FEATURE_CHANGES_CONTROLLER" explanation="FeatureChoiceTemplate" title="@TUTORIAL_CONTROLS_CHANGE_2023_TITLE">
-        <entry imagepath="Gui/TutorialExplanations/TutorialTargetingLock" scale="2.1">
-            <content title="@OPTIONS_AUTOTARGETING_LOCK_TITLE" text="@TUTORIAL_CONTROLS_CHANGE_2023_LOCK_CONTROLLER"/>
-        </entry>
-        <entry imagepath="Gui/TutorialExplanations/TutorialTargetingPreview" scale="2.1">
-            <content title="@TUTORIAL_CONTROLS_CHANGE_OTHER_TITLE" text="@TUTORIAL_CONTROLS_CHANGE_2023_OTHER"/>
-        </entry>
-    </hint>
-
 	<!-- Awakened/ Legendary Items -->
 	<hint uniquename="LEGENDARY_ITEMS_INFO" explanation="VerticalTemplate"
           title="@LEGENDARY_ITEMS_TUTORIAL_SCREEN_1_TITLE" nexthint="LEGENDARY_ITEMS_INFO_2">
@@ -1954,9 +1932,17 @@
     <hint uniquename="LARGE_SCALE_BATTLES_INFO"
           explanation="VerticalTemplate"
           title="@LARGE_SCALE_BATTLES_INFO_TITLE"
-          nexthint="JOURNAL_CLUSTER_QUEUE_INFO">
+          nexthint="LARGE_SCALE_BATTLES_DISARRAY_INFO">
         <entry imagepath="Gui/TutorialExplanations/TutorialLargeScaleBattles" scale="2">
-            <content title="@LARGE_SCALE_BATTLES_INFO_SUBTITLE" text="@LARGE_SCALE_BATTLES_INFO_TEXT"/>
+            <content text="@LARGE_SCALE_BATTLES_INFO_TEXT"/>
+        </entry>
+    </hint>
+    <hint uniquename="LARGE_SCALE_BATTLES_DISARRAY_INFO"
+          explanation="VerticalTemplate"
+          title="@LARGE_SCALE_BATTLES_DISARRAY_INFO_TITLE"
+          nexthint="JOURNAL_CLUSTER_QUEUE_INFO">
+        <entry imagepath="Gui/TutorialExplanations/TutorialLargeScaleBattleDisarray" scale="2">
+            <content text="@LARGE_SCALE_BATTLES_DISARRAY_INFO_TEXT"/>
         </entry>
     </hint>
     <hint uniquename="JOURNAL_CLUSTER_QUEUE_INFO"
@@ -1973,6 +1959,36 @@
         </entry>
         <entry>            
             <content text="@TUTORIAL_ASSET_OVERVIEW_TEXT_INFO"/>
+        </entry>
+    </hint>
+	
+	<!-- NUE: ITEM ANATOMY EXPLANATION - TIER -->
+	 <hint uniquename="ITEM_EXPLANATION_TIER" explanation="HorizontalTemplate" title="@TUTORIAL_ITEM_ANATOMY_TITLE"
+	       nexthint="ITEM_EXPLANATION_ENCHANTMENT">
+        <entry imagepath="Gui/TutorialExplanations/TutorialItemAnatomyTier" scale="1.8">
+            <content title="@TUTORIAL_ITEM_ANATOMY_TIER_SUBTITLE" text="@TUTORIAL_ITEM_ANATOMY_TIER_INFO"/>
+        </entry>
+    </hint>
+	
+	<!-- NUE: ITEM ANATOMY EXPLANATION - ENCHANTMENT -->
+	 <hint uniquename="ITEM_EXPLANATION_ENCHANTMENT" explanation="HorizontalTemplate" title="@TUTORIAL_ITEM_ANATOMY_TITLE"
+	       nexthint="ITEM_EXPLANATION_QUALITY">
+        <entry imagepath="Gui/TutorialExplanations/TutorialItemAnatomyEnchantment" scale="1.8">
+            <content title="@TUTORIAL_ITEM_ANATOMY_ENCHANTMENT_SUBTITLE" text="@TUTORIAL_ITEM_ANATOMY_ENCHANTMENT_INFO"/>
+        </entry>
+    </hint>
+	
+	<!-- NUE: ITEM ANATOMY EXPLANATION - QUALITY -->
+	 <hint uniquename="ITEM_EXPLANATION_QUALITY" explanation="HorizontalTemplate" title="@TUTORIAL_ITEM_ANATOMY_TITLE">
+        <entry imagepath="Gui/TutorialExplanations/TutorialItemAnatomyQuality" scale="1.8">
+            <content title="@TUTORIAL_ITEM_ANATOMY_QUALITY_SUBTITLE" text="@TUTORIAL_ITEM_ANATOMY_QUALITY_INFO"/>
+        </entry>
+    </hint>
+	
+	<!-- NUE: GATHERING TIER EXPLANATION -->
+	<hint uniquename="GATHERING_TIER_EXPLANATION" explanation="VerticalTemplate" title="@TUTORIAL_GATHERING_TIER_EXPLANATION_TITLE">
+        <entry imagepath="Gui/TutorialExplanations/TutorialGatheringTierExplanation" scale="2">
+            <content text="@TUTORIAL_GATHERING_TIER_EXPLANATION_INFO"/>
         </entry>
     </hint>
 
@@ -2439,8 +2455,72 @@
         </entry>
     </hint>
 
-
-
+    <!--ARMORY TUTORIAL HINTS-->
+    <hint uniquename="ARMORY_TUTORIAL_HINT0"
+          title="@ARMORY_TUTORIAL_HINT0_TITLE"
+          infotext="@ARMORY_TUTORIAL_HINT0_TEXT"
+          blockworldinteraction="true"
+          nexthint="ARMORY_TUTORIAL_HINT1"
+          skiptohint="ARMORY_TUTORIAL_CLEAR"
+          triggerui="armoryfirsttime"
+          requiredgui="Armory"
+          mobileposition="BottomRight"/>
+    <hint uniquename="ARMORY_TUTORIAL_HINT1" 
+          title="@ARMORY_TUTORIAL_HINT1_TITLE" 
+          infotext="@ARMORY_TUTORIAL_HINT1_TEXT"
+          blockworldinteraction="true"
+          nexthint="ARMORY_TUTORIAL_HINT2" 
+          skiptohint="ARMORY_TUTORIAL_CLEAR"
+          triggerui="armoryexplanation"
+          requiredgui="Armory"/>
+    <hint uniquename="ARMORY_TUTORIAL_HINT2"
+          title="@ARMORY_TUTORIAL_HINT2_TITLE"
+          infotext="@ARMORY_TUTORIAL_HINT2_TEXT"
+          blockworldinteraction="true"
+          previoushint="ARMORY_TUTORIAL_HINT1"
+          nexthint="ARMORY_TUTORIAL_HINT3"
+          skiptohint="ARMORY_TUTORIAL_CLEAR"
+          triggerui="armorysearchbar" 
+          defaultposition="Center"
+          mobileposition="BottomRight"/>
+    <hint uniquename="ARMORY_TUTORIAL_HINT3"
+          title="@ARMORY_TUTORIAL_HINT3_TITLE"
+          infotext="@ARMORY_TUTORIAL_HINT3_TEXT"
+          blockworldinteraction="true"
+          previoushint="ARMORY_TUTORIAL_HINT2"
+          nexthint="ARMORY_TUTORIAL_HINT4"
+          skiptohint="ARMORY_TUTORIAL_CLEAR"
+          triggerui="armoryresults"
+          mobileposition="BottomRight"/>
+    <hint uniquename="ARMORY_TUTORIAL_HINT4"
+          title="@ARMORY_TUTORIAL_HINT4_TITLE"
+          infotext="@ARMORY_TUTORIAL_HINT4_TEXT"
+          blockworldinteraction="true"
+          previoushint="ARMORY_TUTORIAL_HINT3"
+          nexthint="ARMORY_TUTORIAL_HINT5"
+          skiptohint="ARMORY_TUTORIAL_CLEAR"
+          triggerui="armorybuilddetails"
+          mobileposition="BottomLeft"/>
+    <hint uniquename="ARMORY_TUTORIAL_HINT5"
+          title="@ARMORY_TUTORIAL_HINT5_TITLE"
+          infotext="@ARMORY_TUTORIAL_HINT5_TEXT"
+          blockworldinteraction="true"
+          previoushint="ARMORY_TUTORIAL_HINT4"
+          nexthint="ARMORY_TUTORIAL_HINT6"
+          skiptohint="ARMORY_TUTORIAL_CLEAR"
+          triggerui="armoryfilterbutton"
+          defaultposition="Center"
+          mobileposition="BottomRight"/>
+    <hint uniquename="ARMORY_TUTORIAL_HINT6"
+          title="@ARMORY_TUTORIAL_HINT6_TITLE"
+          infotext="@ARMORY_TUTORIAL_HINT6_TEXT"
+          blockworldinteraction="true"
+          previoushint="ARMORY_TUTORIAL_HINT5"
+          nexthint="ARMORY_TUTORIAL_CLEAR"
+          triggerui="armoryfilterexplanation"
+          completebutton="true"/>
+    <hint uniquename="ARMORY_TUTORIAL_CLEAR" triggerui="armorycleanup"/>
+    
   <!--#####################################################################-->
   <!--#####################################################################-->
   <!--####################### JOURNAL QUEST HINTS #########################-->
@@ -2546,15 +2626,13 @@
           previoushint="JOURNALFULLGUITUTORIAL_HINT7"
           blockworldinteraction="true"
           triggerui="journalhudtracker"
-          endtriggerui="loadselectedhudlayout"
-    />
+          endtriggerui="loadselectedhudlayout"/>
     <hint uniquename="JOURNALFULLGUITUTORIAL_HINT9"
           title="@JOURNALFULLGUITUTORIAL_HINT9_TITLE"
           infotext="@JOURNALFULLGUITUTORIAL_HINT9_TEXT"
           previoushint="JOURNALFULLGUITUTORIAL_HINT8"
           triggerui="clear"
-          completebutton="true"
-    />
+          completebutton="true"/>
     
 	<!-- Beta Welcome Europe-->
     <texthint uniquename="BETA_WELCOME_EUROPE" explanation="TextOnlyTemplate" title="@ASIA_BETA_WELCOME_POPUP_TITLE">

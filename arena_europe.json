@@ -57,10 +57,22 @@
           "@groupsize": "3"
         },
         {
+          "@name": "ranked_4",
+          "@elocategory": "ranked",
+          "@category": "ranked",
+          "@groupsize": "4"
+        },
+        {
           "@name": "ranked_5",
           "@elocategory": "ranked",
           "@category": "ranked",
           "@groupsize": "5"
+        },
+        {
+          "@name": "ranked_1v1",
+          "@elocategory": "ranked1v1",
+          "@category": "ranked_1v1",
+          "@groupsize": "1"
         },
         {
           "@name": "custom_match_arena",
@@ -78,6 +90,18 @@
           "@name": "custom_match_crystal02",
           "@elocategory": "none",
           "@category": "custom_match_crystal02",
+          "@groupsize": "0"
+        },
+        {
+          "@name": "custom_match_crystal03",
+          "@elocategory": "none",
+          "@category": "custom_match_crystal03",
+          "@groupsize": "0"
+        },
+        {
+          "@name": "custom_match_arena_1v1",
+          "@elocategory": "none",
+          "@category": "custom_match_arena_1v1",
           "@groupsize": "0"
         },
         {
@@ -194,7 +218,7 @@
           "@scorefirsthealer": "10000",
           "@scoregroupbalance": "100",
           "@scoreunmatchedfullpremade": "-1000",
-          "@fullpremademinwaitseconds": "600",
+          "@fullpremademinwaitseconds": "300",
           "@minitempoweraverage": "600",
           "@arenamatchtype": "arena",
           "@badbehaviourpunishmentactive": "true",
@@ -279,7 +303,7 @@
           "@name": "ranked",
           "@isranked": "true",
           "@ruleset": "stdgvg",
-          "@cluster": "CrystalRealm-Nonlethal",
+          "@cluster": "CrystalRealm03",
           "@matchtype": "MATCH_CRYSTAL_GVG_NONLETHAL",
           "@displayname": "@ARENA_RANKED",
           "@tutorialname": "CRYSTAL_ARENA_MATCH_INFO",
@@ -298,7 +322,7 @@
           "@scorefirsthealer": "10000",
           "@scoregroupbalance": "100",
           "@scoreunmatchedfullpremade": "-1000",
-          "@fullpremademinwaitseconds": "600",
+          "@fullpremademinwaitseconds": "300",
           "@minitempoweraverage": "900",
           "@arenamatchtype": "arena",
           "@badbehaviourpunishmentactive": "true",
@@ -310,6 +334,41 @@
               "@max": "1"
             }
           },
+          "rewards": {
+            "@rewardsperday": "3"
+          }
+        },
+        {
+          "@name": "ranked_1v1",
+          "@isranked": "true",
+          "@ruleset": "1v1",
+          "@cluster": "ARENA-1v1-01",
+          "@matchtype": "MATCH_1V1_ARENA",
+          "@displayname": "@ARENA_1V1",
+          "@tutorialname": "1V1_ARENA_MATCH_INFO",
+          "@startingelo": "1200",
+          "@elok": "20",
+          "@subeloweight": "1.0",
+          "@groupeloweight": "1.0",
+          "@elopersecond": "2",
+          "@eloradiusbase": "9999",
+          "@rankradiusbase": "0",
+          "@rankpersecond": "0.028",
+          "@minpotentials": "1",
+          "@maxpotentials": "200",
+          "@scorepereloimprovement": "5",
+          "@scorepersecond": "2",
+          "@scorefirsthealer": "10000",
+          "@scoregroupbalance": "100",
+          "@scoreunmatchedfullpremade": "-1000",
+          "@fullpremademinwaitseconds": "1",
+          "@minitempoweraverage": "900",
+          "@arenamatchtype": "arena",
+          "@badbehaviourpunishmentactive": "true",
+          "@playaudienceaudioreactions": "true",
+          "@dailylimitcategory": "unranked",
+          "@rankpointfactor": "0.5",
+          "neededitemroles": null,
           "rewards": {
             "@rewardsperday": "3"
           }
@@ -397,6 +456,66 @@
           "@custommatchname": "crystal02",
           "@custommatchdisplayname": "@CUSTOM_MATCH_ORB_CHANNEL",
           "@custommatchmapdropdownname": "@CUSTOM_MATCH_CRYSTAL2_MAP_DESC",
+          "neededitemroles": null,
+          "rewards": {
+            "@rewardsperday": "0"
+          }
+        },
+        {
+          "@name": "custom_match_crystal03",
+          "@ruleset": "custommatch",
+          "@cluster": "CrystalRealm03",
+          "@matchtype": "MATCH_CUSTOM",
+          "@displayname": "@CUSTOM_MATCH",
+          "@startingelo": "1200",
+          "@elok": "20",
+          "@subeloweight": "1.0",
+          "@groupeloweight": "1.0",
+          "@elopersecond": "10",
+          "@eloradiusbase": "20",
+          "@minpotentials": "1",
+          "@maxpotentials": "200",
+          "@scorepereloimprovement": "5",
+          "@scorepersecond": "2",
+          "@scorefirsthealer": "100",
+          "@scoregroupbalance": "100",
+          "@scoreunmatchedfullpremade": "-1000",
+          "@minitempoweraverage": "0",
+          "@arenamatchtype": "custom",
+          "@custommatchname": "crystal03",
+          "@custommatchdisplayname": "@CUSTOM_MATCH_ORB_CHANNEL",
+          "@custommatchmapdropdownname": "@CUSTOM_MATCH_CRYSTAL3_MAP_DESC",
+          "neededitemroles": null,
+          "rewards": {
+            "@rewardsperday": "0"
+          }
+        },
+        {
+          "@name": "custom_match_arena_1v1",
+          "@ruleset": "custommatch",
+          "@cluster": "ARENA-1v1-01",
+          "@matchtype": "MATCH_1V1_ARENA_CUSTOM",
+          "@displayname": "@ARENA_1V1",
+          "@tutorialname": "1V1_ARENA_MATCH_INFO",
+          "@startingelo": "1200",
+          "@elok": "20",
+          "@subeloweight": "1.0",
+          "@groupeloweight": "1.0",
+          "@elopersecond": "10",
+          "@eloradiusbase": "20",
+          "@minpotentials": "1",
+          "@maxpotentials": "200",
+          "@scorepereloimprovement": "5",
+          "@scorepersecond": "2",
+          "@scorefirsthealer": "100",
+          "@scoregroupbalance": "100",
+          "@scoreunmatchedfullpremade": "-1000",
+          "@minitempoweraverage": "0",
+          "@arenamatchtype": "custom",
+          "@custommatchname": "custom1v1",
+          "@playaudienceaudioreactions": "true",
+          "@custommatchdisplayname": "@CUSTOM_MATCH_1V1",
+          "@custommatchmapdropdownname": "@CUSTOM_MATCH_1V1",
           "neededitemroles": null,
           "rewards": {
             "@rewardsperday": "0"
@@ -584,7 +703,7 @@
         {
           "@name": "crystal_league",
           "@ruleset": "stdgvg",
-          "@cluster": "CrystalRealm",
+          "@cluster": "CrystalRealm03",
           "@matchtype": "MATCH_CRYSTAL_GVG",
           "@displayname": "@CRYSTAL_LEAGUE",
           "@startingelo": "1200",
@@ -702,6 +821,12 @@
           "@scorefactor": "1.0"
         },
         {
+          "@name": "1v1",
+          "@teamsize": "1",
+          "@teamsizemin": "1",
+          "@scorefactor": "1.0"
+        },
+        {
           "@name": "stdgvg",
           "@teamsize": "5",
           "@scorefactor": "1.0"
@@ -791,7 +916,7 @@
         },
         {
           "@name": "SEASON_33",
-          "@displayname": "@SEASONS_SEASONNAME_SEASON_32",
+          "@displayname": "@SEASONS_SEASONNAME_SEASON_33",
           "@seasonranktemplate": "RANKED_BRACKETS_ARENA_S26",
           "@startdatetimeref": "GVG_SEASON_33_START",
           "@newseasonrankdownid": "RANK_DOWN_MAPPING_BRACKET_S26_TO_S26"
@@ -6514,64 +6639,124 @@
                   "@count": "1"
                 }
               },
-              "winrewards": {
-                "itemreward": [
-                  {
-                    "@premiumstatus": "Premium",
-                    "@itemid": "T3_LOOTBAG_ARENA_WIN_PREMIUM_IRON1",
-                    "@enchantmentlevel": "0",
-                    "@count": "1"
-                  },
-                  {
-                    "@premiumstatus": "NonPremium",
-                    "@itemid": "T2_LOOTBAG_ARENA_WIN_BASIC_IRON1",
-                    "@enchantmentlevel": "0",
-                    "@count": "1"
-                  },
-                  {
-                    "@role": "ARENA_HEAL",
-                    "@itemid": "T3_SKILLBOOK_NONTRADABLE",
-                    "@enchantmentlevel": "0",
-                    "@count": "2"
-                  }
-                ],
-                "pspreward": [
-                  {
-                    "@premiumstatus": "Premium",
-                    "@amount": "1500"
-                  },
-                  {
-                    "@premiumstatus": "NonPremium",
-                    "@amount": "1200"
-                  }
-                ]
-              },
-              "loserewards": {
-                "itemreward": [
-                  {
-                    "@premiumstatus": "Premium",
-                    "@itemid": "T2_SKILLBOOK_NONTRADABLE",
-                    "@enchantmentlevel": "0",
-                    "@count": "12"
-                  },
-                  {
-                    "@premiumstatus": "NonPremium",
-                    "@itemid": "T2_SKILLBOOK_NONTRADABLE",
-                    "@enchantmentlevel": "0",
-                    "@count": "8"
-                  }
-                ],
-                "pspreward": [
-                  {
-                    "@premiumstatus": "Premium",
-                    "@amount": "750"
-                  },
-                  {
-                    "@premiumstatus": "NonPremium",
-                    "@amount": "500"
-                  }
-                ]
-              }
+              "winrewards": [
+                {
+                  "@category": "ranked",
+                  "itemreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@itemid": "T3_LOOTBAG_ARENA_WIN_PREMIUM_IRON1",
+                      "@enchantmentlevel": "0",
+                      "@count": "1"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@itemid": "T2_LOOTBAG_ARENA_WIN_BASIC_IRON1",
+                      "@enchantmentlevel": "0",
+                      "@count": "1"
+                    },
+                    {
+                      "@role": "ARENA_HEAL",
+                      "@itemid": "T3_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "2"
+                    }
+                  ],
+                  "pspreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@amount": "1500"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@amount": "1200"
+                    }
+                  ]
+                },
+                {
+                  "@category": "ranked_1v1",
+                  "itemreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@itemid": "T3_LOOTBAG_1V1_ARENA_WIN_PREMIUM_IRON1",
+                      "@enchantmentlevel": "0",
+                      "@count": "1"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@itemid": "T2_LOOTBAG_1V1_ARENA_WIN_BASIC_IRON1",
+                      "@enchantmentlevel": "0",
+                      "@count": "1"
+                    }
+                  ],
+                  "pspreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@amount": "500"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@amount": "400"
+                    }
+                  ]
+                }
+              ],
+              "loserewards": [
+                {
+                  "@category": "ranked",
+                  "itemreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@itemid": "T2_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "12"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@itemid": "T2_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "8"
+                    }
+                  ],
+                  "pspreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@amount": "750"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@amount": "500"
+                    }
+                  ]
+                },
+                {
+                  "@category": "ranked_1v1",
+                  "itemreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@itemid": "T2_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "5"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@itemid": "T2_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "3"
+                    }
+                  ],
+                  "pspreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@amount": "250"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@amount": "175"
+                    }
+                  ]
+                }
+              ]
             },
             {
               "@id": "ARENA_IRON_2",
@@ -6586,13 +6771,24 @@
               "@elowinbooster": "10",
               "@elolosebooster": "1",
               "@expectedelo": "850",
-              "seasonrankrewards": {
-                "itemreward": {
-                  "@itemid": "T4_LOOTBAG_ARENA_RANK_UP_IRON2",
-                  "@enchantmentlevel": "0",
-                  "@count": "1"
+              "seasonrankrewards": [
+                {
+                  "@category": "ranked",
+                  "itemreward": {
+                    "@itemid": "T4_LOOTBAG_ARENA_RANK_UP_IRON2",
+                    "@enchantmentlevel": "0",
+                    "@count": "1"
+                  }
+                },
+                {
+                  "@category": "ranked_1v1",
+                  "itemreward": {
+                    "@itemid": "T4_LOOTBAG_1V1_ARENA_RANK_UP_IRON2",
+                    "@enchantmentlevel": "0",
+                    "@count": "1"
+                  }
                 }
-              },
+              ],
               "limitedwinrewards": {
                 "itemreward": {
                   "@itemid": "T4_LOOTBAG_EXPEDITION_ROYAL_SIGIL",
@@ -6600,64 +6796,124 @@
                   "@count": "1"
                 }
               },
-              "winrewards": {
-                "itemreward": [
-                  {
-                    "@premiumstatus": "Premium",
-                    "@itemid": "T3_LOOTBAG_ARENA_WIN_PREMIUM_IRON2",
-                    "@enchantmentlevel": "0",
-                    "@count": "1"
-                  },
-                  {
-                    "@premiumstatus": "NonPremium",
-                    "@itemid": "T2_LOOTBAG_ARENA_WIN_BASIC_IRON2",
-                    "@enchantmentlevel": "0",
-                    "@count": "1"
-                  },
-                  {
-                    "@role": "ARENA_HEAL",
-                    "@itemid": "T3_SKILLBOOK_NONTRADABLE",
-                    "@enchantmentlevel": "0",
-                    "@count": "2"
-                  }
-                ],
-                "pspreward": [
-                  {
-                    "@premiumstatus": "Premium",
-                    "@amount": "1600"
-                  },
-                  {
-                    "@premiumstatus": "NonPremium",
-                    "@amount": "1300"
-                  }
-                ]
-              },
-              "loserewards": {
-                "itemreward": [
-                  {
-                    "@premiumstatus": "Premium",
-                    "@itemid": "T2_SKILLBOOK_NONTRADABLE",
-                    "@enchantmentlevel": "0",
-                    "@count": "14"
-                  },
-                  {
-                    "@premiumstatus": "NonPremium",
-                    "@itemid": "T2_SKILLBOOK_NONTRADABLE",
-                    "@enchantmentlevel": "0",
-                    "@count": "9"
-                  }
-                ],
-                "pspreward": [
-                  {
-                    "@premiumstatus": "Premium",
-                    "@amount": "775"
-                  },
-                  {
-                    "@premiumstatus": "NonPremium",
-                    "@amount": "525"
-                  }
-                ]
-              }
+              "winrewards": [
+                {
+                  "@category": "ranked",
+                  "itemreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@itemid": "T3_LOOTBAG_ARENA_WIN_PREMIUM_IRON2",
+                      "@enchantmentlevel": "0",
+                      "@count": "1"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@itemid": "T2_LOOTBAG_ARENA_WIN_BASIC_IRON2",
+                      "@enchantmentlevel": "0",
+                      "@count": "1"
+                    },
+                    {
+                      "@role": "ARENA_HEAL",
+                      "@itemid": "T3_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "2"
+                    }
+                  ],
+                  "pspreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@amount": "1600"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@amount": "1300"
+                    }
+                  ]
+                },
+                {
+                  "@category": "ranked_1v1",
+                  "itemreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@itemid": "T3_LOOTBAG_1V1_ARENA_WIN_PREMIUM_IRON2",
+                      "@enchantmentlevel": "0",
+                      "@count": "1"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@itemid": "T2_LOOTBAG_1V1_ARENA_WIN_BASIC_IRON2",
+                      "@enchantmentlevel": "0",
+                      "@count": "1"
+                    }
+                  ],
+                  "pspreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@amount": "525"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@amount": "425"
+                    }
+                  ]
+                }
+              ],
+              "loserewards": [
+                {
+                  "@category": "ranked",
+                  "itemreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@itemid": "T2_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "14"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@itemid": "T2_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "9"
+                    }
+                  ],
+                  "pspreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@amount": "775"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@amount": "525"
+                    }
+                  ]
+                },
+                {
+                  "@category": "ranked_1v1",
+                  "itemreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@itemid": "T2_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "5"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@itemid": "T2_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "3"
+                    }
+                  ],
+                  "pspreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@amount": "250"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@amount": "175"
+                    }
+                  ]
+                }
+              ]
             },
             {
               "@id": "ARENA_IRON_3",
@@ -6672,13 +6928,24 @@
               "@elowinbooster": "10",
               "@elolosebooster": "1",
               "@expectedelo": "900",
-              "seasonrankrewards": {
-                "itemreward": {
-                  "@itemid": "T4_LOOTBAG_ARENA_RANK_UP_IRON3",
-                  "@enchantmentlevel": "0",
-                  "@count": "1"
+              "seasonrankrewards": [
+                {
+                  "@category": "ranked",
+                  "itemreward": {
+                    "@itemid": "T4_LOOTBAG_ARENA_RANK_UP_IRON3",
+                    "@enchantmentlevel": "0",
+                    "@count": "1"
+                  }
+                },
+                {
+                  "@category": "ranked_1v1",
+                  "itemreward": {
+                    "@itemid": "T4_LOOTBAG_1V1_ARENA_RANK_UP_IRON3",
+                    "@enchantmentlevel": "0",
+                    "@count": "1"
+                  }
                 }
-              },
+              ],
               "limitedwinrewards": {
                 "itemreward": {
                   "@itemid": "T4_LOOTBAG_EXPEDITION_ROYAL_SIGIL",
@@ -6686,64 +6953,130 @@
                   "@count": "1"
                 }
               },
-              "winrewards": {
-                "itemreward": [
-                  {
-                    "@premiumstatus": "Premium",
-                    "@itemid": "T3_LOOTBAG_ARENA_WIN_PREMIUM_IRON3",
-                    "@enchantmentlevel": "0",
-                    "@count": "1"
-                  },
-                  {
-                    "@premiumstatus": "NonPremium",
-                    "@itemid": "T2_LOOTBAG_ARENA_WIN_BASIC_IRON3",
-                    "@enchantmentlevel": "0",
-                    "@count": "1"
-                  },
-                  {
-                    "@role": "ARENA_HEAL",
-                    "@itemid": "T3_SKILLBOOK_NONTRADABLE",
-                    "@enchantmentlevel": "0",
-                    "@count": "2"
-                  }
-                ],
-                "pspreward": [
-                  {
-                    "@premiumstatus": "Premium",
-                    "@amount": "1650"
-                  },
-                  {
-                    "@premiumstatus": "NonPremium",
-                    "@amount": "1350"
-                  }
-                ]
-              },
-              "loserewards": {
-                "itemreward": [
-                  {
-                    "@premiumstatus": "Premium",
-                    "@itemid": "T2_SKILLBOOK_NONTRADABLE",
-                    "@enchantmentlevel": "0",
-                    "@count": "15"
-                  },
-                  {
-                    "@premiumstatus": "NonPremium",
-                    "@itemid": "T2_SKILLBOOK_NONTRADABLE",
-                    "@enchantmentlevel": "0",
-                    "@count": "10"
-                  }
-                ],
-                "pspreward": [
-                  {
-                    "@premiumstatus": "Premium",
-                    "@amount": "800"
-                  },
-                  {
-                    "@premiumstatus": "NonPremium",
-                    "@amount": "550"
-                  }
-                ]
-              }
+              "winrewards": [
+                {
+                  "@category": "ranked",
+                  "itemreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@itemid": "T3_LOOTBAG_ARENA_WIN_PREMIUM_IRON3",
+                      "@enchantmentlevel": "0",
+                      "@count": "1"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@itemid": "T2_LOOTBAG_ARENA_WIN_BASIC_IRON3",
+                      "@enchantmentlevel": "0",
+                      "@count": "1"
+                    },
+                    {
+                      "@role": "ARENA_HEAL",
+                      "@itemid": "T3_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "2"
+                    }
+                  ],
+                  "pspreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@amount": "1650"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@amount": "1350"
+                    }
+                  ]
+                },
+                {
+                  "@category": "ranked_1v1",
+                  "itemreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@itemid": "T3_LOOTBAG_1V1_ARENA_WIN_PREMIUM_IRON3",
+                      "@enchantmentlevel": "0",
+                      "@count": "1"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@itemid": "T2_LOOTBAG_1V1_ARENA_WIN_BASIC_IRON3",
+                      "@enchantmentlevel": "0",
+                      "@count": "1"
+                    },
+                    {
+                      "@role": "ARENA_HEAL",
+                      "@itemid": "T3_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "2"
+                    }
+                  ],
+                  "pspreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@amount": "550"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@amount": "450"
+                    }
+                  ]
+                }
+              ],
+              "loserewards": [
+                {
+                  "@category": "ranked",
+                  "itemreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@itemid": "T2_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "15"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@itemid": "T2_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "10"
+                    }
+                  ],
+                  "pspreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@amount": "800"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@amount": "550"
+                    }
+                  ]
+                },
+                {
+                  "@category": "ranked_1v1",
+                  "itemreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@itemid": "T2_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "6"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@itemid": "T2_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "4"
+                    }
+                  ],
+                  "pspreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@amount": "275"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@amount": "175"
+                    }
+                  ]
+                }
+              ]
             },
             {
               "@id": "ARENA_IRON_4",
@@ -6758,13 +7091,24 @@
               "@elowinbooster": "10",
               "@elolosebooster": "1",
               "@expectedelo": "950",
-              "seasonrankrewards": {
-                "itemreward": {
-                  "@itemid": "T4_LOOTBAG_ARENA_RANK_UP_IRON4",
-                  "@enchantmentlevel": "0",
-                  "@count": "1"
+              "seasonrankrewards": [
+                {
+                  "@category": "ranked",
+                  "itemreward": {
+                    "@itemid": "T4_LOOTBAG_ARENA_RANK_UP_IRON4",
+                    "@enchantmentlevel": "0",
+                    "@count": "1"
+                  }
+                },
+                {
+                  "@category": "ranked_1v1",
+                  "itemreward": {
+                    "@itemid": "T4_LOOTBAG_1V1_ARENA_RANK_UP_IRON4",
+                    "@enchantmentlevel": "0",
+                    "@count": "1"
+                  }
                 }
-              },
+              ],
               "limitedwinrewards": {
                 "itemreward": {
                   "@itemid": "T4_LOOTBAG_EXPEDITION_ROYAL_SIGIL",
@@ -6772,64 +7116,124 @@
                   "@count": "1"
                 }
               },
-              "winrewards": {
-                "itemreward": [
-                  {
-                    "@premiumstatus": "Premium",
-                    "@itemid": "T3_LOOTBAG_ARENA_WIN_PREMIUM_IRON4",
-                    "@enchantmentlevel": "0",
-                    "@count": "1"
-                  },
-                  {
-                    "@premiumstatus": "NonPremium",
-                    "@itemid": "T2_LOOTBAG_ARENA_WIN_BASIC_IRON4",
-                    "@enchantmentlevel": "0",
-                    "@count": "1"
-                  },
-                  {
-                    "@role": "ARENA_HEAL",
-                    "@itemid": "T3_SKILLBOOK_NONTRADABLE",
-                    "@enchantmentlevel": "0",
-                    "@count": "2"
-                  }
-                ],
-                "pspreward": [
-                  {
-                    "@premiumstatus": "Premium",
-                    "@amount": "1750"
-                  },
-                  {
-                    "@premiumstatus": "NonPremium",
-                    "@amount": "1400"
-                  }
-                ]
-              },
-              "loserewards": {
-                "itemreward": [
-                  {
-                    "@premiumstatus": "Premium",
-                    "@itemid": "T2_SKILLBOOK_NONTRADABLE",
-                    "@enchantmentlevel": "0",
-                    "@count": "17"
-                  },
-                  {
-                    "@premiumstatus": "NonPremium",
-                    "@itemid": "T2_SKILLBOOK_NONTRADABLE",
-                    "@enchantmentlevel": "0",
-                    "@count": "11"
-                  }
-                ],
-                "pspreward": [
-                  {
-                    "@premiumstatus": "Premium",
-                    "@amount": "825"
-                  },
-                  {
-                    "@premiumstatus": "NonPremium",
-                    "@amount": "575"
-                  }
-                ]
-              }
+              "winrewards": [
+                {
+                  "@category": "ranked",
+                  "itemreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@itemid": "T3_LOOTBAG_ARENA_WIN_PREMIUM_IRON4",
+                      "@enchantmentlevel": "0",
+                      "@count": "1"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@itemid": "T2_LOOTBAG_ARENA_WIN_BASIC_IRON4",
+                      "@enchantmentlevel": "0",
+                      "@count": "1"
+                    },
+                    {
+                      "@role": "ARENA_HEAL",
+                      "@itemid": "T3_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "2"
+                    }
+                  ],
+                  "pspreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@amount": "1750"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@amount": "1400"
+                    }
+                  ]
+                },
+                {
+                  "@category": "ranked_1v1",
+                  "itemreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@itemid": "T3_LOOTBAG_1V1_ARENA_WIN_PREMIUM_IRON4",
+                      "@enchantmentlevel": "0",
+                      "@count": "1"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@itemid": "T2_LOOTBAG_1V1_ARENA_WIN_BASIC_IRON4",
+                      "@enchantmentlevel": "0",
+                      "@count": "1"
+                    }
+                  ],
+                  "pspreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@amount": "575"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@amount": "475"
+                    }
+                  ]
+                }
+              ],
+              "loserewards": [
+                {
+                  "@category": "ranked",
+                  "itemreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@itemid": "T2_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "17"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@itemid": "T2_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "11"
+                    }
+                  ],
+                  "pspreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@amount": "825"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@amount": "575"
+                    }
+                  ]
+                },
+                {
+                  "@category": "ranked_1v1",
+                  "itemreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@itemid": "T2_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "7"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@itemid": "T2_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "4"
+                    }
+                  ],
+                  "pspreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@amount": "275"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@amount": "200"
+                    }
+                  ]
+                }
+              ]
             },
             {
               "@id": "ARENA_BRONZE_1",
@@ -6844,13 +7248,24 @@
               "@elowinbooster": "10",
               "@elolosebooster": "1",
               "@expectedelo": "1000",
-              "seasonrankrewards": {
-                "itemreward": {
-                  "@itemid": "T5_LOOTBAG_ARENA_RANK_UP_BRONZE1",
-                  "@enchantmentlevel": "0",
-                  "@count": "1"
+              "seasonrankrewards": [
+                {
+                  "@category": "ranked",
+                  "itemreward": {
+                    "@itemid": "T5_LOOTBAG_ARENA_RANK_UP_BRONZE1",
+                    "@enchantmentlevel": "0",
+                    "@count": "1"
+                  }
+                },
+                {
+                  "@category": "ranked_1v1",
+                  "itemreward": {
+                    "@itemid": "T5_LOOTBAG_1V1_ARENA_RANK_UP_BRONZE1",
+                    "@enchantmentlevel": "0",
+                    "@count": "1"
+                  }
                 }
-              },
+              ],
               "limitedwinrewards": {
                 "itemreward": {
                   "@itemid": "T4_LOOTBAG_EXPEDITION_ROYAL_SIGIL",
@@ -6858,64 +7273,124 @@
                   "@count": "1"
                 }
               },
-              "winrewards": {
-                "itemreward": [
-                  {
-                    "@premiumstatus": "Premium",
-                    "@itemid": "T3_LOOTBAG_ARENA_WIN_PREMIUM_BRONZE1",
-                    "@enchantmentlevel": "0",
-                    "@count": "1"
-                  },
-                  {
-                    "@premiumstatus": "NonPremium",
-                    "@itemid": "T2_LOOTBAG_ARENA_WIN_BASIC_BRONZE1",
-                    "@enchantmentlevel": "0",
-                    "@count": "1"
-                  },
-                  {
-                    "@role": "ARENA_HEAL",
-                    "@itemid": "T3_SKILLBOOK_NONTRADABLE",
-                    "@enchantmentlevel": "0",
-                    "@count": "3"
-                  }
-                ],
-                "pspreward": [
-                  {
-                    "@premiumstatus": "Premium",
-                    "@amount": "1800"
-                  },
-                  {
-                    "@premiumstatus": "NonPremium",
-                    "@amount": "1500"
-                  }
-                ]
-              },
-              "loserewards": {
-                "itemreward": [
-                  {
-                    "@premiumstatus": "Premium",
-                    "@itemid": "T2_SKILLBOOK_NONTRADABLE",
-                    "@enchantmentlevel": "0",
-                    "@count": "18"
-                  },
-                  {
-                    "@premiumstatus": "NonPremium",
-                    "@itemid": "T2_SKILLBOOK_NONTRADABLE",
-                    "@enchantmentlevel": "0",
-                    "@count": "12"
-                  }
-                ],
-                "pspreward": [
-                  {
-                    "@premiumstatus": "Premium",
-                    "@amount": "850"
-                  },
-                  {
-                    "@premiumstatus": "NonPremium",
-                    "@amount": "600"
-                  }
-                ]
-              }
+              "winrewards": [
+                {
+                  "@category": "ranked",
+                  "itemreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@itemid": "T3_LOOTBAG_ARENA_WIN_PREMIUM_BRONZE1",
+                      "@enchantmentlevel": "0",
+                      "@count": "1"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@itemid": "T2_LOOTBAG_ARENA_WIN_BASIC_BRONZE1",
+                      "@enchantmentlevel": "0",
+                      "@count": "1"
+                    },
+                    {
+                      "@role": "ARENA_HEAL",
+                      "@itemid": "T3_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "3"
+                    }
+                  ],
+                  "pspreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@amount": "1800"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@amount": "1500"
+                    }
+                  ]
+                },
+                {
+                  "@category": "ranked_1v1",
+                  "itemreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@itemid": "T3_LOOTBAG_1V1_ARENA_WIN_PREMIUM_BRONZE1",
+                      "@enchantmentlevel": "0",
+                      "@count": "1"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@itemid": "T2_LOOTBAG_1V1_ARENA_WIN_BASIC_BRONZE1",
+                      "@enchantmentlevel": "0",
+                      "@count": "1"
+                    }
+                  ],
+                  "pspreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@amount": "600"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@amount": "500"
+                    }
+                  ]
+                }
+              ],
+              "loserewards": [
+                {
+                  "@category": "ranked",
+                  "itemreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@itemid": "T2_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "18"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@itemid": "T2_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "12"
+                    }
+                  ],
+                  "pspreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@amount": "850"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@amount": "600"
+                    }
+                  ]
+                },
+                {
+                  "@category": "ranked_1v1",
+                  "itemreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@itemid": "T2_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "7"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@itemid": "T2_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "5"
+                    }
+                  ],
+                  "pspreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@amount": "275"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@amount": "200"
+                    }
+                  ]
+                }
+              ]
             },
             {
               "@id": "ARENA_BRONZE_2",
@@ -6930,13 +7405,24 @@
               "@elowinbooster": "10",
               "@elolosebooster": "1",
               "@expectedelo": "1050",
-              "seasonrankrewards": {
-                "itemreward": {
-                  "@itemid": "T5_LOOTBAG_ARENA_RANK_UP_BRONZE2",
-                  "@enchantmentlevel": "0",
-                  "@count": "1"
+              "seasonrankrewards": [
+                {
+                  "@category": "ranked",
+                  "itemreward": {
+                    "@itemid": "T5_LOOTBAG_ARENA_RANK_UP_BRONZE2",
+                    "@enchantmentlevel": "0",
+                    "@count": "1"
+                  }
+                },
+                {
+                  "@category": "ranked_1v1",
+                  "itemreward": {
+                    "@itemid": "T5_LOOTBAG_1V1_ARENA_RANK_UP_BRONZE2",
+                    "@enchantmentlevel": "0",
+                    "@count": "1"
+                  }
                 }
-              },
+              ],
               "limitedwinrewards": {
                 "itemreward": {
                   "@itemid": "T4_LOOTBAG_EXPEDITION_ROYAL_SIGIL",
@@ -6944,64 +7430,124 @@
                   "@count": "1"
                 }
               },
-              "winrewards": {
-                "itemreward": [
-                  {
-                    "@premiumstatus": "Premium",
-                    "@itemid": "T3_LOOTBAG_ARENA_WIN_PREMIUM_BRONZE2",
-                    "@enchantmentlevel": "0",
-                    "@count": "1"
-                  },
-                  {
-                    "@premiumstatus": "NonPremium",
-                    "@itemid": "T2_LOOTBAG_ARENA_WIN_BASIC_BRONZE2",
-                    "@enchantmentlevel": "0",
-                    "@count": "1"
-                  },
-                  {
-                    "@role": "ARENA_HEAL",
-                    "@itemid": "T3_SKILLBOOK_NONTRADABLE",
-                    "@enchantmentlevel": "0",
-                    "@count": "3"
-                  }
-                ],
-                "pspreward": [
-                  {
-                    "@premiumstatus": "Premium",
-                    "@amount": "1900"
-                  },
-                  {
-                    "@premiumstatus": "NonPremium",
-                    "@amount": "1550"
-                  }
-                ]
-              },
-              "loserewards": {
-                "itemreward": [
-                  {
-                    "@premiumstatus": "Premium",
-                    "@itemid": "T2_SKILLBOOK_NONTRADABLE",
-                    "@enchantmentlevel": "0",
-                    "@count": "20"
-                  },
-                  {
-                    "@premiumstatus": "NonPremium",
-                    "@itemid": "T2_SKILLBOOK_NONTRADABLE",
-                    "@enchantmentlevel": "0",
-                    "@count": "13"
-                  }
-                ],
-                "pspreward": [
-                  {
-                    "@premiumstatus": "Premium",
-                    "@amount": "875"
-                  },
-                  {
-                    "@premiumstatus": "NonPremium",
-                    "@amount": "625"
-                  }
-                ]
-              }
+              "winrewards": [
+                {
+                  "@category": "ranked",
+                  "itemreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@itemid": "T3_LOOTBAG_ARENA_WIN_PREMIUM_BRONZE2",
+                      "@enchantmentlevel": "0",
+                      "@count": "1"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@itemid": "T2_LOOTBAG_ARENA_WIN_BASIC_BRONZE2",
+                      "@enchantmentlevel": "0",
+                      "@count": "1"
+                    },
+                    {
+                      "@role": "ARENA_HEAL",
+                      "@itemid": "T3_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "3"
+                    }
+                  ],
+                  "pspreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@amount": "1900"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@amount": "1550"
+                    }
+                  ]
+                },
+                {
+                  "@category": "ranked_1v1",
+                  "itemreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@itemid": "T3_LOOTBAG_1V1_ARENA_WIN_PREMIUM_BRONZE2",
+                      "@enchantmentlevel": "0",
+                      "@count": "1"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@itemid": "T2_LOOTBAG_1V1_ARENA_WIN_BASIC_BRONZE2",
+                      "@enchantmentlevel": "0",
+                      "@count": "1"
+                    }
+                  ],
+                  "pspreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@amount": "625"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@amount": "525"
+                    }
+                  ]
+                }
+              ],
+              "loserewards": [
+                {
+                  "@category": "ranked",
+                  "itemreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@itemid": "T2_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "20"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@itemid": "T2_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "13"
+                    }
+                  ],
+                  "pspreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@amount": "875"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@amount": "625"
+                    }
+                  ]
+                },
+                {
+                  "@category": "ranked_1v1",
+                  "itemreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@itemid": "T2_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "8"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@itemid": "T2_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "5"
+                    }
+                  ],
+                  "pspreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@amount": "300"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@amount": "200"
+                    }
+                  ]
+                }
+              ]
             },
             {
               "@id": "ARENA_BRONZE_3",
@@ -7016,13 +7562,24 @@
               "@elowinbooster": "10",
               "@elolosebooster": "1",
               "@expectedelo": "1100",
-              "seasonrankrewards": {
-                "itemreward": {
-                  "@itemid": "T5_LOOTBAG_ARENA_RANK_UP_BRONZE3",
-                  "@enchantmentlevel": "0",
-                  "@count": "1"
+              "seasonrankrewards": [
+                {
+                  "@category": "ranked",
+                  "itemreward": {
+                    "@itemid": "T5_LOOTBAG_ARENA_RANK_UP_BRONZE3",
+                    "@enchantmentlevel": "0",
+                    "@count": "1"
+                  }
+                },
+                {
+                  "@category": "ranked_1v1",
+                  "itemreward": {
+                    "@itemid": "T5_LOOTBAG_1V1_ARENA_RANK_UP_BRONZE3",
+                    "@enchantmentlevel": "0",
+                    "@count": "1"
+                  }
                 }
-              },
+              ],
               "limitedwinrewards": {
                 "itemreward": {
                   "@itemid": "T4_LOOTBAG_EXPEDITION_ROYAL_SIGIL",
@@ -7030,64 +7587,124 @@
                   "@count": "1"
                 }
               },
-              "winrewards": {
-                "itemreward": [
-                  {
-                    "@premiumstatus": "Premium",
-                    "@itemid": "T3_LOOTBAG_ARENA_WIN_PREMIUM_BRONZE3",
-                    "@enchantmentlevel": "0",
-                    "@count": "1"
-                  },
-                  {
-                    "@premiumstatus": "NonPremium",
-                    "@itemid": "T2_LOOTBAG_ARENA_WIN_BASIC_BRONZE3",
-                    "@enchantmentlevel": "0",
-                    "@count": "1"
-                  },
-                  {
-                    "@role": "ARENA_HEAL",
-                    "@itemid": "T3_SKILLBOOK_NONTRADABLE",
-                    "@enchantmentlevel": "0",
-                    "@count": "3"
-                  }
-                ],
-                "pspreward": [
-                  {
-                    "@premiumstatus": "Premium",
-                    "@amount": "1950"
-                  },
-                  {
-                    "@premiumstatus": "NonPremium",
-                    "@amount": "1600"
-                  }
-                ]
-              },
-              "loserewards": {
-                "itemreward": [
-                  {
-                    "@premiumstatus": "Premium",
-                    "@itemid": "T2_SKILLBOOK_NONTRADABLE",
-                    "@enchantmentlevel": "0",
-                    "@count": "21"
-                  },
-                  {
-                    "@premiumstatus": "NonPremium",
-                    "@itemid": "T2_SKILLBOOK_NONTRADABLE",
-                    "@enchantmentlevel": "0",
-                    "@count": "14"
-                  }
-                ],
-                "pspreward": [
-                  {
-                    "@premiumstatus": "Premium",
-                    "@amount": "900"
-                  },
-                  {
-                    "@premiumstatus": "NonPremium",
-                    "@amount": "650"
-                  }
-                ]
-              }
+              "winrewards": [
+                {
+                  "@category": "ranked",
+                  "itemreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@itemid": "T3_LOOTBAG_ARENA_WIN_PREMIUM_BRONZE3",
+                      "@enchantmentlevel": "0",
+                      "@count": "1"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@itemid": "T2_LOOTBAG_ARENA_WIN_BASIC_BRONZE3",
+                      "@enchantmentlevel": "0",
+                      "@count": "1"
+                    },
+                    {
+                      "@role": "ARENA_HEAL",
+                      "@itemid": "T3_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "3"
+                    }
+                  ],
+                  "pspreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@amount": "1950"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@amount": "1600"
+                    }
+                  ]
+                },
+                {
+                  "@category": "ranked_1v1",
+                  "itemreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@itemid": "T3_LOOTBAG_1V1_ARENA_WIN_PREMIUM_BRONZE3",
+                      "@enchantmentlevel": "0",
+                      "@count": "1"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@itemid": "T2_LOOTBAG_1V1_ARENA_WIN_BASIC_BRONZE3",
+                      "@enchantmentlevel": "0",
+                      "@count": "1"
+                    }
+                  ],
+                  "pspreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@amount": "650"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@amount": "525"
+                    }
+                  ]
+                }
+              ],
+              "loserewards": [
+                {
+                  "@category": "ranked",
+                  "itemreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@itemid": "T2_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "21"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@itemid": "T2_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "14"
+                    }
+                  ],
+                  "pspreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@amount": "900"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@amount": "650"
+                    }
+                  ]
+                },
+                {
+                  "@category": "ranked_1v1",
+                  "itemreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@itemid": "T2_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "8"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@itemid": "T2_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "5"
+                    }
+                  ],
+                  "pspreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@amount": "300"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@amount": "225"
+                    }
+                  ]
+                }
+              ]
             },
             {
               "@id": "ARENA_BRONZE_4",
@@ -7102,13 +7719,24 @@
               "@elowinbooster": "10",
               "@elolosebooster": "1",
               "@expectedelo": "1150",
-              "seasonrankrewards": {
-                "itemreward": {
-                  "@itemid": "T5_LOOTBAG_ARENA_RANK_UP_BRONZE4",
-                  "@enchantmentlevel": "0",
-                  "@count": "1"
+              "seasonrankrewards": [
+                {
+                  "@category": "ranked",
+                  "itemreward": {
+                    "@itemid": "T5_LOOTBAG_ARENA_RANK_UP_BRONZE4",
+                    "@enchantmentlevel": "0",
+                    "@count": "1"
+                  }
+                },
+                {
+                  "@category": "ranked_1v1",
+                  "itemreward": {
+                    "@itemid": "T5_LOOTBAG_1V1_ARENA_RANK_UP_BRONZE4",
+                    "@enchantmentlevel": "0",
+                    "@count": "1"
+                  }
                 }
-              },
+              ],
               "limitedwinrewards": {
                 "itemreward": {
                   "@itemid": "T4_LOOTBAG_EXPEDITION_ROYAL_SIGIL",
@@ -7116,64 +7744,124 @@
                   "@count": "1"
                 }
               },
-              "winrewards": {
-                "itemreward": [
-                  {
-                    "@premiumstatus": "Premium",
-                    "@itemid": "T3_LOOTBAG_ARENA_WIN_PREMIUM_BRONZE4",
-                    "@enchantmentlevel": "0",
-                    "@count": "1"
-                  },
-                  {
-                    "@premiumstatus": "NonPremium",
-                    "@itemid": "T2_LOOTBAG_ARENA_WIN_BASIC_BRONZE4",
-                    "@enchantmentlevel": "0",
-                    "@count": "1"
-                  },
-                  {
-                    "@role": "ARENA_HEAL",
-                    "@itemid": "T3_SKILLBOOK_NONTRADABLE",
-                    "@enchantmentlevel": "0",
-                    "@count": "3"
-                  }
-                ],
-                "pspreward": [
-                  {
-                    "@premiumstatus": "Premium",
-                    "@amount": "2050"
-                  },
-                  {
-                    "@premiumstatus": "NonPremium",
-                    "@amount": "1650"
-                  }
-                ]
-              },
-              "loserewards": {
-                "itemreward": [
-                  {
-                    "@premiumstatus": "Premium",
-                    "@itemid": "T2_SKILLBOOK_NONTRADABLE",
-                    "@enchantmentlevel": "0",
-                    "@count": "23"
-                  },
-                  {
-                    "@premiumstatus": "NonPremium",
-                    "@itemid": "T2_SKILLBOOK_NONTRADABLE",
-                    "@enchantmentlevel": "0",
-                    "@count": "15"
-                  }
-                ],
-                "pspreward": [
-                  {
-                    "@premiumstatus": "Premium",
-                    "@amount": "925"
-                  },
-                  {
-                    "@premiumstatus": "NonPremium",
-                    "@amount": "675"
-                  }
-                ]
-              }
+              "winrewards": [
+                {
+                  "@category": "ranked",
+                  "itemreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@itemid": "T3_LOOTBAG_ARENA_WIN_PREMIUM_BRONZE4",
+                      "@enchantmentlevel": "0",
+                      "@count": "1"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@itemid": "T2_LOOTBAG_ARENA_WIN_BASIC_BRONZE4",
+                      "@enchantmentlevel": "0",
+                      "@count": "1"
+                    },
+                    {
+                      "@role": "ARENA_HEAL",
+                      "@itemid": "T3_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "3"
+                    }
+                  ],
+                  "pspreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@amount": "2050"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@amount": "1650"
+                    }
+                  ]
+                },
+                {
+                  "@category": "ranked_1v1",
+                  "itemreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@itemid": "T3_LOOTBAG_1V1_ARENA_WIN_PREMIUM_BRONZE4",
+                      "@enchantmentlevel": "0",
+                      "@count": "1"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@itemid": "T2_LOOTBAG_1V1_ARENA_WIN_BASIC_BRONZE4",
+                      "@enchantmentlevel": "0",
+                      "@count": "1"
+                    }
+                  ],
+                  "pspreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@amount": "675"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@amount": "550"
+                    }
+                  ]
+                }
+              ],
+              "loserewards": [
+                {
+                  "@category": "ranked",
+                  "itemreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@itemid": "T2_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "23"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@itemid": "T2_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "15"
+                    }
+                  ],
+                  "pspreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@amount": "925"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@amount": "675"
+                    }
+                  ]
+                },
+                {
+                  "@category": "ranked_1v1",
+                  "itemreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@itemid": "T2_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "9"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@itemid": "T2_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "6"
+                    }
+                  ],
+                  "pspreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@amount": "300"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@amount": "225"
+                    }
+                  ]
+                }
+              ]
             },
             {
               "@id": "ARENA_SILVER_1",
@@ -7188,20 +7876,31 @@
               "@elowinbooster": "10",
               "@elolosebooster": "1",
               "@expectedelo": "1175",
-              "seasonrankrewards": {
-                "itemreward": [
-                  {
-                    "@itemid": "T6_LOOTBAG_ARENA_RANK_UP_SILVER1",
-                    "@enchantmentlevel": "0",
-                    "@count": "1"
-                  },
-                  {
-                    "@itemid": "UNIQUE_AVATARRING_ARENA_SILVER1",
+              "seasonrankrewards": [
+                {
+                  "@category": "ranked",
+                  "itemreward": [
+                    {
+                      "@itemid": "T6_LOOTBAG_ARENA_RANK_UP_SILVER1",
+                      "@enchantmentlevel": "0",
+                      "@count": "1"
+                    },
+                    {
+                      "@itemid": "UNIQUE_AVATARRING_ARENA_SILVER1",
+                      "@enchantmentlevel": "0",
+                      "@count": "1"
+                    }
+                  ]
+                },
+                {
+                  "@category": "ranked_1v1",
+                  "itemreward": {
+                    "@itemid": "T6_LOOTBAG_1V1_ARENA_RANK_UP_SILVER1",
                     "@enchantmentlevel": "0",
                     "@count": "1"
                   }
-                ]
-              },
+                }
+              ],
               "limitedwinrewards": {
                 "itemreward": {
                   "@itemid": "T4_LOOTBAG_EXPEDITION_ROYAL_SIGIL",
@@ -7209,64 +7908,124 @@
                   "@count": "1"
                 }
               },
-              "winrewards": {
-                "itemreward": [
-                  {
-                    "@premiumstatus": "Premium",
-                    "@itemid": "T3_LOOTBAG_ARENA_WIN_PREMIUM_SILVER1",
-                    "@enchantmentlevel": "0",
-                    "@count": "1"
-                  },
-                  {
-                    "@premiumstatus": "NonPremium",
-                    "@itemid": "T2_LOOTBAG_ARENA_WIN_BASIC_SILVER1",
-                    "@enchantmentlevel": "0",
-                    "@count": "1"
-                  },
-                  {
-                    "@role": "ARENA_HEAL",
-                    "@itemid": "T3_SKILLBOOK_NONTRADABLE",
-                    "@enchantmentlevel": "0",
-                    "@count": "4"
-                  }
-                ],
-                "pspreward": [
-                  {
-                    "@premiumstatus": "Premium",
-                    "@amount": "2100"
-                  },
-                  {
-                    "@premiumstatus": "NonPremium",
-                    "@amount": "1700"
-                  }
-                ]
-              },
-              "loserewards": {
-                "itemreward": [
-                  {
-                    "@premiumstatus": "Premium",
-                    "@itemid": "T2_SKILLBOOK_NONTRADABLE",
-                    "@enchantmentlevel": "0",
-                    "@count": "24"
-                  },
-                  {
-                    "@premiumstatus": "NonPremium",
-                    "@itemid": "T2_SKILLBOOK_NONTRADABLE",
-                    "@enchantmentlevel": "0",
-                    "@count": "16"
-                  }
-                ],
-                "pspreward": [
-                  {
-                    "@premiumstatus": "Premium",
-                    "@amount": "950"
-                  },
-                  {
-                    "@premiumstatus": "NonPremium",
-                    "@amount": "700"
-                  }
-                ]
-              }
+              "winrewards": [
+                {
+                  "@category": "ranked",
+                  "itemreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@itemid": "T3_LOOTBAG_ARENA_WIN_PREMIUM_SILVER1",
+                      "@enchantmentlevel": "0",
+                      "@count": "1"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@itemid": "T2_LOOTBAG_ARENA_WIN_BASIC_SILVER1",
+                      "@enchantmentlevel": "0",
+                      "@count": "1"
+                    },
+                    {
+                      "@role": "ARENA_HEAL",
+                      "@itemid": "T3_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "4"
+                    }
+                  ],
+                  "pspreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@amount": "2100"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@amount": "1700"
+                    }
+                  ]
+                },
+                {
+                  "@category": "ranked_1v1",
+                  "itemreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@itemid": "T3_LOOTBAG_1V1_ARENA_WIN_PREMIUM_SILVER1",
+                      "@enchantmentlevel": "0",
+                      "@count": "1"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@itemid": "T2_LOOTBAG_1V1_ARENA_WIN_BASIC_SILVER1",
+                      "@enchantmentlevel": "0",
+                      "@count": "1"
+                    }
+                  ],
+                  "pspreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@amount": "700"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@amount": "575"
+                    }
+                  ]
+                }
+              ],
+              "loserewards": [
+                {
+                  "@category": "ranked",
+                  "itemreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@itemid": "T2_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "24"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@itemid": "T2_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "16"
+                    }
+                  ],
+                  "pspreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@amount": "950"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@amount": "700"
+                    }
+                  ]
+                },
+                {
+                  "@category": "ranked_1v1",
+                  "itemreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@itemid": "T2_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "9"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@itemid": "T2_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "6"
+                    }
+                  ],
+                  "pspreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@amount": "325"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@amount": "225"
+                    }
+                  ]
+                }
+              ]
             },
             {
               "@id": "ARENA_SILVER_2",
@@ -7281,13 +8040,24 @@
               "@elowinbooster": "10",
               "@elolosebooster": "1",
               "@expectedelo": "1200",
-              "seasonrankrewards": {
-                "itemreward": {
-                  "@itemid": "T6_LOOTBAG_ARENA_RANK_UP_SILVER2",
-                  "@enchantmentlevel": "0",
-                  "@count": "1"
+              "seasonrankrewards": [
+                {
+                  "@category": "ranked",
+                  "itemreward": {
+                    "@itemid": "T6_LOOTBAG_ARENA_RANK_UP_SILVER2",
+                    "@enchantmentlevel": "0",
+                    "@count": "1"
+                  }
+                },
+                {
+                  "@category": "ranked_1v1",
+                  "itemreward": {
+                    "@itemid": "T6_LOOTBAG_1V1_ARENA_RANK_UP_SILVER2",
+                    "@enchantmentlevel": "0",
+                    "@count": "1"
+                  }
                 }
-              },
+              ],
               "limitedwinrewards": {
                 "itemreward": {
                   "@itemid": "T4_LOOTBAG_EXPEDITION_ROYAL_SIGIL",
@@ -7295,64 +8065,124 @@
                   "@count": "1"
                 }
               },
-              "winrewards": {
-                "itemreward": [
-                  {
-                    "@premiumstatus": "Premium",
-                    "@itemid": "T3_LOOTBAG_ARENA_WIN_PREMIUM_SILVER2",
-                    "@enchantmentlevel": "0",
-                    "@count": "1"
-                  },
-                  {
-                    "@premiumstatus": "NonPremium",
-                    "@itemid": "T2_LOOTBAG_ARENA_WIN_BASIC_SILVER2",
-                    "@enchantmentlevel": "0",
-                    "@count": "1"
-                  },
-                  {
-                    "@role": "ARENA_HEAL",
-                    "@itemid": "T3_SKILLBOOK_NONTRADABLE",
-                    "@enchantmentlevel": "0",
-                    "@count": "4"
-                  }
-                ],
-                "pspreward": [
-                  {
-                    "@premiumstatus": "Premium",
-                    "@amount": "2150"
-                  },
-                  {
-                    "@premiumstatus": "NonPremium",
-                    "@amount": "1750"
-                  }
-                ]
-              },
-              "loserewards": {
-                "itemreward": [
-                  {
-                    "@premiumstatus": "Premium",
-                    "@itemid": "T2_SKILLBOOK_NONTRADABLE",
-                    "@enchantmentlevel": "0",
-                    "@count": "26"
-                  },
-                  {
-                    "@premiumstatus": "NonPremium",
-                    "@itemid": "T2_SKILLBOOK_NONTRADABLE",
-                    "@enchantmentlevel": "0",
-                    "@count": "17"
-                  }
-                ],
-                "pspreward": [
-                  {
-                    "@premiumstatus": "Premium",
-                    "@amount": "975"
-                  },
-                  {
-                    "@premiumstatus": "NonPremium",
-                    "@amount": "725"
-                  }
-                ]
-              }
+              "winrewards": [
+                {
+                  "@category": "ranked",
+                  "itemreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@itemid": "T3_LOOTBAG_ARENA_WIN_PREMIUM_SILVER2",
+                      "@enchantmentlevel": "0",
+                      "@count": "1"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@itemid": "T2_LOOTBAG_ARENA_WIN_BASIC_SILVER2",
+                      "@enchantmentlevel": "0",
+                      "@count": "1"
+                    },
+                    {
+                      "@role": "ARENA_HEAL",
+                      "@itemid": "T3_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "4"
+                    }
+                  ],
+                  "pspreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@amount": "2150"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@amount": "1750"
+                    }
+                  ]
+                },
+                {
+                  "@category": "ranked_1v1",
+                  "itemreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@itemid": "T3_LOOTBAG_1V1_ARENA_WIN_PREMIUM_SILVER2",
+                      "@enchantmentlevel": "0",
+                      "@count": "1"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@itemid": "T2_LOOTBAG_1V1_ARENA_WIN_BASIC_SILVER2",
+                      "@enchantmentlevel": "0",
+                      "@count": "1"
+                    }
+                  ],
+                  "pspreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@amount": "725"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@amount": "575"
+                    }
+                  ]
+                }
+              ],
+              "loserewards": [
+                {
+                  "@category": "ranked",
+                  "itemreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@itemid": "T2_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "26"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@itemid": "T2_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "17"
+                    }
+                  ],
+                  "pspreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@amount": "975"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@amount": "725"
+                    }
+                  ]
+                },
+                {
+                  "@category": "ranked_1v1",
+                  "itemreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@itemid": "T2_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "10"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@itemid": "T2_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "7"
+                    }
+                  ],
+                  "pspreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@amount": "325"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@amount": "250"
+                    }
+                  ]
+                }
+              ]
             },
             {
               "@id": "ARENA_SILVER_3",
@@ -7367,13 +8197,24 @@
               "@elowinbooster": "10",
               "@elolosebooster": "1",
               "@expectedelo": "1225",
-              "seasonrankrewards": {
-                "itemreward": {
-                  "@itemid": "T6_LOOTBAG_ARENA_RANK_UP_SILVER3",
-                  "@enchantmentlevel": "0",
-                  "@count": "1"
+              "seasonrankrewards": [
+                {
+                  "@category": "ranked",
+                  "itemreward": {
+                    "@itemid": "T6_LOOTBAG_ARENA_RANK_UP_SILVER3",
+                    "@enchantmentlevel": "0",
+                    "@count": "1"
+                  }
+                },
+                {
+                  "@category": "ranked_1v1",
+                  "itemreward": {
+                    "@itemid": "T6_LOOTBAG_1V1_ARENA_RANK_UP_SILVER3",
+                    "@enchantmentlevel": "0",
+                    "@count": "1"
+                  }
                 }
-              },
+              ],
               "limitedwinrewards": {
                 "itemreward": {
                   "@itemid": "T4_LOOTBAG_EXPEDITION_ROYAL_SIGIL",
@@ -7381,64 +8222,124 @@
                   "@count": "1"
                 }
               },
-              "winrewards": {
-                "itemreward": [
-                  {
-                    "@premiumstatus": "Premium",
-                    "@itemid": "T3_LOOTBAG_ARENA_WIN_PREMIUM_SILVER3",
-                    "@enchantmentlevel": "0",
-                    "@count": "1"
-                  },
-                  {
-                    "@premiumstatus": "NonPremium",
-                    "@itemid": "T2_LOOTBAG_ARENA_WIN_BASIC_SILVER3",
-                    "@enchantmentlevel": "0",
-                    "@count": "1"
-                  },
-                  {
-                    "@role": "ARENA_HEAL",
-                    "@itemid": "T3_SKILLBOOK_NONTRADABLE",
-                    "@enchantmentlevel": "0",
-                    "@count": "4"
-                  }
-                ],
-                "pspreward": [
-                  {
-                    "@premiumstatus": "Premium",
-                    "@amount": "2250"
-                  },
-                  {
-                    "@premiumstatus": "NonPremium",
-                    "@amount": "1800"
-                  }
-                ]
-              },
-              "loserewards": {
-                "itemreward": [
-                  {
-                    "@premiumstatus": "Premium",
-                    "@itemid": "T2_SKILLBOOK_NONTRADABLE",
-                    "@enchantmentlevel": "0",
-                    "@count": "27"
-                  },
-                  {
-                    "@premiumstatus": "NonPremium",
-                    "@itemid": "T2_SKILLBOOK_NONTRADABLE",
-                    "@enchantmentlevel": "0",
-                    "@count": "18"
-                  }
-                ],
-                "pspreward": [
-                  {
-                    "@premiumstatus": "Premium",
-                    "@amount": "1000"
-                  },
-                  {
-                    "@premiumstatus": "NonPremium",
-                    "@amount": "750"
-                  }
-                ]
-              }
+              "winrewards": [
+                {
+                  "@category": "ranked",
+                  "itemreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@itemid": "T3_LOOTBAG_ARENA_WIN_PREMIUM_SILVER3",
+                      "@enchantmentlevel": "0",
+                      "@count": "1"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@itemid": "T2_LOOTBAG_ARENA_WIN_BASIC_SILVER3",
+                      "@enchantmentlevel": "0",
+                      "@count": "1"
+                    },
+                    {
+                      "@role": "ARENA_HEAL",
+                      "@itemid": "T3_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "4"
+                    }
+                  ],
+                  "pspreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@amount": "2250"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@amount": "1800"
+                    }
+                  ]
+                },
+                {
+                  "@category": "ranked_1v1",
+                  "itemreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@itemid": "T3_LOOTBAG_1V1_ARENA_WIN_PREMIUM_SILVER3",
+                      "@enchantmentlevel": "0",
+                      "@count": "1"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@itemid": "T2_LOOTBAG_1V1_ARENA_WIN_BASIC_SILVER3",
+                      "@enchantmentlevel": "0",
+                      "@count": "1"
+                    }
+                  ],
+                  "pspreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@amount": "750"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@amount": "600"
+                    }
+                  ]
+                }
+              ],
+              "loserewards": [
+                {
+                  "@category": "ranked",
+                  "itemreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@itemid": "T2_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "27"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@itemid": "T2_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "18"
+                    }
+                  ],
+                  "pspreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@amount": "1000"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@amount": "750"
+                    }
+                  ]
+                },
+                {
+                  "@category": "ranked_1v1",
+                  "itemreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@itemid": "T2_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "11"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@itemid": "T2_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "7"
+                    }
+                  ],
+                  "pspreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@amount": "325"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@amount": "250"
+                    }
+                  ]
+                }
+              ]
             },
             {
               "@id": "ARENA_SILVER_4",
@@ -7453,13 +8354,24 @@
               "@elowinbooster": "10",
               "@elolosebooster": "1",
               "@expectedelo": "1250",
-              "seasonrankrewards": {
-                "itemreward": {
-                  "@itemid": "T6_LOOTBAG_ARENA_RANK_UP_SILVER4",
-                  "@enchantmentlevel": "0",
-                  "@count": "1"
+              "seasonrankrewards": [
+                {
+                  "@category": "ranked",
+                  "itemreward": {
+                    "@itemid": "T6_LOOTBAG_ARENA_RANK_UP_SILVER4",
+                    "@enchantmentlevel": "0",
+                    "@count": "1"
+                  }
+                },
+                {
+                  "@category": "ranked_1v1",
+                  "itemreward": {
+                    "@itemid": "T6_LOOTBAG_1V1_ARENA_RANK_UP_SILVER4",
+                    "@enchantmentlevel": "0",
+                    "@count": "1"
+                  }
                 }
-              },
+              ],
               "limitedwinrewards": {
                 "itemreward": {
                   "@itemid": "T4_LOOTBAG_EXPEDITION_ROYAL_SIGIL",
@@ -7467,64 +8379,124 @@
                   "@count": "1"
                 }
               },
-              "winrewards": {
-                "itemreward": [
-                  {
-                    "@premiumstatus": "Premium",
-                    "@itemid": "T3_LOOTBAG_ARENA_WIN_PREMIUM_SILVER4",
-                    "@enchantmentlevel": "0",
-                    "@count": "1"
-                  },
-                  {
-                    "@premiumstatus": "NonPremium",
-                    "@itemid": "T2_LOOTBAG_ARENA_WIN_BASIC_SILVER4",
-                    "@enchantmentlevel": "0",
-                    "@count": "1"
-                  },
-                  {
-                    "@role": "ARENA_HEAL",
-                    "@itemid": "T3_SKILLBOOK_NONTRADABLE",
-                    "@enchantmentlevel": "0",
-                    "@count": "4"
-                  }
-                ],
-                "pspreward": [
-                  {
-                    "@premiumstatus": "Premium",
-                    "@amount": "2300"
-                  },
-                  {
-                    "@premiumstatus": "NonPremium",
-                    "@amount": "1850"
-                  }
-                ]
-              },
-              "loserewards": {
-                "itemreward": [
-                  {
-                    "@premiumstatus": "Premium",
-                    "@itemid": "T2_SKILLBOOK_NONTRADABLE",
-                    "@enchantmentlevel": "0",
-                    "@count": "29"
-                  },
-                  {
-                    "@premiumstatus": "NonPremium",
-                    "@itemid": "T2_SKILLBOOK_NONTRADABLE",
-                    "@enchantmentlevel": "0",
-                    "@count": "19"
-                  }
-                ],
-                "pspreward": [
-                  {
-                    "@premiumstatus": "Premium",
-                    "@amount": "1025"
-                  },
-                  {
-                    "@premiumstatus": "NonPremium",
-                    "@amount": "775"
-                  }
-                ]
-              }
+              "winrewards": [
+                {
+                  "@category": "ranked",
+                  "itemreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@itemid": "T3_LOOTBAG_ARENA_WIN_PREMIUM_SILVER4",
+                      "@enchantmentlevel": "0",
+                      "@count": "1"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@itemid": "T2_LOOTBAG_ARENA_WIN_BASIC_SILVER4",
+                      "@enchantmentlevel": "0",
+                      "@count": "1"
+                    },
+                    {
+                      "@role": "ARENA_HEAL",
+                      "@itemid": "T3_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "4"
+                    }
+                  ],
+                  "pspreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@amount": "2300"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@amount": "1850"
+                    }
+                  ]
+                },
+                {
+                  "@category": "ranked_1v1",
+                  "itemreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@itemid": "T3_LOOTBAG_1V1_ARENA_WIN_PREMIUM_SILVER4",
+                      "@enchantmentlevel": "0",
+                      "@count": "1"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@itemid": "T2_LOOTBAG_1V1_ARENA_WIN_BASIC_SILVER4",
+                      "@enchantmentlevel": "0",
+                      "@count": "1"
+                    }
+                  ],
+                  "pspreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@amount": "775"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@amount": "625"
+                    }
+                  ]
+                }
+              ],
+              "loserewards": [
+                {
+                  "@category": "ranked",
+                  "itemreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@itemid": "T2_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "29"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@itemid": "T2_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "19"
+                    }
+                  ],
+                  "pspreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@amount": "1025"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@amount": "775"
+                    }
+                  ]
+                },
+                {
+                  "@category": "ranked_1v1",
+                  "itemreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@itemid": "T2_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "11"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@itemid": "T2_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "7"
+                    }
+                  ],
+                  "pspreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@amount": "350"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@amount": "250"
+                    }
+                  ]
+                }
+              ]
             },
             {
               "@id": "ARENA_GOLD_1",
@@ -7539,20 +8511,31 @@
               "@elowinbooster": "10",
               "@elolosebooster": "1",
               "@expectedelo": "1275",
-              "seasonrankrewards": {
-                "itemreward": [
-                  {
-                    "@itemid": "T7_LOOTBAG_ARENA_RANK_UP_GOLD1",
-                    "@enchantmentlevel": "0",
-                    "@count": "1"
-                  },
-                  {
-                    "@itemid": "UNIQUE_AVATARRING_ARENA_GOLD1",
+              "seasonrankrewards": [
+                {
+                  "@category": "ranked",
+                  "itemreward": [
+                    {
+                      "@itemid": "T7_LOOTBAG_ARENA_RANK_UP_GOLD1",
+                      "@enchantmentlevel": "0",
+                      "@count": "1"
+                    },
+                    {
+                      "@itemid": "UNIQUE_AVATARRING_ARENA_GOLD1",
+                      "@enchantmentlevel": "0",
+                      "@count": "1"
+                    }
+                  ]
+                },
+                {
+                  "@category": "ranked_1v1",
+                  "itemreward": {
+                    "@itemid": "T7_LOOTBAG_1V1_ARENA_RANK_UP_GOLD1",
                     "@enchantmentlevel": "0",
                     "@count": "1"
                   }
-                ]
-              },
+                }
+              ],
               "limitedwinrewards": {
                 "itemreward": {
                   "@itemid": "T4_LOOTBAG_EXPEDITION_ROYAL_SIGIL",
@@ -7560,64 +8543,124 @@
                   "@count": "1"
                 }
               },
-              "winrewards": {
-                "itemreward": [
-                  {
-                    "@premiumstatus": "Premium",
-                    "@itemid": "T3_LOOTBAG_ARENA_WIN_PREMIUM_GOLD1",
-                    "@enchantmentlevel": "0",
-                    "@count": "1"
-                  },
-                  {
-                    "@premiumstatus": "NonPremium",
-                    "@itemid": "T2_LOOTBAG_ARENA_WIN_BASIC_GOLD1",
-                    "@enchantmentlevel": "0",
-                    "@count": "1"
-                  },
-                  {
-                    "@role": "ARENA_HEAL",
-                    "@itemid": "T3_SKILLBOOK_NONTRADABLE",
-                    "@enchantmentlevel": "0",
-                    "@count": "5"
-                  }
-                ],
-                "pspreward": [
-                  {
-                    "@premiumstatus": "Premium",
-                    "@amount": "2350"
-                  },
-                  {
-                    "@premiumstatus": "NonPremium",
-                    "@amount": "1900"
-                  }
-                ]
-              },
-              "loserewards": {
-                "itemreward": [
-                  {
-                    "@premiumstatus": "Premium",
-                    "@itemid": "T2_SKILLBOOK_NONTRADABLE",
-                    "@enchantmentlevel": "0",
-                    "@count": "30"
-                  },
-                  {
-                    "@premiumstatus": "NonPremium",
-                    "@itemid": "T2_SKILLBOOK_NONTRADABLE",
-                    "@enchantmentlevel": "0",
-                    "@count": "20"
-                  }
-                ],
-                "pspreward": [
-                  {
-                    "@premiumstatus": "Premium",
-                    "@amount": "1050"
-                  },
-                  {
-                    "@premiumstatus": "NonPremium",
-                    "@amount": "800"
-                  }
-                ]
-              }
+              "winrewards": [
+                {
+                  "@category": "ranked",
+                  "itemreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@itemid": "T3_LOOTBAG_ARENA_WIN_PREMIUM_GOLD1",
+                      "@enchantmentlevel": "0",
+                      "@count": "1"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@itemid": "T2_LOOTBAG_ARENA_WIN_BASIC_GOLD1",
+                      "@enchantmentlevel": "0",
+                      "@count": "1"
+                    },
+                    {
+                      "@role": "ARENA_HEAL",
+                      "@itemid": "T3_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "5"
+                    }
+                  ],
+                  "pspreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@amount": "2350"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@amount": "1900"
+                    }
+                  ]
+                },
+                {
+                  "@category": "ranked_1v1",
+                  "itemreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@itemid": "T3_LOOTBAG_1V1_ARENA_WIN_PREMIUM_GOLD1",
+                      "@enchantmentlevel": "0",
+                      "@count": "1"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@itemid": "T2_LOOTBAG_1V1_ARENA_WIN_BASIC_GOLD1",
+                      "@enchantmentlevel": "0",
+                      "@count": "1"
+                    }
+                  ],
+                  "pspreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@amount": "775"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@amount": "625"
+                    }
+                  ]
+                }
+              ],
+              "loserewards": [
+                {
+                  "@category": "ranked",
+                  "itemreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@itemid": "T2_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "30"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@itemid": "T2_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "20"
+                    }
+                  ],
+                  "pspreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@amount": "1050"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@amount": "800"
+                    }
+                  ]
+                },
+                {
+                  "@category": "ranked_1v1",
+                  "itemreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@itemid": "T2_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "12"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@itemid": "T2_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "8"
+                    }
+                  ],
+                  "pspreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@amount": "350"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@amount": "275"
+                    }
+                  ]
+                }
+              ]
             },
             {
               "@id": "ARENA_GOLD_2",
@@ -7632,13 +8675,24 @@
               "@elowinbooster": "10",
               "@elolosebooster": "1",
               "@expectedelo": "1300",
-              "seasonrankrewards": {
-                "itemreward": {
-                  "@itemid": "T7_LOOTBAG_ARENA_RANK_UP_GOLD2",
-                  "@enchantmentlevel": "0",
-                  "@count": "1"
+              "seasonrankrewards": [
+                {
+                  "@category": "ranked",
+                  "itemreward": {
+                    "@itemid": "T7_LOOTBAG_ARENA_RANK_UP_GOLD2",
+                    "@enchantmentlevel": "0",
+                    "@count": "1"
+                  }
+                },
+                {
+                  "@category": "ranked_1v1",
+                  "itemreward": {
+                    "@itemid": "T7_LOOTBAG_1V1_ARENA_RANK_UP_GOLD2",
+                    "@enchantmentlevel": "0",
+                    "@count": "1"
+                  }
                 }
-              },
+              ],
               "limitedwinrewards": {
                 "itemreward": {
                   "@itemid": "T4_LOOTBAG_EXPEDITION_ROYAL_SIGIL",
@@ -7646,64 +8700,124 @@
                   "@count": "1"
                 }
               },
-              "winrewards": {
-                "itemreward": [
-                  {
-                    "@premiumstatus": "Premium",
-                    "@itemid": "T3_LOOTBAG_ARENA_WIN_PREMIUM_GOLD2",
-                    "@enchantmentlevel": "0",
-                    "@count": "1"
-                  },
-                  {
-                    "@premiumstatus": "NonPremium",
-                    "@itemid": "T2_LOOTBAG_ARENA_WIN_BASIC_GOLD2",
-                    "@enchantmentlevel": "0",
-                    "@count": "1"
-                  },
-                  {
-                    "@role": "ARENA_HEAL",
-                    "@itemid": "T3_SKILLBOOK_NONTRADABLE",
-                    "@enchantmentlevel": "0",
-                    "@count": "5"
-                  }
-                ],
-                "pspreward": [
-                  {
-                    "@premiumstatus": "Premium",
-                    "@amount": "2400"
-                  },
-                  {
-                    "@premiumstatus": "NonPremium",
-                    "@amount": "1950"
-                  }
-                ]
-              },
-              "loserewards": {
-                "itemreward": [
-                  {
-                    "@premiumstatus": "Premium",
-                    "@itemid": "T2_SKILLBOOK_NONTRADABLE",
-                    "@enchantmentlevel": "0",
-                    "@count": "32"
-                  },
-                  {
-                    "@premiumstatus": "NonPremium",
-                    "@itemid": "T2_SKILLBOOK_NONTRADABLE",
-                    "@enchantmentlevel": "0",
-                    "@count": "21"
-                  }
-                ],
-                "pspreward": [
-                  {
-                    "@premiumstatus": "Premium",
-                    "@amount": "1075"
-                  },
-                  {
-                    "@premiumstatus": "NonPremium",
-                    "@amount": "825"
-                  }
-                ]
-              }
+              "winrewards": [
+                {
+                  "@category": "ranked",
+                  "itemreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@itemid": "T3_LOOTBAG_ARENA_WIN_PREMIUM_GOLD2",
+                      "@enchantmentlevel": "0",
+                      "@count": "1"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@itemid": "T2_LOOTBAG_ARENA_WIN_BASIC_GOLD2",
+                      "@enchantmentlevel": "0",
+                      "@count": "1"
+                    },
+                    {
+                      "@role": "ARENA_HEAL",
+                      "@itemid": "T3_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "5"
+                    }
+                  ],
+                  "pspreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@amount": "2400"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@amount": "1950"
+                    }
+                  ]
+                },
+                {
+                  "@category": "ranked_1v1",
+                  "itemreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@itemid": "T3_LOOTBAG_1V1_ARENA_WIN_PREMIUM_GOLD2",
+                      "@enchantmentlevel": "0",
+                      "@count": "1"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@itemid": "T2_LOOTBAG_1V1_ARENA_WIN_BASIC_GOLD2",
+                      "@enchantmentlevel": "0",
+                      "@count": "1"
+                    }
+                  ],
+                  "pspreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@amount": "800"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@amount": "650"
+                    }
+                  ]
+                }
+              ],
+              "loserewards": [
+                {
+                  "@category": "ranked",
+                  "itemreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@itemid": "T2_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "32"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@itemid": "T2_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "21"
+                    }
+                  ],
+                  "pspreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@amount": "1075"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@amount": "825"
+                    }
+                  ]
+                },
+                {
+                  "@category": "ranked_1v1",
+                  "itemreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@itemid": "T2_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "12"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@itemid": "T2_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "8"
+                    }
+                  ],
+                  "pspreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@amount": "350"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@amount": "275"
+                    }
+                  ]
+                }
+              ]
             },
             {
               "@id": "ARENA_GOLD_3",
@@ -7718,13 +8832,24 @@
               "@elowinbooster": "10",
               "@elolosebooster": "1",
               "@expectedelo": "1350",
-              "seasonrankrewards": {
-                "itemreward": {
-                  "@itemid": "T7_LOOTBAG_ARENA_RANK_UP_GOLD3",
-                  "@enchantmentlevel": "0",
-                  "@count": "1"
+              "seasonrankrewards": [
+                {
+                  "@category": "ranked",
+                  "itemreward": {
+                    "@itemid": "T7_LOOTBAG_ARENA_RANK_UP_GOLD3",
+                    "@enchantmentlevel": "0",
+                    "@count": "1"
+                  }
+                },
+                {
+                  "@category": "ranked_1v1",
+                  "itemreward": {
+                    "@itemid": "T7_LOOTBAG_1V1_ARENA_RANK_UP_GOLD3",
+                    "@enchantmentlevel": "0",
+                    "@count": "1"
+                  }
                 }
-              },
+              ],
               "limitedwinrewards": {
                 "itemreward": {
                   "@itemid": "T4_LOOTBAG_EXPEDITION_ROYAL_SIGIL",
@@ -7732,64 +8857,124 @@
                   "@count": "1"
                 }
               },
-              "winrewards": {
-                "itemreward": [
-                  {
-                    "@premiumstatus": "Premium",
-                    "@itemid": "T3_LOOTBAG_ARENA_WIN_PREMIUM_GOLD3",
-                    "@enchantmentlevel": "0",
-                    "@count": "1"
-                  },
-                  {
-                    "@premiumstatus": "NonPremium",
-                    "@itemid": "T2_LOOTBAG_ARENA_WIN_BASIC_GOLD3",
-                    "@enchantmentlevel": "0",
-                    "@count": "1"
-                  },
-                  {
-                    "@role": "ARENA_HEAL",
-                    "@itemid": "T3_SKILLBOOK_NONTRADABLE",
-                    "@enchantmentlevel": "0",
-                    "@count": "5"
-                  }
-                ],
-                "pspreward": [
-                  {
-                    "@premiumstatus": "Premium",
-                    "@amount": "2450"
-                  },
-                  {
-                    "@premiumstatus": "NonPremium",
-                    "@amount": "2000"
-                  }
-                ]
-              },
-              "loserewards": {
-                "itemreward": [
-                  {
-                    "@premiumstatus": "Premium",
-                    "@itemid": "T2_SKILLBOOK_NONTRADABLE",
-                    "@enchantmentlevel": "0",
-                    "@count": "33"
-                  },
-                  {
-                    "@premiumstatus": "NonPremium",
-                    "@itemid": "T2_SKILLBOOK_NONTRADABLE",
-                    "@enchantmentlevel": "0",
-                    "@count": "22"
-                  }
-                ],
-                "pspreward": [
-                  {
-                    "@premiumstatus": "Premium",
-                    "@amount": "1100"
-                  },
-                  {
-                    "@premiumstatus": "NonPremium",
-                    "@amount": "850"
-                  }
-                ]
-              }
+              "winrewards": [
+                {
+                  "@category": "ranked",
+                  "itemreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@itemid": "T3_LOOTBAG_ARENA_WIN_PREMIUM_GOLD3",
+                      "@enchantmentlevel": "0",
+                      "@count": "1"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@itemid": "T2_LOOTBAG_ARENA_WIN_BASIC_GOLD3",
+                      "@enchantmentlevel": "0",
+                      "@count": "1"
+                    },
+                    {
+                      "@role": "ARENA_HEAL",
+                      "@itemid": "T3_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "5"
+                    }
+                  ],
+                  "pspreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@amount": "2450"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@amount": "2000"
+                    }
+                  ]
+                },
+                {
+                  "@category": "ranked_1v1",
+                  "itemreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@itemid": "T3_LOOTBAG_1V1_ARENA_WIN_PREMIUM_GOLD3",
+                      "@enchantmentlevel": "0",
+                      "@count": "1"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@itemid": "T2_LOOTBAG_1V1_ARENA_WIN_BASIC_GOLD3",
+                      "@enchantmentlevel": "0",
+                      "@count": "1"
+                    }
+                  ],
+                  "pspreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@amount": "825"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@amount": "675"
+                    }
+                  ]
+                }
+              ],
+              "loserewards": [
+                {
+                  "@category": "ranked",
+                  "itemreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@itemid": "T2_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "33"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@itemid": "T2_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "22"
+                    }
+                  ],
+                  "pspreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@amount": "1100"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@amount": "850"
+                    }
+                  ]
+                },
+                {
+                  "@category": "ranked_1v1",
+                  "itemreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@itemid": "T2_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "12"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@itemid": "T2_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "9"
+                    }
+                  ],
+                  "pspreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@amount": "375"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@amount": "275"
+                    }
+                  ]
+                }
+              ]
             },
             {
               "@id": "ARENA_GOLD_4",
@@ -7804,13 +8989,24 @@
               "@elowinbooster": "10",
               "@elolosebooster": "1",
               "@expectedelo": "1400",
-              "seasonrankrewards": {
-                "itemreward": {
-                  "@itemid": "T7_LOOTBAG_ARENA_RANK_UP_GOLD4",
-                  "@enchantmentlevel": "0",
-                  "@count": "1"
+              "seasonrankrewards": [
+                {
+                  "@category": "ranked",
+                  "itemreward": {
+                    "@itemid": "T7_LOOTBAG_ARENA_RANK_UP_GOLD4",
+                    "@enchantmentlevel": "0",
+                    "@count": "1"
+                  }
+                },
+                {
+                  "@category": "ranked_1v1",
+                  "itemreward": {
+                    "@itemid": "T7_LOOTBAG_1V1_ARENA_RANK_UP_GOLD4",
+                    "@enchantmentlevel": "0",
+                    "@count": "1"
+                  }
                 }
-              },
+              ],
               "limitedwinrewards": {
                 "itemreward": {
                   "@itemid": "T4_LOOTBAG_EXPEDITION_ROYAL_SIGIL",
@@ -7818,64 +9014,124 @@
                   "@count": "1"
                 }
               },
-              "winrewards": {
-                "itemreward": [
-                  {
-                    "@premiumstatus": "Premium",
-                    "@itemid": "T3_LOOTBAG_ARENA_WIN_PREMIUM_GOLD4",
-                    "@enchantmentlevel": "0",
-                    "@count": "1"
-                  },
-                  {
-                    "@premiumstatus": "NonPremium",
-                    "@itemid": "T2_LOOTBAG_ARENA_WIN_BASIC_GOLD4",
-                    "@enchantmentlevel": "0",
-                    "@count": "1"
-                  },
-                  {
-                    "@role": "ARENA_HEAL",
-                    "@itemid": "T3_SKILLBOOK_NONTRADABLE",
-                    "@enchantmentlevel": "0",
-                    "@count": "5"
-                  }
-                ],
-                "pspreward": [
-                  {
-                    "@premiumstatus": "Premium",
-                    "@amount": "2500"
-                  },
-                  {
-                    "@premiumstatus": "NonPremium",
-                    "@amount": "2050"
-                  }
-                ]
-              },
-              "loserewards": {
-                "itemreward": [
-                  {
-                    "@premiumstatus": "Premium",
-                    "@itemid": "T2_SKILLBOOK_NONTRADABLE",
-                    "@enchantmentlevel": "0",
-                    "@count": "35"
-                  },
-                  {
-                    "@premiumstatus": "NonPremium",
-                    "@itemid": "T2_SKILLBOOK_NONTRADABLE",
-                    "@enchantmentlevel": "0",
-                    "@count": "23"
-                  }
-                ],
-                "pspreward": [
-                  {
-                    "@premiumstatus": "Premium",
-                    "@amount": "1125"
-                  },
-                  {
-                    "@premiumstatus": "NonPremium",
-                    "@amount": "875"
-                  }
-                ]
-              }
+              "winrewards": [
+                {
+                  "@category": "ranked",
+                  "itemreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@itemid": "T3_LOOTBAG_ARENA_WIN_PREMIUM_GOLD4",
+                      "@enchantmentlevel": "0",
+                      "@count": "1"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@itemid": "T2_LOOTBAG_ARENA_WIN_BASIC_GOLD4",
+                      "@enchantmentlevel": "0",
+                      "@count": "1"
+                    },
+                    {
+                      "@role": "ARENA_HEAL",
+                      "@itemid": "T3_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "5"
+                    }
+                  ],
+                  "pspreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@amount": "2500"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@amount": "2050"
+                    }
+                  ]
+                },
+                {
+                  "@category": "ranked_1v1",
+                  "itemreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@itemid": "T3_LOOTBAG_1V1_ARENA_WIN_PREMIUM_GOLD4",
+                      "@enchantmentlevel": "0",
+                      "@count": "1"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@itemid": "T2_LOOTBAG_1V1_ARENA_WIN_BASIC_GOLD4",
+                      "@enchantmentlevel": "0",
+                      "@count": "1"
+                    }
+                  ],
+                  "pspreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@amount": "825"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@amount": "675"
+                    }
+                  ]
+                }
+              ],
+              "loserewards": [
+                {
+                  "@category": "ranked",
+                  "itemreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@itemid": "T2_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "35"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@itemid": "T2_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "23"
+                    }
+                  ],
+                  "pspreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@amount": "1125"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@amount": "875"
+                    }
+                  ]
+                },
+                {
+                  "@category": "ranked_1v1",
+                  "itemreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@itemid": "T2_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "14"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@itemid": "T2_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "9"
+                    }
+                  ],
+                  "pspreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@amount": "375"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@amount": "300"
+                    }
+                  ]
+                }
+              ]
             },
             {
               "@id": "ARENA_CRYSTAL",
@@ -7890,20 +9146,31 @@
               "@elowinbooster": "5",
               "@elolosebooster": "1",
               "@expectedelo": "1500",
-              "seasonrankrewards": {
-                "itemreward": [
-                  {
-                    "@itemid": "T8_LOOTBAG_ARENA_RANK_UP_CRYSTAL",
-                    "@enchantmentlevel": "0",
-                    "@count": "1"
-                  },
-                  {
-                    "@itemid": "UNIQUE_AVATARRING_ARENA_CRYSTAL",
+              "seasonrankrewards": [
+                {
+                  "@category": "ranked",
+                  "itemreward": [
+                    {
+                      "@itemid": "T8_LOOTBAG_ARENA_RANK_UP_CRYSTAL",
+                      "@enchantmentlevel": "0",
+                      "@count": "1"
+                    },
+                    {
+                      "@itemid": "UNIQUE_AVATARRING_ARENA_CRYSTAL",
+                      "@enchantmentlevel": "0",
+                      "@count": "1"
+                    }
+                  ]
+                },
+                {
+                  "@category": "ranked_1v1",
+                  "itemreward": {
+                    "@itemid": "T8_LOOTBAG_1V1_ARENA_RANK_UP_CRYSTAL",
                     "@enchantmentlevel": "0",
                     "@count": "1"
                   }
-                ]
-              },
+                }
+              ],
               "limitedwinrewards": {
                 "itemreward": {
                   "@itemid": "T4_LOOTBAG_EXPEDITION_ROYAL_SIGIL",
@@ -7911,64 +9178,124 @@
                   "@count": "1"
                 }
               },
-              "winrewards": {
-                "itemreward": [
-                  {
-                    "@premiumstatus": "Premium",
-                    "@itemid": "T3_LOOTBAG_ARENA_WIN_PREMIUM_CRYSTAL",
-                    "@enchantmentlevel": "0",
-                    "@count": "1"
-                  },
-                  {
-                    "@premiumstatus": "NonPremium",
-                    "@itemid": "T2_LOOTBAG_ARENA_WIN_BASIC_CRYSTAL",
-                    "@enchantmentlevel": "0",
-                    "@count": "1"
-                  },
-                  {
-                    "@role": "ARENA_HEAL",
-                    "@itemid": "T3_SKILLBOOK_NONTRADABLE",
-                    "@enchantmentlevel": "0",
-                    "@count": "7"
-                  }
-                ],
-                "pspreward": [
-                  {
-                    "@premiumstatus": "Premium",
-                    "@amount": "2550"
-                  },
-                  {
-                    "@premiumstatus": "NonPremium",
-                    "@amount": "2100"
-                  }
-                ]
-              },
-              "loserewards": {
-                "itemreward": [
-                  {
-                    "@premiumstatus": "Premium",
-                    "@itemid": "T2_SKILLBOOK_NONTRADABLE",
-                    "@enchantmentlevel": "0",
-                    "@count": "36"
-                  },
-                  {
-                    "@premiumstatus": "NonPremium",
-                    "@itemid": "T2_SKILLBOOK_NONTRADABLE",
-                    "@enchantmentlevel": "0",
-                    "@count": "24"
-                  }
-                ],
-                "pspreward": [
-                  {
-                    "@premiumstatus": "Premium",
-                    "@amount": "1150"
-                  },
-                  {
-                    "@premiumstatus": "NonPremium",
-                    "@amount": "900"
-                  }
-                ]
-              }
+              "winrewards": [
+                {
+                  "@category": "ranked",
+                  "itemreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@itemid": "T3_LOOTBAG_ARENA_WIN_PREMIUM_CRYSTAL",
+                      "@enchantmentlevel": "0",
+                      "@count": "1"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@itemid": "T2_LOOTBAG_ARENA_WIN_BASIC_CRYSTAL",
+                      "@enchantmentlevel": "0",
+                      "@count": "1"
+                    },
+                    {
+                      "@role": "ARENA_HEAL",
+                      "@itemid": "T3_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "7"
+                    }
+                  ],
+                  "pspreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@amount": "2550"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@amount": "2100"
+                    }
+                  ]
+                },
+                {
+                  "@category": "ranked_1v1",
+                  "itemreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@itemid": "T3_LOOTBAG_1V1_ARENA_WIN_PREMIUM_CRYSTAL",
+                      "@enchantmentlevel": "0",
+                      "@count": "1"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@itemid": "T2_LOOTBAG_1V1_ARENA_WIN_BASIC_CRYSTAL",
+                      "@enchantmentlevel": "0",
+                      "@count": "1"
+                    }
+                  ],
+                  "pspreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@amount": "850"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@amount": "700"
+                    }
+                  ]
+                }
+              ],
+              "loserewards": [
+                {
+                  "@category": "ranked",
+                  "itemreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@itemid": "T2_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "36"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@itemid": "T2_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "24"
+                    }
+                  ],
+                  "pspreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@amount": "1150"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@amount": "900"
+                    }
+                  ]
+                },
+                {
+                  "@category": "ranked_1v1",
+                  "itemreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@itemid": "T2_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "14"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@itemid": "T2_SKILLBOOK_NONTRADABLE",
+                      "@enchantmentlevel": "0",
+                      "@count": "9"
+                    }
+                  ],
+                  "pspreward": [
+                    {
+                      "@premiumstatus": "Premium",
+                      "@amount": "375"
+                    },
+                    {
+                      "@premiumstatus": "NonPremium",
+                      "@amount": "300"
+                    }
+                  ]
+                }
+              ]
             }
           ]
         }

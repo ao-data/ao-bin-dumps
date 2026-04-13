@@ -1770,6 +1770,10 @@
                   {
                     "@name": "T4_PORTAL",
                     "@weight": "0"
+                  },
+                  {
+                    "@name": "AVALON_LIONEL_TEST",
+                    "@weight": "1"
                   }
                 ]
               }
@@ -3056,6 +3060,10 @@
                     {
                       "@name": "T6_MORGANA",
                       "@weight": "1"
+                    },
+                    {
+                      "@name": "AVALON_LIONEL_TEST",
+                      "@weight": "0"
                     }
                   ]
                 },
@@ -3091,6 +3099,10 @@
                     {
                       "@name": "T7_MORGANA",
                       "@weight": "1"
+                    },
+                    {
+                      "@name": "AVALON_LIONEL_TEST",
+                      "@weight": "0"
                     }
                   ]
                 },
@@ -3122,6 +3134,10 @@
                     {
                       "@name": "T8_MORGANA",
                       "@weight": "1"
+                    },
+                    {
+                      "@name": "AVALON_LIONEL_TEST",
+                      "@weight": "0"
                     }
                   ]
                 }
@@ -7071,6 +7087,21 @@
     },
     "RandomExits": {
       "RandomExit": [
+        {
+          "@name": "AVALON_LIONEL_TEST",
+          "@activationtime": "0",
+          "@cooldown": "60",
+          "RandomDungeonGenerators": {
+            "GeneratedRandomDungeon": {
+              "@generatorName": "AVALON_RANDOM_DUNGEON_PORTAL_TEST",
+              "@tier": "8",
+              "@weight": "1"
+            }
+          },
+          "Visualization": {
+            "@ref": "AVALON_ELITE"
+          }
+        },
         {
           "@name": "CORRUPTED_SOLO_NONLETHAL",
           "@activationtime": "0",
@@ -17709,6 +17740,94 @@
           }
         },
         {
+          "@name": "AVALON_RANDOM_DUNGEON_PORTAL_TEST",
+          "@type": "DEFAULT_ELITE",
+          "Faction": {
+            "@name": "KEEPER",
+            "Subset": {
+              "@name": "fanatic",
+              "@weight": "1"
+            }
+          },
+          "Flags": {
+            "Flag": {
+              "@name": "elite"
+            }
+          },
+          "Environments": {
+            "Environment": {
+              "@name": "indoor",
+              "@weight": "1",
+              "Subset": [
+                {
+                  "@name": "cave_01",
+                  "@weight": "0.5"
+                },
+                {
+                  "@name": "cave_ocean",
+                  "@weight": "0.5"
+                }
+              ]
+            }
+          },
+          "DungeonSizeAndDepth": {
+            "Size": {
+              "@floors": "3",
+              "@weight": "1",
+              "BossRarity": {
+                "highlight": {
+                  "@name": "legendary",
+                  "@weight": "1"
+                }
+              },
+              "Floor": [
+                {
+                  "@level": "1",
+                  "DungeonLength": {
+                    "@pathlength": "5",
+                    "@highlightCount": "1",
+                    "@weight": "1",
+                    "highlight": {
+                      "@name": "uncommon",
+                      "@weight": "1"
+                    }
+                  }
+                },
+                {
+                  "@level": "2",
+                  "DungeonLength": {
+                    "@pathlength": "10",
+                    "@highlightCount": "2",
+                    "@weight": "1",
+                    "highlight": [
+                      {
+                        "@name": "rare",
+                        "@weight": "1"
+                      },
+                      {
+                        "@name": "uncommon",
+                        "@weight": "1"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "@level": "3",
+                  "DungeonLength": {
+                    "@pathlength": "0",
+                    "@highlightCount": "0",
+                    "@weight": "1",
+                    "highlight": {
+                      "@name": "uncommon",
+                      "@weight": "1"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
           "@name": "AVALON_RANDOM_DUNGEON_ELITE",
           "@type": "DEFAULT_ELITE",
           "Faction": {
@@ -17754,7 +17873,7 @@
                   {
                     "@level": "1",
                     "DungeonLength": {
-                      "@pathlength": "3",
+                      "@pathlength": "6",
                       "@highlightCount": "1",
                       "@weight": "1",
                       "highlight": {
@@ -17767,7 +17886,7 @@
                     "@level": "2",
                     "DungeonLength": [
                       {
-                        "@pathlength": "5",
+                        "@pathlength": "7",
                         "@highlightCount": "3",
                         "@weight": "1",
                         "highlight": [
