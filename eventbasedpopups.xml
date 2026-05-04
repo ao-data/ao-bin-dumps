@@ -59,6 +59,7 @@
             <category name="GameFeature" totalpopups="1" />
             <category name="ActivityHUB" totalpopups="1" />
             <category name="Mobile" totalpopups="1" />
+            <category name="AccountConversion" totalpopups="1" />
         </allowedcategories>
     </popupqueue>
 
@@ -383,9 +384,9 @@
 
         <!-- Old Popups, do not mix with other, cant control content, only conditions and trigger, still using the regular frequency rules-->
         <!-- Guest Account Incentivization -->
-        <popup uniquename="GUEST_ACCOUNT_INCENTIVIZATION" priority="1" type="GuestAccount">
+        <popup uniquename="GUEST_ACCOUNT_INCENTIVIZATION" priority="9" type="GuestAccount">
             <categories>
-                <category name="GuestAccount" />
+                <category name="AccountConversion" />
                 <category name="Advertisement" />
             </categories>
             <triggers>
@@ -422,13 +423,14 @@
         </popup>
 
         <!-- Platform Account Upgrade -->
-        <popup uniquename="PLATFORM_ACCOUNT_UPGRADE" type="PlatformAccount" priority="1">
+        <popup uniquename="PLATFORM_ACCOUNT_UPGRADE" type="PlatformAccount" priority="10">
             <categories>
-                <category name="PlatformAccount"/>
+                <category name="AccountConversion"/>
                 <category name="Advertisement" />
             </categories>
             <triggers>
-                <trigger action="GameLogin"/>
+                <trigger action="OpenFastTravelUi" />
+                <trigger action="GameLogin" />
             </triggers>
             <conditions>
                 <or>
@@ -440,7 +442,6 @@
                     <and>
                         <IfIsPlatformAccount />
                         <IfTutorialCompleted />
-                        <IfHasSeenPopup uniquename="PLATFORM_ACCOUNT_UPGRADE" frequency="AllTime" operation="greaterOrEqual" amount="1" />
                         <IfHasSeenPopup uniquename="PLATFORM_ACCOUNT_UPGRADE" frequency="Hours" timefactor="12" operation="equals" amount="0" />
                     </and>
                 </or>
