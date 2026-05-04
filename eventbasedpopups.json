@@ -103,6 +103,10 @@
           {
             "@name": "Mobile",
             "@totalpopups": "1"
+          },
+          {
+            "@name": "AccountConversion",
+            "@totalpopups": "1"
           }
         ]
       }
@@ -723,12 +727,12 @@
         },
         {
           "@uniquename": "GUEST_ACCOUNT_INCENTIVIZATION",
-          "@priority": "1",
+          "@priority": "9",
           "@type": "GuestAccount",
           "categories": {
             "category": [
               {
-                "@name": "GuestAccount"
+                "@name": "AccountConversion"
               },
               {
                 "@name": "Advertisement"
@@ -802,11 +806,11 @@
         {
           "@uniquename": "PLATFORM_ACCOUNT_UPGRADE",
           "@type": "PlatformAccount",
-          "@priority": "1",
+          "@priority": "10",
           "categories": {
             "category": [
               {
-                "@name": "PlatformAccount"
+                "@name": "AccountConversion"
               },
               {
                 "@name": "Advertisement"
@@ -814,9 +818,14 @@
             ]
           },
           "triggers": {
-            "trigger": {
-              "@action": "GameLogin"
-            }
+            "trigger": [
+              {
+                "@action": "OpenFastTravelUi"
+              },
+              {
+                "@action": "GameLogin"
+              }
+            ]
           },
           "conditions": {
             "or": {
@@ -836,21 +845,13 @@
                 {
                   "IfIsPlatformAccount": null,
                   "IfTutorialCompleted": null,
-                  "IfHasSeenPopup": [
-                    {
-                      "@uniquename": "PLATFORM_ACCOUNT_UPGRADE",
-                      "@frequency": "AllTime",
-                      "@operation": "greaterOrEqual",
-                      "@amount": "1"
-                    },
-                    {
-                      "@uniquename": "PLATFORM_ACCOUNT_UPGRADE",
-                      "@frequency": "Hours",
-                      "@timefactor": "12",
-                      "@operation": "equals",
-                      "@amount": "0"
-                    }
-                  ]
+                  "IfHasSeenPopup": {
+                    "@uniquename": "PLATFORM_ACCOUNT_UPGRADE",
+                    "@frequency": "Hours",
+                    "@timefactor": "12",
+                    "@operation": "equals",
+                    "@amount": "0"
+                  }
                 }
               ]
             }
