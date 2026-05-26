@@ -1336,7 +1336,7 @@
           "datasetrequirements": {
             "or": {
               "duration": {
-                "@mindurationminutes": "5"
+                "@mindurationminutes": "3"
               },
               "metric": {
                 "@name": "mobskilled",
@@ -1347,21 +1347,26 @@
           "scoreweights": {
             "@minuses": "3",
             "@minusesbaseline": "5",
+            "@minperformancescore": "0.3",
             "weight": [
               {
                 "@metric": "deaths",
                 "@value": "-0.3"
               },
               {
-                "@metric": "mobskilled",
+                "@metric": "pvefamegained",
+                "@value": "0.3"
+              },
+              {
+                "@metric": "healingdone",
                 "@value": "0.2"
               },
               {
-                "@metric": "pvefamegained",
-                "@value": "0.4"
+                "@metrics": "mobskilled,healingdone",
+                "@value": "0.2"
               },
               {
-                "@metrics": "damagereceived,healingdone",
+                "@metrics": "damagedealt,healingdone,damagereceived",
                 "@value": "0.4"
               }
             ]
@@ -1399,17 +1404,22 @@
           },
           "scoreweights": {
             "@minuses": "2",
+            "@minperformancescore": "0.3",
             "weight": [
               {
                 "@metric": "deaths",
                 "@value": "-0.2"
               },
               {
-                "@metric": "mobskilled",
-                "@value": "0.2"
+                "@metric": "healingdone",
+                "@value": "0.4"
               },
               {
                 "@metric": "pvefamegained",
+                "@value": "0.2"
+              },
+              {
+                "@metrics": "damagedealt,healingdone,damagereceived",
                 "@value": "0.4"
               }
             ]
