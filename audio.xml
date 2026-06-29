@@ -2526,13 +2526,22 @@
     <MountType name="empty"/>
   </WwiseSwitchInfo>
 
-    <WwiseSwitchInfo name="MOB_KEEPER_FANATIC_SPEAR">
+  <WwiseSwitchInfo name="MOB_KEEPER_FANATIC_SPEAR">
 	  <CharType name="mob"/>
 	  <MobFaction name="keeper"/>
 	  <MobType name="keeper_fanatic_spear"/>
 	  <Size name="heavy"/>
 	  <ArmorType name="leather"/>
 	  <WeaponType name="staff_bladed"/>
+	  <MountType name="empty"/>
+  </WwiseSwitchInfo>
+    <WwiseSwitchInfo name="MOB_KEEPER_FANATIC_SPEAR_HUGE">
+	  <CharType name="mob"/>
+	  <MobFaction name="keeper"/>
+	  <MobType name="keeper_fanatic_spear"/>
+	  <Size name="huge"/>
+	  <ArmorType name="leather"/>
+	  <WeaponType name="scythe"/>
 	  <MountType name="empty"/>
   </WwiseSwitchInfo>
   <WwiseSwitchInfo name="MOB_KEEPER_FANATIC_WARHORN">
@@ -2543,6 +2552,50 @@
 	  <ArmorType name="leather"/>
 	  <WeaponType name="hammer_huge"/>
 	  <MountType name="empty"/>
+  </WwiseSwitchInfo>
+  <WwiseSwitchInfo name="MOB_KEEPER_FANATIC_SHAMAN_PREACHING">
+	  <CharType name="mob"/>
+	  <MobFaction name="keeper"/>
+	  <MobType name="keeper_fanatic_shaman_preaching"/>
+	  <Size name="heavy"/>
+	  <ArmorType name="leather"/>
+	  <WeaponType name="shapeshifter"/>
+	  <MountType name="empty"/>
+  </WwiseSwitchInfo>
+  <WwiseSwitchInfo name="MOB_KEEPER_FANATIC_SHAMAN_ROAMING">
+	  <CharType name="mob"/>
+	  <MobFaction name="keeper"/>
+	  <MobType name="keeper_fanatic_shaman_roaming"/>
+	  <Size name="heavy"/>
+	  <ArmorType name="leather"/>
+	  <WeaponType name="shapeshifter"/>
+	  <MountType name="empty"/>
+  </WwiseSwitchInfo>
+  <WwiseSwitchInfo name="MOB_KEEPER_FANATIC_WITCH_PREACHING">
+	  <CharType name="mob"/>
+	  <MobFaction name="keeper"/>
+	  <MobType name="keeper_fanatic_witch_preaching"/>
+	  <Size name="heavy"/>
+	  <ArmorType name="leather"/>
+	  <WeaponType name="shapeshifter"/>
+	  <MountType name="empty"/>
+  </WwiseSwitchInfo>
+  <WwiseSwitchInfo name="MOB_KEEPER_FANATIC_WITCH_ROAMING">
+	  <CharType name="mob"/>
+	  <MobFaction name="keeper"/>
+	  <MobType name="keeper_fanatic_witch_roaming"/>
+	  <Size name="heavy"/>
+	  <ArmorType name="leather"/>
+	  <WeaponType name="shapeshifter"/>
+	  <MountType name="empty"/>
+  </WwiseSwitchInfo>
+  <WwiseSwitchInfo name="MOB_KEEPER_OBELISK">
+    <CharType name="mob"/>
+    <MobFaction name="demon"/>
+    <MobType name="demon_statue"/>
+    <Size name="rock_medium"/>
+    <ArmorType name="rock"/>
+    <MountType name="empty"/>
   </WwiseSwitchInfo>
 
   <!--CASTLEGUARDS-->
@@ -5362,6 +5415,9 @@
     <OnCastCanceled name="Stop_fire_cast_load_small" />
     <OnCastFinished name="Play_fire_cast_small" />
   </WwiseEventInfo>
+  <WwiseEventInfo name="SPELL_FIRE_CAST_SMALL">
+    <OnCastFinished name="Play_fire_cast_small" />
+  </WwiseEventInfo>
   <WwiseEventInfo name="SPELL_FIREBOLT_CAST">
     <OnCastStart name="Play_spell_fire_load_small_q" />
     <OnCastInterrupted name="Stop_spell_fire_load_small_q" />
@@ -6113,8 +6169,16 @@
 	  <OnSpellHit name="Play_shapeshifter_impact_damage_medium" />
   </WwiseEventInfo>
 
+  <WwiseEventInfo name="SPELL_SHAPESHIFTER_DAMAGE_IMPACT_MEDIUM_VOICELIMITED" >
+	  <OnSpellHit name="Play_shapeshifter_impact_damage_medium_voicelimited" />
+  </WwiseEventInfo>
+
   <WwiseEventInfo name="SPELL_SHAPESHIFTER_DAMAGE_IMPACT_MEDIUM_KNOCKBACK" >
 	  <OnSpellHit name="Play_shapeshifter_impact_damage_medium_knockback" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_SHAPESHIFTER_DAMAGE_IMPACT_MEDIUM_KNOCKBACK_VOICELIMITED" >
+	  <OnSpellHit name="Play_shapeshifter_impact_damage_medium_knockback_voicelimited" />
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_SHAPESHIFTER_DAMAGE_IMPACT_MEDIUM_PULL" >
@@ -6135,6 +6199,10 @@
 
   <WwiseEventInfo name="SPELL_SHAPESHIFTER_IMP_FIREORB_IMPACT" >
 	  <OnSpellHit name="Play_fire_impact_small_q_firebolt" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_SHAPESHIFTER_IMP_FIREORB_IMPACT_VOICELIMITED" >
+	  <OnSpellHit name="Play_fire_impact_small_q_firebolt_voicelimited" />
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_SHAPESHIFTER_IMP_CAST_FIREBALL" >
@@ -8631,8 +8699,8 @@
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_KEEPER_BEAR_DASH">
-	<OnCastStart name="Play_mob_keeper_bear_cast_knockback" />
-	<OnCastFinished name="Play_rhino_charge_start" />
+	  <OnCastStart name="Play_mob_keeper_bear_cast_knockback" />
+	  <OnCastFinished name="Play_rhino_charge_start" />
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_STUMP_CHANNEL_HIT">
@@ -8647,30 +8715,209 @@
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_KEEPER_FANATIC_HORN_CAST_START_ALLIES">
-	<OnCastStart name="Play_spell_keeper_fanatic_horn_cast_allies"/>
-	<OnCastCanceled name="Stop_spell_keeper_fanatic_horn_cast_allies"/>
-	<OnCastInterrupted name="Stop_spell_keeper_fanatic_horn_cast_allies"/>
+	  <OnCastStart name="Play_spell_keeper_fanatic_horn_cast_allies"/>
+	  <OnCastCanceled name="Stop_spell_keeper_fanatic_horn_cast_allies"/>
+	  <OnCastInterrupted name="Stop_spell_keeper_fanatic_horn_cast_allies"/>
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_KEEPER_FANATIC_HORN_CAST_FINISH_ALLIES">
-	<OnCastFinished name="Play_spell_keeper_fanatic_horn_cast_allies"/>
+	  <OnCastFinished name="Play_spell_keeper_fanatic_horn_cast_allies"/>
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_KEEPER_FANATIC_HORN_CAST_START_CCIMMU">
-	<OnCastStart name="Play_spell_keeper_fanatic_horn_cast_ccimmune"/>
-	<OnCastCanceled name="Stop_spell_keeper_fanatic_horn_cast_ccimmune"/>
-	<OnCastInterrupted name="Stop_spell_keeper_fanatic_horn_cast_ccimmune"/>
+	  <OnCastStart name="Play_spell_keeper_fanatic_horn_cast_ccimmune"/>
+	  <OnCastCanceled name="Stop_spell_keeper_fanatic_horn_cast_ccimmune"/>
+	  <OnCastInterrupted name="Stop_spell_keeper_fanatic_horn_cast_ccimmune"/>
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_KEEPER_FANATIC_HORN_CAST_FINISH_CCIMMU">
-	<OnCastFinished name="Play_spell_keeper_fanatic_horn_cast_ccimmune"/>
+	  <OnCastFinished name="Play_spell_keeper_fanatic_horn_cast_ccimmune"/>
   </WwiseEventInfo>
 
   <WwiseEventInfo name="SPELL_KEEPER_FANATIC_HORN_CHANNEL_DAMAGE">
   	<OnChannelingStart name="Play_spell_keeper_fanatic_horn_channel_damage" />
-	<OnChannelingCancelled name="Stop_spell_keeper_fanatic_horn_channel_damage" />
-	<OnChannelingEnd name="Stop_spell_keeper_fanatic_horn_channel_damage"/>
-	<OnChannelingInterrupted name="Stop_spell_keeper_fanatic_horn_channel_damage" />
+	  <OnChannelingCancelled name="Stop_spell_keeper_fanatic_horn_channel_damage" />
+	  <OnChannelingEnd name="Stop_spell_keeper_fanatic_horn_channel_damage"/>
+	  <OnChannelingInterrupted name="Stop_spell_keeper_fanatic_horn_channel_damage" />
+  </WwiseEventInfo>
+
+<!-- Fanatic Keeper Spear-->
+  <WwiseEventInfo name="SPELL_KEEPER_FANATIC_SPEAR_LUNGE">
+    <OnCastStart name="Play_mob_keeper_fanatic_spear_lunge_load" />
+    <OnCastCanceled name="Stop_mob_keeper_fanatic_spear_lunge_load" />
+    <OnCastInterrupted name="Stop_mob_keeper_fanatic_spear_lunge_load" />
+    <OnCastFinished name="Play_mob_keeper_fanatic_spear_lunge_cast"/>
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_KEEPER_FANATIC_SPEAR_SUNDER">
+    <OnCastStart name="Play_melee_swoosh_big_instant" />
+    <OnCastFinished name="Play_mob_keeper_fanatic_spear_sunder_cast"/>
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_KEEPER_FANATIC_SPEAR_SUNDER_SOLO_IMPACT">
+    <OnSpellHit name="Play_mob_keeper_fanatic_spear_sunder_impact"/>
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_KEEPER_FANATIC_SPEAR_SUNDER_LS">
+    <OnCastStart name="Play_melee_swoosh_load_medium" />
+    <OnCastCanceled name="Stop_melee_swoosh_load_medium" />
+    <OnCastInterrupted name="Stop_melee_swoosh_load_medium" />
+    <OnCastFinished name="Play_mob_keeper_fanatic_spear_sunder_cast"/>
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_KEEPER_FANATIC_SPEAR_THROW">
+    <OnCastStart name="Play_mob_keeper_fanatic_spear_throw_load" />
+    <OnCastCanceled name="Stop_mob_keeper_fanatic_spear_throw_load" />
+    <OnCastInterrupted name="Stop_mob_keeper_fanatic_spear_throw_load" />
+    <OnCastFinished name="Play_spell_spear_cast_throw_big_shapeshifter" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_KEEPER_FANATIC_SPEAR_EXECUTE_CAST">
+    <OnCastStart name="Play_mob_keeper_fanatic_spear_execute_load" />
+    <OnCastCanceled name="Stop_mob_keeper_fanatic_spear_execute_load" />
+    <OnCastInterrupted name="Stop_mob_keeper_fanatic_spear_execute_load" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_KEEPER_FANATIC_SPEAR_EXECUTE_CHANNEL">
+    <OnChannelingStart name="Play_melee_forest_of_spears_loop" />
+    <OnChannelingEnd name="Stop_melee_forest_of_spears_loop" />
+    <OnChannelingInterrupted name="Stop_melee_forest_of_spears_loop" />
+    <OnChannelingCancelled name="Stop_melee_forest_of_spears_loop" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_KEEPER_FANATIC_SPEAR_EXECUTE_MARK">
+    <OnCastStart name="Play_demon_root_fx_impact" />
+  </WwiseEventInfo>
+
+<!-- Fanatic Keeper Shaman-->
+  <WwiseEventInfo name="SPELL_KEEPER_FANATIC_SHAMAN_SUMMON" >
+	  <OnCastStart name="Play_mob_keeper_fanatic_shaman_summon_load_with_vo" />
+    <OnCastCanceled name="Stop_mob_keeper_fanatic_shaman_summon_load_with_vo" />
+    <OnCastInterrupted name="Stop_mob_keeper_fanatic_shaman_summon_load_with_vo" />
+    <OnCastFinished name="Play_mob_keeper_fanatic_shaman_summon_cast_finished" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_KEEPER_FANATIC_SHAMAN_CONE_SMALL" >
+	  <OnCastStart name="Play_mob_keeper_fanatic_shaman_cone_small_load" />
+    <OnCastCanceled name="Stop_mob_keeper_fanatic_shaman_cone_small_load" />
+    <OnCastInterrupted name="Stop_mob_keeper_fanatic_shaman_cone_small_load" />
+    <OnCastFinished name="Play_shapeshifter_cast_big_shockwave" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_KEEPER_FANATIC_SHAMAN_CONE_BIG_CHANNEL" >
+	  <OnChannelingStart name="Play_mob_keeper_fanatic_shaman_cone_big_load" />
+    <OnChannelingCancelled name="Stop_mob_keeper_fanatic_shaman_cone_big_load" />
+    <OnChannelingInterrupted name="Stop_mob_keeper_fanatic_shaman_cone_big_load" />
+    <OnChannelingEnd name="Play_shapeshifter_cast_big_shockwave" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_KEEPER_FANATIC_SHAMAN_CONE_BIG_CAST" >
+    <OnCastStart name="Play_shapeshifter_cast_big_shockwave" />
+  </WwiseEventInfo>
+
+<!-- Fanatic Keeper Witch - Maeve-->
+  <WwiseEventInfo name="SPELL_KEEPER_FANATIC_WITCH_DASH_LOAD_VO">
+    <OnCastFinished name="Play_mob_keeper_fanatic_witch_dash_load_vo" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_KEEPER_FANATIC_WITCH_DASH_RETURN_VO">
+    <OnCastFinished name="Play_mob_keeper_fanatic_witch_dash_return_vo" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_KEEPER_FANATIC_WITCH_ROCK_STOMP_CHANNEL_VO">
+    <OnChannelingStart name="Play_mob_keeper_fanatic_witch_stomp_vo" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_KEEPER_FANATIC_WITCH_DAMAGE_CHECK_LOADING">
+    <OnCastStart name="Play_mob_keeper_fanatic_witch_damage_check_loading" />
+    <OnCastCanceled name="Stop_mob_keeper_fanatic_witch_damage_check_loading" />
+    <OnCastInterrupted name="Stop_mob_keeper_fanatic_witch_damage_check_loading" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_KEEPER_FANATIC_WITCH_DAMAGE_CHECK_CHANELLING">
+    <OnChannelingStart name="Play_mob_keeper_fanatic_witch_damage_check_channeling" />
+    <OnChannelingCancelled name="Stop_mob_keeper_fanatic_witch_damage_check_channeling" />
+    <OnChannelingInterrupted name="Stop_mob_keeper_fanatic_witch_damage_check_channeling" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_KEEPER_FANATIC_WITCH_SUMMON_ROCKS_I_CAST">
+    <OnCastFinished name="Play_mob_keeper_fanatic_witch_summon_rocks_I_cast" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_KEEPER_FANATIC_WITCH_SUMMON_ROCKS_II_CAST">
+    <OnCastFinished name="Play_mob_keeper_fanatic_witch_summon_rocks_II_cast" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_KEEPER_FANATIC_WITCH_ROCK_STOMP_HANDGLOW">
+    <OnCastFinished name="Play_mob_keeper_fanatic_witch_stomp_handglow_load" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_KEEPER_FANATIC_WITCH_ROCK_STOMP_SHOCKWAVE">
+    <OnCastFinished name="Play_mob_keeper_fanatic_witch_stomp_rock_and_wave" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_KEEPER_FANATIC_WITCH_ROCK_STOMP_WAVE_HIT_PLAYER">
+    <OnSpellHit name="Play_mob_keeper_fanatic_witch_stomp_rock_wave_hit_player" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_KEEPER_FANATIC_WITCH_ROCK_STOMP_HIT_UNDERNEATH">
+    <OnSpellHit name="Play_mob_keeper_fanatic_witch_rock_stomp_hit_underneath" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_KEEPER_FANATIC_WITCH_DASH">
+    <OnCastStart name="Play_mob_keeper_fanatic_witch_dash_load" />
+    <OnCastInterrupted name="Stop_mob_keeper_fanatic_witch_dash_load" />
+    <OnCastCanceled name="Stop_mob_keeper_fanatic_witch_dash_load" />
+    <OnCastFinished name="Play_mob_keeper_fanatic_witch_dash" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_KEEPER_FANATIC_WITCH_DASH_STOP">
+    <OnCastFinished name="Play_mob_keeper_fanatic_witch_dash_stop" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_KEEPER_FANATIC_WITCH_DASH_HIT">
+    <OnSpellHit name="Play_mob_keeper_fanatic_witch_dash_hit" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_KEEPER_FANATIC_WITCH_TANK_SMASH_LOAD" >
+	  <OnCastStart name="Play_mob_keeper_fanatic_witch_tank_smash_load" />
+    <OnCastCanceled name="Stop_mob_keeper_fanatic_witch_tank_smash_load" />
+    <OnCastInterrupted name="Stop_mob_keeper_fanatic_witch_tank_smash_load" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_KEEPER_FANATIC_WITCH_ROCK_SPIKE_HIT">
+    <OnSpellHit name="Play_mob_keeper_fanatic_witch_rock_spike_hit" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_KEEPER_FANATIC_OBELISK_SPAWN">
+    <OnSpellHit name="Play_mob_keeper_fanatic_obelisk_spawn" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_KEEPER_FANATIC_OBELISK_AOE_LOAD">
+    <OnCastStart name="Play_mob_keeper_fanatic_obelisk_ring_aoe_load" />
+    <OnCastCanceled name="Stop_mob_keeper_fanatic_obelisk_ring_aoe_load" />
+    <OnCastInterrupted name="Stop_mob_keeper_fanatic_obelisk_ring_aoe_load" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_KEEPER_FANATIC_OBELISK_DEATH">
+    <OnCastFinished name="Play_mob_keeper_fanatic_obelisk_destroy" />
+  </WwiseEventInfo>
+  
+  <!-- Fanatic Keeper and Dragon Shared-->
+  <WwiseEventInfo name="SPELL_FLAME_ELEMENTAL_PICK_UP" >
+    <OnSpellHit name="Play_mob_keeper_fanatic_shaman_flame_elemental_pickup" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_FLAME_ELEMENTAL_PICK_UP_LOUDER" >
+    <OnSpellHit name="Play_mob_keeper_fanatic_shaman_flame_elemental_pickup_louder" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_FLAME_ELEMENTAL_EXPLOSION" >
+    <OnSpellHit name="Play_mob_keeper_fanatic_shaman_flame_elemental_bubble_pick_up_explosion" />
+  </WwiseEventInfo>
+
+  <WwiseEventInfo name="SPELL_FLAME_ELEMENTAL_SUMMON_DESTROY" >
+    <OnSpellHit name="Play_mob_keeper_fanatic_shaman_flame_elemental_summon_destroy" />
   </WwiseEventInfo>
   
   <!-- Morgana-->

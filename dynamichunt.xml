@@ -5,6 +5,20 @@
   <!--it also contains the information on the mob selected-->
   <!--the subtype has to be a treasure subtype to select viable locations of mob camps-->
   <targets>
+    <!--Event Targets-->
+    <category uniquename="EVENT" namelocatag="@MOB_KEEPER_WITCH_VETERAN_BOSS">
+      <!--Keeper Witch-->
+      <target uniquename="WITCH_SOLO_T5"  mobid="T5_MOB_TR_KEEPER_WITCH_BOSS"          tracktileref="TRACK_SILVER_SOLO"  minimapicon="questgiver_target"/>
+      <target uniquename="WITCH_SOLO_T6"  mobid="T6_MOB_TR_KEEPER_WITCH_BOSS"          tracktileref="TRACK_SILVER_SOLO"  minimapicon="questgiver_target"/>
+      <target uniquename="WITCH_SOLO_T7"  mobid="T7_MOB_TR_KEEPER_WITCH_BOSS"          tracktileref="TRACK_SILVER_SOLO"  minimapicon="questgiver_target"/>
+      <target uniquename="WITCH_SOLO_T8"  mobid="T8_MOB_TR_KEEPER_WITCH_BOSS"          tracktileref="TRACK_SILVER_SOLO"  minimapicon="questgiver_target"/>
+
+      <target uniquename="WITCH_GROUP_T5"  mobid="T5_MOB_TR_KEEPER_WITCH_VETERAN_BOSS" tracktileref="TRACK_SILVER_GROUP"  minimapicon="questgiver_target"/>
+      <target uniquename="WITCH_GROUP_T6"  mobid="T6_MOB_TR_KEEPER_WITCH_VETERAN_BOSS" tracktileref="TRACK_SILVER_GROUP"  minimapicon="questgiver_target"/>
+      <target uniquename="WITCH_GROUP_T7"  mobid="T7_MOB_TR_KEEPER_WITCH_VETERAN_BOSS" tracktileref="TRACK_SILVER_GROUP"  minimapicon="questgiver_target"/>
+      <target uniquename="WITCH_GROUP_T8"  mobid="T8_MOB_TR_KEEPER_WITCH_VETERAN_BOSS" tracktileref="TRACK_SILVER_GROUP"  minimapicon="questgiver_target"/>
+    </category>
+    
     <!--Silver Targets-->
     <category uniquename="SILVER" namelocatag="@MOB_TRACKING_SILVER_BOSS">
       <!--T3 Royal Target-->
@@ -47,9 +61,6 @@
       <target uniquename="SHADOWMASK_GROUP_T7" mobid="T7_MOB_TR_SILVER_HERETIC_SHADOWMASK_VETERAN_BOSS" tracktileref="TRACK_SILVER_GROUP" minimapicon="tracking_target_silver_group" />
       <target uniquename="SHADOWMASK_GROUP_T8" mobid="T8_MOB_TR_SILVER_HERETIC_SHADOWMASK_VETERAN_BOSS" tracktileref="TRACK_SILVER_GROUP" minimapicon="tracking_target_silver_group" />
       
-      <!--Keeper Witch-->
-      <target uniquename="WITCH_SOLO"  mobid="T4_MOB_RD_KEEPER_WITCH_BOSS"         tracktileref="TRACK_SILVER_SOLO"  minimapicon="tracking_target_silver_solo"/>
-      <target uniquename="WITCH_GROUP"  mobid="T4_MOB_RD_KEEPER_WITCH_VETERAN_BOSS"         tracktileref="TRACK_SILVER_SOLO"  minimapicon="tracking_target_silver_group"/>
     </category>
     
     <!--Artefact and Ingredient Targets-->
@@ -1691,7 +1702,7 @@
           namelocatagwithtarget="@HUNT_GENERAL_SOLO_WITH_TARGET"
           groupsizemin="1"
           groupsizemax="3"
-          initialfinalquestchance="1"
+          initialfinalquestchance="0.3"
           defaultchancechangeonsuccess="0.018"
           defaultchancechangeonfailure="0"
           minquestsuntilfinalquest="0"
@@ -1706,7 +1717,7 @@
       </variables>
 
       <finalquests>
-        <quest weight="1" name="FINAL_SOLO_SIMPLE" chancechangeonfailure="1" />
+        <quest weight="1" name="FINAL_SOLO_NO_ESCAPE" chancechangeonfailure="1" />
       </finalquests>
 
       <mainquests>
@@ -1730,35 +1741,25 @@
           <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_3">
             <iflastoccurrence op="greater" value="1"/>
           </quest>
-
-          <!--..........................................-->
-          <quest weight="15" name="MAIN_SOLO_SHORT_ESCAPE_TIME">
-            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.5"/>
-          </quest>
         </questblock>
-        <!--2x base chance increase-->
+        
         <questblock>
           <conditions>
-            <ifquestcount op="greaterorequal" type="all" value="5"/>
-            <ifquestcount op="less" type="all" value="10"/>
+            <ifquestcount op="greaterorequal" type="all" value="3"/>
           </conditions>
           <!--..........................................-->
-          <quest weight="6" name="MAIN_GOTO_SHORT_MEDIUM_RING" chancechangeonsuccess="0.036">
+          <quest weight="6" name="MAIN_GOTO_SHORT_MEDIUM_RING" chancechangeonsuccess="1">
             <iflastoccurrence op="greater" value="1"/>
           </quest>
           <!--..........................................-->
-          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_1" chancechangeonsuccess="0.036">
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_1" chancechangeonsuccess="1">
             <iflastoccurrence op="greater" value="1"/>
           </quest>
-          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_2" chancechangeonsuccess="0.036">
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_2" chancechangeonsuccess="1">
             <iflastoccurrence op="greater" value="1"/>
           </quest>
-          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_3" chancechangeonsuccess="0.036">
+          <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_3" chancechangeonsuccess="1">
             <iflastoccurrence op="greater" value="1"/>
-          </quest>
-          <!--..........................................-->
-          <quest weight="15" name="MAIN_SOLO_SHORT_ESCAPE_TIME" chancechangeonsuccess="0.036">
-            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.5"/>
           </quest>
         </questblock>
         <!--100% chance increase-->
@@ -1779,10 +1780,6 @@
           </quest>
           <quest weight="2" name="MAIN_SOLO_SHORT_FIGHT_3" chancechangeonsuccess="1">
             <iflastoccurrence op="greater" value="1"/>
-          </quest>
-          <!--..........................................-->
-          <quest weight="15" name="MAIN_SOLO_SHORT_ESCAPE_TIME" chancechangeonsuccess="1">
-            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.5"/>
           </quest>
         </questblock>
       </mainquests>
@@ -3302,15 +3299,15 @@
         </questblock>
       </mainquests>
     </hunt>
-    <!--Lead-Up Season - Solo-->
+    <!--Lead-Up Season - Group-->
     <hunt uniquename="SILVER_GROUP_WITCH"
           type="group"
           namelocatag="@HUNT_GENERAL_GROUP"
           namelocatagwithtarget="@HUNT_GENERAL_GROUP_WITH_TARGET"
           groupsizemin="4"
           groupsizemax="8"
-          initialfinalquestchance="1"
-          defaultchancechangeonsuccess="0.018"
+          initialfinalquestchance="0.2"
+          defaultchancechangeonsuccess="0.01"
           defaultchancechangeonfailure="0"
           minquestsuntilfinalquest="0"
           maxquestsuntilfinalquest="100"
@@ -3324,7 +3321,7 @@
       </variables>
 
       <finalquests>
-        <quest name="FINAL_GROUP_SIMPLE" weight="1"/>
+        <quest name="FINAL_GROUP_NO_ESCAPE" weight="1"/>
       </finalquests>
 
       <mainquests>
@@ -3349,43 +3346,11 @@
             <iflastoccurrence op="greater" value="1"/>
           </quest>
 
-          <!--..........................................-->
-          <quest weight="72" name="MAIN_GROUP_SHORT_ESCAPE_TIME">
-            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.5"/>
-          </quest>
-
-        </questblock>
-        <!--2x chance increase-->
-        <questblock>
-          <conditions>
-            <ifquestcount type="all" op="greaterorequal" value="5"/>
-            <ifquestcount type="all" op="less" value="12"/>
-          </conditions>
-          <!--..........................................-->
-          <quest weight="18" name="MAIN_GOTO_SHORT_LARGE_RING" chancechangeonsuccess="0.036">
-            <iflastoccurrence op="greater" value="1"/>
-          </quest>
-
-          <!--..........................................-->
-          <quest weight="3" name="MAIN_GROUP_SHORT_FIGHT_2" chancechangeonsuccess="0.036">
-            <iflastoccurrence op="greater" value="1"/>
-          </quest>
-          <quest weight="9" name="MAIN_GROUP_SHORT_FIGHT_3" chancechangeonsuccess="0.036">
-            <iflastoccurrence op="greater" value="1"/>
-          </quest>
-          <quest weight="6" name="MAIN_GROUP_SHORT_FIGHT_4" chancechangeonsuccess="0.036">
-            <iflastoccurrence op="greater" value="1"/>
-          </quest>
-
-          <!--..........................................-->
-          <quest weight="72" name="MAIN_GROUP_SHORT_ESCAPE_TIME" chancechangeonsuccess="0.036">
-            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.5"/>
-          </quest>
         </questblock>
         <!--100% chance-->
         <questblock>
           <conditions>
-            <ifquestcount type="all" op="greaterorequal" value="12"/>
+            <ifquestcount type="all" op="greaterorequal" value="4"/>
           </conditions>
           <!--..........................................-->
           <quest weight="18" name="MAIN_GOTO_SHORT_LARGE_RING" chancechangeonsuccess="1">
@@ -3402,11 +3367,7 @@
           <quest weight="6" name="MAIN_GROUP_SHORT_FIGHT_4" chancechangeonsuccess="1">
             <iflastoccurrence op="greater" value="1"/>
           </quest>
-
-          <!--..........................................-->
-          <quest weight="72" name="MAIN_GROUP_SHORT_ESCAPE_TIME" chancechangeonsuccess="1">
-            <ifvarfloat variablename="HP_TARGET" op="greater" value="0.5"/>
-          </quest>
+          
         </questblock>
       </mainquests>
     </hunt>
@@ -5878,7 +5839,67 @@
       <rewards>
         <fame points="450"/>
       </rewards>
-    </quest>    
+    </quest>
+    <quest uniquename="FINAL_SOLO_NO_ESCAPE" timeout="1200">
+      <variables>
+        <dynamictreasurespot name="LOCATION" filterbylocationhistoryvariable="LOCATION_HISTORY">
+          <distancetocluster mindistance="0" maxdistance="0" />
+        </dynamictreasurespot>
+        <mob name="MOB" mobtypevariable="HUNT_TARGET" locationvariable="LOCATION" overrideaggrodelay="0.1"/>
+        <locationmarker name="LOCATION_MARKER_MINIMAP" locationvariable="LOCATION" radius="80" offsetmin="20" offsetmax="60"/>
+        <locationmarker name="LOCATION_MARKER_TRIGGER" locationvariable="LOCATION" radius="30"/>
+        <locationmarker name="LOCATION_MARKER_COMBAT"  locationvariable="LOCATION" radius="40"/>
+      </variables>
+
+      <tasks>
+        <missionstep>
+          <preactions>
+            <setlocation fromvariable="LOCATION" tovariable="LOCATION_HISTORY"/>
+            <spawnobject variable="LOCATION_MARKER_MINIMAP"/>
+          </preactions>
+          <missions>
+            <gotolocation amount="1" locationmarkervariable="LOCATION_MARKER_MINIMAP" markedinworld="false" markedonminimap="true"/>
+          </missions>
+        </missionstep>
+
+        <missionstep>
+          <preactions>
+            <spawnobject variable="LOCATION_MARKER_TRIGGER"/>
+            <spawnobject variable="LOCATION_MARKER_COMBAT"/>
+            <setfloat tovariable="MOB" fromvariable="HP_TARGET" type="hitpoints"/>
+            <spawnobject variable="MOB"/>
+          </preactions>
+          <missions>
+            <gotolocation amount="1" gotolocationmarkervariable="LOCATION_MARKER_TRIGGER" locationmarkervariable="LOCATION_MARKER_MINIMAP" markedinworld="false" markedonminimap="true"/>
+          </missions>
+          <eventlisteners>
+            <mobevent targetmobvariable="MOB" type="onescape">
+              <setfloat tovariable="HP_TARGET" fromvariable="MOB" type="hitpoints"/>
+              <setlocation tovariable="TARGET_LOCATION" fromvariable="MOB"/>
+              <abortquest reason="TARGET_ESCAPED"/>
+            </mobevent>
+          </eventlisteners>
+        </missionstep>
+
+        <completionstep>
+          <missions>
+            <gotolocation amount="1" locationmarkervariable="LOCATION_MARKER_COMBAT" markedinworld="true" markedonminimap="true"/>
+            <mobisdead textloca="@HUNT_MISSION_ENGAGE_TARGET" mobvariable="MOB" />
+          </missions>
+          <eventlisteners>
+            <mobevent targetmobvariable="MOB" type="onescape">
+              <setfloat tovariable="HP_TARGET" fromvariable="MOB" type="hitpoints"/>
+              <setlocation tovariable="TARGET_LOCATION" fromvariable="MOB"/>
+              <abortquest reason="TARGET_ESCAPED"/>
+            </mobevent>
+          </eventlisteners>
+        </completionstep>
+      </tasks>
+
+      <rewards>
+        <fame points="450"/>
+      </rewards>
+    </quest>
     
     <!--*********************************************************-->
     <!--Veteran-->
@@ -5939,7 +5960,65 @@
       <rewards>
         <fame points="450"/>
       </rewards>
-    </quest>    
+    </quest>
+    <quest uniquename="FINAL_GROUP_NO_ESCAPE" timeout="1200">
+      <variables>
+        <dynamictreasurespot name="LOCATION" filterbylocationhistoryvariable="LOCATION_HISTORY">
+          <distancetocluster mindistance="0" maxdistance="0" />
+        </dynamictreasurespot>
+        <mob name="MOB" mobtypevariable="HUNT_TARGET" locationvariable="LOCATION" overrideaggrodelay="0.1"/>
+        <locationmarker name="LOCATION_MARKER_MINIMAP" locationvariable="LOCATION" radius="160" offsetmin="20" offsetmax="140"/>
+        <locationmarker name="LOCATION_MARKER_TRIGGER" locationvariable="LOCATION" radius="30"/>
+        <locationmarker name="LOCATION_MARKER_COMBAT"  locationvariable="LOCATION" radius="40"/>
+      </variables>
+      <tasks>
+        <missionstep>
+          <preactions>
+            <setlocation fromvariable="LOCATION" tovariable="LOCATION_HISTORY"/>
+            <spawnobject variable="LOCATION_MARKER_MINIMAP"/>
+          </preactions>
+          <missions>
+            <gotolocation amount="1" locationmarkervariable="LOCATION_MARKER_MINIMAP" markedinworld="false" markedonminimap="true"/>
+          </missions>
+        </missionstep>
+
+        <missionstep>
+          <preactions>
+            <spawnobject variable="LOCATION_MARKER_TRIGGER"/>
+            <spawnobject variable="LOCATION_MARKER_COMBAT"/>
+            <setfloat tovariable="MOB" fromvariable="HP_TARGET" type="hitpoints"/>
+            <spawnobject variable="MOB"/>
+          </preactions>
+          <missions>
+            <gotolocation amount="1" gotolocationmarkervariable="LOCATION_MARKER_TRIGGER" locationmarkervariable="LOCATION_MARKER_MINIMAP" markedinworld="false" markedonminimap="true"/>
+          </missions>
+          <eventlisteners>
+            <mobevent targetmobvariable="MOB" type="onescape">
+              <setfloat tovariable="HP_TARGET" fromvariable="MOB" type="hitpoints"/>
+              <setlocation tovariable="TARGET_LOCATION" fromvariable="MOB"/>
+              <abortquest reason="TARGET_ESCAPED"/>
+            </mobevent>
+          </eventlisteners>
+        </missionstep>
+
+        <completionstep>
+          <missions>
+            <gotolocation amount="1" locationmarkervariable="LOCATION_MARKER_COMBAT" markedinworld="true" markedonminimap="true"/>
+            <mobisdead textloca="@HUNT_MISSION_ENGAGE_TARGET" mobvariable="MOB"/>
+          </missions>
+          <eventlisteners>
+            <mobevent targetmobvariable="MOB" type="onescape">
+              <setfloat tovariable="HP_TARGET" fromvariable="MOB" type="hitpoints"/>
+              <setlocation tovariable="TARGET_LOCATION" fromvariable="MOB"/>
+              <abortquest reason="TARGET_ESCAPED"/>
+            </mobevent>
+          </eventlisteners>
+        </completionstep>
+      </tasks>
+      <rewards>
+        <fame points="450"/>
+      </rewards>
+    </quest>
 
     <!--*********************************************************-->
     <!--Main Quests-->

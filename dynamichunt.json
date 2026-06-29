@@ -9,6 +9,60 @@
     "targets": {
       "category": [
         {
+          "@uniquename": "EVENT",
+          "@namelocatag": "@MOB_KEEPER_WITCH_VETERAN_BOSS",
+          "target": [
+            {
+              "@uniquename": "WITCH_SOLO_T5",
+              "@mobid": "T5_MOB_TR_KEEPER_WITCH_BOSS",
+              "@tracktileref": "TRACK_SILVER_SOLO",
+              "@minimapicon": "questgiver_target"
+            },
+            {
+              "@uniquename": "WITCH_SOLO_T6",
+              "@mobid": "T6_MOB_TR_KEEPER_WITCH_BOSS",
+              "@tracktileref": "TRACK_SILVER_SOLO",
+              "@minimapicon": "questgiver_target"
+            },
+            {
+              "@uniquename": "WITCH_SOLO_T7",
+              "@mobid": "T7_MOB_TR_KEEPER_WITCH_BOSS",
+              "@tracktileref": "TRACK_SILVER_SOLO",
+              "@minimapicon": "questgiver_target"
+            },
+            {
+              "@uniquename": "WITCH_SOLO_T8",
+              "@mobid": "T8_MOB_TR_KEEPER_WITCH_BOSS",
+              "@tracktileref": "TRACK_SILVER_SOLO",
+              "@minimapicon": "questgiver_target"
+            },
+            {
+              "@uniquename": "WITCH_GROUP_T5",
+              "@mobid": "T5_MOB_TR_KEEPER_WITCH_VETERAN_BOSS",
+              "@tracktileref": "TRACK_SILVER_GROUP",
+              "@minimapicon": "questgiver_target"
+            },
+            {
+              "@uniquename": "WITCH_GROUP_T6",
+              "@mobid": "T6_MOB_TR_KEEPER_WITCH_VETERAN_BOSS",
+              "@tracktileref": "TRACK_SILVER_GROUP",
+              "@minimapicon": "questgiver_target"
+            },
+            {
+              "@uniquename": "WITCH_GROUP_T7",
+              "@mobid": "T7_MOB_TR_KEEPER_WITCH_VETERAN_BOSS",
+              "@tracktileref": "TRACK_SILVER_GROUP",
+              "@minimapicon": "questgiver_target"
+            },
+            {
+              "@uniquename": "WITCH_GROUP_T8",
+              "@mobid": "T8_MOB_TR_KEEPER_WITCH_VETERAN_BOSS",
+              "@tracktileref": "TRACK_SILVER_GROUP",
+              "@minimapicon": "questgiver_target"
+            }
+          ]
+        },
+        {
           "@uniquename": "SILVER",
           "@namelocatag": "@MOB_TRACKING_SILVER_BOSS",
           "target": [
@@ -208,18 +262,6 @@
               "@uniquename": "SHADOWMASK_GROUP_T8",
               "@mobid": "T8_MOB_TR_SILVER_HERETIC_SHADOWMASK_VETERAN_BOSS",
               "@tracktileref": "TRACK_SILVER_GROUP",
-              "@minimapicon": "tracking_target_silver_group"
-            },
-            {
-              "@uniquename": "WITCH_SOLO",
-              "@mobid": "T4_MOB_RD_KEEPER_WITCH_BOSS",
-              "@tracktileref": "TRACK_SILVER_SOLO",
-              "@minimapicon": "tracking_target_silver_solo"
-            },
-            {
-              "@uniquename": "WITCH_GROUP",
-              "@mobid": "T4_MOB_RD_KEEPER_WITCH_VETERAN_BOSS",
-              "@tracktileref": "TRACK_SILVER_SOLO",
               "@minimapicon": "tracking_target_silver_group"
             }
           ]
@@ -3454,7 +3496,7 @@
           "@namelocatagwithtarget": "@HUNT_GENERAL_SOLO_WITH_TARGET",
           "@groupsizemin": "1",
           "@groupsizemax": "3",
-          "@initialfinalquestchance": "1",
+          "@initialfinalquestchance": "0.3",
           "@defaultchancechangeonsuccess": "0.018",
           "@defaultchancechangeonfailure": "0",
           "@minquestsuntilfinalquest": "0",
@@ -3479,7 +3521,7 @@
           "finalquests": {
             "quest": {
               "@weight": "1",
-              "@name": "FINAL_SOLO_SIMPLE",
+              "@name": "FINAL_SOLO_NO_ESCAPE",
               "@chancechangeonfailure": "1"
             }
           },
@@ -3525,38 +3567,22 @@
                       "@op": "greater",
                       "@value": "1"
                     }
-                  },
-                  {
-                    "@weight": "15",
-                    "@name": "MAIN_SOLO_SHORT_ESCAPE_TIME",
-                    "ifvarfloat": {
-                      "@variablename": "HP_TARGET",
-                      "@op": "greater",
-                      "@value": "0.5"
-                    }
                   }
                 ]
               },
               {
                 "conditions": {
-                  "ifquestcount": [
-                    {
-                      "@op": "greaterorequal",
-                      "@type": "all",
-                      "@value": "5"
-                    },
-                    {
-                      "@op": "less",
-                      "@type": "all",
-                      "@value": "10"
-                    }
-                  ]
+                  "ifquestcount": {
+                    "@op": "greaterorequal",
+                    "@type": "all",
+                    "@value": "3"
+                  }
                 },
                 "quest": [
                   {
                     "@weight": "6",
                     "@name": "MAIN_GOTO_SHORT_MEDIUM_RING",
-                    "@chancechangeonsuccess": "0.036",
+                    "@chancechangeonsuccess": "1",
                     "iflastoccurrence": {
                       "@op": "greater",
                       "@value": "1"
@@ -3565,7 +3591,7 @@
                   {
                     "@weight": "2",
                     "@name": "MAIN_SOLO_SHORT_FIGHT_1",
-                    "@chancechangeonsuccess": "0.036",
+                    "@chancechangeonsuccess": "1",
                     "iflastoccurrence": {
                       "@op": "greater",
                       "@value": "1"
@@ -3574,7 +3600,7 @@
                   {
                     "@weight": "2",
                     "@name": "MAIN_SOLO_SHORT_FIGHT_2",
-                    "@chancechangeonsuccess": "0.036",
+                    "@chancechangeonsuccess": "1",
                     "iflastoccurrence": {
                       "@op": "greater",
                       "@value": "1"
@@ -3583,20 +3609,10 @@
                   {
                     "@weight": "2",
                     "@name": "MAIN_SOLO_SHORT_FIGHT_3",
-                    "@chancechangeonsuccess": "0.036",
+                    "@chancechangeonsuccess": "1",
                     "iflastoccurrence": {
                       "@op": "greater",
                       "@value": "1"
-                    }
-                  },
-                  {
-                    "@weight": "15",
-                    "@name": "MAIN_SOLO_SHORT_ESCAPE_TIME",
-                    "@chancechangeonsuccess": "0.036",
-                    "ifvarfloat": {
-                      "@variablename": "HP_TARGET",
-                      "@op": "greater",
-                      "@value": "0.5"
                     }
                   }
                 ]
@@ -3644,16 +3660,6 @@
                     "iflastoccurrence": {
                       "@op": "greater",
                       "@value": "1"
-                    }
-                  },
-                  {
-                    "@weight": "15",
-                    "@name": "MAIN_SOLO_SHORT_ESCAPE_TIME",
-                    "@chancechangeonsuccess": "1",
-                    "ifvarfloat": {
-                      "@variablename": "HP_TARGET",
-                      "@op": "greater",
-                      "@value": "0.5"
                     }
                   }
                 ]
@@ -6348,8 +6354,8 @@
           "@namelocatagwithtarget": "@HUNT_GENERAL_GROUP_WITH_TARGET",
           "@groupsizemin": "4",
           "@groupsizemax": "8",
-          "@initialfinalquestchance": "1",
-          "@defaultchancechangeonsuccess": "0.018",
+          "@initialfinalquestchance": "0.2",
+          "@defaultchancechangeonsuccess": "0.01",
           "@defaultchancechangeonfailure": "0",
           "@minquestsuntilfinalquest": "0",
           "@maxquestsuntilfinalquest": "100",
@@ -6372,7 +6378,7 @@
           },
           "finalquests": {
             "quest": {
-              "@name": "FINAL_GROUP_SIMPLE",
+              "@name": "FINAL_GROUP_NO_ESCAPE",
               "@weight": "1"
             }
           },
@@ -6418,79 +6424,6 @@
                       "@op": "greater",
                       "@value": "1"
                     }
-                  },
-                  {
-                    "@weight": "72",
-                    "@name": "MAIN_GROUP_SHORT_ESCAPE_TIME",
-                    "ifvarfloat": {
-                      "@variablename": "HP_TARGET",
-                      "@op": "greater",
-                      "@value": "0.5"
-                    }
-                  }
-                ]
-              },
-              {
-                "conditions": {
-                  "ifquestcount": [
-                    {
-                      "@type": "all",
-                      "@op": "greaterorequal",
-                      "@value": "5"
-                    },
-                    {
-                      "@type": "all",
-                      "@op": "less",
-                      "@value": "12"
-                    }
-                  ]
-                },
-                "quest": [
-                  {
-                    "@weight": "18",
-                    "@name": "MAIN_GOTO_SHORT_LARGE_RING",
-                    "@chancechangeonsuccess": "0.036",
-                    "iflastoccurrence": {
-                      "@op": "greater",
-                      "@value": "1"
-                    }
-                  },
-                  {
-                    "@weight": "3",
-                    "@name": "MAIN_GROUP_SHORT_FIGHT_2",
-                    "@chancechangeonsuccess": "0.036",
-                    "iflastoccurrence": {
-                      "@op": "greater",
-                      "@value": "1"
-                    }
-                  },
-                  {
-                    "@weight": "9",
-                    "@name": "MAIN_GROUP_SHORT_FIGHT_3",
-                    "@chancechangeonsuccess": "0.036",
-                    "iflastoccurrence": {
-                      "@op": "greater",
-                      "@value": "1"
-                    }
-                  },
-                  {
-                    "@weight": "6",
-                    "@name": "MAIN_GROUP_SHORT_FIGHT_4",
-                    "@chancechangeonsuccess": "0.036",
-                    "iflastoccurrence": {
-                      "@op": "greater",
-                      "@value": "1"
-                    }
-                  },
-                  {
-                    "@weight": "72",
-                    "@name": "MAIN_GROUP_SHORT_ESCAPE_TIME",
-                    "@chancechangeonsuccess": "0.036",
-                    "ifvarfloat": {
-                      "@variablename": "HP_TARGET",
-                      "@op": "greater",
-                      "@value": "0.5"
-                    }
                   }
                 ]
               },
@@ -6499,7 +6432,7 @@
                   "ifquestcount": {
                     "@type": "all",
                     "@op": "greaterorequal",
-                    "@value": "12"
+                    "@value": "4"
                   }
                 },
                 "quest": [
@@ -6537,16 +6470,6 @@
                     "iflastoccurrence": {
                       "@op": "greater",
                       "@value": "1"
-                    }
-                  },
-                  {
-                    "@weight": "72",
-                    "@name": "MAIN_GROUP_SHORT_ESCAPE_TIME",
-                    "@chancechangeonsuccess": "1",
-                    "ifvarfloat": {
-                      "@variablename": "HP_TARGET",
-                      "@op": "greater",
-                      "@value": "0.5"
                     }
                   }
                 ]
@@ -11800,6 +11723,152 @@
           }
         },
         {
+          "@uniquename": "FINAL_SOLO_NO_ESCAPE",
+          "@timeout": "1200",
+          "variables": {
+            "dynamictreasurespot": {
+              "@name": "LOCATION",
+              "@filterbylocationhistoryvariable": "LOCATION_HISTORY",
+              "distancetocluster": {
+                "@mindistance": "0",
+                "@maxdistance": "0"
+              }
+            },
+            "mob": {
+              "@name": "MOB",
+              "@mobtypevariable": "HUNT_TARGET",
+              "@locationvariable": "LOCATION",
+              "@overrideaggrodelay": "0.1"
+            },
+            "locationmarker": [
+              {
+                "@name": "LOCATION_MARKER_MINIMAP",
+                "@locationvariable": "LOCATION",
+                "@radius": "80",
+                "@offsetmin": "20",
+                "@offsetmax": "60"
+              },
+              {
+                "@name": "LOCATION_MARKER_TRIGGER",
+                "@locationvariable": "LOCATION",
+                "@radius": "30"
+              },
+              {
+                "@name": "LOCATION_MARKER_COMBAT",
+                "@locationvariable": "LOCATION",
+                "@radius": "40"
+              }
+            ]
+          },
+          "tasks": {
+            "missionstep": [
+              {
+                "preactions": {
+                  "setlocation": {
+                    "@fromvariable": "LOCATION",
+                    "@tovariable": "LOCATION_HISTORY"
+                  },
+                  "spawnobject": {
+                    "@variable": "LOCATION_MARKER_MINIMAP"
+                  }
+                },
+                "missions": {
+                  "gotolocation": {
+                    "@amount": "1",
+                    "@locationmarkervariable": "LOCATION_MARKER_MINIMAP",
+                    "@markedinworld": "false",
+                    "@markedonminimap": "true"
+                  }
+                }
+              },
+              {
+                "preactions": {
+                  "spawnobject": [
+                    {
+                      "@variable": "LOCATION_MARKER_TRIGGER"
+                    },
+                    {
+                      "@variable": "LOCATION_MARKER_COMBAT"
+                    },
+                    {
+                      "@variable": "MOB"
+                    }
+                  ],
+                  "setfloat": {
+                    "@tovariable": "MOB",
+                    "@fromvariable": "HP_TARGET",
+                    "@type": "hitpoints"
+                  }
+                },
+                "missions": {
+                  "gotolocation": {
+                    "@amount": "1",
+                    "@gotolocationmarkervariable": "LOCATION_MARKER_TRIGGER",
+                    "@locationmarkervariable": "LOCATION_MARKER_MINIMAP",
+                    "@markedinworld": "false",
+                    "@markedonminimap": "true"
+                  }
+                },
+                "eventlisteners": {
+                  "mobevent": {
+                    "@targetmobvariable": "MOB",
+                    "@type": "onescape",
+                    "setfloat": {
+                      "@tovariable": "HP_TARGET",
+                      "@fromvariable": "MOB",
+                      "@type": "hitpoints"
+                    },
+                    "setlocation": {
+                      "@tovariable": "TARGET_LOCATION",
+                      "@fromvariable": "MOB"
+                    },
+                    "abortquest": {
+                      "@reason": "TARGET_ESCAPED"
+                    }
+                  }
+                }
+              }
+            ],
+            "completionstep": {
+              "missions": {
+                "gotolocation": {
+                  "@amount": "1",
+                  "@locationmarkervariable": "LOCATION_MARKER_COMBAT",
+                  "@markedinworld": "true",
+                  "@markedonminimap": "true"
+                },
+                "mobisdead": {
+                  "@textloca": "@HUNT_MISSION_ENGAGE_TARGET",
+                  "@mobvariable": "MOB"
+                }
+              },
+              "eventlisteners": {
+                "mobevent": {
+                  "@targetmobvariable": "MOB",
+                  "@type": "onescape",
+                  "setfloat": {
+                    "@tovariable": "HP_TARGET",
+                    "@fromvariable": "MOB",
+                    "@type": "hitpoints"
+                  },
+                  "setlocation": {
+                    "@tovariable": "TARGET_LOCATION",
+                    "@fromvariable": "MOB"
+                  },
+                  "abortquest": {
+                    "@reason": "TARGET_ESCAPED"
+                  }
+                }
+              }
+            }
+          },
+          "rewards": {
+            "fame": {
+              "@points": "450"
+            }
+          }
+        },
+        {
           "@uniquename": "FINAL_GROUP_SIMPLE",
           "@timeout": "1200",
           "variables": {
@@ -11820,6 +11889,152 @@
               "@overrideaggrodelay": "0.1",
               "@escapeaftertimeincombat": "180",
               "@escapeafterfirstengagein": "240"
+            },
+            "locationmarker": [
+              {
+                "@name": "LOCATION_MARKER_MINIMAP",
+                "@locationvariable": "LOCATION",
+                "@radius": "160",
+                "@offsetmin": "20",
+                "@offsetmax": "140"
+              },
+              {
+                "@name": "LOCATION_MARKER_TRIGGER",
+                "@locationvariable": "LOCATION",
+                "@radius": "30"
+              },
+              {
+                "@name": "LOCATION_MARKER_COMBAT",
+                "@locationvariable": "LOCATION",
+                "@radius": "40"
+              }
+            ]
+          },
+          "tasks": {
+            "missionstep": [
+              {
+                "preactions": {
+                  "setlocation": {
+                    "@fromvariable": "LOCATION",
+                    "@tovariable": "LOCATION_HISTORY"
+                  },
+                  "spawnobject": {
+                    "@variable": "LOCATION_MARKER_MINIMAP"
+                  }
+                },
+                "missions": {
+                  "gotolocation": {
+                    "@amount": "1",
+                    "@locationmarkervariable": "LOCATION_MARKER_MINIMAP",
+                    "@markedinworld": "false",
+                    "@markedonminimap": "true"
+                  }
+                }
+              },
+              {
+                "preactions": {
+                  "spawnobject": [
+                    {
+                      "@variable": "LOCATION_MARKER_TRIGGER"
+                    },
+                    {
+                      "@variable": "LOCATION_MARKER_COMBAT"
+                    },
+                    {
+                      "@variable": "MOB"
+                    }
+                  ],
+                  "setfloat": {
+                    "@tovariable": "MOB",
+                    "@fromvariable": "HP_TARGET",
+                    "@type": "hitpoints"
+                  }
+                },
+                "missions": {
+                  "gotolocation": {
+                    "@amount": "1",
+                    "@gotolocationmarkervariable": "LOCATION_MARKER_TRIGGER",
+                    "@locationmarkervariable": "LOCATION_MARKER_MINIMAP",
+                    "@markedinworld": "false",
+                    "@markedonminimap": "true"
+                  }
+                },
+                "eventlisteners": {
+                  "mobevent": {
+                    "@targetmobvariable": "MOB",
+                    "@type": "onescape",
+                    "setfloat": {
+                      "@tovariable": "HP_TARGET",
+                      "@fromvariable": "MOB",
+                      "@type": "hitpoints"
+                    },
+                    "setlocation": {
+                      "@tovariable": "TARGET_LOCATION",
+                      "@fromvariable": "MOB"
+                    },
+                    "abortquest": {
+                      "@reason": "TARGET_ESCAPED"
+                    }
+                  }
+                }
+              }
+            ],
+            "completionstep": {
+              "missions": {
+                "gotolocation": {
+                  "@amount": "1",
+                  "@locationmarkervariable": "LOCATION_MARKER_COMBAT",
+                  "@markedinworld": "true",
+                  "@markedonminimap": "true"
+                },
+                "mobisdead": {
+                  "@textloca": "@HUNT_MISSION_ENGAGE_TARGET",
+                  "@mobvariable": "MOB"
+                }
+              },
+              "eventlisteners": {
+                "mobevent": {
+                  "@targetmobvariable": "MOB",
+                  "@type": "onescape",
+                  "setfloat": {
+                    "@tovariable": "HP_TARGET",
+                    "@fromvariable": "MOB",
+                    "@type": "hitpoints"
+                  },
+                  "setlocation": {
+                    "@tovariable": "TARGET_LOCATION",
+                    "@fromvariable": "MOB"
+                  },
+                  "abortquest": {
+                    "@reason": "TARGET_ESCAPED"
+                  }
+                }
+              }
+            }
+          },
+          "rewards": {
+            "fame": {
+              "@points": "450"
+            }
+          }
+        },
+        {
+          "@uniquename": "FINAL_GROUP_NO_ESCAPE",
+          "@timeout": "1200",
+          "variables": {
+            "dynamictreasurespot": {
+              "@name": "LOCATION",
+              "@filterbylocationhistoryvariable": "LOCATION_HISTORY",
+              "distancetocluster": {
+                "@mindistance": "0",
+                "@maxdistance": "0"
+              }
+            },
+            "mob": {
+              "@name": "MOB",
+              "@mobtypevariable": "HUNT_TARGET",
+              "@locationvariable": "LOCATION",
+              "@overrideaggrodelay": "0.1"
             },
             "locationmarker": [
               {

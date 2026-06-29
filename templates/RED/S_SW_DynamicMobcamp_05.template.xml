@@ -1,5 +1,11 @@
 <template path="Assets/Levels/LEVEL_TEMPLATES/SWAMP/Slave/S_SW_DynamicMobcamp_05.unity" unityguid="456a5ed460042ec48ab24ff92f21d8a0" editorBoundsMin="-25 -25" editorBoundsMax="25 25" colBoundsMin="-30 -27" colBoundsMax="30 120">
-  <criticalscenemembers />
+  <criticalscenemembers>
+    <criticalscenemember id="loresnippet_01" type="loresnippet" layerId="Layer_03">
+      <tile name="LORE_SPOT" pos="17 0 -8">
+        <loresnippet loresnippetid="KEEPER_08" />
+      </tile>
+    </criticalscenemember>
+  </criticalscenemembers>
   <tiles>
     <layergroup name="DYNAMIC">
       <layer id="Layer_01" name="KEEPER_DYN_VAR_DEFAULT_ACTIVE">
@@ -104,6 +110,7 @@
       </layer>
       <layer id="Layer_03" name="KEEPER_DYN_VAR_DEFAULT_STATIC">
         <tile name="SWAMP_RED_KPR_FILL_CAMPFIRE_SIT_A" pos="-14 8 5" roty="156" />
+        <tile name="INVISIBLE_COLLISON_BlockGround_4x4" pos="-20 -1 3" />
         <tile name="INVISIBLE_COLLISON_BlockGround_4x4" pos="-15 -1 10" />
         <tile name="INVISIBLE_COLLISON_BlockGround_4x4" pos="-13 -1 13" />
         <tile name="INVISIBLE_COLLISON_BlockGround_4x4" pos="-10 -1 15" />
@@ -111,8 +118,8 @@
         <tile name="INVISIBLE_COLLISON_BlockGround_4x4" pos="17 -1 17" />
         <tile name="INVISIBLE_COLLISON_BlockGround_4x4" pos="8 -1 19" />
         <tile name="SWAMP_RED_GROUND_PATCH_TO_ROAD_A" pos="-7 8 2" roty="315" scale="1.756723 1 2.431373" />
-        <tile name="INVISIBLE_COLLISON_BlockGround_4x4" pos="-20 -1 3" />
         <tile name="SWAMP_RED_GROUND_PATCH_TO_ROAD_A" pos="-10 8 -13" roty="12" scale="0.7877342 0.45553 0.7110666" />
+        <tile name="SWAMP_RED_KPR_FILL_CAMPFIRE_SIT_A" pos="-9 8 11" roty="203" />
         <tile name="SWAMP_RED_KPR_FENCE_WOOD_A" pos="-17.5 8 1" roty="86" />
         <tile name="SWAMP_RED_KPR_FENCE_WOOD_A_DIAG" pos="-9 8 14" roty="105" />
         <tile name="SWAMP_RED_KPR_FENCE_WOOD_A" pos="11 8 16.5" roty="187" />
@@ -120,8 +127,10 @@
         <tile name="SWAMP_RED_KPR_BOWL_A" pos="-4.5 8 0.5" roty="270" />
         <tile name="SWAMP_RED_KPR_FENCE_WOOD_B" pos="-12 8 -16.5" roty="206.6" />
         <tile name="SWAMP_RED_KPR_FILL_CAMPFIRE_SIT_A" pos="1 8 0" />
-        <tile name="SWAMP_RED_KPR_FILL_CAMPFIRE_SIT_A" pos="-9 8 11" roty="203" />
         <tile name="INVISIBLE_COLLISON_BlockGround_4x4" pos="-19 -1 0" />
+        <criticaltile name="LORE_SPOT" pos="17 0 -8" id="loresnippet_01" type="loresnippet">
+          <loresnippet loresnippetid="KEEPER_08" />
+        </criticaltile>
       </layer>
       <layer id="Layer_04" name="MORGANA_DYN_VAR_DEFAULT_ACTIVE">
         <tile name="SpawnPoint_RANDOM_ROAMING_DYNAMIC_CAMP_MORGANA_MELEE" pos="-4.92 8 -9.91" roty="239.73">

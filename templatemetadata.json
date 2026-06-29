@@ -1592,36 +1592,6 @@
                     "template": {
                       "@name": "KPR_TRIBE_HIGH_STD_STRAIGHT_ElementalShrine_01",
                       "@excessweight": "0.5",
-                      "weightedlayerblock": [
-                        {
-                          "@name": "solo_secret",
-                          "@flag": "solo",
-                          "layer": [
-                            {
-                              "@id": "Layer_02",
-                              "@weight": "6"
-                            },
-                            {
-                              "@id": "Layer_04",
-                              "@weight": "3"
-                            }
-                          ]
-                        },
-                        {
-                          "@name": "veteran_secret",
-                          "@flag": "veteran",
-                          "layer": [
-                            {
-                              "@id": "Layer_05",
-                              "@weight": "6"
-                            },
-                            {
-                              "@id": "Layer_07",
-                              "@weight": "3"
-                            }
-                          ]
-                        }
-                      ],
                       "layercontrol": [
                         {
                           "@type": "all:environment|indoor|cave_01",
@@ -1636,8 +1606,16 @@
                           "@layers": "Layer_08"
                         },
                         {
+                          "@type": "solo",
+                          "@layers": "Layer_04"
+                        },
+                        {
                           "@type": "solo:encounter|hard",
                           "@layers": "Layer_01,Layer_10"
+                        },
+                        {
+                          "@type": "veteran",
+                          "@layers": "Layer_07"
                         },
                         {
                           "@type": "veteran:encounter|hard",
@@ -1938,36 +1916,6 @@
                       },
                       {
                         "@name": "KPR_TRIBE_HIGH_UNCOM_STRAIGHT_Waterfalls_01",
-                        "weightedlayerblock": [
-                          {
-                            "@name": "secret_solo",
-                            "@flag": "solo",
-                            "layer": [
-                              {
-                                "@id": "Layer_05",
-                                "@weight": "6"
-                              },
-                              {
-                                "@id": "Layer_07",
-                                "@weight": "3"
-                              }
-                            ]
-                          },
-                          {
-                            "@name": "secret_veteran",
-                            "@flag": "veteran",
-                            "layer": [
-                              {
-                                "@id": "Layer_10",
-                                "@weight": "6"
-                              },
-                              {
-                                "@id": "Layer_11",
-                                "@weight": "3"
-                              }
-                            ]
-                          }
-                        ],
                         "layercontrol": [
                           {
                             "@type": "all:environment|indoor|cave_01",
@@ -1983,7 +1931,7 @@
                           },
                           {
                             "@type": "solo",
-                            "@layers": "Layer_02"
+                            "@layers": "Layer_02,Layer_07"
                           },
                           {
                             "@type": "solo:encounter|hard",
@@ -1991,7 +1939,7 @@
                           },
                           {
                             "@type": "veteran",
-                            "@layers": "Layer_04"
+                            "@layers": "Layer_04,Layer_11"
                           },
                           {
                             "@type": "veteran:encounter|hard",
@@ -10171,36 +10119,6 @@
                       },
                       {
                         "@name": "UND_CASTLE_HIGH_UNCOM_STRAIGHT_KeeperBreak_01",
-                        "weightedlayerblock": [
-                          {
-                            "@name": "solo_secret",
-                            "@flag": "solo",
-                            "layer": [
-                              {
-                                "@id": "Layer_06",
-                                "@weight": "6"
-                              },
-                              {
-                                "@id": "Layer_07",
-                                "@weight": "3"
-                              }
-                            ]
-                          },
-                          {
-                            "@name": "veteran_secret",
-                            "@flag": "veteran",
-                            "layer": [
-                              {
-                                "@id": "Layer_08",
-                                "@weight": "6"
-                              },
-                              {
-                                "@id": "Layer_10",
-                                "@weight": "3"
-                              }
-                            ]
-                          }
-                        ],
                         "layercontrol": [
                           {
                             "@type": "all:environment|indoor|cave_01",
@@ -10216,7 +10134,7 @@
                           },
                           {
                             "@type": "solo",
-                            "@layers": "Layer_01"
+                            "@layers": "Layer_01,Layer_07"
                           },
                           {
                             "@type": "solo:encounter|hard",
@@ -10224,7 +10142,7 @@
                           },
                           {
                             "@type": "veteran",
-                            "@layers": "Layer_02"
+                            "@layers": "Layer_02,Layer_10"
                           },
                           {
                             "@type": "veteran:encounter|hard",

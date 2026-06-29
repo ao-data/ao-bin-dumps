@@ -1,5 +1,11 @@
 <template path="Assets/Levels/LEVEL_TEMPLATES/FOREST/Slave/DungeonBlocks/KEEPER/KPR_TRIBE_HIGH_STD_STRAIGHT_ElementalShrine_01.unity" unityguid="abf0092553e400c4f8f7aaa1a038d62f" editorBoundsMin="-80 -40" editorBoundsMax="80 40" colBoundsMin="-80 -42" colBoundsMax="82 43">
-  <criticalscenemembers />
+  <criticalscenemembers>
+    <criticalscenemember id="loresnippet_01" type="loresnippet" layerId="">
+      <tile name="LORE_SPOT" pos="-30 1 -20">
+        <loresnippet loresnippetid="KEEPER_14" />
+      </tile>
+    </criticalscenemember>
+  </criticalscenemembers>
   <tiles>
     <layergroup name="Backdrop">
       <layer id="Layer_06" name="env_in_cave" />
@@ -163,26 +169,22 @@
       </layer>
     </layergroup>
     <layergroup name="SECRET">
-      <layer id="Layer_02" name="solo_secret_off">
-        <tile name="FOREST_GREEN_DNG_CAVE_ROCK_A" pos="-9 0 -8" roty="90" />
-      </layer>
       <layer id="Layer_04" name="solo_secret_on">
         <tile name="SpawnPoint_LOOTCHEST_KEEPER_SOLO_STANDARD" pos="-39 0 -18" roty="236" />
         <tile name="SpawnPoint_RANDOM_KEEPER_SOLO_MINIBOSS" pos="-33.28 0.27 -14.03" roty="80">
           <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_MINIBOSS" />
         </tile>
       </layer>
-      <layer id="Layer_05" name="veteran_secret_off">
-        <tile name="FOREST_GREEN_DNG_CAVE_ROCK_A" pos="-9 0 -8" roty="90" />
-      </layer>
       <layer id="Layer_07" name="veteran_secret_on">
         <tile name="SpawnPoint_LOOTCHEST_KEEPER_VETERAN_STANDARD" pos="-39 0 -18" roty="236" />
-        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_MINIBOSS" pos="-34.08 0.27 -14.42" roty="85">
+        <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_MINIBOSS" pos="-33.23 0.27 -14.08" roty="85">
           <mobspawnpoint behavior="GUARD" spawnbehavior="KEEPER_VETERAN_MINIBOSS" />
         </tile>
       </layer>
     </layergroup>
-    <tile name="FOREST_GREEN_DNG_GROUND" pos="35 0 -35" />
+    <tile name="FOREST_GREEN_KPR_POINT_LIGHT_DNG_STANDARD_FLICKER_A" pos="10.68 6.09 -11.83">
+      <pointlight range="8" intensity="6" color="1 0.7591847 0.2720588" />
+    </tile>
     <tile name="FOREST_GREEN_DNG_KPR_ROCK_ROOT_B_BLEND" pos="32 0 -24" />
     <tile name="FOREST_GREEN_DNG_KPR_ROCK_ROOT_B_BLEND" pos="33 0 26" roty="270" />
     <tile name="FOREST_GREEN_DNG_KPR_ROCK_ROOT_B_BLEND" pos="61 0 12" />
@@ -269,7 +271,7 @@
     <tile name="FOREST_GREEN_DNG_KPR_ROCK_ROOT_B_BLEND" pos="-7 0 0" roty="270" />
     <tile name="FOREST_GREEN_VEG_BLEND_HIGH_LARGE_A" pos="-2 1 -5" roty="162" />
     <tile name="FOREST_GREEN_VEG_BLEND_HIGH_LARGE_A" pos="-2 0 -10" roty="218" />
-    <tile name="FOREST_GREEN_KPR_TUSK_C" pos="-34.5 0 -21.5" rot="1.51 256.93 6.48" scale="0.7894395 1.023239 0.6796717" />
+    <tile name="FOREST_GREEN_KPR_TUSK_C" pos="-34.5 0 -21.5" rot="2 257 6" scale="0.7894395 1.023239 0.6796717" />
     <tile name="FOREST_GREEN_KPR_TUSK_A" pos="-25.5 0 -21.5" roty="234" scale="0.7894394 1.023239 0.6796717" />
     <tile name="FOREST_GREEN_KPR_TUSK_A" pos="-39.5 0 -9.5" roty="90" scale="0.7894395 1.023239 0.6796716" />
     <tile name="FOREST_GREEN_KPR_FLAG_TRIBE_EXPEDITION_A" pos="-22.5 0 -5.5" roty="271.8" />
@@ -310,7 +312,7 @@
     <tile name="FOREST_GREEN_KPR_POINT_LIGHT_DNG_STANDARD_FLICKER_A" pos="-36.98 4.3 -14.51">
       <pointlight range="10" intensity="8" color="1 0.7591847 0.2720588" />
     </tile>
-    <tile name="FOREST_GREEN_DNG_KPR_ROOT_CEILING_A" pos="-1.5 34 -9.5" roty="270" />
+    <tile name="FOREST_GREEN_DNG_KPR_ROOT_CEILING_A" pos="-1.5 34 -8.5" roty="270" />
     <tile name="FOREST_GREEN_VEG_BLEND_B" pos="49.5 0 34.5" roty="90" />
     <tile name="FOREST_GREEN_VEG_BLEND_B" pos="47.5 0 15.5" roty="180" />
     <tile name="FOREST_GREEN_VEG_FERN_D" pos="-25.5 0 -6.5" roty="180" />
@@ -352,14 +354,13 @@
     <tile name="FOREST_GREEN_DNG_PLATEAU_ROCK_DEBRIS_SMALL_D" pos="51 0 32" roty="180" />
     <tile name="FOREST_GREEN_DNG_PLATEAU_ROCK_DEBRIS_SMALL_A" pos="56 0 11" roty="270" />
     <tile name="FOREST_GREEN_KPR_DNG_FILL_FIREBOWL_OIL_PEDESTAL_STONE_A" pos="10 0 -12" />
-    <tile name="DIFFUSE_GODRAY_A" pos="44 0 -21" />
     <tile name="FOREST_GREEN_KPR_POINT_LIGHT_DNG_STANDARD_FLICKER_A" pos="47.82 4.24 30.38">
       <pointlight range="10" intensity="4" color="1 0.7591847 0.2720588" />
     </tile>
+    <tile name="DIFFUSE_GODRAY_A" pos="-29 0 -19" />
     <tile name="FOREST_GREEN_KPR_POINT_LIGHT_DNG_STANDARD_FLICKER_A" pos="7.79 4.62 0.08">
       <pointlight range="10" intensity="8" color="1 0.9500784 0.2705883" />
     </tile>
-    <tile name="FOREST_GREEN_DNG_GROUND_OBJ_NOCLICK" pos="-75 12 15" />
     <tile name="FOREST_GREEN_DNG_GROUND_OBJ_NOCLICK" pos="-65 12 15" />
     <tile name="FOREST_GREEN_DNG_GROUND_OBJ_NOCLICK" pos="-75 12 5" />
     <tile name="FOREST_GREEN_DNG_GROUND_OBJ_NOCLICK" pos="-65 12 5" />
@@ -376,11 +377,11 @@
     <tile name="FOREST_GREEN_DNG_GROUND_OBJ_NOCLICK" pos="-15 12 -35" />
     <tile name="FOREST_GREEN_DNG_GROUND" pos="-45 0 -5" />
     <tile name="FOREST_GREEN_DNG_GROUND" pos="-35 0 -5" />
-    <tile name="FOREST_GREEN_DNG_GROUND_OBJ_NOCLICK" pos="-45 12 15" />
     <tile name="FOREST_GREEN_DNG_GROUND" pos="-25 0 5" />
-    <tile name="FOREST_GREEN_DNG_GROUND_OBJ_NOCLICK" pos="-55 12 15" />
-    <tile name="FOREST_GREEN_DNG_GROUND_OBJ_NOCLICK" pos="-75 12 25" />
-    <tile name="FOREST_GREEN_DNG_GROUND" pos="-5 0 -15" />
+    <tile name="FOREST_GREEN_DNG_GROUND_OBJ_NOCLICK" pos="-75 12 15" />
+    <tile name="FOREST_GREEN_DNG_GROUND" pos="-25 0 -5" />
+    <tile name="FOREST_GREEN_DNG_GROUND_OBJ_NOCLICK" pos="-45 12 15" />
+    <tile name="FOREST_GREEN_DNG_GROUND_OBJ_NOCLICK" pos="-65 12 25" />
     <tile name="FOREST_GREEN_DNG_GROUND" pos="-35 0 -15" />
     <tile name="FOREST_GREEN_DNG_GROUND" pos="-15 0 -15" />
     <tile name="FOREST_GREEN_DNG_GROUND_OBJ_NOCLICK" pos="-15 12 25" />
@@ -397,11 +398,11 @@
     <tile name="FOREST_GREEN_DNG_GROUND_OBJ_NOCLICK" pos="-65 12 35" />
     <tile name="FOREST_GREEN_DNG_GROUND_OBJ_NOCLICK" pos="-55 12 25" />
     <tile name="FOREST_GREEN_DNG_GROUND_OBJ_NOCLICK" pos="-45 12 25" />
-    <tile name="FOREST_GREEN_DNG_GROUND_OBJ_NOCLICK" pos="-65 12 25" />
-    <tile name="FOREST_GREEN_DNG_GROUND" pos="-45 0 -15" />
-    <tile name="FOREST_GREEN_DNG_GROUND" pos="-25 0 -5" />
-    <tile name="FOREST_GREEN_DNG_GROUND" pos="-15 0 -5" />
-    <tile name="FOREST_GREEN_DNG_GROUND" pos="45 0 15" />
+    <tile name="FOREST_GREEN_DNG_GROUND_OBJ_NOCLICK" pos="-75 12 25" />
+    <tile name="FOREST_GREEN_DNG_GROUND_OBJ_NOCLICK" pos="-55 12 15" />
+    <tile name="FOREST_GREEN_DNG_GROUND" pos="-5 0 -15" />
+    <tile name="FOREST_GREEN_DNG_GROUND" pos="-15 0 5" />
+    <tile name="FOREST_GREEN_DNG_GROUND" pos="-5 0 5" />
     <tile name="FOREST_GREEN_DNG_GROUND_OBJ_NOCLICK" pos="75 12 -15" />
     <tile name="FOREST_GREEN_DNG_GROUND" pos="45 0 -25" />
     <tile name="FOREST_GREEN_DNG_GROUND" pos="45 0 35" />
@@ -418,11 +419,11 @@
     <tile name="FOREST_GREEN_DNG_GROUND" pos="45 0 25" />
     <tile name="FOREST_GREEN_DNG_GROUND" pos="35 0 35" />
     <tile name="FOREST_GREEN_DNG_GROUND" pos="45 0 -35" />
+    <tile name="FOREST_GREEN_DNG_GROUND" pos="35 0 -35" />
+    <tile name="FOREST_GREEN_DNG_GROUND" pos="45 0 15" />
+    <tile name="FOREST_GREEN_DNG_GROUND" pos="-15 0 -5" />
     <tile name="FOREST_GREEN_DNG_GROUND_OBJ_NOCLICK" pos="5 12 -35" />
-    <tile name="FOREST_GREEN_DNG_GROUND" pos="-15 0 5" />
-    <tile name="FOREST_GREEN_DNG_GROUND_OBJ_NOCLICK" pos="65 12 -25" />
-    <tile name="FOREST_GREEN_KPR_FLY_ISLAND_INNERCORNER_A_DNG" pos="35 0 -15" roty="270" />
-    <tile name="FOREST_GREEN_DNG_GROUND" pos="-5 0 5" />
+    <tile name="FOREST_GREEN_DNG_GROUND_OBJ_NOCLICK" pos="5 12 25" />
     <tile name="FOREST_GREEN_DNG_GROUND" pos="5 0 5" />
     <tile name="FOREST_GREEN_DNG_GROUND" pos="15 0 5" />
     <tile name="FOREST_GREEN_DNG_GROUND" pos="5 0 -5" />
@@ -439,12 +440,11 @@
     <tile name="FOREST_GREEN_KPR_FLY_ISLAND_INNERCORNER_A_DNG" pos="35 0 15" roty="180" />
     <tile name="FOREST_GREEN_DNG_GROUND" pos="55 0 15" />
     <tile name="FOREST_GREEN_DNG_GROUND" pos="55 0 5" />
-    <tile name="FOREST_GREEN_DNG_GROUND_OBJ_NOCLICK" pos="5 12 25" />
-    <tile name="FOREST_GREEN_KPR_POINT_LIGHT_DNG_STANDARD_FLICKER_A" pos="10.68 6.09 -11.83">
-      <pointlight range="8" intensity="6" color="1 0.7591847 0.2720588" />
-    </tile>
+    <tile name="FOREST_GREEN_KPR_FLY_ISLAND_INNERCORNER_A_DNG" pos="35 0 -15" roty="270" />
+    <tile name="FOREST_GREEN_DNG_GROUND_OBJ_NOCLICK" pos="65 12 -25" />
+    <tile name="FOREST_GREEN_DNG_GROUND" pos="-45 0 -15" />
     <tile name="FOREST_GREEN_DNG_GROUND" pos="-25 0 -15" />
-    <tile name="FOREST_GREEN_DNG_GROUND_OBJ" pos="15 0 -15" />
+    <tile name="FOREST_GREEN_DNG_GROUND" pos="-35 0 -25" />
     <tile name="FOREST_GREEN_WATER_river_OBJ_DNG" pos="35 -8 -5" />
     <tile name="FOREST_GREEN_WATER_river_OBJ_DNG" pos="45 -8 -25" />
     <tile name="FOREST_GREEN_WATER_river_OBJ_DNG" pos="35 -8 5" />
@@ -502,10 +502,9 @@
     <tile name="FOREST_GREEN_WATER_river_OBJ_DNG" pos="35 -8 -15" />
     <tile name="FOREST_GREEN_WATER_river_OBJ_DNG" pos="25 -8 25" />
     <tile name="FOREST_GREEN_WATER_river_OBJ_DNG" pos="15 -8 25" />
-    <tile name="FOREST_GREEN_DNG_GROUND" pos="-35 0 -25" />
     <tile name="FOREST_GREEN_DNG_CAVE_WALL_CORNER_A" pos="-25 0 -25" roty="270" />
+    <tile name="FOREST_GREEN_DNG_CAVE_WALL_INNERCORNER_A" pos="-55 0 -25" roty="270" />
     <tile name="FOREST_GREEN_DNG_CAVE_WALL_CORNER_A" pos="-45 0 -25" />
-    <tile name="FOREST_GREEN_DNG_CAVE_WALL_TO_BACKDROP_RIGHT_A" pos="25 0 -25" roty="180" />
     <tile name="FOREST_GREEN_DNG_CAVE_WALL_CORNER_A" pos="55 0 25" roty="180" />
     <tile name="FOREST_GREEN_DNG_CAVE_WALL_CORNER_A" pos="55 0 -15" roty="270" />
     <tile name="FOREST_GREEN_DNG_CAVE_WALL_BACKDROP_INNERCORNER_A" pos="15 0 25" />
@@ -522,10 +521,11 @@
     <tile name="FOREST_GREEN_DNG_GROUND" pos="45 0 -15" roty="90" />
     <tile name="FOREST_GREEN_DNG_GROUND" pos="55 0 -5" roty="90" />
     <tile name="FOREST_GREEN_KPR_FLY_ISLAND_STRAIGHT_B_DNG" pos="15 0 -25" roty="180" />
+    <tile name="FOREST_GREEN_DNG_GROUND_OBJ" pos="15 0 -15" />
+    <tile name="FOREST_GREEN_DNG_CAVE_WALL_TO_BACKDROP_RIGHT_A" pos="25 0 -25" roty="180" />
     <tile name="FOREST_GREEN_DNG_CAVE_WALL_TO_BACKDROP_LEFT_A" pos="25 0 25" />
-    <tile name="FOREST_GREEN_DNG_CAVE_WALL_INNERCORNER_A" pos="-55 0 -25" roty="270" />
     <tile name="FOREST_GREEN_DNG_CAVE_WALL_STRAIGHT_A" pos="-55 0 -15" />
-    <tile name="FOREST_GREEN_DNG_CAVE_WALL_TO_BACKDROP_RIGHT_A" pos="15 0 15" roty="270" />
+    <tile name="FOREST_GREEN_DNG_CAVE_WALL_INNERCORNER_A" pos="-35 0 15" />
     <tile name="FOREST_GREEN_DNG_CAVE_WALL_INNERCORNER_A" pos="-25 0 -35" roty="180" />
     <tile name="FOREST_GREEN_DNG_CAVE_WALL_STRAIGHT_A" pos="-35 0 -35" roty="270" />
     <tile name="FOREST_GREEN_DNG_CAVE_WALL_STRAIGHT_A" pos="-5 0 15" roty="90" />
@@ -534,8 +534,8 @@
     <tile name="FOREST_GREEN_DNG_CAVE_WALL_CORNER_A" pos="5 0 -15" roty="270" />
     <tile name="FOREST_GREEN_DNG_CAVE_WALL_INNERCORNER_A" pos="5 0 -25" roty="180" />
     <tile name="FOREST_GREEN_DNG_CAVE_WALL_STRAIGHT_A" pos="5 0 15" roty="90" />
+    <tile name="DIFFUSE_GODRAY_A" pos="44 0 -21" />
     <tile name="FOREST_GREEN_DNG_CAVE_WALL_INNERCORNER_A" pos="-55 0 5" />
-    <tile name="FOREST_GREEN_DNG_CAVE_WALL_TO_BACKDROP_LEFT_A" pos="15 0 -15" roty="270" />
     <tile name="FOREST_GREEN_DNG_CAVE_WALL_CORNER_A" pos="-35 0 5" roty="90" />
     <tile name="FOREST_GREEN_DNG_CAVE_WALL_CORNER_A" pos="65 0 15" roty="180" />
     <tile name="FOREST_GREEN_DNG_CAVE_WALL_CORNER_A" pos="65 0 -5" roty="270" />
@@ -543,7 +543,10 @@
     <tile name="FOREST_GREEN_DNG_CAVE_WALL_INNERCORNER_A" pos="75 0 15" roty="90" />
     <tile name="FOREST_GREEN_DNG_CAVE_WALL_INNERCORNER_A" pos="75 0 -5" roty="180" />
     <tile name="FOREST_GREEN_DNG_CAVE_WALL_BACKDROP_INNERCORNER_A" pos="15 0 -25" roty="270" />
-    <tile name="FOREST_GREEN_DNG_CAVE_WALL_INNERCORNER_A" pos="-35 0 15" />
-    <tile name="DIFFUSE_GODRAY_A" pos="-29 0 -19" />
+    <tile name="FOREST_GREEN_DNG_CAVE_WALL_TO_BACKDROP_RIGHT_A" pos="15 0 15" roty="270" />
+    <tile name="FOREST_GREEN_DNG_CAVE_WALL_TO_BACKDROP_LEFT_A" pos="15 0 -15" roty="270" />
+    <criticaltile name="LORE_SPOT" pos="-30 1 -20" id="loresnippet_01" type="loresnippet">
+      <loresnippet loresnippetid="KEEPER_14" />
+    </criticaltile>
   </tiles>
 </template>
