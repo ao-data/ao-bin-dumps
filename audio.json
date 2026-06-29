@@ -6129,6 +6129,30 @@
         }
       },
       {
+        "@name": "MOB_KEEPER_FANATIC_SPEAR_HUGE",
+        "CharType": {
+          "@name": "mob"
+        },
+        "MobFaction": {
+          "@name": "keeper"
+        },
+        "MobType": {
+          "@name": "keeper_fanatic_spear"
+        },
+        "Size": {
+          "@name": "huge"
+        },
+        "ArmorType": {
+          "@name": "leather"
+        },
+        "WeaponType": {
+          "@name": "scythe"
+        },
+        "MountType": {
+          "@name": "empty"
+        }
+      },
+      {
         "@name": "MOB_KEEPER_FANATIC_WARHORN",
         "CharType": {
           "@name": "mob"
@@ -6147,6 +6171,123 @@
         },
         "WeaponType": {
           "@name": "hammer_huge"
+        },
+        "MountType": {
+          "@name": "empty"
+        }
+      },
+      {
+        "@name": "MOB_KEEPER_FANATIC_SHAMAN_PREACHING",
+        "CharType": {
+          "@name": "mob"
+        },
+        "MobFaction": {
+          "@name": "keeper"
+        },
+        "MobType": {
+          "@name": "keeper_fanatic_shaman_preaching"
+        },
+        "Size": {
+          "@name": "heavy"
+        },
+        "ArmorType": {
+          "@name": "leather"
+        },
+        "WeaponType": {
+          "@name": "shapeshifter"
+        },
+        "MountType": {
+          "@name": "empty"
+        }
+      },
+      {
+        "@name": "MOB_KEEPER_FANATIC_SHAMAN_ROAMING",
+        "CharType": {
+          "@name": "mob"
+        },
+        "MobFaction": {
+          "@name": "keeper"
+        },
+        "MobType": {
+          "@name": "keeper_fanatic_shaman_roaming"
+        },
+        "Size": {
+          "@name": "heavy"
+        },
+        "ArmorType": {
+          "@name": "leather"
+        },
+        "WeaponType": {
+          "@name": "shapeshifter"
+        },
+        "MountType": {
+          "@name": "empty"
+        }
+      },
+      {
+        "@name": "MOB_KEEPER_FANATIC_WITCH_PREACHING",
+        "CharType": {
+          "@name": "mob"
+        },
+        "MobFaction": {
+          "@name": "keeper"
+        },
+        "MobType": {
+          "@name": "keeper_fanatic_witch_preaching"
+        },
+        "Size": {
+          "@name": "heavy"
+        },
+        "ArmorType": {
+          "@name": "leather"
+        },
+        "WeaponType": {
+          "@name": "shapeshifter"
+        },
+        "MountType": {
+          "@name": "empty"
+        }
+      },
+      {
+        "@name": "MOB_KEEPER_FANATIC_WITCH_ROAMING",
+        "CharType": {
+          "@name": "mob"
+        },
+        "MobFaction": {
+          "@name": "keeper"
+        },
+        "MobType": {
+          "@name": "keeper_fanatic_witch_roaming"
+        },
+        "Size": {
+          "@name": "heavy"
+        },
+        "ArmorType": {
+          "@name": "leather"
+        },
+        "WeaponType": {
+          "@name": "shapeshifter"
+        },
+        "MountType": {
+          "@name": "empty"
+        }
+      },
+      {
+        "@name": "MOB_KEEPER_OBELISK",
+        "CharType": {
+          "@name": "mob"
+        },
+        "MobFaction": {
+          "@name": "demon"
+        },
+        "MobType": {
+          "@name": "demon_statue"
+        },
+        "Size": {
+          "@name": "rock_medium"
+        },
+        "ArmorType": {
+          "@name": "rock"
         },
         "MountType": {
           "@name": "empty"
@@ -12473,6 +12614,12 @@
         }
       },
       {
+        "@name": "SPELL_FIRE_CAST_SMALL",
+        "OnCastFinished": {
+          "@name": "Play_fire_cast_small"
+        }
+      },
+      {
         "@name": "SPELL_FIREBOLT_CAST",
         "OnCastStart": {
           "@name": "Play_spell_fire_load_small_q"
@@ -14103,9 +14250,21 @@
         }
       },
       {
+        "@name": "SPELL_SHAPESHIFTER_DAMAGE_IMPACT_MEDIUM_VOICELIMITED",
+        "OnSpellHit": {
+          "@name": "Play_shapeshifter_impact_damage_medium_voicelimited"
+        }
+      },
+      {
         "@name": "SPELL_SHAPESHIFTER_DAMAGE_IMPACT_MEDIUM_KNOCKBACK",
         "OnSpellHit": {
           "@name": "Play_shapeshifter_impact_damage_medium_knockback"
+        }
+      },
+      {
+        "@name": "SPELL_SHAPESHIFTER_DAMAGE_IMPACT_MEDIUM_KNOCKBACK_VOICELIMITED",
+        "OnSpellHit": {
+          "@name": "Play_shapeshifter_impact_damage_medium_knockback_voicelimited"
         }
       },
       {
@@ -14136,6 +14295,12 @@
         "@name": "SPELL_SHAPESHIFTER_IMP_FIREORB_IMPACT",
         "OnSpellHit": {
           "@name": "Play_fire_impact_small_q_firebolt"
+        }
+      },
+      {
+        "@name": "SPELL_SHAPESHIFTER_IMP_FIREORB_IMPACT_VOICELIMITED",
+        "OnSpellHit": {
+          "@name": "Play_fire_impact_small_q_firebolt_voicelimited"
         }
       },
       {
@@ -18862,6 +19027,321 @@
         },
         "OnChannelingInterrupted": {
           "@name": "Stop_spell_keeper_fanatic_horn_channel_damage"
+        }
+      },
+      {
+        "@name": "SPELL_KEEPER_FANATIC_SPEAR_LUNGE",
+        "OnCastStart": {
+          "@name": "Play_mob_keeper_fanatic_spear_lunge_load"
+        },
+        "OnCastCanceled": {
+          "@name": "Stop_mob_keeper_fanatic_spear_lunge_load"
+        },
+        "OnCastInterrupted": {
+          "@name": "Stop_mob_keeper_fanatic_spear_lunge_load"
+        },
+        "OnCastFinished": {
+          "@name": "Play_mob_keeper_fanatic_spear_lunge_cast"
+        }
+      },
+      {
+        "@name": "SPELL_KEEPER_FANATIC_SPEAR_SUNDER",
+        "OnCastStart": {
+          "@name": "Play_melee_swoosh_big_instant"
+        },
+        "OnCastFinished": {
+          "@name": "Play_mob_keeper_fanatic_spear_sunder_cast"
+        }
+      },
+      {
+        "@name": "SPELL_KEEPER_FANATIC_SPEAR_SUNDER_SOLO_IMPACT",
+        "OnSpellHit": {
+          "@name": "Play_mob_keeper_fanatic_spear_sunder_impact"
+        }
+      },
+      {
+        "@name": "SPELL_KEEPER_FANATIC_SPEAR_SUNDER_LS",
+        "OnCastStart": {
+          "@name": "Play_melee_swoosh_load_medium"
+        },
+        "OnCastCanceled": {
+          "@name": "Stop_melee_swoosh_load_medium"
+        },
+        "OnCastInterrupted": {
+          "@name": "Stop_melee_swoosh_load_medium"
+        },
+        "OnCastFinished": {
+          "@name": "Play_mob_keeper_fanatic_spear_sunder_cast"
+        }
+      },
+      {
+        "@name": "SPELL_KEEPER_FANATIC_SPEAR_THROW",
+        "OnCastStart": {
+          "@name": "Play_mob_keeper_fanatic_spear_throw_load"
+        },
+        "OnCastCanceled": {
+          "@name": "Stop_mob_keeper_fanatic_spear_throw_load"
+        },
+        "OnCastInterrupted": {
+          "@name": "Stop_mob_keeper_fanatic_spear_throw_load"
+        },
+        "OnCastFinished": {
+          "@name": "Play_spell_spear_cast_throw_big_shapeshifter"
+        }
+      },
+      {
+        "@name": "SPELL_KEEPER_FANATIC_SPEAR_EXECUTE_CAST",
+        "OnCastStart": {
+          "@name": "Play_mob_keeper_fanatic_spear_execute_load"
+        },
+        "OnCastCanceled": {
+          "@name": "Stop_mob_keeper_fanatic_spear_execute_load"
+        },
+        "OnCastInterrupted": {
+          "@name": "Stop_mob_keeper_fanatic_spear_execute_load"
+        }
+      },
+      {
+        "@name": "SPELL_KEEPER_FANATIC_SPEAR_EXECUTE_CHANNEL",
+        "OnChannelingStart": {
+          "@name": "Play_melee_forest_of_spears_loop"
+        },
+        "OnChannelingEnd": {
+          "@name": "Stop_melee_forest_of_spears_loop"
+        },
+        "OnChannelingInterrupted": {
+          "@name": "Stop_melee_forest_of_spears_loop"
+        },
+        "OnChannelingCancelled": {
+          "@name": "Stop_melee_forest_of_spears_loop"
+        }
+      },
+      {
+        "@name": "SPELL_KEEPER_FANATIC_SPEAR_EXECUTE_MARK",
+        "OnCastStart": {
+          "@name": "Play_demon_root_fx_impact"
+        }
+      },
+      {
+        "@name": "SPELL_KEEPER_FANATIC_SHAMAN_SUMMON",
+        "OnCastStart": {
+          "@name": "Play_mob_keeper_fanatic_shaman_summon_load_with_vo"
+        },
+        "OnCastCanceled": {
+          "@name": "Stop_mob_keeper_fanatic_shaman_summon_load_with_vo"
+        },
+        "OnCastInterrupted": {
+          "@name": "Stop_mob_keeper_fanatic_shaman_summon_load_with_vo"
+        },
+        "OnCastFinished": {
+          "@name": "Play_mob_keeper_fanatic_shaman_summon_cast_finished"
+        }
+      },
+      {
+        "@name": "SPELL_KEEPER_FANATIC_SHAMAN_CONE_SMALL",
+        "OnCastStart": {
+          "@name": "Play_mob_keeper_fanatic_shaman_cone_small_load"
+        },
+        "OnCastCanceled": {
+          "@name": "Stop_mob_keeper_fanatic_shaman_cone_small_load"
+        },
+        "OnCastInterrupted": {
+          "@name": "Stop_mob_keeper_fanatic_shaman_cone_small_load"
+        },
+        "OnCastFinished": {
+          "@name": "Play_shapeshifter_cast_big_shockwave"
+        }
+      },
+      {
+        "@name": "SPELL_KEEPER_FANATIC_SHAMAN_CONE_BIG_CHANNEL",
+        "OnChannelingStart": {
+          "@name": "Play_mob_keeper_fanatic_shaman_cone_big_load"
+        },
+        "OnChannelingCancelled": {
+          "@name": "Stop_mob_keeper_fanatic_shaman_cone_big_load"
+        },
+        "OnChannelingInterrupted": {
+          "@name": "Stop_mob_keeper_fanatic_shaman_cone_big_load"
+        },
+        "OnChannelingEnd": {
+          "@name": "Play_shapeshifter_cast_big_shockwave"
+        }
+      },
+      {
+        "@name": "SPELL_KEEPER_FANATIC_SHAMAN_CONE_BIG_CAST",
+        "OnCastStart": {
+          "@name": "Play_shapeshifter_cast_big_shockwave"
+        }
+      },
+      {
+        "@name": "SPELL_KEEPER_FANATIC_WITCH_DASH_LOAD_VO",
+        "OnCastFinished": {
+          "@name": "Play_mob_keeper_fanatic_witch_dash_load_vo"
+        }
+      },
+      {
+        "@name": "SPELL_KEEPER_FANATIC_WITCH_DASH_RETURN_VO",
+        "OnCastFinished": {
+          "@name": "Play_mob_keeper_fanatic_witch_dash_return_vo"
+        }
+      },
+      {
+        "@name": "SPELL_KEEPER_FANATIC_WITCH_ROCK_STOMP_CHANNEL_VO",
+        "OnChannelingStart": {
+          "@name": "Play_mob_keeper_fanatic_witch_stomp_vo"
+        }
+      },
+      {
+        "@name": "SPELL_KEEPER_FANATIC_WITCH_DAMAGE_CHECK_LOADING",
+        "OnCastStart": {
+          "@name": "Play_mob_keeper_fanatic_witch_damage_check_loading"
+        },
+        "OnCastCanceled": {
+          "@name": "Stop_mob_keeper_fanatic_witch_damage_check_loading"
+        },
+        "OnCastInterrupted": {
+          "@name": "Stop_mob_keeper_fanatic_witch_damage_check_loading"
+        }
+      },
+      {
+        "@name": "SPELL_KEEPER_FANATIC_WITCH_DAMAGE_CHECK_CHANELLING",
+        "OnChannelingStart": {
+          "@name": "Play_mob_keeper_fanatic_witch_damage_check_channeling"
+        },
+        "OnChannelingCancelled": {
+          "@name": "Stop_mob_keeper_fanatic_witch_damage_check_channeling"
+        },
+        "OnChannelingInterrupted": {
+          "@name": "Stop_mob_keeper_fanatic_witch_damage_check_channeling"
+        }
+      },
+      {
+        "@name": "SPELL_KEEPER_FANATIC_WITCH_SUMMON_ROCKS_I_CAST",
+        "OnCastFinished": {
+          "@name": "Play_mob_keeper_fanatic_witch_summon_rocks_I_cast"
+        }
+      },
+      {
+        "@name": "SPELL_KEEPER_FANATIC_WITCH_SUMMON_ROCKS_II_CAST",
+        "OnCastFinished": {
+          "@name": "Play_mob_keeper_fanatic_witch_summon_rocks_II_cast"
+        }
+      },
+      {
+        "@name": "SPELL_KEEPER_FANATIC_WITCH_ROCK_STOMP_HANDGLOW",
+        "OnCastFinished": {
+          "@name": "Play_mob_keeper_fanatic_witch_stomp_handglow_load"
+        }
+      },
+      {
+        "@name": "SPELL_KEEPER_FANATIC_WITCH_ROCK_STOMP_SHOCKWAVE",
+        "OnCastFinished": {
+          "@name": "Play_mob_keeper_fanatic_witch_stomp_rock_and_wave"
+        }
+      },
+      {
+        "@name": "SPELL_KEEPER_FANATIC_WITCH_ROCK_STOMP_WAVE_HIT_PLAYER",
+        "OnSpellHit": {
+          "@name": "Play_mob_keeper_fanatic_witch_stomp_rock_wave_hit_player"
+        }
+      },
+      {
+        "@name": "SPELL_KEEPER_FANATIC_WITCH_ROCK_STOMP_HIT_UNDERNEATH",
+        "OnSpellHit": {
+          "@name": "Play_mob_keeper_fanatic_witch_rock_stomp_hit_underneath"
+        }
+      },
+      {
+        "@name": "SPELL_KEEPER_FANATIC_WITCH_DASH",
+        "OnCastStart": {
+          "@name": "Play_mob_keeper_fanatic_witch_dash_load"
+        },
+        "OnCastInterrupted": {
+          "@name": "Stop_mob_keeper_fanatic_witch_dash_load"
+        },
+        "OnCastCanceled": {
+          "@name": "Stop_mob_keeper_fanatic_witch_dash_load"
+        },
+        "OnCastFinished": {
+          "@name": "Play_mob_keeper_fanatic_witch_dash"
+        }
+      },
+      {
+        "@name": "SPELL_KEEPER_FANATIC_WITCH_DASH_STOP",
+        "OnCastFinished": {
+          "@name": "Play_mob_keeper_fanatic_witch_dash_stop"
+        }
+      },
+      {
+        "@name": "SPELL_KEEPER_FANATIC_WITCH_DASH_HIT",
+        "OnSpellHit": {
+          "@name": "Play_mob_keeper_fanatic_witch_dash_hit"
+        }
+      },
+      {
+        "@name": "SPELL_KEEPER_FANATIC_WITCH_TANK_SMASH_LOAD",
+        "OnCastStart": {
+          "@name": "Play_mob_keeper_fanatic_witch_tank_smash_load"
+        },
+        "OnCastCanceled": {
+          "@name": "Stop_mob_keeper_fanatic_witch_tank_smash_load"
+        },
+        "OnCastInterrupted": {
+          "@name": "Stop_mob_keeper_fanatic_witch_tank_smash_load"
+        }
+      },
+      {
+        "@name": "SPELL_KEEPER_FANATIC_WITCH_ROCK_SPIKE_HIT",
+        "OnSpellHit": {
+          "@name": "Play_mob_keeper_fanatic_witch_rock_spike_hit"
+        }
+      },
+      {
+        "@name": "SPELL_KEEPER_FANATIC_OBELISK_SPAWN",
+        "OnSpellHit": {
+          "@name": "Play_mob_keeper_fanatic_obelisk_spawn"
+        }
+      },
+      {
+        "@name": "SPELL_KEEPER_FANATIC_OBELISK_AOE_LOAD",
+        "OnCastStart": {
+          "@name": "Play_mob_keeper_fanatic_obelisk_ring_aoe_load"
+        },
+        "OnCastCanceled": {
+          "@name": "Stop_mob_keeper_fanatic_obelisk_ring_aoe_load"
+        },
+        "OnCastInterrupted": {
+          "@name": "Stop_mob_keeper_fanatic_obelisk_ring_aoe_load"
+        }
+      },
+      {
+        "@name": "SPELL_KEEPER_FANATIC_OBELISK_DEATH",
+        "OnCastFinished": {
+          "@name": "Play_mob_keeper_fanatic_obelisk_destroy"
+        }
+      },
+      {
+        "@name": "SPELL_FLAME_ELEMENTAL_PICK_UP",
+        "OnSpellHit": {
+          "@name": "Play_mob_keeper_fanatic_shaman_flame_elemental_pickup"
+        }
+      },
+      {
+        "@name": "SPELL_FLAME_ELEMENTAL_PICK_UP_LOUDER",
+        "OnSpellHit": {
+          "@name": "Play_mob_keeper_fanatic_shaman_flame_elemental_pickup_louder"
+        }
+      },
+      {
+        "@name": "SPELL_FLAME_ELEMENTAL_EXPLOSION",
+        "OnSpellHit": {
+          "@name": "Play_mob_keeper_fanatic_shaman_flame_elemental_bubble_pick_up_explosion"
+        }
+      },
+      {
+        "@name": "SPELL_FLAME_ELEMENTAL_SUMMON_DESTROY",
+        "OnSpellHit": {
+          "@name": "Play_mob_keeper_fanatic_shaman_flame_elemental_summon_destroy"
         }
       },
       {

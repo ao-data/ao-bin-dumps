@@ -428,18 +428,12 @@
           </info>
           <info size="2 1" pathsize="2" factionsubset="tribe" environment="indoor|outdoor" flags="solo|veteran" category="fame" pathdata="Ag0=">
             <template name="KPR_TRIBE_HIGH_STD_STRAIGHT_ElementalShrine_01" excessweight="0.5">
-              <weightedlayerblock name="solo_secret" flag="solo">
-                <layer id="Layer_02" weight="6" />
-                <layer id="Layer_04" weight="3" />
-              </weightedlayerblock>
-              <weightedlayerblock name="veteran_secret" flag="veteran">
-                <layer id="Layer_05" weight="6" />
-                <layer id="Layer_07" weight="3" />
-              </weightedlayerblock>
               <layercontrol type="all:environment|indoor|cave_01" layers="Layer_06" />
               <layercontrol type="all:environment|indoor|cave_ocean" layers="Layer_09" />
               <layercontrol type="all:environment|outdoor|forest" layers="Layer_08" />
+              <layercontrol type="solo" layers="Layer_04" />
               <layercontrol type="solo:encounter|hard" layers="Layer_01,Layer_10" />
+              <layercontrol type="veteran" layers="Layer_07" />
               <layercontrol type="veteran:encounter|hard" layers="Layer_03,Layer_11" />
             </template>
           </info>
@@ -520,20 +514,12 @@
               <layercontrol type="veteran:encounter|hard" layers="Layer_03,Layer_13" />
             </template>
             <template name="KPR_TRIBE_HIGH_UNCOM_STRAIGHT_Waterfalls_01">
-              <weightedlayerblock name="secret_solo" flag="solo">
-                <layer id="Layer_05" weight="6" />
-                <layer id="Layer_07" weight="3" />
-              </weightedlayerblock>
-              <weightedlayerblock name="secret_veteran" flag="veteran">
-                <layer id="Layer_10" weight="6" />
-                <layer id="Layer_11" weight="3" />
-              </weightedlayerblock>
               <layercontrol type="all:environment|indoor|cave_01" layers="Layer_06" />
               <layercontrol type="all:environment|indoor|cave_ocean" layers="Layer_09" />
               <layercontrol type="all:environment|outdoor|forest" layers="Layer_08" />
-              <layercontrol type="solo" layers="Layer_02" />
+              <layercontrol type="solo" layers="Layer_02,Layer_07" />
               <layercontrol type="solo:encounter|hard" layers="Layer_01,Layer_12" />
-              <layercontrol type="veteran" layers="Layer_04" />
+              <layercontrol type="veteran" layers="Layer_04,Layer_11" />
               <layercontrol type="veteran:encounter|hard" layers="Layer_03,Layer_13" />
             </template>
           </info>
@@ -2730,20 +2716,12 @@
               <layercontrol type="veteran:encounter|hard" layers="Layer_03,Layer_07" />
             </template>
             <template name="UND_CASTLE_HIGH_UNCOM_STRAIGHT_KeeperBreak_01">
-              <weightedlayerblock name="solo_secret" flag="solo">
-                <layer id="Layer_06" weight="6" />
-                <layer id="Layer_07" weight="3" />
-              </weightedlayerblock>
-              <weightedlayerblock name="veteran_secret" flag="veteran">
-                <layer id="Layer_08" weight="6" />
-                <layer id="Layer_10" weight="3" />
-              </weightedlayerblock>
               <layercontrol type="all:environment|indoor|cave_01" layers="Layer_09" />
               <layercontrol type="all:environment|indoor|cave_ocean" layers="Layer_11" />
               <layercontrol type="all:environment|outdoor|forest" layers="Layer_04" />
-              <layercontrol type="solo" layers="Layer_01" />
+              <layercontrol type="solo" layers="Layer_01,Layer_07" />
               <layercontrol type="solo:encounter|hard" layers="Layer_05,Layer_12" />
-              <layercontrol type="veteran" layers="Layer_02" />
+              <layercontrol type="veteran" layers="Layer_02,Layer_10" />
               <layercontrol type="veteran:encounter|hard" layers="Layer_03,Layer_13" />
             </template>
             <template name="UND_CASTLE_HIGH_UNCOM_STRAIGHT_RitualRoom_01">

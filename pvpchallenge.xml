@@ -233,8 +233,26 @@
     <objective uniquename="PVPCHALLENGE_GVGSEASON_SILVER" seasononly="true" personaltype="GVGSEASON_BRACKET" might="15000" favor="0" indirectobjective="true"/>
     <objective uniquename="PVPCHALLENGE_GVGSEASON_GOLD" seasononly="true" personaltype="GVGSEASON_BRACKET" might="25000" favor="0" indirectobjective="true"/>
     <objective uniquename="PVPCHALLENGE_GVGSEASON_CRYSTAL" seasononly="true" personaltype="GVGSEASON_BRACKET" might="50000" favor="0" indirectobjective="true"/>    
-  </pvpchallengeobjectives>
+    
+    <!-- Lead Up Season Objectives-->
+    <objective uniquename="PVPCHALLENGE_KEEPER_UPRISING_ROAMING_SPEARMEN" objectivetype="KEEPER_UPRISING" might="102.09" favor="0" mindivisor="2" usemobrewardfactor="true"/>
+    <objective uniquename="PVPCHALLENGE_KEEPER_UPRISING_ROAMING_KEEPERSTATIC_BOSS" objectivetype="KEEPER_UPRISING" might="903.55" favor="0" mindivisor="3" usemobrewardfactor="true"/>
+    <objective uniquename="PVPCHALLENGE_KEEPER_UPRISING_ROAMING_ORACLE_SOLO" objectivetype="KEEPER_UPRISING" might="129.70" favor="0" mindivisor="2" usemobrewardfactor="true"/>
+    <objective uniquename="PVPCHALLENGE_KEEPER_UPRISING_ROAMING_ORACLE_VETERAN" objectivetype="KEEPER_UPRISING" might="422.95" favor="0" mindivisor="3" usemobrewardfactor="true"/>
+    <objective uniquename="PVPCHALLENGE_KEEPER_UPRISING_ROAMING_EARTHMOTHER" objectivetype="KEEPER_UPRISING" might="2213.50" favor="0" mindivisor="5" usemobrewardfactor="true"/>
+    <objective uniquename="PVPCHALLENGE_KEEPER_UPRISING_OPEN_WORLD_CAMP_WITCH_BLACK" objectivetype="KEEPER_UPRISING" might="344" favor="0" mindivisor="1" usequestscalingfactor="true" completionoverheadlocatag="@OVERHEADMESSAGE_OBJECTIVE_COMPLETED" completionchatlocatag="@CHATMESSAGE_OBJECTIVE_COMPLETED"/>
+    <objective uniquename="PVPCHALLENGE_KEEPER_UPRISING_OPEN_WORLD_CAMP_SHAMAN_BLACK" objectivetype="KEEPER_UPRISING" might="174" favor="0" mindivisor="1" usequestscalingfactor="true" completionoverheadlocatag="@OVERHEADMESSAGE_OBJECTIVE_COMPLETED" completionchatlocatag="@CHATMESSAGE_OBJECTIVE_COMPLETED"/>
+    <objective uniquename="PVPCHALLENGE_KEEPER_UPRISING_COMPOUND_SHAMAN" objectivetype="KEEPER_UPRISING" might="692.01" favor="0" mindivisor="3" usemobrewardfactor="true"/>
 
+    <objective uniquename="PVPCHALLENGE_KEEPER_UPRISING_OPEN_WORLD_CAMP_SHAMAN_YELLOW" personaltype="KEEPER_UPRISING" might="0" favor="0" completionoverheadlocatag="@OVERHEADMESSAGE_OBJECTIVE_COMPLETED" completionchatlocatag="@CHATMESSAGE_OBJECTIVE_COMPLETED"/>
+    <objective uniquename="PVPCHALLENGE_KEEPER_UPRISING_OPEN_WORLD_CAMP_SHAMAN_RED" personaltype="KEEPER_UPRISING" might="0" favor="0" completionoverheadlocatag="@OVERHEADMESSAGE_OBJECTIVE_COMPLETED" completionchatlocatag="@CHATMESSAGE_OBJECTIVE_COMPLETED"/>
+    <objective uniquename="PVPCHALLENGE_KEEPER_UPRISING_OPEN_WORLD_CAMP_WITCH_YELLOW" personaltype="KEEPER_UPRISING" might="0" favor="0" completionoverheadlocatag="@OVERHEADMESSAGE_OBJECTIVE_COMPLETED" completionchatlocatag="@CHATMESSAGE_OBJECTIVE_COMPLETED"/>
+    <objective uniquename="PVPCHALLENGE_KEEPER_UPRISING_OPEN_WORLD_CAMP_WITCH_RED" personaltype="KEEPER_UPRISING" might="0" favor="0" completionoverheadlocatag="@OVERHEADMESSAGE_OBJECTIVE_COMPLETED" completionchatlocatag="@CHATMESSAGE_OBJECTIVE_COMPLETED"/>
+
+
+  </pvpchallengeobjectives>
+  
+  <!--Might Category Templates-->
   <mightcategorytemplate uniquename="DEFAULT">
     <category uniquename="PVE" displayname="@SEASONS_MIGHT_CATEGORY_PVE" progressiontable="PROGRESSION_PVE">
       <objectivemapping objectivetype="PVPCHALLENGE_PVE"/>
@@ -257,6 +275,51 @@
     </category>
     <category uniquename="SPIDERS" displayname="@SEASONS_MIGHT_CATEGORY_SPIDERS" progressiontable="PROGRESSION_CRYSTAL_SPIDER">
       <objectivemapping objectivetype="SPIDERS"/>
+    </category>
+    <category uniquename="SMUGGLERS" displayname="@SEASONS_MIGHT_CATEGORY_SMUGGLERS" progressiontable="PROGRESSION_SMUGGLERS">
+      <objectivemapping objectivetype="SMUGGLERSCRATES"/>
+      <objectivemapping objectivetype="CAGEDSMUGGLERS"/>
+      <objectivemapping objectivetype="SMUGGLERCOINS"/>
+    </category>
+    <category uniquename="HELLGATE" displayname="@SEASONS_MIGHT_CATEGORY_HELLGATE" progressiontable="PROGRESSION_HELLGATE">
+      <objectivemapping objectivetype="HELLGATE2V2"/>
+      <objectivemapping objectivetype="HELLGATE5V5"/>
+    </category>
+    <category uniquename="HELLDUNGEON" displayname="@SEASONS_MIGHT_CATEGORY_HELLDUNGEON" progressiontable="PROGRESSION_HELLDUNGEON">
+      <objectivemapping objectivetype="HELLDUNGEON"/>
+    </category>
+    <category uniquename="CORRUPTED" displayname="@SEASONS_MIGHT_CATEGORY_CORRUPTED" progressiontable="PROGRESSION_CORRUPTED">
+      <objectivemapping objectivetype="CORRUPTED_STALKER"/>
+      <objectivemapping objectivetype="CORRUPTED_SLAYER"/>
+    </category>
+    <category uniquename="CASTLE" displayname="@SEASONS_MIGHT_CATEGORY_CASTLE" progressiontable="PROGRESSION_CASTLES">
+      <objectivemapping objectivetype="CASTLE_OUTPOST"/>
+      <objectivemapping objectivetype="CASTLE"/>
+    </category>
+  </mightcategorytemplate>
+  
+  <mightcategorytemplate uniquename="KEEPER_LEAD_UP_SEASON">
+    <category uniquename="PVE" displayname="@SEASONS_MIGHT_CATEGORY_PVE" progressiontable="PROGRESSION_PVE">
+      <objectivemapping objectivetype="PVPCHALLENGE_PVE"/>
+    </category>
+    <category uniquename="GATHERING" displayname="@SEASONS_MIGHT_CATEGORY_GATHERING" progressiontable="PROGRESSION_GATHERING">
+      <objectivemapping objectivetype="PVPCHALLENGE_GATHERING"/>
+      <objectivemapping objectivetype="PVPCHALLENGE_FISHING"/>
+    </category>
+    <category uniquename="GVGSEASON" displayname="@SEASONS_MIGHT_CATEGORY_GVGSEASON" progressiontable="PROGRESSION_SIPHONING_MAGE">
+      <objectivemapping objectivetype="GVGSEASON"/>
+    </category>
+    <category uniquename="POWERCORE" displayname="@SEASONS_MIGHT_CATEGORY_POWERCORE" progressiontable="PROGRESSION_POWER_CRYSTAL_HIDEOUT">
+      <objectivemapping objectivetype="POWERCORE"/>
+    </category>
+    <category uniquename="ENERGYCRYSTAL" displayname="@SEASONS_MIGHT_CATEGORY_ENERGYCRYSTAL" progressiontable="PROGRESSION_POWER_CRYSTAL_TERRITORY">
+      <objectivemapping objectivetype="ENERGYCRYSTAL"/>
+    </category>
+    <category uniquename="TREASURES" displayname="@SEASONS_MIGHT_CATEGORY_TREASURES" progressiontable="PROGRESSION_TREASURES">
+      <objectivemapping objectivetype="TREASURES"/>
+    </category>
+    <category uniquename="KEEPER_UPRISING" displayname="@SEASONS_MIGHT_CATEGORY_KEEPER_UPRISING" progressiontable="PROGRESSION_KEEPER_UPRISING">
+      <objectivemapping objectivetype="KEEPER_UPRISING"/>
     </category>
     <category uniquename="SMUGGLERS" displayname="@SEASONS_MIGHT_CATEGORY_SMUGGLERS" progressiontable="PROGRESSION_SMUGGLERS">
       <objectivemapping objectivetype="SMUGGLERSCRATES"/>

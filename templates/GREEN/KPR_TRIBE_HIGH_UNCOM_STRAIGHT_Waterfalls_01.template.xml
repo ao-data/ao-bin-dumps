@@ -1,5 +1,11 @@
 <template path="Assets/Levels/LEVEL_TEMPLATES/FOREST/Slave/DungeonBlocks/KEEPER/KPR_TRIBE_HIGH_UNCOM_STRAIGHT_Waterfalls_01.unity" unityguid="b9319691083edfc4f92d3ea430bdfb13" editorBoundsMin="-80 -40" editorBoundsMax="80 40" colBoundsMin="-81 -45" colBoundsMax="80 50">
-  <criticalscenemembers />
+  <criticalscenemembers>
+    <criticalscenemember id="loresnippet_01" type="loresnippet" layerId="">
+      <tile name="LORE_SPOT" pos="-68 0 -7">
+        <loresnippet loresnippetid="KEEPER_15" />
+      </tile>
+    </criticalscenemember>
+  </criticalscenemembers>
   <tiles>
     <layergroup name="Backdrop">
       <layer id="Layer_06" name="env_in_cave" />
@@ -144,12 +150,6 @@
       </layer>
     </layergroup>
     <layergroup name="SECRET">
-      <layer id="Layer_05" name="secret_solo_off">
-        <tile name="FOREST_GREEN_DNG_FILL_ROCK_DEBRIS_C" pos="-9 -4 12" roty="270" />
-        <tile name="FOREST_GREEN_DNG_PLATEAU_ROCK_DEBRIS_SMALL_GATHERING_A" pos="-5 -4.82 9" roty="90" />
-        <tile name="FOREST_GREEN_DNG_PLATEAU_24M_SHALLOW_S_WATERFALL_BG" pos="-5 -14.47 25" roty="270" scale="1 1 1.5" />
-        <tile name="FOREST_GREEN_DNG_PLATEAU_24M_SHALLOW_S_WATERFALL_BG" pos="-5 -14.47 15" roty="90" scale="1 1 1.5" />
-      </layer>
       <layer id="Layer_07" name="secret_solo_on">
         <tile name="FOREST_GREEN_KPR_FIREBOWL_SINGLE_A" pos="-9.84 -1.41 14.54" rot="22 90 0" />
         <tile name="FOREST_GREEN_KPR_POINT_LIGHT_DNG_STANDARD_FLICKER_A" pos="-4.67 1.89 11.5">
@@ -203,14 +203,9 @@
         </tile>
         <tile name="FOREST_GREEN_DNG_PLATEAU_24M_SHALLOW_S_WATERFALL_BG" pos="-5 -14.47 25" roty="270" scale="1 1 1.5" />
       </layer>
-      <layer id="Layer_10" name="secret_veteran_off">
-        <tile name="FOREST_GREEN_DNG_FILL_ROCK_DEBRIS_C" pos="-9 -4 12" roty="270" />
-        <tile name="FOREST_GREEN_DNG_PLATEAU_ROCK_DEBRIS_SMALL_GATHERING_A" pos="-4.99 -4.82 9.04" roty="90" />
-        <tile name="FOREST_GREEN_DNG_PLATEAU_24M_SHALLOW_S_WATERFALL_BG" pos="-5 -14.47 15" roty="90" scale="1 1 1.5" />
-        <tile name="FOREST_GREEN_DNG_PLATEAU_24M_SHALLOW_S_WATERFALL_BG" pos="-5 -14.47 25" roty="270" scale="1 1 1.5" />
-      </layer>
       <layer id="Layer_11" name="secret_veteran_on">
         <tile name="FOREST_GREEN_KPR_FIREBOWL_SINGLE_A" pos="-9.84 -1.41 14.54" rot="22 90 0" />
+        <tile name="FOREST_GREEN_DNG_PLATEAU_24M_SHALLOW_S_WATERFALL_BG" pos="-5 -14.47 15" roty="90" scale="1 1 1.5" />
         <tile name="FOREST_GREEN_KPR_POINT_LIGHT_DNG_STANDARD_FLICKER_A" pos="-5.06 2.66 11.6">
           <pointlight range="10" intensity="8" color="1 0.7591847 0.2720588" />
         </tile>
@@ -235,8 +230,10 @@
         <tile name="FOREST_GREEN_KPR_POINT_LIGHT_DNG_STANDARD_FLICKER_A" pos="-36.67 7.15 24.57">
           <pointlight range="12" intensity="10" color="1 0.7591847 0.2720588" />
         </tile>
-        <tile name="FOREST_GREEN_DNG_PLATEAU_24M_SHALLOW_S_WATERFALL_BG" pos="-5 -14.47 15" roty="90" scale="1 1 1.5" />
         <tile name="FOREST_GREEN_KPR_POINT_LIGHT_DNG_STANDARD_FLICKER_A" pos="-19.3 7.74 25.22">
+          <pointlight range="10" intensity="8" color="1 0.7591847 0.2720588" />
+        </tile>
+        <tile name="FOREST_GREEN_KPR_POINT_LIGHT_DNG_STANDARD_FLICKER_A" pos="-9.73 7.74 31.13">
           <pointlight range="10" intensity="8" color="1 0.7591847 0.2720588" />
         </tile>
         <tile name="SpawnPoint_RANDOM_KEEPER_VETERAN_UNPROVEN_MALE" pos="-33.89 0 23.48" roty="30">
@@ -257,10 +254,8 @@
         <tile name="SpawnPoint_LOOTCHEST_KEEPER_VETERAN_STANDARD" pos="-57 0 -6" roty="151" />
         <tile name="FOREST_GREEN_KPR_DNG_FILL_FIREBOWL_OIL_PEDESTAL_STONE_A" pos="-21 0 22" roty="90" />
         <tile name="FOREST_GREEN_KPR_FIREBOWL_SINGLE_A" pos="-0.97 -2.73 12.74" rot="18 182 0" />
-        <tile name="FOREST_GREEN_KPR_POINT_LIGHT_DNG_STANDARD_FLICKER_A" pos="-9.73 7.74 31.13">
-          <pointlight range="10" intensity="8" color="1 0.7591847 0.2720588" />
-        </tile>
         <tile name="FOREST_GREEN_DNG_PLATEAU_24M_SHALLOW_S_WATERFALL_BG" pos="-5 -14.47 25" roty="270" scale="1 1 1.5" />
+        <tile name="FOREST_GREEN_KPR_DNG_FILL_FIREBOWL_OIL_PEDESTAL_STONE_A" pos="-69 0 -11" roty="90" />
       </layer>
     </layergroup>
     <tile name="FOREST_GREEN_MOR_FX_WATERDROP_01" pos="-5 -4 6" />
@@ -379,6 +374,7 @@
     <tile name="FOREST_GREEN_DNG_FILL_COLUMN_A_BLEND" pos="-26 -2 21" roty="180" />
     <tile name="FOREST_GREEN_DNG_FILL_COLUMN_CAVERN_DIAGONAL_B_BLEND" pos="-70 11 -17" roty="203" />
     <tile name="FOREST_GREEN_DNG_FILL_COLUMN_CAVERN_DIAGONAL_B_BLEND" pos="1 1 33" roty="137" />
+    <tile name="FOREST_GREEN_VEG_BLEND_HIGH_LARGE_B" pos="-24 1 34" roty="270" />
     <tile name="FOREST_GREEN_VEG_BLEND_HIGH_LARGE_B" pos="-72 -1 14" roty="90" />
     <tile name="FOREST_GREEN_VEG_BLEND_HIGH_LARGE_B" pos="-10 -2 25" roty="180" />
     <tile name="FOREST_GREEN_VEG_BLEND_HIGH_LARGE_B" pos="0 0 34" roty="270" />
@@ -403,11 +399,11 @@
     <tile name="FOREST_GREEN_KPR_FIREBOWL_GROUP_A" pos="-62.5 0 -7.5" roty="90" />
     <tile name="FOREST_GREEN_KPR_FIREBOWL_GROUP_A" pos="-51.5 0 29.5" />
     <tile name="FOREST_GREEN_KPR_FIREBOWL_GROUP_A" pos="-55.5 0 -2.5" roty="90" />
-    <tile name="FOREST_GREEN_FILL_ROOTS_PLATEAU_STRAIGHT_LARGE_A_RIGHT_MIST" pos="-72 3 3" roty="90" />
-    <tile name="FOREST_GREEN_VEG_BLEND_HIGH_LARGE_B" pos="-24 1 34" roty="270" />
-    <tile name="FOREST_GREEN_DNG_SHALLOW_WATER_STRAIGHT_B" pos="-65 0 5" />
     <tile name="FOREST_GREEN_VEG_BLEND_HIGH_LARGE_B" pos="-62 -3 27" roty="180" />
-    <tile name="FOREST_GREEN_VEG_BLEND_HIGH_LARGE_B" pos="-43 -3 20" />
+    <tile name="FOREST_GREEN_DNG_SHALLOW_WATER_STRAIGHT_B" pos="-65 0 5" />
+    <tile name="FOREST_GREEN_VEG_BLEND_HIGH_LARGE_B" pos="-5 1 35" roty="180" />
+    <tile name="FOREST_GREEN_VEG_BLEND_SMALL_A" pos="-21.5 5 36.5" roty="154" />
+    <tile name="FOREST_GREEN_DNG_PLATEAU_ROCK_DEBRIS_SMALL_C" pos="-19.62 -1 19.78" roty="270" />
     <tile name="FOREST_GREEN_DNG_PLATEAU_ROCK_DEBRIS_SMALL_C" pos="-18.67 -1 19.05" roty="180" />
     <tile name="FOREST_GREEN_DNG_PLATEAU_ROCK_DEBRIS_SMALL_GATHERING_A" pos="-16 0 21" roty="180" />
     <tile name="FOREST_GREEN_DNG_PLATEAU_ROCK_DEBRIS_SMALL_C" pos="-32 0 20" roty="90" />
@@ -432,8 +428,7 @@
     <tile name="FOREST_GREEN_VEG_FERN_D" pos="0.5 0 25.5" roty="180" />
     <tile name="FOREST_GREEN_VEG_BLEND_SMALL_A" pos="-35.5 0 30.5" />
     <tile name="FOREST_GREEN_VEG_BLEND_SMALL_A" pos="-26.5 0 30.5" />
-    <tile name="FOREST_GREEN_VEG_BLEND_SMALL_A" pos="-21.5 5 36.5" roty="154" />
-    <tile name="FOREST_GREEN_VEG_BLEND_HIGH_LARGE_B" pos="-5 1 35" roty="180" />
+    <tile name="FOREST_GREEN_VEG_BLEND_HIGH_LARGE_B" pos="-43 -3 20" />
     <tile name="FOREST_GREEN_WATER_river_OBJ_DNG" pos="15 -16 5" />
     <tile name="FOREST_GREEN_DNG_SHALLOW_WATER_STRAIGHT_B" pos="-65 0 25" roty="180" />
     <tile name="FOREST_GREEN_DNG_SHALLOW_WATER_INNERCORNER_A" pos="-55 0 15" />
@@ -492,9 +487,12 @@
     <tile name="FOREST_GREEN_VEG_BLEND_HIGH_LARGE_A" pos="1 -8 9" roty="180" />
     <tile name="FOREST_GREEN_VEG_BLEND_HIGH_LARGE_A" pos="2 -4 15" />
     <tile name="FOREST_GREEN_VEG_BLEND_HIGH_LARGE_A" pos="27 -2 -12" roty="270" />
-    <tile name="FOREST_GREEN_DNG_PLATEAU_ROCK_DEBRIS_SMALL_C" pos="-19.62 -1 19.78" roty="270" />
     <tile name="FOREST_GREEN_WATER_river_OBJ_DNG" pos="15 -16 25" />
+    <tile name="FOREST_GREEN_WATER_river_OBJ_DNG" pos="15 -16 15" />
     <tile name="FOREST_GREEN_WATER_river_OBJ_DNG" pos="5 -16 -15" />
+    <tile name="FOREST_GREEN_KPR_POINT_LIGHT_DNG_STANDARD_FLICKER_A" pos="8.55 1.6 -7.09">
+      <pointlight range="10" intensity="8" color="0.9852941 0.8918226 0.7027465" />
+    </tile>
     <tile name="FOREST_GREEN_KPR_POINT_LIGHT_DNG_STANDARD_FLICKER_A" pos="12.44 1.6 6.68">
       <pointlight range="10" intensity="8" color="0.9852941 0.8918226 0.7027465" />
     </tile>
@@ -520,10 +518,8 @@
     <tile name="FOREST_GREEN_KPR_FLY_ISLAND_STRAIGHT_B_DNG_OBJECT" pos="-35 0 15" roty="180" />
     <tile name="FOREST_GREEN_KPR_FLY_ISLAND_STRAIGHT_B_DNG_OBJECT" pos="-15 -4 15" roty="270" />
     <tile name="FOREST_GREEN_KPR_FLY_ISLAND_STRAIGHT_A_DNG" pos="-65 0 -5" roty="180" />
-    <tile name="FOREST_GREEN_KPR_POINT_LIGHT_DNG_STANDARD_FLICKER_A" pos="8.55 1.6 -7.09">
-      <pointlight range="10" intensity="8" color="0.9852941 0.8918226 0.7027465" />
-    </tile>
     <tile name="FOREST_GREEN_KPR_FLY_ISLAND_CORNER_B_DNG" pos="-55 0 -5" roty="90" />
+    <tile name="FOREST_GREEN_KPR_FLY_ISLAND_STRAIGHT_B_DNG_OBJECT" pos="-45 0 5" roty="90" />
     <tile name="FOREST_GREEN_KPR_FLY_ISLAND_STRAIGHT_B_DNG_OBJECT" pos="-15 0 15" roty="180" />
     <tile name="FOREST_GREEN_KPR_FLY_ISLAND_STRAIGHT_B_DNG_OBJECT" pos="-35 0 15" roty="90" />
     <tile name="FOREST_GREEN_KPR_FLY_ISLAND_STRAIGHT_B_DNG_OBJECT" pos="5 0 25" roty="90" />
@@ -535,14 +531,14 @@
     <tile name="FOREST_GREEN_DNG_GROUND" pos="-15 -4 -5" roty="90" />
     <tile name="FOREST_GREEN_DNG_PLATEAU_4M_STAIRS_RIGHT" pos="15 -4 -5" roty="180" />
     <tile name="FOREST_GREEN_DNG_PLATEAU_4M_STAIRS_LEFT" pos="15 -4 5" roty="180" />
-    <tile name="FOREST_GREEN_KPR_FLY_ISLAND_STRAIGHT_B_DNG_OBJECT" pos="-45 0 5" roty="90" />
     <tile name="FOREST_GREEN_KPR_POINT_LIGHT_DNG_STANDARD_FLICKER_A" pos="-21.06 0.35 -3.68">
       <pointlight range="10" intensity="8" color="1 0.7591847 0.2720588" />
     </tile>
+    <tile name="FOREST_GREEN_DNG_BASE_PUDDLE_G_10x20" pos="35 0 10" />
     <tile name="FOREST_GREEN_KPR_POINT_LIGHT_DNG_STANDARD_FLICKER_A" pos="-28.3 -2.9 -8.94">
       <pointlight range="8" intensity="8" color="0.2705883 1 1" />
     </tile>
-    <tile name="FOREST_GREEN_KPR_POINT_LIGHT_DNG_STANDARD_FLICKER_A" pos="-17.46 -8.17 -20.79">
+    <tile name="FOREST_GREEN_KPR_POINT_LIGHT_DNG_STANDARD_FLICKER_A" pos="-20.22 -3.9 18.03">
       <pointlight range="8" intensity="8" color="0.2705883 1 1" />
     </tile>
     <tile name="FOREST_GREEN_DNG_FILL_ROCK_DEBRIS_SMALL_C" pos="36 0 24" />
@@ -564,6 +560,9 @@
     <tile name="FOREST_GREEN_DNG_FILL_ROCK_MINE_BACKDROP_D" pos="3.5 -52 -5.5" scale="0.5557839 0.5557839 0.5557839" />
     <tile name="FOREST_GREEN_DNG_FILL_ROCK_MINE_BACKDROP_D" pos="3.5 -52 5.5" roty="270" scale="0.5557843 0.5557839 0.5557843" />
     <tile name="FOREST_GREEN_DNG_FILL_ROCK_MINE_BACKDROP_D" pos="-14.5 -52 -32.5" roty="270" />
+    <tile name="FOREST_GREEN_KPR_POINT_LIGHT_DNG_STANDARD_FLICKER_A" pos="-67.41 4.22 -8.23">
+      <pointlight range="8" intensity="5" color="1 0.7591847 0.2720588" />
+    </tile>
     <tile name="DIFFUSE_GODRAY_A" pos="-21 -4 -2" />
     <tile name="DIFFUSE_GODRAY_A" pos="-6 -4 -13" />
     <tile name="DIFFUSE_GODRAY_A" pos="5 -4 11" />
@@ -571,12 +570,11 @@
     <tile name="FOREST_GREEN_KPR_POINT_LIGHT_DNG_STANDARD_FLICKER_A" pos="-0.19 -9.28 20">
       <pointlight range="8" intensity="8" color="0.2705883 1 1" />
     </tile>
-    <tile name="FOREST_GREEN_KPR_POINT_LIGHT_DNG_STANDARD_FLICKER_A" pos="-20.22 -3.9 18.03">
+    <tile name="FOREST_GREEN_KPR_POINT_LIGHT_DNG_STANDARD_FLICKER_A" pos="-17.46 -8.17 -20.79">
       <pointlight range="8" intensity="8" color="0.2705883 1 1" />
     </tile>
-    <tile name="FOREST_GREEN_DNG_BASE_PUDDLE_G_10x20" pos="35 0 10" />
+    <tile name="FOREST_GREEN_DNG_FILL_ROCK_DEBRIS_SMALL_C" pos="48 0 29" roty="270" />
     <tile name="FOREST_GREEN_DNG_GROUND" pos="25 0 -5" roty="270" />
-    <tile name="FOREST_GREEN_DNG_GROUND" pos="45 0 -5" />
     <tile name="FOREST_GREEN_DNG_GROUND_OBJ_NOCLICK" pos="75 12 -25" />
     <tile name="FOREST_GREEN_DNG_GROUND" pos="35 0 -15" />
     <tile name="FOREST_GREEN_DNG_GROUND_OBJ_NOCLICK" pos="75 12 35" />
@@ -604,7 +602,7 @@
     <tile name="FOREST_GREEN_MOR_FX_WATERDROP_01" pos="14 -4 -2" />
     <tile name="FOREST_GREEN_MOR_FX_WATERDROP_01" pos="-17 -4 -5" />
     <tile name="FOREST_GREEN_DNG_GROUND" pos="45 0 35" />
-    <tile name="FOREST_GREEN_DNG_FILL_ROCK_DEBRIS_SMALL_C" pos="48 0 29" roty="270" />
+    <tile name="FOREST_GREEN_DNG_GROUND" pos="45 0 -5" />
     <tile name="FOREST_GREEN_DNG_GROUND" pos="5 -4 -5" roty="90" />
     <tile name="FOREST_GREEN_DNG_GROUND_OBJ_NOCLICK" pos="75 12 -15" />
     <tile name="FOREST_GREEN_KPR_FLY_ISLAND_STRAIGHT_A_DNG" pos="45 0 5" roty="90" />
@@ -633,8 +631,8 @@
     <tile name="FOREST_GREEN_DNG_GROUND_OBJ_NOCLICK" pos="-15 12 -35" />
     <tile name="FOREST_GREEN_DNG_GROUND_OBJ_NOCLICK" pos="-75 12 -35" />
     <tile name="FOREST_GREEN_DNG_GROUND_OBJ_NOCLICK" pos="5 12 -35" />
+    <tile name="FOREST_GREEN_DNG_FILL_COLUMN_B_CUT" pos="-38 8 11" />
     <tile name="FOREST_GREEN_DNG_FILL_ROCK_MINE_BACKDROP_D" pos="12.5 -50 -23.5" roty="61" />
-    <tile name="FOREST_GREEN_DNG_CAVE_ROCK_GATE_A_BLEND" pos="21 0 -13" roty="280" />
     <tile name="FOREST_GREEN_DNG_FILL_ROCK_DEBRIS_SMALL_A" pos="23 0 -11" roty="90" />
     <tile name="FOREST_GREEN_DNG_CAVE_WALL_INNERCORNER_A" pos="-75 0 -15" roty="270" />
     <tile name="FOREST_GREEN_DNG_CAVE_WALL_INNERCORNER_A" pos="-75 0 35" />
@@ -691,7 +689,7 @@
     <tile name="FOREST_GREEN_WATER_river_OBJ_DNG" pos="-5 -16 -5" />
     <tile name="FOREST_GREEN_WATER_river_OBJ_DNG" pos="-15 -16 5" />
     <tile name="FOREST_GREEN_WATER_river_OBJ_DNG" pos="-15 -16 -15" />
-    <tile name="FOREST_GREEN_WATER_river_OBJ_DNG" pos="15 -16 15" />
+    <tile name="FOREST_GREEN_DNG_CAVE_ROCK_GATE_A_BLEND" pos="21 0 -13" roty="280" />
     <tile name="FOREST_GREEN_DNG_CAVE_WALL_BACKDROP_STRAIGHT_EXTENSION_A" pos="55 -28 15" roty="90" />
     <tile name="FOREST_GREEN_DNG_CAVE_WALL_BACKDROP_INNERCORNER_EXTENSION_A" pos="65 -24 15" roty="90" />
     <tile name="FOREST_GREEN_DNG_FILL_ROCK_MINE_BACKDROP_D" pos="15.5 -43 -12.5" roty="331" scale="0.7314376 0.7314376 0.7314376" />
@@ -749,6 +747,8 @@
     <tile name="FOREST_GREEN_DNG_FILL_ROCK_DEBRIS_SMALL_B" pos="-22 0 30" />
     <tile name="FOREST_GREEN_DNG_FILL_ROCK_DEBRIS_SMALL_B" pos="-4 0 32" roty="180" />
     <tile name="FOREST_GREEN_DNG_FILL_ROCK_FORMATION_SPIKES_A" pos="-11 -3 18" />
-    <tile name="FOREST_GREEN_DNG_FILL_COLUMN_B_CUT" pos="-38 8 11" />
+    <criticaltile name="LORE_SPOT" pos="-68 0 -7" id="loresnippet_01" type="loresnippet">
+      <loresnippet loresnippetid="KEEPER_15" />
+    </criticaltile>
   </tiles>
 </template>

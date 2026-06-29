@@ -17,27 +17,45 @@
     <event uniquename="HALLOWEEN2026" title="@FIXED_EVENT_HALLOWEEN_2026" description="@FIXED_EVENT_HALLOWEEN_2023_DESC" image="activities_event_halloween" showinactivityboard="true">
       <activeflag name="halloween" />
     </event>
-    <event uniquename="ANNIVERSARY_2026" title="@FIXED_EVENT_ANNIVERSARY_2022" description="@FIXED_EVENT_ANNIVERSARY_2025_DESC" image="activities_event_anniversary_2023" showinactivityboard="true">
+    <event uniquename="ANNIVERSARY_2026" title="@FIXED_EVENT_ANNIVERSARY_2022" description="@FIXED_EVENT_ANNIVERSARY_2022" image="activities_event_anniversary_2023" showinactivityboard="true">
       <activeflag name="anniversary" />
-      <mail mailid="MAIL_ANNIVERSARY_2025" sender="Albion Online">
-        <attacheditem id="UNIQUE_AVATAR_ANNIVERSARY_2025" amount="1" />
-        <attacheditem id="UNIQUE_AVATARRING_ANNIVERSARY_2025" amount="1" />
+      <mail mailid="MAIL_ANNIVERSARY_2026" sender="Albion Online">
+        <attacheditem id="UNIQUE_AVATAR_ANNIVERSARY_2026" amount="1" />
+        <attacheditem id="UNIQUE_AVATARRING_ANNIVERSARY_2026" amount="1" />
       </mail>
     </event>
     <event uniquename="ANNIVERSARY_PRELUDE_2026">
       <activeflag name="anniversary_prelude" />
     </event>
+    <event uniquename="DRAGON_LEAD_UP_PHASE_5">
+      <activeflag name="special_event_5" />
+    </event>
     <event uniquename="DRAGON_LEAD_UP_PHASE_4">
       <activeflag name="special_event_4" />
+    </event>
+    <event uniquename="DRAGON_LEAD_UP_PHASE_3_4">
+      <activeflag name="special_event_8" />
     </event>
     <event uniquename="DRAGON_LEAD_UP_PHASE_3">
       <activeflag name="special_event_3" />
     </event>
+    <event uniquename="DRAGON_LEAD_UP_PHASE_2_3">
+      <activeflag name="special_event_7" />
+    </event>
     <event uniquename="DRAGON_LEAD_UP_PHASE_2">
+      <activeflag name="special_event_6" />
+    </event>
+    <event uniquename="DRAGON_LEAD_UP_PHASE_1_4">
       <activeflag name="special_event_2" />
     </event>
-    <event uniquename="DRAGON_LEAD_UP_PHASE_1" title="@ACTIVITY_HUB_EASTER_TITLE" description="@FIXED_EVENT_EASTER_DESC" image="activities_event_easter_2023" showinactivityboard="true">
+    <event uniquename="DRAGON_LEAD_UP_PHASE_1" title="@ACTIVITY_HUB_DRAGON_LEAD_UP_TITLE" description="@FIXED_DRAGON_EVENT_LEAD_UP_DESC" image="activities_event_lead_up_season_2026" showinactivityboard="true">
       <activeflag name="special_event_1" />
+    </event>
+    <event uniquename="CRYSTAL_CREATURE_PRE_BLOCKER" showinactivityboard="false">
+      <activeflag name="event_blocker" />
+    </event>
+    <event uniquename="CRYSTAL_CREATURE_POST_BLOCKER" showinactivityboard="false">
+      <activeflag name="event_blocker" />
     </event>
     <event uniquename="EASTER2026" title="@ACTIVITY_HUB_EASTER_TITLE" description="@FIXED_EVENT_EASTER_DESC" image="activities_event_easter_2023" showinactivityboard="true">
       <activeflag name="easter" />
@@ -204,6 +222,9 @@
       <event uniquename="FAME" cooldowndays="9" mindurationdays="2" maxdurationdays="3" weight="0" title="@DYNAMIC_EVENT_FAME_TITLE" description="@DYNAMIC_EVENT_FAME_DESCRIPTION" image="activities_event_fame_week">
         <buff spell="FAMEBONUS25" />
       </event>
+      <event uniquename="MISTS_AND_HELLDUNGEON" cooldowndays="9" mindurationdays="7" maxdurationdays="7" weight="0" title="@DYNAMIC_EVENT_MISTS_AND_HELLDUNGEON_TITLE" description="@DYNAMIC_EVENT_MISTS_AND_HELLDUNGEON_DESCRIPTION" image="activities_event_mists_and_helldungeon">
+        <buff spell="DYNAMIC_EVENT_MISTS_AND_HELLDUNGEON" />
+      </event>
       <!--<event uniquename="TREASURE_SPAWNS" cooldowndays="7" mindurationdays="1" maxdurationdays="1" weight="1" title="@DYNAMIC_EVENT_HELLGATE_TITLE" description="@DYNAMIC_EVENT_HELLGATE_DESCRIPTION" image="activities_event_hellgates">
               <activeflag name="treasureevent"/>
             </event>-->
@@ -320,7 +341,7 @@
     </eventcategory>
   </dailyevents>
   <!-- event views are created even when the event has showinactivityboard set to false, since is showinactivityboard is for the "header" -->
-  <activityhubeventviews>
+  <activityhubeventviews carouseldelay="5.0">
     <!--Easter Events-->
     <verticalimagetemplate eventref="EASTER2024" title="@ACTIVITY_HUB_EASTER_TITLE" description="@ACTIVITY_HUB_EASTER_DESCRIPTION" image="activities_event_easter_2023_vertical" tabicon="icon_tab_festivities">
       <infos>
@@ -456,5 +477,7 @@
         <item uniquename="UNIQUE_UNLOCK_SKIN_GIANTSTAG_XMAS" />
       </lootlist>
     </verticalimagetemplate>
+    <!--Keeper Event-->
+    <journalcategoryeventtemplate eventref="DRAGON_LEAD_UP_PHASE_1" tabicon="icon_awakening" title="@ACTIVITY_HUB_DRAGON_LEAD_UP_TITLE" description="@ACTIVITY_HUB_TIME_LIMITED_DESCRIPTION" categoryuniquename="LEAD_UP_SEASON" tutorialuniquename="EVENT_KEEPER_UPRISING_INFO" avatarpath="Gui/MainAtlasIcons/INFO_ICON_LEAD_UP_SEASON" headertexturepath="Gui/ActivityHub/activities_event_lead_up_season_2026_header" />
   </activityhubeventviews>
 </festivities>
