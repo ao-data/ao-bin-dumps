@@ -60,6 +60,8 @@
             <category name="ActivityHUB" totalpopups="1" />
             <category name="Mobile" totalpopups="1" />
             <category name="AccountConversion" totalpopups="1" />
+            <category name="Surveys" totalpopups="1" />
+            <category name="News" totalpopups="1" />
         </allowedcategories>
     </popupqueue>
 
@@ -155,8 +157,7 @@
             </conditions>
         </popup>
 
-        <popup uniquename="DONT_MISS_OUT" priority="6" type="Premium" title="@EVENT_BASED_POPUPS_DONT_MISS_OUT_TITLE"
-               description="@EVENT_BASED_POPUPS_DONT_MISS_OUT_DESCRIPTION" imagepath="Gui/EventBasedPopups/EVENT_POPUP_DONT_MISS_OUT">
+        <popup uniquename="DONT_MISS_OUT" priority="6" type="Premium" title="@EVENT_BASED_POPUPS_DONT_MISS_OUT_TITLE" description="@EVENT_BASED_POPUPS_DONT_MISS_OUT_DESCRIPTION" imagepath="Gui/EventBasedPopups/EVENT_POPUP_DONT_MISS_OUT">
             <categories>
                 <category name="Premium" />
                 <category name="Advertisement" />
@@ -387,7 +388,6 @@
         <popup uniquename="GUEST_ACCOUNT_INCENTIVIZATION" priority="9" type="GuestAccount">
             <categories>
                 <category name="AccountConversion" />
-                <category name="Advertisement" />
             </categories>
             <triggers>
                 <trigger action="OpenFastTravelUi" />
@@ -406,7 +406,7 @@
                             <IfTutorialCompleted />
                         </not>
                         <IfIsGuestAccount />
-                        <IfGuestLoginCount operation="equals" value="2" />
+                        <IfGuestLoginCount operation="greaterOrEqual" value="2" />
                         <IfHasSeenPopup uniquename="GUEST_ACCOUNT_INCENTIVIZATION" frequency="AllTime" operation="equals" amount="0" />
                     </and>
                     <!---->
@@ -426,7 +426,6 @@
         <popup uniquename="PLATFORM_ACCOUNT_UPGRADE" type="PlatformAccount" priority="10">
             <categories>
                 <category name="AccountConversion"/>
-                <category name="Advertisement" />
             </categories>
             <triggers>
                 <trigger action="OpenFastTravelUi" />
@@ -809,5 +808,69 @@
                 </and>
             </conditions>
         </genericadvertisement>
+
+        <popup uniquename="CONTROLS_PLAYER_BASED_INFO" priority="10" type="GenericTutorial">
+            <categories>
+                <category name="News" />
+            </categories>
+            <triggers>
+                <trigger action="ClusterChange" />
+                <trigger action="GameLogin" />
+            </triggers>
+            <conditions>
+                <and>
+                    <or>
+                        <IfOnPlatform platform="Xbox"/>
+                        <IfInputType type="Gamepad"/>
+                    </or>
+                    <IfTutorialCompleted />
+                    <IfAlbionJournalIsUnlocked />
+                    <IfAccountAgeDays value="2" operation="greater" />
+                    <IfValidDate start="2026-06-03T11:00:00" end="2026-08-17T11:00:00"/>
+                    <IfHasSeenPopup uniquename="CONTROLS_PLAYER_BASED_INFO" frequency="AllTime" operation="equals" amount="0" />
+                </and>
+            </conditions>
+        </popup>
+        
+        <!-- Surveys -->
+        <survey uniquename="GAMEPAD_SURVEY_1" 
+                type="Survey" 
+                priority="0"
+                title="@GAMEPAD_SURVEY_1_TITLE"
+                subtitleright="@GAMEPAD_SURVEY_1_SUB_TITLE"
+                description="@GAMEPAD_SURVEY_1_BULLETPOINTS"
+                customurl="survey"
+                imagetitle="@GAMEPAD_SURVEY_1_TITLE_LEFT"
+                imagedescription="@GAMEPAD_SURVEY_1_DESCRIPTION_LEFT"
+                imagepath="Gui/EventBasedPopups/Surveys/Survey1"
+                qrcodepath="Gui/EventBasedPopups/Surveys/Survey1_QR">
+            <categories>
+                <category name="Surveys"/>
+            </categories>
+            <triggers>
+                <trigger action="GameLogin" />
+                <trigger action="ClusterChange" />
+            </triggers>
+            <conditions>
+                <and>
+                  <or>
+                    <IfOnPlatform platform="Xbox"/>
+                    <IfInputType type="Gamepad"/>
+                  </or>
+                  <IfTutorialCompleted />
+                    <IfAlbionJournalIsUnlocked />
+                    <IfAccountAgeDays value="2" operation="greater" />
+                    <not>
+                        <IfIsGuestAccount/>
+                    </not>
+                  <or>
+                    <!-- Extra Date for testing purposes -->
+                    <IfValidDate start="2026-07-09T11:00:00" end="2026-07-25T11:00:00"/>
+                    <IfValidDate start="2026-08-03T11:00:00" end="2026-08-17T11:00:00"/>
+                  </or>
+                  <IfHasSeenPopup uniquename="GAMEPAD_SURVEY_1" frequency="Days" timefactor="2" operation="equals" amount="0" />
+                </and>
+            </conditions>
+        </survey>
     </popups>
 </eventbasedpopups>

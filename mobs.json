@@ -62,8 +62,33 @@
         "@silvermodifier": "1",
         "@namelocatag": "@MOB_T5_MOB_KEEPER_EARTHMOTHER_ELITE_BOSS",
         "AI": {
+          "Variables": {
+            "Var": {
+              "@name": "setup",
+              "@type": "bool",
+              "@initialValue": "false",
+              "@resetOnMobReset": "true"
+            }
+          },
           "Behaviour": {
             "Spell": [
+              {
+                "@name": "SET_MOB_IDENTIFIER",
+                "@target": "self",
+                "IfVariable": {
+                  "@name": "setup",
+                  "@op": "equals",
+                  "@value": "false"
+                },
+                "Event": {
+                  "@type": "onCastSuccessful",
+                  "Variable": {
+                    "@name": "setup",
+                    "@op": "set",
+                    "@value": "true"
+                  }
+                }
+              },
               {
                 "@name": "BOSS_ENRAGE_BUFF_1",
                 "@target": "self",
@@ -82,10 +107,6 @@
                       {
                         "@who": "SpellTarget",
                         "@spell": "BOSS_ENRAGE_BUFF_2"
-                      },
-                      {
-                        "@who": "SpellTarget",
-                        "@spell": "BOSS_ENRAGE_BUFF_3"
                       }
                     ]
                   }
@@ -100,17 +121,9 @@
                   "@value": "20"
                 },
                 "not": {
-                  "or": {
-                    "IfSpellActive": [
-                      {
-                        "@who": "SpellTarget",
-                        "@spell": "BOSS_ENRAGE_BUFF_2"
-                      },
-                      {
-                        "@who": "SpellTarget",
-                        "@spell": "BOSS_ENRAGE_BUFF_3"
-                      }
-                    ]
+                  "IfSpellActive": {
+                    "@who": "SpellTarget",
+                    "@spell": "BOSS_ENRAGE_BUFF_2"
                   }
                 }
               },
@@ -515,6 +528,10 @@
           "@minimapmarker": "minimap_icon_worldboss_keeper"
         },
         "Loot": {
+          "Harvestable": {
+            "@type": "SILVERCOINS_LOOT_ELITE_BOSS",
+            "@tier": "8"
+          },
           "LootListReference": [
             {
               "@name": "T8_KEEPER_RAIDBOSS_LOOT",
@@ -649,7 +666,8 @@
             {
               "@type": "UNIQUE_UNLOCK_LORE_KEEPER_13",
               "@chance": "0.01",
-              "@cangetmodified": "false"
+              "@cangetmodified": "false",
+              "@ignoreforactivitychest": "true"
             },
             {
               "@type": "T4_SILVERBAG_NONTRADABLE",
@@ -774,7 +792,8 @@
             {
               "@type": "UNIQUE_UNLOCK_LORE_KEEPER_13",
               "@chance": "0.01",
-              "@cangetmodified": "false"
+              "@cangetmodified": "false",
+              "@ignoreforactivitychest": "true"
             },
             {
               "@type": "T4_SILVERBAG_NONTRADABLE",
@@ -903,7 +922,8 @@
             {
               "@type": "UNIQUE_UNLOCK_LORE_KEEPER_13",
               "@chance": "0.01",
-              "@cangetmodified": "false"
+              "@cangetmodified": "false",
+              "@ignoreforactivitychest": "true"
             },
             {
               "@type": "T4_SILVERBAG_NONTRADABLE",
@@ -1028,7 +1048,8 @@
             {
               "@type": "UNIQUE_UNLOCK_LORE_KEEPER_13",
               "@chance": "0.01",
-              "@cangetmodified": "false"
+              "@cangetmodified": "false",
+              "@ignoreforactivitychest": "true"
             },
             {
               "@type": "T4_SILVERBAG_NONTRADABLE",
@@ -1149,7 +1170,8 @@
             {
               "@type": "UNIQUE_UNLOCK_LORE_KEEPER_13",
               "@chance": "0.01",
-              "@cangetmodified": "false"
+              "@cangetmodified": "false",
+              "@ignoreforactivitychest": "true"
             },
             {
               "@type": "T4_SILVERBAG_NONTRADABLE",
@@ -1283,7 +1305,8 @@
             {
               "@type": "UNIQUE_UNLOCK_LORE_KEEPER_13",
               "@chance": "0.01",
-              "@cangetmodified": "false"
+              "@cangetmodified": "false",
+              "@ignoreforactivitychest": "true"
             },
             {
               "@type": "T4_SILVERBAG_NONTRADABLE",
@@ -1421,7 +1444,8 @@
             {
               "@type": "UNIQUE_UNLOCK_LORE_KEEPER_13",
               "@chance": "0.01",
-              "@cangetmodified": "false"
+              "@cangetmodified": "false",
+              "@ignoreforactivitychest": "true"
             },
             {
               "@type": "T4_SILVERBAG_NONTRADABLE",
@@ -1554,7 +1578,8 @@
             {
               "@type": "UNIQUE_UNLOCK_LORE_KEEPER_13",
               "@chance": "0.01",
-              "@cangetmodified": "false"
+              "@cangetmodified": "false",
+              "@ignoreforactivitychest": "true"
             },
             {
               "@type": "T4_SILVERBAG_NONTRADABLE",
@@ -1684,7 +1709,8 @@
             {
               "@type": "UNIQUE_UNLOCK_LORE_KEEPER_13",
               "@chance": "0.01",
-              "@cangetmodified": "false"
+              "@cangetmodified": "false",
+              "@ignoreforactivitychest": "true"
             },
             {
               "@type": "T4_SILVERBAG_NONTRADABLE",
@@ -1838,7 +1864,8 @@
             {
               "@type": "UNIQUE_UNLOCK_LORE_KEEPER_13",
               "@chance": "0.01",
-              "@cangetmodified": "false"
+              "@cangetmodified": "false",
+              "@ignoreforactivitychest": "true"
             },
             {
               "@type": "T4_SILVERBAG_NONTRADABLE",
@@ -1996,7 +2023,8 @@
             {
               "@type": "UNIQUE_UNLOCK_LORE_KEEPER_13",
               "@chance": "0.01",
-              "@cangetmodified": "false"
+              "@cangetmodified": "false",
+              "@ignoreforactivitychest": "true"
             },
             {
               "@type": "T4_SILVERBAG_NONTRADABLE",
@@ -2150,7 +2178,8 @@
             {
               "@type": "UNIQUE_UNLOCK_LORE_KEEPER_13",
               "@chance": "0.01",
-              "@cangetmodified": "false"
+              "@cangetmodified": "false",
+              "@ignoreforactivitychest": "true"
             },
             {
               "@type": "T4_SILVERBAG_NONTRADABLE",
@@ -2451,63 +2480,25 @@
           }
         },
         "Loot": {
-          "Item": {
-            "@type": "UNIQUE_UNLOCK_LORE_KEEPER_04",
-            "@chance": "0.5",
-            "@cangetmodified": "false"
-          },
-          "Harvestable": {
-            "@type": "SILVERCOINS_LOOT_ROAMING_BOSS",
-            "@tier": "5"
-          },
+          "Item": [
+            {
+              "@type": "UNIQUE_UNLOCK_LORE_KEEPER_04",
+              "@chance": "0.5",
+              "@cangetmodified": "false",
+              "@ignoreforactivitychest": "true"
+            },
+            {
+              "@type": "T8_MOUNTUPGRADE_COUGAR_KEEPER",
+              "@chance": "0.000097"
+            }
+          ],
           "LootListReference": [
             {
-              "@name": "LOOT_KEEPER_FURNITURE",
-              "@chance": "0.003467"
-            },
-            {
-              "@name": "T5_FRAGMENT_LOOT",
-              "@chance": "22.921969"
-            },
-            {
-              "@name": "T5_DIRECTLOOTDROP_WHITE",
-              "@chance": "4.250937"
-            },
-            {
-              "@name": "T6_DIRECTLOOTDROP_WHITE",
-              "@chance": "1.07854"
-            },
-            {
-              "@name": "T7_DIRECTLOOTDROP_WHITE",
-              "@chance": "0.273234"
-            },
-            {
-              "@name": "T4_DIRECTLOOTDROP_WHITE",
-              "@chance": "4.131993"
-            },
-            {
-              "@name": "T3_DIRECTLOOTDROP_WHITE",
-              "@chance": "9.390072"
-            },
-            {
-              "@name": "T5_LOOT_EXPEDITION_TOKEN_BOSS",
-              "@chance": "0.001742"
-            },
-            {
               "@name": "FAME_BOOKS_LOOT_MOBS",
-              "@chance": "0.645701"
+              "@chance": "0.065889"
             },
             {
-              "@name": "TREASURES_STANDARD_LOOT",
-              "@chance": "0.390013"
-            },
-            {
-              "@name": "LOOT_KEEPER_FACTION_CAPES",
-              "@chance": "0.084896"
-            },
-            {
-              "@name": "T5_LOOT_RD_TOKEN",
-              "@chance": "0.018017"
+              "@name": "T5_TRACKING_LOOT_SOLO"
             }
           ]
         },
@@ -2589,63 +2580,25 @@
           "@reference": "T5_MOB_TR_KEEPER_WITCH_BOSS"
         },
         "Loot": {
-          "Item": {
-            "@type": "UNIQUE_UNLOCK_LORE_KEEPER_04",
-            "@chance": "0.5",
-            "@cangetmodified": "false"
-          },
-          "Harvestable": {
-            "@type": "SILVERCOINS_LOOT_ROAMING_BOSS",
-            "@tier": "6"
-          },
+          "Item": [
+            {
+              "@type": "UNIQUE_UNLOCK_LORE_KEEPER_04",
+              "@chance": "0.5",
+              "@cangetmodified": "false",
+              "@ignoreforactivitychest": "true"
+            },
+            {
+              "@type": "T8_MOUNTUPGRADE_COUGAR_KEEPER",
+              "@chance": "0.000132"
+            }
+          ],
           "LootListReference": [
             {
-              "@name": "LOOT_KEEPER_FURNITURE",
-              "@chance": "0.000321"
-            },
-            {
-              "@name": "T6_FRAGMENT_LOOT",
-              "@chance": "0.918852"
-            },
-            {
-              "@name": "T6_DIRECTLOOTDROP_WHITE",
-              "@chance": "0.199544"
-            },
-            {
-              "@name": "T7_DIRECTLOOTDROP_WHITE",
-              "@chance": "0.050552"
-            },
-            {
-              "@name": "T8_DIRECTLOOTDROP_WHITE",
-              "@chance": "0.012724"
-            },
-            {
-              "@name": "T5_DIRECTLOOTDROP_WHITE",
-              "@chance": "0.196619"
-            },
-            {
-              "@name": "T4_DIRECTLOOTDROP_WHITE",
-              "@chance": "0.191118"
-            },
-            {
-              "@name": "T6_LOOT_EXPEDITION_TOKEN_BOSS",
-              "@chance": "0.000161"
-            },
-            {
               "@name": "FAME_BOOKS_LOOT_MOBS",
-              "@chance": "0.098325"
+              "@chance": "0.088632"
             },
             {
-              "@name": "TREASURES_STANDARD_LOOT",
-              "@chance": "0.036079"
-            },
-            {
-              "@name": "LOOT_KEEPER_FACTION_CAPES",
-              "@chance": "0.003403"
-            },
-            {
-              "@name": "T6_LOOT_RD_TOKEN",
-              "@chance": "0.001667"
+              "@name": "T6_TRACKING_LOOT_SOLO"
             }
           ]
         },
@@ -2727,59 +2680,25 @@
           "@reference": "T5_MOB_TR_KEEPER_WITCH_BOSS"
         },
         "Loot": {
-          "Item": {
-            "@type": "UNIQUE_UNLOCK_LORE_KEEPER_04",
-            "@chance": "0.5",
-            "@cangetmodified": "false"
-          },
-          "Harvestable": {
-            "@type": "SILVERCOINS_LOOT_ROAMING_BOSS",
-            "@tier": "7"
-          },
+          "Item": [
+            {
+              "@type": "UNIQUE_UNLOCK_LORE_KEEPER_04",
+              "@chance": "0.5",
+              "@cangetmodified": "false",
+              "@ignoreforactivitychest": "true"
+            },
+            {
+              "@type": "T8_MOUNTUPGRADE_COUGAR_KEEPER",
+              "@chance": "0.000179"
+            }
+          ],
           "LootListReference": [
             {
-              "@name": "LOOT_KEEPER_FURNITURE",
-              "@chance": "0.000447"
-            },
-            {
-              "@name": "T7_FRAGMENT_LOOT",
-              "@chance": "0.931798"
-            },
-            {
-              "@name": "T7_DIRECTLOOTDROP_WHITE",
-              "@chance": "0.140976"
-            },
-            {
-              "@name": "T8_DIRECTLOOTDROP_WHITE",
-              "@chance": "0.035484"
-            },
-            {
-              "@name": "T6_DIRECTLOOTDROP_WHITE",
-              "@chance": "0.208679"
-            },
-            {
-              "@name": "T5_DIRECTLOOTDROP_WHITE",
-              "@chance": "0.13708"
-            },
-            {
-              "@name": "T7_LOOT_EXPEDITION_TOKEN_BOSS",
-              "@chance": "0.000225"
-            },
-            {
               "@name": "FAME_BOOKS_LOOT_MOBS",
-              "@chance": "0.131315"
+              "@chance": "0.113193"
             },
             {
-              "@name": "TREASURES_STANDARD_LOOT",
-              "@chance": "0.050307"
-            },
-            {
-              "@name": "LOOT_KEEPER_FACTION_CAPES",
-              "@chance": "0.003451"
-            },
-            {
-              "@name": "T7_LOOT_RD_TOKEN",
-              "@chance": "0.002324"
+              "@name": "T7_TRACKING_LOOT_SOLO"
             }
           ]
         },
@@ -2861,51 +2780,25 @@
           "@reference": "T5_MOB_TR_KEEPER_WITCH_BOSS"
         },
         "Loot": {
-          "Item": {
-            "@type": "UNIQUE_UNLOCK_LORE_KEEPER_04",
-            "@chance": "0.5",
-            "@cangetmodified": "false"
-          },
+          "Item": [
+            {
+              "@type": "UNIQUE_UNLOCK_LORE_KEEPER_04",
+              "@chance": "0.5",
+              "@cangetmodified": "false",
+              "@ignoreforactivitychest": "true"
+            },
+            {
+              "@type": "T8_MOUNTUPGRADE_COUGAR_KEEPER",
+              "@chance": "0.000244"
+            }
+          ],
           "LootListReference": [
             {
-              "@name": "LOOT_KEEPER_FURNITURE",
-              "@chance": "0.000646"
-            },
-            {
-              "@name": "T8_FRAGMENT_LOOT",
-              "@chance": "1.223391"
-            },
-            {
-              "@name": "T8_DIRECTLOOTDROP_WHITE",
-              "@chance": "0.102493"
-            },
-            {
-              "@name": "T7_DIRECTLOOTDROP_WHITE",
-              "@chance": "0.203602"
-            },
-            {
-              "@name": "T6_DIRECTLOOTDROP_WHITE",
-              "@chance": "0.20092"
-            },
-            {
-              "@name": "T8_LOOT_EXPEDITION_TOKEN_BOSS",
-              "@chance": "0.000324"
-            },
-            {
               "@name": "FAME_BOOKS_LOOT_MOBS",
-              "@chance": "0.180608"
+              "@chance": "0.149728"
             },
             {
-              "@name": "TREASURES_STANDARD_LOOT",
-              "@chance": "0.072655"
-            },
-            {
-              "@name": "LOOT_KEEPER_FACTION_CAPES",
-              "@chance": "0.004531"
-            },
-            {
-              "@name": "T8_LOOT_RD_TOKEN",
-              "@chance": "0.003356"
+              "@name": "T8_TRACKING_LOOT_SOLO"
             }
           ]
         },
@@ -3185,55 +3078,25 @@
           }
         },
         "Loot": {
-          "Item": {
-            "@type": "UNIQUE_UNLOCK_LORE_KEEPER_04",
-            "@chance": "2.5",
-            "@cangetmodified": "false"
-          },
-          "Harvestable": {
-            "@type": "SILVERCOINS_LOOT_VETERAN_BOSS",
-            "@tier": "5"
-          },
+          "Item": [
+            {
+              "@type": "UNIQUE_UNLOCK_LORE_KEEPER_04",
+              "@chance": "2.5",
+              "@cangetmodified": "false",
+              "@ignoreforactivitychest": "true"
+            },
+            {
+              "@type": "T8_MOUNTUPGRADE_COUGAR_KEEPER",
+              "@chance": "0.000833"
+            }
+          ],
           "LootListReference": [
             {
-              "@name": "LOOT_KEEPER_FURNITURE",
-              "@chance": "0.000659"
-            },
-            {
-              "@name": "T5_DIRECTLOOTDROP_WHITE",
-              "@chance": "1.208467"
-            },
-            {
-              "@name": "T6_DIRECTLOOTDROP_WHITE",
-              "@chance": "0.30661"
-            },
-            {
-              "@name": "T7_DIRECTLOOTDROP_WHITE",
-              "@chance": "0.077676"
-            },
-            {
-              "@name": "T4_DIRECTLOOTDROP_WHITE",
-              "@chance": "1.174653"
-            },
-            {
-              "@name": "T3_DIRECTLOOTDROP_WHITE",
-              "@chance": "2.669432"
-            },
-            {
-              "@name": "T5_LOOT_EXPEDITION_TOKEN",
-              "@chance": "0.00003"
-            },
-            {
               "@name": "FAME_BOOKS_LOOT_MOBS",
-              "@chance": "0.029336"
+              "@chance": "0.658881"
             },
             {
-              "@name": "TREASURES_STANDARD_LOOT",
-              "@chance": "0.00675"
-            },
-            {
-              "@name": "T5_LOOT_RD_TOKEN",
-              "@chance": "0.000312"
+              "@name": "T5_TRACKING_LOOT_GROUP"
             }
           ]
         },
@@ -3316,63 +3179,25 @@
           "@reference": "T5_MOB_TR_KEEPER_WITCH_VETERAN_BOSS"
         },
         "Loot": {
-          "Item": {
-            "@type": "UNIQUE_UNLOCK_LORE_KEEPER_04",
-            "@chance": "0.5",
-            "@cangetmodified": "false"
-          },
-          "Harvestable": {
-            "@type": "SILVERCOINS_LOOT_VETERAN_BOSS",
-            "@tier": "6"
-          },
+          "Item": [
+            {
+              "@type": "UNIQUE_UNLOCK_LORE_KEEPER_04",
+              "@chance": "0.5",
+              "@cangetmodified": "false",
+              "@ignoreforactivitychest": "true"
+            },
+            {
+              "@type": "T8_MOUNTUPGRADE_COUGAR_KEEPER",
+              "@chance": "0.001135"
+            }
+          ],
           "LootListReference": [
             {
-              "@name": "LOOT_KEEPER_FURNITURE",
-              "@chance": "0.005559"
-            },
-            {
-              "@name": "T6_FRAGMENT_LOOT",
-              "@chance": "22.97129"
-            },
-            {
-              "@name": "T6_DIRECTLOOTDROP_WHITE",
-              "@chance": "3.458755"
-            },
-            {
-              "@name": "T7_DIRECTLOOTDROP_WHITE",
-              "@chance": "0.876231"
-            },
-            {
-              "@name": "T8_DIRECTLOOTDROP_WHITE",
-              "@chance": "0.220548"
-            },
-            {
-              "@name": "T5_DIRECTLOOTDROP_WHITE",
-              "@chance": "3.408067"
-            },
-            {
-              "@name": "T4_DIRECTLOOTDROP_WHITE",
-              "@chance": "3.312707"
-            },
-            {
-              "@name": "T6_LOOT_EXPEDITION_TOKEN_BOSS",
-              "@chance": "0.002793"
-            },
-            {
               "@name": "FAME_BOOKS_LOOT_MOBS",
-              "@chance": "0.983241"
+              "@chance": "0.886284"
             },
             {
-              "@name": "TREASURES_STANDARD_LOOT",
-              "@chance": "0.625363"
-            },
-            {
-              "@name": "LOOT_KEEPER_FACTION_CAPES",
-              "@chance": "0.085079"
-            },
-            {
-              "@name": "T6_LOOT_RD_TOKEN",
-              "@chance": "0.028889"
+              "@name": "T6_TRACKING_LOOT_GROUP"
             }
           ]
         },
@@ -3455,59 +3280,25 @@
           "@reference": "T5_MOB_TR_KEEPER_WITCH_VETERAN_BOSS"
         },
         "Loot": {
-          "Item": {
-            "@type": "UNIQUE_UNLOCK_LORE_KEEPER_04",
-            "@chance": "0.5",
-            "@cangetmodified": "false"
-          },
-          "Harvestable": {
-            "@type": "SILVERCOINS_LOOT_VETERAN_BOSS",
-            "@tier": "7"
-          },
+          "Item": [
+            {
+              "@type": "UNIQUE_UNLOCK_LORE_KEEPER_04",
+              "@chance": "0.5",
+              "@cangetmodified": "false",
+              "@ignoreforactivitychest": "true"
+            },
+            {
+              "@type": "T8_MOUNTUPGRADE_COUGAR_KEEPER",
+              "@chance": "0.001545"
+            }
+          ],
           "LootListReference": [
             {
-              "@name": "LOOT_KEEPER_FURNITURE",
-              "@chance": "0.007751"
-            },
-            {
-              "@name": "T7_FRAGMENT_LOOT",
-              "@chance": "23.294946"
-            },
-            {
-              "@name": "T7_DIRECTLOOTDROP_WHITE",
-              "@chance": "2.443586"
-            },
-            {
-              "@name": "T8_DIRECTLOOTDROP_WHITE",
-              "@chance": "0.615051"
-            },
-            {
-              "@name": "T6_DIRECTLOOTDROP_WHITE",
-              "@chance": "3.617097"
-            },
-            {
-              "@name": "T5_DIRECTLOOTDROP_WHITE",
-              "@chance": "2.376059"
-            },
-            {
-              "@name": "T7_LOOT_EXPEDITION_TOKEN_BOSS",
-              "@chance": "0.003894"
-            },
-            {
               "@name": "FAME_BOOKS_LOOT_MOBS",
-              "@chance": "1.313114"
+              "@chance": "1.131903"
             },
             {
-              "@name": "TREASURES_STANDARD_LOOT",
-              "@chance": "0.87199"
-            },
-            {
-              "@name": "LOOT_KEEPER_FACTION_CAPES",
-              "@chance": "0.086278"
-            },
-            {
-              "@name": "T7_LOOT_RD_TOKEN",
-              "@chance": "0.040282"
+              "@name": "T7_TRACKING_LOOT_GROUP"
             }
           ]
         },
@@ -3590,51 +3381,25 @@
           "@reference": "T5_MOB_TR_KEEPER_WITCH_VETERAN_BOSS"
         },
         "Loot": {
-          "Item": {
-            "@type": "UNIQUE_UNLOCK_LORE_KEEPER_04",
-            "@chance": "0.5",
-            "@cangetmodified": "false"
-          },
+          "Item": [
+            {
+              "@type": "UNIQUE_UNLOCK_LORE_KEEPER_04",
+              "@chance": "0.5",
+              "@cangetmodified": "false",
+              "@ignoreforactivitychest": "true"
+            },
+            {
+              "@type": "T8_MOUNTUPGRADE_COUGAR_KEEPER",
+              "@chance": "0.002104"
+            }
+          ],
           "LootListReference": [
             {
-              "@name": "LOOT_KEEPER_FURNITURE",
-              "@chance": "0.011194"
-            },
-            {
-              "@name": "T8_FRAGMENT_LOOT",
-              "@chance": "30.584775"
-            },
-            {
-              "@name": "T8_DIRECTLOOTDROP_WHITE",
-              "@chance": "1.77655"
-            },
-            {
-              "@name": "T7_DIRECTLOOTDROP_WHITE",
-              "@chance": "3.529099"
-            },
-            {
-              "@name": "T6_DIRECTLOOTDROP_WHITE",
-              "@chance": "3.482612"
-            },
-            {
-              "@name": "T8_LOOT_EXPEDITION_TOKEN_BOSS",
-              "@chance": "0.005624"
-            },
-            {
               "@name": "FAME_BOOKS_LOOT_MOBS",
-              "@chance": "1.806035"
+              "@chance": "1.497276"
             },
             {
-              "@name": "TREASURES_STANDARD_LOOT",
-              "@chance": "1.259353"
-            },
-            {
-              "@name": "LOOT_KEEPER_FACTION_CAPES",
-              "@chance": "0.113277"
-            },
-            {
-              "@name": "T8_LOOT_RD_TOKEN",
-              "@chance": "0.058176"
+              "@name": "T8_TRACKING_LOOT_GROUP"
             }
           ]
         },
@@ -4292,7 +4057,8 @@
           "Item": {
             "@type": "UNIQUE_UNLOCK_LORE_KEEPER_05",
             "@chance": "0.25",
-            "@cangetmodified": "false"
+            "@cangetmodified": "false",
+            "@ignoreforactivitychest": "true"
           },
           "LootListReference": [
             {
@@ -5791,7 +5557,8 @@
             {
               "@type": "UNIQUE_UNLOCK_LORE_KEEPER_05",
               "@chance": "0.25",
-              "@cangetmodified": "false"
+              "@cangetmodified": "false",
+              "@ignoreforactivitychest": "true"
             },
             {
               "@type": "T8_MOUNTUPGRADE_COUGAR_KEEPER",
@@ -5885,7 +5652,8 @@
             {
               "@type": "UNIQUE_UNLOCK_LORE_KEEPER_05",
               "@chance": "0.25",
-              "@cangetmodified": "false"
+              "@cangetmodified": "false",
+              "@ignoreforactivitychest": "true"
             },
             {
               "@type": "T8_MOUNTUPGRADE_COUGAR_KEEPER",
@@ -5979,7 +5747,8 @@
             {
               "@type": "UNIQUE_UNLOCK_LORE_KEEPER_05",
               "@chance": "0.25",
-              "@cangetmodified": "false"
+              "@cangetmodified": "false",
+              "@ignoreforactivitychest": "true"
             },
             {
               "@type": "T8_MOUNTUPGRADE_COUGAR_KEEPER",
@@ -6073,7 +5842,8 @@
             {
               "@type": "UNIQUE_UNLOCK_LORE_KEEPER_05",
               "@chance": "0.25",
-              "@cangetmodified": "false"
+              "@cangetmodified": "false",
+              "@ignoreforactivitychest": "true"
             },
             {
               "@type": "T8_MOUNTUPGRADE_COUGAR_KEEPER",
@@ -6167,7 +5937,8 @@
             {
               "@type": "UNIQUE_UNLOCK_LORE_KEEPER_05",
               "@chance": "0.25",
-              "@cangetmodified": "false"
+              "@cangetmodified": "false",
+              "@ignoreforactivitychest": "true"
             },
             {
               "@type": "T8_MOUNTUPGRADE_COUGAR_KEEPER",
@@ -8126,7 +7897,8 @@
             {
               "@type": "UNIQUE_UNLOCK_LORE_KEEPER_05",
               "@chance": "0.25",
-              "@cangetmodified": "false"
+              "@cangetmodified": "false",
+              "@ignoreforactivitychest": "true"
             },
             {
               "@type": "T8_MOUNTUPGRADE_COUGAR_KEEPER",
@@ -8229,7 +8001,8 @@
             {
               "@type": "UNIQUE_UNLOCK_LORE_KEEPER_05",
               "@chance": "0.25",
-              "@cangetmodified": "false"
+              "@cangetmodified": "false",
+              "@ignoreforactivitychest": "true"
             },
             {
               "@type": "T8_MOUNTUPGRADE_COUGAR_KEEPER",
@@ -8332,7 +8105,8 @@
             {
               "@type": "UNIQUE_UNLOCK_LORE_KEEPER_05",
               "@chance": "0.25",
-              "@cangetmodified": "false"
+              "@cangetmodified": "false",
+              "@ignoreforactivitychest": "true"
             },
             {
               "@type": "T8_MOUNTUPGRADE_COUGAR_KEEPER",
@@ -8435,7 +8209,8 @@
             {
               "@type": "UNIQUE_UNLOCK_LORE_KEEPER_05",
               "@chance": "0.25",
-              "@cangetmodified": "false"
+              "@cangetmodified": "false",
+              "@ignoreforactivitychest": "true"
             },
             {
               "@type": "T8_MOUNTUPGRADE_COUGAR_KEEPER",
@@ -8538,7 +8313,8 @@
             {
               "@type": "UNIQUE_UNLOCK_LORE_KEEPER_05",
               "@chance": "0.25",
-              "@cangetmodified": "false"
+              "@cangetmodified": "false",
+              "@ignoreforactivitychest": "true"
             },
             {
               "@type": "T8_MOUNTUPGRADE_COUGAR_KEEPER",
@@ -30689,7 +30465,7 @@
             }
           ],
           "Item": {
-            "@type": "UNIQUE_CONSUMABLE_EVENT_ANNIVERSARY_CAKE_2025",
+            "@type": "UNIQUE_CONSUMABLE_EVENT_ANNIVERSARY_CAKE_2026",
             "@chance": "0.876800"
           }
         },
@@ -30837,7 +30613,7 @@
             }
           ],
           "Item": {
-            "@type": "UNIQUE_CONSUMABLE_EVENT_ANNIVERSARY_CAKE_2025",
+            "@type": "UNIQUE_CONSUMABLE_EVENT_ANNIVERSARY_CAKE_2026",
             "@chance": "0.876800"
           }
         },
@@ -186396,12 +186172,12 @@
         "@physicalarmor": "131",
         "@magicresistance": "135",
         "@crowdcontrolresistance": "838",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "MORGANABLOODHOUND2",
         "@avatarring": "RING_MOB_ELITE",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@energyrewardspell": "ENERGYREWARD",
@@ -186409,6 +186185,8 @@
         "@mobvalue": "286",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "@reference": "T6_MOB_MORGANA_BLOODHOUND"
         },
@@ -186840,12 +186618,12 @@
         "@physicalarmor": "147",
         "@magicresistance": "163",
         "@crowdcontrolresistance": "1311",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "MORGANABLOODHOUND2",
         "@avatarring": "RING_MOB_ELITE",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@energyrewardspell": "ENERGYREWARD",
@@ -186853,6 +186631,8 @@
         "@mobvalue": "482",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "@reference": "T6_MOB_MORGANA_BLOODHOUND"
         },
@@ -186950,12 +186730,12 @@
         "@physicalarmor": "131",
         "@magicresistance": "135",
         "@crowdcontrolresistance": "84",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "MORGANARECRUIT1",
         "@avatarring": "RING_MOB_ELITE",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@energyrewardspell": "ENERGYREWARD",
@@ -186963,6 +186743,8 @@
         "@mobvalue": "286",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "Loot": {
           "Harvestable": {
             "@type": "SILVERCOINS_LOOT_ELITE_TRASH",
@@ -187166,12 +186948,12 @@
         "@physicalarmor": "147",
         "@magicresistance": "163",
         "@crowdcontrolresistance": "131",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "MORGANARECRUIT1",
         "@avatarring": "RING_MOB_ELITE",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@energyrewardspell": "ENERGYREWARD",
@@ -187179,6 +186961,8 @@
         "@mobvalue": "482",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "Loot": {
           "Harvestable": {
             "@type": "SILVERCOINS_LOOT_ELITE_TRASH",
@@ -188751,12 +188535,12 @@
         "@physicalarmor": "234",
         "@magicresistance": "208",
         "@crowdcontrolresistance": "151",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "MORGANASOLDIER2",
         "@avatarring": "RING_MOB_ELITE",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@energyrewardspell": "ENERGYREWARD",
@@ -188764,6 +188548,8 @@
         "@mobvalue": "2284",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "Behaviour": {
             "Spell": [
@@ -188936,12 +188722,12 @@
         "@physicalarmor": "333",
         "@magicresistance": "277",
         "@crowdcontrolresistance": "419",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "MORGANASOLDIERMINIBOSS2",
         "@avatarring": "RING_MOB_BOSS",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@lootprefab": "T0_LOOTCHEST_MINIBOSS",
@@ -188950,6 +188736,8 @@
         "@mobvalue": "8566",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "@reference": "T6_MOB_MORGANA_SOLDIER_ELITE"
         },
@@ -190160,12 +189948,12 @@
         "@physicalarmor": "269",
         "@magicresistance": "250",
         "@crowdcontrolresistance": "236",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "MORGANASOLDIER2",
         "@avatarring": "RING_MOB_ELITE",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@energyrewardspell": "ENERGYREWARD",
@@ -190173,6 +189961,8 @@
         "@mobvalue": "3859",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "@reference": "T6_MOB_MORGANA_SOLDIER_ELITE"
         },
@@ -190275,12 +190065,12 @@
         "@physicalarmor": "384",
         "@magicresistance": "333",
         "@crowdcontrolresistance": "655",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "MORGANASOLDIERMINIBOSS2",
         "@avatarring": "RING_MOB_BOSS",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@lootprefab": "T0_LOOTCHEST_MINIBOSS",
@@ -190289,6 +190079,8 @@
         "@mobvalue": "14472",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "@reference": "T6_MOB_MORGANA_SOLDIER_ELITE"
         },
@@ -192186,12 +191978,12 @@
         "@physicalarmor": "234",
         "@magicresistance": "208",
         "@crowdcontrolresistance": "101",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "MORGANACROSSBOWMAN2",
         "@avatarring": "RING_MOB_ELITE",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@energyrewardspell": "ENERGYREWARD",
@@ -192199,6 +191991,8 @@
         "@mobvalue": "2284",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "Behaviour": {
             "Spell": [
@@ -192361,12 +192155,12 @@
         "@physicalarmor": "333",
         "@magicresistance": "277",
         "@crowdcontrolresistance": "279",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "MORGANACROSSBOWMAN2",
         "@avatarring": "RING_MOB_BOSS",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@lootprefab": "T0_LOOTCHEST_MINIBOSS",
@@ -192375,6 +192169,8 @@
         "@mobvalue": "8566",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "@reference": "T6_MOB_MORGANA_CROSSBOWMAN_ELITE"
         },
@@ -193661,12 +193457,12 @@
         "@physicalarmor": "269",
         "@magicresistance": "250",
         "@crowdcontrolresistance": "157",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "MORGANACROSSBOWMAN2",
         "@avatarring": "RING_MOB_ELITE",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@energyrewardspell": "ENERGYREWARD",
@@ -193674,6 +193470,8 @@
         "@mobvalue": "3859",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "@reference": "T6_MOB_MORGANA_CROSSBOWMAN_ELITE"
         },
@@ -193782,12 +193580,12 @@
         "@physicalarmor": "384",
         "@magicresistance": "333",
         "@crowdcontrolresistance": "437",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "MORGANACROSSBOWMAN2",
         "@avatarring": "RING_MOB_BOSS",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@lootprefab": "T0_LOOTCHEST_MINIBOSS",
@@ -193796,6 +193594,8 @@
         "@mobvalue": "14472",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "@reference": "T6_MOB_MORGANA_CROSSBOWMAN_ELITE"
         },
@@ -197619,12 +197419,12 @@
         "@physicalarmor": "234",
         "@magicresistance": "208",
         "@crowdcontrolresistance": "101",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "MORGANACULTIST2",
         "@avatarring": "RING_MOB_ELITE",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@energyrewardspell": "ENERGYREWARD",
@@ -197632,6 +197432,8 @@
         "@mobvalue": "2284",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "Variables": {
             "Var": {
@@ -197866,12 +197668,12 @@
         "@physicalarmor": "269",
         "@magicresistance": "250",
         "@crowdcontrolresistance": "157",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "MORGANACULTIST2",
         "@avatarring": "RING_MOB_ELITE",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@energyrewardspell": "ENERGYREWARD",
@@ -197879,6 +197681,8 @@
         "@mobvalue": "3859",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "@reference": "T6_MOB_MORGANA_CULTIST_ELITE"
         },
@@ -197987,12 +197791,12 @@
         "@physicalarmor": "333",
         "@magicresistance": "277",
         "@crowdcontrolresistance": "279",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "MORGANACULTIST2",
         "@avatarring": "RING_MOB_BOSS",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@lootprefab": "T0_LOOTCHEST_MINIBOSS",
@@ -198001,6 +197805,8 @@
         "@mobvalue": "8566",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "@reference": "T6_MOB_MORGANA_CULTIST_ELITE"
         },
@@ -198124,12 +197930,12 @@
         "@physicalarmor": "384",
         "@magicresistance": "333",
         "@crowdcontrolresistance": "437",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "MORGANACULTIST2",
         "@avatarring": "RING_MOB_BOSS",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@lootprefab": "T0_LOOTCHEST_MINIBOSS",
@@ -198138,6 +197944,8 @@
         "@mobvalue": "14472",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "@reference": "T6_MOB_MORGANA_CULTIST_ELITE"
         },
@@ -198254,12 +198062,12 @@
         "@physicalarmor": "333",
         "@magicresistance": "277",
         "@crowdcontrolresistance": "55849",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "MORGANACULTIST2",
         "@avatarring": "RING_MOB_BOSS",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@lootprefab": "T0_LOOTCHEST_RAIDBOSS",
@@ -198268,6 +198076,8 @@
         "@mobvalue": "71384",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "@reference": "T6_MOB_MORGANA_CULTIST_VETERAN_BOSS"
         },
@@ -198951,12 +198761,12 @@
         "@physicalarmor": "234",
         "@magicresistance": "208",
         "@crowdcontrolresistance": "101",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "MORGANACONJURER1",
         "@avatarring": "RING_MOB_ELITE",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@energyrewardspell": "ENERGYREWARD",
@@ -198964,6 +198774,8 @@
         "@mobvalue": "2284",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "@reference": "T6_MOB_MORGANA_BOMBARDIER"
         },
@@ -199086,12 +198898,12 @@
         "@physicalarmor": "269",
         "@magicresistance": "250",
         "@crowdcontrolresistance": "157",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "MORGANACONJURER1",
         "@avatarring": "RING_MOB_ELITE",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@energyrewardspell": "ENERGYREWARD",
@@ -199099,6 +198911,8 @@
         "@mobvalue": "3859",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "@reference": "T6_MOB_MORGANA_BOMBARDIER"
         },
@@ -201512,12 +201326,12 @@
         "@physicalarmor": "234",
         "@magicresistance": "208",
         "@crowdcontrolresistance": "101",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "MORGANAINFESTOR1",
         "@avatarring": "RING_MOB_ELITE",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@energyrewardspell": "ENERGYREWARD",
@@ -201525,6 +201339,8 @@
         "@mobvalue": "2284",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "Behaviour": {
             "Spell": [
@@ -201678,12 +201494,12 @@
         "@physicalarmor": "269",
         "@magicresistance": "250",
         "@crowdcontrolresistance": "157",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "MORGANAINFESTOR1",
         "@avatarring": "RING_MOB_ELITE",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@energyrewardspell": "ENERGYREWARD",
@@ -201691,6 +201507,8 @@
         "@mobvalue": "3859",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "@reference": "T6_MOB_MORGANA_INFESTOR_ELITE"
         },
@@ -203538,12 +203356,12 @@
         "@physicalarmor": "234",
         "@magicresistance": "208",
         "@crowdcontrolresistance": "201",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "MORGANAKNIGHT1",
         "@avatarring": "RING_MOB_ELITE",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@energyrewardspell": "ENERGYREWARD",
@@ -203551,6 +203369,8 @@
         "@mobvalue": "2284",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "Behaviour": {
             "Spell": [
@@ -203775,12 +203595,12 @@
         "@physicalarmor": "333",
         "@magicresistance": "277",
         "@crowdcontrolresistance": "1396",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "MORGANAKNIGHT1",
         "@avatarring": "RING_MOB_BOSS",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@lootprefab": "T0_LOOTCHEST_MINIBOSS",
@@ -203789,6 +203609,8 @@
         "@mobvalue": "8566",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "@reference": "T6_MOB_MORGANA_KNIGHT_ELITE"
         },
@@ -203903,12 +203725,12 @@
         "@physicalarmor": "333",
         "@magicresistance": "277",
         "@crowdcontrolresistance": "55849",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "MORGANACHAMPION1",
         "@avatarring": "RING_MOB_BOSS",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@lootprefab": "T0_LOOTCHEST_RAIDBOSS",
@@ -203917,6 +203739,8 @@
         "@mobvalue": "71384",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "Behaviour": {
             "Spell": [
@@ -205437,12 +205261,12 @@
         "@physicalarmor": "269",
         "@magicresistance": "250",
         "@crowdcontrolresistance": "786",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "MORGANAKNIGHT1",
         "@avatarring": "RING_MOB_ELITE",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@energyrewardspell": "ENERGYREWARD",
@@ -205450,6 +205274,8 @@
         "@mobvalue": "3859",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "@reference": "T6_MOB_MORGANA_KNIGHT_ELITE"
         },
@@ -205552,12 +205378,12 @@
         "@physicalarmor": "384",
         "@magicresistance": "333",
         "@crowdcontrolresistance": "2184",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "MORGANAKNIGHT1",
         "@avatarring": "RING_MOB_BOSS",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@lootprefab": "T0_LOOTCHEST_MINIBOSS",
@@ -205566,6 +205392,8 @@
         "@mobvalue": "14472",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "@reference": "T6_MOB_MORGANA_KNIGHT_ELITE"
         },
@@ -205672,12 +205500,12 @@
         "@physicalarmor": "384",
         "@magicresistance": "333",
         "@crowdcontrolresistance": "87380",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "MORGANACHAMPION1",
         "@avatarring": "RING_MOB_BOSS",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@lootprefab": "T0_LOOTCHEST_RAIDBOSS",
@@ -205686,6 +205514,8 @@
         "@mobvalue": "120596",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "@reference": "T6_MOB_MORGANA_KNIGHT_ELITE_BOSS"
         },
@@ -206582,12 +206412,12 @@
         "@physicalarmor": "234",
         "@magicresistance": "208",
         "@crowdcontrolresistance": "101",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "MORGANAGIANT1",
         "@avatarring": "RING_MOB_ELITE",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@energyrewardspell": "ENERGYREWARD",
@@ -206600,6 +206430,8 @@
         "@attackupperbodyblendtime": "0.015",
         "@castupperbodyblendtime": "0.015",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "Behaviour": {
             "Spell": [
@@ -206744,12 +206576,12 @@
         "@physicalarmor": "269",
         "@magicresistance": "250",
         "@crowdcontrolresistance": "157",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "MORGANAGIANT1",
         "@avatarring": "RING_MOB_ELITE",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@energyrewardspell": "ENERGYREWARD",
@@ -206762,6 +206594,8 @@
         "@attackupperbodyblendtime": "0.015",
         "@castupperbodyblendtime": "0.015",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "@reference": "T6_MOB_MORGANA_GIANT_ELITE"
         },
@@ -206876,12 +206710,12 @@
         "@physicalarmor": "234",
         "@magicresistance": "208",
         "@crowdcontrolresistance": "101",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "MORGANARAVEN1",
         "@avatarring": "RING_MOB_ELITE",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@energyrewardspell": "ENERGYREWARD",
@@ -206891,6 +206725,8 @@
         "@mobvalue": "2284",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "@reference": "T6_MOB_MORGANA_RAVEN_VETERAN_WEAK"
         },
@@ -207000,12 +206836,12 @@
         "@physicalarmor": "269",
         "@magicresistance": "250",
         "@crowdcontrolresistance": "157",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "MORGANARAVEN1",
         "@avatarring": "RING_MOB_ELITE",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@energyrewardspell": "ENERGYREWARD",
@@ -207015,6 +206851,8 @@
         "@mobvalue": "3859",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "@reference": "T6_MOB_MORGANA_RAVEN_VETERAN_WEAK"
         },
@@ -207420,18 +207258,20 @@
         "@physicalarmor": "131",
         "@magicresistance": "135",
         "@crowdcontrolresistance": "84",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "MORGANADEMONIMP1",
         "@avatarring": "RING_MOB_ELITE",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "0.2",
         "@energyrewardspell": "ENERGYREWARD",
         "@energyreward": "8",
         "@mobvalue": "0",
         "@category": "homebase",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "DeathSpells": {
           "deathspell": {
             "@name": "DEMON_IMP_DEATH_AOE",
@@ -207637,18 +207477,20 @@
         "@physicalarmor": "147",
         "@magicresistance": "163",
         "@crowdcontrolresistance": "131",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "MORGANADEMONIMP1",
         "@avatarring": "RING_MOB_ELITE",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "0.2",
         "@energyrewardspell": "ENERGYREWARD",
         "@energyreward": "11",
         "@mobvalue": "0",
         "@category": "homebase",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "DeathSpells": {
           "deathspell": {
             "@name": "DEMON_IMP_DEATH_AOE",
@@ -208248,12 +208090,12 @@
         "@physicalarmor": "333",
         "@magicresistance": "277",
         "@crowdcontrolresistance": "55849",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "MORGANADEMONHALF1",
         "@avatarring": "RING_MOB_BOSS",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@immunetoforcedmovement": "true",
@@ -208264,6 +208106,8 @@
         "@mobvalue": "71384",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "Behaviour": {
             "Spell": [
@@ -208622,12 +208466,12 @@
         "@physicalarmor": "384",
         "@magicresistance": "333",
         "@crowdcontrolresistance": "87380",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "MORGANADEMONHALF1",
         "@avatarring": "RING_MOB_BOSS",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@immunetoforcedmovement": "true",
@@ -208638,6 +208482,8 @@
         "@mobvalue": "120596",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "Behaviour": {
             "Spell": [
@@ -243879,12 +243725,12 @@
         "@physicalarmor": "118",
         "@magicresistance": "118",
         "@crowdcontrolresistance": "57",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "UNDEADSKELETONSWORD1",
         "@avatarring": "RING_MOB_ELITE",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "0.2",
         "@energyrewardspell": "ENERGYREWARD",
@@ -243892,6 +243738,8 @@
         "@namelocatag": "@MOB_T4_MOB_UNDEAD_SKELETON_SUMMON",
         "@mobvalue": "0",
         "@category": "homebase",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AudioInfo": {
           "@name": "MOB_UNDEAD_SUMMONED_SWORD_SKELETON",
           "@threatlevel": "0"
@@ -244218,18 +244066,20 @@
         "@physicalarmor": "137",
         "@magicresistance": "147",
         "@crowdcontrolresistance": "104",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "UNDEADSKELETONSWORD1",
         "@avatarring": "RING_MOB_ELITE",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "0.2",
         "@energyrewardspell": "ENERGYREWARD",
         "@energyreward": "90",
         "@mobvalue": "0",
         "@category": "homebase",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AudioInfo": {
           "@name": "MOB_UNDEAD_SUMMONED_SWORD_SKELETON",
           "@threatlevel": "0"
@@ -247256,12 +247106,12 @@
         "@physicalarmor": "118",
         "@magicresistance": "118",
         "@crowdcontrolresistance": "57",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "UNDEADSKELETONSWORD1",
         "@avatarring": "RING_MOB_ELITE",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@energyrewardspell": "ENERGYREWARD",
@@ -247269,6 +247119,8 @@
         "@mobvalue": "159",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "@reference": "T4_MOB_UNDEAD_SKELETON"
         },
@@ -247897,12 +247749,12 @@
         "@physicalarmor": "147",
         "@magicresistance": "163",
         "@crowdcontrolresistance": "131",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "UNDEADSKELETONSWORD1",
         "@avatarring": "RING_MOB_ELITE",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@energyrewardspell": "ENERGYREWARD",
@@ -247911,6 +247763,8 @@
         "@mobvalue": "482",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "@reference": "T4_MOB_UNDEAD_SKELETON"
         },
@@ -248219,12 +248073,12 @@
         "@physicalarmor": "118",
         "@magicresistance": "118",
         "@crowdcontrolresistance": "57",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "UNDEADSKELETONBRITTLE2",
         "@avatarring": "RING_MOB_ELITE",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@energyrewardspell": "ENERGYREWARD",
@@ -248232,6 +248086,8 @@
         "@mobvalue": "159",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "Loot": {
           "Harvestable": {
             "@type": "SILVERCOINS_LOOT_ELITE_TRASH",
@@ -248538,12 +248394,12 @@
         "@physicalarmor": "137",
         "@magicresistance": "147",
         "@crowdcontrolresistance": "104",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "UNDEADSKELETONBRITTLE2",
         "@avatarring": "RING_MOB_ELITE",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@energyrewardspell": "ENERGYREWARD",
@@ -248551,6 +248407,8 @@
         "@mobvalue": "365",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "Loot": {
           "Harvestable": {
             "@type": "SILVERCOINS_LOOT_ELITE_TRASH",
@@ -248847,12 +248705,12 @@
         "@physicalarmor": "147",
         "@magicresistance": "163",
         "@crowdcontrolresistance": "131",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "UNDEADSKELETONBRITTLE2",
         "@avatarring": "RING_MOB_ELITE",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@energyrewardspell": "ENERGYREWARD",
@@ -248861,6 +248719,8 @@
         "@mobvalue": "482",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "Loot": {
           "Harvestable": {
             "@type": "SILVERCOINS_LOOT_ELITE_TRASH",
@@ -249194,12 +249054,12 @@
         "@physicalarmor": "118",
         "@magicresistance": "118",
         "@crowdcontrolresistance": "57",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "UNDEADSKELETONBRITTLE2",
         "@avatarring": "RING_MOB_ELITE",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@energyrewardspell": "ENERGYREWARD",
@@ -249207,6 +249067,8 @@
         "@mobvalue": "159",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "@reference": "T4_MOB_UNDEAD_SKELETON_RANGED"
         },
@@ -249544,12 +249406,12 @@
         "@physicalarmor": "137",
         "@magicresistance": "147",
         "@crowdcontrolresistance": "104",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "UNDEADSKELETONBRITTLE2",
         "@avatarring": "RING_MOB_ELITE",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@energyrewardspell": "ENERGYREWARD",
@@ -249557,6 +249419,8 @@
         "@mobvalue": "365",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "@reference": "T4_MOB_UNDEAD_SKELETON_RANGED"
         },
@@ -250482,12 +250346,12 @@
         "@physicalarmor": "199",
         "@magicresistance": "182",
         "@crowdcontrolresistance": "57",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "UNDEADGHOUL1",
         "@avatarring": "RING_MOB_ELITE",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@energyrewardspell": "ENERGYREWARD",
@@ -250495,6 +250359,8 @@
         "@mobvalue": "159",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "Behaviour": {
             "Spell": [
@@ -251193,12 +251059,12 @@
         "@physicalarmor": "248",
         "@magicresistance": "226",
         "@crowdcontrolresistance": "104",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "UNDEADGHOUL1",
         "@avatarring": "RING_MOB_ELITE",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@energyrewardspell": "ENERGYREWARD",
@@ -251206,6 +251072,8 @@
         "@mobvalue": "365",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "@reference": "T4_MOB_UNDEAD_GHOUL_ELITE"
         },
@@ -251506,12 +251374,12 @@
         "@physicalarmor": "269",
         "@magicresistance": "250",
         "@crowdcontrolresistance": "131",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "UNDEADGHOUL1",
         "@avatarring": "RING_MOB_ELITE",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@energyrewardspell": "ENERGYREWARD",
@@ -251519,6 +251387,8 @@
         "@mobvalue": "482",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "@reference": "T4_MOB_UNDEAD_GHOUL_ELITE"
         },
@@ -254193,12 +254063,12 @@
         "@physicalarmor": "199",
         "@magicresistance": "182",
         "@crowdcontrolresistance": "69",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "UNDEADSOLDIER2",
         "@avatarring": "RING_MOB_ELITE",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@energyrewardspell": "ENERGYREWARD",
@@ -254206,6 +254076,8 @@
         "@mobvalue": "1274",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "@reference": "T4_MOB_UNDEAD_SOLDIER"
         },
@@ -254312,12 +254184,12 @@
         "@physicalarmor": "276",
         "@magicresistance": "243",
         "@crowdcontrolresistance": "192",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "UNDEADSOLDIERMINIBOSS2",
         "@avatarring": "RING_MOB_BOSS",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@lootprefab": "T0_LOOTCHEST_MINIBOSS",
@@ -254326,6 +254198,8 @@
         "@mobvalue": "4776",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "@reference": "T4_MOB_UNDEAD_SOLDIER"
         },
@@ -255354,12 +255228,12 @@
         "@physicalarmor": "248",
         "@magicresistance": "226",
         "@crowdcontrolresistance": "125",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "UNDEADSOLDIER2",
         "@avatarring": "RING_MOB_ELITE",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@energyrewardspell": "ENERGYREWARD",
@@ -255367,6 +255241,8 @@
         "@mobvalue": "2917",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "@reference": "T4_MOB_UNDEAD_SOLDIER"
         },
@@ -255469,12 +255345,12 @@
         "@physicalarmor": "355",
         "@magicresistance": "301",
         "@crowdcontrolresistance": "346",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "UNDEADSOLDIERMINIBOSS2",
         "@avatarring": "RING_MOB_BOSS",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@lootprefab": "T0_LOOTCHEST_MINIBOSS",
@@ -255483,6 +255359,8 @@
         "@mobvalue": "10940",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "Behaviour": {
             "Spell": [
@@ -255864,12 +255742,12 @@
         "@physicalarmor": "269",
         "@magicresistance": "250",
         "@crowdcontrolresistance": "157",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "UNDEADSOLDIER2",
         "@avatarring": "RING_MOB_ELITE",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@energyrewardspell": "ENERGYREWARD",
@@ -255877,6 +255755,8 @@
         "@mobvalue": "3859",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "@reference": "T4_MOB_UNDEAD_SOLDIER"
         },
@@ -255975,12 +255855,12 @@
         "@physicalarmor": "384",
         "@magicresistance": "333",
         "@crowdcontrolresistance": "437",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "UNDEADSOLDIERMINIBOSS2",
         "@avatarring": "RING_MOB_BOSS",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@lootprefab": "T0_LOOTCHEST_MINIBOSS",
@@ -255989,6 +255869,8 @@
         "@mobvalue": "14472",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "@reference": "T7_MOB_UNDEAD_SOLDIER_ELITE_MINIBOSS"
         },
@@ -258119,12 +258001,12 @@
         "@physicalarmor": "248",
         "@magicresistance": "226",
         "@crowdcontrolresistance": "125",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "UNDEADKNIGHT1",
         "@avatarring": "RING_MOB_ELITE",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@energyrewardspell": "ENERGYREWARD",
@@ -258133,6 +258015,8 @@
         "@mobvalue": "2917",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "Behaviour": {
             "Spell": [
@@ -258262,12 +258146,12 @@
         "@physicalarmor": "269",
         "@magicresistance": "250",
         "@crowdcontrolresistance": "157",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "UNDEADKNIGHT1",
         "@avatarring": "RING_MOB_ELITE",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@energyrewardspell": "ENERGYREWARD",
@@ -258276,6 +258160,8 @@
         "@mobvalue": "3859",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "@reference": "T7_MOB_UNDEAD_KNIGHT_ELITE"
         },
@@ -259503,12 +259389,12 @@
         "@physicalarmor": "199",
         "@magicresistance": "182",
         "@crowdcontrolresistance": "69",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "UNDEADARCHER2",
         "@avatarring": "RING_MOB_ELITE",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@energyrewardspell": "ENERGYREWARD",
@@ -259516,6 +259402,8 @@
         "@mobvalue": "1274",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "Behaviour": {
             "Spell": [
@@ -259674,12 +259562,12 @@
         "@physicalarmor": "276",
         "@magicresistance": "243",
         "@crowdcontrolresistance": "192",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "UNDEADARCHERMINIBOSS2",
         "@avatarring": "RING_MOB_BOSS",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@lootprefab": "T0_LOOTCHEST_MINIBOSS",
@@ -259688,6 +259576,8 @@
         "@mobvalue": "4776",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "Behaviour": {
             "Spell": [
@@ -261058,12 +260948,12 @@
         "@physicalarmor": "248",
         "@magicresistance": "226",
         "@crowdcontrolresistance": "125",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "UNDEADARCHER2",
         "@avatarring": "RING_MOB_ELITE",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@energyrewardspell": "ENERGYREWARD",
@@ -261071,6 +260961,8 @@
         "@mobvalue": "2917",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "@reference": "T4_MOB_UNDEAD_ARCHER_ELITE"
         },
@@ -261182,12 +261074,12 @@
         "@physicalarmor": "355",
         "@magicresistance": "301",
         "@crowdcontrolresistance": "346",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "UNDEADARCHERMINIBOSS2",
         "@avatarring": "RING_MOB_BOSS",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@lootprefab": "T0_LOOTCHEST_MINIBOSS",
@@ -261196,6 +261088,8 @@
         "@mobvalue": "10940",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "Behaviour": {
             "Spell": [
@@ -261699,12 +261593,12 @@
         "@physicalarmor": "269",
         "@magicresistance": "250",
         "@crowdcontrolresistance": "157",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "UNDEADARCHER2",
         "@avatarring": "RING_MOB_ELITE",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@energyrewardspell": "ENERGYREWARD",
@@ -261712,6 +261606,8 @@
         "@mobvalue": "3859",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "@reference": "T4_MOB_UNDEAD_ARCHER_ELITE"
         },
@@ -263137,12 +263033,12 @@
         "@physicalarmor": "199",
         "@magicresistance": "182",
         "@crowdcontrolresistance": "69",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "UNDEADMAGE2",
         "@avatarring": "RING_MOB_ELITE",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@energyrewardspell": "ENERGYREWARD",
@@ -263150,6 +263046,8 @@
         "@mobvalue": "1274",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "Variables": {
             "Var": [
@@ -263330,12 +263228,12 @@
         "@physicalarmor": "276",
         "@magicresistance": "243",
         "@crowdcontrolresistance": "192",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "UNDEADMAGEMINIBOSS2",
         "@avatarring": "RING_MOB_BOSS",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@lootprefab": "T0_LOOTCHEST_MINIBOSS",
@@ -263344,6 +263242,8 @@
         "@mobvalue": "4776",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "Behaviour": {
             "Spell": [
@@ -265918,12 +265818,12 @@
         "@physicalarmor": "248",
         "@magicresistance": "226",
         "@crowdcontrolresistance": "125",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "UNDEADMAGE2",
         "@avatarring": "RING_MOB_ELITE",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@energyrewardspell": "ENERGYREWARD",
@@ -265931,6 +265831,8 @@
         "@mobvalue": "2917",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "@reference": "T4_MOB_UNDEAD_MAGE_ELITE"
         },
@@ -266045,12 +265947,12 @@
         "@physicalarmor": "355",
         "@magicresistance": "301",
         "@crowdcontrolresistance": "346",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "UNDEADMAGEMINIBOSS2",
         "@avatarring": "RING_MOB_BOSS",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@lootprefab": "T0_LOOTCHEST_MINIBOSS",
@@ -266059,6 +265961,8 @@
         "@mobvalue": "10940",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "Behaviour": {
             "Spell": [
@@ -266483,12 +266387,12 @@
         "@physicalarmor": "269",
         "@magicresistance": "250",
         "@crowdcontrolresistance": "157",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "UNDEADMAGE2",
         "@avatarring": "RING_MOB_ELITE",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@energyrewardspell": "ENERGYREWARD",
@@ -266496,6 +266400,8 @@
         "@mobvalue": "3859",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "@reference": "T4_MOB_UNDEAD_MAGE_ELITE"
         },
@@ -266606,12 +266512,12 @@
         "@physicalarmor": "384",
         "@magicresistance": "333",
         "@crowdcontrolresistance": "437",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "UNDEADMAGEMINIBOSS2",
         "@avatarring": "RING_MOB_BOSS",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@lootprefab": "T0_LOOTCHEST_MINIBOSS",
@@ -266620,6 +266526,8 @@
         "@mobvalue": "14472",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "@reference": "T7_MOB_UNDEAD_MAGE_ELITE_MINIBOSS"
         },
@@ -266969,12 +266877,12 @@
         "@physicalarmor": "199",
         "@magicresistance": "182",
         "@crowdcontrolresistance": "69",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "UNDEADSHADE1",
         "@avatarring": "RING_MOB_ELITE",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@energyrewardspell": "ENERGYREWARD",
@@ -266982,6 +266890,8 @@
         "@mobvalue": "1274",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "Events": {
             "Event": {
@@ -267380,12 +267290,12 @@
         "@physicalarmor": "248",
         "@magicresistance": "226",
         "@crowdcontrolresistance": "125",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "UNDEADSHADE1",
         "@avatarring": "RING_MOB_ELITE",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@energyrewardspell": "ENERGYREWARD",
@@ -267393,6 +267303,8 @@
         "@mobvalue": "2917",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "@reference": "T4_MOB_UNDEAD_SHADE_ELITE"
         },
@@ -267497,12 +267409,12 @@
         "@physicalarmor": "269",
         "@magicresistance": "250",
         "@crowdcontrolresistance": "157",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "UNDEADSHADE1",
         "@avatarring": "RING_MOB_ELITE",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@energyrewardspell": "ENERGYREWARD",
@@ -267510,6 +267422,8 @@
         "@mobvalue": "3859",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "@reference": "T4_MOB_UNDEAD_SHADE_ELITE"
         },
@@ -267924,12 +267838,12 @@
         "@physicalarmor": "199",
         "@magicresistance": "182",
         "@crowdcontrolresistance": "69",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "UNDEADSPECIALPULLER1",
         "@avatarring": "RING_MOB_ELITE",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@energyrewardspell": "ENERGYREWARD",
@@ -267937,6 +267851,8 @@
         "@mobvalue": "1274",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "@reference": "T4_MOB_UNDEAD_SPECIAL_PULLER_VETERAN"
         },
@@ -268332,12 +268248,12 @@
         "@physicalarmor": "248",
         "@magicresistance": "226",
         "@crowdcontrolresistance": "125",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "UNDEADSPECIALPULLER1",
         "@avatarring": "RING_MOB_ELITE",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@energyrewardspell": "ENERGYREWARD",
@@ -268345,6 +268261,8 @@
         "@mobvalue": "2917",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "@reference": "T7_MOB_UNDEAD_SPECIAL_PULLER"
         },
@@ -268668,12 +268586,12 @@
         "@physicalarmor": "269",
         "@magicresistance": "250",
         "@crowdcontrolresistance": "157",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "UNDEADSPECIALPULLER1",
         "@avatarring": "RING_MOB_ELITE",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@energyrewardspell": "ENERGYREWARD",
@@ -268681,6 +268599,8 @@
         "@mobvalue": "3859",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "@reference": "T7_MOB_UNDEAD_SPECIAL_PULLER"
         },
@@ -269017,12 +268937,12 @@
         "@physicalarmor": "199",
         "@magicresistance": "182",
         "@crowdcontrolresistance": "57",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "UNDEADSKELETONCURSED1",
         "@avatarring": "RING_MOB_ELITE",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@energyrewardspell": "ENERGYREWARD",
@@ -269030,6 +268950,8 @@
         "@mobvalue": "0",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "@reference": "T4_MOB_UNDEAD_SPECIAL_EXPLODING_SUMMON"
         },
@@ -269291,12 +269213,12 @@
         "@physicalarmor": "248",
         "@magicresistance": "226",
         "@crowdcontrolresistance": "104",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "UNDEADSKELETONCURSED1",
         "@avatarring": "RING_MOB_ELITE",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@energyrewardspell": "ENERGYREWARD",
@@ -269304,6 +269226,8 @@
         "@mobvalue": "0",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "@reference": "T4_MOB_UNDEAD_SPECIAL_EXPLODING_SUMMON"
         },
@@ -269921,12 +269845,12 @@
         "@physicalarmor": "276",
         "@magicresistance": "243",
         "@crowdcontrolresistance": "99999",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "UNDEADNECROMANCERBOSS1",
         "@avatarring": "RING_MOB_BOSS",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@lootprefab": "T0_LOOTCHEST_RAIDBOSS",
@@ -269935,6 +269859,8 @@
         "@mobvalue": "39800",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "Behaviour": {
             "Spell": [
@@ -270731,12 +270657,12 @@
         "@physicalarmor": "355",
         "@magicresistance": "301",
         "@crowdcontrolresistance": "99999",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "UNDEADNECROMANCERBOSS1",
         "@avatarring": "RING_MOB_BOSS",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@lootprefab": "T0_LOOTCHEST_RAIDBOSS",
@@ -270745,6 +270671,8 @@
         "@mobvalue": "91167",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "Behaviour": {
             "Spell": [
@@ -272833,12 +272761,12 @@
         "@physicalarmor": "276",
         "@magicresistance": "243",
         "@crowdcontrolresistance": "99999",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "UNDEADBOSSGENERAL1",
         "@avatarring": "RING_MOB_BOSS",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@lootprefab": "T0_LOOTCHEST_RAIDBOSS",
@@ -272847,6 +272775,8 @@
         "@mobvalue": "39800",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "@reference": "T4_MOB_UNDEAD_GENERAL_VETERAN_BOSS"
         },
@@ -273239,12 +273169,12 @@
         "@physicalarmor": "355",
         "@magicresistance": "301",
         "@crowdcontrolresistance": "99999",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "UNDEADBOSSGENERAL1",
         "@avatarring": "RING_MOB_BOSS",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@lootprefab": "T0_LOOTCHEST_RAIDBOSS",
@@ -273253,6 +273183,8 @@
         "@mobvalue": "91167",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "@reference": "T4_MOB_UNDEAD_GENERAL_VETERAN_BOSS"
         },
@@ -273368,12 +273300,12 @@
         "@physicalarmor": "384",
         "@magicresistance": "333",
         "@crowdcontrolresistance": "99999",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "UNDEADBOSSGENERAL1",
         "@avatarring": "RING_MOB_BOSS",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@lootprefab": "T0_LOOTCHEST_RAIDBOSS",
@@ -273383,6 +273315,8 @@
         "@mobvalue": "120596",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "@reference": "T4_MOB_UNDEAD_GENERAL_VETERAN_BOSS"
         },
@@ -274503,12 +274437,12 @@
         "@physicalarmor": "276",
         "@magicresistance": "243",
         "@crowdcontrolresistance": "38320",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "UNDEADHARVESTER1",
         "@avatarring": "RING_MOB_BOSS",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@lootprefab": "T0_LOOTCHEST_RAIDBOSS",
@@ -274518,6 +274452,8 @@
         "@mobvalue": "39800",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "Behaviour": {
             "Spell": [
@@ -274759,12 +274695,12 @@
         "@physicalarmor": "355",
         "@magicresistance": "301",
         "@crowdcontrolresistance": "69171",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "UNDEADHARVESTER1",
         "@avatarring": "RING_MOB_BOSS",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@lootprefab": "T0_LOOTCHEST_RAIDBOSS",
@@ -274774,6 +274710,8 @@
         "@mobvalue": "91167",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "Behaviour": {
             "Spell": [
@@ -275041,12 +274979,12 @@
         "@physicalarmor": "384",
         "@magicresistance": "333",
         "@crowdcontrolresistance": "87380",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "UNDEADHARVESTER1",
         "@avatarring": "RING_MOB_BOSS",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@lootprefab": "T0_LOOTCHEST_RAIDBOSS",
@@ -275056,6 +274994,8 @@
         "@mobvalue": "120596",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "@reference": "T7_MOB_UNDEAD_HARVESTER_ELITE_BOSS"
         },
@@ -275201,7 +275141,8 @@
           "Item": {
             "@type": "UNIQUE_UNLOCK_LORE_KEEPER_13",
             "@chance": "0.01",
-            "@cangetmodified": "false"
+            "@cangetmodified": "false",
+            "@ignoreforactivitychest": "true"
           },
           "Harvestable": {
             "@type": "ROCK_CRITTER_RANDOM_DUNGEON",
@@ -275326,13 +275267,15 @@
             {
               "@type": "UNIQUE_UNLOCK_LORE_KEEPER_02",
               "@chance": "0.01",
-              "@cangetmodified": "false"
+              "@cangetmodified": "false",
+              "@ignoreforactivitychest": "true"
             },
             {
               "@type": "UNIQUE_UNLOCK_LORE_KEEPER_03",
               "@chance": "0.01",
               "@cangetmodified": "false",
-              "@continent": "Outlands"
+              "@continent": "Outlands",
+              "@ignoreforactivitychest": "true"
             }
           ],
           "Harvestable": {
@@ -275646,13 +275589,15 @@
             {
               "@type": "UNIQUE_UNLOCK_LORE_KEEPER_02",
               "@chance": "0.01",
-              "@cangetmodified": "false"
+              "@cangetmodified": "false",
+              "@ignoreforactivitychest": "true"
             },
             {
               "@type": "UNIQUE_UNLOCK_LORE_KEEPER_03",
               "@chance": "0.01",
               "@cangetmodified": "false",
-              "@continent": "Outlands"
+              "@continent": "Outlands",
+              "@ignoreforactivitychest": "true"
             }
           ],
           "Harvestable": {
@@ -275994,13 +275939,15 @@
             {
               "@type": "UNIQUE_UNLOCK_LORE_KEEPER_02",
               "@chance": "0.01",
-              "@cangetmodified": "false"
+              "@cangetmodified": "false",
+              "@ignoreforactivitychest": "true"
             },
             {
               "@type": "UNIQUE_UNLOCK_LORE_KEEPER_03",
               "@chance": "0.01",
               "@cangetmodified": "false",
-              "@continent": "Outlands"
+              "@continent": "Outlands",
+              "@ignoreforactivitychest": "true"
             }
           ],
           "Harvestable": {
@@ -276345,13 +276292,15 @@
             {
               "@type": "UNIQUE_UNLOCK_LORE_KEEPER_02",
               "@chance": "0.01",
-              "@cangetmodified": "false"
+              "@cangetmodified": "false",
+              "@ignoreforactivitychest": "true"
             },
             {
               "@type": "UNIQUE_UNLOCK_LORE_KEEPER_03",
               "@chance": "0.01",
               "@cangetmodified": "false",
-              "@continent": "Outlands"
+              "@continent": "Outlands",
+              "@ignoreforactivitychest": "true"
             }
           ],
           "Harvestable": {
@@ -276736,13 +276685,15 @@
             {
               "@type": "UNIQUE_UNLOCK_LORE_KEEPER_02",
               "@chance": "0.01",
-              "@cangetmodified": "false"
+              "@cangetmodified": "false",
+              "@ignoreforactivitychest": "true"
             },
             {
               "@type": "UNIQUE_UNLOCK_LORE_KEEPER_03",
               "@chance": "0.01",
               "@cangetmodified": "false",
-              "@continent": "Outlands"
+              "@continent": "Outlands",
+              "@ignoreforactivitychest": "true"
             }
           ],
           "Harvestable": {
@@ -277049,13 +277000,15 @@
             {
               "@type": "UNIQUE_UNLOCK_LORE_KEEPER_02",
               "@chance": "0.01",
-              "@cangetmodified": "false"
+              "@cangetmodified": "false",
+              "@ignoreforactivitychest": "true"
             },
             {
               "@type": "UNIQUE_UNLOCK_LORE_KEEPER_03",
               "@chance": "0.01",
               "@cangetmodified": "false",
-              "@continent": "Outlands"
+              "@continent": "Outlands",
+              "@ignoreforactivitychest": "true"
             }
           ],
           "Harvestable": {
@@ -277420,13 +277373,15 @@
             {
               "@type": "UNIQUE_UNLOCK_LORE_KEEPER_02",
               "@chance": "0.01",
-              "@cangetmodified": "false"
+              "@cangetmodified": "false",
+              "@ignoreforactivitychest": "true"
             },
             {
               "@type": "UNIQUE_UNLOCK_LORE_KEEPER_03",
               "@chance": "0.01",
               "@cangetmodified": "false",
-              "@continent": "Outlands"
+              "@continent": "Outlands",
+              "@ignoreforactivitychest": "true"
             }
           ],
           "Harvestable": {
@@ -277774,13 +277729,15 @@
             {
               "@type": "UNIQUE_UNLOCK_LORE_KEEPER_02",
               "@chance": "0.01",
-              "@cangetmodified": "false"
+              "@cangetmodified": "false",
+              "@ignoreforactivitychest": "true"
             },
             {
               "@type": "UNIQUE_UNLOCK_LORE_KEEPER_03",
               "@chance": "0.01",
               "@cangetmodified": "false",
-              "@continent": "Outlands"
+              "@continent": "Outlands",
+              "@ignoreforactivitychest": "true"
             }
           ],
           "Harvestable": {
@@ -278396,13 +278353,15 @@
             {
               "@type": "UNIQUE_UNLOCK_LORE_KEEPER_02",
               "@chance": "0.01",
-              "@cangetmodified": "false"
+              "@cangetmodified": "false",
+              "@ignoreforactivitychest": "true"
             },
             {
               "@type": "UNIQUE_UNLOCK_LORE_KEEPER_03",
               "@chance": "0.01",
               "@cangetmodified": "false",
-              "@continent": "Outlands"
+              "@continent": "Outlands",
+              "@ignoreforactivitychest": "true"
             }
           ],
           "Harvestable": {
@@ -278763,13 +278722,15 @@
             {
               "@type": "UNIQUE_UNLOCK_LORE_KEEPER_02",
               "@chance": "0.01",
-              "@cangetmodified": "false"
+              "@cangetmodified": "false",
+              "@ignoreforactivitychest": "true"
             },
             {
               "@type": "UNIQUE_UNLOCK_LORE_KEEPER_03",
               "@chance": "0.01",
               "@cangetmodified": "false",
-              "@continent": "Outlands"
+              "@continent": "Outlands",
+              "@ignoreforactivitychest": "true"
             }
           ],
           "Harvestable": {
@@ -279218,13 +279179,15 @@
             {
               "@type": "UNIQUE_UNLOCK_LORE_KEEPER_02",
               "@chance": "0.01",
-              "@cangetmodified": "false"
+              "@cangetmodified": "false",
+              "@ignoreforactivitychest": "true"
             },
             {
               "@type": "UNIQUE_UNLOCK_LORE_KEEPER_03",
               "@chance": "0.01",
               "@cangetmodified": "false",
-              "@continent": "Outlands"
+              "@continent": "Outlands",
+              "@ignoreforactivitychest": "true"
             }
           ],
           "Harvestable": {
@@ -279498,13 +279461,15 @@
             {
               "@type": "UNIQUE_UNLOCK_LORE_KEEPER_02",
               "@chance": "0.01",
-              "@cangetmodified": "false"
+              "@cangetmodified": "false",
+              "@ignoreforactivitychest": "true"
             },
             {
               "@type": "UNIQUE_UNLOCK_LORE_KEEPER_03",
               "@chance": "0.01",
               "@cangetmodified": "false",
-              "@continent": "Outlands"
+              "@continent": "Outlands",
+              "@ignoreforactivitychest": "true"
             }
           ],
           "Harvestable": {
@@ -279893,13 +279858,15 @@
             {
               "@type": "UNIQUE_UNLOCK_LORE_KEEPER_02",
               "@chance": "0.01",
-              "@cangetmodified": "false"
+              "@cangetmodified": "false",
+              "@ignoreforactivitychest": "true"
             },
             {
               "@type": "UNIQUE_UNLOCK_LORE_KEEPER_03",
               "@chance": "0.01",
               "@cangetmodified": "false",
-              "@continent": "Outlands"
+              "@continent": "Outlands",
+              "@ignoreforactivitychest": "true"
             }
           ],
           "Harvestable": {
@@ -280213,13 +280180,15 @@
             {
               "@type": "UNIQUE_UNLOCK_LORE_KEEPER_02",
               "@chance": "0.01",
-              "@cangetmodified": "false"
+              "@cangetmodified": "false",
+              "@ignoreforactivitychest": "true"
             },
             {
               "@type": "UNIQUE_UNLOCK_LORE_KEEPER_03",
               "@chance": "0.01",
               "@cangetmodified": "false",
-              "@continent": "Outlands"
+              "@continent": "Outlands",
+              "@ignoreforactivitychest": "true"
             }
           ],
           "Harvestable": {
@@ -280496,13 +280465,15 @@
             {
               "@type": "UNIQUE_UNLOCK_LORE_KEEPER_02",
               "@chance": "0.01",
-              "@cangetmodified": "false"
+              "@cangetmodified": "false",
+              "@ignoreforactivitychest": "true"
             },
             {
               "@type": "UNIQUE_UNLOCK_LORE_KEEPER_03",
               "@chance": "0.01",
               "@cangetmodified": "false",
-              "@continent": "Outlands"
+              "@continent": "Outlands",
+              "@ignoreforactivitychest": "true"
             }
           ],
           "Harvestable": {
@@ -280885,13 +280856,15 @@
             {
               "@type": "UNIQUE_UNLOCK_LORE_KEEPER_02",
               "@chance": "0.01",
-              "@cangetmodified": "false"
+              "@cangetmodified": "false",
+              "@ignoreforactivitychest": "true"
             },
             {
               "@type": "UNIQUE_UNLOCK_LORE_KEEPER_03",
               "@chance": "0.01",
               "@cangetmodified": "false",
-              "@continent": "Outlands"
+              "@continent": "Outlands",
+              "@ignoreforactivitychest": "true"
             }
           ],
           "Harvestable": {
@@ -281254,13 +281227,15 @@
             {
               "@type": "UNIQUE_UNLOCK_LORE_KEEPER_02",
               "@chance": "0.01",
-              "@cangetmodified": "false"
+              "@cangetmodified": "false",
+              "@ignoreforactivitychest": "true"
             },
             {
               "@type": "UNIQUE_UNLOCK_LORE_KEEPER_03",
               "@chance": "0.01",
               "@cangetmodified": "false",
-              "@continent": "Outlands"
+              "@continent": "Outlands",
+              "@ignoreforactivitychest": "true"
             }
           ],
           "Harvestable": {
@@ -282027,7 +282002,8 @@
           "Item": {
             "@type": "UNIQUE_UNLOCK_LORE_KEEPER_13",
             "@chance": "0.01",
-            "@cangetmodified": "false"
+            "@cangetmodified": "false",
+            "@ignoreforactivitychest": "true"
           },
           "Harvestable": {
             "@type": "SILVERCOINS_LOOT_VETERAN_TRASH",
@@ -282140,12 +282116,12 @@
         "@physicalarmor": "122",
         "@magicresistance": "126",
         "@crowdcontrolresistance": "35",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "KEEPERUNPROVENFEMALE1",
         "@avatarring": "RING_MOB_ELITE",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@energyrewardspell": "ENERGYREWARD",
@@ -282153,6 +282129,8 @@
         "@mobvalue": "212",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "Behaviour": {
             "Spell": {
@@ -282432,7 +282410,8 @@
           "Item": {
             "@type": "UNIQUE_UNLOCK_LORE_KEEPER_13",
             "@chance": "0.01",
-            "@cangetmodified": "false"
+            "@cangetmodified": "false",
+            "@ignoreforactivitychest": "true"
           },
           "Harvestable": {
             "@type": "SILVERCOINS_LOOT_VETERAN_TRASH",
@@ -282532,12 +282511,12 @@
         "@physicalarmor": "122",
         "@magicresistance": "126",
         "@crowdcontrolresistance": "35",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "KEEPERUNPROVENMALE1",
         "@avatarring": "RING_MOB_ELITE",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@energyrewardspell": "ENERGYREWARD",
@@ -282545,6 +282524,8 @@
         "@mobvalue": "212",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "@reference": "T5_MOB_KEEPER_UNPROVEN_FEMALE_ELITE"
         },
@@ -282998,7 +282979,8 @@
           "Item": {
             "@type": "UNIQUE_UNLOCK_LORE_KEEPER_13",
             "@chance": "0.01",
-            "@cangetmodified": "false"
+            "@cangetmodified": "false",
+            "@ignoreforactivitychest": "true"
           },
           "Harvestable": {
             "@type": "SILVERCOINS_LOOT_VETERAN_TRASH",
@@ -283120,7 +283102,8 @@
           "Item": {
             "@type": "UNIQUE_UNLOCK_LORE_KEEPER_13",
             "@chance": "0.01",
-            "@cangetmodified": "false"
+            "@cangetmodified": "false",
+            "@ignoreforactivitychest": "true"
           },
           "Harvestable": {
             "@type": "SILVERCOINS_LOOT_VETERAN",
@@ -283220,12 +283203,12 @@
         "@physicalarmor": "215",
         "@magicresistance": "194",
         "@crowdcontrolresistance": "84",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "KEEPERBEAR1",
         "@avatarring": "RING_MOB_ELITE",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@energyrewardspell": "ENERGYREWARD",
@@ -283235,6 +283218,8 @@
         "@mobvalue": "1698",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "Behaviour": {
             "Spell": [
@@ -283386,12 +283371,12 @@
         "@physicalarmor": "269",
         "@magicresistance": "250",
         "@crowdcontrolresistance": "157",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "KEEPERBEAR1",
         "@avatarring": "RING_MOB_ELITE",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@energyrewardspell": "ENERGYREWARD",
@@ -283401,6 +283386,8 @@
         "@mobvalue": "3859",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "@reference": "T5_MOB_KEEPER_BEAR_ELITE"
         },
@@ -283615,7 +283602,8 @@
           "Item": {
             "@type": "UNIQUE_UNLOCK_LORE_KEEPER_13",
             "@chance": "0.01",
-            "@cangetmodified": "false"
+            "@cangetmodified": "false",
+            "@ignoreforactivitychest": "true"
           },
           "Harvestable": {
             "@type": "SILVERCOINS_LOOT_VETERAN",
@@ -283755,7 +283743,8 @@
           "Item": {
             "@type": "UNIQUE_UNLOCK_LORE_KEEPER_13",
             "@chance": "0.01",
-            "@cangetmodified": "false"
+            "@cangetmodified": "false",
+            "@ignoreforactivitychest": "true"
           },
           "LootListReference": [
             {
@@ -283982,7 +283971,8 @@
           "Item": {
             "@type": "UNIQUE_UNLOCK_LORE_KEEPER_13",
             "@chance": "0.01",
-            "@cangetmodified": "false"
+            "@cangetmodified": "false",
+            "@ignoreforactivitychest": "true"
           },
           "LootListReference": [
             {
@@ -284046,12 +284036,12 @@
         "@physicalarmor": "215",
         "@magicresistance": "194",
         "@crowdcontrolresistance": "84",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "KEEPEREARTHCHILD1",
         "@avatarring": "RING_MOB_ELITE",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@energyrewardspell": "ENERGYREWARD",
@@ -284061,6 +284051,8 @@
         "@mobvalue": "1698",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "@reference": "T5_MOB_KEEPER_EARTHCHILD_VETERAN_CHAMPION"
         },
@@ -284180,12 +284172,12 @@
         "@physicalarmor": "269",
         "@magicresistance": "250",
         "@crowdcontrolresistance": "157",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "KEEPEREARTHCHILD1",
         "@avatarring": "RING_MOB_ELITE",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@energyrewardspell": "ENERGYREWARD",
@@ -284195,6 +284187,8 @@
         "@mobvalue": "3859",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "@reference": "T5_MOB_KEEPER_EARTHCHILD_VETERAN_CHAMPION"
         },
@@ -285076,7 +285070,8 @@
           "Item": {
             "@type": "UNIQUE_UNLOCK_LORE_KEEPER_13",
             "@chance": "0.01",
-            "@cangetmodified": "false"
+            "@cangetmodified": "false",
+            "@ignoreforactivitychest": "true"
           },
           "Harvestable": {
             "@type": "SILVERCOINS_LOOT_VETERAN",
@@ -285202,7 +285197,8 @@
           "Item": {
             "@type": "UNIQUE_UNLOCK_LORE_KEEPER_13",
             "@chance": "0.01",
-            "@cangetmodified": "false"
+            "@cangetmodified": "false",
+            "@ignoreforactivitychest": "true"
           },
           "Harvestable": {
             "@type": "SILVERCOINS_LOOT_VETERAN",
@@ -285331,7 +285327,8 @@
           "Item": {
             "@type": "UNIQUE_UNLOCK_LORE_KEEPER_13",
             "@chance": "0.01",
-            "@cangetmodified": "false"
+            "@cangetmodified": "false",
+            "@ignoreforactivitychest": "true"
           },
           "LootListReference": [
             {
@@ -285421,7 +285418,8 @@
           "Item": {
             "@type": "UNIQUE_UNLOCK_LORE_KEEPER_13",
             "@chance": "0.01",
-            "@cangetmodified": "false"
+            "@cangetmodified": "false",
+            "@ignoreforactivitychest": "true"
           },
           "LootListReference": {
             "@name": "FAME_BOOKS_LOOT_MOBS",
@@ -285501,7 +285499,8 @@
           "Item": {
             "@type": "UNIQUE_UNLOCK_LORE_KEEPER_13",
             "@chance": "0.01",
-            "@cangetmodified": "false"
+            "@cangetmodified": "false",
+            "@ignoreforactivitychest": "true"
           },
           "LootListReference": {
             "@name": "FAME_BOOKS_LOOT_MOBS",
@@ -285555,12 +285554,12 @@
         "@physicalarmor": "215",
         "@magicresistance": "194",
         "@crowdcontrolresistance": "84",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "KEEPERBERSERK2",
         "@avatarring": "RING_MOB_ELITE",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@energyrewardspell": "ENERGYREWARD",
@@ -285568,6 +285567,8 @@
         "@mobvalue": "1698",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "Behaviour": {
             "Spell": [
@@ -285742,12 +285743,12 @@
         "@physicalarmor": "303",
         "@magicresistance": "259",
         "@crowdcontrolresistance": "232",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "KEEPERBERSERKMINIBOSS2",
         "@avatarring": "RING_MOB_BOSS",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@lootprefab": "T0_LOOTCHEST_MINIBOSS",
@@ -285756,6 +285757,8 @@
         "@mobvalue": "6368",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "Behaviour": {
             "Spell": [
@@ -285942,12 +285945,12 @@
         "@physicalarmor": "303",
         "@magicresistance": "259",
         "@crowdcontrolresistance": "46443",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "KEEPERBERSERKMINIBOSS1",
         "@avatarring": "RING_MOB_BOSS",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@lootprefab": "T0_LOOTCHEST_RAIDBOSS",
@@ -285956,6 +285959,8 @@
         "@mobvalue": "53068",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "@reference": "T5_MOB_KEEPER_BERSERK_ELITE_MINIBOSS"
         },
@@ -286426,7 +286431,8 @@
           "Item": {
             "@type": "UNIQUE_UNLOCK_LORE_KEEPER_13",
             "@chance": "0.01",
-            "@cangetmodified": "false"
+            "@cangetmodified": "false",
+            "@ignoreforactivitychest": "true"
           },
           "Harvestable": {
             "@type": "SILVERCOINS_LOOT_VETERAN",
@@ -286600,7 +286606,8 @@
           "Item": {
             "@type": "UNIQUE_UNLOCK_LORE_KEEPER_13",
             "@chance": "0.01",
-            "@cangetmodified": "false"
+            "@cangetmodified": "false",
+            "@ignoreforactivitychest": "true"
           },
           "Harvestable": {
             "@type": "SILVERCOINS_LOOT_VETERAN",
@@ -287574,7 +287581,8 @@
           "Item": {
             "@type": "UNIQUE_UNLOCK_LORE_KEEPER_13",
             "@chance": "0.01",
-            "@cangetmodified": "false"
+            "@cangetmodified": "false",
+            "@ignoreforactivitychest": "true"
           },
           "Harvestable": {
             "@type": "SILVERCOINS_LOOT_VETERAN",
@@ -288020,7 +288028,8 @@
           "Item": {
             "@type": "UNIQUE_UNLOCK_LORE_KEEPER_13",
             "@chance": "0.01",
-            "@cangetmodified": "false"
+            "@cangetmodified": "false",
+            "@ignoreforactivitychest": "true"
           },
           "Harvestable": {
             "@type": "SILVERCOINS_LOOT_VETERAN",
@@ -288180,7 +288189,8 @@
           "Item": {
             "@type": "UNIQUE_UNLOCK_LORE_KEEPER_13",
             "@chance": "0.01",
-            "@cangetmodified": "false"
+            "@cangetmodified": "false",
+            "@ignoreforactivitychest": "true"
           },
           "LootListReference": [
             {
@@ -288531,7 +288541,8 @@
           "Item": {
             "@type": "UNIQUE_UNLOCK_LORE_KEEPER_13",
             "@chance": "0.01",
-            "@cangetmodified": "false"
+            "@cangetmodified": "false",
+            "@ignoreforactivitychest": "true"
           },
           "LootListReference": {
             "@name": "FAME_BOOKS_LOOT_MOBS",
@@ -288865,7 +288876,8 @@
           "Item": {
             "@type": "UNIQUE_UNLOCK_LORE_KEEPER_13",
             "@chance": "0.01",
-            "@cangetmodified": "false"
+            "@cangetmodified": "false",
+            "@ignoreforactivitychest": "true"
           },
           "LootListReference": {
             "@name": "FAME_BOOKS_LOOT_MOBS",
@@ -288948,12 +288960,12 @@
         "@physicalarmor": "215",
         "@magicresistance": "194",
         "@crowdcontrolresistance": "84",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "KEEPERAXETHROWER2",
         "@avatarring": "RING_MOB_ELITE",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@energyrewardspell": "ENERGYREWARD",
@@ -288961,6 +288973,8 @@
         "@mobvalue": "1698",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "Behaviour": {
             "Spell": [
@@ -289169,12 +289183,12 @@
         "@physicalarmor": "303",
         "@magicresistance": "259",
         "@crowdcontrolresistance": "232",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "KEEPERAXETHROWERMINIBOSS2",
         "@avatarring": "RING_MOB_BOSS",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@lootprefab": "T0_LOOTCHEST_MINIBOSS",
@@ -289183,6 +289197,8 @@
         "@mobvalue": "6368",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "@reference": "T5_MOB_KEEPER_AXE_THROWER_ELITE"
         },
@@ -290081,7 +290097,8 @@
           "Item": {
             "@type": "UNIQUE_UNLOCK_LORE_KEEPER_13",
             "@chance": "0.01",
-            "@cangetmodified": "false"
+            "@cangetmodified": "false",
+            "@ignoreforactivitychest": "true"
           },
           "Harvestable": {
             "@type": "SILVERCOINS_LOOT_VETERAN_TRASH",
@@ -290212,7 +290229,8 @@
           "Item": {
             "@type": "UNIQUE_UNLOCK_LORE_KEEPER_13",
             "@chance": "0.01",
-            "@cangetmodified": "false"
+            "@cangetmodified": "false",
+            "@ignoreforactivitychest": "true"
           },
           "Harvestable": {
             "@type": "SILVERCOINS_LOOT_VETERAN",
@@ -290344,7 +290362,8 @@
           "Item": {
             "@type": "UNIQUE_UNLOCK_LORE_KEEPER_13",
             "@chance": "0.01",
-            "@cangetmodified": "false"
+            "@cangetmodified": "false",
+            "@ignoreforactivitychest": "true"
           },
           "Harvestable": {
             "@type": "SILVERCOINS_LOOT_VETERAN",
@@ -290482,7 +290501,8 @@
           "Item": {
             "@type": "UNIQUE_UNLOCK_LORE_KEEPER_13",
             "@chance": "0.01",
-            "@cangetmodified": "false"
+            "@cangetmodified": "false",
+            "@ignoreforactivitychest": "true"
           },
           "LootListReference": [
             {
@@ -290581,7 +290601,8 @@
           "Item": {
             "@type": "UNIQUE_UNLOCK_LORE_KEEPER_13",
             "@chance": "0.01",
-            "@cangetmodified": "false"
+            "@cangetmodified": "false",
+            "@ignoreforactivitychest": "true"
           },
           "LootListReference": [
             {
@@ -290680,7 +290701,8 @@
           "Item": {
             "@type": "UNIQUE_UNLOCK_LORE_KEEPER_13",
             "@chance": "0.01",
-            "@cangetmodified": "false"
+            "@cangetmodified": "false",
+            "@ignoreforactivitychest": "true"
           },
           "LootListReference": [
             {
@@ -290753,12 +290775,12 @@
         "@physicalarmor": "215",
         "@magicresistance": "194",
         "@crowdcontrolresistance": "84",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "KEEPERDRUID2",
         "@avatarring": "RING_MOB_ELITE",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@energyrewardspell": "ENERGYREWARD",
@@ -290766,6 +290788,8 @@
         "@mobvalue": "1698",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "Behaviour": {
             "Spell": [
@@ -290970,12 +290994,12 @@
         "@physicalarmor": "303",
         "@magicresistance": "259",
         "@crowdcontrolresistance": "232",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "KEEPERDRUIDMINIBOSS2",
         "@avatarring": "RING_MOB_BOSS",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@lootprefab": "T0_LOOTCHEST_MINIBOSS",
@@ -290984,6 +291008,8 @@
         "@mobvalue": "6368",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "@reference": "T5_MOB_KEEPER_DRUID_ELITE"
         },
@@ -291107,12 +291133,12 @@
         "@physicalarmor": "303",
         "@magicresistance": "259",
         "@crowdcontrolresistance": "46443",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "KEEPERDRUIDBOSSSEER1",
         "@avatarring": "RING_MOB_BOSS",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@lootprefab": "T0_LOOTCHEST_RAIDBOSS",
@@ -291121,6 +291147,8 @@
         "@mobvalue": "53068",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "Behaviour": {
             "Spell": [
@@ -292142,7 +292170,8 @@
           "Item": {
             "@type": "UNIQUE_UNLOCK_LORE_KEEPER_13",
             "@chance": "0.01",
-            "@cangetmodified": "false"
+            "@cangetmodified": "false",
+            "@ignoreforactivitychest": "true"
           },
           "Harvestable": {
             "@type": "SILVERCOINS_LOOT_VETERAN_TRASH",
@@ -292265,7 +292294,8 @@
           "Item": {
             "@type": "UNIQUE_UNLOCK_LORE_KEEPER_13",
             "@chance": "0.01",
-            "@cangetmodified": "false"
+            "@cangetmodified": "false",
+            "@ignoreforactivitychest": "true"
           },
           "Harvestable": {
             "@type": "SILVERCOINS_LOOT_VETERAN",
@@ -292389,7 +292419,8 @@
           "Item": {
             "@type": "UNIQUE_UNLOCK_LORE_KEEPER_13",
             "@chance": "0.01",
-            "@cangetmodified": "false"
+            "@cangetmodified": "false",
+            "@ignoreforactivitychest": "true"
           },
           "Harvestable": {
             "@type": "SILVERCOINS_LOOT_VETERAN",
@@ -292519,7 +292550,8 @@
           "Item": {
             "@type": "UNIQUE_UNLOCK_LORE_KEEPER_13",
             "@chance": "0.01",
-            "@cangetmodified": "false"
+            "@cangetmodified": "false",
+            "@ignoreforactivitychest": "true"
           },
           "LootListReference": [
             {
@@ -292610,7 +292642,8 @@
           "Item": {
             "@type": "UNIQUE_UNLOCK_LORE_KEEPER_13",
             "@chance": "0.01",
-            "@cangetmodified": "false"
+            "@cangetmodified": "false",
+            "@ignoreforactivitychest": "true"
           },
           "LootListReference": [
             {
@@ -292701,7 +292734,8 @@
           "Item": {
             "@type": "UNIQUE_UNLOCK_LORE_KEEPER_13",
             "@chance": "0.01",
-            "@cangetmodified": "false"
+            "@cangetmodified": "false",
+            "@ignoreforactivitychest": "true"
           },
           "LootListReference": [
             {
@@ -292765,12 +292799,12 @@
         "@physicalarmor": "215",
         "@magicresistance": "194",
         "@crowdcontrolresistance": "84",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "KEEPERGIANT1",
         "@avatarring": "RING_MOB_ELITE",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@energyrewardspell": "ENERGYREWARD",
@@ -292778,6 +292812,8 @@
         "@mobvalue": "1698",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "Behaviour": {
             "Spell": [
@@ -292982,12 +293018,12 @@
         "@physicalarmor": "303",
         "@magicresistance": "259",
         "@crowdcontrolresistance": "232",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "KEEPERGIANTMINIBOSS2",
         "@avatarring": "RING_MOB_BOSS",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@lootprefab": "T0_LOOTCHEST_MINIBOSS",
@@ -292997,6 +293033,8 @@
         "@mobvalue": "6368",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "Behaviour": {
             "Spell": [
@@ -293329,12 +293367,12 @@
         "@physicalarmor": "303",
         "@magicresistance": "259",
         "@crowdcontrolresistance": "46443",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "KEEPERGIANTUNCLEFROST1",
         "@avatarring": "RING_MOB_BOSS",
         "@maxcharges": "13",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@lootprefab": "T0_LOOTCHEST_RAIDBOSS",
@@ -293343,6 +293381,8 @@
         "@mobvalue": "53068",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "Behaviour": {
             "Spell": [
@@ -293728,7 +293768,8 @@
           "Item": {
             "@type": "UNIQUE_UNLOCK_LORE_KEEPER_13",
             "@chance": "0.01",
-            "@cangetmodified": "false"
+            "@cangetmodified": "false",
+            "@ignoreforactivitychest": "true"
           },
           "LootListReference": [
             {
@@ -293805,12 +293846,12 @@
         "@physicalarmor": "303",
         "@magicresistance": "259",
         "@crowdcontrolresistance": "46443",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "KEEPERDRUIDBOSSSEER1",
         "@avatarring": "RING_MOB_BOSS",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@lootprefab": "T0_LOOTCHEST_RAIDBOSS",
@@ -293819,6 +293860,8 @@
         "@mobvalue": "53068",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "Behaviour": {
             "Spell": [
@@ -294279,7 +294322,8 @@
           "Item": {
             "@type": "UNIQUE_UNLOCK_LORE_KEEPER_13",
             "@chance": "0.01",
-            "@cangetmodified": "false"
+            "@cangetmodified": "false",
+            "@ignoreforactivitychest": "true"
           },
           "LootListReference": [
             {
@@ -294612,7 +294656,8 @@
           "Item": {
             "@type": "UNIQUE_UNLOCK_LORE_KEEPER_13",
             "@chance": "0.01",
-            "@cangetmodified": "false"
+            "@cangetmodified": "false",
+            "@ignoreforactivitychest": "true"
           },
           "LootListReference": [
             {
@@ -294681,12 +294726,12 @@
         "@physicalarmor": "303",
         "@magicresistance": "259",
         "@crowdcontrolresistance": "46443",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "KEEPEREARTHMOTHER1",
         "@avatarring": "RING_MOB_BOSS",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@lootprefab": "T0_LOOTCHEST_RAIDBOSS",
@@ -294696,6 +294741,8 @@
         "@mobvalue": "53068",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "Behaviour": {
             "Spell": [
@@ -295188,7 +295235,8 @@
           "Item": {
             "@type": "UNIQUE_UNLOCK_LORE_KEEPER_13",
             "@chance": "0.01",
-            "@cangetmodified": "false"
+            "@cangetmodified": "false",
+            "@ignoreforactivitychest": "true"
           },
           "Harvestable": {
             "@type": "SILVERCOINS_LOOT_VETERAN",
@@ -295304,12 +295352,12 @@
         "@physicalarmor": "215",
         "@magicresistance": "194",
         "@crowdcontrolresistance": "84",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "KEEPERDRUIDSNIPER1",
         "@avatarring": "RING_MOB_ELITE",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@isabletoexecute": "false",
@@ -295318,6 +295366,8 @@
         "@mobvalue": "1698",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "@reference": "T5_MOB_KEEPER_SPECIAL_SNIPER_VETERAN"
         },
@@ -295482,7 +295532,8 @@
           "Item": {
             "@type": "UNIQUE_UNLOCK_LORE_KEEPER_13",
             "@chance": "0.01",
-            "@cangetmodified": "false"
+            "@cangetmodified": "false",
+            "@ignoreforactivitychest": "true"
           },
           "Harvestable": {
             "@type": "SILVERCOINS_LOOT_VETERAN",
@@ -295592,12 +295643,12 @@
         "@physicalarmor": "215",
         "@magicresistance": "194",
         "@crowdcontrolresistance": "84",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "KEEPERGIANT1",
         "@avatarring": "RING_MOB_ELITE",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@isabletoexecute": "false",
@@ -295606,6 +295657,8 @@
         "@mobvalue": "1698",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "@reference": "T5_MOB_KEEPER_SPECIAL_MORTAR_VETERAN"
         },
@@ -295741,13 +295794,15 @@
             {
               "@type": "UNIQUE_UNLOCK_LORE_KEEPER_02",
               "@chance": "0.01",
-              "@cangetmodified": "false"
+              "@cangetmodified": "false",
+              "@ignoreforactivitychest": "true"
             },
             {
               "@type": "UNIQUE_UNLOCK_LORE_KEEPER_03",
               "@chance": "0.01",
               "@cangetmodified": "false",
-              "@continent": "Outlands"
+              "@continent": "Outlands",
+              "@ignoreforactivitychest": "true"
             }
           ],
           "Harvestable": {
@@ -295904,13 +295959,15 @@
             {
               "@type": "UNIQUE_UNLOCK_LORE_KEEPER_02",
               "@chance": "0.01",
-              "@cangetmodified": "false"
+              "@cangetmodified": "false",
+              "@ignoreforactivitychest": "true"
             },
             {
               "@type": "UNIQUE_UNLOCK_LORE_KEEPER_03",
               "@chance": "0.01",
               "@cangetmodified": "false",
-              "@continent": "Outlands"
+              "@continent": "Outlands",
+              "@ignoreforactivitychest": "true"
             }
           ],
           "Harvestable": {
@@ -296070,13 +296127,15 @@
             {
               "@type": "UNIQUE_UNLOCK_LORE_KEEPER_02",
               "@chance": "0.01",
-              "@cangetmodified": "false"
+              "@cangetmodified": "false",
+              "@ignoreforactivitychest": "true"
             },
             {
               "@type": "UNIQUE_UNLOCK_LORE_KEEPER_03",
               "@chance": "0.01",
               "@cangetmodified": "false",
-              "@continent": "Outlands"
+              "@continent": "Outlands",
+              "@ignoreforactivitychest": "true"
             }
           ],
           "Harvestable": {
@@ -296324,13 +296383,15 @@
             {
               "@type": "UNIQUE_UNLOCK_LORE_KEEPER_02",
               "@chance": "0.01",
-              "@cangetmodified": "false"
+              "@cangetmodified": "false",
+              "@ignoreforactivitychest": "true"
             },
             {
               "@type": "UNIQUE_UNLOCK_LORE_KEEPER_03",
               "@chance": "0.01",
               "@cangetmodified": "false",
-              "@continent": "Outlands"
+              "@continent": "Outlands",
+              "@ignoreforactivitychest": "true"
             }
           ],
           "Harvestable": {
@@ -296509,13 +296570,15 @@
             {
               "@type": "UNIQUE_UNLOCK_LORE_KEEPER_02",
               "@chance": "0.01",
-              "@cangetmodified": "false"
+              "@cangetmodified": "false",
+              "@ignoreforactivitychest": "true"
             },
             {
               "@type": "UNIQUE_UNLOCK_LORE_KEEPER_03",
               "@chance": "0.01",
               "@cangetmodified": "false",
-              "@continent": "Outlands"
+              "@continent": "Outlands",
+              "@ignoreforactivitychest": "true"
             }
           ],
           "Harvestable": {
@@ -296634,7 +296697,8 @@
           "Item": {
             "@type": "UNIQUE_UNLOCK_LORE_KEEPER_13",
             "@chance": "0.01",
-            "@cangetmodified": "false"
+            "@cangetmodified": "false",
+            "@ignoreforactivitychest": "true"
           },
           "Harvestable": {
             "@type": "SILVERCOINS_LOOT_VETERAN_TRASH",
@@ -296739,12 +296803,12 @@
         "@physicalarmor": "147",
         "@magicresistance": "163",
         "@crowdcontrolresistance": "66",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "KEEPERUNPROVENFEMALE1",
         "@avatarring": "RING_MOB_ELITE",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@energyrewardspell": "ENERGYREWARD",
@@ -296753,6 +296817,8 @@
         "@mobvalue": "482",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "@reference": "T5_MOB_KEEPER_UNPROVEN_FEMALE_ELITE"
         },
@@ -296987,7 +297053,8 @@
           "Item": {
             "@type": "UNIQUE_UNLOCK_LORE_KEEPER_13",
             "@chance": "0.01",
-            "@cangetmodified": "false"
+            "@cangetmodified": "false",
+            "@ignoreforactivitychest": "true"
           },
           "Harvestable": {
             "@type": "SILVERCOINS_LOOT_VETERAN_TRASH",
@@ -297079,12 +297146,12 @@
         "@physicalarmor": "147",
         "@magicresistance": "163",
         "@crowdcontrolresistance": "66",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "KEEPERUNPROVENMALE1",
         "@avatarring": "RING_MOB_ELITE",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@energyrewardspell": "ENERGYREWARD",
@@ -297092,6 +297159,8 @@
         "@mobvalue": "482",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "@reference": "T5_MOB_KEEPER_UNPROVEN_FEMALE_ELITE"
         },
@@ -297256,7 +297325,8 @@
           "Item": {
             "@type": "UNIQUE_UNLOCK_LORE_KEEPER_13",
             "@chance": "0.01",
-            "@cangetmodified": "false"
+            "@cangetmodified": "false",
+            "@ignoreforactivitychest": "true"
           },
           "Harvestable": {
             "@type": "SILVERCOINS_LOOT_VETERAN",
@@ -297351,12 +297421,12 @@
         "@physicalarmor": "269",
         "@magicresistance": "250",
         "@crowdcontrolresistance": "157",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "KEEPERBERSERK2",
         "@avatarring": "RING_MOB_ELITE",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@energyrewardspell": "ENERGYREWARD",
@@ -297364,6 +297434,8 @@
         "@mobvalue": "3859",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "@reference": "T5_MOB_KEEPER_BERSERK_ELITE"
         },
@@ -297469,12 +297541,12 @@
         "@physicalarmor": "384",
         "@magicresistance": "333",
         "@crowdcontrolresistance": "437",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "KEEPERBERSERKMINIBOSS2",
         "@avatarring": "RING_MOB_BOSS",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@lootprefab": "T0_LOOTCHEST_MINIBOSS",
@@ -297483,6 +297555,8 @@
         "@mobvalue": "14472",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "@reference": "T5_MOB_KEEPER_BERSERK_ELITE_MINIBOSS"
         },
@@ -297669,7 +297743,8 @@
           "Item": {
             "@type": "UNIQUE_UNLOCK_LORE_KEEPER_13",
             "@chance": "0.01",
-            "@cangetmodified": "false"
+            "@cangetmodified": "false",
+            "@ignoreforactivitychest": "true"
           },
           "Harvestable": {
             "@type": "SILVERCOINS_LOOT_VETERAN",
@@ -297790,12 +297865,12 @@
         "@physicalarmor": "269",
         "@magicresistance": "250",
         "@crowdcontrolresistance": "157",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "KEEPERAXETHROWER2",
         "@avatarring": "RING_MOB_ELITE",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@energyrewardspell": "ENERGYREWARD",
@@ -297803,6 +297878,8 @@
         "@mobvalue": "3859",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "@reference": "T5_MOB_KEEPER_AXE_THROWER_ELITE"
         },
@@ -297934,12 +298011,12 @@
         "@physicalarmor": "384",
         "@magicresistance": "333",
         "@crowdcontrolresistance": "437",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "KEEPERAXETHROWERMINIBOSS2",
         "@avatarring": "RING_MOB_BOSS",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@lootprefab": "T0_LOOTCHEST_MINIBOSS",
@@ -297948,6 +298025,8 @@
         "@mobvalue": "14472",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "@reference": "T5_MOB_KEEPER_AXE_THROWER_ELITE"
         },
@@ -298153,7 +298232,8 @@
           "Item": {
             "@type": "UNIQUE_UNLOCK_LORE_KEEPER_13",
             "@chance": "0.01",
-            "@cangetmodified": "false"
+            "@cangetmodified": "false",
+            "@ignoreforactivitychest": "true"
           },
           "Harvestable": {
             "@type": "SILVERCOINS_LOOT_VETERAN",
@@ -298254,12 +298334,12 @@
         "@physicalarmor": "269",
         "@magicresistance": "250",
         "@crowdcontrolresistance": "157",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "KEEPERDRUID2",
         "@avatarring": "RING_MOB_ELITE",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@energyrewardspell": "ENERGYREWARD",
@@ -298267,6 +298347,8 @@
         "@mobvalue": "3859",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "@reference": "T5_MOB_KEEPER_DRUID_ELITE"
         },
@@ -298378,12 +298460,12 @@
         "@physicalarmor": "384",
         "@magicresistance": "333",
         "@crowdcontrolresistance": "437",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "KEEPERDRUIDMINIBOSS2",
         "@avatarring": "RING_MOB_BOSS",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@lootprefab": "T0_LOOTCHEST_MINIBOSS",
@@ -298392,6 +298474,8 @@
         "@mobvalue": "14472",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "Behaviour": {
             "Spell": [
@@ -298604,7 +298688,8 @@
           "Item": {
             "@type": "UNIQUE_UNLOCK_LORE_KEEPER_13",
             "@chance": "0.01",
-            "@cangetmodified": "false"
+            "@cangetmodified": "false",
+            "@ignoreforactivitychest": "true"
           },
           "Harvestable": {
             "@type": "SILVERCOINS_LOOT_VETERAN",
@@ -298706,12 +298791,12 @@
         "@physicalarmor": "269",
         "@magicresistance": "250",
         "@crowdcontrolresistance": "157",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "KEEPERGIANT1",
         "@avatarring": "RING_MOB_ELITE",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@energyrewardspell": "ENERGYREWARD",
@@ -298719,6 +298804,8 @@
         "@mobvalue": "3859",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "@reference": "T5_MOB_KEEPER_GIANT_ELITE"
         },
@@ -298831,12 +298918,12 @@
         "@physicalarmor": "384",
         "@magicresistance": "333",
         "@crowdcontrolresistance": "437",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "KEEPERGIANTMINIBOSS2",
         "@avatarring": "RING_MOB_BOSS",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@lootprefab": "T0_LOOTCHEST_MINIBOSS",
@@ -298845,6 +298932,8 @@
         "@mobvalue": "14472",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "@reference": "T5_MOB_KEEPER_GIANT_ELITE_MINIBOSS"
         },
@@ -298961,12 +299050,12 @@
         "@physicalarmor": "384",
         "@magicresistance": "333",
         "@crowdcontrolresistance": "87380",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "KEEPERDRUIDBOSSSEER1",
         "@avatarring": "RING_MOB_BOSS",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@lootprefab": "T0_LOOTCHEST_RAIDBOSS",
@@ -298976,6 +299065,8 @@
         "@mobvalue": "120596",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "@reference": "T5_MOB_KEEPER_SEER_BOSS"
         },
@@ -299090,12 +299181,12 @@
         "@physicalarmor": "384",
         "@magicresistance": "333",
         "@crowdcontrolresistance": "87380",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "KEEPEREARTHMOTHER1",
         "@avatarring": "RING_MOB_BOSS",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@lootprefab": "T0_LOOTCHEST_RAIDBOSS",
@@ -299105,6 +299196,8 @@
         "@mobvalue": "120596",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "@reference": "T5_MOB_KEEPER_EARTHMOTHER_ELITE_BOSS"
         },
@@ -554648,7 +554741,7 @@
         "@mindivisor": "3.2",
         "@mobtypecategory": "trash",
         "AI": {
-          "@reference": "T5_MOB_RD_KEEPER_FANATIC_UNPROVEN_MALE_VETERAN_TRASH"
+          "@reference": "T5_MOB_KEEPER_UNPROVEN_MALE"
         },
         "Loot": {
           "Harvestable": {
@@ -554758,7 +554851,7 @@
         "@mindivisor": "3.2",
         "@mobtypecategory": "trash",
         "AI": {
-          "@reference": "T5_MOB_RD_KEEPER_FANATIC_UNPROVEN_MALE_VETERAN_TRASH"
+          "@reference": "T5_MOB_KEEPER_UNPROVEN_MALE"
         },
         "Loot": {
           "Harvestable": {
@@ -554868,7 +554961,7 @@
         "@mindivisor": "3.2",
         "@mobtypecategory": "trash",
         "AI": {
-          "@reference": "T5_MOB_RD_KEEPER_FANATIC_UNPROVEN_MALE_VETERAN_TRASH"
+          "@reference": "T5_MOB_KEEPER_UNPROVEN_MALE"
         },
         "Loot": {
           "Harvestable": {
@@ -554974,7 +555067,7 @@
         "@mindivisor": "3.2",
         "@mobtypecategory": "trash",
         "AI": {
-          "@reference": "T5_MOB_RD_KEEPER_FANATIC_UNPROVEN_MALE_VETERAN_TRASH"
+          "@reference": "T5_MOB_KEEPER_UNPROVEN_MALE"
         },
         "Loot": {
           "Harvestable": {
@@ -555076,7 +555169,7 @@
         "@mindivisor": "3.2",
         "@chestwatch": "true",
         "AI": {
-          "@reference": "T5_MOB_RD_KEEPER_FANATIC_BERSERK_VETERAN"
+          "@reference": "T5_MOB_KEEPER_BERSERK_VETERAN"
         },
         "Loot": {
           "Harvestable": {
@@ -555189,7 +555282,7 @@
         "@mindivisor": "3.2",
         "@chestwatch": "true",
         "AI": {
-          "@reference": "T5_MOB_RD_KEEPER_FANATIC_BERSERK_VETERAN"
+          "@reference": "T5_MOB_KEEPER_BERSERK_VETERAN"
         },
         "Loot": {
           "Harvestable": {
@@ -555302,7 +555395,7 @@
         "@mindivisor": "3.2",
         "@chestwatch": "true",
         "AI": {
-          "@reference": "T5_MOB_RD_KEEPER_FANATIC_BERSERK_VETERAN"
+          "@reference": "T5_MOB_KEEPER_BERSERK_VETERAN"
         },
         "Loot": {
           "Harvestable": {
@@ -555411,7 +555504,7 @@
         "@mindivisor": "3.2",
         "@chestwatch": "true",
         "AI": {
-          "@reference": "T5_MOB_RD_KEEPER_FANATIC_BERSERK_VETERAN"
+          "@reference": "T5_MOB_KEEPER_BERSERK_VETERAN"
         },
         "Loot": {
           "Harvestable": {
@@ -555517,7 +555610,7 @@
         "@mindivisor": "3.2",
         "@chestwatch": "true",
         "AI": {
-          "@reference": "T5_MOB_RD_KEEPER_FANATIC_BERSERK_VETERAN_CHAMPION"
+          "@reference": "T5_MOB_KEEPER_BERSERK_VETERAN_CHAMPION"
         },
         "SpawnSpells": {
           "spawnspell": {
@@ -555636,7 +555729,7 @@
         "@mindivisor": "3.2",
         "@chestwatch": "true",
         "AI": {
-          "@reference": "T5_MOB_RD_KEEPER_FANATIC_BERSERK_VETERAN_CHAMPION"
+          "@reference": "T5_MOB_KEEPER_BERSERK_VETERAN_CHAMPION"
         },
         "SpawnSpells": {
           "spawnspell": {
@@ -555755,7 +555848,7 @@
         "@mindivisor": "3.2",
         "@chestwatch": "true",
         "AI": {
-          "@reference": "T5_MOB_RD_KEEPER_FANATIC_BERSERK_VETERAN_CHAMPION"
+          "@reference": "T5_MOB_KEEPER_BERSERK_VETERAN_CHAMPION"
         },
         "SpawnSpells": {
           "spawnspell": {
@@ -555870,7 +555963,7 @@
         "@mindivisor": "3.2",
         "@chestwatch": "true",
         "AI": {
-          "@reference": "T5_MOB_RD_KEEPER_FANATIC_BERSERK_VETERAN_CHAMPION"
+          "@reference": "T5_MOB_KEEPER_BERSERK_VETERAN_CHAMPION"
         },
         "SpawnSpells": {
           "spawnspell": {
@@ -555976,7 +556069,7 @@
         "@mindivisor": "3.2",
         "@mobtypecategory": "trash",
         "AI": {
-          "@reference": "T5_MOB_RD_KEEPER_FANATIC_UNPROVEN_FEMALE_VETERAN_TRASH"
+          "@reference": "T5_MOB_KEEPER_UNPROVEN_FEMALE_VETERAN"
         },
         "Loot": {
           "Harvestable": {
@@ -556099,7 +556192,7 @@
         "@mindivisor": "3.2",
         "@mobtypecategory": "trash",
         "AI": {
-          "@reference": "T5_MOB_RD_KEEPER_FANATIC_UNPROVEN_FEMALE_VETERAN_TRASH"
+          "@reference": "T5_MOB_KEEPER_UNPROVEN_FEMALE_VETERAN"
         },
         "Loot": {
           "Harvestable": {
@@ -556222,7 +556315,7 @@
         "@mindivisor": "3.2",
         "@mobtypecategory": "trash",
         "AI": {
-          "@reference": "T5_MOB_RD_KEEPER_FANATIC_UNPROVEN_FEMALE_VETERAN_TRASH"
+          "@reference": "T5_MOB_KEEPER_UNPROVEN_FEMALE_VETERAN"
         },
         "Loot": {
           "Harvestable": {
@@ -556341,7 +556434,7 @@
         "@mindivisor": "3.2",
         "@mobtypecategory": "trash",
         "AI": {
-          "@reference": "T5_MOB_RD_KEEPER_FANATIC_UNPROVEN_FEMALE_VETERAN_TRASH"
+          "@reference": "T5_MOB_KEEPER_UNPROVEN_FEMALE_VETERAN"
         },
         "Loot": {
           "Harvestable": {
@@ -556456,7 +556549,7 @@
         "@mindivisor": "3.2",
         "@chestwatch": "true",
         "AI": {
-          "@reference": "T5_MOB_RD_KEEPER_FANATIC_AXETHROWER_VETERAN"
+          "@reference": "T5_MOB_KEEPER_AXE_THROWER_VETERAN"
         },
         "Loot": {
           "Harvestable": {
@@ -556595,7 +556688,7 @@
         "@mindivisor": "3.2",
         "@chestwatch": "true",
         "AI": {
-          "@reference": "T5_MOB_RD_KEEPER_FANATIC_AXETHROWER_VETERAN"
+          "@reference": "T5_MOB_KEEPER_AXE_THROWER_VETERAN"
         },
         "Loot": {
           "Harvestable": {
@@ -556734,7 +556827,7 @@
         "@mindivisor": "3.2",
         "@chestwatch": "true",
         "AI": {
-          "@reference": "T5_MOB_RD_KEEPER_FANATIC_AXETHROWER_VETERAN"
+          "@reference": "T5_MOB_KEEPER_AXE_THROWER_VETERAN"
         },
         "Loot": {
           "Harvestable": {
@@ -556869,7 +556962,7 @@
         "@mindivisor": "3.2",
         "@chestwatch": "true",
         "AI": {
-          "@reference": "T5_MOB_RD_KEEPER_FANATIC_AXETHROWER_VETERAN"
+          "@reference": "T5_MOB_KEEPER_AXE_THROWER_VETERAN"
         },
         "Loot": {
           "Harvestable": {
@@ -557001,7 +557094,7 @@
         "@mindivisor": "3.2",
         "@chestwatch": "true",
         "AI": {
-          "@reference": "T5_MOB_RD_KEEPER_FANATIC_AXETHROWER_VETERAN_CHAMPION"
+          "@reference": "T5_MOB_KEEPER_AXE_THROWER_VETERAN_CHAMPION"
         },
         "Loot": {
           "Harvestable": {
@@ -557146,7 +557239,7 @@
         "@mindivisor": "3.2",
         "@chestwatch": "true",
         "AI": {
-          "@reference": "T5_MOB_RD_KEEPER_FANATIC_AXETHROWER_VETERAN_CHAMPION"
+          "@reference": "T5_MOB_KEEPER_AXE_THROWER_VETERAN_CHAMPION"
         },
         "Loot": {
           "Harvestable": {
@@ -557291,7 +557384,7 @@
         "@mindivisor": "3.2",
         "@chestwatch": "true",
         "AI": {
-          "@reference": "T5_MOB_RD_KEEPER_FANATIC_AXETHROWER_VETERAN_CHAMPION"
+          "@reference": "T5_MOB_KEEPER_AXE_THROWER_VETERAN_CHAMPION"
         },
         "Loot": {
           "Harvestable": {
@@ -557432,7 +557525,7 @@
         "@mindivisor": "3.2",
         "@chestwatch": "true",
         "AI": {
-          "@reference": "T5_MOB_RD_KEEPER_FANATIC_AXETHROWER_VETERAN_CHAMPION"
+          "@reference": "T5_MOB_KEEPER_AXE_THROWER_VETERAN_CHAMPION"
         },
         "Loot": {
           "Harvestable": {
@@ -557568,7 +557661,7 @@
         "@mindivisor": "3.2",
         "@mobtypecategory": "trash",
         "AI": {
-          "@reference": "T5_MOB_RD_KEEPER_FANATIC_DRUID_VETERAN_TRASH"
+          "@reference": "T5_MOB_KEEPER_DRUID_ADEPT"
         },
         "Loot": {
           "Harvestable": {
@@ -557687,7 +557780,7 @@
         "@mindivisor": "3.2",
         "@mobtypecategory": "trash",
         "AI": {
-          "@reference": "T5_MOB_RD_KEEPER_FANATIC_DRUID_VETERAN_TRASH"
+          "@reference": "T5_MOB_KEEPER_DRUID_ADEPT"
         },
         "Loot": {
           "Harvestable": {
@@ -557806,7 +557899,7 @@
         "@mindivisor": "3.2",
         "@mobtypecategory": "trash",
         "AI": {
-          "@reference": "T5_MOB_RD_KEEPER_FANATIC_DRUID_VETERAN_TRASH"
+          "@reference": "T5_MOB_KEEPER_DRUID_ADEPT"
         },
         "Loot": {
           "Harvestable": {
@@ -557921,7 +558014,7 @@
         "@mindivisor": "3.2",
         "@mobtypecategory": "trash",
         "AI": {
-          "@reference": "T5_MOB_RD_KEEPER_FANATIC_DRUID_VETERAN_TRASH"
+          "@reference": "T5_MOB_KEEPER_DRUID_ADEPT"
         },
         "Loot": {
           "Harvestable": {
@@ -558032,7 +558125,7 @@
         "@mindivisor": "3.2",
         "@chestwatch": "true",
         "AI": {
-          "@reference": "T5_MOB_RD_KEEPER_FANATIC_DRUID_VETERAN"
+          "@reference": "T5_MOB_KEEPER_DRUID_VETERAN"
         },
         "Loot": {
           "Harvestable": {
@@ -558151,7 +558244,7 @@
         "@mindivisor": "3.2",
         "@chestwatch": "true",
         "AI": {
-          "@reference": "T5_MOB_RD_KEEPER_FANATIC_DRUID_VETERAN"
+          "@reference": "T5_MOB_KEEPER_DRUID_VETERAN"
         },
         "Loot": {
           "Harvestable": {
@@ -558270,7 +558363,7 @@
         "@mindivisor": "3.2",
         "@chestwatch": "true",
         "AI": {
-          "@reference": "T5_MOB_RD_KEEPER_FANATIC_DRUID_VETERAN"
+          "@reference": "T5_MOB_KEEPER_DRUID_VETERAN"
         },
         "Loot": {
           "Harvestable": {
@@ -558385,7 +558478,7 @@
         "@mindivisor": "3.2",
         "@chestwatch": "true",
         "AI": {
-          "@reference": "T5_MOB_RD_KEEPER_FANATIC_DRUID_VETERAN"
+          "@reference": "T5_MOB_KEEPER_DRUID_VETERAN"
         },
         "Loot": {
           "Harvestable": {
@@ -558497,7 +558590,7 @@
         "@mindivisor": "3.2",
         "@chestwatch": "true",
         "AI": {
-          "@reference": "T5_MOB_RD_KEEPER_FANATIC_DRUID_VETERAN_CHAMPION"
+          "@reference": "T5_MOB_KEEPER_DRUID_VETERAN_CHAMPION"
         },
         "Loot": {
           "Harvestable": {
@@ -558620,7 +558713,7 @@
         "@mindivisor": "3.2",
         "@chestwatch": "true",
         "AI": {
-          "@reference": "T5_MOB_RD_KEEPER_FANATIC_DRUID_VETERAN_CHAMPION"
+          "@reference": "T5_MOB_KEEPER_DRUID_VETERAN_CHAMPION"
         },
         "Loot": {
           "Harvestable": {
@@ -558743,7 +558836,7 @@
         "@mindivisor": "3.2",
         "@chestwatch": "true",
         "AI": {
-          "@reference": "T5_MOB_RD_KEEPER_FANATIC_DRUID_VETERAN_CHAMPION"
+          "@reference": "T5_MOB_KEEPER_DRUID_VETERAN_CHAMPION"
         },
         "Loot": {
           "Harvestable": {
@@ -558862,7 +558955,7 @@
         "@mindivisor": "3.2",
         "@chestwatch": "true",
         "AI": {
-          "@reference": "T5_MOB_RD_KEEPER_FANATIC_DRUID_VETERAN_CHAMPION"
+          "@reference": "T5_MOB_KEEPER_DRUID_VETERAN_CHAMPION"
         },
         "Loot": {
           "Harvestable": {
@@ -570021,12 +570114,12 @@
         "@physicalarmor": "303",
         "@magicresistance": "259",
         "@crowdcontrolresistance": "46443",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "KEEPERDRUIDBOSSSEER1",
         "@avatarring": "RING_MOB_BOSS",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@lootprefab": "T0_LOOTCHEST_RAIDBOSS",
@@ -570035,6 +570128,8 @@
         "@mobvalue": "53068",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.7325",
+        "@activityquotientactive": "true",
         "AI": {
           "Behaviour": {
             "Spell": [
@@ -570215,12 +570310,12 @@
         "@physicalarmor": "303",
         "@magicresistance": "259",
         "@crowdcontrolresistance": "46443",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "KEEPERDRUIDBOSSSEER1",
         "@avatarring": "RING_MOB_BOSS",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@lootprefab": "T0_LOOTCHEST_RAIDBOSS",
@@ -570229,6 +570324,8 @@
         "@mobvalue": "53068",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.6667",
+        "@activityquotientactive": "true",
         "AI": {
           "@reference": "T5_MOB_KEEPER_FANATIC_SEER_ELITE_BOSS"
         },
@@ -570344,12 +570441,12 @@
         "@physicalarmor": "303",
         "@magicresistance": "259",
         "@crowdcontrolresistance": "46443",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "KEEPERDRUIDBOSSSEER1",
         "@avatarring": "RING_MOB_BOSS",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@lootprefab": "T0_LOOTCHEST_RAIDBOSS",
@@ -570358,6 +570455,8 @@
         "@mobvalue": "53068",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.7325",
+        "@activityquotientactive": "true",
         "AI": {
           "Behaviour": {
             "Spell": [
@@ -570554,12 +570653,12 @@
         "@physicalarmor": "303",
         "@magicresistance": "259",
         "@crowdcontrolresistance": "46443",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "KEEPERDRUIDBOSSSEER1",
         "@avatarring": "RING_MOB_BOSS",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@lootprefab": "T0_LOOTCHEST_RAIDBOSS",
@@ -570568,6 +570667,8 @@
         "@mobvalue": "53068",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.7325",
+        "@activityquotientactive": "true",
         "AI": {
           "@reference": "T5_MOB_KEEPER_FANATIC_DRUID_ELITE_BOSS"
         },
@@ -570689,12 +570790,12 @@
         "@physicalarmor": "303",
         "@magicresistance": "259",
         "@crowdcontrolresistance": "46443",
-        "@respawntimesecondsmin": "1350",
-        "@respawntimesecondsmax": "2250",
+        "@respawntimesecondsmin": "300",
+        "@respawntimesecondsmax": "600",
         "@avatar": "KEEPERBERSERKMINIBOSS1",
         "@avatarring": "RING_MOB_BOSS",
         "@maxcharges": "1",
-        "@timeperchargeseconds": "1800",
+        "@timeperchargeseconds": "450",
         "@dangerstate": "elite",
         "@aggrodelayafterspawn": "5",
         "@lootprefab": "T0_LOOTCHEST_RAIDBOSS",
@@ -570703,6 +570804,8 @@
         "@mobvalue": "53068",
         "@category": "homebase",
         "@mindivisor": "3.2",
+        "@chargeupchance": "0.7325",
+        "@activityquotientactive": "true",
         "AI": {
           "@reference": "T5_MOB_KEEPER_BERSERK_ELITE_MINIBOSS"
         },
@@ -579384,7 +579487,6 @@
         "@silvermodifier": "32.952",
         "@namelocatag": "@MOB_T5_MOB_ROAMING_KEEPER_FANATIC_SPEAR_CHAMPION",
         "@category": "roaming",
-        "@mindivisor": "3.2",
         "@lootprefab": "T0_LOOTCHEST_MINIBOSS",
         "@mightreward": "PVPCHALLENGE_KEEPER_UPRISING_ROAMING_SPEARMEN",
         "AI": {
@@ -579478,19 +579580,24 @@
           }
         },
         "Loot": {
-          "Item": {
-            "@type": "UNIQUE_UNLOCK_LORE_KEEPER_01",
-            "@chance": "0.05",
-            "@cangetmodified": "false"
-          },
-          "Harvestable": {
-            "@type": "SILVERCOINS_LOOT_ROAMING_MINIBOSS",
-            "@tier": "5"
-          },
+          "Item": [
+            {
+              "@type": "UNIQUE_UNLOCK_LORE_KEEPER_01",
+              "@chance": "0.05",
+              "@cangetmodified": "false",
+              "@ignoreforactivitychest": "true"
+            },
+            {
+              "@type": "T1_SILVERBAG_NONTRADABLE",
+              "@chance": "4.682806",
+              "@ignoreforactivitychest": "true",
+              "@scalewithgoldeconomy": "true"
+            }
+          ],
           "LootListReference": [
             {
               "@name": "LOOT_KEEPER_FURNITURE",
-              "@chance": "0.0006"
+              "@chance": "0.001374"
             },
             {
               "@name": "T5_FRAGMENT_LOOT",
@@ -579498,35 +579605,35 @@
             },
             {
               "@name": "T5_DIRECTLOOTDROP_WHITE",
-              "@chance": "0.735738"
+              "@chance": "1.684935"
             },
             {
               "@name": "T6_DIRECTLOOTDROP_WHITE",
-              "@chance": "0.186669"
+              "@chance": "0.427496"
             },
             {
               "@name": "T7_DIRECTLOOTDROP_WHITE",
-              "@chance": "0.047292"
+              "@chance": "0.108305"
             },
             {
               "@name": "T4_DIRECTLOOTDROP_WHITE",
-              "@chance": "0.715152"
+              "@chance": "1.63779"
             },
             {
               "@name": "T3_DIRECTLOOTDROP_WHITE",
-              "@chance": "1.625205"
+              "@chance": "3.721928"
             },
             {
               "@name": "T5_LOOT_EXPEDITION_TOKEN_BOSS",
-              "@chance": "0.0003"
+              "@chance": "0.000687"
             },
             {
               "@name": "FAME_BOOKS_LOOT_MOBS",
-              "@chance": "0.193713"
+              "@chance": "0.443628"
             },
             {
               "@name": "TREASURES_STANDARD_LOOT",
-              "@chance": "0.067503"
+              "@chance": "0.154591"
             },
             {
               "@name": "LOOT_KEEPER_FACTION_CAPES",
@@ -579534,7 +579641,7 @@
             },
             {
               "@name": "T5_LOOT_RD_TOKEN",
-              "@chance": "0.003117"
+              "@chance": "0.007138"
             }
           ]
         },
@@ -579599,26 +579706,30 @@
         "@silvermodifier": "32.952",
         "@namelocatag": "@MOB_T5_MOB_ROAMING_KEEPER_FANATIC_SPEAR_CHAMPION",
         "@category": "roaming",
-        "@mindivisor": "3.2",
         "@lootprefab": "T0_LOOTCHEST_MINIBOSS",
         "@mightreward": "PVPCHALLENGE_KEEPER_UPRISING_ROAMING_SPEARMEN",
         "AI": {
           "@reference": "T5_MOB_ROAMING_KEEPER_FANATIC_SPEAR_CHAMPION"
         },
         "Loot": {
-          "Item": {
-            "@type": "UNIQUE_UNLOCK_LORE_KEEPER_01",
-            "@chance": "0.05",
-            "@cangetmodified": "false"
-          },
-          "Harvestable": {
-            "@type": "SILVERCOINS_LOOT_ROAMING_MINIBOSS",
-            "@tier": "6"
-          },
+          "Item": [
+            {
+              "@type": "UNIQUE_UNLOCK_LORE_KEEPER_01",
+              "@chance": "0.05",
+              "@cangetmodified": "false",
+              "@ignoreforactivitychest": "true"
+            },
+            {
+              "@type": "T1_SILVERBAG_NONTRADABLE",
+              "@chance": "6.299026",
+              "@ignoreforactivitychest": "true",
+              "@scalewithgoldeconomy": "true"
+            }
+          ],
           "LootListReference": [
             {
               "@name": "LOOT_KEEPER_FURNITURE",
-              "@chance": "0.003171"
+              "@chance": "0.007262"
             },
             {
               "@name": "T6_FRAGMENT_LOOT",
@@ -579626,35 +579737,35 @@
             },
             {
               "@name": "T6_DIRECTLOOTDROP_WHITE",
-              "@chance": "2.949789"
+              "@chance": "6.755396"
             },
             {
               "@name": "T7_DIRECTLOOTDROP_WHITE",
-              "@chance": "0.747291"
+              "@chance": "1.711392"
             },
             {
               "@name": "T8_DIRECTLOOTDROP_WHITE",
-              "@chance": "0.188094"
+              "@chance": "0.430759"
             },
             {
               "@name": "T5_DIRECTLOOTDROP_WHITE",
-              "@chance": "2.906562"
+              "@chance": "6.6564"
             },
             {
               "@name": "T4_DIRECTLOOTDROP_WHITE",
-              "@chance": "2.825232"
+              "@chance": "6.470144"
             },
             {
               "@name": "T6_LOOT_EXPEDITION_TOKEN",
-              "@chance": "0.000144"
+              "@chance": "0.00033"
             },
             {
               "@name": "FAME_BOOKS_LOOT_MOBS",
-              "@chance": "0.134016"
+              "@chance": "0.306914"
             },
             {
               "@name": "TREASURES_STANDARD_LOOT",
-              "@chance": "0.032472"
+              "@chance": "0.074365"
             },
             {
               "@name": "LOOT_KEEPER_FACTION_CAPES",
@@ -579662,7 +579773,7 @@
             },
             {
               "@name": "T6_LOOT_RD_TOKEN",
-              "@chance": "0.0015"
+              "@chance": "0.003435"
             }
           ]
         },
@@ -579727,26 +579838,30 @@
         "@silvermodifier": "32.952",
         "@namelocatag": "@MOB_T5_MOB_ROAMING_KEEPER_FANATIC_SPEAR_CHAMPION",
         "@category": "roaming",
-        "@mindivisor": "3.2",
         "@lootprefab": "T0_LOOTCHEST_MINIBOSS",
         "@mightreward": "PVPCHALLENGE_KEEPER_UPRISING_ROAMING_SPEARMEN",
         "AI": {
           "@reference": "T5_MOB_ROAMING_KEEPER_FANATIC_SPEAR_CHAMPION"
         },
         "Loot": {
-          "Item": {
-            "@type": "UNIQUE_UNLOCK_LORE_KEEPER_01",
-            "@chance": "0.05",
-            "@cangetmodified": "false"
-          },
-          "Harvestable": {
-            "@type": "SILVERCOINS_LOOT_ROAMING_MINIBOSS",
-            "@tier": "7"
-          },
+          "Item": [
+            {
+              "@type": "UNIQUE_UNLOCK_LORE_KEEPER_01",
+              "@chance": "0.05",
+              "@cangetmodified": "false",
+              "@ignoreforactivitychest": "true"
+            },
+            {
+              "@type": "T1_SILVERBAG_NONTRADABLE",
+              "@chance": "8.04469",
+              "@ignoreforactivitychest": "true",
+              "@scalewithgoldeconomy": "true"
+            }
+          ],
           "LootListReference": [
             {
               "@name": "LOOT_KEEPER_FURNITURE",
-              "@chance": "0.004422"
+              "@chance": "0.010127"
             },
             {
               "@name": "T7_FRAGMENT_LOOT",
@@ -579754,31 +579869,31 @@
             },
             {
               "@name": "T7_DIRECTLOOTDROP_WHITE",
-              "@chance": "2.084004"
+              "@chance": "4.772637"
             },
             {
               "@name": "T8_DIRECTLOOTDROP_WHITE",
-              "@chance": "0.524544"
+              "@chance": "1.201273"
             },
             {
               "@name": "T6_DIRECTLOOTDROP_WHITE",
-              "@chance": "3.084831"
+              "@chance": "7.064659"
             },
             {
               "@name": "T5_DIRECTLOOTDROP_WHITE",
-              "@chance": "2.026416"
+              "@chance": "4.640753"
             },
             {
               "@name": "T7_LOOT_EXPEDITION_TOKEN",
-              "@chance": "0.000201"
+              "@chance": "0.00046"
             },
             {
               "@name": "FAME_BOOKS_LOOT_MOBS",
-              "@chance": "0.178971"
+              "@chance": "0.409867"
             },
             {
               "@name": "TREASURES_STANDARD_LOOT",
-              "@chance": "0.045276"
+              "@chance": "0.103688"
             },
             {
               "@name": "LOOT_KEEPER_FACTION_CAPES",
@@ -579786,7 +579901,7 @@
             },
             {
               "@name": "T7_LOOT_RD_TOKEN",
-              "@chance": "0.002091"
+              "@chance": "0.004789"
             }
           ]
         },
@@ -579851,50 +579966,58 @@
         "@silvermodifier": "32.952",
         "@namelocatag": "@MOB_T5_MOB_ROAMING_KEEPER_FANATIC_SPEAR_CHAMPION",
         "@category": "roaming",
-        "@mindivisor": "3.2",
         "@lootprefab": "T0_LOOTCHEST_MINIBOSS",
         "@mightreward": "PVPCHALLENGE_KEEPER_UPRISING_ROAMING_SPEARMEN",
         "AI": {
           "@reference": "T5_MOB_ROAMING_KEEPER_FANATIC_SPEAR_CHAMPION"
         },
         "Loot": {
-          "Item": {
-            "@type": "UNIQUE_UNLOCK_LORE_KEEPER_01",
-            "@chance": "0.05",
-            "@cangetmodified": "false"
-          },
+          "Item": [
+            {
+              "@type": "UNIQUE_UNLOCK_LORE_KEEPER_01",
+              "@chance": "0.05",
+              "@cangetmodified": "false",
+              "@ignoreforactivitychest": "true"
+            },
+            {
+              "@type": "T1_SILVERBAG_NONTRADABLE",
+              "@chance": "10.641493",
+              "@ignoreforactivitychest": "true",
+              "@scalewithgoldeconomy": "true"
+            }
+          ],
           "LootListReference": [
             {
               "@name": "LOOT_KEEPER_FURNITURE",
-              "@chance": "0.006384"
+              "@chance": "0.01462"
             },
             {
               "@name": "T8_DIRECTLOOTDROP_WHITE",
-              "@chance": "1.515126"
+              "@chance": "3.469833"
             },
             {
               "@name": "T7_DIRECTLOOTDROP_WHITE",
-              "@chance": "3.009783"
+              "@chance": "6.89279"
             },
             {
               "@name": "T6_DIRECTLOOTDROP_WHITE",
-              "@chance": "2.970135"
+              "@chance": "6.801991"
             },
             {
               "@name": "T8_LOOT_EXPEDITION_TOKEN",
-              "@chance": "0.000291"
+              "@chance": "0.000666"
             },
             {
               "@name": "FAME_BOOKS_LOOT_MOBS",
-              "@chance": "0.246147"
+              "@chance": "0.563708"
             },
             {
               "@name": "TREASURES_STANDARD_LOOT",
-              "@chance": "0.065388"
+              "@chance": "0.149747"
             },
             {
               "@name": "T8_LOOT_RD_TOKEN",
-              "@chance": "0.003021"
+              "@chance": "0.006918"
             }
           ]
         },

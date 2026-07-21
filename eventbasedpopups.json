@@ -107,6 +107,14 @@
           {
             "@name": "AccountConversion",
             "@totalpopups": "1"
+          },
+          {
+            "@name": "Surveys",
+            "@totalpopups": "1"
+          },
+          {
+            "@name": "News",
+            "@totalpopups": "1"
           }
         ]
       }
@@ -730,14 +738,9 @@
           "@priority": "9",
           "@type": "GuestAccount",
           "categories": {
-            "category": [
-              {
-                "@name": "AccountConversion"
-              },
-              {
-                "@name": "Advertisement"
-              }
-            ]
+            "category": {
+              "@name": "AccountConversion"
+            }
           },
           "triggers": {
             "trigger": [
@@ -770,7 +773,7 @@
                   },
                   "IfIsGuestAccount": null,
                   "IfGuestLoginCount": {
-                    "@operation": "equals",
+                    "@operation": "greaterOrEqual",
                     "@value": "2"
                   },
                   "IfHasSeenPopup": {
@@ -808,14 +811,9 @@
           "@type": "PlatformAccount",
           "@priority": "10",
           "categories": {
-            "category": [
-              {
-                "@name": "AccountConversion"
-              },
-              {
-                "@name": "Advertisement"
-              }
-            ]
+            "category": {
+              "@name": "AccountConversion"
+            }
           },
           "triggers": {
             "trigger": [
@@ -1224,6 +1222,54 @@
               ]
             }
           }
+        },
+        {
+          "@uniquename": "CONTROLS_PLAYER_BASED_INFO",
+          "@priority": "10",
+          "@type": "GenericTutorial",
+          "categories": {
+            "category": {
+              "@name": "News"
+            }
+          },
+          "triggers": {
+            "trigger": [
+              {
+                "@action": "ClusterChange"
+              },
+              {
+                "@action": "GameLogin"
+              }
+            ]
+          },
+          "conditions": {
+            "and": {
+              "or": {
+                "IfOnPlatform": {
+                  "@platform": "Xbox"
+                },
+                "IfInputType": {
+                  "@type": "Gamepad"
+                }
+              },
+              "IfTutorialCompleted": null,
+              "IfAlbionJournalIsUnlocked": null,
+              "IfAccountAgeDays": {
+                "@value": "2",
+                "@operation": "greater"
+              },
+              "IfValidDate": {
+                "@start": "2026-06-03T11:00:00",
+                "@end": "2026-08-17T11:00:00"
+              },
+              "IfHasSeenPopup": {
+                "@uniquename": "CONTROLS_PLAYER_BASED_INFO",
+                "@frequency": "AllTime",
+                "@operation": "equals",
+                "@amount": "0"
+              }
+            }
+          }
         }
       ],
       "lootchestpopup": {
@@ -1500,7 +1546,77 @@
             }
           }
         }
-      ]
+      ],
+      "survey": {
+        "@uniquename": "GAMEPAD_SURVEY_1",
+        "@type": "Survey",
+        "@priority": "0",
+        "@title": "@GAMEPAD_SURVEY_1_TITLE",
+        "@subtitleright": "@GAMEPAD_SURVEY_1_SUB_TITLE",
+        "@description": "@GAMEPAD_SURVEY_1_BULLETPOINTS",
+        "@customurl": "survey",
+        "@imagetitle": "@GAMEPAD_SURVEY_1_TITLE_LEFT",
+        "@imagedescription": "@GAMEPAD_SURVEY_1_DESCRIPTION_LEFT",
+        "@imagepath": "Gui/EventBasedPopups/Surveys/Survey1",
+        "@qrcodepath": "Gui/EventBasedPopups/Surveys/Survey1_QR",
+        "categories": {
+          "category": {
+            "@name": "Surveys"
+          }
+        },
+        "triggers": {
+          "trigger": [
+            {
+              "@action": "GameLogin"
+            },
+            {
+              "@action": "ClusterChange"
+            }
+          ]
+        },
+        "conditions": {
+          "and": {
+            "or": [
+              {
+                "IfOnPlatform": {
+                  "@platform": "Xbox"
+                },
+                "IfInputType": {
+                  "@type": "Gamepad"
+                }
+              },
+              {
+                "IfValidDate": [
+                  {
+                    "@start": "2026-07-09T11:00:00",
+                    "@end": "2026-07-25T11:00:00"
+                  },
+                  {
+                    "@start": "2026-08-03T11:00:00",
+                    "@end": "2026-08-17T11:00:00"
+                  }
+                ]
+              }
+            ],
+            "IfTutorialCompleted": null,
+            "IfAlbionJournalIsUnlocked": null,
+            "IfAccountAgeDays": {
+              "@value": "2",
+              "@operation": "greater"
+            },
+            "not": {
+              "IfIsGuestAccount": null
+            },
+            "IfHasSeenPopup": {
+              "@uniquename": "GAMEPAD_SURVEY_1",
+              "@frequency": "Days",
+              "@timefactor": "2",
+              "@operation": "equals",
+              "@amount": "0"
+            }
+          }
+        }
+      }
     }
   }
 }
