@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<surveys xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="surveys.xsd">
+
+    <!--survey uniquename="TEST" title="@TITLE">
+        <rewards>
+            <reward id="T2_MAIN_SWORD" amount="1"/>
+        </rewards>
+        <triggers>
+            <trigger action="GameLogin"/>
+        </triggers>
+        <conditions>
+            <and>
+                <IfInRandomQualifiedPool chance="0.5"/>
+
+                <IfHasCompletedSurvey uniquename="TEST"/>
+                <IfHasCompletedAnySurvey/>
+                <IfHasCompletedAnySurvey timespan="ThisMonth" timefactor="2" operation="greaterOrEqual" amount="1"/>
+                <IfHasCompletedSurvey uniquename="BETTER_FASTER_STRONGER" timespan="Today" operation="equals" amount="1"/>
+            </and>
+        </conditions>
+        <questions>
+
+            <question type="singlechoice" text="@MY_LOCA_TAG">
+                <answers>
+                    <answer text="@ANSWER_1"/>
+                    <answer text="@ANSWER_2"/>
+                    <answer text="@ANSWER_3"/>
+                </answers>
+            </question>
+
+            <question type="multiplechoice" text="@MYLOCATAG">
+                <answers>
+                    <answer text="@ANSWER_1"/>
+                    <answer text="@ANSWER_2"/>
+                    <answer text="@ANSWER_3"/>
+                </answers>
+            </question>
+
+            <question type="textinput" text="@MYLOCATAG"/>
+
+            <question type="rating" text="@MYLOCATAG">
+                <scale min="1" max="5">
+                    <minlabel text="@SURVEY_GENERIC_VERY_BAD"/>
+                    <maxlabel text="@SURVEY_GENERIC_VERY_GOOD"/>
+                </scale>
+            </question>
+
+
+        </questions>
+    </survey-->
+</surveys>

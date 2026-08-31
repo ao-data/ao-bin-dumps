@@ -38,6 +38,9 @@
       <difficulty level="1" mobmodifier="MOB_HELLDUNGEON_BUFF_02" silverfactor="1"   lootfactor="1.65"  mobfamefactor="1.6"   questscalingfactor="1.6"   gatheringfamefactor="1" fishingfamefactor="1"/>
       <difficulty level="2" mobmodifier="MOB_HELLDUNGEON_BUFF_03" silverfactor="1"   lootfactor="1.8"   mobfamefactor="1.7"   questscalingfactor="1.7"   gatheringfamefactor="1" fishingfamefactor="1"/>
     </difficultygroup>
+    <difficultygroup name="dragonarea">
+      <difficulty level="0" mobmodifier="MOB_DRAGONAREA_BUFF_01"  silverfactor="1"   lootfactor="1"     mobfamefactor="1.0"   questscalingfactor="1.0"   gatheringfamefactor="1" fishingfamefactor="1"/>
+    </difficultygroup>
   </DifficultyLevels>
   
   <RandomLevelRerolls>
@@ -163,16 +166,34 @@
 
   <ClusterTypeMappings defaultClustertype="DUNGEON_SAFEAREA">
     <!--Open World Cluster-->
-    <ClusterTypeMapping clustertype="SAFEAREA" dungeonclustertype="RD_SAFEAREA"/>
-    <ClusterTypeMapping clustertype="OPENPVP_YELLOW" dungeonclustertype="RD_YELLOW"/>
-    <ClusterTypeMapping clustertype="OPENPVP_RED" dungeonclustertype="DUNGEON_RED"/>
-    
-    <ClusterTypeMapping clustertype="OPENPVP_BLACK_1" dungeonclustertype="RD_DUNGEON_BLACK_1"/>
-    <ClusterTypeMapping clustertype="OPENPVP_BLACK_2" dungeonclustertype="RD_DUNGEON_BLACK_2"/>
-    <ClusterTypeMapping clustertype="OPENPVP_BLACK_3" dungeonclustertype="RD_DUNGEON_BLACK_3"/>
-    <ClusterTypeMapping clustertype="OPENPVP_BLACK_4" dungeonclustertype="RD_DUNGEON_BLACK_4"/>
-    <ClusterTypeMapping clustertype="OPENPVP_BLACK_5" dungeonclustertype="RD_DUNGEON_BLACK_5"/>
-    <ClusterTypeMapping clustertype="OPENPVP_BLACK_6" dungeonclustertype="RD_DUNGEON_BLACK_6"/>
+    <ClusterTypeMapping clustertype="SAFEAREA" dungeonclustertype="RD_SAFEAREA">
+      <Generator name="KRP_DRAGON_RANDOM_DUNGEON" dungeonclustertype="DUNGEON_DRAGON_SAFEAREA_BLUE"/>
+    </ClusterTypeMapping>
+    <ClusterTypeMapping clustertype="OPENPVP_YELLOW" dungeonclustertype="RD_YELLOW">
+      <Generator name="KRP_DRAGON_RANDOM_DUNGEON" dungeonclustertype="DUNGEON_DRAGON_SAFEAREA_YELLOW"/>
+    </ClusterTypeMapping>
+    <ClusterTypeMapping clustertype="OPENPVP_RED" dungeonclustertype="DUNGEON_RED">
+      <Generator name="KRP_DRAGON_RANDOM_DUNGEON" dungeonclustertype="DUNGEON_DRAGON_SAFEAREA_RED"/>
+    </ClusterTypeMapping>
+
+    <ClusterTypeMapping clustertype="OPENPVP_BLACK_1" dungeonclustertype="RD_DUNGEON_BLACK_1">
+      <Generator name="KRP_DRAGON_RANDOM_DUNGEON" dungeonclustertype="DUNGEON_DRAGON_SAFEAREA_BLACK_1"/>
+    </ClusterTypeMapping>
+    <ClusterTypeMapping clustertype="OPENPVP_BLACK_2" dungeonclustertype="RD_DUNGEON_BLACK_2">
+      <Generator name="KRP_DRAGON_RANDOM_DUNGEON" dungeonclustertype="DUNGEON_DRAGON_SAFEAREA_BLACK_2"/>
+    </ClusterTypeMapping>
+    <ClusterTypeMapping clustertype="OPENPVP_BLACK_3" dungeonclustertype="RD_DUNGEON_BLACK_3">
+      <Generator name="KRP_DRAGON_RANDOM_DUNGEON" dungeonclustertype="DUNGEON_DRAGON_SAFEAREA_BLACK_3"/>
+    </ClusterTypeMapping>
+    <ClusterTypeMapping clustertype="OPENPVP_BLACK_4" dungeonclustertype="RD_DUNGEON_BLACK_4">
+      <Generator name="KRP_DRAGON_RANDOM_DUNGEON" dungeonclustertype="DUNGEON_DRAGON_SAFEAREA_BLACK_4"/>
+    </ClusterTypeMapping>
+    <ClusterTypeMapping clustertype="OPENPVP_BLACK_5" dungeonclustertype="RD_DUNGEON_BLACK_5">
+      <Generator name="KRP_DRAGON_RANDOM_DUNGEON" dungeonclustertype="DUNGEON_DRAGON_SAFEAREA_BLACK_5"/>
+    </ClusterTypeMapping>
+    <ClusterTypeMapping clustertype="OPENPVP_BLACK_6" dungeonclustertype="RD_DUNGEON_BLACK_6">
+      <Generator name="KRP_DRAGON_RANDOM_DUNGEON" dungeonclustertype="DUNGEON_DRAGON_SAFEAREA_BLACK_6"/>
+    </ClusterTypeMapping>
     <!--Passage Cluster-->
     <ClusterTypeMapping clustertype="PASSAGE_SAFEAREA" dungeonclustertype="RD_SAFEAREA"/>
     <ClusterTypeMapping clustertype="PASSAGE_YELLOW" dungeonclustertype="RD_YELLOW"/>
@@ -248,6 +269,11 @@
           <displayname name="Hidden Easter Dungeon" />
         </default>
       </Subset>
+      <Subset id="fanatic">
+        <default>
+          <displayname name="Dragon Sanctuary" />
+        </default>
+      </Subset>
     </Faction>
     <Faction name="MORGANA" defaultname="Hidden Sanctum">
       <Subset id="monastery">
@@ -264,6 +290,10 @@
       </Subset>
     </Faction>
   </RandomDungeonNames>
+
+  <ReservationProfiles>
+    <ReservationProfile name="dragon_keymaster_elite" mode="Keymaster" maxplayers="20" activationtimeout="300" entrywindowafterfirstenter="600" />
+  </ReservationProfiles>
 
   <!-- ================================================================================================================ -->
   <!--  Fixed Exits -->
@@ -424,7 +454,8 @@
           <RandomExit name="T5_MORGANA" weight="0" />
           <RandomExit name="T6_MORGANA" weight="0" />
           <RandomExit name="T4_PORTAL" weight="0" />
-          <RandomExit name="AVALON_LIONEL_TEST" weight="1"/>
+          
+          <RandomExit name="KEEPER_DRAGON_DUNGEON_T8" weight="1"/>
           <!--<RandomExit name="DEBUG" weight="0" />-->
         </ClusterTier>
       </Subtype>
@@ -782,6 +813,8 @@
           <RandomExit name="T8_PORTAL_CONSUMABLE" weight="0" />
 
           <RandomExit name="T5_KEEPER_BOSSROOM_VETERAN" weight="0" />
+
+          <RandomExit name="KEEPER_DRAKE_DUNGEON_T5" weight="0"/>
         </ClusterTier>
         <ClusterTier tier="6" maxfillratio="0.4">
           <RandomExit name="T6_HERETIC" weight="1" randomlevelrerollref="VETERAN_OUTLANDS"/>
@@ -797,6 +830,8 @@
           <RandomExit name="T6_AVALON_ELITE" weight="0" />
 
           <RandomExit name="T6_MORGANA_BOSSROOM_VETERAN" weight="0" />
+
+          <RandomExit name="KEEPER_DRAKE_DUNGEON_T6" weight="0"/>
         </ClusterTier>
         <ClusterTier tier="7" maxfillratio="0.3">
           <RandomExit name="T7_HERETIC" weight="9" randomlevelrerollref="VETERAN_OUTLANDS"/>
@@ -811,6 +846,8 @@
           <RandomExit name="T7_AVALON_ELITE" weight="0" />
 
           <RandomExit name="T7_UNDEAD_BOSSROOM_VETERAN" weight="0" />
+
+          <RandomExit name="KEEPER_DRAKE_DUNGEON_T7" weight="0"/>
         </ClusterTier>
         <ClusterTier tier="8" maxfillratio="0.2">
           <RandomExit name="T8_HERETIC" weight="9" randomlevelrerollref="VETERAN_OUTLANDS"/>
@@ -822,6 +859,8 @@
           <RandomExit name="T8_PORTAL_CONSUMABLE" weight="0" />
 
           <RandomExit name="T8_MORGANA_BOSSROOM_VETERAN" weight="0" />
+
+          <RandomExit name="KEEPER_DRAKE_DUNGEON_T8" weight="0"/>
         </ClusterTier>
       </Subtype>
       <Subtype name="ELITE">
@@ -836,7 +875,14 @@
           <RandomExit name="T6_UNDEAD" weight="1" />
           <RandomExit name="T6_KEEPER" weight="1" />
           <RandomExit name="T6_MORGANA" weight="1" />
-          <RandomExit name="AVALON_LIONEL_TEST" weight="0"/>
+
+          <RandomExit name="KEEPER_DRAGON_LAIR_T6" weight="0"/>
+          <RandomExit name="KEEPER_DRAGON_LAIR_T7" weight="0"/>
+          <RandomExit name="KEEPER_DRAGON_LAIR_T8" weight="0"/>
+          
+          <RandomExit name="KEEPER_DRAGON_DUNGEON_T6" weight="0"/>
+          <RandomExit name="KEEPER_DRAGON_DUNGEON_T7" weight="0"/>
+          <RandomExit name="KEEPER_DRAGON_DUNGEON_T8" weight="0"/>
         </ClusterTier>
         <ClusterTier tier="7" maxfillratio="0.25">
           <RandomExit name="T7_AVALON_ELITE" weight="12" randomlevelrerollref="ELITE_OUTLANDS"/>
@@ -848,7 +894,14 @@
           <RandomExit name="T7_UNDEAD" weight="1" />
           <RandomExit name="T7_KEEPER" weight="1" />
           <RandomExit name="T7_MORGANA" weight="1" />
-          <RandomExit name="AVALON_LIONEL_TEST" weight="0"/>
+
+          <RandomExit name="KEEPER_DRAGON_LAIR_T6" weight="0"/>
+          <RandomExit name="KEEPER_DRAGON_LAIR_T7" weight="0"/>
+          <RandomExit name="KEEPER_DRAGON_LAIR_T8" weight="0"/>
+
+          <RandomExit name="KEEPER_DRAGON_DUNGEON_T6" weight="0"/>
+          <RandomExit name="KEEPER_DRAGON_DUNGEON_T7" weight="0"/>
+          <RandomExit name="KEEPER_DRAGON_DUNGEON_T8" weight="0"/>
         </ClusterTier>
         <ClusterTier tier="8" maxfillratio="0.25">
           <RandomExit name="T8_AVALON_ELITE" weight="12" randomlevelrerollref="ELITE_OUTLANDS"/>
@@ -859,7 +912,14 @@
           <RandomExit name="T8_UNDEAD" weight="1" />
           <RandomExit name="T8_KEEPER" weight="1" />
           <RandomExit name="T8_MORGANA" weight="1" />
-          <RandomExit name="AVALON_LIONEL_TEST" weight="0"/>
+
+          <RandomExit name="KEEPER_DRAGON_LAIR_T6" weight="0"/>
+          <RandomExit name="KEEPER_DRAGON_LAIR_T7" weight="0"/>
+          <RandomExit name="KEEPER_DRAGON_LAIR_T8" weight="0"/>
+
+          <RandomExit name="KEEPER_DRAGON_DUNGEON_T6" weight="0"/>
+          <RandomExit name="KEEPER_DRAGON_DUNGEON_T7" weight="0"/>
+          <RandomExit name="KEEPER_DRAGON_DUNGEON_T8" weight="0"/>
         </ClusterTier>
       </Subtype>      
       <Subtype name="EVENT_SOLO">
@@ -2336,6 +2396,129 @@
         </fallback>
       </biome>
     </Visualization>
+    <!--Keymaster-->
+    <Visualization name="KEEPER_FANATICS_KEYMASTER">
+      <TooltipDisplay uisprite="dragons_portal_big_active" displayname="@PROXIMITY_TOOLTIP_BOSSROOM_DUNGEON_GROUP" optionentry="GroupDungeon"/>
+      <fallback>
+        <prefab name="SHARED_HELLGATE_ENTRANCE_2V2_LETHAL" />
+      </fallback>
+      <biome name="Forest">
+        <subbiome name="Green">
+          <prefab name="FOREST_GREEN_KPR_FANATICS_PORTAL" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="FOREST_RED_KPR_FANATICS_PORTAL" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="FOREST_DEAD_KPR_FANATICS_PORTAL" />
+        </subbiome>
+      </biome>
+      <biome name="Steppe">
+        <subbiome name="Green">
+          <prefab name="STEPPE_GREEN_KPR_FANATICS_PORTAL" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="STEPPE_RED_KPR_FANATICS_PORTAL" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="STEPPE_DEAD_KPR_FANATICS_PORTAL" />
+        </subbiome>
+      </biome>
+      <biome name="Swamp">
+        <subbiome name="Green">
+          <prefab name="SWAMP_GREEN_KPR_FANATICS_PORTAL" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="SWAMP_RED_KPR_FANATICS_PORTAL" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="SWAMP_DEAD_KPR_FANATICS_PORTAL" />
+        </subbiome>
+      </biome>
+      <biome name="Highland">
+        <subbiome name="Green">
+          <prefab name="HIGHLAND_GREEN_KPR_FANATICS_PORTAL" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="HIGHLAND_RED_KPR_FANATICS_PORTAL" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="HIGHLAND_DEAD_KPR_FANATICS_PORTAL" />
+        </subbiome>
+      </biome>
+      <biome name="Mountain">
+        <subbiome name="Green">
+          <prefab name="MOUNTAIN_GREEN_KPR_FANATICS_PORTAL" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="MOUNTAIN_RED_KPR_FANATICS_PORTAL" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="MOUNTAIN_DEAD_KPR_FANATICS_PORTAL" />
+        </subbiome>
+      </biome>
+    </Visualization>
+    <Visualization name="KEEPER_FANATICS_KEYMASTER_LARGE">
+      <TooltipDisplay uisprite="dragons_portal_big_active" displayname="@PROXIMITY_TOOLTIP_DUNGEON_ELITE" optionentry="LargeGroupDungeon"/>
+      <fallback>
+        <prefab name="SHARED_HELLGATE_ENTRANCE_2V2_LETHAL" />
+      </fallback>
+      <biome name="Forest">
+        <subbiome name="Green">
+          <prefab name="FOREST_GREEN_KPR_FANATICS_PORTAL_LARGE" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="FOREST_RED_KPR_FANATICS_PORTAL_LARGE" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="FOREST_DEAD_KPR_FANATICS_PORTAL_LARGE" />
+        </subbiome>
+      </biome>
+      <biome name="Steppe">
+        <subbiome name="Green">
+          <prefab name="STEPPE_GREEN_KPR_FANATICS_PORTAL_LARGE" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="STEPPE_RED_KPR_FANATICS_PORTAL_LARGE" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="STEPPE_DEAD_KPR_FANATICS_PORTAL_LARGE" />
+        </subbiome>
+      </biome>
+      <biome name="Swamp">
+        <subbiome name="Green">
+          <prefab name="SWAMP_GREEN_KPR_FANATICS_PORTAL_LARGE" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="SWAMP_RED_KPR_FANATICS_PORTAL_LARGE" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="SWAMP_DEAD_KPR_FANATICS_PORTAL_LARGE" />
+        </subbiome>
+      </biome>
+      <biome name="Highland">
+        <subbiome name="Green">
+          <prefab name="HIGHLAND_GREEN_KPR_FANATICS_PORTAL_LARGE" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="HIGHLAND_RED_KPR_FANATICS_PORTAL_LARGE" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="HIGHLAND_DEAD_KPR_FANATICS_PORTAL_LARGE" />
+        </subbiome>
+      </biome>
+      <biome name="Mountain">
+        <subbiome name="Green">
+          <prefab name="MOUNTAIN_GREEN_KPR_FANATICS_PORTAL_LARGE" />
+        </subbiome>
+        <subbiome name="Red">
+          <prefab name="MOUNTAIN_RED_KPR_FANATICS_PORTAL_LARGE" />
+        </subbiome>
+        <subbiome name="Dead">
+          <prefab name="MOUNTAIN_DEAD_KPR_FANATICS_PORTAL_LARGE" />
+        </subbiome>
+      </biome>
+    </Visualization>
     <Visualization name="UNDEAD_BOSSROOM_GROUP">
       <TooltipDisplay uisprite="dungeon_group" displayname="@PROXIMITY_TOOLTIP_BOSSROOM_DUNGEON_GROUP" optionentry="GroupDungeon"/>
       <fallback>
@@ -2476,11 +2659,67 @@
     <!-- ###  Avalon Dungeons  ### -->
     <!--  ##########################  -->
 
-    <RandomExit name="AVALON_LIONEL_TEST" activationtime="0" cooldown="60" >
+    <RandomExit name="KEEPER_DRAKE_DUNGEON_T5" activationtime="0" cooldown="60" >
       <RandomDungeonGenerators>
-        <GeneratedRandomDungeon generatorName="AVALON_RANDOM_DUNGEON_PORTAL_TEST" tier="8" weight="1" />
+        <GeneratedRandomDungeon generatorName="KRP_DRAKE_RANDOM_DUNGEON" tier="5" weight="1" />
       </RandomDungeonGenerators>
-      <Visualization ref="AVALON_ELITE"/>
+      <Visualization ref="KEEPER_FANATICS_KEYMASTER"/>
+    </RandomExit>
+    <RandomExit name="KEEPER_DRAKE_DUNGEON_T6" activationtime="0" cooldown="60" >
+      <RandomDungeonGenerators>
+        <GeneratedRandomDungeon generatorName="KRP_DRAKE_RANDOM_DUNGEON" tier="6" weight="1" />
+      </RandomDungeonGenerators>
+      <Visualization ref="KEEPER_FANATICS_KEYMASTER"/>
+    </RandomExit>
+    <RandomExit name="KEEPER_DRAKE_DUNGEON_T7" activationtime="0" cooldown="60" >
+      <RandomDungeonGenerators>
+        <GeneratedRandomDungeon generatorName="KRP_DRAKE_RANDOM_DUNGEON" tier="7" weight="1" />
+      </RandomDungeonGenerators>
+      <Visualization ref="KEEPER_FANATICS_KEYMASTER"/>
+    </RandomExit>
+    <RandomExit name="KEEPER_DRAKE_DUNGEON_T8" activationtime="0" cooldown="60" >
+      <RandomDungeonGenerators>
+        <GeneratedRandomDungeon generatorName="KRP_DRAKE_RANDOM_DUNGEON" tier="8" weight="1" />
+      </RandomDungeonGenerators>
+      <Visualization ref="KEEPER_FANATICS_KEYMASTER"/>
+    </RandomExit>
+    
+    <RandomExit name="KEEPER_DRAGON_LAIR_T6" activationtime="0" cooldown="60" >
+      <RandomDungeonGenerators>
+        <GeneratedRandomDungeon generatorName="KRP_DRAGON_BOSS_LAIR" tier="6" weight="1" />
+      </RandomDungeonGenerators>
+      <Visualization ref="KEEPER_FANATICS_KEYMASTER_LARGE"/>
+    </RandomExit>
+    <RandomExit name="KEEPER_DRAGON_LAIR_T7" activationtime="0" cooldown="60" >
+      <RandomDungeonGenerators>
+        <GeneratedRandomDungeon generatorName="KRP_DRAGON_BOSS_LAIR" tier="7" weight="1" />
+      </RandomDungeonGenerators>
+      <Visualization ref="KEEPER_FANATICS_KEYMASTER_LARGE"/>
+    </RandomExit>
+    <RandomExit name="KEEPER_DRAGON_LAIR_T8" activationtime="0" cooldown="60" >
+      <RandomDungeonGenerators>
+        <GeneratedRandomDungeon generatorName="KRP_DRAGON_BOSS_LAIR" tier="8" weight="1" />
+      </RandomDungeonGenerators>
+      <Visualization ref="KEEPER_FANATICS_KEYMASTER_LARGE"/>
+    </RandomExit>
+    
+    <RandomExit name="KEEPER_DRAGON_DUNGEON_T6" activationtime="0" cooldown="60" lifetimeafterlastuse="180">
+      <RandomDungeonGenerators>
+        <GeneratedRandomDungeon generatorName="KRP_DRAGON_RANDOM_DUNGEON" tier="6" weight="1" />
+      </RandomDungeonGenerators>
+      <Visualization ref="KEEPER_FANATICS_KEYMASTER_LARGE"/>
+    </RandomExit>
+    <RandomExit name="KEEPER_DRAGON_DUNGEON_T7" activationtime="0" cooldown="60" lifetimeafterlastuse="180">
+      <RandomDungeonGenerators>
+        <GeneratedRandomDungeon generatorName="KRP_DRAGON_RANDOM_DUNGEON" tier="7" weight="1" />
+      </RandomDungeonGenerators>
+      <Visualization ref="KEEPER_FANATICS_KEYMASTER_LARGE"/>
+    </RandomExit>
+    <RandomExit name="KEEPER_DRAGON_DUNGEON_T8" activationtime="0" cooldown="60" lifetimeafterlastuse="180">
+      <RandomDungeonGenerators>
+        <GeneratedRandomDungeon generatorName="KRP_DRAGON_RANDOM_DUNGEON" tier="8" weight="1" />
+      </RandomDungeonGenerators>
+      <Visualization ref="KEEPER_FANATICS_KEYMASTER_LARGE"/>
     </RandomExit>
     
     <!--  ##########################  -->
@@ -5745,9 +5984,77 @@
         </Size>
       </DungeonSizeAndDepth>
     </RandomDungeonGenerator>
-    
+
+    <RandomDungeonGenerator name="KRP_DRAKE_RANDOM_DUNGEON" type="DEFAULT_VETERAN" biome="Dragon">
+      <Faction name="KEEPER">
+        <Subset name="fanatic" weight="1" />
+      </Faction>
+      <Flags>
+        <Flag name="veteran"/>
+      </Flags>
+      <Environments>
+        <Environment name="indoor" weight="1">
+          <Subset name="cave_01" weight="0.5" />
+          <Subset name="cave_ocean" weight="0.5" />
+        </Environment>
+      </Environments>
+      <DungeonSizeAndDepth>
+        <Size floors="3" weight="1">
+          <BossRarity>
+            <highlight name="legendary" weight="1" />
+          </BossRarity>
+          <Floor level="1">
+            <DungeonLength pathlength="3" highlightCount="2" weight="1">
+              <highlight name="uncommon" weight="1" />
+			  <highlight name="standard" weight="1" />
+            </DungeonLength>
+          </Floor>
+          <Floor level="2">
+            <DungeonLength pathlength="9" highlightCount="1" weight="1">
+              <highlight name="rare" weight="1" />
+            </DungeonLength>
+          </Floor>
+          <Floor level="3">
+            <DungeonLength pathlength="0" highlightCount="0" weight="1">
+              <highlight name="uncommon" weight="1" />
+            </DungeonLength>
+          </Floor>
+        </Size>
+      </DungeonSizeAndDepth>
+    </RandomDungeonGenerator>
     <!--ELITE-->
-    <RandomDungeonGenerator name="AVALON_RANDOM_DUNGEON_PORTAL_TEST" type="DEFAULT_ELITE">
+    <RandomDungeonGenerator name="KRP_DRAGON_BOSS_LAIR" type="DEFAULT_ELITE" biome="Dragon" specialtype="Dragon">
+      <Faction name="KEEPER">
+        <Subset name="fanatic" weight="1" />
+      </Faction>
+      <Flags>
+        <Flag name="elite"/>
+      </Flags>
+      <Environments>
+        <Environment name="indoor" weight="1">
+          <Subset name="cave_01" weight="0.5" />
+          <Subset name="cave_ocean" weight="0.5" />
+        </Environment>
+      </Environments>
+      <DungeonSizeAndDepth>
+        <Size floors="2" weight="1">
+          <BossRarity>
+            <highlight name="legendary" weight="1" />
+          </BossRarity>
+          <Floor level="1">
+            <DungeonLength pathlength="0" highlightCount="0" weight="1">
+              <highlight name="uncommon" weight="1" />
+            </DungeonLength>
+          </Floor>
+		 <Floor level="2">
+			<DungeonLength pathlength="0" highlightCount="0" weight="1">
+			  <highlight name="uncommon" weight="1" />
+			</DungeonLength>
+		 </Floor>
+        </Size>
+      </DungeonSizeAndDepth>
+    </RandomDungeonGenerator>
+    <RandomDungeonGenerator name="KRP_DRAGON_RANDOM_DUNGEON" type="DEFAULT_ELITE" biome="Dragon" specialtype="Dragon" fullclusterplayerinterestinbossroom="true">
       <Faction name="KEEPER">
         <Subset name="fanatic" weight="1" />
       </Faction>
@@ -5766,21 +6073,24 @@
             <highlight name="legendary" weight="1" />
           </BossRarity>
           <Floor level="1">
-            <DungeonLength pathlength="5" highlightCount="1" weight="1">
+			<DungeonLength pathlength="6" highlightCount="2" uniqueHighlightRarities="true" weight="20">
+				<highlight name="rare" weight="1" />
+				<highlight name="standard" weight="1" />
+			  </DungeonLength>
+			<DungeonLength pathlength="6" highlightCount="1" weight="80">
+				<highlight name="rare" weight="1" />
+			</DungeonLength>
+          </Floor>
+          <Floor level="2">
+			<DungeonLength pathlength="3" highlightCount="1" weight="1">
+				 <highlight name="uncommon" weight="100" />
+			</DungeonLength>
+          </Floor>
+          <Floor level="3" enforceInDirection="Forward">
+            <DungeonLength pathlength="0" highlightCount="0" weight="1">
               <highlight name="uncommon" weight="1" />
             </DungeonLength>
           </Floor>
-		  <Floor level="2">
-			<DungeonLength pathlength="10" highlightCount="2" weight="1">
-				<highlight name="rare" weight="1" />
-				<highlight name="uncommon" weight="1" />
-			</DungeonLength>
-		  </Floor>
-		  <Floor level="3">
-			 <DungeonLength pathlength="0" highlightCount="0" weight="1">
-			   <highlight name="uncommon" weight="1" />
-		    </DungeonLength>
-		  </Floor>
         </Size>
       </DungeonSizeAndDepth>
     </RandomDungeonGenerator>

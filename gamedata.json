@@ -1175,12 +1175,18 @@
           "@name": "HitpointsMax",
           "@min": "-0.5",
           "@max": "unrestricted",
-          "@absolutemin": "1000"
+          "@absolutemin": "1000",
+          "mobs": {
+            "@min": "-0.25"
+          }
         },
         {
           "@name": "HitpointsMaxBonus",
           "@min": "-0.5",
-          "@max": "unrestricted"
+          "@max": "unrestricted",
+          "mobs": {
+            "@min": "-0.25"
+          }
         },
         {
           "@name": "HitpointsRegeneration",
@@ -1229,22 +1235,34 @@
         {
           "@name": "PhysicalAttackDamageBonus",
           "@min": "-0.8",
-          "@max": "3"
+          "@max": "3",
+          "mobs": {
+            "@min": "-0.5"
+          }
         },
         {
           "@name": "MagicAttackDamageBonus",
           "@min": "-0.8",
-          "@max": "3"
+          "@max": "3",
+          "mobs": {
+            "@min": "-0.5"
+          }
         },
         {
           "@name": "PhysicalSpellDamageBonus",
           "@min": "-0.8",
-          "@max": "1"
+          "@max": "1",
+          "mobs": {
+            "@min": "-0.5"
+          }
         },
         {
           "@name": "MagicSpellDamageBonus",
           "@min": "-0.8",
-          "@max": "1"
+          "@max": "1",
+          "mobs": {
+            "@min": "-0.5"
+          }
         },
         {
           "@name": "HealBonus",
@@ -1325,23 +1343,30 @@
       ]
     },
     "MobFocusFire": {
-      "@maxlevel": "10",
       "dangerstate": [
         {
           "@dangerstate": "normal",
-          "@attackerthreshold": "2"
+          "@attackerthreshold": "2",
+          "@maxlevel": "10",
+          "@spell": "MOB_FOCUSFIRE"
         },
         {
           "@dangerstate": "roaming",
-          "@attackerthreshold": "2"
+          "@attackerthreshold": "2",
+          "@maxlevel": "10",
+          "@spell": "MOB_FOCUSFIRE"
         },
         {
           "@dangerstate": "veteran",
-          "@attackerthreshold": "7"
+          "@attackerthreshold": "7",
+          "@maxlevel": "10",
+          "@spell": "MOB_FOCUSFIRE"
         },
         {
           "@dangerstate": "elite",
-          "@attackerthreshold": "20"
+          "@attackerthreshold": "20",
+          "@maxlevel": "99",
+          "@spell": "MOB_FOCUSFIRE_ELITE"
         }
       ]
     },
@@ -4141,6 +4166,49 @@
         "@minpercent": "0.1"
       }
     },
+    "BleedOutSettings": {
+      "BleedOutSetting": [
+        {
+          "@name": "DEFAULT",
+          "@totalpoints": "120",
+          "@pointlosspersecond": "1",
+          "@pointlosspersecondnoallyclose": "4",
+          "@closerange": "43",
+          "@pointlosspersecondallalliesdeadorknockeddown": "30",
+          "@revivehitpointspercentage": "30",
+          "@warningpulsethresholdpercentage": "20",
+          "@warningpulsespersecond": "1",
+          "@onrevivebuff": "BLEEDOUT_REVIVE_DEBUFF",
+          "@playerrevivespell": "PLAYER_BLEEDOUT_REVIVE"
+        },
+        {
+          "@name": "DRAGON_AREA_5",
+          "@totalpoints": "240",
+          "@pointlosspersecond": "1",
+          "@pointlosspersecondnoallyclose": "8",
+          "@closerange": "43",
+          "@pointlosspersecondallalliesdeadorknockeddown": "60",
+          "@revivehitpointspercentage": "30",
+          "@warningpulsethresholdpercentage": "20",
+          "@warningpulsespersecond": "1",
+          "@onrevivebuff": "BLEEDOUT_REVIVE_DEBUFF",
+          "@playerrevivespell": "PLAYER_BLEEDOUT_REVIVE_DRAGON_AREA_5_GROUP"
+        },
+        {
+          "@name": "DRAGON_AREA_20",
+          "@totalpoints": "360",
+          "@pointlosspersecond": "1",
+          "@pointlosspersecondnoallyclose": "12",
+          "@closerange": "43",
+          "@pointlosspersecondallalliesdeadorknockeddown": "90",
+          "@revivehitpointspercentage": "30",
+          "@warningpulsethresholdpercentage": "20",
+          "@warningpulsespersecond": "1",
+          "@onrevivebuff": "BLEEDOUT_REVIVE_DEBUFF",
+          "@playerrevivespell": "PLAYER_BLEEDOUT_REVIVE_DRAGON_AREA_20_GROUP"
+        }
+      ]
+    },
     "UserTaxValues": {
       "Guild": {
         "@default": "0.05",
@@ -4609,6 +4677,110 @@
           "@moblootfactor": "2.6",
           "@mobsilverlootfactor": "3",
           "@questscalingfactor": "4.2",
+          "@gatheringfamefactor": "1",
+          "@fishingfamefactor": "1"
+        },
+        {
+          "@type": "dragonareaorange1to1",
+          "@icon": "orange",
+          "@famefactor": "2.9",
+          "@moblootfactor": "1.80",
+          "@mobsilverlootfactor": "2",
+          "@questscalingfactor": "1",
+          "@gatheringfamefactor": "1",
+          "@fishingfamefactor": "1"
+        },
+        {
+          "@type": "dragonareaorange2to3",
+          "@icon": "orange",
+          "@famefactor": "6.96",
+          "@moblootfactor": "6.6",
+          "@mobsilverlootfactor": "5",
+          "@questscalingfactor": "1",
+          "@gatheringfamefactor": "1",
+          "@fishingfamefactor": "1",
+          "@mobbuff": "MOB_DRAGON_AREA_BUFF_SIZE_2_3"
+        },
+        {
+          "@type": "dragonareaorange4to5",
+          "@icon": "orange",
+          "@famefactor": "11.7",
+          "@moblootfactor": "12.4",
+          "@mobsilverlootfactor": "8",
+          "@questscalingfactor": "1",
+          "@gatheringfamefactor": "1",
+          "@fishingfamefactor": "1",
+          "@mobbuff": "MOB_DRAGON_AREA_BUFF_SIZE_4_5"
+        },
+        {
+          "@type": "dragonareaorange5to7",
+          "@icon": "orange",
+          "@famefactor": "2.9",
+          "@moblootfactor": "1.80",
+          "@mobsilverlootfactor": "2",
+          "@questscalingfactor": "1.2",
+          "@gatheringfamefactor": "1",
+          "@fishingfamefactor": "1"
+        },
+        {
+          "@type": "dragonareaorange15to20",
+          "@icon": "orange",
+          "@famefactor": "2.9",
+          "@moblootfactor": "1.80",
+          "@mobsilverlootfactor": "2",
+          "@questscalingfactor": "3",
+          "@gatheringfamefactor": "1",
+          "@fishingfamefactor": "1"
+        },
+        {
+          "@type": "dragonareablack1to1",
+          "@icon": "black",
+          "@famefactor": "4.2",
+          "@moblootfactor": "2.6",
+          "@mobsilverlootfactor": "3",
+          "@questscalingfactor": "1.35",
+          "@gatheringfamefactor": "1",
+          "@fishingfamefactor": "1"
+        },
+        {
+          "@type": "dragonareablack2to3",
+          "@icon": "black",
+          "@famefactor": "10.5",
+          "@moblootfactor": "9.6",
+          "@mobsilverlootfactor": "6.5",
+          "@questscalingfactor": "1.35",
+          "@gatheringfamefactor": "1",
+          "@fishingfamefactor": "1",
+          "@mobbuff": "MOB_DRAGON_AREA_BUFF_SIZE_2_3"
+        },
+        {
+          "@type": "dragonareablack4to5",
+          "@icon": "black",
+          "@famefactor": "16",
+          "@moblootfactor": "17.9",
+          "@mobsilverlootfactor": "10",
+          "@questscalingfactor": "1.35",
+          "@gatheringfamefactor": "1",
+          "@fishingfamefactor": "1",
+          "@mobbuff": "MOB_DRAGON_AREA_BUFF_SIZE_4_5"
+        },
+        {
+          "@type": "dragonareablack5to7",
+          "@icon": "black",
+          "@famefactor": "4.2",
+          "@moblootfactor": "2.6",
+          "@mobsilverlootfactor": "3",
+          "@questscalingfactor": "1.65",
+          "@gatheringfamefactor": "1",
+          "@fishingfamefactor": "1"
+        },
+        {
+          "@type": "dragonareablack15to20",
+          "@icon": "black",
+          "@famefactor": "4.2",
+          "@moblootfactor": "2.6",
+          "@mobsilverlootfactor": "3",
+          "@questscalingfactor": "4.1",
           "@gatheringfamefactor": "1",
           "@fishingfamefactor": "1"
         }
@@ -6083,6 +6255,9 @@
     ],
     "PlayerEncumbrance": {
       "@threshold": "150"
+    },
+    "DragonGlobalEvent": {
+      "@blockeduntil": "2026-08-15T11:00:00Z"
     },
     "mobreaverbonuses": {
       "reavertier": [

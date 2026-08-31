@@ -53,6 +53,11 @@
   <!--*************************************************************************************************************************************************************-->
   <!--MOUNTS-->
   <!--*************************************************************************************************************************************************************-->
+  <AssetVfxInfo uniquename="UNIQUE_MOUNT_STAG_DRAGONHUNTER">
+    <AssetVfx socketname="head_mount">
+      <Vfx prefabName="FX/ClientPrefabs/fx_mount_stag_dragonhunter" />
+    </AssetVfx>
+  </AssetVfxInfo>
   <AssetVfxInfo uniquename="UNIQUE_VANITY_MOUNT_VALKYRIE">
     <AssetVfx socketname="fx_head_FW">
       <Vfx prefabName="FX/ClientPrefabs/fx_MOUNT_DIREBEAR_VALKYRIE_01_Neck_Head" />
@@ -224,6 +229,14 @@
   <AssetVfxInfo uniquename="UNIQUE_MOUNT_COUGAR_FIREMAGE">
     <AssetVfx socketname="head_mount">
       <Vfx prefabName="FX/ClientPrefabs/fx_mount_lion_firemage_01_head" />
+    </AssetVfx>
+  </AssetVfxInfo>
+  <AssetVfxInfo uniquename="UNIQUE_MOUNT_COUGAR_FIREDRAGON_01">
+    <AssetVfx socketname="head_mount">
+      <Vfx prefabName="FX/ClientPrefabs/fx_mount_cougar_firedragon_head" />
+    </AssetVfx>
+    <AssetVfx socketname="neck_mount">
+      <Vfx prefabName="FX/ClientPrefabs/fx_mount_cougar_firedragon_neck" />
     </AssetVfx>
   </AssetVfxInfo>
   <AssetVfxInfo uniquename="UNIQUE_MOUNT_COUGAR_FROSTMAGE">
@@ -462,6 +475,14 @@
     </AssetVfx>
     <AssetVfx socketname="spine_0">
       <Vfx prefabName="FX/ClientPrefabs/fx_mount_horse_marauder_01_tail" />
+    </AssetVfx>
+  </AssetVfxInfo>
+  <AssetVfxInfo uniquename="UNIQUE_MOUNT_ARMORED_HORSE_MARAUDER_ANNIVERSARY">
+    <AssetVfx socketname="mane">
+      <Vfx prefabName="FX/ClientPrefabs/fx_mount_horse_marauder_anniversary_01_mane" />
+    </AssetVfx>
+    <AssetVfx socketname="spine_0">
+      <Vfx prefabName="FX/ClientPrefabs/fx_mount_horse_marauder_anniversary_01_tail" />
     </AssetVfx>
   </AssetVfxInfo>
   <AssetVfxInfo uniquename="UNIQUE_MOUNT_ARMORED_HORSE_PALADIN">
@@ -5013,6 +5034,42 @@
   <!--ITEMS-->
   <!--*************************************************************************************************************************************************************-->
   <!-- Vanity Items -->
+  <AssetVfxInfo uniquename="UNIQUE_HEAD_VANITY_DRAGON_FACTION">
+    <AssetVFXConstraintMaster name="HUMAN_MALE">
+      <AssetVfx socketname="head_clean">
+        <Vfx prefabName="FX/ClientPrefabs/fx_UNIQUE_HEAD_VANITY_DRAGON_FACTION_HM_Neck_Head"/>
+      </AssetVfx>
+    </AssetVFXConstraintMaster>
+    <AssetVFXConstraintMaster name="HUMAN_FEMALE">
+      <AssetVfx socketname="head_clean">
+        <Vfx prefabName="FX/ClientPrefabs/fx_UNIQUE_HEAD_VANITY_DRAGON_FACTION_HM_Neck_Head"/>
+      </AssetVfx>
+    </AssetVFXConstraintMaster>
+  </AssetVfxInfo>
+  <AssetVfxInfo uniquename="UNIQUE_ARMOR_VANITY_DRAGON_FACTION">
+    <AssetVFXConstraintMaster name="HUMAN_MALE">
+      <AssetVfx socketname="collar">
+        <Vfx prefabName="FX/ClientPrefabs/fx_UNIQUE_HEAD_VANITY_DRAGON_FACTION_HM_Spine_3"/>
+      </AssetVfx>
+    </AssetVFXConstraintMaster>
+    <AssetVFXConstraintMaster name="HUMAN_FEMALE">
+      <AssetVfx socketname="collar">
+        <Vfx prefabName="FX/ClientPrefabs/fx_UNIQUE_HEAD_VANITY_DRAGON_FACTION_HM_Spine_3"/>
+      </AssetVfx>
+    </AssetVFXConstraintMaster>
+  </AssetVfxInfo>
+  <AssetVfxInfo uniquename="UNIQUE_ARMOR_VANITY_DRAGONHUNTER">
+    <AssetVFXConstraintMaster name="HUMAN_MALE">
+      <AssetVfx socketname="collar">
+        <Vfx prefabName="FX/ClientPrefabs/fx_UNIQUE_ARMOR_VANITY_DRAGONHUNTER_HM_Spine_3"/>
+      </AssetVfx>
+    </AssetVFXConstraintMaster>
+    <AssetVFXConstraintMaster name="HUMAN_FEMALE">
+      <AssetVfx socketname="collar">
+        <Vfx prefabName="FX/ClientPrefabs/fx_UNIQUE_ARMOR_VANITY_DRAGONHUNTER_HM_Spine_3"/>
+      </AssetVfx>
+    </AssetVFXConstraintMaster>
+  </AssetVfxInfo>
   <AssetVfxInfo uniquename="UNIQUE_HEAD_VANITY_VALKYRIE">
     <AssetVFXConstraintMaster name="HUMAN_MALE">
       <AssetVfx socketname="head_clean">
@@ -6005,14 +6062,31 @@
       <Vfx prefabName="FX/ClientPrefabs/fx_keeper_warhorn_weapon_glow" />
     </AssetVfx>
   </AssetVfxInfo>
+  <!-- Dragons -->
+  <AssetVfxInfo uniquename="MOB_DRAGON_FIRE">
+    <AssetVfx socketname="throat_back">
+      <Vfx prefabName="FX/ClientPrefabs/fx_dragons_neck_smoke" />
+    </AssetVfx>
+    <AssetVfx socketname="tail_tip">
+      <Vfx prefabName="FX/ClientPrefabs/fx_dragons_tail_glow" />
+    </AssetVfx>
+    <AssetVfx socketname="halo">
+      <Vfx prefabName="FX/ClientPrefabs/fx_dragons_eyes_glow" />
+    </AssetVfx>
+  </AssetVfxInfo>
+  <AssetVfxInfo uniquename="MOB_DRAGON_DRAKE_FIRE">
+    <AssetVfx socketname="head">
+      <Vfx prefabName="FX/ClientPrefabs/fx_dragons_drake_eyes_glow" />
+    </AssetVfx>
+    <AssetVfx socketname="tail_end">
+      <Vfx prefabName="FX/ClientPrefabs/fx_dragons_drake_tail_glow" />
+    </AssetVfx>
+  </AssetVfxInfo>
 
   <!-- Test Setups -->
   <AssetVfxInfo uniquename="MOB_AVALON_LIONEL_FLAME_SUMMON">
     <AssetVfx socketname="damage">
       <Vfx prefabName="FX/ClientPrefabs/fx_mob_heretic_mage_01_torch" constraintpreset="default" />
-    </AssetVfx>
-    <AssetVfx socketname="floor">
-      <Vfx prefabName="FX/ClientPrefabs/fx_minibossmark" constraintpreset="default" ignoreSocketScale="true" />
     </AssetVfx>
   </AssetVfxInfo>
 </AssetVfxInfos>

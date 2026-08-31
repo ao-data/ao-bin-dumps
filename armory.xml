@@ -623,5 +623,109 @@
                 <weight metric="pvefamegained" value="0.3"/>
             </scoreweights>
         </activity>
+        <activity uniquename="dragonareasmallgroup" image="Gui/Armory/ARMORY_TRACKING" hidden="true">
+            <tags>
+                <tag ref="small_group"/>
+                <tag ref="pve"/>
+                <tag ref="pvp"/>
+                <tag ref="instanced"/>
+            </tags>
+            <datasetrequirements>
+                <or>
+                    <and>
+                        <duration mindurationminutes="10"/>
+                        <metric name="kills" minvalue="1"/>
+                        <metric name="pvpfamegained" minvalue="25000"/>
+                    </and>
+                    <and>
+                        <duration mindurationminutes="10"/>
+                        <metric name="pvefamegained" minvalue="200000"/>
+                    </and>
+                </or>
+            </datasetrequirements>
+            <scoreweights minuses="3" minusesbaseline="5">
+                <weight metric="kills" value="0.4"/>
+                <weight metric="deaths" value="-0.2"/>
+                <weight metrics="damagedealt,healingdone" value="0.2"/>
+                <weight metric="pvpfamegained" value="0.3"/>
+                <weight metric="pvefamegained" value="0.1"/>
+            </scoreweights>
+        </activity>
+        <activity uniquename="dragonareamediumgroup" image="Gui/Armory/ARMORY_TRACKING" hidden="true">
+            <tags>
+                <tag ref="medium_group"/>
+                <tag ref="pve"/>
+                <tag ref="pvp"/>
+                <tag ref="instanced"/>
+            </tags>
+            <datasetrequirements>
+                <or>
+                    <and>
+                        <duration mindurationminutes="10"/>
+                        <metric name="kills" minvalue="1"/>
+                        <metric name="pvpfamegained" minvalue="50000"/>
+                    </and>
+                    <and>
+                        <duration mindurationminutes="10"/>
+                        <metric name="pvefamegained" minvalue="200000"/>
+                    </and>
+                </or>
+            </datasetrequirements>
+            <scoreweights minuses="2" minusesbaseline="3">
+                <weight metric="kills" value="0.4"/>
+                <weight metric="deaths" value="-0.2"/>
+                <weight metrics="damagedealt,healingdone" value="0.2"/>
+                <weight metric="pvpfamegained" value="0.3"/>
+                <weight metric="pvefamegained" value="0.1"/>
+            </scoreweights>
+        </activity>
+        <activity uniquename="dragonarealargegroup" image="Gui/Armory/ARMORY_TRACKING" hidden="true">
+            <tags>
+                <tag ref="large_group"/>
+                <tag ref="pve"/>
+                <tag ref="pvp"/>
+                <tag ref="instanced"/>
+            </tags>
+            <datasetrequirements>
+                <or>
+                    <and>
+                        <duration mindurationminutes="10"/>
+                        <metric name="kills" minvalue="1"/>
+                        <metric name="pvpfamegained" minvalue="100000"/>
+                    </and>
+                    <and>
+                        <duration mindurationminutes="10"/>
+                        <metric name="pvefamegained" minvalue="200000"/>
+                    </and>
+                </or>
+            </datasetrequirements>
+            <scoreweights minuses="1">
+                <weight metric="kills" value="0.4"/>
+                <weight metric="deaths" value="-0.2"/>
+                <weight metrics="damagereceived,healingdone" value="0.3"/>
+                <weight metric="pvpfamegained" value="0.3"/>
+                <weight metric="pvefamegained" value="0.1"/>
+            </scoreweights>
+        </activity>
+        <activity uniquename="dragondungeons" image="Gui/Armory/ARMORY_AVALONIAN_DUNGEON" hidden="true">
+            <tags>
+                <tag ref="large_group"/>
+                <tag ref="instanced"/>
+                <tag ref="dungeons"/>
+                <tag ref="pve"/>
+            </tags>
+            <datasetrequirements>
+                <or>
+                    <duration mindurationminutes="5"/>
+                    <metric name="mobskilled" minvalue="20"/>
+                </or>
+            </datasetrequirements>
+            <scoreweights minuses="2" minperformancescore="0.3">
+                <weight metric="deaths" value="-0.2"/>
+                <weight metric="healingdone" value="0.4"/>
+                <weight metric="pvefamegained" value="0.2"/>
+                <weight metrics="damagedealt,healingdone,damagereceived" value="0.4"/>
+            </scoreweights>
+        </activity>
     </activities>
 </armory>

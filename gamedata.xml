@@ -665,8 +665,12 @@
 	</Items>
 	<Loot vanishtime="1800" mobprotection="120" pvpallowedprotection="120" pvpforcedprotection="90" dropvisibilitydelay="0.5"/>
 	<ActiveBuffScaling>
-		<attribute name="HitpointsMax" min="-0.5" max="unrestricted" absolutemin="1000"/>
-		<attribute name="HitpointsMaxBonus" min="-0.5" max="unrestricted"/>
+		<attribute name="HitpointsMax" min="-0.5" max="unrestricted" absolutemin="1000">
+      <mobs min="-0.25"/>
+    </attribute>
+		<attribute name="HitpointsMaxBonus" min="-0.5" max="unrestricted">
+      <mobs min="-0.25"/>
+    </attribute>
 		<attribute name="HitpointsRegeneration" min="-0.5" max="unrestricted" absolutemin="5"/>
 		<attribute name="HitpointsRegenerationBonus" min="-1" max="unrestricted"/>
 
@@ -677,11 +681,19 @@
 
 		<attribute name="AttackDamage" min="-0.8" max="1.5" absolutemin="1"/>
 		<attribute name="AttackSpeedBonus" min="-1" max="1.2" />
-		<attribute name="PhysicalAttackDamageBonus" min="-0.8" max="3"/>
-		<attribute name="MagicAttackDamageBonus" min="-0.8" max="3"/>
+		<attribute name="PhysicalAttackDamageBonus" min="-0.8" max="3">
+      <mobs min="-0.5"/>
+    </attribute>
+    <attribute name="MagicAttackDamageBonus" min="-0.8" max="3">
+      <mobs min="-0.5"/>
+    </attribute>
 
-		<attribute name="PhysicalSpellDamageBonus" min="-0.8" max="1"/>
-		<attribute name="MagicSpellDamageBonus" min="-0.8" max="1"/>
+    <attribute name="PhysicalSpellDamageBonus" min="-0.8" max="1">
+      <mobs min="-0.5"/>
+    </attribute>
+    <attribute name="MagicSpellDamageBonus" min="-0.8" max="1">
+      <mobs min="-0.5"/>
+    </attribute>
 
 		<attribute name="HealBonus" min="-0.7" max="unrestricted"/>
 		<attribute name="HealModifier" min="-0.7" max="unrestricted"/>
@@ -782,11 +794,11 @@
 
 	</ActiveBuffScaling>
 
-	<MobFocusFire maxlevel="10">
-		<dangerstate dangerstate="normal" attackerthreshold="2"/>
-		<dangerstate dangerstate="roaming" attackerthreshold="2"/>
-		<dangerstate dangerstate="veteran" attackerthreshold="7"/>
-		<dangerstate dangerstate="elite" attackerthreshold="20"/>
+	<MobFocusFire>
+		<dangerstate dangerstate="normal" attackerthreshold="2" maxlevel="10" spell="MOB_FOCUSFIRE"/>
+		<dangerstate dangerstate="roaming" attackerthreshold="2" maxlevel="10" spell="MOB_FOCUSFIRE"/>
+		<dangerstate dangerstate="veteran" attackerthreshold="7" maxlevel="10" spell="MOB_FOCUSFIRE"/>
+		<dangerstate dangerstate="elite" attackerthreshold="20" maxlevel="99" spell="MOB_FOCUSFIRE_ELITE"/>
 	</MobFocusFire>
 	<PlayerFocusFire lookbackseconds="10" effectdurationinsec="5">
 		<attackers numbergreaterorequal="2"  meleemodifier="0.143" rangedmodifier="0.143" mountedmodifier="0.143"/>
@@ -1483,6 +1495,50 @@
 		<MinCraftDurability minpercent="0.1"/>
 		<MinDurabilityDecay minpercent="0.1"/>
 	</DurabilityData>
+
+  <BleedOutSettings>
+    <!-- NEVER remove the DEFAULT setup, it is required to be there, feel free to make custom ones tho -->
+    <BleedOutSetting
+      name="DEFAULT"
+      totalpoints="120"
+      pointlosspersecond="1"
+      pointlosspersecondnoallyclose="4"
+      closerange="43"
+      pointlosspersecondallalliesdeadorknockeddown="30"
+      revivehitpointspercentage="30"
+      warningpulsethresholdpercentage="20"
+      warningpulsespersecond="1"
+      onrevivebuff="BLEEDOUT_REVIVE_DEBUFF"
+      playerrevivespell="PLAYER_BLEEDOUT_REVIVE"
+    />
+    <BleedOutSetting
+			name="DRAGON_AREA_5"
+			totalpoints="240"
+			pointlosspersecond="1"
+			pointlosspersecondnoallyclose="8"
+			closerange="43"
+			pointlosspersecondallalliesdeadorknockeddown="60"
+			revivehitpointspercentage="30"
+			warningpulsethresholdpercentage="20"
+			warningpulsespersecond="1"
+			onrevivebuff="BLEEDOUT_REVIVE_DEBUFF"
+			playerrevivespell="PLAYER_BLEEDOUT_REVIVE_DRAGON_AREA_5_GROUP"
+		/>
+    <BleedOutSetting
+      name="DRAGON_AREA_20"
+      totalpoints="360"
+      pointlosspersecond="1"
+      pointlosspersecondnoallyclose="12"
+      closerange="43"
+      pointlosspersecondallalliesdeadorknockeddown="90"
+      revivehitpointspercentage="30"
+      warningpulsethresholdpercentage="20"
+      warningpulsespersecond="1"
+      onrevivebuff="BLEEDOUT_REVIVE_DEBUFF"
+      playerrevivespell="PLAYER_BLEEDOUT_REVIVE_DRAGON_AREA_20_GROUP"
+    />
+  </BleedOutSettings>
+  
 	<!-- ********************************************************************************************************************** -->
 	<UserTaxValues>
 		<Guild default="0.05" minimum="0" maximum="1.00"/>
@@ -1542,35 +1598,46 @@
 	</PremiumLifeTimeRewards>
 	<LearningPoints payoutdaytimeref="DOWNTIME" ctalpthreshold="50"/>
 	<ClusterDangerBonusTypes globalmoblootfactor="0.9" globalmobsilverlootfactor="0.9">
-		<ClusterDangerBonus type="safe"                   icon="safe"                  famefactor="2.15" moblootfactor="1.25" mobsilverlootfactor="1.45" questscalingfactor="2.15" gatheringfamefactor="1" fishingfamefactor="1"/>
-		<ClusterDangerBonus type="yellow"                 icon="yellow"                famefactor="2.4"  moblootfactor="1.33" mobsilverlootfactor="1.53" questscalingfactor="2.4"  gatheringfamefactor="1" fishingfamefactor="1"/>
-		<ClusterDangerBonus type="orange"                 icon="orange"                famefactor="2.9"  moblootfactor="1.80" mobsilverlootfactor="2"    questscalingfactor="2.9"  gatheringfamefactor="1" fishingfamefactor="1"/>
-		<ClusterDangerBonus type="red"                    icon="red"                   famefactor="3.3"  moblootfactor="2.25" mobsilverlootfactor="2.6"  questscalingfactor="3.3"  gatheringfamefactor="1" fishingfamefactor="1"/>
-		<ClusterDangerBonus type="black"                  icon="black"                 famefactor="4.2"  moblootfactor="2.6"  mobsilverlootfactor="3"    questscalingfactor="4.2"  gatheringfamefactor="1" fishingfamefactor="1"/>
+		<ClusterDangerBonus type="safe"												icon="safe"                  famefactor="2.15" moblootfactor="1.25" mobsilverlootfactor="1.45" questscalingfactor="2.15" gatheringfamefactor="1" fishingfamefactor="1"/>
+		<ClusterDangerBonus type="yellow"											icon="yellow"                famefactor="2.4"  moblootfactor="1.33" mobsilverlootfactor="1.53" questscalingfactor="2.4"  gatheringfamefactor="1" fishingfamefactor="1"/>
+		<ClusterDangerBonus type="orange"											icon="orange"                famefactor="2.9"  moblootfactor="1.80" mobsilverlootfactor="2"    questscalingfactor="2.9"  gatheringfamefactor="1" fishingfamefactor="1"/>
+		<ClusterDangerBonus type="red"												icon="red"                   famefactor="3.3"  moblootfactor="2.25" mobsilverlootfactor="2.6"  questscalingfactor="3.3"  gatheringfamefactor="1" fishingfamefactor="1"/>
+		<ClusterDangerBonus type="black"										  icon="black"                 famefactor="4.2"  moblootfactor="2.6"  mobsilverlootfactor="3"    questscalingfactor="4.2"  gatheringfamefactor="1" fishingfamefactor="1"/>
 
-		<ClusterDangerBonus type="black1"                 icon="black"                 famefactor="4.2"  moblootfactor="2.6"  mobsilverlootfactor="3"    questscalingfactor="4.2"  gatheringfamefactor="1.25" fishingfamefactor="1.25"/>
-		<ClusterDangerBonus type="black2"                 icon="black"                 famefactor="4.6"  moblootfactor="2.8"  mobsilverlootfactor="3.3"  questscalingfactor="4.6"  gatheringfamefactor="1.30" fishingfamefactor="1.30" mobbuff="MOB_OPENWORLD_BUFF_Q2"/>
-		<ClusterDangerBonus type="black3"                 icon="black"                 famefactor="5.0"  moblootfactor="3.0"  mobsilverlootfactor="3.6"  questscalingfactor="5.0"  gatheringfamefactor="1.35" fishingfamefactor="1.35" mobbuff="MOB_OPENWORLD_BUFF_Q3"/>
-		<ClusterDangerBonus type="black4"                 icon="black"                 famefactor="5.4"  moblootfactor="3.2"  mobsilverlootfactor="3.9"  questscalingfactor="5.4"  gatheringfamefactor="1.40" fishingfamefactor="1.40" mobbuff="MOB_OPENWORLD_BUFF_Q4"/>
-		<ClusterDangerBonus type="black5"                 icon="black"                 famefactor="5.8"  moblootfactor="3.4"  mobsilverlootfactor="4.2"  questscalingfactor="5.8"  gatheringfamefactor="1.45" fishingfamefactor="1.45" mobbuff="MOB_OPENWORLD_BUFF_Q5"/>
-		<ClusterDangerBonus type="black6"                 icon="black"                 famefactor="6.3"  moblootfactor="3.6"  mobsilverlootfactor="4.5"  questscalingfactor="6.3"  gatheringfamefactor="1.50" fishingfamefactor="1.50" mobbuff="MOB_OPENWORLD_BUFF_Q6"/>
+		<ClusterDangerBonus type="black1"									   icon="black"                 famefactor="4.2"  moblootfactor="2.6"  mobsilverlootfactor="3"    questscalingfactor="4.2"  gatheringfamefactor="1.25" fishingfamefactor="1.25"/>
+		<ClusterDangerBonus type="black2"										  icon="black"                 famefactor="4.6"  moblootfactor="2.8"  mobsilverlootfactor="3.3"  questscalingfactor="4.6"  gatheringfamefactor="1.30" fishingfamefactor="1.30" mobbuff="MOB_OPENWORLD_BUFF_Q2"/>
+		<ClusterDangerBonus type="black3"										  icon="black"                 famefactor="5.0"  moblootfactor="3.0"  mobsilverlootfactor="3.6"  questscalingfactor="5.0"  gatheringfamefactor="1.35" fishingfamefactor="1.35" mobbuff="MOB_OPENWORLD_BUFF_Q3"/>
+		<ClusterDangerBonus type="black4"										  icon="black"                 famefactor="5.4"  moblootfactor="3.2"  mobsilverlootfactor="3.9"  questscalingfactor="5.4"  gatheringfamefactor="1.40" fishingfamefactor="1.40" mobbuff="MOB_OPENWORLD_BUFF_Q4"/>
+		<ClusterDangerBonus type="black5"										  icon="black"                 famefactor="5.8"  moblootfactor="3.4"  mobsilverlootfactor="4.2"  questscalingfactor="5.8"  gatheringfamefactor="1.45" fishingfamefactor="1.45" mobbuff="MOB_OPENWORLD_BUFF_Q5"/>
+		<ClusterDangerBonus type="black6"										  icon="black"                 famefactor="6.3"  moblootfactor="3.6"  mobsilverlootfactor="4.5"  questscalingfactor="6.3"  gatheringfamefactor="1.50" fishingfamefactor="1.50" mobbuff="MOB_OPENWORLD_BUFF_Q6"/>
 
-		<ClusterDangerBonus type="hell_nonlethal_2v2"     icon="hellnonlethal2v2"      famefactor="2.4"  moblootfactor="1.33" mobsilverlootfactor="1.53" questscalingfactor="2.4"  gatheringfamefactor="1" fishingfamefactor="1"/>
-		<ClusterDangerBonus type="hell_nonlethal_5v5"     icon="hellnonlethal5v5"      famefactor="2.4"  moblootfactor="1.33" mobsilverlootfactor="1.53" questscalingfactor="2.4"  gatheringfamefactor="1" fishingfamefactor="1"/>
-		<ClusterDangerBonus type="hell_nonlethal_10v10"   icon="hellnonlethal10v10"    famefactor="2.4"  moblootfactor="1.33" mobsilverlootfactor="1.53" questscalingfactor="2.4"  gatheringfamefactor="1" fishingfamefactor="1"/>
-		<ClusterDangerBonus type="hell_lethal_2v2"        icon="helllethal2v2"         famefactor="4.2"  moblootfactor="2.6"  mobsilverlootfactor="3"    questscalingfactor="4.2"  gatheringfamefactor="1" fishingfamefactor="1"/>
-		<ClusterDangerBonus type="hell_lethal_5v5"        icon="helllethal5v5"         famefactor="4.2"  moblootfactor="2.6"  mobsilverlootfactor="3"    questscalingfactor="4.2"  gatheringfamefactor="1" fishingfamefactor="1"/>
-		<ClusterDangerBonus type="hell_lethal_10v10"      icon="helllethal10v10"       famefactor="4.2"  moblootfactor="2.6"  mobsilverlootfactor="3"    questscalingfactor="4.2"  gatheringfamefactor="1" fishingfamefactor="1"/>
-		<ClusterDangerBonus type="corrupted_beginner"     icon="corruptedbeginner"     famefactor="2.4"  moblootfactor="1.33" mobsilverlootfactor="1.53" questscalingfactor="2.4"  gatheringfamefactor="1" fishingfamefactor="1"/>
-		<ClusterDangerBonus type="corrupted_intermediate" icon="corruptedintermediate" famefactor="4.2"  moblootfactor="2.6"  mobsilverlootfactor="3"    questscalingfactor="4.2"  gatheringfamefactor="1" fishingfamefactor="1"/>
-		<ClusterDangerBonus type="corrupted_pro"          icon="corruptedpro"          famefactor="4.2"  moblootfactor="2.6"  mobsilverlootfactor="3"    questscalingfactor="4.2"  gatheringfamefactor="1" fishingfamefactor="1"/>
-		<ClusterDangerBonus type="expedition"             icon="safe"                  famefactor="1"    moblootfactor="0.5"  mobsilverlootfactor="0.5"  questscalingfactor="1"    gatheringfamefactor="1" fishingfamefactor="1"/>
-		<ClusterDangerBonus type="tunnel"                 icon="black"                 famefactor="4.2"  moblootfactor="3"    mobsilverlootfactor="3.45" questscalingfactor="4.2"  gatheringfamefactor="1" fishingfamefactor="1"/>
-		<ClusterDangerBonus type="mistsyellow"            icon="yellow"                famefactor="1.8"  moblootfactor="1.33" mobsilverlootfactor="1.53" questscalingfactor="1.8"  gatheringfamefactor="1" fishingfamefactor="1"/>
-		<ClusterDangerBonus type="mistsblack"             icon="black"                 famefactor="3.16" moblootfactor="2.6"  mobsilverlootfactor="3"    questscalingfactor="3.16" gatheringfamefactor="1" fishingfamefactor="1"/>
-		<ClusterDangerBonus type="mistsdungeonyellow"     icon="yellow"                famefactor="2.4"  moblootfactor="1.33" mobsilverlootfactor="1.53" questscalingfactor="2.4"  gatheringfamefactor="1" fishingfamefactor="1"/>
-		<ClusterDangerBonus type="mistsdungeonblack"      icon="black"                 famefactor="4.2"  moblootfactor="2.6"  mobsilverlootfactor="3"    questscalingfactor="4.2"  gatheringfamefactor="1" fishingfamefactor="1"/>
-		<ClusterDangerBonus type="helldungeonblack"       icon="black"                 famefactor="4.2"  moblootfactor="2.6"  mobsilverlootfactor="3"    questscalingfactor="4.2"  gatheringfamefactor="1" fishingfamefactor="1"/>
+		<ClusterDangerBonus type="hell_nonlethal_2v2"				  icon="hellnonlethal2v2"      famefactor="2.4"  moblootfactor="1.33" mobsilverlootfactor="1.53" questscalingfactor="2.4"  gatheringfamefactor="1" fishingfamefactor="1"/>
+		<ClusterDangerBonus type="hell_nonlethal_5v5"					icon="hellnonlethal5v5"      famefactor="2.4"  moblootfactor="1.33" mobsilverlootfactor="1.53" questscalingfactor="2.4"  gatheringfamefactor="1" fishingfamefactor="1"/>
+		<ClusterDangerBonus type="hell_nonlethal_10v10"				icon="hellnonlethal10v10"    famefactor="2.4"  moblootfactor="1.33" mobsilverlootfactor="1.53" questscalingfactor="2.4"  gatheringfamefactor="1" fishingfamefactor="1"/>
+		<ClusterDangerBonus type="hell_lethal_2v2"						icon="helllethal2v2"         famefactor="4.2"  moblootfactor="2.6"  mobsilverlootfactor="3"    questscalingfactor="4.2"  gatheringfamefactor="1" fishingfamefactor="1"/>
+		<ClusterDangerBonus type="hell_lethal_5v5"						icon="helllethal5v5"         famefactor="4.2"  moblootfactor="2.6"  mobsilverlootfactor="3"    questscalingfactor="4.2"  gatheringfamefactor="1" fishingfamefactor="1"/>
+		<ClusterDangerBonus type="hell_lethal_10v10"					icon="helllethal10v10"       famefactor="4.2"  moblootfactor="2.6"  mobsilverlootfactor="3"    questscalingfactor="4.2"  gatheringfamefactor="1" fishingfamefactor="1"/>
+		<ClusterDangerBonus type="corrupted_beginner"					icon="corruptedbeginner"     famefactor="2.4"  moblootfactor="1.33" mobsilverlootfactor="1.53" questscalingfactor="2.4"  gatheringfamefactor="1" fishingfamefactor="1"/>
+		<ClusterDangerBonus type="corrupted_intermediate"			icon="corruptedintermediate" famefactor="4.2"  moblootfactor="2.6"  mobsilverlootfactor="3"    questscalingfactor="4.2"  gatheringfamefactor="1" fishingfamefactor="1"/>
+		<ClusterDangerBonus type="corrupted_pro"							icon="corruptedpro"          famefactor="4.2"  moblootfactor="2.6"  mobsilverlootfactor="3"    questscalingfactor="4.2"  gatheringfamefactor="1" fishingfamefactor="1"/>
+		<ClusterDangerBonus type="expedition"								  icon="safe"                  famefactor="1"    moblootfactor="0.5"  mobsilverlootfactor="0.5"  questscalingfactor="1"    gatheringfamefactor="1" fishingfamefactor="1"/>
+		<ClusterDangerBonus type="tunnel"										  icon="black"                 famefactor="4.2"  moblootfactor="3"    mobsilverlootfactor="3.45" questscalingfactor="4.2"  gatheringfamefactor="1" fishingfamefactor="1"/>
+		<ClusterDangerBonus type="mistsyellow"							  icon="yellow"                famefactor="1.8"  moblootfactor="1.33" mobsilverlootfactor="1.53" questscalingfactor="1.8"  gatheringfamefactor="1" fishingfamefactor="1"/>
+		<ClusterDangerBonus type="mistsblack"								  icon="black"                 famefactor="3.16" moblootfactor="2.6"  mobsilverlootfactor="3"    questscalingfactor="3.16" gatheringfamefactor="1" fishingfamefactor="1"/>
+		<ClusterDangerBonus type="mistsdungeonyellow"				  icon="yellow"                famefactor="2.4"  moblootfactor="1.33" mobsilverlootfactor="1.53" questscalingfactor="2.4"  gatheringfamefactor="1" fishingfamefactor="1"/>
+		<ClusterDangerBonus type="mistsdungeonblack"				  icon="black"                 famefactor="4.2"  moblootfactor="2.6"  mobsilverlootfactor="3"    questscalingfactor="4.2"  gatheringfamefactor="1" fishingfamefactor="1"/>
+		<ClusterDangerBonus type="helldungeonblack"					  icon="black"                 famefactor="4.2"  moblootfactor="2.6"  mobsilverlootfactor="3"    questscalingfactor="4.2"  gatheringfamefactor="1" fishingfamefactor="1"/>
+    
+    <ClusterDangerBonus type="dragonareaorange1to1"       icon="orange"                famefactor="2.9"  moblootfactor="1.80"  mobsilverlootfactor="2"    questscalingfactor="1"  gatheringfamefactor="1" fishingfamefactor="1"/>
+    <ClusterDangerBonus type="dragonareaorange2to3"       icon="orange"                famefactor="6.96"  moblootfactor="6.6"  mobsilverlootfactor="5"    questscalingfactor="1"  gatheringfamefactor="1" fishingfamefactor="1" mobbuff="MOB_DRAGON_AREA_BUFF_SIZE_2_3"/>
+    <ClusterDangerBonus type="dragonareaorange4to5"       icon="orange"                famefactor="11.7"  moblootfactor="12.4"  mobsilverlootfactor="8"    questscalingfactor="1"  gatheringfamefactor="1" fishingfamefactor="1" mobbuff="MOB_DRAGON_AREA_BUFF_SIZE_4_5"/>
+    <ClusterDangerBonus type="dragonareaorange5to7"       icon="orange"                famefactor="2.9"  moblootfactor="1.80"  mobsilverlootfactor="2"    questscalingfactor="1.2"  gatheringfamefactor="1" fishingfamefactor="1"/>
+    <ClusterDangerBonus type="dragonareaorange15to20"     icon="orange"                famefactor="2.9"  moblootfactor="1.80"  mobsilverlootfactor="2"    questscalingfactor="3"  gatheringfamefactor="1" fishingfamefactor="1"/>
+    <ClusterDangerBonus type="dragonareablack1to1"        icon="black"                 famefactor="4.2"  moblootfactor="2.6"   mobsilverlootfactor="3"    questscalingfactor="1.35"  gatheringfamefactor="1" fishingfamefactor="1"/>
+    <ClusterDangerBonus type="dragonareablack2to3"        icon="black"                 famefactor="10.5"  moblootfactor="9.6"   mobsilverlootfactor="6.5"    questscalingfactor="1.35"  gatheringfamefactor="1" fishingfamefactor="1" mobbuff="MOB_DRAGON_AREA_BUFF_SIZE_2_3"/>
+    <ClusterDangerBonus type="dragonareablack4to5"        icon="black"                 famefactor="16"  moblootfactor="17.9"   mobsilverlootfactor="10"    questscalingfactor="1.35"  gatheringfamefactor="1" fishingfamefactor="1" mobbuff="MOB_DRAGON_AREA_BUFF_SIZE_4_5"/>
+    <ClusterDangerBonus type="dragonareablack5to7"        icon="black"                 famefactor="4.2"  moblootfactor="2.6"   mobsilverlootfactor="3"    questscalingfactor="1.65"  gatheringfamefactor="1" fishingfamefactor="1"/>
+    <ClusterDangerBonus type="dragonareablack15to20"      icon="black"                 famefactor="4.2"  moblootfactor="2.6"   mobsilverlootfactor="3"    questscalingfactor="4.1"  gatheringfamefactor="1" fishingfamefactor="1"/>
 	</ClusterDangerBonusTypes>
 	<QuestScalingByClusterTier>
 		<Tier tier="1" scalingfactor="1"/>
@@ -1976,6 +2043,7 @@
 	<RecoveryVault type="MigrationWithFee" feefactor="450" notclaimabletime="604800"/>
   <RecoveryVault type="GuildIslandPlayerBank" feefactor="30" notclaimabletime="604800"/>
 	<PlayerEncumbrance threshold="150"/>
+  <DragonGlobalEvent blockeduntil="2026-08-15T11:00:00Z" />
 	<mobreaverbonuses>
 		<reavertier tier="1">
 			<mobreaverbonus mobtier="1" mobbonusdamage="0" mobbonusdefense="0"/>

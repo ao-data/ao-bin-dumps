@@ -957,6 +957,15 @@
         }
       },
       {
+        "@name": "MOUNT_DRAKE",
+        "CharType": {
+          "@name": "mount"
+        },
+        "MountType": {
+          "@name": "drake"
+        }
+      },
+      {
         "@name": "MOB_TUTORIAL_DUMMY",
         "CharType": {
           "@name": "mob"
@@ -6164,7 +6173,7 @@
           "@name": "keeper_fanatic_warhorn"
         },
         "Size": {
-          "@name": "heavy"
+          "@name": "huge"
         },
         "ArmorType": {
           "@name": "leather"
@@ -7830,7 +7839,7 @@
         }
       },
       {
-        "@name": "MOB_DRAGON_DRAKE",
+        "@name": "MOB_DRAGON_DRAKE_BOSS",
         "CharType": {
           "@name": "mob"
         },
@@ -7841,7 +7850,31 @@
           "@name": "dragon_drake"
         },
         "Size": {
-          "@name": "huge"
+          "@name": "heavy"
+        },
+        "ArmorType": {
+          "@name": "hide"
+        },
+        "WeaponType": {
+          "@name": "claw_hide_medium"
+        },
+        "MountType": {
+          "@name": "empty"
+        }
+      },
+      {
+        "@name": "MOB_DRAGON_DRAKE_NEUTRAL",
+        "CharType": {
+          "@name": "mob"
+        },
+        "MobFaction": {
+          "@name": "dragon"
+        },
+        "MobType": {
+          "@name": "dragon_drake"
+        },
+        "Size": {
+          "@name": "heavy"
         },
         "ArmorType": {
           "@name": "hide"
@@ -8748,6 +8781,24 @@
         }
       },
       {
+        "@name": "FARMABLE_DRAKE",
+        "CharType": {
+          "@name": "farmanimal"
+        },
+        "FarmAnimalType": {
+          "@name": "drake"
+        }
+      },
+      {
+        "@name": "FARMABLE_DRAKE_EGG",
+        "CharType": {
+          "@name": "farmanimal"
+        },
+        "FarmAnimalType": {
+          "@name": "drake_egg"
+        }
+      },
+      {
         "@name": "HIDEOUT_PLACEABLE_ITEM",
         "ArmorType": {
           "@name": "castlegate_small"
@@ -9308,6 +9359,12 @@
         }
       },
       {
+        "@name": "MOB_DRAGON_FIRE",
+        "OnMobDied": {
+          "@name": "Die"
+        }
+      },
+      {
         "@name": "OVERCHARGE_START",
         "OnCastFinished": {
           "@name": "Play_overcharge_start"
@@ -9703,6 +9760,13 @@
         "@name": "MELEE_MEDIUMIMPACT",
         "OnSpellHit": {
           "@name": "Play_melee_impact_medium",
+          "ImpactType": null
+        }
+      },
+      {
+        "@name": "MELEE_MEDIUMIMPACT_AND_KNOCKBACK",
+        "OnSpellHit": {
+          "@name": "Play_melee_impact_medium_with_knockback",
           "ImpactType": null
         }
       },
@@ -16089,6 +16153,39 @@
         }
       },
       {
+        "@name": "SPELL_PLAYER_BLEEDOUT_REVIVE",
+        "OnCastStart": {
+          "@name": "Play_player_bleedout_revive_start"
+        },
+        "OnCastFinished": {
+          "@name": "Play_player_bleedout_revive_end"
+        }
+      },
+      {
+        "@name": "SPELL_ARMOR_DRAGON_WEAPON_SPRINT_CAST",
+        "OnCastFinished": {
+          "@name": "Play_spells_armor_dragon_sprint_cast"
+        }
+      },
+      {
+        "@name": "SPELL_ARMOR_DRAGON_FLARE_CAST",
+        "OnCastFinished": {
+          "@name": "Play_spells_armor_dragon_flare_throw"
+        }
+      },
+      {
+        "@name": "SPELL_ARMOR_DRAGON_IMMUNEAREA_CAST",
+        "OnCastStart": {
+          "@name": "Play_spell_armor_dragon_immunearea_jump"
+        },
+        "OnCastCanceled": {
+          "@name": "Stop_spell_armor_dragon_immunearea_jump"
+        },
+        "OnCastInterrupted": {
+          "@name": "Stop_spell_armor_dragon_immunearea_jump"
+        }
+      },
+      {
         "@name": "SPELL_POTION_DRINK_HEALING",
         "OnCastFinished": {
           "@name": "Play_potion_drink_healing"
@@ -16158,6 +16255,12 @@
         },
         "OnSpellRemoved": {
           "@name": "Stop_enrage_loop"
+        }
+      },
+      {
+        "@name": "SPELL_POTION_REVIVE_EFFECT_HEAL",
+        "OnSpellHit": {
+          "@name": "Play_potion_revive_effect_heal"
         }
       },
       {
@@ -18979,54 +19082,108 @@
         }
       },
       {
-        "@name": "SPELL_KEEPER_FANATIC_HORN_CAST_START_ALLIES",
-        "OnCastStart": {
-          "@name": "Play_spell_keeper_fanatic_horn_cast_allies"
-        },
-        "OnCastCanceled": {
-          "@name": "Stop_spell_keeper_fanatic_horn_cast_allies"
-        },
-        "OnCastInterrupted": {
-          "@name": "Stop_spell_keeper_fanatic_horn_cast_allies"
-        }
-      },
-      {
-        "@name": "SPELL_KEEPER_FANATIC_HORN_CAST_FINISH_ALLIES",
-        "OnCastFinished": {
-          "@name": "Play_spell_keeper_fanatic_horn_cast_allies"
-        }
-      },
-      {
-        "@name": "SPELL_KEEPER_FANATIC_HORN_CAST_START_CCIMMU",
-        "OnCastStart": {
-          "@name": "Play_spell_keeper_fanatic_horn_cast_ccimmune"
-        },
-        "OnCastCanceled": {
-          "@name": "Stop_spell_keeper_fanatic_horn_cast_ccimmune"
-        },
-        "OnCastInterrupted": {
-          "@name": "Stop_spell_keeper_fanatic_horn_cast_ccimmune"
-        }
-      },
-      {
-        "@name": "SPELL_KEEPER_FANATIC_HORN_CAST_FINISH_CCIMMU",
-        "OnCastFinished": {
-          "@name": "Play_spell_keeper_fanatic_horn_cast_ccimmune"
-        }
-      },
-      {
-        "@name": "SPELL_KEEPER_FANATIC_HORN_CHANNEL_DAMAGE",
+        "@name": "SPELL_KEEPER_FANATIC_HORN_CHANNEL_CCIMMU",
         "OnChannelingStart": {
-          "@name": "Play_spell_keeper_fanatic_horn_channel_damage"
+          "@name": "Play_mob_keeper_fanatic_warhorn_cc_immune_channel_start"
         },
         "OnChannelingCancelled": {
-          "@name": "Stop_spell_keeper_fanatic_horn_channel_damage"
+          "@name": "Stop_mob_keeper_fanatic_warhorn_cc_immune_channel"
         },
         "OnChannelingEnd": {
-          "@name": "Stop_spell_keeper_fanatic_horn_channel_damage"
+          "@name": "Stop_mob_keeper_fanatic_warhorn_cc_immune_channel"
         },
         "OnChannelingInterrupted": {
-          "@name": "Stop_spell_keeper_fanatic_horn_channel_damage"
+          "@name": "Stop_mob_keeper_fanatic_warhorn_cc_immune_channel"
+        }
+      },
+      {
+        "@name": "SPELL_KEEPER_FANATIC_HORN_CHANNEL_FINAL_SONG",
+        "OnChannelingStart": {
+          "@name": "Play_mob_keeper_fanatic_warhorn_finalsong_channel_start"
+        },
+        "OnChannelingCancelled": {
+          "@name": "Stop_mob_keeper_fanatic_warhorn_finalsong_channel"
+        },
+        "OnChannelingEnd": {
+          "@name": "Stop_mob_keeper_fanatic_warhorn_finalsong_channel"
+        },
+        "OnChannelingInterrupted": {
+          "@name": "Stop_mob_keeper_fanatic_warhorn_finalsong_channel"
+        }
+      },
+      {
+        "@name": "SPELL_KEEPER_FANATIC_HORN_CHANNEL_SOUND_ALLIES",
+        "OnChannelingStart": {
+          "@name": "Play_mob_keeper_fanatic_warhorn_soundallies_channel_start"
+        },
+        "OnChannelingCancelled": {
+          "@name": "Stop_mob_keeper_fanatic_warhorn_soundallies_channel"
+        },
+        "OnChannelingEnd": {
+          "@name": "Stop_mob_keeper_fanatic_warhorn_soundallies_channel"
+        },
+        "OnChannelingInterrupted": {
+          "@name": "Stop_mob_keeper_fanatic_warhorn_soundallies_channel"
+        }
+      },
+      {
+        "@name": "SPELL_KEEPER_FANATIC_HORN_SMASH",
+        "OnCastStart": {
+          "@name": "Play_mob_keeper_fanatic_warhorn_smash_load"
+        },
+        "OnCastCanceled": {
+          "@name": "Stop_mob_keeper_fanatic_warhorn_smash_load"
+        },
+        "OnCastInterrupted": {
+          "@name": "Stop_mob_keeper_fanatic_warhorn_smash_load"
+        },
+        "OnCastFinished": {
+          "@name": "Play_mob_keeper_fanatic_warhorn_smash_impact"
+        }
+      },
+      {
+        "@name": "SPELL_KEEPER_FANATIC_AXETHROWER_GROUNDBREAKER_LL",
+        "OnCastStart": {
+          "@name": "Play_mob_keeper_fanatic_axethrower_groundbreaker_load"
+        },
+        "OnCastCanceled": {
+          "@name": "Stop_mob_keeper_fanatic_axethrower_groundbreaker_load"
+        },
+        "OnCastInterrupted": {
+          "@name": "Stop_mob_keeper_fanatic_axethrower_groundbreaker_load"
+        },
+        "OnCastFinished": {
+          "@name": "Play_keeper_fanatic_axethrower_groundbreaker_cast"
+        }
+      },
+      {
+        "@name": "SPELL_KEEPER_FANATIC_GIANT_PULL",
+        "OnCastStart": {
+          "@name": "Play_melee_swoosh_small_instant"
+        },
+        "OnCastFinished": {
+          "@name": "Play_shapeshifter_cast_medium_ally_beam"
+        }
+      },
+      {
+        "@name": "SPELL_KEEPER_FANATIC_GIANT_PULL_EFFECT",
+        "OnSpellHit": {
+          "@name": "Play_mob_keeper_fanatic_giant_pull_effect"
+        }
+      },
+      {
+        "@name": "SPELL_KEEPER_FANATIC_GIANT_PULL_FOLLOWUP_LOAD",
+        "OnCastStart": {
+          "@name": "Play_mob_keeper_fanatic_giant_pull_followup_load"
+        },
+        "OnCastCanceled": {
+          "@name": "Stop_mob_keeper_fanatic_giant_pull_followup_load"
+        },
+        "OnCastInterrupted": {
+          "@name": "Stop_mob_keeper_fanatic_giant_pull_followup_load"
+        },
+        "OnCastFinished": {
+          "@name": "Stop_mob_keeper_fanatic_giant_pull_followup_load"
         }
       },
       {
@@ -19171,6 +19328,12 @@
         "@name": "SPELL_KEEPER_FANATIC_SHAMAN_CONE_BIG_CAST",
         "OnCastStart": {
           "@name": "Play_shapeshifter_cast_big_shockwave"
+        }
+      },
+      {
+        "@name": "SPELL_SHAPESHIFTER_DAMAGE_CAST_MULTIPROJECTILE",
+        "OnCastFinished": {
+          "@name": "Play_mob_keeper_fanatic_shaman_multiprojectile_cast"
         }
       },
       {
@@ -19335,6 +19498,12 @@
       {
         "@name": "SPELL_FLAME_ELEMENTAL_EXPLOSION",
         "OnSpellHit": {
+          "@name": "Play_mob_keeper_fanatic_shaman_flame_elemental_bubble_pick_up_explosion"
+        }
+      },
+      {
+        "@name": "SPELL_FLAME_ELEMENTAL_EXPLOSION_ONCASTFINISHED",
+        "OnCastFinished": {
           "@name": "Play_mob_keeper_fanatic_shaman_flame_elemental_bubble_pick_up_explosion"
         }
       },
@@ -22953,21 +23122,108 @@
         }
       },
       {
-        "@name": "MOB_DRAGON_DRAKE_GRUNT",
+        "@name": "MOB_DRAGON_DRAKE_LOAD",
         "OnCastStart": {
-          "@name": "Play_mob_dragon_drake_grunt"
+          "@name": "Play_mob_dragon_drake_load"
         }
       },
       {
-        "@name": "MOB_DRAGON_DRAKE_ROAR",
+        "@name": "MOB_DRAGON_DRAKE_ROAR_CAST",
         "OnCastStart": {
-          "@name": "Play_mob_dragon_drake_roar"
+          "@name": "Play_mob_dragon_drake_roar_cast"
         }
       },
       {
-        "@name": "MOB_DRAGON_DRAKE_ROAR_LONG",
+        "@name": "MOB_DRAGON_DRAKE_FIREBALL_CAST",
         "OnCastStart": {
-          "@name": "Play_mob_dragon_drake_roar_long"
+          "@name": "Play_mob_dragon_drake_fireball_load"
+        },
+        "OnCastCanceled": {
+          "@name": "Stop_mob_dragon_drake_fireball_load"
+        },
+        "OnCastInterrupted": {
+          "@name": "Stop_mob_dragon_drake_fireball_load"
+        },
+        "OnCastFinished": {
+          "@name": "Play_mob_dragon_drake_fireball_cast"
+        },
+        "OnSpellHit": {
+          "@name": "Play_lava_projectile_impact"
+        }
+      },
+      {
+        "@name": "MOB_DRAGON_DRAKE_FIREBREATH_CAST",
+        "OnCastStart": {
+          "@name": "Play_mob_dragon_drake_firebreath_load"
+        },
+        "OnCastCanceled": {
+          "@name": "Stop_mob_dragon_drake_firebreath_load"
+        },
+        "OnCastInterrupted": {
+          "@name": "Stop_mob_dragon_drake_firebreath_load"
+        },
+        "OnCastFinished": {
+          "@name": "Play_mob_dragon_drake_firebreath_cast"
+        }
+      },
+      {
+        "@name": "MOB_DRAGON_DRAKE_BITE_CAST",
+        "OnCastFinished": {
+          "@name": "Play_mob_dragon_drake_attack_bite_cast"
+        }
+      },
+      {
+        "@name": "MOB_DRAGON_DRAKE_BITE_HIT",
+        "OnSpellHit": {
+          "@name": "Play_mob_dragon_drake_bite_impact"
+        }
+      },
+      {
+        "@name": "MOB_DRAGON_DRAKE_SWIPE_CAST",
+        "OnCastFinished": {
+          "@name": "Play_mob_dragon_drake_swipe_cast"
+        }
+      },
+      {
+        "@name": "MOB_DRAGON_DRAKE_GUST_CAST",
+        "OnCastStart": {
+          "@name": "Play_mob_dragon_drake_gust_load"
+        },
+        "OnCastInterrupted": {
+          "@name": "Stop_mob_dragon_drake_gust_load"
+        },
+        "OnCastCanceled": {
+          "@name": "Stop_mob_dragon_drake_gust_load"
+        },
+        "OnCastFinished": {
+          "@name": "Play_mob_dragon_drake_gust_cast"
+        }
+      },
+      {
+        "@name": "MOB_DRAGON_DRAKE_GUST_CLOSE_HIT",
+        "OnSpellHit": {
+          "@name": "Play_mob_dragon_drake_gust_impact"
+        }
+      },
+      {
+        "@name": "MOB_DRAGON_DRAKE_DASH_CAST",
+        "OnCastStart": {
+          "@name": "Play_mob_dragon_drake_dash_load"
+        },
+        "OnCastInterrupted": {
+          "@name": "Stop_mob_dragon_drake_dash_load"
+        },
+        "OnCastCanceled": {
+          "@name": "Stop_mob_dragon_drake_dash_load"
+        },
+        "OnCastFinished": {
+          "@name": "Play_mob_dragon_drake_dash"
+        }
+      },
+      {
+        "@name": "MOB_DRAGON_DRAKE_DASH_GROUNDIMPACT",
+        "OnSpellHit": {
+          "@name": "Play_mob_dragon_drake_dash_groundimpact"
         }
       },
       {
@@ -23007,9 +23263,9 @@
         }
       },
       {
-        "@name": "MOB_DRAGON_FIRE_PHASE_CHANGE",
+        "@name": "MOB_DRAGON_FIRE_ANNOYED_GRUNT",
         "OnCastFinished": {
-          "@name": "Play_mob_dragon_fire_phase_change"
+          "@name": "Play_mob_dragon_fire_annoyed_grunt"
         }
       },
       {
@@ -23034,6 +23290,207 @@
         "@name": "MOB_DRAGON_FIRE_ROAR_STARTING_AGGRO",
         "OnCastFinished": {
           "@name": "Play_mob_dragon_fire_roar_startingaggro"
+        }
+      },
+      {
+        "@name": "SPELL_MOB_DRAGON_ATTACK",
+        "OnCastStart": {
+          "@name": "Play_mob_dragon_fire_attack_cast"
+        }
+      },
+      {
+        "@name": "SPELL_MOB_DRAGON_FIREBREATH",
+        "OnCastStart": {
+          "@name": "Play_mob_dragon_fire_firebreath_load"
+        },
+        "OnCastFinished": {
+          "@name": "Play_mob_dragon_fire_firebreath_attack"
+        }
+      },
+      {
+        "@name": "SPELL_MOB_DRAGON_TURN90_ATTACK",
+        "OnCastFinished": {
+          "@name": "Play_mob_dragon_turn90_attack_swoosh_and_impact"
+        }
+      },
+      {
+        "@name": "SPELL_MOB_DRAGON_TURN90_ATTACK_HIT",
+        "OnSpellHit": {
+          "@name": "Play_mob_dragon_turn90_attack_hit"
+        }
+      },
+      {
+        "@name": "SPELL_MOB_DRAGON_FRONT_SHORTDASH_DASHING",
+        "OnCastFinished": {
+          "@name": "Play_mob_dragon_front_shortdash_dashing"
+        }
+      },
+      {
+        "@name": "SPELL_MOB_DRAGON_FRONT_SHORTDASH_IMPACT",
+        "OnCastFinished": {
+          "@name": "Play_mob_dragon_front_shortdash_impact"
+        }
+      },
+      {
+        "@name": "SPELL_MOB_DRAGON_SMASH",
+        "OnCastStart": {
+          "@name": "Play_mob_dragon_smash_load"
+        },
+        "OnCastFinished": {
+          "@name": "Play_mob_dragon_smash_impact"
+        }
+      },
+      {
+        "@name": "SPELL_MOB_TREASURE_DRAGON_SMASH",
+        "OnCastStart": {
+          "@name": "Play_mob_dragon_smash_load"
+        },
+        "OnCastFinished": {
+          "@name": "Play_mob_dragon_smash_impact_att_combat_big"
+        }
+      },
+      {
+        "@name": "SPELL_MOB_DRAGON_GREATER_STOMP_IN1_CAST",
+        "OnCastStart": {
+          "@name": "Play_mob_dragon_fire_greater_stomp_in1_cast"
+        },
+        "OnCastInterrupted": {
+          "@name": "Stop_mob_dragon_fire_greater_stomp_in1_cast"
+        },
+        "OnCastCanceled": {
+          "@name": "Stop_mob_dragon_fire_greater_stomp_in1_cast"
+        },
+        "OnCastFinished": {
+          "@name": "Play_mob_dragon_fire_greater_stomp_eruption"
+        }
+      },
+      {
+        "@name": "SPELL_MOB_DRAGON_GREATER_STOMP_IN2_CAST",
+        "OnCastStart": {
+          "@name": "Play_mob_dragon_fire_greater_stomp_in2_cast"
+        },
+        "OnCastInterrupted": {
+          "@name": "Stop_mob_dragon_fire_greater_stomp_in2_cast"
+        },
+        "OnCastCanceled": {
+          "@name": "Stop_mob_dragon_fire_greater_stomp_in2_cast"
+        },
+        "OnCastFinished": {
+          "@name": "Play_mob_dragon_fire_greater_stomp_eruption"
+        }
+      },
+      {
+        "@name": "SPELL_MOB_DRAGON_GREATER_STOMP_OUT_CAST",
+        "OnCastStart": {
+          "@name": "Play_mob_dragon_fire_greater_stomp_out_cast"
+        },
+        "OnCastFinished": {
+          "@name": "Play_mob_dragon_fire_greater_stomp_out_impact"
+        }
+      },
+      {
+        "@name": "SPELL_MOB_DRAGON_TAIL_STRIKE_CAST",
+        "OnCastStart": {
+          "@name": "Play_mob_dragon_fire_tail_strike_load"
+        }
+      },
+      {
+        "@name": "SPELL_MOB_DRAGON_DASH_BREATH_CAST",
+        "OnCastStart": {
+          "@name": "Play_mob_dragon_fire_dash_breath_cast"
+        }
+      },
+      {
+        "@name": "SPELL_MOB_DRAGON_DASH_BREATH_FIRE_IMPACT_AREA",
+        "OnCastFinished": {
+          "@name": "Play_mob_dragon_fire_dash_breath_firebreath"
+        }
+      },
+      {
+        "@name": "SPELL_MOB_DRAGON_FIREWALL_GROWL",
+        "OnCastFinished": {
+          "@name": "Play_mob_dragon_fire_firewall_vo"
+        }
+      },
+      {
+        "@name": "SPELL_MOB_DRAGON_FIRE_PROTECTION_CAST",
+        "OnCastStart": {
+          "@name": "Play_mob_dragon_fire_protection_cast"
+        },
+        "OnCastCanceled": {
+          "@name": "Stop_mob_dragon_fire_protection_cast"
+        },
+        "OnCastInterrupted": {
+          "@name": "Stop_mob_dragon_fire_protection_cast"
+        },
+        "OnCastFinished": {
+          "@name": "Stop_mob_dragon_fire_protection_cast"
+        }
+      },
+      {
+        "@name": "SPELL_MOB_DRAGON_FIRE_PROTECTION_CHANNEL",
+        "OnChannelingStart": {
+          "@name": "Play_mob_dragon_fire_protection_channel_loop"
+        },
+        "OnChannelingInterrupted": {
+          "@name": "Stop_mob_dragon_fire_protection_channel_loop"
+        },
+        "OnChannelingCancelled": {
+          "@name": "Stop_mob_dragon_fire_protection_channel_loop"
+        },
+        "OnChannelingEnd": {
+          "@name": "Stop_mob_dragon_fire_protection_channel_loop"
+        }
+      },
+      {
+        "@name": "SPELL_MOB_DRAGON_FIRE_METEOR_CAST",
+        "OnCastStart": {
+          "@name": "Play_mob_dragon_fire_meteor_cast"
+        }
+      },
+      {
+        "@name": "SPELL_MOB_DRAGON_FIRE_LAVA_CHANNEL",
+        "OnChannelingStart": {
+          "@name": "Play_mob_dragon_fire_lava_channel"
+        },
+        "OnChannelingInterrupted": {
+          "@name": "Stop_mob_dragon_fire_lava_channel"
+        },
+        "OnChannelingCancelled": {
+          "@name": "Stop_mob_dragon_fire_lava_channel"
+        },
+        "OnChannelingEnd": {
+          "@name": "Stop_mob_dragon_fire_lava_channel"
+        }
+      },
+      {
+        "@name": "SPELL_MOB_DRAGON_FIRE_METEOR_PROJECTILE",
+        "OnCastFinished": {
+          "@name": "Play_mob_dragon_fire_meteor_projectile_falling"
+        }
+      },
+      {
+        "@name": "SPELL_MOB_DRAGON_FIRE_METEOR_PROJECTILE_TARGETED",
+        "OnCastFinished": {
+          "@name": "Play_mob_dragon_fire_meteor_projectile_falling"
+        }
+      },
+      {
+        "@name": "SPELL_MOB_DRAGON_FIRE_PHASECHANGE_ROAR",
+        "OnCastStart": {
+          "@name": "Play_mob_dragon_fire_phasechange_vo"
+        }
+      },
+      {
+        "@name": "SPELL_MOB_DRAGON_FIRE_PHASECHANGE_4_METEOR_ATTACK",
+        "OnCastFinished": {
+          "@name": "Play_mob_dragon_fire_phasechange_4_meteor_attack"
+        }
+      },
+      {
+        "@name": "SPELL_MOB_DRAGON_FIRE_ESCAPE_ROAR",
+        "OnCastFinished": {
+          "@name": "Play_mob_dragon_fire_phasechange_vo"
         }
       },
       {
@@ -23503,6 +23960,24 @@
         },
         "OnPlaceItemStarted": {
           "@name": "Play_ui_open_spider"
+        }
+      },
+      {
+        "@name": "FARMABLE_DRAKE",
+        "OnOpened": {
+          "@name": "Play_ui_open_drake"
+        },
+        "OnPlaceItemStarted": {
+          "@name": "Play_ui_open_drake"
+        }
+      },
+      {
+        "@name": "FARMABLE_DRAKE_EGG",
+        "OnOpened": {
+          "@name": "Play_ui_open_drake_egg"
+        },
+        "OnPlaceItemStarted": {
+          "@name": "Play_ui_open_drake_egg"
         }
       },
       {
@@ -24614,6 +25089,30 @@
         }
       },
       {
+        "@clustername": "DRAGON-*",
+        "Environment": {
+          "@name": "WorldEnv"
+        },
+        "SubEnvironment": {
+          "@name": "None"
+        },
+        "Biom": {
+          "@name": "Dragon"
+        },
+        "SubBiom": {
+          "@name": "None"
+        },
+        "MobFaction": {
+          "@name": "None"
+        },
+        "Music": {
+          "@name": "World"
+        },
+        "GlobalEnvironmentEffect": {
+          "@name": "highlands"
+        }
+      },
+      {
         "@clustername": "PSG-.*_PGU_.*_*",
         "Environment": {
           "@name": "PassageUndergroundEnv"
@@ -25307,7 +25806,7 @@
         }
       },
       {
-        "@clustername": ".*_RDG_.*_.*_.*_KPR_NON",
+        "@clustername": ".*_RDG_FR_.*_.*_KPR_NON",
         "Environment": {
           "@name": "DungeonEnv"
         },
@@ -25322,6 +25821,55 @@
         },
         "MobFaction": {
           "@name": "Keeper"
+        },
+        "Music": {
+          "@name": "Dungeon"
+        },
+        "GlobalEnvironmentEffect": {
+          "@name": "cave"
+        }
+      },
+      {
+        "@clustername": ".*_RDG_DR_.*_.*_KPR_NON",
+        "Environment": {
+          "@name": "DungeonEnv"
+        },
+        "SubEnvironment": {
+          "@name": "Keeper_Dragondungeon"
+        },
+        "Biom": {
+          "@name": "Default"
+        },
+        "SubBiom": {
+          "@name": "None"
+        },
+        "MobFaction": {
+          "@name": "Keeper"
+        },
+        "Music": {
+          "@name": "Dungeon"
+        },
+        "GlobalEnvironmentEffect": {
+          "@name": "cave"
+        }
+      },
+      {
+        "@clustername": ".*_RDG_DR_.*_.*_KPR_NON",
+        "@flag": "BOSS",
+        "Environment": {
+          "@name": "DungeonEnv"
+        },
+        "SubEnvironment": {
+          "@name": "None"
+        },
+        "Biom": {
+          "@name": "Default"
+        },
+        "SubBiom": {
+          "@name": "None"
+        },
+        "MobFaction": {
+          "@name": "Dragonarena"
         },
         "Music": {
           "@name": "Dungeon"
