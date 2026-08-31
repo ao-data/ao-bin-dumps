@@ -598,7 +598,9 @@
         "@visibleonminimapbeforevisit": "true",
         "@visibleonminimapinotherclusters": "true",
         "missions": {
-          "killallmobsinarea": null
+          "killallmobsinarea": {
+            "@onlycountmobsmarkedforquest": "true"
+          }
         },
         "rewards": {
           "pvpchallengeobjective": {
@@ -632,7 +634,9 @@
         "@visibleonminimapbeforevisit": "true",
         "@visibleonminimapinotherclusters": "true",
         "missions": {
-          "killallmobsinarea": null
+          "killallmobsinarea": {
+            "@onlycountmobsmarkedforquest": "true"
+          }
         },
         "rewards": {
           "pvpchallengeobjective": {
@@ -654,6 +658,129 @@
           "unlocksharedlootchest": null,
           "switchdynamictemplatestate": {
             "@delaysec": "300"
+          }
+        }
+      },
+      {
+        "@uniquename": "DRAGON_AREA_SMALL_ISLAND",
+        "@name": "@LOCAL_QUEST_DRAGON_AREA_SMALL_ISLAND",
+        "@tutorialname": "DRAGON_AREA_MACRO_INFO",
+        "@questtype": "open",
+        "@questsubtype": "dragonareaquest",
+        "@visibleonminimap": "false",
+        "@visibleonminimapbeforevisit": "false",
+        "@visibleonminimapinotherclusters": "false",
+        "missions": {
+          "killmobfameinarea": {
+            "@value": "28215",
+            "@onlycountrawfamewithclusterbonusandmindivisor": "true",
+            "@scalewithclusterquestfactor": "true"
+          }
+        },
+        "rewards": {
+          "eventtrigger": {
+            "@event": "SPAWN_DRAGON_AREA_ISLAND_KEY",
+            "@needsspawnlocation": "true"
+          }
+        }
+      },
+      {
+        "@uniquename": "DRAGON_AREA_MEDIUM_ISLAND",
+        "@name": "@LOCAL_QUEST_DRAGON_AREA_MEDIUM_ISLAND",
+        "@tutorialname": "DRAGON_AREA_MACRO_INFO",
+        "@questtype": "open",
+        "@questsubtype": "dragonareaquest",
+        "@visibleonminimap": "false",
+        "@visibleonminimapbeforevisit": "false",
+        "@visibleonminimapinotherclusters": "false",
+        "missions": {
+          "killmobfameinarea": {
+            "@value": "32832",
+            "@onlycountrawfamewithclusterbonusandmindivisor": "true",
+            "@scalewithclusterquestfactor": "true"
+          }
+        },
+        "rewards": {
+          "eventtrigger": {
+            "@event": "SPAWN_DRAGON_AREA_ISLAND_KEY",
+            "@needsspawnlocation": "true"
+          }
+        }
+      },
+      {
+        "@uniquename": "DRAGON_AREA_CENTER_ISLAND",
+        "@name": "@LOCAL_QUEST_DRAGON_AREA_CENTER_ISLAND",
+        "@tutorialname": "DRAGON_AREA_MACRO_INFO",
+        "@questtype": "open",
+        "@questsubtype": "dragonareaquest",
+        "@visibleonminimap": "false",
+        "@visibleonminimapbeforevisit": "false",
+        "@visibleonminimapinotherclusters": "false",
+        "missions": {
+          "killmobfameinarea": {
+            "@value": "32832",
+            "@onlycountrawfamewithclusterbonusandmindivisor": "true",
+            "@scalewithclusterquestfactor": "true"
+          }
+        },
+        "rewards": {
+          "eventtrigger": {
+            "@event": "SPAWN_DRAGON_AREA_ISLAND_KEY",
+            "@needsspawnlocation": "true"
+          }
+        }
+      },
+      {
+        "@uniquename": "DRAGON_AREA_PRIMARY_QUEST_ISLAND",
+        "@name": "@LOCAL_QUEST_DRAGON_AREA_PRIMARY_QUEST_ISLAND",
+        "@tutorialname": "DRAGON_AREA_MACRO_INFO",
+        "@questtype": "open",
+        "@questsubtype": "dragonareaprimaryquest",
+        "@visibleonminimap": "true",
+        "@visibleonminimapbeforevisit": "true",
+        "@visibleonminimapinotherclusters": "false",
+        "@hideonminimapaftercompletion": "true",
+        "@showprogressonminimap": "false",
+        "missions": {
+          "killmobfameinarea": {
+            "@value": "41553",
+            "@onlycountrawfamewithclusterbonusandmindivisor": "true",
+            "@scalewithclusterquestfactor": "true"
+          },
+          "or": {
+            "@textloca": "@DRAGON_AREA_PRIMARY_QUEST_KILL_NEUTRAL_DRAKE",
+            "killmobinarea": [
+              {
+                "@mobid": "T6_MOB_DA_KEEPER_NEUTRAL_DRAKE_MINIBOSS",
+                "@count": "1"
+              },
+              {
+                "@mobid": "T7_MOB_DA_KEEPER_NEUTRAL_DRAKE_MINIBOSS",
+                "@count": "1"
+              },
+              {
+                "@mobid": "T6_MOB_DA_KEEPER_NEUTRAL_DRAKE_VETERAN_MINIBOSS",
+                "@count": "1"
+              },
+              {
+                "@mobid": "T7_MOB_DA_KEEPER_NEUTRAL_DRAKE_VETERAN_MINIBOSS",
+                "@count": "1"
+              },
+              {
+                "@mobid": "T6_MOB_DA_KEEPER_NEUTRAL_DRAKE_ELITE_MINIBOSS",
+                "@count": "1"
+              },
+              {
+                "@mobid": "T7_MOB_DA_KEEPER_NEUTRAL_DRAKE_ELITE_MINIBOSS",
+                "@count": "1"
+              }
+            ]
+          }
+        },
+        "rewards": {
+          "eventtrigger": {
+            "@event": "SPAWN_DRAGON_AREA_ISLAND_KEY",
+            "@needsspawnlocation": "true"
           }
         }
       },

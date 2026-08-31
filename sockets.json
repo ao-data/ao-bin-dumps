@@ -886,6 +886,66 @@
         ]
       },
       {
+        "@name": "UNIQUE_HEAD_VANITY_DRAGON_FACTION",
+        "SocketConstraintMaster": [
+          {
+            "@name": "HUMAN_FEMALE",
+            "Socket": {
+              "@socketname": "head_clean",
+              "@bonename": "Neck_Head",
+              "@scaling": "0.82"
+            }
+          },
+          {
+            "@name": "HUMAN_MALE",
+            "Socket": {
+              "@socketname": "head_clean",
+              "@bonename": "Neck_Head"
+            }
+          }
+        ]
+      },
+      {
+        "@name": "UNIQUE_ARMOR_VANITY_DRAGON_FACTION",
+        "SocketConstraintMaster": [
+          {
+            "@name": "HUMAN_FEMALE",
+            "Socket": {
+              "@socketname": "collar",
+              "@bonename": "Spine_3",
+              "@scaling": "0.87"
+            }
+          },
+          {
+            "@name": "HUMAN_MALE",
+            "Socket": {
+              "@socketname": "collar",
+              "@bonename": "Spine_3"
+            }
+          }
+        ]
+      },
+      {
+        "@name": "UNIQUE_ARMOR_VANITY_DRAGONHUNTER",
+        "SocketConstraintMaster": [
+          {
+            "@name": "HUMAN_FEMALE",
+            "Socket": {
+              "@socketname": "collar",
+              "@bonename": "Spine_3",
+              "@scaling": "0.87"
+            }
+          },
+          {
+            "@name": "HUMAN_MALE",
+            "Socket": {
+              "@socketname": "collar",
+              "@bonename": "Spine_3"
+            }
+          }
+        ]
+      },
+      {
         "@name": "UNIQUE_HEAD_VANITY_VALKYRIE",
         "SocketConstraintMaster": [
           {
@@ -5052,7 +5112,7 @@
         ]
       },
       {
-        "@name": "MOB_AVALON_KNIGHT_LIONEL",
+        "@name": "MOB_DRAGON_FIRE",
         "Socket": [
           {
             "@socketname": "floor",
@@ -5129,7 +5189,100 @@
           {
             "@socketname": "maintrail",
             "@bonename": "skeleton",
-            "@positionOffset": "0 2 4"
+            "@positionOffset": "0 2 4",
+            "@rotationOffset": "0 90 0"
+          },
+          {
+            "@socketname": "maintrail_180",
+            "@bonename": "skeleton",
+            "@positionOffset": "0 2 4",
+            "@rotationOffset": "180 -90 0"
+          },
+          {
+            "@socketname": "mouth_firebreath",
+            "@bonename": "Jaw",
+            "@positionOffset": "0 0.8 0.3",
+            "@rotationOffset": "-40 0 0"
+          },
+          {
+            "@socketname": "throat_back",
+            "@bonename": "Neck_1"
+          },
+          {
+            "@socketname": "throat_fwd",
+            "@bonename": "Neck_3"
+          },
+          {
+            "@socketname": "tail_tip",
+            "@bonename": "Tail_4"
+          }
+        ]
+      },
+      {
+        "@name": "MOB_DRAGON_DRAKE",
+        "Socket": [
+          {
+            "@socketname": "root",
+            "@bonename": "Skeleton_Root"
+          },
+          {
+            "@socketname": "floor",
+            "@bonename": "Skeleton_Root",
+            "@positionOffset": "0 0.1 0"
+          },
+          {
+            "@socketname": "halo",
+            "@bonename": "Skeleton_Root",
+            "@positionOffset": "0 7.59 0.7"
+          },
+          {
+            "@socketname": "damage",
+            "@bonename": "Neck_0",
+            "@positionOffset": "0 -2.7 0.5"
+          },
+          {
+            "@socketname": "mainhand",
+            "@bonename": "RightClaws",
+            "@rotationOffset": "0 180 0"
+          },
+          {
+            "@socketname": "offhand",
+            "@bonename": "LeftClaws"
+          },
+          {
+            "@socketname": "mainhandprojectile",
+            "@bonename": "Jaw",
+            "@positionOffset": "0 0 0.7"
+          },
+          {
+            "@socketname": "head",
+            "@bonename": "Head"
+          },
+          {
+            "@socketname": "back_center",
+            "@bonename": "Neck_0"
+          },
+          {
+            "@socketname": "tail_end",
+            "@bonename": "Tail_3",
+            "@positionOffset": "0 0 -3.2",
+            "@rotationOffset": "0 180 0"
+          },
+          {
+            "@socketname": "mouth",
+            "@bonename": "Head",
+            "@positionOffset": "0 -0.6 0.8",
+            "@rotationOffset": "50 0 0"
+          },
+          {
+            "@socketname": "throat_back",
+            "@bonename": "Neck_1",
+            "@positionOffset": "0 -1.5 0"
+          },
+          {
+            "@socketname": "throat_fwd",
+            "@bonename": "Neck_3",
+            "@positionOffset": "0 -1.2 0"
           }
         ]
       },
@@ -15674,6 +15827,10 @@
             "@bonename": "mount|Head"
           },
           {
+            "@socketname": "neck_mount",
+            "@bonename": "mount|Neck_0"
+          },
+          {
             "@socketname": "pelvis_mount",
             "@bonename": "mount|Pelvis"
           }
@@ -15927,6 +16084,65 @@
           {
             "@socketname": "mount_head",
             "@bonename": "mount|Head"
+          }
+        ]
+      },
+      {
+        "@name": "MOUNT_STAG_DRAGONHUNTER",
+        "Socket": [
+          {
+            "@socketname": "root_mount",
+            "@bonename": "mount|Skeleton_Root"
+          },
+          {
+            "@socketname": "head_mount",
+            "@bonename": "mount|Head"
+          },
+          {
+            "@socketname": "chest_mount",
+            "@bonename": "mount|Chest"
+          },
+          {
+            "@socketname": "pelvis_mount",
+            "@bonename": "mount|Pelvis"
+          },
+          {
+            "@socketname": "jaw_mount",
+            "@bonename": "mount|Jaw"
+          }
+        ]
+      },
+      {
+        "@name": "MOUNT_DRAGON_DRAKE",
+        "Socket": [
+          {
+            "@socketname": "root_mount",
+            "@bonename": "mount|Skeleton_Root"
+          },
+          {
+            "@socketname": "floor_mount",
+            "@bonename": "mount|Skeleton_Root",
+            "@positionOffset": "0 0.1 0"
+          },
+          {
+            "@socketname": "halo_mount",
+            "@bonename": "mount|Skeleton_Root",
+            "@positionOffset": "0 9 0"
+          },
+          {
+            "@socketname": "chest_mount",
+            "@bonename": "mount|Neck_0",
+            "@positionOffset": "0 -1.5 0.7"
+          },
+          {
+            "@socketname": "back_center",
+            "@bonename": "mount|Neck_0"
+          },
+          {
+            "@socketname": "maw_mount",
+            "@bonename": "mount|Head",
+            "@positionOffset": "0 -0.6 1.2",
+            "@rotationOffset": "20 0 0"
           }
         ]
       },

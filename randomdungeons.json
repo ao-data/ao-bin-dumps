@@ -205,6 +205,19 @@
               "@fishingfamefactor": "1"
             }
           ]
+        },
+        {
+          "@name": "dragonarea",
+          "difficulty": {
+            "@level": "0",
+            "@mobmodifier": "MOB_DRAGONAREA_BUFF_01",
+            "@silverfactor": "1",
+            "@lootfactor": "1",
+            "@mobfamefactor": "1.0",
+            "@questscalingfactor": "1.0",
+            "@gatheringfamefactor": "1",
+            "@fishingfamefactor": "1"
+          }
         }
       ]
     },
@@ -680,39 +693,75 @@
       "ClusterTypeMapping": [
         {
           "@clustertype": "SAFEAREA",
-          "@dungeonclustertype": "RD_SAFEAREA"
+          "@dungeonclustertype": "RD_SAFEAREA",
+          "Generator": {
+            "@name": "KRP_DRAGON_RANDOM_DUNGEON",
+            "@dungeonclustertype": "DUNGEON_DRAGON_SAFEAREA_BLUE"
+          }
         },
         {
           "@clustertype": "OPENPVP_YELLOW",
-          "@dungeonclustertype": "RD_YELLOW"
+          "@dungeonclustertype": "RD_YELLOW",
+          "Generator": {
+            "@name": "KRP_DRAGON_RANDOM_DUNGEON",
+            "@dungeonclustertype": "DUNGEON_DRAGON_SAFEAREA_YELLOW"
+          }
         },
         {
           "@clustertype": "OPENPVP_RED",
-          "@dungeonclustertype": "DUNGEON_RED"
+          "@dungeonclustertype": "DUNGEON_RED",
+          "Generator": {
+            "@name": "KRP_DRAGON_RANDOM_DUNGEON",
+            "@dungeonclustertype": "DUNGEON_DRAGON_SAFEAREA_RED"
+          }
         },
         {
           "@clustertype": "OPENPVP_BLACK_1",
-          "@dungeonclustertype": "RD_DUNGEON_BLACK_1"
+          "@dungeonclustertype": "RD_DUNGEON_BLACK_1",
+          "Generator": {
+            "@name": "KRP_DRAGON_RANDOM_DUNGEON",
+            "@dungeonclustertype": "DUNGEON_DRAGON_SAFEAREA_BLACK_1"
+          }
         },
         {
           "@clustertype": "OPENPVP_BLACK_2",
-          "@dungeonclustertype": "RD_DUNGEON_BLACK_2"
+          "@dungeonclustertype": "RD_DUNGEON_BLACK_2",
+          "Generator": {
+            "@name": "KRP_DRAGON_RANDOM_DUNGEON",
+            "@dungeonclustertype": "DUNGEON_DRAGON_SAFEAREA_BLACK_2"
+          }
         },
         {
           "@clustertype": "OPENPVP_BLACK_3",
-          "@dungeonclustertype": "RD_DUNGEON_BLACK_3"
+          "@dungeonclustertype": "RD_DUNGEON_BLACK_3",
+          "Generator": {
+            "@name": "KRP_DRAGON_RANDOM_DUNGEON",
+            "@dungeonclustertype": "DUNGEON_DRAGON_SAFEAREA_BLACK_3"
+          }
         },
         {
           "@clustertype": "OPENPVP_BLACK_4",
-          "@dungeonclustertype": "RD_DUNGEON_BLACK_4"
+          "@dungeonclustertype": "RD_DUNGEON_BLACK_4",
+          "Generator": {
+            "@name": "KRP_DRAGON_RANDOM_DUNGEON",
+            "@dungeonclustertype": "DUNGEON_DRAGON_SAFEAREA_BLACK_4"
+          }
         },
         {
           "@clustertype": "OPENPVP_BLACK_5",
-          "@dungeonclustertype": "RD_DUNGEON_BLACK_5"
+          "@dungeonclustertype": "RD_DUNGEON_BLACK_5",
+          "Generator": {
+            "@name": "KRP_DRAGON_RANDOM_DUNGEON",
+            "@dungeonclustertype": "DUNGEON_DRAGON_SAFEAREA_BLACK_5"
+          }
         },
         {
           "@clustertype": "OPENPVP_BLACK_6",
-          "@dungeonclustertype": "RD_DUNGEON_BLACK_6"
+          "@dungeonclustertype": "RD_DUNGEON_BLACK_6",
+          "Generator": {
+            "@name": "KRP_DRAGON_RANDOM_DUNGEON",
+            "@dungeonclustertype": "DUNGEON_DRAGON_SAFEAREA_BLACK_6"
+          }
         },
         {
           "@clustertype": "PASSAGE_SAFEAREA",
@@ -901,6 +950,14 @@
                   "@name": "Hidden Easter Dungeon"
                 }
               }
+            },
+            {
+              "@id": "fanatic",
+              "default": {
+                "displayname": {
+                  "@name": "Dragon Sanctuary"
+                }
+              }
             }
           ]
         },
@@ -929,6 +986,15 @@
           }
         }
       ]
+    },
+    "ReservationProfiles": {
+      "ReservationProfile": {
+        "@name": "dragon_keymaster_elite",
+        "@mode": "Keymaster",
+        "@maxplayers": "20",
+        "@activationtimeout": "300",
+        "@entrywindowafterfirstenter": "600"
+      }
     },
     "FixedExits": {
       "FixedExit": [
@@ -1875,7 +1941,7 @@
                     "@weight": "0"
                   },
                   {
-                    "@name": "AVALON_LIONEL_TEST",
+                    "@name": "KEEPER_DRAGON_DUNGEON_T8",
                     "@weight": "1"
                   }
                 ]
@@ -2982,6 +3048,10 @@
                     {
                       "@name": "T5_KEEPER_BOSSROOM_VETERAN",
                       "@weight": "0"
+                    },
+                    {
+                      "@name": "KEEPER_DRAKE_DUNGEON_T5",
+                      "@weight": "0"
                     }
                   ]
                 },
@@ -3033,6 +3103,10 @@
                     {
                       "@name": "T6_MORGANA_BOSSROOM_VETERAN",
                       "@weight": "0"
+                    },
+                    {
+                      "@name": "KEEPER_DRAKE_DUNGEON_T6",
+                      "@weight": "0"
                     }
                   ]
                 },
@@ -3080,6 +3154,10 @@
                     {
                       "@name": "T7_UNDEAD_BOSSROOM_VETERAN",
                       "@weight": "0"
+                    },
+                    {
+                      "@name": "KEEPER_DRAKE_DUNGEON_T7",
+                      "@weight": "0"
                     }
                   ]
                 },
@@ -3118,6 +3196,10 @@
                     },
                     {
                       "@name": "T8_MORGANA_BOSSROOM_VETERAN",
+                      "@weight": "0"
+                    },
+                    {
+                      "@name": "KEEPER_DRAKE_DUNGEON_T8",
                       "@weight": "0"
                     }
                   ]
@@ -3165,7 +3247,27 @@
                       "@weight": "1"
                     },
                     {
-                      "@name": "AVALON_LIONEL_TEST",
+                      "@name": "KEEPER_DRAGON_LAIR_T6",
+                      "@weight": "0"
+                    },
+                    {
+                      "@name": "KEEPER_DRAGON_LAIR_T7",
+                      "@weight": "0"
+                    },
+                    {
+                      "@name": "KEEPER_DRAGON_LAIR_T8",
+                      "@weight": "0"
+                    },
+                    {
+                      "@name": "KEEPER_DRAGON_DUNGEON_T6",
+                      "@weight": "0"
+                    },
+                    {
+                      "@name": "KEEPER_DRAGON_DUNGEON_T7",
+                      "@weight": "0"
+                    },
+                    {
+                      "@name": "KEEPER_DRAGON_DUNGEON_T8",
                       "@weight": "0"
                     }
                   ]
@@ -3204,7 +3306,27 @@
                       "@weight": "1"
                     },
                     {
-                      "@name": "AVALON_LIONEL_TEST",
+                      "@name": "KEEPER_DRAGON_LAIR_T6",
+                      "@weight": "0"
+                    },
+                    {
+                      "@name": "KEEPER_DRAGON_LAIR_T7",
+                      "@weight": "0"
+                    },
+                    {
+                      "@name": "KEEPER_DRAGON_LAIR_T8",
+                      "@weight": "0"
+                    },
+                    {
+                      "@name": "KEEPER_DRAGON_DUNGEON_T6",
+                      "@weight": "0"
+                    },
+                    {
+                      "@name": "KEEPER_DRAGON_DUNGEON_T7",
+                      "@weight": "0"
+                    },
+                    {
+                      "@name": "KEEPER_DRAGON_DUNGEON_T8",
                       "@weight": "0"
                     }
                   ]
@@ -3239,7 +3361,27 @@
                       "@weight": "1"
                     },
                     {
-                      "@name": "AVALON_LIONEL_TEST",
+                      "@name": "KEEPER_DRAGON_LAIR_T6",
+                      "@weight": "0"
+                    },
+                    {
+                      "@name": "KEEPER_DRAGON_LAIR_T7",
+                      "@weight": "0"
+                    },
+                    {
+                      "@name": "KEEPER_DRAGON_LAIR_T8",
+                      "@weight": "0"
+                    },
+                    {
+                      "@name": "KEEPER_DRAGON_DUNGEON_T6",
+                      "@weight": "0"
+                    },
+                    {
+                      "@name": "KEEPER_DRAGON_DUNGEON_T7",
+                      "@weight": "0"
+                    },
+                    {
+                      "@name": "KEEPER_DRAGON_DUNGEON_T8",
                       "@weight": "0"
                     }
                   ]
@@ -6875,6 +7017,266 @@
           ]
         },
         {
+          "@name": "KEEPER_FANATICS_KEYMASTER",
+          "TooltipDisplay": {
+            "@uisprite": "dragons_portal_big_active",
+            "@displayname": "@PROXIMITY_TOOLTIP_BOSSROOM_DUNGEON_GROUP",
+            "@optionentry": "GroupDungeon"
+          },
+          "fallback": {
+            "prefab": {
+              "@name": "SHARED_HELLGATE_ENTRANCE_2V2_LETHAL"
+            }
+          },
+          "biome": [
+            {
+              "@name": "Forest",
+              "subbiome": [
+                {
+                  "@name": "Green",
+                  "prefab": {
+                    "@name": "FOREST_GREEN_KPR_FANATICS_PORTAL"
+                  }
+                },
+                {
+                  "@name": "Red",
+                  "prefab": {
+                    "@name": "FOREST_RED_KPR_FANATICS_PORTAL"
+                  }
+                },
+                {
+                  "@name": "Dead",
+                  "prefab": {
+                    "@name": "FOREST_DEAD_KPR_FANATICS_PORTAL"
+                  }
+                }
+              ]
+            },
+            {
+              "@name": "Steppe",
+              "subbiome": [
+                {
+                  "@name": "Green",
+                  "prefab": {
+                    "@name": "STEPPE_GREEN_KPR_FANATICS_PORTAL"
+                  }
+                },
+                {
+                  "@name": "Red",
+                  "prefab": {
+                    "@name": "STEPPE_RED_KPR_FANATICS_PORTAL"
+                  }
+                },
+                {
+                  "@name": "Dead",
+                  "prefab": {
+                    "@name": "STEPPE_DEAD_KPR_FANATICS_PORTAL"
+                  }
+                }
+              ]
+            },
+            {
+              "@name": "Swamp",
+              "subbiome": [
+                {
+                  "@name": "Green",
+                  "prefab": {
+                    "@name": "SWAMP_GREEN_KPR_FANATICS_PORTAL"
+                  }
+                },
+                {
+                  "@name": "Red",
+                  "prefab": {
+                    "@name": "SWAMP_RED_KPR_FANATICS_PORTAL"
+                  }
+                },
+                {
+                  "@name": "Dead",
+                  "prefab": {
+                    "@name": "SWAMP_DEAD_KPR_FANATICS_PORTAL"
+                  }
+                }
+              ]
+            },
+            {
+              "@name": "Highland",
+              "subbiome": [
+                {
+                  "@name": "Green",
+                  "prefab": {
+                    "@name": "HIGHLAND_GREEN_KPR_FANATICS_PORTAL"
+                  }
+                },
+                {
+                  "@name": "Red",
+                  "prefab": {
+                    "@name": "HIGHLAND_RED_KPR_FANATICS_PORTAL"
+                  }
+                },
+                {
+                  "@name": "Dead",
+                  "prefab": {
+                    "@name": "HIGHLAND_DEAD_KPR_FANATICS_PORTAL"
+                  }
+                }
+              ]
+            },
+            {
+              "@name": "Mountain",
+              "subbiome": [
+                {
+                  "@name": "Green",
+                  "prefab": {
+                    "@name": "MOUNTAIN_GREEN_KPR_FANATICS_PORTAL"
+                  }
+                },
+                {
+                  "@name": "Red",
+                  "prefab": {
+                    "@name": "MOUNTAIN_RED_KPR_FANATICS_PORTAL"
+                  }
+                },
+                {
+                  "@name": "Dead",
+                  "prefab": {
+                    "@name": "MOUNTAIN_DEAD_KPR_FANATICS_PORTAL"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "@name": "KEEPER_FANATICS_KEYMASTER_LARGE",
+          "TooltipDisplay": {
+            "@uisprite": "dragons_portal_big_active",
+            "@displayname": "@PROXIMITY_TOOLTIP_DUNGEON_ELITE",
+            "@optionentry": "LargeGroupDungeon"
+          },
+          "fallback": {
+            "prefab": {
+              "@name": "SHARED_HELLGATE_ENTRANCE_2V2_LETHAL"
+            }
+          },
+          "biome": [
+            {
+              "@name": "Forest",
+              "subbiome": [
+                {
+                  "@name": "Green",
+                  "prefab": {
+                    "@name": "FOREST_GREEN_KPR_FANATICS_PORTAL_LARGE"
+                  }
+                },
+                {
+                  "@name": "Red",
+                  "prefab": {
+                    "@name": "FOREST_RED_KPR_FANATICS_PORTAL_LARGE"
+                  }
+                },
+                {
+                  "@name": "Dead",
+                  "prefab": {
+                    "@name": "FOREST_DEAD_KPR_FANATICS_PORTAL_LARGE"
+                  }
+                }
+              ]
+            },
+            {
+              "@name": "Steppe",
+              "subbiome": [
+                {
+                  "@name": "Green",
+                  "prefab": {
+                    "@name": "STEPPE_GREEN_KPR_FANATICS_PORTAL_LARGE"
+                  }
+                },
+                {
+                  "@name": "Red",
+                  "prefab": {
+                    "@name": "STEPPE_RED_KPR_FANATICS_PORTAL_LARGE"
+                  }
+                },
+                {
+                  "@name": "Dead",
+                  "prefab": {
+                    "@name": "STEPPE_DEAD_KPR_FANATICS_PORTAL_LARGE"
+                  }
+                }
+              ]
+            },
+            {
+              "@name": "Swamp",
+              "subbiome": [
+                {
+                  "@name": "Green",
+                  "prefab": {
+                    "@name": "SWAMP_GREEN_KPR_FANATICS_PORTAL_LARGE"
+                  }
+                },
+                {
+                  "@name": "Red",
+                  "prefab": {
+                    "@name": "SWAMP_RED_KPR_FANATICS_PORTAL_LARGE"
+                  }
+                },
+                {
+                  "@name": "Dead",
+                  "prefab": {
+                    "@name": "SWAMP_DEAD_KPR_FANATICS_PORTAL_LARGE"
+                  }
+                }
+              ]
+            },
+            {
+              "@name": "Highland",
+              "subbiome": [
+                {
+                  "@name": "Green",
+                  "prefab": {
+                    "@name": "HIGHLAND_GREEN_KPR_FANATICS_PORTAL_LARGE"
+                  }
+                },
+                {
+                  "@name": "Red",
+                  "prefab": {
+                    "@name": "HIGHLAND_RED_KPR_FANATICS_PORTAL_LARGE"
+                  }
+                },
+                {
+                  "@name": "Dead",
+                  "prefab": {
+                    "@name": "HIGHLAND_DEAD_KPR_FANATICS_PORTAL_LARGE"
+                  }
+                }
+              ]
+            },
+            {
+              "@name": "Mountain",
+              "subbiome": [
+                {
+                  "@name": "Green",
+                  "prefab": {
+                    "@name": "MOUNTAIN_GREEN_KPR_FANATICS_PORTAL_LARGE"
+                  }
+                },
+                {
+                  "@name": "Red",
+                  "prefab": {
+                    "@name": "MOUNTAIN_RED_KPR_FANATICS_PORTAL_LARGE"
+                  }
+                },
+                {
+                  "@name": "Dead",
+                  "prefab": {
+                    "@name": "MOUNTAIN_DEAD_KPR_FANATICS_PORTAL_LARGE"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
           "@name": "UNDEAD_BOSSROOM_GROUP",
           "TooltipDisplay": {
             "@uisprite": "dungeon_group",
@@ -7191,18 +7593,156 @@
     "RandomExits": {
       "RandomExit": [
         {
-          "@name": "AVALON_LIONEL_TEST",
+          "@name": "KEEPER_DRAKE_DUNGEON_T5",
           "@activationtime": "0",
           "@cooldown": "60",
           "RandomDungeonGenerators": {
             "GeneratedRandomDungeon": {
-              "@generatorName": "AVALON_RANDOM_DUNGEON_PORTAL_TEST",
+              "@generatorName": "KRP_DRAKE_RANDOM_DUNGEON",
+              "@tier": "5",
+              "@weight": "1"
+            }
+          },
+          "Visualization": {
+            "@ref": "KEEPER_FANATICS_KEYMASTER"
+          }
+        },
+        {
+          "@name": "KEEPER_DRAKE_DUNGEON_T6",
+          "@activationtime": "0",
+          "@cooldown": "60",
+          "RandomDungeonGenerators": {
+            "GeneratedRandomDungeon": {
+              "@generatorName": "KRP_DRAKE_RANDOM_DUNGEON",
+              "@tier": "6",
+              "@weight": "1"
+            }
+          },
+          "Visualization": {
+            "@ref": "KEEPER_FANATICS_KEYMASTER"
+          }
+        },
+        {
+          "@name": "KEEPER_DRAKE_DUNGEON_T7",
+          "@activationtime": "0",
+          "@cooldown": "60",
+          "RandomDungeonGenerators": {
+            "GeneratedRandomDungeon": {
+              "@generatorName": "KRP_DRAKE_RANDOM_DUNGEON",
+              "@tier": "7",
+              "@weight": "1"
+            }
+          },
+          "Visualization": {
+            "@ref": "KEEPER_FANATICS_KEYMASTER"
+          }
+        },
+        {
+          "@name": "KEEPER_DRAKE_DUNGEON_T8",
+          "@activationtime": "0",
+          "@cooldown": "60",
+          "RandomDungeonGenerators": {
+            "GeneratedRandomDungeon": {
+              "@generatorName": "KRP_DRAKE_RANDOM_DUNGEON",
               "@tier": "8",
               "@weight": "1"
             }
           },
           "Visualization": {
-            "@ref": "AVALON_ELITE"
+            "@ref": "KEEPER_FANATICS_KEYMASTER"
+          }
+        },
+        {
+          "@name": "KEEPER_DRAGON_LAIR_T6",
+          "@activationtime": "0",
+          "@cooldown": "60",
+          "RandomDungeonGenerators": {
+            "GeneratedRandomDungeon": {
+              "@generatorName": "KRP_DRAGON_BOSS_LAIR",
+              "@tier": "6",
+              "@weight": "1"
+            }
+          },
+          "Visualization": {
+            "@ref": "KEEPER_FANATICS_KEYMASTER_LARGE"
+          }
+        },
+        {
+          "@name": "KEEPER_DRAGON_LAIR_T7",
+          "@activationtime": "0",
+          "@cooldown": "60",
+          "RandomDungeonGenerators": {
+            "GeneratedRandomDungeon": {
+              "@generatorName": "KRP_DRAGON_BOSS_LAIR",
+              "@tier": "7",
+              "@weight": "1"
+            }
+          },
+          "Visualization": {
+            "@ref": "KEEPER_FANATICS_KEYMASTER_LARGE"
+          }
+        },
+        {
+          "@name": "KEEPER_DRAGON_LAIR_T8",
+          "@activationtime": "0",
+          "@cooldown": "60",
+          "RandomDungeonGenerators": {
+            "GeneratedRandomDungeon": {
+              "@generatorName": "KRP_DRAGON_BOSS_LAIR",
+              "@tier": "8",
+              "@weight": "1"
+            }
+          },
+          "Visualization": {
+            "@ref": "KEEPER_FANATICS_KEYMASTER_LARGE"
+          }
+        },
+        {
+          "@name": "KEEPER_DRAGON_DUNGEON_T6",
+          "@activationtime": "0",
+          "@cooldown": "60",
+          "@lifetimeafterlastuse": "180",
+          "RandomDungeonGenerators": {
+            "GeneratedRandomDungeon": {
+              "@generatorName": "KRP_DRAGON_RANDOM_DUNGEON",
+              "@tier": "6",
+              "@weight": "1"
+            }
+          },
+          "Visualization": {
+            "@ref": "KEEPER_FANATICS_KEYMASTER_LARGE"
+          }
+        },
+        {
+          "@name": "KEEPER_DRAGON_DUNGEON_T7",
+          "@activationtime": "0",
+          "@cooldown": "60",
+          "@lifetimeafterlastuse": "180",
+          "RandomDungeonGenerators": {
+            "GeneratedRandomDungeon": {
+              "@generatorName": "KRP_DRAGON_RANDOM_DUNGEON",
+              "@tier": "7",
+              "@weight": "1"
+            }
+          },
+          "Visualization": {
+            "@ref": "KEEPER_FANATICS_KEYMASTER_LARGE"
+          }
+        },
+        {
+          "@name": "KEEPER_DRAGON_DUNGEON_T8",
+          "@activationtime": "0",
+          "@cooldown": "60",
+          "@lifetimeafterlastuse": "180",
+          "RandomDungeonGenerators": {
+            "GeneratedRandomDungeon": {
+              "@generatorName": "KRP_DRAGON_RANDOM_DUNGEON",
+              "@tier": "8",
+              "@weight": "1"
+            }
+          },
+          "Visualization": {
+            "@ref": "KEEPER_FANATICS_KEYMASTER_LARGE"
           }
         },
         {
@@ -17843,8 +18383,172 @@
           }
         },
         {
-          "@name": "AVALON_RANDOM_DUNGEON_PORTAL_TEST",
+          "@name": "KRP_DRAKE_RANDOM_DUNGEON",
+          "@type": "DEFAULT_VETERAN",
+          "@biome": "Dragon",
+          "Faction": {
+            "@name": "KEEPER",
+            "Subset": {
+              "@name": "fanatic",
+              "@weight": "1"
+            }
+          },
+          "Flags": {
+            "Flag": {
+              "@name": "veteran"
+            }
+          },
+          "Environments": {
+            "Environment": {
+              "@name": "indoor",
+              "@weight": "1",
+              "Subset": [
+                {
+                  "@name": "cave_01",
+                  "@weight": "0.5"
+                },
+                {
+                  "@name": "cave_ocean",
+                  "@weight": "0.5"
+                }
+              ]
+            }
+          },
+          "DungeonSizeAndDepth": {
+            "Size": {
+              "@floors": "3",
+              "@weight": "1",
+              "BossRarity": {
+                "highlight": {
+                  "@name": "legendary",
+                  "@weight": "1"
+                }
+              },
+              "Floor": [
+                {
+                  "@level": "1",
+                  "DungeonLength": {
+                    "@pathlength": "3",
+                    "@highlightCount": "2",
+                    "@weight": "1",
+                    "highlight": [
+                      {
+                        "@name": "uncommon",
+                        "@weight": "1"
+                      },
+                      {
+                        "@name": "standard",
+                        "@weight": "1"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "@level": "2",
+                  "DungeonLength": {
+                    "@pathlength": "9",
+                    "@highlightCount": "1",
+                    "@weight": "1",
+                    "highlight": {
+                      "@name": "rare",
+                      "@weight": "1"
+                    }
+                  }
+                },
+                {
+                  "@level": "3",
+                  "DungeonLength": {
+                    "@pathlength": "0",
+                    "@highlightCount": "0",
+                    "@weight": "1",
+                    "highlight": {
+                      "@name": "uncommon",
+                      "@weight": "1"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "@name": "KRP_DRAGON_BOSS_LAIR",
           "@type": "DEFAULT_ELITE",
+          "@biome": "Dragon",
+          "@specialtype": "Dragon",
+          "Faction": {
+            "@name": "KEEPER",
+            "Subset": {
+              "@name": "fanatic",
+              "@weight": "1"
+            }
+          },
+          "Flags": {
+            "Flag": {
+              "@name": "elite"
+            }
+          },
+          "Environments": {
+            "Environment": {
+              "@name": "indoor",
+              "@weight": "1",
+              "Subset": [
+                {
+                  "@name": "cave_01",
+                  "@weight": "0.5"
+                },
+                {
+                  "@name": "cave_ocean",
+                  "@weight": "0.5"
+                }
+              ]
+            }
+          },
+          "DungeonSizeAndDepth": {
+            "Size": {
+              "@floors": "2",
+              "@weight": "1",
+              "BossRarity": {
+                "highlight": {
+                  "@name": "legendary",
+                  "@weight": "1"
+                }
+              },
+              "Floor": [
+                {
+                  "@level": "1",
+                  "DungeonLength": {
+                    "@pathlength": "0",
+                    "@highlightCount": "0",
+                    "@weight": "1",
+                    "highlight": {
+                      "@name": "uncommon",
+                      "@weight": "1"
+                    }
+                  }
+                },
+                {
+                  "@level": "2",
+                  "DungeonLength": {
+                    "@pathlength": "0",
+                    "@highlightCount": "0",
+                    "@weight": "1",
+                    "highlight": {
+                      "@name": "uncommon",
+                      "@weight": "1"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "@name": "KRP_DRAGON_RANDOM_DUNGEON",
+          "@type": "DEFAULT_ELITE",
+          "@biome": "Dragon",
+          "@specialtype": "Dragon",
+          "@fullclusterplayerinterestinbossroom": "true",
           "Faction": {
             "@name": "KEEPER",
             "Subset": {
@@ -17886,36 +18590,49 @@
               "Floor": [
                 {
                   "@level": "1",
-                  "DungeonLength": {
-                    "@pathlength": "5",
-                    "@highlightCount": "1",
-                    "@weight": "1",
-                    "highlight": {
-                      "@name": "uncommon",
-                      "@weight": "1"
+                  "DungeonLength": [
+                    {
+                      "@pathlength": "6",
+                      "@highlightCount": "2",
+                      "@uniqueHighlightRarities": "true",
+                      "@weight": "20",
+                      "highlight": [
+                        {
+                          "@name": "rare",
+                          "@weight": "1"
+                        },
+                        {
+                          "@name": "standard",
+                          "@weight": "1"
+                        }
+                      ]
+                    },
+                    {
+                      "@pathlength": "6",
+                      "@highlightCount": "1",
+                      "@weight": "80",
+                      "highlight": {
+                        "@name": "rare",
+                        "@weight": "1"
+                      }
                     }
-                  }
+                  ]
                 },
                 {
                   "@level": "2",
                   "DungeonLength": {
-                    "@pathlength": "10",
-                    "@highlightCount": "2",
+                    "@pathlength": "3",
+                    "@highlightCount": "1",
                     "@weight": "1",
-                    "highlight": [
-                      {
-                        "@name": "rare",
-                        "@weight": "1"
-                      },
-                      {
-                        "@name": "uncommon",
-                        "@weight": "1"
-                      }
-                    ]
+                    "highlight": {
+                      "@name": "uncommon",
+                      "@weight": "100"
+                    }
                   }
                 },
                 {
                   "@level": "3",
+                  "@enforceInDirection": "Forward",
                   "DungeonLength": {
                     "@pathlength": "0",
                     "@highlightCount": "0",

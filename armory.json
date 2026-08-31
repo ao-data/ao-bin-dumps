@@ -1719,6 +1719,290 @@
               }
             ]
           }
+        },
+        {
+          "@uniquename": "dragonareasmallgroup",
+          "@image": "Gui/Armory/ARMORY_TRACKING",
+          "@hidden": "true",
+          "tags": {
+            "tag": [
+              {
+                "@ref": "small_group"
+              },
+              {
+                "@ref": "pve"
+              },
+              {
+                "@ref": "pvp"
+              },
+              {
+                "@ref": "instanced"
+              }
+            ]
+          },
+          "datasetrequirements": {
+            "or": {
+              "and": [
+                {
+                  "duration": {
+                    "@mindurationminutes": "10"
+                  },
+                  "metric": [
+                    {
+                      "@name": "kills",
+                      "@minvalue": "1"
+                    },
+                    {
+                      "@name": "pvpfamegained",
+                      "@minvalue": "25000"
+                    }
+                  ]
+                },
+                {
+                  "duration": {
+                    "@mindurationminutes": "10"
+                  },
+                  "metric": {
+                    "@name": "pvefamegained",
+                    "@minvalue": "200000"
+                  }
+                }
+              ]
+            }
+          },
+          "scoreweights": {
+            "@minuses": "3",
+            "@minusesbaseline": "5",
+            "weight": [
+              {
+                "@metric": "kills",
+                "@value": "0.4"
+              },
+              {
+                "@metric": "deaths",
+                "@value": "-0.2"
+              },
+              {
+                "@metrics": "damagedealt,healingdone",
+                "@value": "0.2"
+              },
+              {
+                "@metric": "pvpfamegained",
+                "@value": "0.3"
+              },
+              {
+                "@metric": "pvefamegained",
+                "@value": "0.1"
+              }
+            ]
+          }
+        },
+        {
+          "@uniquename": "dragonareamediumgroup",
+          "@image": "Gui/Armory/ARMORY_TRACKING",
+          "@hidden": "true",
+          "tags": {
+            "tag": [
+              {
+                "@ref": "medium_group"
+              },
+              {
+                "@ref": "pve"
+              },
+              {
+                "@ref": "pvp"
+              },
+              {
+                "@ref": "instanced"
+              }
+            ]
+          },
+          "datasetrequirements": {
+            "or": {
+              "and": [
+                {
+                  "duration": {
+                    "@mindurationminutes": "10"
+                  },
+                  "metric": [
+                    {
+                      "@name": "kills",
+                      "@minvalue": "1"
+                    },
+                    {
+                      "@name": "pvpfamegained",
+                      "@minvalue": "50000"
+                    }
+                  ]
+                },
+                {
+                  "duration": {
+                    "@mindurationminutes": "10"
+                  },
+                  "metric": {
+                    "@name": "pvefamegained",
+                    "@minvalue": "200000"
+                  }
+                }
+              ]
+            }
+          },
+          "scoreweights": {
+            "@minuses": "2",
+            "@minusesbaseline": "3",
+            "weight": [
+              {
+                "@metric": "kills",
+                "@value": "0.4"
+              },
+              {
+                "@metric": "deaths",
+                "@value": "-0.2"
+              },
+              {
+                "@metrics": "damagedealt,healingdone",
+                "@value": "0.2"
+              },
+              {
+                "@metric": "pvpfamegained",
+                "@value": "0.3"
+              },
+              {
+                "@metric": "pvefamegained",
+                "@value": "0.1"
+              }
+            ]
+          }
+        },
+        {
+          "@uniquename": "dragonarealargegroup",
+          "@image": "Gui/Armory/ARMORY_TRACKING",
+          "@hidden": "true",
+          "tags": {
+            "tag": [
+              {
+                "@ref": "large_group"
+              },
+              {
+                "@ref": "pve"
+              },
+              {
+                "@ref": "pvp"
+              },
+              {
+                "@ref": "instanced"
+              }
+            ]
+          },
+          "datasetrequirements": {
+            "or": {
+              "and": [
+                {
+                  "duration": {
+                    "@mindurationminutes": "10"
+                  },
+                  "metric": [
+                    {
+                      "@name": "kills",
+                      "@minvalue": "1"
+                    },
+                    {
+                      "@name": "pvpfamegained",
+                      "@minvalue": "100000"
+                    }
+                  ]
+                },
+                {
+                  "duration": {
+                    "@mindurationminutes": "10"
+                  },
+                  "metric": {
+                    "@name": "pvefamegained",
+                    "@minvalue": "200000"
+                  }
+                }
+              ]
+            }
+          },
+          "scoreweights": {
+            "@minuses": "1",
+            "weight": [
+              {
+                "@metric": "kills",
+                "@value": "0.4"
+              },
+              {
+                "@metric": "deaths",
+                "@value": "-0.2"
+              },
+              {
+                "@metrics": "damagereceived,healingdone",
+                "@value": "0.3"
+              },
+              {
+                "@metric": "pvpfamegained",
+                "@value": "0.3"
+              },
+              {
+                "@metric": "pvefamegained",
+                "@value": "0.1"
+              }
+            ]
+          }
+        },
+        {
+          "@uniquename": "dragondungeons",
+          "@image": "Gui/Armory/ARMORY_AVALONIAN_DUNGEON",
+          "@hidden": "true",
+          "tags": {
+            "tag": [
+              {
+                "@ref": "large_group"
+              },
+              {
+                "@ref": "instanced"
+              },
+              {
+                "@ref": "dungeons"
+              },
+              {
+                "@ref": "pve"
+              }
+            ]
+          },
+          "datasetrequirements": {
+            "or": {
+              "duration": {
+                "@mindurationminutes": "5"
+              },
+              "metric": {
+                "@name": "mobskilled",
+                "@minvalue": "20"
+              }
+            }
+          },
+          "scoreweights": {
+            "@minuses": "2",
+            "@minperformancescore": "0.3",
+            "weight": [
+              {
+                "@metric": "deaths",
+                "@value": "-0.2"
+              },
+              {
+                "@metric": "healingdone",
+                "@value": "0.4"
+              },
+              {
+                "@metric": "pvefamegained",
+                "@value": "0.2"
+              },
+              {
+                "@metrics": "damagedealt,healingdone,damagereceived",
+                "@value": "0.4"
+              }
+            ]
+          }
         }
       ]
     }

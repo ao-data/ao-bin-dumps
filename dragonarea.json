@@ -7,8 +7,1667 @@
     "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
     "@xsi:noNamespaceSchemaLocation": "dragonarea.xsd",
     "globalsettings": {
-      "@teleporterusagedurationsec": "5",
-      "@teleporterunlockmaphighlightdurationsec": "30"
+      "@teleporterusagedurationsec": "1.25",
+      "@teleporterunlockmaphighlightdurationsec": "60",
+      "@minimumspawndistance": "120",
+      "@clusterclosinglocatag": "@DRAGON_AREA_LIFE_CYCLE_CLOSING",
+      "@clustershutdownalerttimer": "60",
+      "@entranceblockerdebuff": "DRAGON_AREA_JOINED_FROM_ENTRANCE_DEBUFF",
+      "@leavedragonareaprotectionspells": "DRAGON_AREA_LEAVE_PROTECTION,DRAGON_AREA_LEAVE_PROTECTION_SELF_REMOVALCHECK",
+      "@teleporterusagebuff": "DRAGON_AREA_TELEPORTER",
+      "modetypesetting": {
+        "@type": "dragonarea",
+        "@minimapdisplayinterestareaextend": "100",
+        "@dragonareabossspawndelaysec": "60"
+      }
+    },
+    "dragonenergy": {
+      "@lossonbleedoutfactor": "1",
+      "@transferonbleedoutfactor": "0.5",
+      "@minimumtransfer": "0.01",
+      "@stackspell": "DRAGON_AREA_ENERGY_STACK",
+      "@stackspellmaxcharges": "15",
+      "energypayoutbase": {
+        "@chance": "0.01",
+        "@amount": "1",
+        "@splitamountwithparty": "true"
+      },
+      "energypayout": [
+        {
+          "@mobtypecategory": "standard",
+          "@chance": "0.05",
+          "@amount": "1",
+          "@splitamountwithparty": "true"
+        },
+        {
+          "@mobid": "T6_MOB_DA_KEEPER_FANATIC_DRAGON_SPEAR_CHAMPION",
+          "@chance": "1",
+          "@amount": "0.2",
+          "@splitamountwithparty": "false"
+        },
+        {
+          "@mobid": "T6_MOB_DA_KEEPER_FANATIC_DRAGON_SPEAR_VETERAN_CHAMPION",
+          "@chance": "1",
+          "@amount": "0.2",
+          "@splitamountwithparty": "false"
+        },
+        {
+          "@mobid": "T6_MOB_DA_KEEPER_FANATIC_DRAGON_SPEAR_ELITE_CHAMPION",
+          "@chance": "1",
+          "@amount": "0.2",
+          "@splitamountwithparty": "false"
+        },
+        {
+          "@mobid": "T7_MOB_DA_KEEPER_FANATIC_DRAGON_SPEAR_CHAMPION",
+          "@chance": "1",
+          "@amount": "0.2",
+          "@splitamountwithparty": "false"
+        },
+        {
+          "@mobid": "T7_MOB_DA_KEEPER_FANATIC_DRAGON_SPEAR_VETERAN_CHAMPION",
+          "@chance": "1",
+          "@amount": "0.2",
+          "@splitamountwithparty": "false"
+        },
+        {
+          "@mobid": "T7_MOB_DA_KEEPER_FANATIC_DRAGON_SPEAR_ELITE_CHAMPION",
+          "@chance": "1",
+          "@amount": "0.2",
+          "@splitamountwithparty": "false"
+        },
+        {
+          "@mobid": "T6_MOB_DA_KEEPER_FANATIC_DRAGON_SHAMAN_CHAMPION",
+          "@chance": "1",
+          "@amount": "0.2",
+          "@splitamountwithparty": "false"
+        },
+        {
+          "@mobid": "T6_MOB_DA_KEEPER_FANATIC_DRAGON_SHAMAN_VETERAN_CHAMPION",
+          "@chance": "1",
+          "@amount": "0.2",
+          "@splitamountwithparty": "false"
+        },
+        {
+          "@mobid": "T6_MOB_DA_KEEPER_FANATIC_DRAGON_SHAMAN_ELITE_CHAMPION",
+          "@chance": "1",
+          "@amount": "0.2",
+          "@splitamountwithparty": "false"
+        },
+        {
+          "@mobid": "T7_MOB_DA_KEEPER_FANATIC_DRAGON_SHAMAN_CHAMPION",
+          "@chance": "1",
+          "@amount": "0.2",
+          "@splitamountwithparty": "false"
+        },
+        {
+          "@mobid": "T7_MOB_DA_KEEPER_FANATIC_DRAGON_SHAMAN_VETERAN_CHAMPION",
+          "@chance": "1",
+          "@amount": "0.2",
+          "@splitamountwithparty": "false"
+        },
+        {
+          "@mobid": "T7_MOB_DA_KEEPER_FANATIC_DRAGON_SHAMAN_ELITE_CHAMPION",
+          "@chance": "1",
+          "@amount": "0.2",
+          "@splitamountwithparty": "false"
+        },
+        {
+          "@mobid": "T6_MOB_DA_KEEPER_FANATIC_WARHORN_CHAMPION",
+          "@chance": "1",
+          "@amount": "0.2",
+          "@splitamountwithparty": "false"
+        },
+        {
+          "@mobid": "T6_MOB_DA_KEEPER_FANATIC_WARHORN_VETERAN_CHAMPION",
+          "@chance": "1",
+          "@amount": "0.2",
+          "@splitamountwithparty": "false"
+        },
+        {
+          "@mobid": "T6_MOB_DA_KEEPER_FANATIC_WARHORN_ELITE_CHAMPION",
+          "@chance": "1",
+          "@amount": "0.2",
+          "@splitamountwithparty": "false"
+        },
+        {
+          "@mobid": "T7_MOB_DA_KEEPER_FANATIC_WARHORN_CHAMPION",
+          "@chance": "1",
+          "@amount": "0.2",
+          "@splitamountwithparty": "false"
+        },
+        {
+          "@mobid": "T7_MOB_DA_KEEPER_FANATIC_WARHORN_VETERAN_CHAMPION",
+          "@chance": "1",
+          "@amount": "0.2",
+          "@splitamountwithparty": "false"
+        },
+        {
+          "@mobid": "T7_MOB_DA_KEEPER_FANATIC_WARHORN_ELITE_CHAMPION",
+          "@chance": "1",
+          "@amount": "0.2",
+          "@splitamountwithparty": "false"
+        },
+        {
+          "@mobid": "T6_MOB_DA_KEEPER_FANATIC_WISP_PURPLE_TRASH",
+          "@chance": "1",
+          "@amount": "0.05",
+          "@splitamountwithparty": "false"
+        },
+        {
+          "@mobid": "T6_MOB_DA_KEEPER_FANATIC_WISP_PURPLE_VETERAN_TRASH",
+          "@chance": "1",
+          "@amount": "0.05",
+          "@splitamountwithparty": "false"
+        },
+        {
+          "@mobid": "T6_MOB_DA_KEEPER_FANATIC_WISP_PURPLE_ELITE_TRASH",
+          "@chance": "1",
+          "@amount": "0.05",
+          "@splitamountwithparty": "false"
+        },
+        {
+          "@mobid": "T7_MOB_DA_KEEPER_FANATIC_WISP_PURPLE_TRASH",
+          "@chance": "1",
+          "@amount": "0.05",
+          "@splitamountwithparty": "false"
+        },
+        {
+          "@mobid": "T7_MOB_DA_KEEPER_FANATIC_WISP_PURPLE_VETERAN_TRASH",
+          "@chance": "1",
+          "@amount": "0.05",
+          "@splitamountwithparty": "false"
+        },
+        {
+          "@mobid": "T7_MOB_DA_KEEPER_FANATIC_WISP_PURPLE_ELITE_TRASH",
+          "@chance": "1",
+          "@amount": "0.05",
+          "@splitamountwithparty": "false"
+        },
+        {
+          "@mobid": "T6_MOB_DA_KEEPER_NEUTRAL_DRAKE_MINIBOSS",
+          "@chance": "1",
+          "@amount": "3",
+          "@splitamountwithparty": "false"
+        },
+        {
+          "@mobid": "T7_MOB_DA_KEEPER_NEUTRAL_DRAKE_MINIBOSS",
+          "@chance": "1",
+          "@amount": "3",
+          "@splitamountwithparty": "false"
+        },
+        {
+          "@mobid": "T6_MOB_DA_KEEPER_NEUTRAL_DRAKE_VETERAN_MINIBOSS",
+          "@chance": "1",
+          "@amount": "3",
+          "@splitamountwithparty": "false"
+        },
+        {
+          "@mobid": "T7_MOB_DA_KEEPER_NEUTRAL_DRAKE_VETERAN_MINIBOSS",
+          "@chance": "1",
+          "@amount": "3",
+          "@splitamountwithparty": "false"
+        },
+        {
+          "@mobid": "T6_MOB_DA_KEEPER_NEUTRAL_DRAKE_ELITE_MINIBOSS",
+          "@chance": "1",
+          "@amount": "3",
+          "@splitamountwithparty": "false"
+        },
+        {
+          "@mobid": "T7_MOB_DA_KEEPER_NEUTRAL_DRAKE_ELITE_MINIBOSS",
+          "@chance": "1",
+          "@amount": "3",
+          "@splitamountwithparty": "false"
+        },
+        {
+          "@mobid": "T6_MOB_DA_KEEPER_FIRE_DRAKE_BOSS",
+          "@chance": "1",
+          "@amount": "8",
+          "@splitamountwithparty": "false"
+        },
+        {
+          "@mobid": "T7_MOB_DA_KEEPER_FIRE_DRAKE_BOSS",
+          "@chance": "1",
+          "@amount": "8",
+          "@splitamountwithparty": "false"
+        },
+        {
+          "@mobid": "T6_MOB_DA_KEEPER_FIRE_DRAKE_VETERAN_BOSS",
+          "@chance": "1",
+          "@amount": "8",
+          "@splitamountwithparty": "false"
+        },
+        {
+          "@mobid": "T7_MOB_DA_KEEPER_FIRE_DRAKE_VETERAN_BOSS",
+          "@chance": "1",
+          "@amount": "8",
+          "@splitamountwithparty": "false"
+        },
+        {
+          "@mobid": "T6_MOB_DA_KEEPER_FIRE_DRAKE_ELITE_BOSS",
+          "@chance": "1",
+          "@amount": "8",
+          "@splitamountwithparty": "false"
+        },
+        {
+          "@mobid": "T7_MOB_DA_KEEPER_FIRE_DRAKE_ELITE_BOSS",
+          "@chance": "1",
+          "@amount": "8",
+          "@splitamountwithparty": "false"
+        }
+      ]
+    },
+    "dragonattackevent": {
+      "@mineventcooldownindays": "21",
+      "@maxeventcooldownindays": "30",
+      "@announcementloca": "@DRAGON_AREA_EVENT_INFO",
+      "condition": {
+        "@method": "craft",
+        "@itemid": "QUESTITEM_STANDING_DRAGONS_STRONG",
+        "@chance": "0.00001"
+      },
+      "triggerglobaleventgroup": [
+        {
+          "@name": "DRAGON_RAID_OUTLANDS",
+          "@maxactive": "20"
+        },
+        {
+          "@name": "DRAGON_RAID_ROYAL",
+          "@maxactive": "10"
+        }
+      ]
+    },
+    "entrancetypes": {
+      "entrancetype": [
+        {
+          "@name": "DRAGON_AREA_ORANGE_SMALL",
+          "@tileref": "DRAGON_AREA_ENTRANCE_SMALL",
+          "@nameloca": "@DRAGON_AREA_ENTRANCE_SMALL_TITLE",
+          "@locktime": "1800",
+          "@lifetime": "180",
+          "@despawntime": "600",
+          "@minimapmarker": "dragons_portal_small",
+          "mode": [
+            {
+              "@name": "DRAGON_AREA_1_TO_1_ORANGE"
+            },
+            {
+              "@name": "DRAGON_AREA_2_TO_3_ORANGE"
+            },
+            {
+              "@name": "DRAGON_AREA_4_TO_5_ORANGE"
+            }
+          ]
+        },
+        {
+          "@name": "DRAGON_AREA_ORANGE_MEDIUM",
+          "@tileref": "DRAGON_AREA_ENTRANCE_SMALL",
+          "@nameloca": "@DRAGON_AREA_ENTRANCE_MEDIUM_TITLE",
+          "@locktime": "3600",
+          "@lifetime": "180",
+          "@despawntime": "600",
+          "@minimapmarker": "dragons_portal_medium",
+          "mode": {
+            "@name": "DRAGON_AREA_5_TO_7_ORANGE"
+          }
+        },
+        {
+          "@name": "DRAGON_AREA_ORANGE_LARGE",
+          "@tileref": "DRAGON_AREA_ENTRANCE_LARGE",
+          "@nameloca": "@DRAGON_AREA_ENTRANCE_LARGE_TITLE",
+          "@locktime": "10800",
+          "@lifetime": "180",
+          "@despawntime": "600",
+          "@minimapmarker": "dragons_portal_big",
+          "mode": {
+            "@name": "DRAGON_AREA_15_TO_20_ORANGE"
+          }
+        },
+        {
+          "@name": "DRAGON_AREA_BLACK_SMALL",
+          "@tileref": "DRAGON_AREA_ENTRANCE_SMALL",
+          "@nameloca": "@DRAGON_AREA_ENTRANCE_SMALL_TITLE",
+          "@locktime": "1800",
+          "@lifetime": "180",
+          "@despawntime": "600",
+          "@minimapmarker": "dragons_portal_small",
+          "mode": [
+            {
+              "@name": "DRAGON_AREA_1_TO_1_BLACK"
+            },
+            {
+              "@name": "DRAGON_AREA_2_TO_3_BLACK"
+            },
+            {
+              "@name": "DRAGON_AREA_4_TO_5_BLACK"
+            }
+          ]
+        },
+        {
+          "@name": "DRAGON_AREA_BLACK_MEDIUM",
+          "@tileref": "DRAGON_AREA_ENTRANCE_SMALL",
+          "@nameloca": "@DRAGON_AREA_ENTRANCE_MEDIUM_TITLE",
+          "@locktime": "3600",
+          "@lifetime": "180",
+          "@despawntime": "600",
+          "@minimapmarker": "dragons_portal_medium",
+          "mode": {
+            "@name": "DRAGON_AREA_5_TO_7_BLACK"
+          }
+        },
+        {
+          "@name": "DRAGON_AREA_BLACK_LARGE",
+          "@tileref": "DRAGON_AREA_ENTRANCE_LARGE",
+          "@nameloca": "@DRAGON_AREA_ENTRANCE_LARGE_TITLE",
+          "@locktime": "10800",
+          "@lifetime": "180",
+          "@despawntime": "600",
+          "@minimapmarker": "dragons_portal_big",
+          "mode": {
+            "@name": "DRAGON_AREA_15_TO_20_BLACK"
+          }
+        }
+      ]
+    },
+    "modes": {
+      "mode": [
+        {
+          "@name": "DRAGON_AREA_1_TO_1_ORANGE",
+          "@type": "dragonarea",
+          "@clustertype": "DRAGON_AREA_1_TO_1_ORANGE",
+          "@clusterdisplayname": "Ancient Lands",
+          "@minteamsize": "1",
+          "@maxteamsize": "1",
+          "@mapset": "MAPSET_1_TO_1_PLAYERS_ORANGE",
+          "@bossmob": "T6_MOB_DA_KEEPER_FIRE_DRAKE_BOSS",
+          "@itempowerrequirement": "900",
+          "@instancerandomdungeondifficultygroup": "dragonarea",
+          "difficultylevel": {
+            "@level": "0",
+            "@minimuminstancepool": "3",
+            "@flexibleinstancepool": "0.05"
+          },
+          "treasures": {
+            "subtype": [
+              {
+                "@name": "CHEST",
+                "@rolls": "1",
+                "@chance": "1",
+                "@initialblocktimeseconds": "360",
+                "@finalblocktimeseconds": "540",
+                "@mindifficulty": "1"
+              },
+              {
+                "@name": "COFFER",
+                "@rolls": "3",
+                "@chance": "1",
+                "@initialblocktimeseconds": "180",
+                "@finalblocktimeseconds": "480"
+              }
+            ]
+          }
+        },
+        {
+          "@name": "DRAGON_AREA_2_TO_3_ORANGE",
+          "@type": "dragonarea",
+          "@clustertype": "DRAGON_AREA_2_TO_3_ORANGE",
+          "@clusterdisplayname": "Ancient Lands",
+          "@minteamsize": "2",
+          "@maxteamsize": "3",
+          "@mapset": "MAPSET_2_TO_3_PLAYERS_ORANGE",
+          "@bossmob": "T6_MOB_DA_KEEPER_FIRE_DRAKE_BOSS",
+          "@itempowerrequirement": "900",
+          "@instancerandomdungeondifficultygroup": "dragonarea",
+          "difficultylevel": {
+            "@level": "0",
+            "@minimuminstancepool": "2",
+            "@flexibleinstancepool": "0.05"
+          },
+          "treasures": {
+            "subtype": [
+              {
+                "@name": "CHEST",
+                "@rolls": "1",
+                "@chance": "1",
+                "@initialblocktimeseconds": "360",
+                "@finalblocktimeseconds": "540",
+                "@mindifficulty": "1"
+              },
+              {
+                "@name": "COFFER",
+                "@rolls": "3",
+                "@chance": "1",
+                "@initialblocktimeseconds": "180",
+                "@finalblocktimeseconds": "480"
+              }
+            ]
+          }
+        },
+        {
+          "@name": "DRAGON_AREA_4_TO_5_ORANGE",
+          "@type": "dragonarea",
+          "@clustertype": "DRAGON_AREA_4_TO_5_ORANGE",
+          "@clusterdisplayname": "Ancient Lands",
+          "@minteamsize": "4",
+          "@maxteamsize": "5",
+          "@mapset": "MAPSET_4_TO_5_PLAYERS_ORANGE",
+          "@bossmob": "T6_MOB_DA_KEEPER_FIRE_DRAKE_BOSS",
+          "@itempowerrequirement": "900",
+          "@instancerandomdungeondifficultygroup": "dragonarea",
+          "difficultylevel": {
+            "@level": "0",
+            "@minimuminstancepool": "1",
+            "@flexibleinstancepool": "0.05"
+          },
+          "treasures": {
+            "subtype": [
+              {
+                "@name": "CHEST",
+                "@rolls": "1",
+                "@chance": "1",
+                "@initialblocktimeseconds": "360",
+                "@finalblocktimeseconds": "540",
+                "@mindifficulty": "1"
+              },
+              {
+                "@name": "COFFER",
+                "@rolls": "3",
+                "@chance": "1",
+                "@initialblocktimeseconds": "180",
+                "@finalblocktimeseconds": "480"
+              }
+            ]
+          }
+        },
+        {
+          "@name": "DRAGON_AREA_5_TO_7_ORANGE",
+          "@type": "dragonarea",
+          "@clustertype": "DRAGON_AREA_5_TO_7_ORANGE",
+          "@clusterdisplayname": "Ancient Lands",
+          "@minteamsize": "5",
+          "@maxteamsize": "7",
+          "@mapset": "MAPSET_5_TO_7_PLAYERS_ORANGE",
+          "@bossmob": "T6_MOB_DA_KEEPER_FIRE_DRAKE_VETERAN_BOSS",
+          "@itempowerrequirement": "900",
+          "@instancerandomdungeondifficultygroup": "dragonarea",
+          "difficultylevel": {
+            "@level": "0",
+            "@minimuminstancepool": "1",
+            "@flexibleinstancepool": "0.05"
+          },
+          "treasures": {
+            "subtype": [
+              {
+                "@name": "CHEST",
+                "@rolls": "1",
+                "@chance": "1",
+                "@initialblocktimeseconds": "360",
+                "@finalblocktimeseconds": "540",
+                "@mindifficulty": "1"
+              },
+              {
+                "@name": "COFFER",
+                "@rolls": "3",
+                "@chance": "1",
+                "@initialblocktimeseconds": "180",
+                "@finalblocktimeseconds": "480"
+              }
+            ]
+          }
+        },
+        {
+          "@name": "DRAGON_AREA_15_TO_20_ORANGE",
+          "@type": "dragonarea",
+          "@clustertype": "DRAGON_AREA_15_TO_20_ORANGE",
+          "@clusterdisplayname": "Ancient Lands",
+          "@minteamsize": "15",
+          "@maxteamsize": "20",
+          "@mapset": "MAPSET_15_TO_20_PLAYERS_ORANGE",
+          "@bossmob": "T6_MOB_DA_KEEPER_FIRE_DRAKE_ELITE_BOSS",
+          "@itempowerrequirement": "900",
+          "@instancerandomdungeondifficultygroup": "dragonarea",
+          "difficultylevel": {
+            "@level": "0",
+            "@minimuminstancepool": "1",
+            "@flexibleinstancepool": "0.05"
+          },
+          "treasures": {
+            "subtype": [
+              {
+                "@name": "CHEST",
+                "@rolls": "1",
+                "@chance": "1",
+                "@initialblocktimeseconds": "360",
+                "@finalblocktimeseconds": "540",
+                "@mindifficulty": "1"
+              },
+              {
+                "@name": "COFFER",
+                "@rolls": "3",
+                "@chance": "1",
+                "@initialblocktimeseconds": "180",
+                "@finalblocktimeseconds": "480"
+              }
+            ]
+          }
+        },
+        {
+          "@name": "DRAGON_AREA_1_TO_1_BLACK",
+          "@type": "dragonarea",
+          "@clustertype": "DRAGON_AREA_1_TO_1_BLACK",
+          "@applyleaveprotection": "true",
+          "@clusterdisplayname": "Ancient Lands",
+          "@minteamsize": "1",
+          "@maxteamsize": "1",
+          "@mapset": "MAPSET_1_TO_1_PLAYERS_BLACK",
+          "@bossmob": "T7_MOB_DA_KEEPER_FIRE_DRAKE_BOSS",
+          "@itempowerrequirement": "900",
+          "@instancerandomdungeondifficultygroup": "dragonarea",
+          "difficultylevel": {
+            "@level": "0",
+            "@minimuminstancepool": "3",
+            "@flexibleinstancepool": "0.05"
+          },
+          "treasures": {
+            "subtype": [
+              {
+                "@name": "CHEST",
+                "@rolls": "1",
+                "@chance": "1",
+                "@initialblocktimeseconds": "360",
+                "@finalblocktimeseconds": "540",
+                "@mindifficulty": "1"
+              },
+              {
+                "@name": "COFFER",
+                "@rolls": "3",
+                "@chance": "1",
+                "@initialblocktimeseconds": "180",
+                "@finalblocktimeseconds": "480"
+              }
+            ]
+          }
+        },
+        {
+          "@name": "DRAGON_AREA_2_TO_3_BLACK",
+          "@type": "dragonarea",
+          "@clustertype": "DRAGON_AREA_2_TO_3_BLACK",
+          "@applyleaveprotection": "true",
+          "@clusterdisplayname": "Ancient Lands",
+          "@minteamsize": "2",
+          "@maxteamsize": "3",
+          "@mapset": "MAPSET_2_TO_3_PLAYERS_BLACK",
+          "@bossmob": "T7_MOB_DA_KEEPER_FIRE_DRAKE_BOSS",
+          "@itempowerrequirement": "900",
+          "@instancerandomdungeondifficultygroup": "dragonarea",
+          "difficultylevel": {
+            "@level": "0",
+            "@minimuminstancepool": "2",
+            "@flexibleinstancepool": "0.05"
+          },
+          "treasures": {
+            "subtype": [
+              {
+                "@name": "CHEST",
+                "@rolls": "1",
+                "@chance": "1",
+                "@initialblocktimeseconds": "360",
+                "@finalblocktimeseconds": "540",
+                "@mindifficulty": "1"
+              },
+              {
+                "@name": "COFFER",
+                "@rolls": "3",
+                "@chance": "1",
+                "@initialblocktimeseconds": "180",
+                "@finalblocktimeseconds": "480"
+              }
+            ]
+          }
+        },
+        {
+          "@name": "DRAGON_AREA_4_TO_5_BLACK",
+          "@type": "dragonarea",
+          "@clustertype": "DRAGON_AREA_4_TO_5_BLACK",
+          "@applyleaveprotection": "true",
+          "@clusterdisplayname": "Ancient Lands",
+          "@minteamsize": "4",
+          "@maxteamsize": "5",
+          "@mapset": "MAPSET_4_TO_5_PLAYERS_BLACK",
+          "@bossmob": "T7_MOB_DA_KEEPER_FIRE_DRAKE_BOSS",
+          "@itempowerrequirement": "900",
+          "@instancerandomdungeondifficultygroup": "dragonarea",
+          "difficultylevel": {
+            "@level": "0",
+            "@minimuminstancepool": "1",
+            "@flexibleinstancepool": "0.05"
+          },
+          "treasures": {
+            "subtype": [
+              {
+                "@name": "CHEST",
+                "@rolls": "1",
+                "@chance": "1",
+                "@initialblocktimeseconds": "360",
+                "@finalblocktimeseconds": "540",
+                "@mindifficulty": "1"
+              },
+              {
+                "@name": "COFFER",
+                "@rolls": "3",
+                "@chance": "1",
+                "@initialblocktimeseconds": "180",
+                "@finalblocktimeseconds": "480"
+              }
+            ]
+          }
+        },
+        {
+          "@name": "DRAGON_AREA_5_TO_7_BLACK",
+          "@type": "dragonarea",
+          "@clustertype": "DRAGON_AREA_5_TO_7_BLACK",
+          "@applyleaveprotection": "true",
+          "@clusterdisplayname": "Ancient Lands",
+          "@minteamsize": "5",
+          "@maxteamsize": "7",
+          "@mapset": "MAPSET_5_TO_7_PLAYERS_BLACK",
+          "@bossmob": "T7_MOB_DA_KEEPER_FIRE_DRAKE_VETERAN_BOSS",
+          "@itempowerrequirement": "900",
+          "@instancerandomdungeondifficultygroup": "dragonarea",
+          "difficultylevel": {
+            "@level": "0",
+            "@minimuminstancepool": "1",
+            "@flexibleinstancepool": "0.05"
+          },
+          "treasures": {
+            "subtype": [
+              {
+                "@name": "CHEST",
+                "@rolls": "1",
+                "@chance": "1",
+                "@initialblocktimeseconds": "360",
+                "@finalblocktimeseconds": "540",
+                "@mindifficulty": "1"
+              },
+              {
+                "@name": "COFFER",
+                "@rolls": "3",
+                "@chance": "1",
+                "@initialblocktimeseconds": "180",
+                "@finalblocktimeseconds": "480"
+              }
+            ]
+          }
+        },
+        {
+          "@name": "DRAGON_AREA_15_TO_20_BLACK",
+          "@type": "dragonarea",
+          "@clustertype": "DRAGON_AREA_15_TO_20_BLACK",
+          "@applyleaveprotection": "true",
+          "@clusterdisplayname": "Ancient Lands",
+          "@minteamsize": "15",
+          "@maxteamsize": "20",
+          "@mapset": "MAPSET_15_TO_20_PLAYERS_BLACK",
+          "@bossmob": "T7_MOB_DA_KEEPER_FIRE_DRAKE_ELITE_BOSS",
+          "@itempowerrequirement": "900",
+          "@instancerandomdungeondifficultygroup": "dragonarea",
+          "difficultylevel": {
+            "@level": "0",
+            "@minimuminstancepool": "1",
+            "@flexibleinstancepool": "0.05"
+          },
+          "treasures": {
+            "subtype": [
+              {
+                "@name": "CHEST",
+                "@rolls": "1",
+                "@chance": "1",
+                "@initialblocktimeseconds": "360",
+                "@finalblocktimeseconds": "540",
+                "@mindifficulty": "1"
+              },
+              {
+                "@name": "COFFER",
+                "@rolls": "3",
+                "@chance": "1",
+                "@initialblocktimeseconds": "180",
+                "@finalblocktimeseconds": "480"
+              }
+            ]
+          }
+        },
+        {
+          "@name": "DRAGON_AREA_1_TO_3_ORANGE",
+          "@type": "dragonarea",
+          "@clustertype": "DRAGON_AREA_ORANGE",
+          "@clusterdisplayname": "Ancient Lands",
+          "@minteamsize": "1",
+          "@maxteamsize": "3",
+          "@mapset": "DRAGON_AREA_1_TO_3_MAP_01",
+          "@bossmob": "T6_MOB_DA_KEEPER_FIRE_DRAKE_BOSS",
+          "@itempowerrequirement": "900",
+          "@instancerandomdungeondifficultygroup": "dragonarea",
+          "difficultylevel": {
+            "@level": "0",
+            "@minimuminstancepool": "1",
+            "@flexibleinstancepool": "0.05"
+          },
+          "treasures": {
+            "subtype": [
+              {
+                "@name": "CHEST",
+                "@rolls": "1",
+                "@chance": "1",
+                "@initialblocktimeseconds": "360",
+                "@finalblocktimeseconds": "540",
+                "@mindifficulty": "1"
+              },
+              {
+                "@name": "COFFER",
+                "@rolls": "3",
+                "@chance": "1",
+                "@initialblocktimeseconds": "180",
+                "@finalblocktimeseconds": "480"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "maps": {
+      "mapset": [
+        {
+          "@name": "MAPSET_1_TO_1_PLAYERS_ORANGE",
+          "map": {
+            "@id": "DRAGON_AREA_1_TO_1_ORANGE",
+            "@difficultylevel": "0",
+            "@mastertemplate": "DRAGON_001",
+            "@templatepool": "ORANGE_SOLO_TEMPLATEPOOL",
+            "@clustertier": "6",
+            "@subbiome": "invalid",
+            "@softgrouplimitmin": "5",
+            "@softgrouplimitmax": "6",
+            "@hardgroupcapspace": "1",
+            "@weight": "1",
+            "@clusterclosetime": "300",
+            "@clustershutdownstart": "2400",
+            "@clustershutdowntime": "2700",
+            "@restrictrotation": "true",
+            "mastertemplaterolllayertag": {
+              "layertag": {
+                "@name": "orangesolo",
+                "@weight": "1"
+              }
+            }
+          }
+        },
+        {
+          "@name": "MAPSET_2_TO_3_PLAYERS_ORANGE",
+          "map": {
+            "@id": "DRAGON_AREA_2_TO_3_ORANGE",
+            "@difficultylevel": "0",
+            "@mastertemplate": "DRAGON_001",
+            "@templatepool": "ORANGE_SOLO_TEMPLATEPOOL",
+            "@clustertier": "6",
+            "@subbiome": "invalid",
+            "@softgrouplimitmin": "5",
+            "@softgrouplimitmax": "6",
+            "@hardgroupcapspace": "1",
+            "@weight": "1",
+            "@clusterclosetime": "300",
+            "@clustershutdownstart": "2400",
+            "@clustershutdowntime": "2700",
+            "@restrictrotation": "true",
+            "mastertemplaterolllayertag": {
+              "layertag": {
+                "@name": "orangesolo",
+                "@weight": "1"
+              }
+            }
+          }
+        },
+        {
+          "@name": "MAPSET_4_TO_5_PLAYERS_ORANGE",
+          "map": {
+            "@id": "DRAGON_AREA_4_TO_5_ORANGE",
+            "@difficultylevel": "0",
+            "@mastertemplate": "DRAGON_001",
+            "@templatepool": "ORANGE_SOLO_TEMPLATEPOOL",
+            "@clustertier": "6",
+            "@subbiome": "invalid",
+            "@softgrouplimitmin": "5",
+            "@softgrouplimitmax": "6",
+            "@hardgroupcapspace": "1",
+            "@weight": "1",
+            "@clusterclosetime": "300",
+            "@clustershutdownstart": "2400",
+            "@clustershutdowntime": "2700",
+            "@restrictrotation": "true",
+            "mastertemplaterolllayertag": {
+              "layertag": {
+                "@name": "orangesolo",
+                "@weight": "1"
+              }
+            }
+          }
+        },
+        {
+          "@name": "MAPSET_5_TO_7_PLAYERS_ORANGE",
+          "map": {
+            "@id": "DRAGON_AREA_5_TO_7_ORANGE",
+            "@difficultylevel": "0",
+            "@mastertemplate": "DRAGON_001",
+            "@templatepool": "ORANGE_VETERAN_TEMPLATEPOOL",
+            "@clustertier": "6",
+            "@subbiome": "invalid",
+            "@softgrouplimitmin": "5",
+            "@softgrouplimitmax": "5",
+            "@hardgroupcapspace": "1",
+            "@weight": "1",
+            "@clusterclosetime": "300",
+            "@clustershutdownstart": "2400",
+            "@clustershutdowntime": "2700",
+            "@restrictrotation": "true",
+            "mastertemplaterolllayertag": {
+              "layertag": {
+                "@name": "orangeveteran",
+                "@weight": "1"
+              }
+            }
+          }
+        },
+        {
+          "@name": "MAPSET_15_TO_20_PLAYERS_ORANGE",
+          "map": {
+            "@id": "DRAGON_AREA_15_TO_20_ORANGE",
+            "@difficultylevel": "0",
+            "@mastertemplate": "DRAGON_001",
+            "@templatepool": "ORANGE_ELITE_TEMPLATEPOOL",
+            "@clustertier": "6",
+            "@subbiome": "invalid",
+            "@softgrouplimitmin": "4",
+            "@softgrouplimitmax": "4",
+            "@hardgroupcapspace": "1",
+            "@weight": "1",
+            "@clusterclosetime": "300",
+            "@clustershutdownstart": "2400",
+            "@clustershutdowntime": "2700",
+            "@restrictrotation": "true",
+            "mastertemplaterolllayertag": {
+              "layertag": {
+                "@name": "orangeelite",
+                "@weight": "1"
+              }
+            }
+          }
+        },
+        {
+          "@name": "MAPSET_1_TO_1_PLAYERS_BLACK",
+          "map": {
+            "@id": "DRAGON_AREA_1_TO_1_BLACK",
+            "@difficultylevel": "0",
+            "@mastertemplate": "DRAGON_001",
+            "@templatepool": "BLACK_SOLO_TEMPLATEPOOL",
+            "@clustertier": "7",
+            "@subbiome": "invalid",
+            "@softgrouplimitmin": "5",
+            "@softgrouplimitmax": "6",
+            "@hardgroupcapspace": "1",
+            "@weight": "1",
+            "@clusterclosetime": "300",
+            "@clustershutdownstart": "2400",
+            "@clustershutdowntime": "2700",
+            "@restrictrotation": "true",
+            "mastertemplaterolllayertag": {
+              "layertag": {
+                "@name": "blacksolo",
+                "@weight": "1"
+              }
+            }
+          }
+        },
+        {
+          "@name": "MAPSET_2_TO_3_PLAYERS_BLACK",
+          "map": {
+            "@id": "DRAGON_AREA_2_TO_3_BLACK",
+            "@difficultylevel": "0",
+            "@mastertemplate": "DRAGON_001",
+            "@templatepool": "BLACK_SOLO_TEMPLATEPOOL",
+            "@clustertier": "7",
+            "@subbiome": "invalid",
+            "@softgrouplimitmin": "5",
+            "@softgrouplimitmax": "6",
+            "@hardgroupcapspace": "1",
+            "@weight": "1",
+            "@clusterclosetime": "300",
+            "@clustershutdownstart": "2400",
+            "@clustershutdowntime": "2700",
+            "@restrictrotation": "true",
+            "mastertemplaterolllayertag": {
+              "layertag": {
+                "@name": "blacksolo",
+                "@weight": "1"
+              }
+            }
+          }
+        },
+        {
+          "@name": "MAPSET_4_TO_5_PLAYERS_BLACK",
+          "map": {
+            "@id": "DRAGON_AREA_4_TO_5_BLACK",
+            "@difficultylevel": "0",
+            "@mastertemplate": "DRAGON_001",
+            "@templatepool": "BLACK_SOLO_TEMPLATEPOOL",
+            "@clustertier": "7",
+            "@subbiome": "invalid",
+            "@softgrouplimitmin": "5",
+            "@softgrouplimitmax": "6",
+            "@hardgroupcapspace": "1",
+            "@weight": "1",
+            "@clusterclosetime": "300",
+            "@clustershutdownstart": "2400",
+            "@clustershutdowntime": "2700",
+            "@restrictrotation": "true",
+            "mastertemplaterolllayertag": {
+              "layertag": {
+                "@name": "blacksolo",
+                "@weight": "1"
+              }
+            }
+          }
+        },
+        {
+          "@name": "MAPSET_5_TO_7_PLAYERS_BLACK",
+          "map": {
+            "@id": "DRAGON_AREA_5_TO_7_BLACK",
+            "@difficultylevel": "0",
+            "@mastertemplate": "DRAGON_001",
+            "@templatepool": "BLACK_VETERAN_TEMPLATEPOOL",
+            "@clustertier": "7",
+            "@subbiome": "invalid",
+            "@softgrouplimitmin": "5",
+            "@softgrouplimitmax": "5",
+            "@hardgroupcapspace": "1",
+            "@weight": "1",
+            "@clusterclosetime": "300",
+            "@clustershutdownstart": "2400",
+            "@clustershutdowntime": "2700",
+            "@restrictrotation": "true",
+            "mastertemplaterolllayertag": {
+              "layertag": {
+                "@name": "blackveteran",
+                "@weight": "1"
+              }
+            }
+          }
+        },
+        {
+          "@name": "MAPSET_15_TO_20_PLAYERS_BLACK",
+          "map": {
+            "@id": "DRAGON_AREA_15_TO_20_BLACK",
+            "@difficultylevel": "0",
+            "@mastertemplate": "DRAGON_001",
+            "@templatepool": "BLACK_ELITE_TEMPLATEPOOL",
+            "@clustertier": "7",
+            "@subbiome": "invalid",
+            "@softgrouplimitmin": "4",
+            "@softgrouplimitmax": "4",
+            "@hardgroupcapspace": "1",
+            "@weight": "1",
+            "@clusterclosetime": "300",
+            "@clustershutdownstart": "2400",
+            "@clustershutdowntime": "2700",
+            "@restrictrotation": "true",
+            "mastertemplaterolllayertag": {
+              "layertag": {
+                "@name": "blackelite",
+                "@weight": "1"
+              }
+            }
+          }
+        },
+        {
+          "@name": "DRAGON_AREA_1_TO_3_MAP_01",
+          "map": {
+            "@id": "DRAGON_AREA_1_TO_3_MAP_01",
+            "@difficultylevel": "0",
+            "@mastertemplate": "DRAGON_001",
+            "@templatepool": "ORANGE_SOLO_TEMPLATEPOOL",
+            "@clustertier": "6",
+            "@subbiome": "invalid",
+            "@softgrouplimitmin": "5",
+            "@softgrouplimitmax": "6",
+            "@hardgroupcapspace": "1",
+            "@weight": "1",
+            "@clusterclosetime": "300",
+            "@clustershutdownstart": "2400",
+            "@clustershutdowntime": "2700",
+            "@restrictrotation": "true",
+            "mastertemplaterolllayertag": {
+              "layertag": {
+                "@name": "orangesolo",
+                "@weight": "1"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "difficultyleveluimapping": {
+      "difficultylevel": {
+        "@level": "0",
+        "@name": "@DRAGON_AREA_DIFFICULTY_LEVEL_0"
+      }
+    },
+    "factionweightingtable": {
+      "faction": {
+        "@id": "KEEPER",
+        "@weight": "1"
+      }
+    },
+    "templates": {
+      "templatepool": [
+        {
+          "@id": "ORANGE_SOLO_TEMPLATEPOOL",
+          "size": [
+            {
+              "@name": "medium",
+              "type": [
+                {
+                  "@category": "mobcamp",
+                  "@weight": "1",
+                  "rolllayertag": {
+                    "layertag": {
+                      "@name": "orangesolo",
+                      "@weight": "1"
+                    }
+                  },
+                  "template": [
+                    {
+                      "@id": "M_DR_Mobcamp_01",
+                      "@weight": "1",
+                      "@unique": "false"
+                    },
+                    {
+                      "@id": "M_DR_Mobcamp_02",
+                      "@weight": "1",
+                      "@unique": "false"
+                    },
+                    {
+                      "@id": "M_DR_Mobcamp_03",
+                      "@weight": "1",
+                      "@unique": "false"
+                    },
+                    {
+                      "@id": "M_DR_Mobcamp_04",
+                      "@weight": "1",
+                      "@unique": "false"
+                    }
+                  ]
+                },
+                {
+                  "@category": "drake_island",
+                  "@weight": "1",
+                  "@requiredslottags": "DRAKE_ISLAND",
+                  "@selectionmode": "prioritypick",
+                  "rolllayertag": {
+                    "layertag": {
+                      "@name": "orangesolo",
+                      "@weight": "1"
+                    }
+                  },
+                  "template": {
+                    "@id": "M_DR_Drake_01",
+                    "@weight": "1",
+                    "@unique": "false",
+                    "@restrictrotation": "true"
+                  }
+                }
+              ]
+            },
+            {
+              "@name": "small",
+              "type": {
+                "@category": "mobcamp",
+                "@weight": "1",
+                "rolllayertag": {
+                  "layertag": {
+                    "@name": "orangesolo",
+                    "@weight": "1"
+                  }
+                },
+                "template": [
+                  {
+                    "@id": "S_DR_Mobcamp_01",
+                    "@weight": "1",
+                    "@unique": "false"
+                  },
+                  {
+                    "@id": "S_DR_Mobcamp_02",
+                    "@weight": "1",
+                    "@unique": "false"
+                  },
+                  {
+                    "@id": "S_DR_Mobcamp_04",
+                    "@weight": "1",
+                    "@unique": "false"
+                  },
+                  {
+                    "@id": "S_DR_Mobcamp_05",
+                    "@weight": "1",
+                    "@unique": "false"
+                  },
+                  {
+                    "@id": "S_DR_Mobcamp_06",
+                    "@weight": "1",
+                    "@unique": "false"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "@id": "ORANGE_VETERAN_TEMPLATEPOOL",
+          "size": [
+            {
+              "@name": "medium",
+              "type": [
+                {
+                  "@category": "mobcamp",
+                  "@weight": "1",
+                  "rolllayertag": {
+                    "layertag": {
+                      "@name": "orangeveteran",
+                      "@weight": "1"
+                    }
+                  },
+                  "template": [
+                    {
+                      "@id": "M_DR_Mobcamp_01",
+                      "@weight": "1",
+                      "@unique": "false"
+                    },
+                    {
+                      "@id": "M_DR_Mobcamp_02",
+                      "@weight": "1",
+                      "@unique": "false"
+                    },
+                    {
+                      "@id": "M_DR_Mobcamp_03",
+                      "@weight": "1",
+                      "@unique": "false"
+                    },
+                    {
+                      "@id": "M_DR_Mobcamp_04",
+                      "@weight": "1",
+                      "@unique": "false"
+                    }
+                  ]
+                },
+                {
+                  "@category": "drake_island",
+                  "@weight": "1",
+                  "@requiredslottags": "DRAKE_ISLAND",
+                  "@selectionmode": "prioritypick",
+                  "rolllayertag": {
+                    "layertag": {
+                      "@name": "orangeveteran",
+                      "@weight": "1"
+                    }
+                  },
+                  "template": {
+                    "@id": "M_DR_Drake_01",
+                    "@weight": "1",
+                    "@unique": "false",
+                    "@restrictrotation": "true"
+                  }
+                }
+              ]
+            },
+            {
+              "@name": "small",
+              "type": {
+                "@category": "mobcamp",
+                "@weight": "1",
+                "rolllayertag": {
+                  "layertag": {
+                    "@name": "orangeveteran",
+                    "@weight": "1"
+                  }
+                },
+                "template": [
+                  {
+                    "@id": "S_DR_Mobcamp_01",
+                    "@weight": "1",
+                    "@unique": "false"
+                  },
+                  {
+                    "@id": "S_DR_Mobcamp_02",
+                    "@weight": "1",
+                    "@unique": "false"
+                  },
+                  {
+                    "@id": "S_DR_Mobcamp_04",
+                    "@weight": "1",
+                    "@unique": "false"
+                  },
+                  {
+                    "@id": "S_DR_Mobcamp_05",
+                    "@weight": "1",
+                    "@unique": "false"
+                  },
+                  {
+                    "@id": "S_DR_Mobcamp_06",
+                    "@weight": "1",
+                    "@unique": "false"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "@id": "ORANGE_ELITE_TEMPLATEPOOL",
+          "size": [
+            {
+              "@name": "medium",
+              "type": [
+                {
+                  "@category": "mobcamp",
+                  "@weight": "1",
+                  "rolllayertag": {
+                    "layertag": {
+                      "@name": "orangeelite",
+                      "@weight": "1"
+                    }
+                  },
+                  "template": [
+                    {
+                      "@id": "M_DR_Mobcamp_01",
+                      "@weight": "1",
+                      "@unique": "false"
+                    },
+                    {
+                      "@id": "M_DR_Mobcamp_02",
+                      "@weight": "1",
+                      "@unique": "false"
+                    },
+                    {
+                      "@id": "M_DR_Mobcamp_03",
+                      "@weight": "1",
+                      "@unique": "false"
+                    },
+                    {
+                      "@id": "M_DR_Mobcamp_04",
+                      "@weight": "1",
+                      "@unique": "false"
+                    }
+                  ]
+                },
+                {
+                  "@category": "drake_island",
+                  "@weight": "1",
+                  "@requiredslottags": "DRAKE_ISLAND",
+                  "@selectionmode": "prioritypick",
+                  "rolllayertag": {
+                    "layertag": {
+                      "@name": "orangeelite",
+                      "@weight": "1"
+                    }
+                  },
+                  "template": {
+                    "@id": "M_DR_Drake_01",
+                    "@weight": "1",
+                    "@unique": "false",
+                    "@restrictrotation": "true"
+                  }
+                }
+              ]
+            },
+            {
+              "@name": "small",
+              "type": {
+                "@category": "mobcamp",
+                "@weight": "1",
+                "rolllayertag": {
+                  "layertag": {
+                    "@name": "orangeelite",
+                    "@weight": "1"
+                  }
+                },
+                "template": [
+                  {
+                    "@id": "S_DR_Mobcamp_01",
+                    "@weight": "1",
+                    "@unique": "false"
+                  },
+                  {
+                    "@id": "S_DR_Mobcamp_02",
+                    "@weight": "1",
+                    "@unique": "false"
+                  },
+                  {
+                    "@id": "S_DR_Mobcamp_04",
+                    "@weight": "1",
+                    "@unique": "false"
+                  },
+                  {
+                    "@id": "S_DR_Mobcamp_05",
+                    "@weight": "1",
+                    "@unique": "false"
+                  },
+                  {
+                    "@id": "S_DR_Mobcamp_06",
+                    "@weight": "1",
+                    "@unique": "false"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "@id": "BLACK_SOLO_TEMPLATEPOOL",
+          "size": [
+            {
+              "@name": "medium",
+              "type": [
+                {
+                  "@category": "mobcamp",
+                  "@weight": "1",
+                  "rolllayertag": {
+                    "layertag": {
+                      "@name": "blacksolo",
+                      "@weight": "1"
+                    }
+                  },
+                  "template": [
+                    {
+                      "@id": "M_DR_Mobcamp_01",
+                      "@weight": "1",
+                      "@unique": "false"
+                    },
+                    {
+                      "@id": "M_DR_Mobcamp_02",
+                      "@weight": "1",
+                      "@unique": "false"
+                    },
+                    {
+                      "@id": "M_DR_Mobcamp_03",
+                      "@weight": "1",
+                      "@unique": "false"
+                    },
+                    {
+                      "@id": "M_DR_Mobcamp_04",
+                      "@weight": "1",
+                      "@unique": "false"
+                    }
+                  ]
+                },
+                {
+                  "@category": "drake_island",
+                  "@weight": "1",
+                  "@requiredslottags": "DRAKE_ISLAND",
+                  "@selectionmode": "prioritypick",
+                  "rolllayertag": {
+                    "layertag": {
+                      "@name": "blacksolo",
+                      "@weight": "1"
+                    }
+                  },
+                  "template": {
+                    "@id": "M_DR_Drake_01",
+                    "@weight": "1",
+                    "@unique": "false",
+                    "@restrictrotation": "true"
+                  }
+                }
+              ]
+            },
+            {
+              "@name": "small",
+              "type": {
+                "@category": "mobcamp",
+                "@weight": "1",
+                "rolllayertag": {
+                  "layertag": {
+                    "@name": "blacksolo",
+                    "@weight": "1"
+                  }
+                },
+                "template": [
+                  {
+                    "@id": "S_DR_Mobcamp_01",
+                    "@weight": "1",
+                    "@unique": "false"
+                  },
+                  {
+                    "@id": "S_DR_Mobcamp_02",
+                    "@weight": "1",
+                    "@unique": "false"
+                  },
+                  {
+                    "@id": "S_DR_Mobcamp_04",
+                    "@weight": "1",
+                    "@unique": "false"
+                  },
+                  {
+                    "@id": "S_DR_Mobcamp_05",
+                    "@weight": "1",
+                    "@unique": "false"
+                  },
+                  {
+                    "@id": "S_DR_Mobcamp_06",
+                    "@weight": "1",
+                    "@unique": "false"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "@id": "BLACK_VETERAN_TEMPLATEPOOL",
+          "size": [
+            {
+              "@name": "medium",
+              "type": [
+                {
+                  "@category": "mobcamp",
+                  "@weight": "1",
+                  "rolllayertag": {
+                    "layertag": {
+                      "@name": "blackveteran",
+                      "@weight": "1"
+                    }
+                  },
+                  "template": [
+                    {
+                      "@id": "M_DR_Mobcamp_01",
+                      "@weight": "1",
+                      "@unique": "false"
+                    },
+                    {
+                      "@id": "M_DR_Mobcamp_02",
+                      "@weight": "1",
+                      "@unique": "false"
+                    },
+                    {
+                      "@id": "M_DR_Mobcamp_03",
+                      "@weight": "1",
+                      "@unique": "false"
+                    },
+                    {
+                      "@id": "M_DR_Mobcamp_04",
+                      "@weight": "1",
+                      "@unique": "false"
+                    }
+                  ]
+                },
+                {
+                  "@category": "drake_island",
+                  "@weight": "1",
+                  "@requiredslottags": "DRAKE_ISLAND",
+                  "@selectionmode": "prioritypick",
+                  "rolllayertag": {
+                    "layertag": {
+                      "@name": "blackveteran",
+                      "@weight": "1"
+                    }
+                  },
+                  "template": {
+                    "@id": "M_DR_Drake_01",
+                    "@weight": "1",
+                    "@unique": "false",
+                    "@restrictrotation": "true"
+                  }
+                }
+              ]
+            },
+            {
+              "@name": "small",
+              "type": {
+                "@category": "mobcamp",
+                "@weight": "1",
+                "rolllayertag": {
+                  "layertag": {
+                    "@name": "blackveteran",
+                    "@weight": "1"
+                  }
+                },
+                "template": [
+                  {
+                    "@id": "S_DR_Mobcamp_01",
+                    "@weight": "1",
+                    "@unique": "false"
+                  },
+                  {
+                    "@id": "S_DR_Mobcamp_02",
+                    "@weight": "1",
+                    "@unique": "false"
+                  },
+                  {
+                    "@id": "S_DR_Mobcamp_04",
+                    "@weight": "1",
+                    "@unique": "false"
+                  },
+                  {
+                    "@id": "S_DR_Mobcamp_05",
+                    "@weight": "1",
+                    "@unique": "false"
+                  },
+                  {
+                    "@id": "S_DR_Mobcamp_06",
+                    "@weight": "1",
+                    "@unique": "false"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "@id": "BLACK_ELITE_TEMPLATEPOOL",
+          "size": [
+            {
+              "@name": "medium",
+              "type": [
+                {
+                  "@category": "mobcamp",
+                  "@weight": "1",
+                  "rolllayertag": {
+                    "layertag": {
+                      "@name": "blackelite",
+                      "@weight": "1"
+                    }
+                  },
+                  "template": [
+                    {
+                      "@id": "M_DR_Mobcamp_01",
+                      "@weight": "1",
+                      "@unique": "false"
+                    },
+                    {
+                      "@id": "M_DR_Mobcamp_02",
+                      "@weight": "1",
+                      "@unique": "false"
+                    },
+                    {
+                      "@id": "M_DR_Mobcamp_03",
+                      "@weight": "1",
+                      "@unique": "false"
+                    },
+                    {
+                      "@id": "M_DR_Mobcamp_04",
+                      "@weight": "1",
+                      "@unique": "false"
+                    }
+                  ]
+                },
+                {
+                  "@category": "drake_island",
+                  "@weight": "1",
+                  "@requiredslottags": "DRAKE_ISLAND",
+                  "@selectionmode": "prioritypick",
+                  "rolllayertag": {
+                    "layertag": {
+                      "@name": "blackelite",
+                      "@weight": "1"
+                    }
+                  },
+                  "template": {
+                    "@id": "M_DR_Drake_01",
+                    "@weight": "1",
+                    "@unique": "false",
+                    "@restrictrotation": "true"
+                  }
+                }
+              ]
+            },
+            {
+              "@name": "small",
+              "type": {
+                "@category": "mobcamp",
+                "@weight": "1",
+                "rolllayertag": {
+                  "layertag": {
+                    "@name": "blackelite",
+                    "@weight": "1"
+                  }
+                },
+                "template": [
+                  {
+                    "@id": "S_DR_Mobcamp_01",
+                    "@weight": "1",
+                    "@unique": "false"
+                  },
+                  {
+                    "@id": "S_DR_Mobcamp_02",
+                    "@weight": "1",
+                    "@unique": "false"
+                  },
+                  {
+                    "@id": "S_DR_Mobcamp_04",
+                    "@weight": "1",
+                    "@unique": "false"
+                  },
+                  {
+                    "@id": "S_DR_Mobcamp_05",
+                    "@weight": "1",
+                    "@unique": "false"
+                  },
+                  {
+                    "@id": "S_DR_Mobcamp_06",
+                    "@weight": "1",
+                    "@unique": "false"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
     }
   }
 }

@@ -228,7 +228,7 @@
         }
       },
       {
-        "@uniquename": "MATCH_CUSTOM_CITY_2_INDIV_CHANNEL",
+        "@uniquename": "MATCH_CUSTOM_CITY_2",
         "@matchdurationminutes": "15",
         "@roundduration": "180",
         "@ticketdefault": "200",
@@ -237,7 +237,7 @@
         "@matchtimerespawnmultiplier": "1",
         "@minplayerperteam": "15",
         "@maxplayerperteam": "20",
-        "@ticketreductionbydeath": "5",
+        "@ticketreductionbydeath": "4",
         "@almostlostticketthreshold": "0",
         "@advantageticketsdifference": "0",
         "@orbtype": "ORB_CRYSTAL_GVG_WINNER_RESET_INDIVIDUAL_CHANNEL",
@@ -592,6 +592,58 @@
             "@attackdistancedelay": "24.0",
             "@buffradius": "8.7",
             "@buffspell": "WARCAMP_INVULNERABILITY",
+            "FriendlyFX": {
+              "@beam": "FX/ClientPrefabs/fx_beam_gvg_blue",
+              "@impact": "Prefabs/SpellEffects/MeleeHit"
+            },
+            "HostileFX": {
+              "@beam": "FX/ClientPrefabs/fx_beam_gvg_orange",
+              "@impact": "Prefabs/SpellEffects/MeleeHit"
+            }
+          }
+        }
+      },
+      {
+        "@uniquename": "MATCH_GVG_CITY_2",
+        "@matchdurationminutes": "15",
+        "@roundduration": "180",
+        "@ticketdefault": "200",
+        "@timeleftorbearlyreset": "0",
+        "@respawndelay": "15",
+        "@matchtimerespawnmultiplier": "1",
+        "@minplayerperteam": "15",
+        "@maxplayerperteam": "20",
+        "@ticketreductionbydeath": "5",
+        "@almostlostticketthreshold": "0",
+        "@advantageticketsdifference": "0",
+        "@orbtype": "ORB_CRYSTAL_GVG_WINNER_RESET_INDIVIDUAL_CHANNEL",
+        "ticketreductionlookup": [
+          {
+            "@orbdifference": "0",
+            "@ticketreduction": "0"
+          },
+          {
+            "@orbdifference": "1",
+            "@ticketreduction": "10"
+          },
+          {
+            "@orbdifference": "2",
+            "@ticketreduction": "30"
+          },
+          {
+            "@orbdifference": "3",
+            "@ticketreduction": "50"
+          }
+        ],
+        "warcamp": {
+          "defense": {
+            "@engageattackrange": "25.0",
+            "@disengageattackrange": "25.0",
+            "@attackinterval": "0.4",
+            "@attackdamage": "0.1",
+            "@attackdistancedelay": "24.0",
+            "@buffradius": "10",
+            "@buffspell": "CRYSTAL_CITY_WARCAMP_INVULNERABILITY",
             "FriendlyFX": {
               "@beam": "FX/ClientPrefabs/fx_beam_gvg_blue",
               "@impact": "Prefabs/SpellEffects/MeleeHit"

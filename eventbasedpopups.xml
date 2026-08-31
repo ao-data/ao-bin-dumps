@@ -647,7 +647,17 @@
             </conditions>
         </popup>
 
-        <lootchestpopup uniquename="TWITCH_DROPS" type="LootChests" guitemplate="LootChest" priority="0" title="@EVENT_BASED_POPUPS_TITLE_TWITCH_DROPS" description="@EVENT_BASED_POPUPS_DESCRIPTION_TWITCH_DROPS" rewardstitle="@EVENT_BASED_POPUPS_REWARDS_TITLE_TWITCH_DROPS" buttonloca="@EVENT_BASED_POPUPS_BUTTON_TWITCH_DROPS" imagepath="Gui/EventBasedPopups/EVENT_POPUP_TWITCH_DROPS_02" flagpath="Gui/EventBasedPopups/icons_shop_flag_brown_big" flagiconpath="Gui/EventBasedPopups/icon_twitch_drops">
+        <lootchestpopup uniquename="TWITCH_DROPS"
+                        type="LootChests"
+                        guitemplate="LootChest"
+                        priority="0"
+                        title="@EVENT_BASED_POPUPS_TITLE_TWITCH_DROPS"
+                        description="@EVENT_BASED_POPUPS_DESCRIPTION_TWITCH_DROPS"
+                        rewardstitle="@EVENT_BASED_POPUPS_REWARDS_TITLE_TWITCH_DROPS"
+                        buttonloca="@EVENT_BASED_POPUPS_BUTTON_TWITCH_DROPS"
+                        imagepath="Gui/EventBasedPopups/EVENT_POPUP_TWITCH_DROPS"
+                        flagpath="Gui/EventBasedPopups/icons_shop_flag_brown_big"
+                        flagiconpath="Gui/EventBasedPopups/icon_twitch_drops">
             <categories>
                 <category name="Advertisement" />
             </categories>
@@ -655,19 +665,23 @@
                 <trigger action="GameLogin" />
             </triggers>
             <conditions>
-              <and>
-                <IfValidDate start="2024-06-03T10:15:00" />
-                <IfTutorialCompleted />
-                <not>
-                  <IfIsGuestAccount/>
-                </not>
-                <IfHasSeenPopup uniquename="TWITCH_DROPS" frequency="Days" operation="equals" timefactor="14" amount="0"/> 
-            </and>
+                <and>
+                    <IfValidDate start="2024-06-03T10:15:00" />
+                    <IfTutorialCompleted />
+                    <not>
+                        <IfIsGuestAccount />
+                    </not>
+                    <IfHasSeenPopup uniquename="TWITCH_DROPS"
+                                    frequency="Days"
+                                    operation="equals"
+                                    timefactor="14"
+                                    amount="0" />
+                </and>
             </conditions>
             <possibledrops>
                 <item itemid="UNIQUE_UNLOCK_DIREBOAR_FIBER_GATHERER" />
                 <item itemid="UNIQUE_UNLOCK_ARMOR_VANITY_KNIGHT_AOCP_NON_TRADABLE" />
-                <item itemid="UNIQUE_UNLOCK_SKIN_GIANTSTAG_ALPACA_BROWN" />
+                <item itemid="UNIQUE_UNLOCK_SKIN_COUGAR_FIREDRAGON" />
             </possibledrops>
         </lootchestpopup>
 
