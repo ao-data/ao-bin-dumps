@@ -7800,6 +7800,14 @@
   <activespell uniquename="DRAGON_AREA_ENTRANCE_WAITING_PROTECTION" uisprite="EXPEDITION_PENALTY" target="all" category="instant" castingtime="0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" neutraleffect="true" buffpriority="1" systemspell="true" hidespelleffecticon="true">
     <transparency target="all" time="3600" />
     <invincibility target="all" time="3600" attackingbreakseffect="true" persistsafterclusterchange="false" persistsafterknockdown="false" persistsafterdeath="false"/>
+    <spellimmunity category="damage" target="all" time="3600" attackingbreakseffect="true" persistsafterclusterchange="false" persistsafterknockdown="false" persistsafterdeath="false"/>
+    <spellimmunity category="debuff" target="all" time="3600" attackingbreakseffect="true" persistsafterclusterchange="false" persistsafterknockdown="false" persistsafterdeath="false"/>
+    <cceffectimmunity type="stun" target="all" time="3600" attackingbreakseffect="true" persistsafterclusterchange="false" persistsafterknockdown="false" persistsafterdeath="false"/>
+    <cceffectimmunity type="root" target="all" time="3600" attackingbreakseffect="true" persistsafterclusterchange="false" persistsafterknockdown="false" persistsafterdeath="false"/>
+    <cceffectimmunity type="silence" target="all" time="3600" attackingbreakseffect="true" persistsafterclusterchange="false" persistsafterknockdown="false" persistsafterdeath="false"/>
+    <cceffectimmunity type="slow" target="all" time="3600" attackingbreakseffect="true" persistsafterclusterchange="false" persistsafterknockdown="false" persistsafterdeath="false"/>
+    <cceffectimmunity type="forcedmovement" target="all" time="3600" attackingbreakseffect="true" persistsafterclusterchange="false" persistsafterknockdown="false" persistsafterdeath="false"/>
+    <cceffectimmunity type="transformationcc" target="all" time="3600" attackingbreakseffect="true" persistsafterclusterchange="false" persistsafterknockdown="false" persistsafterdeath="false"/>
   </activespell>
 
   <!-- Smallscale Instanced Clusterwide Buffs -->
@@ -9292,7 +9300,7 @@
     <AudioInfo name="SPELL_MOUNT_SPEED"/>
   </activespell>
 
-  <activespell uniquename="MOUNT_SPEEDBUFF_DRAKE" target="self" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="DASH" assessment="positive" buffpriority="9" spelleffectlocatag="@SPELLS_MOUNT_SPEEDBUFF_DRAKE_DESC">
+  <activespell uniquename="MOUNT_SPEEDBUFF_DRAKE" target="self" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="DASH" assessment="positive" buffpriority="9" spelleffectlocatag="@SPELLS_STATUS_MOUNT_SPEEDBUFF_DRAKE">
     <buffovertime type="movespeedbonus" value="0.60" target="self" time="0" breaksoncc="stun" attackingbreakseffect="true" worldinteractionbreakseffect="true" castingbreakseffect="true" mountingbreakseffect="false"/>
     <cceffectimmunity target="self" type="root" time="0" breaksoncc="stun" attackingbreakseffect="true" worldinteractionbreakseffect="true" castingbreakseffect="true" mountingbreakseffect="false"/>
     <cceffectimmunity target="self" type="slow" time="0" breaksoncc="stun" attackingbreakseffect="true" worldinteractionbreakseffect="true" castingbreakseffect="true" mountingbreakseffect="false"/>
@@ -11254,33 +11262,65 @@
     <AudioInfo name="SPELL_MOUNT_SPIDER_LAND_PASSIVE" />
   </activespell>
   <!-- Scorching Breath - Fire Drake -->
-  <activespell uniquename="MOUNTSPELL_DRAKE_FIRE_BREATH" target="ground" uisprite="FLAMECONE" castingtime="3" hitdelay="0" standtime="3" disruptionfactor="0" recastdelay="90" energyusage="0" castrange="12" uitype="movement" category="instant" castanimation="mount_sky_dash" animmode="SingleAnim" ignorecasttimereductionbonus="true" assessment="positive" hidespelleffecticon="true" statblock="@SPELLS_STANDARD_STATBLOCK" standtimeallowedspellslots="shoes" controllerpreferredtarget="neutral">
-    <spelleffectarea visible="true" time="1.6" effect="MOUNTSPELL_DRAKE_FIRE_BREATH_EFFECT" target="enemy" removeonleave="false" position="atcaster" rotation="castdirection" skillshotindicatormax="18" skillshotindicatormin="18" applyeffectonlyoncepertarget="true">
+  <activespell uniquename="MOUNTSPELL_DRAKE_FIRE_BREATH" target="ground" uisprite="FLAMECONE" castingtime="3" hitdelay="0" standtime="3.84" disruptionfactor="0" recastdelay="90" energyusage="0" castrange="12" uitype="movement" category="instant" castanimation="mount_sky_dash" animmode="SingleAnim" ignorecasttimereductionbonus="true" assessment="positive" hidespelleffecticon="true" statblock="@SPELLS_STANDARD_STATBLOCK" standtimeallowedspellslots="shoes" controllerpreferredtarget="neutral" adjustgroundtargettorange="true">
+    <spellindicationarea target="enemy" visible="true" position="atcaster" rotation="casterrotation" ignoreLegacy250msDelay="true">
+      <area>
+        <shape>
+          <node distance="1">
+            <circle radius="3.5"/>
+          </node>
+          <node distance="17">
+            <circle radius="6"/>
+          </node>
+          <node distance="-18">
+            <arc angle="19.6" innerradius="20" outerradius="35"/>
+          </node>
+        </shape>
+        <fill>
+          <node distance="-18">
+            <arc angle="30" innerradius="15.5" outerradius="15.5-41"/>
+          </node>
+        </fill>
+      </area>
+    </spellindicationarea>
+    <spelleffectarea visible="true" time="3.5" effect="MOUNTSPELL_DRAKE_FIRE_BREATH_EFFECT" target="enemy" removeonleave="false" position="atcaster" rotation="castdirection" skillshotindicatormax="23" skillshotindicatormin="23" applyeffectonlyoncepertarget="true">
       <area>
         <shape>
           <node angle="0" distance="A 0:1;1.5:17">
-            <circle radius="A 0:3.5;1.5:6">
+            <circle radius="A 0:3.5;1.5:6;1.6:6;1.61:0">
               <beamvfx prefab="FX/ClientPrefabs/fx_beam_dragons" event="SpellEffectAreaInit" target="target" fadeouttime="0.5" duration="1.5">
                 <source socket="maw_mount" attachedto="caster" />
                 <target socket="centerJustAboveGround" />
               </beamvfx>
+              <spellvfx prefab="FX/ClientPrefabs/fx_spell_drake_mount_firebreath_ground_silent" event="SpellEffectAreaInit" duration="1.6" target="target" socket="centerJustAboveGround"/>
+              <spellvfx prefab="FX/ClientPrefabs/fx_spell_drake_mount_firebreath_burnt_ground_silent" event="SpellEffectAreaInit" duration="3.5" target="target" socket="centerJustAboveGround"/>
             </circle>
           </node>
         </shape>
       </area>
     </spelleffectarea>
+    <spellvfx event="OnCastStart" target="self" prefab="FX/ClientPrefabs/fx_spell_drake_mount_firebreath_cast_glow" duration="5.0" socket="back_center" timeoffset="0.1"/>
+    <spellvfx event="OnCastStart" target="self" prefab="FX/ClientPrefabs/fx_spell_drake_mount_firebreath_dust_flight" socket="root_mount" timeoffset="0.5"/>
+    <spellvfx event="OnCastStart" target="self" prefab="FX/ClientPrefabs/fx_spell_drake_mount_firebreath_smoke_mouth" duration="5" socket="maw_mount" alive="none" timeoffset="0.1"/>
+    <AudioInfo name="SPELL_MOUNT_DRAKE_FIRE_BREATH_CAST" />
   </activespell>
   <activespell uniquename="MOUNTSPELL_DRAKE_FIRE_BREATH_EFFECT" target="enemy" castingtime="0" recastdelay="0" energyusage="0" castrange="1" uitype="movement" uisprite="FLAMECONE" category="damage" namelocatag="@SPELLS_MOUNTSPELL_DRAKE_FIRE_BREATH">
     <applyspell target="enemymobs" spell="MOUNTSPELL_DRAKE_FIRE_BREATH_EFFECT_DOT_MOB"/>
     <applyspell target="enemyplayers" spell="MOUNTSPELL_DRAKE_FIRE_BREATH_EFFECT_DOT_PLAYER"/>
+    <applyspell target="enemy" spell="MOUNTSPELL_DRAKE_FIRE_BREATH_EFFECT_IMMUNITY"/>
   </activespell>
   <activespell uniquename="MOUNTSPELL_DRAKE_FIRE_BREATH_EFFECT_DOT_MOB" target="enemymobs" castingtime="0" recastdelay="0" energyusage="0" castrange="1" uitype="movement" uisprite="FLAMECONE" category="damage" namelocatag="@SPELLS_MOUNTSPELL_DRAKE_FIRE_BREATH" spelleffectlocatag="@SPELLS_STATUS_DOT_MAGICAL" maxcharges="1" maxstack="1">
     <attributechangeovertime target="enemymobs" attribute="health" change="-390" effecttype="magic" initialinterval="0" interval="1" count="4"/>
     <spelleffectfx prefab="FX/ClientPrefabs/fx_dot_fire" socket="damage" constraintpreset="pointconstraint"/>
+    <AudioInfo name="SPELL_FIRE_IMPACT_MEDIUM_W" />
   </activespell>
   <activespell uniquename="MOUNTSPELL_DRAKE_FIRE_BREATH_EFFECT_DOT_PLAYER" target="enemyplayers" castingtime="0" recastdelay="0" energyusage="0" castrange="1" uitype="movement" uisprite="FLAMECONE" category="damage" namelocatag="@SPELLS_MOUNTSPELL_DRAKE_FIRE_BREATH" spelleffectlocatag="@SPELLS_STATUS_DOT_MAGICAL" maxcharges="1" maxstack="1">
     <attributechangeovertime target="enemyplayers" attribute="health" change="-35" effecttype="magic" initialinterval="0" interval="1" count="4"/>
     <spelleffectfx prefab="FX/ClientPrefabs/fx_dot_fire" socket="damage" constraintpreset="pointconstraint"/>
+    <AudioInfo name="SPELL_FIRE_HIT_SMALL" />
+  </activespell>
+  <activespell uniquename="MOUNTSPELL_DRAKE_FIRE_BREATH_EFFECT_IMMUNITY" target="enemy" castingtime="0" recastdelay="0" energyusage="0" castrange="1" uitype="movement" uisprite="FLAMECONE" category="instant" namelocatag="@SPELLS_MOUNTSPELL_DRAKE_FIRE_BREATH" spelleffectlocatag="@SPELLS_STATUS_IMMUNE_TO_SPELL">
+    <spellimmunity target="enemy" spellname="MOUNTSPELL_DRAKE_FIRE_BREATH_EFFECT" time="15"/>
   </activespell>
   
   <!-- Season Events Mount Spells-->
@@ -16984,7 +17024,7 @@
   <activespell uniquename="QUESTITEM_STANDING_DRAGONS_FAME_BUFF" target="friendallplayers" uisprite="T6_DRAGONS_FAME_BUFF" category="instant" energyusage="0" uitype="buff" castingtime="0" recastdelay="0" castrange="0" assessment="positive">
     <triggerpvpchallenge objective="PVPCHALLENGE_DRAGONS_RITUAL_ITEM" target="friendallplayers" />
     <awardstanding target="friendallplayers" amount="100" type="dragons"/>
-     <buffovertime target="friendallplayers" type="mobfamemodifier" value="0.1" time="3600">
+     <buffovertime target="friendallplayers" type="mobfamemodifier" value="0.1" time="3600" persistsafterdeath="true" persistsafterknockdown="true">
       <not>
         <IfSpellActive who="SpellTarget" spell="QUESTITEM_STANDING_DRAGONS_STRONG_FAME_BUFF"/>
       </not>
@@ -16994,7 +17034,7 @@
     <triggerpvpchallenge objective="PVPCHALLENGE_DRAGONS_RITUAL_STRONG_ITEM" target="friendallplayers" />
     <awardstanding target="friendallplayers" amount="100" type="dragons"/>
     <removeactivespell target="friendallplayers" spell="QUESTITEM_STANDING_DRAGONS_FAME_BUFF" />
-    <buffovertime target="friendallplayers" type="mobfamemodifier" value="0.2" time="7200" />
+    <buffovertime target="friendallplayers" type="mobfamemodifier" value="0.2" time="7200" persistsafterdeath="true" persistsafterknockdown="true"/>
   </activespell>
 	
   <!-- #################################################################################################################
@@ -30665,7 +30705,7 @@
   <activespell uniquename="BLESSED_MACES" bindtoitem="true" target="ground" castingtime="0" hitdelay="0.35" standtime="0.6" disruptionfactor="1" recastdelay="30" energyusage="20" castrange="2" castanimation="self_buff" uisprite="BLESSED_MACES" category="buff" uitype="buff" assessment="positive" animmode="SingleAnim" adjustgroundtargettorange="true" namelocatag="@SPELLS_BLESSED_MACES" descriptionlocatag="@SPELLS_BLESSED_MACES_DESC" statblock="@SPELLS_STANDARD_STATBLOCK" spelleffectlocatag="@SPELLS_BLESSED_MACES_EFFECT_DESC" autoattackcooldownaftercasting="Trigger" controllerpreferredtarget="neutral" controllerselfcastable="true">
     <spelleffectarea time="3" effect="BLESSED_MACES_AREA" target="friendall" removeonleave="false" position="atcaster" visible="true" maxeffectareatargets="20" skillshotindicatormax="6" applyeffectonlyoncepertarget="true" >
       <area>
-        <shape material="Red">
+        <shape>
           <node angle="0" distance="1.5">
             <rectangle width="AS 0:0;
                                 0.4:18" height="2.5">
@@ -30681,7 +30721,7 @@
     <AudioInfo name="MELEE_MACE_BLESSEDMACE"/>
   </activespell>
   <activespell uniquename="BLESSED_MACES_EFFECT" target="all" castingtime="0" hitdelay="0" standtime="0" disruptionfactor="1" recastdelay="0" energyusage="0" castrange="0" uitype="damage" uisprite="BLESSED_MACES" category="damage" assessment="negative">
-    <directattributechange target="friendall" attribute="health" change="66" effectarearadius="8" maxeffectareatargets="10"/>
+    <directattributechange target="friendall" attribute="health" change="50" effectarearadius="8" maxeffectareatargets="10"/>
     <spellvfx target="target" event="OnSpellHit" alive="none" prefab="FX/ClientPrefabs/fx_spell_avalon_impact_small" socket="damage" constraintpreset="pointconstraint"/>
   </activespell>
   <activespell uniquename="BLESSED_MACES_AREA" target="all" castingtime="0" hitdelay="0" standtime="0" disruptionfactor="1" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="BLESSED_MACES" category="buff_damageshield" assessment="positive" spelleffectlocatag="@SPELLS_STATUS_SHIELD">
@@ -74198,10 +74238,10 @@
   <activespell uniquename="MOB_KEEPER_BERSERK_RESILIENT_BUFF" target="self" castingtime="0" recastdelay="0" energyusage="0" castrange="0" category="instant" uitype="crowdcontrol" uisprite="STRENGTH" spelleffectlocatag="@SPELLS_STATUS_CCRESISTANCE_INCREASED" keeponretreat="true">
     <buffovertime target="self" type="crowdcontrolresistance" value="100" time="0" ignoreabilitypowerscaling="true" />
   </activespell>
-  <activespell uniquename="MOB_KEEPER_BERSERK_LL_ATTACKS" target="self" castingtime="0" recastdelay="1" energyusage="0" castrange="1" category="instant" uitype="crowdcontrol" hidespelleffecticon="true" interruptiblebyspell="false" hidecastbar="true" disruptionfactor="0">
+  <activespell uniquename="MOB_KEEPER_BERSERK_LL_ATTACKS" target="self" castingtime="0" recastdelay="1" energyusage="0" castrange="1" category="instant" uitype="crowdcontrol" hidespelleffecticon="true" interruptiblebyspell="false" hidecastbar="true" disruptionfactor="0" namelocatag="@SPELLS_MOB_KEEPER_BERSERK_LL_ATTACKS_CONE">
     <applyeffectoneventactive target="self" applyeffecttarget="enemy" event="AutoAttack" spell="MOB_KEEPER_BERSERK_LL_ATTACKS_CONE" count="100" time="60" />
   </activespell>
-  <activespell uniquename="MOB_KEEPER_BERSERK_LL_ATTACKS_CONE" target="enemy" castingtime="0" recastdelay="0" energyusage="0" castrange="1" category="instant" uitype="crowdcontrol" hidespelleffecticon="true" interruptiblebyspell="false" hidecastbar="true" disruptionfactor="0">
+  <activespell uniquename="MOB_KEEPER_BERSERK_LL_ATTACKS_CONE" target="enemy" castingtime="0" recastdelay="0" energyusage="0" castrange="1" category="instant" uitype="crowdcontrol" hidespelleffecticon="true" interruptiblebyspell="false" hidecastbar="true" disruptionfactor="0" namelocatag="@SPELLS_MOB_KEEPER_BERSERK_LL_ATTACKS_CONE">
     <directattributechange target="enemy" attribute="health" change="-400" effecttype="magic" />
     <spellimmunity spellname="MOB_KEEPER_BERSERK_LL_ATTACKS_CONE_EFFECT" target="enemy" time="0.2" />
     <spelleffectarea time="0.6" effect="SHAPE_Q_CAST_AREA" target="enemy" removeonleave="false" position="attarget" visible="false" applyeffectonlyoncepertarget="true" rotation="castdirection">
@@ -74217,7 +74257,7 @@
     </spelleffectarea>
     <spellvfx event="OnSpellHit" target="target_notCaster" prefab="FX/ClientPrefabs/fx_spell_aoe_impact" socket="damage" constraintpreset="pointconstraint" />
   </activespell>
-  <activespell uniquename="MOB_KEEPER_BERSERK_LL_ATTACKS_CONE_EFFECT" target="enemy" castingtime="0" recastdelay="0" energyusage="0" castrange="1" category="instant" uitype="crowdcontrol" hidespelleffecticon="true" interruptiblebyspell="false" hidecastbar="true" disruptionfactor="0">
+  <activespell uniquename="MOB_KEEPER_BERSERK_LL_ATTACKS_CONE_EFFECT" target="enemy" castingtime="0" recastdelay="0" energyusage="0" castrange="1" category="instant" uitype="crowdcontrol" hidespelleffecticon="true" interruptiblebyspell="false" hidecastbar="true" disruptionfactor="0" namelocatag="@SPELLS_MOB_KEEPER_BERSERK_LL_ATTACKS_CONE">
     <directattributechange target="enemy" attribute="health" change="-400" effecttype="magic" />
     <spellvfx event="OnSpellHit" target="target_notCaster" prefab="FX/ClientPrefabs/fx_spell_aoe_impact" socket="damage" constraintpreset="pointconstraint" />
     <AudioInfo name="SPELL_SHAPESHIFTER_DAMAGE_IMPACT_SMALL" />
@@ -103923,7 +103963,7 @@
         </fill>
       </area>
     </spellindicationarea>
-    <spawnmob target="ground" type="T5_MOB_ROAMING_KEEPER_FANATIC_DRAGON_SHAMAN_SUMMON" distancefromtarget="0" ttl="9999" ttlaftercasterreset="0" ttlaftercasterdeath="30" limit="3" />
+    <spawnmob target="ground" type="T5_MOB_ROAMING_KEEPER_FANATIC_DRAGON_SHAMAN_SUMMON" distancefromtarget="0" ttl="9999" ttlaftercasterreset="0" ttlaftercasterdeath="0" limit="3" />
     <spellvfx target="self" event="OnCastStart" alive="none" prefab="FX/ClientPrefabs/fx_dragons_keeper_shaman_summon_cast" socket="mainhandprojectile" duration="1.5" />
     <AudioInfo name="SPELL_KEEPER_FANATIC_SHAMAN_SUMMON" />  
   </activespell>
@@ -104247,7 +104287,7 @@
     <spelleffectfx socket="floor" prefab="FX/ClientPrefabs/fx_keeper_spear_execution_group_root" constraintpreset="pointconstraint" />
     <AudioInfo name="SPELL_KEEPER_FANATIC_SPEAR_EXECUTE_MARK" />
   </activespell>
-  <activespell uniquename="TEST_MOB_KEEPER_FANATIC_SPEAR_EXECUTE" castanimation="channel_start" uisprite="SUNDER_ARMOR" target="enemy" castingtime="1" hitdelay="0" standtime="0" recastdelay="5" castrange="5" energyusage="0" category="instant" uitype="buff" interruptiblebyspell="false" animmode="SingleAnim" namelocatag="@SPELLS_MOB_KEEPER_FANATIC_SPEAR_LS_CONE">
+  <activespell uniquename="TEST_MOB_KEEPER_FANATIC_SPEAR_EXECUTE" castanimation="channel_start" uisprite="ARROW_MULTISHOT" target="enemy" castingtime="1" hitdelay="0" standtime="0" recastdelay="5" castrange="5" energyusage="0" category="instant" uitype="buff" interruptiblebyspell="false" animmode="SingleAnim" namelocatag="@SPELLS_MOB_KEEPER_FANATIC_SPEAR_LS_CONE">
     <channelingspell channelinganimation="channel_melee_attack_01" initialeffectinterval="0" effectinterval="0.25" effectcount="15" energyusage="0" disruptionfactor="0" endeffect="TEST_MOB_RD_AVALON_KNIGHT_LIONEL_MELEE_CHAMPION_SPEAR_EXECUTE_CLEANUP" namelocatag="@SPELLS_MOB_KEEPER_FANATIC_SPEAR_LS_CONE">
       <directattributechange target="enemy" attribute="health" change="-0.05" changetype="relativemax" ignorearmor="true" ignoreabilitypowerscaling="true" ignorebonusdamagescaling="true" reflectdamage="never">
         <IfChannelTick op="lessOrEqual" value="5" />
@@ -104269,7 +104309,7 @@
   <activespell uniquename="TEST_MOB_KEEPER_FANATIC_SPEAR_EXECUTE_CLEANUP" target="self" castingtime="0" hitdelay="0" standtime="0" recastdelay="0" castrange="0" energyusage="0" category="instant" uitype="buff">
     <removeactivespell target="enemy" spell="TEST_MOB_KEEPER_FANATIC_SPEAR_EXECUTE_MARK" />
   </activespell>
-  <activespell uniquename="TEST_MOB_KEEPER_FANATIC_SPEAR_SUNDER" castanimation="melee_highstrike" uisprite="SUNDER_ARMOR" target="enemy" castingtime="0.6" hitdelay="0" standtime="0" recastdelay="5" castrange="5" energyusage="0" category="instant" uitype="buff" spelleffectlocatag="@SPELLS_STATUS_RESISTANCES_DECREASED" interruptiblebyspell="false" hidecastbar="true" animmode="SingleAnim" namelocatag="@SPELLS_MOB_KEEPER_FANATIC_SPEAR_SUNDER_LS">
+  <activespell uniquename="TEST_MOB_KEEPER_FANATIC_SPEAR_SUNDER" castanimation="melee_highstrike" uisprite="SUNDER_ARMOR" target="enemy" castingtime="0.6" hitdelay="0" standtime="0" recastdelay="5" castrange="5" energyusage="0" category="instant" uitype="buff" interruptiblebyspell="false" hidecastbar="true" animmode="SingleAnim" namelocatag="@SPELLS_MOB_KEEPER_FANATIC_SPEAR_SUNDER_LS" hidespelleffecticon="true">
     <aura target="self" time="2" spell="TEST_MOB_KEEPER_FANATIC_SPEAR_SUNDER_EFFECT" auraradius="3" applyeffectonlyoncepertarget="true" />
     <dash animID="dash" endeffect="TEST_MOB_KEEPER_FANATIC_SPEAR_SUNDER_CLEANUP" mindistance="1" endeffecttarget="caster" movespeed="15" ruleset="constanttime" scaleAnim="false" standtime="0.4" endpositionoffset="4" />
     <spellvfx target="self" event="OnCastFinished" alive="none" prefab="FX/ClientPrefabs/fx_keeper_spear_dash" socket="root" />
@@ -104538,7 +104578,7 @@
     <spellvfx target="target_notCaster" event="OnSpellHit" prefab="FX/ClientPrefabs/fx_impact_bloody_damage" socket="damage" />
 	<AudioInfo name="SPELLHIT_WEAPON_IMPACT"/>
   </activespell>
-  <activespell uniquename="MOB_DRAGON_DRAKE_SWIPE_DOT" target="enemy" castingtime="0" hitdelay="0" standtime="0" recastdelay="0" energyusage="0" castrange="0" uisprite="BLOOD_DROP" uitype="damage" category="damage" maxcharges="5" spelleffectlocatag="@SPELLS_STATUS_DOT_PHYSICAL" removeoncasterdeath="true" removeoncasterreset="true" namelocatag="@SPELLS_MOB_HALLOWEEN_BOSS_BLEED_EFFECT">
+  <activespell uniquename="MOB_DRAGON_DRAKE_SWIPE_DOT" target="enemy" castingtime="0" hitdelay="0" standtime="0" recastdelay="0" energyusage="0" castrange="0" uisprite="BLOOD_DROP" uitype="damage" category="damage" maxcharges="5" spelleffectlocatag="@SPELLS_STATUS_DOT_PHYSICAL" removeoncasterdeath="true" removewhencastergone="true" removeoncasterreset="true" namelocatag="@SPELLS_MOB_HALLOWEEN_BOSS_BLEED_EFFECT">
     <attributechangeovertime target="enemy" attribute="health" change="-90" effecttype="physical" initialinterval="0" interval="2" count="8" />
     <spelleffectfx prefab="FX/ClientPrefabs/fx_dot_bloody" socket="ground" constraintpreset="pointconstraint" />
   </activespell>
@@ -104596,7 +104636,7 @@
     </pull>
   </activespell>
   <!-- Gust -->
-  <activespell uniquename="MOB_DRAGON_DRAKE_GUST" target="ground" castingtime="1.08" hitdelay="0" standtime="2.68" uisprite="OWL_GLIDE_RISE" recastdelay="8" energyusage="0" castrange="12" uitype="damage" category="damage" castanimation="cast_tornado" animmode="SingleAnim" hidespelleffecticon="true" namelocatag="@SPELLS_MOB_MISTS_GRIFFIN_GUST_EFFECT" interruptiblebyspell="false">
+  <activespell uniquename="MOB_DRAGON_DRAKE_GUST" target="ground" castingtime="1.08" hitdelay="0" standtime="2.68" uisprite="WINDWALL" recastdelay="8" energyusage="0" castrange="12" uitype="damage" category="damage" castanimation="cast_tornado" animmode="SingleAnim" hidespelleffecticon="true" namelocatag="@SPELLS_MOB_MISTS_GRIFFIN_GUST_EFFECT" interruptiblebyspell="false">
     <spellindicationarea target="enemy" position="atcaster" visible="true">
       <area>
         <shape>
@@ -104631,19 +104671,19 @@
     </spelleffectarea>
     <AudioInfo name="MOB_DRAGON_DRAKE_GUST_CAST" />
   </activespell>
-  <activespell uniquename="MOB_DRAGON_DRAKE_GUST_EFFECT" target="enemy" castingtime="0" hitdelay="0" standtime="0" recastdelay="0" energyusage="0" castrange="0" uitype="damage" category="forcedmovement" uisprite="OWL_GLIDE_RISE" namelocatag="@SPELLS_MOB_MISTS_GRIFFIN_GUST_EFFECT">
+  <activespell uniquename="MOB_DRAGON_DRAKE_GUST_EFFECT" target="enemy" castingtime="0" hitdelay="0" standtime="0" recastdelay="0" energyusage="0" castrange="0" uitype="damage" category="forcedmovement" uisprite="WINDWALL" namelocatag="@SPELLS_MOB_MISTS_GRIFFIN_GUST_EFFECT">
     <knockback target="enemy" fromwhere="FromCaster" distance="8" movespeed="11" />
     <spellvfx event="OnSpellHit" target="target_notCaster" prefab="FX/ClientPrefabs/fx_spell_aoe_impact" socket="damage" constraintpreset="default" />
     <AudioInfo name="SPELL_HIT_KNOCKBACK" />
   </activespell>
-  <activespell uniquename="MOB_DRAGON_DRAKE_GUST_STRONG_EFFECT" target="enemy" castingtime="0" hitdelay="0" standtime="0" recastdelay="0" energyusage="0" castrange="0" uitype="damage" category="forcedmovement" uisprite="OWL_GLIDE_RISE" namelocatag="@SPELLS_MOB_MISTS_GRIFFIN_GUST_EFFECT">
+  <activespell uniquename="MOB_DRAGON_DRAKE_GUST_STRONG_EFFECT" target="enemy" castingtime="0" hitdelay="0" standtime="0" recastdelay="0" energyusage="0" castrange="0" uitype="damage" category="forcedmovement" uisprite="WINDWALL" namelocatag="@SPELLS_MOB_MISTS_GRIFFIN_GUST_EFFECT">
     <directattributechange target="enemy" attribute="health" change="-300" effecttype="physical" />
     <knockback target="enemy" fromwhere="FromCaster" distance="12" movespeed="11" />
     <spellvfx event="OnSpellHit" target="target_notCaster" prefab="FX/ClientPrefabs/fx_spell_aoe_impact" socket="damage" constraintpreset="default" />
     <AudioInfo name="MOB_DRAGON_DRAKE_GUST_CLOSE_HIT" />
   </activespell>
   <!-- Dash -->
-  <activespell uniquename="MOB_DRAGON_DRAKE_DASH" target="ground" uisprite="WILD_ONSLAUGHT" castingtime="1.3" hitdelay="0" standtime="0" recastdelay="11" castrange="22" energyusage="0" category="damage" uitype="buff" castanimation="melee_crescentslash" hidecastbar="true" animmode="SingleAnim" interruptiblebyspell="false" namelocatag="@SPELLS_MOB_DRAGON_FIRE_DASH">
+  <activespell uniquename="MOB_DRAGON_DRAKE_DASH" target="ground" uisprite="WILD_ONSLAUGHT" castingtime="1.3" hitdelay="0" standtime="0" recastdelay="11" castrange="22" energyusage="0" category="damage" uitype="buff" castanimation="melee_crescentslash" hidecastbar="true" animmode="SingleAnim" interruptiblebyspell="false" namelocatag="@SPELLS_MOB_DRAGON_FIRE_DASH" hidespelleffecticon="true">
     <spellindicationarea target="enemy" position="atcaster" visible="true" ignoreLegacy250msDelay="true">
       <area>
         <shape>
@@ -105033,7 +105073,7 @@
     <spellvfx target="self" event="OnCastFinished" alive="none" prefab="FX/ClientPrefabs/fx_mob_keeper_dragon_obelisk_01_charge" constraintpreset="default" socket="obelisk_vfx" />
     <AudioInfo name="SPELL_KEEPER_FANATIC_OBELISK_AOE_LOAD" />
   </activespell>
-  <activespell uniquename="TEST_MOB_KEEPER_FANATIC_WITCH_SPAWN_SPEAR_ELECTRIC_PULSE_EFFECT" target="enemy" castingtime="0" recastdelay="5" energyusage="0" castrange="0" uisprite="STORMSHIELD" uitype="buff" category="damage" namelocatag="@SPELLS_MOB_KEEPER_FANATIC_WITCH_SPAWN_SPEAR_ELECTRIC_PULSE">
+  <activespell uniquename="TEST_MOB_KEEPER_FANATIC_WITCH_SPAWN_SPEAR_ELECTRIC_PULSE_EFFECT" target="enemy" castingtime="0" recastdelay="5" energyusage="0" castrange="0" uisprite="STORMSHIELD" uitype="buff" category="damage" namelocatag="@SPELLS_MOB_KEEPER_FANATIC_WITCH_SPAWN_SPEAR_ELECTRIC_PULSE" spelleffectlocatag="@SPELLS_STATUS_DOT_MAGICAL">
     <attributechangeovertime target="enemy" attribute="health" change="-250" effecttype="magic" initialinterval="0.15" interval="0.4" count="100" />
     <spelleffectfx socket="damage" prefab="FX/ClientPrefabs/fx_spell_lightning_aoe_impact_keeper" soundinit="Play_lightning_impact_soft" constraintpreset="pointconstraint" />
   </activespell>
@@ -105709,19 +105749,19 @@
     <dummy target="enemy" time="3000" />
   </activespell>
   <activespell uniquename="MOB_KEEPER_FANATIC_WITCH_MARK_ROCK_SPIKES" target="enemy" castanimation="none" castingtime="0.5" hitdelay="0" standtime="0" recastdelay="12" energyusage="0" castrange="20" uitype="damage" uisprite="GROUND_SPEAR" category="instant" animmode="SingleAnim" animIgnoreHitDelay="true" interruptiblebyspell="false" hidespelleffecticon="true" removeoncasterdeath="true" removeoncasterreset="true" removewhencastergone="true">
-    <applyspell target="enemy" spell="TEST_MOB_KEEPER_FANATIC_WITCH_MARK_ROCK_SPIKES_STACKS" charges="14" />
+    <applyspell target="enemy" spell="TEST_MOB_KEEPER_FANATIC_WITCH_MARK_ROCK_SPIKES_STACKS" charges="12" />
     <pulsingspell target="enemy" spell="TEST_MOB_KEEPER_FANATIC_WITCH_MARK_ROCK_SPIKES_PULSING_EFFECT" initialinterval="1.5" interval="1.1" count="12" />
     <spelleffectfx socket="halo" prefab="FX/ClientPrefabs/fx_arrow_marker_red" constraintpreset="pointconstraint" ignoresocketscale="true" visibility="AllExceptAffected"/>
     <spelleffectfx socket="halo" prefab="FX/ClientPrefabs/fx_arrow_marker_red_affected_only" constraintpreset="pointconstraint" ignoresocketscale="true" visibility="AffectedOnly"/>
   </activespell>
-  <activespell uniquename="TEST_MOB_KEEPER_FANATIC_WITCH_MARK_ROCK_SPIKES_STACKS" target="enemy" castingtime="0" hitdelay="0" standtime="0" recastdelay="0" energyusage="0" castrange="0" uitype="damage" uisprite="GROUND_SPEAR" category="instant" maxcharges="12" removeoncasterdeath="true" removeoncasterreset="true" removewhencastergone="true" namelocatag="@SPELLS_TEST_MOB_KEEPER_FANATIC_WITCH_MARK_ROCK_SPIKES">
+  <activespell uniquename="TEST_MOB_KEEPER_FANATIC_WITCH_MARK_ROCK_SPIKES_STACKS" target="enemy" castingtime="0" hitdelay="0" standtime="0" recastdelay="0" energyusage="0" castrange="0" uitype="damage" uisprite="GROUND_SPEAR" category="instant" maxcharges="12" removeoncasterdeath="true" removeoncasterreset="true" removewhencastergone="true" namelocatag="@SPELLS_MOB_KEEPER_FANATIC_WITCH_MARK_ROCK_SPIKES" spelleffectlocatag="@SPELLS_MOB_KEEPER_FANATIC_WITCH_MARK_ROCK_SPIKES_STACKS_DESC">
     <dummy target="enemy" time="300" />
   </activespell>
-  <activespell uniquename="TEST_MOB_KEEPER_FANATIC_WITCH_MARK_ROCK_SPIKES_PULSING_EFFECT" target="enemy" castingtime="0" hitdelay="0" standtime="0" recastdelay="0" energyusage="0" castrange="0" uitype="damage" uisprite="GROUND_SPEAR" category="instant" namelocatag="@SPELLS_TEST_MOB_KEEPER_FANATIC_WITCH_MARK_ROCK_SPIKES">
+  <activespell uniquename="TEST_MOB_KEEPER_FANATIC_WITCH_MARK_ROCK_SPIKES_PULSING_EFFECT" target="enemy" castingtime="0" hitdelay="0" standtime="0" recastdelay="0" energyusage="0" castrange="0" uitype="damage" uisprite="GROUND_SPEAR" category="instant" namelocatag="@SPELLS_MOB_KEEPER_FANATIC_WITCH_MARK_ROCK_SPIKES">
     <applyspell target="enemy" spell="TEST_MOB_KEEPER_FANATIC_WITCH_MARK_ROCK_SPIKES_PULSING_SPIKE" />
     <removeactivespell target="enemy" spell="TEST_MOB_KEEPER_FANATIC_WITCH_MARK_ROCK_SPIKES_STACKS" charges="1" />
   </activespell>
-  <activespell uniquename="TEST_MOB_KEEPER_FANATIC_WITCH_MARK_ROCK_SPIKES_PULSING_SPIKE" target="enemy" castingtime="0" recastdelay="0" hitdelay="0" energyusage="0" castrange="0" uitype="damage" uisprite="GROUND_SPEAR" category="damage" namelocatag="@SPELLS_TEST_MOB_KEEPER_FANATIC_WITCH_MARK_ROCK_SPIKES">
+  <activespell uniquename="TEST_MOB_KEEPER_FANATIC_WITCH_MARK_ROCK_SPIKES_PULSING_SPIKE" target="enemy" castingtime="0" recastdelay="0" hitdelay="0" energyusage="0" castrange="0" uitype="damage" uisprite="GROUND_SPEAR" category="damage" namelocatag="@SPELLS_MOB_KEEPER_FANATIC_WITCH_MARK_ROCK_SPIKES">
     <spelleffectarea time="2" effect="none" target="enemy" position="attarget" visible="true" removeoncasterdeath="true" removeoncasterreset="true">
       <area>
         <shape>
@@ -105747,7 +105787,7 @@
       </area>
     </spelleffectarea>
   </activespell>
-  <activespell uniquename="TEST_MOB_KEEPER_FANATIC_WITCH_MARK_ROCK_SPIKES_PULSING_SPIKE_EFFECT" target="enemy" castingtime="0" recastdelay="0" energyusage="0" castrange="0" uitype="damage" uisprite="GROUND_SPEAR" category="damage" namelocatag="@SPELLS_TEST_MOB_KEEPER_FANATIC_WITCH_MARK_ROCK_SPIKES">
+  <activespell uniquename="TEST_MOB_KEEPER_FANATIC_WITCH_MARK_ROCK_SPIKES_PULSING_SPIKE_EFFECT" target="enemy" castingtime="0" recastdelay="0" energyusage="0" castrange="0" uitype="damage" uisprite="GROUND_SPEAR" category="damage" namelocatag="@SPELLS_MOB_KEEPER_FANATIC_WITCH_MARK_ROCK_SPIKES">
     <directattributechange target="enemy" attribute="health" change="-900" reflectdamage="never">
       <Event type="onSuccessfullHit">
         <Spell name="TEST_MOB_KEEPER_FANATIC_WITCH_MARK_ROCK_SPIKES_PULSING_SPIKE_CC" target="SpellTarget" />
@@ -105756,12 +105796,12 @@
     <spellvfx event="OnSpellHit" target="target_notCaster" prefab="FX/ClientPrefabs/fx_spell_aoe_impact" socket="damage" constraintpreset="pointconstraint" />
     <AudioInfo name="SPELL_KEEPER_FANATIC_WITCH_ROCK_SPIKE_HIT" />
   </activespell>
-  <activespell uniquename="TEST_MOB_KEEPER_FANATIC_WITCH_MARK_ROCK_SPIKES_PULSING_SPIKE_CC" target="enemy" castingtime="0" recastdelay="0" energyusage="0" castrange="0" uitype="damage" uisprite="GROUND_SPEAR" category="forcedmovement" hidespelleffecticon="true" namelocatag="@SPELLS_SPELLS_TEST_MOB_KEEPER_FANATIC_WITCH_MARK_ROCK_SPIKES">
+  <activespell uniquename="TEST_MOB_KEEPER_FANATIC_WITCH_MARK_ROCK_SPIKES_PULSING_SPIKE_CC" target="enemy" castingtime="0" recastdelay="0" energyusage="0" castrange="0" uitype="damage" uisprite="GROUND_SPEAR" category="forcedmovement" hidespelleffecticon="true" namelocatag="@SPELLS_MOB_KEEPER_FANATIC_WITCH_MARK_ROCK_SPIKES">
     <knockback target="enemy" distance="1" fromwhere="FromCaster" movespeed="3" ignorecrowdcontrolresistance="true" ignoreabilitypowerscaling="true" ignorebonusccdurationscaling="true" />
     <spellimmunity target="enemy" spellname="TEST_MOB_KEEPER_FANATIC_WITCH_MARK_ROCK_SPIKES_PULSING_SPIKE_CC" time="2.5" />
   </activespell>
   <!-- Damage Check -->
-  <activespell uniquename="MOB_KEEPER_FANATIC_WITCH_DAMAGE_CHECK" target="self" castanimation="cast_tornado" castingtime="5" recastdelay="60" energyusage="0" castrange="0" uitype="damage" uisprite="FLAME_TORNADO" category="instant" interruptiblebyspell="false" disruptionfactor="0" animmode="SingleAnim">
+  <activespell uniquename="MOB_KEEPER_FANATIC_WITCH_DAMAGE_CHECK" target="self" castanimation="cast_tornado" castingtime="5" recastdelay="60" energyusage="0" castrange="0" uitype="damage" uisprite="FLAME_TORNADO" category="instant" interruptiblebyspell="false" disruptionfactor="0" animmode="SingleAnim" hidespelleffecticon="true">
     <cannotattack target="self" time="10" />
     <spellvfx event="OnCastStart" target="self" prefab="FX/ClientPrefabs/fx_spell_keeper_fanatic_witch_dragon_fire_cast_draw_flames" socket="floor" constraintpreset="pointconstraint" />
     <!-- Aura builds up over 5s from weak to strong and for the last 2 seconds it goes from strong back to weak for the condense in the channel -->
@@ -110476,8 +110516,8 @@
     </spelleffectarea>
   </activespell>
   <!--Circular Fire Breath-->
-  <activespell uniquename="MOB_DRAGON_FIRE_FIRE_EFFECT" target="enemy" castingtime="0" recastdelay="5" energyusage="0" castrange="1" category="damage" uitype="damage" maxcharges="15" requireslineofsight="true" uisprite="CONTAGIOUS_FIRE" namelocatag="@SPELLS_MOB_DRAGON_FIRE_CHANNEL" hidespelleffecticon="true">
-    <attributechangeovertime target="enemy" attribute="health" change="-160" initialinterval="0" interval="1" count="2" />
+  <activespell uniquename="MOB_DRAGON_FIRE_FIRE_EFFECT" target="enemy" castingtime="0" recastdelay="5" energyusage="0" castrange="1" category="damage" uitype="damage" maxcharges="20" requireslineofsight="true" uisprite="CONTAGIOUS_FIRE" namelocatag="@SPELLS_MOB_DRAGON_FIRE_CHANNEL" hidespelleffecticon="true">
+    <attributechangeovertime target="enemy" attribute="health" change="-150" initialinterval="0" interval="1" count="2" />
 	  <spelleffectfx prefab="FX/ClientPrefabs/fx_dot_fire" socket="damage" constraintpreset="pointconstraint" />
   </activespell>
   <activespell uniquename="MOB_DRAGON_FIRE_FIRE_CHANNEL" target="self" castingtime="7" hitdelay="0" standtime="0" recastdelay="1" castrange="1" energyusage="0" category="instant" uitype="buff" castanimation="channel_start" animmode="SingleAnim" hidecastbar="true" interruptiblebyspell="false" disruptionfactor="0" castablewhensilenced="true" castablewhenstunned="true" uisprite="CONTAGIOUS_FIRE" namelocatag="@SPELLS_MOB_DRAGON_FIRE_CHANNEL">
@@ -110521,7 +110561,7 @@
       </area>
     </spellindicationarea>
     <transparency target="self" time="4"/>
-    <channelingspell channelinganimation="channel_ranged_aoe_01" initialeffectinterval="0" effectinterval="0.3" effectcount="15" energyusage="0" standtime="3" disruptionfactor="0" hidecastbar="true">
+    <channelingspell channelinganimation="channel_ranged_aoe_01" initialeffectinterval="0" effectinterval="0.22" effectcount="20" energyusage="0" standtime="3" disruptionfactor="0" hidecastbar="true">
       <nothittablebyothers target="self" time="7" linktochanneling="true" />
       <notselectable target="self" time="7" linktochanneling="true" />
       <invincibility target="self" time="7" linktochanneling="true" />
@@ -110661,7 +110701,7 @@
   <!-- Direction Indicators -->
   <activespell uniquename="MOB_DRAGON_DIRECTION_INDICATOR" target="allplayers" castingtime="0" recastdelay="0" energyusage="0" castrange="0" uisprite="TAUNT" uitype="buff" category="instant" keeponretreat="true" hidespelleffecticon="true">
     <nop target="allplayers"/>
-    <spellvfx event="OnSpellHit" target="target_notCaster" prefab="FX/ClientPrefabs/fx_spell_taunt" socket="halo" constraintpreset="pointconstraint" />
+    <spellvfx event="OnSpellHit" target="target_notCaster" prefab="FX/ClientPrefabs/fx_spell_taunt_silent" socket="halo" constraintpreset="pointconstraint" />
   </activespell>
   <activespell uniquename="MOB_DRAGON_DIRECTION_RIGHT" target="self" castingtime="0" recastdelay="1" energyusage="0" castrange="0" uisprite="BLACKHOLE" uitype="buff" category="instant" keeponretreat="true" hidespelleffecticon="true">
     <spelleffectarea target="allplayers" effect="MOB_DRAGON_DIRECTION_INDICATOR" time="0.2" applyeffectonlyoncepertarget="true" removeonleave="false" position="atcaster" visible="false">
@@ -115778,7 +115818,7 @@
   </activespell>
 
   <activespell uniquename="MOB_DRAGON_DUNGEON_CURSE" uisprite="MAGICCIRCLE_DEMONIC" target="all" castingtime="0" recastdelay="0" energyusage="0" castrange="10000" buffpriority="10" category="instant" uitype="debuff" assessment="negative" maxcharges="6" maxstack="1" casterindependentcharges="true" systemspell="true" allowedinknockdown="true" >
-    <dummy target="all" time="597600" persistsafterdeath="true" persistsafterknockdown="true" persistsafterclusterchange="true"/>
+    <dummy target="all" time="590400" persistsafterdeath="true" persistsafterknockdown="true" persistsafterclusterchange="true"/>
   </activespell>
 
   <activespell uniquename="MOB_DRAGON_DUNGEON_MOB_BUFF" target="all" castingtime="0.0" uisprite="OVERLOAD_DAMAGE" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" category="buff" uitype="buff" maxstack="1" maxcharges="6" systemspell="true" keeponretreat="true" spelleffectlocatag="@SPELLS_STATUS_DAMAGE_DEFENSE_PLAYER_INCREASED">

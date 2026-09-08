@@ -19388,8 +19388,11 @@
 				</achievement>
 				<achievement name="JOURNAL_CREATURES_KEEPER_BESTIARY_FANATIC_SPEAR" absoluteprogressmax="10" avatarPath="Gui\Avatars\KEEPERFANATICSPEAR1" difficultyrating="1850" symbol="NONE" rewarditem="T6_SKILLBOOK_NONTRADABLE" rewardamount="1" expandabledescription="@JOURNAL_CREATURES_KEEPER_BESTIARY_FANATIC_SPEAR_INFO" texturePath="Gui\JournalCreatures\KEEPER_DRAGON_T5_MOB_ROAMING_KEEPER_FANATIC_SPEAR_CHAMPION" xboxgamerscore="0">
 					<killmob count="10" countpartykills="true">
-						<IfTargetMobName op="contains" value="_KEEPER_FANATIC_SPEAR_" />
-					</killmob>
+            <or>
+              <IfTargetMobName op="contains" value="_KEEPER_FANATIC_SPEAR_" />
+              <IfTargetMobName op="contains" value="_KEEPER_FANATIC_DRAGON_SPEAR_" />
+            </or>
+          </killmob>
 				</achievement>
 				<achievement name="JOURNAL_CREATURES_KEEPER_BESTIARY_FANATIC_WISP_PURPLE" absoluteprogressmax="20" avatarPath="Gui\Avatars\KEEPERWISP1" difficultyrating="1851" symbol="NONE" rewarditem="T2_LEARNINGPOINTS_NONTRADABLE" rewardamount="1" expandabledescription="@JOURNAL_CREATURES_KEEPER_BESTIARY_FANATIC_WISP_PURPLE_INFO" texturePath="Gui\JournalCreatures\KEEPER_FANATIC_WISP_PURPLE" xboxgamerscore="0">
 					<killmob count="20" countpartykills="true">
