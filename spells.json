@@ -28232,8 +28232,8 @@
         "cannotuseobject": {
           "@target": "all",
           "@type": "dragonareaentrance",
-          "@time": "300",
-          "@persistsafterdeath": "true",
+          "@time": "600",
+          "@persistsafterdeath": "false",
           "@persistsafterclusterchange": "true",
           "@persistsafterknockdown": "true"
         }
@@ -34573,6 +34573,22 @@
           "@persistsafterclusterchange": "false",
           "@persistsafterknockdown": "false",
           "@persistsafterdeath": "false"
+        },
+        "cannotattack": {
+          "@target": "all",
+          "@time": "180",
+          "@ignorecrowdcontrolresistance": "true",
+          "@persistsafterclusterchange": "false",
+          "@persistsafterknockdown": "false",
+          "@persistsafterdeath": "false"
+        },
+        "silence": {
+          "@target": "all",
+          "@time": "180",
+          "@ignorecrowdcontrolresistance": "true",
+          "@persistsafterclusterchange": "false",
+          "@persistsafterknockdown": "false",
+          "@persistsafterdeath": "false"
         }
       },
       {
@@ -34589,6 +34605,26 @@
         "@buffpriority": "1",
         "@systemspell": "true",
         "@hidespelleffecticon": "true",
+        "applyspell": {
+          "@target": "all",
+          "@spell": "DRAGON_AREA_ENTRANCE_SILENCE_LISTENER"
+        },
+        "cannotattack": {
+          "@target": "all",
+          "@time": "3600",
+          "@ignorecrowdcontrolresistance": "true",
+          "@persistsafterclusterchange": "false",
+          "@persistsafterknockdown": "false",
+          "@persistsafterdeath": "false"
+        },
+        "silence": {
+          "@target": "all",
+          "@time": "3600",
+          "@ignorecrowdcontrolresistance": "true",
+          "@persistsafterclusterchange": "false",
+          "@persistsafterknockdown": "false",
+          "@persistsafterdeath": "false"
+        },
         "transparency": {
           "@target": "all",
           "@time": "3600"
@@ -34676,7 +34712,75 @@
             "@persistsafterknockdown": "false",
             "@persistsafterdeath": "false"
           }
-        ]
+        ],
+        "spelleffectfx": {
+          "@prefab": "Prefabs/SpellEffects/SpellEffectVfx/SilenceEffectVfx_nosound",
+          "@socket": "halo"
+        }
+      },
+      {
+        "@uniquename": "DRAGON_AREA_ENTRANCE_SILENCE_LISTENER",
+        "@uisprite": "EXPEDITION_PENALTY",
+        "@target": "all",
+        "@category": "instant",
+        "@castingtime": "0",
+        "@recastdelay": "0",
+        "@energyusage": "0",
+        "@castrange": "0",
+        "@uitype": "buff",
+        "@neutraleffect": "true",
+        "@buffpriority": "1",
+        "@systemspell": "true",
+        "@hidespelleffecticon": "true",
+        "applyeffectoneventactive": {
+          "@target": "all",
+          "@time": "3600",
+          "@count": "1",
+          "@event": "SpellRemoved_TerminatedPrematurely",
+          "@removedspell": "DRAGON_AREA_ENTRANCE_WAITING_PROTECTION",
+          "@applyeffecttarget": "self",
+          "@spell": "DRAGON_AREA_ENTRANCE_SILENCE_AFTEREFFECT",
+          "@attackingbreakseffect": "true",
+          "@persistsafterclusterchange": "false",
+          "@persistsafterknockdown": "false",
+          "@persistsafterdeath": "false"
+        }
+      },
+      {
+        "@uniquename": "DRAGON_AREA_ENTRANCE_SILENCE_AFTEREFFECT",
+        "@uisprite": "SILENCE",
+        "@target": "all",
+        "@category": "instant",
+        "@castingtime": "0",
+        "@recastdelay": "0",
+        "@energyusage": "0",
+        "@castrange": "0",
+        "@uitype": "buff",
+        "@neutraleffect": "true",
+        "@buffpriority": "1",
+        "@systemspell": "true",
+        "@hidespelleffecticon": "false",
+        "@spelleffectlocatag": "@SPELLS_STATUS_SILENCE_CANNOT_ATTACK",
+        "cannotattack": {
+          "@target": "all",
+          "@time": "5",
+          "@ignorecrowdcontrolresistance": "true",
+          "@persistsafterclusterchange": "false",
+          "@persistsafterknockdown": "false",
+          "@persistsafterdeath": "false"
+        },
+        "silence": {
+          "@target": "all",
+          "@time": "5",
+          "@ignorecrowdcontrolresistance": "true",
+          "@persistsafterclusterchange": "false",
+          "@persistsafterknockdown": "false",
+          "@persistsafterdeath": "false"
+        },
+        "spelleffectfx": {
+          "@prefab": "Prefabs/SpellEffects/SpellEffectVfx/SilenceEffectVfx_nosound",
+          "@socket": "halo"
+        }
       },
       {
         "@uniquename": "HELL_2V2_ENTER",
@@ -54072,7 +54176,7 @@
         "@hitdelay": "0",
         "@standtime": "3.84",
         "@disruptionfactor": "0",
-        "@recastdelay": "90",
+        "@recastdelay": "60",
         "@energyusage": "0",
         "@castrange": "12",
         "@uitype": "movement",
@@ -54080,7 +54184,6 @@
         "@castanimation": "mount_sky_dash",
         "@animmode": "SingleAnim",
         "@ignorecasttimereductionbonus": "true",
-        "@assessment": "positive",
         "@hidespelleffecticon": "true",
         "@statblock": "@SPELLS_STANDARD_STATBLOCK",
         "@standtimeallowedspellslots": "shoes",
@@ -103285,7 +103388,7 @@
         "@standtime": "0.3",
         "@disruptionfactor": "0",
         "@recastdelay": "18",
-        "@energyusage": "11",
+        "@energyusage": "16",
         "@castrange": "13",
         "@uitype": "buff",
         "@category": "instant",
@@ -103557,7 +103660,7 @@
         "@spelleffectlocatag": "@SPELLS_STATUS_SHIELD",
         "damageshield": {
           "@target": "self",
-          "@damageabsorbed": "100",
+          "@damageabsorbed": "88",
           "@time": "2"
         },
         "spelleffectfx": {
@@ -107318,7 +107421,7 @@
         "directattributechange": {
           "@target": "enemy",
           "@attribute": "health",
-          "@change": "-66",
+          "@change": "-75",
           "@effectarearadius": "4",
           "@effecttype": "magic",
           "@showarearadius": "true",
@@ -107369,7 +107472,7 @@
         "buffovertime": {
           "@target": "enemy",
           "@type": "healmodifier",
-          "@value": "-0.2",
+          "@value": "-0.35",
           "@time": "3.5"
         },
         "attributechangeovertime": {
@@ -118564,7 +118667,7 @@
           "@target": "enemy",
           "@effectarearadius": "3",
           "@effecttype": "magic",
-          "@change": "-130.00",
+          "@change": "-119",
           "@targetcountvaluebonusfactor": "0.08",
           "@showarearadius": "true"
         },
@@ -118631,7 +118734,7 @@
         "spellvfx": {
           "@event": "OnSpellHit",
           "@target": "target",
-          "@prefab": "FX/ClientPrefabs/fx_spell_aoe_impact",
+          "@prefab": "FX/ClientPrefabs/fx_spell_aoe_impact_firehitsound",
           "@socket": "damage",
           "@constraintpreset": "pointconstraint"
         },
@@ -123751,7 +123854,7 @@
         "@castrange": "3",
         "@castrangemin": "3",
         "@hitdelay": "0",
-        "@recastdelay": "30",
+        "@recastdelay": "35",
         "@energyusage": "18",
         "@category": "damage",
         "@uitype": "damage",
@@ -124031,6 +124134,9 @@
           "@ignorecrowdcontrolresistance": "true",
           "@ignorebonusccdurationscaling": "true",
           "@fromwhere": "ParentCastDirection"
+        },
+        "AudioInfo": {
+          "@name": "SPELL_HIT_KNOCKBACK"
         }
       },
       {
@@ -127439,8 +127545,8 @@
                 "node": [
                   {
                     "arc": {
-                      "@innerradius": "A 0:0;0.4:5.5",
-                      "@outerradius": "A 0:1.5;0.4:7",
+                      "@innerradius": "A 0:0;0.4:5",
+                      "@outerradius": "A 0:1.5;0.4:8",
                       "@angle": "359.9"
                     }
                   },
@@ -127454,7 +127560,7 @@
                         "@event": "SpellEffectAreaInit",
                         "@duration": "6",
                         "@target": "target",
-                        "@socket": "centerAboveGround",
+                        "@socket": "centerJustAboveGround",
                         "@fadeouttime": "0.1"
                       }
                     }
@@ -127616,7 +127722,7 @@
         "attributechangeovertime": {
           "@target": "enemy",
           "@attribute": "health",
-          "@change": "-27",
+          "@change": "-36",
           "@effecttype": "physical",
           "@initialinterval": "0.5",
           "@interval": "0.5",
@@ -130025,7 +130131,7 @@
         "@keepmovingaftercast": "false",
         "@castingtime": "0",
         "@hitdelay": "0.8",
-        "@standtime": "0.4",
+        "@standtime": "0.25",
         "@disruptionfactor": "1",
         "@recastdelay": "15",
         "@energyusage": "9",
@@ -131247,7 +131353,7 @@
         "@hitdelay": "0",
         "@standtime": "0",
         "@disruptionfactor": "0",
-        "@recastdelay": "40",
+        "@recastdelay": "45",
         "@energyusage": "19",
         "@castrange": "14",
         "@adjustgroundtargettorange": "true",
@@ -138893,6 +138999,7 @@
         "@autoattackcooldownaftercasting": "Trigger",
         "@controllerpreferredtarget": "enemy",
         "@controllerselfcastable": "true",
+        "@descriptionlocatag": "@SPELLS_SMITE_AOE_V2_DESC",
         "spellindicationarea": {
           "@target": "enemy",
           "@position": "attarget",
@@ -138918,29 +139025,12 @@
             }
           }
         },
-        "directattributechange": {
-          "@target": "enemy",
-          "@change": "-136",
-          "@attribute": "health",
-          "@effectarearadius": "2.5",
-          "@targetcountvaluebonusfactor": "0.08",
-          "@showarearadius": "true",
-          "Event": {
-            "@type": "onSuccessfullHit",
-            "Spell": {
-              "@name": "SMITE_AOE_COOLDOWN_REDUCTION",
-              "@target": "Caster"
-            }
-          }
-        },
-        "applyspell": {
-          "@target": "enemy",
-          "@spell": "SMITE_AOE_MARK",
-          "@effectarearadius": "2.5"
-        },
         "locareferences": {
           "description": {
             "locareference": [
+              {
+                "@tag": "$directattributechange[1].change$"
+              },
               {
                 "@tag": "$directattributechange[0].change$"
               },
@@ -138957,6 +139047,35 @@
                 "@tag": "$$SMITE_AOE_COOLDOWN_REDUCTION.resetcooldowns[0].amount$"
               }
             ]
+          }
+        },
+        "directattributechange": [
+          {
+            "@target": "enemymobs",
+            "@change": "-136",
+            "@attribute": "health",
+            "@effectarearadius": "2.5",
+            "@targetcountvaluebonusfactor": "0.08",
+            "@showarearadius": "true"
+          },
+          {
+            "@target": "enemyplayers",
+            "@change": "-115",
+            "@attribute": "health",
+            "@effectarearadius": "2.5",
+            "@targetcountvaluebonusfactor": "0.08"
+          }
+        ],
+        "applyspell": {
+          "@target": "enemy",
+          "@spell": "SMITE_AOE_MARK",
+          "@effectarearadius": "2.5",
+          "Event": {
+            "@type": "onSuccessfullHit",
+            "Spell": {
+              "@name": "SMITE_AOE_COOLDOWN_REDUCTION",
+              "@target": "Caster"
+            }
           }
         },
         "spellvfx": [
@@ -151934,7 +152053,7 @@
           "@target": "self",
           "@type": "movespeedbonus",
           "@value": "0.2",
-          "@time": "3.5"
+          "@time": "4"
         },
         "spelleffectfx": {
           "@prefab": "Prefabs/SpellEffects/SpellEffectVfx/SprintEffectVfx",
@@ -156894,7 +157013,7 @@
         "@standtime": "0",
         "@disruptionfactor": "1",
         "@recastdelay": "6",
-        "@energyusage": "5",
+        "@energyusage": "7",
         "@castrange": "8",
         "@uitype": "crowdcontrol",
         "@uisprite": "CARTWHEEL",
@@ -160019,6 +160138,7 @@
         "@autoattackcooldownaftercasting": "Trigger",
         "@controllerpreferredtarget": "enemy",
         "@controllerselfcastable": "true",
+        "@descriptionlocatag": "@SPELLS_QS_CRYSTAL_COMBO_V2_DESC",
         "locareferences": {
           "description": {
             "locareference": [
@@ -160163,7 +160283,7 @@
         "@uisprite": "CRYSTAL_ZEPHYR",
         "@showrange": "true",
         "@animmode": "SingleAnim",
-        "@descriptionlocatag": "@SPELLS_QS_CRYSTAL_COMBO_DESC",
+        "@descriptionlocatag": "@SPELLS_QS_CRYSTAL_COMBO_V2_DESC",
         "@statblock": "@SPELLS_STATBLOCK_SEQUENCE_1_1_2",
         "@namelocatag": "@SPELLS_QS_CRYSTAL_COMBO",
         "@autoattackcooldownaftercasting": "Trigger",
@@ -160317,7 +160437,7 @@
         "@animmode": "SingleAnim",
         "@animIgnoreHitDelay": "false",
         "@castupperbodyblendtime": "0.08",
-        "@descriptionlocatag": "@SPELLS_QS_CRYSTAL_COMBO_DESC",
+        "@descriptionlocatag": "@SPELLS_QS_CRYSTAL_COMBO_V2_DESC",
         "@statblock": "@SPELLS_STATBLOCK_SEQUENCE_1_1_2",
         "@autoattackcooldownaftercasting": "Trigger",
         "@controllerpreferredtarget": "enemy",
@@ -160481,17 +160601,6 @@
           "@interval": "0.5",
           "@initialinterval": "0",
           "@count": "5"
-        },
-        "buffovertime": {
-          "@type": "movespeedbonus",
-          "@value": "-0.15",
-          "@target": "enemy",
-          "@time": "2",
-          "@targetcountvaluebonusfactor": "0.08"
-        },
-        "spelleffectfx": {
-          "@prefab": "FX/ClientPrefabs/fx_slow",
-          "@socket": "floor"
         }
       },
       {
@@ -164173,7 +164282,7 @@
         "attributechangeovertime": {
           "@target": "enemy",
           "@attribute": "health",
-          "@change": "-18",
+          "@change": "-24",
           "@effecttype": "magic",
           "@initialinterval": "1",
           "@interval": "1",
@@ -168068,7 +168177,7 @@
         "@hitdelay": "0",
         "@standtime": "0",
         "@disruptionfactor": "1",
-        "@recastdelay": "35",
+        "@recastdelay": "30",
         "@energyusage": "10",
         "@castrange": "0",
         "@category": "buff",
@@ -171544,7 +171653,7 @@
         "directattributechange": {
           "@target": "enemy",
           "@attribute": "health",
-          "@change": "-27",
+          "@change": "-21",
           "@reflectdamage": "never"
         },
         "silence": {
@@ -171990,6 +172099,22 @@
         "@statblock": "@SPELLS_STANDARD_STATBLOCK",
         "@adjustgroundtargettorange": "true",
         "@controllerpreferredtarget": "enemy",
+        "@descriptionlocatag": "@SPELLS_HELMET_FIREBREATH_V2_DESC",
+        "locareferences": {
+          "description": {
+            "locareference": [
+              {
+                "@tag": "$$HELMET_FIREBREATH_EFFECT.attributechangeovertime[0].totalchange$"
+              },
+              {
+                "@tag": "$$HELMET_FIREBREATH_EFFECT.attributechangeovertime[0].time$"
+              },
+              {
+                "@tag": "$$HELMET_FIREBREATH_EFFECT.buffovertime[0].value$"
+              }
+            ]
+          }
+        },
         "spelleffectarea": {
           "@target": "enemy",
           "@effect": "HELMET_FIREBREATH_EFFECT",
@@ -172058,6 +172183,22 @@
         "@category": "damage",
         "@spelleffectlocatag": "@SPELLS_STATUS_DOT_MAGICAL",
         "@namelocatag": "@SPELLS_HELMET_FIREBREATH",
+        "buffovertime": [
+          {
+            "@target": "enemy",
+            "@type": "physicalarmor",
+            "@value": "-0.08",
+            "@time": "3",
+            "@targetcountvaluebonusfactor": "0.08"
+          },
+          {
+            "@target": "enemy",
+            "@type": "magicresistance",
+            "@value": "-0.08",
+            "@time": "3",
+            "@targetcountvaluebonusfactor": "0.08"
+          }
+        ],
         "attributechangeovertime": {
           "@target": "enemy",
           "@attribute": "health",
@@ -172068,11 +172209,19 @@
           "@count": "4",
           "@targetcountvaluebonusfactor": "0.08"
         },
-        "spelleffectfx": {
-          "@prefab": "FX/ClientPrefabs/fx_dot_fire",
-          "@socket": "damage",
-          "@constraintpreset": "pointconstraint"
-        }
+        "spelleffectfx": [
+          {
+            "@prefab": "FX/ClientPrefabs/fx_dot_fire",
+            "@socket": "damage",
+            "@constraintpreset": "pointconstraint"
+          },
+          {
+            "@prefab": "Prefabs/SpellEffects/SpellEffectVfx/ShieldDebuffEffectVfx",
+            "@socket": "floor",
+            "@size": "1",
+            "@constraintpreset": "pointconstraint"
+          }
+        ]
       },
       {
         "@uniquename": "PERPETUALENERGY",
@@ -172424,7 +172573,7 @@
         "@disruptionfactor": "1",
         "@recastdelay": "30",
         "@energyusage": "0",
-        "@castrange": "21",
+        "@castrange": "18",
         "@uisprite": "BEAM_HOLY",
         "@uitype": "damage",
         "@castanimation": "taunt_01",
@@ -172482,7 +172631,7 @@
           "area": {
             "shape": {
               "node": {
-                "@distance": "S0:0;0.5:12",
+                "@distance": "S0:0;0.5:9",
                 "rectangle": {
                   "@width": "2",
                   "@height": "S0:0;0.5:18",
@@ -173551,7 +173700,7 @@
       {
         "@uniquename": "FLARE",
         "@target": "ground",
-        "@recastdelay": "25",
+        "@recastdelay": "20",
         "@castrange": "11",
         "@energyusage": "0",
         "@castingtime": "0",
@@ -173646,7 +173795,7 @@
         "buffovertime": {
           "@target": "enemy",
           "@type": "magiccooldownratemodifier",
-          "@value": "-0.5",
+          "@value": "-0.66",
           "@time": "5"
         },
         "removeactiveeffects": {
@@ -178186,7 +178335,7 @@
           "@constraintpreset": "pointconstraint"
         },
         "AudioInfo": {
-          "@name": "SPELL_SELF_BUFF"
+          "@name": "SPELL_SELF_BUFF_PURGINGSHIELD"
         }
       },
       {
@@ -229102,25 +229251,21 @@
         "@recastdelay": "1",
         "@energyusage": "0",
         "@castrange": "1",
-        "@uitype": "crowdcontrol",
-        "@category": "forcedmovement",
+        "@uitype": "damage",
+        "@category": "damage",
         "@namelocatag": "@SPELLS_MOB_KEEPER_BEAR_DASH_EFFECT",
         "directattributechange": {
           "@target": "enemy",
           "@attribute": "health",
           "@change": "-500",
-          "@effecttype": "physical"
-        },
-        "knockback": {
-          "@target": "enemy",
-          "@distance": "10",
-          "@fromwhere": "FromCaster",
-          "@movespeed": "25"
-        },
-        "spellimmunity": {
-          "@target": "enemy",
-          "@spellname": "MOB_BOAR_DASH_EFFECT",
-          "@time": "1"
+          "@effecttype": "physical",
+          "Event": {
+            "@type": "onDealDamage",
+            "Spell": {
+              "@name": "MOB_BOAR_DASH_KNOCKBACK",
+              "@target": "SpellTarget"
+            }
+          }
         },
         "spellvfx": {
           "@event": "OnSpellHit",
@@ -229128,9 +229273,44 @@
           "@prefab": "FX/ClientPrefabs/fx_spell_aoe_impact",
           "@socket": "damage",
           "@constraintpreset": "pointconstraint"
+        }
+      },
+      {
+        "@uniquename": "MOB_BOAR_DASH_KNOCKBACK",
+        "@uisprite": "WILD_ONSLAUGHT",
+        "@hidespelleffecticon": "true",
+        "@target": "enemy",
+        "@castingtime": "1",
+        "@recastdelay": "1",
+        "@energyusage": "0",
+        "@castrange": "1",
+        "@uitype": "crowdcontrol",
+        "@category": "forcedmovement",
+        "@namelocatag": "@SPELLS_MOB_KEEPER_BEAR_DASH_EFFECT",
+        "knockback": {
+          "@target": "enemy",
+          "@distance": "10",
+          "@fromwhere": "FromCaster",
+          "@movespeed": "25"
         },
         "AudioInfo": {
           "@name": "SPELL_HIT_KNOCKBACK"
+        }
+      },
+      {
+        "@uniquename": "MOB_BOAR_DASH_CLEANUP",
+        "@target": "self",
+        "@castingtime": "0",
+        "@recastdelay": "0",
+        "@energyusage": "0",
+        "@castrange": "0",
+        "@uitype": "buff",
+        "@category": "instant",
+        "@namelocatag": "@SPELLS_MOB_KEEPER_BEAR_DASH_EFFECT",
+        "@hidespelleffecticon": "true",
+        "removeactivespell": {
+          "@target": "self",
+          "@spell": "MOB_BOAR_DASH"
         }
       },
       {
@@ -229147,18 +229327,37 @@
         "@animmode": "SingleAnim",
         "@namelocatag": "@SPELLS_MOB_KEEPER_BEAR_DASH_EFFECT",
         "@hidespelleffecticon": "true",
+        "@disruptionfactor": "0",
         "spellindicationarea": {
           "@target": "enemy",
-          "@position": "attarget",
+          "@position": "atcaster",
+          "@ignoreLegacy250msDelay": "true",
           "area": {
             "shape": {
-              "circle": {
-                "@radius": "1.51"
-              }
+              "node": [
+                {
+                  "circle": {
+                    "@radius": "1.51"
+                  }
+                },
+                {
+                  "@distance": "4",
+                  "node": {
+                    "@angle": "180",
+                    "arc": {
+                      "@innerradius": "0",
+                      "@outerradius": "3.6",
+                      "@angle": "45.5"
+                    }
+                  }
+                }
+              ]
             },
             "fill": {
-              "circle": {
-                "@radius": "1-2"
+              "node": {
+                "circle": {
+                  "@radius": "0-1.51"
+                }
               }
             }
           }
@@ -229166,12 +229365,17 @@
         "aura": {
           "@target": "self",
           "@spell": "MOB_BOAR_DASH_EFFECT",
-          "@time": "0.5",
-          "@auraradius": "1"
+          "@time": "2",
+          "@auraradius": "1.5",
+          "@applyeffectonlyoncepertarget": "true"
         },
         "dash": {
           "@animID": "dash",
-          "@movespeed": "15"
+          "@movespeed": "12",
+          "@mindistance": "5",
+          "@endpositionoffset": "1",
+          "@endeffect": "MOB_BOAR_DASH_CLEANUP",
+          "@endeffecttarget": "caster"
         },
         "spellvfx": [
           {
@@ -312645,7 +312849,7 @@
         "directattributechange": {
           "@target": "enemy",
           "@attribute": "health",
-          "@change": "-400",
+          "@change": "-300",
           "@effecttype": "magic"
         },
         "spellimmunity": {
@@ -312655,7 +312859,7 @@
         },
         "spelleffectarea": {
           "@time": "0.6",
-          "@effect": "SHAPE_Q_CAST_AREA",
+          "@effect": "MOB_KEEPER_BERSERK_LL_ATTACKS_CONE_EFFECT",
           "@target": "enemy",
           "@removeonleave": "false",
           "@position": "attarget",
@@ -312707,7 +312911,7 @@
         "directattributechange": {
           "@target": "enemy",
           "@attribute": "health",
-          "@change": "-400",
+          "@change": "-300",
           "@effecttype": "magic"
         },
         "spellvfx": {
@@ -320187,7 +320391,7 @@
         },
         "spelleffectarea": {
           "@visible": "false",
-          "@time": "1.3",
+          "@time": "0.7",
           "@effect": "MOB_KEEPER_AXETHROWER_GROUNDBREAKER_LL_EFFECT",
           "@target": "enemy",
           "@removeonleave": "false",
@@ -320258,7 +320462,7 @@
         "directattributechange": {
           "@target": "enemy",
           "@attribute": "health",
-          "@change": "-1350",
+          "@change": "-1000",
           "@effecttype": "magic"
         },
         "spellvfx": {
@@ -419504,6 +419708,9 @@
         "applyspell": {
           "@spell": "KEEPER_SPECIAL_TURRET_SILENCE",
           "@target": "enemy"
+        },
+        "AudioInfo": {
+          "@name": "MELEE_MEDIUMIMPACT"
         }
       },
       {
@@ -422771,6 +422978,7 @@
             "@removeonleave": "true",
             "@applyeffectonlyoncepertarget": "false",
             "@position": "atcaster",
+            "@rotation": "castdirection",
             "@visible": "true",
             "@linktochanneling": "true",
             "area": {
@@ -426312,15 +426520,11 @@
         "applyspell": [
           {
             "@target": "self",
-            "@spell": "TEST_MOB_KEEPER_FANATIC_WITCH_START_SPAWN_ROCKMOB_FIRST"
+            "@spell": "TEST_MOB_KEEPER_FANATIC_WITCH_START_SPAWN_ROCKMOB_FOURTH"
           },
           {
             "@target": "self",
-            "@spell": "TEST_MOB_KEEPER_FANATIC_WITCH_START_SPAWN_ROCKMOB_SECOND"
-          },
-          {
-            "@target": "self",
-            "@spell": "TEST_MOB_KEEPER_FANATIC_WITCH_START_SPAWN_ROCKMOB_THIRD"
+            "@spell": "TEST_MOB_KEEPER_FANATIC_WITCH_START_SPAWN_ROCKMOB_FIFTH"
           }
         ],
         "spellvfx": [
@@ -427046,6 +427250,462 @@
         }
       },
       {
+        "@uniquename": "TEST_MOB_KEEPER_FANATIC_WITCH_START_SPAWN_ROCKMOB_FOURTH",
+        "@target": "self",
+        "@castingtime": "0",
+        "@hitdelay": "0",
+        "@standtime": "0",
+        "@recastdelay": "0",
+        "@castrange": "1",
+        "@energyusage": "0",
+        "@category": "instant",
+        "@uitype": "buff",
+        "@interruptiblebyspell": "false",
+        "spawnmob": [
+          {
+            "@target": "all",
+            "@type": "T5_MOB_RD_KEEPER_FANATIC_WITCH_ROCKS_ROCK_A_VETERAN_SUMMON",
+            "@ttl": "9999",
+            "@limit": "7",
+            "@ttlaftercasterdeath": "0",
+            "@ttlaftercasterreset": "0",
+            "@ttlafterreset": "0",
+            "@anglefromcaster": "90",
+            "@distancefromtarget": "9",
+            "@sharenewthreats": "true",
+            "@returnhomebehavior": "teleporttocaster",
+            "IfSpellActive": [
+              {
+                "@who": "SpellTarget",
+                "@spell": "MOB_IS_VETERAN"
+              },
+              {
+                "@who": "SpellTarget",
+                "@spell": "MOB_IS_TIER_5"
+              }
+            ]
+          },
+          {
+            "@target": "all",
+            "@type": "T6_MOB_RD_KEEPER_FANATIC_WITCH_ROCKS_ROCK_A_VETERAN_SUMMON",
+            "@ttl": "9999",
+            "@limit": "7",
+            "@ttlaftercasterdeath": "0",
+            "@ttlaftercasterreset": "0",
+            "@ttlafterreset": "0",
+            "@anglefromcaster": "90",
+            "@distancefromtarget": "9",
+            "@sharenewthreats": "true",
+            "@returnhomebehavior": "teleporttocaster",
+            "IfSpellActive": [
+              {
+                "@who": "SpellTarget",
+                "@spell": "MOB_IS_VETERAN"
+              },
+              {
+                "@who": "SpellTarget",
+                "@spell": "MOB_IS_TIER_6"
+              }
+            ]
+          },
+          {
+            "@target": "all",
+            "@type": "T7_MOB_RD_KEEPER_FANATIC_WITCH_ROCKS_ROCK_A_VETERAN_SUMMON",
+            "@ttl": "9999",
+            "@limit": "7",
+            "@ttlaftercasterdeath": "0",
+            "@ttlaftercasterreset": "0",
+            "@ttlafterreset": "0",
+            "@anglefromcaster": "90",
+            "@distancefromtarget": "9",
+            "@sharenewthreats": "true",
+            "@returnhomebehavior": "teleporttocaster",
+            "IfSpellActive": [
+              {
+                "@who": "SpellTarget",
+                "@spell": "MOB_IS_VETERAN"
+              },
+              {
+                "@who": "SpellTarget",
+                "@spell": "MOB_IS_TIER_7"
+              }
+            ]
+          },
+          {
+            "@target": "all",
+            "@type": "T8_MOB_RD_KEEPER_FANATIC_WITCH_ROCKS_ROCK_A_VETERAN_SUMMON",
+            "@ttl": "9999",
+            "@limit": "7",
+            "@ttlaftercasterdeath": "0",
+            "@ttlaftercasterreset": "0",
+            "@ttlafterreset": "0",
+            "@anglefromcaster": "90",
+            "@distancefromtarget": "9",
+            "@sharenewthreats": "true",
+            "@returnhomebehavior": "teleporttocaster",
+            "IfSpellActive": [
+              {
+                "@who": "SpellTarget",
+                "@spell": "MOB_IS_VETERAN"
+              },
+              {
+                "@who": "SpellTarget",
+                "@spell": "MOB_IS_TIER_8"
+              }
+            ]
+          },
+          {
+            "@target": "all",
+            "@type": "T5_MOB_RD_KEEPER_FANATIC_WITCH_ROCKS_ROCK_A_ELITE_SUMMON",
+            "@ttl": "9999",
+            "@limit": "7",
+            "@ttlaftercasterdeath": "0",
+            "@ttlaftercasterreset": "0",
+            "@ttlafterreset": "0",
+            "@anglefromcaster": "90",
+            "@distancefromtarget": "9",
+            "@sharenewthreats": "true",
+            "@returnhomebehavior": "teleporttocaster",
+            "IfSpellActive": [
+              {
+                "@who": "SpellTarget",
+                "@spell": "MOB_IS_ELITE"
+              },
+              {
+                "@who": "SpellTarget",
+                "@spell": "MOB_IS_TIER_5"
+              }
+            ]
+          },
+          {
+            "@target": "all",
+            "@type": "T6_MOB_RD_KEEPER_FANATIC_WITCH_ROCKS_ROCK_A_ELITE_SUMMON",
+            "@ttl": "9999",
+            "@limit": "7",
+            "@ttlaftercasterdeath": "0",
+            "@ttlaftercasterreset": "0",
+            "@ttlafterreset": "0",
+            "@anglefromcaster": "90",
+            "@distancefromtarget": "9",
+            "@sharenewthreats": "true",
+            "@returnhomebehavior": "teleporttocaster",
+            "IfSpellActive": [
+              {
+                "@who": "SpellTarget",
+                "@spell": "MOB_IS_ELITE"
+              },
+              {
+                "@who": "SpellTarget",
+                "@spell": "MOB_IS_TIER_6"
+              }
+            ]
+          },
+          {
+            "@target": "all",
+            "@type": "T7_MOB_RD_KEEPER_FANATIC_WITCH_ROCKS_ROCK_A_ELITE_SUMMON",
+            "@ttl": "9999",
+            "@limit": "7",
+            "@ttlaftercasterdeath": "0",
+            "@ttlaftercasterreset": "0",
+            "@ttlafterreset": "0",
+            "@anglefromcaster": "90",
+            "@distancefromtarget": "9",
+            "@sharenewthreats": "true",
+            "@returnhomebehavior": "teleporttocaster",
+            "IfSpellActive": [
+              {
+                "@who": "SpellTarget",
+                "@spell": "MOB_IS_ELITE"
+              },
+              {
+                "@who": "SpellTarget",
+                "@spell": "MOB_IS_TIER_7"
+              }
+            ]
+          },
+          {
+            "@target": "all",
+            "@type": "T8_MOB_RD_KEEPER_FANATIC_WITCH_ROCKS_ROCK_A_ELITE_SUMMON",
+            "@ttl": "9999",
+            "@limit": "7",
+            "@ttlaftercasterdeath": "0",
+            "@ttlaftercasterreset": "0",
+            "@ttlafterreset": "0",
+            "@anglefromcaster": "90",
+            "@distancefromtarget": "9",
+            "@sharenewthreats": "true",
+            "@returnhomebehavior": "teleporttocaster",
+            "IfSpellActive": [
+              {
+                "@who": "SpellTarget",
+                "@spell": "MOB_IS_ELITE"
+              },
+              {
+                "@who": "SpellTarget",
+                "@spell": "MOB_IS_TIER_8"
+              }
+            ]
+          }
+        ],
+        "spelleffectarea": {
+          "@target": "enemy",
+          "@effect": "none",
+          "@time": "1",
+          "@removeoncasterdeath": "true",
+          "@removeonleave": "true",
+          "@visible": "true",
+          "area": {
+            "shape": {
+              "node": {
+                "@angle": "90",
+                "@distance": "9",
+                "circle": {
+                  "@radius": "2",
+                  "spellvfx": {
+                    "@target": "target",
+                    "@event": "SpellEffectAreaInit",
+                    "@alive": "none",
+                    "@prefab": "FX/ClientPrefabs/fx_dragons_witch_boss_rocks_spawn",
+                    "@socket": "centerJustAboveGround",
+                    "@constraintpreset": "inworld",
+                    "@size": "1",
+                    "@timeoffset": "0"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "@uniquename": "TEST_MOB_KEEPER_FANATIC_WITCH_START_SPAWN_ROCKMOB_FIFTH",
+        "@target": "self",
+        "@castingtime": "0",
+        "@hitdelay": "0.15",
+        "@standtime": "0",
+        "@recastdelay": "0",
+        "@castrange": "1",
+        "@energyusage": "0",
+        "@category": "instant",
+        "@uitype": "buff",
+        "@interruptiblebyspell": "false",
+        "spawnmob": [
+          {
+            "@target": "all",
+            "@type": "T5_MOB_RD_KEEPER_FANATIC_WITCH_ROCKS_ROCK_B_VETERAN_SUMMON",
+            "@ttl": "9999",
+            "@limit": "7",
+            "@ttlaftercasterdeath": "0",
+            "@ttlaftercasterreset": "0",
+            "@ttlafterreset": "0",
+            "@anglefromcaster": "270",
+            "@distancefromtarget": "9",
+            "@sharenewthreats": "true",
+            "@returnhomebehavior": "teleporttocaster",
+            "IfSpellActive": [
+              {
+                "@who": "SpellTarget",
+                "@spell": "MOB_IS_VETERAN"
+              },
+              {
+                "@who": "SpellTarget",
+                "@spell": "MOB_IS_TIER_5"
+              }
+            ]
+          },
+          {
+            "@target": "all",
+            "@type": "T6_MOB_RD_KEEPER_FANATIC_WITCH_ROCKS_ROCK_B_VETERAN_SUMMON",
+            "@ttl": "9999",
+            "@limit": "7",
+            "@ttlaftercasterdeath": "0",
+            "@ttlaftercasterreset": "0",
+            "@ttlafterreset": "0",
+            "@anglefromcaster": "270",
+            "@distancefromtarget": "9",
+            "@sharenewthreats": "true",
+            "@returnhomebehavior": "teleporttocaster",
+            "IfSpellActive": [
+              {
+                "@who": "SpellTarget",
+                "@spell": "MOB_IS_VETERAN"
+              },
+              {
+                "@who": "SpellTarget",
+                "@spell": "MOB_IS_TIER_6"
+              }
+            ]
+          },
+          {
+            "@target": "all",
+            "@type": "T7_MOB_RD_KEEPER_FANATIC_WITCH_ROCKS_ROCK_B_VETERAN_SUMMON",
+            "@ttl": "9999",
+            "@limit": "7",
+            "@ttlaftercasterdeath": "0",
+            "@ttlaftercasterreset": "0",
+            "@ttlafterreset": "0",
+            "@anglefromcaster": "270",
+            "@distancefromtarget": "9",
+            "@sharenewthreats": "true",
+            "@returnhomebehavior": "teleporttocaster",
+            "IfSpellActive": [
+              {
+                "@who": "SpellTarget",
+                "@spell": "MOB_IS_VETERAN"
+              },
+              {
+                "@who": "SpellTarget",
+                "@spell": "MOB_IS_TIER_7"
+              }
+            ]
+          },
+          {
+            "@target": "all",
+            "@type": "T8_MOB_RD_KEEPER_FANATIC_WITCH_ROCKS_ROCK_B_VETERAN_SUMMON",
+            "@ttl": "9999",
+            "@limit": "7",
+            "@ttlaftercasterdeath": "0",
+            "@ttlaftercasterreset": "0",
+            "@ttlafterreset": "0",
+            "@anglefromcaster": "270",
+            "@distancefromtarget": "9",
+            "@sharenewthreats": "true",
+            "@returnhomebehavior": "teleporttocaster",
+            "IfSpellActive": [
+              {
+                "@who": "SpellTarget",
+                "@spell": "MOB_IS_VETERAN"
+              },
+              {
+                "@who": "SpellTarget",
+                "@spell": "MOB_IS_TIER_8"
+              }
+            ]
+          },
+          {
+            "@target": "all",
+            "@type": "T5_MOB_RD_KEEPER_FANATIC_WITCH_ROCKS_ROCK_B_ELITE_SUMMON",
+            "@ttl": "9999",
+            "@limit": "7",
+            "@ttlaftercasterdeath": "0",
+            "@ttlaftercasterreset": "0",
+            "@ttlafterreset": "0",
+            "@anglefromcaster": "270",
+            "@distancefromtarget": "9",
+            "@sharenewthreats": "true",
+            "@returnhomebehavior": "teleporttocaster",
+            "IfSpellActive": [
+              {
+                "@who": "SpellTarget",
+                "@spell": "MOB_IS_ELITE"
+              },
+              {
+                "@who": "SpellTarget",
+                "@spell": "MOB_IS_TIER_5"
+              }
+            ]
+          },
+          {
+            "@target": "all",
+            "@type": "T6_MOB_RD_KEEPER_FANATIC_WITCH_ROCKS_ROCK_B_ELITE_SUMMON",
+            "@ttl": "9999",
+            "@limit": "7",
+            "@ttlaftercasterdeath": "0",
+            "@ttlaftercasterreset": "0",
+            "@ttlafterreset": "0",
+            "@anglefromcaster": "270",
+            "@distancefromtarget": "9",
+            "@sharenewthreats": "true",
+            "@returnhomebehavior": "teleporttocaster",
+            "IfSpellActive": [
+              {
+                "@who": "SpellTarget",
+                "@spell": "MOB_IS_ELITE"
+              },
+              {
+                "@who": "SpellTarget",
+                "@spell": "MOB_IS_TIER_6"
+              }
+            ]
+          },
+          {
+            "@target": "all",
+            "@type": "T7_MOB_RD_KEEPER_FANATIC_WITCH_ROCKS_ROCK_B_ELITE_SUMMON",
+            "@ttl": "9999",
+            "@limit": "7",
+            "@ttlaftercasterdeath": "0",
+            "@ttlaftercasterreset": "0",
+            "@ttlafterreset": "0",
+            "@anglefromcaster": "270",
+            "@distancefromtarget": "9",
+            "@sharenewthreats": "true",
+            "@returnhomebehavior": "teleporttocaster",
+            "IfSpellActive": [
+              {
+                "@who": "SpellTarget",
+                "@spell": "MOB_IS_ELITE"
+              },
+              {
+                "@who": "SpellTarget",
+                "@spell": "MOB_IS_TIER_7"
+              }
+            ]
+          },
+          {
+            "@target": "all",
+            "@type": "T8_MOB_RD_KEEPER_FANATIC_WITCH_ROCKS_ROCK_B_ELITE_SUMMON",
+            "@ttl": "9999",
+            "@limit": "7",
+            "@ttlaftercasterdeath": "0",
+            "@ttlaftercasterreset": "0",
+            "@ttlafterreset": "0",
+            "@anglefromcaster": "270",
+            "@distancefromtarget": "9",
+            "@sharenewthreats": "true",
+            "@returnhomebehavior": "teleporttocaster",
+            "IfSpellActive": [
+              {
+                "@who": "SpellTarget",
+                "@spell": "MOB_IS_ELITE"
+              },
+              {
+                "@who": "SpellTarget",
+                "@spell": "MOB_IS_TIER_8"
+              }
+            ]
+          }
+        ],
+        "spelleffectarea": {
+          "@target": "enemy",
+          "@effect": "none",
+          "@time": "1",
+          "@removeoncasterdeath": "true",
+          "@removeonleave": "true",
+          "@visible": "true",
+          "area": {
+            "shape": {
+              "node": {
+                "@angle": "270",
+                "@distance": "9",
+                "circle": {
+                  "@radius": "2",
+                  "spellvfx": {
+                    "@target": "target",
+                    "@event": "SpellEffectAreaInit",
+                    "@alive": "none",
+                    "@prefab": "FX/ClientPrefabs/fx_dragons_witch_boss_rocks_spawn",
+                    "@socket": "centerJustAboveGround",
+                    "@constraintpreset": "inworld",
+                    "@size": "1",
+                    "@timeoffset": "0"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      {
         "@uniquename": "TEST_MOB_KEEPER_FANATIC_WITCH_START_SPAWNROCK_SPAWNSPELL",
         "@target": "self",
         "@castingtime": "0",
@@ -427106,7 +427766,7 @@
         "@hidespelleffecticon": "true"
       },
       {
-        "@uniquename": "TEST_MOB_KEEPER_FANATIC_WITCH_START_SPAWN_ROCKMOB_120_DEGREES",
+        "@uniquename": "TEST_MOB_KEEPER_FANATIC_WITCH_START_SPAWN_ROCKMOB_144_DEGREES",
         "@target": "allmobs",
         "@castingtime": "0",
         "@hitdelay": "0",
@@ -427120,7 +427780,7 @@
         "@hidespelleffecticon": "true"
       },
       {
-        "@uniquename": "TEST_MOB_KEEPER_FANATIC_WITCH_START_SPAWN_ROCKMOB_240_DEGREES",
+        "@uniquename": "TEST_MOB_KEEPER_FANATIC_WITCH_START_SPAWN_ROCKMOB_288_DEGREES",
         "@target": "allmobs",
         "@castingtime": "0",
         "@hitdelay": "0",
@@ -427134,7 +427794,7 @@
         "@hidespelleffecticon": "true"
       },
       {
-        "@uniquename": "TEST_MOB_KEEPER_FANATIC_WITCH_START_SPAWN_ROCKMOB_60_DEGREES",
+        "@uniquename": "TEST_MOB_KEEPER_FANATIC_WITCH_START_SPAWN_ROCKMOB_72_DEGREES",
         "@target": "allmobs",
         "@castingtime": "0",
         "@hitdelay": "0",
@@ -427148,21 +427808,7 @@
         "@hidespelleffecticon": "true"
       },
       {
-        "@uniquename": "TEST_MOB_KEEPER_FANATIC_WITCH_START_SPAWN_ROCKMOB_180_DEGREES",
-        "@target": "allmobs",
-        "@castingtime": "0",
-        "@hitdelay": "0",
-        "@standtime": "0",
-        "@recastdelay": "2",
-        "@castrange": "100",
-        "@energyusage": "0",
-        "@category": "instant",
-        "@uitype": "buff",
-        "@interruptiblebyspell": "false",
-        "@hidespelleffecticon": "true"
-      },
-      {
-        "@uniquename": "TEST_MOB_KEEPER_FANATIC_WITCH_START_SPAWN_ROCKMOB_300_DEGREES",
+        "@uniquename": "TEST_MOB_KEEPER_FANATIC_WITCH_START_SPAWN_ROCKMOB_216_DEGREES",
         "@target": "allmobs",
         "@castingtime": "0",
         "@hitdelay": "0",
@@ -427368,6 +428014,20 @@
           "@change": "-500",
           "@effecttype": "physical",
           "@reflectdamage": "never",
+          "not": [
+            {
+              "IfSpellActive": {
+                "@spell": "TEST_MOB_KEEPER_FANATIC_BRUTE_FRENZY_DASH_IMPACT_KNOCKBACK",
+                "@who": "EffectTarget"
+              }
+            },
+            {
+              "IfSpellActive": {
+                "@spell": "TEST_MOB_KEEPER_FANATIC_WITCH_ROCK_SUMMON_DASH_AURA_EFFECT",
+                "@who": "EffectTarget"
+              }
+            }
+          ],
           "Event": {
             "@type": "onSuccessfullHit",
             "Spell": {
@@ -429371,7 +430031,7 @@
           {
             "@target": "enemy",
             "@attribute": "health",
-            "@change": "-1250",
+            "@change": "-1150",
             "@effecttype": "magic",
             "@reflectdamage": "never"
           },
@@ -454698,6 +455358,17 @@
             }
           }
         ],
+        "buffovertime": {
+          "@target": "self",
+          "@type": "bonusdefensevsplayers",
+          "@value": "-1",
+          "@time": "2",
+          "IfSpellActive": {
+            "@who": "EffectTarget",
+            "@spell": "HELLGATE_DAMAGE_STACK",
+            "@atleastcharges": "1"
+          }
+        },
         "spellimmunity": {
           "@target": "self",
           "@category": "buff_damageshield",
@@ -470595,7 +471266,7 @@
         "attributechangeovertime": {
           "@target": "self",
           "@attribute": "health",
-          "@change": "-0.04",
+          "@change": "-0.025",
           "@changetype": "relativemax",
           "@ignoreabilitypowerscaling": "true",
           "@ignorearmor": "true",
