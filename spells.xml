@@ -9258,11 +9258,11 @@
     <spelleffectfx prefab="FX/ClientPrefabs/fx_mount_direbear_speedbuff_01" socket="floor" fadeouttime="0.40"/>
     <AudioInfo name="SPELL_MOUNT_SPEED"/>
   </activespell>
-  <activespell uniquename="MOUNT_SPEEDBUFF_DIREBEAR" target="self" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="DASH" assessment="positive" buffpriority="9" spelleffectlocatag="@SPELLS_MOUNT_SPEEDBUFF_GENERAL_DESC">
+  <!--<activespell uniquename="MOUNT_SPEEDBUFF_DIREBEAR" target="self" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="DASH" assessment="positive" buffpriority="9" spelleffectlocatag="@SPELLS_MOUNT_SPEEDBUFF_GENERAL_DESC">
     <buffovertime type="movespeedbonus" value="0.40" target="self" time="0" damagebreakseffect="true" attackingbreakseffect="true" worldinteractionbreakseffect="true" castingbreakseffect="true" mountingbreakseffect="false"/>
     <spelleffectfx prefab="FX/ClientPrefabs/fx_mount_direbear_speedbuff_01" socket="floor" fadeouttime="0.40"/>
     <AudioInfo name="SPELL_MOUNT_SPEED"/>
-  </activespell>
+  </activespell>-->
   <activespell uniquename="MOUNT_SPEEDBUFF_FW_DIREBEAR_T8" target="self" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="DASH" assessment="positive" buffpriority="9" spelleffectlocatag="@SPELLS_MOUNT_SPEEDBUFF_GENERAL_DESC">
     <buffovertime type="movespeedbonus" value="0.40" target="self" time="0" damagebreakseffect="true" attackingbreakseffect="true" worldinteractionbreakseffect="true" castingbreakseffect="false" mountingbreakseffect="false"/>
     <spelleffectfx prefab="FX/ClientPrefabs/fx_mount_direbear_speedbuff_01" socket="floor" fadeouttime="0.40"/>
@@ -9899,7 +9899,7 @@
     <buffovertime type="maxload" value="12.60" target="self" time="0"/>
   </activespell>
   <activespell uniquename="T8_MOUNT_DIREBEAR_MOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" neutraleffect="true" buffpriority="9" spelleffectlocatag="@SPELLS_STATUS_MOUNTED_HEAVY">
-    <buffovertime type="movespeedbonus" value="0.5" target="self" time="0"/>
+    <buffovertime type="movespeedbonus" value="0.85" target="self" time="0"/>
     <buffovertime type="physicalarmor" value="1.2" target="self" time="0"/>
     <buffovertime type="magicresistance" value="1.2" target="self" time="0"/>
     <buffovertime type="crowdcontrolresistance" value="2" target="self" time="0"/>
@@ -9908,7 +9908,7 @@
     <spellimmunity category="movementbuff" target="self" time="0"/>
     <spellimmunity category="heal" target="self" time="0"/>
     <spellimmunity category="buff_damageshield" target="self" time="0"/>
-    <castspellaftermoving spell="MOUNT_SPEEDBUFF_DIREBEAR" movetimetocast="4.0" standtimetoendspell="2.0" minmovespeed="5.0" damageresetstimetocast="true" cooldownafterdamage="4" target="self"/>
+    <!--<castspellaftermoving spell="MOUNT_SPEEDBUFF_DIREBEAR" movetimetocast="4.0" standtimetoendspell="2.0" minmovespeed="5.0" damageresetstimetocast="true" cooldownafterdamage="4" target="self"/>-->
   </activespell>
   <activespell uniquename="T8_MOUNT_DIREBEAR_HALFMOUNTED" target="self" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" hidespelleffecticon="true">
     <buffovertime type="maxload" value="13.67" target="self" time="0"/>
@@ -11630,7 +11630,7 @@
     <AudioInfo name="SPELL_MOUNT_SPEED"/>
   </activespell>
 
-  <!-- Intimidating Aura -->
+  <!-- Intimidating Aura - Grizzly Bear -->
   <togglespell uniquename="MOUNTSPELL_INTIMIDATINGAURA" target="self" keepmovingaftercast="true" energyusage="10" castingtime="0" hitdelay="0" standtime="0" castrange="0" recastdelay="60" category="instant" uisprite="BARRIER_DEMONIC" uitype="debuff" disruptionfactor="1" maxstack="1" assessment="positive" statblock="@SPELLS_STANDARD_STATBLOCK" spelleffectlocatag="@SPELLS_MOUNTSPELL_INTIMIDATINGAURA" boundtofaction="NotInAnyFaction">
     <aura target="self" spell="MOUNTSPELL_INTIMIDATINGAURA_EFFECT" removeonleave="true" auraradius="11" time="8" maxauratargets="25"/>
     <spelleffectfx socket="root_mount" prefab="FX/ClientPrefabs/fx_spell_enfeeble_aura_channelsound" size="1.5" constraintpreset="pointconstraint" ignoresocketscale="true"/>
@@ -11645,7 +11645,7 @@
     <spelleffectfx prefab="Prefabs/SpellEffects/SpellEffectVfx/ShieldDebuffEffectVfx_sound" soundinit="Play_resistance_reduction_voicelimit_6" socket="floor" size="1" constraintpreset="pointconstraint"/>
   </activespell>
 
-  <!-- Rush -->
+  <!-- Rush - Grizzly Bear -->
   <activespell uniquename="MOUNTSPELL_DMG_SPEEDBOOST_CONDITION" target="all" castingtime="0" hitdelay="0" standtime="0" disruptionfactor="1" recastdelay="0" energyusage="0" castrange="0" uitype="crowdcontrol" uisprite="MOUNTSPELL_POISONBOLT" category="instant" assessment="positive">
     <applyspell spell="MOUNTSPELL_DMG_SPEEDBOOST" target="self">
       <not>
@@ -11665,6 +11665,10 @@
 
   <passivespell uniquename="MOUNTSPELL_DMG_SPEEDBOOST_PASSIVE" uisprite="PASSIVE_AGILITY_1" statblock="@SPELLS_STATBLOCK_COOLDOWN">
     <locareferences>
+      <description>
+        <locareference tag="$$MOUNTSPELL_DMG_SPEEDBOOST.buffovertime[0].value$"/>
+        <locareference tag="$$MOUNTSPELL_DMG_SPEEDBOOST.buffovertime[0].time$"/>
+      </description>
       <statblock>
         <locareference tag="$$MOUNTSPELL_DMG_SPEEDBOOST_COOLDOWN.dummy[0].time$"/>
       </statblock>
@@ -13499,6 +13503,35 @@
     <buffovertime target="self" type="movespeedbonus" value="-0.5" time="3" donttriggerdiminishingreturns="true" ignorebonusccdurationscaling="true" ignorecrowdcontrolresistance="true" ignorediminishingreturns="true"/>
   </activespell>-->
 
+  <!-- Rush - Saddled Direbear -->
+  <passivespell uniquename="MOUNTSPELL_DMG_TAKEN_SPEEDBOOST_PASSIVE" uisprite="PASSIVE_AGILITY_1" statblock="@SPELLS_STATBLOCK_COOLDOWN" namelocatag="@SPELLS_MOUNTSPELL_DMG_SPEEDBOOST_PASSIVE" descriptionlocatag="@SPELLS_MOUNTSPELL_DMG_SPEEDBOOST_PASSIVE_DESC">
+    <locareferences>
+      <description>
+        <locareference tag="$$MOUNTSPELL_DMG_TAKEN_SPEEDBOOST.buffovertime[0].value$"/>
+        <locareference tag="$$MOUNTSPELL_DMG_TAKEN_SPEEDBOOST.buffovertime[0].time$"/>
+      </description>
+      <statblock>
+        <locareference tag="$$MOUNTSPELL_DMG_TAKEN_SPEEDBOOST_COOLDOWN.dummy[0].time$"/>
+      </statblock>
+    </locareferences>
+    <applyeffectoneventpassive event="ReceiveDirectMountDamage" applyeffecttarget="self" spell="MOUNTSPELL_DMG_TAKEN_SPEEDBOOST_CONDITION" chance="1"/>
+  </passivespell>
+  <activespell uniquename="MOUNTSPELL_DMG_TAKEN_SPEEDBOOST_CONDITION" target="all" castingtime="0" hitdelay="0" standtime="0" disruptionfactor="1" recastdelay="0" energyusage="0" castrange="0" uitype="crowdcontrol" uisprite="MOUNTSPELL_POISONBOLT" category="instant" assessment="positive">
+    <applyspell spell="MOUNTSPELL_DMG_TAKEN_SPEEDBOOST" target="self">
+      <not>
+        <IfSpellActive spell="MOUNTSPELL_DMG_TAKEN_SPEEDBOOST_COOLDOWN" who="SpellTarget"/>
+      </not>
+    </applyspell>
+  </activespell>
+  <activespell uniquename="MOUNTSPELL_DMG_TAKEN_SPEEDBOOST" target="self" keepmovingaftercast="true" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uisprite="SPRINT" category="instant" uitype="movement" assessment="positive" spelleffectlocatag="@SPELLS_STATUS_MOVESPEED_INCREASED">
+    <applyspell spell="MOUNTSPELL_DMG_TAKEN_SPEEDBOOST_COOLDOWN" target="self"/>
+    <buffovertime type="movespeedbonus" value="0.4" target="self" time="4"/>
+    <spelleffectfx prefab="Prefabs/SpellEffects/SpellEffectVfx/SprintEffectVfx" socket="floor"/>
+  </activespell>
+  <activespell uniquename="MOUNTSPELL_DMG_TAKEN_SPEEDBOOST_COOLDOWN" target="all" castingtime="0" hitdelay="0" standtime="0" disruptionfactor="1" recastdelay="0" energyusage="0" castrange="0" uitype="crowdcontrol" uisprite="PASSIVE_AGILITY_1" category="instant" assessment="positive">
+    <dummy target="self" time="8"/>
+  </activespell>
+
   <!-- Faction Warfare Mounts -->
   
   <!-- FW Caerleon -->
@@ -13629,7 +13662,7 @@
 
   
   <!-- FW Martlock -->
-  <!--  -->
+  <!-- Steadfast - Elite Bighorn Ram -->
   <activespell uniquename="MOUNTSPELL_RAM_FW_MARTLOCK_STEADFAST" target="self" castingtime="0" disruptionfactor="0" standtime="0" recastdelay="25" energyusage="4" castrange="0" category="mountbuff" uitype="buff" uisprite="LIVINGARMOR" assessment="positive" keepmovingaftercast="true" statblock="@SPELLS_CHANNELING_STATBLOCK" interruptiblebyspell="false"  controllerpreferredtarget="neutral">
     <applyspell target="self" spell="MOUNTSPELL_RAM_FW_MARTLOCK_STEADFAST_CHECK"/>
     <applyspell target="self" spell="MOUNTSPELL_RAM_FW_MARTLOCK_STEADFAST_BUFF"/>
@@ -13688,7 +13721,7 @@
     <AudioInfo name="SPELLHIT_ARMOR_INCREASE"/>
   </activespell>
   
-  <!-- Martlock Passive -->
+  <!-- Charged Gallop - Bighorn Ram -->
   <passivespell uniquename="MOUNTSPELL_RAM_FW_MARTLOCK_PASSIVE" uisprite="PASSIVE_AGILITY_1">
     <locareferences>
       <description>
@@ -13709,17 +13742,24 @@
     <spellimmunity category="buff_damageshield" target="self" time="0"/>
     <castspellaftermoving spell="MOUNT_SPEEDBUFF_FW_RAM_T5_01" movetimetocast="4.0" standtimetoendspell="2.0" minmovespeed="5.0" damageresetstimetocast="true" cooldownafterdamage="4" target="self"/>
     <castspellaftermoving spell="MOUNT_SPEEDBUFF_FW_RAM_T5_02" movetimetocast="8.0" standtimetoendspell="2.0" minmovespeed="5.0" damageresetstimetocast="true" cooldownafterdamage="8" target="self"/>
+    <castspellaftermoving spell="MOUNT_SPEEDBUFF_FW_RAM_T5_03" movetimetocast="12.0" standtimetoendspell="2.0" minmovespeed="5.0" damageresetstimetocast="true" cooldownafterdamage="12" target="self"/>
   </activespell>
   <activespell uniquename="MOUNT_SPEEDBUFF_FW_RAM_T5_01" target="self" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="DASH" assessment="positive" buffpriority="9" spelleffectlocatag="@SPELLS_MOUNT_SPEEDBUFF_GENERAL_DESC" >
     <buffovertime type="movespeedbonus" value="0.40" target="self" time="0" damagebreakseffect="true" attackingbreakseffect="true" worldinteractionbreakseffect="true" castingbreakseffect="true" mountingbreakseffect="false"/>
     <spelleffectfx prefab="FX/ClientPrefabs/fx_mount_ox_speedbuff_01" socket="floor" fadeouttime="0.40"/>
     <AudioInfo name="SPELL_MOUNT_SPEED"/>
   </activespell>
-  <activespell uniquename="MOUNT_SPEEDBUFF_FW_RAM_T5_02" target="self" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="DASH" assessment="positive" buffpriority="9" spelleffectlocatag="@SPELLS_MOUNTSPELL_RAM_FW_MARTLOCK_PASSIVE_SPELLEFFECT" >
-    <buffovertime type="movespeedbonus" value="0.15" target="self" time="0" damagebreakseffect="true" attackingbreakseffect="true" worldinteractionbreakseffect="true" castingbreakseffect="true" mountingbreakseffect="false"/>
+  <activespell uniquename="MOUNT_SPEEDBUFF_FW_RAM_T5_02" target="self" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="DASH" assessment="positive" buffpriority="9" spelleffectlocatag="@SPELLS_MOUNTSPELL_RAM_FW_MARTLOCK_PASSIVE_SPELLEFFECT">
+    <buffovertime type="movespeedbonus" value="0.10" target="self" time="0" damagebreakseffect="true" attackingbreakseffect="true" worldinteractionbreakseffect="true" castingbreakseffect="true" mountingbreakseffect="false"/>
     <spelleffectfx prefab="FX/ClientPrefabs/fx_mount_ox_speedbuff_01" socket="floor" fadeouttime="0.40"/>
     <AudioInfo name="SPELL_MOUNT_SPEED"/>
   </activespell>
+  <activespell uniquename="MOUNT_SPEEDBUFF_FW_RAM_T5_03" target="self" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="DASH" assessment="positive" buffpriority="9" spelleffectlocatag="@SPELLS_MOUNTSPELL_RAM_FW_MARTLOCK_PASSIVE_SPELLEFFECT">
+    <buffovertime type="movespeedbonus" value="0.10" target="self" time="0" damagebreakseffect="true" attackingbreakseffect="true" worldinteractionbreakseffect="true" castingbreakseffect="true" mountingbreakseffect="false"/>
+    <spelleffectfx prefab="FX/ClientPrefabs/fx_mount_ox_speedbuff_01" socket="floor" fadeouttime="0.40"/>
+    <AudioInfo name="SPELL_MOUNT_SPEED"/>
+  </activespell>
+  <!-- Charged Gallop - Elite Bighorn Ram -->
   <activespell uniquename="T8_MOUNT_FW_RAM_MOUNTED" target="self" category="mountbuff" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="MOUNT" neutraleffect="true" buffpriority="9" spelleffectlocatag="@SPELLS_STATUS_MOUNTED_HEAVY">
     <buffovertime type="movespeedbonus" value="0.60" target="self" time="0"/>
     <buffovertime type="physicalarmor" value="0.8" target="self" time="0"/>
@@ -13732,18 +13772,24 @@
     <spellimmunity category="buff_damageshield" target="self" time="0"/>
     <castspellaftermoving spell="MOUNT_SPEEDBUFF_FW_RAM_T8_01" movetimetocast="4.0" standtimetoendspell="2.0" minmovespeed="5.0" damageresetstimetocast="true" cooldownafterdamage="4" target="self"/>
     <castspellaftermoving spell="MOUNT_SPEEDBUFF_FW_RAM_T8_02" movetimetocast="8.0" standtimetoendspell="2.0" minmovespeed="5.0" damageresetstimetocast="true" cooldownafterdamage="8" target="self"/>
+    <castspellaftermoving spell="MOUNT_SPEEDBUFF_FW_RAM_T8_03" movetimetocast="12.0" standtimetoendspell="2.0" minmovespeed="5.0" damageresetstimetocast="true" cooldownafterdamage="12" target="self"/>
   </activespell>
   <activespell uniquename="MOUNT_SPEEDBUFF_FW_RAM_T8_01" target="self" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="DASH" assessment="positive" buffpriority="9" spelleffectlocatag="@SPELLS_MOUNT_SPEEDBUFF_GENERAL_DESC" >
     <buffovertime type="movespeedbonus" value="0.50" target="self" time="0" damagebreakseffect="true" attackingbreakseffect="true" worldinteractionbreakseffect="true" castingbreakseffect="true" mountingbreakseffect="false"/>
     <spelleffectfx prefab="FX/ClientPrefabs/fx_mount_ox_speedbuff_01" socket="floor" fadeouttime="0.40"/>
     <AudioInfo name="SPELL_MOUNT_SPEED"/>
   </activespell>
-  <activespell uniquename="MOUNT_SPEEDBUFF_FW_RAM_T8_02" target="self" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="DASH" assessment="positive" buffpriority="9" spelleffectlocatag="@SPELLS_MOUNTSPELL_RAM_FW_MARTLOCK_PASSIVE_SPELLEFFECT" >
-    <buffovertime type="movespeedbonus" value="0.15" target="self" time="0" damagebreakseffect="true" attackingbreakseffect="true" worldinteractionbreakseffect="true" castingbreakseffect="true" mountingbreakseffect="false"/>
+  <activespell uniquename="MOUNT_SPEEDBUFF_FW_RAM_T8_02" target="self" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="DASH" assessment="positive" buffpriority="9" spelleffectlocatag="@SPELLS_MOUNTSPELL_RAM_FW_MARTLOCK_PASSIVE_SPELLEFFECT">
+    <buffovertime type="movespeedbonus" value="0.10" target="self" time="0" damagebreakseffect="true" attackingbreakseffect="true" worldinteractionbreakseffect="true" castingbreakseffect="true" mountingbreakseffect="false"/>
     <spelleffectfx prefab="FX/ClientPrefabs/fx_mount_ox_speedbuff_01" socket="floor" fadeouttime="0.40"/>
     <AudioInfo name="SPELL_MOUNT_SPEED"/>
   </activespell>
-  
+  <activespell uniquename="MOUNT_SPEEDBUFF_FW_RAM_T8_03" target="self" category="instant" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="DASH" assessment="positive" buffpriority="9" spelleffectlocatag="@SPELLS_MOUNTSPELL_RAM_FW_MARTLOCK_PASSIVE_SPELLEFFECT">
+    <buffovertime type="movespeedbonus" value="0.10" target="self" time="0" damagebreakseffect="true" attackingbreakseffect="true" worldinteractionbreakseffect="true" castingbreakseffect="true" mountingbreakseffect="false"/>
+    <spelleffectfx prefab="FX/ClientPrefabs/fx_mount_ox_speedbuff_01" socket="floor" fadeouttime="0.40"/>
+    <AudioInfo name="SPELL_MOUNT_SPEED"/>
+  </activespell>
+
   <!-- FW Lymhurst -->
   <!-- Fearless Rush -->
   <activespell uniquename="MOUNTSPELL_DIREBOAR_FW_LYMHURST_CHARGE" target="ground" castingtime="0" disruptionfactor="0" standtime="0" recastdelay="40" energyusage="4" castrange="12" category="mountbuff" uitype="buff" uisprite="HAMMERTACKLE" assessment="positive" keepmovingaftercast="true" adjustgroundtargettorange="true" hidespelleffecticon="true" statblock="@SPELLS_STANDARD_STATBLOCK" controllerpreferredtarget="neutral" controllerpreferredcastdirection="alwayslookdirection">
@@ -19602,6 +19648,16 @@
     <spellvfx event="OnSpellHit" target="self" prefab="FX/ClientPrefabs/fx_spell_holy_heal_impact_large" socket="floor" constraintpreset="pointconstraint"/>
   </activespell>
   
+  <!--Season 32-->
+  <activespell uniquename="UNIQUE_AVATAR_GVGSEASON_32_CRYSTAL_SINGLE" target="self" castingtime="0" recastdelay="0" energyusage="0" castrange="0" hitdelay="0.2" standtime="0.8" castanimation="ability_eat" keepmovingaftercast="true" uitype="heal" uisprite="BUFF_CCR" category="instant" neutraleffect="true" buffpriority="10" namelocatag="@SPELLS_UNIQUE_AVATAR_GVGSEASON_04_SPELL" descriptionlocatag="@SPELLS_UNIQUE_AVATAR_GVGSEASON_04_SPELL_DESC">
+    <unlockavatar unlocktype="avatar" unlockname="GVGSEASON_32_CRYSTAL" target="self"/>
+    <spellvfx event="OnSpellHit" target="self" prefab="FX/ClientPrefabs/fx_spell_holy_heal_impact_large" socket="floor" constraintpreset="pointconstraint"/>
+  </activespell>
+  <activespell uniquename="UNIQUE_AVATAR_GVGSEASON_32_SILVER_SINGLE" target="self" castingtime="0" recastdelay="0" energyusage="0" castrange="0" hitdelay="0.2" standtime="0.8" castanimation="ability_eat" keepmovingaftercast="true" uitype="heal" uisprite="BUFF_CCR" category="instant" neutraleffect="true" buffpriority="10" namelocatag="@SPELLS_UNIQUE_AVATAR_GVGSEASON_04_SPELL" descriptionlocatag="@SPELLS_UNIQUE_AVATAR_GVGSEASON_04_SPELL_DESC">
+    <unlockavatar unlocktype="avatar" unlockname="GVGSEASON_32_SILVER" target="self"/>
+    <spellvfx event="OnSpellHit" target="self" prefab="FX/ClientPrefabs/fx_spell_holy_heal_impact_large" socket="floor" constraintpreset="pointconstraint"/>
+  </activespell>
+  
   <!-- GVG Season Random Avatar Box-->
   <activespell uniquename="UNIQUE_AVATAR_GVGSEASON_LEGACY_AVATARS_GOLD_SPELL" target="self" castingtime="0" recastdelay="0" energyusage="0" castrange="0" hitdelay="0.2" standtime="0.8" castanimation="ability_eat" keepmovingaftercast="true" uitype="heal" uisprite="BUFF_CCR" category="instant" neutraleffect="true" buffpriority="10" namelocatag="@SPELLS_UNIQUE_AVATAR_GVGSEASON_LEGACY_AVATARS_SPELL">
     <generateloot target="self" lootlist="LOOT_GVG_SEASON_LEGACY_AVATARS_GOLD" />
@@ -21637,7 +21693,7 @@
   </activespell>
 
   <!-- Panther Q-Spell -->
-  <!-- Sinister Swipe -->
+  <!-- Sinister Swipes - Prowling Staff -->
   <activespell uniquename="PANTHER_CLAWS" target="enemy" keepmovingaftercast="true" castingtime="0" hitdelay="0.1" standtime="0.1" disruptionfactor="1" recastdelay="3" energyusage="0" castrange="5" uitype="damage" uisprite="SINISTER_SWIPE" castanimation="cast_dash" animmode="SingleAnim" animIgnoreHitDelay="true" category="damage" maxcharges="3" showrange="true" assessment="negative" buffpriority="2" statblock="@SPELLS_CHARGECONSUMING_STATBLOCK" autoattackcooldownaftercasting="Trigger" controllerpreferredtarget="enemy">
     <locareferences>
       <description>
@@ -21646,6 +21702,7 @@
         <locareference tag="$$PANTHER_CLAWS.applyspell[0].IfConsumeCharges[0].charges$"/>
         <locareference tag="$$PANTHER_CLAWS_MAX_DAMAGE.directattributechange[0].change$"/>
         <locareference tag="$$PANTHER_CLAWS_MAX_DAMAGE.directattributechange[1].change$"/>
+        <locareference tag="$$PANTHER_CLAWS_MAX_DAMAGE.directattributechange[1].changevaluecap$"/>
         <locareference tag="$$PANTHER_CLAWS_COOLDOWN_PENALTY.setcooldowns[0].amount$"/>
       </description>
     </locareferences>
@@ -21666,7 +21723,7 @@
   <activespell uniquename="PANTHER_CLAWS_MAX_DAMAGE" target="enemy" castingtime="0" hitdelay="0.5" standtime="0" recastdelay="0" energyusage="0" castrange="0" uitype="damage" uisprite="SUNDER_ARMOR" category="damage" maxcharges="3" showrange="true" assessment="negative" namelocatag="@SPELLS_PANTHER_CLAWS">
     <applyspell spell="PANTHER_CLAWS_COOLDOWN_PENALTY" target="self"/> 
     <directattributechange target="enemyplayers" attribute="health" change="-0.25" effecttype="physical" ignorearmor="true" ignoreabilitypowerscaling="true" ignorebonusdamagescaling="true"  changetype="relativemissing"/>
-    <directattributechange target="enemymobs" attribute="health" change="-0.40" changevaluecap="-150" effecttype="physical" ignorearmor="false" ignoreabilitypowerscaling="true" ignorebonusdamagescaling="true" changetype="relativemissing" changevaluecapabilitypowerprogressionfactor="0.5"/>
+    <directattributechange target="enemymobs" attribute="health" change="-0.40" changevaluecap="-300" effecttype="physical" ignorearmor="false" ignoreabilitypowerscaling="true" ignorebonusdamagescaling="true" changetype="relativemissing" changevaluecapabilitypowerprogressionfactor="0.5"/>
     <spellvfx target="target_notCaster" event="OnSpellHit" alive="none" prefab="FX/ClientPrefabs/fx_impact_bloody" socket="floor" constraintpreset="inworld" />
     <spellvfx target="target_notCaster" event="OnSpellHit" alive="none" prefab="FX/ClientPrefabs/fx_spell_panther_claws_big" socket="damage" constraintpreset="pointconstraint" />
     <AudioInfo name="MELEE_IMPACT_MEDIUM_WINDY" /> 
@@ -23527,7 +23584,7 @@
   </activespell>
   
   <!-- Artefact Level 2 -->
-  <!-- Bloody Reap -->
+  <!-- Bloody Reap - Infernal Scythe -->
   <activespell uniquename="SCYTHESWING" target="self" keepmovingaftercast="true" castingtime="0" hitdelay="0.5" standtime="0" disruptionfactor="1" recastdelay="20" energyusage="18" castrange="0" uitype="damage" uisprite="BLOODY_REAP" castanimation="cast_melee" category="instant" animmode="SingleAnim" showrange="false" assessment="negative" hidespelleffecticon="true" statblock="@SPELLS_STANDARD_STATBLOCK" descriptionlocatag="@SPELLS_SCYTHESWING_V2_DESC" autoattackcooldownaftercasting="Trigger" controllerpreferredtarget="neutral">
     <spellindicationarea target="enemy" position="attarget" visible="true" ignoreLegacy250msDelay="true">
       <area>
@@ -23566,10 +23623,10 @@
   </activespell>
   <activespell uniquename="SCYTHESWING_HIT2" target="all" castingtime="0" hitdelay="0" standtime="0" disruptionfactor="1" recastdelay="0" energyusage="0" castrange="0" uitype="damage" uisprite="BLOODY_REAP" castanimation="cast_melee" category="damage" animmode="SingleAnim" showrange="false" assessment="negative" namelocatag="@SPELLS_SCYTHESWING" spelleffectlocatag="@SPELLS_STATUS_DOT_PHYSICAL">
     <nop target="self"/>
-    <attributechangeovertime target="enemy" attribute="health" effecttype="physical" change="-85" targetcountvaluebonusfactor="0.08" effectarearadius="5" initialinterval="0" interval="1" count="3">
+    <attributechangeovertime target="enemy" attribute="health" effecttype="physical" change="-74" targetcountvaluebonusfactor="0.08" effectarearadius="5" initialinterval="0" interval="0.75" count="4">
       <IfTargetHealthPercentage op="lessOrEqual" value="0.4"/>
     </attributechangeovertime>
-    <attributechangeovertime target="enemy" attribute="health" effecttype="physical" change="-47" targetcountvaluebonusfactor="0.08" effectarearadius="5"  initialinterval="0" interval="1" count="3">
+    <attributechangeovertime target="enemy" attribute="health" effecttype="physical" change="-42" targetcountvaluebonusfactor="0.08" effectarearadius="5"  initialinterval="0" interval="0.75" count="4">
       <IfTargetHealthPercentage op="greater" value="0.4"/>
     </attributechangeovertime>
     <spellvfx target="self" event="OnSpellHit" alive="none" prefab="FX/ClientPrefabs/fx_spell_bloody_reap" socket="root" duration="0.5"/>
@@ -26528,8 +26585,8 @@
   </activespell>
   
   <!-- Artefact Level 2 -->
-  <!-- Blood Ritual -->
-  <activespell uniquename="BLOOD_BLADE" target="ground" castingtime="0" keepmovingaftercast="true" hitdelay="0.15" standtime="0.02" disruptionfactor="0" recastdelay="0" energyusage="5" castrange="3" uitype="damage" uisprite="BLOOD_BLADE" castanimation="cast_melee2" category="damage" animmode="SingleAnim" assessment="negative" adjustgroundtargettorange="true" statblock="@SPELLS_STANDARD_STATBLOCK_V2" hidespelleffecticon="true" descriptionlocatag="@SPELLS_BLOOD_BLADE_REWORK_DESC" autoattackcooldownaftercasting="Trigger" controllerpreferredtarget="enemy">
+  <!-- Blood Ritual - Demonfang -->
+  <activespell uniquename="BLOOD_BLADE" target="ground" castingtime="0" keepmovingaftercast="true" hitdelay="0.15" standtime="0.02" disruptionfactor="0" recastdelay="0" energyusage="5" castrange="7.5" uitype="damage" uisprite="BLOOD_BLADE" castanimation="cast_melee2" category="damage" animmode="SingleAnim" assessment="negative" adjustgroundtargettorange="true" statblock="@SPELLS_STANDARD_STATBLOCK_V2" hidespelleffecticon="true" descriptionlocatag="@SPELLS_BLOOD_BLADE_REWORK_DESC" autoattackcooldownaftercasting="Trigger" controllerpreferredtarget="enemy">
     <locareferences>
       <statblock>
         <locareference tag="$energyusage$"/>
@@ -26545,7 +26602,7 @@
     <spellvfx target="self" event="OnCastStart" alive="none" prefab="FX/ClientPrefabs/fx_impact_blood_splatter" socket="offhand"  timeoffset="0.2"/>
     <AudioInfo name="MELEE_DAGGER_BLOODBLADE"/>
   </activespell>
-  <activespell uniquename="BLOOD_BLADE_MULTI" target="ground" castingtime="0" keepmovingaftercast="true" hitdelay="0.15" standtime="0.02" disruptionfactor="0" recastdelay="0" energyusage="5" castrange="3" uitype="damage" uisprite="BLOOD_BLADE" castanimation="cast_melee2" category="damage" animmode="SingleAnim" assessment="negative" adjustgroundtargettorange="true" namelocatag="@SPELLS_BLOOD_BLADE" descriptionlocatag="@SPELLS_BLOOD_BLADE_REWORK_DESC" statblock="@SPELLS_STANDARD_STATBLOCK_V2" hidespelleffecticon="true" autoattackcooldownaftercasting="Trigger">
+  <activespell uniquename="BLOOD_BLADE_MULTI" target="ground" castingtime="0" keepmovingaftercast="true" hitdelay="0.15" standtime="0.02" disruptionfactor="0" recastdelay="0" energyusage="5" castrange="7.5" uitype="damage" uisprite="BLOOD_BLADE" castanimation="cast_melee2" category="damage" animmode="SingleAnim" assessment="negative" adjustgroundtargettorange="true" namelocatag="@SPELLS_BLOOD_BLADE" descriptionlocatag="@SPELLS_BLOOD_BLADE_REWORK_DESC" statblock="@SPELLS_STANDARD_STATBLOCK_V2" hidespelleffecticon="true" autoattackcooldownaftercasting="Trigger">
     <locareferences>
       <statblock>
         <locareference tag="$energyusage$"/>
@@ -26561,7 +26618,7 @@
     <spellvfx target="self" event="OnCastStart" alive="none" prefab="FX/ClientPrefabs/fx_impact_blood_splatter" socket="offhand"  timeoffset="0.2"/>
     <AudioInfo name="MELEE_DAGGER_BLOODBLADE"/>
   </activespell>
-  <activespell uniquename="BLOOD_BLADE_MULTI2" target="ground" castingtime="0" keepmovingaftercast="true" hitdelay="0.15" standtime="0.02" disruptionfactor="0" recastdelay="20" energyusage="5" castrange="3" uitype="damage" uisprite="BLOOD_BLADE" castanimation="cast_melee2" category="damage" animmode="SingleAnim" assessment="negative" adjustgroundtargettorange="true" namelocatag="@SPELLS_BLOOD_BLADE" descriptionlocatag="@SPELLS_BLOOD_BLADE_REWORK_DESC" statblock="@SPELLS_STANDARD_STATBLOCK_V2" hidespelleffecticon="true" autoattackcooldownaftercasting="Trigger">
+  <activespell uniquename="BLOOD_BLADE_MULTI2" target="ground" castingtime="0" keepmovingaftercast="true" hitdelay="0.15" standtime="0.02" disruptionfactor="0" recastdelay="20" energyusage="5" castrange="7.5" uitype="damage" uisprite="BLOOD_BLADE" castanimation="cast_melee2" category="damage" animmode="SingleAnim" assessment="negative" adjustgroundtargettorange="true" namelocatag="@SPELLS_BLOOD_BLADE" descriptionlocatag="@SPELLS_BLOOD_BLADE_REWORK_DESC" statblock="@SPELLS_STANDARD_STATBLOCK_V2" hidespelleffecticon="true" autoattackcooldownaftercasting="Trigger">
     <locareferences>
       <statblock>
         <locareference tag="$energyusage$"/>
@@ -29335,8 +29392,8 @@
   </activespell>
 
   <!-- Artefact Level 3 -->
-  <!-- Ground Pound -->
-  <activespell uniquename="RAM_CHARGE" target="ground" castingtime="0.4" recastdelay="30" energyusage="23" castrange="16" hitdelay="0" standtime="0" category="instant" uitype="crowdcontrol" showrange="true" uisprite="GROUND_POUND" adjustgroundtargettorange="true" castanimation="cast_jump" animmode="SingleAnim" interruptiblebyspell="false" hidespelleffecticon="true" statblock="@SPELLS_STANDARD_STATBLOCK" descriptionlocatag="@SPELLS_RAM_CHARGE_V2_DESC" autoattackcooldownaftercasting="Trigger" controllerpreferredtarget="enemy" controllerpreferredcastdirection="targetthenlookdirection" controllerselfcastable="true">
+  <!-- Ground Pound - Grovekeeper -->
+  <activespell uniquename="RAM_CHARGE" target="ground" castingtime="0.2" recastdelay="30" energyusage="23" castrange="16" hitdelay="0" standtime="0" category="instant" uitype="crowdcontrol" showrange="true" uisprite="GROUND_POUND" adjustgroundtargettorange="true" castanimation="cast_jump" animmode="SingleAnim" interruptiblebyspell="false" hidespelleffecticon="true" statblock="@SPELLS_STANDARD_STATBLOCK" descriptionlocatag="@SPELLS_RAM_CHARGE_V2_DESC" autoattackcooldownaftercasting="Trigger" controllerpreferredtarget="enemy" controllerpreferredcastdirection="targetthenlookdirection" controllerselfcastable="true">
     <locareferences>
       <description>
         <locareference tag="$$RAM_CHARGE_EFFECT.applyspell[1].effectarearadius$"/>
@@ -29894,7 +29951,7 @@
   </activespell>
 
   <!-- Level 3 -->
-  <!-- Divine Protection -->
+  <!-- Divine Protection - Divine Staff -->
   <activespell uniquename="HOLYSHIELD" target="friendall" castingtime="0" keepmovingaftercast="false" energyusage="9" standtime="0" castrange="13" recastdelay="0" uisprite="DIVINE_PROTECTION" castanimation="cast_heal" category="instant" uitype="buff" assessment="positive" showrange="true" statblock="@SPELLS_STATBLOCK_SEQUENCE_1_2" descriptionlocatag="@SPELLS_HOLYSHIELD_V2_DESC" hidespelleffecticon="true" autoattackcooldownaftercasting="Trigger" controllerpreferredtarget="ally" controllerselfcastable="true">
     <locareferences>
       <description>
@@ -29924,7 +29981,7 @@
   </activespell>
   <activespell uniquename="HOLYSHIELD_SHIELD" target="friendall" energyusage="0" castingtime="0" standtime="0" castrange="0" recastdelay="0" uisprite="DIVINE_PROTECTION" castanimation="cast_heal" category="buff_damageshield" uitype="heal" assessment="positive" hidespelleffecticon="false" spelleffectlocatag="@SPELLS_STATUS_SHIELD">
     <applyspell target="friendall" spell="HOLYSHIELD_TARGET" />
-    <damageshield target="friendall" damageabsorbed="456.30" time="4"/>
+    <damageshield target="friendall" damageabsorbed="500" time="4"/>
     <spelleffectfx prefab="FX/ClientPrefabs/fx_spell_holyshield_wings_bubble" socket="root"/>
     <spellvfx target="self" event="OnCastStart" alive="none" prefab="FX/ClientPrefabs/fx_spell_holy_heal_loop_silent" socket="mainhandprojectile"/>
   </activespell>
@@ -30752,7 +30809,7 @@
   </activespell>
   
   <!-- Artifacat Level 5-->
-  <!-- Crystal Mace - Eye of the Storm -->
+  <!-- Eye of the Storm - Dreadstorm Monarch -->
   <activespell uniquename="MACE_CRYSTAL_FRAGMENT_STORM" target="ground" castingtime="0" keepmovingaftercast="false" hitdelay="0.25" standtime="0.3" disruptionfactor="0" recastdelay="1.5" energyusage="5" castrange="3" uitype="debuff" uisprite="MACE_CRYSTAL_FRAGMENT_STORM" castanimation="cast_multi_1" category="instant" animmode="SingleAnim" assessment="negative" adjustgroundtargettorange="true" statblock="@SPELLS_STATBLOCK_V2_MULTI2" bindtoitem="true" autoattackcooldownaftercasting="Trigger" controllerpreferredtarget="enemy">
     <spellindicationarea target="enemy" position="atcaster" visible="true" ignoreLegacy250msDelay="true">
       <area>
@@ -30985,9 +31042,9 @@
         <locareference tag="$$MACE_CRYSTAL_FRAGMENT_STORM_AURA_EFFECT.buffovertime[2].value$"/>
       </spelleffect>
     </locareferences>
-    <buffovertime target="enemy" type="physicalarmor" value="-0.18" time="30"/>
-    <buffovertime target="enemy" type="magicresistance" value="-0.18" time="30"/>
-    <buffovertime target="enemy" type="movespeedbonus" value="-0.25" time="30"/>
+    <buffovertime target="enemy" type="physicalarmor" value="-0.18" time="30" targetcountvaluebonusfactor="0.08"/>
+    <buffovertime target="enemy" type="magicresistance" value="-0.18" time="30" targetcountvaluebonusfactor="0.08"/>
+    <buffovertime target="enemy" type="movespeedbonus" value="-0.25" time="30" targetcountdurationbonusfactor="0.08" ignorecrowdcontrolresistance="true" ignorediminishingreturns="true"/>
     <spelleffectfx prefab="FX/ClientPrefabs/fx_slow" socket="floor" />
     <spelleffectfx prefab="Prefabs/SpellEffects/SpellEffectVfx/ShieldDebuffEffectVfx" socket="floor" size="1" constraintpreset="pointconstraint"/>
   </activespell>
@@ -33020,8 +33077,8 @@
   </activespell>
 
   <!-- Level 2 -->
-  <!-- Charge -->
-  <activespell uniquename="CLAYMORECHARGE" target="enemy" castingtime="0.4" hitdelay="0" standtime="0" disruptionfactor="1" recastdelay="20" energyusage="16" castrange="13" uitype="movement" uisprite="CLAYMORESTRIKE" castanimation="charge_2hsword" animmode="SingleAnim" uiatlas="RefSpellAtlas" category="crowdcontrol" usableincombat="true" showrange="true" interruptiblebyspell="false" statblock="@SPELLS_STANDARD_STATBLOCK" descriptionlocatag="@SPELLS_CLAYMORECHARGE_V2_DESC" hidespelleffecticon="true" autoattackcooldownaftercasting="Trigger" controllerpreferredtarget="enemy">
+  <!-- Charge - Claymore -->
+  <activespell uniquename="CLAYMORECHARGE" target="enemy" castingtime="0.4" hitdelay="0" standtime="0" disruptionfactor="1" recastdelay="20" energyusage="16" castrange="13" uitype="movement" uisprite="CLAYMORESTRIKE" castanimation="charge_2hsword" animmode="SingleAnim" uiatlas="RefSpellAtlas" category="crowdcontrol" usableincombat="true" showrange="true" interruptiblebyspell="false" statblock="@SPELLS_STANDARD_STATBLOCK" descriptionlocatag="@SPELLS_CLAYMORECHARGE_DESC" hidespelleffecticon="true" autoattackcooldownaftercasting="Trigger" controllerpreferredtarget="enemy">
      <locareferences>
       <description>
         <locareference tag="$$CLAYMORECHARGE_MARK.invincibility.time$"/>
@@ -33030,10 +33087,6 @@
         <locareference tag="$$CLAYMORECHARGE_EFFECT1.directattributechange[0].change$"/>
         <locareference tag="$$CLAYMORECHARGE_EFFECT2.directattributechange[0].change$"/>
         <locareference tag="$$CLAYMORECHARGE_EFFECT3.directattributechange[0].change$"/>
-        <locareference tag="$$CLAYMORECHARGE_AOE_EFFECT0.directattributechange[0].change$"/>
-        <locareference tag="$$CLAYMORECHARGE_AOE_EFFECT1.directattributechange[0].change$"/>
-        <locareference tag="$$CLAYMORECHARGE_AOE_EFFECT2.directattributechange[0].change$"/>
-        <locareference tag="$$CLAYMORECHARGE_AOE_EFFECT3.directattributechange[0].change$"/>
       </description>
     </locareferences>
     <applyspell spell="CLAYMORECHARGE_MARK" target="enemy" />
@@ -33179,19 +33232,19 @@
     </applyspell>
   </activespell>
   <activespell uniquename="CLAYMORECHARGE_AOE_EFFECT0" target="enemy" castingtime="0" hitdelay="0" standtime="0.0" disruptionfactor="1" recastdelay="0" energyusage="0" castrange="0" uitype="movement" uisprite="CLAYMORESTRIKE" uiatlas="RefSpellAtlas" category="damage" spelleffectanimation="sleep" namelocatag="@SPELLS_CLAYMORECHARGE">
-    <directattributechange target="enemy" attribute="health" change="-56" effecttype="physical" targetcountvaluebonusfactor="0.08" />
+    <directattributechange target="enemy" attribute="health" change="-85" effecttype="physical" targetcountvaluebonusfactor="0.08" />
     <spellvfx target="target_notCaster" event="OnSpellHit" alive="none" prefab="FX/ClientPrefabs/fx_spell_aoe_impact" socket="damage" constraintpreset="pointconstraint" />
   </activespell>
   <activespell uniquename="CLAYMORECHARGE_AOE_EFFECT1" target="enemy" castingtime="0" hitdelay="0" standtime="0.0" disruptionfactor="1" recastdelay="0" energyusage="0" castrange="0" uitype="movement" uisprite="CLAYMORESTRIKE" uiatlas="RefSpellAtlas" category="damage" spelleffectanimation="sleep" namelocatag="@SPELLS_CLAYMORECHARGE">
-    <directattributechange target="enemy" attribute="health" change="-90" effecttype="physical" targetcountvaluebonusfactor="0.08" />
+    <directattributechange target="enemy" attribute="health" change="-137" effecttype="physical" targetcountvaluebonusfactor="0.08" />
     <spellvfx target="target_notCaster" event="OnSpellHit" alive="none" prefab="FX/ClientPrefabs/fx_spell_aoe_impact" socket="damage" constraintpreset="pointconstraint" />
   </activespell>
   <activespell uniquename="CLAYMORECHARGE_AOE_EFFECT2" target="enemy" castingtime="0" hitdelay="0" standtime="0.0" disruptionfactor="1" recastdelay="0" energyusage="0" castrange="0" uitype="movement" uisprite="CLAYMORESTRIKE" uiatlas="RefSpellAtlas" category="damage" spelleffectanimation="sleep" namelocatag="@SPELLS_CLAYMORECHARGE">
-    <directattributechange target="enemy" attribute="health" change="-135" effecttype="physical" targetcountvaluebonusfactor="0.08" />
+    <directattributechange target="enemy" attribute="health" change="-204" effecttype="physical" targetcountvaluebonusfactor="0.08" />
     <spellvfx target="target_notCaster" event="OnSpellHit" alive="none" prefab="FX/ClientPrefabs/fx_spell_aoe_impact" socket="damage" constraintpreset="pointconstraint" />
   </activespell>
   <activespell uniquename="CLAYMORECHARGE_AOE_EFFECT3" target="enemy" castingtime="0" hitdelay="0" standtime="0.0" disruptionfactor="1" recastdelay="0" energyusage="0" castrange="0" uitype="movement" uisprite="CLAYMORESTRIKE" uiatlas="RefSpellAtlas" category="damage" spelleffectanimation="sleep" namelocatag="@SPELLS_CLAYMORECHARGE">
-    <directattributechange target="enemy" attribute="health" change="-191" effecttype="physical" targetcountvaluebonusfactor="0.08" />
+    <directattributechange target="enemy" attribute="health" change="-290" effecttype="physical" targetcountvaluebonusfactor="0.08" />
     <spellvfx target="target_notCaster" event="OnSpellHit" alive="none" prefab="FX/ClientPrefabs/fx_spell_aoe_impact" socket="damage" constraintpreset="pointconstraint" />
   </activespell>
 
@@ -33512,7 +33565,7 @@
   </activespell>
 
   <!--Artefact Level 4-->
-  <!-- Majestic Smash -->
+  <!-- Majestic Smash - Kingmaker -->
   <activespell uniquename="MAJESTIC_SMASH" uisprite="MAJESTIC_SMASH" keepmovingaftercast="false" target="ground" castingtime="0" standtime="1.6" hitdelay="0.1" disruptionfactor="0" recastdelay="20" energyusage="19" castrange="6" uitype="damage" category="instant" castanimation="melee_heavycombo" assessment="negative" animmode="SingleAnim" animIgnoreHitDelay="true" adjustgroundtargettorange="true" statblock="@SPELLS_STANDARD_STATBLOCK" autoattackcooldownaftercasting="Trigger" controllerpreferredtarget="enemy" descriptionlocatag="@SPELLS_MAJESTIC_SMASH_V2_DESC">
     <locareferences>
       <description>
@@ -33643,11 +33696,12 @@
     <removeactivespell target="self" spell="HEROIC_STACK" casterchargesonly="true" />
   </activespell>
   <activespell uniquename="MAJESTIC_SMASH_KILL_BUFF" target="all" castingtime="0" hitdelay="0" standtime="0" disruptionfactor="1" recastdelay="0" energyusage="0" castrange="0" uisprite="MAJESTIC_SMASH" uitype="damage" category="instant" stackingrule="replacenever" spelleffectlocatag="@SPELLS_STATUS_DAMAGE_INCREASED" assessment="positive">
-    <buffovertime target="friendall" type="physicalattackdamagebonus" value="0.2" time="5" effectarearadius="11"/>
-    <buffovertime target="friendall" type="magicattackdamagebonus" value="0.2" time="5" effectarearadius="11"/>
-    <buffovertime target="friendall" type="physicalspelldamagebonus" value="0.2" time="5" effectarearadius="11"/>
-    <buffovertime target="friendall" type="magicspelldamagebonus" value="0.2" time="5" effectarearadius="11"/>
+    <buffovertime target="friendall" type="physicalattackdamagebonus" value="0.3" time="5" effectarearadius="11"/>
+    <buffovertime target="friendall" type="magicattackdamagebonus" value="0.3" time="5" effectarearadius="11"/>
+    <buffovertime target="friendall" type="physicalspelldamagebonus" value="0.3" time="5" effectarearadius="11"/>
+    <buffovertime target="friendall" type="magicspelldamagebonus" value="0.3" time="5" effectarearadius="11"/>
     <spelleffectfx prefab="FX/ClientPrefabs/fx_spell_damageBuffYellow" socket="floor" constraintpreset="pointconstraint"/>
+    <spelleffectfx prefab="FX/ClientPrefabs/fx_mount_avalon_basilisk_lightning_01" socket="damage" constraintpreset="pointconstraint"/>
   </activespell>
   
   <!-- Limitbreaker -->
@@ -33808,8 +33862,8 @@
     <removeactivespell spell="CARTWHEEL" target="self" casterchargesonly="true" />
   </activespell>
 
-  <!-- Concussive Combo -->
-  <activespell uniquename="CONCUSSIVEBLOW_MULTI_1" target="enemy" castingtime="0" hitdelay="0.24" standtime="0.3" disruptionfactor="1" recastdelay="3" energyusage="3" castrange="4" uitype="buff" uisprite="STUN" castanimation="cast_multi_1" category="damage" showrange="true" assessment="negative" descriptionlocatag="@SPELLS_CONCUSSIVEBLOW_MULTI_1_V2_DESC" statblock="@SPELLS_STANDARD_STATBLOCK" animmode="SingleAnim" hidespelleffecticon="true" autoattackcooldownaftercasting="Trigger" controllerpreferredtarget="enemy">
+  <!-- Concussive Combo - all Quarterstaffs -->
+  <activespell uniquename="CONCUSSIVEBLOW_MULTI_1" target="enemy" castingtime="0" hitdelay="0.24" standtime="0.25" disruptionfactor="1" recastdelay="3" energyusage="3" castrange="4" uitype="buff" uisprite="STUN" castanimation="cast_multi_1" category="damage" showrange="true" assessment="negative" descriptionlocatag="@SPELLS_CONCUSSIVEBLOW_MULTI_1_DESC" statblock="@SPELLS_STANDARD_STATBLOCK" animmode="SingleAnim" hidespelleffecticon="true" autoattackcooldownaftercasting="Trigger" controllerpreferredtarget="enemy">
     <locareferences>
       <description>
         <locareference tag="$$CONCUSSIVEBLOW_MULTI_1.multispell[0].timewindow$"/>
@@ -33819,9 +33873,13 @@
         <locareference tag="$$CONCUSSIVEBLOW_MULTI_3.directattributechange[0].effectarearadius$"/>
         <locareference tag="$$CONCUSSION.stun[0].time$"/>
         <locareference tag="$$CONCUSSIVEBLOW_MULTI_3.changeaggro[0].value$"/>
+        <locareference tag="$$CONCUSSIVEBLOW_SLOW.buffovertime[0].value$"/>
+        <locareference tag="$$CONCUSSIVEBLOW_SLOW.buffovertime[0].time$"/>
+        <locareference tag="$$CONCUSSIVEBLOW_SLOW.maxcharges$"/>
       </description>
     </locareferences>
     <directattributechange target="enemy" attribute="health" change="-85.00" effecttype="physical"/>
+    <applyspell target="enemy" spell="CONCUSSIVEBLOW_SLOW"/>
     <changeaggro target="self" value="50"/>
     <spellimmunity target="enemy" spellname="CONCUSSIVEBLOW_EFFECT" time="0.5"/>
     <multispell spell="CONCUSSIVEBLOW_MULTI_2" slot="mainhand1" castableonlyonce="true" timeoutcooldown="0" extendtimewindowaftersuccessfulcastbyseconds="1" timewindow="6"/>
@@ -33838,7 +33896,7 @@
     <spellvfx event="OnSpellHit" target="target_notCaster" prefab="FX/ClientPrefabs/fx_hit_01" socket="damage" constraintpreset="pointconstraint" />
     <AudioInfo name="MELEE_STAFF_CONCUSSIVE_SWING" />
   </activespell>
-  <activespell uniquename="CONCUSSIVEBLOW_MULTI_2" target="enemy" castupperbodyblendtime="0.0035" castingtime="0" hitdelay="0.24" standtime="0.3" disruptionfactor="1" recastdelay="3" energyusage="3" castrange="4" uitype="buff" uisprite="STUN" castanimation="cast_multi_2" category="damage" showrange="true" assessment="negative" statblock="@SPELLS_STANDARD_STATBLOCK" animmode="SingleAnim" namelocatag="@SPELLS_CONCUSSIVEBLOW_MULTI_1" descriptionlocatag="@SPELLS_CONCUSSIVEBLOW_MULTI_1_V2_DESC" hidespelleffecticon="true" autoattackcooldownaftercasting="Trigger" controllerpreferredtarget="enemy">
+  <activespell uniquename="CONCUSSIVEBLOW_MULTI_2" target="enemy" castupperbodyblendtime="0.0035" castingtime="0" hitdelay="0.24" standtime="0.25" disruptionfactor="1" recastdelay="3" energyusage="3" castrange="4" uitype="buff" uisprite="STUN" castanimation="cast_multi_2" category="damage" showrange="true" assessment="negative" statblock="@SPELLS_STANDARD_STATBLOCK" animmode="SingleAnim" namelocatag="@SPELLS_CONCUSSIVEBLOW_MULTI_1" descriptionlocatag="@SPELLS_CONCUSSIVEBLOW_MULTI_1_DESC" hidespelleffecticon="true" autoattackcooldownaftercasting="Trigger" controllerpreferredtarget="enemy">
     <locareferences>
       <description>
         <locareference tag="$$CONCUSSIVEBLOW_MULTI_1.multispell[0].timewindow$"/>
@@ -33848,9 +33906,13 @@
         <locareference tag="$$CONCUSSIVEBLOW_MULTI_3.directattributechange[0].effectarearadius$"/>
         <locareference tag="$$CONCUSSION.stun[0].time$"/>
         <locareference tag="$$CONCUSSIVEBLOW_MULTI_3.changeaggro[0].value$"/>
+        <locareference tag="$$CONCUSSIVEBLOW_SLOW.buffovertime[0].value$"/>
+        <locareference tag="$$CONCUSSIVEBLOW_SLOW.buffovertime[0].time$"/>
+        <locareference tag="$$CONCUSSIVEBLOW_SLOW.maxcharges$"/>
       </description>
     </locareferences>
     <directattributechange target="enemy" attribute="health" change="-85.00" effecttype="physical" targetcountvaluebonusfactor="0.08"/>
+    <applyspell target="enemy" spell="CONCUSSIVEBLOW_SLOW"/>
     <spellimmunity target="enemy" spellname="CONCUSSIVEBLOW_EFFECT" time="0.5"/>
     <changeaggro target="self" value="50"/>
     <multispell spell="CONCUSSIVEBLOW_MULTI_3" slot="mainhand1" castableonlyonce="true" timeoutcooldown="0" extendtimewindowaftersuccessfulcastbyseconds="1" timewindow="6"/>
@@ -33867,7 +33929,7 @@
     <spellvfx event="OnSpellHit" target="target_notCaster" prefab="FX/ClientPrefabs/fx_hit_01" socket="damage" constraintpreset="pointconstraint" />
     <AudioInfo name="MELEE_STAFF_CONCUSSIVE_SWING" />
   </activespell>
-  <activespell uniquename="CONCUSSIVEBLOW_MULTI_3" target="enemy" castingtime="0" castupperbodyblendtime="0.0065" hitdelay="0.32" standtime="0.4" disruptionfactor="1" recastdelay="3" energyusage="3" castrange="4" uitype="buff" uisprite="STUN" castanimation="cast_multi_3" category="damage" showrange="true" assessment="negative" statblock="@SPELLS_STANDARD_STATBLOCK" animmode="SingleAnim" namelocatag="@SPELLS_CONCUSSIVEBLOW_MULTI_1" descriptionlocatag="@SPELLS_CONCUSSIVEBLOW_MULTI_1_V2_DESC" autoattackcooldownaftercasting="Trigger" controllerpreferredtarget="enemy">
+  <activespell uniquename="CONCUSSIVEBLOW_MULTI_3" target="enemy" castingtime="0" castupperbodyblendtime="0.0065" hitdelay="0.32" standtime="0.4" disruptionfactor="1" recastdelay="3" energyusage="3" castrange="4" uitype="buff" uisprite="STUN" castanimation="cast_multi_3" category="damage" showrange="true" assessment="negative" statblock="@SPELLS_STANDARD_STATBLOCK" animmode="SingleAnim" namelocatag="@SPELLS_CONCUSSIVEBLOW_MULTI_1" descriptionlocatag="@SPELLS_CONCUSSIVEBLOW_MULTI_1_DESC" autoattackcooldownaftercasting="Trigger" controllerpreferredtarget="enemy">
     <locareferences>
       <description>
         <locareference tag="$$CONCUSSIVEBLOW_MULTI_1.multispell[0].timewindow$"/>
@@ -33877,6 +33939,9 @@
         <locareference tag="$$CONCUSSIVEBLOW_MULTI_3.directattributechange[0].effectarearadius$"/>
         <locareference tag="$$CONCUSSION.stun[0].time$"/>
         <locareference tag="$$CONCUSSIVEBLOW_MULTI_3.changeaggro[0].value$"/>
+        <locareference tag="$$CONCUSSIVEBLOW_SLOW.buffovertime[0].value$"/>
+        <locareference tag="$$CONCUSSIVEBLOW_SLOW.buffovertime[0].time$"/>
+        <locareference tag="$$CONCUSSIVEBLOW_SLOW.maxcharges$"/>
       </description>
     </locareferences>
     <directattributechange target="enemy" attribute="health" change="-85" effecttype="physical" effectarearadius="4" targetcountvaluebonusfactor="0.08"/>
@@ -33891,6 +33956,7 @@
   </activespell>
   <activespell uniquename="CONCUSSIVEBLOW_EFFECT" target="enemy" castingtime="0" hitdelay="0" standtime="0" disruptionfactor="1" recastdelay="0" energyusage="0" castrange="0" uitype="buff" uisprite="STUN" category="damage" assessment="negative" statblock="@SPELLS_STANDARD_STATBLOCK"  namelocatag="@SPELLS_CONCUSSIVEBLOW_MULTI_1" descriptionlocatag="@SPELLS_CONCUSSIVEBLOW_MULTI_1_DESC">
     <directattributechange target="enemy" attribute="health" change="-85" effecttype="physical" targetcountvaluebonusfactor="0.08"/>
+    <applyspell target="enemy" spell="CONCUSSIVEBLOW_SLOW"/>
     <changeaggro target="self" value="50"/>
     <spellvfx event="OnSpellHit" target="target_notCaster" prefab="FX/ClientPrefabs/fx_hit_01" socket="damage" constraintpreset="pointconstraint" />
     <AudioInfo name="MELEE_STAFF_CONCUSSIVE_HIT" />
@@ -33898,6 +33964,10 @@
   <activespell uniquename="CONCUSSION" target="enemy" castingtime="0" hitdelay="0" standtime="0" disruptionfactor="1" recastdelay="0" energyusage="0" castrange="0" uitype="crowdcontrol" uisprite="STUN" category="crowdcontrol" spelleffectanimation="sleep" spelleffectlocatag="@SPELLS_STATUS_STUN">
     <stun target="enemy" time="1.43" damagebreakseffect="false" />
     <spelleffectfx prefab="FX/ClientPrefabs/fx_status_stun" socket="halo" constraintpreset="pointconstraint" />
+  </activespell>
+  <activespell uniquename="CONCUSSIVEBLOW_SLOW" target="enemy" castingtime="0" hitdelay="0" standtime="0" disruptionfactor="1" recastdelay="0" energyusage="0" castrange="0" uitype="crowdcontrol" uisprite="HAMSTRING" category="crowdcontrol" spelleffectlocatag="@SPELLS_STATUS_SLOW" maxcharges="2">
+    <buffovertime type="movespeedbonus" target="enemy" value="-0.08" time="3" targetcountdurationbonusfactor="0.08" />
+    <spelleffectfx prefab="FX/ClientPrefabs/fx_slow" socket="floor" />
   </activespell>
   
   <!-- Whirling Strikes -->
@@ -37711,8 +37781,7 @@
     <spelleffectfx prefab="FX/ClientPrefabs/fx_beam_shield_bubble" socket="damage" constraintpreset="pointconstraint" />  
   </activespell>
 
-  <!-- ROYAL Helmet -->
-  <!-- Ballista Support Fire -->
+  <!-- Ballista Support Fire - Royal Helmet-->
   <activespell uniquename="ARTILLERY_COMMAND" keepmovingaftercast="false" target="ground" castingtime="0" hitdelay="0.6" standtime="0.2" disruptionfactor="1" recastdelay="30" energyusage="0" uisprite="METEOR_FIRE" castrange="11" uitype="crowdcontrol" category="crowdcontrol" castanimation="cast_command" spelleffectanimation="sleep" maxstack="1" showrange="true" assessment="negative" animmode="SingleAnim" adjustgroundtargettorange="true" animIgnoreHitDelay="true" statblock="@SPELLS_STANDARD_STATBLOCK" spelleffectlocatag="@SPELLS_STATUS_STUN" autoattackcooldownaftercasting="Trigger" requireslineofsight="false" controllerpreferredtarget="enemy" controllerselfcastable="true">
     <spellindicationarea target="enemy" position="attarget" visible="true">
       <area>
@@ -37730,7 +37799,6 @@
     <spellvfx target="ground" event="OnCastFinished" size="1" socket="centerGround" timeoffset="0.6" prefab="FX/ClientPrefabs/fx_mortar_barrel_impact_playerspell" constraintpreset="inworld" />
     <spellvfx event="OnSpellHit" target="target" prefab="FX/ClientPrefabs/fx_spell_aoe_impact" socket="damage" constraintpreset="pointconstraint" />
     <spelleffectfx prefab="FX/ClientPrefabs/fx_status_stun" socket="halo" constraintpreset="pointconstraint" />
-    <spelleffectfx prefab="FX/ClientPrefabs/fx_slow" socket="floor" />
     <AudioInfo name="SPELL_BALLISTA_SUPPORT" />
   </activespell>
   
@@ -37750,8 +37818,8 @@
   </activespell>
 
   <!-- Artefact Level 2 -->
-  <!-- Hush - old vfx from previous Hush that i dont wanna lose: fx_spell_hush_impact & fx_spell_hush_mainhand -->
-  <activespell uniquename="WEAPON_SILENCE" target="ground" castrange="11" castingtime="0" hitdelay="0.45" standtime="0.3" recastdelay="25" energyusage="0" category="crowdcontrol" uitype="crowdcontrol" uisprite="SILENCE" showrange="true" keepmovingaftercast="true" castanimation="cast_command" statblock="@SPELLS_STANDARD_STATBLOCK" adjustgroundtargettorange="true" spelleffectlocatag="@SPELLS_STATUS_SILENCE" autoattackcooldownaftercasting="Trigger" descriptionlocatag="@SPELLS_ABYSS_EYES_DESC" hideMainhandDuringAnim="true" hideOffhandDuringAnim="true" controllerpreferredtarget="enemy" controllerselfcastable="true">
+  <!-- Hush - Demon Helmet - old vfx from previous Hush that i dont wanna lose: fx_spell_hush_impact & fx_spell_hush_mainhand -->
+  <activespell uniquename="WEAPON_SILENCE" target="ground" castrange="11" castingtime="0" hitdelay="0.45" standtime="0.3" recastdelay="20" energyusage="0" category="crowdcontrol" uitype="crowdcontrol" uisprite="SILENCE" showrange="true" keepmovingaftercast="true" castanimation="cast_command" statblock="@SPELLS_STANDARD_STATBLOCK" adjustgroundtargettorange="true" spelleffectlocatag="@SPELLS_STATUS_SILENCE" autoattackcooldownaftercasting="Trigger" descriptionlocatag="@SPELLS_ABYSS_EYES_DESC" hideMainhandDuringAnim="true" hideOffhandDuringAnim="true" controllerpreferredtarget="enemy" controllerselfcastable="true">
     <spellindicationarea target="enemy" visible="true">
       <area>
         <shape>
@@ -37979,7 +38047,7 @@
   </activespell>
   
   <!-- Artefact Level 3 -->
-  <!-- Rotten Ground -->
+  <!-- Rotten Ground - Cultist Sandals -->
   <activespell uniquename="DEMONWALK" bindtoitem="true" target="self" keepmovingaftercast="true" energyusage="0" castrange="0" castingtime="0" hitdelay="0" standtime="0.0" disruptionfactor="1" recastdelay="30" uisprite="CURSED_AREA" uitype="damage" category="movementbuff" assessment="negative" statblock="@SPELLS_STANDARD_STATBLOCK" spelleffectlocatag="@SPELLS_DEMONWALK_BUFF_DESC" autoattackcooldownaftercasting="Trigger" controllerpreferredtarget="neutral">
     <castspellafterdistancemoved spell="DEMONWALK_PULSE" firstcastonapply="true" time="5.5" target="self" castafterdistancemoved="3" castspellintervalnotenoughmovement="1"/>
     <buffovertime type="movespeedbonus" value="0.3" target="self" time="5" />
@@ -38000,8 +38068,8 @@
     <AudioInfo name="SPELL_SMALL_DEBUFF_LIMITED" />
   </activespell>
   <activespell uniquename="DEMONWALK_EFFECT2" target="enemy" castingtime="0" hitdelay="0" standtime="0.0" disruptionfactor="1" recastdelay="0" uisprite="CURSED_AREA" energyusage="0" castrange="0" uitype="damage" category="debuff" maxstack="1" namelocatag="@SPELLS_DEMONWALK" spelleffectlocatag="@SPELLS_STATUS_RESISTANCES_HEALING_RECEIVED_DECREASED">
-    <buffovertime target="enemy" type="physicalarmor" value="-0.15" time="3" />
-    <buffovertime target="enemy" type="magicresistance" value="-0.15" time="3" />
+    <buffovertime target="enemy" type="physicalarmor" value="-0.15" time="3" targetcountvaluebonusfactor="0.08"/>
+    <buffovertime target="enemy" type="magicresistance" value="-0.15" time="3" targetcountvaluebonusfactor="0.08"/>
     <buffovertime type="healmodifier" value="-0.2" target="enemy" time="3" />
     <spellvfx event="OnSpellHit" target="target" prefab="FX/ClientPrefabs/fx_healingreduction_debuff_impact_silent" socket="damage" constraintpreset="pointconstraint" />
     <spelleffectfx prefab="Prefabs/SpellEffects/SpellEffectVfx/ShieldDebuffEffectVfx" socket="floor" size="1" constraintpreset="pointconstraint" />
@@ -38045,7 +38113,7 @@
   </activespell>
 
   <!-- Level 2 -->
-  <!-- Rush -->
+  <!-- Rush - Hunter Shoes -->
   <activespell uniquename="OVERSPRINT" bindtoitem="true" target="self" keepmovingaftercast="true" castingtime="0.0" hitdelay="0.0" standtime="0.0" disruptionfactor="0.0" recastdelay="30" energyusage="0" castrange="0" uisprite="SPRINT_CC" category="movementbuff" uitype="movement" castanimation="none" assessment="positive" statblock="@SPELLS_STANDARD_STATBLOCK" spelleffectlocatag="@SPELLS_STATUS_MOVESPEED_CCDURATION_INCREASED" autoattackcooldownaftercasting="Trigger" controllerpreferredtarget="neutral">
     <buffovertime type="movespeedbonus" value="1.2" target="self" time="3" />
     <buffovertime type="bonusccdurationvsplayers" value="0.35" target="self" time="3" />
@@ -38441,13 +38509,13 @@
   </activespell>
   
   <!-- Artefact Level 1 -->
-  <!-- Battle Frenzy -->
+  <!-- Battle Frenzy - Graveguard Boots -->
   <activespell uniquename="BATTLEFRENZY" bindtoitem="true" target="self" keepmovingaftercast="true" castingtime="0" recastdelay="30" energyusage="0" hitdelay="0" standtime="0" disruptionfactor="1" uisprite="PURGE_HOLY" castrange="0" uitype="buff" category="movementbuff" autoattackcooldownaftercasting="DoNotTrigger" unlockedtoequip="true" assessment="positive"  statblock="@SPELLS_STANDARD_STATBLOCK" spelleffectlocatag="@SPELLS_BATTLEFRENZY_BUFF_DESC" controllerpreferredtarget="neutral">
     <removeactiveeffects target="self" category="crowdcontrol" />
-    <buffovertime type="movespeedbonus" target="self" value="0.55" time="5" />
-    <cceffectimmunity type="stun" target="self" time="5" />
-    <cceffectimmunity type="root" target="self" time="5" />
-    <cceffectimmunity type="slow" target="self" time="5" />
+    <buffovertime type="movespeedbonus" target="self" value="0.55" time="6" />
+    <cceffectimmunity type="stun" target="self" time="6" />
+    <cceffectimmunity type="root" target="self" time="6" />
+    <cceffectimmunity type="slow" target="self" time="6" />
     <spellvfx target="target" socket="damage" event="OnSpellHit" alive="none" prefab="FX/ClientPrefabs/fx_spell_cleanse" />
     <spelleffectfx prefab="Prefabs/SpellEffects/SpellEffectVfx/SprintEffectVfx" socket="floor" />
     <spelleffectfx prefab="FX/ClientPrefabs/fx_spell_cleanse_loop" socket="damage" />
@@ -41073,7 +41141,7 @@
         <locareference tag="$attributechangeovertime[0].time$"/>
       </description>
     </locareferences>
-    <attributechangeovertime attribute="health" change="0.007" target="self" changetype="relativemax" usehealingmodifiers="false" initialinterval="0" interval="1" count="10" />
+    <attributechangeovertime attribute="health" change="0.006" target="self" changetype="relativemax" usehealingmodifiers="false" initialinterval="0" interval="1" count="10" />
     <spellvfx event="OnSpellHit" target="self" prefab="FX/ClientPrefabs/fx_potion_red" socket="halo" constraintpreset="pointconstraint" />
     <spellvfx event="OnSpellHit" target="self" prefab="FX/ClientPrefabs/fx_healing_potion" socket="floor" constraintpreset="pointconstraint" />
     <AudioInfo name="SPELL_POTION_DRINK_HEALING" />
@@ -41086,7 +41154,7 @@
         <locareference tag="$attributechangeovertime[0].time$"/>
       </description>
     </locareferences>
-    <attributechangeovertime attribute="health" change="0.01" target="self" changetype="relativemax" usehealingmodifiers="false" initialinterval="0" interval="1" count="10" />
+    <attributechangeovertime attribute="health" change="0.009" target="self" changetype="relativemax" usehealingmodifiers="false" initialinterval="0" interval="1" count="10" />
     <spellvfx event="OnSpellHit" target="self" prefab="FX/ClientPrefabs/fx_potion_red" socket="halo" constraintpreset="pointconstraint" />
     <spellvfx event="OnSpellHit" target="self" prefab="FX/ClientPrefabs/fx_healing_potion" socket="floor" constraintpreset="pointconstraint" />
     <AudioInfo name="SPELL_POTION_DRINK_HEALING" />
@@ -41099,7 +41167,7 @@
         <locareference tag="$attributechangeovertime[0].time$"/>
       </description>
     </locareferences>
-    <attributechangeovertime attribute="health" change="0.013" target="self" changetype="relativemax" usehealingmodifiers="false" initialinterval="0" interval="1" count="10" />
+    <attributechangeovertime attribute="health" change="0.012" target="self" changetype="relativemax" usehealingmodifiers="false" initialinterval="0" interval="1" count="10" />
     <spellvfx event="OnSpellHit" target="self" prefab="FX/ClientPrefabs/fx_potion_red" socket="halo" constraintpreset="pointconstraint" />
     <spellvfx event="OnSpellHit" target="self" prefab="FX/ClientPrefabs/fx_healing_potion" socket="floor" constraintpreset="pointconstraint" />
     <AudioInfo name="SPELL_POTION_DRINK_HEALING" />
@@ -41112,7 +41180,7 @@
         <locareference tag="$attributechangeovertime[0].time$"/>
       </description>
     </locareferences>
-    <attributechangeovertime attribute="health" change="0.016" target="self" changetype="relativemax" usehealingmodifiers="false" initialinterval="0" interval="1" count="10" />
+    <attributechangeovertime attribute="health" change="0.014" target="self" changetype="relativemax" usehealingmodifiers="false" initialinterval="0" interval="1" count="10" />
     <spellvfx event="OnSpellHit" target="self" prefab="FX/ClientPrefabs/fx_potion_red" socket="halo" constraintpreset="pointconstraint" />
     <spellvfx event="OnSpellHit" target="self" prefab="FX/ClientPrefabs/fx_healing_potion" socket="floor" constraintpreset="pointconstraint" />
     <AudioInfo name="SPELL_POTION_DRINK_HEALING" />
@@ -41125,7 +41193,7 @@
         <locareference tag="$attributechangeovertime[0].time$"/>
       </description>
     </locareferences>
-    <attributechangeovertime attribute="health" change="0.018" target="self" changetype="relativemax" usehealingmodifiers="false" initialinterval="0" interval="1" count="10" />
+    <attributechangeovertime attribute="health" change="0.016" target="self" changetype="relativemax" usehealingmodifiers="false" initialinterval="0" interval="1" count="10" />
     <spellvfx event="OnSpellHit" target="self" prefab="FX/ClientPrefabs/fx_potion_red" socket="halo" constraintpreset="pointconstraint" />
     <spellvfx event="OnSpellHit" target="self" prefab="FX/ClientPrefabs/fx_healing_potion" socket="floor" constraintpreset="pointconstraint" />
     <AudioInfo name="SPELL_POTION_DRINK_HEALING" />
@@ -41138,12 +41206,12 @@
         <locareference tag="$attributechangeovertime[0].time$"/>
       </description>
     </locareferences>
-    <attributechangeovertime attribute="health" change="0.02" target="self" changetype="relativemax" usehealingmodifiers="false" initialinterval="0" interval="1" count="10" >
+    <attributechangeovertime attribute="health" change="0.018" target="self" changetype="relativemax" usehealingmodifiers="false" initialinterval="0" interval="1" count="10" >
       <not>
         <IfClusterArcheType op="equals" value="ARENA_1V1"/>
       </not>
     </attributechangeovertime>
-    <attributechangeovertime attribute="health" change="0.018" target="self" changetype="relativemax" usehealingmodifiers="false" initialinterval="0" interval="1" count="10">
+    <attributechangeovertime attribute="health" change="0.016" target="self" changetype="relativemax" usehealingmodifiers="false" initialinterval="0" interval="1" count="10">
       <IfClusterArcheType op="equals" value="ARENA_1V1"/>
     </attributechangeovertime>
     <spellvfx event="OnSpellHit" target="self" prefab="FX/ClientPrefabs/fx_potion_red" socket="halo" constraintpreset="pointconstraint" />
@@ -41158,12 +41226,12 @@
         <locareference tag="$attributechangeovertime[0].time$"/>
       </description>
     </locareferences>
-    <attributechangeovertime attribute="health" change="0.022" target="self" changetype="relativemax" usehealingmodifiers="false" initialinterval="0" interval="1" count="10" >
+    <attributechangeovertime attribute="health" change="0.0195" target="self" changetype="relativemax" usehealingmodifiers="false" initialinterval="0" interval="1" count="10" >
       <not>
         <IfClusterArcheType op="equals" value="ARENA_1V1"/>
       </not>
     </attributechangeovertime>
-    <attributechangeovertime attribute="health" change="0.018" target="self" changetype="relativemax" usehealingmodifiers="false" initialinterval="0" interval="1" count="10">
+    <attributechangeovertime attribute="health" change="0.016" target="self" changetype="relativemax" usehealingmodifiers="false" initialinterval="0" interval="1" count="10">
       <IfClusterArcheType op="equals" value="ARENA_1V1"/>
     </attributechangeovertime>
     <spellvfx event="OnSpellHit" target="self" prefab="FX/ClientPrefabs/fx_potion_red" socket="halo" constraintpreset="pointconstraint" />
@@ -41178,12 +41246,12 @@
         <locareference tag="$attributechangeovertime[0].time$"/>
       </description>
     </locareferences>
-    <attributechangeovertime attribute="health" change="0.024" target="self" changetype="relativemax" usehealingmodifiers="false" initialinterval="0" interval="1" count="10" >
+    <attributechangeovertime attribute="health" change="0.021" target="self" changetype="relativemax" usehealingmodifiers="false" initialinterval="0" interval="1" count="10" >
       <not>
         <IfClusterArcheType op="equals" value="ARENA_1V1"/>
       </not>
     </attributechangeovertime>
-    <attributechangeovertime attribute="health" change="0.018" target="self" changetype="relativemax" usehealingmodifiers="false" initialinterval="0" interval="1" count="10">
+    <attributechangeovertime attribute="health" change="0.016" target="self" changetype="relativemax" usehealingmodifiers="false" initialinterval="0" interval="1" count="10">
       <IfClusterArcheType op="equals" value="ARENA_1V1"/>
     </attributechangeovertime>
     <spellvfx event="OnSpellHit" target="self" prefab="FX/ClientPrefabs/fx_potion_red" socket="halo" constraintpreset="pointconstraint" />
@@ -45993,7 +46061,7 @@
     <dummy target="friendallplayers" time="180" persistsafterclusterchange="true" persistsafterknockdown="true"/>
   </activespell>
 
-  <activespell uniquename="POTION_REVIVE_P1" target="ground" category="instant" castrange="11" castingtime="0" hitdelay="0.2" standtime="0.2" recastdelay="150" energyusage="0" uisprite="LIFEWARD" uitype="buff" castanimation="throw_snowball" maxstack="1" showrange="true" adjustgroundtargettorange="true" castablewhensilenced="true" descriptionlocatag="@SPELLS_POTION_REVIVE_DESC" namelocatag="@ITEMS_T6_POTION_LIFEWARD" statblock="@SPELLS_POTION_STATBLOCK" controllerpreferredtarget="ally" controllerpreferredcastdirection="targetthenlookdirection" controllerselfcastable="true" assessment="positive">
+  <activespell uniquename="POTION_REVIVE_P1" target="ground" category="instant" castrange="14" castingtime="0" hitdelay="0.2" standtime="0.2" recastdelay="150" energyusage="0" uisprite="LIFEWARD" uitype="buff" castanimation="throw_snowball" maxstack="1" showrange="true" adjustgroundtargettorange="true" castablewhensilenced="true" descriptionlocatag="@SPELLS_POTION_REVIVE_DESC" namelocatag="@ITEMS_T6_POTION_LIFEWARD" statblock="@SPELLS_POTION_STATBLOCK" controllerpreferredtarget="ally" controllerpreferredcastdirection="targetthenlookdirection" controllerselfcastable="true" assessment="positive">
     <locareferences>
       <description>
         <locareference tag="$spelleffectarea.circle.radius_max$"/>
@@ -46047,7 +46115,7 @@
     <AudioInfo name="SPELL_POTION_REVIVE_EFFECT_HEAL" />
   </activespell>
 
-  <activespell uniquename="POTION_REVIVE_P2" target="ground" category="instant" castrange="11" castingtime="0" hitdelay="0.2" standtime="0.2" recastdelay="150" energyusage="0" uisprite="LIFEWARD" uitype="buff" castanimation="throw_snowball" maxstack="1" showrange="true" adjustgroundtargettorange="true" castablewhensilenced="true" descriptionlocatag="@SPELLS_POTION_REVIVE_DESC" namelocatag="@ITEMS_T6_POTION_LIFEWARD" statblock="@SPELLS_POTION_STATBLOCK" controllerpreferredtarget="ally" controllerpreferredcastdirection="targetthenlookdirection" controllerselfcastable="true" assessment="positive">
+  <activespell uniquename="POTION_REVIVE_P2" target="ground" category="instant" castrange="14" castingtime="0" hitdelay="0.2" standtime="0.2" recastdelay="150" energyusage="0" uisprite="LIFEWARD" uitype="buff" castanimation="throw_snowball" maxstack="1" showrange="true" adjustgroundtargettorange="true" castablewhensilenced="true" descriptionlocatag="@SPELLS_POTION_REVIVE_DESC" namelocatag="@ITEMS_T6_POTION_LIFEWARD" statblock="@SPELLS_POTION_STATBLOCK" controllerpreferredtarget="ally" controllerpreferredcastdirection="targetthenlookdirection" controllerselfcastable="true" assessment="positive">
     <locareferences>
       <description>
         <locareference tag="$spelleffectarea.circle.radius_max$"/>
@@ -46101,7 +46169,7 @@
     <AudioInfo name="SPELL_POTION_REVIVE_EFFECT_HEAL" />
   </activespell>
 
-  <activespell uniquename="POTION_REVIVE_P3" target="ground" category="instant" castrange="11" castingtime="0" hitdelay="0.2" standtime="0.2" recastdelay="150" energyusage="0" uisprite="LIFEWARD" uitype="buff" castanimation="throw_snowball" maxstack="1" showrange="true" adjustgroundtargettorange="true" castablewhensilenced="true" descriptionlocatag="@SPELLS_POTION_REVIVE_DESC" namelocatag="@ITEMS_T6_POTION_LIFEWARD" statblock="@SPELLS_POTION_STATBLOCK" controllerpreferredtarget="ally" controllerpreferredcastdirection="targetthenlookdirection" controllerselfcastable="true" assessment="positive">
+  <activespell uniquename="POTION_REVIVE_P3" target="ground" category="instant" castrange="14" castingtime="0" hitdelay="0.2" standtime="0.2" recastdelay="150" energyusage="0" uisprite="LIFEWARD" uitype="buff" castanimation="throw_snowball" maxstack="1" showrange="true" adjustgroundtargettorange="true" castablewhensilenced="true" descriptionlocatag="@SPELLS_POTION_REVIVE_DESC" namelocatag="@ITEMS_T6_POTION_LIFEWARD" statblock="@SPELLS_POTION_STATBLOCK" controllerpreferredtarget="ally" controllerpreferredcastdirection="targetthenlookdirection" controllerselfcastable="true" assessment="positive">
     <locareferences>
       <description>
         <locareference tag="$spelleffectarea.circle.radius_max$"/>
@@ -46155,7 +46223,7 @@
     <AudioInfo name="SPELL_POTION_REVIVE_EFFECT_HEAL" />
   </activespell>
 
-  <activespell uniquename="POTION_REVIVE_P4" target="ground" category="instant" castrange="11" castingtime="0" hitdelay="0.2" standtime="0.2" recastdelay="150" energyusage="0" uisprite="LIFEWARD" uitype="buff" castanimation="throw_snowball" maxstack="1" showrange="true" adjustgroundtargettorange="true" castablewhensilenced="true" descriptionlocatag="@SPELLS_POTION_REVIVE_DESC" namelocatag="@ITEMS_T6_POTION_LIFEWARD" statblock="@SPELLS_POTION_STATBLOCK" controllerpreferredtarget="ally" controllerpreferredcastdirection="targetthenlookdirection" controllerselfcastable="true" assessment="positive">
+  <activespell uniquename="POTION_REVIVE_P4" target="ground" category="instant" castrange="14" castingtime="0" hitdelay="0.2" standtime="0.2" recastdelay="150" energyusage="0" uisprite="LIFEWARD" uitype="buff" castanimation="throw_snowball" maxstack="1" showrange="true" adjustgroundtargettorange="true" castablewhensilenced="true" descriptionlocatag="@SPELLS_POTION_REVIVE_DESC" namelocatag="@ITEMS_T6_POTION_LIFEWARD" statblock="@SPELLS_POTION_STATBLOCK" controllerpreferredtarget="ally" controllerpreferredcastdirection="targetthenlookdirection" controllerselfcastable="true" assessment="positive">
     <locareferences>
       <description>
         <locareference tag="$spelleffectarea.circle.radius_max$"/>
@@ -46209,7 +46277,7 @@
     <AudioInfo name="SPELL_POTION_REVIVE_EFFECT_HEAL" />
   </activespell>
 
-  <activespell uniquename="POTION_REVIVE_P5" target="ground" category="instant" castrange="11" castingtime="0" hitdelay="0.2" standtime="0.2" recastdelay="150" energyusage="0" uisprite="LIFEWARD" uitype="buff" castanimation="throw_snowball" maxstack="1" showrange="true" adjustgroundtargettorange="true" castablewhensilenced="true" descriptionlocatag="@SPELLS_POTION_REVIVE_DESC" namelocatag="@ITEMS_T6_POTION_LIFEWARD" statblock="@SPELLS_POTION_STATBLOCK" controllerpreferredtarget="ally" controllerpreferredcastdirection="targetthenlookdirection" controllerselfcastable="true" assessment="positive">
+  <activespell uniquename="POTION_REVIVE_P5" target="ground" category="instant" castrange="14" castingtime="0" hitdelay="0.2" standtime="0.2" recastdelay="150" energyusage="0" uisprite="LIFEWARD" uitype="buff" castanimation="throw_snowball" maxstack="1" showrange="true" adjustgroundtargettorange="true" castablewhensilenced="true" descriptionlocatag="@SPELLS_POTION_REVIVE_DESC" namelocatag="@ITEMS_T6_POTION_LIFEWARD" statblock="@SPELLS_POTION_STATBLOCK" controllerpreferredtarget="ally" controllerpreferredcastdirection="targetthenlookdirection" controllerselfcastable="true" assessment="positive">
     <locareferences>
       <description>
         <locareference tag="$spelleffectarea.circle.radius_max$"/>
@@ -46263,7 +46331,7 @@
     <AudioInfo name="SPELL_POTION_REVIVE_EFFECT_HEAL" />
   </activespell>
 
-  <activespell uniquename="POTION_REVIVE_P6" target="ground" category="instant" castrange="11" castingtime="0" hitdelay="0.2" standtime="0.2" recastdelay="150" energyusage="0" uisprite="LIFEWARD" uitype="buff" castanimation="throw_snowball" maxstack="1" showrange="true" adjustgroundtargettorange="true" castablewhensilenced="true" descriptionlocatag="@SPELLS_POTION_REVIVE_DESC" namelocatag="@ITEMS_T6_POTION_LIFEWARD" statblock="@SPELLS_POTION_STATBLOCK" controllerpreferredtarget="ally" controllerpreferredcastdirection="targetthenlookdirection" controllerselfcastable="true" assessment="positive">
+  <activespell uniquename="POTION_REVIVE_P6" target="ground" category="instant" castrange="14" castingtime="0" hitdelay="0.2" standtime="0.2" recastdelay="150" energyusage="0" uisprite="LIFEWARD" uitype="buff" castanimation="throw_snowball" maxstack="1" showrange="true" adjustgroundtargettorange="true" castablewhensilenced="true" descriptionlocatag="@SPELLS_POTION_REVIVE_DESC" namelocatag="@ITEMS_T6_POTION_LIFEWARD" statblock="@SPELLS_POTION_STATBLOCK" controllerpreferredtarget="ally" controllerpreferredcastdirection="targetthenlookdirection" controllerselfcastable="true" assessment="positive">
     <locareferences>
       <description>
         <locareference tag="$spelleffectarea.circle.radius_max$"/>
@@ -46317,7 +46385,7 @@
     <AudioInfo name="SPELL_POTION_REVIVE_EFFECT_HEAL" />
   </activespell>
 
-  <activespell uniquename="POTION_REVIVE_P7" target="ground" category="instant" castrange="11" castingtime="0" hitdelay="0.2" standtime="0.2" recastdelay="150" energyusage="0" uisprite="LIFEWARD" uitype="buff" castanimation="throw_snowball" maxstack="1" showrange="true" adjustgroundtargettorange="true" castablewhensilenced="true" descriptionlocatag="@SPELLS_POTION_REVIVE_DESC" namelocatag="@ITEMS_T6_POTION_LIFEWARD" statblock="@SPELLS_POTION_STATBLOCK" controllerpreferredtarget="ally" controllerpreferredcastdirection="targetthenlookdirection" controllerselfcastable="true" assessment="positive">
+  <activespell uniquename="POTION_REVIVE_P7" target="ground" category="instant" castrange="14" castingtime="0" hitdelay="0.2" standtime="0.2" recastdelay="150" energyusage="0" uisprite="LIFEWARD" uitype="buff" castanimation="throw_snowball" maxstack="1" showrange="true" adjustgroundtargettorange="true" castablewhensilenced="true" descriptionlocatag="@SPELLS_POTION_REVIVE_DESC" namelocatag="@ITEMS_T6_POTION_LIFEWARD" statblock="@SPELLS_POTION_STATBLOCK" controllerpreferredtarget="ally" controllerpreferredcastdirection="targetthenlookdirection" controllerselfcastable="true" assessment="positive">
     <locareferences>
       <description>
         <locareference tag="$spelleffectarea.circle.radius_max$"/>
@@ -46371,7 +46439,7 @@
     <AudioInfo name="SPELL_POTION_REVIVE_EFFECT_HEAL" />
   </activespell>
 
-  <activespell uniquename="POTION_REVIVE_P8" target="ground" category="instant" castrange="11" castingtime="0" hitdelay="0.2" standtime="0.2" recastdelay="150" energyusage="0" uisprite="LIFEWARD" uitype="buff" castanimation="throw_snowball" maxstack="1" showrange="true" adjustgroundtargettorange="true" castablewhensilenced="true" descriptionlocatag="@SPELLS_POTION_REVIVE_DESC" namelocatag="@ITEMS_T6_POTION_LIFEWARD" statblock="@SPELLS_POTION_STATBLOCK" controllerpreferredtarget="ally" controllerpreferredcastdirection="targetthenlookdirection" controllerselfcastable="true" assessment="positive">
+  <activespell uniquename="POTION_REVIVE_P8" target="ground" category="instant" castrange="14" castingtime="0" hitdelay="0.2" standtime="0.2" recastdelay="150" energyusage="0" uisprite="LIFEWARD" uitype="buff" castanimation="throw_snowball" maxstack="1" showrange="true" adjustgroundtargettorange="true" castablewhensilenced="true" descriptionlocatag="@SPELLS_POTION_REVIVE_DESC" namelocatag="@ITEMS_T6_POTION_LIFEWARD" statblock="@SPELLS_POTION_STATBLOCK" controllerpreferredtarget="ally" controllerpreferredcastdirection="targetthenlookdirection" controllerselfcastable="true" assessment="positive">
     <locareferences>
       <description>
         <locareference tag="$spelleffectarea.circle.radius_max$"/>
@@ -84580,7 +84648,7 @@
     <buffovertime target="self" type="bonusdamagevsplayers" value="0" time="0" />
   </activespell>
   <activespell uniquename="MOB_DRAGON_AREA_BUFF_SIZE_2_3" hidespelleffecticon="true" uisprite="PASSIVE_DAZE" target="self" castingtime="0" castrange="1" recastdelay="3" energyusage="0" category="instant" uitype="buff" neutraleffect="true" keeponretreat="true">
-    <buffovertime target="self" type="hitpointsmaxbonus" value="0.9" time="0" />
+    <buffovertime target="self" type="hitpointsmaxbonus" value="1.0" time="0" />
     <buffovertime target="self" type="physicalattackdamagebonus" value="0.3" time="0" />
     <buffovertime target="self" type="magicattackdamagebonus" value="0.3" time="0" />
     <buffovertime target="self" type="physicalspelldamagebonus" value="0.9" time="0" />
@@ -103873,7 +103941,51 @@
   <activespell uniquename="TEST_MOB_KEEPER_FANATIC_DRAGON_SHAMAN_ROAMING_CONE_CAST_FINAL_APPLY_CC" target="enemy" castingtime="0" recastdelay="0" energyusage="0" castrange="0" uitype="damage" uisprite="ENERGY_EXERTION" category="forcedmovement" namelocatag="@SPELLS_MOB_KEEPER_FANATIC_DRAGON_SHAMAN_ROAMING_CONE_CAST">
     <knockback target="enemy" distance="1" fromwhere="FromCaster" movespeed="0.66" ignorecrowdcontrolresistance="true" ignoreabilitypowerscaling="true" ignorebonusccdurationscaling="true" />
   </activespell>
-  <activespell uniquename="MOB_KEEPER_FANATIC_DRAGON_SHAMAN_PROJECTILES" target="self" recastdelay="20" castrange="0" energyusage="0" castingtime="0" category="instant" uitype="buff" uisprite="MEZZ" castanimation="channel_start" namelocatag="@SPELLS_MOB_KEEPER_FANATIC_DRAGON_SHAMAN_PROJECTILES_SHORT_RANGE">
+  <activespell uniquename="MOB_KEEPER_FANATIC_DRAGON_SHAMAN_PROJECTILES" target="self" recastdelay="20" hitdelay="1.5" standtime="0.56" castrange="0" energyusage="0" castingtime="0" category="instant" uitype="crowdcontrol" uisprite="MEZZ" castanimation="channel_start" namelocatag="@SPELLS_MOB_KEEPER_FANATIC_DRAGON_SHAMAN_PROJECTILES_SHORT_RANGE">
+    <spellindicationarea target="enemy" ignoreLegacy250msDelay="true" visible="true">
+      <area>
+        <shape>
+          <node angle="0" distance="20">
+            <circle radius="1"/>
+          </node>
+          <node angle="60" distance="20">
+            <circle radius="1"/>
+          </node>
+          <node angle="120" distance="20">
+            <circle radius="1"/>
+          </node>
+          <node angle="180" distance="20">
+            <circle radius="1"/>
+          </node>
+          <node angle="240" distance="20">
+            <circle radius="1"/>
+          </node>
+          <node angle="300" distance="20">
+            <circle radius="1"/>
+          </node>
+        </shape>
+        <fill>
+          <node angle="0" distance="20">
+            <circle radius="0-1"/>
+          </node>
+          <node angle="60" distance="20">
+            <circle radius="0-1"/>
+          </node>
+          <node angle="120" distance="20">
+            <circle radius="0-1"/>
+          </node>
+          <node angle="180" distance="20">
+            <circle radius="0-1"/>
+          </node>
+          <node angle="240" distance="20">
+            <circle radius="0-1"/>
+          </node>
+          <node angle="300" distance="20">
+            <circle radius="0-1"/>
+          </node>
+        </fill>
+      </area>
+    </spellindicationarea>
     <spelleffectarea target="enemy" effect="MOB_KEEPER_FANATIC_DRAGON_SHAMAN_PROJECTILES_EFFECT" time="15" positionthenrotationcasterrotation="targetdirection" visible="false" removeonleave="false" removeoncasterdeath="true" removeoncasterreset="true">
       <area>
         <shape>
@@ -103881,7 +103993,7 @@
             <node angle="0" distance="AS 0:20; 2:20; 15:7">
               <node angle="0-1710">
                 <node angle="-90" distance="1">
-                  <circle radius="1">
+                  <circle radius="0.75">
                     <spellvfx prefab="FX/ClientPrefabs/fx_spell_shapeshifter_multi_shot" event="SpellEffectAreaInit" duration="15" target="target" socket="centerGround" soundinit="Play_keeper_fanatic_shaman_persistent_projectiles_loop" soundshutdown="Stop_keeper_fanatic_shaman_persistent_projectiles_loop"/>
                   </circle>
                 </node>
@@ -103890,7 +104002,7 @@
             <node angle="60" distance="AS 0:20; 2:20; 15:7">
               <node angle="0-1710">
                 <node angle="-90" distance="1">
-                  <circle radius="1">
+                  <circle radius="0.75">
                     <spellvfx prefab="FX/ClientPrefabs/fx_spell_shapeshifter_multi_shot" event="SpellEffectAreaInit" duration="15" target="target" socket="centerGround" soundinit="Play_keeper_fanatic_shaman_persistent_projectiles_loop" soundshutdown="Stop_keeper_fanatic_shaman_persistent_projectiles_loop" />
                   </circle>
                 </node>
@@ -103899,7 +104011,7 @@
             <node angle="120" distance="AS 0:20; 2:20; 15:7">
               <node angle="0-1710">
                 <node angle="-90" distance="1">
-                  <circle radius="1">
+                  <circle radius="0.75">
                     <spellvfx prefab="FX/ClientPrefabs/fx_spell_shapeshifter_multi_shot" event="SpellEffectAreaInit" duration="15" target="target" socket="centerGround" soundinit="Play_keeper_fanatic_shaman_persistent_projectiles_loop" soundshutdown="Stop_keeper_fanatic_shaman_persistent_projectiles_loop" />
                   </circle>
                 </node>
@@ -103908,7 +104020,7 @@
             <node angle="180" distance="AS 0:20; 2:20; 15:7">
               <node angle="0-1710">
                 <node angle="-90" distance="1">
-                  <circle radius="1">
+                  <circle radius="0.75">
                     <spellvfx prefab="FX/ClientPrefabs/fx_spell_shapeshifter_multi_shot" event="SpellEffectAreaInit" duration="15" target="target" socket="centerGround" soundinit="Play_keeper_fanatic_shaman_persistent_projectiles_loop" soundshutdown="Stop_keeper_fanatic_shaman_persistent_projectiles_loop" />
                   </circle>
                 </node>
@@ -103917,7 +104029,7 @@
             <node angle="240" distance="AS 0:20; 2:20; 15:7">
               <node angle="0-1710">
                 <node angle="-90" distance="1">
-                  <circle radius="1">
+                  <circle radius="0.75">
                     <spellvfx prefab="FX/ClientPrefabs/fx_spell_shapeshifter_multi_shot" event="SpellEffectAreaInit" duration="15" target="target" socket="centerGround" soundinit="Play_keeper_fanatic_shaman_persistent_projectiles_loop" soundshutdown="Stop_keeper_fanatic_shaman_persistent_projectiles_loop" />
                   </circle>
                 </node>
@@ -103926,7 +104038,7 @@
             <node angle="300" distance="AS 0:20; 2:20; 15:7">
               <node angle="0-1710">
                 <node angle="-90" distance="1">
-                  <circle radius="1">
+                  <circle radius="0.75">
                     <spellvfx prefab="FX/ClientPrefabs/fx_spell_shapeshifter_multi_shot" event="SpellEffectAreaInit" duration="15" target="target" socket="centerGround" soundinit="Play_keeper_fanatic_shaman_persistent_projectiles_loop" soundshutdown="Stop_keeper_fanatic_shaman_persistent_projectiles_loop" />
                   </circle>
                 </node>
@@ -103938,21 +104050,53 @@
     </spelleffectarea>
     <AudioInfo name="SPELL_SHAPESHIFTER_DAMAGE_CAST_MULTIPROJECTILE" />
   </activespell>
-  <activespell uniquename="MOB_KEEPER_FANATIC_DRAGON_SHAMAN_PROJECTILES_EFFECT" target="enemy" recastdelay="0" castrange="0" energyusage="0" castingtime="0" category="crowdcontrol" uitype="buff" uisprite="MEZZ" spelleffectanimation="sleep" spelleffectlocatag="@SPELLS_STATUS_SLEEP" namelocatag="@SPELLS_MOB_KEEPER_FANATIC_DRAGON_SHAMAN_PROJECTILES_SHORT_RANGE">
-    <stun target="enemy" donttriggerdiminishingreturns="true" ignoreabilitypowerscaling="true" ignorebonusccdurationscaling="true" ignorecrowdcontrolresistance="true" ignorediminishingreturns="true" time="2" damagebreakseffect="true"/>
+  <activespell uniquename="MOB_KEEPER_FANATIC_DRAGON_SHAMAN_PROJECTILES_EFFECT" target="enemy" recastdelay="0" castrange="0" energyusage="0" castingtime="0" category="crowdcontrol" uitype="crowdcontrol" uisprite="MEZZ" spelleffectanimation="sleep" spelleffectlocatag="@SPELLS_STATUS_SLEEP" namelocatag="@SPELLS_MOB_KEEPER_FANATIC_DRAGON_SHAMAN_PROJECTILES_SHORT_RANGE">
+    <stun target="enemy" donttriggerdiminishingreturns="true" ignoreabilitypowerscaling="true" ignorebonusccdurationscaling="true" ignorecrowdcontrolresistance="true" ignorediminishingreturns="true" time="4" damagebreakseffect="true"/>
     <spelleffectfx prefab="FX/ClientPrefabs/fx_status_sleep" socket="halo"/>
     <spellvfx event="OnSpellHit" target="target_notCaster" prefab="FX/ClientPrefabs/fx_spell_magic_shapeshifter_impact_aoe" socket="damage" ignoresocketscale="true"  constraintpreset="inworld" />
     <AudioInfo name="SPELL_SHAPESHIFTER_DAMAGE_IMPACT_SMALL" />
   </activespell>
-  <activespell uniquename="MOB_KEEPER_FANATIC_DRAGON_SHAMAN_PROJECTILES_SHORT_RANGE" target="self" recastdelay="20" castrange="0" energyusage="0" castingtime="0" category="instant" uitype="buff" uisprite="MEZZ" castanimation="channel_start">
-    <spelleffectarea target="enemy" effect="MOB_KEEPER_FANATIC_DRAGON_SHAMAN_PROJECTILES_EFFECT" time="15" positionthenrotationcasterrotation="targetdirection" visible="false" removeonleave="false" removeoncasterdeath="true" removeoncasterreset="true">
+  <activespell uniquename="MOB_KEEPER_FANATIC_DRAGON_SHAMAN_PROJECTILES_SHORT_RANGE" target="self" recastdelay="20" hitdelay="1.5" standtime="0.56" castrange="0" energyusage="0" castingtime="0" category="instant" uitype="crowdcontrol" uisprite="MEZZ" castanimation="channel_start">
+    <spellindicationarea target="enemy" visible="true" ignoreLegacy250msDelay="true">
+      <area>
+        <shape>
+          <node angle="0" distance="12">
+            <circle radius="1"/>
+          </node>
+          <node angle="90" distance="12">
+            <circle radius="1"/>
+          </node>
+          <node angle="180" distance="12">
+            <circle radius="1"/>
+          </node>
+          <node angle="270" distance="12">
+            <circle radius="1"/>
+          </node>
+        </shape>
+        <fill>
+          <node angle="0" distance="12">
+            <circle radius="0-1"/>
+          </node>
+          <node angle="90" distance="12">
+            <circle radius="0-1"/>
+          </node>
+          <node angle="180" distance="12">
+            <circle radius="0-1"/>
+          </node>
+          <node angle="270" distance="12">
+            <circle radius="0-1"/>
+          </node>
+        </fill>
+      </area>
+    </spellindicationarea>
+    <spelleffectarea target="enemy" effect="MOB_KEEPER_FANATIC_DRAGON_SHAMAN_PROJECTILES_SHORT_RANGE_EFFECT" time="15" positionthenrotationcasterrotation="targetdirection" visible="false" removeonleave="false" removeoncasterdeath="true" removeoncasterreset="true">
       <area>
         <shape>
           <node angle="0-360">
             <node angle="0" distance="AS 0:12; 2:12; 15:6">
               <node angle="0-1710">
                 <node angle="-90" distance="1">
-                  <circle radius="1">
+                  <circle radius="0.75">
                     <spellvfx prefab="FX/ClientPrefabs/fx_spell_shapeshifter_multi_shot" event="SpellEffectAreaInit" duration="15" target="target" socket="centerGround" soundinit="Play_keeper_fanatic_shaman_persistent_projectiles_loop" soundshutdown="Stop_keeper_fanatic_shaman_persistent_projectiles_loop"/>
                   </circle>
                 </node>
@@ -103961,7 +104105,7 @@
             <node angle="90" distance="AS 0:12; 2:12; 15:6">
               <node angle="0-1710">
                 <node angle="-90" distance="1">
-                  <circle radius="1">
+                  <circle radius="0.75">
                     <spellvfx prefab="FX/ClientPrefabs/fx_spell_shapeshifter_multi_shot" event="SpellEffectAreaInit" duration="15" target="target" socket="centerGround" soundinit="Play_keeper_fanatic_shaman_persistent_projectiles_loop" soundshutdown="Stop_keeper_fanatic_shaman_persistent_projectiles_loop" />
                   </circle>
                 </node>
@@ -103970,7 +104114,7 @@
             <node angle="180" distance="AS 0:12; 2:12; 15:6">
               <node angle="0-1710">
                 <node angle="-90" distance="1">
-                  <circle radius="1">
+                  <circle radius="0.75">
                     <spellvfx prefab="FX/ClientPrefabs/fx_spell_shapeshifter_multi_shot" event="SpellEffectAreaInit" duration="15" target="target" socket="centerGround" soundinit="Play_keeper_fanatic_shaman_persistent_projectiles_loop" soundshutdown="Stop_keeper_fanatic_shaman_persistent_projectiles_loop" />
                   </circle>
                 </node>
@@ -103979,7 +104123,7 @@
             <node angle="270" distance="AS 0:12; 2:12; 15:6">
               <node angle="0-1710">
                 <node angle="-90" distance="1">
-                  <circle radius="1">
+                  <circle radius="0.75">
                     <spellvfx prefab="FX/ClientPrefabs/fx_spell_shapeshifter_multi_shot" event="SpellEffectAreaInit" duration="15" target="target" socket="centerGround" soundinit="Play_keeper_fanatic_shaman_persistent_projectiles_loop" soundshutdown="Stop_keeper_fanatic_shaman_persistent_projectiles_loop" />
                   </circle>
                 </node>
@@ -103990,6 +104134,12 @@
       </area>
     </spelleffectarea>
     <AudioInfo name="SPELL_SHAPESHIFTER_DAMAGE_CAST_MULTIPROJECTILE" />
+  </activespell>
+  <activespell uniquename="MOB_KEEPER_FANATIC_DRAGON_SHAMAN_PROJECTILES_SHORT_RANGE_EFFECT" target="enemy" recastdelay="0" castrange="0" energyusage="0" castingtime="0" category="crowdcontrol" uitype="crowdcontrol" uisprite="MEZZ" spelleffectanimation="sleep" spelleffectlocatag="@SPELLS_STATUS_SLEEP" namelocatag="@SPELLS_MOB_KEEPER_FANATIC_DRAGON_SHAMAN_PROJECTILES_SHORT_RANGE">
+    <stun target="enemy" donttriggerdiminishingreturns="true" ignoreabilitypowerscaling="true" ignorebonusccdurationscaling="true" ignorecrowdcontrolresistance="true" ignorediminishingreturns="true" time="2" damagebreakseffect="true"/>
+    <spelleffectfx prefab="FX/ClientPrefabs/fx_status_sleep" socket="halo"/>
+    <spellvfx event="OnSpellHit" target="target_notCaster" prefab="FX/ClientPrefabs/fx_spell_magic_shapeshifter_impact_aoe" socket="damage" ignoresocketscale="true"  constraintpreset="inworld" />
+    <AudioInfo name="SPELL_SHAPESHIFTER_DAMAGE_IMPACT_SMALL" />
   </activespell>
   <activespell uniquename="TEST_MOB_KEEPER_FANATIC_DRAGON_SHAMAN_ROAMING_FLAME_SELFMARK" target="self" castingtime="0" hitdelay="0" standtime="0" interruptiblebyspell="false" disruptionfactor="0" recastdelay="0" castrange="0" energyusage="0" category="instant" uitype="damage" hidespelleffecticon="true">
     <dummy target="self" time="0" />
@@ -104333,8 +104483,8 @@
   </activespell>
   <activespell uniquename="TEST_MOB_KEEPER_FANATIC_SPEAR_EXECUTE_MARK" uisprite="CROSSHAIR" target="enemy" castingtime="0" hitdelay="0" standtime="0" recastdelay="18" castrange="10" energyusage="0" category="instant" uitype="buff" interruptiblebyspell="false" removeoncasterdeath="true" removeoncasterreset="true" removewhencastergone="true" systemspell="true" buffpriority="1">
     <root target="enemy" time="5" />
-    <spelleffectfx socket="halo" prefab="FX/ClientPrefabs/fx_arrow_marker_red" constraintpreset="pointconstraint" ignoresocketscale="true" visibility="AllExceptAffected"/>
-    <spelleffectfx socket="halo" prefab="FX/ClientPrefabs/fx_arrow_marker_red_affected_only" constraintpreset="pointconstraint" ignoresocketscale="true" visibility="AffectedOnly"/>
+    <spelleffectfx socket="chest_fixed" prefab="FX/ClientPrefabs/fx_arrow_marker_red" constraintpreset="pointconstraint" ignoresocketscale="true" visibility="AllExceptAffected"/>
+    <spelleffectfx socket="chest_fixed" prefab="FX/ClientPrefabs/fx_arrow_marker_red_affected_only" constraintpreset="pointconstraint" ignoresocketscale="true" visibility="AffectedOnly"/>
     <spelleffectfx socket="floor" prefab="FX/ClientPrefabs/fx_keeper_spear_execution_group_root" constraintpreset="pointconstraint" />
     <AudioInfo name="SPELL_KEEPER_FANATIC_SPEAR_EXECUTE_MARK" />
   </activespell>
@@ -104956,7 +105106,7 @@
     <projectile prefab="FX/ClientPrefabs/fx_dragons_magma_bullet_arc" flyspeed="35" startsocket="head" ignoresocketscale="true" hitsocket="ground" timeoffset="0.05" />
     <AudioInfo name="MOB_DRAGON_DRAKE_FIREBALL_CAST" />
   </activespell>
-  <!-- Lionel Fanatic Boss A -->
+  <!-- Fanatic Witch - Maeve -->
   <activespell uniquename="MOB_KEEPER_FANATIC_WITCH_START" target="self" castingtime="0" hitdelay="0" standtime="0" recastdelay="1" castrange="1" energyusage="0" category="instant" uitype="buff" interruptiblebyspell="false" hidespelleffecticon="true" keeponretreat="true">
     <cceffectimmunity target="self" type="stun" time="0" />
     <cceffectimmunity target="self" type="root" time="0" />
@@ -105936,8 +106086,8 @@
   <activespell uniquename="MOB_KEEPER_FANATIC_WITCH_MARK_ROCK_SPIKES" target="enemy" castanimation="none" castingtime="0.5" hitdelay="0" standtime="0" recastdelay="12" energyusage="0" castrange="20" uitype="damage" uisprite="GROUND_SPEAR" category="instant" animmode="SingleAnim" animIgnoreHitDelay="true" interruptiblebyspell="false" hidespelleffecticon="true" removeoncasterdeath="true" removeoncasterreset="true" removewhencastergone="true">
     <applyspell target="enemy" spell="TEST_MOB_KEEPER_FANATIC_WITCH_MARK_ROCK_SPIKES_STACKS" charges="12" />
     <pulsingspell target="enemy" spell="TEST_MOB_KEEPER_FANATIC_WITCH_MARK_ROCK_SPIKES_PULSING_EFFECT" initialinterval="1.5" interval="1.1" count="12" />
-    <spelleffectfx socket="halo" prefab="FX/ClientPrefabs/fx_arrow_marker_red" constraintpreset="pointconstraint" ignoresocketscale="true" visibility="AllExceptAffected"/>
-    <spelleffectfx socket="halo" prefab="FX/ClientPrefabs/fx_arrow_marker_red_affected_only" constraintpreset="pointconstraint" ignoresocketscale="true" visibility="AffectedOnly"/>
+    <spelleffectfx socket="chest_fixed" prefab="FX/ClientPrefabs/fx_arrow_marker_red" constraintpreset="pointconstraint" ignoresocketscale="true" visibility="AllExceptAffected"/>
+    <spelleffectfx socket="chest_fixed" prefab="FX/ClientPrefabs/fx_arrow_marker_red_affected_only" constraintpreset="pointconstraint" ignoresocketscale="true" visibility="AffectedOnly"/>
   </activespell>
   <activespell uniquename="TEST_MOB_KEEPER_FANATIC_WITCH_MARK_ROCK_SPIKES_STACKS" target="enemy" castingtime="0" hitdelay="0" standtime="0" recastdelay="0" energyusage="0" castrange="0" uitype="damage" uisprite="GROUND_SPEAR" category="instant" maxcharges="12" removeoncasterdeath="true" removeoncasterreset="true" removewhencastergone="true" namelocatag="@SPELLS_MOB_KEEPER_FANATIC_WITCH_MARK_ROCK_SPIKES" spelleffectlocatag="@SPELLS_MOB_KEEPER_FANATIC_WITCH_MARK_ROCK_SPIKES_STACKS_DESC">
     <dummy target="enemy" time="300" />
@@ -106024,7 +106174,7 @@
     <spellvfx event="OnSpellHit" target="self" prefab="FX/ClientPrefabs/fx_spell_keeper_fanatic_witch_dragon_fire_channel_condense_flames_others" socket="floor" duration="2.9" />
     <spellvfx event="OnSpellHit" target="self" prefab="FX/ClientPrefabs/fx_spell_keeper_fanatic_witch_dragon_fire_channel_flame_aura_others" socket="floor" />
   </activespell>
-  <!-- Lionel Fanatic Boss B -->
+  <!-- Keeper Fanatic Brute -->
   <!-- Spawnspell -->
   <activespell uniquename="TEST_MOB_KEEPER_FANATIC_BRUTE_SPAWN" target="self" castingtime="0" hitdelay="0" standtime="0" recastdelay="1" castrange="1" energyusage="0" category="instant" uitype="buff" interruptiblebyspell="false" keeponretreat="true" hidespelleffecticon="true">
     <cceffectimmunity target="self" type="stun" time="0" />
@@ -107345,7 +107495,7 @@
     <spellvfx event="OnSpellHit" target="target" prefab="FX/ClientPrefabs/fx_spell_aoe_impact" socket="damage" constraintpreset="pointconstraint" />
     <AudioInfo name="SPELL_FIRE_HIT_SMALL" />
   </activespell>
-  <!-- Lionel -->
+  <!-- Dragons -->
   <!-- Rotation/Target Area Spell-->
   <activespell uniquename="MOB_DRAGON_GENERAL_DIRECTION_ZONE_SETUP_DEBUG" uisprite="BUFF_DAMAGE" target="self" castingtime="0" recastdelay="0" castrange="0" energyusage="0" category="instant" uitype="damage">
     <spelleffectarea time="1" effect="TEST_TARGET_FRONT_CONE_DEBUG" target="enemy" visible="true" position="atcaster" removeoncasterdeath="true">
@@ -107637,7 +107787,7 @@
   <!--#####################################################-->
   <!--Open World Dragon Auto Attack-->
   <activespell uniquename="MOB_TREASURE_DRAGON_FIRE_ATTACK_EFFECT" target="enemy" castingtime="0" recastdelay="1" energyusage="0" castrange="1" uitype="damage" category="damage" uisprite="BLEED" namelocatag="@SPELLS_MOB_DRAGON_FIRE_ATTACK">
-    <directattributechange target="enemy" attribute="health" change="-1000" effecttype="physical"/>
+    <directattributechange target="enemy" attribute="health" change="-1000" effecttype="physical" reflectdamage="never"/>
     <spellvfx target="target_notCaster" event="OnSpellHit" prefab="FX/ClientPrefabs/fx_impact_bloody" socket="floor" constraintpreset="inworld" />
   </activespell>
   <activespell uniquename="MOB_TREASURE_DRAGON_FIRE_ATTACK_LEFT" target="self" castingtime="1.8" standtime="0.5" recastdelay="1.5" energyusage="0" castrange="12" uitype="damage" category="damage"  uisprite="BLEED" namelocatag="@SPELLS_MOB_DRAGON_FIRE_ATTACK" castanimation="cast_multi_1" animmode="SingleAnim" castablewhensilenced="true" hidecastbar="true" interruptiblebyspell="false" disruptionfactor="0">    
@@ -107717,8 +107867,11 @@
     <dummy target="self" time="1" />
   </activespell>
   <activespell uniquename="MOB_DRAGON_FIRE_ATTACK_DAMAGE_EFFECT" target="enemy" castingtime="0" recastdelay="1" energyusage="0" castrange="1" uitype="damage" category="damage" uisprite="BLEED" namelocatag="@SPELLS_MOB_DRAGON_FIRE_ATTACK">
-    <directattributechange target="enemy" attribute="health" change="-3000" effecttype="physical">
+    <directattributechange target="enemy" attribute="health" change="-3000" effecttype="physical" reflectdamage="never">
       <IfTargetItemTypeEquipped who="EffectTarget" slottype="armor" shopsubcategory1="plate_armor"/>
+      <Event type="onDealHealthDamage">
+        <Spell target="SpellTarget" name="MOB_DRAGON_FIRE_ATTACK_DAMAGE_SINGLE_HIT_INFO_DEBUFF"/>
+      </Event>
       <valueoverride>
         <IfCharge who="Caster" chargespell="MOB_DRAGON_FIRE_ATTACK_TARGETCOUNT" casterchargesonly="true">
           <change value="-3000" mincharges="1" />
@@ -107726,12 +107879,13 @@
         </IfCharge>
       </valueoverride>
     </directattributechange>
-    <directattributechange target="enemy" attribute="health" change="-3000" effecttype="physical">
+    <directattributechange target="enemy" attribute="health" change="-3000" effecttype="physical" reflectdamage="never">
       <not>
         <IfTargetItemTypeEquipped who="EffectTarget" slottype="armor" shopsubcategory1="plate_armor"/>
       </not>
       <Event type="onDealHealthDamage">
         <Spell target="SpellTarget" name="MOB_DRAGON_FIRE_ATTACK_DAMAGE_HIT_INFO_DEBUFF"/>
+        <Spell target="SpellTarget" name="MOB_DRAGON_FIRE_ATTACK_DAMAGE_SINGLE_HIT_INFO_DEBUFF"/>
       </Event>
       <valueoverride>
         <IfCharge who="Caster" chargespell="MOB_DRAGON_FIRE_ATTACK_TARGETCOUNT" casterchargesonly="true">
@@ -107743,7 +107897,15 @@
     <spellvfx target="target_notCaster" event="OnSpellHit" prefab="FX/ClientPrefabs/fx_impact_bloody_silent" socket="floor" constraintpreset="inworld" />
   </activespell>
   <activespell uniquename="MOB_DRAGON_FIRE_ATTACK_DAMAGE_HIT_INFO_DEBUFF" target="enemy" castingtime="0" standtime="0" recastdelay="0" energyusage="0" castrange="0" uitype="damage" category="instant" uisprite="ARMOR_PIERCER" namelocatag="@SPELLS_MOB_DRAGON_FIRE_ATTACK" spelleffectlocatag="@SPELLS_TEST_MOB_DRAGON_FIRE_ATTACK_DAMAGE_HIT_INFO_DEBUFF_DESC" buffpriority="2">
-    <dummy target="enemy" time="3"/>
+    <dummy target="enemy" time="6"/>
+  </activespell>
+  <activespell uniquename="MOB_DRAGON_FIRE_ATTACK_DAMAGE_SINGLE_HIT_INFO_DEBUFF" target="enemy" castingtime="0" standtime="0" recastdelay="0" energyusage="0" castrange="0" uitype="damage" category="instant" uisprite="HAUNTING_SCREAMS" namelocatag="@SPELLS_MOB_DRAGON_FIRE_ATTACK" spelleffectlocatag="@SPELLS_MOB_DRAGON_FIRE_ATTACK_DAMAGE_SINGLE_HIT_INFO_DEBUFF_DESC" buffpriority="1">
+    <dummy target="enemy" time="6">
+      <IfSpellActive who="Caster" spell="MOB_DRAGON_FIRE_ATTACK_TARGETCOUNT" atleastcharges="1"/>
+      <not>
+        <IfSpellActive who="Caster" spell="MOB_DRAGON_FIRE_ATTACK_TARGETCOUNT" atleastcharges="2"/>
+      </not>
+    </dummy>
   </activespell>
   <!-- ### Summon Flame Elemental ###-->
   <activespell uniquename="MOB_DRAGON_FLAME_ELEMENTAL_SUMMON_APPLY" target="enemy" castingtime="0" standtime="0" recastdelay="0.2" energyusage="0" castrange="50" uisprite="AOE_FIRE" uitype="damage" category="instant" hidespelleffecticon="true">
@@ -107763,8 +107925,8 @@
         </fill>
       </area>
     </spellindicationarea>
-    <spellvfx event="OnCastFinished" alive="none" target="target" prefab="FX/ClientPrefabs/fx_arrow_marker_blue" socket="halo" constraintpreset="pointconstraint" ignoresocketscale="true" duration="4" visibility="AllExceptAffected"/>
-    <spellvfx event="OnCastFinished" alive="none" target="target" prefab="FX/ClientPrefabs/fx_arrow_marker_blue_affected_only" socket="halo" constraintpreset="pointconstraint" ignoresocketscale="true" duration="4" visibility="AffectedOnly"/>
+    <spellvfx event="OnCastFinished" alive="none" target="target" prefab="FX/ClientPrefabs/fx_arrow_marker_blue" socket="chest_fixed" constraintpreset="pointconstraint" ignoresocketscale="true" duration="4" visibility="AllExceptAffected"/>
+    <spellvfx event="OnCastFinished" alive="none" target="target" prefab="FX/ClientPrefabs/fx_arrow_marker_blue_affected_only" socket="chest_fixed" constraintpreset="pointconstraint" ignoresocketscale="true" duration="4" visibility="AffectedOnly"/>
   </activespell>
   <activespell uniquename="MOB_DRAGON_FLAME_ELEMENTAL_SUMMON_SUMMONING" target="enemy" allowedinknockdown="true" castingtime="0" standtime="0" recastdelay="35" energyusage="0" castrange="50" uisprite="AOE_FIRE" uitype="damage" category="instant" hidespelleffecticon="true">
     <spellimmunity target="enemy" spellname="MOB_DRAGON_FLAME_ELEMENTAL_SUMMON_SPAWNSPELL_AREAPULSE" time="2"/>
@@ -108099,8 +108261,8 @@
     </pulsingspell>
     <attributechangeovertime target="enemy" attribute="health" change="-25" effecttype="magic" initialinterval="0.75" interval="0.75" count="6"/>
     <spelleffectfx prefab="FX/ClientPrefabs/fx_spell_human_torch" soundinit="Play_mob_dragon_fire_firewall_onplayer_indicator_loop" soundshutdown="Stop_mob_dragon_fire_firewall_onplayer_indicator_loop" socket="damage" constraintpreset="pointconstraint"/>
-    <spelleffectfx prefab="FX/ClientPrefabs/fx_arrow_marker_blue" socket="halo" constraintpreset="pointconstraint" ignoresocketscale="true" visibility="AllExceptAffected"/>
-    <spelleffectfx prefab="FX/ClientPrefabs/fx_arrow_marker_blue_affected_only" socket="halo" constraintpreset="pointconstraint" ignoresocketscale="true" visibility="AffectedOnly"/>
+    <spelleffectfx prefab="FX/ClientPrefabs/fx_arrow_marker_blue" socket="chest_fixed" constraintpreset="pointconstraint" ignoresocketscale="true" visibility="AllExceptAffected"/>
+    <spelleffectfx prefab="FX/ClientPrefabs/fx_arrow_marker_blue_affected_only" socket="chest_fixed" constraintpreset="pointconstraint" ignoresocketscale="true" visibility="AffectedOnly"/>
     <spellvfx target="target_notCaster" event="OnSpellHit" alive="none" prefab="FX/ClientPrefabs/fx_spell_fireball_impact_silent" socket="damage" constraintpreset="inworld" />
     <AudioInfo name="SPELL_FIRE_IMPACT_SMALL_SEARINGFLAME" />
   </activespell>
@@ -108123,8 +108285,8 @@
     </pulsingspell>
     <attributechangeovertime target="enemy" attribute="health" change="-25" effecttype="magic" initialinterval="0.75" interval="0.75" count="6"/>
     <spelleffectfx prefab="FX/ClientPrefabs/fx_spell_human_torch" soundinit="Play_mob_dragon_fire_firewall_onplayer_indicator_loop" soundshutdown="Stop_mob_dragon_fire_firewall_onplayer_indicator_loop" socket="damage" constraintpreset="pointconstraint"/>
-    <spelleffectfx prefab="FX/ClientPrefabs/fx_arrow_marker_blue" socket="halo" constraintpreset="pointconstraint" ignoresocketscale="true" visibility="AllExceptAffected"/>
-    <spelleffectfx prefab="FX/ClientPrefabs/fx_arrow_marker_blue_affected_only" socket="halo" constraintpreset="pointconstraint" ignoresocketscale="true" visibility="AffectedOnly"/>
+    <spelleffectfx prefab="FX/ClientPrefabs/fx_arrow_marker_blue" socket="chest_fixed" constraintpreset="pointconstraint" ignoresocketscale="true" visibility="AllExceptAffected"/>
+    <spelleffectfx prefab="FX/ClientPrefabs/fx_arrow_marker_blue_affected_only" socket="chest_fixed" constraintpreset="pointconstraint" ignoresocketscale="true" visibility="AffectedOnly"/>
     <spellvfx target="target_notCaster" event="OnSpellHit" alive="none" prefab="FX/ClientPrefabs/fx_spell_fireball_impact_silent" socket="damage" constraintpreset="inworld" />
     <AudioInfo name="SPELL_FIRE_IMPACT_SMALL_SEARINGFLAME" />
   </activespell>
@@ -108147,8 +108309,8 @@
     </pulsingspell>
     <attributechangeovertime target="enemy" attribute="health" change="-25" effecttype="magic" initialinterval="0.75" interval="0.75" count="6"/>
     <spelleffectfx prefab="FX/ClientPrefabs/fx_spell_human_torch" soundinit="Play_mob_dragon_fire_firewall_onplayer_indicator_loop" soundshutdown="Stop_mob_dragon_fire_firewall_onplayer_indicator_loop" socket="damage" constraintpreset="pointconstraint"/>
-    <spelleffectfx prefab="FX/ClientPrefabs/fx_arrow_marker_blue" socket="halo" constraintpreset="pointconstraint" ignoresocketscale="true" visibility="AllExceptAffected"/>
-    <spelleffectfx prefab="FX/ClientPrefabs/fx_arrow_marker_blue_affected_only" socket="halo" constraintpreset="pointconstraint" ignoresocketscale="true" visibility="AffectedOnly"/>
+    <spelleffectfx prefab="FX/ClientPrefabs/fx_arrow_marker_blue" socket="chest_fixed" constraintpreset="pointconstraint" ignoresocketscale="true" visibility="AllExceptAffected"/>
+    <spelleffectfx prefab="FX/ClientPrefabs/fx_arrow_marker_blue_affected_only" socket="chest_fixed" constraintpreset="pointconstraint" ignoresocketscale="true" visibility="AffectedOnly"/>
     <spellvfx target="target_notCaster" event="OnSpellHit" alive="none" prefab="FX/ClientPrefabs/fx_spell_fireball_impact_silent" socket="damage" constraintpreset="inworld" />
     <AudioInfo name="SPELL_FIRE_IMPACT_SMALL_SEARINGFLAME" />
   </activespell>
@@ -108171,8 +108333,8 @@
     </pulsingspell>
     <attributechangeovertime target="enemy" attribute="health" change="-25" effecttype="magic" initialinterval="0.75" interval="0.75" count="6"/>
     <spelleffectfx prefab="FX/ClientPrefabs/fx_spell_human_torch" soundinit="Play_mob_dragon_fire_firewall_onplayer_indicator_loop" soundshutdown="Stop_mob_dragon_fire_firewall_onplayer_indicator_loop" socket="damage" constraintpreset="pointconstraint"/>
-    <spelleffectfx prefab="FX/ClientPrefabs/fx_arrow_marker_blue" socket="halo" constraintpreset="pointconstraint" ignoresocketscale="true" visibility="AllExceptAffected"/>
-    <spelleffectfx prefab="FX/ClientPrefabs/fx_arrow_marker_blue_affected_only" socket="halo" constraintpreset="pointconstraint" ignoresocketscale="true" visibility="AffectedOnly"/>
+    <spelleffectfx prefab="FX/ClientPrefabs/fx_arrow_marker_blue" socket="chest_fixed" constraintpreset="pointconstraint" ignoresocketscale="true" visibility="AllExceptAffected"/>
+    <spelleffectfx prefab="FX/ClientPrefabs/fx_arrow_marker_blue_affected_only" socket="chest_fixed" constraintpreset="pointconstraint" ignoresocketscale="true" visibility="AffectedOnly"/>
     <spellvfx target="target_notCaster" event="OnSpellHit" alive="none" prefab="FX/ClientPrefabs/fx_spell_fireball_impact_silent" socket="damage" constraintpreset="inworld" />
     <AudioInfo name="SPELL_FIRE_IMPACT_SMALL_SEARINGFLAME" />
   </activespell>
@@ -108318,7 +108480,7 @@
   <activespell uniquename="MOB_DRAGON_GENERAL_TAIL_STRIKE_EFFECT" target="enemy" castingtime="0" recastdelay="0" castrange="0" energyusage="0" category="forcedmovement" uitype="damage" hidespelleffecticon="true" uisprite="KNOCKUP" namelocatag="@SPELLS_MOB_DRAGON_FIRE_TAILSTRIKE">
     <spellimmunity target="enemy" spellname="MOB_DRAGON_FIRE_MELEEATTACK_SMASH_HIT" time="1" />
     <knockback target="enemy" distance="18" movespeed="48" fromwhere="FromCollisionPoint" ignoreabilitypowerscaling="true" ignorebonusccdurationscaling="true" ignorecrowdcontrolresistance="true" />
-    <directattributechange target="enemy" attribute="health" change="-2250" effecttype="physical"/>
+    <directattributechange target="enemy" attribute="health" change="-2250" effecttype="physical" reflectdamage="never"/>
     <spellvfx event="OnSpellHit" target="target" prefab="FX/ClientPrefabs/fx_spell_aoe_impact" socket="damage" constraintpreset="pointconstraint" />
     <spellvfx event="OnSpellHit" target="target" prefab="FX/ClientPrefabs/fx_spell_knockback" socket="damage" constraintpreset="pointconstraint" />
     <AudioInfo name="MELEE_IMPACT_MEDIUM_HEAVY" />
@@ -109266,7 +109428,7 @@
   </activespell>  
   <!--Turn 90° right-->
   <activespell uniquename="MOB_DRAGON_GENERAL_TURN_ATTACK_AREA_HIT" target="enemy" castingtime="0" recastdelay="1" energyusage="0" castrange="1" uitype="damage" category="damage" uisprite="BLOODY_REAP" namelocatag="@SPELLS_MOB_DRAGON_FIRE_ROTATE_ATTACK">
-    <directattributechange target="enemy" attribute="health" change="-1000" effecttype="physical" />
+    <directattributechange target="enemy" attribute="health" change="-1000" effecttype="physical" reflectdamage="never" />
     <spellvfx target="target_notCaster" event="OnSpellHit" prefab="FX/ClientPrefabs/fx_hit_01" socket="damage"/>
     <AudioInfo name="SPELL_MOB_DRAGON_TURN90_ATTACK_HIT" />
   </activespell>
@@ -109317,7 +109479,7 @@
   <!--Dragon Smash Attacks-->
   <!--Open World Dragon Smash Attack-->
   <activespell uniquename="MOB_TREASURE_DRAGON_FIRE_SMASH_EFFECT" target="enemy" castingtime="0" hitdelay="0" standtime="0" recastdelay="0" castrange="0" energyusage="0" category="damage" uitype="buff" uisprite="FIRE_WAVE" namelocatag="@SPELLS_MOB_DRAGON_FIRE_SMASH">
-    <directattributechange target="enemy" attribute="health" change="-2000"/>
+    <directattributechange target="enemy" attribute="health" change="-2000" reflectdamage="never"/>
     <spellvfx event="OnSpellHit" target="target" prefab="FX/ClientPrefabs/fx_spell_aoe_impact" socket="damage" constraintpreset="pointconstraint" />
     <AudioInfo name="MELEE_IMPACT_MEDIUM_HEAVY" />
     <screenshakeinfo name="CASTFINISHED_MEDIUM_IMPACT" />
@@ -109550,7 +109712,7 @@
     <AudioInfo name="SPELL_MOB_DRAGON_SMASH" />
   </activespell>
   <activespell uniquename="MOB_DRAGON_FIRE_MELEEATTACK_SMASH_HIT" target="enemy" castingtime="0" hitdelay="0" standtime="0" recastdelay="0" castrange="0" energyusage="0" category="damage" uitype="buff" uisprite="FIRE_WAVE" namelocatag="@SPELLS_MOB_DRAGON_FIRE_SMASH">
-    <directattributechange target="enemy" attribute="health" change="-2000">
+    <directattributechange target="enemy" attribute="health" change="-2000" reflectdamage="never">
       <Event type="onDealHealthDamage">
         <Spell name="MOB_DRAGON_FIRE_MELEEATTACK_SMASH_HIT_STUN" target="SpellTarget" />
       </Event>
@@ -109580,13 +109742,13 @@
   </activespell>
   <activespell uniquename="MOB_DRAGON_FIRE_MELEEATTACK_FRONT_SHORT_DASH_AURA_EFFECT" target="enemy" castingtime="0" hitdelay="0" standtime="0" recastdelay="0" castrange="0" energyusage="0" category="crowdcontrol" uitype="buff" uisprite="BUFF_DAMAGE" namelocatag="@SPELLS_MOB_DRAGON_FIRE_DASH" hidespelleffecticon="true">
     <knockback target="enemy" distance="5" movespeed="10" fromwhere="ParentCastDirection" ignoreabilitypowerscaling="true" ignorebonusccdurationscaling="true" ignorediminishingreturns="true" donttriggerdiminishingreturns="true" />
-    <directattributechange target="enemy" attribute="health" change="-150" />
+    <directattributechange target="enemy" attribute="health" change="-150" reflectdamage="never"/>
     <spellvfx event="OnSpellHit" target="target" prefab="FX/ClientPrefabs/fx_spell_aoe_impact" socket="damage" constraintpreset="pointconstraint" />
     <spellvfx event="OnSpellHit" target="target" prefab="FX/ClientPrefabs/fx_spell_knockback" socket="damage" constraintpreset="pointconstraint" />
   </activespell>
   <activespell uniquename="MOB_DRAGON_FIRE_MELEEATTACK_FRONT_SHORT_DASH_IMPACT" target="self" castingtime="0" hitdelay="0" standtime="0" recastdelay="0" castrange="0" energyusage="0" category="damage" uitype="buff" uisprite="BUFF_DAMAGE" namelocatag="@SPELLS_MOB_DRAGON_FIRE_DASH">
     <removeactivespell target="self" spell="MOB_DRAGON_FIRE_MELEEATTACK_FRONT_SHORT_DASH" />
-    <directattributechange target="enemy" attribute="health" change="-300" effectarearadius="8" />
+    <directattributechange target="enemy" attribute="health" change="-300" effectarearadius="8" reflectdamage="never" />
     <spellvfx target="self" event="OnCastFinished" socket="floor" prefab="FX/ClientPrefabs/fx_dragons_charge_impact" ignoresocketscale="true" constraintpreset="default" />
     <spellvfx event="OnSpellHit" target="target" prefab="FX/ClientPrefabs/fx_spell_aoe_impact" socket="damage" constraintpreset="pointconstraint" />
     <AudioInfo name="SPELL_MOB_DRAGON_FRONT_SHORTDASH_IMPACT" />
@@ -109595,7 +109757,7 @@
   
   <!--Primary & Secondary Stomp-->
   <activespell uniquename="MOB_DRAGON_FIRE_GREATER_STOMP_EFFECT" target="enemy" castingtime="0" recastdelay="0" castrange="0" energyusage="0" category="damage" uitype="damage" hidespelleffecticon="true" uisprite="AOE_FIRE" namelocatag="@SPELLS_MOB_DRAGON_FIRE_STOMP">
-    <directattributechange target="enemy" attribute="health" change="-4000">
+    <directattributechange target="enemy" attribute="health" change="-4000" reflectdamage="never">
       <Event type="onDealHealthDamage">
         <Spell target="SpellTarget" name="MOB_DRAGON_FIRE_GREATER_STOMP_EFFECT_KNOCKBACK"/>
       </Event>
@@ -109870,7 +110032,7 @@
     <screenshakeinfo name="CASTFINISHED_BIG_IMPACT" />
   </activespell>
   <activespell uniquename="MOB_DRAGON_FIRE_LASTING_EFFECT" target="enemy" castingtime="0" hitdelay="0" standtime="0" recastdelay="0" castrange="0" energyusage="0" category="instant" uitype="buff" maxcharges="10" uisprite="AOE_FIRE" namelocatag="@SPELLS_MOB_DRAGON_FIRE_STOMP" spelleffectlocatag="@SPELLS_STATUS_DOT_MAGICAL">
-    <attributechangeovertime target="enemy" attribute="health" change="-250" initialinterval="0.25" effecttype="magic" interval="1" count="9999" />
+    <attributechangeovertime target="enemy" attribute="health" change="-250" initialinterval="0.25" effecttype="magic" interval="1" count="9999" reflectdamage="never" />
     <spelleffectfx prefab="FX/ClientPrefabs/fx_dot_fire" socket="damage" constraintpreset="pointconstraint" />
   </activespell>
   <activespell uniquename="MOB_DRAGON_FIRE_LASTING" target="self" castingtime="0" recastdelay="1" castrange="1" energyusage="0" category="damage" uitype="buff" interruptiblebyspell="false" uisprite="AOE_FIRE" namelocatag="@SPELLS_MOB_DRAGON_FIRE_STOMP">
@@ -109907,7 +110069,7 @@
     <dummy target="enemy" time="1.51" />
   </activespell>
   <activespell uniquename="MOB_TREASURE_DRAGON_FIRE_GREATER_STOMP_DAMAGE" target="enemy" castingtime="0" recastdelay="0" castrange="0" energyusage="0" category="damage" uitype="damage" hidespelleffecticon="true" uisprite="AOE_FIRE" namelocatag="@SPELLS_MOB_DRAGON_FIRE_STOMP">
-    <directattributechange target="enemy" attribute="health" change="-3000">
+    <directattributechange target="enemy" attribute="health" change="-3000" reflectdamage="never">
       <Event type="onDealHealthDamage">
         <Spell target="SpellTarget" name="MOB_DRAGON_FIRE_GREATER_STOMP_EFFECT_KNOCKBACK"/>
       </Event>
@@ -110262,7 +110424,7 @@
   <!--Cast Breath Attack-->
   <activespell uniquename="MOB_DRAGON_FIRE_BREATH_ATTACK_EFFECT" target="enemy" castingtime="0" hitdelay="0" standtime="0" recastdelay="0" castrange="0" energyusage="0" category="damage" uitype="buff" maxcharges="5" hidespelleffecticon="true" uisprite="HELLFIRE_ORB" namelocatag="@SPELLS_MOB_DRAGON_FIRE_FIREBREATH">
     <dummy target="enemy" time="1" />
-    <directattributechange target="enemy" attribute="health" change="-300">
+    <directattributechange target="enemy" attribute="health" change="-300" reflectdamage="never">
       <valueoverride>
         <IfCharge who="EffectTarget" chargespell="MOB_DRAGON_FIRE_BREATH_ATTACK_EFFECT">
           <change mincharges="1" value="-300" />
@@ -110727,7 +110889,7 @@
   </activespell>
   <!--Circular Fire Breath-->
   <activespell uniquename="MOB_DRAGON_FIRE_FIRE_EFFECT" target="enemy" castingtime="0" recastdelay="5" energyusage="0" castrange="1" category="damage" uitype="damage" maxcharges="20" requireslineofsight="true" uisprite="CONTAGIOUS_FIRE" namelocatag="@SPELLS_MOB_DRAGON_FIRE_CHANNEL" hidespelleffecticon="true">
-    <attributechangeovertime target="enemy" attribute="health" change="-150" initialinterval="0" interval="1" count="2" />
+    <attributechangeovertime target="enemy" attribute="health" change="-150" initialinterval="0" interval="1" count="2" reflectdamage="never" />
 	  <spelleffectfx prefab="FX/ClientPrefabs/fx_dot_fire" socket="damage" constraintpreset="pointconstraint" />
   </activespell>
   <activespell uniquename="MOB_DRAGON_FIRE_FIRE_CHANNEL" target="self" castingtime="7" hitdelay="0" standtime="0" recastdelay="1" castrange="1" energyusage="0" category="instant" uitype="buff" castanimation="channel_start" animmode="SingleAnim" hidecastbar="true" interruptiblebyspell="false" disruptionfactor="0" castablewhensilenced="true" castablewhenstunned="true" uisprite="CONTAGIOUS_FIRE" namelocatag="@SPELLS_MOB_DRAGON_FIRE_CHANNEL">
@@ -110800,6 +110962,7 @@
     <AudioInfo name="SPELL_MOB_DRAGON_FIRE_PROTECTION_CAST" />
     <screenshakeinfo name="CASTSTART_MEDIUM_DRAGON_ROAR"/>
   </activespell>
+  <!--Dragon Spawn Setup-->
   <activespell uniquename="MOB_DRAGON_FIRE_SPAWN_CAMERA" target="self" castingtime="0" hitdelay="0.6" standtime="0" recastdelay="0" castrange="0" energyusage="0" category="instant" uitype="damage" keeponretreat="true" hidespelleffecticon="true">
     <dummy target="self" time="0"/>
     <spelleffectfx prefab="FX/ClientPrefabs/fx_dragon_camera_zoom" socket="floor" constraintpreset="inworld" />
