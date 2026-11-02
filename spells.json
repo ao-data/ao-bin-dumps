@@ -9472,6 +9472,16 @@
         "@uisprite": "PASSIVE_AGILITY_1",
         "@statblock": "@SPELLS_STATBLOCK_COOLDOWN",
         "locareferences": {
+          "description": {
+            "locareference": [
+              {
+                "@tag": "$$MOUNTSPELL_DMG_SPEEDBOOST.buffovertime[0].value$"
+              },
+              {
+                "@tag": "$$MOUNTSPELL_DMG_SPEEDBOOST.buffovertime[0].time$"
+              }
+            ]
+          },
           "statblock": {
             "locareference": {
               "@tag": "$$MOUNTSPELL_DMG_SPEEDBOOST_COOLDOWN.dummy[0].time$"
@@ -9488,6 +9498,36 @@
       {
         "@uniquename": "MOUNTSPELL_GALLOP_FAKESPELL",
         "@uisprite": "PASSIVE_LIGHTWEIGHT"
+      },
+      {
+        "@uniquename": "MOUNTSPELL_DMG_TAKEN_SPEEDBOOST_PASSIVE",
+        "@uisprite": "PASSIVE_AGILITY_1",
+        "@statblock": "@SPELLS_STATBLOCK_COOLDOWN",
+        "@namelocatag": "@SPELLS_MOUNTSPELL_DMG_SPEEDBOOST_PASSIVE",
+        "@descriptionlocatag": "@SPELLS_MOUNTSPELL_DMG_SPEEDBOOST_PASSIVE_DESC",
+        "locareferences": {
+          "description": {
+            "locareference": [
+              {
+                "@tag": "$$MOUNTSPELL_DMG_TAKEN_SPEEDBOOST.buffovertime[0].value$"
+              },
+              {
+                "@tag": "$$MOUNTSPELL_DMG_TAKEN_SPEEDBOOST.buffovertime[0].time$"
+              }
+            ]
+          },
+          "statblock": {
+            "locareference": {
+              "@tag": "$$MOUNTSPELL_DMG_TAKEN_SPEEDBOOST_COOLDOWN.dummy[0].time$"
+            }
+          }
+        },
+        "applyeffectoneventpassive": {
+          "@event": "ReceiveDirectMountDamage",
+          "@applyeffecttarget": "self",
+          "@spell": "MOUNTSPELL_DMG_TAKEN_SPEEDBOOST_CONDITION",
+          "@chance": "1"
+        }
       },
       {
         "@uniquename": "MOUNTSPELL_GREYWOLF_FW_CAERLEON_PASSIVE",
@@ -42467,42 +42507,6 @@
         }
       },
       {
-        "@uniquename": "MOUNT_SPEEDBUFF_DIREBEAR",
-        "@target": "self",
-        "@category": "instant",
-        "@castingtime": "0.0",
-        "@hitdelay": "0.0",
-        "@standtime": "0.0",
-        "@disruptionfactor": "0.0",
-        "@recastdelay": "0",
-        "@energyusage": "0",
-        "@castrange": "0",
-        "@uitype": "buff",
-        "@uisprite": "DASH",
-        "@assessment": "positive",
-        "@buffpriority": "9",
-        "@spelleffectlocatag": "@SPELLS_MOUNT_SPEEDBUFF_GENERAL_DESC",
-        "buffovertime": {
-          "@type": "movespeedbonus",
-          "@value": "0.40",
-          "@target": "self",
-          "@time": "0",
-          "@damagebreakseffect": "true",
-          "@attackingbreakseffect": "true",
-          "@worldinteractionbreakseffect": "true",
-          "@castingbreakseffect": "true",
-          "@mountingbreakseffect": "false"
-        },
-        "spelleffectfx": {
-          "@prefab": "FX/ClientPrefabs/fx_mount_direbear_speedbuff_01",
-          "@socket": "floor",
-          "@fadeouttime": "0.40"
-        },
-        "AudioInfo": {
-          "@name": "SPELL_MOUNT_SPEED"
-        }
-      },
-      {
         "@uniquename": "MOUNT_SPEEDBUFF_FW_DIREBEAR_T8",
         "@target": "self",
         "@category": "instant",
@@ -46204,7 +46208,7 @@
         "buffovertime": [
           {
             "@type": "movespeedbonus",
-            "@value": "0.5",
+            "@value": "0.85",
             "@target": "self",
             "@time": "0"
           },
@@ -46252,16 +46256,7 @@
             "@target": "self",
             "@time": "0"
           }
-        ],
-        "castspellaftermoving": {
-          "@spell": "MOUNT_SPEEDBUFF_DIREBEAR",
-          "@movetimetocast": "4.0",
-          "@standtimetoendspell": "2.0",
-          "@minmovespeed": "5.0",
-          "@damageresetstimetocast": "true",
-          "@cooldownafterdamage": "4",
-          "@target": "self"
-        }
+        ]
       },
       {
         "@uniquename": "T8_MOUNT_DIREBEAR_HALFMOUNTED",
@@ -63063,6 +63058,81 @@
         }
       },
       {
+        "@uniquename": "MOUNTSPELL_DMG_TAKEN_SPEEDBOOST_CONDITION",
+        "@target": "all",
+        "@castingtime": "0",
+        "@hitdelay": "0",
+        "@standtime": "0",
+        "@disruptionfactor": "1",
+        "@recastdelay": "0",
+        "@energyusage": "0",
+        "@castrange": "0",
+        "@uitype": "crowdcontrol",
+        "@uisprite": "MOUNTSPELL_POISONBOLT",
+        "@category": "instant",
+        "@assessment": "positive",
+        "applyspell": {
+          "@spell": "MOUNTSPELL_DMG_TAKEN_SPEEDBOOST",
+          "@target": "self",
+          "not": {
+            "IfSpellActive": {
+              "@spell": "MOUNTSPELL_DMG_TAKEN_SPEEDBOOST_COOLDOWN",
+              "@who": "SpellTarget"
+            }
+          }
+        }
+      },
+      {
+        "@uniquename": "MOUNTSPELL_DMG_TAKEN_SPEEDBOOST",
+        "@target": "self",
+        "@keepmovingaftercast": "true",
+        "@castingtime": "0.0",
+        "@hitdelay": "0.0",
+        "@standtime": "0.0",
+        "@disruptionfactor": "0.0",
+        "@recastdelay": "0",
+        "@energyusage": "0",
+        "@castrange": "0",
+        "@uisprite": "SPRINT",
+        "@category": "instant",
+        "@uitype": "movement",
+        "@assessment": "positive",
+        "@spelleffectlocatag": "@SPELLS_STATUS_MOVESPEED_INCREASED",
+        "applyspell": {
+          "@spell": "MOUNTSPELL_DMG_TAKEN_SPEEDBOOST_COOLDOWN",
+          "@target": "self"
+        },
+        "buffovertime": {
+          "@type": "movespeedbonus",
+          "@value": "0.4",
+          "@target": "self",
+          "@time": "4"
+        },
+        "spelleffectfx": {
+          "@prefab": "Prefabs/SpellEffects/SpellEffectVfx/SprintEffectVfx",
+          "@socket": "floor"
+        }
+      },
+      {
+        "@uniquename": "MOUNTSPELL_DMG_TAKEN_SPEEDBOOST_COOLDOWN",
+        "@target": "all",
+        "@castingtime": "0",
+        "@hitdelay": "0",
+        "@standtime": "0",
+        "@disruptionfactor": "1",
+        "@recastdelay": "0",
+        "@energyusage": "0",
+        "@castrange": "0",
+        "@uitype": "crowdcontrol",
+        "@uisprite": "PASSIVE_AGILITY_1",
+        "@category": "instant",
+        "@assessment": "positive",
+        "dummy": {
+          "@target": "self",
+          "@time": "8"
+        }
+      },
+      {
         "@uniquename": "MOUNTSPELL_GREYWOLF_FW_CAERLEON_HUNTER_MARK",
         "@target": "enemy",
         "@castanimation": "mount_ability_01",
@@ -63912,6 +63982,15 @@
             "@damageresetstimetocast": "true",
             "@cooldownafterdamage": "8",
             "@target": "self"
+          },
+          {
+            "@spell": "MOUNT_SPEEDBUFF_FW_RAM_T5_03",
+            "@movetimetocast": "12.0",
+            "@standtimetoendspell": "2.0",
+            "@minmovespeed": "5.0",
+            "@damageresetstimetocast": "true",
+            "@cooldownafterdamage": "12",
+            "@target": "self"
           }
         ]
       },
@@ -63969,7 +64048,43 @@
         "@spelleffectlocatag": "@SPELLS_MOUNTSPELL_RAM_FW_MARTLOCK_PASSIVE_SPELLEFFECT",
         "buffovertime": {
           "@type": "movespeedbonus",
-          "@value": "0.15",
+          "@value": "0.10",
+          "@target": "self",
+          "@time": "0",
+          "@damagebreakseffect": "true",
+          "@attackingbreakseffect": "true",
+          "@worldinteractionbreakseffect": "true",
+          "@castingbreakseffect": "true",
+          "@mountingbreakseffect": "false"
+        },
+        "spelleffectfx": {
+          "@prefab": "FX/ClientPrefabs/fx_mount_ox_speedbuff_01",
+          "@socket": "floor",
+          "@fadeouttime": "0.40"
+        },
+        "AudioInfo": {
+          "@name": "SPELL_MOUNT_SPEED"
+        }
+      },
+      {
+        "@uniquename": "MOUNT_SPEEDBUFF_FW_RAM_T5_03",
+        "@target": "self",
+        "@category": "instant",
+        "@castingtime": "0.0",
+        "@hitdelay": "0.0",
+        "@standtime": "0.0",
+        "@disruptionfactor": "0.0",
+        "@recastdelay": "0",
+        "@energyusage": "0",
+        "@castrange": "0",
+        "@uitype": "buff",
+        "@uisprite": "DASH",
+        "@assessment": "positive",
+        "@buffpriority": "9",
+        "@spelleffectlocatag": "@SPELLS_MOUNTSPELL_RAM_FW_MARTLOCK_PASSIVE_SPELLEFFECT",
+        "buffovertime": {
+          "@type": "movespeedbonus",
+          "@value": "0.10",
           "@target": "self",
           "@time": "0",
           "@damagebreakseffect": "true",
@@ -64073,6 +64188,15 @@
             "@damageresetstimetocast": "true",
             "@cooldownafterdamage": "8",
             "@target": "self"
+          },
+          {
+            "@spell": "MOUNT_SPEEDBUFF_FW_RAM_T8_03",
+            "@movetimetocast": "12.0",
+            "@standtimetoendspell": "2.0",
+            "@minmovespeed": "5.0",
+            "@damageresetstimetocast": "true",
+            "@cooldownafterdamage": "12",
+            "@target": "self"
           }
         ]
       },
@@ -64130,7 +64254,43 @@
         "@spelleffectlocatag": "@SPELLS_MOUNTSPELL_RAM_FW_MARTLOCK_PASSIVE_SPELLEFFECT",
         "buffovertime": {
           "@type": "movespeedbonus",
-          "@value": "0.15",
+          "@value": "0.10",
+          "@target": "self",
+          "@time": "0",
+          "@damagebreakseffect": "true",
+          "@attackingbreakseffect": "true",
+          "@worldinteractionbreakseffect": "true",
+          "@castingbreakseffect": "true",
+          "@mountingbreakseffect": "false"
+        },
+        "spelleffectfx": {
+          "@prefab": "FX/ClientPrefabs/fx_mount_ox_speedbuff_01",
+          "@socket": "floor",
+          "@fadeouttime": "0.40"
+        },
+        "AudioInfo": {
+          "@name": "SPELL_MOUNT_SPEED"
+        }
+      },
+      {
+        "@uniquename": "MOUNT_SPEEDBUFF_FW_RAM_T8_03",
+        "@target": "self",
+        "@category": "instant",
+        "@castingtime": "0.0",
+        "@hitdelay": "0.0",
+        "@standtime": "0.0",
+        "@disruptionfactor": "0.0",
+        "@recastdelay": "0",
+        "@energyusage": "0",
+        "@castrange": "0",
+        "@uitype": "buff",
+        "@uisprite": "DASH",
+        "@assessment": "positive",
+        "@buffpriority": "9",
+        "@spelleffectlocatag": "@SPELLS_MOUNTSPELL_RAM_FW_MARTLOCK_PASSIVE_SPELLEFFECT",
+        "buffovertime": {
+          "@type": "movespeedbonus",
+          "@value": "0.10",
           "@target": "self",
           "@time": "0",
           "@damagebreakseffect": "true",
@@ -98266,6 +98426,68 @@
         }
       },
       {
+        "@uniquename": "UNIQUE_AVATAR_GVGSEASON_32_CRYSTAL_SINGLE",
+        "@target": "self",
+        "@castingtime": "0",
+        "@recastdelay": "0",
+        "@energyusage": "0",
+        "@castrange": "0",
+        "@hitdelay": "0.2",
+        "@standtime": "0.8",
+        "@castanimation": "ability_eat",
+        "@keepmovingaftercast": "true",
+        "@uitype": "heal",
+        "@uisprite": "BUFF_CCR",
+        "@category": "instant",
+        "@neutraleffect": "true",
+        "@buffpriority": "10",
+        "@namelocatag": "@SPELLS_UNIQUE_AVATAR_GVGSEASON_04_SPELL",
+        "@descriptionlocatag": "@SPELLS_UNIQUE_AVATAR_GVGSEASON_04_SPELL_DESC",
+        "unlockavatar": {
+          "@unlocktype": "avatar",
+          "@unlockname": "GVGSEASON_32_CRYSTAL",
+          "@target": "self"
+        },
+        "spellvfx": {
+          "@event": "OnSpellHit",
+          "@target": "self",
+          "@prefab": "FX/ClientPrefabs/fx_spell_holy_heal_impact_large",
+          "@socket": "floor",
+          "@constraintpreset": "pointconstraint"
+        }
+      },
+      {
+        "@uniquename": "UNIQUE_AVATAR_GVGSEASON_32_SILVER_SINGLE",
+        "@target": "self",
+        "@castingtime": "0",
+        "@recastdelay": "0",
+        "@energyusage": "0",
+        "@castrange": "0",
+        "@hitdelay": "0.2",
+        "@standtime": "0.8",
+        "@castanimation": "ability_eat",
+        "@keepmovingaftercast": "true",
+        "@uitype": "heal",
+        "@uisprite": "BUFF_CCR",
+        "@category": "instant",
+        "@neutraleffect": "true",
+        "@buffpriority": "10",
+        "@namelocatag": "@SPELLS_UNIQUE_AVATAR_GVGSEASON_04_SPELL",
+        "@descriptionlocatag": "@SPELLS_UNIQUE_AVATAR_GVGSEASON_04_SPELL_DESC",
+        "unlockavatar": {
+          "@unlocktype": "avatar",
+          "@unlockname": "GVGSEASON_32_SILVER",
+          "@target": "self"
+        },
+        "spellvfx": {
+          "@event": "OnSpellHit",
+          "@target": "self",
+          "@prefab": "FX/ClientPrefabs/fx_spell_holy_heal_impact_large",
+          "@socket": "floor",
+          "@constraintpreset": "pointconstraint"
+        }
+      },
+      {
         "@uniquename": "UNIQUE_AVATAR_GVGSEASON_LEGACY_AVATARS_GOLD_SPELL",
         "@target": "self",
         "@castingtime": "0",
@@ -105801,6 +106023,9 @@
                 "@tag": "$$PANTHER_CLAWS_MAX_DAMAGE.directattributechange[1].change$"
               },
               {
+                "@tag": "$$PANTHER_CLAWS_MAX_DAMAGE.directattributechange[1].changevaluecap$"
+              },
+              {
                 "@tag": "$$PANTHER_CLAWS_COOLDOWN_PENALTY.setcooldowns[0].amount$"
               }
             ]
@@ -105900,7 +106125,7 @@
             "@target": "enemymobs",
             "@attribute": "health",
             "@change": "-0.40",
-            "@changevaluecap": "-150",
+            "@changevaluecap": "-300",
             "@effecttype": "physical",
             "@ignorearmor": "false",
             "@ignoreabilitypowerscaling": "true",
@@ -114050,12 +114275,12 @@
             "@target": "enemy",
             "@attribute": "health",
             "@effecttype": "physical",
-            "@change": "-85",
+            "@change": "-74",
             "@targetcountvaluebonusfactor": "0.08",
             "@effectarearadius": "5",
             "@initialinterval": "0",
-            "@interval": "1",
-            "@count": "3",
+            "@interval": "0.75",
+            "@count": "4",
             "IfTargetHealthPercentage": {
               "@op": "lessOrEqual",
               "@value": "0.4"
@@ -114065,12 +114290,12 @@
             "@target": "enemy",
             "@attribute": "health",
             "@effecttype": "physical",
-            "@change": "-47",
+            "@change": "-42",
             "@targetcountvaluebonusfactor": "0.08",
             "@effectarearadius": "5",
             "@initialinterval": "0",
-            "@interval": "1",
-            "@count": "3",
+            "@interval": "0.75",
+            "@count": "4",
             "IfTargetHealthPercentage": {
               "@op": "greater",
               "@value": "0.4"
@@ -126227,7 +126452,7 @@
         "@disruptionfactor": "0",
         "@recastdelay": "0",
         "@energyusage": "5",
-        "@castrange": "3",
+        "@castrange": "7.5",
         "@uitype": "damage",
         "@uisprite": "BLOOD_BLADE",
         "@castanimation": "cast_melee2",
@@ -126297,7 +126522,7 @@
         "@disruptionfactor": "0",
         "@recastdelay": "0",
         "@energyusage": "5",
-        "@castrange": "3",
+        "@castrange": "7.5",
         "@uitype": "damage",
         "@uisprite": "BLOOD_BLADE",
         "@castanimation": "cast_melee2",
@@ -126367,7 +126592,7 @@
         "@disruptionfactor": "0",
         "@recastdelay": "20",
         "@energyusage": "5",
-        "@castrange": "3",
+        "@castrange": "7.5",
         "@uitype": "damage",
         "@uisprite": "BLOOD_BLADE",
         "@castanimation": "cast_melee2",
@@ -137849,7 +138074,7 @@
       {
         "@uniquename": "RAM_CHARGE",
         "@target": "ground",
-        "@castingtime": "0.4",
+        "@castingtime": "0.2",
         "@recastdelay": "30",
         "@energyusage": "23",
         "@castrange": "16",
@@ -140545,7 +140770,7 @@
         },
         "damageshield": {
           "@target": "friendall",
-          "@damageabsorbed": "456.30",
+          "@damageabsorbed": "500",
           "@time": "4"
         },
         "spelleffectfx": {
@@ -144948,19 +145173,24 @@
             "@target": "enemy",
             "@type": "physicalarmor",
             "@value": "-0.18",
-            "@time": "30"
+            "@time": "30",
+            "@targetcountvaluebonusfactor": "0.08"
           },
           {
             "@target": "enemy",
             "@type": "magicresistance",
             "@value": "-0.18",
-            "@time": "30"
+            "@time": "30",
+            "@targetcountvaluebonusfactor": "0.08"
           },
           {
             "@target": "enemy",
             "@type": "movespeedbonus",
             "@value": "-0.25",
-            "@time": "30"
+            "@time": "30",
+            "@targetcountdurationbonusfactor": "0.08",
+            "@ignorecrowdcontrolresistance": "true",
+            "@ignorediminishingreturns": "true"
           }
         ],
         "spelleffectfx": [
@@ -153735,7 +153965,7 @@
         "@showrange": "true",
         "@interruptiblebyspell": "false",
         "@statblock": "@SPELLS_STANDARD_STATBLOCK",
-        "@descriptionlocatag": "@SPELLS_CLAYMORECHARGE_V2_DESC",
+        "@descriptionlocatag": "@SPELLS_CLAYMORECHARGE_DESC",
         "@hidespelleffecticon": "true",
         "@autoattackcooldownaftercasting": "Trigger",
         "@controllerpreferredtarget": "enemy",
@@ -153759,18 +153989,6 @@
               },
               {
                 "@tag": "$$CLAYMORECHARGE_EFFECT3.directattributechange[0].change$"
-              },
-              {
-                "@tag": "$$CLAYMORECHARGE_AOE_EFFECT0.directattributechange[0].change$"
-              },
-              {
-                "@tag": "$$CLAYMORECHARGE_AOE_EFFECT1.directattributechange[0].change$"
-              },
-              {
-                "@tag": "$$CLAYMORECHARGE_AOE_EFFECT2.directattributechange[0].change$"
-              },
-              {
-                "@tag": "$$CLAYMORECHARGE_AOE_EFFECT3.directattributechange[0].change$"
               }
             ]
           }
@@ -154389,7 +154607,7 @@
         "directattributechange": {
           "@target": "enemy",
           "@attribute": "health",
-          "@change": "-56",
+          "@change": "-85",
           "@effecttype": "physical",
           "@targetcountvaluebonusfactor": "0.08"
         },
@@ -154421,7 +154639,7 @@
         "directattributechange": {
           "@target": "enemy",
           "@attribute": "health",
-          "@change": "-90",
+          "@change": "-137",
           "@effecttype": "physical",
           "@targetcountvaluebonusfactor": "0.08"
         },
@@ -154453,7 +154671,7 @@
         "directattributechange": {
           "@target": "enemy",
           "@attribute": "health",
-          "@change": "-135",
+          "@change": "-204",
           "@effecttype": "physical",
           "@targetcountvaluebonusfactor": "0.08"
         },
@@ -154485,7 +154703,7 @@
         "directattributechange": {
           "@target": "enemy",
           "@attribute": "health",
-          "@change": "-191",
+          "@change": "-290",
           "@effecttype": "physical",
           "@targetcountvaluebonusfactor": "0.08"
         },
@@ -156484,37 +156702,44 @@
           {
             "@target": "friendall",
             "@type": "physicalattackdamagebonus",
-            "@value": "0.2",
+            "@value": "0.3",
             "@time": "5",
             "@effectarearadius": "11"
           },
           {
             "@target": "friendall",
             "@type": "magicattackdamagebonus",
-            "@value": "0.2",
+            "@value": "0.3",
             "@time": "5",
             "@effectarearadius": "11"
           },
           {
             "@target": "friendall",
             "@type": "physicalspelldamagebonus",
-            "@value": "0.2",
+            "@value": "0.3",
             "@time": "5",
             "@effectarearadius": "11"
           },
           {
             "@target": "friendall",
             "@type": "magicspelldamagebonus",
-            "@value": "0.2",
+            "@value": "0.3",
             "@time": "5",
             "@effectarearadius": "11"
           }
         ],
-        "spelleffectfx": {
-          "@prefab": "FX/ClientPrefabs/fx_spell_damageBuffYellow",
-          "@socket": "floor",
-          "@constraintpreset": "pointconstraint"
-        }
+        "spelleffectfx": [
+          {
+            "@prefab": "FX/ClientPrefabs/fx_spell_damageBuffYellow",
+            "@socket": "floor",
+            "@constraintpreset": "pointconstraint"
+          },
+          {
+            "@prefab": "FX/ClientPrefabs/fx_mount_avalon_basilisk_lightning_01",
+            "@socket": "damage",
+            "@constraintpreset": "pointconstraint"
+          }
+        ]
       },
       {
         "@uniquename": "SWORD_BERSERK_RUN_RE",
@@ -157235,7 +157460,7 @@
         "@target": "enemy",
         "@castingtime": "0",
         "@hitdelay": "0.24",
-        "@standtime": "0.3",
+        "@standtime": "0.25",
         "@disruptionfactor": "1",
         "@recastdelay": "3",
         "@energyusage": "3",
@@ -157246,7 +157471,7 @@
         "@category": "damage",
         "@showrange": "true",
         "@assessment": "negative",
-        "@descriptionlocatag": "@SPELLS_CONCUSSIVEBLOW_MULTI_1_V2_DESC",
+        "@descriptionlocatag": "@SPELLS_CONCUSSIVEBLOW_MULTI_1_DESC",
         "@statblock": "@SPELLS_STANDARD_STATBLOCK",
         "@animmode": "SingleAnim",
         "@hidespelleffecticon": "true",
@@ -157275,6 +157500,15 @@
               },
               {
                 "@tag": "$$CONCUSSIVEBLOW_MULTI_3.changeaggro[0].value$"
+              },
+              {
+                "@tag": "$$CONCUSSIVEBLOW_SLOW.buffovertime[0].value$"
+              },
+              {
+                "@tag": "$$CONCUSSIVEBLOW_SLOW.buffovertime[0].time$"
+              },
+              {
+                "@tag": "$$CONCUSSIVEBLOW_SLOW.maxcharges$"
               }
             ]
           }
@@ -157284,6 +157518,10 @@
           "@attribute": "health",
           "@change": "-85.00",
           "@effecttype": "physical"
+        },
+        "applyspell": {
+          "@target": "enemy",
+          "@spell": "CONCUSSIVEBLOW_SLOW"
         },
         "changeaggro": {
           "@target": "self",
@@ -157353,7 +157591,7 @@
         "@castupperbodyblendtime": "0.0035",
         "@castingtime": "0",
         "@hitdelay": "0.24",
-        "@standtime": "0.3",
+        "@standtime": "0.25",
         "@disruptionfactor": "1",
         "@recastdelay": "3",
         "@energyusage": "3",
@@ -157367,7 +157605,7 @@
         "@statblock": "@SPELLS_STANDARD_STATBLOCK",
         "@animmode": "SingleAnim",
         "@namelocatag": "@SPELLS_CONCUSSIVEBLOW_MULTI_1",
-        "@descriptionlocatag": "@SPELLS_CONCUSSIVEBLOW_MULTI_1_V2_DESC",
+        "@descriptionlocatag": "@SPELLS_CONCUSSIVEBLOW_MULTI_1_DESC",
         "@hidespelleffecticon": "true",
         "@autoattackcooldownaftercasting": "Trigger",
         "@controllerpreferredtarget": "enemy",
@@ -157394,6 +157632,15 @@
               },
               {
                 "@tag": "$$CONCUSSIVEBLOW_MULTI_3.changeaggro[0].value$"
+              },
+              {
+                "@tag": "$$CONCUSSIVEBLOW_SLOW.buffovertime[0].value$"
+              },
+              {
+                "@tag": "$$CONCUSSIVEBLOW_SLOW.buffovertime[0].time$"
+              },
+              {
+                "@tag": "$$CONCUSSIVEBLOW_SLOW.maxcharges$"
               }
             ]
           }
@@ -157404,6 +157651,10 @@
           "@change": "-85.00",
           "@effecttype": "physical",
           "@targetcountvaluebonusfactor": "0.08"
+        },
+        "applyspell": {
+          "@target": "enemy",
+          "@spell": "CONCUSSIVEBLOW_SLOW"
         },
         "spellimmunity": {
           "@target": "enemy",
@@ -157487,7 +157738,7 @@
         "@statblock": "@SPELLS_STANDARD_STATBLOCK",
         "@animmode": "SingleAnim",
         "@namelocatag": "@SPELLS_CONCUSSIVEBLOW_MULTI_1",
-        "@descriptionlocatag": "@SPELLS_CONCUSSIVEBLOW_MULTI_1_V2_DESC",
+        "@descriptionlocatag": "@SPELLS_CONCUSSIVEBLOW_MULTI_1_DESC",
         "@autoattackcooldownaftercasting": "Trigger",
         "@controllerpreferredtarget": "enemy",
         "locareferences": {
@@ -157513,6 +157764,15 @@
               },
               {
                 "@tag": "$$CONCUSSIVEBLOW_MULTI_3.changeaggro[0].value$"
+              },
+              {
+                "@tag": "$$CONCUSSIVEBLOW_SLOW.buffovertime[0].value$"
+              },
+              {
+                "@tag": "$$CONCUSSIVEBLOW_SLOW.buffovertime[0].time$"
+              },
+              {
+                "@tag": "$$CONCUSSIVEBLOW_SLOW.maxcharges$"
               }
             ]
           }
@@ -157605,6 +157865,10 @@
           "@effecttype": "physical",
           "@targetcountvaluebonusfactor": "0.08"
         },
+        "applyspell": {
+          "@target": "enemy",
+          "@spell": "CONCUSSIVEBLOW_SLOW"
+        },
         "changeaggro": {
           "@target": "self",
           "@value": "50"
@@ -157644,6 +157908,33 @@
           "@prefab": "FX/ClientPrefabs/fx_status_stun",
           "@socket": "halo",
           "@constraintpreset": "pointconstraint"
+        }
+      },
+      {
+        "@uniquename": "CONCUSSIVEBLOW_SLOW",
+        "@target": "enemy",
+        "@castingtime": "0",
+        "@hitdelay": "0",
+        "@standtime": "0",
+        "@disruptionfactor": "1",
+        "@recastdelay": "0",
+        "@energyusage": "0",
+        "@castrange": "0",
+        "@uitype": "crowdcontrol",
+        "@uisprite": "HAMSTRING",
+        "@category": "crowdcontrol",
+        "@spelleffectlocatag": "@SPELLS_STATUS_SLOW",
+        "@maxcharges": "2",
+        "buffovertime": {
+          "@type": "movespeedbonus",
+          "@target": "enemy",
+          "@value": "-0.08",
+          "@time": "3",
+          "@targetcountdurationbonusfactor": "0.08"
+        },
+        "spelleffectfx": {
+          "@prefab": "FX/ClientPrefabs/fx_slow",
+          "@socket": "floor"
         }
       },
       {
@@ -174187,17 +174478,11 @@
             "@constraintpreset": "pointconstraint"
           }
         ],
-        "spelleffectfx": [
-          {
-            "@prefab": "FX/ClientPrefabs/fx_status_stun",
-            "@socket": "halo",
-            "@constraintpreset": "pointconstraint"
-          },
-          {
-            "@prefab": "FX/ClientPrefabs/fx_slow",
-            "@socket": "floor"
-          }
-        ],
+        "spelleffectfx": {
+          "@prefab": "FX/ClientPrefabs/fx_status_stun",
+          "@socket": "halo",
+          "@constraintpreset": "pointconstraint"
+        },
         "AudioInfo": {
           "@name": "SPELL_BALLISTA_SUPPORT"
         }
@@ -174305,7 +174590,7 @@
         "@castingtime": "0",
         "@hitdelay": "0.45",
         "@standtime": "0.3",
-        "@recastdelay": "25",
+        "@recastdelay": "20",
         "@energyusage": "0",
         "@category": "crowdcontrol",
         "@uitype": "crowdcontrol",
@@ -175285,13 +175570,15 @@
             "@target": "enemy",
             "@type": "physicalarmor",
             "@value": "-0.15",
-            "@time": "3"
+            "@time": "3",
+            "@targetcountvaluebonusfactor": "0.08"
           },
           {
             "@target": "enemy",
             "@type": "magicresistance",
             "@value": "-0.15",
-            "@time": "3"
+            "@time": "3",
+            "@targetcountvaluebonusfactor": "0.08"
           },
           {
             "@type": "healmodifier",
@@ -177367,23 +177654,23 @@
           "@type": "movespeedbonus",
           "@target": "self",
           "@value": "0.55",
-          "@time": "5"
+          "@time": "6"
         },
         "cceffectimmunity": [
           {
             "@type": "stun",
             "@target": "self",
-            "@time": "5"
+            "@time": "6"
           },
           {
             "@type": "root",
             "@target": "self",
-            "@time": "5"
+            "@time": "6"
           },
           {
             "@type": "slow",
             "@target": "self",
-            "@time": "5"
+            "@time": "6"
           }
         ],
         "spellvfx": {
@@ -192292,7 +192579,7 @@
         },
         "attributechangeovertime": {
           "@attribute": "health",
-          "@change": "0.007",
+          "@change": "0.006",
           "@target": "self",
           "@changetype": "relativemax",
           "@usehealingmodifiers": "false",
@@ -192357,7 +192644,7 @@
         },
         "attributechangeovertime": {
           "@attribute": "health",
-          "@change": "0.01",
+          "@change": "0.009",
           "@target": "self",
           "@changetype": "relativemax",
           "@usehealingmodifiers": "false",
@@ -192422,7 +192709,7 @@
         },
         "attributechangeovertime": {
           "@attribute": "health",
-          "@change": "0.013",
+          "@change": "0.012",
           "@target": "self",
           "@changetype": "relativemax",
           "@usehealingmodifiers": "false",
@@ -192487,7 +192774,7 @@
         },
         "attributechangeovertime": {
           "@attribute": "health",
-          "@change": "0.016",
+          "@change": "0.014",
           "@target": "self",
           "@changetype": "relativemax",
           "@usehealingmodifiers": "false",
@@ -192552,7 +192839,7 @@
         },
         "attributechangeovertime": {
           "@attribute": "health",
-          "@change": "0.018",
+          "@change": "0.016",
           "@target": "self",
           "@changetype": "relativemax",
           "@usehealingmodifiers": "false",
@@ -192618,7 +192905,7 @@
         "attributechangeovertime": [
           {
             "@attribute": "health",
-            "@change": "0.02",
+            "@change": "0.018",
             "@target": "self",
             "@changetype": "relativemax",
             "@usehealingmodifiers": "false",
@@ -192634,7 +192921,7 @@
           },
           {
             "@attribute": "health",
-            "@change": "0.018",
+            "@change": "0.016",
             "@target": "self",
             "@changetype": "relativemax",
             "@usehealingmodifiers": "false",
@@ -192705,7 +192992,7 @@
         "attributechangeovertime": [
           {
             "@attribute": "health",
-            "@change": "0.022",
+            "@change": "0.0195",
             "@target": "self",
             "@changetype": "relativemax",
             "@usehealingmodifiers": "false",
@@ -192721,7 +193008,7 @@
           },
           {
             "@attribute": "health",
-            "@change": "0.018",
+            "@change": "0.016",
             "@target": "self",
             "@changetype": "relativemax",
             "@usehealingmodifiers": "false",
@@ -192792,7 +193079,7 @@
         "attributechangeovertime": [
           {
             "@attribute": "health",
-            "@change": "0.024",
+            "@change": "0.021",
             "@target": "self",
             "@changetype": "relativemax",
             "@usehealingmodifiers": "false",
@@ -192808,7 +193095,7 @@
           },
           {
             "@attribute": "health",
-            "@change": "0.018",
+            "@change": "0.016",
             "@target": "self",
             "@changetype": "relativemax",
             "@usehealingmodifiers": "false",
@@ -210997,7 +211284,7 @@
         "@uniquename": "POTION_REVIVE_P1",
         "@target": "ground",
         "@category": "instant",
-        "@castrange": "11",
+        "@castrange": "14",
         "@castingtime": "0",
         "@hitdelay": "0.2",
         "@standtime": "0.2",
@@ -211226,7 +211513,7 @@
         "@uniquename": "POTION_REVIVE_P2",
         "@target": "ground",
         "@category": "instant",
-        "@castrange": "11",
+        "@castrange": "14",
         "@castingtime": "0",
         "@hitdelay": "0.2",
         "@standtime": "0.2",
@@ -211455,7 +211742,7 @@
         "@uniquename": "POTION_REVIVE_P3",
         "@target": "ground",
         "@category": "instant",
-        "@castrange": "11",
+        "@castrange": "14",
         "@castingtime": "0",
         "@hitdelay": "0.2",
         "@standtime": "0.2",
@@ -211684,7 +211971,7 @@
         "@uniquename": "POTION_REVIVE_P4",
         "@target": "ground",
         "@category": "instant",
-        "@castrange": "11",
+        "@castrange": "14",
         "@castingtime": "0",
         "@hitdelay": "0.2",
         "@standtime": "0.2",
@@ -211913,7 +212200,7 @@
         "@uniquename": "POTION_REVIVE_P5",
         "@target": "ground",
         "@category": "instant",
-        "@castrange": "11",
+        "@castrange": "14",
         "@castingtime": "0",
         "@hitdelay": "0.2",
         "@standtime": "0.2",
@@ -212142,7 +212429,7 @@
         "@uniquename": "POTION_REVIVE_P6",
         "@target": "ground",
         "@category": "instant",
-        "@castrange": "11",
+        "@castrange": "14",
         "@castingtime": "0",
         "@hitdelay": "0.2",
         "@standtime": "0.2",
@@ -212371,7 +212658,7 @@
         "@uniquename": "POTION_REVIVE_P7",
         "@target": "ground",
         "@category": "instant",
-        "@castrange": "11",
+        "@castrange": "14",
         "@castingtime": "0",
         "@hitdelay": "0.2",
         "@standtime": "0.2",
@@ -212600,7 +212887,7 @@
         "@uniquename": "POTION_REVIVE_P8",
         "@target": "ground",
         "@category": "instant",
-        "@castrange": "11",
+        "@castrange": "14",
         "@castingtime": "0",
         "@hitdelay": "0.2",
         "@standtime": "0.2",
@@ -353183,7 +353470,7 @@
           {
             "@target": "self",
             "@type": "hitpointsmaxbonus",
-            "@value": "0.9",
+            "@value": "1.0",
             "@time": "0"
           },
           {
@@ -421364,14 +421651,115 @@
         "@uniquename": "MOB_KEEPER_FANATIC_DRAGON_SHAMAN_PROJECTILES",
         "@target": "self",
         "@recastdelay": "20",
+        "@hitdelay": "1.5",
+        "@standtime": "0.56",
         "@castrange": "0",
         "@energyusage": "0",
         "@castingtime": "0",
         "@category": "instant",
-        "@uitype": "buff",
+        "@uitype": "crowdcontrol",
         "@uisprite": "MEZZ",
         "@castanimation": "channel_start",
         "@namelocatag": "@SPELLS_MOB_KEEPER_FANATIC_DRAGON_SHAMAN_PROJECTILES_SHORT_RANGE",
+        "spellindicationarea": {
+          "@target": "enemy",
+          "@ignoreLegacy250msDelay": "true",
+          "@visible": "true",
+          "area": {
+            "shape": {
+              "node": [
+                {
+                  "@angle": "0",
+                  "@distance": "20",
+                  "circle": {
+                    "@radius": "1"
+                  }
+                },
+                {
+                  "@angle": "60",
+                  "@distance": "20",
+                  "circle": {
+                    "@radius": "1"
+                  }
+                },
+                {
+                  "@angle": "120",
+                  "@distance": "20",
+                  "circle": {
+                    "@radius": "1"
+                  }
+                },
+                {
+                  "@angle": "180",
+                  "@distance": "20",
+                  "circle": {
+                    "@radius": "1"
+                  }
+                },
+                {
+                  "@angle": "240",
+                  "@distance": "20",
+                  "circle": {
+                    "@radius": "1"
+                  }
+                },
+                {
+                  "@angle": "300",
+                  "@distance": "20",
+                  "circle": {
+                    "@radius": "1"
+                  }
+                }
+              ]
+            },
+            "fill": {
+              "node": [
+                {
+                  "@angle": "0",
+                  "@distance": "20",
+                  "circle": {
+                    "@radius": "0-1"
+                  }
+                },
+                {
+                  "@angle": "60",
+                  "@distance": "20",
+                  "circle": {
+                    "@radius": "0-1"
+                  }
+                },
+                {
+                  "@angle": "120",
+                  "@distance": "20",
+                  "circle": {
+                    "@radius": "0-1"
+                  }
+                },
+                {
+                  "@angle": "180",
+                  "@distance": "20",
+                  "circle": {
+                    "@radius": "0-1"
+                  }
+                },
+                {
+                  "@angle": "240",
+                  "@distance": "20",
+                  "circle": {
+                    "@radius": "0-1"
+                  }
+                },
+                {
+                  "@angle": "300",
+                  "@distance": "20",
+                  "circle": {
+                    "@radius": "0-1"
+                  }
+                }
+              ]
+            }
+          }
+        },
         "spelleffectarea": {
           "@target": "enemy",
           "@effect": "MOB_KEEPER_FANATIC_DRAGON_SHAMAN_PROJECTILES_EFFECT",
@@ -421395,7 +421783,7 @@
                         "@angle": "-90",
                         "@distance": "1",
                         "circle": {
-                          "@radius": "1",
+                          "@radius": "0.75",
                           "spellvfx": {
                             "@prefab": "FX/ClientPrefabs/fx_spell_shapeshifter_multi_shot",
                             "@event": "SpellEffectAreaInit",
@@ -421418,7 +421806,7 @@
                         "@angle": "-90",
                         "@distance": "1",
                         "circle": {
-                          "@radius": "1",
+                          "@radius": "0.75",
                           "spellvfx": {
                             "@prefab": "FX/ClientPrefabs/fx_spell_shapeshifter_multi_shot",
                             "@event": "SpellEffectAreaInit",
@@ -421441,7 +421829,7 @@
                         "@angle": "-90",
                         "@distance": "1",
                         "circle": {
-                          "@radius": "1",
+                          "@radius": "0.75",
                           "spellvfx": {
                             "@prefab": "FX/ClientPrefabs/fx_spell_shapeshifter_multi_shot",
                             "@event": "SpellEffectAreaInit",
@@ -421464,7 +421852,7 @@
                         "@angle": "-90",
                         "@distance": "1",
                         "circle": {
-                          "@radius": "1",
+                          "@radius": "0.75",
                           "spellvfx": {
                             "@prefab": "FX/ClientPrefabs/fx_spell_shapeshifter_multi_shot",
                             "@event": "SpellEffectAreaInit",
@@ -421487,7 +421875,7 @@
                         "@angle": "-90",
                         "@distance": "1",
                         "circle": {
-                          "@radius": "1",
+                          "@radius": "0.75",
                           "spellvfx": {
                             "@prefab": "FX/ClientPrefabs/fx_spell_shapeshifter_multi_shot",
                             "@event": "SpellEffectAreaInit",
@@ -421510,7 +421898,7 @@
                         "@angle": "-90",
                         "@distance": "1",
                         "circle": {
-                          "@radius": "1",
+                          "@radius": "0.75",
                           "spellvfx": {
                             "@prefab": "FX/ClientPrefabs/fx_spell_shapeshifter_multi_shot",
                             "@event": "SpellEffectAreaInit",
@@ -421541,7 +421929,245 @@
         "@energyusage": "0",
         "@castingtime": "0",
         "@category": "crowdcontrol",
-        "@uitype": "buff",
+        "@uitype": "crowdcontrol",
+        "@uisprite": "MEZZ",
+        "@spelleffectanimation": "sleep",
+        "@spelleffectlocatag": "@SPELLS_STATUS_SLEEP",
+        "@namelocatag": "@SPELLS_MOB_KEEPER_FANATIC_DRAGON_SHAMAN_PROJECTILES_SHORT_RANGE",
+        "stun": {
+          "@target": "enemy",
+          "@donttriggerdiminishingreturns": "true",
+          "@ignoreabilitypowerscaling": "true",
+          "@ignorebonusccdurationscaling": "true",
+          "@ignorecrowdcontrolresistance": "true",
+          "@ignorediminishingreturns": "true",
+          "@time": "4",
+          "@damagebreakseffect": "true"
+        },
+        "spelleffectfx": {
+          "@prefab": "FX/ClientPrefabs/fx_status_sleep",
+          "@socket": "halo"
+        },
+        "spellvfx": {
+          "@event": "OnSpellHit",
+          "@target": "target_notCaster",
+          "@prefab": "FX/ClientPrefabs/fx_spell_magic_shapeshifter_impact_aoe",
+          "@socket": "damage",
+          "@ignoresocketscale": "true",
+          "@constraintpreset": "inworld"
+        },
+        "AudioInfo": {
+          "@name": "SPELL_SHAPESHIFTER_DAMAGE_IMPACT_SMALL"
+        }
+      },
+      {
+        "@uniquename": "MOB_KEEPER_FANATIC_DRAGON_SHAMAN_PROJECTILES_SHORT_RANGE",
+        "@target": "self",
+        "@recastdelay": "20",
+        "@hitdelay": "1.5",
+        "@standtime": "0.56",
+        "@castrange": "0",
+        "@energyusage": "0",
+        "@castingtime": "0",
+        "@category": "instant",
+        "@uitype": "crowdcontrol",
+        "@uisprite": "MEZZ",
+        "@castanimation": "channel_start",
+        "spellindicationarea": {
+          "@target": "enemy",
+          "@visible": "true",
+          "@ignoreLegacy250msDelay": "true",
+          "area": {
+            "shape": {
+              "node": [
+                {
+                  "@angle": "0",
+                  "@distance": "12",
+                  "circle": {
+                    "@radius": "1"
+                  }
+                },
+                {
+                  "@angle": "90",
+                  "@distance": "12",
+                  "circle": {
+                    "@radius": "1"
+                  }
+                },
+                {
+                  "@angle": "180",
+                  "@distance": "12",
+                  "circle": {
+                    "@radius": "1"
+                  }
+                },
+                {
+                  "@angle": "270",
+                  "@distance": "12",
+                  "circle": {
+                    "@radius": "1"
+                  }
+                }
+              ]
+            },
+            "fill": {
+              "node": [
+                {
+                  "@angle": "0",
+                  "@distance": "12",
+                  "circle": {
+                    "@radius": "0-1"
+                  }
+                },
+                {
+                  "@angle": "90",
+                  "@distance": "12",
+                  "circle": {
+                    "@radius": "0-1"
+                  }
+                },
+                {
+                  "@angle": "180",
+                  "@distance": "12",
+                  "circle": {
+                    "@radius": "0-1"
+                  }
+                },
+                {
+                  "@angle": "270",
+                  "@distance": "12",
+                  "circle": {
+                    "@radius": "0-1"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "spelleffectarea": {
+          "@target": "enemy",
+          "@effect": "MOB_KEEPER_FANATIC_DRAGON_SHAMAN_PROJECTILES_SHORT_RANGE_EFFECT",
+          "@time": "15",
+          "@positionthenrotationcasterrotation": "targetdirection",
+          "@visible": "false",
+          "@removeonleave": "false",
+          "@removeoncasterdeath": "true",
+          "@removeoncasterreset": "true",
+          "area": {
+            "shape": {
+              "node": {
+                "@angle": "0-360",
+                "node": [
+                  {
+                    "@angle": "0",
+                    "@distance": "AS 0:12; 2:12; 15:6",
+                    "node": {
+                      "@angle": "0-1710",
+                      "node": {
+                        "@angle": "-90",
+                        "@distance": "1",
+                        "circle": {
+                          "@radius": "0.75",
+                          "spellvfx": {
+                            "@prefab": "FX/ClientPrefabs/fx_spell_shapeshifter_multi_shot",
+                            "@event": "SpellEffectAreaInit",
+                            "@duration": "15",
+                            "@target": "target",
+                            "@socket": "centerGround",
+                            "@soundinit": "Play_keeper_fanatic_shaman_persistent_projectiles_loop",
+                            "@soundshutdown": "Stop_keeper_fanatic_shaman_persistent_projectiles_loop"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "@angle": "90",
+                    "@distance": "AS 0:12; 2:12; 15:6",
+                    "node": {
+                      "@angle": "0-1710",
+                      "node": {
+                        "@angle": "-90",
+                        "@distance": "1",
+                        "circle": {
+                          "@radius": "0.75",
+                          "spellvfx": {
+                            "@prefab": "FX/ClientPrefabs/fx_spell_shapeshifter_multi_shot",
+                            "@event": "SpellEffectAreaInit",
+                            "@duration": "15",
+                            "@target": "target",
+                            "@socket": "centerGround",
+                            "@soundinit": "Play_keeper_fanatic_shaman_persistent_projectiles_loop",
+                            "@soundshutdown": "Stop_keeper_fanatic_shaman_persistent_projectiles_loop"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "@angle": "180",
+                    "@distance": "AS 0:12; 2:12; 15:6",
+                    "node": {
+                      "@angle": "0-1710",
+                      "node": {
+                        "@angle": "-90",
+                        "@distance": "1",
+                        "circle": {
+                          "@radius": "0.75",
+                          "spellvfx": {
+                            "@prefab": "FX/ClientPrefabs/fx_spell_shapeshifter_multi_shot",
+                            "@event": "SpellEffectAreaInit",
+                            "@duration": "15",
+                            "@target": "target",
+                            "@socket": "centerGround",
+                            "@soundinit": "Play_keeper_fanatic_shaman_persistent_projectiles_loop",
+                            "@soundshutdown": "Stop_keeper_fanatic_shaman_persistent_projectiles_loop"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "@angle": "270",
+                    "@distance": "AS 0:12; 2:12; 15:6",
+                    "node": {
+                      "@angle": "0-1710",
+                      "node": {
+                        "@angle": "-90",
+                        "@distance": "1",
+                        "circle": {
+                          "@radius": "0.75",
+                          "spellvfx": {
+                            "@prefab": "FX/ClientPrefabs/fx_spell_shapeshifter_multi_shot",
+                            "@event": "SpellEffectAreaInit",
+                            "@duration": "15",
+                            "@target": "target",
+                            "@socket": "centerGround",
+                            "@soundinit": "Play_keeper_fanatic_shaman_persistent_projectiles_loop",
+                            "@soundshutdown": "Stop_keeper_fanatic_shaman_persistent_projectiles_loop"
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "AudioInfo": {
+          "@name": "SPELL_SHAPESHIFTER_DAMAGE_CAST_MULTIPROJECTILE"
+        }
+      },
+      {
+        "@uniquename": "MOB_KEEPER_FANATIC_DRAGON_SHAMAN_PROJECTILES_SHORT_RANGE_EFFECT",
+        "@target": "enemy",
+        "@recastdelay": "0",
+        "@castrange": "0",
+        "@energyusage": "0",
+        "@castingtime": "0",
+        "@category": "crowdcontrol",
+        "@uitype": "crowdcontrol",
         "@uisprite": "MEZZ",
         "@spelleffectanimation": "sleep",
         "@spelleffectlocatag": "@SPELLS_STATUS_SLEEP",
@@ -421570,132 +422196,6 @@
         },
         "AudioInfo": {
           "@name": "SPELL_SHAPESHIFTER_DAMAGE_IMPACT_SMALL"
-        }
-      },
-      {
-        "@uniquename": "MOB_KEEPER_FANATIC_DRAGON_SHAMAN_PROJECTILES_SHORT_RANGE",
-        "@target": "self",
-        "@recastdelay": "20",
-        "@castrange": "0",
-        "@energyusage": "0",
-        "@castingtime": "0",
-        "@category": "instant",
-        "@uitype": "buff",
-        "@uisprite": "MEZZ",
-        "@castanimation": "channel_start",
-        "spelleffectarea": {
-          "@target": "enemy",
-          "@effect": "MOB_KEEPER_FANATIC_DRAGON_SHAMAN_PROJECTILES_EFFECT",
-          "@time": "15",
-          "@positionthenrotationcasterrotation": "targetdirection",
-          "@visible": "false",
-          "@removeonleave": "false",
-          "@removeoncasterdeath": "true",
-          "@removeoncasterreset": "true",
-          "area": {
-            "shape": {
-              "node": {
-                "@angle": "0-360",
-                "node": [
-                  {
-                    "@angle": "0",
-                    "@distance": "AS 0:12; 2:12; 15:6",
-                    "node": {
-                      "@angle": "0-1710",
-                      "node": {
-                        "@angle": "-90",
-                        "@distance": "1",
-                        "circle": {
-                          "@radius": "1",
-                          "spellvfx": {
-                            "@prefab": "FX/ClientPrefabs/fx_spell_shapeshifter_multi_shot",
-                            "@event": "SpellEffectAreaInit",
-                            "@duration": "15",
-                            "@target": "target",
-                            "@socket": "centerGround",
-                            "@soundinit": "Play_keeper_fanatic_shaman_persistent_projectiles_loop",
-                            "@soundshutdown": "Stop_keeper_fanatic_shaman_persistent_projectiles_loop"
-                          }
-                        }
-                      }
-                    }
-                  },
-                  {
-                    "@angle": "90",
-                    "@distance": "AS 0:12; 2:12; 15:6",
-                    "node": {
-                      "@angle": "0-1710",
-                      "node": {
-                        "@angle": "-90",
-                        "@distance": "1",
-                        "circle": {
-                          "@radius": "1",
-                          "spellvfx": {
-                            "@prefab": "FX/ClientPrefabs/fx_spell_shapeshifter_multi_shot",
-                            "@event": "SpellEffectAreaInit",
-                            "@duration": "15",
-                            "@target": "target",
-                            "@socket": "centerGround",
-                            "@soundinit": "Play_keeper_fanatic_shaman_persistent_projectiles_loop",
-                            "@soundshutdown": "Stop_keeper_fanatic_shaman_persistent_projectiles_loop"
-                          }
-                        }
-                      }
-                    }
-                  },
-                  {
-                    "@angle": "180",
-                    "@distance": "AS 0:12; 2:12; 15:6",
-                    "node": {
-                      "@angle": "0-1710",
-                      "node": {
-                        "@angle": "-90",
-                        "@distance": "1",
-                        "circle": {
-                          "@radius": "1",
-                          "spellvfx": {
-                            "@prefab": "FX/ClientPrefabs/fx_spell_shapeshifter_multi_shot",
-                            "@event": "SpellEffectAreaInit",
-                            "@duration": "15",
-                            "@target": "target",
-                            "@socket": "centerGround",
-                            "@soundinit": "Play_keeper_fanatic_shaman_persistent_projectiles_loop",
-                            "@soundshutdown": "Stop_keeper_fanatic_shaman_persistent_projectiles_loop"
-                          }
-                        }
-                      }
-                    }
-                  },
-                  {
-                    "@angle": "270",
-                    "@distance": "AS 0:12; 2:12; 15:6",
-                    "node": {
-                      "@angle": "0-1710",
-                      "node": {
-                        "@angle": "-90",
-                        "@distance": "1",
-                        "circle": {
-                          "@radius": "1",
-                          "spellvfx": {
-                            "@prefab": "FX/ClientPrefabs/fx_spell_shapeshifter_multi_shot",
-                            "@event": "SpellEffectAreaInit",
-                            "@duration": "15",
-                            "@target": "target",
-                            "@socket": "centerGround",
-                            "@soundinit": "Play_keeper_fanatic_shaman_persistent_projectiles_loop",
-                            "@soundshutdown": "Stop_keeper_fanatic_shaman_persistent_projectiles_loop"
-                          }
-                        }
-                      }
-                    }
-                  }
-                ]
-              }
-            }
-          }
-        },
-        "AudioInfo": {
-          "@name": "SPELL_SHAPESHIFTER_DAMAGE_CAST_MULTIPROJECTILE"
         }
       },
       {
@@ -423086,14 +423586,14 @@
         },
         "spelleffectfx": [
           {
-            "@socket": "halo",
+            "@socket": "chest_fixed",
             "@prefab": "FX/ClientPrefabs/fx_arrow_marker_red",
             "@constraintpreset": "pointconstraint",
             "@ignoresocketscale": "true",
             "@visibility": "AllExceptAffected"
           },
           {
-            "@socket": "halo",
+            "@socket": "chest_fixed",
             "@prefab": "FX/ClientPrefabs/fx_arrow_marker_red_affected_only",
             "@constraintpreset": "pointconstraint",
             "@ignoresocketscale": "true",
@@ -429707,14 +430207,14 @@
         },
         "spelleffectfx": [
           {
-            "@socket": "halo",
+            "@socket": "chest_fixed",
             "@prefab": "FX/ClientPrefabs/fx_arrow_marker_red",
             "@constraintpreset": "pointconstraint",
             "@ignoresocketscale": "true",
             "@visibility": "AllExceptAffected"
           },
           {
-            "@socket": "halo",
+            "@socket": "chest_fixed",
             "@prefab": "FX/ClientPrefabs/fx_arrow_marker_red_affected_only",
             "@constraintpreset": "pointconstraint",
             "@ignoresocketscale": "true",
@@ -435446,7 +435946,8 @@
           "@target": "enemy",
           "@attribute": "health",
           "@change": "-1000",
-          "@effecttype": "physical"
+          "@effecttype": "physical",
+          "@reflectdamage": "never"
         },
         "spellvfx": {
           "@target": "target_notCaster",
@@ -435765,10 +436266,18 @@
             "@attribute": "health",
             "@change": "-3000",
             "@effecttype": "physical",
+            "@reflectdamage": "never",
             "IfTargetItemTypeEquipped": {
               "@who": "EffectTarget",
               "@slottype": "armor",
               "@shopsubcategory1": "plate_armor"
+            },
+            "Event": {
+              "@type": "onDealHealthDamage",
+              "Spell": {
+                "@target": "SpellTarget",
+                "@name": "MOB_DRAGON_FIRE_ATTACK_DAMAGE_SINGLE_HIT_INFO_DEBUFF"
+              }
             },
             "valueoverride": {
               "IfCharge": {
@@ -435793,6 +436302,7 @@
             "@attribute": "health",
             "@change": "-3000",
             "@effecttype": "physical",
+            "@reflectdamage": "never",
             "not": {
               "IfTargetItemTypeEquipped": {
                 "@who": "EffectTarget",
@@ -435802,10 +436312,16 @@
             },
             "Event": {
               "@type": "onDealHealthDamage",
-              "Spell": {
-                "@target": "SpellTarget",
-                "@name": "MOB_DRAGON_FIRE_ATTACK_DAMAGE_HIT_INFO_DEBUFF"
-              }
+              "Spell": [
+                {
+                  "@target": "SpellTarget",
+                  "@name": "MOB_DRAGON_FIRE_ATTACK_DAMAGE_HIT_INFO_DEBUFF"
+                },
+                {
+                  "@target": "SpellTarget",
+                  "@name": "MOB_DRAGON_FIRE_ATTACK_DAMAGE_SINGLE_HIT_INFO_DEBUFF"
+                }
+              ]
             },
             "valueoverride": {
               "IfCharge": {
@@ -435850,7 +436366,38 @@
         "@buffpriority": "2",
         "dummy": {
           "@target": "enemy",
-          "@time": "3"
+          "@time": "6"
+        }
+      },
+      {
+        "@uniquename": "MOB_DRAGON_FIRE_ATTACK_DAMAGE_SINGLE_HIT_INFO_DEBUFF",
+        "@target": "enemy",
+        "@castingtime": "0",
+        "@standtime": "0",
+        "@recastdelay": "0",
+        "@energyusage": "0",
+        "@castrange": "0",
+        "@uitype": "damage",
+        "@category": "instant",
+        "@uisprite": "HAUNTING_SCREAMS",
+        "@namelocatag": "@SPELLS_MOB_DRAGON_FIRE_ATTACK",
+        "@spelleffectlocatag": "@SPELLS_MOB_DRAGON_FIRE_ATTACK_DAMAGE_SINGLE_HIT_INFO_DEBUFF_DESC",
+        "@buffpriority": "1",
+        "dummy": {
+          "@target": "enemy",
+          "@time": "6",
+          "IfSpellActive": {
+            "@who": "Caster",
+            "@spell": "MOB_DRAGON_FIRE_ATTACK_TARGETCOUNT",
+            "@atleastcharges": "1"
+          },
+          "not": {
+            "IfSpellActive": {
+              "@who": "Caster",
+              "@spell": "MOB_DRAGON_FIRE_ATTACK_TARGETCOUNT",
+              "@atleastcharges": "2"
+            }
+          }
         }
       },
       {
@@ -435918,7 +436465,7 @@
             "@alive": "none",
             "@target": "target",
             "@prefab": "FX/ClientPrefabs/fx_arrow_marker_blue",
-            "@socket": "halo",
+            "@socket": "chest_fixed",
             "@constraintpreset": "pointconstraint",
             "@ignoresocketscale": "true",
             "@duration": "4",
@@ -435929,7 +436476,7 @@
             "@alive": "none",
             "@target": "target",
             "@prefab": "FX/ClientPrefabs/fx_arrow_marker_blue_affected_only",
-            "@socket": "halo",
+            "@socket": "chest_fixed",
             "@constraintpreset": "pointconstraint",
             "@ignoresocketscale": "true",
             "@duration": "4",
@@ -437299,14 +437846,14 @@
           },
           {
             "@prefab": "FX/ClientPrefabs/fx_arrow_marker_blue",
-            "@socket": "halo",
+            "@socket": "chest_fixed",
             "@constraintpreset": "pointconstraint",
             "@ignoresocketscale": "true",
             "@visibility": "AllExceptAffected"
           },
           {
             "@prefab": "FX/ClientPrefabs/fx_arrow_marker_blue_affected_only",
-            "@socket": "halo",
+            "@socket": "chest_fixed",
             "@constraintpreset": "pointconstraint",
             "@ignoresocketscale": "true",
             "@visibility": "AffectedOnly"
@@ -437395,14 +437942,14 @@
           },
           {
             "@prefab": "FX/ClientPrefabs/fx_arrow_marker_blue",
-            "@socket": "halo",
+            "@socket": "chest_fixed",
             "@constraintpreset": "pointconstraint",
             "@ignoresocketscale": "true",
             "@visibility": "AllExceptAffected"
           },
           {
             "@prefab": "FX/ClientPrefabs/fx_arrow_marker_blue_affected_only",
-            "@socket": "halo",
+            "@socket": "chest_fixed",
             "@constraintpreset": "pointconstraint",
             "@ignoresocketscale": "true",
             "@visibility": "AffectedOnly"
@@ -437491,14 +438038,14 @@
           },
           {
             "@prefab": "FX/ClientPrefabs/fx_arrow_marker_blue",
-            "@socket": "halo",
+            "@socket": "chest_fixed",
             "@constraintpreset": "pointconstraint",
             "@ignoresocketscale": "true",
             "@visibility": "AllExceptAffected"
           },
           {
             "@prefab": "FX/ClientPrefabs/fx_arrow_marker_blue_affected_only",
-            "@socket": "halo",
+            "@socket": "chest_fixed",
             "@constraintpreset": "pointconstraint",
             "@ignoresocketscale": "true",
             "@visibility": "AffectedOnly"
@@ -437587,14 +438134,14 @@
           },
           {
             "@prefab": "FX/ClientPrefabs/fx_arrow_marker_blue",
-            "@socket": "halo",
+            "@socket": "chest_fixed",
             "@constraintpreset": "pointconstraint",
             "@ignoresocketscale": "true",
             "@visibility": "AllExceptAffected"
           },
           {
             "@prefab": "FX/ClientPrefabs/fx_arrow_marker_blue_affected_only",
-            "@socket": "halo",
+            "@socket": "chest_fixed",
             "@constraintpreset": "pointconstraint",
             "@ignoresocketscale": "true",
             "@visibility": "AffectedOnly"
@@ -438027,7 +438574,8 @@
           "@target": "enemy",
           "@attribute": "health",
           "@change": "-2250",
-          "@effecttype": "physical"
+          "@effecttype": "physical",
+          "@reflectdamage": "never"
         },
         "spellvfx": [
           {
@@ -441208,7 +441756,8 @@
           "@target": "enemy",
           "@attribute": "health",
           "@change": "-1000",
-          "@effecttype": "physical"
+          "@effecttype": "physical",
+          "@reflectdamage": "never"
         },
         "spellvfx": {
           "@target": "target_notCaster",
@@ -441432,7 +441981,8 @@
         "directattributechange": {
           "@target": "enemy",
           "@attribute": "health",
-          "@change": "-2000"
+          "@change": "-2000",
+          "@reflectdamage": "never"
         },
         "spellvfx": {
           "@event": "OnSpellHit",
@@ -442065,6 +442615,7 @@
           "@target": "enemy",
           "@attribute": "health",
           "@change": "-2000",
+          "@reflectdamage": "never",
           "Event": {
             "@type": "onDealHealthDamage",
             "Spell": {
@@ -442227,7 +442778,8 @@
         "directattributechange": {
           "@target": "enemy",
           "@attribute": "health",
-          "@change": "-150"
+          "@change": "-150",
+          "@reflectdamage": "never"
         },
         "spellvfx": [
           {
@@ -442267,7 +442819,8 @@
           "@target": "enemy",
           "@attribute": "health",
           "@change": "-300",
-          "@effectarearadius": "8"
+          "@effectarearadius": "8",
+          "@reflectdamage": "never"
         },
         "spellvfx": [
           {
@@ -442309,6 +442862,7 @@
           "@target": "enemy",
           "@attribute": "health",
           "@change": "-4000",
+          "@reflectdamage": "never",
           "Event": {
             "@type": "onDealHealthDamage",
             "Spell": {
@@ -443088,7 +443642,8 @@
           "@initialinterval": "0.25",
           "@effecttype": "magic",
           "@interval": "1",
-          "@count": "9999"
+          "@count": "9999",
+          "@reflectdamage": "never"
         },
         "spelleffectfx": {
           "@prefab": "FX/ClientPrefabs/fx_dot_fire",
@@ -443284,6 +443839,7 @@
           "@target": "enemy",
           "@attribute": "health",
           "@change": "-3000",
+          "@reflectdamage": "never",
           "Event": {
             "@type": "onDealHealthDamage",
             "Spell": {
@@ -444205,6 +444761,7 @@
           "@target": "enemy",
           "@attribute": "health",
           "@change": "-300",
+          "@reflectdamage": "never",
           "valueoverride": {
             "IfCharge": {
               "@who": "EffectTarget",
@@ -445627,7 +446184,8 @@
           "@change": "-150",
           "@initialinterval": "0",
           "@interval": "1",
-          "@count": "2"
+          "@count": "2",
+          "@reflectdamage": "never"
         },
         "spelleffectfx": {
           "@prefab": "FX/ClientPrefabs/fx_dot_fire",
