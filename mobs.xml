@@ -8821,74 +8821,14 @@
   <!--*******************************************************-->
   <!--Raid-->
   <Mob uniquename="T7_MOB_WATCHTOWER_ARCANEGUARD_ELITE" tier="7" npchostility="hostile" abilitypower="85" fame="5301" prefab="MOB_TERRITORY_GUARD_01" prefabscale="1.25" roamingradius="0" roamingidletimemin="3" roamingidletimemax="10" aggroradius="12" pursuitradius="25" damageaggrofactor="1" healingaggrofactor="1" shieldaggrofactor="0.5" alertradius="20" faction="WATCHTOWER" alertsfactions="WATCHTOWER" category="territoryguards" playerguard="true" collisionradius="0.75" attackcollisionradius="1" attacktype="magic" attackrange="20" attackdamage="782" hitpointsmax="68287" hitpointsregeneration="0" energymax="331" energyregeneration="10" movespeed="3.646" attackmovespeed="7.5" meleeattackdamagetime="1.08" attackspeed="0.5" physicalarmor="142" magicresistance="151" crowdcontrolresistance="99999" respawntimesecondsmin="5400" respawntimesecondsmax="9000" avatar="TERRITORYGUARD1" avatarring="RING_MOB_BOSS" maxcharges="1" timeperchargeseconds="7200" dangerstate="elite" aggrodelayafterspawn="5" lootprefab="T0_LOOTCHEST_MINIBOSS" energyrewardspell="ENERGYREWARD" energyreward="462" mobvalue="0" dontresetafterpursuit="true" immunetoforcedmovement="true">
+    <PersistentHealthThresholdPercent>
+      <Threshold value="0.8"/>
+      <Threshold value="0.6"/>
+      <Threshold value="0.4"/>
+      <Threshold value="0.2"/>
+    </PersistentHealthThresholdPercent>
     <AI>
-      <Variables>
-        <Var name="hp_threshold" type="int" initialValue="0" resetOnMobReset="false" />
-        <Var name="set_hp" type="bool" initialValue="false" resetOnMobReset="true" />
-      </Variables>
       <Behaviour>
-        <!--set hp-->
-        <Spell name="MOB_TERRITORY_BOSS_HP_RESET1" target="self">
-          <IfFightDuration op="less" value="0.3" />
-          <IfVariable name="set_hp" op="equals" value="false" />
-          <IfVariable name="hp_threshold" op="equals" value="1" />
-          <Event type="onCastSuccessful">
-            <Variable name="set_hp" op="set" value="true" />
-          </Event>
-        </Spell>
-        <Spell name="MOB_TERRITORY_BOSS_HP_RESET2" target="self">
-          <IfFightDuration op="less" value="0.3" />
-          <IfVariable name="set_hp" op="equals" value="false" />
-          <IfVariable name="hp_threshold" op="equals" value="2" />
-          <Event type="onCastSuccessful">
-            <Variable name="set_hp" op="set" value="true" />
-          </Event>
-        </Spell>
-        <Spell name="MOB_TERRITORY_BOSS_HP_RESET3" target="self">
-          <IfFightDuration op="less" value="0.3" />
-          <IfVariable name="set_hp" op="equals" value="false" />
-          <IfVariable name="hp_threshold" op="equals" value="3" />
-          <Event type="onCastSuccessful">
-            <Variable name="set_hp" op="set" value="true" />
-          </Event>
-        </Spell>
-        <Spell name="MOB_TERRITORY_BOSS_HP_RESET4" target="self">
-          <IfFightDuration op="less" value="0.3" />
-          <IfVariable name="set_hp" op="equals" value="false" />
-          <IfVariable name="hp_threshold" op="equals" value="4" />
-          <Event type="onCastSuccessful">
-            <Variable name="set_hp" op="set" value="true" />
-          </Event>
-        </Spell>
-        <!--set hp thresholds-->
-        <Spell name="MOB_TERRITORY_BOSS_NOP" target="self">
-          <IfVariable name="hp_threshold" op="less" value="1" />
-          <IfOwnHealthPercentage op="lessOrEqual" value="0.8" />
-          <Event type="onCastSuccessful">
-            <Variable name="hp_threshold" op="set" value="1" />
-          </Event>
-        </Spell>
-        <Spell name="MOB_TERRITORY_BOSS_NOP" target="self">
-          <IfVariable name="hp_threshold" op="less" value="2" />
-          <IfOwnHealthPercentage op="lessOrEqual" value="0.6" />
-          <Event type="onCastSuccessful">
-            <Variable name="hp_threshold" op="set" value="2" />
-          </Event>
-        </Spell>
-        <Spell name="MOB_TERRITORY_BOSS_NOP" target="self">
-          <IfVariable name="hp_threshold" op="less" value="3" />
-          <IfOwnHealthPercentage op="lessOrEqual" value="0.4" />
-          <Event type="onCastSuccessful">
-            <Variable name="hp_threshold" op="set" value="3" />
-          </Event>
-        </Spell>
-        <Spell name="MOB_TERRITORY_BOSS_NOP" target="self">
-          <IfVariable name="hp_threshold" op="less" value="4" />
-          <IfOwnHealthPercentage op="lessOrEqual" value="0.2" />
-          <Event type="onCastSuccessful">
-            <Variable name="hp_threshold" op="set" value="4" />
-          </Event>
-        </Spell>
         <!--combat bahavior-->
         <Spell target="self" name="MOB_TERRITORY_BOSS_FORK_LIGHTNING_PULSE">
           <not>
