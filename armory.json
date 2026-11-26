@@ -256,27 +256,14 @@
             ]
           },
           "datasetrequirements": {
-            "or": {
-              "and": [
-                {
-                  "duration": {
-                    "@mindurationminutes": "5"
-                  },
-                  "metric": {
-                    "@name": "pvpfamegained",
-                    "@minvalue": "50000"
-                  }
-                },
-                {
-                  "duration": {
-                    "@mindurationminutes": "5"
-                  },
-                  "metric": {
-                    "@name": "pvefamegained",
-                    "@minvalue": "100000"
-                  }
-                }
-              ]
+            "and": {
+              "duration": {
+                "@mindurationminutes": "5"
+              },
+              "metric": {
+                "@name": "pvpfamegained",
+                "@minvalue": "50000"
+              }
             }
           },
           "scoreweights": {
@@ -297,10 +284,6 @@
               {
                 "@metric": "pvpfamegained",
                 "@value": "0.2"
-              },
-              {
-                "@metric": "pvefamegained",
-                "@value": "0.3"
               }
             ]
           }
@@ -412,6 +395,10 @@
                 {
                   "@name": "kills",
                   "@minvalue": "1"
+                },
+                {
+                  "@name": "deaths",
+                  "@minvalue": "1"
                 }
               ]
             }
@@ -471,6 +458,10 @@
                 {
                   "@name": "kills",
                   "@minvalue": "1"
+                },
+                {
+                  "@name": "deaths",
+                  "@minvalue": "1"
                 }
               ]
             }
@@ -529,6 +520,10 @@
                 },
                 {
                   "@name": "kills",
+                  "@minvalue": "1"
+                },
+                {
+                  "@name": "deaths",
                   "@minvalue": "1"
                 }
               ]
@@ -1722,8 +1717,7 @@
         },
         {
           "@uniquename": "dragonareasmallgroup",
-          "@image": "Gui/Armory/ARMORY_TRACKING",
-          "@hidden": "true",
+          "@image": "Gui/Armory/ARMORY_DRAGON_AREA",
           "tags": {
             "tag": [
               {
@@ -1799,8 +1793,7 @@
         },
         {
           "@uniquename": "dragonareamediumgroup",
-          "@image": "Gui/Armory/ARMORY_TRACKING",
-          "@hidden": "true",
+          "@image": "Gui/Armory/ARMORY_DRAGON_AREA",
           "tags": {
             "tag": [
               {
@@ -1824,16 +1817,10 @@
                   "duration": {
                     "@mindurationminutes": "10"
                   },
-                  "metric": [
-                    {
-                      "@name": "kills",
-                      "@minvalue": "1"
-                    },
-                    {
-                      "@name": "pvpfamegained",
-                      "@minvalue": "50000"
-                    }
-                  ]
+                  "metric": {
+                    "@name": "pvpfamegained",
+                    "@minvalue": "50000"
+                  }
                 },
                 {
                   "duration": {
@@ -1848,8 +1835,8 @@
             }
           },
           "scoreweights": {
-            "@minuses": "2",
-            "@minusesbaseline": "3",
+            "@minuses": "1",
+            "@minperformancescore": "0",
             "weight": [
               {
                 "@metric": "kills",
@@ -1876,8 +1863,7 @@
         },
         {
           "@uniquename": "dragonarealargegroup",
-          "@image": "Gui/Armory/ARMORY_TRACKING",
-          "@hidden": "true",
+          "@image": "Gui/Armory/ARMORY_DRAGON_AREA",
           "tags": {
             "tag": [
               {
@@ -1901,16 +1887,10 @@
                   "duration": {
                     "@mindurationminutes": "10"
                   },
-                  "metric": [
-                    {
-                      "@name": "kills",
-                      "@minvalue": "1"
-                    },
-                    {
-                      "@name": "pvpfamegained",
-                      "@minvalue": "100000"
-                    }
-                  ]
+                  "metric": {
+                    "@name": "pvpfamegained",
+                    "@minvalue": "100000"
+                  }
                 },
                 {
                   "duration": {
@@ -1926,6 +1906,7 @@
           },
           "scoreweights": {
             "@minuses": "1",
+            "@minperformancescore": "0",
             "weight": [
               {
                 "@metric": "kills",
@@ -1952,8 +1933,7 @@
         },
         {
           "@uniquename": "dragondungeons",
-          "@image": "Gui/Armory/ARMORY_AVALONIAN_DUNGEON",
-          "@hidden": "true",
+          "@image": "Gui/Armory/ARMORY_DRAGON_DUNGEON",
           "tags": {
             "tag": [
               {
@@ -1983,7 +1963,7 @@
           },
           "scoreweights": {
             "@minuses": "2",
-            "@minperformancescore": "0.3",
+            "@minperformancescore": "0",
             "weight": [
               {
                 "@metric": "deaths",
@@ -1991,14 +1971,14 @@
               },
               {
                 "@metric": "healingdone",
-                "@value": "0.4"
+                "@value": "0.2"
               },
               {
                 "@metric": "pvefamegained",
                 "@value": "0.2"
               },
               {
-                "@metrics": "damagedealt,healingdone,damagereceived",
+                "@metrics": "damagedealt,damagereceived",
                 "@value": "0.4"
               }
             ]

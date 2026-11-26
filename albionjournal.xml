@@ -13834,7 +13834,10 @@
 				</achievement>
 				<achievement name="JOURNAL_PVP_CRYSTAL_LEAGUE_20V20_WIN_1" rewarditem="T8_SILVERBAG_NONTRADABLE" difficultyrating="1141" absoluteprogressmax="1" symbol="NONE" rewardamount="1" xboxgamerscore="0">
 					<finishcrystalleaguematch result="win" count="1">
+            <or>
 						<IfArenaMatchCategory op="equals" value="crystal_league_city" />
+              <IfArenaMatchCategory op="equals" value="crystal_league_city_v2" />
+            </or>
 					</finishcrystalleaguematch>
 				</achievement>
 				<achievement name="JOURNAL_PVP_CRYSTAL_LEAGUE_5V5_WIN_4" rewarditem="T8_SILVERBAG_NONTRADABLE" rewardamount="5" difficultyrating="1175" absoluteprogressmax="1" symbol="NONE" xboxgamerscore="0">
@@ -13857,44 +13860,52 @@
 						<IfArenaMatchCategory op="equals" value="crystal_league_nonlethal" />
 					</finishcrystalleaguematch>
 				</achievement>
-				<achievement name="JOURNAL_PVP_CRYSTAL_LEAGUE_5V5_WIN_8" rewarditem="T8_SILVERBAG_NONTRADABLE" rewardamount="40" difficultyrating="1265" absoluteprogressmax="1" symbol="NONE" xboxgamerscore="0">
-					<finishcrystalleaguematch result="win" level="8">
-						<IfArenaMatchCategory op="equals" value="crystal_league_nonlethal" />
-					</finishcrystalleaguematch>
-				</achievement>
-				<achievement name="JOURNAL_PVP_CRYSTAL_LEAGUE_5V5_WIN_9" rewarditem="UNIQUE_UNLOCK_HEAD_VANITY_GLADIATOR_CRYSTAL" difficultyrating="1267" absoluteprogressmax="1" symbol="NONE" rewardamount="1" xboxgamerscore="0">
-					<finishcrystalleaguematch result="win" level="9">
-						<IfArenaMatchCategory op="equals" value="crystal_league_nonlethal" />
-					</finishcrystalleaguematch>
-				</achievement>
 				<achievement name="JOURNAL_PVP_CRYSTAL_LEAGUE_20V20_WIN_2" rewarditem="T8_SILVERBAG_NONTRADABLE" rewardamount="5" difficultyrating="1268" absoluteprogressmax="1" symbol="NONE" xboxgamerscore="0">
 					<finishcrystalleaguematch result="win" level="2">
+            <or>
 						<IfArenaMatchCategory op="equals" value="crystal_league_city" />
+              <IfArenaMatchCategory op="equals" value="crystal_league_city_v2" />
+            </or>
 					</finishcrystalleaguematch>
 				</achievement>
 				<achievement name="JOURNAL_PVP_CRYSTAL_LEAGUE_20V20_WIN_3" rewarditem="UNIQUE_UNLOCK_SHOES_VANITY_GLADIATOR_CRYSTAL" difficultyrating="1269" absoluteprogressmax="1" symbol="NONE" rewardamount="1" xboxgamerscore="0">
 					<finishcrystalleaguematch result="win" level="3">
+            <or>
 						<IfArenaMatchCategory op="equals" value="crystal_league_city" />
+              <IfArenaMatchCategory op="equals" value="crystal_league_city_v2" />
+            </or>					
 					</finishcrystalleaguematch>
 				</achievement>
 				<achievement name="JOURNAL_PVP_CRYSTAL_LEAGUE_20V20_WIN_4" rewarditem="T8_SILVERBAG_NONTRADABLE" rewardamount="10" difficultyrating="1270" absoluteprogressmax="1" symbol="NONE" xboxgamerscore="0">
 					<finishcrystalleaguematch result="win" level="4">
+            <or>
 						<IfArenaMatchCategory op="equals" value="crystal_league_city" />
+              <IfArenaMatchCategory op="equals" value="crystal_league_city_v2" />
+            </or>					
 					</finishcrystalleaguematch>
 				</achievement>
 				<achievement name="JOURNAL_PVP_CRYSTAL_LEAGUE_20V20_WIN_5" rewarditem="T1_KILL_EMOTE_FLAG_CHARGES_NONTRADABLE" rewardamount="500" difficultyrating="1272" absoluteprogressmax="1" symbol="NONE" xboxgamerscore="0">
 					<finishcrystalleaguematch result="win" level="5">
+            <or>
 						<IfArenaMatchCategory op="equals" value="crystal_league_city" />
+              <IfArenaMatchCategory op="equals" value="crystal_league_city_v2" />
+            </or>					
 					</finishcrystalleaguematch>
 				</achievement>
 				<achievement name="JOURNAL_PVP_CRYSTAL_LEAGUE_20V20_WIN_6" rewarditem="T8_SILVERBAG_NONTRADABLE" rewardamount="40" difficultyrating="1273" absoluteprogressmax="1" symbol="NONE" xboxgamerscore="0">
 					<finishcrystalleaguematch result="win" level="6">
+            <or>
 						<IfArenaMatchCategory op="equals" value="crystal_league_city" />
+              <IfArenaMatchCategory op="equals" value="crystal_league_city_v2" />
+            </or>					
 					</finishcrystalleaguematch>
 				</achievement>
 				<achievement name="JOURNAL_PVP_CRYSTAL_LEAGUE_20V20_WIN_7" rewarditem="UNIQUE_UNLOCK_ARMOR_VANITY_GLADIATOR_CRYSTAL" difficultyrating="1275" absoluteprogressmax="1" symbol="NONE" rewardamount="1" xboxgamerscore="0">
 					<finishcrystalleaguematch result="win" level="7">
+            <or>
 						<IfArenaMatchCategory op="equals" value="crystal_league_city" />
+              <IfArenaMatchCategory op="equals" value="crystal_league_city_v2" />
+            </or>					
 					</finishcrystalleaguematch>
 				</achievement>
 			</subcategory>
@@ -23903,6 +23914,18 @@
         </achievement>
         <achievement name="JOURNAL_PVP_HELL_GATES_10V10_INFAMY_03" rewarditem="T8_SILVERBAG_NONTRADABLE" rewardamount="30" difficultyrating="1274" symbol="INFAMY" absoluteprogressmax="250000" xboxgamerscore="0">
           <haveinfamy amount="250000" infamytype="Hell10v10" />
+        </achievement>
+      </subcategory>
+      <subcategory uniquename="ARCHIVE_SUBARCHIVE_CRYSTAL_LEAGUE" displayname="@JOURNAL_ACTIVITY_ARCHIVE_SUBARCHIVE_CRYSTAL_LEAGUE" showonlyifcontainsfinishedachievements="true">
+        <achievement name="JOURNAL_PVP_CRYSTAL_LEAGUE_5V5_WIN_8" rewarditem="T8_SILVERBAG_NONTRADABLE" rewardamount="40" difficultyrating="1265" absoluteprogressmax="1" symbol="NONE" xboxgamerscore="0">
+          <finishcrystalleaguematch result="win" level="8">
+            <IfArenaMatchCategory op="equals" value="crystal_league_nonlethal" />
+          </finishcrystalleaguematch>
+        </achievement>
+        <achievement name="JOURNAL_PVP_CRYSTAL_LEAGUE_5V5_WIN_9" rewarditem="UNIQUE_UNLOCK_HEAD_VANITY_GLADIATOR_CRYSTAL" difficultyrating="1267" absoluteprogressmax="1" symbol="NONE" rewardamount="1" xboxgamerscore="0">
+          <finishcrystalleaguematch result="win" level="9">
+            <IfArenaMatchCategory op="equals" value="crystal_league_nonlethal" />
+          </finishcrystalleaguematch>
         </achievement>
       </subcategory>
     </category>

@@ -44766,221 +44766,25 @@
         "@mobvalue": "0",
         "@dontresetafterpursuit": "true",
         "@immunetoforcedmovement": "true",
+        "PersistentHealthThresholdPercent": {
+          "Threshold": [
+            {
+              "@value": "0.8"
+            },
+            {
+              "@value": "0.6"
+            },
+            {
+              "@value": "0.4"
+            },
+            {
+              "@value": "0.2"
+            }
+          ]
+        },
         "AI": {
-          "Variables": {
-            "Var": [
-              {
-                "@name": "hp_threshold",
-                "@type": "int",
-                "@initialValue": "0",
-                "@resetOnMobReset": "false"
-              },
-              {
-                "@name": "set_hp",
-                "@type": "bool",
-                "@initialValue": "false",
-                "@resetOnMobReset": "true"
-              }
-            ]
-          },
           "Behaviour": {
             "Spell": [
-              {
-                "@name": "MOB_TERRITORY_BOSS_HP_RESET1",
-                "@target": "self",
-                "IfFightDuration": {
-                  "@op": "less",
-                  "@value": "0.3"
-                },
-                "IfVariable": [
-                  {
-                    "@name": "set_hp",
-                    "@op": "equals",
-                    "@value": "false"
-                  },
-                  {
-                    "@name": "hp_threshold",
-                    "@op": "equals",
-                    "@value": "1"
-                  }
-                ],
-                "Event": {
-                  "@type": "onCastSuccessful",
-                  "Variable": {
-                    "@name": "set_hp",
-                    "@op": "set",
-                    "@value": "true"
-                  }
-                }
-              },
-              {
-                "@name": "MOB_TERRITORY_BOSS_HP_RESET2",
-                "@target": "self",
-                "IfFightDuration": {
-                  "@op": "less",
-                  "@value": "0.3"
-                },
-                "IfVariable": [
-                  {
-                    "@name": "set_hp",
-                    "@op": "equals",
-                    "@value": "false"
-                  },
-                  {
-                    "@name": "hp_threshold",
-                    "@op": "equals",
-                    "@value": "2"
-                  }
-                ],
-                "Event": {
-                  "@type": "onCastSuccessful",
-                  "Variable": {
-                    "@name": "set_hp",
-                    "@op": "set",
-                    "@value": "true"
-                  }
-                }
-              },
-              {
-                "@name": "MOB_TERRITORY_BOSS_HP_RESET3",
-                "@target": "self",
-                "IfFightDuration": {
-                  "@op": "less",
-                  "@value": "0.3"
-                },
-                "IfVariable": [
-                  {
-                    "@name": "set_hp",
-                    "@op": "equals",
-                    "@value": "false"
-                  },
-                  {
-                    "@name": "hp_threshold",
-                    "@op": "equals",
-                    "@value": "3"
-                  }
-                ],
-                "Event": {
-                  "@type": "onCastSuccessful",
-                  "Variable": {
-                    "@name": "set_hp",
-                    "@op": "set",
-                    "@value": "true"
-                  }
-                }
-              },
-              {
-                "@name": "MOB_TERRITORY_BOSS_HP_RESET4",
-                "@target": "self",
-                "IfFightDuration": {
-                  "@op": "less",
-                  "@value": "0.3"
-                },
-                "IfVariable": [
-                  {
-                    "@name": "set_hp",
-                    "@op": "equals",
-                    "@value": "false"
-                  },
-                  {
-                    "@name": "hp_threshold",
-                    "@op": "equals",
-                    "@value": "4"
-                  }
-                ],
-                "Event": {
-                  "@type": "onCastSuccessful",
-                  "Variable": {
-                    "@name": "set_hp",
-                    "@op": "set",
-                    "@value": "true"
-                  }
-                }
-              },
-              {
-                "@name": "MOB_TERRITORY_BOSS_NOP",
-                "@target": "self",
-                "IfVariable": {
-                  "@name": "hp_threshold",
-                  "@op": "less",
-                  "@value": "1"
-                },
-                "IfOwnHealthPercentage": {
-                  "@op": "lessOrEqual",
-                  "@value": "0.8"
-                },
-                "Event": {
-                  "@type": "onCastSuccessful",
-                  "Variable": {
-                    "@name": "hp_threshold",
-                    "@op": "set",
-                    "@value": "1"
-                  }
-                }
-              },
-              {
-                "@name": "MOB_TERRITORY_BOSS_NOP",
-                "@target": "self",
-                "IfVariable": {
-                  "@name": "hp_threshold",
-                  "@op": "less",
-                  "@value": "2"
-                },
-                "IfOwnHealthPercentage": {
-                  "@op": "lessOrEqual",
-                  "@value": "0.6"
-                },
-                "Event": {
-                  "@type": "onCastSuccessful",
-                  "Variable": {
-                    "@name": "hp_threshold",
-                    "@op": "set",
-                    "@value": "2"
-                  }
-                }
-              },
-              {
-                "@name": "MOB_TERRITORY_BOSS_NOP",
-                "@target": "self",
-                "IfVariable": {
-                  "@name": "hp_threshold",
-                  "@op": "less",
-                  "@value": "3"
-                },
-                "IfOwnHealthPercentage": {
-                  "@op": "lessOrEqual",
-                  "@value": "0.4"
-                },
-                "Event": {
-                  "@type": "onCastSuccessful",
-                  "Variable": {
-                    "@name": "hp_threshold",
-                    "@op": "set",
-                    "@value": "3"
-                  }
-                }
-              },
-              {
-                "@name": "MOB_TERRITORY_BOSS_NOP",
-                "@target": "self",
-                "IfVariable": {
-                  "@name": "hp_threshold",
-                  "@op": "less",
-                  "@value": "4"
-                },
-                "IfOwnHealthPercentage": {
-                  "@op": "lessOrEqual",
-                  "@value": "0.2"
-                },
-                "Event": {
-                  "@type": "onCastSuccessful",
-                  "Variable": {
-                    "@name": "hp_threshold",
-                    "@op": "set",
-                    "@value": "4"
-                  }
-                }
-              },
               {
                 "@target": "self",
                 "@name": "MOB_TERRITORY_BOSS_FORK_LIGHTNING_PULSE",
